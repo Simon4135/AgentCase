@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI/Agent 接入企业系统 · 外部调研</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;background:#f6f8fa;color:#1f2328}
+header{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff;padding:28px 30px}
+header h1{margin:0 0 8px;font-size:24px;font-weight:650}
+header p{margin:0;opacity:.9;font-size:13.4px;max-width:1100px}
+header .navlinks{margin-top:15px;display:flex;gap:10px;flex-wrap:wrap}
+header .navlinks a{background:#ffffff22;border:1px solid #ffffff44;color:#fff;padding:5px 14px;border-radius:999px;font-size:12.5px;text-decoration:none}
+header .navlinks a:hover{background:#ffffff33}
+.wrap{max-width:1400px;margin:0 auto;padding:22px 30px 90px}
+section{background:#fff;border:1px solid #dfe4e9;border-radius:12px;padding:20px 24px 24px;margin-bottom:20px}
+section>h2{margin:0 0 4px;font-size:17px;color:#0f766e;display:flex;align-items:center;gap:9px}
+section>h2 .no{display:inline-flex;min-width:23px;height:23px;padding:0 6px;border-radius:6px;background:#0f766e;color:#fff;font-size:12px;align-items:center;justify-content:center;font-weight:700}
+section>.hint{margin:0 0 16px;color:#6b7280;font-size:12.5px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:20px}
+.kpi{background:#fff;border:1px solid #dfe4e9;border-radius:12px;padding:15px 16px}
+.kpi .v{font-size:25px;font-weight:700;color:#0f766e;line-height:1.15;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:12.4px;color:#6b7280;margin-top:3px}
+.kpi .s{font-size:11.4px;color:#9aa4ae;margin-top:4px}
+.bars{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:20px}
+.bar-h{font-size:13px;font-weight:650;color:#374151;margin:0 0 10px}
+.row{display:grid;grid-template-columns:150px 1fr 74px;align-items:center;gap:10px;margin-bottom:7px}
+.row .nm{font-size:12.5px;color:#374151;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .tr{background:#eef2f5;border-radius:5px;height:19px;overflow:hidden}
+.row .fl{height:100%;border-radius:5px;background:linear-gradient(90deg,#14b8a6,#0f766e)}
+.row.alt .fl{background:linear-gradient(90deg,#fbbf24,#b45309)}
+.row.warn .fl{background:linear-gradient(90deg,#f87171,#b91c1c)}
+.row .vv{font-size:12.5px;color:#0f766e;font-weight:650;font-variant-numeric:tabular-nums;text-align:right}
+.row .vv small{color:#9aa4ae;font-weight:400}
+table{border-collapse:collapse;width:100%;font-size:12.8px}
+th,td{border-bottom:1px solid #eaeef2;padding:7px 9px;text-align:left;vertical-align:top}
+th{background:#eef2f5;font-size:12px;font-weight:650;color:#374151;position:sticky;top:0}
+tbody tr:hover{background:#f8fbfb}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap;color:#0f766e;font-weight:600}
+td.c{text-align:center}
+a{color:#0f766e;text-decoration:none}
+a:hover{text-decoration:underline}
+.tw{overflow-x:auto}
+.pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}
+.p-g{background:#dcfce7;color:#166534}
+.p-y{background:#fef3c7;color:#92400e}
+.p-b{background:#dbeafe;color:#1e40af}
+.p-r{background:#fee2e2;color:#991b1b}
+.p-z{background:#eef2f5;color:#57606a}
+.note{border-left:3px solid #0f766e;background:#f4f8f8;padding:11px 15px;border-radius:0 8px 8px 0;font-size:12.8px;color:#374151;margin:14px 0 0}
+.note.w{border-left-color:#f59e0b;background:#fffbf2}
+.note b{color:#0f766e}
+.note.w b{color:#b45309}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}.row{grid-template-columns:110px 1fr 60px}}
+.card{border:1px solid #dfe4e9;border-radius:10px;padding:13px 15px;background:#fff}
+.card h4{margin:0 0 8px;font-size:13.4px;color:#0f766e;display:flex;align-items:center;gap:7px}
+.card ol,.card ul{margin:0;padding-left:18px;font-size:12.6px;color:#3f4750}
+.card li{margin-bottom:5px}
+.case{border:1px solid #dfe4e9;border-radius:11px;padding:14px 16px;background:#fff;margin-bottom:12px}
+.case h4{margin:0 0 4px;font-size:14px;color:#1f2328}
+.case .sub{font-size:11.8px;color:#8b949e;margin-bottom:8px}
+.case .kpi3{display:flex;flex-wrap:wrap;gap:9px;margin:9px 0}
+.case .k{background:#f0f9f8;border:1px solid #d6e9e7;border-radius:8px;padding:6px 11px;font-size:12px}
+.case .k b{color:#0f766e;font-variant-numeric:tabular-nums;font-size:14px}
+.case p{margin:6px 0;font-size:12.7px;color:#3f4750}
+.quote{border-left:3px solid #d6e9e7;padding-left:11px;color:#57606a;font-size:12.5px;margin:8px 0}
+.lvl{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.lv{border:1px solid #dfe4e9;border-radius:11px;padding:13px 15px}
+.lv h4{margin:0 0 6px;font-size:13.2px}
+.lv.l1{background:#f7fef9;border-color:#bbf7d0}.lv.l1 h4{color:#166534}
+.lv.l2{background:#fffdf5;border-color:#fde68a}.lv.l2 h4{color:#92400e}
+.lv.l3{background:#f5f9ff;border-color:#bfdbfe}.lv.l3 h4{color:#1e40af}
+.lv.l4{background:#fdf6ff;border-color:#e9d5ff}.lv.l4 h4{color:#6b21a8}
+.lv ul{margin:0;padding-left:17px;font-size:12.4px;color:#3f4750}
+.lv li{margin-bottom:4px}
+footer{text-align:center;color:#8b949e;font-size:12px;padding:22px}
+.src{font-size:11.6px;color:#8b949e}
+.tag{display:inline-block;padding:0 6px;border-radius:4px;font-size:10.5px;background:#eef2f5;color:#57606a;margin-right:4px}
+.tag.g{background:#dcfce7;color:#166534}.tag.y{background:#fef3c7;color:#92400e}
+.tag.b{background:#dbeafe;color:#1e40af}.tag.r{background:#fee2e2;color:#991b1b}
+
+/* ================= 左侧导航栏（wb-sidebar） ================= */
+#wbsb{position:fixed;top:0;left:0;bottom:0;width:268px;background:#fff;border-right:1px solid #e3e8ed;overflow-y:auto;overflow-x:hidden;z-index:40;display:flex;flex-direction:column;font-size:13px}
+#wbsb::-webkit-scrollbar{width:8px}
+#wbsb::-webkit-scrollbar-thumb{background:#d5dde3;border-radius:4px}
+#wbsb::-webkit-scrollbar-track{background:transparent}
+#wbsb .sbb{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff;padding:15px 16px 14px;position:relative;flex:0 0 auto}
+#wbsb .sbb .t{font-size:14px;font-weight:650;line-height:1.35;padding-right:28px}
+#wbsb .sbb .s{font-size:11.3px;opacity:.85;margin-top:4px;line-height:1.5}
+#wbsb .sbc{position:absolute;top:12px;right:11px;border:0;background:#ffffff26;color:#fff;border-radius:6px;width:24px;height:24px;cursor:pointer;font:inherit;font-size:14px;line-height:1;padding:0}
+#wbsb .sbc:hover{background:#ffffff45}
+#wbsb .sbt{padding:13px 16px 5px;font-size:10.5px;letter-spacing:.7px;color:#9aa4ae;font-weight:700}
+#wbsb a.sbi,#wbsb button.sbi{display:flex;align-items:center;gap:8px;width:100%;padding:7px 15px 7px 13px;font-size:12.7px;color:#3f4750;text-decoration:none;border:0;border-left:3px solid transparent;background:none;cursor:pointer;font-family:inherit;text-align:left;line-height:1.45}
+#wbsb a.sbi:hover,#wbsb button.sbi:hover{background:#f2f7f7;color:#0f766e}
+#wbsb a.sbi.on{background:#eef7f6;color:#0f766e;font-weight:650;border-left-color:#0f766e}
+#wbsb .sbi .ic{flex:0 0 auto;width:15px;text-align:center;font-size:12px}
+#wbsb .sbi .tx{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+#wbsb .sbi .ct{flex:0 0 auto;font-size:10.6px;color:#9aa4ae;font-variant-numeric:tabular-nums}
+#wbsb a.sbi.on .ct{color:#0f766e}
+#wbsb .sbp{display:inline-flex;min-width:16px;height:16px;border-radius:4px;background:#eef2f5;color:#57606a;font-size:10px;align-items:center;justify-content:center;font-weight:700;flex:0 0 auto;padding:0 4px}
+#wbsb a.sbi.on .sbp{background:#0f766e;color:#fff}
+#wbsb .sbi.sub{padding-left:26px;font-size:12.2px;color:#57606a}
+#wbsb .sbi.sub .ct{display:none}
+#wbsb .sbdiv{height:1px;background:#eef1f4;margin:9px 14px;flex:0 0 auto}
+#wbsb .sbf{margin-top:auto;padding:11px 16px 16px;border-top:1px solid #eef1f4;font-size:11.2px;color:#9aa4ae;line-height:1.65;flex:0 0 auto}
+#wbsb .sbf a{color:#0f766e;text-decoration:none}
+#wbsb .sbf a:hover{text-decoration:underline}
+#wbsb .sbq{display:flex;flex-wrap:wrap;gap:5px;padding:4px 15px 8px}
+#wbsb .sbq button{border:1px solid #dfe4e9;background:#fafbfc;border-radius:6px;padding:3px 9px;font:inherit;font-size:11.4px;color:#4b5563;cursor:pointer}
+#wbsb .sbq button:hover{border-color:#0f766e;color:#0f766e;background:#f2f7f7}
+#wbsb .sbq button.on{border-color:#0f766e;background:#eef7f6;color:#0f766e;font-weight:650}
+#wbopen{position:fixed;top:10px;left:10px;z-index:41;display:none;border:0;background:#0f766e;color:#fff;border-radius:8px;width:36px;height:36px;font-size:17px;cursor:pointer;box-shadow:0 2px 10px #0003;line-height:1;padding:0}
+#wbopen:hover{background:#115e59}
+body{padding-left:268px}
+body.sb-hide{padding-left:0}
+body.sb-hide #wbsb{display:none}
+body.sb-hide #wbopen{display:block}
+body.sb-top{position:relative}
+#wbtop{position:fixed;right:20px;bottom:22px;z-index:39;border:0;background:#0f766e;color:#fff;border-radius:999px;padding:9px 15px;font:inherit;font-size:12.5px;cursor:pointer;box-shadow:0 3px 12px #0003;display:none}
+#wbtop:hover{background:#115e59}
+#wbtop.on{display:block}
+@media(max-width:900px){
+  body{padding-left:0}
+  #wbsb{transform:translateX(-101%);transition:transform .2s ease;box-shadow:0 0 22px #0004;z-index:60}
+  body.sb-hide #wbsb{display:flex;transform:translateX(-101%)}
+  body:not(.sb-hide) #wbsb{transform:none}
+  #wbopen{display:block;z-index:61}
+  body:not(.sb-hide) #wbopen{display:none}
+}
+#wbsbScrim{display:none;position:fixed;inset:0;background:#0b122066;z-index:55}
+@media(max-width:900px){#wbsbScrim.on{display:block}}
+body.sb-hide header{padding-left:56px}
+@media print{#wbsb,#wbopen,#wbtop{display:none!important}body{padding-left:0!important}}
+[id^="sb-"]{scroll-margin-top:14px}
+/* ============== 左侧导航栏结束 ============== */
+</style>
+</head>
+<body>
+<aside id="wbsb">
+  <div class="sbb">
+    <button class="sbc" id="wbsbc" title="收起侧边栏（快捷键 [ ）">«</button>
+    <div class="t" id="wbsbTitle">WorkBuddy 解决方案库</div>
+    <div class="s" id="wbsbSub">官方内容本地离线归档</div>
+  </div>
+  <div id="wbsbBody"></div>
+  <div class="sbf">
+    <div id="wbsbFoot"></div>
+  </div>
+</aside>
+<button id="wbopen" title="展开导航（快捷键 [ ）">☰</button>
+<button id="wbtop" title="回到顶部">↑ 顶部</button>
+
+
+<header>
+  <h1>AI / Agent 如何接入企业现有系统 —— 外部世界调研</h1>
+  <p>为 <b>WorkBuddy 693 个解决方案库</b>提供外部对照：外面成熟的做法、开源项目与已落地案例，分别是怎样让 AI 自动读写 ERP / CRM / MES / OA 这些「系统记录源（System of Record）」的。所有数字均为本次联网实测或原文引用，逐条标注来源与口径。</p>
+  <p style="margin-top:8px;font-size:12.6px;opacity:.86">调研时间：2026-10-16（Asia/Shanghai） · 数据口径：GitHub REST API 实时抓取 / 官方 MCP Registry 公共 API / 厂商官网与官方文档原文 / 公开报道</p>
+  <div class="navlinks">
+    <a href="./索引.html">← 返回索引（693 方案）</a>
+    <a href="./分析.html">多维度分析</a>
+    <a href="./README.md">README</a>
+    <a href="./全量清单.csv">全量清单.csv</a>
+  </div>
+</header>
+<div class="wrap">
+
+<div class="kpis" id="kpis"></div>
+
+<section>
+  <h2><span class="no">0</span>先看结论：一句话回答「外面的世界怎么做的」</h2>
+  <p class="hint">如果你只想记住一件事，就是这个。</p>
+  <div class="note" style="font-size:13.4px">
+    <b>结论：</b>WorkBuddy 走的是「<b>把文件扔进来 → 提示词 + 技能包 → 出文件</b>」的<b>外挂型</b>路线，不碰企业系统；
+    而外面世界的 2025–2026 主流答案只有一条 —— <b>把企业系统用 MCP（Model Context Protocol，模型上下文协议）包成「工具」，让 Agent 直接调用</b>。
+    这条路上已经有 ① 厂商官方（SAP / Salesforce / Dynamics 365 / Workday / ServiceNow / NetSuite / X）出原生 MCP Server；
+    ② 连接器层（Composio / Zapier MCP / n8n / Workato / AnythingMCP）把成千上万个业务 API 变成工具；
+    ③ 开源 ERP 自建（Odoo / ERPNext / 金蝶云星空 / ERP5）已能实测「17 秒查到库存、22 秒出财务表、直接审核单据」。
+    <b>两者不是替代关系</b>：外挂型解决「零改造、当天能用」，MCP 型解决「实时、可写、可审计」。真正的分水岭是<b>你是否愿意动企业的系统</b>。
+  </div>
+</section>
+
+<section>
+  <h2><span class="no">1</span>MCP 生态到底有多大：把「势头」换成数字</h2>
+  <p class="hint">MCP（Model Context Protocol，模型上下文协议）由 Anthropic 于 2024 年 11 月开源，是 Agent 调用外部工具与数据的通行协议。以下为 2026-10-16 实测或原文引用。</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:210px">指标</th><th style="width:110px">数值</th><th>口径与来源</th></tr></thead>
+    <tbody>
+      <tr><td>官方 Registry 上架 Server 数</td><td class="n">约 40,047</td><td>host0.ai《State of MCP 2026》（2026-10-06）对官方公共 API 的自行计数；同文称 2025-11 时「接近 2,000」，<b>约 20 倍增长</b>。registry 官方文档标注仍为 preview。</td></tr>
+      <tr><td>官方 Registry 条目（本次自测）</td><td class="n">≥ 6,000</td><td>本次直接分页调用 <code>registry.modelcontextprotocol.io/v0/servers?limit=100</code>，取前 60 页共 6,000 条<b>未触底</b>（仅用于验证 API 真实可用与量级，不作总数）。</td></tr>
+      <tr><td>SDK 月下载量（Python+TS）</td><td class="n">545M</td><td>host0.ai 自计 npm+PyPI，2026-08 峰值；2026-09 为 464M。<b>下载≠用户</b>，同文明确提示。</td></tr>
+      <tr><td>Anthropic 官方说法</td><td class="n">>10,000</td><td>其 2025-12 生态更新称「超过 10,000 个活跃公共 MCP Server」；另称 SDK 月下载 97M+（口径更窄，仅自家 SDK 统计周期）。</td></tr>
+      <tr><td>远端托管成为主流</td><td class="n">62.8%</td><td>registry 条目中提供 hosted endpoint 的比例；提供可安装包的为 40.9%。意思是「连 URL 就能用」已比「装个包」更常见。</td></tr>
+      <tr><td>互联网可达的 MCP 服务</td><td class="n">12,520</td><td>Censys 测绘；其中 <b>89.4% 停留在 2025-03 版协议</b>上（落后 5 个修订版）。</td></tr>
+      <tr><td>未认证的 MCP Server</td><td class="n">1,467</td><td>Trend Micro 统计，9 个月内接近三倍。→ 生态在裸奔式扩张。</td></tr>
+      <tr><td>企业生产采用率</td><td class="n">41%</td><td>Stacklok 2026 软件报告：41% 受访软件组织处于 MCP Server 的 limited 或 broad production 阶段。该报告<b>明确否定了流传甚广的「78% 生产采用」说法（无出处）</b>。</td></tr>
+      <tr><td>资本</td><td class="n">约 $211M</td><td>8 笔已披露融资合计；Arcade 收购 Smithery（知名公共 registry）；Snowflake 宣布收购 Natoma。</td></tr>
+      <tr><td>协议修订</td><td class="n">5 个版本</td><td>最新 2026-07-28 版把 MCP 改为<b>无状态（stateless）</b>：无握手、无 session，远端 Server「与任何其他 HTTP workload 无异」；Roots / Sampling / Logging / Dynamic Client Registration 被弃用并给 12 个月过渡期。</td></tr>
+      <tr><td>治理归属</td><td class="n">Linux Foundation</td><td>通过 <b>Agentic AI Foundation</b> 治理（Anthropic、OpenAI、Block 共同创立）。厂商采纳时间线：OpenAI 2025-03 → Google DeepMind 2025-04 → Microsoft 2025-07 → AWS 2025-11。</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="bars" style="margin-top:20px">
+    <div>
+      <p class="bar-h">SDK 月下载量增长（百万次 / 月，host0.ai 与 laterstack 口径）</p>
+      <div class="row"><span class="nm">2024-11</span><span class="tr"><span class="fl" style="width:0.2%"></span></span><span class="vv">0.1</span></div>
+      <div class="row"><span class="nm">2025-04</span><span class="tr"><span class="fl" style="width:1.5%"></span></span><span class="vv">8</span></div>
+      <div class="row"><span class="nm">2026-03</span><span class="tr"><span class="fl" style="width:17.8%"></span></span><span class="vv">97</span></div>
+      <div class="row"><span class="nm">2026-08 峰值</span><span class="tr"><span class="fl" style="width:100%"></span></span><span class="vv">545</span></div>
+    </div>
+    <div>
+      <p class="bar-h">官方 Registry Server 数增长</p>
+      <div class="row"><span class="nm">2025-11</span><span class="tr"><span class="fl" style="width:5%"></span></span><span class="vv">~2,000</span></div>
+      <div class="row"><span class="nm">2026-05-24</span><span class="tr"><span class="fl" style="width:24%"></span></span><span class="vv">9,652</span></div>
+      <div class="row"><span class="nm">2026-10-06</span><span class="tr"><span class="fl" style="width:100%"></span></span><span class="vv">40,047</span></div>
+      <p class="bar-h" style="margin-top:16px">互联网可达的 MCP 服务（Censys）</p>
+      <div class="row alt"><span class="nm">暴露在公网</span><span class="tr"><span class="fl" style="width:100%"></span></span><span class="vv">12,520</span></div>
+      <div class="row warn"><span class="nm">无认证保护</span><span class="tr"><span class="fl" style="width:11.7%"></span></span><span class="vv">1,467</span></div>
+      <div class="row warn"><span class="nm">停留在旧协议</span><span class="tr"><span class="fl" style="width:89.4%"></span></span><span class="vv">89.4%</span></div>
+    </div>
+  </div>
+
+  <div class="note w">
+    <b>反方观点也要听：</b>2026-10-06，Ampersand 创始人 Lauren Long 在 X / LinkedIn 上公开写道「<b>MCP is not an integration strategy</b>（MCP 不是一套集成战略）」，并以 $15M A 轮（Bessemer 领投）为这一判断融资。她的核心论点：把 Agent 接到客户的 Salesforce MCP 上「是不够的」——真正的难点在客户的<b>数据模型、权限、租户隔离与系统差异</b>，那是集成问题，不是协议问题。
+    另有 WunderGraph《The Missing Layer in AI Agent Architecture》直接把 MCP 称作「企业级 AI Agent 架构的天花板」，以及 The New Stack《The MCP debate has a context problem》质疑上下文成本。
+  </div>
+</section>
+
+<section>
+  <h2><span class="no">2</span>四条技术路线：从「不改系统」到「住进系统里」</h2>
+  <p class="hint">外面世界的做法不是一种，而是四层。越往下，能力越强、改造代价越大。</p>
+  <div class="lvl">
+    <div class="lv l1">
+      <h4>路线 A · 文件投喂（外挂型）</h4>
+      <p class="src">代表：WorkBuddy 693 方案 / ChatGPT 上传 / Claude Projects</p>
+      <ul><li>系统完全不动，人工导出 Excel/PDF/截图</li><li>当天可用、零 IT 参与</li><li>数据是「某一刻的快照」，读不到实时、写不回系统</li><li>不可审计、不可追溯来源</li></ul>
+    </div>
+    <div class="lv l2">
+      <h4>路线 B · 只读查询（MCP / API）</h4>
+      <p class="src">代表：IQMS 只读 MCP / 厂商 Hosted MCP Server</p>
+      <ul><li>把系统按只读权限包成工具，Agent 直接查</li><li>实时数据、可审计，风险最低</li><li>需要开 API / 建 Server，但不必改业务逻辑</li><li>多数企业落地从这一层开始</li></ul>
+    </div>
+    <div class="lv l3">
+      <h4>路线 C · 可写执行（带人类审批）</h4>
+      <p class="src">代表：金蝶 k3cloud MCP / ERP5 / CoolERP 记账</p>
+      <ul><li>Agent 能建单、过账、审核、改状态</li><li>必须叠加权限分级 + 审批兜底 + 审计留痕</li><li>需要处理幂等、回滚、并发与人机边界</li><li>风险与价值同时最高</li></ul>
+    </div>
+    <div class="lv l4">
+      <h4>路线 D · 嵌进系统 / 无 API 兜底</h4>
+      <p class="src">代表：钉钉悟空路线 C / RPA：UiPath、Skyvern、browser-use</p>
+      <ul><li>反向把 Agent 嵌进自家 CRM 页面里（用户无感）</li><li>或用 RPA / 浏览器自动化操作没有 API 的老系统</li><li>适合「改不动系统」又「必须动数据」的场景</li><li>稳定性差、维护成本高，属兜底手段</li></ul>
+    </div>
+  </div>
+
+  <div class="tw" style="margin-top:18px">
+  <table>
+    <thead><tr><th>维度</th><th>A 文件投喂</th><th>B 只读 MCP</th><th>C 可写 MCP</th><th>D 嵌入 / RPA</th></tr></thead>
+    <tbody>
+      <tr><td>是否要改企业系统</td><td class="c"><span class="pill p-g">完全不用</span></td><td class="c"><span class="pill p-y">开 API</span></td><td class="c"><span class="pill p-r">开 API + 权限</span></td><td class="c"><span class="pill p-r">可能直接改前端</span></td></tr>
+      <tr><td>数据实时性</td><td class="c">快照</td><td class="c">实时</td><td class="c">实时</td><td class="c">实时（模拟点击）</td></tr>
+      <tr><td>能否写回系统</td><td class="c"><span class="pill p-r">不能</span></td><td class="c"><span class="pill p-r">不能</span></td><td class="c"><span class="pill p-g">能</span></td><td class="c"><span class="pill p-y">能（脆弱）</span></td></tr>
+      <tr><td>上手周期（第三方经验）</td><td class="c">小时级</td><td class="c">天~周级</td><td class="c">周~月级</td><td class="c">周级起</td></tr>
+      <tr><td>审计与合规</td><td class="c"><span class="pill p-z">弱</span></td><td class="c"><span class="pill p-g">强</span></td><td class="c"><span class="pill p-g">强</span></td><td class="c"><span class="pill p-y">中</span></td></tr>
+      <tr><td>典型风险</td><td class="c">数据过时、口径不一致</td><td class="c">越权读取、凭证管理</td><td class="c">误操作、confused deputy</td><td class="c">UI 变更即失效</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note">
+    <b>第三方给出的周期参考：</b>整合服务商 summumia 在其技术博客中写明——把 Odoo / Sage / Dynamics 接到对话式助手，「只要 ERP 暴露可访问的 API（REST / JSON-RPC / OData），上线、权限配置与测试通常需要 <b>5 到 15 个工作日</b>」。这是路线 B/C 的现实节奏感，比「AI 一天就能接」的宣传务实得多。
+  </div>
+</section>
+
+<section>
+  <h2><span class="no">3</span>厂商官方已经下场：主流企业软件的 MCP 支持现状</h2>
+  <p class="hint">2026 年最重要的变化是——企业软件厂商自己开始提供官方 MCP Server，而不是等第三方逆向。以下均为官网 / 官方文档原文核实。</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:120px">厂商</th><th style="width:150px">产品名</th><th>能力（官方原文要点）</th><th style="width:88px">状态</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><b>SAP</b></td><td>ABAP MCP Server</td>
+        <td>SAP 官方文档《Agentic ABAP Development》写明这套能力「driven by MCP and Joule」。Joule Studio 负责 Agent 编排。全球约 500 万 ABAP 开发者。另 AWS 推出的 <b>AWS for SAP MCP Server</b> 把 SAP S/4HANA 与 ECC 的 <b>OData V2 服务</b>变成 Agent 的一等工具，跑在 Amazon Bedrock AgentCore 上。</td>
+        <td><span class="pill p-g">2026 Q2 GA</span></td>
+      </tr>
+      <tr>
+        <td><b>Salesforce</b></td><td>Hosted MCP Servers</td>
+        <td>官方开发者文档列出的支持方式：把 <code>@InvocableMethod</code> / <code>@AuraEnabled</code> / <code>@RestResource</code> 注解的 Apex <b>零新增代码</b>暴露为 MCP 工具；把 API Catalog 里注册的 REST 端点映射为工具；把 Lightning Flows 暴露为工具。内置 CRM Analytics（SAQL 只读查询，仅限 sandbox/scratch org）与 Data 360（SQL 查统一客户数据）。</td>
+        <td><span class="pill p-g">已上线</span></td>
+      </tr>
+      <tr>
+        <td><b>Microsoft</b></td><td>Dynamics 365 ERP MCP Server</td>
+        <td>Microsoft Learn 官方文档给的定位：ERP MCP server 提供<b>动态框架</b>让 Agent 执行数据操作与业务逻辑。官方列出的四条收益：跨应用访问数据与业务逻辑、跨 ERP 复用 Agent、<b>任何兼容的 Agent 平台都能访问 F&amp;O 工具</b>、一致的权限与可审计性。</td>
+        <td><span class="pill p-g">已上线</span></td>
+      </tr>
+      <tr>
+        <td><b>Workday</b></td><td>Agent-Ready Tools &amp; MCP</td>
+        <td>平台层提供一整套治理组件：「Agent System of Record」「Agent Passport」「Agent Analytics」「Agent Harness」；HR / 财务 / IT 各有专职 Agent（招聘、薪资、财务审计、采购）。2026-10-13 官宣与 Anthropic 合作，让 Workday 信息与审批动作可以在 Claude 里完成，并强调「<b>一个连接承载每家公司的权限、策略与审批</b>」。</td>
+        <td><span class="pill p-g">已上线</span></td>
+      </tr>
+      <tr>
+        <td><b>ServiceNow</b></td><td>Action Fabric</td>
+        <td>同时提供 MCP Server / MCP Client 与 A2A 支持；新闻稿标题原文「ServiceNow opens its full system of action to every AI Agent in the enterprise」。（页面被 Cloudflare 拦，标题来自检索结果，未能核到正文。）</td>
+        <td><span class="pill p-y">公告级</span></td>
+      </tr>
+      <tr>
+        <td><b>Oracle</b></td><td>NetSuite AI Connector / OIC</td>
+        <td>NetSuite 官方 MCP server（产品页 + 官方 FAQ + Oracle 开发者博客《Talking to Your ERP: NetSuite Meets Claude via MCP》）。Oracle 另有 AI Agent Studio + Oracle Integration Cloud 作为 Agent 执行层。The Register 2026-10-09 报道其新 Fusion Claw 运行时，并提醒「采用仍处早期、客户有被更紧绑定的风险」。</td>
+        <td><span class="pill p-g">已上线</span></td>
+      </tr>
+      <tr>
+        <td><b>X（推特）</b></td><td>Hosted MCP Server</td>
+        <td>2026-06-29/30 上线托管 MCP Server（<code>api.x.com/mcp</code>），把 <b>200+ API 端点</b>暴露给 Claude、Cursor、Codex、Grok 等；用<b>用户自己的 OAuth 权限</b>调用；2026-08-21 另推出 X Ads MCP（广告账户读写）。</td>
+        <td><span class="pill p-g">已上线</span></td>
+      </tr>
+      <tr>
+        <td><b>Darwinbox</b></td><td>HCM MCP Server</td>
+        <td>官方博客（2025-05-12）自称<b>全球首个推出 MCP Server 的 HCM（Human Capital Management，人力资本管理）平台</b>：任何 MCP 兼容 Agent 都能在客户环境内安全地与 Darwinbox 交互——发起动作、访问上下文数据、参与跨系统工作流。</td>
+        <td><span class="pill p-g">已上线</span></td>
+      </tr>
+      <tr>
+        <td><b>Zapier</b></td><td>Zapier MCP</td>
+        <td>官网首页原文：「Connect AI tools to <b>9,000 apps</b>」，可检索 <b>66,000+ triggers and actions</b>，带托管认证与权限控制；「Tell it what you want to do, and your agent searches Zapier's 9,000+ apps... to find the right tools」。</td>
+        <td><span class="pill p-g">已上线</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note">
+    <b>请注意这条时间线的含金量：</b>从 2024 年 11 月 Anthropic 开源 MCP，到 SAP / Salesforce / Microsoft / Workday / Oracle / X 全部给出<b>官方</b>支持，只用了不到两年。而同一时期，绝大多数「企业 AI 场景包」仍在用「导出 Excel 再上传」的方式工作。<b>这两条路线的时间差，就是本页最值得关注的信息。</b>
+  </div>
+</section>
+
+<section>
+  <h2><span class="no">4</span>真实落地案例（带硬数字，全部原文核实）</h2>
+  <p class="hint">只放能查到原文、且有具体数字或具体动作的案例。每条都标了归属方与出处性质。</p>
+
+  <div class="case">
+    <h4>① Rivian × AWS for SAP —— 为什么财务流程塞不进硬编码脚本</h4>
+    <div class="sub">来源：AWS for SAP 官方博客（aws.amazon.com/blogs/awsforsap/…）</div>
+    <p>Rivian 用 Amazon Bedrock AgentCore 自动化月末/季末结账文档、资源预测与供应商准入。官方博客给出的痛点原文极具代表性：<b>传统自动化（硬编码脚本）解决不了财务流程，因为业务逻辑太动态</b>——PO accruals（采购订单预提）要按金额阈值、PO 特性、交期、GAAP 条件规则去解释 SOP，<b>编码进去可能需要上千行 if-then-else，且业务规则一变就要开发介入</b>。</p>
+    <p class="quote">GenAI Agent 能直接读自然语言 SOP、按情境决策，规则变了不用重写程序。——这正是「文件 + 提示词」路线做不到、而「读系统 + 执行」路线才能做到的事。</p>
+    <p class="src">同系列另有 Covestro 用 AWS 上 AI Agent 改造主数据治理（Master Data Governance），以及方法论文《Transforming ERP Business Process Operations with Agentic AI》。</p>
+  </div>
+
+  <div class="case">
+    <h4>② 金蝶云星空 × 灵基（KingdeeMCP）—— 中国 ERP 的实测四场景</h4>
+    <div class="sub">来源：金蝶官方社区 vip.kingdee.com/article/879867537130394112（2026-08-25）+ 开源项目 WaHaiLong/KingdeeMCP（110★，Python，97 个工具）</div>
+    <p>在设置面板添加一个名为 <code>k3cloud</code> 的 MCP 服务器即完成连接，原文称「<b>没有中间件配置，没有接口联调，不需要 IT 部门排期</b>」，连上后<b>拥有直接读写星空 ERP 数据的能力</b>。四个实测场景：</p>
+    <div class="kpi3">
+      <span class="k">① 查库存 <b>17 秒</b></span>
+      <span class="k">② 查未关闭订单 <b>7 张筛出 2 张</b></span>
+      <span class="k">③ 财务月度分析 <b>22 秒</b></span>
+      <span class="k">④ 审核单据 <b>真的调接口通过</b></span>
+    </div>
+    <p><b>①</b> 问「查一下物料智能手机-6S 的即时库存」→ 自动查到物料编码 S1.06，按仓库分拆（手机成品仓 22 台、电商总仓 98 台，合计 120 台），与星空界面<b>逐行核对分毫不差</b>。<br>
+    <b>②</b> 问「查询客户金蝶东方集团的所有销售订单有多少张未关闭的」→ Agent <b>自己摸清关闭状态字段含义</b>（A=未关闭，B=已关闭），筛出 7 张已审核订单、其中 2 张未关闭。<br>
+    <b>③</b> 问「统计每月销售额…除了金蝶香港组织，按价税合计本位币计算，每月同比上月增加多少」→ 自动识别组织字段、排除编码 104 的香港公司、保留蓝海销售与蓝海电商，算出 1 月合计 <b>601,186 元</b>与 2 月环比。<br>
+    <b>④</b> 说「帮我审核一张费用申请单，申请人是 XXX」→ 查出待审核单据、逐张查看详情锁定李忠声那张 800 元单据、<b>调用审核接口通过</b>，并提示还有一张 500 元待审核。文中还提到它<b>会把 API 调用经验存进记忆</b>，下次不用重新摸索。</p>
+    <p class="src">技术栈：FastMCP（Python）。这是国内开源生态里与 WorkBuddy 场景最接近、但路线完全相反的样本——同一批业务问题，一边靠导 Excel，一边靠直连 ERP。</p>
+  </div>
+
+  <div class="case">
+    <h4>③ 制造业 ERP（IQMS / DELMIAworks）—— 一个人做的只读 MCP，一年省 300 小时</h4>
+    <div class="sub">来源：haydennester.com/case-studies/iqms-mcp（个人实战记录）</div>
+    <p>底层 Oracle，系统有 <b>1,500+ 张表</b>。作者 map 了 <b>1,587 张表、2,959 条外键关系</b>，建了一个<b>只读</b> MCP Server（SSE transport、Oracle python-oracledb、Claude Opus/Sonnet、把 schema 预载入 Agent 上下文、内网部署不外泄）。</p>
+    <div class="kpi3">
+      <span class="k">覆盖表 <b>1,587</b></span>
+      <span class="k">外键关系 <b>2,959</b></span>
+      <span class="k">作者自述年省 <b>约 300 小时</b></span>
+      <span class="k">≈ <b>$14K</b> 分析师人力</span>
+      <span class="k">写权限 <b>设计上为零</b></span>
+    </div>
+    <p class="quote">把工厂里的问题从「写 SQL 或等厂商报表队列」变成秒级回答。文章还专门解释了「为什么用 MCP 而不是做一个 Text-to-SQL 应用」。</p>
+  </div>
+
+  <div class="case">
+    <h4>④ Claude 连真实 ERP 记账 —— 「AI 跑在系统记录源里，而不是描述它」</h4>
+    <div class="sub">来源：aicoooffice.substack.com（2026-06-24，作者 Joost Vogelezang）</div>
+    <p>把 Claude 通过 MCP 连到一个叫 CoolERP 的真实 ERP demo。作者强调的三个「不是…而是…」：<b>模型不是总结试算表，而是拉取它</b>；不是描述 COGS 科目，而是下钻；<b>真的过账了一张 journal entry（日记账分录）</b>。</p>
+    <p>最有说服力的细节是反向验证：<b>故意过一张不平的凭证时，ERP 拒绝接受</b>。作者原话——「AI working inside the system of record with typed, governed tools and full audit visibility」（AI 运行在系统记录源之内，用的是有类型、受治理的工具，全程可审计）。</p>
+    <p class="src">这个案例说明了可写路线的安全边界在哪里：<b>不是让模型自己保证正确，而是让 ERP 的校验规则挡住错误</b>。</p>
+  </div>
+
+  <div class="case">
+    <h4>⑤ Workato × Anthropic —— 8 个月 800+ 个 MCP Server</h4>
+    <div class="sub">来源：claude.com/customers/workato（Anthropic 官方客户案例页）</div>
+    <div class="kpi3">
+      <span class="k">员工采用率 <b>7 倍</b></span>
+      <span class="k">8 个月建 <b>800+</b> 个自定义 MCP Server</span>
+      <span class="k">其中最后一个月 <b>150+</b></span>
+      <span class="k">底层连接 <b>14,000+ 应用</b></span>
+      <span class="k">预建 workflow <b>900,000+</b></span>
+    </div>
+    <p>Workato 提供 <b>100+ 全托管 MCP Server 模板</b>，把 Claude 连到 Salesforce / NetSuite / Workday 等。案例页给出的关键数字是「部署 MCP server 后员工采用率提升 7 倍」——<b>说明真正的瓶颈从来不是模型能力，而是「能不能动到数据」</b>。</p>
+  </div>
+
+  <div class="case">
+    <h4>⑥ Nexedi ERP5 —— 开源 ERP 官方自带 MCP，能建采购单</h4>
+    <div class="sub">来源：nexedi.com 官方文档（2026-09-20 更新）</div>
+    <p>ERP5 的官方 MCP Server 允许任何 MCP client（Claude、Open WebUI、Continue 或自写脚本）连到运行中的 ERP5 实例做 search / read / create / edit / <b>validate documents</b> / run reports，<b>甚至开发 ERP 本身</b>。文档提出「HATEOAS toolset」（超媒体即应用状态引擎风格的工具集）设计，示例动作就是「Create a purchase order for project Y with 1 quantity of this product」。</p>
+  </div>
+
+  <div class="case">
+    <h4>⑦ Block（Goose）—— 从「一次性定制集成」到「8 周铺满全公司」</h4>
+    <div class="sub">来源：aviator.co 播客（2025-12-11），嘉宾为 Block VP of Engineering Angie Jones</div>
+    <p>Block 的 Goose 是<b>最早的 MCP client 之一</b>，起点是 ML 工程师 Bradley Axton 的内部实验。转折点在于：工程师们想连各种内部系统，<b>但当时每个集成都是一次性定制的（bespoke one-off）</b>；于是他们找 Anthropic 拿到早期 MCP 规范、把 Goose 重写成 MCP client 并开源，<b>8 周内把 AI Agent 推广到公司每个部门</b>。</p>
+    <p class="src">这条经验的普适价值：<b>集成的边际成本决定 Agent 的扩散速度</b>。一对一写连接器，就只能服务一个部门；抽象成协议，才能铺满一家公司。</p>
+  </div>
+
+  <div class="case">
+    <h4>⑧ 中国制造业的「系统内嵌」实践：飞鹤、美的</h4>
+    <div class="sub">来源：快科技报道（2026-08-27，飞鹤）/ itcn.cc（2026-01-20，美的美云智数）</div>
+    <p><b>飞鹤 × 火山引擎 HiAgent：</b>10 余家智能工厂、<b>数字化生产设备占比超 90%</b>；已开发 <b>436 个智能体</b>，近三个月活跃用户超 24 万，Tokens 消耗接近 230 亿。其 AI TPM（智能化设备管理操作系统）基于飞鹤 EV 设备管理系统 + HiAgent + Hermes 智能体框架。</p>
+    <div class="kpi3">
+      <span class="k">覆盖工厂 <b>9 家</b></span>
+      <span class="k">故障恢复时长 <b>104h → 47h</b></span>
+      <span class="k">重复故障率 <b>34% → 8%</b></span>
+      <span class="k">服务工程师 <b>千余名</b></span>
+    </div>
+    <p class="quote">飞鹤 AI 负责人原话：「效果最明显的场景，一般不是那些比较炫酷的，而是<b>高频的、重复的、数据基础比较好的、能够嵌入到我们业务流程中</b>的场景。」——这句话几乎可以直接当作 WorkBuddy 选型指南的注脚。</p>
+    <p><b>美的 / 美云智数：</b>推出制造 AI 智能体（美擎 TPM / DMS / LOSS / 模具），<b>与 MES、EAM/TPM、SCADA、QMS 等业务系统及现场 PLC、AGV、传感器打通</b>，底座是「企业数据银行」+ 多域知识库。落地证据：美的荆州洗衣机智能体工厂获 WRCA 认证；<b>美的厨卫电器（芜湖）工厂为世界经济论坛 2026-01-16 新晋灯塔工厂</b>，部署 <b>113 个数字化用例、其中约 35% 由 AI 驱动</b>，实现交货周期缩短 <b>39%</b>、库存周转天数减少 <b>30%</b>、市场缺陷率下降 <b>86%</b>。</p>
+    <p class="src">这两家与 WorkBuddy 的根本区别：<b>它们啃的是「与业务系统打通」这块硬骨头</b>，所以代价是数年投入与专职团队，收益是可量化的产线指标。</p>
+  </div>
+
+  <div class="case">
+    <h4>⑨ 一条务实的分档建议：钉钉悟空的 A / B / C 三路线</h4>
+    <div class="sub">来源：开沿科技《钉钉悟空 API 接入 ERP 集成》长文（2026-06-14）</div>
+    <p>文中给了一个 80 人鞋服批发企业的真实翻车现场：开通悟空一个月，销售在群里 @ 悟空问「这个客户上个季度发了多少货」答得头头是道，<b>但只能基于上传的知识库回答，查实时库存、回款、在途订单一概不知</b>。</p>
+    <p>据此给出的三条路线与选择逻辑：<b>路线 A 原生 Skill 包装</b>（ERP 有标准开放 API 时写薄中间层，投入小上线快，以查询类为主）；<b>路线 B 自定义 Skill 写动作</b>（提交报销、创建客户、生成调拨单——难点在权限、审批流、防误操作，「<b>不能让 Agent 随便代下游员工签字</b>」）；<b>路线 C 反向把 Agent 嵌进自有应用</b>（CRM 详情页右侧放对话区，用户感知在自家系统内完成，对话流可在自家留痕）。</p>
+    <p class="quote">最容易翻车的地方：把所有数据怼进知识库 → <b>静态文档答得准、动态业务数据全是幻觉</b>。正确分工是静态慢变内容走 RAG（检索增强生成），实时业务数据走结构化查询。</p>
+  </div>
+
+  <div class="note">
+    <b>规模参照：</b>McKinsey《The State of AI: Global Survey 2026》——年收入超 10 亿美元的大型组织里，<b>40% 表示正在规模化使用 AI Agent，高于去年的 27%</b>；但小型企业基本持平在 22%。该文与多个分析一致指出：<b>差距来自实施能力，不是软件成本</b>。
+  </div>
+</section>
+
+<section>
+  <h2><span class="no">5</span>GitHub 上的开源项目地图（星标均为 2026-10-16 实时抓取）</h2>
+  <p class="hint">这部分回答「我能不能直接拿来用」。分五层罗列。</p>
+
+  <p class="bar-h" style="margin-top:6px">第一层 · 协议与官方工具链</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:300px">仓库</th><th style="width:90px">星标</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://github.com/modelcontextprotocol/servers">modelcontextprotocol/servers</a></td><td class="n">91,289★</td><td>MCP 官方参考实现集合。README <b>明确声明这只是参考实现、不是生产就绪方案</b>，并指向官方 Registry。</td></tr>
+      <tr><td><a href="https://github.com/modelcontextprotocol/python-sdk">modelcontextprotocol/python-sdk</a></td><td class="n">24,591★</td><td>官方 Python SDK。</td></tr>
+      <tr><td><a href="https://github.com/modelcontextprotocol/typescript-sdk">modelcontextprotocol/typescript-sdk</a></td><td class="n">13,588★</td><td>官方 TypeScript SDK。</td></tr>
+      <tr><td><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a></td><td class="n">7,366★</td><td>社区驱动的 Registry 服务（Go）。</td></tr>
+      <tr><td><a href="https://github.com/a2aproject/A2A">a2aproject/A2A</a></td><td class="n">26,166★</td><td>Agent2Agent 协议（Agent 之间互相调用），与 MCP 互补：MCP 连工具，A2A 连 Agent。</td></tr>
+      <tr><td><a href="https://github.com/PrefectHQ/fastmcp">PrefectHQ/fastmcp</a></td><td class="n">28,092★</td><td>写 MCP Server 最常用的 Python 框架（金蝶 KingdeeMCP 就是用它）。</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="bar-h" style="margin-top:18px">第二层 · 把业务系统变成工具（与企业系统集成最相关）</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:300px">仓库</th><th style="width:70px">星标</th><th style="width:80px">语言</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://github.com/HelpCode-ai/anythingmcp">HelpCode-ai/anythingmcp</a></td><td class="n">748★</td><td>TS</td><td>自托管 MCP 网关：把任意 <b>REST/OpenAPI、SOAP、GraphQL、OData 或 SQL</b> 直接变成 MCP 工具。<b>474 个预置连接器，含 SAP S/4HANA 与 Business One</b>。企业「不动代码就接老系统」的最短路径。</td></tr>
+      <tr><td><a href="https://github.com/w8123/EnterpriseAgentFramework">w8123/EnterpriseAgentFramework</a></td><td class="n">919★</td><td>Java</td><td>ReachAI 企业级智能体平台：目标原文「快速、安全完成已有业务系统智能化改造，让 AI 在 <b>OA、ERP、CRM 等原系统中查数据、填表单、办业务</b>」。国产、活跃（2026-10-15 有推送）。</td></tr>
+      <tr><td><a href="https://github.com/ivnvxd/mcp-server-odoo">ivnvxd/mcp-server-odoo</a></td><td class="n">405★</td><td>Python</td><td>Odoo ERP 的标准 MCP Server，支持数据读取与写入。</td></tr>
+      <tr><td><a href="https://github.com/getrebuild/rebuild">getrebuild/rebuild</a></td><td class="n">1,080★</td><td>Java</td><td>国产低代码企业管理系统（WMS/MES/CRM/HRM/TMS），新版全面支持「自然语言操作业务数据，支持 Skills/工具/知识库/MCP」，企业内部可免费商用。</td></tr>
+      <tr><td><a href="https://github.com/oc8-ai/oc8">oc8-ai/oc8</a></td><td class="n">129★</td><td>Python</td><td>开源 AI 业务编排平台：在 <b>ERP、CRM、Microsoft 365</b> 之间运行「受治理的 Agent」。</td></tr>
+      <tr><td><a href="https://github.com/bailinghub/bailinghub">bailinghub/bailinghub</a></td><td class="n">151★</td><td>TS</td><td>中文项目，定位精准：「让 Agent 通过对话直接操作你的商城、SaaS、CRM 或 ERP 后台，<b>同时保留原有权限、审批与审计</b>」。话题标签含 human-in-the-loop、audit-trail、tool-governance。</td></tr>
+      <tr><td><a href="https://github.com/WaHaiLong/KingdeeMCP">WaHaiLong/KingdeeMCP</a></td><td class="n">110★</td><td>Python</td><td>金蝶云星空 MCP Server（97 个工具），即上面案例②的主角。国内 ERP 这一赛道还很小（Python 检索「erp mcp server」仅 <b>107 个</b>仓库）。</td></tr>
+      <tr><td><a href="https://github.com/dynamics365ninja/d365fo-mcp-server">dynamics365ninja/d365fo-mcp-server</a></td><td class="n">157★</td><td>TS</td><td>D365 Finance &amp; Operations 的 MCP Server，特色是「<b>在 AI 写代码之前，先用真实元数据证明每个方法、字段、标签与表单模式</b>」——防幻觉的工程化做法。</td></tr>
+      <tr><td><a href="https://github.com/erp-mafia/accounted">erp-mafia/accounted</a></td><td class="n">416★</td><td>TS</td><td>「The Open Source ERP Built for Agents」——从设计之初就假设用户是 Agent 的新一代 ERP。</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="bar-h" style="margin-top:18px">第三层 · 连接器 / 认证 / 网关（企业落地的真正门槛）</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:300px">仓库</th><th style="width:80px">星标</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://github.com/ComposioHQ/composio">ComposioHQ/composio</a></td><td class="n">30,575★</td><td>「1000+ toolkits, tool search, context management, authentication, sandboxed workbench」。提供 <b>per-user session</b>，适配 OpenAI Agents / Claude Agent SDK / Vercel AI SDK / LangChain。</td></tr>
+      <tr><td><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a></td><td class="n">14,580★</td><td>定位已改为「<b>Agent-first</b> Identity and Access Management（IAM，身份与访问管理）」，即把 Agent 当成一等身份来管。</td></tr>
+      <tr><td><a href="https://github.com/archestra-ai/archestra">archestra-ai/archestra</a></td><td class="n">4,372★</td><td>「Enterprise AI Platform with guardrails, MCP registry, gateway &amp; orchestrator」——企业护栏 + 网关 + 编排。</td></tr>
+      <tr><td><a href="https://github.com/ascending-llc/jarvis-registry">ascending-llc/jarvis-registry</a></td><td class="n">3,603★</td><td>「Connect any AI copilot or autonomous agent to your <b>enterprise tools</b> — through a single, secure…」。</td></tr>
+      <tr><td><a href="https://github.com/agentic-community/mcp-gateway-registry">agentic-community/mcp-gateway-registry</a></td><td class="n">984★</td><td>企业级 MCP 网关与注册中心，带 OAuth 安全。</td></tr>
+      <tr><td><a href="https://github.com/chaitin/OctoBus">chaitin/OctoBus</a></td><td class="n">203★</td><td>长亭科技：给 AI Agent 用的本地安全网关，可靠调用<b>经批准的</b>企业 API 与工具。</td></tr>
+      <tr><td><a href="https://github.com/docker/mcp-gateway">docker/mcp-gateway</a></td><td class="n">1,601★</td><td>Docker 官方 MCP 网关（Go）。</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="bar-h" style="margin-top:18px">第四层 · 工作流与 Agent 编排（把工具串成业务流）</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:300px">仓库</th><th style="width:80px">星标</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://github.com/n8n-io/n8n">n8n-io/n8n</a></td><td class="n">207,537★</td><td>「400+ integrations」，且原生支持 MCP；官网另称有 <b>10,000+ 工作流模板</b>。开源自动化的事实标准。</td></tr>
+      <tr><td><a href="https://github.com/langgenius/dify">langgenius/dify</a></td><td class="n">158,591★</td><td>LLM 应用开发平台，国内使用极广，内置 Agent 与工具编排。</td></tr>
+      <tr><td><a href="https://github.com/langchain-ai/langgraph">langchain-ai/langgraph</a></td><td class="n">43,324★</td><td>有状态多 Agent 编排框架，企业级 Agent 最常用的底座之一。</td></tr>
+      <tr><td><a href="https://github.com/crewAIInc/crewAI">crewAIInc/crewAI</a></td><td class="n">59,745★</td><td>角色化多 Agent 协作框架。</td></tr>
+      <tr><td><a href="https://github.com/activepieces/activepieces">activepieces/activepieces</a></td><td class="n">25,063★</td><td>「~400 MCP servers for AI agents」的开源自动化平台。</td></tr>
+      <tr><td><a href="https://github.com/iflytek/astron-agent">iflytek/astron-agent</a></td><td class="n">8,903★</td><td>科大讯飞：企业级、商用友好的 Agentic 工作流平台。</td></tr>
+      <tr><td><a href="https://github.com/iflytek/astron-rpa">iflytek/astron-rpa</a></td><td class="n">5,271★</td><td>「Agent-ready RPA suite」——路线 D（无 API 兜底）的国产代表。</td></tr>
+      <tr><td><a href="https://github.com/Skyvern-AI/skyvern">Skyvern-AI/skyvern</a> / <a href="https://github.com/browser-use/browser-use">browser-use</a></td><td class="n">23,211★ / 118,097★</td><td>用视觉 + LLM 操作浏览器：老系统没有 API 时的兜底手段。</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="bar-h" style="margin-top:18px">第五层 · 被 Agent 直接「吃」的系统（信号意义大于工具意义）</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:300px">仓库</th><th style="width:80px">星标</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://github.com/odoo/odoo">odoo/odoo</a></td><td class="n">55,070★</td><td>开源 ERP 主力（Python）。已有多个 MCP Server 围绕它生长。</td></tr>
+      <tr><td><a href="https://github.com/frappe/erpnext">frappe/erpnext</a></td><td class="n">40,208★</td><td>开源 ERP，同样有 erpnext-mcp-server 等社区实现。</td></tr>
+      <tr><td><a href="https://github.com/twentyhq/twenty">twentyhq/twenty</a></td><td class="n">58,401★</td><td>自述「open alternative to Salesforce, <b>designed for AI</b>」——CRM 从设计起就假设有 Agent。</td></tr>
+      <tr><td><a href="https://github.com/nocodb/nocodb">nocodb/nocodb</a></td><td class="n">65,286★</td><td>开源 Airtable 替代，天然适合给 Agent 当结构化数据底座。</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    <b>这张地图怎么读：</b>第一层是「协议」、第二层是「能连什么」、第三层是「怎么安全地连」、第四层是「连起来之后怎么编排」、第五层是「系统本身在变成 Agent 友好」。<b>唯一没有被这张地图覆盖的，恰恰是 WorkBuddy 的方式——把文件复制出来再喂给模型。</b>这不是说它错，而是说它是一个<b>在集成层之外另开的一条路</b>。
+  </div>
+</section>
+
+<section>
+  <h2><span class="no">6</span>为什么大部分 Agent 项目卡住：失败的真正原因与安全边界</h2>
+  <p class="hint">这一节回答「那为什么不都去做？难在哪？」——也直接解释了 WorkBuddy 为什么要选择外挂路线。</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h4>口径必须先分清（否则数字会骗人）</h4>
+      <p style="font-size:12.7px;color:#3f4750;margin:0 0 8px">「88%」「89%」「95%」「40%」这些数字经常被混用，但它们测的根本不是同一件事。据 alatirok.com 的逐条溯源：</p>
+      <ul>
+        <li><b>40%</b> — Gartner：<b>预测</b>到 2027 年底超过 40% 的 agentic AI 项目会被取消。<span class="tag g">唯一真正针对 Agent 的权威数字</span></li>
+        <li><b>88% / 89%</b> — 多个来源引用的「Agent 试点未进生产」比例，AWS 官网 banner 原文也在用「88% of agent pilots stall」。<span class="tag y">口径为试点阶段</span></li>
+        <li><b>95%</b> — MIT 的生成式 AI 试点研究，<b>测的是 GenAI 试点而非 Agent</b>。<span class="tag r">不可直接套用</span></li>
+        <li><b>41%</b> — Stacklok：软件组织中已进入 MCP 生产阶段的比例。<span class="tag b">正面口径</span></li>
+        <li><b>40% vs 22%</b> — McKinsey 2026：大企业（>10 亿美元营收）规模化使用 Agent 的比例 vs 小企业。<span class="tag b">能力差距</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>卡点排序：不是模型不行，是集成不行</h4>
+      <ul>
+        <li><b>第一名：集成。</b>dynamisch.co 直接把文章命名为《The Integration Wall》（集成墙），主张失败主因是集成而非模型能力。</li>
+        <li><b>第二名：认证与授权。</b>agent 从「单用户 demo」走向「多用户企业部署」时<b>认证最先崩</b>——原型可以用环境变量或共享 service account，生产必须做委托授权、凭据隔离、策略执行与审计追踪。</li>
+        <li><b>第三名：上下文成本。</b>Anthropic 实测 5 个 Server 的工具定义就要吃掉 <b>55K tokens</b>；工具搜索与代码执行等优化可削减 <b>85%–99.9%</b>。GitHub 甚至把自己家的 MCP Server 换成 gh CLI 来做数据抓取。</li>
+        <li><b>第四名：权限与「越权代签」。</b>不能让 Agent 随便代下游员工签字——这是写权限路线必须挡住的坑。</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="bar-h" style="margin-top:20px">认证为什么会先崩：Agent 引入的新身份问题（Arcade.dev《7 Best AI Agent Authentication Platforms (2026)》核心论点）</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:230px">风险</th><th>原意</th><th style="width:280px">后果</th></tr></thead>
+    <tbody>
+      <tr><td><b>Credential drift</b>（凭据漂移）</td><td>原型期的共享密钥被沿用到生产</td><td>无法区分「是谁让 Agent 做的这件事」</td></tr>
+      <tr><td><b>Confused deputy</b>（混淆代理）</td><td>Agent 拥有高权限，用户通过间接提示注入借它之手越权</td><td>AI 成了「有权限但被骗」的执行者 —— 2026 年最被反复讨论的攻击面</td></tr>
+      <tr><td>过宽 API key</td><td>一次授权覆盖所有租户/所有动作</td><td>越权读取、跨系统数据外泄</td></tr>
+      <tr><td>限流冲突</td><td>多 Agent 共享同一凭据配额</td><td>互相挤兑，生产不稳定</td></tr>
+      <tr><td>策略不一致</td><td>同一动作在不同入口判定不同</td><td>审计无法解释</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note">
+    <b>耐久模式：「两个身份 + 委托上下文」。</b>不是给 Agent 一个万能身份，而是同时携带 <b>Agent 身份</b> 与 <b>用户身份</b>，并在运行期评估一个<b>任务级授权上下文</b>（task-specific authorization context），每次动作都取权限交集。<br>
+    <b>延伸阅读：</b>OWASP 的 MCP Security Cheat Sheet 与 MCP Tool Poisoning 条目；微软 <code>MCP-SECURITY-GATEWAY-1.0</code> 规范；arXiv 2511.20920《Securing the Model Context Protocol (MCP): Risks, Controls, and Governance》——该文把攻击面分成数据驱动（用户生成内容注入、跨系统外泄）、供应链（registry 信任、<b>rugpull 攻击</b>、通过工具描述做上下文投毒）、配置治理（过度授权、动态工具发现）、运行安全（PII 合规、密钥暴露、多 Agent 监控层威胁）四类，并特别提到一类对手：<b>善意但出错的 Agent 自己</b>。
+  </div>
+</section>
+
+<section>
+  <h2><span class="no">7</span>对照：WorkBuddy 693 方案 vs 外部世界</h2>
+  <p class="hint">把本地实测的数字和外面的做法放在同一张表里。左边数字来自本机 693 个方案的全文扫描，右边来自本页前六节的调研。</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:190px">维度</th><th style="width:280px">WorkBuddy 693 个方案（本地实测）</th><th>外部世界主流做法（2026-10）</th></tr></thead>
+    <tbody>
+      <tr><td><b>接入方式</b></td><td>人工导出文件 + 上传到对话框</td><td>MCP Server / API 直连</td></tr>
+      <tr><td><b>MCP 提及</b></td><td class="n">2 / 693（0.29%）</td><td class="n">官方 Registry 约 40,047 个 Server</td></tr>
+      <tr><td><b>数据实时性</b></td><td>快照（导出那一刻）</td><td>实时查询</td></tr>
+      <tr><td><b>能否写回</b></td><td class="n">0（产出文件型 693/693）</td><td>厂商原生 MCP 普遍支持写（含审批闸门）</td></tr>
+      <tr><td><b>输入来源</b></td><td>xlsx 1,013 / txt 223 / docx 43 / csv 6 / pdf 4</td><td>系统字段、表、业务对象</td></tr>
+      <tr><td><b>技术形态</b></td><td>SKILL.md（286/286）+ references/*.md（578 个全为 Markdown）；<b>含代码文件的技能包 0 个</b></td><td>代码 + 协议 + 网关 + 身份</td></tr>
+      <tr><td><b>企业系统关系</b></td><td>提到系统名 162 个方案；真正要求对接的极少，且多为「<b>不要求打通</b>」的显式排除承诺</td><td>SAP / Salesforce / D365 / Workday / NetSuite / X 均出官方 MCP Server</td></tr>
+      <tr><td><b>嵌入现有系统</b></td><td class="n">0（正则扫描全库零命中）</td><td>钉钉路线 C：把 Agent 嵌进自家 CRM 页面；IoT/ERP 内嵌 Agent</td></tr>
+      <tr><td><b>人在环</b></td><td class="n">585 / 693 要求人工把关</td><td>写权限路线普遍要求审批闸门 + 审计留痕（Workday 明确「一个连接承载权限、策略与审批」）</td></tr>
+      <tr><td><b>上线周期</b></td><td>小时级（装技能包即用）</td><td>第三方经验值 <b>5–15 个工作日</b>（仅接通已有 API 的 ERP）</td></tr>
+      <tr><td><b>可审计性</b></td><td>弱（对话与文件散落本地）</td><td>强（走系统权限、动作留痕）</td></tr>
+      <tr><td><b>企业改造代价</b></td><td class="n">零</td><td>高（要开 API、建 Server、配身份与权限）</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note w">
+    <b>关键判断（请允许我说得直白）：</b>这不是「WorkBuddy 落后」——这是一次<b>刻意的取舍</b>。它把「企业改造」这一项成本从方案里彻底删掉，代价是把「实时、可写、可审计」三项能力也一并删掉了。
+    对 <b>一个 200 人以下、IT 只有一个兼职、ERP 是五年前买的</b> 的企业来说，这个取舍是<b>对的</b>：外面那套 MCP 集成要 5–15 个工作日 + 身份权限设计，而这套方案当天下午就能跑出结果。
+    但如果企业已经<b>有 API、有人、有合规要求</b>，那就应该走 MCP 路线，因为「导出 Excel 再上传」在那种环境下反而变成新的风险点——数据副本散落、口径不一致、无审计。
+  </div>
+  <div class="note">
+    <b>一个可以直接用的判断标准（来自案例③的作者）</b>：如果你的需求是「<b>读</b>」——优先只读 MCP，风险最低收益立竿见影（他靠只读一年省了 300 小时）；如果需求包含「<b>写</b>」——那先问清楚三件事：谁授权、谁来复核、出错谁负责。三个都答不上来，就先别开写权限。
+  </div>
+</section>
+
+<section>
+  <h2><span class="no">8</span>如果你要往前走一步：按优先级排的行动清单</h2>
+  <p class="hint">从「今天就能做」到「需要立项」，按代价从小到大。</p>
+  <div class="lvl">
+    <div class="lv l1">
+      <h4>第 1 步 · 今天（零成本）</h4>
+      <ul>
+        <li>先把 WorkBuddy 的 693 个方案用起来——<b>它是零改造路线的天花板</b></li>
+        <li>挑第一个场景：打开 <a href="./索引.html">索引.html</a>，按自己的角色筛选，看「最大差异点」是否正好是你的痛点</li>
+        <li>把「高频、重复、数据基础好」的三条作为选型硬标准</li>
+      </ul>
+    </div>
+    <div class="lv l2">
+      <h4>第 2 步 · 本周（验证）</h4>
+      <ul>
+        <li>盘一下：你常用系统里<b>哪些有开放 API</b>（金蝶、用友、钉钉、企微、飞书大多有）</li>
+        <li>装一个 MCP 客户端（Claude / Cursor / Cherry Studio 等），先连<b>一个只读</b>的官方或社区 MCP Server 试手感</li>
+        <li>读一遍 OWASP 的 MCP Security Cheat Sheet，知道攻击面长什么样</li>
+      </ul>
+    </div>
+    <div class="lv l3">
+      <h4>第 3 步 · 本月（试点）</h4>
+      <ul>
+        <li>选一个「读多写少」的场景做只读 MCP 试点（参考案例③：先只读，写权限设为零）</li>
+        <li>老系统没 API？用 <b>AnythingMCP</b> 这类网关把 REST/SOAP/GraphQL/OData/SQL 直接转成工具</li>
+        <li>为每个 Agent 建立<b>独立身份 + 委托上下文</b>，不要复用共享密钥</li>
+      </ul>
+    </div>
+    <div class="lv l4">
+      <h4>第 4 步 · 立项（写权限）</h4>
+      <ul>
+        <li>只做「<b>Agent 出草稿 → 人点确认 → 系统执行</b>」的三段式，绝不让 Agent 直接落库</li>
+        <li>把审批流、权限分级、审计留痕当<b>前置条件</b>而不是后续优化</li>
+        <li>用系统的校验规则兜底（参考案例④：不平的凭证被 ERP 拒绝）</li>
+        <li>衡量指标对齐飞鹤那句话：高频、重复、数据基础好、能嵌进流程</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="no">9</span>来源清单与可信度标注</h2>
+  <p class="hint">按可信度分级。凡标「未能核实」的，请在决策前自行复核。</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:130px">级别</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td><span class="pill p-g">一手实测</span></td><td>GitHub 全部星标数（api.github.com 实时抓取，2026-10-16）；MCP 官方 Registry 分页 API（本次取到 ≥6,000 条未触底）；Zapier 官网首页「9,000 apps / 66,000+ triggers」原文。</td></tr>
+      <tr><td><span class="pill p-g">官方原文</span></td><td>SAP 官方文档与 SAP News；Salesforce 开发者文档 Hosted MCP Servers 页；Microsoft Learn Dynamics 365 F&amp;O MCP 文档；Workday 官网 MCP 页与 2026-10-13 新闻稿；NetSuite 产品页与 Oracle 开发者博客；Nexedi ERP5 官方文档；AWS for SAP MCP Server 官方文档与 GA 公告；金蝶官方社区文章；钉钉悟空集成长文；Anthropic 客户案例页（Workato）。</td></tr>
+      <tr><td><span class="pill p-y">第三方研究与媒体</span></td><td>host0.ai《State of MCP 2026》（2026-10-06，含 Censys / Trend Micro 数据转引）；digitalapplied.com《MCP Adoption Statistics 2026》（含 Stacklok 数据）；laterstack.com；Arcade.dev《7 Best AI Agent Authentication Platforms (2026)》；Truto《Connect AI Agents to NetSuite &amp; SAP via MCP: The 2026 Architecture Guide》；alatirok.com《AI Agent Failure Rate 2026: The Real Data, Reconciled》；dynamisch.co《The Integration Wall》；McKinsey《The State of AI: Global Survey 2026》（经检索摘要引用）；The Register 2026-10-09（Oracle Fusion Claw）；快科技（飞鹤）；itcn.cc（美的）；Amazon/AWS 博客（Rivian、Covestro）；haydennester.com（IQMS 只读 MCP）；aicoooffice.substack.com（Claude 记账）。</td></tr>
+      <tr><td><span class="pill p-r">未能核实 / 仅标题</span></td><td>ServiceNow Action Fabric 正文（Cloudflare 拦截，仅得标题）；Pinterest 工程博客正文；PhonePe Engineering Agent Hub 正文；Synechron Xero 案例正文；cloudwars.com（D365 at Vast Scale，403）；Deloitte 2026 tech trends 页（404）；三一集团原文（正文被导航淹没，未取到数字）。<b>这些未作为关键论据使用。</b></td></tr>
+      <tr><td><span class="pill p-b">反方观点（已收录）</span></td><td>Lauren Long（Ampersand）「MCP is not an integration strategy」（2026-10-06，X / LinkedIn 原文）；WunderGraph《The Missing Layer in AI Agent Architecture》；The New Stack《The MCP debate has a context problem》。</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note w" style="margin-top:16px">
+    <b>关于数字的诚实声明：</b>Registry Server 数量存在多个互相冲突的口径（~40,047 / 9,652 / >10,000），差异来自统计时间、是否去重、是否只算 latest 版本。本页<b>全部保留并标注来源</b>，不做取舍合并——因为任何一个单独引用都会误导。
+    同理，「Agent 试点失败率」的 88% / 89% / 95% / 40% 测的不是同一件事，本页在第 6 节逐条拆开标注。
+  </div>
+</section>
+
+<footer>
+  AI/Agent 接入企业系统 · 外部调研 —— 为 WorkBuddy 解决方案库（693 个方案）提供外部对照<br>
+  调研时间 2026-10-16（Asia/Shanghai） · 全部数据与链接均可点击回溯 · 本页可离线打开
+</footer>
+</div>
+<script>
+(function(){
+  var KPI = [
+    ['40,047','官方 Registry Server 数','host0.ai 计数（2026-10-06）'],
+    ['545M','SDK 月下载量（峰值）','npm+PyPI，2026-08'],
+    ['41%','软件组织已进 MCP 生产','Stacklok 2026 报告'],
+    ['9','厂商官方 MCP Server','SAP/Salesforce/MS/Workday/Oracle/X/NetSuite/Darwinbox/Zapier'],
+    ['12,520','互联网可达 MCP 服务','Censys 测绘'],
+    ['1,467','其中无认证保护','Trend Micro，9 个月近 3 倍'],
+    ['2 / 693','WorkBuddy 提及 MCP 的方案','本地全库扫描'],
+    ['0','WorkBuddy 嵌入现有系统的方案','本地全库正则零命中'],
+    ['5–15 天','接通已有 API 的 ERP 的周期','整合商 summumia 经验值']
+  ];
+  var h = KPI.map(function(k){
+    return '<div class="kpi"><div class="v">' + k[0] + '</div><div class="l">' + k[1] + '</div><div class="s">' + k[2] + '</div></div>';
+  }).join('');
+  var el = document.getElementById('kpis');
+  if (el) el.innerHTML = h;
+})();
+</script>
+<script>
+window.__SB = {
+  title: 'AI 接入企业系统调研',
+  sub: '2026-10-16 · 外部对照',
+  autoSections: 'section',
+  groups: [
+    { label: '调研主体', items: [
+      { id: 'sb-s1', no: '0', tx: '先看结论' },
+      { id: 'sb-s2', no: '1', tx: 'MCP 生态规模' },
+      { id: 'sb-s3', no: '2', tx: '四条技术路线' },
+      { id: 'sb-s4', no: '3', tx: '厂商官方 MCP 支持' },
+      { id: 'sb-s5', no: '4', tx: '九个落地案例' },
+      { id: 'sb-s6', no: '5', tx: 'GitHub 项目地图' }
+    ] },
+    { label: '对照与行动', items: [
+      { id: 'sb-s7', no: '6', tx: '失败原因与安全边界' },
+      { id: 'sb-s8', no: '7', tx: '与 WorkBuddy 693 方案对照' },
+      { id: 'sb-s9', no: '8', tx: '行动清单' },
+      { id: 'sb-s10', no: '9', tx: '来源与可信度' }
+    ] }
+  ],
+  linksLabel: '相关页面',
+  links: [
+    { href: './索引.html', ic: '\u{1F4C2}', tx: '解决方案索引' },
+    { href: './分析.html', ic: '\u{1F4CA}', tx: '多维度分析' },
+    { href: './README.md', ic: '\u{1F4C4}', tx: 'README' },
+    { href: './全量清单.csv', ic: '\u{1F4D1}', tx: '全量清单.csv' }
+  ],
+  foot: '35 个外链可点击回溯原文<br>按 <b>[</b> 收起 / 展开侧栏'
+};
+(function(){
+  var C = window.__SB || {};
+  var D = document, B = D.body;
+  function id(x){ return D.getElementById(x); }
+  var host = id('wbsbBody');
+  function ea(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  var tEl = id('wbsbTitle'), sEl = id('wbsbSub');
+  if (C.title && tEl) tEl.textContent = C.title;
+  if (C.sub && sEl) sEl.textContent = C.sub;
+
+  // ---- \u81ea\u52a8\u7ed9\u6b63\u6587 section \u7f16\u53f7\u951a\u70b9 ----
+  if (C.autoSections) {
+    var secs = Array.prototype.slice.call(D.querySelectorAll(C.autoSections));
+    secs.forEach(function(s, i){ if (!s.id) s.id = 'sb-s' + (i + 1); });
+  }
+
+  var h = [];
+  var tocIds = [];
+  if (C.groups && C.groups.length) {
+    C.groups.forEach(function(g){
+      if (g.label) h.push('<div class="sbt">' + ea(g.label) + '</div>');
+      (g.items || []).forEach(function(it){
+        tocIds.push(it.id);
+        h.push('<a class="sbi" href="#' + ea(it.id) + '" data-t="' + ea(it.id) + '"' +
+          (it.hint ? ' title="' + ea(it.hint) + '"' : '') + '>' +
+          (it.no ? '<span class="sbp">' + ea(it.no) + '</span>' : '<span class="ic">\u2022</span>') +
+          '<span class="tx">' + ea(it.tx) + '</span>' +
+          (it.ct ? '<span class="ct">' + ea(it.ct) + '</span>' : '') + '</a>');
+      });
+    });
+  }
+
+  if (C.chips && C.chips.length) {
+    h.push('<div class="sbdiv"></div><div class="sbt">' + ea(C.chipsLabel || '\u5feb\u6377\u7b5b\u9009') + '</div><div class="sbq" id="wbsbChips">');
+    C.chips.forEach(function(c, i){ h.push('<button data-c="' + i + '"' + (c.acc ? ' title="' + ea(c.acc) + '"' : '') + '>' + ea(c.tx) + '</button>'); });
+    h.push('</div>');
+  }
+
+  if (C.links && C.links.length) {
+    h.push('<div class="sbdiv"></div><div class="sbt">' + ea(C.linksLabel || '\u76f8\u5173\u9875\u9762') + '</div>');
+    C.links.forEach(function(l){
+      h.push('<a class="sbi" href="' + ea(l.href) + '"' + (l.t ? ' target="_blank"' : '') + '>' +
+        '<span class="ic">' + ea(l.ic || '\u203a') + '</span><span class="tx">' + ea(l.tx) + '</span>' +
+        (l.ct ? '<span class="ct">' + ea(l.ct) + '</span>' : '') + '</a>');
+    });
+  }
+
+  h.push('<div class="sbdiv"></div>');
+  h.push('<button class="sbi" id="wbsbTopBtn"><span class="ic">\u2191</span><span class="tx">\u56de\u5230\u9876\u90e8</span></button>');
+  if (host) host.innerHTML = h.join('');
+
+  var ft = id('wbsbFoot');
+  if (ft) ft.innerHTML = (C.foot || '') + (C.mirror ? '<div id="wbsbMirror" style="margin-top:7px;color:#0f766e;font-weight:650;font-size:12px"></div>' : '');
+
+  // ---- \u6298\u53e0 / \u5c55\u5f00 ----
+  var KEY = 'wbsbHide';
+  try { if (localStorage.getItem(KEY) === '1') B.classList.add('sb-hide'); } catch(e){}
+  function toggle(){
+    B.classList.toggle('sb-hide');
+    try { localStorage.setItem(KEY, B.classList.contains('sb-hide') ? '1' : '0'); } catch(e){}
+  }
+  var bc = id('wbsbc'), ob = id('wbopen');
+  if (bc) bc.addEventListener('click', toggle);
+  if (ob) ob.addEventListener('click', toggle);
+  D.addEventListener('keydown', function(e){
+    if (e.key !== '[') return;
+    var k = (e.target && e.target.tagName || '').toUpperCase();
+    if (k === 'INPUT' || k === 'SELECT' || k === 'TEXTAREA') return;
+    toggle();
+  });
+
+  // ---- \u56de\u5230\u9876\u90e8 ----
+  var tp = id('wbtop'), tb = id('wbsbTopBtn');
+  function top(){ window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  if (tp) tp.addEventListener('click', top);
+  if (tb) tb.addEventListener('click', top);
+
+  // ---- \u6eda\u52a8\uff1a\u9ad8\u4eae + \u56de\u9876\u6309\u94ae ----
+  var nodes = tocIds.map(id).filter(Boolean);
+  var as = tocIds.map(function(x){ return host ? host.querySelector('a[data-t="' + x + '"]') : null; });
+  function spy(){
+    if (tp) tp.classList.toggle('on', window.scrollY > 420);
+    if (!nodes.length) return;
+    var k = 0;
+    for (var i = 0; i < nodes.length; i++) { if (nodes[i].getBoundingClientRect().top <= 130) k = i; }
+    if (as[k]) as.forEach(function(a, j){ if (a) a.classList.toggle('on', j === k); });
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
+
+  // ---- \u5feb\u6377\u7b5b\u9009 chips ----
+  if (C.chips && C.chips.length) {
+    var box = id('wbsbChips');
+    function sel(){ return C.chips.map(function(c){ var e = id(c.sel); return e ? e.value : ''; }); }
+    function setChip(i){
+      var c = C.chips[i];
+      if (c.reset) {
+        C.chips.forEach(function(x){ if (!x.reset) { var e = id(x.sel); if (e) e.value = ''; } });
+      } else {
+        var e = id(c.sel); if (!e) return;
+        e.value = (e.value === c.val ? '' : c.val);
+      }
+      C.chips.forEach(function(x){ if (!x.reset) { var e2 = id(x.sel); if (e2) e2.dispatchEvent(new Event('change', { bubbles: true })); } });
+      sync();
+    }
+    function sync(){
+      if (!box) return;
+      var cur = sel();
+      box.querySelectorAll('button').forEach(function(b, i){
+        var c = C.chips[i]; if (!c || c.reset) return;
+        b.classList.toggle('on', cur[i] === c.val);
+      });
+    }
+    if (box) box.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click', function(){ setChip(+b.dataset.c); });
+    });
+    D.addEventListener('change', function(e){
+      if (C.chips.some(function(c){ return c.sel === (e.target && e.target.id); })) sync();
+    });
+    sync();
+    window.__SBsync = sync;
+  }
+
+  // ---- \u955c\u50cf\u5e95\u90e8\u8ba1\u6570\u5230\u4fa7\u680f ----
+  if (C.mirror) {
+    var src = id(C.mirror), dst = id('wbsbMirror');
+    if (src && dst) {
+      var upd = function(){ dst.textContent = src.textContent || ''; };
+      upd();
+      try { new MutationObserver(upd).observe(src, { childList: true, subtree: true, characterData: true }); } catch(e){}
+    }
+  }
+})();
+</script>
+<!-- 窄屏抽屉：≤900px 时侧栏默认收起，点 ☰ 或滚出遮罩关闭 -->
+<script>
+(function(){
+  var B = document.body;
+  var q = window.matchMedia('(max-width:900px)');
+  var sc = document.createElement('div'); sc.id = 'wbsbScrim'; B.appendChild(sc);
+  function setScrim(){ sc.classList.toggle('on', q.matches && !B.classList.contains('sb-hide')); }
+  function toMobile(){ if (q.matches) { B.classList.add('sb-hide'); } }
+  toMobile(); setScrim();
+  sc.addEventListener('click', function(){ B.classList.add('sb-hide'); setScrim(); });
+  var ob = document.getElementById('wbopen');
+  if (ob) ob.addEventListener('click', function(){ setTimeout(setScrim, 0); });
+  try {
+    q.addEventListener('change', function(e){
+      if (e.matches) { B.classList.add('sb-hide'); } else { B.classList.remove('sb-hide'); sc.classList.remove('on'); }
+      setScrim();
+    });
+  } catch (err) {}
+})();
+</script>
+</body>
+</html>
