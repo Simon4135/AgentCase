@@ -1,0 +1,2340 @@
+[
+ {
+  "slug": "biz-review",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "经营复盘",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/zL3602QLMAGGXMdEd7psSh/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "bom-import",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "BOM导入核对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/D3YVlkae4VBONnobDvprwI/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "contract-review",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "合同条款确认",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/QpEFGUhMuHBQ3QD344PXSJ/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "deadline-balance",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "交期平衡与产销协同",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ZTsNJ2QbNSXrd7ggPoNF5N/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "delivery-risk",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "交付风险评估",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/7q6MhixBhObcplK3HvcdI7/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "ecn",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "工程变更管理ECN",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/cXM5uzWzjZPIA8pF7cPieo/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "idle-stock-review",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "库存结构与呆滞料复盘",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/8MgnKPRNxy59bWXzTdCqQh/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "incident-triage",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "异常分级与升级归口",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/4xFuasYCcJuRva1fV4mYgI/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "material-chase",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "来料跟催",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/10UoS29aRxJ07aagWBm3Pn/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "order-intake",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "客户单据转订单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Y8BHBA1jn4NSDCXQbeFOsC/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "order-review",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "订单接单评审",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/FckhPEZ0phZ28GPMuWl5yk/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "priority-adjust",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "排产与插单调整",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Rr6aj20aomDUbpJ0MAhdix/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "profit-risk",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "利润风险提示",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/KwT0qomjWtKmCq7bCaERHV/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "progress-deviation",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "执行偏差追踪与补产",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/FcxerdKIhzsCNTYXecmrm0/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "quality-analysis",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "品质异常分析",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/pEklzrcuy9MtQ3v5hePCgc/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "reconciliation",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "对账差异核对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/mUZOl1rwdGmNyY627mKIU8/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "lead-intake",
+  "node": "ZHiqrQ9jfVhUeLezsqloaX",
+  "skillName": "获客信息录入及潜客推荐",
+  "pkg": null,
+  "install": null,
+  "materials": [
+   {
+    "name": "展区获取名单.xlsx",
+    "uri": "https://workbuddy-space-static.codebuddy.work/page/s1llgYDP7vfNaoKwMlJltN/iHvGo8cAJ1Ax/%E5%B1%95%E5%8C%BA%E8%8E%B7%E5%8F%96%E5%90%8D%E5%8D%95.xlsx",
+    "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+   }
+  ]
+ },
+ {
+  "slug": "account-research",
+  "node": "kBYzp4iOFOAGfzYILhdr2F",
+  "skillName": "客户背景调查与价值研判",
+  "pkg": null,
+  "install": null,
+  "materials": null
+ },
+ {
+  "slug": "first-outreach",
+  "node": "qVwWigVI75AEmW3wMO0cQF",
+  "skillName": "客户首次联系开场白生成",
+  "pkg": null,
+  "install": null,
+  "materials": [
+   {
+    "name": "北京仁科互动_客户调查简报.html",
+    "uri": "https://workbuddy-space-static.codebuddy.work/page/ULiAUE3kequCLGtB9EzmXS/JVFdQLH-Iyae/%E5%8C%97%E4%BA%AC%E4%BB%81%E7%A7%91%E4%BA%92%E5%8A%A8_%E5%AE%A2%E6%88%B7%E8%B0%83%E6%9F%A5%E7%AE%80%E6%8A%A5.html",
+    "mime": "text/html"
+   }
+  ]
+ },
+ {
+  "slug": "meeting-followup",
+  "node": "hhQJUt5x9trt6LekWghalp",
+  "skillName": "会议纪要整理与跟进提醒",
+  "pkg": null,
+  "install": null,
+  "materials": [
+   {
+    "name": "沟通记录.docx",
+    "uri": "https://workbuddy-space-static.codebuddy.work/page/CJdIy2VBngW8TaAJlcpN8i/9gPvcRBKQApD/%E6%B2%9F%E9%80%9A%E8%AE%B0%E5%BD%95.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+   }
+  ]
+ },
+ {
+  "slug": "rfq-quote",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "图纸询价智能报价",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/INSWrkRFc3l53vz1PEJgPl/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "shortage-alert",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "齐套与缺料预警",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/kYPlGl285Fh1hIao65JlgO/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "sop-gen",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "SOP生成与校验",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/y7QRUjn1Jh0myVGMxF3x5I/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "trial-check",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "开工条件核查",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ln5mPE35bfxcCmabsdXtJd/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "version-audit",
+  "node": "XDAj9uPGyFKYk1zicA86ni",
+  "skillName": "版本一致性巡检",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/UoXJIwwI90aPks73SAhtf4/0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "arbitration-evidence-pack",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "劳动仲裁举证资料包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/JzA9nAbEwOgTNaxxztBiP3/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "contract-expiry-ledger",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "劳动合同台账重建与到期预警",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/wF0MBMpf1Q615S8zMDGsn3/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "interview-criteria-gen",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "面试题与量化录用条件生成",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/r7EulaiQnZp3BtF3Vzyc3y/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "labor-cost-onepager",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "月度人力成本一页纸",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/GNYCWqqmdNEQlo0AeJRlut/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "onboarding-compliance-pack",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "入职合规启动包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/AFgtmQuLdAnklXFVMPj6c5/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "overtime-exposure",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "加班费敞口测算",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/pXkbBKu8k3A4WJBhTxVoDG/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "payroll-data-assembly",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "算薪跨部门数据拼图",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/sEBwqlqlpjUkfZdBgcIYaO/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "payslip-anomaly",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "工资条生成与异常波动拦截",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/gQ6REpxgCRF7ZT0rZghqzv/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "pip-docs",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "绩效改进计划（PIP）文书与合规流程",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/PfXxPZ0l2ZRkaHnhdli9b6/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "probation-evidence",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "试用期考核留痕与录用条件对照",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Ui08277i8wZPnBMrRasMGe/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "recruitment-funnel-report",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "招聘漏斗月报与渠道 ROI",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/tf36TwiFqmADDcstCwkJ9i/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "resume-normalize",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "简历格式归一与结构化",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/06XwE1VAhgB63YUUuxghlS/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "retention-cost",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "核心人才保留成本测算",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/GF0ypkXIknsiSXJdhglXpv/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "roster-audit",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "员工花名册法定栏位体检与重建",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/vt1WfQLXSloog0JDIKN6ww/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "social-insurance-base-check",
+  "node": "ALPypL0fZCtq6kc2StM8wC",
+  "skillName": "社保基数三数比对体检",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/FcirhxshHITj7AjyDdpIyc/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "ar-aging",
+  "node": "hPAUJKV8TPAtMB4ZYl32yb",
+  "skillName": "应收账款账龄分析与逾期预警",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/5qItKebpnKCChBmCVwOaVk/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "bank-reconciliation",
+  "node": "hPAUJKV8TPAtMB4ZYl32yb",
+  "skillName": "银行余额调节表自动编制",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/UqToueL1SqfVsC6UyCuaa1/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "budget-collection",
+  "node": "hPAUJKV8TPAtMB4ZYl32yb",
+  "skillName": "预算编制数据收集",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/lMyCI6aBhQ5MpU4BvV5Ddq/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "cash-daily-report",
+  "node": "hPAUJKV8TPAtMB4ZYl32yb",
+  "skillName": "资金日报自动拼表",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/2fShA2a9x8HhJ9JFOWLVjl/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "cost-variance",
+  "node": "hPAUJKV8TPAtMB4ZYl32yb",
+  "skillName": "费用异常波动分析",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/wYVK1jfjcdjV6hI1b8PnP1/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "expense-precheck",
+  "node": "hPAUJKV8TPAtMB4ZYl32yb",
+  "skillName": "报销单合规预审",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/oavzDiI4PnNpv75oV1Tozo/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "reconciliation-diff",
+  "node": "hPAUJKV8TPAtMB4ZYl32yb",
+  "skillName": "往来对账差异清单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/YM3SdF4Z4p88QwOgwCPCuT/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "tax-benefit-scan",
+  "node": "hPAUJKV8TPAtMB4ZYl32yb",
+  "skillName": "税收优惠体检与漏享扫描",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/sqgkKjCbkJfyrtOrZclh7H/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "tax-calendar",
+  "node": "hPAUJKV8TPAtMB4ZYl32yb",
+  "skillName": "纳税日历与逾期预警",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/VRQ13eYiAS6QC2oKMF9p4J/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "tax-risk-checklist",
+  "node": "hPAUJKV8TPAtMB4ZYl32yb",
+  "skillName": "纳税申报前风险清单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/7GabM9Oud7p2jFkLMaxcba/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "voucher-audit",
+  "node": "hPAUJKV8TPAtMB4ZYl32yb",
+  "skillName": "凭证全量稽核扫描",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/1Z5QmykXuGzIF4jZjXFLxx/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "weekly-report",
+  "node": "hPAUJKV8TPAtMB4ZYl32yb",
+  "skillName": "经营周报自动拼表",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Tg2azA0Xat7RWv3tLi5iGk/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "ar-aging-collection",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "逾期应收账龄分档与差异化催收方案",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/OGvSWnJjBB5VgSwJ7gH8nT/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "ar-reconciliation-gap",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "客户对账差异逐笔排查",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/XOtC2EDAccVwj7KP83K3Fw/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "bid-collusion-selfcheck",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "关联方串标风险自查",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/WmWlRqQeMtUiFxDhnxwMzT/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "bid-go-nogo",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "投不投的可行性初筛",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/MsT54yiCCFjDJ6AVdcDHUC/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "bid-mandatory-clause",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "招标文件实质性条款逐条清单化",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/sFFQAv3VPTyqxfyNOPFjGf/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "bid-void-selfcheck",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "商务标废标项逐条自查",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/L5By8dwk7XrvUcoNTmvlrT/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "channel-price-fleeing",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "渠道价格体系一致性与窜货证据链",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/S2LdaKbnor8utRjG1ZCJf9/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "contract-clause-deviation",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "合同条款与标准模板偏离比对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/k5UTHov6ioHycg0jKNKYhQ/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "contract-renewal-sweep",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "合同到期与续签盘点",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/SUMswYyQROu5aQVWQz6kn5/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "contract-review-pack",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "合同评审跨部门资料一次性齐套",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/nr3yVi0KDDBsDWeuTyg38C/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "credit-limit-exposure",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "客户额度占用与超限发货预警",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Ui6LPSV9qZtUDGEPY3f5nc/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "lost-deal-timeline",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "丢单复盘事实时间线重建",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/RIbs9XbRGWBtxD0bjjL6k1/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "quote-discount-audit",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "历史报价一致性与越权折扣核查",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ZTHFcoAluc0gbsjVIrwK6Y/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "rebate-reconciliation",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "经销商返利兑现核对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/qYQ7Fmw5kiAcNSGTOqui23/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "stalled-deal-detection",
+  "node": "ots1af1M8J2fvk7OxWVwPg",
+  "skillName": "停滞商机识别与唤醒清单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/iz8LpwiYOGaRqCFkAwGhvJ/1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "prd-consistency",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "PRD 一致性终审",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/nP0HTswgnnMg1QwurIi0wm/yydN0GNvRd0o/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "prd-challenge",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "PRD 评审前找茬预演",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/UNnKsVh6MfeiIvXYJo0T90/dM9TiM0ns4kH/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "incident-postmortem",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "事故复盘初稿",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/nNVQpHn3HnQc8cQjdDRUAV/9cE2sJirt7Tt/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "release-checklist",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "发布检查清单执行留痕",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/6OOisfjtrtK10cw3zJXrUQ/JKHonbRD4a2D/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "req-intake",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "多渠道需求归集结构化",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/D0VKPKZILupuvefSrilZEW/hx15ZOUiddxf/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "custom-margin",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "定制工时与毛利台账",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/N4Lb2DCgsFQHeywDCbJ0l4/MCWL0IT9Bycg/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "promise-ledger",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "客户承诺台账",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/xKrTvSlmvVauR45inYgDMz/_LkhOl7gaVov/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "voc-clustering",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "客服工单全量聚类",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/FpIZMJp0u6LR1l32TKtyWT/05UTFlsCyeEP/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "boss-directive",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "老板口头指示翻译",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/K97PS6aImIDRaY5S5fUA6T/CIMIxUAo_Bpi/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "review-minutes",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "评审决议与待办登记",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/7TG48LC3ZvoNDHgBWxtzoC/p4FoeZc1Bj4Z/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "review-pack",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "评审材料自动凑齐",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ngdeE5IwoqMezbhNbsF8nO/Npi4YWI8JIS1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "change-ledger",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "需求变更留档登记",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/NIVHt1PS84J1erMtIwIZnC/EzJ1P5wOalWx/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "req-trace",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "需求来源回溯档案",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/TiCxbnkhuddBz5E3IkcG50/EehbOLQNTrI-/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "pool-checkup",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "需求池清淤体检",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/deVSoqP8qBoajmWFtNZCXJ/w8C1YwP24cgd/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "acceptance-cases",
+  "node": "qXZWjcnGJJUarOKSK8hDyJ",
+  "skillName": "验收测试用例生成",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/1f5TytAKQoKDqvUFoKjTVe/w37KwxKYRKDw/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "bom-data-cleanup",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "BOM 脏数据清洗与一物多码归并",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/bShStq7Ww8evKjUw81UsXG/ykPmlPDO8YIu/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "supplier-fact-card",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "供应商事实卡（不打分版）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/vUrzJUyln62YQ1reWd3Ej3/FvHvBgL_7zGr/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "quality-claim-ledger",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "供应商质量损失索赔台账",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/HsZMHnrzVr459f986aAp65/VbRFokltkT--/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "supplier-certificate",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "供应商资质证书台账与到期监控",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ceCyJrI6fza2TDNkieLP35/0IG7kSz0_WXk/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "expedite-ledger",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "催货台账与当日催货清单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/dAk5Ro76IdN3wvbfyH8fzM/6J-geNQkbG6Q/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "arrival-exception",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "到货异常处理单与特采决策留痕",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/s6BIOsKXVcqUC5HQLywFIH/uVyIQdC0yim8/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "single-source-risk",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "单一来源风险清单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/aX4zciSPburLEtXNkvKEeF/ikjvGK7IvMma/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "price-history-curve",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "历史采购价价格曲线",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/eVORH8n91CamcTdvXEwWxF/xqsjT7EH_7og/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "slow-moving-alert",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "呆滞料预警清单（库龄分档）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/DveyVUaQpnyb04Cko6lHWA/QVGKpPVKVi34/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "inquiry-screenshot-archive",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "微信询价截图归档为结构化记录",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/sv2n1JGx21WjfIugk2jyxN/oDJA26fNXXil/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "monthly-reconciliation",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "月度对账差异表（三单匹配）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/VjP6XjjEokT92qT149hyLU/RO12KE8-e8A_/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "quote-record",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "比价留档表（三家报价+历史价对照）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/b0GWmzZwpR0I9JDCMcURlg/mhHbowZzI8GW/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "price-increase-review",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "涨价审批说明单（给老板版）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/x1z6wiVAga1qlt4BtP9IJm/XZIbMbNbw-uW/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "overdue-order-daily",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "逾期订单风险日报（给老板版）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/BOsSmJvG9d6ipeXsPFEi6s/1g0YnL-rVxRq/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "po-tracking-update",
+  "node": "hAdFQbeuOhztKO9XvjFpoH",
+  "skillName": "采购订单跟踪表自动更新",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/sCVo7QJUJvesHxBueuX5jn/1eUzhPwojaDK/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "bla-consistency",
+  "node": "6raawuY6z7fIefddmOsyyp",
+  "skillName": "BLA 卷宗模块间一致性核对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/mtDlLuTO9emMplllxb4BAI/nt_RSz8aoT0Y/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "icsr-intake",
+  "node": "6raawuY6z7fIefddmOsyyp",
+  "skillName": "个例报告接收分诊与 Day 0 判定",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/3UmUcv9MYjfPqwTS9ihloN/7j9GQglpTm-i/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "deficiency-gaplist",
+  "node": "6raawuY6z7fIefddmOsyyp",
+  "skillName": "发补缺口清单与证据定位",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/wHr9Zs2YNFk0Sh3QpqpbR6/2Pua7Gm2OHa9/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "lit-case-mining",
+  "node": "6raawuY6z7fIefddmOsyyp",
+  "skillName": "文献个例挖掘与分诊底稿",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/zSMzcSDnxRrJ1WTS4xeKvJ/BBb-AThsAHyy/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "lit-review-draft",
+  "node": "6raawuY6z7fIefddmOsyyp",
+  "skillName": "文献综述初稿与证据表",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/NWEt7RP4OebRqYwfeYXgjv/FSKEDo5ndJTZ/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "protocol-amendment",
+  "node": "6raawuY6z7fIefddmOsyyp",
+  "skillName": "方案修正案与登记平台核对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/9k0e8gxmx4kSnhxxrpllLh/Pc-v5pGqnT_0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "pipeline-watch",
+  "node": "6raawuY6z7fIefddmOsyyp",
+  "skillName": "竞品管线周监测与影响判定",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/7G33S51EicvD9OcRWpx55F/S2JSUjpet5Jz/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "target-landscape",
+  "node": "6raawuY6z7fIefddmOsyyp",
+  "skillName": "靶点竞争格局四源盘点",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/MO81Yv6ZsBqwyM1FMgZWhe/WzEufmIJ1LJu/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "kol-registry",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "KOL 与媒体资源库结构化",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/AZJnkPXsg09iFduPNRktws/9mXsr56XWLqD/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "negword-list",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "SEM 否词建议清单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/BwuvP3WCmFX0VH4JVJ48Vq/heAJ4yw9yjBV/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "topic-library",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "内容选题库周更",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ZHkZxONXxLPuEveRLe69gj/pWmQul5c_tRd/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "expo-roi-review",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "展会 ROI 复盘表",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/AjkWx3At3xx9LIFkIu8cn9/TAT0rz7zIRWt/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "citation-audit",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "已发布内容数据引用溯源核对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/xrSDVobA4YcCd01Jq4uw7N/ug4xp4LYtPNZ/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "adlaw-check",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "广告法极限词发布前自查",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/3WlZo1IJrCeKpjwk47wI1v/VOscW2Ij8k4l/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "ads-weekly",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "投放周报与异常拦截",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/guVFlhZuFwtYfq6L5gbi2G/9Kb0xTJq8mG4/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "monthly-onepager",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "月度市场报表五指标一页纸",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/LUbq89CsSgwjotOTAK9OHG/V6yePSHEgbOQ/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "event-plan-draft",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "活动策划案初稿",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/s399skYQClLbgxSkxNME57/Rs9RXSDncv4e/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "event-budget-reconcile",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "活动预算表与对账",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/1mI8hMysMLzJFmvqTtudr6/v7Z1B4A1MjCb/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "lead-cleaning",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "留资线索清洗与分级",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/7WQABA8RPLcrVqA9UXqwM7/1xBFNZEMuIAH/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "whitepaper-draft",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "白皮书初稿框架（数据位标注）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/TRTwWbpCYtBsC7Eej1I2b4/xZF0dGNb608Q/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "competitor-deepdive",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "竞品分析报告（突击版）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/atW1bDc4VxjKjWggJoQmV6/phyH_bnNdzN6/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "competitor-weekly",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "竞品动态周报",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/68uCuQrxyU5qDK2i2drFgv/UXvJkjbbLoL0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "lead-handoff",
+  "node": "MtS0TO6bVLD3iCQYxKlIxf",
+  "skillName": "线索交接表（挡锅凭证）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Up1gAKp7bwsZYa2flsxCpz/gD1Ce_U4rH5m/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "evidence-chain-audit",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "催收证据链完整性体检",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/8wCxFnEu620Gbsfz47Ae4v/mK8Xi2O86Jzl/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "demand-letter-draft",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "催款函草稿（企业公章版）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/3pD6BXkoEoPzLpofV4brSm/wkp-v3rdNZFN/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "contract-risk-triage",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "合同风险分级初审（四栏清单版）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/o0i2eJJfkLPRi9co6F1WRj/m1dkT4Qmtf8X/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "advertising-claim-scan",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "宣传物料极限词语义扫描",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/FYbrtQ9fZz60TtYO96rvSE/pJgttV3XhLSD/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "reconciliation-letter",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "对账函与签章补救",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/uvSwPbbSZX6OfdaxzmYbCJ/-QYAYCIwiTdy/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "aging-collection-ledger",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "应收账龄三色与催收动作台账",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/45lCAbdFgGuOQv381U5LDy/t8cI_OSyNd-6/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "lawyer-letter-brief",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "律师函委托需求包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/BXyplajhXdxvf02lodhbcj/HHMtlW1GU8ol/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "wechat-evidence-guide",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "微信催款留证指引",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/AyH8g0nGagBVG6afz9Tv09/zyKeN28fHQGL/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "incoming-letter-response",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "收到律师函应急包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/OyGcMMljJiaFbMPLQIOW0w/Cq9YLgMRQBza/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "contract-extraction-ledger",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "散落合同抽取建台账",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Z1FDghjfrITbwrcgEk2SIp/WUwEWx5pGSTI/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "contract-version-diff",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "盖章前版本比对（对方改了什么）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/yFUhJTRL5krHBFnsT2GYec/fxo6PdjBEvSu/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "counterparty-credit-check",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "签约对方资信核查摘要",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/6PgFQIY5IYB0UQ87KcQh9x/6uyNb4NHTtk3/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "auto-renewal-scan",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "自动续约条款扫描与通知期倒排",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Zwib9dyjpLj7k9lLKd0u7X/1CsQ-R7dXeuX/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "limitation-countdown",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "诉讼时效倒推预警表",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Ox3yvcwECf3AnVT1w9Tx56/HICoTYzAkpo4/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "litigation-deadline-tracker",
+  "node": "NvOfmU96ul754qlYDzVbPZ",
+  "skillName": "诉讼节点倒计时跟踪",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Jhqci3IDoSkq671AaIE7NK/BuSh_GzdY6BQ/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "policy-conflict-scan",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "制度冲突与失效引用排查",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/uxANkrMY0oD1KSGNgn63D8/AAquiZg_c1bA/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "policy-qa-base",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "制度问答知识库（带出处）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/tWRMt4UIlG3SKWDXRQkj8Z/_JQrxDfAUf3M/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "quote-comparison",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "多供应商报价逐项拆解比价",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/WU2WQnbPwfGYR55QFLh0oG/qS0uNM-itvYj/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "compliance-calendar",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "年度合规日历与到期预警台账构建",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/9zZSJu5ND05hKchtuSfnHL/at9d4hGuTm11/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "contract-execution-audit",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "框架合同与实际结算偏离核查",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/J3yfXciFmFHA7XyeuzRGFv/WsskZwHVSW6R/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "stocktake-variance",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "盘点差异归因与盘点报告生成",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/CVIBnyB5lqYdMU7al78afq/RQvbasCHRayr/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "offboarding-recovery",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "离职资产与授权回收核查",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/wEsJafbNwtzhwOdmPm1okD/yM7MNnrTTsOU/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "lease-decision-pack",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "续租与换租决策包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/1fNnHqZL1LCfpZhxpsIIuf/KLlWBa-lM1zZ/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "admin-monthly-report",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "行政月报与量化口径生成",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/21r1x9dawlpXFVHAdGLyZw/SuWnEy0sNdPj/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "cost-variance-split",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "行政费用异常归因（量价分离）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/mf8QoMAFv2sKKZgkZQsR2A/aYhtmSROa342/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "budget-basis-pack",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "行政预算编制依据包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/QN1bc7dB5xeacEKuQPt29Y/V34p_qVlSQzO/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "asset-ledger-cleanup",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "资产台账清洗与幽灵资产识别",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ILYY87WONAbMcUA7c6MrOm/VzcuS_pWe_gL/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "action-item-tracking",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "跨会议待办闭环追踪",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/H0QfsmTtQ3eWOsUOo3y4Bs/MkGJuv9ZKHG1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "meeting-prep-pack",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "重要会议前的资料预备包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/0HG7BrWLTKVYQdel6cWmtJ/kEeLfZ6zdh3J/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "insurance-comparison",
+  "node": "nMp75oYkVxOi74mqHYso8Q",
+  "skillName": "雇主责任险与团意险方案横向比对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/3974YXNhDvBk5QeWLJQtuD/42wDv2r0veT1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "gmv-reconciliation",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "GMV 对账器（82% 告警线）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/t5eNSaZoIKyt0RZA9r1S9r/S7k9eUZxgCxF/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "rfm-wakeup",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "RFM 分层与沉睡唤醒名单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/4dMyZsgEd1nAKW1TpJMOhN/VAyL2LngDTet/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "wechat-tag-auto",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "企微客户标签自动补全",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/sqnjmrRmcxEaDiPTuTVFPL/W9ofDIPEK-Tc/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "coupon-sandbox",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "优惠券到手价沙盘推演",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/53uHRyKpjThPHR4SadDVju/-69Q28P0lyL4/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "coupon-patrol",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "优惠叠加巡检与零点值守",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Ig6LDKrHjHZ01NB3HpDO8F/PT1i-8jhuT3g/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "weekly-onepager",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "周报一页纸",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/CXRNstQHG6uq1TLe9EXQEe/MmBpYwECCLf7/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "multi-platform-daily",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "多平台经营日报（口径统一版）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/qfegHtI4s7x2YWxXVvxPJ4/ndz-h7xgIZ-6/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "campaign-review",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "大促复盘报告（补断链版）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/kdsA1oIxoArRvNF893E8m9/uc8nn5NRn6vO/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "review-refund-cluster",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "差评与退款原因聚类分析",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/MxRO3gYt2Vl89B4iAwEEco/nH6A3nYpKl1C/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "ads-pause-diagnosis",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "投放周归集与应停投计划标注",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/jtfwQxhQrnw0kXbQ0KQmCN/dYiLWC6pm_MJ/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "campaign-breakeven",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "活动预算与盈亏平衡测算",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/kFH000hrORB6o7KroJWzzt/aL_KZnFozibm/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "slow-moving-sku",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "滞销 SKU 分级诊断与清理方案",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ue7nC2Zpo3AVQifcQdU6ub/YGs-RjgyfDTu/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "sop-traceability",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "私域 SOP 执行留痕周报",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/gbiBH9EGQ3NsqKFfTuP9vg/bYInXz6YV88p/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "competitor-watch",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "竞品价格与促销监控",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/u9WySEKLMjg4ufvlQ9oSge/uAamdQLnn7VR/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "compliance-check",
+  "node": "4kVE4fqhoAvsyHNhsbXwHg",
+  "skillName": "违禁词与 AI 标注合规自查",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/wnV5PAuSLmgZ7N7bybRmey/fhlQVYcRfvnw/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "loss-review",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "丢单复盘归档",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/kKydVMX84sDN1YeiEZm1EG/_jts_r74m9ur/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "price-history",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "历史报价归集与口径核对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/m3ETq6mVuOsYXygZ9l3Wa3/mRpAE_gEvcQh/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "pipeline-health",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "商机健康度体检",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/kf8Lsqx7Vkihf7Q5kPhM9O/xWia0oYrMECp/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "handover-pack",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "客户交接包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/kqWLAtSq9UcDqnM7CyR9BM/3obH15wexV4L/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "credit-check",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "客户信用速查卡",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/CHh48G0aU4YPm4fYdNzgR8/JxBy5lGfzCHW/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "bizcard-triage",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "展会名片分级与跟进清单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/xaViZYPkywzZlTRATQ2LZ9/V8O42QEZanzs/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "bid-precheck",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "投标废标体检",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ym8KoiSrgQDuVvdeSQRC7f/ol5m-_5_5w3I/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "bid-assembly",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "投标资料一键组卷",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ztGE15f5tDybB5nakqUdpM/KFbu51nmbJxJ/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "quote-calc",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "报价测算表生成",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/hTzz4fRPf0qbz9uKEm7uO9/vrGWYsWoN0n0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "tender-interpret",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "招标文件智能解读",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/lXIcwofoZSja3JN0B7TLFs/Ofr2VxeR2YqD/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "pre-visit-brief",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "拜访前作战简报",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/G42gYuxCNrcAaEzpKRWL7m/SARwqexlcYeA/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "proposal-assembly",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "方案初稿组装（带出处）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/HF069RGbYsGJ7Y0jfpwS90/QRUFSpPQa40l/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "voice-crm",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "语音转结构化跟进记录",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/IRaxTAcOFwFsjy3BevFr7p/_2XoZtfjaoak/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "qualification-ledger",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "资质证书台账与到期预警",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/sBLunjjDpAJD1KKc232py4/Jx1ISv3Q3WKt/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "requirement-clarify",
+  "node": "Q9LVzQWCSlbPI8L87k5wKG",
+  "skillName": "需求澄清纪要",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/JqabOsViMqYmi1KRn421U6/0QvlYq1tSwc-/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "yield-daily-report",
+  "node": "WXtSDPa6mvNz8cIQH2nt57",
+  "skillName": "CP／FT 良率日报",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/uL79HaxLW8rBMk4NnkoIzW/3DtJRV0Ynk_9/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "eol-pcn-impact",
+  "node": "WXtSDPa6mvNz8cIQH2nt57",
+  "skillName": "EOL／PCN 影响评估",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/uUsxWuUP8X7Egb2VuYaan9/LHEe9tHedWuB/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "low-yield-rra",
+  "node": "WXtSDPa6mvNz8cIQH2nt57",
+  "skillName": "低良批次初判快报",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/keoVzYs6FimI9ufKe1a84g/ZA7B-joofJVv/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "audit-package-rehearsal",
+  "node": "WXtSDPa6mvNz8cIQH2nt57",
+  "skillName": "客户审核数据包预演",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/rbvzvArNptNEFNiG4LeFOB/LwdFY5k5cYVe/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "gerber-completeness-check",
+  "node": "WXtSDPa6mvNz8cIQH2nt57",
+  "skillName": "客户资料完整性预检",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ZiBYJuc1qnCrgZYlip6kW9/gEqGRkctv0uc/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "complaint-8d-draft",
+  "node": "WXtSDPa6mvNz8cIQH2nt57",
+  "skillName": "客诉 8D 回复初稿",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/1tSnWygnj1jmZIa6XROVLc/0870RmkbKv_4/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "pcb-scrap-pareto",
+  "node": "WXtSDPa6mvNz8cIQH2nt57",
+  "skillName": "报废归因帕累托周报",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/0H0UguFTbXdRGpPkZpO7xk/vgm18EBKnPLW/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "alt-part-validation",
+  "node": "WXtSDPa6mvNz8cIQH2nt57",
+  "skillName": "替代料验证计划与风险台账",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/b5izEHBYE03keWFfr2WCxJ/PiSeS-mRUbsQ/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "incoming-risk-screen",
+  "node": "WXtSDPa6mvNz8cIQH2nt57",
+  "skillName": "来料异常与假料风险比对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Ux8khlCNPMj1qKJMEWeTQq/FefNZbkzyKQP/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "material-risk-brief",
+  "node": "WXtSDPa6mvNz8cIQH2nt57",
+  "skillName": "物料风险周快报",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/zBMBhSpQYUNC7f3Dh2zSNy/DncHYv9411S4/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "teardown-bom-draft",
+  "node": "WXtSDPa6mvNz8cIQH2nt57",
+  "skillName": "竞品拆解 BOM 初稿",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/CZeCotPERoS0163ImpF6gk/Fj9axFnDDy5v/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "yield-weekly-review",
+  "node": "WXtSDPa6mvNz8cIQH2nt57",
+  "skillName": "良率周报与措施闭环",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/6PpDYKOnQH8m3U1SWMz4BI/Upx1K0Qjw5xV/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "store-opening-handbook",
+  "node": "5RwVkQkeox7wCHooAUMA1j",
+  "skillName": "加盟商照着手册就能开店",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/4QU9Yu8xkht5v9F3EDwrLI/oKkwT6NYsvEa/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "store-inspection-loop",
+  "node": "5RwVkQkeox7wCHooAUMA1j",
+  "skillName": "巡检当天变整改单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/AJpLuM0mlRlnP7yhMYkeox/y6Gp__oMxcMh/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "review-analysis-response",
+  "node": "5RwVkQkeox7wCHooAUMA1j",
+  "skillName": "差评归因当天回",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/iHtvMzl6qHGU3CvCfrJfnG/fBkEv-a7tZ_m/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "recipe-cost-card",
+  "node": "5RwVkQkeox7wCHooAUMA1j",
+  "skillName": "新菜上市前算毛利",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/izeA8LqJbvzzaRgFCVLopO/BDxtmkq-ZChp/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "expiry-management",
+  "node": "5RwVkQkeox7wCHooAUMA1j",
+  "skillName": "每日效期扫描与报废",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ZFWLxVzdctFrJlvCR0z54O/2DSMPP1ybp6B/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "delivery-appeal",
+  "node": "5RwVkQkeox7wCHooAUMA1j",
+  "skillName": "配送异常账算清再申诉",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/WrnlfR4aaLgLxqXmGqmUgr/aPWeH7lH-dQ0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "food-safety-audit",
+  "node": "5RwVkQkeox7wCHooAUMA1j",
+  "skillName": "食安合规逐项稽核",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/5PXDkQsbzzbroKqCt7uCsZ/XLyxWlyhJn1A/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "tiktok-creative-fatigue",
+  "node": "519VmISEMRJIuh9AL7rJ54",
+  "skillName": "TikTok 素材衰退预警与上新排期",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/akvoTPJ2P0PrmCyv7pp9Ii/Grt-XshM-QCf/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "settlement-profit-reconcile",
+  "node": "519VmISEMRJIuh9AL7rJ54",
+  "skillName": "多平台多币种回款利润还原",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/lAMf5EIAM0OQj6R4DzRgqK/NNxnbmY8eoP-/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "multilang-listing-compliance",
+  "node": "519VmISEMRJIuh9AL7rJ54",
+  "skillName": "多语言 Listing 与 A+ 批量改写",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/BkotXYKT2Q1NM37YcXafIg/reBHd1QaCCiv/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "review-chargeback-response",
+  "node": "519VmISEMRJIuh9AL7rJ54",
+  "skillName": "多语言客诉差评与 Chargeback 抗辩",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Xq74MJ7FR7jxmOlSm3yGay/nwM9BZROf0z-/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "inbound-shortage-claim",
+  "node": "519VmISEMRJIuh9AL7rJ54",
+  "skillName": "头程入仓核对与丢件索赔",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ZS2z7DDOJTPV4F5JWF4gdE/NCrp7qzCbanN/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "ad-acos-weekly-waste",
+  "node": "519VmISEMRJIuh9AL7rJ54",
+  "skillName": "广告花费与 ACOS 周复盘",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/vVLkHSfIACX3tfB4dxB6M1/Wb978XIhbrLG/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "dev-letter-pi-cost-check",
+  "node": "519VmISEMRJIuh9AL7rJ54",
+  "skillName": "开发信个性化与报价 PI 校验",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/3OfQtPyNlg0rKGhq9VOVH0/zhHaybfwKLKb/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "compliance-expiry-delisting-check",
+  "node": "519VmISEMRJIuh9AL7rJ54",
+  "skillName": "海外合规到期与下架风险体检",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/GzeImxn8NLQEF1g0YXFHZ1/XNbEiP4r-kO6/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "inquiry-triage-due-diligence",
+  "node": "519VmISEMRJIuh9AL7rJ54",
+  "skillName": "询盘分级与客户背景调查",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/rZd7a1UBTsj3E0lRg6PK6s/DtRrN_UL9Xt6/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "selection-profit-price-check",
+  "node": "519VmISEMRJIuh9AL7rJ54",
+  "skillName": "选品利润测算与竞品价格体检",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/wz4Y3P8SeMwWVKADdtX0tN/3YVCyhHpZIMI/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "void-code-reconcile",
+  "node": "4vRQy4ZdqhIaBJ6QcLQPQd",
+  "skillName": "作废码与物料平衡逐条对账",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/DKZoTroDwTol3IMjYhwNNw/qg349PIuHnPz/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "api-lot-usage",
+  "node": "4vRQy4ZdqhIaBJ6QcLQPQd",
+  "skillName": "原辅料批号使用去向反查",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/97fBnChKlRetnOLXVBEBwJ/UuiYHgOhibMa/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "apr-drafting",
+  "node": "4vRQy4ZdqhIaBJ6QcLQPQd",
+  "skillName": "年度产品质量回顾取数与趋势草案",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/B3okpgMqSBPnXSrczXku0Y/M4S119KUNd9e/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "yield-drift",
+  "node": "4vRQy4ZdqhIaBJ6QcLQPQd",
+  "skillName": "收率连续同向偏移的趋势体检",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/pj4YxrBzpGBJx4hlGpgFEr/ryO1BDSOJr4x/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "trace-release-check",
+  "node": "4vRQy4ZdqhIaBJ6QcLQPQd",
+  "skillName": "放行前追溯码专项核对清单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/PCm3pPvJpJ04flvWrQpjoS/XYZbfS7ObSU0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "recall-drill",
+  "node": "4vRQy4ZdqhIaBJ6QcLQPQd",
+  "skillName": "模拟召回演练陪练与缺口清单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/5EVgcPj1dGoR09dxo1DTNt/Mp-ri5iVcnu3/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "upload-confirm",
+  "node": "4vRQy4ZdqhIaBJ6QcLQPQd",
+  "skillName": "追溯码上传成功确认台账",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/QcUgKidLOymwua7Q7hadfJ/mcnWfP-7xwjB/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "product-selection",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "AI选品机会发现与多维验证",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/EP31dYG89Txg0l4U6o1Cyu/Edu6b-bk3a-8/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "auto-listing",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "Amazon及多平台商品批量上架与发布校验",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/MRP2ZRA63wHgrRdvfjMA81/kBUX7wruaQD1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "fba-reimbursement",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "FBA赔偿与异常货件损失追回",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/35cDAC9MO08naadZTwTxs6/hsjgUiZIKtoi/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "ppc-profit",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "PPC搜索词与真实利润诊断",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/JNYLU4hYbPOpxchvmmBJeo/ftpDHv_C-qQk/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "voc-loop",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "VOC产品质量闭环",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/txgcE6ue8FFnyXq4lb4jsb/1ng4U5xIet8P/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "supplier-comparison",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "供应商询价与样品对比",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/2N2fRVqOOxfbGBIisxmfRV/bCkFctSSO4Zv/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "tiktok-net-roi",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "内容—达人—广告—退款后净ROI",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/sn0P7KChOSDiZXXlybrNfW/rgUr7Y1sasum/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "compliance-dossier",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "商品合规材料包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/BUxuvFjgT1gyg6bFNETpZZ/FxSPLDrrPPh6/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "detail-image",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "商品详情图与A+内容批量生成",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/imWuSGVB0LRUwchwmZ14OM/pU8hEiqcLJYP/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "chargeback-evidence",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "复杂退款／拒付证据包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/2QwwzSC2xJWFCB5VYaPB7I/tYsjEq8f9rAM/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "policy-impact",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "平台政策变更影响扫描与整改包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/5w6zIrQI1U31klAC8J8vNh/tBd0WQ0JMdsp/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "fee-audit",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "平台费用异常审计",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/mpAL1bmvfieeQGj3XSCsgW/U75w6BjPFkFy/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "ad-stock-profit",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "广告—库存—利润联动预警",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/LONc7PTsfCE3lqGLI2efDh/0NQdVhvDhBoo/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "product-business-case",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "新品全口径利润立项",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/iaMNSiMiPIhU4kc1CBYn03/Lug41kI5BwWo/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "profit-anomaly",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "经营利润异常会诊与行动审批",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/x7LLia03tOUVpFWRTIGzE5/ERzRXb7_zb8Z/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "appeal-evidence",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "账号申诉证据包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/O6GbcUPs5rsOcGLe8NXDI4/K-S4Ic-AK3MW/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "incident-warroom",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "重大异常战情室",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/3yR652uHxc3DdU19no68C4/XloeEEMt9UyX/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "spec-consistency",
+  "node": "bs222IjqP4A5h0kmJ4WRoz",
+  "skillName": "三份文件工艺指标一致性核对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/U19XZ8rGZDnZzWm2pW7Rn0/C-SErKv_T8J0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "handover-log",
+  "node": "bs222IjqP4A5h0kmJ4WRoz",
+  "skillName": "交接班「十交清」日志草稿",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/6Hb9vG95MAYD28JEnoDv0l/3iTBcYvZOy4C/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "coa-deviation",
+  "node": "bs222IjqP4A5h0kmJ4WRoz",
+  "skillName": "供应商 COA 与进厂复检偏差台账",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/r6eSoRLoJI7ns19z3ciLhF/eFPc-pKf54dp/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "repeat-repair",
+  "node": "bs222IjqP4A5h0kmJ4WRoz",
+  "skillName": "同一位号重复报修归集",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/s9eVyEroH8ABwc0Zxh6DG9/ARimCSE0ED-E/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "batch-trace",
+  "node": "bs222IjqP4A5h0kmJ4WRoz",
+  "skillName": "批次质量追溯与异常归因",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/50zdJRsW3A9QASBovvidfp/7xzAaD7eZvxj/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "detector-failure",
+  "node": "bs222IjqP4A5h0kmJ4WRoz",
+  "skillName": "检测报警器失效未报修清单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/p9JYV0siMegmG1gnUAyq3B/MnW19iIeQ-mO/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "alarm-not-closed",
+  "node": "bs222IjqP4A5h0kmJ4WRoz",
+  "skillName": "被消音报警未闭环清单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/TaGPIyTz2StvX4qBdMMjpq/a3VQ9r80WSpx/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "bill-recon",
+  "node": "KddjYd5cS4HDvaIrcsUkoy",
+  "skillName": "三平台账单逐单对清",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/J2dWHSHAyu2JGi7Y6BV5ff/m0iQM7_lufFz/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "expiring-stock",
+  "node": "KddjYd5cS4HDvaIrcsUkoy",
+  "skillName": "临期批次周内清完",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/aLsrtPAh1i52grKzP3dfpk/wqTDf1W1Z2iT/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "label-review",
+  "node": "KddjYd5cS4HDvaIrcsUkoy",
+  "skillName": "包材开印前逐项比对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/igoQ5mz23KYOChMq50jm9d/e4myEXGXbtS0/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "complaint-trace",
+  "node": "KddjYd5cS4HDvaIrcsUkoy",
+  "skillName": "客诉当天定位批次",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ItKBKFOJjRgyCGbxYSJ5Y1/CNY3HWlOxndw/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "claims-check",
+  "node": "KddjYd5cS4HDvaIrcsUkoy",
+  "skillName": "宣称合规逐句核对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/GDWLFeOK8zm4lQHlYIvjoi/RT8t6GKgYuBX/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "review-alert",
+  "node": "KddjYd5cS4HDvaIrcsUkoy",
+  "skillName": "差评信号当天处置",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/WXTOM30cPtal7SASTADH0y/LCX0zQT0iRKC/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "ingredient-compliance",
+  "node": "KddjYd5cS4HDvaIrcsUkoy",
+  "skillName": "成分合规三库查证",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/3fGK8F7qqkXZytOXHG4Bdj/MwvTOmXrb1E2/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "launch-pack",
+  "node": "KddjYd5cS4HDvaIrcsUkoy",
+  "skillName": "新品上市从方案到过会",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/9TPZYu1GexW01WKSSXXGM6/pEHMik1313qr/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "reg-radar",
+  "node": "KddjYd5cS4HDvaIrcsUkoy",
+  "skillName": "法规变更只推相关",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ZDyEK1ORJtt4yNbBO3kUfg/cvGAMmGh1Y-1/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "trade-spend-roi",
+  "node": "KddjYd5cS4HDvaIrcsUkoy",
+  "skillName": "渠道费用当周核完",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/6ulqlPcSjMdY1Qn7sSmwyu/k9c9ckLf1rjq/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "seeding-copy",
+  "node": "KddjYd5cS4HDvaIrcsUkoy",
+  "skillName": "自己的爆文喂种草稿",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/rkiAvCby9muGDR1L2qZfqj/RCWoNDaBfQD3/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "review-insight",
+  "node": "KddjYd5cS4HDvaIrcsUkoy",
+  "skillName": "评论里捞卖点",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/SsJFZ8VCS9lF6LtaCain6V/AiSognZk64gA/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "shelf-life-clearance",
+  "node": "VPbnTKMzgjp8DUZWS9Hl7Z",
+  "skillName": "临期预警与分时段出清方案",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/FxVUB0cixt06utj63216DU/BAZQD9jedjXI/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "member-weekly-report",
+  "node": "VPbnTKMzgjp8DUZWS9Hl7Z",
+  "skillName": "会员运营周报",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/pARP5P5etegFrTV3b8Vsmj/4Jmoafc1eEoq/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "supplier-rebate-check",
+  "node": "VPbnTKMzgjp8DUZWS9Hl7Z",
+  "skillName": "供应商费用返利核对",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/lqZ5tctxhqrcQFkY450tAF/j5aEEpIE8dZq/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "category-review",
+  "node": "VPbnTKMzgjp8DUZWS9Hl7Z",
+  "skillName": "品类结构月度复盘",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/aE6Q2T2O4d0NrMbO4e3ddK/KZrgzH33t-dK/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "patrol-loop-track",
+  "node": "VPbnTKMzgjp8DUZWS9Hl7Z",
+  "skillName": "巡店报告与整改闭环追踪",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ZNt4OE4BdBSVZowZ25nlNZ/wex0hc7dwqLJ/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "community-copy",
+  "node": "VPbnTKMzgjp8DUZWS9Hl7Z",
+  "skillName": "本店社群营销文案",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/kEWl9Ixq2wmfTbBjcy7lWG/ynqin2Ro9Mu2/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "member-wakeup-list",
+  "node": "VPbnTKMzgjp8DUZWS9Hl7Z",
+  "skillName": "沉睡会员唤醒名单与企微话术",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/grOSUzvrieUQnHszs4HDQy/sWfoqZL9r5Fs/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "fresh-loss-daily",
+  "node": "VPbnTKMzgjp8DUZWS9Hl7Z",
+  "skillName": "生鲜损耗日报与降损动作",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/X9TundceG9vww0YBvhOfYw/-hg2pHsgL1Ug/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "fresh-order-advisor",
+  "node": "VPbnTKMzgjp8DUZWS9Hl7Z",
+  "skillName": "生鲜订货参考单（解释型）",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ktYGwisBDQ7tVq5I5qkXmy/c2Hw9f4EThtE/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "patrol-prescreen",
+  "node": "VPbnTKMzgjp8DUZWS9Hl7Z",
+  "skillName": "督导巡店重点预筛",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/J3YhHN14m5bIww1E9egpPd/R3ZGPNDYVCJB/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "store-daily-report",
+  "node": "VPbnTKMzgjp8DUZWS9Hl7Z",
+  "skillName": "门店经营日报与晨会一页纸",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ab8hB3vTJt6mDPJ07i8Gr9/z33GBJacJjMy/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "production-issue-log",
+  "node": "L7nkw2ewFXzC2zVkqKJi8k",
+  "skillName": "大货异常留痕",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/ndTsiCrNL1na6LlsxSwKVZ/nNlJHKV0KKfN/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "weekly-sellthrough-review",
+  "node": "L7nkw2ewFXzC2zVkqKJi8k",
+  "skillName": "波段畅滞销归因复盘",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/SC9azrWhoVVgBzPQvkRicM/RalliE8kT1Qo/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "store-transfer-advice",
+  "node": "L7nkw2ewFXzC2zVkqKJi8k",
+  "skillName": "滞销款店间调拨建议",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/oYD8fn1oMMvlxrZYLUANbL/Uew2cmUNRAQM/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "otb-buy-plan",
+  "node": "L7nkw2ewFXzC2zVkqKJi8k",
+  "skillName": "订货会 OTB 采买测算",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/q1Wvh9VdUZxgqcg5h6IMGd/mu57SfQXbRHu/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "listing-copy-pack",
+  "node": "L7nkw2ewFXzC2zVkqKJi8k",
+  "skillName": "详情页文案包与极限词校验",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/j4tZ2oXYz8mJ8qVm1LVQxt/a7_K8hbJN4Ht/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "returns-root-cause",
+  "node": "L7nkw2ewFXzC2zVkqKJi8k",
+  "skillName": "退换货归因月报",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/VYeaSeD7kqytvyuwGYd3W7/tdwEwA09sbZP/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "store-weekly-review",
+  "node": "L7nkw2ewFXzC2zVkqKJi8k",
+  "skillName": "门店周报异常标红版",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/JxxRT3pAfFOBgYC655i4Nk/CurW-CrW3lt2/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "fabric-quote-compare",
+  "node": "L7nkw2ewFXzC2zVkqKJi8k",
+  "skillName": "面辅料比价与决策单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/XbSLFvaLjt8A0uZ9XDgOXK/kQjwxa0XRTYG/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "prelive-command-check",
+  "node": "ubSOL03sSCIwTCzZJsFWzn",
+  "skillName": "开播前人货场投联检",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/7S0CIOtgXmCMT9BUCmIaSy/OJTc2CuHbkq2/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "traffic-material-loss",
+  "node": "ubSOL03sSCIwTCzZJsFWzn",
+  "skillName": "投流素材衰退与亏损诊断",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/lXkRmrN0bLMQp1l21mtdxq/qgf9CHySeRnO/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "live-correction-evidence",
+  "node": "ubSOL03sSCIwTCzZJsFWzn",
+  "skillName": "直播口误纠错与证据包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/HpkCN3cDAkXTmwleLz5qRp/hsANtc7mso1x/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "claim-evidence-script",
+  "node": "ubSOL03sSCIwTCzZJsFWzn",
+  "skillName": "证据化直播脚本",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/dI1vqHoQupKMv9ju6F6xOg/SlsCRN8rBBOa/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "sellable-lineup-check",
+  "node": "ubSOL03sSCIwTCzZJsFWzn",
+  "skillName": "货盘可播状态联检",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/E4AugCSFmzVGCGVFfWtPiY/F6UgbzkFG607/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "creator-fulfillment-evidence",
+  "node": "ubSOL03sSCIwTCzZJsFWzn",
+  "skillName": "达人合作履约证据包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/mMgr5RkCk9pMWdqd2Ctno3/znkB7mVBCrW8/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "refund-promise-trace",
+  "node": "ubSOL03sSCIwTCzZJsFWzn",
+  "skillName": "退款原因与主播承诺归因",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/uAHNezIFdJJb5HliKCk9GM/VM-CUb6W4OnC/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "net-income-action-review",
+  "node": "ubSOL03sSCIwTCzZJsFWzn",
+  "skillName": "退款后净收入复盘",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/5R9stfSyWO4Kc40LHtr77K/ibGeu1D_6ebe/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "selling-point-compliance",
+  "node": "paxRvC8t4WYSS5yTwsBXph",
+  "skillName": "商品卖点提炼与合规转化",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/L97NXXayEegJpTCVEC7tu4/Hy4z7D6T5CKH/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "session-review-funnel",
+  "node": "paxRvC8t4WYSS5yTwsBXph",
+  "skillName": "场次复盘报告与转化漏斗逐层归因",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/S30vJWOah1wtWsc8aUjBxX/bTTN2tvTFpSU/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "pre-air-compliance",
+  "node": "paxRvC8t4WYSS5yTwsBXph",
+  "skillName": "开播前内容合规预审与违规话术拦截",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/zYYp2Hzy9BUPGui7WnRS9M/-7tFwKpm0nbE/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "live-script-voice",
+  "node": "paxRvC8t4WYSS5yTwsBXph",
+  "skillName": "直播脚本与话术按品类生成",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/33MaczRD71plgDotH1AzCt/xg7g3jTikVJt/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "talent-record-review",
+  "node": "paxRvC8t4WYSS5yTwsBXph",
+  "skillName": "达人合作档案与复投判断",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/Xe5P2KcWJFKcHaxw0pKUiH/Oj2I99MyXlF7/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "talent-proposal-quote",
+  "node": "paxRvC8t4WYSS5yTwsBXph",
+  "skillName": "达人商务合作提案与报价对比单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/KMD8hF3H0w7CMyMoahiANp/TQ817gdpmtXO/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "talent-matrix-compare",
+  "node": "paxRvC8t4WYSS5yTwsBXph",
+  "skillName": "达人矩阵横向对比",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/x4EA8kPbcv43eXsp2pB6Uv/MEyLznDdm-VL/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "violation-knowledge-base",
+  "node": "paxRvC8t4WYSS5yTwsBXph",
+  "skillName": "违规话术踩坑库与案例归档",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/BM6C2rRJFzGNikHarQiQnR/fr_KKJQ21sjS/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "supplier-cert-expiry",
+  "node": "5RwVkQkeox7wCHooAUMA1j",
+  "skillName": "索证索票到期预警",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/qV28nzppbsVnF1k3NVSCeJ/ZigW9AR7ExTA/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "release-gap-check",
+  "node": "4vRQy4ZdqhIaBJ6QcLQPQd",
+  "skillName": "放行前法定十项齐套性与缺口清单",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/jd5bn07klhZ1Fr6zkaoOS7/gX8weP-XsaTr/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ },
+ {
+  "slug": "platform-recon-evidence",
+  "node": "vcOqhL6VCaTitiebfHnkEe",
+  "skillName": "多平台对账差异证据包",
+  "pkg": "https://workbuddy-space-static.codebuddy.work/page/zm50h3uNi9cwEtyjLqbAUu/PqD2-SsB9bMr/pkg.zip",
+  "install": "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py",
+  "materials": null
+ }
+]

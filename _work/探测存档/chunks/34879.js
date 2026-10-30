@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_mindx_app_mindx=self.webpackChunk_mindx_app_mindx||[]).push([["34879"],{20674(e,a,p){p.d(a,{createWardleyServices:()=>d.J});var d=p(35701);p(23252)}}]);

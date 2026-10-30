@@ -1,0 +1,1202 @@
+[
+  {
+    "t": "图纸询价智能报价",
+    "pain": "报价慢和不准都不是算得慢 · 而是算之前要花大量时间把图纸、历史件、材料价和工时依据凑齐",
+    "ind": "制造业",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/F72hKH4E4I351zD6GMbcFB/0/制造业场景解决方案_图纸询价智能报价.html"
+  },
+  {
+    "t": "合同条款确认",
+    "pain": "销售审合同难的不是看不懂字 · 而是没有标准模板参照、逐条看漏条款组合、历史旧账从来没人翻",
+    "ind": "制造业",
+    "roles": [
+      "销售",
+      "法务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/RKJ5CgwlCbZKup5hFARD5n/0/制造业场景解决方案_合同条款确认.html"
+  },
+  {
+    "t": "客户单据转订单",
+    "pain": "客户 Excel/邮件/图片口径五花八门 · 料号五种混乱形态、单位按套按件一算就是 4 倍差价",
+    "ind": "制造业",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/7Qz1R0koF0Vfyc8wXvZnWo/0/deep-dives/1.7-order-intake.html"
+  },
+  {
+    "t": "经营复盘",
+    "pain": "经营复盘难的不是缺数据 · 而是五个部门各交一份表每份都对、没人拼成「这个月到底怎么样」这一句",
+    "ind": "制造业",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/hHIKEK46h2fp2V9PxLxFYq/0/制造业场景解决方案_经营复盘.html"
+  },
+  {
+    "t": "异常分级与升级归口",
+    "pain": "中小企业没有升级机制只有老板的微信 · 判不出哪几件今天必须管",
+    "ind": "制造业",
+    "roles": [
+      "生产"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/sLLgXV47PdwKiQ9etyXoeS/0/制造业场景解决方案_异常分级与升级归口.html"
+  },
+  {
+    "t": "BOM导入核对",
+    "pain": "BOM 导入最危险的不是哪几行变了 · 而是不该那样的差异和存量脏数据被一起带进新基线、牵动一批工单",
+    "ind": "制造业",
+    "roles": [
+      "研发"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/LIIfbGQWbzkVosVHhyNfv1/0/制造业场景解决方案_BOM导入核对.html"
+  },
+  {
+    "t": "开工条件核查",
+    "pain": "开工确认最容易带病开工 · 跨五个部门问一圈几小时才凑齐答案",
+    "ind": "制造业",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/0y3rVp87bWE2GXQsOBWbxh/0/deep-dives/3.2-trial-check.html"
+  },
+  {
+    "t": "工程变更管理ECN",
+    "pain": "工程变更难的不是填表 · 而是影响面靠经验、分级靠人判、会签周期长、整套文件还要同步更新",
+    "ind": "制造业",
+    "roles": [
+      "研发"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/xXZpz7AVTUVRikZX8ajIDD/0/制造业场景解决方案_工程变更管理ECN.html"
+  },
+  {
+    "t": "版本一致性巡检",
+    "pain": "系统里改了现场还在用老版 · 抽查靠人一星期跑不完上百份受控文件",
+    "ind": "制造业",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/nRbWDIZhpdAB0EkpV517VE/0/deep-dives/3.4-version-audit.html"
+  },
+  {
+    "t": "SOP生成与校验",
+    "pain": "SOP 问题看起来只是文档没更新 · 实际同时拖累品质稳定性、工艺一致性与审核合规",
+    "ind": "制造业",
+    "roles": [
+      "生产"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/SD9OSaHZ4GgrKsBrNtUWvR/0/制造业场景解决方案_SOP生成与校验.html"
+  },
+  {
+    "t": "订单接单评审",
+    "pain": "急单评审难的不是算一道题 · 而是销售技术采购生产品质多方接力确认、在 ERP/MES/APS 三个系统来回切还不一定答得准",
+    "ind": "制造业",
+    "roles": [
+      "PMC",
+      "销售"
+    ],
+    "status": "可演示",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/ojNqhYa5yWj3u0kcnnrdmW/6/制造业场景解决方案_订单接单评审.html"
+  },
+  {
+    "t": "交期平衡与产销协同",
+    "pain": "PMC 排产难的不是排表 · 而是多单挤一条产线先保谁没标准，销售生产物料拉会半天口径还不一",
+    "ind": "制造业",
+    "roles": [
+      "PMC"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/J5IDPBja47euCazX7yHZHb/0/制造业场景解决方案_交期平衡与产销协同.html"
+  },
+  {
+    "t": "排产与插单调整",
+    "pain": "插单难的不是改优先级一个动作 · 而是改完现场不知道、通知没回执、过程没留痕",
+    "ind": "制造业",
+    "roles": [
+      "PMC"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/3qeHQoZHhz9fShkiDYP8p6/0/制造业场景解决方案_排产与插单调整.html"
+  },
+  {
+    "t": "执行偏差追踪与补产",
+    "pain": "PMC 跟单难的不是算完成率 · 而是报工数据不可信、进度条会骗人、根因证据散在四个部门",
+    "ind": "制造业",
+    "roles": [
+      "PMC"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/bmWqXjdx65Hf2Axn07gx1f/0/制造业场景解决方案_执行偏差追踪与补产.html"
+  },
+  {
+    "t": "库存结构与呆滞料复盘",
+    "pain": "呆滞料复盘难的不是拉库龄表 · 而是「能不能用」的判据不在 ERP、处置只剩报废、判据随人离职失传",
+    "ind": "制造业",
+    "roles": [
+      "PMC"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/XfIOBEK1c0eKcWscBHxFiP/0/制造业场景解决方案_库存结构与呆滞料复盘.html"
+  },
+  {
+    "t": "齐套与缺料预警",
+    "pain": "齐套难的不是 BOM 展开 · 而是可用库存口径算不准、判据散在 ERP 外、缺料到开工那一刻才暴露",
+    "ind": "制造业",
+    "roles": [
+      "采购"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/wTTfJt3fAGGPJVr46P9ZKX/0/制造业场景解决方案_齐套与缺料预警.html"
+  },
+  {
+    "t": "来料跟催",
+    "pain": "采购每天盯十几张在途单不是不催 · 而是按逾期天数排序催错了顺序、真正卡交付的那张排最后",
+    "ind": "制造业",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/rSQO51zzFDrwpgXaCKf72Z/0/deep-dives/6.2-material-chase.html"
+  },
+  {
+    "t": "品质异常分析",
+    "pain": "品质分析最难的不是把报告写满 · 而是有限时间把根因追到可整改那一层、答清「为什么没检出来」",
+    "ind": "制造业",
+    "roles": [
+      "生产"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/WssZYc18mG6yy7oxRzFvY9/0/制造业场景解决方案_品质异常分析.html"
+  },
+  {
+    "t": "交付风险评估",
+    "pain": "出货前查出异常最难的不是合格不合格 · 而是能不能放、不能放有没有别的路，拍板信息不在品质工程师手上",
+    "ind": "制造业",
+    "roles": [
+      "生产"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/JXDmOtJ5viQr63zpZrBJXY/0/制造业场景解决方案_交付风险评估.html"
+  },
+  {
+    "t": "利润风险提示",
+    "pain": "中小企业没人有「事中盯单毛利」这个 KPI · 等财务月底结账钱已经花完了",
+    "ind": "制造业",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/Fe5HtgRKV6N2eNIbCOzcUy/0/deep-dives/10.3-profit-risk.html"
+  },
+  {
+    "t": "对账差异核对",
+    "pain": "财务对账难的不是公式 · 而是客户与我方口径不同、单号不统一、还要写一份客户能接受的回函",
+    "ind": "制造业",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/NLIfFKKUMqLdGXwbFHVH3A/0/制造业场景解决方案_对账差异核对.html"
+  },
+  {
+    "t": "VOC产品质量闭环",
+    "pain": "仓库按外观标 Defective、客户按体验退货，两套语言说的是两件事 · 差评退货工单散在三个系统没人交叉核对",
+    "ind": "跨境电商",
+    "roles": [
+      "客服"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/PmZjXCFOd5IjemkaN8SwQr/0/deep-dives/CX-01-voc-loop.html"
+  },
+  {
+    "t": "复杂退款/拒付证据包",
+    "pain": "5 天时限里跨四个系统凑证据 · 拒付材料散落、截止日前凑不齐",
+    "ind": "跨境电商",
+    "roles": [
+      "客服"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/U59Oos1cVYvgzYfqK0kmUQ/0/deep-dives/CX-02-chargeback-evidence.html"
+  },
+  {
+    "t": "多平台对账差异证据包",
+    "pain": "平台结算周期和会计期间永远错位 · 四方四个时间轴硬对必差",
+    "ind": "跨境电商",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/J1Iehfimii5GNAhBaUd4pJ/0/deep-dives/FN-01-reconciliation.html"
+  },
+  {
+    "t": "平台费用异常审计",
+    "pain": "费率调整没人同步改账单规则 · 重复扣费单笔小、混在几千行里抽查难命中",
+    "ind": "跨境电商",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/ihiraNsyiCd3XNeuXS3Ccq/0/deep-dives/FN-02-fee-audit.html"
+  },
+  {
+    "t": "PPC搜索词与真实利润诊断",
+    "pain": "ACoS 高就停词是最贵的条件反射 · 广告报表里根本没有利润",
+    "ind": "跨境电商",
+    "roles": [
+      "运营"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/cHOhovKXiBmd64TdZRgD4n/0/deep-dives/GR-01-ppc-profit.html"
+  },
+  {
+    "t": "广告—库存—利润联动预警",
+    "pain": "广告看 ROAS、供应链看库存，没人一起看 · 断货后广告权重和排名双输",
+    "ind": "跨境电商",
+    "roles": [
+      "运营"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/kRQL7afuN4GTstMFrb3ndq/0/deep-dives/GR-02-ad-stock-profit.html"
+  },
+  {
+    "t": "内容—达人—广告—退款后净ROI",
+    "pain": "平台归因天然偏向自己、同一订单多方记功 · 佣金和样品从来不在广告报表里",
+    "ind": "跨境电商",
+    "roles": [
+      "运营"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/xXFmZHvSfUDYZLs90Lk0gA/0/deep-dives/GR-03-tiktok-net-roi.html"
+  },
+  {
+    "t": "商品详情图与A+内容批量生成",
+    "pain": "AI 生图最先牺牲的是产品结构 · 「好看但不对」的图一上线退货会替你纠错",
+    "ind": "跨境电商",
+    "roles": [
+      "运营"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/sxCHN1RLfgKXPGbupcE2Fy/0/deep-dives/GR-04-detail-image.html"
+  },
+  {
+    "t": "经营利润异常会诊与行动审批",
+    "pain": "看得到销售额看不到钱去哪了 · 问「这个月赚没赚」要等财务拉表一星期",
+    "ind": "跨境电商",
+    "roles": [
+      "管理层"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/kF9OYHqgFzux928pCqJLLt/0/deep-dives/MG-01-profit-anomaly.html"
+  },
+  {
+    "t": "重大异常战情室",
+    "pain": "异常发生时事实比谣言跑得慢 · 每个人都只看到自己那一段",
+    "ind": "跨境电商",
+    "roles": [
+      "管理层"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/mMIh0AqBGCZ2wt2v9VFCSv/0/deep-dives/MG-02-incident-warroom.html"
+  },
+  {
+    "t": "平台政策变更影响扫描与整改包",
+    "pain": "政策生效才被发现、整改永远在路上 · 等商品被下架才发现确认函还躺在共享盘",
+    "ind": "跨境电商",
+    "roles": [
+      "运营"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/a2KbCHlI0HZIafbNDuY7al/0/deep-dives/OP-01-policy-impact.html"
+  },
+  {
+    "t": "账号申诉证据包",
+    "pain": "申诉被驳回多数输在证据组织而不是事实 · 72 小时里最难的不是写是找",
+    "ind": "跨境电商",
+    "roles": [
+      "运营"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/1z6Y4eiddg0EMUcgK51DJL/0/deep-dives/OP-02-appeal-evidence.html"
+  },
+  {
+    "t": "商品合规材料包",
+    "pain": "型号差一个字母证书可能整本作废 · 证书过期了还在卖没人盯",
+    "ind": "跨境电商",
+    "roles": [
+      "运营"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/V36vJC1V09Z8KjgyEvrodn/0/deep-dives/OP-03-compliance-dossier.html"
+  },
+  {
+    "t": "Amazon及多平台商品批量上架与发布校验",
+    "pain": "批量上架的错误不是技术错误是主数据错误 · ERP 回执逐条点开排查极耗时",
+    "ind": "跨境电商",
+    "roles": [
+      "运营"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/iybX9q4Ct6DWvgoaG7Nfuh/0/deep-dives/OP-04-auto-listing.html"
+  },
+  {
+    "t": "AI选品机会发现与多维验证",
+    "pain": "工具各给一半答案拼起来靠人脑 · 300 条差评躺在导出文件里没人真读",
+    "ind": "跨境电商",
+    "roles": [
+      "运营"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/hS2nQGG61TLUehumCQV5Hl/0/deep-dives/PD-01-product-selection.html"
+  },
+  {
+    "t": "新品全口径利润立项",
+    "pain": "立项看毛利量产看现金 · 广告退货平台费头程认证费量产才逐个现身",
+    "ind": "跨境电商",
+    "roles": [
+      "运营"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/lnK9bpCVuonXivrcEZEtpZ/0/deep-dives/PD-02-product-business-case.html"
+  },
+  {
+    "t": "供应商询价与样品对比",
+    "pain": "比价只比单价落地成本没人算 · 样品缺陷躺在微信里、比价表上永远「合格」",
+    "ind": "跨境电商",
+    "roles": [
+      "运营"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/UVToAqxGUYyOkXEYZBSecj/0/deep-dives/PD-03-supplier-comparison.html"
+  },
+  {
+    "t": "FBA赔偿与异常货件损失追回",
+    "pain": "自动赔偿不等于足额赔偿 · 索赔有时效、过期就归零",
+    "ind": "跨境电商",
+    "roles": [
+      "运营"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/gRNFBBM8IEYE6BE7B1Gfrj/0/deep-dives/PD-04-fba-reimbursement.html"
+  },
+  {
+    "t": "社群周内容包",
+    "pain": "一个运营管 10-20 个群每周都要出新内容包 · 每周 6-8 小时耗在重复写话术",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/vdoBIAPPDfv4vHFKzucGn7/0/deep-dives/1.1-membership-content.html"
+  },
+  {
+    "t": "沉睡会员唤醒完整方案",
+    "pain": "沉睡池 3 万占会员 35% · 唤醒净 GMV 预估 342 万却没人系统去做",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/5pnubut2h2ATYxajcJMgWe/0/deep-dives/1.2-sleeping-recall.html"
+  },
+  {
+    "t": "RFM 分层与差异化触达",
+    "pain": "对所有会员一视同仁是最省事也最贵的做法 · 给忠诚客户发券纯粹伤利润",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/MjoyMCIq7Dm7nCk4qLLwLD/0/deep-dives/1.3-rfm-segmentation.html"
+  },
+  {
+    "t": "周报/月报自动化",
+    "pain": "周报数字堆砌没有结论 · 拉数据拼表格算环比要花 3-5 小时",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/R614Z7PsbadzBR5q4fsIp9/0/deep-dives/2.1-weekly-report.html"
+  },
+  {
+    "t": "异常归因分析完整报告",
+    "pain": "试驾预约 320 跌到 180 环比 -43.8% · 只知道跌了不知道为什么会跌",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/gFsamcCs8IJ31ya6NWvqB6/0/deep-dives/2.2-anomaly-attribution.html"
+  },
+  {
+    "t": "年度提案框架完整交付",
+    "pain": "年度提案 22 页从调研到起稿全靠手 · 45 分钟会议背后是几天的准备",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/ztf4KOkPf9O2SWKk9yBu71/0/deep-dives/2.3-annual-proposal.html"
+  },
+  {
+    "t": "多尺寸海报智能适配",
+    "pain": "一张主视觉要改五个尺寸 · 每个尺寸重排版还容易跑 VI 规范",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/lD2XY1wGZDFj5oMTGABOIE/0/deep-dives/3.1-multi-size-poster.html"
+  },
+  {
+    "t": "短视频分镜完整交付",
+    "pain": "短视频分镜从痛点开场到 CTA 要逐镜头写 · 文案运镜音效全靠人工憋",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/w2kDpHakhR83RrvwexIMj5/0/deep-dives/3.2-video-storyboard.html"
+  },
+  {
+    "t": "多版本推文完整交付",
+    "pain": "一篇推文要出理性情感场景多个版本做 A/B · 手写三版耗时且风格不稳",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/n9mjQwFOIGXfos2sBQ6gaW/0/deep-dives/3.3-multi-copywriting.html"
+  },
+  {
+    "t": "落地页从需求到上线",
+    "pain": "从「一句话需求」到可访问链接传统流程 3 天起 · 运营提需求开发排期",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/KtRNT4mdg6dOmWlRc3H6uU/0/deep-dives/4.1-landing-page.html"
+  },
+  {
+    "t": "AI 自动化工作流",
+    "pain": "12 人每天 8:30-10:00 做重复劳动 · 人均 1.5-2 小时耗在搬数据",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/zyNqcOwmEIr5D7vG1xJfTJ/0/deep-dives/4.2-workflow-automation.html"
+  },
+  {
+    "t": "数据看板 / 三视图可视化",
+    "pain": "一份看板给所有人看、老板嫌多运营嫌少甲方嫌泄露 · 每周手动截图发群",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/b6kU68TXjAErPyrmA71tb1/0/deep-dives/4.3-multi-view-dashboard.html"
+  },
+  {
+    "t": "FAQ 知识库建设完整方案",
+    "pain": "5 份 PDF 加 6800 条工单加老员工 Word 散落 · 同一问题被反复问",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/ehaxabmyfKOdK2hEe8Wd6e/0/deep-dives/5.1-faq-knowledge-base.html"
+  },
+  {
+    "t": "场景化标准应答",
+    "pain": "客户一句「水光针敏感肌能做吗」· 不同等级不同情绪要不同话术全靠临场发挥",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/VLvIBEBExwdx8DwNpKt2Dt/0/deep-dives/5.2-scenario-response.html"
+  },
+  {
+    "t": "投诉与敏感应对",
+    "pain": "一句话说错品牌被截图挂抖音小红书 · 新员工用错话术、P0 当 P3 处理",
+    "ind": "零售",
+    "roles": [],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/yXzedNX3GfkaTGx1aORB3b/0/deep-dives/5.3-crisis-response.html"
+  },
+  {
+    "t": "银行余额调节表自动编制",
+    "pain": "制度要求每月做、实际从没做过 · 长期不做等于把 50 万的窟窿藏在未达账项里",
+    "ind": "",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/VnVayGtDj8N2XH6SyxkEPy/1/deep-dives/bank-reconciliation.html"
+  },
+  {
+    "t": "报销单合规预审",
+    "pain": "报销单看着天天在过、实际天天在扯皮 · 退单的话术和依据，才是财务最缺的",
+    "ind": "",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/FDBtPTYzn26aFiGykM0Nrm/1/deep-dives/expense-precheck.html"
+  },
+  {
+    "t": "资金日报自动拼表",
+    "pain": "老板每天早上问「账上还有多少钱」 · 出纳要从三家网银+微信截图里现凑",
+    "ind": "",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/Jw2JiBJ4ovwEUAKLKxR06W/1/deep-dives/cash-daily-report.html"
+  },
+  {
+    "t": "应收账款账龄分析与逾期预警",
+    "pain": "账上躺着 300 万应收、老板以为都是钱 · 逾期超过 1 年的，核销概率高达 80%",
+    "ind": "",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/UK9SgA6G9PaHF6rBkpfJAZ/1/deep-dives/ar-aging.html"
+  },
+  {
+    "t": "往来对账差异清单",
+    "pain": "和客户对账一对就扯皮、所以一直拖着 · 拖三年的账，最后是张 2 万的红字发票没冲减",
+    "ind": "",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/0NrKMN7ZZdrS383Yx3W2mG/1/deep-dives/reconciliation-diff.html"
+  },
+  {
+    "t": "凭证全量稽核扫描",
+    "pain": "制度要求凭证要有稽核人签章、实际从没抽过 · 不是抽5%，是全部扫一遍",
+    "ind": "",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/KFgZLY7XLrOszS51U0urES/1/deep-dives/voucher-audit.html"
+  },
+  {
+    "t": "税收优惠体检与漏享扫描",
+    "pain": "本该少交的税一分没少交 · 五项优惠一项没享，一年白交 83 万",
+    "ind": "",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/ruUkfx4oA57TB5op5fjFiv/1/deep-dives/tax-benefit-scan.html"
+  },
+  {
+    "t": "纳税申报前风险清单",
+    "pain": "申报表填得再快，也挡不住被金税四期扫出来 · 真正怕的是申报之前没人帮你先扫一遍",
+    "ind": "",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/XDwxTnw0K9F3GMkTDvjCi1/1/deep-dives/tax-risk-checklist.html"
+  },
+  {
+    "t": "纳税日历与逾期预警",
+    "pain": "每个月都有申报截止日、一错过就是钱 · 逾期一天万分之五，从来没人提前算好「该哪天启动」",
+    "ind": "",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/xPO5DHYLta9zQhB6Z7NeEG/1/deep-dives/tax-calendar.html"
+  },
+  {
+    "t": "经营周报自动拼表",
+    "pain": "老板要的那张周报，散在三个模块里 · 财务每周手工导出粘 Excel，花两小时",
+    "ind": "",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/Vm5FHzndEPnkrGYT0isMQD/1/deep-dives/weekly-report.html"
+  },
+  {
+    "t": "费用异常波动分析",
+    "pain": "费用涨了老板问「钱去哪了」 · 财务只能答「涨了」，答不出是量涨还是价涨",
+    "ind": "",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/Ei1qGU67C9IBxwIMVc0GpM/1/deep-dives/cost-variance.html"
+  },
+  {
+    "t": "预算编制数据收集",
+    "pain": "预算到最后都是拍脑袋 · 因为各部门交来的表格式五花八门，根本对不齐",
+    "ind": "",
+    "roles": [
+      "财务"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/iqjL26w9vLLZhNEZn140Cx/1/deep-dives/budget-collection.html"
+  },
+  {
+    "t": "招标文件实质性条款逐条清单化",
+    "pain": "一百多页招标文件里星号散落在七个章节 · 漏掉一条不给澄清机会直接废标",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/lGvO6zQgULwZmCjPQFCLLs/0/deep-dives/bid-mandatory-clause.html"
+  },
+  {
+    "t": "商务标废标项逐条自查",
+    "pain": "标书做了两周 · 废标事由通报里的条目没有一条需要专业判断",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/tNPMHkQGr2KB3Yk7eMDtna/0/deep-dives/bid-void-selfcheck.html"
+  },
+  {
+    "t": "投不投的可行性初筛",
+    "pain": "中标率不到三成 · 但每个标都投的隐性成本没人算过",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/03YcTXMRDSU1Z1SeVJkDFW/0/deep-dives/bid-go-nogo.html"
+  },
+  {
+    "t": "关联方串标风险自查",
+    "pain": "认定串标的依据已经技术化到 IP 共现率 · 而几乎没有企业在投标前自查过",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/EfJM1O54Cts2mkZS814daL/0/deep-dives/bid-collusion-selfcheck.html"
+  },
+  {
+    "t": "历史报价一致性与越权折扣核查",
+    "pain": "折扣申请单上写的是「客户要求」· 而这个客户上一单的折扣是多少没人翻过",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/F07Xc0R96PNjP7XF2V4NwX/0/deep-dives/quote-discount-audit.html"
+  },
+  {
+    "t": "合同条款与标准模板偏离比对",
+    "pain": "客户法务改了七处 · 销售看了一遍说没什么问题",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/D3z6lrOO4tDOLQEQKb5s2b/0/deep-dives/contract-clause-deviation.html"
+  },
+  {
+    "t": "合同评审跨部门资料一次性齐套",
+    "pain": "评审会开到一半发现财务要的开票口径没人提供 · 于是散会下周再开",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/A0AIFMgmvzBhNOkndl7vPu/0/deep-dives/contract-review-pack.html"
+  },
+  {
+    "t": "客户额度占用与超限发货预警",
+    "pain": "系统里能录信用额度 · 销售开单照样超限",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/nyQhO9MRjTKERoQR93Ewq4/0/deep-dives/credit-limit-exposure.html"
+  },
+  {
+    "t": "逾期应收账龄分档与差异化催收方案",
+    "pain": "账龄表每月都做 · 诉讼时效那一栏从来没人填",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/Wuknx7QHN0NSdw9V03c4l2/0/deep-dives/ar-aging-collection.html"
+  },
+  {
+    "t": "客户对账差异逐笔排查",
+    "pain": "客户对账单跟我方台账差 17 万 · 两边都说自己的账没错",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/94TQ2Qe6Qvvw61IMnAlO3M/0/deep-dives/ar-reconciliation-gap.html"
+  },
+  {
+    "t": "经销商返利兑现核对",
+    "pain": "返利纠纷的争点全部是账对不上 · 不是算不对",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/qxvYLOR4lNYPEWyHlTxqEJ/0/deep-dives/rebate-reconciliation.html"
+  },
+  {
+    "t": "渠道价格体系一致性与窜货证据链",
+    "pain": "窜货定义写在合同里只有一句话 · 取证标准和认定流程一个字都没写",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/ZhDhVWzZAz0DcchdzZYaP8/0/deep-dives/channel-price-fleeing.html"
+  },
+  {
+    "t": "停滞商机识别与唤醒清单",
+    "pain": "Pipeline 上写着推进中 · 最后一次实质互动是四个半月前",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/2BzkviY0HNFUeOioBunMbr/0/deep-dives/stalled-deal-detection.html"
+  },
+  {
+    "t": "丢单复盘事实时间线重建",
+    "pain": "复盘结论三句话 · 报价太高、联系人离职、对手价格低",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/hYRHtcyH5vFtmqCW6YQKbE/0/deep-dives/lost-deal-timeline.html"
+  },
+  {
+    "t": "合同到期与续签盘点",
+    "pain": "制度写着提前三十天提醒续签 · 实际靠销售的记性",
+    "ind": "",
+    "roles": [
+      "销售"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/mAClOK1FVkF7RmqcqhZKXy/0/deep-dives/contract-renewal-sweep.html"
+  },
+  {
+    "t": "多供应商报价逐项拆解比价",
+    "pain": "三家报价单价看着差几分钱 · 折算到到厂价之后最便宜那家反而最贵",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/6qZXSCMbf2h1t9gyz4l3wz/0/deep-dives/quote-comparison.html"
+  },
+  {
+    "t": "框架合同与实际结算偏离核查",
+    "pain": "物业保洁绿植快递每月照付 · 合同里写的服务频次和实际结算单从来没人对过",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/kDUnbrF9vO1Lahk9iokMTX/0/deep-dives/contract-execution-audit.html"
+  },
+  {
+    "t": "雇主责任险与团意险方案横向比对",
+    "pain": "同样 50 万保额一家报 270 一家报 449 · 贵的不一定更好、便宜的可能不赔猝死",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/9yXIO0N7l5pVpxDAslq5r8/0/deep-dives/insurance-comparison.html"
+  },
+  {
+    "t": "制度冲突与失效引用排查",
+    "pain": "考勤制度去年改了 · 用车制度里引用的还是那条已经作废的条款",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/bv7uX2fHe1GBL3AcAEkkbL/0/deep-dives/policy-conflict-scan.html"
+  },
+  {
+    "t": "年度合规日历与到期预警台账构建",
+    "pain": "难的不是「到期提醒」· 是先把那份半年没更新的台账重建出来",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/YSk84YNmVXnhQ7BDjlkqbI/0/deep-dives/compliance-calendar.html"
+  },
+  {
+    "t": "制度问答知识库（带出处）",
+    "pain": "年假怎么算、这张发票能不能报、加班餐补多少 · 同样的问题一天被问八遍",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/DBdGQMpm1W01g1TaJFsK3P/0/deep-dives/policy-qa-base.html"
+  },
+  {
+    "t": "资产台账清洗与幽灵资产识别",
+    "pain": "台账越来越长、虚挂资产越来越多 · 盘点时全是找不到的东西",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/elOw3F5XaomEXgoFfiFw9L/0/deep-dives/asset-ledger-cleanup.html"
+  },
+  {
+    "t": "盘点差异归因与盘点报告生成",
+    "pain": "盘完了差了 27 台 · 报告里「差异原因」那一栏最后往往是随便解释",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/dcITqwHCF2snWEojtO4Zwh/0/deep-dives/stocktake-variance.html"
+  },
+  {
+    "t": "离职资产与授权回收核查",
+    "pain": "人走了电脑找不到了 · 更麻烦的是他手上那份盖过章的授权书还在",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/PTVVjotD7mXvo9xBr2oolf/0/deep-dives/offboarding-recovery.html"
+  },
+  {
+    "t": "续租与换租决策包",
+    "pain": "租金看着降了 · 但把装修摊销、复原义务、空调加班费算进去可能比现在更贵",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/PJAqdhs3ZznvbUCQlON264/0/deep-dives/lease-decision-pack.html"
+  },
+  {
+    "t": "跨会议待办闭环追踪",
+    "pain": "会开了纪要发了 · 然后就没有然后了",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/0qabL1zDI7MHe7C0WzM0bk/0/deep-dives/action-item-tracking.html"
+  },
+  {
+    "t": "重要会议前的资料预备包",
+    "pain": "开会前一小时才想起来 · 上次定了什么、制度怎么写的、合同有没有约定",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/VycVqkEOfgn25EdXObKAC5/0/deep-dives/meeting-prep-pack.html"
+  },
+  {
+    "t": "行政月报与量化口径生成",
+    "pain": "做好了没人夸出事了全是锅 · 月报是行政唯一能让工作被看见的东西",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/g9fM0NbMrwO4d0nE7SkvEZ/0/deep-dives/admin-monthly-report.html"
+  },
+  {
+    "t": "行政费用异常归因（量价分离）",
+    "pain": "都知道水电物业在涨 · 但没人拆过是用得多了还是单价涨了",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/9aGE4LNQvH4A2SlzwdHDvZ/0/deep-dives/cost-variance-split.html"
+  },
+  {
+    "t": "行政预算编制依据包",
+    "pain": "预算不是「去年加 10%」· 但要说出别的算法得先有测算依据",
+    "ind": "",
+    "roles": [
+      "行政"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/Byas1b9D6CIbBHMTo6KF6V/0/deep-dives/budget-basis-pack.html"
+  },
+  {
+    "t": "部门人力盘点",
+    "pain": "季度盘点 2-3 小时 · 编制表在岗表流动记录散在不同 Excel 里手工对账",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/aCjTelsDGdXYTHrirW6Nwg/0/deep-dives/BP.1-org-headcount.html"
+  },
+  {
+    "t": "业务会议纪要行动项",
+    "pain": "跟会加纪要半天没了 · 行动项靠「耳朵硬记」漏掉离职风险也不自知",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/ByRvK2eahryT2Zgeubnfbb/0/deep-dives/BP.2-meeting-minutes.html"
+  },
+  {
+    "t": "业务主管赋能",
+    "pain": "主管求助「问一次答一次」· 同一个低绩效面谈 A 被教直接说 B 被教先表态",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/i4XLkEg38wYNNrO93tHv96/0/deep-dives/BP.3-manager-coaching.html"
+  },
+  {
+    "t": "月度薪资核算",
+    "pain": "每月发薪前后逐人手工对齐三张表 · 错一个公式全盘错",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/P2GLjwkJGwvavhoDREaTyg/0/deep-dives/CB.1-payroll.html"
+  },
+  {
+    "t": "调薪/年终奖测算",
+    "pain": "年度调薪手工试算 Excel 累到吐 · 超预算就「拍脑袋压」",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/wZlVjihZIBqEm9jPfNUEHK/0/deep-dives/CB.2-pay-adjustment.html"
+  },
+  {
+    "t": "薪酬竞争力对标",
+    "pain": "「我们薪资到底啥水平」没人答得上来 · 薪酬倒挂看不见直到人家提离职",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/ofpa0hVVE0qDzHar6nOE3X/0/deep-dives/CB.3-comp-benchmark.html"
+  },
+  {
+    "t": "离职面谈分析",
+    "pain": "面谈纪要散乱离职原因靠人肉归类 · 场面话把真实诉求藏起来",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/ylQ89NKHHgwkaM8RBXzMnV/0/deep-dives/ER.1-exit-interview.html"
+  },
+  {
+    "t": "员工满意度分析",
+    "pain": "18 题 24 人手工算六维度均分至少一天 · 3.1 分是「还好」还是「报警」全看主观",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/4kCwRWrwWzmGaIRpVrUc8x/0/deep-dives/ER.2-satisfaction-survey.html"
+  },
+  {
+    "t": "合规文书草拟",
+    "pain": "文书从零起草要件遗漏风险大 · 法条引用差一个款项就是一场仲裁",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/wgP93304RQFERNNbiJn0ZO/0/deep-dives/ER.3-compliance-doc.html"
+  },
+  {
+    "t": "投诉处理记录",
+    "pain": "投诉来了不知道先查什么 · 什么必须升级什么能调解没有分级标准",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/BIwzQj8vxnKZoGAflwDbYN/0/deep-dives/ER.4-conflict-resolution.html"
+  },
+  {
+    "t": "用工合规排查",
+    "pain": "逐条核对一天起步 · 漏检一条劳动合同到期未续签就是双倍工资",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/0RPOa6rnLVEXBuu3jmDt3a/0/deep-dives/ER.5-labor-compliance.html"
+  },
+  {
+    "t": "入离职手续办理",
+    "pain": "入职跑断腿漏一个材料就重来 · 离职交接靠微信群催",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/3jPX2WwNJZ0To7lTgFWN3g/0/deep-dives/ES.1-onboarding.html"
+  },
+  {
+    "t": "员工证明一键开具",
+    "pain": "四种证明四种模板现找现填 · 张三开「月薪」李四开「月平均工资」银行不认",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/k5WUuyW4naXMhmdRD6OaFC/0/deep-dives/ES.2-certification.html"
+  },
+  {
+    "t": "员工福利方案测算",
+    "pain": "福利方案比选全靠 Excel 手算 · 说人均 1500 出账 2200 因为漏了附加费",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/XLYEiEwfxdid1I49fFgGgx/0/deep-dives/ES.3-benefit-plan.html"
+  },
+  {
+    "t": "转正调动流程",
+    "pain": "转正调动五个节点漏一个就出错 · 漏了薪资调整员工下月还拿试用期工资",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/VD86fIyxdgP9AJnnQy1W2D/0/deep-dives/ES.4-probation-transfer.html"
+  },
+  {
+    "t": "培训需求分析",
+    "pain": "年度培训计划靠拍脑袋 · 培训需求与绩效短板两张皮",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/7XAUwVttpuXRldYUC3wSJr/0/deep-dives/LD.1-training-needs.html"
+  },
+  {
+    "t": "课件/SOP 生成",
+    "pain": "每个课程从零写课件 2-3 天起步 · 课件结构随意质量靠个人",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/vo18hwaphIehbb64qJwgRA/0/deep-dives/LD.2-courseware.html"
+  },
+  {
+    "t": "培训效果评估",
+    "pain": "培训完就完事效果没人管 · 只统计满意度看不见真效果",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/JZ0jGHBGiL7spTrPgme3kZ/0/deep-dives/LD.3-training-eval.html"
+  },
+  {
+    "t": "人才九宫格盘点",
+    "pain": "年度盘点手工填格子一天起步 · 「潜力」没有统一标准九宫格就失真",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/j8WMPR9PAiatxSDLKVwjWr/0/deep-dives/OT.2-talent-grid.html"
+  },
+  {
+    "t": "组织诊断",
+    "pain": "诊断靠感觉 · 离职率高干劲不足说不出是钱的问题还是人的问题",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/vJjQQ1Mppj4sJKImBEXmZ3/0/deep-dives/OT.3-org-diagnosis.html"
+  },
+  {
+    "t": "人员汰换评估",
+    "pain": "汰换靠「感觉加人情」· 四类台账手工比对一天起步",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/ObWqsY1m0QryreyPdlUlZ7/0/deep-dives/OT.4-elimination-review.html"
+  },
+  {
+    "t": "继任计划",
+    "pain": "关键岗没有继任者没人提前排 · 核心人才一走岗位直接断档",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/0R4XccSpGMDK5M3Y7NnDUV/0/deep-dives/OT.5-succession-plan.html"
+  },
+  {
+    "t": "JD 需求拆解",
+    "pain": "业务提需求只有一句「要个做板子的」· 来回确认 1-2 小时改三版",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/Oi48rHuWeq9K8bh9BzGNkd/0/deep-dives/TA.1-jd-decompose.html"
+  },
+  {
+    "t": "批量简历筛选排序",
+    "pain": "逐份翻简历 2-4 小时起步 · 同一岗位两个 HR 标准还不一样",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/0SazJbbOB29eTjUiUiS1aw/0/deep-dives/TA.2-resume-screening.html"
+  },
+  {
+    "t": "面试评估汇总",
+    "pain": "反馈散在五个渠道 · 面试官 A 说不错 B 说还行汇总起来没标准",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/a7FBqeYa6S4yRIlSuQnT8p/0/deep-dives/TA.3-interview-summary.html"
+  },
+  {
+    "t": "招聘漏斗与渠道效果分析",
+    "pain": "钱花在哪最值人卡在哪一环答不出来 · Excel 透视表半天起步",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/pf4LRPSgcE8vcQnz3GWFLa/0/deep-dives/TA.4-recruitment-funnel.html"
+  },
+  {
+    "t": "Offer 谈判测算",
+    "pain": "跨表测算一小时起步容易漏项 · 期望 30K 和 45K 处理完全不同却只有跟或不跟两条路",
+    "ind": "",
+    "roles": [
+      "HR"
+    ],
+    "status": "已上线",
+    "src": "https://workbuddy-space-static.codebuddy.work/page/WQN0ItfVSKQCwIwpl8CKvX/0/deep-dives/TA.5-offer-negotiation.html"
+  },
+  {
+    "placeholder": true,
+    "roles": []
+  },
+  {
+    "placeholder": true,
+    "roles": []
+  }
+]

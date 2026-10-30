@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_mindx_app_mindx=self.webpackChunk_mindx_app_mindx||[]).push([["35893"],{18324(e,p,a){a.d(p,{createGitGraphServices:()=>i.b});var i=a(79529);a(23252)}}]);

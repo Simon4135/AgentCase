@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_mindx_app_mindx=self.webpackChunk_mindx_app_mindx||[]).push([["39252"],{99423(e,a,p){p.d(a,{createPacketServices:()=>c.$});var c=p(40177);p(23252)}}]);

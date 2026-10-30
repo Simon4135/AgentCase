@@ -1,0 +1,10 @@
+const fs=require("fs"),path=require("path");
+const OUT="D:/WorkbuddyUseCase/WorkBuddy解决方案库";
+const m=JSON.parse(fs.readFileSync("D:/WorkbuddyUseCase/_tools/last_run.json","utf8"));
+const pb=m.rows.filter(r=>{const p=path.join(OUT,r.dir,"LiveDemo.html");return fs.existsSync(p)&&fs.readFileSync(p,"utf8").includes('class="prompt-box"');});
+console.log("prompt-box solutions:",pb.length);
+const r0=pb[0];
+const h=fs.readFileSync(path.join(OUT,r0.dir,"LiveDemo.html"),"utf8");
+const i=h.indexOf('class="prompt-box"');
+console.log("=== raw 1400 chars of",r0.dir,"===");
+console.log(h.slice(i-160,i+1400));

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_mindx_app_mindx=self.webpackChunk_mindx_app_mindx||[]).push([["79466"],{75893(i,a,n){n.d(a,{NotificationPagePC:()=>p.g});var p=n(36402)}}]);

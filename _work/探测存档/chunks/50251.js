@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_mindx_app_mindx=self.webpackChunk_mindx_app_mindx||[]).push([["50251"],{57030(e,a,p){p.d(a,{createRadarServices:()=>d.f});var d=p(75287);p(23252)}}]);

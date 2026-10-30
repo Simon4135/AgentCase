@@ -1,0 +1,12 @@
+const fs=require('fs');
+const path=require('path');
+const TOP="D:\\WorkbuddyUseCase";
+const B=TOP+"\\_work\\采集与构建";
+const DATA=JSON.parse(fs.readFileSync(B+"\\index_data.json","utf8"));
+const tpl=fs.readFileSync(B+"\\analysis_template.html","utf8");
+const marker="/*__DATA__*/[]";
+if(tpl.indexOf(marker)<0) throw new Error("模板缺少数据占位符");
+const out=tpl.replace(marker, JSON.stringify(DATA));
+fs.writeFileSync(path.join(TOP,"分析.html"), out, "utf8");
+console.log("分析.html bytes:", Buffer.byteLength(out,"utf8"));
+console.log("rows:", DATA.length);

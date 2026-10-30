@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WorkBuddy 解决方案库 · 本地索引</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;background:#f6f8fa;color:#1f2328}
+header{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff;padding:24px 28px}
+header h1{margin:0 0 6px;font-size:22px;font-weight:650}
+header p{margin:0;opacity:.88;font-size:13px}
+header .navlinks{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+header .navlinks a{background:#ffffff22;border:1px solid #ffffff44;color:#fff;padding:5px 14px;border-radius:999px;font-size:12.5px;text-decoration:none}
+header .navlinks a:hover{background:#ffffff33}
+.wrap{max-width:1680px;margin:0 auto;padding:20px 28px 80px}
+.stat{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.pill{background:#fff;border:1px solid #d0d7de;border-radius:999px;padding:5px 13px;font-size:12.5px}
+.pill b{color:#0f766e;font-size:14px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;align-items:center}
+input,select{padding:8px 12px;border:1px solid #d0d7de;border-radius:8px;font:inherit;background:#fff;color:#1f2328}
+input:focus,select:focus{outline:2px solid #0f766e55;border-color:#0f766e}
+input{flex:1;min-width:220px}
+.btn{padding:8px 14px;border:1px solid #d0d7de;border-radius:8px;background:#fff;cursor:pointer;font:inherit;font-size:13px}
+.btn:hover{background:#f0f4f6}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #d0d7de;border-radius:10px;overflow:hidden;font-size:13.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid #eaeef2;vertical-align:top}
+th{background:#eef2f5;font-size:12.5px;cursor:pointer;user-select:none;white-space:nowrap;position:sticky;top:0;z-index:2}
+th:hover{background:#e2e8ee}
+th.asc::after{content:" ▲";font-size:9px;color:#0f766e}
+th.desc::after{content:" ▼";font-size:9px;color:#0f766e}
+th.nosort{cursor:default}
+th.nosort:hover{background:#eef2f5}
+tr:hover td{background:#f7fcfb}
+td.n{color:#57606a;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.t{font-weight:640;min-width:180px;max-width:280px}
+td.t a{color:#0f766e}
+td.p{color:#57606a;font-size:12.5px;max-width:330px}
+.c{text-align:center;white-space:nowrap}
+a{color:#0f766e;text-decoration:none}
+a:hover{text-decoration:underline}
+.tag{display:inline-block;padding:1px 7px;border-radius:5px;font-size:11px;margin-top:3px;white-space:nowrap}
+.A{background:#dcfce7;color:#166534}.B{background:#fef3c7;color:#92400e}
+.C{background:#dbeafe;color:#1e40af}.D{background:#f1f3f5;color:#6b7280}
+.yes{color:#166534;font-weight:600}.no{color:#adb5bd}
+.foot{margin-top:16px;color:#6b7280;font-size:12.5px}
+
+/* 业务价值 / ROI 列 */
+td.v{min-width:300px;max-width:430px;font-size:12.8px;color:#374151}
+.vline{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.roi{display:inline-flex;align-items:center;gap:5px;margin-top:5px;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;border-radius:6px;padding:2px 8px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.roi b{color:#c2410c}
+.vmore{margin-top:5px}
+.vmore button{border:0;background:none;color:#0f766e;cursor:pointer;font:inherit;font-size:11.5px;padding:0;text-decoration:underline}
+.detail td{background:#fbfcfd;border-bottom:2px solid #e2e8ee;padding:14px 16px 18px 46px}
+.dg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.dsec{background:#fff;border:1px solid #e5e9ee;border-radius:8px;padding:10px 13px}
+.dsec h5{margin:0 0 7px;font-size:12px;color:#0f766e;letter-spacing:.3px}
+.dsec ul{margin:0;padding-left:17px}
+.dsec li{margin:3px 0;font-size:12.5px;color:#374151}
+.dsec p{margin:3px 0;font-size:12.5px;color:#374151}
+.chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px}
+.chip{background:#eef2f5;border-radius:5px;padding:1px 8px;font-size:11.5px;color:#4b5563}
+.chip.k{background:#e0f2f1;color:#0f766e}
+.cmpold{color:#9a3412}.cmpnew{color:#166534}
+
+/* ================= 左侧导航栏（wb-sidebar） ================= */
+#wbsb{position:fixed;top:0;left:0;bottom:0;width:268px;background:#fff;border-right:1px solid #e3e8ed;overflow-y:auto;overflow-x:hidden;z-index:40;display:flex;flex-direction:column;font-size:13px}
+#wbsb::-webkit-scrollbar{width:8px}
+#wbsb::-webkit-scrollbar-thumb{background:#d5dde3;border-radius:4px}
+#wbsb::-webkit-scrollbar-track{background:transparent}
+#wbsb .sbb{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff;padding:15px 16px 14px;position:relative;flex:0 0 auto}
+#wbsb .sbb .t{font-size:14px;font-weight:650;line-height:1.35;padding-right:28px}
+#wbsb .sbb .s{font-size:11.3px;opacity:.85;margin-top:4px;line-height:1.5}
+#wbsb .sbc{position:absolute;top:12px;right:11px;border:0;background:#ffffff26;color:#fff;border-radius:6px;width:24px;height:24px;cursor:pointer;font:inherit;font-size:14px;line-height:1;padding:0}
+#wbsb .sbc:hover{background:#ffffff45}
+#wbsb .sbt{padding:13px 16px 5px;font-size:10.5px;letter-spacing:.7px;color:#9aa4ae;font-weight:700}
+#wbsb a.sbi,#wbsb button.sbi{display:flex;align-items:center;gap:8px;width:100%;padding:7px 15px 7px 13px;font-size:12.7px;color:#3f4750;text-decoration:none;border:0;border-left:3px solid transparent;background:none;cursor:pointer;font-family:inherit;text-align:left;line-height:1.45}
+#wbsb a.sbi:hover,#wbsb button.sbi:hover{background:#f2f7f7;color:#0f766e}
+#wbsb a.sbi.on{background:#eef7f6;color:#0f766e;font-weight:650;border-left-color:#0f766e}
+#wbsb .sbi .ic{flex:0 0 auto;width:15px;text-align:center;font-size:12px}
+#wbsb .sbi .tx{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+#wbsb .sbi .ct{flex:0 0 auto;font-size:10.6px;color:#9aa4ae;font-variant-numeric:tabular-nums}
+#wbsb a.sbi.on .ct{color:#0f766e}
+#wbsb .sbp{display:inline-flex;min-width:16px;height:16px;border-radius:4px;background:#eef2f5;color:#57606a;font-size:10px;align-items:center;justify-content:center;font-weight:700;flex:0 0 auto;padding:0 4px}
+#wbsb a.sbi.on .sbp{background:#0f766e;color:#fff}
+#wbsb .sbi.sub{padding-left:26px;font-size:12.2px;color:#57606a}
+#wbsb .sbi.sub .ct{display:none}
+#wbsb .sbdiv{height:1px;background:#eef1f4;margin:9px 14px;flex:0 0 auto}
+#wbsb .sbf{margin-top:auto;padding:11px 16px 16px;border-top:1px solid #eef1f4;font-size:11.2px;color:#9aa4ae;line-height:1.65;flex:0 0 auto}
+#wbsb .sbf a{color:#0f766e;text-decoration:none}
+#wbsb .sbf a:hover{text-decoration:underline}
+#wbsb .sbq{display:flex;flex-wrap:wrap;gap:5px;padding:4px 15px 8px}
+#wbsb .sbq button{border:1px solid #dfe4e9;background:#fafbfc;border-radius:6px;padding:3px 9px;font:inherit;font-size:11.4px;color:#4b5563;cursor:pointer}
+#wbsb .sbq button:hover{border-color:#0f766e;color:#0f766e;background:#f2f7f7}
+#wbsb .sbq button.on{border-color:#0f766e;background:#eef7f6;color:#0f766e;font-weight:650}
+#wbopen{position:fixed;top:10px;left:10px;z-index:41;display:none;border:0;background:#0f766e;color:#fff;border-radius:8px;width:36px;height:36px;font-size:17px;cursor:pointer;box-shadow:0 2px 10px #0003;line-height:1;padding:0}
+#wbopen:hover{background:#115e59}
+body{padding-left:268px}
+body.sb-hide{padding-left:0}
+body.sb-hide #wbsb{display:none}
+body.sb-hide #wbopen{display:block}
+body.sb-top{position:relative}
+#wbtop{position:fixed;right:20px;bottom:22px;z-index:39;border:0;background:#0f766e;color:#fff;border-radius:999px;padding:9px 15px;font:inherit;font-size:12.5px;cursor:pointer;box-shadow:0 3px 12px #0003;display:none}
+#wbtop:hover{background:#115e59}
+#wbtop.on{display:block}
+@media(max-width:900px){
+  body{padding-left:0}
+  #wbsb{transform:translateX(-101%);transition:transform .2s ease;box-shadow:0 0 22px #0004;z-index:60}
+  body.sb-hide #wbsb{display:flex;transform:translateX(-101%)}
+  body:not(.sb-hide) #wbsb{transform:none}
+  #wbopen{display:block;z-index:61}
+  body:not(.sb-hide) #wbopen{display:none}
+}
+#wbsbScrim{display:none;position:fixed;inset:0;background:#0b122066;z-index:55}
+@media(max-width:900px){#wbsbScrim.on{display:block}}
+body.sb-hide header{padding-left:56px}
+@media print{#wbsb,#wbopen,#wbtop{display:none!important}body{padding-left:0!important}}
+[id^="sb-"]{scroll-margin-top:14px}
+/* ============== 左侧导航栏结束 ============== */
+</style>
+</head>
+<body>
+<aside id="wbsb">
+  <div class="sbb">
+    <button class="sbc" id="wbsbc" title="收起侧边栏（快捷键 [ ）">«</button>
+    <div class="t" id="wbsbTitle">WorkBuddy 解决方案库</div>
+    <div class="s" id="wbsbSub">官方内容本地离线归档</div>
+  </div>
+  <div id="wbsbBody"></div>
+  <div class="sbf">
+    <div id="wbsbFoot"></div>
+  </div>
+</aside>
+<button id="wbopen" title="展开导航（快捷键 [ ）">☰</button>
+<button id="wbtop" title="回到顶部">↑ 顶部</button>
+
+
+<header>
+  <h1>WorkBuddy 解决方案库 · 本地索引</h1>
+  <p id="sub"></p>
+  <div class="navlinks">
+    <a href="./分析.html">📊 多维度分析报告</a>
+    <a href="./AI接入企业系统调研.html">🔌 AI 接入企业系统调研（外部对照）</a>
+    <a href="./README.md">📄 README</a>
+    <a href="./全量清单.csv">📑 全量清单.csv</a>
+  </div>
+</header>
+<div class="wrap">
+  <div class="stat" id="stat"></div>
+  <div class="bar" id="sb-search">
+    <input id="q" placeholder="搜索：标题 / 痛点 / 业务价值 / 行业 / 角色 / 编号…">
+    <select id="fInd"><option value="">全部行业</option></select>
+    <select id="fRole"><option value="">全部角色</option></select>
+    <select id="fTier">
+      <option value="">全部形态</option>
+      <option value="A">A · 推荐任务 + 技能包</option>
+      <option value="B">B · 有推荐任务，无技能包</option>
+      <option value="C">C · 两页方案，提示词在 Demo 内</option>
+      <option value="D">D · 两页方案，无提示词</option>
+    </select>
+    <select id="fPkg">
+      <option value="">技能包：不限</option>
+      <option value="1">仅有技能包</option>
+      <option value="0">仅无技能包</option>
+    </select>
+    <select id="fPrm">
+      <option value="">提示词：不限</option>
+      <option value="1">仅有提示词</option>
+    </select>
+    <select id="fRoi">
+      <option value="">ROI 量化：不限</option>
+      <option value="1">仅有「改造前→后」量化对比</option>
+    </select>
+    <button class="btn" id="reset">重置</button>
+  </div>
+  <table id="sb-table">
+    <thead><tr>
+      <th data-k="n">编号</th>
+      <th data-k="t">解决方案</th>
+      <th data-k="ind">行业</th>
+      <th data-k="roles">角色</th>
+      <th data-k="val">业务价值 / ROI 说明</th>
+      <th data-k="tc" class="c">推荐任务</th>
+      <th data-k="dp" class="c">Demo提示词</th>
+      <th data-k="pk" class="c">技能包</th>
+      <th class="nosort">本地文件</th>
+    </tr></thead>
+    <tbody id="tb"></tbody>
+  </table>
+  <div class="foot" id="foot"></div>
+</div>
+<script>
+const DATA = /*__DATA__*/[];
+
+const TB = document.getElementById("tb");
+const Q = document.getElementById("q");
+const FI = document.getElementById("fInd");
+const FRo = document.getElementById("fRole");
+const FT = document.getElementById("fTier");
+const FP = document.getElementById("fPkg");
+const FR = document.getElementById("fPrm");
+const FO = document.getElementById("fRoi");
+
+const TLABEL = { A:"推荐任务+技能包", B:"有任务无技能包", C:"Demo提示词", D:"无提示词" };
+
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+
+const opt = (sel, list) => { for (const v of list) { const o = document.createElement("option"); o.value = v; o.textContent = v; sel.appendChild(o); } };
+opt(FI, [...new Set(DATA.map(r => r.ind).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"zh")));
+const roleCount = {};
+for (const r of DATA) for (const ro of String(r.roles||"").split("、")) if (ro) roleCount[ro] = (roleCount[ro]||0)+1;
+opt(FRo, Object.keys(roleCount).sort((a,b)=> roleCount[b]-roleCount[a] || a.localeCompare(b,"zh")));
+
+document.getElementById("sub").textContent =
+  "共 " + DATA.length + " 个解决方案 · 来源 www.workbuddy.cn/space/d/ZljbYQzFpALFLcPwKPlct1 · 点击表头排序，点标题打开离线页面";
+
+const nPkg = DATA.filter(r=>r.pk).length, nTasks = DATA.filter(r=>r.tc>0).length;
+const nPrm = DATA.filter(r=>r.tc>0||r.dp>0).length, nVal = DATA.filter(r=>r.val).length, nRoi = DATA.filter(r=>r.roi&&r.roi.speed).length;
+document.getElementById("stat").innerHTML =
+  [["解决方案",DATA.length],["含提示词",nPrm],["带推荐任务",nTasks],["带技能包",nPkg],["含业务价值说明",nVal],["含量化 ROI 对比",nRoi]]
+  .map(x=>'<span class="pill">'+x[0]+' <b>'+x[1]+'</b></span>').join("");
+
+let sk = "n", sd = 1;
+
+function valueCell(r, i) {
+  let h = '<div class="vline">' + esc(r.val || "—") + '</div>';
+  if (r.roi && r.roi.speed) {
+    h += '<div class="roi">⏱ ' + esc(r.roi.before) + ' → <b>' + esc(r.roi.after) + '</b> · 提速 ' + r.roi.speed + ' 倍</div>';
+  }
+  if (r.score) {
+    h += '<div class="roi" style="background:#eff6ff;border-color:#bfdbfe;color:#1e40af">官方评分 <b>' + r.score.value + '</b> ＝ 痛感 ' + r.score.pain + ' × AI 适配 ' + r.score.ai + ' ÷ 落地难度 ' + r.score.diff + '</div>';
+  }
+  const d = [];
+  if (r.diff) d.push('<div class="dsec"><h5>最大差异点（官方原文 · 为什么这个场景值得做）</h5><p>' + esc(r.diff) + '</p></div>');
+  if (r.ev && r.ev.length) d.push('<div class="dsec"><h5>价值说明（官方原文）</h5><ul>' + r.ev.map(x=>'<li>'+esc(x)+'</li>').join("") + '</ul></div>');
+  if (r.cv && r.cv.length) d.push('<div class="dsec"><h5>核心价值</h5>' + r.cv.map(x=>'<p><b>'+esc(x.h)+'</b>：'+esc(x.t)+'</p>').join("") + '</div>');
+  if (r.cmp && (r.cmp.old || r.cmp.new)) d.push('<div class="dsec"><h5>改造前后对照</h5>'
+    + (r.cmp.old ? '<p class="cmpold">✕ 现在的做法：'+esc(r.cmp.old)+'</p>' : "")
+    + (r.cmp.new ? '<p class="cmpnew">✓ 交给 Agent 之后：'+esc(r.cmp.new)+'</p>' : "") + '</div>');
+  if (r.outs && r.outs.length) d.push('<div class="dsec"><h5>会产出什么</h5><ul>' + r.outs.map(x=>'<li>'+esc(x.ot||x.on||"")+(x.od?' — '+esc(x.od):'')+'</li>').join("") + '</ul></div>');
+  if (r.nums && r.nums.length) d.push('<div class="dsec"><h5>页面里的量化表述</h5><ul>' + r.nums.slice(0,5).map(x=>'<li>'+esc(x)+'</li>').join("") + '</ul></div>');
+  const meta = [];
+  if (r.steps) meta.push('<span class="chip k">流程 '+r.steps+' 步</span>');
+  for (const k of (r.kinds||[])) meta.push('<span class="chip k">产出 '+esc(k)+'</span>');
+  for (const k of (r.skinds||[])) meta.push('<span class="chip">输入 '+esc(k)+'</span>');
+  if (meta.length) d.push('<div class="dsec"><h5>交互维度：输入 → 处理 → 产出</h5><div class="chips">'+meta.join("")+'</div>'
+    + ((r.srcs&&r.srcs.length)?('<ul>'+r.srcs.map(x=>'<li>'+esc(x.fn||"")+(x.fd?' — '+esc(x.fd):'')+'</li>').join("")+'</ul>'):"") + '</div>');
+  const hasD = d.length > 0;
+  h += '<div class="vmore"><button data-i="'+i+'">' + (hasD ? '展开价值详情 ▾' : '（无更多价值字段）') + '</button></div>';
+  return { cell: h, detail: hasD ? d.join("") : "" };
+}
+
+function render() {
+  const kw = Q.value.trim().toLowerCase();
+  const R = DATA.filter(r => {
+    if (FI.value && r.ind !== FI.value) return false;
+    if (FRo.value && String(r.roles||"").split("、").indexOf(FRo.value) < 0) return false;
+    if (FT.value && String(r.tier||"").charAt(0) !== FT.value) return false;
+    if (FP.value === "1" && !r.pk) return false;
+    if (FP.value === "0" && r.pk) return false;
+    if (FR.value === "1" && !(r.tc > 0 || r.dp > 0)) return false;
+    if (FO.value === "1" && !(r.roi && r.roi.speed)) return false;
+    if (kw) {
+      const s = (r.t + " " + r.pain + " " + r.val + " " + r.pn + " " + r.ind + " " + r.roles + " " + r.n).toLowerCase();
+      if (s.indexOf(kw) < 0) return false;
+    }
+    return true;
+  });
+  R.sort((a,b) => {
+    const x = a[sk], y = b[sk];
+    if (typeof x === "number" && typeof y === "number") return (x - y) * sd;
+    return String(x == null ? "" : x).localeCompare(String(y == null ? "" : y), "zh") * sd;
+  });
+  const out = [];
+  R.forEach((r, i) => {
+    const L = "./WorkBuddy解决方案库/" + encodeURI(r.d) + "/";
+    const cell = v => v > 0 ? '<span class="yes">' + v + '</span>' : '<span class="no">—</span>';
+    const v = valueCell(r, i);
+    out.push('<tr>' +
+      '<td class="n">' + r.n + '</td>' +
+      '<td class="t"><a href="' + L + '场景引入.html" target="_blank">' + esc(r.t) + '</a>' +
+        '<br><span class="tag ' + String(r.tier||"D").charAt(0) + '">' + String(r.tier||"D").charAt(0) + ' · ' + TLABEL[String(r.tier||"D").charAt(0)] + '</span>' +
+        (r.pain ? '<div class="p">' + esc(r.pain.slice(0, 110)) + (r.pain.length > 110 ? "…" : "") + '</div>' : '') +
+      '</td>' +
+      '<td>' + esc(r.ind || "—") + '</td>' +
+      '<td>' + esc(r.roles || "—") + '</td>' +
+      '<td class="v" id="v' + i + '">' + v.cell + '</td>' +
+      '<td class="c">' + cell(r.tc) + '</td>' +
+      '<td class="c">' + cell(r.dp) + '</td>' +
+      '<td class="c">' + (r.pk ? '<a href="' + L + encodeURI(r.pn) + '">下载</a>' : '<span class="no">—</span>') + '</td>' +
+      '<td class="n"><a href="' + L + '提示词与说明.md">说明.md</a>' +
+        (r.tc > 0 ? ' · <a href="' + L + '推荐任务.html" target="_blank">任务页</a>' : '') +
+        (r.dm ? ' · <a href="' + L + 'LiveDemo.html" target="_blank">Demo</a>' : '') +
+      '</td>' +
+    '</tr>');
+    if (v.detail) out.push('<tr class="detail" id="d' + i + '" style="display:none"><td colspan="9"><div class="dg">' + v.detail + '</div></td></tr>');
+  });
+  TB.innerHTML = out.join("");
+  TB.querySelectorAll(".vmore button").forEach(b => b.addEventListener("click", () => {
+    const d = document.getElementById("d" + b.dataset.i);
+    if (!d) return;
+    const on = d.style.display !== "none";
+    d.style.display = on ? "none" : "";
+    b.textContent = on ? "展开价值详情 ▾" : "收起价值详情 ▴";
+  }));
+  document.getElementById("foot").textContent = "当前显示 " + R.length + " / " + DATA.length + " 个解决方案";
+}
+
+Q.addEventListener("input", render);
+[FI,FRo,FT,FP,FR,FO].forEach(e => e.addEventListener("change", render));
+document.getElementById("reset").addEventListener("click", () => {
+  Q.value = ""; FI.value = ""; FRo.value = ""; FT.value = ""; FP.value = ""; FR.value = ""; FO.value = "";
+  sk = "n"; sd = 1;
+  document.querySelectorAll("th").forEach(x => x.classList.remove("asc","desc"));
+  render();
+});
+document.querySelectorAll("th[data-k]").forEach(th => th.addEventListener("click", () => {
+  const k = th.dataset.k;
+  if (sk === k) sd *= -1; else { sk = k; sd = 1; }
+  document.querySelectorAll("th").forEach(x => x.classList.remove("asc","desc"));
+  th.classList.add(sd > 0 ? "asc" : "desc");
+  render();
+}));
+render();
+</script>
+<script>
+window.__SB = {
+  title: 'WorkBuddy 解决方案库',
+  sub: '693 个官方解决方案 · 本地离线归档',
+  groups: [
+    { label: '本页导航', items: [
+      { id: 'sb-search', no: '1', tx: '搜索与筛选', hint: '关键词 + 6 个筛选条件' },
+      { id: 'sb-table', no: '2', tx: '方案清单 693 行', hint: '点标题打开本地方案页' },
+      { id: 'foot', no: '3', tx: '显示计数' }
+    ] }
+  ],
+  chipsLabel: '一键筛选',
+  chips: [
+    { tx: '销售', sel: 'fRole', val: '销售' },
+    { tx: '运营', sel: 'fRole', val: '运营' },
+    { tx: '财务', sel: 'fRole', val: '财务' },
+    { tx: '法务', sel: 'fRole', val: '法务' },
+    { tx: '制造与工业', sel: 'fInd', val: '制造与工业' },
+    { tx: '消费与零售', sel: 'fInd', val: '消费与零售' },
+    { tx: '有技能包', sel: 'fPkg', val: '1' },
+    { tx: '有量化 ROI', sel: 'fRoi', val: '1' },
+    { tx: '清空', reset: true, acc: '清空以上快捷筛选' }
+  ],
+  linksLabel: '相关页面',
+  links: [
+    { href: './分析.html', ic: '\u{1F4CA}', tx: '多维度分析' },
+    { href: './AI接入企业系统调研.html', ic: '\u{1F50C}', tx: 'AI 接入企业系统调研' },
+    { href: './README.md', ic: '\u{1F4C4}', tx: 'README' },
+    { href: './全量清单.csv', ic: '\u{1F4D1}', tx: '全量清单.csv' }
+  ],
+  mirror: 'foot',
+  foot: '数据来源：WorkBuddy 官方解决方案库本地归档<br>按 <b>[</b> 收起 / 展开侧栏'
+};
+(function(){
+  var C = window.__SB || {};
+  var D = document, B = D.body;
+  function id(x){ return D.getElementById(x); }
+  var host = id('wbsbBody');
+  function ea(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  var tEl = id('wbsbTitle'), sEl = id('wbsbSub');
+  if (C.title && tEl) tEl.textContent = C.title;
+  if (C.sub && sEl) sEl.textContent = C.sub;
+
+  // ---- \u81ea\u52a8\u7ed9\u6b63\u6587 section \u7f16\u53f7\u951a\u70b9 ----
+  if (C.autoSections) {
+    var secs = Array.prototype.slice.call(D.querySelectorAll(C.autoSections));
+    secs.forEach(function(s, i){ if (!s.id) s.id = 'sb-s' + (i + 1); });
+  }
+
+  var h = [];
+  var tocIds = [];
+  if (C.groups && C.groups.length) {
+    C.groups.forEach(function(g){
+      if (g.label) h.push('<div class="sbt">' + ea(g.label) + '</div>');
+      (g.items || []).forEach(function(it){
+        tocIds.push(it.id);
+        h.push('<a class="sbi" href="#' + ea(it.id) + '" data-t="' + ea(it.id) + '"' +
+          (it.hint ? ' title="' + ea(it.hint) + '"' : '') + '>' +
+          (it.no ? '<span class="sbp">' + ea(it.no) + '</span>' : '<span class="ic">\u2022</span>') +
+          '<span class="tx">' + ea(it.tx) + '</span>' +
+          (it.ct ? '<span class="ct">' + ea(it.ct) + '</span>' : '') + '</a>');
+      });
+    });
+  }
+
+  if (C.chips && C.chips.length) {
+    h.push('<div class="sbdiv"></div><div class="sbt">' + ea(C.chipsLabel || '\u5feb\u6377\u7b5b\u9009') + '</div><div class="sbq" id="wbsbChips">');
+    C.chips.forEach(function(c, i){ h.push('<button data-c="' + i + '"' + (c.acc ? ' title="' + ea(c.acc) + '"' : '') + '>' + ea(c.tx) + '</button>'); });
+    h.push('</div>');
+  }
+
+  if (C.links && C.links.length) {
+    h.push('<div class="sbdiv"></div><div class="sbt">' + ea(C.linksLabel || '\u76f8\u5173\u9875\u9762') + '</div>');
+    C.links.forEach(function(l){
+      h.push('<a class="sbi" href="' + ea(l.href) + '"' + (l.t ? ' target="_blank"' : '') + '>' +
+        '<span class="ic">' + ea(l.ic || '\u203a') + '</span><span class="tx">' + ea(l.tx) + '</span>' +
+        (l.ct ? '<span class="ct">' + ea(l.ct) + '</span>' : '') + '</a>');
+    });
+  }
+
+  h.push('<div class="sbdiv"></div>');
+  h.push('<button class="sbi" id="wbsbTopBtn"><span class="ic">\u2191</span><span class="tx">\u56de\u5230\u9876\u90e8</span></button>');
+  if (host) host.innerHTML = h.join('');
+
+  var ft = id('wbsbFoot');
+  if (ft) ft.innerHTML = (C.foot || '') + (C.mirror ? '<div id="wbsbMirror" style="margin-top:7px;color:#0f766e;font-weight:650;font-size:12px"></div>' : '');
+
+  // ---- \u6298\u53e0 / \u5c55\u5f00 ----
+  var KEY = 'wbsbHide';
+  try { if (localStorage.getItem(KEY) === '1') B.classList.add('sb-hide'); } catch(e){}
+  function toggle(){
+    B.classList.toggle('sb-hide');
+    try { localStorage.setItem(KEY, B.classList.contains('sb-hide') ? '1' : '0'); } catch(e){}
+  }
+  var bc = id('wbsbc'), ob = id('wbopen');
+  if (bc) bc.addEventListener('click', toggle);
+  if (ob) ob.addEventListener('click', toggle);
+  D.addEventListener('keydown', function(e){
+    if (e.key !== '[') return;
+    var k = (e.target && e.target.tagName || '').toUpperCase();
+    if (k === 'INPUT' || k === 'SELECT' || k === 'TEXTAREA') return;
+    toggle();
+  });
+
+  // ---- \u56de\u5230\u9876\u90e8 ----
+  var tp = id('wbtop'), tb = id('wbsbTopBtn');
+  function top(){ window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  if (tp) tp.addEventListener('click', top);
+  if (tb) tb.addEventListener('click', top);
+
+  // ---- \u6eda\u52a8\uff1a\u9ad8\u4eae + \u56de\u9876\u6309\u94ae ----
+  var nodes = tocIds.map(id).filter(Boolean);
+  var as = tocIds.map(function(x){ return host ? host.querySelector('a[data-t="' + x + '"]') : null; });
+  function spy(){
+    if (tp) tp.classList.toggle('on', window.scrollY > 420);
+    if (!nodes.length) return;
+    var k = 0;
+    for (var i = 0; i < nodes.length; i++) { if (nodes[i].getBoundingClientRect().top <= 130) k = i; }
+    if (as[k]) as.forEach(function(a, j){ if (a) a.classList.toggle('on', j === k); });
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
+
+  // ---- \u5feb\u6377\u7b5b\u9009 chips ----
+  if (C.chips && C.chips.length) {
+    var box = id('wbsbChips');
+    function sel(){ return C.chips.map(function(c){ var e = id(c.sel); return e ? e.value : ''; }); }
+    function setChip(i){
+      var c = C.chips[i];
+      if (c.reset) {
+        C.chips.forEach(function(x){ if (!x.reset) { var e = id(x.sel); if (e) e.value = ''; } });
+      } else {
+        var e = id(c.sel); if (!e) return;
+        e.value = (e.value === c.val ? '' : c.val);
+      }
+      C.chips.forEach(function(x){ if (!x.reset) { var e2 = id(x.sel); if (e2) e2.dispatchEvent(new Event('change', { bubbles: true })); } });
+      sync();
+    }
+    function sync(){
+      if (!box) return;
+      var cur = sel();
+      box.querySelectorAll('button').forEach(function(b, i){
+        var c = C.chips[i]; if (!c || c.reset) return;
+        b.classList.toggle('on', cur[i] === c.val);
+      });
+    }
+    if (box) box.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click', function(){ setChip(+b.dataset.c); });
+    });
+    D.addEventListener('change', function(e){
+      if (C.chips.some(function(c){ return c.sel === (e.target && e.target.id); })) sync();
+    });
+    sync();
+    window.__SBsync = sync;
+  }
+
+  // ---- \u955c\u50cf\u5e95\u90e8\u8ba1\u6570\u5230\u4fa7\u680f ----
+  if (C.mirror) {
+    var src = id(C.mirror), dst = id('wbsbMirror');
+    if (src && dst) {
+      var upd = function(){ dst.textContent = src.textContent || ''; };
+      upd();
+      try { new MutationObserver(upd).observe(src, { childList: true, subtree: true, characterData: true }); } catch(e){}
+    }
+  }
+})();
+</script>
+<!-- 窄屏抽屉：≤900px 时侧栏默认收起，点 ☰ 或滚出遮罩关闭 -->
+<script>
+(function(){
+  var B = document.body;
+  var q = window.matchMedia('(max-width:900px)');
+  var sc = document.createElement('div'); sc.id = 'wbsbScrim'; B.appendChild(sc);
+  function setScrim(){ sc.classList.toggle('on', q.matches && !B.classList.contains('sb-hide')); }
+  function toMobile(){ if (q.matches) { B.classList.add('sb-hide'); } }
+  toMobile(); setScrim();
+  sc.addEventListener('click', function(){ B.classList.add('sb-hide'); setScrim(); });
+  var ob = document.getElementById('wbopen');
+  if (ob) ob.addEventListener('click', function(){ setTimeout(setScrim, 0); });
+  try {
+    q.addEventListener('change', function(e){
+      if (e.matches) { B.classList.add('sb-hide'); } else { B.classList.remove('sb-hide'); sc.classList.remove('on'); }
+      setScrim();
+    });
+  } catch (err) {}
+})();
+</script>
+</body>
+</html>

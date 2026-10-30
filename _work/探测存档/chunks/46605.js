@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_mindx_app_mindx=self.webpackChunk_mindx_app_mindx||[]).push([["46605"],{69500(e,c,i){i.d(c,{createArchitectureServices:()=>p.S});var p=i(3185);i(23252)}}]);

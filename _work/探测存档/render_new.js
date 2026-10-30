@@ -1,0 +1,20 @@
+const fs=require('fs'), vm=require('vm');
+const OUT='D:/WorkbuddyUseCase/WorkBuddy解决方案库/';
+function mkEl(t){return{tagName:t||'div',_html:'',textContent:'',value:'',dataset:{},style:{},classList:{add(){},remove(){},contains(){return false}},appendChild(){},removeChild(){},addEventListener(){},setAttribute(){},getAttribute(){return null},querySelector(){return mkEl('div')},querySelectorAll(){return[]},get innerHTML(){return this._html},set innerHTML(v){this._html=v}};}
+const store={},getEl=id=>store[id]||(store[id]=mkEl('div'));
+const doc={getElementById:getEl,querySelector:()=>mkEl('div'),querySelectorAll:()=>[],createElement:t=>mkEl(t),addEventListener(){},body:mkEl('body')};
+const h=fs.readFileSync(OUT+'分析.html','utf8');
+const body=[...h.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi)].map(m=>m[1]).pop();
+const ctx={console,document:doc,window:{addEventListener(){}},addEventListener(){},setTimeout,clearTimeout};
+ctx.globalThis=ctx; vm.createContext(ctx); vm.runInContext(body,ctx,{filename:'a'});
+const strip=s=>s.replace(/<[^>]+>/g,'|').replace(/\|+/g,'|').trim();
+console.log('=== §7 价值分档位分布 ===');
+console.log(strip(getEl('secScore')._html));
+console.log('\n=== §7 分值 × 落地难度 矩阵 ===');
+console.log(getEl('secScoreMx')._html.replace(/<(\/?)(table|tr|td|th)[^>]*>/g,(m,s,t)=>t==='tr'?(s?'</tr>':'\n<tr>'):(t==='td'||t==='th'?' | ':'')).replace(/\n+/g,'\n').slice(0,1200));
+console.log('\n=== §8 最大差异点词条 ===');
+console.log(strip(getEl('secDiffTags')._html).slice(0,900));
+console.log('\n=== §9 价值主题词 ===');
+console.log(strip(getEl('secThemes')._html));
+console.log('\n=== KPI ===');
+console.log(strip(getEl('kpis')._html));

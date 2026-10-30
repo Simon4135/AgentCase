@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_mindx_app_mindx=self.webpackChunk_mindx_app_mindx||[]).push([["71189"],{77863(e,n,s){s.d(n,{PresenterMount:()=>a});var r=s(77104),t=s(86972);function a(){return(0,r.jsx)("div",{className:"presenter-mount",children:(0,r.jsx)(t.at,{})})}}}]);

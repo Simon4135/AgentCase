@@ -1,0 +1,11 @@
+const fs=require('fs');
+const B='D:\\WorkbuddyUseCase\\_work\\';
+const OUT='D:\\WorkbuddyUseCase\\AI接入企业系统调研.html';
+const a=fs.readFileSync(B+'_p_int1.html','utf8');
+const b=fs.readFileSync(B+'_p_int2.html','utf8');
+const c=fs.readFileSync(B+'_p_int3.html','utf8');
+const html=a+b+c;
+fs.writeFileSync(OUT,html,'utf8');
+console.log('bytes',Buffer.byteLength(html,'utf8'));
+console.log('sections',(html.match(/<section>/g)||[]).length);
+console.log('scriptblocks',(html.match(/<script>/g)||[]).length);

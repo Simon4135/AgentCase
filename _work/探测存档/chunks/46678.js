@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_mindx_app_mindx=self.webpackChunk_mindx_app_mindx||[]).push([["46678"],{10901(e,n,i){i.d(n,{createEventModelingServices:()=>p.g});var p=i(90173);i(23252)}}]);

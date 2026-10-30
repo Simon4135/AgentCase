@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html data-page-node-id="TlAV20EumuLJyBsTPlDqQb" lang="zh-CN">
+<head data-page-node-id="u0SgET0qte5YY2SfQOoQ3k">
+<script data-page-node-id="DFIfuQ7MdgINbIXm8N1z0x" src="/page/page_comm/inject.js"></script>
+<meta data-page-node-id="vA1gTnGeZFlnvbVFx3m4ql" charset="UTF-8">
+<meta data-page-node-id="t5Z6OFMUht8gOSOQVMLgTy" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="lWsEwYH2yl480Kzh7l2f7y" data-pnid-children="n7jtcV6cKGYRy3WrthdEMP">图纸询价智能报价</title>
+<link data-page-node-id="tyBILCCoE3ERUnlxxCanpJ" href="../shared/style.css" rel="stylesheet">
+<link data-page-node-id="joi4CMVfBF8rnYCujR31bJ" href="../shared/discrete-extra.css" rel="stylesheet">
+<style data-page-node-id="UDzXtePn15GNelGy0hYEXA" data-pnid-children="g0xO8r7Y6RCVaZnD650UeU">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="A87oFhbfynS5JnMBl3Pvsy" data-pnid-children="WuM2Jomrv9ZIAxkiLZqj9V" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="nf46G9b6UNUlmDEcjADGY8" data-pnid-children="47MF1v7vwzGPf48RZUgIqn" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="XhFtgYReITJOUzxIc12RY5">
+
+<div data-page-node-id="9ZUvQnp0Vb4PyLffnNSo8e" class="wrap">
+<section data-page-node-id="lVEe1qqpOcBan3YcugtUUV" class="page-hero">
+<h1 data-page-node-id="ucrZ2b9cKE9fgU0RxnpEa6"><!--pnid:xvNMdjvft9gxwnMktH9SNG-->图纸询价智能报价</h1>
+<p data-page-node-id="wK5GWvuNtfwCgd2F5CtnsU" class="lead"><!--pnid:y2y3BXKHIdSzW9isOCHs5r-->客户发来图纸要报价 · 销售当天就能回价 —— 不用再等技术排队、不用再靠老师傅拍脑袋</p>
+</section><nav data-page-node-id="WylmISGoWsHtuN211JOXKT" class="subnav"><a data-page-node-id="Y0GnrraEtTY8ocqo2fUNkg" href="../deep-dives/rfq-quote.html"><!--pnid:5Ku3KIvQJzmgehB3hwXLJS-->场景引入</a><a data-page-node-id="nbCnbt4uBAF8Vpf5oizdrq" href="../live-demos/rfq-quote/index.html"><!--pnid:2Y034zt2zQGQHGJ32IR5rm-->Live Demo</a><a data-page-node-id="ubE5hkg0r0IhNsofzdRUyV" class="on" href="../deep-dives/rfq-quote-tasks.html"><!--pnid:4XPfXnOiqATL3rSYq1xUXb-->推荐任务</a></nav>
+
+<section data-page-node-id="S8Mjku8J0xuwchhmK4KtgJ" class="blk">
+  <h2 data-page-node-id="J8f00944D3chbXiGIChdAy" class="h"><span data-page-node-id="HdVY21h2KIZ2IsGjnh3mg7" class="num"><!--pnid:1mRHt1F7oF9NGwMJB9WeUG-->一</span><!--pnid:WGzulLeCSpPH3aKmxt2ZPH-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="GU82OjTvQWztNvKh5KRs69" class="subline"><!--pnid:hCMxSQmzlBcinUVda1l3rA-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="YzFCoL29T83TdFr9hPIBWX" class="card"><p data-page-node-id="8vhX9wreXZTr2u8CC7Z6Z8"><!--pnid:uwwhVmQv4i0GRWZcNt83ok-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="1nvDzDR7BJxwSeGBp5Cdg7" style="margin-top:10px"><!--pnid:dm9HdYOssYF6ecEYLNCFQk-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:xZknJC17OTy7WLIgCMAYkL--><!--wb-skill-start-->
+<div data-page-node-id="IpWAmbJZDLn5kjkfLnCm5H" class="wb-skill">
+<p data-page-node-id="P7G65pJ8huG7RUVHq5hScH" class="wb-skill-lead"><!--pnid:NWcoH7cHtjiN4rQOZTsEBU-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="uSgXUpbmDzUpErInyL7rsW" class="prompt" id="wbSkillPrompt"><!--pnid:ofCBfMfetOkA4geuUNb7na-->【准备】这个场景的规则都在「图纸询价智能报价」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/INSWrkRFc3l53vz1PEJgPl/0/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="Yr6VAD89qOZnIIWHa8ljgU" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:LSIf9BXdhMJWSJrWRlfeJs-->复制</button></div>
+</div>
+<!--pnid:TwI2UH3HGEZ69iqXrt45Rl--><!--wb-skill-end-->
+<section data-page-node-id="3VwNOuHxhZDqKrWEdMweO6" class="blk">
+  <h2 data-page-node-id="2y3ZSWg2GpuoMXvwY1q9OI" class="h"><span data-page-node-id="YNv7z82DJkqAHbevxRWfEZ" class="num"><!--pnid:yNVqXVIB6iKUOniNqwpTzL-->二</span><!--pnid:aKzRR84k8Hp3oZQmgfzLgh-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="9vJNUOheV3KceUnc56fPMz" class="subline"><!--pnid:iIXklzrg6CLokKk22aYwrl-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="8TRXOaCtObQB4bfrePoksY" class="tlist">
+    <article data-page-node-id="NTLhUvc3aZZR6uuOVvrM9S" class="task">
+      <div data-page-node-id="QizP6nsHXR1cRMOw5OCuuQ" class="th"><span data-page-node-id="qhIQ5CKdp6Ss93CYYoDB2F" class="no"><!--pnid:NHdJtWL5WMXp8QECovcPAu-->01</span><h3 data-page-node-id="T9352hvo6jYG4ZgOUIP8TD" class="ttl"><!--pnid:mtfZme6Cfzyf6xq0M5MJ8p-->首推默认</h3><span data-page-node-id="4unw5AiBdwfP0gHp797PIn" class="star"><!--pnid:03NzK00z4LB1yl8aslLuv7-->与一键体验入口一致</span><button data-page-node-id="ZTQvnEI3YNbNRv3rw7f3to" class="cp" type="button"><!--pnid:jtwOuhKpCxnpshD39Yx3ER-->复制</button></div>
+      <p data-page-node-id="DsXqpjfAkzEANNz7xfhqvi" class="tp"><!--pnid:y1AhqYNHyHw37H7V80y2cQ-->华东电气发来询价，户外机柜 P-CAB-02，120 台，30 天交期，要求两天内回价。客户还问了加急价，以及二期一次订到 300 台的价格。用技能内置的演示数据跑一遍，不用我再传文件。帮我出一份能发出去的报价——图纸上没写清楚的地方一定要标出来，影响大的项没确认就别让我发出去；每一行成本都写清是怎么算出来的，我要能自己拿计算器验。产出三份：一份成本核算表（六项构成逐行算式加台账来源，可逐行加总）、一份报价单草稿（常规、加急、批量三档，逐档标加成率与毛利率）、一份待确认清单（按 A/B/C 三级，每项附金额敞口和责任人）。</p>
+    </article>
+    <article data-page-node-id="1iGZrMSMkYKT1lSQLy5Fuy" class="task">
+      <div data-page-node-id="OEozOV8SyDUOBYk78Jlp1z" class="th"><span data-page-node-id="QDsOaHuinsPqgl4bynxzer" class="no"><!--pnid:3FISQ9c3RDVfluoUKR7HHc-->02</span><h3 data-page-node-id="LETu3pgs7bhKpChU3PGJca" class="ttl"><!--pnid:HqyuL2rngmeHQCTn1K3z3z-->只做历史相似件反算校核</h3><button data-page-node-id="9gkl2GaypDt1sgGlm1K40U" class="cp" type="button"><!--pnid:S70T87bmpVPdlpdhrXjLcH-->复制</button></div>
+      <p data-page-node-id="cgcmUsipekvNMgttFfLWKp" class="tp"><!--pnid:AxaK80vJpDwPF62Di95bWP-->先别出报价，只跑历史相似件比对与反算校核：在历史报价库里按件类结构、材质料厚、展开面积、工序组合、表面处理五个维度找相似件，拿「实际成本」反算这次的 P-CAB-02 成本，跟标准模型正算的结果比对；偏差超 ±8% 就停下告诉我卡在哪一步。产出用 Excel：相似件匹配度与反算过程一张表，逐行带算式。</p>
+    </article>
+    <article data-page-node-id="Z5f0UOX2WjXXoEsEIDBWyY" class="task">
+      <div data-page-node-id="gYJsKlqojPtjGOrtnMcNbD" class="th"><span data-page-node-id="QDHvbO0VTVWxKQ2eOXsl6D" class="no"><!--pnid:wYY84XeNTpcy9Pc2RMJSGj-->03</span><h3 data-page-node-id="YUpGgk6cYPb49Nj3UP8UJu" class="ttl"><!--pnid:15aXm7dlmQQJjmAisWuhIK-->换客户等级口径再报</h3><button data-page-node-id="xEbAbEAwxnqh6LKMdn57hn" class="cp" type="button"><!--pnid:ht21WUSlGFIlFVgWwu3WKa-->复制</button></div>
+      <p data-page-node-id="B21qCx2JO2dC0Jm4kkX8ke" class="tp"><!--pnid:S7UGwYAtcAL5RRFHr3f5V6-->这次改按战略客户（最高等级）的加成率档重跑三档报价，其余条件不变。产出用 Excel：常规、加急、批量三档的加成率、毛利率与单价对照表，并标出哪一档触及客户分层下限、需要销售经理审批。</p>
+    </article>
+    <article data-page-node-id="3UrUlGPJS2hiYvxF6e25ON" class="task">
+      <div data-page-node-id="x63TdttTaBqOzTAbcr9vgi" class="th"><span data-page-node-id="KWJ76XrUgqFNrDeMM79nOp" class="no"><!--pnid:dxCcy96dJXC1jBZCYg9Vwv-->04</span><h3 data-page-node-id="KLcaheyNGk6e3GS0hh7GQJ" class="ttl"><!--pnid:HrQBlMG5tzOyDItOHv0UWo-->一次报三个件号</h3><button data-page-node-id="CcgiBt7qHNjKD1Uzr9LcQK" class="cp" type="button"><!--pnid:xnX1Bmg2InfJEeYAWb8zO1-->复制</button></div>
+      <p data-page-node-id="axvMees9PRhLXUR0mge12X" class="tp"><!--pnid:FUmx4j7FVYDoBFrIEstfQD-->附件里再加上另外两个件号的询价（同客户、同批交期），三个件号一起跑，各自出成本核算与三档报价，最后给我一张三件横向对照表：展开面积、主要工序数、单台成本、常规档单价、A 级风险项数。产出用 Excel。</p>
+    </article>
+    <article data-page-node-id="Q0gRs7hsYS8MwWKmVwuRZo" class="task">
+      <div data-page-node-id="UpxBh46DgOqe3LYsdVJmhw" class="th"><span data-page-node-id="eKwWdFc3nEfQ8h939fQELj" class="no"><!--pnid:1KQt5A9RcF5uJ3WkKnOqyi-->05</span><h3 data-page-node-id="4BZS58rLmLrARVbbB3lcxo" class="ttl"><!--pnid:qIqtEvazjMwf5AQ665F4iV-->给销售经理的让价底线</h3><button data-page-node-id="axccI8wsA4vUgbq6EBH5Da" class="cp" type="button"><!--pnid:ybLJg5yOBx9wgirMpjTV61-->复制</button></div>
+      <p data-page-node-id="I2xwZ0FHFF3N40m4trxTum" class="tp"><!--pnid:enRJkqyVsbgsyeh12ZfyhH-->把这份报价压成一页「让价底线」给销售经理：按三层让价路径写清常规档能自行让到哪、降到客户分层下限是多少、低于制造成本覆盖线的红线在哪，每层标出要谁审批。产出一页纸表格。</p>
+    </article>
+    <article data-page-node-id="viFjhZJKppiqF5SrS6eVjg" class="task">
+      <div data-page-node-id="HlNTFPIDHQB96YA34slMS9" class="th"><span data-page-node-id="OZGtdi1DEnLyk5oa52wxIP" class="no"><!--pnid:eYID2G9lYvDfaAUSDb8295-->06</span><h3 data-page-node-id="7qCGUcu0SJKaGF6JrXBh02" class="ttl"><!--pnid:nSZMIGwQvHWK86sCKXDSuk-->让它反驳自己</h3><button data-page-node-id="rg13p7DdlxvDgbHxjGP953" class="cp" type="button"><!--pnid:kz5rblJQzMZD4rUGCnqE6k-->复制</button></div>
+      <p data-page-node-id="G8GZeyaDo7UpF6RdwcRTLo" class="tp"><!--pnid:82lkmcLoqjIZPiEObBhsD7-->你刚出的这份报价，自己挑三处最可能被客户或财务问倒的地方（材料利用率取值、隐含工序有没有漏、加急档多花的成本是不是真多花了），逐条说明依据是什么、要不要改。产出用 Excel：疑点、依据、建议修改一张表。</p>
+    </article>
+    <article data-page-node-id="KtE9U4NS8NKLcPTEghx6Nm" class="task">
+      <div data-page-node-id="I7vttSinIfwVrI1NsrXG6D" class="th"><span data-page-node-id="EsybHcYZeIiGwBqYoSBBLo" class="no"><!--pnid:Ucz0ZA9DsZBCqVdTAvWKKd-->07</span><h3 data-page-node-id="NBUqKmAncj8wtfPAXVPjqf" class="ttl"><!--pnid:3RYx26eOoCDi8lIxdBv2XO-->比对历史亏损单</h3><button data-page-node-id="Mzgw7bc0bqY8Tc9gIE3Zzt" class="cp" type="button"><!--pnid:gwHINonRqFf2jyBGBEhXdp-->复制</button></div>
+      <p data-page-node-id="EGRbj7PsEpHvjh7V8QuFsS" class="tp"><!--pnid:PgPvaZaDpog5VqgKDlREJ2-->把这次询价跟历史报价库里的亏损单逐条比对，看有没有命中复盘归因字段记过的坑（如「图纸标 IP55 但未注明满焊、实做满焊导致少赚」）。命中的直接升 A 级风险。产出用 Excel：历史亏损单号、归因、本次是否命中、处置建议。</p>
+    </article>
+    <article data-page-node-id="ZsPpWbBvQ7ZhJ50iHKQF7l" class="task">
+      <div data-page-node-id="THrKCkT82YGhKNsTQcml5K" class="th"><span data-page-node-id="wzkymkFNQy3KqVie9aypXt" class="no"><!--pnid:a7Mz3CTRxEKxLVoZEJZ5ln-->08</span><h3 data-page-node-id="GDfmP3I8shXLmOILl1LxxN" class="ttl"><!--pnid:9ExorQyoC8gQD2rWQ6NHMh-->对照发出前自检清单</h3><button data-page-node-id="pcM29Qyn2JpBktIA2EFZGu" class="cp" type="button"><!--pnid:GtC9TPfp8sR31uVV6e6a8q-->复制</button></div>
+      <p data-page-node-id="7sY6QYmG6qtLERR7PZ7Kk2" class="tp"><!--pnid:rlVFu6N9RrDI1aKRWuobf3-->对照技能里的报价发出前自检清单，把这份报价逐项自查：六项成本构成齐不齐、加成率与毛利率有没有混用、有效期写了没有、A 级项是不是都拦住了。缺的列出来，不要替我圆。产出用 Excel：检查项、是否通过、缺口。</p>
+    </article>
+    <article data-page-node-id="BVZlNOZM0r57BFjrzNOkcV" class="task">
+      <div data-page-node-id="uIRsda7rL57RgrbAUQuxXB" class="th"><span data-page-node-id="YuVpkPK12bxyTPvRfuydpl" class="no"><!--pnid:JELVA7wjFeVdVzivDHkTYw-->09</span><h3 data-page-node-id="JH0yJH5Hh6WPx011Ggh9ix" class="ttl"><!--pnid:f2wgMaKRBFY2PpS3348XPF-->折算成订单毛利额</h3><button data-page-node-id="kpyvaGXmzMV0apV5MXqGuZ" class="cp" type="button"><!--pnid:5a45CoqeLtoL5OwiSNhOTm-->复制</button></div>
+      <p data-page-node-id="KOW4MCPjOczpBgn2rnBXDU" class="tp"><!--pnid:EdT7Ydw086p2kE5jB6QPzH-->批量档单价降了，订单毛利额到底是涨是跌？按 120 台和 300 台两档分别算单价、单台毛利与订单毛利额，给出对比。产出用 Excel，最后一行给结论，说明批量档该不该推。</p>
+    </article>
+    <article data-page-node-id="gWu1BVS9riZ4IujWTlXeT2" class="task">
+      <div data-page-node-id="RvpXFQXwCEy4JVUWEKKy3v" class="th"><span data-page-node-id="uY8hTfZC5x3TM6wcrEh3V8" class="no"><!--pnid:cJ1s93b72dnBy4qIlIY9Y7-->10</span><h3 data-page-node-id="F4ZLGkRJlz4k3sYqdyJTow" class="ttl"><!--pnid:kZv7v7SdCB5Aia11jCVIoC-->沉淀成取值口径表</h3><button data-page-node-id="2ECQUJkdC2NFkJfMo2TiCE" class="cp" type="button"><!--pnid:DKwL8fvN0mBWOf611WGThv-->复制</button></div>
+      <p data-page-node-id="yB4QdlY8XGVPfPp9CtetcY" class="tp"><!--pnid:Hcjj5wioGiWtSK8eorrfYE-->把这次用到的取值口径整理成一张可复用的口径表：材料利用率在什么情形下取下限、哪些图纸标注触发校平与打磨、各客户等级的标准加成率取多少。产出用 Excel，下次报价直接照抄。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="ljl9IDGqGgMw1g30Guh4j6" class="cta">
+  <div data-page-node-id="Q7aozyEax2Stt0WBqofFmc"><h3 data-page-node-id="Gs0E2cr4NuQxAWLsvAlmto"><!--pnid:Uzz3VLtqM1AVgCnJXMGNKM-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="KNCsjUODSiQcR5xWGkxO5a"><!--pnid:OGF78fQyWa7XTNGjMfoR52-->把演示数据换成你的客户询价邮件、历史报价库、材料价格表、工序标准工时，同一套六步法就能直接跑。如果报价口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="wRaJWBhNbwye6UGY2MQeP2" class="btns"><a data-page-node-id="tHW7AewYDZh0QXDRrsP67Q" class="btn" href="#" id="ctaContact"><!--pnid:vdRcarC42eYejvu2ciQ011-->联系我们</a></div>
+</div>
+<footer data-page-node-id="iVevB8Ugih0D7kdRy2qy2n"><!--pnid:S5sRuUlDwuMAf51CnNusDm-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="rQms7GCsPoyxUa772kovE6" data-pnid-children="6Svco9XH3gxKnfLiJQIgnS">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="it2q7Nx3UUdZ9SRBnOlQBL" data-pnid-children="2TNmgxjHDy70fSkq2bx8Oh">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="GjEDnk2Scj6JvSIF2rePLt" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="V3TpKBywxTai7xD0XjZ6G9" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="Zs11kuFRGK4K6zwU34s5cP" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="NNEx2Y9InHQJvsdcSBHJlR" data-pnid-children="mBtZkR0Cc5uIqn7qARweRg">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="VSYtdr42NHvsDATX2lRgMA" data-pnid-children="p7nFhQrjchBIPE9lM1XoR7" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

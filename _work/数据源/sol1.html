@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html data-page-node-id="9FBgsVUnNOcALEaAQpTfR4" lang="zh-CN">
+<head data-page-node-id="i7PgoRYgNGVta3BjIGBNv0">
+<script data-page-node-id="WEgYYpWjPPPMzXM5v51GlR" src="/page/page_comm/inject.js"></script>
+  <meta data-page-node-id="O6MxxUU3gBzBi2z6ZNWMwY" charset="UTF-8">
+  <meta data-page-node-id="9NIUguvh04xna6xYnh330D" content="width=device-width, initial-scale=1.0" name="viewport">
+  <title data-page-node-id="ZiWTJIoP9Fo7tICPjk6vV3" data-pnid-children="llwIVqOAfi1BAerupH0C50">制造业场景解决方案培训 · 图纸询价智能报价 · WorkBuddy</title>
+  <style data-page-node-id="yZWMxSoQ2kDNDZpeFYAxXH" data-pnid-children="SpVbtXvjxhmuuv3gv2i63l">
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#fbfcfe;
+      --bg-elev:#ffffff;
+      --bg-soft:#eaf2ff;
+      --bg-warm:#fff7eb;
+      --border:#d8e3f5;
+      --border-strong:#a8bde0;
+      --text:#001533;
+      --text-mute:#4a5b78;
+      --text-dim:#6b7d9c;
+      --accent:#0052D9;
+      --accent-2:#006EFF;
+      --accent-soft:rgba(0,82,217,0.08);
+      --green:#0f9d58;
+      --green-soft:#e9f7ef;
+      --amber:#b9770a;
+      --amber-soft:#fff4db;
+      --red:#cf3c3c;
+      --red-soft:#fdeeee;
+      --ink:#0a1a2c;
+      --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",Georgia,"Times New Roman",STSong,SimSun,serif;
+      --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI","Helvetica Neue",sans-serif;
+      --mono:ui-monospace,"SF Mono",Menlo,monospace;
+      --num:"SF Pro Display","Helvetica Neue",Arial,sans-serif;
+      --shadow:0 10px 30px rgba(0,82,217,0.08);
+    }
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      font-size:15.5px;
+      line-height:1.85;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{color:var(--accent-2)}
+    .layout{display:grid;grid-template-columns:300px 1fr;max-width:1440px;margin:0 auto}
+    .sidebar{
+      position:sticky;top:30px;height:calc(100vh - 30px);border-right:1px solid var(--border);
+      background:linear-gradient(180deg,rgba(0,110,255,0.09) 0%,rgba(0,110,255,0.04) 10%,rgba(241,213,140,0.08) 24%,rgba(255,255,255,0) 42%),#fff;
+      display:flex;flex-direction:column;overflow:hidden;
+    }
+    .sidebar-head{padding:34px 18px 16px 32px;border-bottom:1px solid var(--border)}
+    .course-name{font-family:var(--sans);font-weight:800;font-size:23px;line-height:1.35;color:var(--text);letter-spacing:0.02em}
+    .course-name em{font-style:normal;color:var(--accent)}
+    .sidebar-scroll{padding:18px 18px 36px 32px;overflow-y:auto}
+    .toc-label{font-size:12px;letter-spacing:0.16em;color:var(--accent);font-weight:700;margin-bottom:10px}
+    .toc-group{margin-bottom:14px}
+    .toc-l1{display:flex;align-items:baseline;gap:10px;padding:12px 4px;border-radius:6px;background:transparent}
+    .toc-title{font-weight:700;font-size:15px;color:var(--text);line-height:1.4}
+    .toc-children{padding:2px 0 8px 0}
+    .toc-l2{display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;color:var(--text-mute);font-size:14px;transition:all .15s}
+    .toc-l2:hover{background:var(--bg-soft);color:var(--text)}
+    .toc-l2.active{background:var(--bg-soft);color:var(--accent);font-weight:700}
+    .toc-check{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--border-strong);background:#fff;flex-shrink:0;position:relative}
+    .toc-check.done{background:var(--accent);border-color:var(--accent);box-shadow:0 2px 8px rgba(0,82,217,0.28)}
+    .toc-check.done::after{content:"";position:absolute;left:4px;top:3px;width:6px;height:3px;border-left:1.8px solid #fff;border-bottom:1.8px solid #fff;transform:rotate(-45deg)}
+
+    .content{
+      padding:64px 84px 72px;max-width:980px;
+      background:radial-gradient(circle at 0% 0%,rgba(0,110,255,0.10) 0%,rgba(0,110,255,0) 9%);
+      background-repeat:no-repeat;
+    }
+    .page-title{font-family:var(--serif);font-weight:900;font-size:70px;line-height:1.18;letter-spacing:0.04em;margin-bottom:14px;color:var(--text)}
+    .page-title em{color:var(--accent);font-style:normal}
+    .standfirst{font-family:var(--serif);font-size:23px;line-height:1.82;color:var(--text);font-weight:700;margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+    .standfirst .hl{color:var(--accent);font-style:normal;font-weight:900}
+    .sec-title{font-family:var(--serif);font-weight:900;font-size:46px;line-height:1.3;letter-spacing:0.04em;margin:72px 0 14px;scroll-margin-top:96px;color:var(--text)}
+    .sub-title{font-family:var(--serif);font-weight:700;font-size:25px;margin:40px 0 14px;line-height:1.35;color:var(--text);display:flex;align-items:center;gap:14px;scroll-margin-top:96px}
+    .sub-title .sub-num{font-family:var(--num);font-size:13px;letter-spacing:0.08em;color:#fff;background:var(--accent);padding:5px 10px;border-radius:4px;line-height:1;flex-shrink:0}
+    p{margin-bottom:18px}
+    p.lead{font-family:var(--serif);font-size:19px;line-height:1.85}
+    strong{color:var(--text)}
+    code{font-family:var(--mono);font-size:0.88em;background:var(--bg-soft);padding:1px 6px;border-radius:3px;color:var(--accent)}
+
+    .callout{background:linear-gradient(180deg,#ffffff 0%,#f6faff 100%);border:1px solid #d7e4f8;border-left:4px solid var(--accent);padding:22px 24px;margin:24px 0;border-radius:0 14px 14px 0;box-shadow:0 10px 28px rgba(0,82,217,0.05)}
+    .callout-title{font-family:var(--serif);font-size:13px;letter-spacing:0.2em;color:var(--accent);font-weight:700;margin-bottom:10px}
+    .callout p{font-family:var(--serif);font-size:16px;line-height:1.9;margin:0;color:#28405f}
+    .pull-quote{font-family:var(--serif);font-weight:700;font-size:30px;line-height:1.55;color:var(--text);margin:36px 0;padding:28px 0 28px 32px;border-top:1px solid var(--text);border-bottom:1px solid var(--text);position:relative;letter-spacing:0.04em}
+    .pull-quote::before{content:"「";position:absolute;left:-12px;top:14px;font-size:48px;color:var(--accent);font-family:var(--serif);font-weight:900;line-height:1}
+
+    .pain-grid,.value-grid,.deliver-grid,.resource-grid{display:grid;gap:16px}
+    .pain-grid{grid-template-columns:1fr 1fr}
+    .value-grid{grid-template-columns:repeat(3,1fr)}
+    .deliver-grid{grid-template-columns:repeat(2,1fr)}
+    .resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .resource-grid .resource-card:only-child{grid-column:1/-1}
+    .card{position:relative;background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);border:1px solid #dbe5f4;border-radius:18px;padding:22px 22px 18px;box-shadow:0 14px 34px rgba(0,82,217,0.06);overflow:hidden}
+    .card::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),#8eb8ff)}
+    .card h4{font-size:16.5px;font-weight:800;color:var(--text);margin-bottom:10px;line-height:1.55}
+    .card p{margin:0;color:#425572;font-size:14.5px;line-height:1.9}
+    .card .meta{display:inline-block;margin-top:14px;padding:5px 11px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:0.06em}
+    .meta.red{background:var(--red-soft);color:var(--red)}
+    .meta.amber{background:var(--amber-soft);color:var(--amber)}
+    .meta.green{background:var(--green-soft);color:var(--green)}
+    .pain-grid .card{background:linear-gradient(180deg,#ffffff 0%,#fff8f8 100%);border-color:#ecd7d7}
+    .pain-grid .card::before{background:linear-gradient(90deg,#cf3c3c,#f08a8a)}
+    .pain-grid .card:nth-child(2),.pain-grid .card:nth-child(4){background:linear-gradient(180deg,#ffffff 0%,#fffaf0 100%);border-color:#efdfc4}
+    .pain-grid .card:nth-child(2)::before,.pain-grid .card:nth-child(4)::before{background:linear-gradient(90deg,#b9770a,#efc46c)}
+    .value-grid .card{background:linear-gradient(180deg,#ffffff 0%,#f5f9ff 100%);border-color:#d8e5fb}
+    .value-grid .card::before{background:linear-gradient(90deg,#0052d9,#6aa5ff)}
+    .deliver-grid .card{background:linear-gradient(180deg,#ffffff 0%,#f5fbf7 100%);border-color:#d5e8dd}
+    .deliver-grid .card::before{background:linear-gradient(90deg,#0f9d58,#7ecb9f)}
+
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0 26px}
+    .compare .panel{border:1px solid var(--border);border-radius:18px;padding:24px 24px 22px;background:#fff;box-shadow:0 14px 34px rgba(0,82,217,0.05)}
+    .compare .panel.old{border-left:4px solid var(--red);background:linear-gradient(180deg,#ffffff 0%,#fff8f8 100%)}
+    .compare .panel.new{border-left:4px solid var(--green);background:linear-gradient(180deg,#ffffff 0%,#f5fbf7 100%)}
+    .compare .panel h4{font-size:16px;margin-bottom:10px}
+    .compare .panel p{font-size:14.5px;color:#425572;line-height:1.9;margin:0}
+
+    .quant-block{margin:0 0 28px;padding:18px 20px;background:linear-gradient(180deg,#fffdf8 0%,#ffffff 100%);border:1px solid #f0dfc9;border-radius:18px;box-shadow:0 12px 30px rgba(194,122,32,0.08)}
+    .quant-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+    .quant-title{font-size:13px;letter-spacing:0.12em;color:#b56a10;font-weight:800}
+    .quant-note{font-size:12.5px;color:#8a6c48}
+    .quant-compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .quant-card{border-radius:14px;padding:16px 16px 14px;background:#fff;border:1px solid #eadfce}
+    .quant-card.before{border-left:4px solid #667085;background:linear-gradient(180deg,#ffffff 0%,#fbfcff 100%)}
+    .quant-card.after{border-left:4px solid #e48b3b;background:linear-gradient(180deg,#ffffff 0%,#fff7ee 100%)}
+    .quant-label{font-size:12px;letter-spacing:0.08em;color:#7b8798;font-weight:800;margin-bottom:6px}
+    .quant-value{font-size:28px;line-height:1.1;font-weight:900;color:var(--text);margin-bottom:8px}
+    .quant-desc{font-size:13.5px;color:#425572;line-height:1.8}
+
+    .process-strip{display:grid;gap:12px;margin:24px 0}
+    .step-box{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .step-box::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#6aa5ff)}
+    .step-no{font-family:var(--num);font-size:12px;letter-spacing:0.12em;color:var(--accent);font-weight:800;margin-bottom:6px}
+    .step-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:6px;line-height:1.5}
+    .step-desc{font-size:12.5px;color:var(--text-dim);line-height:1.7}
+
+    .visual-card{margin:24px 0 30px;background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px 18px 10px;box-shadow:var(--shadow)}
+    .visual-card.zoomable{cursor:zoom-in;transition:transform .18s ease, box-shadow .18s ease}
+    .visual-card.zoomable:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(0,82,217,0.14)}
+    .figure-cap{font-size:13px;color:var(--text-dim);margin-top:12px;line-height:1.7}
+    .figure-cap strong{color:var(--text)}
+    .lightbox{position:fixed;inset:0;background:rgba(3,10,20,0.82);display:none;align-items:center;justify-content:center;padding:36px;z-index:2000}
+    .lightbox.open{display:flex}
+    .lightbox-backdrop{position:absolute;inset:0}
+    .lightbox-dialog{position:relative;z-index:1;width:min(1280px,92vw);max-height:88vh;background:#fff;border-radius:18px;padding:18px;box-shadow:0 24px 60px rgba(0,0,0,0.35);overflow:auto}
+    .lightbox-close{position:absolute;top:14px;right:14px;width:40px;height:40px;border:none;border-radius:999px;background:rgba(0,21,51,0.08);color:var(--text);font-size:24px;cursor:pointer}
+    .lightbox-content svg,.lightbox-content img{display:block;width:100%;height:auto}
+
+    table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+    thead th{background:var(--bg-soft);font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-mute);padding:12px 14px;text-align:left;border-bottom:1px solid var(--border)}
+    tbody td{padding:13px 14px;border-bottom:1px solid #e8eef8;vertical-align:top;color:var(--text-mute);line-height:1.75}
+    tbody tr:last-child td{border-bottom:none}
+
+    .resource-card{position:relative;background:linear-gradient(180deg,#ffffff 0%,#f7faff 100%);border:1px solid #d9e5f7;border-radius:18px;padding:20px 20px 18px;box-shadow:0 14px 34px rgba(0,82,217,0.05);overflow:hidden}
+    .resource-card::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,#0052d9,#7aacff)}
+    .resource-label{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;background:#eaf2ff;font-size:11px;letter-spacing:0.12em;color:var(--accent);font-weight:800;margin-bottom:10px}
+    .resource-title{font-size:15.5px;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.55}
+    .resource-desc{font-size:13.5px;color:#425572;line-height:1.8;margin-bottom:14px}
+    .resource-link{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border:1px solid #cfe0fb;border-radius:999px;font-size:12.5px;background:#f3f8ff;color:var(--accent);font-weight:700}
+
+    .prompt-box{position:relative;background:#091a32;color:#dce6f7;border-radius:16px;padding:22px 24px;margin:18px 0 14px;box-shadow:0 18px 36px rgba(9,26,50,0.18)}
+    .prompt-box .label{font-size:11px;letter-spacing:0.18em;color:#8fb4ff;margin-bottom:12px;font-weight:700}
+    .prompt-text{white-space:pre-wrap;font-family:var(--mono);font-size:13px;line-height:1.95}
+    .prompt-action{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:999px;font-size:12.5px;font-weight:700;border:1px solid transparent;cursor:pointer;font-family:var(--sans)}
+    .btn.primary{background:#fff;color:var(--accent)}
+    .btn.ghost{background:transparent;color:#dce6f7;border-color:rgba(220,230,247,0.24)}
+
+    .video-slot{margin:22px 0 26px;background:linear-gradient(135deg,rgba(0,82,217,0.08),rgba(0,82,217,0.02));border:1.5px dashed var(--border-strong);border-radius:18px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .video-slot-inner{text-align:center;max-width:520px;padding:24px}
+    .video-play{width:74px;height:74px;border-radius:50%;margin:0 auto 16px;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:24px;box-shadow:0 10px 24px rgba(0,82,217,0.16)}
+    .video-slot h4{font-size:24px;font-family:var(--serif);margin-bottom:10px;color:var(--text)}
+    .video-slot p{font-size:14px;color:var(--text-mute);line-height:1.8;margin:0}
+
+    .checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:20px 0}
+    .check-item{display:flex;gap:12px;padding:16px 16px 15px;background:linear-gradient(180deg,#ffffff 0%,#f7fbf8 100%);border:1px solid #d7e8dd;border-radius:16px;box-shadow:0 12px 28px rgba(15,157,88,0.06)}
+    .check-icon{width:26px;height:26px;border-radius:50%;background:var(--green-soft);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;margin-top:2px;border:1px solid #b9dfc9}
+    .check-item div{font-size:13.5px;color:#425572;line-height:1.8}
+
+    @media (max-width:800px){
+      .layout{grid-template-columns:1fr}
+      .sidebar{position:relative;top:auto;height:auto;border-right:none;border-bottom:1px solid var(--border)}
+      .content{padding:44px 28px 56px;max-width:none}
+      .page-title{font-size:52px}
+    }
+    @media (max-width:900px){
+      .content{padding:36px 18px 50px}
+      .pain-grid,.value-grid,.deliver-grid,.resource-grid,.compare,.checklist,.quant-compare{grid-template-columns:1fr}
+      .quant-value{font-size:24px}
+      .page-title{font-size:38px}
+      .standfirst{font-size:19px}
+      .sec-title{font-size:34px}
+      .sub-title{font-size:22px}
+    }
+
+  </style>
+</head>
+<body data-page-node-id="Cpcu0CZT4FyDkXZn2Ew8RW">
+  <div data-page-node-id="4sHeTQuL4akJ3cUV54MGoy" class="layout">
+    <aside data-page-node-id="KAOtUtkwYG9IZPyUCAFkvk" class="sidebar">
+      <div data-page-node-id="4u2Su75PJfCUOH8z2VnWTC" class="sidebar-head">
+        <div data-page-node-id="Tal7fptnpMMgVotq5PPrrw" class="course-name"><!--pnid:SwrkhpC4aVaeacsBkBPmRP-->制造业场景解决方案 - <em data-page-node-id="8gjOIO4hMt4pPzWgaIrtxC"><!--pnid:jUplWeZZDSkwDeQVWVouav-->图纸询价智能报价</em></div>
+      </div>
+      <div data-page-node-id="USgXtYRvsEDrBlUTblWJrQ" class="sidebar-scroll">
+        <div data-page-node-id="D08Fw4PbfsU7VCu8Hb42ub" class="toc-label"><!--pnid:oWB6TuywwsD3tR7FNAllew-->课 程 导 航</div>
+        <div data-page-node-id="gQWWj5bhzjMzG7OlnAeY4G" class="toc-group">
+          <div data-page-node-id="ZvybV692t1M6cMhekMxzj9" class="toc-l1"><span data-page-node-id="AriP5FBiglBn5KzRi95Zi1" class="toc-title"><!--pnid:Y1e9BSXLgzlVMCNMTCGl8z-->销售 / 商务 · 图纸询价智能报价</span></div>
+          <div data-page-node-id="QIsKv7YiJGGQKFsbvRDtGc" class="toc-children">
+            <a data-page-node-id="H8VhQiwm4t8U4wfiYDFhVd" class="toc-l2" href="#sec-overview"><span data-page-node-id="biIhtspEVprKoOTgZwwfLu" class="toc-check"></span><span data-page-node-id="wA4Vc6Gm168eM9oMBaWJqp"><!--pnid:AskaNuxx3w0bmszAUyd0cH-->场景概览</span></a><a data-page-node-id="OWILvIS9VC6IxWlUnlzurI" class="toc-l2" href="#sec-video"><span data-page-node-id="AhTT6ms3E6R1NaAEbxvCfL" class="toc-check"></span><span data-page-node-id="XavXmPjW3kAxh8H5WTEafX"><!--pnid:tyw71DGKfFoDbT9muAUOEc-->演示</span></a><a data-page-node-id="udILdfiPs1CQQjerqtRH6s" class="toc-l2" href="#sec-pain"><span data-page-node-id="IIAF9Vd3GhYkXrYPr46onE" class="toc-check"></span><span data-page-node-id="DDGuAW0FYTj1eN8YftIZql"><!--pnid:msqkJSkzqAaAyTrvJYhfpN-->现状与痛点</span></a><a data-page-node-id="XgN079PUkp3xeguTlCR0Qs" class="toc-l2" href="#sec-value"><span data-page-node-id="FTbpsV22GfePK93dw6QYjW" class="toc-check"></span><span data-page-node-id="eliWHs0GxxF8mlwz3KY85j"><!--pnid:Auhw7WbEK5O7AWlDC5rJ9v-->WorkBuddy 的解决与价值</span></a><a data-page-node-id="47LCkDVobKyE05SQbM3GFs" class="toc-l2" href="#sec-solution"><span data-page-node-id="t32ujTxYOSBV2dOwFyiEb9" class="toc-check"></span><span data-page-node-id="PHCeLYUlotyT5pveLFsWB0"><!--pnid:ntVlL2Ez9bnX8Iy3QeEibA-->解决方案工作流程</span></a><a data-page-node-id="fl0GlTbpH1AehBKLptoR4y" class="toc-l2" href="#sec-case"><span data-page-node-id="u7jJnix6SSXG9tP3h7tvvR" class="toc-check"></span><span data-page-node-id="1QnPlWhi7tUxcQqnNEZici"><!--pnid:A97nFHgV8Nmen7YshTzc63-->案例基本介绍</span></a><a data-page-node-id="GttVcRDb9UbkD0XhiB6YaE" class="toc-l2" href="#sec-assets"><span data-page-node-id="kWGwbBZXbRzGcndWPd4C5m" class="toc-check"></span><span data-page-node-id="IkboBYv4ivwn99xuo79AgV"><!--pnid:Pr3tSeQyoI4QHR8pdVula2-->具体案例解决方案</span></a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main data-page-node-id="CSMY4OquDdwrZxpfDDGHjO" class="content">
+      <section data-page-node-id="ECWZANh1AQHnv4GlUi1RKq" class="chapter" data-chapter="scene-solution">
+        <h1 data-page-node-id="OVIz8WvenKGMjeDxF1Y0b8" class="page-title" id="sec-overview"><!--pnid:RJgTkOSQi9HT54n5W1b3EE-->图纸询价智能报价<br data-page-node-id="vBmzawp1r5bk0HbKJOiZG8"><em data-page-node-id="CODkHRik0kDXtQulSNVKb9"><!--pnid:Z0NQ2QxBcncmL3UN736VVQ-->制造业场景解决方案培训</em></h1>
+        <p data-page-node-id="b2ynqkmxJRDl9BOQEXEaxY" class="standfirst"><!--pnid:AoQeXjZpxPb5gRIVCIAb0b-->把“客户发来图纸、两天内就要回价、还同时问加急价和批量价”这一类高频售前问题，沉淀成一个可讲、可演、可复制的 <span data-page-node-id="XgtG1ZO5UWu2nTAVbYc1FA" class="hl"><!--pnid:YW7utCDVL1p9rKjWzMAoYB-->WorkBuddy 制造业场景解决方案</span><!--pnid:NW4XHoGyREjYSmb0KJt4w2-->：先把依据凑齐，再把成本算透，最后把风险讲清。</p>
+
+        <div data-page-node-id="ApvIr04x4XqImnWjSzXzHr" class="visual-card">
+          <svg data-page-node-id="WwM2qkh6XORNbYjHGw0dxG" aria-label="图纸询价智能报价场景解决方案总览图" role="img" viewBox="0 0 1080 360" xmlns="http://www.w3.org/2000/svg"><rect data-page-node-id="Jwm1JqFmCDLDHz3K0diqK1" fill="#FBFCFE" height="360" width="1080" x="0" y="0"/><text data-page-node-id="uQ8TTR84rbGEGK3Chv4jmv" fill="#001533" font-family="PingFang SC, sans-serif" font-size="18" font-weight="700" text-anchor="middle" x="540" y="34"><!--pnid:UDhY1XtFXrJ26FeuHYi3gt-->图纸询价智能报价 · 场景解决方案总览</text><text data-page-node-id="Kbe0zo8pZ2p5pH0pL8fXJe" fill="#5A7080" font-family="PingFang SC, sans-serif" font-size="11" text-anchor="middle" x="540" y="56"><!--pnid:Gg6m9nvmCWPlZEsStZfzSu-->场景概览 → 简要价值说明 → 先看演示 → 再看流程与案例</text><g data-page-node-id="8MWQOZSta72IjnSycFgAbF" transform="translate(28,96)"><rect data-page-node-id="VuRfSO9PLxS5SLOGL4oyXM" fill="#FFFFFF" height="114" rx="14" stroke="#D8E3F5" width="188" x="0" y="0"/><rect data-page-node-id="WhRp91XfsgrBNwh8W5QXg1" fill="#CF3C3C" height="8" rx="14" width="188" x="0" y="0"/><text data-page-node-id="R9xXwNXLKqLSmhNV4e4D9w" fill="#001533" font-family="PingFang SC, sans-serif" font-size="15" font-weight="700" x="18" y="34"><!--pnid:IwcFBiZBjaV9dCclSDtq0a-->现状与痛点</text><text data-page-node-id="KeOrsbPykV6ZoIlLdmqBgJ" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="58"><!--pnid:OZ4ZjM82o4gwzkBz5BWstW-->数据分散难凑齐</text><text data-page-node-id="wO6l7XM5nAjQKA36Tt77G4" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="78"><!--pnid:8CfXTzCRpCaJGfUIglfb0B-->回价速度拖赢单率</text><text data-page-node-id="xSMOYz7gm6Yi2Udfx97YdR" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="98"><!--pnid:SPUCYQVUngDyHKkQBZTkc2-->不确定项常在报价后暴露</text></g><g data-page-node-id="HbthJVPTyrz7UFi8v5fEe2" transform="translate(244,96)"><rect data-page-node-id="fOHngniBATkQYZVayrO1R3" fill="#FFFFFF" height="114" rx="14" stroke="#D8E3F5" width="188" x="0" y="0"/><rect data-page-node-id="hCKeNS4Jyt0pB1PdbW0fPQ" fill="#0052D9" height="8" rx="14" width="188" x="0" y="0"/><text data-page-node-id="KXDYVNBe6JiY4e7W8qT6jv" fill="#001533" font-family="PingFang SC, sans-serif" font-size="15" font-weight="700" x="18" y="34"><!--pnid:rRDgWd2wMd5nhcWclUF313-->WorkBuddy 价值</text><text data-page-node-id="H1HVZ0CFIiEMRNOZMb2Dm5" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="58"><!--pnid:V3iY1PATb9XGvh6vY2QK0v-->图纸参数自动提取</text><text data-page-node-id="3OD9vALhbeaiqqsLEStYED" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="78"><!--pnid:ET1iO6STTr1jGGy9DccUuC-->成本逐项可追溯</text><text data-page-node-id="IZxosQ1YfOSgUELNiXzAwv" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="98"><!--pnid:ABPBtNhKgFT3qb0MkFFdky-->多档报价同步输出</text></g><g data-page-node-id="7cZPV79dLe3Bf8a6Nh2D92" transform="translate(460,96)"><rect data-page-node-id="tA5nWpTd9rzbDKsWl8aCE8" fill="#FFFFFF" height="114" rx="14" stroke="#D8E3F5" width="188" x="0" y="0"/><rect data-page-node-id="w1cRTO97TMib431rRj46XF" fill="#0F9D58" height="8" rx="14" width="188" x="0" y="0"/><text data-page-node-id="kKzRhYDG4u5GPg5VigyoHh" fill="#001533" font-family="PingFang SC, sans-serif" font-size="15" font-weight="700" x="18" y="34"><!--pnid:k6s5IdFq542LShhisLVbGB-->工作流程</text><text data-page-node-id="4v9ROL2tlGokWNmUHkDs40" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="58"><!--pnid:OVwezwWpCWH0NjuKI54UnZ-->询价受理</text><text data-page-node-id="AkWpzlL2WyVwKx9KnEy1uR" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="78"><!--pnid:OkrqiCCTRwcJcZGLHq81UC-->成本核算与档位设计</text><text data-page-node-id="YdiwRMygMR08xo0Om2NjuC" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="98"><!--pnid:iPeyPpYoAvEs4RBK7l0waH-->风险标注与报价输出</text></g><g data-page-node-id="83wo4QpzbdPa8orWUnyjWs" transform="translate(676,96)"><rect data-page-node-id="2sbz3Z8QLDd9iTzyLSisdI" fill="#FFFFFF" height="114" rx="14" stroke="#D8E3F5" width="188" x="0" y="0"/><rect data-page-node-id="2LKRXWaJ5v7YpFcUEFCZxo" fill="#B9770A" height="8" rx="14" width="188" x="0" y="0"/><text data-page-node-id="lhylnOFjF0AVy732C7RWBH" fill="#001533" font-family="PingFang SC, sans-serif" font-size="15" font-weight="700" x="18" y="34"><!--pnid:tBE9ZiMXEMepjgsdirlEpR-->案例落地</text><text data-page-node-id="RZqGhAXftwgBW8SIkxvMG1" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="58"><!--pnid:12ZE7ZdU6xDu1CC55VGhFZ-->Skill 包</text><text data-page-node-id="qLCs2ZaNiOF4l4LiFQrG1h" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="78"><!--pnid:7PtnJ5Qsd4BhAy1VpHyJ8t-->原始数据源</text><text data-page-node-id="ZIiJCUmpIqe3cLcFee0QgD" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="98"><!--pnid:xnS0CmiNhaX9ACazYerI4u-->提示词 + 交付物</text></g><g data-page-node-id="6sM2HHRfrXKf5R5xXMrPcd" transform="translate(892,96)"><rect data-page-node-id="tPOsxiNJcqiLBmlCzMyADS" fill="#FFFFFF" height="114" rx="14" stroke="#D8E3F5" width="160" x="0" y="0"/><rect data-page-node-id="GlfrZvdEvXYpmThx5fgvjh" fill="#6A5ACD" height="8" rx="14" width="160" x="0" y="0"/><text data-page-node-id="MObyDCnb2We2D7DucV9IGo" fill="#001533" font-family="PingFang SC, sans-serif" font-size="15" font-weight="700" x="18" y="34"><!--pnid:Jwg2gRcmNru9eK8orh3AKN-->先看演示</text><text data-page-node-id="nrGiTBtcitFvF6Y8Hsd0o8" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="58"><!--pnid:NSh9gyf4lKO4ylAvdB3uiD-->场景演示</text><text data-page-node-id="Pdwdq8TrIgPvwx3u9fcBij" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="78"><!--pnid:f6eusBK3opcARmNuYNnYVq-->报价过程录屏</text><text data-page-node-id="YREdRJmz4R9Q8siRcFxxz0" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="98"><!--pnid:ZGjpf9q7OwbWDolSSP3SlU-->后续嵌入视频</text></g><line data-page-node-id="1jaGRBKXqEYEPMHrfQn9Jr" stroke="#A8BDE0" stroke-width="2" x1="216" x2="244" y1="152" y2="152"/><line data-page-node-id="q1DCCL0cDqoAtgtos67b0l" stroke="#A8BDE0" stroke-width="2" x1="432" x2="460" y1="152" y2="152"/><line data-page-node-id="1TH7UaXbYVywO3HB1rCB6T" stroke="#A8BDE0" stroke-width="2" x1="648" x2="676" y1="152" y2="152"/><line data-page-node-id="BjhbVF4n2oE7Z2sBcK7uQW" stroke="#A8BDE0" stroke-width="2" x1="864" x2="892" y1="152" y2="152"/><g data-page-node-id="lAWe3gpcQEDDtMfoXJoeYn" transform="translate(60,246)"><rect data-page-node-id="zCgYj30jyFg5VxxwOgIj60" fill="#001533" height="64" rx="12" width="960" x="0" y="0"/><text data-page-node-id="B3BnP2DOhvVAcfHdWZNZcb" fill="#FFFFFF" font-family="PingFang SC, sans-serif" font-size="13" font-weight="700" x="20" y="26"><!--pnid:kJVD5GrH8Ypq4HR2LJosJ3-->一句话定位</text><text data-page-node-id="xHja8AokLYuG5bQshxvyZc" fill="#FFFFFF" font-family="PingFang SC, sans-serif" font-size="12" x="20" y="46"><!--pnid:leLDrFy4AZ3uxC0wTtqqF4-->这不是“让 AI 随手估个价”，而是让销售把图纸、历史报价和成本依据一次凑齐，拿回一份能解释、敢发出的报价方案。</text></g></svg>
+          <figcaption data-page-node-id="EVWW2Xc7TJrTlMGezDBj7I" class="figure-cap"><strong data-page-node-id="YmDTkKaE9CgKE8HVhAVsfP"><!--pnid:d45BY6aBqfmCHEv23nRZXM-->总览图</strong><!--pnid:Pio37K4FKk7QbxNjISI3gY-->　图纸询价场景解决方案结构总览：从报价痛点、价值定位到案例落地与后续演示承载。</figcaption>
+        </div>
+
+        <div data-page-node-id="vXneDp30vet5DFb60XZ0q0" class="value-grid" style="margin-top:18px">
+          <div data-page-node-id="U3uhCTWGgWeSNBgN8xNThk" class="card"><h4 data-page-node-id="F1TyeTC7eNdSvcKeOfbxR1"><!--pnid:UHuzY3s72wDdbZweyCSuin-->先看效果</h4><p data-page-node-id="RoBdFFnII5140naYmL4zj1"><!--pnid:IBxaxboNazCUSr4IDYkO0N-->先确认 WorkBuddy 是否真的能把关键判断、问题定位和交付结果串成一次完整动作。</p></div>
+          <div data-page-node-id="hpjATvQobhdHNUB5GxyLoU" class="card"><h4 data-page-node-id="Wu5FPHnQvw3tcApAzKgxjf"><!--pnid:gpkFPZd7kq72g9aAehcPqt-->再看细节</h4><p data-page-node-id="CM3KrqpMH6Os2efamuH6Tl"><!--pnid:9Thp6THeq0fqIX8tQnCo70-->看完演示后，再回看痛点、流程和样例资料，会更容易理解每一步为什么这样设计。</p></div>
+          <div data-page-node-id="ibAMBMP1H54zUt6Y1i1dNn" class="card"><h4 data-page-node-id="qfNHM0eodzXMvpqnxmcBlW"><!--pnid:nVaxlAYl7uD4mJWmUypsQw-->最后看附件</h4><p data-page-node-id="O64KRv7YjvoHBEMI7dUYPX"><!--pnid:6QSJJc2ghBp27WDdlIKkSG-->如果方案方向认可，再直接打开 Skill、原始数据、提示词和交付物样件做复盘即可。</p></div>
+        </div>
+
+        <h2 data-page-node-id="EA2vVYpZoxmMcC2HHznjac" class="sec-title" id="sec-video"><!--pnid:wPqWZrcXTofMFt2dYGM7ix-->演示</h2>
+        <div data-page-node-id="7sPcE5pSFRfqnepJZ1td8e" class="video-slot filled" style="padding:0; border-style:solid; background:#000; aspect-ratio:auto; min-height:520px">
+          <video data-page-node-id="lDOW3lqZ2ETFJdOFEvRE79" controls playsinline preload="metadata" src="assets/图纸询价智能报价.mp4" style="display:block; width:100%; height:auto; max-height:78vh; background:#000"></video>
+        </div>
+
+        <h2 data-page-node-id="NTa1GIfWLvAo6y14P6j1qy" class="sec-title" id="sec-pain"><!--pnid:Hb4LkNqqGmgZNBkvvgj61R-->现状与痛点</h2>
+        <p data-page-node-id="exP4tEZbmy0Xi6MfbzAFYg" class="lead"><!--pnid:7rJcfX4BzE5PYJdJGvRqNA-->报价慢和报价不准，本质都不是“算得慢”，而是算之前要花大量时间把图纸、历史件、材料价和工时依据凑齐。</p>
+        <div data-page-node-id="0U9EVlxwme3HA3jmeFPaKM" class="pain-grid"><div data-page-node-id="wrSpmZRrO8ftr8IVdpi2m0" class="card"><h4 data-page-node-id="FZRXeOplZzumqGs5gzPW9C"><!--pnid:dG1iHhBR3WtAWrBaD647AB-->时间不是花在算价，而是花在找数据</h4><p data-page-node-id="7aNtu69jyhQzaAmTvWofVL"><!--pnid:XnFQBHkn460vgPrBrGqk7H-->客户邮件、历史报价、材料价格、工时费率分别散在销售、采购和工艺手里。真正开始算价前，往往已经耗掉了大半天。</p><span data-page-node-id="FaJd3sZRnysasahCDgj23g" class="meta red"><!--pnid:fK5te031mKMtfAyPV8CU6g-->高频售前瓶颈</span></div><div data-page-node-id="B1245EUUUxMpyaISfECIx3" class="card"><h4 data-page-node-id="Ru1z8pNkMkiwsVg7Zmq48Z"><!--pnid:TlR8fxqUeHSBOnA2FYNEsB-->一份报价要在多人之间来回流转</h4><p data-page-node-id="2jOZK4S8QWvbwgByn85BjN"><!--pnid:HWd4tzqrjWkiewst2eiDsC-->销售转技术看图、技术转回销售定价、拿不准再等负责人拍板。客户往往同时找了两三家，回价稍慢就直接失去机会。</p><span data-page-node-id="2keM5Smm71GKAF7eLXaPjp" class="meta amber"><!--pnid:VCCUBtvzzEG23hkB3YUo2J-->响应速度受限</span></div><div data-page-node-id="xkBZrsE89mBpLDLzB9hnxn" class="card"><h4 data-page-node-id="YOao7zF6kNgOhEQVWkSHUx"><!--pnid:NHgspvCQ9pJ8oDvx0iOyyJ-->同一张图，不同人报出不同口径</h4><p data-page-node-id="NTk5qaUM2bicdJH55ctIvw"><!--pnid:ODzwkd8LOE9i5hlcg4bnCM-->损耗率、工时、余量和加成方式高度依赖个人经验。老手在时还勉强稳定，人一离岗，报价能力就跟着走。</p><span data-page-node-id="R2iqMFO7iXFW6kmCcwjgsX" class="meta red"><!--pnid:QJbKgwcB3usfuYJgrxNp2v-->经验难复制</span></div><div data-page-node-id="wiBoyA4OM89VQ1GFdRnNxt" class="card"><h4 data-page-node-id="2mTowWImpxFlln4kg1GCOo"><!--pnid:rdGa3aowSpAL4O3LG8I7qt-->图纸没写清的地方常在成交后才爆雷</h4><p data-page-node-id="ySfnwV6PPSKqVIBMcNrriz"><!--pnid:UblCKqFAFnMXGTHwJZ7PKW-->材料牌号、表面处理、关键工艺要求和外购件品牌一旦理解偏了，差价最后只能从毛利里硬扛。</p><span data-page-node-id="OFddie4bXI91MAgmJOPKQC" class="meta amber"><!--pnid:Ddntz62eH2V88SYmcShvoR-->风险后置</span></div></div>
+        <div data-page-node-id="JnXgur7paE3d5p5OhtHhdn" class="pull-quote"><!--pnid:7ET9uWeo9JrWA23sTjmTuQ-->报价真正难的，不是把价格算出来，而是在有限时间里把“依据、风险和让价空间”同时讲清楚。</div>
+
+        <h2 data-page-node-id="T4fnMsb2YUCNvPpOVngAna" class="sec-title" id="sec-value"><!--pnid:qdyCzDnmqGSxRK7lWp8Tkq-->WorkBuddy 的解决和价值</h2>
+        <p data-page-node-id="QRzOpbZFOQ2kPXnR0Xq1Kx" class="lead"><!--pnid:0lPwb1QDQRLkeF3WEIjm7Z-->WorkBuddy 在这个场景里不只是算一张价格表，而是把“提参、找历史、核成本、做档位、标风险”几件原本分散的工作，收敛成一次完整对话。</p>
+        <div data-page-node-id="QGo9Vl8kydM8rUigNksaTT" class="compare">
+          <div data-page-node-id="t4uhIITUEmgML4I8mbTE1Y" class="panel old">
+            <h4 data-page-node-id="Vvp3SfrzIMtobrD37cLbtQ"><!--pnid:TMHu841WYTdRPoJSa1dzsE-->传统做法</h4>
+            <p data-page-node-id="R6ToERFif4qRyWE7BGQtuQ"><!--pnid:bml5HWSxk3U8IDZnpBfQCX-->销售先找图纸，再翻历史报价、问采购材料价、问工艺工时，最后靠经验拼出价格口径。过程中最费时间的不是公式，而是反复找人和补信息。</p>
+          </div>
+          <div data-page-node-id="gxcI4NNSHdW16iRbBdVU0S" class="panel new">
+            <h4 data-page-node-id="4wFWyWiIFE5qTZYlh6mDoK"><!--pnid:fw3TM0I4Vu5F7kmVNxcTCs-->WorkBuddy 做法</h4>
+            <p data-page-node-id="3uWbrCjrzNEfBDH8TaZ2Us"><!--pnid:leMjrYoNqrykEnjSX487k8-->把客户询价邮件、图纸、历史报价库、材料价格表和工序标准工时一起输入，WorkBuddy 自动提参数、查相似件、逐项算成本并给出常规 / 加急 / 批量三档报价，同时把高风险待确认项单独拎出来。</p>
+          </div>
+        </div>
+        <div data-page-node-id="cyazbh7JKbfmKeNSPcMC9K" class="quant-block">
+          <div data-page-node-id="pp6o2Q5cjp0TuVhZfTqFop" class="quant-head">
+            <div data-page-node-id="LGB6VYHPNgFzN7fZGBfX6O" class="quant-title"><!--pnid:DzY61LftBVRWZ6WelqyQdm-->量 化 价 值 对 比</div>
+            <div data-page-node-id="xSmT9MkXxnYjO63OX9cyth" class="quant-note"><!--pnid:r776dHlDC3sM3QoIr4TZsh-->整体上，WorkBuddy 可显著缩短询价资料收集、成本核算与多档报价设计所需工时，把原本跨部门接力凑数据的工作压缩到更短周期内完成。</div>
+          </div>
+          <div data-page-node-id="qVkPS0JXYNgje6xSTEeVO1" class="quant-compare">
+            <div data-page-node-id="T27vxn8JYzbPmmOT0rZWUh" class="quant-card before">
+              <div data-page-node-id="2FY0yPiewnrWnSo6oJuqg8" class="quant-label"><!--pnid:RCPAnh6PERGdMtESzwAeT1-->案例示例 · 使用前</div>
+              <div data-page-node-id="HRJOTmjaADTJNehnpE58xN" class="quant-value"><!--pnid:7DMgreRxFSoZpLZg92XK3p-->6-10 小时</div>
+              <div data-page-node-id="scDvf1EXeMjokaZN75JUS7" class="quant-desc"><!--pnid:7QOLrM7aNl7oKEQBOGPeAD-->以该场景为例，销售要找图纸、翻历史报价、问采购材料价、问工艺工时，一单报价在 3 个部门间接力，大半天耗在找数据上。</div>
+            </div>
+            <div data-page-node-id="3bTkOAnP5fo71O8EunhOuf" class="quant-card after">
+              <div data-page-node-id="RBnvAGSaaziJeQnfi65EJs" class="quant-label"><!--pnid:99poMKawqaDCBG4IdbMV9L-->案例示例 · 使用后</div>
+              <div data-page-node-id="8wGDM0ecVUUwgadvbpDXLI" class="quant-value"><!--pnid:mpFLI5qRvqEM2cRXz1Xi5I-->≈ 0.5 小时</div>
+              <div data-page-node-id="EMSti9OSo3HRVnDM3vIPoz" class="quant-desc"><!--pnid:m3dgHlWuS1Tf8R1YbD3GO0-->拖入 4 份文件后，WorkBuddy 自动完成提参、查相似件与成本核算约 10-15 分钟，人工只需复核与审批被标出的高风险项，约 20-30 分钟。</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 data-page-node-id="Z3HksAOyg0tMTxOaoz9dG1" class="sub-title"><span data-page-node-id="eAqHsXNS7LdnLDfehVMiTA" class="sub-num"><!--pnid:7uQ93uDudj0gnzs2ZgijYm-->VALUE</span><!--pnid:wkEKTddBVFyjVNTkwFOamE-->六个核心价值</h3>
+        <div data-page-node-id="HiDX8CBhMElmZKJDu7a2ib" class="value-grid"><div data-page-node-id="zQaYRE5Tzb87eMh4DrraqL" class="card"><h4 data-page-node-id="AIbtFxgUX3OyUbktPiOcZf"><!--pnid:ps6bKyOT0y2gzjl6AwXv3V-->销售自己就能拿到报价初稿</h4><p data-page-node-id="HFUe9n2vznRRNUmWAgNFHH"><!--pnid:dD0dIb0XrHmfIW7XjCKvjL-->不用先排队等技术全程手工算，技术只需复核被标出来的不确定项。</p></div><div data-page-node-id="qMFSvtNDgV2pf6xI1JyE3B" class="card"><h4 data-page-node-id="Mb23aanquN734ipCPV20PP"><!--pnid:YkcVumRpg8IGCPZBXOphbf-->成本结构逐行可追</h4><p data-page-node-id="fBw8ZoOyE0eOsQ4Kl6Pa1h"><!--pnid:sCy0zAn4qYDMKoHFtZiVFp-->材料、加工、表面处理、包装运输和管理费都有取数依据，客户压价时可以一项一项讲清楚。</p></div><div data-page-node-id="rs1y0M3QRQjnoPd2oS8mg8" class="card"><h4 data-page-node-id="93qM3EcGTq8FYN0wng6XbZ"><!--pnid:StzGrGaLlHq9GyYM1MCHtW-->多档报价同步输出</h4><p data-page-node-id="E6HOg4PehgnKDW30q1srR0"><!--pnid:CFFqTYD3nLvoEsz5IgCu50-->常规交期、加急交期和批量档可以一起给，让议价变成有依据的选择，而不是临场拍脑袋让毛利。</p></div><div data-page-node-id="B5YvW2sUYhnoTSYInRljxh" class="card"><h4 data-page-node-id="fxYwnJd1f05r8BZikIaOU7"><!--pnid:9tkx2Jy2BFmupCl6bXmmXD-->高风险项报价前就被拦住</h4><p data-page-node-id="ZTlDdjlSFT3EQYVa2iw69W"><!--pnid:4o6OADkZ8y2Qjtyz3uXp8Y-->图纸未明确、工艺要求模糊或成本波动过大的地方会被主动标记，避免先报出去再回头补洞。</p></div><div data-page-node-id="18n0cYcQvfA4l2gE8YVP3D" class="card"><h4 data-page-node-id="jECQRSGPD2VpvWWlYzUR5Z"><!--pnid:QDKAOjqLLuSSrLOBnb3kNH-->相似件经验沉淀为统一规则</h4><p data-page-node-id="SRe3Hjdxd8051eKoJrTkGa"><!--pnid:gyA4A9hKNUn842JNaEtO1A-->损耗率、工时和加成逻辑写入 Skill，同类询价以后按同一套口径执行。</p></div><div data-page-node-id="u8t7lYxhwgH9KODHuY3RUt" class="card"><h4 data-page-node-id="V0piwzXnu2bONGYOX9YFTX"><!--pnid:mlfYb4igfb1cFMzmEkI2Qj-->报一次就沉淀一次台账</h4><p data-page-node-id="3fILgmCpq7v3bsnIzdSGEM"><!--pnid:8HKUvwwnSK8XI00fgaC66L-->每次询价都能留下结构化结果，后续遇到同类件可以直接复用，不必从头再来。</p></div></div>
+        <div data-page-node-id="gyLIzNHBPaUg9po9KazoEK" class="callout">
+          <div data-page-node-id="L7uooLxJYpF4phnFCu1Cry" class="callout-title"><!--pnid:ihH5z4NlntHVFb2wnLJaza-->方 案 定 位</div>
+          <p data-page-node-id="IgjoynhcJSX6Rz4gjoJD0X"><!--pnid:q9BHv3XYbWGjvcfUTFQ7o1-->WorkBuddy 的定位不是替代销售和技术拍板，而是把凑数据、算成本、列风险这些高密度但低复用的动作标准化，让人把精力放在判断和成交推进上。</p>
+        </div>
+
+        <h2 data-page-node-id="nErG7obgcTmBSmVFNOzgYc" class="sec-title" id="sec-solution"><!--pnid:oDuBg78rYoRjOK5x8uyGXW-->解决方案工作流程</h2>
+        <p data-page-node-id="qRibkQk6TmWza9gL8Pqmy2" class="lead"><!--pnid:35zLXPeToYagWS7xxlMZ2i-->图纸询价场景最核心的不是一个 prompt，而是一条稳定的报价工作流：输入稳定、规则稳定、输出稳定，才能既快又稳。</p>
+        <div data-page-node-id="gK2Y0iWNDVVrC1mnXUUT7X" class="process-strip" style="grid-template-columns:repeat(6,1fr)"><div data-page-node-id="qLc0WLrGaFJjd94nwhWPBR" class="step-box"><div data-page-node-id="NidNPFTvJvIPAqOPlaZ9iR" class="step-no"><!--pnid:7ed7BSsaGCDCcBomjMB3We-->STEP 01</div><div data-page-node-id="tNyhdBk6DbxlLdkNpELVpx" class="step-title"><!--pnid:4khX0n6vJUTYPgC80aj0iN-->接收询价与图纸</div><div data-page-node-id="KrE0dv6NCrTO6fHYkCI8mc" class="step-desc"><!--pnid:n1A58zr30ZNHMtG1jqe7iC-->先确认产品、数量、交期和客户额外问题。</div></div><div data-page-node-id="ZayCSJCm3ivfbc6jYlyfkn" class="step-box"><div data-page-node-id="aKxpUOc8PvqNUBKL5orghg" class="step-no"><!--pnid:uI13f8zheA2DSpzr3qIGHc-->STEP 02</div><div data-page-node-id="RnLLlaeTE4lx5gDsZSkNoE" class="step-title"><!--pnid:gl1trbDSh0JVowtFAwehuf-->提取关键参数</div><div data-page-node-id="E139zAwWkwLceRvvKLhrAG" class="step-desc"><!--pnid:idGSYhAGNuZpJBNcYaQrRO-->从图纸里抽出材料、尺寸、工艺与表面处理要求。</div></div><div data-page-node-id="IqQ5bIwCkVLutqepaURlzf" class="step-box"><div data-page-node-id="vGLGlFz5vjKWCPoSlnqlwa" class="step-no"><!--pnid:DF8yspzNcBkuYKayfGNcGb-->STEP 03</div><div data-page-node-id="1W8VGtTQvwRRUDvhRyFCoj" class="step-title"><!--pnid:qDCUXBHc4XEZQRZRhJLzDP-->回查历史相似件</div><div data-page-node-id="lzNQp1wsLVdMft3E7huKet" class="step-desc"><!--pnid:Tbpj4HKcCqHg9IinQBfzbR-->拿历史报价与已成交件反向校核估算口径。</div></div><div data-page-node-id="7WFimKOQsAjab0CxbrBRIZ" class="step-box"><div data-page-node-id="Hk0KoPyRgcLqa5PSxYVuU3" class="step-no"><!--pnid:zeaYeIVctq1av6gJxSgTDW-->STEP 04</div><div data-page-node-id="HPnh6HBzAxTApVfcFVDs8R" class="step-title"><!--pnid:ANvxccN9R0VNkekjqqlPwg-->逐项核成本</div><div data-page-node-id="exyRO8k5Rl62oiYmrNqePs" class="step-desc"><!--pnid:WdXfK4BKKMbxFiEPsAKaLB-->按材料、工时、外协和管理项逐层展开。</div></div><div data-page-node-id="DbSDCOgWFnqCCsTPBknIPs" class="step-box"><div data-page-node-id="gOhyc4CAISiZHvpufI2QGv" class="step-no"><!--pnid:rmxXRx2yxaUFqPMYSD8LrK-->STEP 05</div><div data-page-node-id="Jm1tMrxo1yju9eqKtExAUY" class="step-title"><!--pnid:0gEQlq0yDeHdnX8qMipYzZ-->设计报价档位</div><div data-page-node-id="oS6bRE5xpHuyVk2DdjPNpj" class="step-desc"><!--pnid:B7oQ9aAcbyH1oHUAyFisl2-->同步给出常规、加急和批量档选择。</div></div><div data-page-node-id="GAwoBv7I0JJgo1gdX2129A" class="step-box"><div data-page-node-id="JRnPlEilBvL2oS97bpBKQB" class="step-no"><!--pnid:oPDRVx2N0ijCTJiqnoVaLr-->STEP 06</div><div data-page-node-id="o9hIkm5CrVG5PPpDI472dQ" class="step-title"><!--pnid:pHyI7uimkCRZwD9FviJkMm-->标注待确认风险</div><div data-page-node-id="pYv4MtPnFBrajsVrPTbjMZ" class="step-desc"><!--pnid:lJE5WSBnriTv3jfnjnpFE8-->影响大的项单独拎出，明确确认人和差额影响。</div></div></div>
+        <div data-page-node-id="i7fXin789vFhDwUVBLQe1x" class="visual-card">
+          <svg data-page-node-id="x52hYcNu3RdI1vrH8lknBC" aria-label="图纸询价智能报价工作流程图" role="img" viewBox="0 0 1080 420" xmlns="http://www.w3.org/2000/svg"><rect data-page-node-id="Cb64A2pmzncmpGJNsaJviN" fill="#FFFFFF" height="420" rx="16" width="1080" x="0" y="0"/><text data-page-node-id="CA7uckZqW5EvVFMLY5pO7n" fill="#001533" font-family="PingFang SC, sans-serif" font-size="18" font-weight="700" text-anchor="middle" x="540" y="32"><!--pnid:vtW50MC4yB0d98GDQe4R5O-->WorkBuddy 解决方案工作流程</text><text data-page-node-id="y9cS1HdAqPf4dcPDT81tuJ" fill="#5A7080" font-family="PingFang SC, sans-serif" font-size="11" text-anchor="middle" x="540" y="54"><!--pnid:FsgfUbGd6UeOIOqU9UuZbK-->输入文件 → Skill规则 → 分析判断 → 正式交付物</text><g data-page-node-id="YXoERc00PQyOH7LqNSSj2t" transform="translate(48,98)"><rect data-page-node-id="tgr6llpsEQG2Qg261WxqWt" fill="#F7FAFF" height="220" rx="16" stroke="#D8E3F5" width="206" x="0" y="0"/><text data-page-node-id="qqxyB8rrOEtNyFK5Sxae7m" fill="#0052D9" font-family="PingFang SC, sans-serif" font-size="13" font-weight="800" x="18" y="30"><!--pnid:ahTvcPCj0dchEOXf8AvSNV-->输入层</text><text data-page-node-id="Mxc6ukKTwEnVMpOSLjxF8o" fill="#001533" font-family="PingFang SC, sans-serif" font-size="14" font-weight="700" x="18" y="60"><!--pnid:Sxe6ehjfVT90bU6hAUdvqI-->4 类输入文件</text><text data-page-node-id="o3nPShEXoxGkHPmASTxxg3" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="88"><!--pnid:qgx7WvizUUnG8EUpxGcdZG-->• 客户询价邮件</text><text data-page-node-id="DBmj908Gg9rwAjOy2Yi4NT" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="110"><!--pnid:WG9qof4C5oeQnd9rLbZUhk-->• 历史报价库</text><text data-page-node-id="j2SV5gi6LgxIw7fYiE2GGR" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="132"><!--pnid:IK7z8kIO3xilVak4WwLgkw-->• 材料价格表</text><text data-page-node-id="oLJrI5DTCDhdVtRhVDSXXr" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="154"><!--pnid:yTyBLL5TGxMttvXPgVh6Zs-->• 工序标准工时</text><text data-page-node-id="KA2FHUHA64iCyU36tM3LLJ" fill="#B9770A" font-family="PingFang SC, sans-serif" font-size="11.5" x="18" y="206"><!--pnid:YeZBoACehXNJQrCpgdDNLO-->关键点：图纸要求要读全</text></g><g data-page-node-id="U9LkQ7wK1No1gG0NCo6SGj" transform="translate(300,98)"><rect data-page-node-id="A3FzCw5Z5ZBLTM2YcXpujB" fill="#F7FAFF" height="220" rx="16" stroke="#D8E3F5" width="224" x="0" y="0"/><text data-page-node-id="F94oEDoMrUe1rITpSiF9AJ" fill="#0052D9" font-family="PingFang SC, sans-serif" font-size="13" font-weight="800" x="18" y="30"><!--pnid:z5euUFvpnn0SeqN0bs8cjR-->规则层</text><text data-page-node-id="zKfoq9iIjzm5oy9ahZyEg1" fill="#001533" font-family="PingFang SC, sans-serif" font-size="14" font-weight="700" x="18" y="60"><!--pnid:Ci6nzh9c1DuIECLPv14xkn-->Skill 固化规则</text><text data-page-node-id="w5wafZjY8yZy7uAiZ0k6ho" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="88"><!--pnid:uVRUWtuch7dUNaweT4jUYL-->• 提参口径</text><text data-page-node-id="jqLR1DhepEms5BNtQTjpr1" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="110"><!--pnid:deEFDfWwSRgqOo2YUlnsrc-->• 成本六项模型</text><text data-page-node-id="SwZQhbVsc6EToxjPwEzWp4" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="132"><!--pnid:waATkPA0TcwOHtov1VZmNr-->• 档位报价规则</text><text data-page-node-id="WwZZs0mUKVxdYKwQ7bIF8O" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="154"><!--pnid:nJox1Ut4fgI3YJ20rEtY6Y-->• 风险 A/B/C 判级</text><text data-page-node-id="FqfURXc9pUhvsscyFXF6MW" fill="#0F9D58" font-family="PingFang SC, sans-serif" font-size="11.5" x="18" y="206"><!--pnid:b2qivu9YcivLOU2u6uqgz8-->关键点：规则写进 Skill，不靠人记</text></g><g data-page-node-id="LxN5R9vZHUOSY7ktbLfQHG" transform="translate(570,98)"><rect data-page-node-id="eZwfUOJWnCPulo8SylewlL" fill="#F7FAFF" height="220" rx="16" stroke="#D8E3F5" width="224" x="0" y="0"/><text data-page-node-id="mMTjoAYDLEJ0Jlv7ZBawvN" fill="#0052D9" font-family="PingFang SC, sans-serif" font-size="13" font-weight="800" x="18" y="30"><!--pnid:EzOpHURwVyTvl1dbJvSf36-->分析层</text><text data-page-node-id="69elkzSjlxM29k8F0sUW8J" fill="#001533" font-family="PingFang SC, sans-serif" font-size="14" font-weight="700" x="18" y="60"><!--pnid:X7PHHEQVrQTSCmam4YcSvo-->WorkBuddy 执行逻辑</text><text data-page-node-id="Py89W0p3SXr6n18LMmO6Hc" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="88"><!--pnid:Z8B19b6TvQmYE3v3fyReM8-->• 参数提取</text><text data-page-node-id="xLOqQF2IaP2CJWBTns3HUF" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="110"><!--pnid:K5Me5DCyKxlfR4Vz49ciUP-->• 历史相似件比对</text><text data-page-node-id="ABfNSFxMLULq6hI57AtTry" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="132"><!--pnid:JJWujKSPfTaex8YH0B3xCQ-->• 成本逐项核算</text><text data-page-node-id="iDn8zlg91e87kVTeF1sfRq" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="154"><!--pnid:LoTPJODs0FXUZTxLF9C1LQ-->• 多档价格设计</text><text data-page-node-id="U3KpeseryJ8tAy7JyUx3H9" fill="#CF3C3C" font-family="PingFang SC, sans-serif" font-size="11.5" x="18" y="206"><!--pnid:s80tn0ofmZ9Ycfe45MADlT-->关键点：每个数字都带出处</text></g><g data-page-node-id="JodO4W1xp33DksSj2Dnjy0" transform="translate(840,98)"><rect data-page-node-id="iZhLSIV5HTtjiCB0ZmkyPG" fill="#F7FAFF" height="220" rx="16" stroke="#D8E3F5" width="192" x="0" y="0"/><text data-page-node-id="g9M9nW3x8xbUGPHBokp66a" fill="#0052D9" font-family="PingFang SC, sans-serif" font-size="13" font-weight="800" x="18" y="30"><!--pnid:UrmSAYqa3eU8d3lhIwoDhF-->输出层</text><text data-page-node-id="6Y5irpl7XIpCQvrso1q2sz" fill="#001533" font-family="PingFang SC, sans-serif" font-size="14" font-weight="700" x="18" y="60"><!--pnid:a39FeL8nOOCkH08YxuNlE0-->4 类正式结果</text><text data-page-node-id="0KYKQEauQpnd1Xm4uItMSZ" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="88"><!--pnid:1m5MdzkdqsaZoJ4VYlurdY-->• 成本明细</text><text data-page-node-id="LmdSujTVXTQQFINfopCQc8" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="110"><!--pnid:9kEzB9VBE6bgPld2fmDRlA-->• 三档报价方案</text><text data-page-node-id="fJwMWtiqRgYHgMDAoITA9H" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="132"><!--pnid:qRYkYeZRkHJtLaFefm6Jda-->• 待确认清单</text><text data-page-node-id="b1BUeJgSMhSBz4M1Zjyf6q" fill="#4A5B78" font-family="PingFang SC, sans-serif" font-size="12" x="18" y="154"><!--pnid:yk2PFG6fB3t7LxXSCheoKy-->• 报价说明</text><text data-page-node-id="jfsiAKAWUXWNpH9HpUfLVU" fill="#0052D9" font-family="PingFang SC, sans-serif" font-size="11.5" x="18" y="206"><!--pnid:K5rr1TqhvR6qKEthgM0hOk-->关键点：能发客户、能支持议价</text></g><line data-page-node-id="WaMyoBcL9WcK0SMDqt1pfk" stroke="#A8BDE0" stroke-width="2.5" x1="254" x2="300" y1="208" y2="208"/><polygon data-page-node-id="n7HVqUmAFnDR0o1V17as4H" fill="#A8BDE0" points="298,208 288,202 288,214"/><line data-page-node-id="iW1yKWxAkGA3tvhbekPS6Y" stroke="#A8BDE0" stroke-width="2.5" x1="524" x2="570" y1="208" y2="208"/><polygon data-page-node-id="NZo2X199wfl8kwTMKLpbfK" fill="#A8BDE0" points="568,208 558,202 558,214"/><line data-page-node-id="jxyiUCKxsPn9HVr59bPYN8" stroke="#A8BDE0" stroke-width="2.5" x1="794" x2="840" y1="208" y2="208"/><polygon data-page-node-id="UsclzcDQRLJEM6m5nyS1zp" fill="#A8BDE0" points="838,208 828,202 828,214"/></svg>
+          <figcaption data-page-node-id="Ea5EABxZRwUMXkRYcBj2rX" class="figure-cap"><strong data-page-node-id="MAXUBSmias5mqJXFSdv0CY"><!--pnid:ApLKhCU4udXaZ4YruJz3i2-->流程图</strong><!--pnid:oHT0qUIdIbnr8OzsQjGixj-->　图纸询价场景工作流：从输入依据、报价规则到成本测算与正式报价输出的完整闭环。</figcaption>
+        </div>
+
+        <h2 data-page-node-id="ZTq0Oo33VtYl2isktlFxsG" class="sec-title" id="sec-case"><!--pnid:ub8qKSnd7vMa5F9qV3nfaW-->案例基本介绍</h2>
+        <p data-page-node-id="w4i9gR1frR11jLtOrHUiKM" class="lead"><!--pnid:Eyv6LiNtai53nn2UaFBrsL-->这个案例的重点不只是“算出一个价”，而是要证明 WorkBuddy 能在时间紧、竞争激烈、图纸不完整的情况下，让销售拿到一份讲得清的报价。</p>
+        <div data-page-node-id="YlYBWshpi8NH4sDSqxX44Q" class="card" style="padding:24px 24px 20px">
+          <h4 data-page-node-id="adnLX2Ve8Fvh07jYOLUJeL"><!--pnid:m2t768lybkRFzzs7TCH4L6-->合作多年的老客户发来结构件询价，两天内必须回价</h4>
+          <p data-page-node-id="T7fADJVSwzphM1xfi3tgIg" style="margin-bottom:16px"><!--pnid:KH7s0WP9WPhetlsf8Nug2d-->客户在原有产品基础上做了结构调整，并同时询问加急交期和一次下单 300 台的批量价。销售手上拿到的是客户询价邮件、历史报价库、材料价格表和工序标准工时，既要快，也要把没写清楚的地方提前讲透。</p>
+          <div data-page-node-id="t9RbE1Le7KezOb2bDIuqO0" class="compare" style="margin:0 0 18px; grid-template-columns:repeat(3,1fr); gap:0; box-shadow:none">
+            <div data-page-node-id="DfnZWj6mT2RXJU3u8mXNMH" class="m"><div data-page-node-id="FadPfeAxRjYvIYwV18bWy2" class="ml"><!--pnid:didzF2y9TXc64dX3JErnCC-->客户关系</div><div data-page-node-id="IlzP2H4VEm8cBWi5FJQbdC" class="mv"><!--pnid:2kVEuoEQGZSOyl2JJ3Lij6-->合作 4 年 / 重点客户</div></div><div data-page-node-id="BgT4S0hNSNWhalpTjo0N9Y" class="m"><div data-page-node-id="6ZJGditABBPRmhFoKslVjD" class="ml"><!--pnid:LDq8qVmkXaMxZo1dwZVBMv-->竞争情况</div><div data-page-node-id="gFQ5FcRxgwU6WH0rtqt6fD" class="mv"><!--pnid:WZm9iwkoTpzJR6ZROmPywn-->同时询价 3 家</div></div><div data-page-node-id="LsNmkekOEJ2bTEZAemyPWM" class="m"><div data-page-node-id="lcAOqEi5SC1s6wzVO2Ujsl" class="ml"><!--pnid:f4419Sm9ahHFKAHedKkDXw-->客户要求</div><div data-page-node-id="DAgIAPWBTHLNJHlRas0AfT" class="mv"><!--pnid:jpO43yoRpa1Yq1XiqX6rrb-->2 天内回价 / 要三种价</div></div>
+          </div>
+          <h3 data-page-node-id="OCLQfL3qXiwBUslqRD8bZq" class="sub-title" style="margin-top:0"><span data-page-node-id="oesucx8BWltdQZB3k3mJ6m" class="sub-num"><!--pnid:gzkY01DHvqnUrxELA8IRTL-->CASE</span><!--pnid:60j8gl2HwwlhCC5GaOImbu-->WorkBuddy 一次对话给出</h3>
+          <div data-page-node-id="wJZPt4t59LIszgmxSdfGrF" class="value-grid"><div data-page-node-id="p0dHPaLb6yyO6q0cXXbkuA" class="card"><h4 data-page-node-id="vLz7wpMM18MsqcMXPdOGLH"><!--pnid:x0p1DJogXbrLRT0kZK73Hr-->一份成本明细</h4><p data-page-node-id="7o8auvW4k7LJNrMXXkuaMQ"><!--pnid:0lWjv5ju7bM1Nw794vysYg-->材料、加工、表面处理与管理项逐行列出，每行都附带算式与出处。</p></div><div data-page-node-id="rgyqVjjZvd1aibwcaSCzYM" class="card"><h4 data-page-node-id="FzOsiXFNkugyzSaAcXYLRr"><!--pnid:PKmBkaVwqUMWRcO5Lez53K-->三档报价方案</h4><p data-page-node-id="zewTcZEY2E8iCvFMKtKw3O"><!--pnid:RpM1cx9AdfchHeZJgTPFqq-->常规、加急和批量三档同步给出，差额和适用条件说得明明白白。</p></div><div data-page-node-id="6LqDipcgL7Jv1w9iYPK5Fj" class="card"><h4 data-page-node-id="Nx2gKuHQ9E11GcOAK9uBHQ"><!--pnid:VNmfk1RL0xGyn55khy6iZE-->待确认清单</h4><p data-page-node-id="YZqOKCaMLGB8GNLcisS7zf"><!--pnid:p83dwEhGv10WL5vgTEd5rM-->图纸未写清的项按影响金额分级，写清当前假设和待确认责任人。</p></div></div>
+          <div data-page-node-id="ObJXg29LMzrZzYUTURdnV0" class="callout">
+            <div data-page-node-id="NtfOinkjDnhqIgNLX9f5iQ" class="callout-title"><!--pnid:4eJPdWZSFgjUcfSrW2JYwB-->案 例 结 论</div>
+            <p data-page-node-id="KMrmC3HcXegX3KSZyRC5ZY"><!--pnid:vnCGqQ53hWf368CM7MJBki-->这个案例真正说明的是：销售不需要变成成本工程师，只需要把手头资料交给 WorkBuddy，就能拿回一份自己讲得清、也敢发出去的报价。</p>
+          </div>
+        </div>
+
+        <h2 data-page-node-id="osP7A4W1wyVOmoEiSfdB52" class="sec-title" id="sec-assets"><!--pnid:fOhoSvtj9gAdpaynuv1lEM-->具体案例解决方案</h2>
+        <p data-page-node-id="oVnMt9tNu3ydiXW7Ls9isQ" class="lead"><!--pnid:1CdOz6JlRODiqlKmeTc4D0-->这一部分把场景真正落到可以复用的执行资产上：Skill、原始数据、提示词和输出形态要一起看，方案才算完整。</p>
+
+        <h3 data-page-node-id="PTQGnrJsTjlTVZQ3e6xYdY" class="sub-title"><span data-page-node-id="QVyJo1MglobWKkUH6yRCY8" class="sub-num"><!--pnid:iHzPxrTbkoHUeq0kX56iUx-->A</span><!--pnid:LT5Fve3gFmUDdvxx4i802L-->Skill 包</h3>
+        <div data-page-node-id="UztrgrTHo77cmNrEDdX4Fa" class="resource-grid">
+          <div data-page-node-id="U2RRBm0KfWKkQz37xj1Hgx" class="resource-card">
+            <div data-page-node-id="ljyoVhtU7v5F0dIDyLuXTi" class="resource-label"><!--pnid:F0Qdo9W8IH3NaBDHtJGeON-->SKILL</div>
+            <div data-page-node-id="xoBGVPgwsiDCQfaPZPbc5w" class="resource-title"><!--pnid:IRtwFgPwk9woDIMWNHJm0l-->rfq-intelligent-quoting.zip</div>
+            <div data-page-node-id="7kYZ9SK6Wf2mdlXEFockUE" class="resource-desc"><!--pnid:hWjIkxMlMP0F04spdABb6h-->包含图纸询价智能报价主 Skill 和配套 references，负责固化提参口径、成本模型、档位设计和风险判级规则。</div>
+            <a data-page-node-id="2lfB6MfypoTagxDXAExsUI" class="resource-link" href="assets/rfq-intelligent-quoting.zip"><!--pnid:TmoIt6HIlCCayDuD0RTtdf-->打开 Skill 包 →</a>
+          </div>
+        </div>
+
+        <h3 data-page-node-id="IPRXKjTRWKRN9fhvIv7czG" class="sub-title"><span data-page-node-id="FVYdal9geul4y0k6tVd1GW" class="sub-num"><!--pnid:PXlKjBRJmr0NOw6P64Qgw4-->B</span><!--pnid:vYiuGpspzWDLtk1l2jJUdT-->原始数据源</h3>
+        <table data-page-node-id="B0dQenooeIxeHSMebCncnN" aria-label="原始数据源清单"><thead data-page-node-id="wIVdBMnuMM2dMDyg5A4gUH"><tr data-page-node-id="BVhXmLO4dq45th9WVFf4mm"><th data-page-node-id="kMP9wUsRO2DO3UWzRbWsIH"><!--pnid:VRsmpAKEpWs8pusCPj5vMm-->文件</th><th data-page-node-id="mY0vNEvXO3SGBYSVkZaf9Y"><!--pnid:1VqfdEVixNNCbVJNHtEbEg-->角色</th><th data-page-node-id="h89CdpuiQw162EtQSj51im"><!--pnid:8ZqGWnje7AkJUVlkwz73ZC-->在场景中的作用</th></tr></thead><tbody data-page-node-id="aWNaaEl1vFXISyOJpzPEnD"><tr data-page-node-id="t9WtSjEqCVHd2UOrX5lMcs"><td data-page-node-id="eCxlMmdlEa1mo0yOFk8UGz"><a data-page-node-id="BxJK1QTxCKzz0osQawicTn" href="assets/客户询价邮件.docx"><!--pnid:urNZTqSCazkJ66Q7looBZW-->客户询价邮件.docx</a></td><td data-page-node-id="1iQVGtwuScisQPcDLNtN5N"><!--pnid:o8CPg9YrC0fFIgMPn6MgFl-->业务背景</td><td data-page-node-id="HQcw195FD0mT935LERVDGR"><!--pnid:VflEIz3TulY6Uw1UwSFjXx-->说明客户是谁、问什么件、要多少台、交期多紧，以及是否额外要求加急价和批量价。</td></tr><tr data-page-node-id="aDMnl27pMcLPbI9eoNHTZZ"><td data-page-node-id="SzyQABRanmv0fzT3lyO07G"><a data-page-node-id="GxF5gS3nlnM13f96iyOa0v" href="assets/历史报价库.xlsx"><!--pnid:2PtPMIA4IVx3cvIa6DXb2J-->历史报价库.xlsx</a></td><td data-page-node-id="tlmLqGtSfS7qDdZIPLOf8v"><!--pnid:T8F3oDycGkOR3yZBuCPu1v-->相似件基准</td><td data-page-node-id="zPUwCMJXzGQxqYxa5gd4TP"><!--pnid:iPqPMBggONaFoS8vU9OKmz-->帮助回查同类结构件过去的报价口径、成交价和潜在亏损记录。</td></tr><tr data-page-node-id="VNplNoU9yN47ApOFsCZ2bd"><td data-page-node-id="BnSYqDHxpwyyYUefWts7DY"><a data-page-node-id="hgeSmlkxQuLi0ahU2ErjeQ" href="assets/材料价格表.xlsx"><!--pnid:cDMRcFBwfGxLRlrhQwB3ZL-->材料价格表.xlsx</a></td><td data-page-node-id="l5GCQ3k5UbC4Ntnim6U5dq"><!--pnid:ORN91Apl0aYtrpf26ek8q5-->材料成本依据</td><td data-page-node-id="f7HpIWIUpHPuU74L4y1g87"><!--pnid:JqV4Y2QFFXm0tOeVzVc8ov-->提供当前材料价格口径，支撑报价中的材料项计算。</td></tr><tr data-page-node-id="xgVDAi4dP82GJ2OUEUuFGU"><td data-page-node-id="DBp3BYWA6hOrX7brqavf6L"><a data-page-node-id="ILtstuSsEtCd7As6C2YkZ0" href="assets/工序标准工时.xlsx"><!--pnid:HsDDhkukSiJOYPwMy7HaQs-->工序标准工时.xlsx</a></td><td data-page-node-id="AuEc9qFR9AWyZYmteEZklN"><!--pnid:xYkULPM3zVsujQw5bEwK8t-->加工成本依据</td><td data-page-node-id="ijmAI3xRtvhushqxqwOyXk"><!--pnid:DivSqjNeYZXMhWoIj85hRv-->提供关键工序的标准工时与费率，支撑加工费用估算。</td></tr></tbody></table>
+
+        <h3 data-page-node-id="RGtNMCodmu87yIQtdB8lkF" class="sub-title"><span data-page-node-id="U0d4cCMHdGZNguSkOVPsCZ" class="sub-num"><!--pnid:ncY5wQ9TWJYEs1x90YuPR7-->C</span><!--pnid:tcZi9wxNYoey8Wxvf0mVvf-->提示词</h3>
+        <div data-page-node-id="EDt8hob5YOOhh4hU2xaK0T" class="prompt-box">
+          <div data-page-node-id="nDxjUSUGIpB2d35chIN1oI" class="label"><!--pnid:89LEeWTPwXkp0BbKGUfeen-->TRAINING PROMPT · 复制即用</div>
+          <div data-page-node-id="vLrM6sZRnxjUOO6xvzJOwO" class="prompt-text" id="promptText"><!--pnid:83EFxYYsRBcd3nvLygpPUB-->华东电气发来询价，户外机柜 P-CAB-02，120 台，30 天交期，要求两天内回价。
+客户还问了加急价，以及二期一次订到 300 台的价格。
+文件都传上来了，帮我出一份能发出去的报价。
+
+图纸上没写清楚的地方一定要标出来，影响大的项没确认就别让我发出去。
+每一行成本都写清是怎么算出来的，我要能自己拿计算器验。
+
+产出一个 Excel，用标准报告格式。</div>
+          <div data-page-node-id="iyq12FZooyflruMB2kz30R" class="prompt-action">
+            <button data-page-node-id="dGKvDHBclUYjbsF7ucIKNu" class="btn primary" onclick="copyPrompt()" type="button"><!--pnid:wJ6ckNT07QHw2Rb3GcG2fm-->复制提示词</button>
+            <a data-page-node-id="c2sM58PKtsgHmHmRQMCisy" class="btn ghost" href="assets/场景①_图纸询价报价.md"><!--pnid:aDHgXL7EmZXf6TE19DZBnP-->查看完整提示词说明</a>
+          </div>
+        </div>
+        <p data-page-node-id="MZZX72WXFnFGcW3bIQuo5I"><!--pnid:iRiSgGt8eA4GcpQ8pIAAMw-->这里的提示词本身并不长，因为真正复杂的提参规则、成本模型、档位逻辑和风险判级，都已经沉淀在 Skill 里。用户只需要把业务事实说清楚，WorkBuddy 就能按标准流程执行。</p>
+
+                <h3 data-page-node-id="YVjjzv41zwzXobfwD5Vcfk" class="sub-title"><span data-page-node-id="Bvi7k2Etgc5tuV7uECdtHA" class="sub-num"><!--pnid:IhF2lWjExpB7mT7tVagSH0-->D</span><!--pnid:Ye3tZd2UlHtmnilOQla3N6-->怎么用</h3>
+        <div data-page-node-id="eTchWXkT4ErJZx4B0Myk8h" class="callout">
+          <div data-page-node-id="zvZZSOVGxVyebadBvj05Vg" class="callout-title"><!--pnid:NwdAFL0yul5muckuS7n9Hp-->使 用 方 式</div>
+          <p data-page-node-id="BgqYaR1Em7GmDlytyQHfHh"><!--pnid:GQ1iQn3m6A2NQI7nmf4mqI-->先将 <a data-page-node-id="53xW7NIAH0gfpHqy0QhNNU" href="assets/rfq-intelligent-quoting.zip"><!--pnid:ovhRTeiC3WfKxZA9tDZXuh-->rfq-intelligent-quoting.zip</a><!--pnid:Ob2zf27Xv8TNTv271AHOIC--> 导入 WorkBuddy，并在当前对话中选中这个 Skill；然后把客户询价邮件、历史报价库、材料价格表、工序标准工时 4 份文件一起拖进对话框，最后粘贴上方提示词发送。WorkBuddy 会按 Skill 固化的报价规则自动完成成本拆解、三档报价和风险分级。</p>
+        </div>
+        <div data-page-node-id="dURdbxitcKbLHZ2L5JDf1o" class="checklist"><div data-page-node-id="yKOUayjgPVXxZYBOZa7vXi" class="check-item"><span data-page-node-id="65XcPUBedw3c6EANpxY9HQ" class="check-icon"><!--pnid:UDhFMpGHRWFvm7G34unhlO-->1</span><div data-page-node-id="PeR26NLOrwzF2OmoLMvJZg"><strong data-page-node-id="kPheERcftV6Kyi88eEMxzb"><!--pnid:cNFTkR7BXiUwpvIQALImG8-->选中相应 Skill：</strong><!--pnid:RTmI5sfPndqJ3TbJQjp0gH-->先导入并选中 <a data-page-node-id="sp9CWKAU4scj4txIeb0QfN" href="assets/rfq-intelligent-quoting.zip"><!--pnid:GyK8VNjvdYIACjrkgDjlpn-->rfq-intelligent-quoting.zip</a><!--pnid:fMjzOgsfTYT69S0EY8kidz-->，让报价逻辑、档位规则和风险判级按标准执行。</div></div><div data-page-node-id="AIkw9Xzkld9if7kuKo1ofv" class="check-item"><span data-page-node-id="BMsZi4faiIQNWaXuHsj7PZ" class="check-icon"><!--pnid:C2K3EwaFvAjx0tCEZC33rp-->2</span><div data-page-node-id="CPz5GZMCsHg8sMNhgvBWmj"><strong data-page-node-id="rxOAnTCvHIu402uki3Socp"><!--pnid:UZ22jgcHS2OPU24Tbk93KJ-->上传样例数据：</strong><!--pnid:5I035yHgEKwa1U5EkMVHKF-->客户询价邮件、历史报价库、材料价格表、工序标准工时 4 份文件一起上传即可。</div></div><div data-page-node-id="QllafokLb7C8NdjngM4Lvu" class="check-item"><span data-page-node-id="SA18vq3y4VFVffKOml3k0g" class="check-icon"><!--pnid:pek9UwkHySb4X1UM4qdaY8-->3</span><div data-page-node-id="dlFUKEtD0k3NfIQt4byl5f"><strong data-page-node-id="X7cJTJ27m5Q7bZMK81y8uP"><!--pnid:rMq764mqgLF1NWCRmjLJWw-->发送提示词：</strong><!--pnid:iabOjedmB8bqhxSbNNFYaa-->直接粘贴页面里的提示词，不需要再额外解释每份文件在第几步使用。</div></div><div data-page-node-id="GuXwtP2tQ1JifUhq0VFHpu" class="check-item"><span data-page-node-id="Mqink8WB1dr6C9r264suga" class="check-icon"><!--pnid:xuNZGatRsAn8wq9O7U5U2s-->4</span><div data-page-node-id="naRsyQwdwC65yFEwkbLfzi"><strong data-page-node-id="Uh2hoIcvfvaYIpTw3MKduK"><!--pnid:TfdmPFwH6AQ37X3xw7Y4cd-->下载产出附件：</strong><!--pnid:527ktWH8bcYTPDiJeYrwM1-->重点查看报价测算表，里面已经包含成本明细、三档报价、待确认项和报价说明。</div></div><div data-page-node-id="rp7dNGv7sMxeJM64GzkDZW" class="check-item"><span data-page-node-id="EVodLO2oK6D1Ah3KCauZfh" class="check-icon"><!--pnid:72ZqTjkqB4BR7iL3cQxP3b-->5</span><div data-page-node-id="UGfjxgmSIE3NBaXzaLAoy8"><strong data-page-node-id="CgMbACMIwpBYdR4gDSUw3s"><!--pnid:T80bI46t3ODnYqaAFOJ9y0-->对外发送报价：</strong><!--pnid:KmlXThCupgDmnofAXPPNfG-->先复核高风险待确认项，再把可对客的报价结果用于议价、审批和正式回函。</div></div></div>
+
+<h3 data-page-node-id="ijgEhu3xRmG2BQnuzd55Y9" class="sub-title"><span data-page-node-id="4pyHNQqlA2lX1C94n9sPyH" class="sub-num"><!--pnid:jhfNMYShyPUfppStnrUEKs-->E</span><!--pnid:iysw3pLZyfnWRFFxwVV1f8-->预期交付物</h3>
+        
+        <div data-page-node-id="8odeD3E178JEGzF3CVzbAc" class="resource-grid">
+          <div data-page-node-id="TcdSVxt8fTa1Uro4deD6jB" class="resource-card">
+            <div data-page-node-id="nlbEe2YjoN9SdTMJfOuHll" class="resource-label"><!--pnid:fEO80dIimO9GdAybVOLoGf-->ATTACHMENT</div>
+            <div data-page-node-id="jVC6v33AKkjjRYUjii7y6J" class="resource-title"><!--pnid:COo6d3WpHMZ3LaDOvw1zxA-->报价结果附件</div>
+            <div data-page-node-id="tgP2aq5K8HBssYsBv4w2vn" class="resource-desc"><!--pnid:u8lnoaTybGn0mJPoq7NCEg-->同一份 Excel 内含成本明细、三档报价、风险 A/B/C 分级与待确认项，适合直接拿给客户或内部审批。</div>
+            <a data-page-node-id="XZjZZBs3VR0qpQS7dsrDwn" class="resource-link" href="assets/场景①_图纸询价报价_预期输出.xlsx"><!--pnid:2ZIVvce7azVuPTQqdYI6yO-->场景①_图纸询价报价_预期输出.xlsx →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div data-page-node-id="SsRDEE5Ha5bFSTlNi49rTs" aria-hidden="true" class="lightbox" id="figureLightbox">
+    <div data-page-node-id="jYzPbOXIJnHn8z36gRyncW" class="lightbox-backdrop" data-close-lightbox="true"></div>
+    <div data-page-node-id="6gtXqKqYcABw59vhyumxvK" aria-label="图示放大预览" aria-modal="true" class="lightbox-dialog" role="dialog">
+      <button data-page-node-id="FaHGmTRiFwrtVKn404DsRw" aria-label="关闭" class="lightbox-close" data-close-lightbox="true" type="button"><!--pnid:tiX2p3UDaGSVckWaNQFrK2-->×</button>
+      <div data-page-node-id="frsYTpwR2kvq5KZDyf726G" class="lightbox-content" id="lightboxContent"></div>
+    </div>
+  </div>
+
+  <script data-page-node-id="m8TYtVIMX8Jc5OREZGcYfc" data-pnid-children="j0bdivLBiuUCvLP4TmWL1x">
+    function copyPrompt(){
+      const text = document.getElementById('promptText').innerText;
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.top = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+    }
+
+    const lightbox = document.getElementById('figureLightbox');
+    const lightboxContent = document.getElementById('lightboxContent');
+    const zoomableCards = Array.from(document.querySelectorAll('.visual-card'));
+
+    function openLightbox(card) {
+      if (!lightbox || !lightboxContent) return;
+      lightboxContent.innerHTML = card.innerHTML;
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      if (!lightbox || !lightboxContent) return;
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxContent.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+
+    zoomableCards.forEach(card => {
+      card.classList.add('zoomable');
+      card.setAttribute('title', '点击放大查看');
+      card.addEventListener('click', () => openLightbox(card));
+    });
+
+    if (lightbox) {
+      lightbox.addEventListener('click', (event) => {
+        const target = event.target;
+        if (target instanceof HTMLElement && target.dataset.closeLightbox === 'true') {
+          closeLightbox();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeLightbox();
+    });
+
+    const tocLinks = Array.from(document.querySelectorAll('.toc-l2'));
+    const sections = tocLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const id = '#' + entry.target.id;
+        tocLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === id));
+      });
+    }, { rootMargin: '-20% 0px -65% 0px', threshold: 0.01 });
+    sections.forEach(sec => observer.observe(sec));
+    tocLinks.forEach(link => {
+      const check = link.querySelector('.toc-check');
+      link.addEventListener('click', () => { if (check) check.classList.add('done'); });
+    });
+  </script>
+</body>
+</html>

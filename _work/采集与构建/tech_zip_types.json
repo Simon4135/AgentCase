@@ -1,0 +1,14 @@
+{
+ "inExt": {
+  "xlsx": 1013,
+  "docx": 43,
+  "pdf": 4,
+  "txt": 223,
+  "csv": 6
+ },
+ "refExt": {
+  "md": 578
+ },
+ "pureXlsx": 129,
+ "total": 286
+}

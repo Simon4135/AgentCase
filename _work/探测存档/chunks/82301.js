@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_mindx_app_mindx=self.webpackChunk_mindx_app_mindx||[]).push([["82301"],{10060(e,i,p){p.d(i,{createPieServices:()=>a.f});var a=p(4252);p(23252)}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_mindx_app_mindx=self.webpackChunk_mindx_app_mindx||[]).push([["55847"],{26458(e,i,p){p.d(i,{createTreeViewServices:()=>a.I});var a=p(2519);p(23252)}}]);

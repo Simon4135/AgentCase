@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_mindx_app_mindx=self.webpackChunk_mindx_app_mindx||[]).push([["27618"],{81817(e,n,i){i.d(n,{createCynefinServices:()=>p.t});var p=i(57690);i(23252)}}]);

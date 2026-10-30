@@ -1,0 +1,352 @@
+
+<section>
+  <h2><span class="no">6</span>为什么大部分 Agent 项目卡住：失败的真正原因与安全边界</h2>
+  <p class="hint">这一节回答「那为什么不都去做？难在哪？」——也直接解释了 WorkBuddy 为什么要选择外挂路线。</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h4>口径必须先分清（否则数字会骗人）</h4>
+      <p style="font-size:12.7px;color:#3f4750;margin:0 0 8px">「88%」「89%」「95%」「40%」这些数字经常被混用，但它们测的根本不是同一件事。据 alatirok.com 的逐条溯源：</p>
+      <ul>
+        <li><b>40%</b> — Gartner：<b>预测</b>到 2027 年底超过 40% 的 agentic AI 项目会被取消。<span class="tag g">唯一真正针对 Agent 的权威数字</span></li>
+        <li><b>88% / 89%</b> — 多个来源引用的「Agent 试点未进生产」比例，AWS 官网 banner 原文也在用「88% of agent pilots stall」。<span class="tag y">口径为试点阶段</span></li>
+        <li><b>95%</b> — MIT 的生成式 AI 试点研究，<b>测的是 GenAI 试点而非 Agent</b>。<span class="tag r">不可直接套用</span></li>
+        <li><b>41%</b> — Stacklok：软件组织中已进入 MCP 生产阶段的比例。<span class="tag b">正面口径</span></li>
+        <li><b>40% vs 22%</b> — McKinsey 2026：大企业（>10 亿美元营收）规模化使用 Agent 的比例 vs 小企业。<span class="tag b">能力差距</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>卡点排序：不是模型不行，是集成不行</h4>
+      <ul>
+        <li><b>第一名：集成。</b>dynamisch.co 直接把文章命名为《The Integration Wall》（集成墙），主张失败主因是集成而非模型能力。</li>
+        <li><b>第二名：认证与授权。</b>agent 从「单用户 demo」走向「多用户企业部署」时<b>认证最先崩</b>——原型可以用环境变量或共享 service account，生产必须做委托授权、凭据隔离、策略执行与审计追踪。</li>
+        <li><b>第三名：上下文成本。</b>Anthropic 实测 5 个 Server 的工具定义就要吃掉 <b>55K tokens</b>；工具搜索与代码执行等优化可削减 <b>85%–99.9%</b>。GitHub 甚至把自己家的 MCP Server 换成 gh CLI 来做数据抓取。</li>
+        <li><b>第四名：权限与「越权代签」。</b>不能让 Agent 随便代下游员工签字——这是写权限路线必须挡住的坑。</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="bar-h" style="margin-top:20px">认证为什么会先崩：Agent 引入的新身份问题（Arcade.dev《7 Best AI Agent Authentication Platforms (2026)》核心论点）</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:230px">风险</th><th>原意</th><th style="width:280px">后果</th></tr></thead>
+    <tbody>
+      <tr><td><b>Credential drift</b>（凭据漂移）</td><td>原型期的共享密钥被沿用到生产</td><td>无法区分「是谁让 Agent 做的这件事」</td></tr>
+      <tr><td><b>Confused deputy</b>（混淆代理）</td><td>Agent 拥有高权限，用户通过间接提示注入借它之手越权</td><td>AI 成了「有权限但被骗」的执行者 —— 2026 年最被反复讨论的攻击面</td></tr>
+      <tr><td>过宽 API key</td><td>一次授权覆盖所有租户/所有动作</td><td>越权读取、跨系统数据外泄</td></tr>
+      <tr><td>限流冲突</td><td>多 Agent 共享同一凭据配额</td><td>互相挤兑，生产不稳定</td></tr>
+      <tr><td>策略不一致</td><td>同一动作在不同入口判定不同</td><td>审计无法解释</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note">
+    <b>耐久模式：「两个身份 + 委托上下文」。</b>不是给 Agent 一个万能身份，而是同时携带 <b>Agent 身份</b> 与 <b>用户身份</b>，并在运行期评估一个<b>任务级授权上下文</b>（task-specific authorization context），每次动作都取权限交集。<br>
+    <b>延伸阅读：</b>OWASP 的 MCP Security Cheat Sheet 与 MCP Tool Poisoning 条目；微软 <code>MCP-SECURITY-GATEWAY-1.0</code> 规范；arXiv 2511.20920《Securing the Model Context Protocol (MCP): Risks, Controls, and Governance》——该文把攻击面分成数据驱动（用户生成内容注入、跨系统外泄）、供应链（registry 信任、<b>rugpull 攻击</b>、通过工具描述做上下文投毒）、配置治理（过度授权、动态工具发现）、运行安全（PII 合规、密钥暴露、多 Agent 监控层威胁）四类，并特别提到一类对手：<b>善意但出错的 Agent 自己</b>。
+  </div>
+</section>
+
+<section>
+  <h2><span class="no">7</span>对照：WorkBuddy 693 方案 vs 外部世界</h2>
+  <p class="hint">把本地实测的数字和外面的做法放在同一张表里。左边数字来自本机 693 个方案的全文扫描，右边来自本页前六节的调研。</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:190px">维度</th><th style="width:280px">WorkBuddy 693 个方案（本地实测）</th><th>外部世界主流做法（2026-10）</th></tr></thead>
+    <tbody>
+      <tr><td><b>接入方式</b></td><td>人工导出文件 + 上传到对话框</td><td>MCP Server / API 直连</td></tr>
+      <tr><td><b>MCP 提及</b></td><td class="n">2 / 693（0.29%）</td><td class="n">官方 Registry 约 40,047 个 Server</td></tr>
+      <tr><td><b>数据实时性</b></td><td>快照（导出那一刻）</td><td>实时查询</td></tr>
+      <tr><td><b>能否写回</b></td><td class="n">0（产出文件型 693/693）</td><td>厂商原生 MCP 普遍支持写（含审批闸门）</td></tr>
+      <tr><td><b>输入来源</b></td><td>xlsx 1,013 / txt 223 / docx 43 / csv 6 / pdf 4</td><td>系统字段、表、业务对象</td></tr>
+      <tr><td><b>技术形态</b></td><td>SKILL.md（286/286）+ references/*.md（578 个全为 Markdown）；<b>含代码文件的技能包 0 个</b></td><td>代码 + 协议 + 网关 + 身份</td></tr>
+      <tr><td><b>企业系统关系</b></td><td>提到系统名 162 个方案；真正要求对接的极少，且多为「<b>不要求打通</b>」的显式排除承诺</td><td>SAP / Salesforce / D365 / Workday / NetSuite / X 均出官方 MCP Server</td></tr>
+      <tr><td><b>嵌入现有系统</b></td><td class="n">0（正则扫描全库零命中）</td><td>钉钉路线 C：把 Agent 嵌进自家 CRM 页面；IoT/ERP 内嵌 Agent</td></tr>
+      <tr><td><b>人在环</b></td><td class="n">585 / 693 要求人工把关</td><td>写权限路线普遍要求审批闸门 + 审计留痕（Workday 明确「一个连接承载权限、策略与审批」）</td></tr>
+      <tr><td><b>上线周期</b></td><td>小时级（装技能包即用）</td><td>第三方经验值 <b>5–15 个工作日</b>（仅接通已有 API 的 ERP）</td></tr>
+      <tr><td><b>可审计性</b></td><td>弱（对话与文件散落本地）</td><td>强（走系统权限、动作留痕）</td></tr>
+      <tr><td><b>企业改造代价</b></td><td class="n">零</td><td>高（要开 API、建 Server、配身份与权限）</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note w">
+    <b>关键判断（请允许我说得直白）：</b>这不是「WorkBuddy 落后」——这是一次<b>刻意的取舍</b>。它把「企业改造」这一项成本从方案里彻底删掉，代价是把「实时、可写、可审计」三项能力也一并删掉了。
+    对 <b>一个 200 人以下、IT 只有一个兼职、ERP 是五年前买的</b> 的企业来说，这个取舍是<b>对的</b>：外面那套 MCP 集成要 5–15 个工作日 + 身份权限设计，而这套方案当天下午就能跑出结果。
+    但如果企业已经<b>有 API、有人、有合规要求</b>，那就应该走 MCP 路线，因为「导出 Excel 再上传」在那种环境下反而变成新的风险点——数据副本散落、口径不一致、无审计。
+  </div>
+  <div class="note">
+    <b>一个可以直接用的判断标准（来自案例③的作者）</b>：如果你的需求是「<b>读</b>」——优先只读 MCP，风险最低收益立竿见影（他靠只读一年省了 300 小时）；如果需求包含「<b>写</b>」——那先问清楚三件事：谁授权、谁来复核、出错谁负责。三个都答不上来，就先别开写权限。
+  </div>
+</section>
+
+<section>
+  <h2><span class="no">8</span>如果你要往前走一步：按优先级排的行动清单</h2>
+  <p class="hint">从「今天就能做」到「需要立项」，按代价从小到大。</p>
+  <div class="lvl">
+    <div class="lv l1">
+      <h4>第 1 步 · 今天（零成本）</h4>
+      <ul>
+        <li>先把 WorkBuddy 的 693 个方案用起来——<b>它是零改造路线的天花板</b></li>
+        <li>挑第一个场景：打开 <a href="./索引.html">索引.html</a>，按自己的角色筛选，看「最大差异点」是否正好是你的痛点</li>
+        <li>把「高频、重复、数据基础好」的三条作为选型硬标准</li>
+      </ul>
+    </div>
+    <div class="lv l2">
+      <h4>第 2 步 · 本周（验证）</h4>
+      <ul>
+        <li>盘一下：你常用系统里<b>哪些有开放 API</b>（金蝶、用友、钉钉、企微、飞书大多有）</li>
+        <li>装一个 MCP 客户端（Claude / Cursor / Cherry Studio 等），先连<b>一个只读</b>的官方或社区 MCP Server 试手感</li>
+        <li>读一遍 OWASP 的 MCP Security Cheat Sheet，知道攻击面长什么样</li>
+      </ul>
+    </div>
+    <div class="lv l3">
+      <h4>第 3 步 · 本月（试点）</h4>
+      <ul>
+        <li>选一个「读多写少」的场景做只读 MCP 试点（参考案例③：先只读，写权限设为零）</li>
+        <li>老系统没 API？用 <b>AnythingMCP</b> 这类网关把 REST/SOAP/GraphQL/OData/SQL 直接转成工具</li>
+        <li>为每个 Agent 建立<b>独立身份 + 委托上下文</b>，不要复用共享密钥</li>
+      </ul>
+    </div>
+    <div class="lv l4">
+      <h4>第 4 步 · 立项（写权限）</h4>
+      <ul>
+        <li>只做「<b>Agent 出草稿 → 人点确认 → 系统执行</b>」的三段式，绝不让 Agent 直接落库</li>
+        <li>把审批流、权限分级、审计留痕当<b>前置条件</b>而不是后续优化</li>
+        <li>用系统的校验规则兜底（参考案例④：不平的凭证被 ERP 拒绝）</li>
+        <li>衡量指标对齐飞鹤那句话：高频、重复、数据基础好、能嵌进流程</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="no">9</span>来源清单与可信度标注</h2>
+  <p class="hint">按可信度分级。凡标「未能核实」的，请在决策前自行复核。</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:130px">级别</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td><span class="pill p-g">一手实测</span></td><td>GitHub 全部星标数（api.github.com 实时抓取，2026-10-16）；MCP 官方 Registry 分页 API（本次取到 ≥6,000 条未触底）；Zapier 官网首页「9,000 apps / 66,000+ triggers」原文。</td></tr>
+      <tr><td><span class="pill p-g">官方原文</span></td><td>SAP 官方文档与 SAP News；Salesforce 开发者文档 Hosted MCP Servers 页；Microsoft Learn Dynamics 365 F&amp;O MCP 文档；Workday 官网 MCP 页与 2026-10-13 新闻稿；NetSuite 产品页与 Oracle 开发者博客；Nexedi ERP5 官方文档；AWS for SAP MCP Server 官方文档与 GA 公告；金蝶官方社区文章；钉钉悟空集成长文；Anthropic 客户案例页（Workato）。</td></tr>
+      <tr><td><span class="pill p-y">第三方研究与媒体</span></td><td>host0.ai《State of MCP 2026》（2026-10-06，含 Censys / Trend Micro 数据转引）；digitalapplied.com《MCP Adoption Statistics 2026》（含 Stacklok 数据）；laterstack.com；Arcade.dev《7 Best AI Agent Authentication Platforms (2026)》；Truto《Connect AI Agents to NetSuite &amp; SAP via MCP: The 2026 Architecture Guide》；alatirok.com《AI Agent Failure Rate 2026: The Real Data, Reconciled》；dynamisch.co《The Integration Wall》；McKinsey《The State of AI: Global Survey 2026》（经检索摘要引用）；The Register 2026-10-09（Oracle Fusion Claw）；快科技（飞鹤）；itcn.cc（美的）；Amazon/AWS 博客（Rivian、Covestro）；haydennester.com（IQMS 只读 MCP）；aicoooffice.substack.com（Claude 记账）。</td></tr>
+      <tr><td><span class="pill p-r">未能核实 / 仅标题</span></td><td>ServiceNow Action Fabric 正文（Cloudflare 拦截，仅得标题）；Pinterest 工程博客正文；PhonePe Engineering Agent Hub 正文；Synechron Xero 案例正文；cloudwars.com（D365 at Vast Scale，403）；Deloitte 2026 tech trends 页（404）；三一集团原文（正文被导航淹没，未取到数字）。<b>这些未作为关键论据使用。</b></td></tr>
+      <tr><td><span class="pill p-b">反方观点（已收录）</span></td><td>Lauren Long（Ampersand）「MCP is not an integration strategy」（2026-10-06，X / LinkedIn 原文）；WunderGraph《The Missing Layer in AI Agent Architecture》；The New Stack《The MCP debate has a context problem》。</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note w" style="margin-top:16px">
+    <b>关于数字的诚实声明：</b>Registry Server 数量存在多个互相冲突的口径（~40,047 / 9,652 / >10,000），差异来自统计时间、是否去重、是否只算 latest 版本。本页<b>全部保留并标注来源</b>，不做取舍合并——因为任何一个单独引用都会误导。
+    同理，「Agent 试点失败率」的 88% / 89% / 95% / 40% 测的不是同一件事，本页在第 6 节逐条拆开标注。
+  </div>
+</section>
+
+<footer>
+  AI/Agent 接入企业系统 · 外部调研 —— 为 WorkBuddy 解决方案库（693 个方案）提供外部对照<br>
+  调研时间 2026-10-16（Asia/Shanghai） · 全部数据与链接均可点击回溯 · 本页可离线打开
+</footer>
+</div>
+<script>
+(function(){
+  var KPI = [
+    ['40,047','官方 Registry Server 数','host0.ai 计数（2026-10-06）'],
+    ['545M','SDK 月下载量（峰值）','npm+PyPI，2026-08'],
+    ['41%','软件组织已进 MCP 生产','Stacklok 2026 报告'],
+    ['9','厂商官方 MCP Server','SAP/Salesforce/MS/Workday/Oracle/X/NetSuite/Darwinbox/Zapier'],
+    ['12,520','互联网可达 MCP 服务','Censys 测绘'],
+    ['1,467','其中无认证保护','Trend Micro，9 个月近 3 倍'],
+    ['2 / 693','WorkBuddy 提及 MCP 的方案','本地全库扫描'],
+    ['0','WorkBuddy 嵌入现有系统的方案','本地全库正则零命中'],
+    ['5–15 天','接通已有 API 的 ERP 的周期','整合商 summumia 经验值']
+  ];
+  var h = KPI.map(function(k){
+    return '<div class="kpi"><div class="v">' + k[0] + '</div><div class="l">' + k[1] + '</div><div class="s">' + k[2] + '</div></div>';
+  }).join('');
+  var el = document.getElementById('kpis');
+  if (el) el.innerHTML = h;
+})();
+</script>
+<script>
+window.__SB = {
+  title: 'AI 接入企业系统调研',
+  sub: '2026-10-16 · 外部对照',
+  autoSections: 'section',
+  groups: [
+    { label: '调研主体', items: [
+      { id: 'sb-s1', no: '0', tx: '先看结论' },
+      { id: 'sb-s2', no: '1', tx: 'MCP 生态规模' },
+      { id: 'sb-s3', no: '2', tx: '四条技术路线' },
+      { id: 'sb-s4', no: '3', tx: '厂商官方 MCP 支持' },
+      { id: 'sb-s5', no: '4', tx: '九个落地案例' },
+      { id: 'sb-s6', no: '5', tx: 'GitHub 项目地图' }
+    ] },
+    { label: '对照与行动', items: [
+      { id: 'sb-s7', no: '6', tx: '失败原因与安全边界' },
+      { id: 'sb-s8', no: '7', tx: '与 WorkBuddy 693 方案对照' },
+      { id: 'sb-s9', no: '8', tx: '行动清单' },
+      { id: 'sb-s10', no: '9', tx: '来源与可信度' }
+    ] }
+  ],
+  linksLabel: '相关页面',
+  links: [
+    { href: './索引.html', ic: '\u{1F4C2}', tx: '解决方案索引' },
+    { href: './分析.html', ic: '\u{1F4CA}', tx: '多维度分析' },
+    { href: './README.md', ic: '\u{1F4C4}', tx: 'README' },
+    { href: './全量清单.csv', ic: '\u{1F4D1}', tx: '全量清单.csv' }
+  ],
+  foot: '35 个外链可点击回溯原文<br>按 <b>[</b> 收起 / 展开侧栏'
+};
+(function(){
+  var C = window.__SB || {};
+  var D = document, B = D.body;
+  function id(x){ return D.getElementById(x); }
+  var host = id('wbsbBody');
+  function ea(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  var tEl = id('wbsbTitle'), sEl = id('wbsbSub');
+  if (C.title && tEl) tEl.textContent = C.title;
+  if (C.sub && sEl) sEl.textContent = C.sub;
+
+  // ---- \u81ea\u52a8\u7ed9\u6b63\u6587 section \u7f16\u53f7\u951a\u70b9 ----
+  if (C.autoSections) {
+    var secs = Array.prototype.slice.call(D.querySelectorAll(C.autoSections));
+    secs.forEach(function(s, i){ if (!s.id) s.id = 'sb-s' + (i + 1); });
+  }
+
+  var h = [];
+  var tocIds = [];
+  if (C.groups && C.groups.length) {
+    C.groups.forEach(function(g){
+      if (g.label) h.push('<div class="sbt">' + ea(g.label) + '</div>');
+      (g.items || []).forEach(function(it){
+        tocIds.push(it.id);
+        h.push('<a class="sbi" href="#' + ea(it.id) + '" data-t="' + ea(it.id) + '"' +
+          (it.hint ? ' title="' + ea(it.hint) + '"' : '') + '>' +
+          (it.no ? '<span class="sbp">' + ea(it.no) + '</span>' : '<span class="ic">\u2022</span>') +
+          '<span class="tx">' + ea(it.tx) + '</span>' +
+          (it.ct ? '<span class="ct">' + ea(it.ct) + '</span>' : '') + '</a>');
+      });
+    });
+  }
+
+  if (C.chips && C.chips.length) {
+    h.push('<div class="sbdiv"></div><div class="sbt">' + ea(C.chipsLabel || '\u5feb\u6377\u7b5b\u9009') + '</div><div class="sbq" id="wbsbChips">');
+    C.chips.forEach(function(c, i){ h.push('<button data-c="' + i + '"' + (c.acc ? ' title="' + ea(c.acc) + '"' : '') + '>' + ea(c.tx) + '</button>'); });
+    h.push('</div>');
+  }
+
+  if (C.links && C.links.length) {
+    h.push('<div class="sbdiv"></div><div class="sbt">' + ea(C.linksLabel || '\u76f8\u5173\u9875\u9762') + '</div>');
+    C.links.forEach(function(l){
+      h.push('<a class="sbi" href="' + ea(l.href) + '"' + (l.t ? ' target="_blank"' : '') + '>' +
+        '<span class="ic">' + ea(l.ic || '\u203a') + '</span><span class="tx">' + ea(l.tx) + '</span>' +
+        (l.ct ? '<span class="ct">' + ea(l.ct) + '</span>' : '') + '</a>');
+    });
+  }
+
+  h.push('<div class="sbdiv"></div>');
+  h.push('<button class="sbi" id="wbsbTopBtn"><span class="ic">\u2191</span><span class="tx">\u56de\u5230\u9876\u90e8</span></button>');
+  if (host) host.innerHTML = h.join('');
+
+  var ft = id('wbsbFoot');
+  if (ft) ft.innerHTML = (C.foot || '') + (C.mirror ? '<div id="wbsbMirror" style="margin-top:7px;color:#0f766e;font-weight:650;font-size:12px"></div>' : '');
+
+  // ---- \u6298\u53e0 / \u5c55\u5f00 ----
+  var KEY = 'wbsbHide';
+  try { if (localStorage.getItem(KEY) === '1') B.classList.add('sb-hide'); } catch(e){}
+  function toggle(){
+    B.classList.toggle('sb-hide');
+    try { localStorage.setItem(KEY, B.classList.contains('sb-hide') ? '1' : '0'); } catch(e){}
+  }
+  var bc = id('wbsbc'), ob = id('wbopen');
+  if (bc) bc.addEventListener('click', toggle);
+  if (ob) ob.addEventListener('click', toggle);
+  D.addEventListener('keydown', function(e){
+    if (e.key !== '[') return;
+    var k = (e.target && e.target.tagName || '').toUpperCase();
+    if (k === 'INPUT' || k === 'SELECT' || k === 'TEXTAREA') return;
+    toggle();
+  });
+
+  // ---- \u56de\u5230\u9876\u90e8 ----
+  var tp = id('wbtop'), tb = id('wbsbTopBtn');
+  function top(){ window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  if (tp) tp.addEventListener('click', top);
+  if (tb) tb.addEventListener('click', top);
+
+  // ---- \u6eda\u52a8\uff1a\u9ad8\u4eae + \u56de\u9876\u6309\u94ae ----
+  var nodes = tocIds.map(id).filter(Boolean);
+  var as = tocIds.map(function(x){ return host ? host.querySelector('a[data-t="' + x + '"]') : null; });
+  function spy(){
+    if (tp) tp.classList.toggle('on', window.scrollY > 420);
+    if (!nodes.length) return;
+    var k = 0;
+    for (var i = 0; i < nodes.length; i++) { if (nodes[i].getBoundingClientRect().top <= 130) k = i; }
+    if (as[k]) as.forEach(function(a, j){ if (a) a.classList.toggle('on', j === k); });
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
+
+  // ---- \u5feb\u6377\u7b5b\u9009 chips ----
+  if (C.chips && C.chips.length) {
+    var box = id('wbsbChips');
+    function sel(){ return C.chips.map(function(c){ var e = id(c.sel); return e ? e.value : ''; }); }
+    function setChip(i){
+      var c = C.chips[i];
+      if (c.reset) {
+        C.chips.forEach(function(x){ if (!x.reset) { var e = id(x.sel); if (e) e.value = ''; } });
+      } else {
+        var e = id(c.sel); if (!e) return;
+        e.value = (e.value === c.val ? '' : c.val);
+      }
+      C.chips.forEach(function(x){ if (!x.reset) { var e2 = id(x.sel); if (e2) e2.dispatchEvent(new Event('change', { bubbles: true })); } });
+      sync();
+    }
+    function sync(){
+      if (!box) return;
+      var cur = sel();
+      box.querySelectorAll('button').forEach(function(b, i){
+        var c = C.chips[i]; if (!c || c.reset) return;
+        b.classList.toggle('on', cur[i] === c.val);
+      });
+    }
+    if (box) box.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click', function(){ setChip(+b.dataset.c); });
+    });
+    D.addEventListener('change', function(e){
+      if (C.chips.some(function(c){ return c.sel === (e.target && e.target.id); })) sync();
+    });
+    sync();
+    window.__SBsync = sync;
+  }
+
+  // ---- \u955c\u50cf\u5e95\u90e8\u8ba1\u6570\u5230\u4fa7\u680f ----
+  if (C.mirror) {
+    var src = id(C.mirror), dst = id('wbsbMirror');
+    if (src && dst) {
+      var upd = function(){ dst.textContent = src.textContent || ''; };
+      upd();
+      try { new MutationObserver(upd).observe(src, { childList: true, subtree: true, characterData: true }); } catch(e){}
+    }
+  }
+})();
+</script>
+<!-- 窄屏抽屉：≤900px 时侧栏默认收起，点 ☰ 或滚出遮罩关闭 -->
+<script>
+(function(){
+  var B = document.body;
+  var q = window.matchMedia('(max-width:900px)');
+  var sc = document.createElement('div'); sc.id = 'wbsbScrim'; B.appendChild(sc);
+  function setScrim(){ sc.classList.toggle('on', q.matches && !B.classList.contains('sb-hide')); }
+  function toMobile(){ if (q.matches) { B.classList.add('sb-hide'); } }
+  toMobile(); setScrim();
+  sc.addEventListener('click', function(){ B.classList.add('sb-hide'); setScrim(); });
+  var ob = document.getElementById('wbopen');
+  if (ob) ob.addEventListener('click', function(){ setTimeout(setScrim, 0); });
+  try {
+    q.addEventListener('change', function(e){
+      if (e.matches) { B.classList.add('sb-hide'); } else { B.classList.remove('sb-hide'); sc.classList.remove('on'); }
+      setScrim();
+    });
+  } catch (err) {}
+})();
+</script>
+</body>
+</html>
