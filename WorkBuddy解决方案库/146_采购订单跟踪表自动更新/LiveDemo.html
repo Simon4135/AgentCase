@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html data-page-node-id="DMBcxHLPlpSVULgrh9OQq3" lang="zh-CN">
+<head data-page-node-id="Z7NUX3BpdgjdAtWeMq1NOM">
+<script data-page-node-id="VptNy9qda1G2lX00EEpv03" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="YNsu0Ic4Hi9slS47sMRZEw" charset="UTF-8">
+<meta data-page-node-id="aV6EydDELca3nNfBEEhoUH" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="xp5rh4VXMHLBejbcONN6ZK" data-pnid-children="QF2SF0gCN28fXvleU0TjvO">采购订单跟踪表自动更新</title>
+<link data-page-node-id="YnildsTXz41tZJQ4GmT6iY" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="To97HNM12xtkBaArfWolDd" data-pnid-children="6T9Map0oHTgmUKKZ2i2ue4" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="XWSaW6gWNxnwj2eblDrOyC">
+
+<div data-page-node-id="9CTg1Kiqxr2BgMIznnOxOe" class="wrap">
+<section data-page-node-id="k8wWJUAD2wTMWQ1d72lzLt" class="page-hero">
+
+
+<h1 data-page-node-id="lvZhv3h1jGTD4NmuKmaYuF"><!--pnid:ZqsM5ufAiMgFR4poUluHVx-->采购订单跟踪表自动更新</h1>
+<p data-page-node-id="mF1YHhQRglBmthINdRNaHw" class="lead"><!--pnid:xNiYdxr7zEYwWvzB2k3lr1-->ERP 里改一条订单要十分钟 · Excel 加微信批量处理五十条只要二十分钟 —— 然后状态列三个月没更新过</p>
+</section><nav data-page-node-id="yTfYxm3k5qdM6Zc0GEPM2s" class="subnav"><a data-page-node-id="ToR1Z6KRtdIOCpgvKUbICT" class href="场景引入.html"><!--pnid:vLka1CyFI6THPjeY5pRVLu-->场景引入</a><a data-page-node-id="A4mM3MuVq9nvrC1dTnJsS7" class="on" href="#"><!--pnid:ts0R8b5udpfrym3k8b8d1Z-->Live Demo</a><a data-page-node-id="bscgLdOG02jZkzur4INA0i" href="推荐任务.html"><!--pnid:GyPxn9BzFXwwwn7L14pHQH-->推荐任务</a></nav>
+<section data-page-node-id="FzIhRrTghnBXPpCu3FOjts" class="notice warn"><div data-page-node-id="w8enaqoP5Mecs5niZWs92E" class="icon"><!--pnid:wgxg4rCBB6xsRBocdOCcni-->!</div><div data-page-node-id="EmgSjX43Im3GbeqtAcKF8B">
+<b data-page-node-id="vAjQkxEFjzowk9nLX3nMvK"><!--pnid:daS7iTxb0AVWdIVk4GBOr0-->演示模式 · 可视化预演</b>
+<p data-page-node-id="oIA9e0e3jPpqYfAS7ydLL5"><!--pnid:u8y0PvOgzm0O7N4ZgzWjT0-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，
+不宣称已接入客户生产系统，也不承诺任何效率提升百分比。
+案例设定：铭泰精密（虚构）月底盘数据发现跟踪表状态列有 11 张单停留在「已下单」—— 其中 7 张早已到货、3 张在途、1 张已退货。状态列成了摆设。</p></div></section>
+
+<div data-page-node-id="L1nrLrACMvEL19YuGVuX8y" class="kpi-row"><div data-page-node-id="X43qxFWJC9lZOP75JYmW7i" class="kpi"><div data-page-node-id="AT1G3QTIYIkK9Xj1GG8f7x" class="k"><!--pnid:H9EUpzEccyFHn4WX5GfMts-->状态滞后</div><div data-page-node-id="Auv77mqNmvvy1Sq9nRLLwQ" class="v"><!--pnid:G1XgfbMmVxgwC3hOwNhx5z-->11 张</div></div><div data-page-node-id="eKhqi19wTBtcjsoSXRrmB9" class="kpi"><div data-page-node-id="lLMulujgL7l53RBbaYCVkp" class="k"><!--pnid:yWqVqhGN4OLqhabwYXttIh-->已到货未更</div><div data-page-node-id="zXvqZLyjTH4hQZePP4E63a" class="v"><!--pnid:bj6S3PJOlPhjv2uMsdsBL6-->7 张</div></div><div data-page-node-id="uz4SkhbXOs64RbCOSS3Kl8" class="kpi"><div data-page-node-id="OE4UNcBTcC5DGZuEvtdZXO" class="k"><!--pnid:9sp4slzAxy5r5Ctmp9fxoD-->假在途</div><div data-page-node-id="DQO9KDMpKZpEIMf3ok9RAD" class="v"><!--pnid:DeESeiDJuFnLno0yPQkW90-->1 张 · 谎报存疑</div></div><div data-page-node-id="OQaMxetU919GCgVNnxnrlU" class="kpi"><div data-page-node-id="5aW2oxIYI9rJXyuaKyHT9O" class="k"><!--pnid:2rrzSQeUOVO3ZccquZa7Jv-->结论</div><div data-page-node-id="pprnSYnZHdXFX7CGr070aw" class="v"><!--pnid:ME1B3zCHUhfv2YuMUpMJYU-->修正后可发生产部</div></div></div>
+
+<div data-page-node-id="yNci9056nOzJiuwFWofpjd" class="dstep" style="margin-top:22px">
+<div data-page-node-id="2bIkQgVosSvVEFjDYo8OWh" class="dstep-h"><div data-page-node-id="eIJDSwEmBwPzMhqjallwmn" class="dstep-n io"><!--pnid:tOFX3kL14Bp2uzYFgxafri-->输入</div><div data-page-node-id="QU6kt8RekGfrbXznPBS10m"><h2 data-page-node-id="eeHbN3YfEhgXAj3OodQSTN"><!--pnid:BHECEaT64X3KR8arb2M9TQ-->采购手上能拿到的东西</h2>
+<div data-page-node-id="tCaNPm8Q2GDkZIEYWxbH2h" class="sd"><!--pnid:8HUuVd7khR9OnBfq0ogeuQ-->不需要整理格式、不需要改文件名 · 直接拖进对话框</div></div></div>
+<div data-page-node-id="WxkCHADrDCrFLZo9xcVjwB" class="dstep-b"><div data-page-node-id="5gihYWOK5AJcQNFAcZb5WX" class="srcs"><div data-page-node-id="qmp3k5YzPvxuw1uPzcShVI" class="src"><div data-page-node-id="cCqkQAS0UgWufWrTNBAucH" class="fn"><!--pnid:Mp4IndDM7AZjkwisgbbh9B-->01_采购订单跟踪表（现状）.xlsx</div><div data-page-node-id="zHKi05s7h5caroJrZf4AVN" class="fd"><!--pnid:cp95guvAakilToYEAAq56r-->状态列滞后的原表 —— 与 逾期订单风险日报（给老板版） 同源</div><span data-page-node-id="PGKpzF1lV9UjKBYVpu6ZE5" class="fw"><!--pnid:7In2GFs3ox5aFqIjKdl7dk-->采购员吴晓峰维护 · 状态列大半滞后</span></div><div data-page-node-id="uDZGi6tOjWGWifAgJ3kWg6" class="src"><div data-page-node-id="Fhq2gFlAocL0DBABGet33s" class="fn"><!--pnid:1Loo8sGzSgqCVN3JGc5BYR-->02_仓库到货登记本（近2周）.xlsx</div><div data-page-node-id="fUajJ1AA0W7tZMR6C0lv0H" class="fd"><!--pnid:qHUDKOnSHEyHsxX71hELIs-->已到货的权威事实 —— 与 逾期订单风险日报（给老板版） 素材 03 同源</div><span data-page-node-id="EIgY7xXuAQjYnlMuI6fhvb" class="fw"><!--pnid:W5vyFlhoLoDE2lJcvsAK6L-->仓库主管马丽娟维护 · 每天随收货登记</span></div><div data-page-node-id="cun6PY2P5jbAF50jnXJGax" class="src star"><div data-page-node-id="ZZMwkS9Z3J4RRZ7fm4RK5Q" class="fn"><!--pnid:DGaj9LSCSohMfjViDX3Lo9-->03_物流查询记录.xlsx</div><div data-page-node-id="uv5Tw1qe2K6goFC81Ho1Iq" class="fd"><!--pnid:VvJdGavtyfeXR4aMPVoC2h-->在途单的物流核验 —— 「已发货」的验真依据</div><span data-page-node-id="8gmrYXTxuF2g675zQAYsPQ" class="fw"><!--pnid:EJUOgV7bRJymIC2mI7bz1Y-->采购员零散查询 · 从不留档</span></div></div><p data-page-node-id="duMF9HMED7NOAfy57c1uPn" style="margin-top:12px"><b data-page-node-id="DNAeWwMfYdbwNvS5zazRZ3"><!--pnid:Fq3vOqxolQ93dOuHKV31Q9-->注意标橙色那一份 ——</b> <code data-page-node-id="F3tT3ANu8HqcfmvVMzhukm" data-pnid-children="Jf4SuttJdA9csFRULreH1a" style="font-size:12px">03_物流查询记录.xlsx</code><!--pnid:FIgnOlEQwpnUKuY0nLcyJy-->。它采购员零散查询 · 从不留档，<b data-page-node-id="Wot4suIFrMDpmFFGRoNbb1"><!--pnid:QfsJRtqXL3PIA3SIhzEgmV-->平时压根不在核对范围里</b><!--pnid:BKTsG2FSe3ZmMfOWrzCu1Y-->。这个场景的价值，很大一部分就来自把它读进来。</p></div></div>
+
+<div data-page-node-id="fFsSzUcsLsSRPGkl4ANQ2h" class="dstep">
+<div data-page-node-id="feHSU64cPARq3T3OYgETFE" class="dstep-h"><div data-page-node-id="fd6v7pjGHIJ6TRJEh9brHp" class="dstep-n io"><!--pnid:t4XvjmGw7rAM50ZPOUDewo-->提示词</div><div data-page-node-id="b4gnbThFpJlGyqfaj9mulH"><h2 data-page-node-id="uODyQXS9v5GlsYpCSZVZGP"><!--pnid:ASxVtVBVPuN3CfkXEMBn3c-->就说这么几句</h2>
+<div data-page-node-id="K146HiW0xH6lewHqFYyUkR" class="sd"><!--pnid:T5JG546CRyQOCnNW86gF4I-->没有模板、没有表单 · 专业规则由 Skill 兜底</div></div></div>
+<div data-page-node-id="NXpHFWTCuHUEgWdOao6uKW" class="dstep-b">
+<div data-page-node-id="1guRSVYs8iNhhxZB9GJDlV" class="prompt" id="lp"><!--pnid:kdEl3KdyCHn05ijrzEVldy-->跟踪表和供应商群的记录都在这，帮我把状态列更新了。
+
+哪句微信能信、哪句不能信（比如光说&quot;明天安排&quot;的先别动），你来判断，改了什么都给我留个底。
+仓库的到货登记也给你，跟微信说的对不上的单独标出来。
+
+表还是原来那个表，别给我整新的格式，我就要状态列是准的。<button data-page-node-id="S0EXb9VfFErsbG7CHduLfd" class="copy" onclick="cp('lp',this)"><!--pnid:pHGo70A796PjE7Y3Sz6ZQO-->复制</button></div>
+<p data-page-node-id="rqEJbZmvgFPettttadk37X"><!--pnid:6vEmQzlAZgBBSsIeYICxgb-->短是因为「事实vs承诺的判定口径、三方对齐规则、可回溯更新」都在能力包里。原表扔回来，原表拿回去。</p></div></div>
+
+<div data-page-node-id="1qGuK9bL6qWMWRCqamSYgd" class="dstep">
+<div data-page-node-id="Yl4A36uKHBeXmxqePHSZL0" class="dstep-h"><div data-page-node-id="Bwsr8wv1SOPS8HauWBE9G2" class="dstep-n io"><!--pnid:parIoQ1gdJAWfpUCLWugj3-->触发</div><div data-page-node-id="bBaqAvDYXn6OhMcTs5KUsc"><h2 data-page-node-id="yKd8MW2C9ZymdgrJQDqNk0"><!--pnid:St82tkdNZfYuOy0EkmuQr3-->月底盘数据 · 状态列是「下单纪念册」</h2>
+<div data-page-node-id="sPJzYNMZgT9jrzChBvdPNY" class="sd"><!--pnid:hVXOw7WI8oNQceP4OIaJt8-->11 张滞后状态里藏着 1 张假在途</div></div></div>
+<div data-page-node-id="d9IO5m99Xib9rkWZ58067g" class="dstep-b"></div></div><div data-page-node-id="v9RYv60mYM4IqMv3enjMp0" class="dstep">
+<div data-page-node-id="HkmDhPyh17Z94sUy8WzoBa" class="dstep-h"><div data-page-node-id="A3up91XQe1Dej7O7cVK4hl" class="dstep-n"><!--pnid:wNYnPoU6b9mjPcMDVWXdcJ-->1</div><div data-page-node-id="d02cVOAI77cMpqbTQnwVy4"><h2 data-page-node-id="mf9bmZlPnekhdHTHnP3Wya"><!--pnid:ZwvIPqlIt65PEuxo0JJ2eT-->三方对齐 · 微信 × 仓库 × 物流</h2>
+<div data-page-node-id="STDadHCvOrConkg5vYDbXz" class="sd"><!--pnid:jBsB3Usu12obyFfycQ0VHC-->以最新事实为准，逐单刷新</div></div></div>
+<div data-page-node-id="yPUxURivLnccHycTB94N1B" class="dstep-b"><div data-page-node-id="IJMvMmntVJ33EuCO6Ex11z" class="tbl"><table data-page-node-id="wqPTmuFQcvXsAfnRy0F1Dg"><thead data-page-node-id="aPB3wJ4gPViU5eWdo9Rreg"><tr data-page-node-id="otNIevX0iXz4J6AD2XXnZp"><th data-page-node-id="P2k871IImpinFiyopVs1M3"><!--pnid:Ulxdn0BD3qTl6rkmIVJ9uH-->数据源</th><th data-page-node-id="uHb5zQBnfXNGORYvcTWIaq"><!--pnid:wnKgQgrDTIG0OjJB4jLIpU-->口径</th><th data-page-node-id="JEtX63pCURbpMtTV8eQBoj"><!--pnid:YcD9G9cjQE0EfkYogz680b-->可信度</th></tr></thead><tbody data-page-node-id="M19VeHtEIqv2tmTizuQm05"><tr data-page-node-id="Etb5wUM1SRThmyUs7pYPq5"><td data-page-node-id="oYowe0MbZnRqWsSOjxJ5c4"><!--pnid:mnmC3AEL0j0M43wWhq3bB5-->微信记录</td><td data-page-node-id="XRfW3ERya8QOy8CyYJDbEd"><!--pnid:XnrTkPMggqaBGtB3FkPhtK-->供应商说什么</td><td data-page-node-id="8x1WTk4byYs150awC7RM3i"><!--pnid:eAtuWuRjbLtjOpxmJqo8yI-->承诺 ≠ 事实 —— 待验</td></tr><tr data-page-node-id="I9IK3JC5wa3NLXGVarEVuT"><td data-page-node-id="GipGXzMA1eLDA7Vii6wh8N"><!--pnid:wsFJvXdH3pNnjjZQPLBa55-->仓库登记</td><td data-page-node-id="z6Q2YvcBoJf921mY5IFsC0"><!--pnid:Vx3reY91IhglYwRAUBGTEs-->货到没到</td><td data-page-node-id="bxbwhJbgltRYZyQ8rDWH1v"><span data-page-node-id="WlhJWG6O6OWShDFg1jDjUw" class="tag g"><!--pnid:d944kHO4JqS1GUlXbCjcmH-->权威事实</span></td></tr><tr data-page-node-id="Q6XtWqzj7EEtk8fSr6IVGh"><td data-page-node-id="TVt9NZOT2WUBtlyDR7XcDb"><!--pnid:HjYYLwxfuVJXeh5f2AFhuq-->物流查询</td><td data-page-node-id="FD7LVDb7x8nBxiWJyyjYIM"><!--pnid:5RVXMHgV97rmpY1tH5q6Dv-->单号真不真</td><td data-page-node-id="djksKLcb03q7cWXCImJTee"><span data-page-node-id="YMX21vspIsgw3U5WJ0pirH" class="tag g"><!--pnid:f8L3SBSEuS5IAQNqoxktK3-->硬证据</span><!--pnid:HDvNF2MYB16WoTlZJKrhvm-->（查无此单 = 谎报）</td></tr></tbody></table></div><div data-page-node-id="C1nxhn3nrQ5gNE2T9fYYiL" class="think"><span data-page-node-id="t677G37K2gPZ12kNWO7xTt" class="lbl"><!--pnid:OqTJ1k2jwqPUTcfcTt6OBG-->从物流核验里发现了「假在途」</span><!--pnid:KJ2x6FcJjA4J2P3m74g53L-->PO-2615 联达 08-11 就说「已发货 SF1385」—— 顺丰官网<b data-page-node-id="9VMaM2ryzLS62heZ9CfSAf"><!--pnid:TUWpsvTk39ORSgnvuaB60M-->查无此单</b><!--pnid:Ar5NLAeFYXo6KE2x4LAokA-->。「已发货」是假的，这单实际是「未发货+谎报」。<b data-page-node-id="C2T9IpadHdP2LyETmOQq72"><!--pnid:N68g756yUGO1oZWdPLpt94-->状态列写「在途」的 8 天里，没人知道货根本没出过联达的仓库</b><!--pnid:gtYKM3KfftIupm50devFd2--> —— 生产部还按「在途」给 08-25 的排程留了位置。物流核验（星标素材）平时零散做从不留档 —— 如果留了，谎报 9 天前就该暴露。</div></div></div><div data-page-node-id="zRkGw3JpCst47D0Z7sz23P" class="dstep">
+<div data-page-node-id="nuApenszkNlrThGDdEUMmm" class="dstep-h"><div data-page-node-id="z5qghBEkyNsYJhJ1e8bADY" class="dstep-n"><!--pnid:lNmOY8ypwHdXFwc6VgXWUF-->2</div><div data-page-node-id="EFiwY7GF2XXXjcFySNrQOq"><h2 data-page-node-id="Q0nHG8LeL17WpNhf1uFfMV"><!--pnid:KFwH5ahrdIbW6YSTI5jVOj-->批量更新 · 11 处修正一次完成</h2>
+<div data-page-node-id="0CDyS3HRRdxGJnISYyLeDj" class="sd"><!--pnid:pZf3AnGfoNeUIPdeR0SLf0-->每条修正带出处，可回溯</div></div></div>
+<div data-page-node-id="QfqhA1Mh47kfEEr8ptJZyI" class="dstep-b"><p data-page-node-id="kCFj1i2JrbhLWGhLEWX1Km"><!--pnid:0UmF1hA9RGJDZyxJ7Jus9F-->修正原则：仓库登记 > 物流核验 > 微信承诺 —— 事实的等级高于说法。11 处修正全部标注出处（哪页登记本/哪次查询/哪句微信）。</p><div data-page-node-id="v9nOGPw0dzHgeijvMMxq40" class="think"><span data-page-node-id="Dsi9zoX4pSM5bUCqCWqn0J" class="lbl"><!--pnid:CqZKNUZrheKFl03dEQephG-->该拦的地方拦住了</span><!--pnid:2KDDd35xClvXBt1K6KiETv-->结论是「刷新后的跟踪表还不能直接发生产部」—— PO-2615 的「假在途」要改成「供应商未发货（发货存疑）」并标红。<b data-page-node-id="we9JL04oRfaA28x7OsgLdc"><!--pnid:h9At1ljIKJS0td9MfDZynl-->直接发出去生产部会按「在途」排产，08-25 照样落空</b><!--pnid:5debLJK2uC6rBydpVjmTZn-->。给出的不是干等：表先发，该单一行标红「状态异常、以采购确认为准」；今天下午向联达销售主管要发货凭证（磅单/底单）—— 要不到就启动蓝海替代（900 元价差，逾期订单风险日报（给老板版） 的账）。</div></div></div><div data-page-node-id="v41nf757pfj6amLMfneRvR" class="dstep">
+<div data-page-node-id="VvTRlLhHunNafJEH76yTCc" class="dstep-h"><div data-page-node-id="TF2hmCuKh2OhYYxB1qw72b" class="dstep-n"><!--pnid:TLS2Oqy1Y2KSdSDqHUYvdu-->3</div><div data-page-node-id="lhjxRZat0mTWU8pO0oz1NB"><h2 data-page-node-id="BQDzEMrkurt2BWzLuJIE7B"><!--pnid:VMgncnsYExxH6vfYZX37dT-->退货单的账 · PO-2606 不只是改状态</h2>
+<div data-page-node-id="VeBbyY5fzD65yZGfxnn2yN" class="sd"><!--pnid:0faNMbgbmDfycsPEfUwych-->已退货的 PO-2606 关联着对账冲减</div></div></div>
+<div data-page-node-id="GD6qrPTFmZCGYMFVCwU9vQ" class="dstep-b"><p data-page-node-id="CUlFuFIdKkQ2lh7g99iy7X"><!--pnid:dAhrwLGE42cEtGRoN6NFI5-->PO-2606 广材市场的料整批退货（超差）—— 状态改成「已退货」之外，这单还欠一个动作：通知财务在对账时冲减这批货款（月度对账差异表（三单匹配） 的对账差异表会用到这条记录）。</p><div data-page-node-id="UHMQP0u4wf9x6w9C4ZKTV4" class="think"><span data-page-node-id="5zKUkRjIv2NmuQnaiuqWXF" class="lbl"><!--pnid:r3DRhyUKwBIAIh3xdvE9G8-->排除性结论</span><!--pnid:t7igGPFYe5vBZX3Mdb3HYM-->「宏钢的 5 张单状态滞后可以排除风险 —— 仓库登记显示 4 张已到货、1 张在途按期，只是表格懒不是货有问题。」—— <b data-page-node-id="tWTSdGnFDwUfbLHujgBr5j"><!--pnid:bMDIHahrSz47Gdx6xvK3Mc-->11 张滞后单里真正的雷只有 PO-2615 一张，其余是账面卫生问题。</b></div></div></div><div data-page-node-id="6GmptjHr0oHtqSmRIwPfD5" class="dstep">
+<div data-page-node-id="NTJkodeTATsQ5SzOgV7Jm5" class="dstep-h"><div data-page-node-id="LcWwJkmw46of3eXGiwv6Mo" class="dstep-n"><!--pnid:KHCnDp37ag4MhhtfRAWWgj-->4</div><div data-page-node-id="6Jp6nSPx1zWKpWzVW5uDE8"><h2 data-page-node-id="C4iWCLcOEF6uluG3uUXISF"><!--pnid:lpnnQnmGPQB4Ct9dI5HlMz-->差异留档 · 改了什么一张纸</h2>
+<div data-page-node-id="tIr4i9TZa9OOZHgabeylV1" class="sd"><!--pnid:8wMetEywa7L1AyobauUJ7Z-->月底盘数据时「状态为什么变了」有答案</div></div></div>
+<div data-page-node-id="WE9UFUVS77fDjnpAQrliwf" class="dstep-b"><div data-page-node-id="zXc2sUmTUOeFvu6xSRwpfq" class="think"><span data-page-node-id="m1ysCBYMSslG5hjgBgDf6e" class="lbl"><!--pnid:r6PYwCxXOJotMv5NCM7g8Z-->把技术动作翻译成钱</span><!--pnid:mswfwCEfmECiDhjQEHvtr4-->「状态刷新」翻译成「PO-2615 的假在途若没被发现，B 线按『有料』排产 —— 停机费每小时 800-2000 元的行业口径，半天 4,000-8,000 元；而发现它的成本是一次物流查询。状态列是真的还是假的，区别就在这一查 —— 以后物流核验随跟踪表每次更新留档，谎报当周暴露。</div></div></div>
+
+<div data-page-node-id="b6wSpOPPF9MO1CTF5TidA1" class="verdict hold"><div data-page-node-id="JebJDp2g1Jiq1E53Hz8c4y" class="t"><!--pnid:5ZnoSD27g9s7S191IT1bHV-->表可以发，PO-2615 标红处理 —— 凭证今天下午必须拿到</div><div data-page-node-id="8vVxwLmou3g4CCJ0mxrivl" class="d"><!--pnid:OAGQq0PpSWwCo1VOjS0HVT-->「假在途」是这轮刷新唯一的实质风险 —— 联达的谎报已持续 8 天，每多等一天，蓝海替代的启动窗口就少一天（替代交期 5 天 + 08-25 需用日 = 窗口只剩 1 天）。<br data-page-node-id="Q8BFqJrFY4OK2o0g6zMSo0"><br data-page-node-id="AXlK6CHp3cojlzvsT5634d"><!--pnid:ltDCATx0tN851dWzT2l7zy-->给出的不是干等：① 跟踪表按「发货存疑（标红）」发生产部，附一行「08-25 前到料保障以采购确认为准」；② 今天 16:00 前向联达要凭证 —— 拿到改「在途」；③ 拿不到，明早直接上蓝海替代（30,000 件 × 0.03 元 = 900 元价差，48 小时到货）—— 凭证和替代两条线并行，哪条通走哪条。</div></div>
+
+<div data-page-node-id="AMYtX3OlXbJOWogqlLRUT8" class="dstep">
+<div data-page-node-id="yWsWwiSZv0LQmPvrgiOTdd" class="dstep-h"><div data-page-node-id="P4KvOx7CLbC4kfbfwiKCVz" class="dstep-n io"><!--pnid:0jQkk4oWEWicQmk2KfM4vt-->之后</div><div data-page-node-id="Dc5uFwCb7Ef9ERkiQVgccw"><h2 data-page-node-id="Q5los2GXDxRoiyS5HfDuU1"><!--pnid:loxTqjUA5uRyOQlQndyg6z-->这一次跑完，公司多了什么</h2>
+<div data-page-node-id="nFmfPAQW1t5UqzE5y5HGzC" class="sd"><!--pnid:6349lBTjnCDYEZUm9nZSyN-->不讲省了多久 · 讲少了几个隐患、沉淀了什么</div></div></div>
+<div data-page-node-id="M9G14lo09jd5LlIigJmTOo" class="dstep-b"><div data-page-node-id="xvuUnY3d7EQkjuzkEyIJuO" class="act"><span data-page-node-id="uGvYLU2BncI7vLmFSXzcnN" class="ic"><!--pnid:WnBSKgx7ARCY8i7iTHTVzP-->✓</span><div data-page-node-id="Hq2cTZI16EjFXdQ5uRj1V6"><!--pnid:ZYL88EjGwnc7ReVsN1uDxY-->状态列从「下单纪念」变回活账 —— 11 处修正后，在途/逾期/到货终于可信</div></div><div data-page-node-id="gFsdSltiKV2qdouO01mayC" class="act"><span data-page-node-id="VxQ0ouieov70TsYhu4n3Nv" class="ic"><!--pnid:jAEH1YzPIAEFC8gGl226nJ-->✓</span><div data-page-node-id="n02qWhuGCE5W2IJ2NrGTbz"><!--pnid:us8kxNUQJUC8HSLBVPUYV4-->「假在途」的识别口径落地 —— 供应商谎报发货从此要过「微信承诺 × 仓库登记」两道关</div></div><div data-page-node-id="fTzGY8MrYIjWHPfc9mdvC5" class="act"><span data-page-node-id="yvjnmugYUDFQdofShZtLy2" class="ic"><!--pnid:2tIJyRxak078D6dtZzGYco-->✓</span><div data-page-node-id="WLfYsIvYppPiBN5G4AnPvq"><!--pnid:jsyEl5QYkLThobHX0F1Jj0-->更新留在原 Excel —— 不装系统不加录入负担，交互成本死因被绕开</div></div><div data-page-node-id="lvjDOKwVyY6XZsc6BkFTpc" class="act"><span data-page-node-id="9Sn77bjhHoOAnPr4hE5shT" class="ic"><!--pnid:ck6ZQvIpEtsbvn86s4a0Gd-->✓</span><div data-page-node-id="J3it2sQnm7rBVoe2QB6JXE"><!--pnid:JgpHhCmlsfLoP4H5wEsn5Y-->修正留档可回溯 —— 月底盘数据时「状态为什么变了」第一次有答案</div></div></div></div>
+
+<section data-page-node-id="7mmc2k5nGYsrfMltQA8L78" class="blk">
+  <h2 data-page-node-id="R0TtwITZsF9gOp643r5kzc" class="h"><span data-page-node-id="urXOmMEPZsR3ck67F1tgqR" class="num"><!--pnid:jIj5blm5nxLkIv8Zmk9mDQ-->追问</span><!--pnid:9Ucq6oWmd7QqssOMvfQ5aC-->现场可能被问到的</h2>
+  <p data-page-node-id="thBpWFfN85QC19Vn3ync0O" class="subline"><!--pnid:b6obaKiHucGVy9PMUQAhx0-->答不上来的问题，比答得漂亮的问题更能决定这场演示的结果</p>
+  <div data-page-node-id="TdDdwjTF44CCe1OJ2UaNDz" class="fq"><div data-page-node-id="JvSGpipUyetBdWOM3alMTU" class="q"><!--pnid:h3p4Uzb64Drp54OLh3xj0e-->为什么不用 ERP 的状态？</div><div data-page-node-id="o31hiZWZnZX32JV0Gqmi3t" class="a"><!--pnid:a77ElDxIfBUXx5yPKJ5aht-->ERP 状态靠人录入才更新，而录入的交互成本（10 分钟/条）注定了没人录 —— 我们的更新从微信对话里提取，不依赖任何人先动系统。</div></div><div data-page-node-id="jZ6ThORZYaZf5t6Ep7pGL8" class="fq"><div data-page-node-id="8qtLf2MhqLOOcpcCIE6nW8" class="q"><!--pnid:rcEm8byhsnIgRytNI3aOPJ-->供应商发的是语音怎么办？</div><div data-page-node-id="NTt5ipD9fcgh5Qoe449Xw5" class="a"><!--pnid:UHPR1n6oKTRMnbl2RsStln-->语音转文字后同样提取 —— 转不准的字段标「待人工确认」，不会把听岔的单号写进表里。</div></div><div data-page-node-id="oLXrLTvmEuZuiX2IBIXpYB" class="fq"><div data-page-node-id="JeneiGPSRFe4a04zx5HRoB" class="q"><!--pnid:opdr4YDk1bhkgWyN9hfYJP-->会不会把表改乱？</div><div data-page-node-id="3fE6wtxmsUBjgzV2Mjk7yo" class="a"><!--pnid:x1oe0wZ3LuYzRtHCak9IZH-->只动状态列和相关两列，文件名、行序、格式原样 —— 改了什么全在对照表里，不满意可以一条条核回去。</div></div>
+</section>
+
+<div data-page-node-id="S4cWQ0XAml3tUUdveOm5yz" class="cta">
+  <div data-page-node-id="z6k6ZGlx1zr1nK5OIkwav5"><h3 data-page-node-id="qfzXxAuE5UBzUVxy8WQMQI"><!--pnid:DxaW6JNxUJr8dgOHyBUJWT-->想了解来龙去脉？</h3><p data-page-node-id="Uy4GBlISHr4GvojkWFDqHV"><!--pnid:w6s3wvQYjrz7uQCRYSmIb1-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+  <div data-page-node-id="9NickTTPyMmzNn6yBz52Sm" class="btns">
+    <a data-page-node-id="gkazpdHuSgTiy0ZfYZGhtC" class="btn ghost" href="场景引入.html"><!--pnid:D4lQJg0crY5znDmwPemlqO-->返回场景引入</a>
+  </div>
+</div>
+<footer data-page-node-id="ZgZzieSh6vTREK6qzjf91x"><!--pnid:otCZmzd8p0hLxyBrYuDdLd-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+<script data-page-node-id="uJeAF61wY8kdUFndU9cOCH" data-pnid-children="V1xHjPlS7zhTF7p1thcttl">
+function cp(id,btn){var el=document.getElementById(id);var t=el.innerText.replace(/复制$/,'').trim();
+function ok(){btn.innerText='已复制';setTimeout(function(){btn.innerText='复制'},1400)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok).catch(function(){fb(t,ok)})}else{fb(t,ok)}}
+function fb(t,cb){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';
+document.body.appendChild(a);a.select();try{document.execCommand('copy');cb()}catch(e){}a.remove()}
+</script>
+<button data-page-node-id="l5wjbgCwvuEczB2wEskUEs" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="sAIAZqU7gb7Jbcmrq4io9D" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="oWs9IPRExtQ2WnyP7Km5PB" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="17Ksma6zp3i1qcO3SszkM4" data-pnid-children="LUqZfMwVidaYSaR2lLcEq7">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="8sRHaNXjddkRGmMyqsSK5j" data-pnid-children="qBNDbKcEWoeHT8H27SQnFu">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html data-page-node-id="m3BRA9MCbgJzUN8U2UYm1x" lang="zh-CN">
+<head data-page-node-id="FLX2VVU0TZJSjU2ioEZwKv">
+<script data-page-node-id="7KZuWOKbAisCTzHpPbOSsa" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="SlBUzyGZuIrPkAh42jCzuS" charset="UTF-8">
+<meta data-page-node-id="IUmop487ClMszMkcBQyjjo" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="87OHQ6123bSraLRxQp4IQy" data-pnid-children="HevMRa7Sg5AqRvqHJyJWX7">加班费敞口测算</title>
+<link data-page-node-id="PmKkjUFyxgZHlXqNA9I5rb" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Txg6Rnyg0FrtRoMqXQlqHQ" data-pnid-children="pcHtpsNvPy5YWFRrfvFiLR">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="UyUeA68cDM7dpN8jg9ooHt" data-pnid-children="kN6WmNg2xVQTzVwbmwHikX" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="h6pBrr8lw8pe1hiAHyNBua" data-pnid-children="SSxazomBcsh11aH1HUPFFR" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="UobSk30xysEZNuQjWyaTMQ">
+
+<div data-page-node-id="NKfMVL8BT5nx0x7ljHKaeO" class="wrap">
+<section data-page-node-id="OqWLc5Vwu7hSts34BwVSvH" class="page-hero">
+<h1 data-page-node-id="6Uhb35aJ1uucQ1QNCyEtJQ"><!--pnid:UtiFEHBuY9uPodBmKY0T26-->加班费敞口测算</h1>
+<p data-page-node-id="niN5mt7ezgYNxl8HTa5JDE" class="lead"><!--pnid:87fUbh6u6JGMGenNjurPNQ-->老板口头说好月薪里含周六加班费 · 仲裁说举证不能，双倍加班费照付</p>
+</section><nav data-page-node-id="8a2CIRIXdOHgmkBRApZHkm" class="subnav"><a data-page-node-id="tstlA8NjPaJOxJlOXhWSH0" href="场景引入.html"><!--pnid:rmCCnpkCIvZJwTA23oWSl1-->场景引入</a><a data-page-node-id="fr5ZUbaGGWvczzCebnzi4x" href="LiveDemo.html"><!--pnid:N3nlHlKZh8pT1hWdV6FWSE-->Live Demo</a><a data-page-node-id="5yfQoVp3Qg7JOP45Zdv5WR" class="on" href="#"><!--pnid:Lb7BTLlWtWNuDcHFALqukW-->推荐任务</a></nav>
+
+<section data-page-node-id="fko45yMJwtzU3RCHDrNOMP" class="blk">
+  <h2 data-page-node-id="0QgFH32gIhYiM9XENlqwYF" class="h"><span data-page-node-id="KgvjfR4xOdUN9ICkiVmU5e" class="num"><!--pnid:niFykCugyiO4abuqK1Fqcm-->一</span><!--pnid:2enGGwHmMd3oZpWteGuVzg-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="OWh50JPkR8mqFd8ss3rWDy" class="subline"><!--pnid:uS4yGhpyLUcMhS82H5HpNN-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="1yyqrKb1fjkWyiRu0UrIUn" class="card"><p data-page-node-id="TPiJ5pNQUS9yScVjyX3kmE"><!--pnid:6uT1i9UC5YJM3c8I4nwm1b-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="MWoMv1AwVEZR5lA6jXDa0n" style="margin-top:10px"><!--pnid:M7B2PlwsM0s8MVWpsDYeo5-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:eB1wWYyt4W7mZrOsMwZkjr--><!--wb-skill-start-->
+<div data-page-node-id="wMnQjJQ4ddBRtiQrE7oTKW" class="wb-skill">
+<p data-page-node-id="qlIhtRdhiw2fLPP4t0oRV3" class="wb-skill-lead"><!--pnid:EGoW7eP5OPSYquM5ACNvt2-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="6aqRm4oBZHmmaTHwEtAYbh" class="prompt" id="wbSkillPrompt"><!--pnid:E8nWLOWuAEgMBY2GlztOFH-->【准备】这个场景的规则都在「加班费敞口测算」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/pXkbBKu8k3A4WJBhTxVoDG/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="6CWmFXDma5vTBenNqrsWrX" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:veH9fZgbf5QFxARHFr0HGZ-->复制</button></div>
+</div>
+<!--pnid:OIRtJhsqC7fdMVxAjEMBkr--><!--wb-skill-end-->
+<section data-page-node-id="9gh6RftgZj5RkIhYFi46cg" class="blk">
+  <h2 data-page-node-id="Q8nL5RhfZ2buJ0vOXlJM3n" class="h"><span data-page-node-id="pRRwfWptQtS5ukamf9RcuG" class="num"><!--pnid:zEQxIk26e1rzeFgNgtim1i-->二</span><!--pnid:bGtQDcgL1SxtsKOuOtLbTx-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="4CgwiWsA93XWoDBGkF2k9d" class="subline"><!--pnid:oEwmQ6Fkj4i0fW1QsMwTgI-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="xYjFaRuR9n5Wyn0URsDDff" class="tlist">
+    <article data-page-node-id="UE7TmCCnx5kx2nLnHbsxrJ" class="task">
+      <div data-page-node-id="SNo0vkx4z9p6dF6zGLMgA3" class="th"><span data-page-node-id="AWzmn4XUIyXw5e240j75nR" class="no"><!--pnid:Xyi7WF04F8SmYrUxp1EoSq-->01</span><h3 data-page-node-id="0XEjX6gQrO6jEx9doKPyTP" class="ttl"><!--pnid:Wpk7CMshllDVFSw3YEM9Q7-->首推默认</h3><span data-page-node-id="HY8Zt0yoGxtliChJBuk2bS" class="star"><!--pnid:fgQMAdHrr1Wib6Al22Gpr1-->与一键体验入口一致</span><button data-page-node-id="Q9bOgIexjp9mVlwYw2EVLi" class="cp" type="button"><!--pnid:qn4KKqfgA3ysGng6dt8cLZ-->复制</button></div>
+      <p data-page-node-id="gpoUPt3h52HrAx0gveGnCn" class="tp"><!--pnid:0KnQw6pYLdgde83e4XPyiv-->车间这两个月周六全员加班，都是口头安排的，没有审批单。老板要一个数：加班费的敞口到底有多少。
+
+考勤原始记录、工资表、排班表都在这。
+两种基数口径都算给我，没审批的部分单独列。哪天是法定节假日你也帮我盯一下。
+
+下个月怎么把口子堵上，给我个方案。</p>
+    </article>
+    <article data-page-node-id="872MLGZx4C6T3I2ZQGO0O1" class="task">
+      <div data-page-node-id="w6YTUBzDRp3jZsYAQTqofZ" class="th"><span data-page-node-id="5I2HcOtLOdgEUmV7dU4rrl" class="no"><!--pnid:HcQOejR70nTSuuuhbA75tM-->02</span><h3 data-page-node-id="CXsIh71Q6XNC6hJ1q7nvOB" class="ttl"><!--pnid:RHntBbci3B2aSnYUzkyHXx-->只做工时重构</h3><button data-page-node-id="Z6z1HrhzEAyCe4hij86Lra" class="cp" type="button"><!--pnid:oQKgKKd9egF3QOfttTAmzF-->复制</button></div>
+      <p data-page-node-id="KG6BoPZA9j5xr54xebcTDa" class="tp"><!--pnid:xBClv4xDI3cTX5Ghjqjn38-->先只做工时重构：把这三个月的打卡记录还原成工作日延长、休息日、法定节假日三类，逐人逐月列出小时数，敞口先不算。</p>
+    </article>
+    <article data-page-node-id="uEogK0B056Pzy13Hk5BIvY" class="task">
+      <div data-page-node-id="QD51r0atSPAr6ntnpGcjju" class="th"><span data-page-node-id="OXqNbpc5LZIFrKD5RerjJ7" class="no"><!--pnid:bQk86ehFl6b1jajwpHfwAD-->03</span><h3 data-page-node-id="OJpDvF3ob4Qd4E35tf7Xv2" class="ttl"><!--pnid:gnduhFgt7WQ4MlVFKlkBsr-->换约定基数口径</h3><button data-page-node-id="QUg8skIEpvKSZpdtlxKJFi" class="cp" type="button"><!--pnid:sIuYS3hpP657zrXcG1LOCZ-->复制</button></div>
+      <p data-page-node-id="x6RhytZ5sjjD02UHP8kHAO" class="tp"><!--pnid:cjdmCS3QwLq7jNhNeEJ7dV-->这次只按「合同约定基数」这一种口径重算敞口，把与全额口径的差额单独列一栏，方便拿去跟律师确认最后采用哪一种。</p>
+    </article>
+    <article data-page-node-id="8vlk2ZxEbB8ewIzZqjFtpL" class="task">
+      <div data-page-node-id="lsYzdDSb81upkDPTq1bCJl" class="th"><span data-page-node-id="NGbqjYYNWgDCBo7Zx45pZg" class="no"><!--pnid:zKLDT7y25M1r08g16EWOye-->04</span><h3 data-page-node-id="NKJ2bVMD4urqwnbnP1Pgqj" class="ttl"><!--pnid:6nmqZZew5ZBIL0jUyAIhlN-->一次处理三个月</h3><button data-page-node-id="RZ3JelFQLUpmT5qxuhxxkA" class="cp" type="button"><!--pnid:a9TfddGiJnOP07r9yoorTy-->复制</button></div>
+      <p data-page-node-id="uFlRgXZ27czmmg1L7gE6aE" class="tp"><!--pnid:iDZIjUFPP0P7viPKjTqIvo-->演示数据里再把上个月和上上个月的排班表补上，三个月一起跑，最后给我一张月度敞口走势表：各月三类工时的敞口各多少。</p>
+    </article>
+    <article data-page-node-id="G2yu991niZ4tzXji8Arsai" class="task">
+      <div data-page-node-id="OwwMgpq8tbtP2GlHWc8FXW" class="th"><span data-page-node-id="XUUeN3gsGlEW0QrCb0ox8v" class="no"><!--pnid:4L6W6WsnS2tUYtfxO5u8Ll-->05</span><h3 data-page-node-id="BNZ4BiMQ02F02I3oCrJvhr" class="ttl"><!--pnid:NZZ760YIP4JUaucGzmPCZE-->给老板看的一页</h3><button data-page-node-id="mXGxhDj7D23p1lnsfeLmOc" class="cp" type="button"><!--pnid:pS1X4dlc1jPCJRrrI8Lt8f-->复制</button></div>
+      <p data-page-node-id="R2Vgt862AH3bRVuVIhqal8" class="tp"><!--pnid:KtguM3uXxS7YQOb5bItiRN-->把报告压成给老板看的一页：这个月敞口多少、旺季每月再滚多少、堵口子每月花多少时间，三个数加一句口径说明。</p>
+    </article>
+    <article data-page-node-id="8TgG8YMHAU3mPCMJyfSRQF" class="task">
+      <div data-page-node-id="A4brqBwyBorZ9pyzAzJkOv" class="th"><span data-page-node-id="3JKG9eZhLzORTZX7LhcmHL" class="no"><!--pnid:c946pRkWTtrdus8VmQJDRM-->06</span><h3 data-page-node-id="avOnwUdVC6HH23HpzuKkhZ" class="ttl"><!--pnid:G8EZUSXFXz8x7mX1AHY7US-->让它反驳自己</h3><button data-page-node-id="nOSOTZkSZxWVOeRGfiJG5a" class="cp" type="button"><!--pnid:Kr9uVK0z0ky7nLEafrsiSJ-->复制</button></div>
+      <p data-page-node-id="J1KsbQkmuB8PYRs1gMquE6" class="tp"><!--pnid:iecicGQnYT7SNZQl2Gv0qV-->你说「职能部门的加班敞口可以排除」，依据是什么？把工资结构里的固定加班补贴条款和打卡模式列出来，站不住的就撤回。</p>
+    </article>
+    <article data-page-node-id="TjCgRjVyI1gADfdfAo0EC3" class="task">
+      <div data-page-node-id="tmEDiIAyFvocyXSR1XXyik" class="th"><span data-page-node-id="OiPhfQGSMhB4siGVsVtCNu" class="no"><!--pnid:3kQxIApjsJ1emocau1XGkr-->07</span><h3 data-page-node-id="dkvsAmdT0Pth7UDulLY0bz" class="ttl"><!--pnid:IMKFBFOIL1EvxdwyqrZfU3-->比对口头约定败诉案</h3><button data-page-node-id="cdionE79MI6PPON7ntrnrD" class="cp" type="button"><!--pnid:460qxBs9ttMmBQQROa9YnO-->复制</button></div>
+      <p data-page-node-id="BYNf0g95MlASyfLx0oS9tH" class="tp"><!--pnid:dSLDzLUVj5OpO4N4SHhgxK-->把这次的考勤情况跟上次那个「月薪含周六加班费」口头约定的败诉案例对一遍：我们现在的材料比那次强在哪、弱在哪。</p>
+    </article>
+    <article data-page-node-id="vgvMIYXAio65C032gm2UOJ" class="task">
+      <div data-page-node-id="7ipmD8focZLAT9h6Ixl80H" class="th"><span data-page-node-id="W8lS4lYWlhY5qYHNlTFVGS" class="no"><!--pnid:EMsuuzSVS0q1b7wQEwhcJT-->08</span><h3 data-page-node-id="yCMTgDc2BMMplDIYLqWkRk" class="ttl"><!--pnid:Eg0lLI6CXdwBRIPmfTUGxd-->对照留痕要求自检</h3><button data-page-node-id="UlndNuUENU8MKvsV4CnIZr" class="cp" type="button"><!--pnid:r8pWVowdteqXDvrlNjpUM7-->复制</button></div>
+      <p data-page-node-id="7yOIwYWWnMtfdetHwuKFWy" class="tp"><!--pnid:E1OrtQVbQRIK7vFYXmw3Q7-->对照加班审批与月度考勤签字的要求，把现有留痕自查：哪些月份完全没有审批、哪些考勤没有员工签字，逐月列出来。</p>
+    </article>
+    <article data-page-node-id="u6XI2vLjEkyUIuGA3DIm0C" class="task">
+      <div data-page-node-id="F6bjCx0YrRxtnrHpj14bBV" class="th"><span data-page-node-id="k1Uf234Pk7Lb4x6lE6d0FS" class="no"><!--pnid:Ygy8dQHZvXcqzOIN2OXwaw-->09</span><h3 data-page-node-id="Hx8elbAvvuqPgGnpLVlBKX" class="ttl"><!--pnid:YJmUginZsZrcYg9pEjS8hU-->折算成双口径敞口</h3><button data-page-node-id="L81yjcxQYtnRMP6wZGEisE" class="cp" type="button"><!--pnid:3Ga2T9qWvEMZOx77bBMuvV-->复制</button></div>
+      <p data-page-node-id="jOAh816UawADkgklJgxHqR" class="tp"><!--pnid:xt7mploOtMnrtAhBOIH9S0-->按双口径把总数给我：保守口径多少、加上全额差额一共多少，再把 10 月 3 日那类法定节假日单独算一遍敞口。</p>
+    </article>
+    <article data-page-node-id="x5kovdsX3FQDQrBWtUej7P" class="task">
+      <div data-page-node-id="ugKvqcW3TDhr5AbQPBlO0y" class="th"><span data-page-node-id="qVs41AAOg1DkICY4ao3AGo" class="no"><!--pnid:9HaHYkrKaPPpnpEA6YWNgm-->10</span><h3 data-page-node-id="aXnT86NkBmgIfOwErZkPrY" class="ttl"><!--pnid:ftxgz0jmRG9atQiwvWPzmN-->沉淀成敞口测算模板</h3><button data-page-node-id="ji3Z62uTqpQxbI73dRYqMd" class="cp" type="button"><!--pnid:ueQY6ZOqEgxPqHBIXRvl2H-->复制</button></div>
+      <p data-page-node-id="Qt4KqmtghjnvFkrghfLHCD" class="tp"><!--pnid:AMH7CSU2nfO5U2nzC2LZWX-->把这次的测算口径沉淀成一份模板：三类工时怎么分、两种基数怎么并排、审批缺口怎么标、月度敞口怎么滚，下个月照这个出。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="hZ7uUkg3PebZWqIbFqSdgk" class="cta">
+  <div data-page-node-id="oWCzMZqhHF1Vr7jRc8bvwF"><h3 data-page-node-id="a7pn3cjGE3TB78NqLNPhZu"><!--pnid:gid219UCpKf2oWXPmwa0Yt-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="eeG0Mvg1joTrMO5LzNjQ8W"><!--pnid:BruhCuozVjQb3CL0kbykgz-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="bg2XbKtnkypFrcYerOanpe" class="btns"><a data-page-node-id="BQ5B9ihNlzzkbGsoGorhhz" class="btn" href="#" id="ctaContact"><!--pnid:Fd3rksk4cv5MB90MMk4VUq-->联系我们</a></div>
+</div>
+<footer data-page-node-id="dGM7qc0iuwHIyPRnlAxEC4"><!--pnid:O3mqhjXxXo0Kn7tgNW0kU0-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 涉对人的决定一律人工终审留痕</footer>
+</div>
+
+<script data-page-node-id="01hp5kpSlrQnRk2ZrcZ2jy" data-pnid-children="Cd5vGPExQQrm34mxchLgG7">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="fDppmUAiHrvJTRXPiBmK5B" data-pnid-children="4N43xNPujh2jDAKBOe28Gs">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="2b1A81f1pwdiLZMNsyKCyR" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="IMQB4A3q2EJuNHgmkxlgEt" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="xfUTDWEPDi1AylbcTSMoAw" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="ei9FIx6i7GSeZNg0nhXbMP" data-pnid-children="Oc9FmaycHWPqa108tONG7w">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="qMqWvCws81AIe4qtObpxuM" data-pnid-children="N3BsTrijhUTCgMnMlYThdd" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

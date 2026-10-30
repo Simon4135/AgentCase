@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="r2psdskSAghRyspWHLn1rm" lang="zh-CN">
+<head data-page-node-id="lpewXfHDVUdXNAoHlJ4PXk">
+<script data-page-node-id="DXRXYOLJxw21BbEZ1ZCk5g" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="rA4DFNQpFa9a5Gso2fasDJ" charset="UTF-8">
+<meta data-page-node-id="ARbh7yi5cSowV4SDIcvqJK" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="RvSpERDh5Nbbw9eHoyTsiJ" data-pnid-children="X8VPaaKh0Ph8wfzaWlH1fC">资产台账清洗与幽灵资产识别</title>
+<link data-page-node-id="Krl8ja8icgQI194oxEckyY" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="w48ZlxMlUmVSvb0mB0rPci" data-pnid-children="57ZmaOnpJu3BxJrc4mvadR" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="QP4yY7q8ESmdyyJSXkJuz0">
+
+<div data-page-node-id="L2Wrbq9b5NdjzDKvsL9Sms" class="wrap">
+<section data-page-node-id="hSbaFBRBNKhp00tEQi8PEC" class="page-hero">
+
+
+<h1 data-page-node-id="ND9NEJdrGILTTKtV757Vze"><!--pnid:8gmq4nq87SWIUVtq9IuBZT-->资产台账清洗与幽灵资产识别</h1>
+<p data-page-node-id="GIyGL20kqoO8iafpocZQo3" class="lead"><!--pnid:xx4ik6aDw65qh0pStDaGcm-->台账越来越长 · 虚挂资产越来越多 · 盘点时全是找不到的东西</p>
+</section><nav data-page-node-id="mjlZHUrJA5vQB3LKnHpv2B" class="subnav"><a data-page-node-id="yY3jDnHBdFIS52TvuK9Hnf" class="on" href="#"><!--pnid:PkWvgpzlLs6mJfrCbClOPI-->场景引入</a><a data-page-node-id="fBh0IXXDOukd6YeLDP4WdT" class href="LiveDemo.html"><!--pnid:otVsbSNlLUVpKrMLKsngJU-->Live Demo</a><a data-page-node-id="Jo9Jb9Ja43kMwxe2RPdYAn" href="推荐任务.html"><!--pnid:FwUOZb9PLP6e4bF9vuyjJQ-->推荐任务</a></nav>
+<section data-page-node-id="sGusJtWg3mtk1PjrrmnVNm" class="blk">
+  <h2 data-page-node-id="GJevV5MHJNdvmhTvbqESEk" class="h"><span data-page-node-id="1c3kfJiNQIuAirHdwzDoWt" class="num"><!--pnid:hTr6m4fI2Qp4VMLNnCqHIl-->一</span><!--pnid:pOB0KtMEUg0zBhWzfQx3Pp-->这件事现在是什么样</h2>
+  <p data-page-node-id="eyfziAo0yzqThoyOMgVmj4" class="subline"><!--pnid:6ctibuqOkDJ6LQxy8kHmWE-->资产与空间管理 · 真实业务触发</p>
+  <div data-page-node-id="sb0lOaEVeg1hYpj1nVlJlZ" class="card"><p data-page-node-id="BnqAihCCyP1hGEzPpGPt1k"><!--pnid:7roC7AU0wyWpCjtasNRvVg-->年度盘点前把台账打开，发现有 300 多条记录。凭印象知道里面有很多早该报废的、有些是同一台设备重复录了两遍、还有些责任人已经离职两年了。但没人敢删。</p></div>
+  <h2 data-page-node-id="kIwHJjjfb8ow71sfa1zxcN" class="h" style="margin-top:22px"><span data-page-node-id="zyRVbgtHXnRENagyk7d4Ce" class="num"><!--pnid:jM6c5tLd2MKDNso2geu6S9-->二</span><!--pnid:h6af1RzuBFZFx6v2G6agZZ-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="hIPEQ0g37pDTMW0P4lGRcj" class="subline"><!--pnid:OpRIWPRi2mhTk2oEaabchl-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="oL4Yv4Bzb7rKe8jDPHbpFI" class="pains"><div data-page-node-id="ZDc2D67uON24lA0PyRRZAa" class="pain"><span data-page-node-id="ckamCAuuwYEFTJ3OkfZvr3" class="i"><!--pnid:0SkVRZdmZcCDwTXXUwWVVp-->1</span><div data-page-node-id="DPzvtsdKghx1TAl5yOE2ih" class="t"><!--pnid:KeHYiTLP0AOINHSXG18jHx-->几百块钱的工具、频繁更换的耗材，本该直接走费用，却被塞进固定资产台账计提折旧；台账越来越长，虚挂资产越来越多，盘点时全是幽灵资产<span data-page-node-id="TaxkHsptRJqU86oKu6ECBR" class="src"><!--pnid:9jr7mb365e9CRAvg63WEnB-->依据 · <a data-page-node-id="5n55hu5YKmRZJHNzvS3giE" href="https://cloud.tencent.com/developer/news/4231573" rel="noopener" target="_blank"><!--pnid:8rr4528OiKMDFhxi7ZQ9zr-->腾讯云开发者社区：几百元工具塞进固定资产计提折旧，台账越来越长形成幽灵资产</a></span></div></div><div data-page-node-id="4oH4VkorMCoDBrDDITc41B" class="pain"><span data-page-node-id="Ff6S3wC5lN2f4WFSQMwYrm" class="i"><!--pnid:nwEbDJJXoDhAuUVMgGfJa3-->2</span><div data-page-node-id="oyN6zGG7QaII01exzaMyEo" class="t"><!--pnid:qalVNP6ilbBDwigSzPj2E3-->入账环节把一套设备拆成几个零散资产；实物到货几个月发票没到；日常调拨、搬楼、停用、送修不报备<span data-page-node-id="Fq8rQHV8vqyrooJBWPjSqq" class="src"><!--pnid:FHR6pwOixWltUJjFRRq9ah-->依据 · <a data-page-node-id="FDULM8ioNnzFZ97M4kpYyM" href="https://cloud.tencent.com/developer/news/4231573" rel="noopener" target="_blank"><!--pnid:doqFpg7zqQJ99W1s7ikCVo-->腾讯云开发者社区：几百元工具塞进固定资产计提折旧，台账越来越长形成幽灵资产</a></span></div></div><div data-page-node-id="Ir2s5ASMwgY3Zijy9yQx4u" class="pain"><span data-page-node-id="Fibv7ugLiZVKt9YZva7hJS" class="i"><!--pnid:G6W6ag11EWP4uh1kopFFwP-->3</span><div data-page-node-id="kXtM1zBpwxyImdyCxyv8F9" class="t"><!--pnid:sxq4QVeGKyS5jlKsTaQKw5-->行政部一份台账、财务部一份、IT 组自己一份，同一台投影仪三个编号，到底谁在用、丢了没都搞不清<span data-page-node-id="oftUEseflgJgYiE2MA7DwT" class="src"><!--pnid:XcBPO6aP0Pm7Pbgh3z7PXk-->依据 · <a data-page-node-id="OugJ3jRNsOhXPOIMJuashk" href="https://landian.cc/m/info.aspx?id=8535" rel="noopener" target="_blank"><!--pnid:6kx52cBE9Yw66iSo6tbSxW-->行政/财务/IT 三份台账各自维护，同一台投影仪三个编号</a></span></div></div><div data-page-node-id="P1GRwvJsXOjNkq7wt902uK" class="pain"><span data-page-node-id="vTcMyK192EXXOScBQ8F5Gf" class="i"><!--pnid:kj3s5dJBVBkFgJgTjZZsUy-->4</span><div data-page-node-id="YIyl9Y9YWYwBYNqj2pjvgS" class="t"><!--pnid:KnJ0E443ozNxh8J0S7IAlu-->账上 15 台实际 12 台，无调拨记录无报废审批，最后行政自己贴钱赔了两台<span data-page-node-id="Tnw1d9OJadrNUTLuxyu3F8" class="src"><!--pnid:zMQ0szwrBBgwq6hvmvc1mp-->依据 · <a data-page-node-id="4aCP1YjdLNT6aFw6ZALTFd" href="http://lib.landian.cc/arts.aspx?p=39490" rel="noopener" target="_blank"><!--pnid:7N5ztQOZsfti5VjWcZp1v5-->行政从业者自述：账上 15 台实际 12 台，无调拨记录无报废审批，最后自己贴钱赔</a></span></div></div><div data-page-node-id="Vu9J86DJw2eN78pX0ls9Uz" class="pain"><span data-page-node-id="Gf6wM4a8tAk2vdmEC2LnxY" class="i"><!--pnid:yp4duX5vdSJKOOxMlTtN6J-->5</span><div data-page-node-id="7HH9zwFQbQVRLjgxQ5EINs" class="t"><!--pnid:7VmEkT5XncXBgwuWblq1Sh-->行政 KPI 里明确写着资产盘点差异率 ≤0.5%，但台账本身就是脏的，差异率无从谈起<span data-page-node-id="vImOeZpNE8kScUGwO1VFRu" class="src"><!--pnid:1PySLjtmWVGfz2aVnFfy8H-->依据 · <a data-page-node-id="Mq3KbcVTfuMiJb300JCcyQ" href="https://blog.ihr360.com/p/409339/" rel="noopener" target="_blank"><!--pnid:LRzVQgLq4V68Edk7ubntD2-->行政 KPI 口径：工单 SLA 达成率 ≥97%、资产盘点差异率 ≤0.5%、合同用印合规率零容忍</a></span></div></div><div data-page-node-id="R2mpqSk5fZN4KsLfv0UDdq" class="pain"><span data-page-node-id="yjuUoEQjPgf6LLdoU8J0NG" class="i"><!--pnid:YcJOlYlK1CS5cNsW9Dt1CL-->6</span><div data-page-node-id="0twnN6h7zmwWVmruXEsdhR" class="t"><!--pnid:oP7yzJ5s2JoAp5JDie1ooc-->没人敢删台账里的记录 —— 因为删了就要解释，而解释不清就要赔<span data-page-node-id="g8oFjBMQ8I8SjwsBMwSrid" class="src"><!--pnid:L09ByuSsGZGPDGTOmSZODU-->依据 · <a data-page-node-id="5qAdepKuSXQj5f2LhbgKOr" href="http://lib.landian.cc/arts.aspx?p=39490" rel="noopener" target="_blank"><!--pnid:XAJ3zhTa3GM9c54dMralos-->行政从业者自述：账上 15 台实际 12 台，无调拨记录无报废审批，最后自己贴钱赔</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="4HzrbEbhcbxbroC28eKbhs" class="blk">
+  <h2 data-page-node-id="ScMqkG7WQTXfKGFWVcPMoO" class="h"><span data-page-node-id="1vTDnG0q5bzKOrwGWW614G" class="num"><!--pnid:pZ87wEWSW80e91doJLuRbQ-->三</span><!--pnid:YUe6JTZbPbQJF9WVrNj1jD-->换个做法之后</h2>
+  <p data-page-node-id="WWDDgfpPJZ7wcwJt7t8Puf" class="subline"><!--pnid:2XONUgwlfvVVTLh1mNKfAH-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="rTmwdZylixF7tISCh8D729" class="cmp">
+    <div data-page-node-id="lHG3vYNnWsu0TU5JSlZv2e" class="old"><h4 data-page-node-id="gLNH4wdzdXzFPhwrJgbQTx"><!--pnid:DDuSSKFDvvftPrxmEjoCWI-->✕ 现在的做法</h4><ul data-page-node-id="EXTCNvLUIiwmxASHajF6zo" class="list"><li data-page-node-id="MLCcKy6rWhlb1jNFid19Ia"><!--pnid:u1cikfJpt3S3FbIFEc2LRe-->几百块钱的工具、频繁更换的耗材，本该直接走费用，却被塞进固定资产台账计提折旧；台账越来越长，虚挂资产越来越多，盘点时全是幽灵资产</li><li data-page-node-id="aHfZJ9blfRG0pDI9Tdiajf"><!--pnid:xUhcnnmaqGyZfk9Eka0fSS-->入账环节把一套设备拆成几个零散资产；实物到货几个月发票没到；日常调拨、搬楼、停用、送修不报备</li><li data-page-node-id="YgO7XCW9k7SOE5AOkAx8Rl"><!--pnid:KAqxoVeCRxlf75iC3BFjTy-->行政部一份台账、财务部一份、IT 组自己一份，同一台投影仪三个编号，到底谁在用、丢了没都搞不清</li><li data-page-node-id="xjIMy7gDtxXajWPEpp9THD"><!--pnid:RYJAY7pQsmNvgeCOgWBPPq-->账上 15 台实际 12 台，无调拨记录无报废审批，最后行政自己贴钱赔了两台</li></ul></div>
+    <div data-page-node-id="BRddTLH6munyynuSzIHQov" class="new"><h4 data-page-node-id="ZP0uzMHxbf8zTE0JTKaGEW"><!--pnid:rG8zFcxh6p6Tm8lbkG1yaB-->✓ 交给 Agent 之后</h4><ul data-page-node-id="dPnkKUHY7yp9e8ONhUVmb6" class="list"><li data-page-node-id="hZGXrOz0zapeNoPEgbya87"><!--pnid:JYCuDfWoXrmrmtN04nIw0y-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="43TRtJ9vcSVDhhBkSSiBdb"><!--pnid:30d56QB5N3A2LM1roIFfcR-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="QJ8Zkf0ApfbHats8HUjW9u"><!--pnid:BV4IOVuuDF64lpcKSF1Nc6-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="teYibF5Yjn5wVRR3JVcByk"><!--pnid:h3X6PtAVTNkRwcLrdrD5Kw-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="z1yabW2b8plm4xRRvzeWqk" class="blk">
+  <h2 data-page-node-id="MzUnJkESALG8xSCsmPLYNn" class="h"><span data-page-node-id="KxiOp0MW69WxtdvbavdVHI" class="num"><!--pnid:2xLp4PDtcZlcN5W0IY4SgE-->四</span><!--pnid:7Evjg8lPu7YhTtbWGKMho6-->场景闭环</h2>
+  <p data-page-node-id="Kcf5riIDViTILcIvQ4srcZ" class="subline"><!--pnid:g19ScglFyqGIxYr5p2nBUr-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="Q0vwM9sJtgFGgjgd85cbTw" class="flow"><div data-page-node-id="yFLPbxrtkR9fF8Apr57xFQ" class="step"><div data-page-node-id="TXfWgh29AcGxsP6sGTM7J7" class="n"><!--pnid:fMjPhBXpyCjpRJR84oMidE-->第 1 步</div><b data-page-node-id="denu1QHsAtVUMjq1XBSuhX"><!--pnid:Bjl8KTrTfUSLXjXh7YTWlR-->多表合并 · 先把几份台账拼起来</b><span data-page-node-id="o0yGRq2lCE5DWjztM96kuI"><!--pnid:CrfbF9fYsit5z5praLwzoj-->按资产名称+规格+原值做模糊匹配，识别跨表重复</span></div><div data-page-node-id="hmzbBeF7zsSWAMJibmHt8A" class="step"><div data-page-node-id="EmOssy1hvUE8wuP4P0l93g" class="n"><!--pnid:HaYj68y8b9fZWvkcUjqR1p-->第 2 步</div><b data-page-node-id="1W2iwiPTuBVy8EPzkPyzrf"><!--pnid:DEV5sfrFNthRJe2XaD3lCN-->重复建档检测 · 同一台东西录了几遍</b><span data-page-node-id="J1kew36OJsR9PpGVQU9d9K"><!--pnid:yBmGFmOXaqLeVobAYTHHJl-->同名同规格同原值、或编号不同但序列号相同的，标为疑似重复</span></div><div data-page-node-id="wgo9Z1JozaV5ep9PmfZBGn" class="step"><div data-page-node-id="oEBoH4JbRhmF4aj0zAukE5" class="n"><!--pnid:dnDVUw95s8PG2SgzwYKe9Y-->第 3 步</div><b data-page-node-id="jZOkhF3Twmd5GZFwoGPxIJ"><!--pnid:LPagQVrVFYUUkhDj6p5swx-->该费用化识别 · 不该进固资的</b><span data-page-node-id="omiVQAd9zHDTE5jVgHzJ8P"><!--pnid:1VE8lnbHDVpv6veEjscTN3-->原值低于固资标准、或属易耗品类目的，列出并算出虚增金额</span></div><div data-page-node-id="OKJtGcBJOJbQMtM5a94l6h" class="step"><div data-page-node-id="sXCglbi5T3eHGrOl1KvyM3" class="n"><!--pnid:BIM6MXaWeQJKVqdUv1cpdp-->第 4 步</div><b data-page-node-id="yc90mRWMEATe3bE4XsXmz6"><!--pnid:VPzQCKSvGTJrz2D2VQP2bC-->超龄计提检测 · 早该报废还在折旧的</b><span data-page-node-id="3EWqx29O1ifS8QnrUKnKfG"><!--pnid:wCS8UeQcCTuOlNvjwiQkpG-->已过折旧年限仍有净值、或购置超 N 年仍标「在用」的</span></div><div data-page-node-id="m5XXAQZEUNRn0jCkdP0Yta" class="step"><div data-page-node-id="xq9Svb4kiiP0sJg3A5d5hl" class="n"><!--pnid:4LnDhzAOBaGqZ92LfyCwEb-->第 5 步</div><b data-page-node-id="145E7QfDUL7MJ0JJrR8RzO"><!--pnid:uduzfDnBX4sEmSKTZhBzi7-->责任人核验 · 人还在不在</b><span data-page-node-id="kFmjtGDr5g0x9w62tqCx61"><!--pnid:NcVRyA750SIwVQTrbrR9GA-->与离职名单比对，责任人已离职且无交接记录的单独列出</span></div><div data-page-node-id="gInVNNfEJ74ALRrkL5ozZe" class="step"><div data-page-node-id="IBlgOOMDh6kO9HqQ4QbTuE" class="n"><!--pnid:k7gp8VID8XfViqJ63g62ZI-->第 6 步</div><b data-page-node-id="XgY2TPN5V4w0Hr426ecagf"><!--pnid:lilOtRafeJbLqtL1hdFdEQ-->清洗方案 · 每条给处理建议与佐证线索</b><span data-page-node-id="rPktTxHiyoL5v81GI7tUid"><!--pnid:PUYwIgPkoCB62UbnpTeda4-->建议动作 + 需要什么凭证 + 找谁确认 —— 不写「加强台账管理」</span></div></div>
+</section>
+
+<section data-page-node-id="jhem4QHioIW74b8R6ZvarA" class="blk">
+  <div data-page-node-id="AtZJwBVQ6G5MPej4qhT3Wv" class="g2">
+    <div data-page-node-id="mrJPwvmezjpVASgFcjmsBz" class="card"><h3 data-page-node-id="Act8yBYYpO7i1eYUowECrP"><!--pnid:r9o4bRgtt5IlQ0FTpDzOlA-->要准备什么</h3><div data-page-node-id="KZK0Oh5oOdPlao1QZqgj12" class="src"><div data-page-node-id="XtD3oSnMPkzMk86QrbZ6LJ" class="fn"><!--pnid:yMczistumtDpRhqgijR7Vi-->固定资产台账.xlsx</div><div data-page-node-id="gO2NflD71fOZwsujLxCIRS" class="fd"><!--pnid:JDgJCFbXdy4M9eJL7Fft21-->行政或财务维护的那份，通常半年以上未更新</div></div><div data-page-node-id="JtRgjHc8j3BL9iWMRpH6Cx" class="src"><div data-page-node-id="HojSdlhvn2vnhtnJVxfBuw" class="fn"><!--pnid:YOf957AfQpr7lSWaBwquLh-->其他部门的资产表</div><div data-page-node-id="nXtxXddAr2VP4oyD4ry3Bc" class="fd"><!--pnid:TR3IPNRpYhaYwLql0z5o5c-->IT 设备表、办公家具表 —— 常常各有一份</div></div><div data-page-node-id="6OV4uagoYAun8oGoKYjrEi" class="src"><div data-page-node-id="86EjZM4Rjs10hZcPmCVymi" class="fn"><!--pnid:DkgEiWElaJaTHgLBDwwNU0-->采购入库单与发票记录</div><div data-page-node-id="2a7AOqZHyzWPKyfTUPDC7t" class="fd"><!--pnid:oqh0ME0b4bqmMMDQ9hkIWS-->用于判断原值口径与入账时点</div></div><div data-page-node-id="nUcilcfp6QCUMOUpVPOOzr" class="src"><div data-page-node-id="VBmFczWsh5V5rgtdW0iodH" class="fn"><!--pnid:W6bx1I1ogyj9D9EQVN5VrV-->报废申请单与调拨单</div><div data-page-node-id="JoqjJeR3yPuOt4rrBy5J4O" class="fd"><!--pnid:uqbog3uCq0vZU8yDfKFAmE-->有多少算多少，缺失本身就是发现</div></div><div data-page-node-id="ahmcLvgTbYM3WTt7xUhkP5" class="src"><div data-page-node-id="bGB5PPbr5PHGn5OKPqiIQp" class="fn"><!--pnid:YUw4EOuvzifxqCPO0VmEkC-->员工离职名单</div><div data-page-node-id="TOlHdtynttPwoCadbKA8uN" class="fd"><!--pnid:wbMA9q8fgxWZJDIbIT1Gap-->用于识别责任人已离职的资产</div></div></div>
+    <div data-page-node-id="9Eh3rpwuDoXZSwYnbsDPCm" class="card ev"><h3 data-page-node-id="sq2L8dLEBkdZcVuOYdmGHf"><!--pnid:WLOThUR5rPOzU8EFhQfxSc-->为什么这个场景值得做</h3>
+      <p data-page-node-id="EdNiNBSeQUYyEa2kPGfb2D"><!--pnid:pyCkgU1e5sbnNi5f3CykXb-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="TURPoSn3BD6fCpZjpLq3KJ"><!--pnid:uhtH1bZ0LmQAPokAWwdNj3-->10.0</b></p>
+      <p data-page-node-id="3KfEsgIcEOSL9ItKLuWj9t"><b data-page-node-id="wALSHV18RWckpWipcMlwQJ"><!--pnid:4DiCfLgddekdOyzYw4QZMq-->最大差异点 ·</b><!--pnid:wWBEiU7HNJsgipLHyetf0W--> 不要求企业先把台账整理干净再用 —— 恰恰相反，越脏越有价值。而且明确区分「台账问题」和「实物问题」，不把两件事混在一起。</p>
+      <p data-page-node-id="XpKUKBBiPd15Tx1fA7zyk5" style="color:var(--ink3); font-size:12.5px"><!--pnid:L336Mo2cLCJxf5bhn90TRR-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="LaGpTocQng9H8Pa94VQEnP" class="blk">
+  <h2 data-page-node-id="9FaWIZ9G9LRzn5xliRQ1P6" class="h"><span data-page-node-id="dkVU9Ztzi9Zi2yNofp5q9l" class="num"><!--pnid:WLxWY8fYFTu8mIBVcWFg9h-->五</span><!--pnid:iwy5xRXOwc65MKObHOOK37-->会产出什么</h2>
+  <p data-page-node-id="uGd6qByPBX3HnmpyPEmy14" class="subline"><!--pnid:CzZCgNpSRKx1FiIYflI2ZD-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="fCXr8527gyff5LsiY4djrV" class="outs"><div data-page-node-id="s34ceXcDvzRgfAX6on4Bva" class="out"><div data-page-node-id="fYsFU1PR1YLMinSAN9IBZf" class="on"><!--pnid:HdtE3GMa5dGSLYrQHQGlYf-->正式件本体</div><div data-page-node-id="da3IdPvuK1zwfNxsTp605s" class="ot"><!--pnid:aFy4Fc6vJyLY5omodyyBdq-->资产台账清洗报告.xlsx</div><div data-page-node-id="pEowNkIcmyPotxo9sT9Dvt" class="od"><!--pnid:ebWW8rtot4bbpsZHo9WMYV-->正式件本体 · 6 sheet · 六类问题分区 + 清洗前后对照</div></div><div data-page-node-id="jK7kdktNBQNP68MokAGMiZ" class="out"><div data-page-node-id="kXQt2Epyue5ZPYByzgbIMr" class="on"><!--pnid:EcnWwOYpBhkFTvWyXsBfnN-->可派发清单</div><div data-page-node-id="HXvXSlYVSAgU8ewoAmWTL8" class="ot"><!--pnid:njazRagBCHpEu4JzuEfkiE-->待核销与调整清单.xlsx</div><div data-page-node-id="P764CRr6yZOv0IWUiA7Oht" class="od"><!--pnid:ANka8OoiOp8crfcZGweKaI-->有金额影响 · 需财务与总经理签批 · 每条附所需凭证</div></div><div data-page-node-id="K67FvCu77F4EzlfPfX7bjG" class="out"><div data-page-node-id="ESH854CnlleSsIOcDFqx4j" class="on"><!--pnid:eOVGBIERWnoPQqMUOd76Qt-->可派发清单</div><div data-page-node-id="WDg73egq3lJfZ4T5wEmY7i" class="ot"><!--pnid:rMqPYhoFerne1BbfCEZII4-->信息更正清单.xlsx</div><div data-page-node-id="BYWZh18ekaEdbE6vSyS57Z" class="od"><!--pnid:9rQizkwzBpoDimX5hRiwVL-->无金额影响 · 可直接执行 · 按部门派发</div></div></div>
+</section>
+
+<section data-page-node-id="hH8rmMmuU6ocZDQdS2iXNM" class="blk">
+  <div data-page-node-id="KBa0Y5uvUJtcM2nXbfPXDx" class="card warn"><h3 data-page-node-id="XMBPp6ZB954P31EOfM7Umh"><!--pnid:Pv8ON2LSfiqttyZaZwDao8-->这套东西不承诺什么</h3><p data-page-node-id="GWRIFoET0MqXZDqFAFaK2S"><!--pnid:a7XSsRwV2rQMkQ2V9wETIC-->不做实物盘点，不判定资产是否真的丢了 —— 那需要现场清点。我们做的是台账体检：哪些记录在逻辑上就有问题（重复、该费用化、已离职、超龄仍计提），并给出佐证线索。是否核销、如何处理由财务和管理层决定。</p></div>
+</section>
+
+<div data-page-node-id="snH9fyPDL3gpbQlKhtrfpg" class="cta">
+  <div data-page-node-id="MnjwhWsUoz5sivv5n0JrIV"><h3 data-page-node-id="6HPWYkfmjD8QqVDJ3CuXWC"><!--pnid:aUYVNGblzwBqz32DXlAWKQ-->想看具体怎么跑？</h3><p data-page-node-id="nghBCtjKFCoUhW2M6alf8h"><!--pnid:KEWys8xkhu9lEvErL0w1AM-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="2zt5nMYWeZqiuKOOULG8sA" class="btns">
+    <a data-page-node-id="80353cSnJfi4h9RJd0B5tQ" class="btn" href="LiveDemo.html"><!--pnid:t47IuxjaRnZlJ84oOIp5xk-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="C3i5tQ93h3ShCcAh3KUASA"><!--pnid:2SWcAxjiK56RHI2I77zC7X-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="jklN3CSNyg8fvsg8biRLHx" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="jaFhCtOfsac1NoXoGJksqD" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="W7BZoi54IwZQZLYijz1pkA" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="jFWjuB1i6rcUonRFPsWoRO" data-pnid-children="WvJDkcHczchC3LLFpnj9zi">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="iCbDAWGucatvVfoSywTlQl" data-pnid-children="ZdB8eNYqqhhfhgnmCQbHaE">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

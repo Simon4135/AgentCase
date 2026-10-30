@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html data-page-node-id="bTFivtyHZulfz5ndb9Li25" lang="zh-CN">
+<head data-page-node-id="X6cwK1GnKSlPw2L6H2MGbe">
+<script data-page-node-id="5yE8NZGn5EtgcExM3oif9t" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="n7vwSOALkAhj5hSfeCL9nw" charset="UTF-8">
+<meta data-page-node-id="PC37Sj9YqxatrV8t98Nkgj" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="tLQH0PsUlPojCmsd248iFW" data-pnid-children="MZnODiyRJglLsUFLuktgxX">月末结账清单自动整理</title>
+<link data-page-node-id="gDCJOr1ORrtJHHAqi1uHFk" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="FhjZpUxWeNXpT7kfGTZcSZ" data-pnid-children="zWeiQNLyxM1YWPczVmAXYD" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="slrQCvljwaPnTXSt14eFoO">
+<div data-page-node-id="vzqK5Wp6HJNtw0pvma5K3x" class="wrap">
+<section data-page-node-id="WKVcYsZKhN6yctZLqDDSWf" class="page-hero">
+<h1 data-page-node-id="Z2GSbjQk17gu1LS4g6RfSQ"><!--pnid:xbjb6EhgAwWqNtdEbOr5gc-->月末结账清单自动整理</h1>
+<p data-page-node-id="zGy6Cg4Mhl2Dbs0LLMshcG" class="lead"><!--pnid:7je8KWyIXCBaF9riwBDNKs-->结账事项跨多模块易遗漏，多主体进度分散难跟踪，关账时点强约束返工成本高</p>
+</section><nav data-page-node-id="1D9hZMtHAzBrckwUBWYwVk" class="subnav"><a data-page-node-id="WD1fERN0mf20VJVQImlqLh" class="on" href="#"><!--pnid:weucAjLFs0f4YmpozyBgQL-->场景引入</a><a data-page-node-id="pGY0w1k0e7BJKrTs4cRji5" class href="LiveDemo.html"><!--pnid:ERvuq7uAsfB0XHwl9slqRO-->Live Demo</a></nav>
+<section data-page-node-id="wq1jxdbhYkrwA5UDDqzVEM" class="blk">
+  <h2 data-page-node-id="OoQgZrUZvaUSpaqFCsGjuh" class="h"><span data-page-node-id="7xcdNhAYyKuuwyQjPCzgE5" class="num"><!--pnid:wihDgcJ4WH7DcKSuHpP8w5-->一</span><!--pnid:LLun8pJHw8sYVEd3aNyK9x-->这件事现在是什么样</h2>
+  <p data-page-node-id="3CPb3dhseR7WdHhcyioGW3" class="subline"><!--pnid:8hRcy0AzqtmzrSG6g0tkDd-->财务专员 · 每月关账前与清单赛跑的一周</p>
+  <div data-page-node-id="JLVN5i5YrN5lJ2tGaAxzj3" class="card"><p data-page-node-id="QBbrMZkSsZQUCcOwiy5NFL"><!--pnid:UrntrdXUkRz4Nbeh7IgjX0-->某连锁餐饮企业，月末最后两天。财务专员的桌上摊着四个主体的结账事项：总部 HO001、深圳区域、南山店、福田店 —— 凭证审没审完在微信里，折旧提没提在折旧摊销表里，对账差异在对账表里，税表还是草稿。哪个主体进度过半、哪个还卡着，得翻四五个文件加十几条聊天记录才能拼出来。最怕的是关账前一夜：总部试算差 1,256.78 元，借贷不平 —— 这种异常关账时点强约束下就是返工，查不出来谁都不敢点「关账」。清单靠脑子记，进度靠嘴问，遗漏一项，下月第一件事就是挨问。</p></div>
+  <h2 data-page-node-id="E0n601Ouw4fXDV3VrP2noO" class="h" style="margin-top:22px"><span data-page-node-id="GwSodQATCuDioYRA7jVW9Q" class="num"><!--pnid:o5jSc6yFKBsMB8DmKqMoU7-->二</span><!--pnid:RC5tuC5NL0kZPNOvw4cSj2-->痛点 · 每个月结都在重演</h2>
+  <p data-page-node-id="S07ygCppHKUjCxlhBgvQJO" class="subline"><!--pnid:cXhdzWJdSKScw2MnyHfU6d-->不是流程描述，是财务每月真实经历的消耗 —— 以下内容取自场景调研</p>
+  <div data-page-node-id="d1FeS0o14ElpZfkr1ssmLe" class="pains"><div data-page-node-id="2tsERm3zwWGBEOZmLFMviP" class="pain"><span data-page-node-id="pfnRu0OyA8KbadyWcjtTXv" class="i"><!--pnid:Lf9YzNRR4b9TcC2AaELS3D-->1</span><div data-page-node-id="tdGuo0Qh2o69lgSlRg19sJ" class="t"><!--pnid:ylQoKDpP1j1fHvTwQyztPe-->结账事项跨多模块易遗漏：凭证、资产、税务、对账、关账五大类各有若干任务，漏提一笔折旧、漏算一个附加税，关账后才发现就是差错</div></div><div data-page-node-id="2jF3fe7nWz3SMYhI5hqCpz" class="pain"><span data-page-node-id="W40oHxtz0ZmkYIMuv2OWz1" class="i"><!--pnid:peLid2d6bfTt8McSJWEaBc-->2</span><div data-page-node-id="ODkfz7i4S0a5QdHwmYvL5g" class="t"><!--pnid:s9yprnX4PoaJxZgmss3jFi-->多主体进度分散难跟踪：总部、区域、门店各自的完成度散在不同文件和聊天记录里，「现在到底还差几项」没人能一句话答上来</div></div><div data-page-node-id="qopAL2Bo5fHzPxfZ5OHGju" class="pain"><span data-page-node-id="vUnIUt9ONz2svqpeKy55dA" class="i"><!--pnid:Op0HIM6hXYEOMqFOLVDeni-->3</span><div data-page-node-id="LXhXbxSQL1OCmhV3uUFVx0" class="t"><!--pnid:neyuvU6GeIxp3K5yvCpozk-->关账时点强约束返工成本高：关账截止就在眼前，发现试算不平衡时已经没有从容排查的时间，返工都在深夜</div></div><div data-page-node-id="YHYabsjburMgCq2vByHUi1" class="pain"><span data-page-node-id="vPPVxknDc0ihkAMKXqRPrH" class="i"><!--pnid:jIdw9TMAQK4AzPX9zuFvGM-->4</span><div data-page-node-id="m9Ch02JRosfizMWjRR8HGw" class="t"><!--pnid:1ZAbCBOQbhGZfss1ZdiJqQ-->异常发现晚：试算差异 1,256.78 元这种阻断级问题，往往是关账前最后一刻才撞见 —— 早发现一天和晚发现一天，是两个周末</div></div></div>
+</section>
+
+<section data-page-node-id="sS1JRKKTcdQfSyogTUcXqJ" class="blk">
+  <h2 data-page-node-id="Sw6mkHw0ROGIYPlmFlmi8V" class="h"><span data-page-node-id="KGFVO7jBc4gIIwJjDfSnzH" class="num"><!--pnid:Dk63vo7Mzshd43WBn3t9kF-->三</span><!--pnid:vDIJ2JTayGJKwwRKNLPzBE-->换个做法之后</h2>
+  <p data-page-node-id="fU0IeC49iUHkzlHvmlNEpB" class="subline"><!--pnid:WPkKnuDpOOmGv29a73UEjX-->变化不在「快」，在「不漏」和「敢关账」</p>
+  <div data-page-node-id="WkBKBj9duw4mjrFf1dikN3" class="cmp">
+    <div data-page-node-id="PquqFZohHO5aAM36swcq2L" class="old"><h4 data-page-node-id="t6CWGI6LuZbVH3TvL2J9Ap"><!--pnid:2DmUBvyT0OC3MNwd5Y7WE0-->✕ 现在的做法</h4><ul data-page-node-id="eLFQoBUoAX7DJXQrPOtgO2" class="list"><li data-page-node-id="WETcnpIQb6ZDGOFKOQkEGJ"><!--pnid:uFq6h2nKRc7ru2zswocBCk-->五大类结账事项靠脑子记、靠旧清单抄，漏一项算一项</li><li data-page-node-id="YF7h3GkiLAnhxZjEMh5b4w"><!--pnid:kmFyLSs7HUApHsiWV8Z0k7-->多主体进度翻文件翻聊天记录拼，永远说不清整体完成率</li><li data-page-node-id="RzXkEllrIv5YBPrEopkS9q"><!--pnid:K2GFQRo36CQ9emP8KhKHrG-->试算不平衡等阻断级异常关账前夜才撞见，深夜返工</li><li data-page-node-id="TrDJGFIoHUkUVdSgmgPOpR"><!--pnid:xCejRipjK4DvQbp6MDZyrs-->遗漏项、逾期项没有预警，靠人盯人</li></ul></div>
+    <div data-page-node-id="zbrjocXvryKjd5tQyci5Si" class="new"><h4 data-page-node-id="F3Oj5XDp1EDyzCTx3vzOZU"><!--pnid:c1o3SHTxsVVDfDawyAFWWt-->✓ 交给 Agent 之后</h4><ul data-page-node-id="xQXApcSBE9nyezVTj57OP2" class="list"><li data-page-node-id="EN9F812dYNOA8uZpByLlda"><!--pnid:ypiUhwwmmbdzSGhCG6JFq7-->按凭证/资产/税务/对账/关账五大类模板化生成任务清单，含前置依赖关系</li><li data-page-node-id="pPHI57le7cpYsoYt0KVlO6"><!--pnid:ERP3c2PUbqnY4rmbHeZp3Y-->逐主体逐任务标记状态，完成率自动算，遗漏项与即将逾期项自动标</li><li data-page-node-id="hJ7t9GGodVVXoX4iF9IzNc"><!--pnid:AdoEvDgD75yPv2VdPp9w7m-->关账前置自动校验：试算平衡/损益结转/折旧摊销/对账差异，异常项直接阻断关账建议</li><li data-page-node-id="EEGWDFyRKQmuoEn79oFuUn"><!--pnid:AAy0YXiq1gL3HfAJWpaomI-->清单报告 + CSV 明细 + HTML 进度看板一次给齐，10 分钟拿到</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="izh49qiDaEqr6KEf5Fh0HU" class="blk">
+  <h2 data-page-node-id="inKcwExyjAf3FhvA4zW6dg" class="h"><span data-page-node-id="2U2ERhucPEvSqyWsPYjSrJ" class="num"><!--pnid:ywB7lDlNIDVD0LEiK3PgVy-->四</span><!--pnid:pmrZ5M5tibFMfgXvSZGOuI-->场景闭环</h2>
+  <p data-page-node-id="neebHDQBOn7xGVH8l2Z66V" class="subline"><!--pnid:tBflvlrrLdv9LmPbmXhwtc-->6 步 · 解析 → 归集 → 汇总 → 校验 → 交付</p>
+  <div data-page-node-id="5qZKBluSx0rH9RgHqKOobW" class="flow"><div data-page-node-id="datwY2PDwyYLi5cggt8DFA" class="step"><div data-page-node-id="DmAnZSAzAA1dFpQ2WZXGJH" class="n"><!--pnid:evITCDf45VxzzWvS8o7WYO-->第 1 步</div><b data-page-node-id="xbZ189H51bgNGW4ZxiZwXL"><!--pnid:7nh9c3OyIS89q1ACnl6ssd-->周期与主体识别 · 先定骨架</b><span data-page-node-id="qVj6tIt3iMcDutiHeeswez"><!--pnid:wSQrAP79vtjLscRQuNUSTM-->解析结账周期（年月）+ 核算主体清单；无主体清单时按总部 + 区域 + 门店三层生成默认骨架</span></div><div data-page-node-id="n7hqRboeMqrF0TNpaorpQi" class="step"><div data-page-node-id="YkWxa0FvK6HxEIMsPOO17y" class="n"><!--pnid:CF1kMsHAsE5tMiPGOCIM8R-->第 2 步</div><b data-page-node-id="VzZlBXx8ZCcY1cGWVYIkVp"><!--pnid:HsyOuUQtVcDt9ypUCE206x-->多源文件解析 · 各归其类</b><span data-page-node-id="GAvzgKdIt9uDsJ1ExpDAWO"><!--pnid:8OurL149rKRKxoGs1tFOkI-->解析科目余额表 / 折旧摊销表 / 对账差异表 / 税表草稿（Excel/CSV，多文件多 Sheet），按文件类型匹配结账类别</span></div><div data-page-node-id="ldCXprUmUerqjakRrogQsG" class="step"><div data-page-node-id="QhwBj6F7u4Gr5qWyNBqZrN" class="n"><!--pnid:qJiFtfYIeo5yUUQWc3jHJn-->第 3 步</div><b data-page-node-id="jZa4lkVMX0aPe8ZZXrKbex"><!--pnid:iQzHXEzM7a5kK7t2Nem6na-->五大类任务归集 · 模板化生成</b><span data-page-node-id="YsguN8mcagXvmE53x6GBYL"><!--pnid:sVVouzuxX8hWYSsN6TFasL-->按凭证 / 资产 / 税务 / 对账 / 关账五大类模板化生成结账任务项，含标准任务清单与前置依赖关系图</span></div><div data-page-node-id="Jhh6E9uoZs8sQMshTVbjTm" class="step"><div data-page-node-id="MNPV9w9wzwX7EEyJuex0Mh" class="n"><!--pnid:DQhvhjBvvefT3bQCF3GXYu-->第 4 步</div><b data-page-node-id="H28kCDrrojDqFa0JaaMZe0"><!--pnid:o9noGDhMVgV8ObHZLcbj2f-->进度汇总 · 完成率自动算</b><span data-page-node-id="vmGTYtCJGUOM77mtLCQy2C"><!--pnid:BP1wIzHWz3WuLKCrDjVXeT-->逐主体逐任务标记完成状态，自动计算各主体完成率与整体完成率，标记遗漏项与即将逾期项</span></div><div data-page-node-id="lQqQHE8vffuRIRV2rNN4Gz" class="step"><div data-page-node-id="idlATmXKV1etQSleVChdCQ" class="n"><!--pnid:atVrJEjE8oB8NgFb97tUgD-->第 5 步</div><b data-page-node-id="yeZRalUlF6Qvr8oDhE5NZ3"><!--pnid:t4nu9SCzaLGnLinJVVjXtC-->关账前置校验 · 异常直接阻断</b><span data-page-node-id="EYmc7uZyTrW26orMyjftrx"><!--pnid:H5GHme0hojaARmJt74E28l-->自动校验试算平衡 / 损益结转 / 折旧计提 / 摊销计提 / 对账差异，异常项阻断关账建议</span></div><div data-page-node-id="axATrycglFiJtwKKEgNiK9" class="step"><div data-page-node-id="Niskqn7gvTVgkcXPOePuPo" class="n"><!--pnid:k8fImrb4ZrbOnJPAAyLxQu-->第 6 步</div><b data-page-node-id="yZV4vdPaWISkSOZJxfYEi5"><!--pnid:sI9x7TLdrpw7QLdlmVOQzM-->结构化输出 · 可追溯交付</b><span data-page-node-id="C6JB34hvmSDsbX7BTVBMhW"><!--pnid:WKZGTJGPWP6Wh6InAlkalU-->结账清单 Markdown 报告 + CSV 明细（UTF-8 BOM）+ HTML 进度看板，任务项附模板编号或文件行号</span></div></div>
+</section>
+
+<section data-page-node-id="MJapqXQ8jdhHIAicl24RZX" class="blk">
+  <div data-page-node-id="r9iHvmIpdZzboknssGVtbP" class="g2">
+    <div data-page-node-id="SLlJNCw1IwwRB4HeSRfUYn" class="card"><h3 data-page-node-id="sSdMb8iKkqvZYgs8NcgdfE"><!--pnid:4twz40cfGIY2EMrXimfXbp-->要准备什么</h3><div data-page-node-id="kS4q53etMfCfIkVRm7mwKP" class="src"><div data-page-node-id="GB7TiIlux8vjZRmWCA3Cvw" class="fn"><!--pnid:VR58cZ7SEebVssgbpTeyHQ-->结账周期（年月）+ 核算主体清单（可选）</div><div data-page-node-id="LN0kmwylvOuxiouw7JVp9g" class="fd"><!--pnid:92RNtDQdT6ZyJgCUQbsZSE-->无主体清单时按总部+区域+门店三层默认骨架生成</div></div><div data-page-node-id="L4N9F8qDM4FyiBMrCGkGpa" class="src"><div data-page-node-id="YcbLCMl2u4yf9je1q2N8XR" class="fn"><!--pnid:Ush7HLGaN0XIZjJET7x1zU-->科目余额表 / 折旧摊销表 / 对账差异表 / 税表草稿</div><div data-page-node-id="WdSwWnQxcHMbNyqdbEcITW" class="fd"><!--pnid:pY047sYVt7ICFftHG3unxX-->Excel/CSV 原样扔进来 —— 多文件多 Sheet 均可</div></div><div data-page-node-id="yrIWh6wxBvQrKScvis5vd4" class="src"><div data-page-node-id="ztt6mwS3VkOiPAqj5gxeYB" class="fn"><!--pnid:6J4euF9Ly7ebCFFEpdNR2b-->已完成的结账进度（如有）</div><div data-page-node-id="av9x3MvrotLjiHyecHBdP9" class="fd"><!--pnid:Ohq3xHXkrDq4J1mlqsAKwr-->口头说清或文字粘贴均可 —— 缺项按未完成计</div></div></div>
+    <div data-page-node-id="815kBRakCdH32vxHtEEdmK" class="card ev"><h3 data-page-node-id="34e2dYjQDZJsGfLEU8uPH9"><!--pnid:eAM62ZvUtWG3HlgPdx1q07-->为什么这个场景值得做</h3>
+      <p data-page-node-id="zUm55v0j1ye07gwa7wy6hn"><!--pnid:LpzaxgmDq9wWpGfmUuThjU-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="ylm4yMKDctnIZDx4DTP3Hj"><!--pnid:MBqCtTDM11bAfXfUpgUSgy-->8.0</b></p>
+      <p data-page-node-id="elbvgAuh1qHgzeVMf89ikS"><b data-page-node-id="J0OhfMGh66jkk8kUT7FuWw"><!--pnid:xKmU18VJ116e28yEOhYDIi-->最大差异点 ·</b><!--pnid:RKzO4W80ppfmHXy15f8mIY--> 不动 ERP、不改结账流程：散落的四类财务文件原样扔进来，清单、进度、前置校验一次成型 —— 财务只做异常项复核与关账拍板。</p>
+      <p data-page-node-id="cGk0oqw1EQBWi7Z0PJs8N4" style="color:var(--ink3); font-size:12.5px"><!--pnid:bzV2ia6C2M7708mVs8v3Xa-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="JS3qDJuSBQzQipnCn8tABE" class="blk">
+  <h2 data-page-node-id="4IjAM7yHmUKdtBMJmfAhzH" class="h"><span data-page-node-id="iIdGgNwWEAkFOgLakSx7Kj" class="num"><!--pnid:qu4HsyxZRVDNmUPDFpVX59-->五</span><!--pnid:iXuFXCaLSloeOcI03GoLgA-->会产出什么</h2>
+  <p data-page-node-id="CC79POoH7am3BRfyESBqM4" class="subline"><!--pnid:zS1kE4h4Ydt6Q19Jeyv72a-->判断标准只有一个：这份东西能不能直接拿去开结账推进会</p>
+  <div data-page-node-id="fLzqWL8QcibxJyI5aEmyDb" class="outs"><div data-page-node-id="AIf5X3RwN3Vnb7iZOVQqb0" class="out"><div data-page-node-id="4cFCaXE4vcdrtg6q9XuE74" class="on"><!--pnid:9fWnbFKLsqxNpB9dCZYOog-->正式件本体</div><div data-page-node-id="7zJFSQ8CH85VTqj55nAQu7" class="ot"><!--pnid:2wlsehtfwos0nGNfjv3FGs-->结账清单报告.md</div><div data-page-node-id="wefgEkpSJWwHxkxCkSkH5K" class="od"><!--pnid:4Q8nvBRgU4yFydXfaCgNIG-->按主体分组的五大类任务清单 + 进度汇总 + 异常预警 · 可直接用于财务团队同步与复核</div></div><div data-page-node-id="hxgq3hiVdrGkuhJyQTOyb7" class="out"><div data-page-node-id="mhkJeXSEU93h7LN4jxsp0M" class="on"><!--pnid:EMT7GiRUa7OUUzaQRpE0Vg-->演示看板</div><div data-page-node-id="9fPuL0IjNqiU1Pa7kBAgN5" class="ot"><!--pnid:8ERaOJMBW9xBDM7734jzQJ-->结账进度看板.html</div><div data-page-node-id="weDBrAkACvTIhHUcx2eStK" class="od"><!--pnid:D3gswCXPewTTjWJMs3iIcY-->完成率仪表盘 + 遗漏项清单 + 关账前置校验结果 · 浏览器直接演示与跟踪</div></div><div data-page-node-id="lFK8wHzCYpat3qFWIP9Tb0" class="out"><div data-page-node-id="uY4pnrSuwZO4KY4gw5Xf22" class="on"><!--pnid:yOy3xU6WavrQx0Xy7SoBmW-->可交接明细</div><div data-page-node-id="V34q1hJ1FS63WlnYy3dMIM" class="ot"><!--pnid:aii5bNKUH7WjBO5gAuusnc-->结账任务明细 CSV</div><div data-page-node-id="HI8R90Rzy4d17zPoHyBdxx" class="od"><!--pnid:Nv5uiQ50PcHzoJfUkLmNkW-->UTF-8 BOM 便于 Excel 直接打开 · 任务编号/主体/类别/状态/前置依赖/截止时点/异常说明</div></div></div>
+</section>
+
+<section data-page-node-id="p8SK8y5rjMgPN7tDDFXSYe" class="blk">
+  <div data-page-node-id="yEbqdGKkjVYFk2hgge544K" class="card warn"><h3 data-page-node-id="ifrwj3fj66UtuFqae86nPU"><!--pnid:tbKVdErOPXhzSTtOrRQoyH-->这套东西不承诺什么</h3><p data-page-node-id="oZmKDOYj8hJ5ALpSFQTp4M"><!--pnid:jqpyJH9DoBa2Kgf5vF0H72-->不替代真实 ERP 结账操作；不直接调用财务系统 API；不生成会计凭证；不对接银企直联与税务申报接口。试算平衡校验仅校验借贷合计是否相等（容差 0.01 元），无法识别科目串户或方向性错误，财务主管须逐科目复核余额合理性；默认五大类任务模板基于通用餐饮连锁场景，加盟、中央厨房、预制菜等特殊业务可能存在未覆盖事项，须结合企业实际增补；本 Skill 仅输出关账建议与阻断预警，禁止自动关账 —— 关账决策须财务主管最终确认。</p></div>
+</section>
+
+<div data-page-node-id="7Ex24pQnoe0LoIhmlnAoX4" class="cta">
+  <div data-page-node-id="tzlzYRNwvYShSISr1AGcts"><h3 data-page-node-id="L8BRYKPZr5jfVp4RUavv3l"><!--pnid:xk4lf2KTnIGER0fdN0Sq9S-->想看具体怎么跑？</h3><p data-page-node-id="gSPqxF2OiyUyWDWALODQBs"><!--pnid:aYLWaEJwzpNJgpHuVbntdl-->Live Demo 里有一个完整案例的每一步，包括哪些异常会直接把「关账」拦下来</p></div>
+  <div data-page-node-id="TUtaY6ZtBd3zfzd3sRGfL3" class="btns">
+    <a data-page-node-id="sDcOLic9fQtLZTdOuZ38Iy" class="btn" href="LiveDemo.html"><!--pnid:4zdEUYcSRzfjNOEHZKh5Cf-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="eoySlrthCVEUPEtIzpxaBh"><!--pnid:Kj3baOjn7QIGkCPmZhHZTN-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="VcsgWOzyt7x8BK2fY1WWaz" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="65x7aBobpIB0eZU7PmTERe" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="4PPlZeAT71jcCztNMNEqEI" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="vKZ0JJoQBP1PXnIXlD7ipY" data-pnid-children="spKTJU3NtVsiMSICpoGFCU">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

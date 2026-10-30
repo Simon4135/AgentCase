@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html data-page-node-id="nEpfcf7gq4FSelGTxuQenO" lang="zh-CN">
+<head data-page-node-id="D05jUuvY3BPS3WiJGFcp2w">
+<script data-page-node-id="yWMtUH8h3Lz6kSB1Ef96ww" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="cV69wThHyt43hsTsdnY2DD" charset="UTF-8">
+<meta data-page-node-id="O5LtOx24Ji8IYokgCcUPkU" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="z6DJtHiZFMGpJtwlgqxRxs" data-pnid-children="8hoddCthdHoeF62ETCbKBQ">Offer谈判测算</title>
+<link data-page-node-id="BqxkN2stD9GqWeqPUCLpIa" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="bt57xuht5GDV0VBT9sTTb8" href="_assets/shared/hr-extra.css" rel="stylesheet">
+
+<style data-page-node-id="Y07fltYSVwa5UQdSHnWZXo" data-pnid-children="u0vlesvuYMdzJZkAQcmdPU" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="ay7P6rNSe0UgzITY0v2AGq">
+<div data-page-node-id="cSAxGP9k3TliexBPPuXFCp" class="wrap">
+
+<section data-page-node-id="LQvBhtr6ZdY30pou0NPdGf" class="page-hero">
+<h1 data-page-node-id="kfqRjES6t9GcukSgGx7thQ"><!--pnid:NZgX5Ze05AKdshL5F47MdC-->Offer 谈判测算</h1>
+<p data-page-node-id="MpqPZvZW9IsNBOqWpKCMCi" class="lead"><!--pnid:2GUlHYR7KYz8zuwEqMYBvY-->OfferNegotiator Skill · 期望+带宽对标 → 参数组合 + 谈判策略 + 风险提示</p>
+
+</section><nav data-page-node-id="Syv21yEYLSeQPflA11v5Oo" class="subnav"><a data-page-node-id="18ZWMCVpB0AdGCZ3AeS2Hn" class href="场景引入.html"><!--pnid:aOWNXEfhuPI3TVpK1X2YNa-->场景引入</a><a data-page-node-id="qfv3GNHvnYl6FGObRh6rz7" class="on" href="#"><!--pnid:8ZI4kfMf5VEJUGwbHEEFbe-->Live Demo</a></nav>
+<section data-page-node-id="JV0a8Li6CvE1C8xUnrbzuc" class="notice warn"><div data-page-node-id="5AOybQGiCVHzdNYYpRwdCh" class="icon"><!--pnid:r7qlkDfIcnLnFwwh1lrvAu-->!</div><div data-page-node-id="oOgVq0vu9ye6gc3DrqHFWM">
+<b data-page-node-id="XZK02CMH1bqDV6bhtnqc57"><!--pnid:Rt3VCxzWDVLPcHca7tUGPo-->演示模式 · 可视化预演</b>
+<p data-page-node-id="L4r8FSVJCb4BEXXECBsGvQ"><!--pnid:2pCJRyPvxRAuJxcCLuDxCq-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="VX6J31uLHg5T7XYKGvzFZX" class="kpi-row">
+<div data-page-node-id="5Fu2WtO0DDMppq5FO2Gm72" class="kpi"><div data-page-node-id="aCUB6C0EhpYs5Xi5CnR53X" class="k"><!--pnid:Az6fFPEdVxuvD5disJMUnr-->待定候选人</div><div data-page-node-id="nwGh0X83Tte3CD8TpymW7y" class="v"><!--pnid:kG7ikFegQ3GiEGtAC8Ex58-->3</div></div>
+<div data-page-node-id="qTmFuzJJpZAjSwWUDVLsj8" class="kpi"><div data-page-node-id="K6uqbXDYbpaAsvdkUC98zj" class="k"><!--pnid:yTYGOsKsIOxlabsvvWi736-->Offer参数</div><div data-page-node-id="YBFUbpF5fHzzzay1MYVOJK" class="v"><!--pnid:2dWKqD5Le08gyO8FoEHW3L-->5项</div></div>
+<div data-page-node-id="FEgCirLUWmCIsHnhZblbPB" class="kpi"><div data-page-node-id="4P9VxC6lSg30zxQRfr4c8C" class="k"><!--pnid:GUk0mZzFE3bq4vsv9Zhy8M-->AI处理耗时</div><div data-page-node-id="HWdbPEG2HlpAeD7cBUpwL0" class="v"><!--pnid:JUrWd3hwz2JF6ZJzJpZG29-->1min</div></div>
+<div data-page-node-id="RXgJ82b1yZkQDNp9e1Nk0i" class="kpi"><div data-page-node-id="94yyeSqyaHjS9Zl67vOJqN" class="k"><!--pnid:3DWFAZYExEusrA4uPK9EdG-->效率提升</div><div data-page-node-id="gD52KhRMaiXPwwfDlgCccG" class="v"><!--pnid:6yRg3kqvFchO8QdYMEUGPD-->-90%</div></div>
+</div>
+
+<section data-page-node-id="QMPU4keNNMpe7EnRTa20IF" class="phase phase-in">
+<div data-page-node-id="0b4AURxYwtxXtqpvLH93QM" class="phase-h"><span data-page-node-id="NQ9yjAIVMvduJ0nAR8TkHU" class="phase-tag"><!--pnid:ZJgYxHKIjY7LrfQkL6Dhx9-->INPUT 输入</span><span data-page-node-id="z1J4J7VyK3dK9bMA69dn1x" class="phase-title"><!--pnid:KgK3wpPMDuZT5yYeX16hnl-->候选人期望 + 岗位薪资带宽</span></div>
+<table data-page-node-id="lfmY35d9KJ8iGGG2jIcxGZ">
+<thead data-page-node-id="qcPn8Utr8bF15D25C3gvKo"><tr data-page-node-id="JB5C4YGqxuQFZB2mlw4L5L"><th data-page-node-id="YvmZd3WDWXSxqAGwvzr054"><!--pnid:TBUTfhkzdnlNWePMEqgx4w-->候选人</th><th data-page-node-id="4TWA6MVhS8qDWSXp9UPPk4"><!--pnid:vdK0DnDhn0QkyZwZFBDW4z-->级别</th><th data-page-node-id="Vbpbbrxq4HPKc1nvizsnFM" class="num"><!--pnid:kxG2ToNh2MsF525vXwExz7-->期望月薪</th><th data-page-node-id="IRzZUUrQ60vseL66JVJJra" class="num"><!--pnid:vqpBZSs9CrcOwlDTvelboD-->期望总包</th><th data-page-node-id="ohuDbXYXuWrENT7gJe4ULa"><!--pnid:iFwaBcfrdLgUvctj3ZP8jS-->期望签字费</th><th data-page-node-id="4m3kdyEQRhnc6N5g7GPgRl"><!--pnid:zIDS32kNosC2QcYfGqEQYt-->特殊要求</th></tr></thead>
+<tbody data-page-node-id="aK83fTBphXpBVzWPO8PRAW">
+<tr data-page-node-id="QSBo25g6CTf7uYNhFfMvB8" style="background:#ecfdf5"><td data-page-node-id="yXECFu8isHveBoBJdF9J0N"><b data-page-node-id="ep84jsHqyRi6LXK6xfJhGR"><!--pnid:icASmfqOm2DKxGVQnVj1p4-->赵立军</b></td><td data-page-node-id="JAqstA8qAbxhcfs3Rvur6Y"><!--pnid:OIGXqgGd2GOVl8GBLtWoXP-->P4</td><td data-page-node-id="Du2vpWVGAll1RoaEDqbwFZ" class="num"><!--pnid:jy2om7q5q1XGpDkkc7BAoT-->30K</td><td data-page-node-id="Tg28V3H9Mzt0VKKwPS9ghG" class="num"><!--pnid:RgISHBDP3YF2eHYRZfTmLq-->450K</td><td data-page-node-id="bEjeUms506SgEKaoyZIvp4"><!--pnid:t6PUKusoCpsrC0GpDmPZKy-->1-2月</td><td data-page-node-id="gfAUWk8jdocItV9W8OyvRe"><!--pnid:dYsIfpQFcEURoQJSBgCfAg-->工控龙头平台优先</td></tr>
+<tr data-page-node-id="k33tHMmXmUNqiQD6DzQ8Cw"><td data-page-node-id="4Ox6UpeV6hRE0SX8Gw8yAw"><b data-page-node-id="MApQPYggqg0VOD1INkP1YQ"><!--pnid:LWxnIFY5m7wqyX7Oho9Nwz-->王海</b></td><td data-page-node-id="sjR9RqalPgPmug0YEKyTlY"><!--pnid:g57d5kJHVBPHMIWvAaGgxV-->P4</td><td data-page-node-id="FT2S7sMz46mBX11Z06ILmT" class="num"><!--pnid:sTJ7T6msPDpWfr2wdB6HeS-->28K</td><td data-page-node-id="B8kK72iE4nmkFwnrFvmEax" class="num"><!--pnid:08X0aRpPCe4muLudKMyQvC-->392K</td><td data-page-node-id="DRbvq7FnC5atg05SuPcopa"><!--pnid:DnsdNmChzCaMjVBy2Xg2SR-->无</td><td data-page-node-id="xmECC0du2SF4MfDTZoTVKW"><!--pnid:GDa6V7ZFvpIkavuQJXdFpv-->团队TL机会</td></tr>
+<tr data-page-node-id="4YUQtvD5GQEglrK8ZakKlk" style="background:#ecfdf5"><td data-page-node-id="5ma7NwVTEucOALOgvVA2lr"><b data-page-node-id="Zz4lPDr8DbBl0pp8URRViG"><!--pnid:zAfu7FdvvD7PlpgURcLJtP-->刘洋</b></td><td data-page-node-id="EO6wnb7K2xCAArdHYRqLwt"><!--pnid:QKYciaYAXnwiyWUK5JGLHa-->P5</td><td data-page-node-id="1mmzTzNqQyzCyKj5loU0P7" class="num"><!--pnid:pGtElZ2LVBdrVMLyS9HLAe-->45K</td><td data-page-node-id="XpU6YQjbzkfW13yfw57v1R" class="num"><!--pnid:H8Z9GCSfDMqxsxLrBpvAgL-->675K</td><td data-page-node-id="qCWVAPJYbvsve1hYE0fqFU"><!--pnid:0ocgzTHMvehtrdzf22B2bu-->2-3月</td><td data-page-node-id="E7n9K2vbuivN45ILigQBbZ"><!--pnid:tJZBUGMylWIBYmwcqXVdxa-->外企背景，看重稳定性</td></tr>
+</tbody>
+</table>
+<h3 data-page-node-id="QOdI3gB0HX6PWdH0dpkkAp" style="font-size:14px; margin:14px 0 8px"><!--pnid:h7hXVN1cmMKYcCPVyfv2CW-->岗位薪资带宽</h3>
+<table data-page-node-id="Jilq4RFZWOhVb1iWSKHFjr">
+<thead data-page-node-id="WQw60JJOwpikfU4sj5InHh"><tr data-page-node-id="UD5QnhYVxVtcL8ZEVJn8KS"><th data-page-node-id="h02NAXSKjS79jydWuviket"><!--pnid:FxW3lzAwwANZCfkl5c9V3w-->级别</th><th data-page-node-id="ICl67OzkZmKc1K4WTeUzX8" class="num"><!--pnid:PTOdAuZaAjeB3t2EBZ3P92-->带宽(月薪)</th><th data-page-node-id="uFrAQ4JMQwfDzfISvA5BQy" class="num"><!--pnid:xARyhUvtZZnGkZD7Gjgabg-->带宽(年总包)</th><th data-page-node-id="kG6FfcLdjcX8sXAvEAx5Hy"><!--pnid:01dRtmbAp75seVDxQnN51Y-->市场分位参考</th></tr></thead>
+<tbody data-page-node-id="KBAv9KdjPfHvydXC60aRoy">
+<tr data-page-node-id="ZL9F6ZhFn3l6VD2NUroQnm"><td data-page-node-id="zlvVCbqGuOLngnXhnbPROI"><!--pnid:oe9ixSF9hGCiptgTvIkBDC-->P4</td><td data-page-node-id="EyR0EM3Ulw3mIhShon4eD4" class="num"><!--pnid:ceZB35SzQ6KgW2wiR3BVBV-->25-35K</td><td data-page-node-id="MhQoloTUpo9HMwRPXj0zuL" class="num"><!--pnid:czvVh3eNvg23LvvvqcOtTD-->37.5-52.5万</td><td data-page-node-id="LHHpHkY3lTbFctUJRnmrxX"><!--pnid:w4cPHiy1YfUFrzvuikecsL-->P50 约 28-30K · P75 约 32-34K</td></tr>
+<tr data-page-node-id="wFH3BBkJiDmNqfqM8tprnb"><td data-page-node-id="shQq0M0pdjD3TLRSlRGCsH"><!--pnid:iZsaojxVj6G34o2iNUAqOr-->P5</td><td data-page-node-id="zUzaR06xvnFNUCjjB6WnK6" class="num"><!--pnid:rgKvhghGyShu0CysX0HBq0-->35-50K</td><td data-page-node-id="6nk6XDf4CxpruZpHpd6kOJ" class="num"><!--pnid:0afoKo6dOz3xTVpnnboB1r-->52.5-75万</td><td data-page-node-id="YMwQFrtyBSnJylpTaTtuCs"><!--pnid:oglnwVLltp9zv3fBXQB3f8-->P50 约 40-42K · P75 约 46-48K</td></tr>
+</tbody>
+</table>
+</section>
+
+<section data-page-node-id="25FyrsNyIzGwcjI0lFz4vk" class="phase phase-run">
+<div data-page-node-id="1TUHoWiDqzeKcKQ07AXkjC" class="phase-h"><span data-page-node-id="kjht90j9x0KxiDuBzrvsSb" class="phase-tag"><!--pnid:lxpoUmrWv0eKFLxHcFyJNO-->RUN 调用</span><span data-page-node-id="WdEUqxMRaImY6jKnWYrgQP" class="phase-title"><!--pnid:v41eNgAhWqKOnGNRp7cU77-->一句话调用 + 引擎执行</span></div>
+<div data-page-node-id="pBOGhsiTNCiALxU30S3vzH" class="console" style="padding-top:24px">
+<p data-page-node-id="NXIplMTDUQ0lG4s7N4vfOc"><!--pnid:x68U5h0bgbhnOlRecgdv6F-->3位候选人要出<span data-page-node-id="csyoMvZpOJKPMvoJ8mwhap" class="hl"><!--pnid:LKmYuNM41I9I8BV18QGJ6L-->Offer方案</span><!--pnid:nxzhem0I6lykK21Lkb0B9k-->，数据已上传。<br data-page-node-id="6imiDKuDFXmp4Ld2wicwt9"><!--pnid:2pNh2QkM34YdtOHUFgNJzH-->对每位请输出：<span data-page-node-id="vBuHC5IScdM9JNfbcPFr4Z" class="hl"><!--pnid:EWPlfQJNrMQJyPuJpdLFNY-->① 分位定位 ② 5项Offer参数(base/奖金/签字费/股票/总包) ③ 谈判策略 ④ 风险提示</span><!--pnid:ZFqWi0lKokLOrYLqSUu6oZ-->。<br data-page-node-id="ERZgoi3OIYaLGHj43iLPqT"><!--pnid:CqgSFPLuiJ1UxdkCwPWXWX-->默认：首报 = 期望 × 90%</p>
+</div>
+<div data-page-node-id="rkqJW2uMMHdJzEn1KLBfsi" class="engine-toggle" onclick="document.getElementById('eng').classList.toggle('show')"><!--pnid:BUgsFY7UZL9osJ7AQO0gex-->🔧 展开/折叠 引擎调用代码</div>
+<div data-page-node-id="ZbXZNXkUwjySJ9l4MWQyvh" class="engine-box" data-label="🔧 Skill 调用 OfferNegotiator 引擎" id="eng">
+<span data-page-node-id="NYPy1YiRuJmx3p0H5KGi8P" class="cm"><!--pnid:Guzrz2GisMoMciMkm36d7g--># OfferNegotiator 引擎</span>
+<span data-page-node-id="CkqVV7SHV9rS0rm17J06W2" class="kw"><!--pnid:zZUog6Ln7UkiMeDKpuZ7DD-->from</span><!--pnid:KIQaxmbSP5oiPQVkQWSbEn--> offer_negotiator <span data-page-node-id="DW67GnRNezPwqjvjwKNnj4" class="kw"><!--pnid:myVZPUuZskVPspDgVrGDDX-->import</span><!--pnid:GzqKI99JCRonB6HElfl5WZ--> OfferCalculator
+calc = <span data-page-node-id="ZQUQjPAS5Mlf0ZRawgJboa" class="fn"><!--pnid:klWBoUwwJrU9CtICb5wf2b-->OfferCalculator()</span><!--pnid:it7PWGrlUhmlVF6WoPjwDS-->
+calc.<span data-page-node-id="dmRHbBtXvFgjB5RSDAlzwF" class="fn"><!--pnid:H3KW6righGrARNoQy2BvQ1-->load_company_band</span><!--pnid:dwNpHvapSeOl4zi1Vts8kR-->(<span data-page-node-id="u7toEvbjGDTm7jLzO8XkQ0" class="str"><!--pnid:8ipYGJjOL3PrOx0DbqGNq7-->"P4_P5_band.csv"</span><!--pnid:oPJQHABTKI19PjbwtYRuT4-->)
+calc.<span data-page-node-id="aLEXAkYjn0L4dsaRbiwGC9" class="fn"><!--pnid:dpPe5W9JnvmO2gx19pKWzS-->load_market_data</span><!--pnid:haLzHkePMfP1XPLeC6SZ2D-->(<span data-page-node-id="vT5WI5dSJKBCJoi5agFemb" class="str"><!--pnid:Yxh0DsgBmlyGUJgBjGy7sQ-->"2026Q2_report"</span><!--pnid:XdrhwPzsOVbzPDDyM3HjpR-->)
+<span data-page-node-id="c2tPy9jWly5REOQtO12xhc" class="kw"><!--pnid:T912g8Vot5JzaQg1X7lU9P-->for</span><!--pnid:h8rOvnFOm2x2gdaIaGmlZy--> c <span data-page-node-id="wOnY77uGMuTKXEyNZILZKt" class="kw"><!--pnid:oiKNM4wmgt06pH6L041aoL-->in</span><!--pnid:nGhxOWRgoKE2nPpDb33Ws1--> candidates:
+    band = calc.<span data-page-node-id="QfLdIezdL99ZgzjXJv6BzR" class="fn"><!--pnid:gnjJbYis4FNK5Z614u7hzK-->get_band</span><!--pnid:nOmaVqVkkq39dUlVzm2r2f-->(c.level)
+    offer = calc.<span data-page-node-id="oxlOnUMNSp3pbFQ8mEnr2I" class="fn"><!--pnid:PvXClqSY1MuZdAZCHpEJIj-->calc_offer</span><!--pnid:mVsoOINRVuhve1biJ2MpKu-->(c, band)
+    offer.<span data-page-node-id="vNeozRSZtklPoieOVlYGi1" class="fn"><!--pnid:IqkWfAqIVvo1OmNcvffmPo-->add_signing_bonus</span><!--pnid:r9lD0cXrdbtxXbWcK8iena-->(c.expectation)
+    offer.<span data-page-node-id="5110nLWOZmmayGrgNeJI5C" class="fn"><!--pnid:raYezQenY5bhy7bwmhe5vi-->add_equity</span><!--pnid:abpb12vtAU4ct0peoOnYjm-->(c.level)
+    offer.<span data-page-node-id="Ikrotae9s32f324UhR6TFe" class="fn"><!--pnid:APQ9Yw72g85R8lPDJIufRD-->set_negotiation_strategy</span><!--pnid:0RkmhhFULq9O8Hq16wMW5l-->()
+    offer.<span data-page-node-id="cCvf4nXXZey6Rj6mzjNtfU" class="fn"><!--pnid:Hz7XoI1Ehv1jcdJ8FczzmB-->flag_risks</span><!--pnid:raUh00sxuZ1NbodjNbML1k-->()
+</div>
+</section>
+
+<section data-page-node-id="nPXGWRvSUWFGvOu21QH2Yo" class="phase phase-out">
+<div data-page-node-id="EwBO9vDa6LQPRjf3iLWbBO" class="phase-h"><span data-page-node-id="FgCFa8N9fDpqihXnNL3Qsr" class="phase-tag"><!--pnid:D5GUmd8bEiXW3fmyQkITDf-->OUTPUT 输出</span><span data-page-node-id="LnQ6LSCmt6mJUQJ6LZLS4I" class="phase-title"><!--pnid:JxqykWss6TwNpz1LWuxSJK-->3套Offer方案 + 谈判策略 + 风险</span></div>
+
+<div data-page-node-id="7vY4GJXVhtMDlK6clTwWoc" class="result-card">
+<div data-page-node-id="WWBnYnGVlJOvC19c5fD7US" class="rc-title"><!--pnid:370eXDHPkzkratg9kFL9f9-->💼 赵立军 · P4·P75分位</div>
+<table data-page-node-id="gFofUbzwTAjwaDdsuxppGV">
+<tr data-page-node-id="dydCLgAv7jKQBhMYEGO9l8"><td data-page-node-id="1jLsbfNS97vfqwWdtSGshM" style="width:100px"><b data-page-node-id="8ansew1Z1xiXnKxwoz2VEV"><!--pnid:TCEBmL5fx6POMBaH6trO9d-->首报月薪</b></td><td data-page-node-id="DYG9JDXJneL9kMQCwhtFdn"><!--pnid:zyKpmBQ20FxKiLqyKvCKBX-->28K（期望30K的93%）</td><td data-page-node-id="F1znyfV36Q7krAO5E1Tfz2"><b data-page-node-id="GWKmIxSju6vH9ZCioHfr0z"><!--pnid:kmp6AyMPRCataQuSjl4lLM-->年终</b></td><td data-page-node-id="x8gc9bLBHBiKj8Csu5MB4s"><!--pnid:SgHGXmzr3zQKNPE4iP9lX8-->3个月</td></tr>
+<tr data-page-node-id="gCLD71nMWBxk7QIAQYsfZl"><td data-page-node-id="N60lqcoeUeyJP64Kw6uU5G"><b data-page-node-id="9wCEDhS7j439VWd2NKFa5z"><!--pnid:Eq8P0dKf03hbzxCxxRumAC-->签字费</b></td><td data-page-node-id="qGK4qt8HvArN3UUR9ugF1Y"><!--pnid:qGm7A8Qj0AUi7JBCPJyLTp-->1个月base = 28K</td><td data-page-node-id="B53QiPSiXfwal7XSLrG2a7"><b data-page-node-id="hdvPilXWtaNIqFIeLiagkl"><!--pnid:rnG36vl4CLqRKmnwGneMyE-->年总包</b></td><td data-page-node-id="Lxoph9Q7onSwQd0XENMIM9"><b data-page-node-id="6op0n0qOsjhMlamdlaHYtd"><!--pnid:g5hNmL8CAbdgutGZlbKXEG-->445K</b></td></tr>
+<tr data-page-node-id="rYiiRpE3oGfqJQwQWCtfSU"><td data-page-node-id="hsbGO0ewrWWOUwpvaAVwby"><b data-page-node-id="HXIgJHIjy1XTKpL21Nk55I"><!--pnid:BIsnr7nwzxBmfiYkEcvD2R-->谈判策略</b></td><td data-page-node-id="EepjURbFECPKwMDQSleGkv" colspan="3"><!--pnid:4FCmUkbgb5tUa3mghjQxwg-->首报=期望93%，让步2K。强调工控龙头平台+量产机会</td></tr>
+<tr data-page-node-id="ODJtR9MTslKv4tfPHlFZTh"><td data-page-node-id="ynjy4RQ5NjAPSWjOZkg1RT"><b data-page-node-id="d2N9CFoxAJqZxxVo7ZN8jF"><!--pnid:kGipHPHyKlWYoKgO88RSyB-->风险</b></td><td data-page-node-id="2oTWCaqOuArlK9G3Sw1BYx" colspan="3" style="color:#059669"><!--pnid:D1Z01hfUvvQUOxiL3IX613-->✅ 在带宽内·无重大风险</td></tr>
+</table>
+</div>
+
+<div data-page-node-id="4TRQmp9VTLhRPG6tbGrR0z" class="result-card">
+<div data-page-node-id="HFr5l7zaaygaDiNgjlwLbP" class="rc-title"><!--pnid:5SccTcMLZCxjEPWw7Wpss4-->💼 王海 · P4·P50分位</div>
+<table data-page-node-id="IxpJ2xecrDf73B1SnXvogK">
+<tr data-page-node-id="fAc8O1gcYHvds5WHkKWtMs"><td data-page-node-id="BWtseyLzLRk0N2jriOvcza"><b data-page-node-id="PVri97TD4mmri3neHavvXT"><!--pnid:SVyCMwn2SC17i2lz3Y4KkC-->首报月薪</b></td><td data-page-node-id="jvfYRjRWzgWpcQ76yNBskp"><!--pnid:2c7FzFvGkCa2uw0fTsNg7B-->25K（期望28K的89%）</td><td data-page-node-id="ZtpL8AgiDgg9IdvYMAKfbM"><b data-page-node-id="VNwF6GaJHYHwC5I3p7lvtK"><!--pnid:BgmVHcc5y8Q6C2WupXkgVL-->年终</b></td><td data-page-node-id="psStqIEXIeUVQ8Omi6QYbL"><!--pnid:ZiZ4KBbHGarQcyNPpngsvY-->3个月</td></tr>
+<tr data-page-node-id="Vv59ia5TaSpkOs4ESI5onH"><td data-page-node-id="CQMzzFPXrWg32435ak4bqe"><b data-page-node-id="Sl9NUCxuKN9h5zFH2LevTk"><!--pnid:nYesTfdgmYIGzmajFrKsdx-->签字费</b></td><td data-page-node-id="WpKkMbWwtq13LimRC4rJ4a"><!--pnid:boCJlep9IqekIkEsVoiO2r-->无</td><td data-page-node-id="t8VuYQ0moVKyyNQAULUH4Y"><b data-page-node-id="qpckCCgVCmZmpTKLzGPRFr"><!--pnid:nzx4rvfuq99sUwbTpaDN9W-->年总包</b></td><td data-page-node-id="SZDG4XBDNa1e8o8tC8Zi4q"><b data-page-node-id="q9RfIfhJr8HMaTD8fBjVMI"><!--pnid:a275IV3wrkuiHEJZBZXLFM-->350K</b></td></tr>
+<tr data-page-node-id="uNyZCmAquS7vYXPsv4bGDv"><td data-page-node-id="QZcE5gRHsYrWCmReqWJv6h"><b data-page-node-id="ZjqNQopz7oq3ogWU2wgPpL"><!--pnid:EyMK30ETKoRiKlQyQ3EqVz-->谈判策略</b></td><td data-page-node-id="lnNOnPG9MI7CoFABcLDDMw" colspan="3"><!--pnid:AbWczGL3V1bqOfhEDn72i1-->比期望低10%，<b data-page-node-id="jNduUluB7ACmF8qyI8e1Q3"><!--pnid:w5OWN1BbErWKiXdjI9qx16-->用签字费+TL机会+加速年终兑现</b><!--pnid:2SiT2ZNDXWvqv5AtF1882I--> 弥补</td></tr>
+<tr data-page-node-id="JWUDEJRfMQDj42ha9SvYsD"><td data-page-node-id="qRQAsRIr5owATCahENii4W"><b data-page-node-id="PImZuR9s8WykN1iJNZowME"><!--pnid:T7iLhDm9oODmGMpIOFT06F-->风险</b></td><td data-page-node-id="8ow4maNUDEblBOZe1HmcWW" colspan="3" style="color:#b45309"><!--pnid:rMYRZZyoB8H0CBEeGqjfw7-->⚠️ 到岗2个月是主要风险·可用签字费换提前</td></tr>
+</table>
+</div>
+
+<div data-page-node-id="ZreytGqc0W8fXTVUmOVhMA" class="result-card">
+<div data-page-node-id="6VtGOul3rvR73QTGYsoE8H" class="rc-title"><!--pnid:lPkQTtivhRe7Sz5TAo9L1H-->💼 刘洋 · P5·P75分位</div>
+<table data-page-node-id="ADG2kK7S3yvpA9XbVtxYQt">
+<tr data-page-node-id="D0GRGm9glBzSY8DVVdqIrV"><td data-page-node-id="vcdo32N0LeS5Ls7lzEzjx9"><b data-page-node-id="7ABIOL4pSpopjqXR7PQJxC"><!--pnid:vxEgCMbOMNgmh2hzVet5XR-->首报月薪</b></td><td data-page-node-id="uMSkkxvVqEJpQy6H1qDGLW"><!--pnid:RRhddodHgFqfAWJKgCaGbJ-->42K（期望45K的93%）</td><td data-page-node-id="hDGQ6zbl9cc5HwjkXluQXr"><b data-page-node-id="2uxfsXARrKUrNcenQRhCKY"><!--pnid:iEY7wd6DLQAF7xe9ZKlMHu-->年终</b></td><td data-page-node-id="VdG4mrioRS5kKxNPr3VvVG"><!--pnid:NH2JUznV1D00ssTsCjZ0Hx-->4个月（外企习惯）</td></tr>
+<tr data-page-node-id="jBmcN4lQQVmSK9qlXTSGMd"><td data-page-node-id="Gwzvk4ynfB2Q3z4DuDs1Rd"><b data-page-node-id="4CPvTyO8P1qmVsYdFyo5HZ"><!--pnid:OoFhcVLXckClIiaqYbCGv8-->签字费</b></td><td data-page-node-id="7P8w3hT8J3Nhzt72EUazxr"><!--pnid:rZwC6P2RG5yqM9ODRZIC8U-->1.5个月 = 63K</td><td data-page-node-id="oPENgRkjqtqNdh9GQ76CV0"><b data-page-node-id="JYxBdJEcn44bu1kYo88Cy4"><!--pnid:11rIH0ONaF3JQCNPOT64Ln-->年总包</b></td><td data-page-node-id="Hzj0n7u8K9VeIpDKcQvLXH"><b data-page-node-id="o3swMiMBPU1YsrB3ojbzNV"><!--pnid:28vwRInzjdcoAZrj77Vut8-->693K</b></td></tr>
+<tr data-page-node-id="YJbsM2jfaM5GoG7aAUSjcn"><td data-page-node-id="yG1PeDDaXAHDpgGPZNDYIp"><b data-page-node-id="LDkEtLKZTNxafnyqSGxZJh"><!--pnid:pQnBFbYinDHPyMtWh2kWCN-->谈判策略</b></td><td data-page-node-id="FaTp9p2nRYXGquppAgMhlj" colspan="3"><!--pnid:MMEDtgJauWT5LaI9f75XuG-->首报低于期望7%，<b data-page-node-id="XeQam4pdJoeImQOHdbwmSz"><!--pnid:MR3CSy46kgU3ivkoOatuOp-->用更高年终(4月)+签字费(1.5月)</b><!--pnid:QoG4zLJ06u9yJWXf4QSezi--> 化解</td></tr>
+<tr data-page-node-id="xDs8UzfyIkmvNqESirwRHz"><td data-page-node-id="kIcfsNMMYuqhACskkJJ40d"><b data-page-node-id="ZjTYoUdPes3G89KQEY3Tjk"><!--pnid:5Ax6itFFgdNiijlsi8bh5L-->风险</b></td><td data-page-node-id="ST2eusKQzzGmJngJpIZ447" colspan="3" style="color:#dc2626"><!--pnid:jvD1zyF36zMtP5GxkiiGct-->❗ 超P4带宽上限·需走特批·建议按P5定级</td></tr>
+</table>
+</div>
+
+<div data-page-node-id="eyEAkUH7ofCY21SHmbIn3V" class="result-card warn">
+<div data-page-node-id="ayofPQKylcQiL03PO84TDr" class="rc-title"><!--pnid:aRhya0h5ty371ApFCpknGj-->🎯 通用谈判话术</div>
+<ul data-page-node-id="O8iiu7zDZavATtWYsIB2m4" style="font-size:12.5px; padding-left:18px; line-height:1.8; color:var(--ink)">
+<li data-page-node-id="zXvfJIiw9Cgg2yWCVVZCQp"><b data-page-node-id="zcJGf2KaPlytKqbSCLs99l"><!--pnid:Wv5okTFITsHNs71el302PQ-->竞品抢人</b><!--pnid:ip0t3CaRatJ39nBl2xlf1y-->：对比总包而非月薪（我们年终+签字费 vs 竞品可能只有2个月年终）</li>
+<li data-page-node-id="6fMYMk7Qvne0wP5UOn8BEC"><b data-page-node-id="4AgiqjQavnBPwrh10iA77Y"><!--pnid:VYNJoIQKJ2GSt39YFrQVre-->压缩总包</b><!--pnid:tZzVp9IbFFFnQOlcrFO9Ay-->：减签字费→增加期权，把现金转成长线激励</li>
+<li data-page-node-id="udccp5ucE025RZSVjZc8TE"><b data-page-node-id="UXA546zWu7NlHh3PmL1kM0"><!--pnid:bp0iAr4CcyPOblFcgjYfxw-->候选人犹豫</b><!--pnid:iDqR8fqvykwBwRFqgdhBZV-->：强调团队+项目+晋升空间</li>
+</ul>
+</div>
+
+<div data-page-node-id="vDL62qkcRhcd8LJlba6O0u" class="eff-bar">
+<span data-page-node-id="jSEXUEQfUcdp8ACZoE5BJC" class="label"><!--pnid:7uo2o3UqCb46WHWY1HseN0-->人工 1-2小时</span><div data-page-node-id="0TO9IvjYablX8NtvvP0Bo8" class="bar-wrap"><div data-page-node-id="9DNKXvv19vVhaCvz1bfxZ1" class="bar-fill old" style="width:85%"><!--pnid:MNS26k0PuiT4n9dXcOtBTo-->1-2h</div></div>
+<span data-page-node-id="dCiJtMTRg1NHRfJTn7o59v" class="label"><!--pnid:OlejqShEGZRNQTapcbSmJZ-->→ Skill 1分钟</span><div data-page-node-id="xRt1QTg6tbRjQinqdLYQ8E" class="bar-wrap"><div data-page-node-id="Ja0HuTJXKczL9qV7HHmkIA" class="bar-fill" style="width:3%"><!--pnid:BbPZdeTtVmhdC6PxDGmMY7-->1m</div></div>
+<span data-page-node-id="ZJMgsuqSYoppwiVQvSlLEO" class="label" style="font-weight:800; color:#059669"><!--pnid:54EbnXzl3b0JM9YaZZlhNU-->节省 -90%</span>
+</div>
+</section>
+
+<section data-page-node-id="rtf7x9o9h70ukiPwl4l2rF" class="faq"><div data-page-node-id="ckQnZxsrRFVIsxdiin40qg" class="q"><!--pnid:0U1Kfa6biLckU0lItx9ho9-->❓ 候选人期望超出带宽太多怎么办？</div><div data-page-node-id="vjou4vL3orO6xR5cWbaYn8" class="a"><!--pnid:eDwXv0faCkk1adrNAsIwOG-->建议降级招聘级别（如P4降为P3）或走特批流程。如果候选人确实强，可考虑股票/期权等长线激励弥补现金缺口。</div></section>
+<section data-page-node-id="JlDg9jkfiG1kQreHKd6QRl" class="faq"><div data-page-node-id="dPynJXH3r16515X2suZa8D" class="q"><!--pnid:60ofVSq98KyZoRh884wWyY-->❓ 外企背景候选人的报价有特殊吗？</div><div data-page-node-id="VCLA8LKFLD25aG3jaTlQkB" class="a"><!--pnid:vn9YF3ykhOJENpC6ndydKL-->有。外企候选人对年终(月数)和签字费更看重，月薪谈判空间大。建议用更高年终(4月) + 签字费(1.5月) 组合，总包可能持平但候选人接受度高。</div></section>
+
+<!--pnid:YHu6bxScvrb6zw5C186e9r--><!-- 三件套已移至顶部统一导航 -->
+<!--pnid:Dkx7g2V26NC7EGFNLmaISo--><!-- Footer CTA -->
+<div data-page-node-id="lljnhX3tG6u5PRFIgyRIqY" class="cta">
+<div data-page-node-id="PblEpro5OHrrq18Ey9n1TK"><h3 data-page-node-id="O1AS5BRpmy8T249BEUuuHd"><!--pnid:IL1uGWSKluuQtstGpqkMR6-->想了解来龙去脉？</h3><p data-page-node-id="f09um4DrhYol5QgsFAm8ev"><!--pnid:6dON05zo82Vk8r3JlWukwK-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+<div data-page-node-id="HOHDFtIlriEZ8McXXWPnGI" class="btns">
+<a data-page-node-id="WGTvt5YfbtPU8vWrBKPxdG" class="btn ghost" href="场景引入.html"><!--pnid:zwOghicLhaEb8UOcTRzhCv-->返回场景引入</a>
+</div>
+</div>
+
+<footer data-page-node-id="6LZ4oaKJjZRZ8aiBt441XF"><!--pnid:xkejXKFs08qHn8hB5LZW9o-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+<script data-page-node-id="Ik7uNZy3uolOV8oaXtcvJU" data-pnid-children="BlOBK9wbTnmUpYQqUektlR">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="yd9YLnYlOffxN51OVRanLD" data-pnid-children="hJW6ydCrqNPn0tedmKSXCb">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="y5to9j9JKxdpbki0BqEoQi" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="J4xZCeHv0XbPZTeyD0y1Lq" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="D9htHMI20qQVH1lf6H7czq" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="UZzUBNXOCLyjwBUYl9AntC" data-pnid-children="RfmmTplVU3LXBKAAj0p2PL">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="KBhjmx7ndHKQvudgmgi9qs" lang="zh-CN">
+<head data-page-node-id="RI3qUfUnEmI2gqZMBVkqf8">
+<script data-page-node-id="wDLYkMYfnCy8pgZeVaarQB" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="peveNvs8AxcbU8YM6Dbtws" charset="UTF-8">
+<meta data-page-node-id="R1MAR1NfYOmk07fgPXfhKS" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="UleNCDz7wgw7tOqzvylyrB" data-pnid-children="WNVVObo1K50FLp1CLrgIfP">跨单据一致性校验</title>
+<link data-page-node-id="SRpXysfRyLNj8FvKFrZR18" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="uTN8mqqetMdc4A3m7C70iR" data-pnid-children="DpxOWUDdKQuHZ2ryaFLpt4" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="ndq2FgoOfcGysfzklN7JqY">
+
+<div data-page-node-id="vF4HH17YrjIBVZ1S4AQC2N" class="wrap">
+<section data-page-node-id="0rEQ4QsjWR1ymw3tHZsyi7" class="page-hero">
+
+
+<h1 data-page-node-id="2U2nF6KELxzervu0yGkdk2"><!--pnid:sepxhWtF4oDqFkUeMokWtI-->跨单据一致性校验</h1>
+<p data-page-node-id="tjWf5w0UqWO1pc2zhtdXXN" class="lead"><!--pnid:nJWIJsYJJI6MWoRwueKV0q-->一票货的发票、箱单、提单各说各话 · 发票写 100 台、箱单写 96 台，对不上就是退单加查验</p>
+</section><nav data-page-node-id="mlmADF4K0QSyvDJrwhEwtG" class="subnav"><a data-page-node-id="fdplOSPLaWUWTlUdEyKi7E" class="on" href="#"><!--pnid:KOmAzQASX4TAOdAfv8cpXE-->场景引入</a><a data-page-node-id="CXC7zxRhfdVoRGM8nzUFK2" class href="LiveDemo.html"><!--pnid:R6n9QNcypTNf2olXIkrd9U-->Live Demo</a></nav>
+<section data-page-node-id="BQOki32YbVg1jNjmYmrhVA" class="blk">
+  <h2 data-page-node-id="v8uYOZAhEIwwCXFksONixb" class="h"><span data-page-node-id="eu2ardtunCdQI8cSYFpN21" class="num"><!--pnid:xIpnshtsN6XRBtvFPgfqXm-->一</span><!--pnid:PT9P3CGHE81Hog8DdBWiu0-->这件事现在是什么样</h2>
+  <p data-page-node-id="Ug5CiIOvSZPLQs2sHofjG9" class="subline"><!--pnid:BCnc0DgQQWpBbNsLP6iNRF-->单证关务 · 真实业务触发</p>
+  <div data-page-node-id="WkwzPLJX6blK4OANWdAVif" class="card"><p data-page-node-id="GFhEOXKVYR1Kb4qpqSxHXu"><!--pnid:2MFxn0eTFSRfLFwgwJVB0D-->截关前要把提单、商业发票、装箱单、原产地证四份单据对齐。同一票货，发票写 100 台、箱单写 96 台、产地证写 100 台，人工逐项比对漏检率高，拼箱几十个 SKU 时更是一塌糊涂。</p></div>
+  <h2 data-page-node-id="t4A58tFM2g45P4S8CzElHN" class="h" style="margin-top:22px"><span data-page-node-id="WVNReMBjLxW6rSIj5X2PDp" class="num"><!--pnid:aM3K6fFmffKnFaRQgJNbny-->二</span><!--pnid:JasqROJDFphtsd4Y1HSTJE-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="vUJoH76jBppPpHwgv3SK6z" class="subline"><!--pnid:pJOXtlEBdqpFb9ZuYfNvXU-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="FSsA3HmZggw48hjNoL7AGD" class="pains"><div data-page-node-id="aFYXfL5aSklksddTBZDHZz" class="pain"><span data-page-node-id="EVNTBwkp7gPCxydqUAiZOf" class="i"><!--pnid:tqnbda6Adnmf2nCAAJiFdb-->1</span><div data-page-node-id="IJEELMAfwjDHQddMrZ3Gml" class="t"><!--pnid:X6RioD88Zz5vtuv066ABjj-->关务 AI 撞墙的本质是数据碎片化：发票 100 台、箱单 96 台、产地证 100 台，AI 无法判断哪份是「运营事实」<span data-page-node-id="pTliVBRZY4LFJD4MCtYJpU" class="src"><!--pnid:VvyrungtZYbnZ3Ssl1gSc5-->依据 · <a data-page-node-id="hYwEpY4MrDuMrxQgrmy0QL" href="https://aircargoweek.com/why-customs-ai-is-hitting-the-deployment-wall" rel="noopener" target="_blank"><!--pnid:U3kSnK6Qrnxnk52vqbSEu9-->关务 AI 撞「部署墙」：发票写 100 台、箱单写 96 台，数据碎片化导致 AI 降置信度转人工</a></span></div></div><div data-page-node-id="u0yeTzIloXO64EUedU6l7T" class="pain"><span data-page-node-id="5vWSeTUTdhRU405EgprZJT" class="i"><!--pnid:7S4FzvnVuqLXe3ezcX9d5V-->2</span><div data-page-node-id="qnfZ422uhwdVuuHT0nWqQM" class="t"><!--pnid:HIsq9zvoHAw4njOQeZ5Dw3-->提单/发票/箱单的件数、毛重、体积、金额、HS 编码要逐项比对，人工漏检率高，尤其拼箱几十个 SKU<span data-page-node-id="jVyCskzcoTwI3vDZOSV6YX" class="src"><!--pnid:ZrMEBfG4Dbl0uaUEeKIgNl-->依据 · <a data-page-node-id="NPVHQahmYXYsfJrI7sg4oH" href="https://www.10100.com/encyclopedia/5/118540976" rel="noopener" target="_blank"><!--pnid:DZfOP1e8Th6OaENPEppptz-->全国出口报关平均退单率 8.3%，72.6% 源于单证填写错误或逻辑矛盾，HS 归类偏差占 34.1%</a></span></div></div><div data-page-node-id="qxexECZEpUo8mfQuciXJ3y" class="pain"><span data-page-node-id="dtjkx7kwNpYypjTpreDPgt" class="i"><!--pnid:fKkxBPFnVvkUiqXg2B0FmG-->3</span><div data-page-node-id="zj80c9gi5NP2kNPa9bwuQN" class="t"><!--pnid:HI8q11wbWpQHQ6MhfbZSCU-->单单不一致会被海关退单、布控查验，改单补料滞报金跟着来<span data-page-node-id="WC3I6UZzdOrUeLWKjTQXoK" class="src"><!--pnid:cc66qy3uRnjFNZP0MKf23X-->依据 · <a data-page-node-id="ZMy1W78qyROUPGhhiVIQJ7" href="https://www.zhongshenchina.com/xyzs/national-import-export-agent-management-system-guide.html" rel="noopener" target="_blank"><!--pnid:sgj5q44yhdVYzbMAzt3OyH-->报关差错罚款：容错阈值降至 2%，单次差错罚款最高达货值 5%</a></span></div></div><div data-page-node-id="hXy2Jj9KIrmB3voSDGFX0k" class="pain"><span data-page-node-id="W8Ul4FOq1BU2MmFQeuxlBl" class="i"><!--pnid:CPfOoxHEmrQd7zaAvMPbFN-->4</span><div data-page-node-id="0nUqWD2KvUyTBBI3WXnRRg" class="t"><!--pnid:GiBDsGxRxAfpx9YXcvT2xQ-->提单一个字母都不能错，SHIPPER/CONSIGNEE/箱号/铅封号任何字段错，收货人提不了货<span data-page-node-id="rY5D39dIc2v5LWtS25QJ4T" class="src"><!--pnid:mbeq8s8XhQx7pPXm63phPF-->依据 · <a data-page-node-id="UM5ZYAVOUN84CCd3BT5cFe" href="https://teyoubao.cn/kuajingwuliu/1519.html" rel="noopener" target="_blank"><!--pnid:F3G8PxS3p3aYE4kRfCeZpt-->货代五大岗位吐槽：操作 24 小时待命、单证「一个字母都不能错」、财务「每张账单都写着谁欠我」</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="LXZCWvOH97xYBNmdQwbpKW" class="blk">
+  <h2 data-page-node-id="wzG6yyXCIgTi4JlXvLfhXo" class="h"><span data-page-node-id="1WP7x5jiapELamYqVTthac" class="num"><!--pnid:tp3lmoz9HnHXTMv2kSoMIV-->三</span><!--pnid:bUFVPXRRsEDUGRONZ7XnXe-->换个做法之后</h2>
+  <p data-page-node-id="EfMDsq8DdHgVUkE8CTVcZQ" class="subline"><!--pnid:va29O6yp1lFlhyJanCnsu0-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="wjBJcKwGuFkOU81TqfuiAC" class="cmp">
+    <div data-page-node-id="ziRJoXlEDfVEHAMgMchguw" class="old"><h4 data-page-node-id="A3f581vuuwpZN6UNH1gZrX"><!--pnid:5RrnOw1SiAWaLLEG1KW1pV-->✕ 现在的做法</h4><ul data-page-node-id="XaPNnRlWz1tQXwbeQY8MQr" class="list"><li data-page-node-id="ftXerjo28k0wbDCaGxCezj"><!--pnid:gR4SjzivQJOK4bzPwHbZgK-->关务 AI 撞墙的本质是数据碎片化：发票 100 台、箱单 96 台、产地证 100 台，AI 无法判断哪份是「运营事实」</li><li data-page-node-id="ZzhmpZLcfPZUlU5hFqujSn"><!--pnid:MtdSqrw5rAolUf6GFnfXLx-->提单/发票/箱单的件数、毛重、体积、金额、HS 编码要逐项比对，人工漏检率高，尤其拼箱几十个 SKU</li><li data-page-node-id="Pir9SsqOV4GyQKTSjKMAoi"><!--pnid:4RTqHFwgi20lVk7PkykdM3-->单单不一致会被海关退单、布控查验，改单补料滞报金跟着来</li><li data-page-node-id="YRF9RFtKs8lpxVE9Fc4zQb"><!--pnid:WWjentwtb87K8qpG5NK1OR-->提单一个字母都不能错，SHIPPER/CONSIGNEE/箱号/铅封号任何字段错，收货人提不了货</li></ul></div>
+    <div data-page-node-id="CajReQ0gSKLlbr1uG3u40c" class="new"><h4 data-page-node-id="XZXeLEKKGN9jiRkmIKpfxY"><!--pnid:DGUMuCIrCZ2QSE99Abm7oE-->✓ 交给 Agent 之后</h4><ul data-page-node-id="RGJbUyRc08jA64b48hf6Wc" class="list"><li data-page-node-id="WPGJi8ISDubRhIEmPcS331"><!--pnid:SlNSh8HIVWAWgDYekpzQT8-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="HDVYR24iQT8uwqXPG0FkYH"><!--pnid:QFj9GM3k8aM8SPHDZiIps5-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="OiyHciugY7c0caseNu2cT9"><!--pnid:nhEG4HXxunjxgGT0X8q7CL-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="2A9fb61DRoYd5WCAUuyb4P"><!--pnid:au6cejwYrhmP1WXgQysD1D-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="2xkz8WMe5Y1riM5gGY4ifC" class="blk">
+  <h2 data-page-node-id="feyz5YJeYNIxrfkulKj14n" class="h"><span data-page-node-id="aeUrfnS3Tl3YvHNIhtEgO7" class="num"><!--pnid:8RhTzznCQak8x4uAIPl9i5-->四</span><!--pnid:OPJLtDNwg2Ng7rwLTNrVrQ-->场景闭环</h2>
+  <p data-page-node-id="WDEgWZD5wAZy2ROKSVsyKQ" class="subline"><!--pnid:guoMLjPZ1tqncROsGxTvuk-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="i6YRHPbhHQDKdHWGyymsBj" class="flow"><div data-page-node-id="v71yzeywPz8qnFW5C9C4OT" class="step"><div data-page-node-id="TziS5q0kQrtURrcajqATE3" class="n"><!--pnid:xMi4xaHez4RSAmzPCaowx2-->第 1 步</div><b data-page-node-id="psX9Z6VFfI05VJBrVsvSEw"><!--pnid:LsUaX8Kw6zdj2LwXflu8hi-->要素校验 · 判断四份单据能不能比对</b><span data-page-node-id="LKbYnCw6k7HqMCYToEuiHF"><!--pnid:D49ZAi7cPiSRsLpKSgmVta-->单据是否齐全、是否同一票货、关键字段是否可读，逐项打勾</span></div><div data-page-node-id="btiB9Gt6wIjOdscUi7iKNw" class="step"><div data-page-node-id="muU5Tcdk1bs05iN7oOWebk" class="n"><!--pnid:dTJyliHJCgNvNmMPm2SUR7-->第 2 步</div><b data-page-node-id="dwtHhR7tISLAAttcaZBdAx"><!--pnid:xjeyssJ1qQu6SZkGfjNPVv-->件重尺比对 · 发票 vs 箱单 vs 提单</b><span data-page-node-id="L3aFsh2hsDR9hnMB2TYNwr"><!--pnid:nOBPhM56tHfYhQGFRbOMCS-->件数、毛重、体积、尺码逐字段对齐，异常标注来源</span></div><div data-page-node-id="g5IWBObeWhEQCs2OFMZT5T" class="step"><div data-page-node-id="cwNSEFI9OBD5pTEjQgXOtn" class="n"><!--pnid:s0uxaJ1tU4SBH5K7PMtfLp-->第 3 步</div><b data-page-node-id="jWXzTnFkmWvvL6x5ca9edh"><!--pnid:F63o4LBXMyZz1RYQKWPnUA-->金额比对 · 发票总价 vs 报关申报金额</b><span data-page-node-id="KB8I5HoN37bAQfiDkhlX3h"><!--pnid:wQWTwiOqjvs9AJBVbbTrWY-->金额、币制、运费保费逐项对齐，对不上标出</span></div><div data-page-node-id="L4vK3A7IupCvlI8e9vmEEr" class="step"><div data-page-node-id="MrsfnXytkq1l87FhADu5we" class="n"><!--pnid:Z7gs2Qi8ne6wkY4c2p3IZX-->第 4 步</div><b data-page-node-id="VFLXt3DM8hgS5espWcxy7Q"><!--pnid:hQs98g4ei2yAFuBXfBQqzG-->主体比对 · 收发货人 vs 提单 SHIPPER/CONSIGNEE</b><span data-page-node-id="kAgQAECWQUa4aOpMWE2IvR"><!--pnid:ztw8FzlENscDRsTUKp5qSu-->统一社会信用代码、名称、国别逐项对齐</span></div><div data-page-node-id="nzJnUSKgqFNHav2GEoIEEe" class="step"><div data-page-node-id="KklTEQIWH8ikLZpn0BjV5a" class="n"><!--pnid:sFCysd5OoiBwyx304AufS8-->第 5 步</div><b data-page-node-id="EM5mUxQrtxackIjGXEAixn"><!--pnid:AoXV3Ec6zRRAf6DpbfxhM4-->留证与签批 · 生成待签的一致性核对表</b><span data-page-node-id="Cfv6s8dcRlzaitVVQlw7Y3"><!--pnid:G8eN28kKfnTUEAml3MW5uE-->不一致字段清单，单证员确认后生成对齐版草稿</span></div></div>
+</section>
+
+<section data-page-node-id="PNVyuyWjp8yU8jW2aorMEM" class="blk">
+  <div data-page-node-id="VAsQ1KHNYOLdzNerDlf2RA" class="g2">
+    <div data-page-node-id="lbmE85Rpppfojx6CZwx5Du" class="card"><h3 data-page-node-id="ORnvS2kjpHGnK2ZlK2j9tP"><!--pnid:ikZrbPb9VkOsGkri5cUJkW-->要准备什么</h3><div data-page-node-id="UyaVWzOHuuvUaN4RsCPx5g" class="src"><div data-page-node-id="2Zxlo97mi1jnaqq4uNLcxn" class="fn"><!--pnid:axuXLovbH5Y6ZdlYqzaDnH-->商业发票.xlsx</div><div data-page-node-id="FmdXB0HlQ64MIzHJKpdFHI" class="fd"><!--pnid:hFz3xm8Adqwv5MWAZRTwlG-->品名、货值、收发货人、件数</div></div><div data-page-node-id="Pu74ps0Opx9Ehz1CaysPnG" class="src"><div data-page-node-id="Tli4q9W51R0AVg86PuTy4V" class="fn"><!--pnid:Ccm1ezNwzkyDjHMhK4d9KJ-->装箱单.xlsx</div><div data-page-node-id="bZppCTh82FZhnHORULj9tH" class="fd"><!--pnid:x8OdiFxz0lpgLHpPVJafZN-->包装、件数、毛净重、尺码</div></div><div data-page-node-id="2959kDX32oJaG5NTC4Aow7" class="src"><div data-page-node-id="vbKmwv8XTp6MMARaL4fwBe" class="fn"><!--pnid:GkYnbyzmIWFflWvJffyrnR-->提单确认件 B/L</div><div data-page-node-id="LlBsmf95QcLgc4Nst4Tx26" class="fd"><!--pnid:HQ520CkOOlLBamO4PzvHtX-->SHIPPER/CONSIGNEE/箱号/铅封号/件重尺</div></div><div data-page-node-id="2og9XrWxf33hkP5xsrRvid" class="src"><div data-page-node-id="icPs9RranIDMBi4hrxxHE3" class="fn"><!--pnid:4qnUhs4qLGRWOIta50gIYP-->原产地证.xlsx</div><div data-page-node-id="FJFnm7kgfIGrMGuoLsawVK" class="fd"><!--pnid:FXwsu9idY5aoqukWN1sD95-->品名、HS 编码、数量</div></div></div>
+    <div data-page-node-id="37BuWXoeCwnMkN2WFaCWh3" class="card ev"><h3 data-page-node-id="tCo10iHfk0FeHmCsY4hyVv"><!--pnid:nF4Vk8CuDVVULaWBQbRmSM-->为什么这个场景值得做</h3>
+      <p data-page-node-id="k7ulgYXOjinpojlQa1PdP9"><!--pnid:PrbTBFVFqaz9yLfe78HQNn-->痛感 5 × AI 适配 5 ÷ 落地难度 3 = <b data-page-node-id="zQ3VEy2iVJQ6EIvQzOk0bv"><!--pnid:XQe3j524pPq4wx3ofDdE1d-->10.0</b></p>
+      <p data-page-node-id="h9nrJmdxQfdie3dc9lwB0p"><b data-page-node-id="WvyIRZKVvQ7yah2ctuZgGE"><!--pnid:JLVtu9zD5Fgz3ESEqEpq5A-->最大差异点 ·</b><!--pnid:RWj8ma8QrHQqRhZeKDc9x8--> 不要求单据先电子化。发票、箱单、提单哪怕是 PDF 扫描件，Agent 也能读进去逐字段比对，异常字段标注来源。</p>
+      <p data-page-node-id="RMBSLoD0ka5ezmHYm8xNbf" style="color:var(--ink3); font-size:12.5px"><!--pnid:iCZs2Cf1p79MAn7lWoXa9a-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="VaX1xcUH1hUCxxXnBfIGio" class="blk">
+  <h2 data-page-node-id="xUULmshF7yjjAtCZOwYwEP" class="h"><span data-page-node-id="9KHBoqxKCwT2Zz9oIMXkdB" class="num"><!--pnid:XeNF9rW2yaezuVTCI74TaN-->五</span><!--pnid:8M3KP4xstDTMW9WNZxG3LX-->会产出什么</h2>
+  <p data-page-node-id="N6C7SMuy8aABO7fZBVlMuZ" class="subline"><!--pnid:Ky4ViD1936PecxJU0IyMnS-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="2JfHy6QnU89MbFGGpE61cl" class="outs"><div data-page-node-id="nLWeOmY1vCPamncLMvAMgP" class="out"><div data-page-node-id="gtSewO8bZeRbgqdlAXDi3U" class="on"><!--pnid:fVyemkd2PGARQ3x8KIuvsB-->正式件本体</div><div data-page-node-id="DMSh1M4DK4twNOYxzGg5CC" class="ot"><!--pnid:fLfLhsAixHAVOhidHEDp32-->单证一致性核对表.xlsx</div><div data-page-node-id="hlXMmtr3Bql2fU3tL50x3b" class="od"><!--pnid:TfcbRjEhYXHg5EXiyj83LK-->正式件本体 · 件重尺/金额/主体比对 · 含签批栏</div></div><div data-page-node-id="HmPFiGKHd3uKA4TDn3ky5k" class="out"><div data-page-node-id="QejXsFG1ov18fSNqjtj1b6" class="on"><!--pnid:o6A6A7fBH7sGrsw3PznSYv-->可派发清单</div><div data-page-node-id="S0hp9OdbZGwsTgvYphhXCO" class="ot"><!--pnid:lpOXyYy0NnVdvxubmj66MT-->不一致字段清单.xlsx</div><div data-page-node-id="Scf9dYF0NMpDb051QZlIfO" class="od"><!--pnid:Pv0HfufFQaiXdZSdmEbpDr-->可派发 · 异常字段与出处逐条可追溯</div></div></div>
+</section>
+
+<section data-page-node-id="yqqE46uIZc3xQA7ShUa2Qy" class="blk">
+  <div data-page-node-id="ooVLarO6wIvEsPBeqqibgP" class="card warn"><h3 data-page-node-id="Mu4OSDxC1ERl4O6pozYa2Q"><!--pnid:BRg64YFXettZxRBLDjRrTd-->这套东西不承诺什么</h3><p data-page-node-id="ebDEScLFDrNwhrQ7Fc0CXI"><!--pnid:i7OTAGGClDhYfHb0EuqYyY-->不替客户判定「哪份单据是对的」，只标出不一致的字段和各自出处。以哪份为准、怎么改，由单证员和货主定。</p></div>
+</section>
+
+<div data-page-node-id="NdwBA09vXdqImHxpLrl6ei" class="cta">
+  <div data-page-node-id="4hmyuj5pefI7tur0NQzTXh"><h3 data-page-node-id="spqik4yhP0nC9OyBaXQ3Kl"><!--pnid:CO1cLKqUX2DFN42KF0qx7C-->想看具体怎么跑？</h3><p data-page-node-id="pjWN7zTTQdJimEKt0ZCIS6"><!--pnid:fZJJ4nPfrEeUgUxsbq4stk-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="DCTki8wSzu4dLTCIZMaf2x" class="btns">
+    <a data-page-node-id="n9ctRp4q9a7WW3BqINu9AX" class="btn" href="LiveDemo.html"><!--pnid:PLvNfpvg5azOOZfgzmwGj1-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="QA5TGVJ1iHlxFpqHDGRK7l"><!--pnid:zuAsIAWyFvEJPS23OA7s6F-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="3GEVaoURl3K3CiqcCt3bhJ" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="LhcTM1tNldDkLVnNxv5xsh" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="EZFekrqQpOla8EHzmPbWLI" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="TEroEtwT1zCEQ0rduCTcGL" data-pnid-children="bNy9mg7qtn2t4IvYGcXupB">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="rlWucGUBEjdiDEMHoU0FjU" data-pnid-children="jQa0fAQYxos6mwUIh4rN5X">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

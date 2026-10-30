@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="b71hrOxn8HebP7abvxXdK2" lang="zh-CN">
+<head data-page-node-id="PxVsDf0awQuhx3mIjEdLYn">
+<script data-page-node-id="5WFhJ0Ijk2K5orM6cvPEu9" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="g35Neue5DDTlVkpuAeuH9A" charset="UTF-8">
+<meta data-page-node-id="Gjuz4FKmxB8kkU4Xb6ITBx" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="WMmA5peYzGV1Wlv9nuUmFQ" data-pnid-children="WUX1qYDTwbmk89mec7H1I8">活动预算与盈亏平衡测算</title>
+<link data-page-node-id="NmZChmyhkg9XLtMKIpK1Uf" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="YATpyiVuCunLZVaWuCmIhT" data-pnid-children="uNCPPX9gQH4rsSKqNO2lhk">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="9tjj20DIyFsqije1TWPyfq" data-pnid-children="4qum6BqmluQ87CzIfJhumU" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="KZBYwn8RG0dwXgenEn95CD" data-pnid-children="HruZwnwsWhR8Ciin4g8tBr" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="ctsDw8kpEuvZMuoiXPMLqe">
+
+<div data-page-node-id="gU0VOZBwtBrxyuqbIsCeQK" class="wrap">
+<section data-page-node-id="7YLTyshJF6Uqli8mxopUL5" class="page-hero">
+<h1 data-page-node-id="EKXnPQEnIXwUZBUit8noQS"><!--pnid:qgayswqlr32ryTuAUvnyox-->活动预算与盈亏平衡测算</h1>
+<p data-page-node-id="6Fx2xvbFZHq8YRDnok5MQL" class="lead"><!--pnid:qSe08unUNIg1mcnHn8lHQ3-->报名页写着「预计引流 10 万」· 没人算过要卖多少件才不亏</p>
+</section><nav data-page-node-id="yPh5LO6D1Cj05Ovg9wfbpA" class="subnav"><a data-page-node-id="UdqhyZOIdreEqThJoaLkCF" href="场景引入.html"><!--pnid:YLg4rswUGll0LWMsP6zug7-->场景引入</a><a data-page-node-id="8SJkQdjFP5ZH2VbuI08XyY" href="LiveDemo.html"><!--pnid:PorEdgyXiV99EjVy5jh9vY-->Live Demo</a><a data-page-node-id="tj9RFLFTztdr22xjMPcYnl" class="on" href="#"><!--pnid:KeDw94koWHGZGOZdDSsTS1-->推荐任务</a></nav>
+
+<section data-page-node-id="dqeTFFKLIF6k4XQyHXaclV" class="blk">
+  <h2 data-page-node-id="cfyeOkqoigSSVHrZVcLaCb" class="h"><span data-page-node-id="ack82JdbvQJejThoeVmRnN" class="num"><!--pnid:Os1Y7wY0bHYHL1xJYgMbDL-->一</span><!--pnid:nkG4Ew0c2TGXxDRv8SsHgw-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="H2evvKnZvqmPFzOwhT9nWf" class="subline"><!--pnid:bP3OUfNBqKQGYpcYTbZVN2-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="MDudFL0b98nmcS9OsVmVqk" class="card"><p data-page-node-id="XtpL8BeiX8WZ67tFn9TlU4"><!--pnid:FDcwCpzBecqwGDXy5pWGi4-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="xADceYD9SzOCPVARKEEGJp" style="margin-top:10px"><!--pnid:ZApN643BY3KqtPAOEiFbdU-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:n3i57vRvVIRBee1aCEKzw7--><!--wb-skill-start-->
+<div data-page-node-id="hWPfpeLItpB0I8pKjdZJ7h" class="wb-skill">
+<p data-page-node-id="wIopRLULD8GQ9BAk7TmfZM" class="wb-skill-lead"><!--pnid:44rJSAmAcZZ6SXwGL0OBFI-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="1yp9cDKi7nRGHRObeYxxZN" class="prompt" id="wbSkillPrompt"><!--pnid:4rF4AaSZtgj8I1v8qsJp2A-->【准备】这个场景的规则都在「活动预算与盈亏平衡测算」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/kFH000hrORB6o7KroJWzzt/aL_KZnFozibm/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="U6CfbrbfEcX4OgeJMd6HXQ" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:zxtAIg4qqJ6rpzUHuWjJU1-->复制</button></div>
+</div>
+<!--pnid:RP9fHrwCIOICwXsN9H3WE0--><!--wb-skill-end-->
+<section data-page-node-id="zmgmuasLSMQQP4cZMmY3q5" class="blk">
+  <h2 data-page-node-id="FLc1MJ36EaiKlxvVGcN4qC" class="h"><span data-page-node-id="jx24ceYR3Gjr6W8uGWKUUf" class="num"><!--pnid:ued57qsStZYRRuKMJnpVjN-->二</span><!--pnid:7u9x1rQh33g17SwqqGuMbG-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="zsYTK3qz50rNXvsIkIdMyG" class="subline"><!--pnid:lJQ1nKrMYJHynvTgr9S1wP-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="JBd7WDpoPdgYjfOu4V4Y5T" class="tlist">
+    <article data-page-node-id="qLUgKGBSoMUYB2Bj7wu8YT" class="task">
+      <div data-page-node-id="sQjuQF8OrmJtHprdO0all0" class="th"><span data-page-node-id="2nLOg31kfzehrtPAr7CeGk" class="no"><!--pnid:NrXi37pThJ6The7F0Z3HGo-->01</span><h3 data-page-node-id="44AmJCzJtj3HPRDVSzooAI" class="ttl"><!--pnid:zsMzrtphU2XZFvImOPrDi9-->首推默认</h3><span data-page-node-id="8PgVU0zW2bj5XaZkew4BNe" class="star"><!--pnid:plixKdMMSa67tUHLxoBm3Q-->与一键体验入口一致</span><button data-page-node-id="NDsIMg0plBGo0iZcGQefWX" class="cp" type="button"><!--pnid:f8in9VodIBckoZbhb1F0cG-->复制</button></div>
+      <p data-page-node-id="D4lvQ8sPkCJdyrNkmLuWDp" class="tp"><!--pnid:7ZmZ9taGRAYoFRY25GiIsY-->我来试一次这个技能。四份材料都读：「01_活动报名要求.txt」（9.9 包邮试用，坑位费 800 元）、「02_试用装成本明细.xlsx」「03_正装毛利数据.xlsx」「04_去年试用活动复盘.txt」。平台小二推来这个活动，老板娘问要卖多少正装才回本，我得给她算清楚。产出三份：「活动盈亏平衡测算.xlsx」——五项成本逐项归集算到分，给平衡点和三档敏感性（转化率 5%、10%、15% 各一行），再放同预算换成私域闪购、老客唤醒的对照；「假设与数据来源清单.xlsx」——一个数一行，列取值、来源（哪份文件还是行业假设）、实测算还是假设算，实测值和行业值分开标；「历史同类活动对照.xlsx」——去年 3 月那次同款试用活动的实测账，当转化率锚点。转化率优先用「04_去年试用活动复盘.txt」里的实测值，用行业区间就要写明这是假设。运费在 9.9 元里占多少算出来，看砍价该往哪砍。报不报我自己定，测算只给回本销量、最坏情况亏损上限、替代方案这三样；推荐意见、完成质量评定、责任认定三栏留空。不编造成本或效率数据，拿不到的写「本项无法分析」。</p>
+    </article>
+    <article data-page-node-id="RrqIoZpsQIMjdyohMMH1V6" class="task">
+      <div data-page-node-id="y6VynDpF6TSuFLxRvdrr8R" class="th"><span data-page-node-id="uTv0mYKjAjwskn96qCNakv" class="no"><!--pnid:d11PUF0bn675DslRrSgm8m-->02</span><h3 data-page-node-id="YYQ978xcPrqUdmqi19zmGa" class="ttl"><!--pnid:MZ2fnQoTSapSOpdsfeBj1c-->只算回本销量</h3><button data-page-node-id="An1myr2WAPTGtETeCpYwFW" class="cp" type="button"><!--pnid:cxORI0dRSb6WvKU25oC1o5-->复制</button></div>
+      <p data-page-node-id="IUPnSD149ZYyJ16eFSIL3e" class="tp"><!--pnid:mhBRZOGxPMT52gJlYeBhKJ-->先别管敏感性，只回答一个问题：要卖多少单正装才回本。读「01_活动报名要求.txt」「02_试用装成本明细.xlsx」「03_正装毛利数据.xlsx」，按去年同款活动的实测转化率算。产出 Excel 一张：试用装每份亏多少、预计卖多少份、亏损总额、正装单件毛利、回本所需正装销量五行，每行给算式；再跟历史月销比一下这个数现不现实。</p>
+    </article>
+    <article data-page-node-id="WbJLBlmRHwRYSEj6A5Qe8m" class="task">
+      <div data-page-node-id="Iz7bI37lvYlcSi2PTpzkj5" class="th"><span data-page-node-id="oyA5w5KKkoergiZ0nSTkTK" class="no"><!--pnid:yQwahhoUejvhB4CWMzUSuH-->03</span><h3 data-page-node-id="ve0OcsD8kovcA0WbVTSRmN" class="ttl"><!--pnid:Ej20zzij12IrdRnPKDtZkd-->换成三档转化率假设</h3><button data-page-node-id="lEmIepqf9SKdytV4qgc5RX" class="cp" type="button"><!--pnid:klup4VSv1Nh78rOC2LrGRL-->复制</button></div>
+      <p data-page-node-id="L9NFcaLje5WBZh0v5ea4Br" class="tp"><!--pnid:wvWGj8oAJAHDXmPNZqq4QK-->把转化率换成 5%、10%、15% 三档各算一遍，跟去年实测值那一档并排。读四份材料（含「04_去年试用活动复盘.txt」），产出「活动盈亏平衡测算.xlsx」里的敏感性表：档位一行，列转化率、回本所需正装销量、预期净利、最坏情况亏损。每档标明是实测还是假设，让我看清假设猜错时会亏多少。</p>
+    </article>
+    <article data-page-node-id="fYNYc1GV1258kQxLMFDyOF" class="task">
+      <div data-page-node-id="ECwyO7r2yuakZ086rNBcMr" class="th"><span data-page-node-id="OPvtdGWS5M6GglCerK1TGt" class="no"><!--pnid:lqJyRKcmIuTQIBzi86bTXp-->04</span><h3 data-page-node-id="YsfgCEFjAd2CI8swH409P1" class="ttl"><!--pnid:QPH4eJtLEODcuAif78VxBg-->一次算三种花法</h3><button data-page-node-id="KcWII6giXJPkeES7VwQ4Do" class="cp" type="button"><!--pnid:AF3hk18b0A90Vwvd6wOrO4-->复制</button></div>
+      <p data-page-node-id="yWRv28dXnGyrw3AP0Sf7oF" class="tp"><!--pnid:1KVDMQz7AUuj73jVSzxKSK-->把同样这笔预算一次算三种花法：报这个 9.9 试用活动、私域闪购、老客唤醒。读四份材料，产出「活动盈亏平衡测算.xlsx」里加一张横向对照表：花法一行，列投入、预期产出、回本口径、最坏情况、需要谁去做。三种花法的口径要一致，缺哪项数据的写明缺什么，不要拿别的场景的数顶上。</p>
+    </article>
+    <article data-page-node-id="DalDD7cYhKBZQRUJ75zh0O" class="task">
+      <div data-page-node-id="bfTeFJ6MBfiOA917sMGMC4" class="th"><span data-page-node-id="67KyEFKqOHFpk86tMEA6eK" class="no"><!--pnid:ZndOW2oNfsIS6Fpt43hYwv-->05</span><h3 data-page-node-id="549YXh3S9LoIOyoSt8fbcQ" class="ttl"><!--pnid:VUD5yn1ZnSfUhAjFE7EyhS-->给老板娘拍板的一页</h3><button data-page-node-id="S3AsKKyGJSULWJR0rfkE7T" class="cp" type="button"><!--pnid:k5PamHsrTEwz8SszTVsG8P-->复制</button></div>
+      <p data-page-node-id="VuOjttqUIrlabVxLdZ4Kdz" class="tp"><!--pnid:Nu8b3FL2WZQ5MVzFGZlXgm-->读「01_活动报名要求.txt」「02_试用装成本明细.xlsx」「03_正装毛利数据.xlsx」「04_去年试用活动复盘.txt」，把测算压成一页三个数，输出 Markdown：回本销量、悲观转化率下最多亏多少、这 800 元不报活动还能怎么花，各一段且每段带数字和一句结论。假设是什么、哪个数没来源，写在最后一行。报不报留给她决定，不要写建议。</p>
+    </article>
+    <article data-page-node-id="Cq8wjNY1wk003Qj44bTSYQ" class="task">
+      <div data-page-node-id="C7L99KW9Q0WA4H61KNoqtL" class="th"><span data-page-node-id="xIPChtL4vS63YJXbihkrll" class="no"><!--pnid:KG3yA6zcKwL9AHzFx5GSWQ-->06</span><h3 data-page-node-id="pbBNpxeCwdH7gsyGWaZ4YW" class="ttl"><!--pnid:QeX1LFbW53W7IQvbNwFB1U-->让它反驳自己</h3><button data-page-node-id="2CN90Y21u62HYyV4te9sLO" class="cp" type="button"><!--pnid:UVoGvgR4ZXSlAxDzRRsSIF-->复制</button></div>
+      <p data-page-node-id="PEkjTOP8lfJLmL0pVvtgzf" class="tp"><!--pnid:ZJHGKUU0jsRuD6NbnndhCG-->「坑位费 800 元可以排除出主要矛盾」这个判断的依据是什么？读「02_试用装成本明细.xlsx」和「01_活动报名要求.txt」，把运费占 9.9 元的比例、包材占多少、坑位费占总投入的比例分别算出来。如果运费才是大头就改口，并说明砍价该往哪砍。产出 Excel 一个对照段：成本项一行，列金额、占比、可砍空间、砍价对象。</p>
+    </article>
+    <article data-page-node-id="k7vGMfN3IgEWCSxGKe7V8T" class="task">
+      <div data-page-node-id="NO3uRPFBLMEhLaYSb1eBAX" class="th"><span data-page-node-id="EOU5zC0TZqnTF95erBMc4E" class="no"><!--pnid:k9IqbCBu9Zw22nEmmtZgvQ-->07</span><h3 data-page-node-id="ImcUMG1dUeemIf25Nq9isC" class="ttl"><!--pnid:45Jd1h8DP5jRpKKSaz3yds-->专门翻去年同款活动的账</h3><button data-page-node-id="uXtz8dym4khERCFU4y31Rf" class="cp" type="button"><!--pnid:urnnCjAdHzbNee1paRO59a-->复制</button></div>
+      <p data-page-node-id="yjr46EM2Yrsz0zKkU9gR7W" class="tp"><!--pnid:UiSAqSGiH78HHhxAqPHOze-->读「04_去年试用活动复盘.txt」，把去年 3 月那次同款试用活动的实测账翻出来：试用装亏了多少、带回几单正装、毛利多少、净亏多少，用它替换行业区间重算一遍平衡点和敏感性。产出「历史同类活动对照.xlsx」：科目一行，列去年实测、本次测算、差异、口径是否可比。两次口径不一样的地方标出来，别直接比。</p>
+    </article>
+    <article data-page-node-id="TrrMYvZWKWVxvT2SOKOaif" class="task">
+      <div data-page-node-id="PR0vhaOOZM80OGsLiJ5h3z" class="th"><span data-page-node-id="N2cKMqXMwy1gCowqIKwDLV" class="no"><!--pnid:pLwQjbeLDMTU7DQUTAHfxi-->08</span><h3 data-page-node-id="sUGJxEjkKRLBsCgAQpcWoQ" class="ttl"><!--pnid:SVLXFsiEF1ETgyun5Wz4GL-->对照假设清单自查</h3><button data-page-node-id="0uk9HsGDL0c1FAKWcGsgEp" class="cp" type="button"><!--pnid:NJv7xFO6imEmkBqmcPUYpH-->复制</button></div>
+      <p data-page-node-id="UHE0IkLPWLNTB4eie8TS7i" class="tp"><!--pnid:P11FMFITJy33p8AQSns3ed-->对照「假设与数据来源清单.xlsx」把这份测算自查一遍。产出 Excel 一张：数一行，列取值、声明来源、实际能不能对上、判定（实测/假设/无来源）——哪些是实测的、哪些是行业假设、哪个数其实没有来源、哪个数借用了不覆盖它的口径。无来源的列出来，我补数或改成假设。</p>
+    </article>
+    <article data-page-node-id="EkyQPaosXTkMniHpmHEGiq" class="task">
+      <div data-page-node-id="XvIDSgFCzmX4Bi2MB0GIQg" class="th"><span data-page-node-id="OyQxdW4e6cJP8PrqIiLirx" class="no"><!--pnid:ABSEXUMRrqlDeuYmEle5in-->09</span><h3 data-page-node-id="OXBQ8zAq3XDcOfEbthNv6V" class="ttl"><!--pnid:Qh3ge8JBAhS5lN6824LcpF-->折算成最坏情况</h3><button data-page-node-id="VL077yOINGb2k9RNsvkG2D" class="cp" type="button"><!--pnid:gcNuvlW2LstkZL42Gssz1I-->复制</button></div>
+      <p data-page-node-id="H8DBU7uN64TbLECvmhpH5d" class="tp"><!--pnid:im9sYpodVp9nWctuB0XRYB-->读「01_活动报名要求.txt」「02_试用装成本明细.xlsx」「03_正装毛利数据.xlsx」。如果转化率只有 5%、试用装全部卖光，这个活动最多亏多少？把这笔钱改投私域老客唤醒的预期产出并排摆出来。产出 Excel 一个测算段：情形一行，列投入、最坏亏损或预期产出、算式、依据。老客唤醒那头没有本店历史数据的话，写明按什么口径估的、这是假设，不要给一个看着很确定的数。</p>
+    </article>
+    <article data-page-node-id="2zpF57xmDqLWySyzDFofTE" class="task">
+      <div data-page-node-id="maFHlGTZ4Qp744rUE1FYP2" class="th"><span data-page-node-id="pUCMH0VuiXoiHRw3vZQgee" class="no"><!--pnid:mY8xbfEYGIvGnd0HVDySHE-->10</span><h3 data-page-node-id="3CWFTiE13uP5PNGEUkPTP0" class="ttl"><!--pnid:ormpCWmRqHBBNGKj1T2CPi-->沉淀成报名测算模板</h3><button data-page-node-id="x35Knd08Mw4hjcj4M9HdJh" class="cp" type="button"><!--pnid:RHwJApp8ozN6v1e6quvI0n-->复制</button></div>
+      <p data-page-node-id="UvCV1Q2RT6jppni6nooEvt" class="tp"><!--pnid:kDYfb7uO3c1s6j8rLYc8Ph-->读「01_活动报名要求.txt」「02_试用装成本明细.xlsx」「03_正装毛利数据.xlsx」，把这次五项成本的口径、平衡点公式（试用装亏损总额 ÷ 正装单件毛利）、三档敏感性和假设标注规则整理成一份报名测算模板，Excel 一张：上半部分是成本项与公式，下半部分是敏感性空表（档位 + 回本销量 + 净利）。下次平台推活动直接填数，假设栏和实测栏分开留着。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="hZy1IdtWksw2v2CUnZ7B35" class="cta">
+  <div data-page-node-id="TOFg7KZutI64Fq13EDB3Rg"><h3 data-page-node-id="E5lfJyqeSCknPFXJ5LCQYO"><!--pnid:1gIsEbz5skKn8BIIFMeoXT-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="xAodnU9r7FWVElhVwVtW1c"><!--pnid:1aUoI7rER2QfAFtQUScgoM-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="4o4ABMdfV03blimq4Gt8Lm" class="btns"><a data-page-node-id="zRoAWyPZoK1Xr7JYcU3iQg" class="btn" href="#" id="ctaContact"><!--pnid:FDru6hZHNnG9vYJKJ6mfvR-->联系我们</a></div>
+</div>
+<footer data-page-node-id="wWnXrRLkpo6zvYE0amIjbj"><!--pnid:5RR3jYTTYZAaxTxv9ZGBLu-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 不碰钱不对外发声 · 执行按钮永远在人手上</footer>
+</div>
+
+<script data-page-node-id="0OhVtjNIGrxL0ivzZu4wv8" data-pnid-children="TnyxCToodC0Wrf4lEyrWR1">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="oJxd87s8lEn5OyA677CJXr" data-pnid-children="mWvyLkyou8SBIN4cFO3qCv">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="rWSrPDdF79n8Ify61HU4a6" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="fVdbxjSgepD0lIcWCV5wgA" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="sTrHGFiA6fEvnYkzOL7oeM" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="rB9CCXQJDH6HlMfC4KzWKa" data-pnid-children="DiIpBuaNRMHRes4uhJfpm6">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="onhSahbvCCqyoYYJ2KGWIl" data-pnid-children="YiDuGmehTYei4VbFUPZNCv" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

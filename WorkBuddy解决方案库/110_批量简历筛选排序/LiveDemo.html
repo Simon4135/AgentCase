@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html data-page-node-id="5JS8p8bHHxPwiahWGwmGA9" lang="zh-CN">
+<head data-page-node-id="ccK0geoZHaGkaA07XNvB87">
+<script data-page-node-id="bHlIhaoCmWKyTQ5VUX5iDs" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="QEUVOBY6zQwZlANDnO1fkk" charset="UTF-8">
+<meta data-page-node-id="c6WY26cPC0x3dRBIeQE9he" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="cvYKfvWmTJvydXYAwzlTNI" data-pnid-children="lgHp0dVvSvO26FTgXtBKRC">简历筛选排序</title>
+<link data-page-node-id="f2jumdlYseVpRXHCjF4QdG" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="6ea7DGTSffDqgsWSwCqJk9" href="_assets/shared/hr-extra.css" rel="stylesheet">
+
+<style data-page-node-id="2A7YUBMOD4uC9OscQf56mL" data-pnid-children="7sK7Oj6IwPpRRxswMILtDG" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="xPHQHuV79idelMstl4LiWF">
+<div data-page-node-id="ReZAl3sXn9C3SyAEq2qfIT" class="wrap">
+
+  <!--pnid:vL9BbqgxcuPlshSIIUaaPV--><!-- HERO -->
+  <section data-page-node-id="6bjd8GHefjQBSwRNjSk71s" class="page-hero">
+    <h1 data-page-node-id="4CEtFLaNLwRLZeBegG9CYk"><!--pnid:vYhq80Q7Xt2SM2Y9UXt5Xz-->批量简历筛选排序</h1>
+    <p data-page-node-id="16DyC5z1KcyOkqOluGe68n" class="lead"><!--pnid:RV1ovXKLtMVl2YJaUMwQPx-->ResumeScorer Skill · JD硬性规则匹配 → 逐份扫描评分 → 三色分级输出</p>
+    
+  </section><nav data-page-node-id="BJSlRI66T1My1WMVbNCuLJ" class="subnav"><a data-page-node-id="jlKDHCeqJE2LLoNPoEBG6H" class href="场景引入.html"><!--pnid:WYUNZ1WOuBcdmxlB6dHiUt-->场景引入</a><a data-page-node-id="aHJgsEYa9mUahrTA26jdsN" class="on" href="#"><!--pnid:So9laghMAR0IPrYH78mMgS-->Live Demo</a></nav>
+<section data-page-node-id="TopH9jS8fQqKu0Zcl5BDFL" class="notice warn"><div data-page-node-id="SuZBMC7YJe3RUUlLhHtLkT" class="icon"><!--pnid:Ni87RaTUBGgsEWTcmIeC23-->!</div><div data-page-node-id="9eSu74232t7oBvjwhtK8YT">
+<b data-page-node-id="ILc5IMcvUbjXKMEhHytbpp"><!--pnid:hPEs1ofM73Uvz4bJPmz2FM-->演示模式 · 可视化预演</b>
+<p data-page-node-id="lDospuRjrADRYjNxRgnNUY"><!--pnid:R8aoFpJWsiNJWj7SYwi12M-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="nuZA2NLJ1xmYWKywRfFfhI" class="kpi-row">
+      <div data-page-node-id="03F6aHcNpYjR9ZKHCAnkCN" class="kpi"><div data-page-node-id="nIjIjbEhKVya6FlOJGYbqm" class="k"><!--pnid:0W0WBI9MZmT2PiPkLNE4dL-->待筛简历</div><div data-page-node-id="O5IKtzD3bhFA5WdOxlaa6L" class="v"><!--pnid:j7sAAfVUD3wI4AgEy2hFNs-->12</div></div>
+      <div data-page-node-id="u2QybCzkSP5JDKLAOxGybo" class="kpi"><div data-page-node-id="d1zlp86ltzZEfzm1tkfmQN" class="k"><!--pnid:rbsejAco013MoTdgQw8ZPS-->分级结果</div><div data-page-node-id="9G18Ue5YY7TJKgMCUREcuK" class="v"><!--pnid:q5qEoKJ6WfguqbwNm0FW4J-->🟢3 🟡4 🔴5</div></div>
+      <div data-page-node-id="fMb1P8KMFs10m2qxdepL9t" class="kpi"><div data-page-node-id="Id9XAPLRULWytMooryJW9U" class="k"><!--pnid:OS3z2gZJPKkDGGCJqIBg45-->AI筛选耗时</div><div data-page-node-id="RoSVooTZ8qNsNsMRZyg9ii" class="v"><!--pnid:79pTXzM9yxQotZ9ptFVncQ-->30s</div></div>
+      <div data-page-node-id="wc0y0fTedUPbsVGzDKtTrr" class="kpi"><div data-page-node-id="Tsn3c275RnrmMfKMeGwLIh" class="k"><!--pnid:WRtghIyehTYkgK14F3bJ69-->效率提升</div><div data-page-node-id="REHmOslPuxmAhJ9VfpZySu" class="v"><!--pnid:oMqOBUHr3ZhjFruSX2bxmt-->-99%</div></div>
+    </div>
+
+  <!--pnid:kcS7BKv7cbTNjC6uu2h2HV--><!-- SKILL BADGE -->
+
+  <!--pnid:5taFBrGtsVeGSFZygBZQFl--><!-- PHASE 1 · 输入 -->
+  <section data-page-node-id="m62Uky5KAU0Ax35VXjo76u" class="phase phase-in">
+    <div data-page-node-id="HOndVbHaoiUAXMIGf5znOu" class="phase-h">
+      <span data-page-node-id="9UCwsAQEZbl5SGoUsQ17As" class="phase-tag"><!--pnid:rvb9acubSRquOJSvVmwYf9-->INPUT 输入</span>
+      <span data-page-node-id="AS8QgBluPszCs4NFzEMSam" class="phase-title"><!--pnid:lnpcgBbLBJ8C04hhYeSpOR-->岗位画像（JD 摘要）+ 12 份候选简历</span>
+    </div>
+    <div data-page-node-id="n1EadoTP127CQX5zLidLJP" class="jd-grid">
+      <div data-page-node-id="jW20fJ0q6sQoLYJ8EK7UoR" class="jd-item"><div data-page-node-id="7eoHHs2YLgb5iWOttlXOrW" class="k"><!--pnid:bUcIvSEKk3m1nJ9ZHrG3dT-->硬性条件（一票否决）</div><div data-page-node-id="l3IVwNzyZNEyRZdfNM8fQ6" class="jd-hard"><span data-page-node-id="L1PPdP56ziDfuZtVcy6uiS" class="jd-chip"><!--pnid:kIXv0HFQR6yJzHwiC6Sxvt-->本科电子类</span><span data-page-node-id="LbhVMEevBI0FtHWeBveJvX" class="jd-chip"><!--pnid:pV4IB75bzdWX0IJy6I8EKL-->5年经验(含2年工控)</span><span data-page-node-id="5ckwQsMXqrz58UHR7f6rMl" class="jd-chip"><!--pnid:PaLePMxaAR1OXkN1NEttAP-->会画板 AD/Cadence</span></div></div>
+      <div data-page-node-id="8OxBB0qkqEnqMnGFGDOB8Q" class="jd-item"><div data-page-node-id="lgh4lF0En7EROceY7hj6y0" class="k"><!--pnid:s3VfYLRu1ZIo2FGNuQbwoO-->加分项</div><div data-page-node-id="54Deq896whqvP5wR9Nv9qi" class="jd-hard"><span data-page-node-id="ZMPwPSz7DdPUDYXE4pq1DG" class="jd-chip"><!--pnid:xjixHghKevNgFwBcqMYomd-->EMC/EMI</span><span data-page-node-id="KZdMjQGp268RAGHkB8CH2d" class="jd-chip"><!--pnid:OTh0EXCdBSKqihEEOoAlPU-->IATF 16949</span><span data-page-node-id="neXy3QGzLaLXlU9YY6BjzT" class="jd-chip"><!--pnid:ehySqZVANBQIcKJpmzFQS5-->PLC/伺服/电源</span><span data-page-node-id="abiMfMMcwivg0UuBsDBEXm" class="jd-chip"><!--pnid:2RwKhM8Ynr6X8oiBmL6Bky-->量产≥2款</span></div></div>
+      <div data-page-node-id="O1xG6tRk2pxdHWI5KKNB8T" class="jd-item"><div data-page-node-id="9DjzDdI4qoP71FpcCA2Asx" class="k"><!--pnid:lUNlcudyYMMtPyTSzEX3JY-->薪资预算</div><div data-page-node-id="WlWj32i1XZoIGzgBzdp6Bn" class="v"><!--pnid:dHiiTbIzgqnxKc3ib5DzgA-->25-35K × 15薪</div></div>
+      <div data-page-node-id="MCTdpCgwQ3qwVJUZIePEXj" class="jd-item"><div data-page-node-id="RZZpgvoO5vAi0SOr0MgfNX" class="k"><!--pnid:sIfr7t8a8SJDvjl3i5mTcj-->红线</div><div data-page-node-id="0GSX242s8XXQ9cOMCxrzfg" class="v" style="color:var(--red)"><!--pnid:TKsvNkZ1zjpDnLbvwMBcC9-->近3年跳槽>2次 · 薪资超预算20% · 行业完全不符</div></div>
+    </div>
+    <p data-page-node-id="XMN22wAEKJmtQFpcAcmkNS" style="font-size:12px; color:var(--muted); margin-top:10px"><!--pnid:B6myFbzjFUdtVkGbMJUGcy-->📁 已加载 12 份简历（含正常样本 + 注水陷阱样本），点击下方按钮开始筛选 ↓</p>
+  </section>
+
+  <!--pnid:oFtZTeoXjj14UK1U5U6DQ9--><!-- PHASE 2 · 调用 -->
+  <section data-page-node-id="9jDgzOgHGgVl3vXvp0AXMQ" class="phase phase-run">
+    <div data-page-node-id="lZjV9biwKRj0mulsZCvTKu" class="phase-h">
+      <span data-page-node-id="NL0nli9HgrOPRUHgKOXx9v" class="phase-tag"><!--pnid:QRAhAKsBoVFL40PhKDwCOQ-->RUN 调用</span>
+      <span data-page-node-id="L7oQZP5npuoxXdn4J5MzFa" class="phase-title"><!--pnid:wOpYIIFOLVkJBADt9u218R-->一句话调用 + 引擎执行</span>
+    </div>
+    <div data-page-node-id="ASC5ORLcu4dMT0iJsYaoMM" class="console">
+      <div data-page-node-id="OIxOr8QGn7t6vXCdGsewFI" class="prompt"><!--pnid:CL9iBJbmun8R2HAbmBy2HQ-->我用「简历筛选排序」能力，筛这批高级硬件工程师（工控方向）的简历。<br data-page-node-id="jIUIAcZKLWzmNKGhb2Pnqz"><!--pnid:cD5GoEdTqmQlg1RzhawWGY-->规则：硬性三关（本科电子类 + 5年含2年工控 + 会画板）+ 加分（EMC/IATF/PLC/量产2款）+ 红线（跳槽&gt;2次 / 薪资超预算20%）。<br data-page-node-id="UI133I8Y8cqJmluITyBzDQ"><!--pnid:ebsWFbRJiVhiFkPmeXtttW-->请输出：<span data-page-node-id="qS6WIyLr27obvo5kIXxEA0" class="hl"><!--pnid:2meayDPAdKFjnlQKUZ6AfR-->① 三色分级统计 ② 逐份评分+理由 ③ 待澄清清单 ④ 邀约顺序</span></div>
+      <div data-page-node-id="zkz491iotkIjIRrPF00c6g" class="run-row">
+        <button data-page-node-id="MwDLyujNf5YEtVLh0Ob577" class="btn-run" id="runBtn" onclick="runScan()"><!--pnid:yTBWWcctT7SICXgDPuijCp-->▶ 开始 AI 筛选（模拟 30 秒）</button>
+        <div data-page-node-id="iv3k8Hxa6y26gB4oGy8mME" class="progress"><div data-page-node-id="PSVHlKjByMn8awCZbQY8LY" class="bar" id="bar"></div></div>
+      </div>
+      <div data-page-node-id="22zj3z34W5PpaDA1CQaZsS" class="scan-status" id="status"><!--pnid:zXvYrPgG9kRloTj200Cd9B-->等待开始…</div>
+    </div>
+    
+    <!--pnid:Zsmkwd12G1b67aCR1QLB0l--><!-- Engine Toggle -->
+    <div data-page-node-id="TqxdrCaPy4hZaCDniDwdxo" class="engine-toggle" onclick="toggleEngine()"><!--pnid:8rnK4jkBGxvjmjWfqkDLan-->🔧 展开/折叠 引擎调用代码</div>
+    <div data-page-node-id="q5KvNklS7LyCQ5cgjCx0KE" class="engine-box" data-label="🔧 Skill 调用 ResumeScorer 引擎" id="engineBox">
+<span data-page-node-id="ySiYBbW9tcxFvbkAYgYR3q" class="cm"><!--pnid:A1siJWI0BqVEmyQkWx1Lxi--># ResumeScorer 引擎调用</span>
+<span data-page-node-id="cm2dnhGp0XU1m5IpWXONjb" class="kw"><!--pnid:JSN9RANHEOm0qEHdG3Up7h-->from</span><!--pnid:dJG3GiXDFn2cJuMfaYCMVp--> resume_scorer <span data-page-node-id="R2kEOxGOh2FSj6qBoBTOJa" class="kw"><!--pnid:MXFAUJH52ryVAGuD88MfMM-->import</span><!--pnid:lryQWG9ormWSZjnQTgsUJv--> ResumeScorer
+scorer = <span data-page-node-id="GQVB6QViOvOltaTnXRPAqM" class="fn"><!--pnid:hTrHHPxdaKcNEVyhQ7SO9J-->ResumeScorer()</span><!--pnid:K6wf9delf9vS2qxdAgCow6-->
+scorer.<span data-page-node-id="ESKSc5Rgii6np47QbWoSZm" class="fn"><!--pnid:JHzn5BcIiWW1VELAMiVKtF-->load_jd_profile</span><!--pnid:xzoc7MTZQnBwrYUpgvKtqP-->(jd_profile)              <span data-page-node-id="vyx0Rwsg4sIH5GlXbVIxgB" class="cm"><!--pnid:vdrBZhA3EOK28IKavioIZE--># 装 JD 硬性+加分+红线</span><!--pnid:p3yoj5AP37yUqKXEAORyMb-->
+scorer.<span data-page-node-id="oJZFyLIExY83f2SwRojNNe" class="fn"><!--pnid:KJUD1wy2cQW67UaTu0B3E2-->load_resumes_from_dir</span><!--pnid:U9s8BSfrfPZEDYvaBu4JHD-->(<span data-page-node-id="nLP8LTJPQpa0yDzaKoyonb" class="str"><!--pnid:h7QBaloqcCy70m9V2n2xKF-->"./resumes/"</span><!--pnid:ETuLAHD9fNbS1MI5MrmHmS-->)   <span data-page-node-id="doz092WXQPiCOa6iyQIBkH" class="cm"><!--pnid:2Hl2RhteJWZgM5SE61dI5K--># 批量装载 12 份 PDF/Word</span><!--pnid:OluYVSjzU8zn5AbKfKCOMK-->
+scorer.<span data-page-node-id="ZYijJaEYWrrVWZxzrkBFtX" class="fn"><!--pnid:nkn8O9FB7tRtewLlKemfuJ-->set_scoring_rules</span><!--pnid:8lolFty7BhcHKUdad6MZU3-->(
+    hard_rules=[<span data-page-node-id="4YfmLDOf1uL5bHTds49GLp" class="str"><!--pnid:jR3hahPjRNrzU1GmsmKOJZ-->"edu_bachelor_elec"</span><!--pnid:6p3wf0brJ54o84TKuio0x4-->, <span data-page-node-id="TlSSufpGsXixp15At5BUMG" class="str"><!--pnid:2ljxXkhcGlYO5Lg9NNv9Vy-->"exp_5y_2y_ctrl"</span><!--pnid:8op1VI3ny81fYdWfoJcjMO-->, <span data-page-node-id="3nLpHhUOglfqRvQyPV2dlC" class="str"><!--pnid:h2UCESq68WuXoRPCr27YEu-->"skill_pcb"</span><!--pnid:mOAzp6tFbatr43v4mt3mVL-->],
+    bonus_rules=[<span data-page-node-id="xcUZWYBnjstni5ODfxoWbp" class="str"><!--pnid:R7bB8qj128qOcfXF2QgAn3-->"emc"</span><!--pnid:aNIlCw3OGRBOXXHe6dtb5X-->, <span data-page-node-id="PAdSSZzp30h0yEGLt7DNuu" class="str"><!--pnid:T4m0BOZLq5CJzVDWE6egkd-->"iatf"</span><!--pnid:WsuJ3OB3Ss1pZzonTMCeQk-->, <span data-page-node-id="PtEYQstpEtwbkmU2eyP1MP" class="str"><!--pnid:OgBSYSDjCg0AIQfywLpjPD-->"plc"</span><!--pnid:8P7BkVzZ9DHbcEq4DOxdjD-->, <span data-page-node-id="lnkuO5ZBGFIh0Wj7avoN6K" class="str"><!--pnid:abBkuSPF6zO4fg6uJWP8FB-->"mass_prod_2"</span><!--pnid:8epR5YlAgElPgTIAYhE83V-->],
+    red_lines=[<span data-page-node-id="3UhQRBQo3w6Z75ATrV61pK" class="str"><!--pnid:rts4AuNyyAh1gAGpBGVxND-->"job_hops&gt;2"</span><!--pnid:UWsgM8veG8a3zseYAwScU2-->, <span data-page-node-id="s6tH7YB3yUhsqUN8gEJciz" class="str"><!--pnid:IzdJhPEHt6fcsxcFpbwKEN-->"salary_over_20pct"</span><!--pnid:uIFpLo723qABbskl6HqaOU-->, <span data-page-node-id="gZIoQEUkyI5jzfFipSUsTG" class="str"><!--pnid:jZ01rc0a0oBGEZEl491EU4-->"industry_mismatch"</span><!--pnid:AiQdFR0fd9GNhIDQpCKdRi-->]
+)
+results = scorer.<span data-page-node-id="Gk6PQkUiXWU3trgrjKzeL0" class="fn"><!--pnid:QNBltqpOZ5W99I4mpOCJdH-->score_all</span><!--pnid:tW69TaF49B3LGggvkQcAOQ-->(parallel=<span data-page-node-id="8fcl0UVDUftY4kk1doipNv" class="kw"><!--pnid:6Up9eCTBaUyPPiOc9fVomA-->True</span><!--pnid:6QbldTZiYubc7OxgD2A2t8-->)          <span data-page-node-id="sSYvWTGbMLbqnqExrFrLeU" class="cm"><!--pnid:it7XwFt5kjZLv8tCLPeIuj--># 逐份扫描+评分</span><!--pnid:ABAmOIAzj0QBlNyYQv3ltI-->
+tiered = scorer.<span data-page-node-id="TmTbVUVZChLmkSdiSraMd6" class="fn"><!--pnid:VuNX4EHBuYZjtf0sUiZO8e-->classify_by_tier</span><!--pnid:hzKKEWOEGN0KLtCQiMbPlZ-->(results)           <span data-page-node-id="5L95ZiTVecMnKXuzPEbblz" class="cm"><!--pnid:BRa9jF7o2BMs583HaBNqLL--># 🟢≥80 / 🟡60-79 / 🔴&lt;60</span><!--pnid:KcbVHzta5OG5OmEDD39s8P-->
+ordered = scorer.<span data-page-node-id="ScbMPJmvmviVdde0w0gqDf" class="fn"><!--pnid:etKBi5hwNx1YN1EXThd92B-->sort_by_score_desc</span><!--pnid:kDPoHenszFUvAXrlTsELAu-->(tiered)
+clarifications = scorer.<span data-page-node-id="11XraYmQgK7jkBlsCJH4OH" class="fn"><!--pnid:fSGaQMMbqGtrpB9QXGZ8Lk-->extract_clarifications</span><!--pnid:v6PqsYP5tSLx8agoUei1Dq-->(tiered)
+    </div>
+  </section>
+
+  <!--pnid:ShLi6hfDSSPkK9gzM1gXTt--><!-- PHASE 3 · 输出 -->
+  <section data-page-node-id="XFvtKEZDIv1CVdt3rO0K2Z" class="phase phase-out">
+    <div data-page-node-id="PK1De1Ko648pxHTEuwsSL6" class="phase-h">
+      <span data-page-node-id="h0tRi01eb2ldVV79r9cIZu" class="phase-tag"><!--pnid:FPKbjMQw6mN0PeABjoEsFw-->OUTPUT 输出</span>
+      <span data-page-node-id="zxpgfrpTz8vLdyjYcIq44S" class="phase-title"><!--pnid:xwkjJCo9MRsn1ZZGRQAX6A-->三色分级结果 + 待澄清清单 + 邀约顺序</span>
+    </div>
+    <div data-page-node-id="Grza4fUu7pJD0qGxKm0Piu" id="resultArea">
+      <div data-page-node-id="9SmQJ0l4daKG3dEpeujUlo" class="stat-row">
+        <div data-page-node-id="BNSwXr2u5l70khVEo0g0pA" class="stat t"><div data-page-node-id="alo1TJoyKZ2Hw4jLqlqX8r" class="n" id="sTotal"><!--pnid:VEgNQLENSKecSVIFaUzzg8-->0</div><div data-page-node-id="cU0ZEAc9jfyrBM1xTD52eY" class="l"><!--pnid:FuI1pUZxXxHqFwxIRvVYeR-->简历总量</div></div>
+        <div data-page-node-id="We8HbZK7z5WwzJtrDIGYyZ" class="stat g"><div data-page-node-id="SecgWXmdWZAWO965hqAT8G" class="n" id="sG"><!--pnid:Qf9l2DWqYjIbrYSqApnU6k-->0</div><div data-page-node-id="jWhdlFi18eVmmm4Dt3dyw6" class="l"><!--pnid:9DiZfoEmYS2ieGUWM1FgB5-->🟢 可约面</div></div>
+        <div data-page-node-id="k3uYaBxWRgpiAL9bnKIzvt" class="stat y"><div data-page-node-id="569woOKuPjJuSSIN0Lmn4h" class="n" id="sY"><!--pnid:yWzycNWcqbd23Zqfruznch-->0</div><div data-page-node-id="pufNoh9LFWjARz64tzHRiQ" class="l"><!--pnid:jefDrRY18RcJo8O4KovkZa-->🟡 待澄清</div></div>
+        <div data-page-node-id="BTFPwoETOBj5I9e8c6zFAO" class="stat r"><div data-page-node-id="3v8aURKYNBz9h2gZXmXkiw" class="n" id="sR"><!--pnid:NbaRCiuouFBsYJBv8nY5Xw-->0</div><div data-page-node-id="5KCEcj5oQkDGlQmGib6oyb" class="l"><!--pnid:wphRzl0hIvAq0X7MCg9VZv-->🔴 淘汰</div></div>
+      </div>
+
+      <div data-page-node-id="QgJ94Q8kzfaY8XX3obtKP9" class="filt">
+        <button data-page-node-id="ivPES7VPDdN52SXYyuDjlw" class="fbtn on" data-f="all" onclick="filt('all')"><!--pnid:TcQ9elcx6ZztEmkDE3kMQO-->全部 (12)</button>
+        <button data-page-node-id="GAsRt5kG7lwELVV5AM8KGl" class="fbtn" data-f="green" onclick="filt('green')"><!--pnid:weCLsH5y62fLJLhjm8AXsX-->🟢 绿 (3)</button>
+        <button data-page-node-id="wvhqUaJMXD8vnjkAz7g0RH" class="fbtn" data-f="yellow" onclick="filt('yellow')"><!--pnid:aTFXPjXBUBdgkkg8a7HJb2-->🟡 黄 (4)</button>
+        <button data-page-node-id="mZJu0p0tkmzHsAJNmOOAVb" class="fbtn" data-f="red" onclick="filt('red')"><!--pnid:o7jp2F2hSldIedSpbRemDa-->🔴 红 (5)</button>
+      </div>
+      <div data-page-node-id="yoihkXw0j2r9oWFydOABas" style="background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px">
+        <table data-page-node-id="tl6G9ItzWuCX63WLKQ0Pow">
+          <thead data-page-node-id="XvycN7iRV4K9nrn6puzOZj"><tr data-page-node-id="ysgMKOfuAZXoRbVEtVKeqF"><th data-page-node-id="TUOdWNhdPNxdqzeL76R0xE" style="width:100px"><!--pnid:CPpYP2GayfMwAKkWy3hx9z-->候选人</th><th data-page-node-id="xMb2iQVd7XAvd9zgzQBrxH" style="width:56px"><!--pnid:lXFkjCYX2BwZepTnhQhzey-->分级</th><th data-page-node-id="HwZaZhQtQiQ6SJQwjxQrdg" style="width:48px"><!--pnid:8TRr8AkK5XRmYMgfsJD0mA-->评分</th><th data-page-node-id="tB6aHYO2lJMn9D8DwaNWPn"><!--pnid:bmgy3uzgu7cg038Rz4ilD5-->匹配理由</th><th data-page-node-id="UDFHIivVbDvBxhQppr0q0l"><!--pnid:jinJf7CWUTOz3VkDlY9Tka-->顾虑点</th><th data-page-node-id="oZPEauuYHB1RGjaSz4qXXB" style="width:140px"><!--pnid:2l279RvheJViXPjVKK5EOE-->建议动作</th></tr></thead>
+          <tbody data-page-node-id="OXbeUoGMnj9LRFEvicHoRF" id="tbody"></tbody>
+        </table>
+      </div>
+
+      <h3 data-page-node-id="RHxiBOCBDzGNuGjVM8ggPW" style="margin-top:14px; font-size:14px"><!--pnid:XN0hsQw9SqtF8qWn5IlTx9-->❓ 待澄清清单</h3>
+      <div data-page-node-id="nxFyw5Fs8e7QFXxgCgxpZK" class="clr-grid" id="clrGrid"></div>
+
+      <h3 data-page-node-id="koINdLKb8gddCoUvwWOc4z" style="margin-top:14px; font-size:14px"><!--pnid:JmOsduAGqd7oJNV3VL4aBT-->📋 邀约顺序建议</h3>
+      <div data-page-node-id="A72HufSjdjx2zBSwdQf3l5" class="order-list" id="orderList"></div>
+
+      <!--pnid:8YpUZ1SRDTcTWpkyvBxYXH--><!-- Verdict -->
+      <div data-page-node-id="PW7V5kFBywqteFRfAm7UcR" class="verdict">
+        <div data-page-node-id="qj1zS3upkbxNiEggM1jbuV" class="t"><!--pnid:up9idBSxsToKnH2atjomJ4-->🟢 3人可约面 · 4人需澄清 · 5人淘汰（含1份注水）</div>
+        <div data-page-node-id="zu0eFdmlR64WXohI5qNkzx" class="d"><!--pnid:jkwUI0KBseTUVCmTBGFf1D-->绿组赵立军92分全场最佳（华中科技硕士+PLC量产3次）；黄组何志远大专但工控9年建议破格；红组林峰量产时间线矛盾疑似注水</div>
+      </div>
+
+      <!--pnid:oL1tdqd4HPl2lwdyFOyQ0B--><!-- Eff Bar -->
+      <div data-page-node-id="RWjW3cK8b3cEQ4EHtZLHrv" class="eff-bar">
+        <span data-page-node-id="liFb0lwMM1s8dXgjwfpoLz" class="label"><!--pnid:4sK8tWiVeF9Tj1GwNEDECC-->人工 2-4小时</span>
+        <div data-page-node-id="QA19ptuevy92Iw7byMJxID" class="bar-wrap">
+          <div data-page-node-id="CyDWIdVKzMhOudtbFXVOwd" class="bar-fill old" style="width:90%"><!--pnid:RBsceg9AdNfmfdX66gPRuQ-->2-4h</div>
+        </div>
+        <span data-page-node-id="WrZbnUjbC7S9hDXuuoStdH" class="label"><!--pnid:uUS3DA4uTyhAA4f7DDex3I-->→ Skill 30秒</span>
+        <div data-page-node-id="0LKw6c0B1heKQBxys2zPWs" class="bar-wrap">
+          <div data-page-node-id="VATrm4HF8GYl8IU5i1D2cb" class="bar-fill" style="width:3%"><!--pnid:HxUU5IVCb6506vMPpkfYz0-->30s</div>
+        </div>
+        <span data-page-node-id="zKxDvKhX0M4zhrR5P6fEzO" class="label" style="font-weight:800; color:var(--green)"><!--pnid:NPFCFjmlqPiUVLAWBxB4Q1-->节省 -99%</span>
+      </div>
+    </div>
+  </section>
+
+  <!--pnid:1adLShGWaq3kISLKALiSKL--><!-- FAQ -->
+  <section data-page-node-id="xGvukAHvxeyzMiyLStuRLt" class="faq">
+    <div data-page-node-id="7jTolJPt6lespFRDW7Wzx8" class="q"><!--pnid:HjUbhA4ElPe2hPz4ecjnae-->❓ 这套评分规则可以复用吗？</div>
+    <div data-page-node-id="gPNX1jQBxrvheNO9zVwfdN" class="a"><!--pnid:EfpFDpjPwLtqMyYw2BSGdC-->可以。JD画像和评分规则可保存为模板，下次同类岗位直接调用。支持动态加规则 rerun（如追加"到岗≤30天"条件一键重筛）。</div>
+  </section>
+  <section data-page-node-id="J2xWPNsH7NyW0k5IQysraM" class="faq">
+    <div data-page-node-id="7G4AvkPUFwqH3777hOj6ZH" class="q"><!--pnid:Xv4pGu7sipnsjn7xXI9Mnr-->❓ 注水识别准确率如何？</div>
+    <div data-page-node-id="jRJzjftwvZiqhGah1sLh1Q" class="a"><!--pnid:Advb31pwcSsUUCW72AYXEb-->基于交叉验证算法（时间线矛盾 + 技能链完整性检查），标注"疑似"而非"定论"。建议面试时针对疑点深问，最终判断权归 HR。</div>
+  </section>
+
+  <!--pnid:naJhznYi4JTbWT0RzeipwF--><!-- 旧三件套/相关链接盒已移到顶部统一导航，删除底部重复 -->
+  <!--pnid:Q1gFdRpHhmOknENOPufCs5--><!-- Footer CTA -->
+  <div data-page-node-id="XZ1LjLc2yQghpJeYZGrwaI" class="cta">
+<div data-page-node-id="maps025l2FnOjytcAT9jbG"><h3 data-page-node-id="PizqEYHU173OBSB3hdzyb8"><!--pnid:zKkR2k9odWZlnK1bYuAIPA-->想了解来龙去脉？</h3><p data-page-node-id="IYZivM4Q8knUrtrfJkTLtE"><!--pnid:zlKqb5Qgfl7D2SikQI6Not-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+<div data-page-node-id="u0neIvsUuGKmb919R8q8w6" class="btns">
+<a data-page-node-id="5hUnzxVALMjfvKYLI6c21a" class="btn ghost" href="场景引入.html"><!--pnid:7h9lFvyUOqerEpD7XG62Fz-->返回场景引入</a>
+</div>
+</div>
+
+</div>
+
+<script data-page-node-id="zU7sTP9rv3X63Go0bcS5nv" data-pnid-children="gHYOUTp1Hx26zUKab6seWk">
+/* ---- 12 份简历沙箱数据 ---- */
+var RES = [
+ {name:"赵立军",tier:"g",score:92,edu:"硕士·华中科技",exp:"9年·工控9年",reason:["PLC 量产 3 次出货 20 万+","IATF + ECN + EMC 全具备","画板 8 年 AD/Cadence"],concern:"期望 30K 偏上，预算内",action:"优先约面（1 周内）",dur:"1 个月内"},
+ {name:"王海",tier:"g",score:90,edu:"本科·西电",exp:"10年·工控8年",reason:["工业网关量产 3 次","IATF 16949 体系主审","带 4 人小组管理经验"],concern:"到岗需 2 个月（交接长）",action:"约面，谈压缩交接",dur:"2 个月"},
+ {name:"李敏",tier:"g",score:84,edu:"本科·浙大",exp:"7年·工控4年",reason:["伺服主控板量产 2 次","EMC 整改 3 次过 CE","IGBT 驱动扎实"],concern:"前 4 年家电非工控",action:"约面",dur:"3 周"},
+ {name:"何志远",tier:"y",score:72,edu:"大专·高职",exp:"12年·工控9年",reason:["工控 9 年能力超出岗位","量产 4+ 款","画板 12 年极熟"],concern:"大专学历不满足本科硬性",action:"与用人部门确认学历破格",dur:"2 周"},
+ {name:"刘洋",tier:"y",score:70,edu:"硕士·上交",exp:"7年·工控外企",reason:["工控外企能力完全匹配","CE/UL 认证经验"],concern:"期望 45K 超预算 20K",action:"确认薪资弹性",dur:"1 个月"},
+ {name:"孙悦",tier:"y",score:68,edu:"本科·北理工",exp:"4.5年·工控3年",reason:["工控 3 年行业对口","薪资 24K 预算内"],concern:"经验 4.5 年&lt;5 年；量产 1 款&lt;2 次",action:"电话初面确认项目深度",dur:"2 周"},
+ {name:"周涛",tier:"y",score:64,edu:"本科·华南理工",exp:"9年·工控+电源",reason:["工控/电源经验都有","画板能力强"],concern:"近 3 年跳槽 4 次超红线",action:"电话初面核实稳定性（高风险）",dur:"随时"},
+ {name:"陈强",tier:"r",score:45,edu:"本科·南邮",exp:"8年·消费/医疗电子",reason:["硬件功底扎实画板熟练"],concern:"无工控经验，方向不符",action:"淘汰",dur:"—"},
+ {name:"林峰",tier:"r",score:30,edu:"本科·211",exp:"声称6年·工控",reason:["简历描述像模像样"],concern:"量产时间线与公开信息矛盾，注水嫌疑",action:"淘汰（背景核实后定）",dur:"—"},
+ {name:"吴倩",tier:"r",score:20,edu:"本科·软件工程",exp:"6年·嵌入式软件",reason:[],concern:"无任何电路设计经验，核心方向不符",action:"淘汰",dur:"—"},
+ {name:"郑浩",tier:"r",score:18,edu:"本科·电子信息",exp:"1.5年·助理",reason:[],concern:"经验远低于 5 年，初级与高级不匹配",action:"淘汰",dur:"—"},
+ {name:"马超",tier:"r",score:12,edu:"大专·机械设计",exp:"7年·结构设计",reason:[],concern:"专业与经验双不符，无硬件经验",action:"淘汰",dur:"—"}
+];
+var CLR=[
+ {who:"刘洋",issue:"期望薪资 45K，超预算 20K（上限 35K）",todo:"HR 确认薪资弹性 / 是否接受奖金结构",p:"P0"},
+ {who:"周涛",issue:"近 3 年跳槽 4 次，超红线（>2 次）",todo:"电话初面核实离职原因与稳定性",p:"P0"},
+ {who:"何志远",issue:"大专学历，不满足本科硬性条件",todo:"与用人部门确认是否学历破格（建议破格）",p:"P1"},
+ {who:"孙悦",issue:"总经验 4.5 年 < 5 年，量产 1 次 < 2 次",todo:"电话初面确认项目深度与定位",p:"P1"}
+];
+var ORDER=[
+ {n:"赵立军",d:"92 分 · 1 周内到岗 · 无风险"},
+ {n:"王海",d:"90 分 · 交接需 2 个月，同步谈",w:true},
+ {n:"李敏",d:"84 分 · 3 周到岗"},
+ {n:"黄组 4 人",d:"先电话初面澄清，通过后排业务面",w:true},
+ {n:"红组 5 人",d:"淘汰 · 林峰留档待背景核实"}
+];
+
+var running=false;
+function runScan(){
+  if(running)return;running=true;
+  var btn=document.getElementById("runBtn");btn.disabled=true;
+  var bar=document.getElementById("bar"),st=document.getElementById("status");
+  bar.style.width="0%";
+  var i=0;
+  var timer=setInterval(function(){
+    i++;
+    var pct=Math.round(i/RES.length*100);
+    bar.style.width=pct+"%";
+    st.textContent="扫描中 "+(i+"/"+RES.length)+" · "+RES[Math.min(i,RES.length-1)].name;
+    if(i>=RES.length){
+      clearInterval(timer);
+      st.textContent="✅ 完成 · 12 份已分级（30 秒 vs 人工 2-4 小时）";
+      setTimeout(renderResult,300);
+    }
+  },380);
+}
+function renderResult(){
+  document.getElementById("resultArea").style.display="block";
+  document.getElementById("sTotal").textContent=RES.length;
+  document.getElementById("sG").textContent=RES.filter(function(r){return r.tier==="g"}).length;
+  document.getElementById("sY").textContent=RES.filter(function(r){return r.tier==="y"}).length;
+  document.getElementById("sR").textContent=RES.filter(function(r){return r.tier==="r"}).length;
+  var tbody=document.getElementById("tbody");tbody.innerHTML="";
+  var sorted=RES.slice().sort(function(a,b){return b.score-a.score});
+  sorted.forEach(function(r){
+    var tr=document.createElement("tr");tr.className="tr-"+r.tier;
+    var tierL={g:'🟢 绿',y:'🟡 黄',r:'🔴 红'}[r.tier];
+    var tierC={g:'tier g',y:'tier y',r:'tier r'}[r.tier];
+    var scoreC={g:'score-g',y:'score-y',r:'score-r'}[r.tier];
+    var reason=r.reason.length?("<ul class='reason'>"+r.reason.map(function(x){return "<li>"+x+"</li>"}).join("")+"</ul>"):"<span style='color:var(--muted)'>—</span>";
+    tr.innerHTML="<td><b>"+r.name+"</b><br><span style='font-size:10.5px;color:var(--muted)'>"+r.edu+"</span></td>"+
+      "<td><span class='"+tierC+"'>"+tierL+"</span></td>"+
+      "<td class='num "+scoreC+"'>"+r.score+"</td>"+
+      "<td>"+reason+"</td>"+
+      "<td class='concern'>"+r.concern+"</td>"+
+      "<td><span class='action'>"+r.action+"</span><br><span style='font-size:10.5px;color:var(--muted)'>到岗："+r.dur+"</span></td>";
+    tbody.appendChild(tr);
+  });
+  var cg=document.getElementById("clrGrid");cg.innerHTML="";
+  CLR.forEach(function(c){
+    var d=document.createElement("div");d.className="clr-card";
+    d.innerHTML="<div class='who'>"+c.who+" <span style='font-size:10px;background:#fde68a;color:#92400e;padding:1px 6px;border-radius:8px'>"+c.p+"</span></div>"+
+      "<div class='issue'>"+c.issue+"</div><div class='todo'>→ "+c.todo+"</div>";
+    cg.appendChild(d);
+  });
+  var ol=document.getElementById("orderList");ol.innerHTML="";
+  ORDER.forEach(function(o,i){
+    var d=document.createElement("div");d.className="item"+(o.w?" warn":"");
+    d.innerHTML="<span class='idx'>"+(i+1)+"</span><b>"+o.n+"</b><span class='note'>"+o.d+"</span>";
+    ol.appendChild(d);
+  });
+  document.getElementById("resultArea").scrollIntoView({behavior:"smooth"});
+}
+function filt(f){
+  document.querySelectorAll(".fbtn").forEach(function(b){b.classList.remove("on")});
+  document.querySelector(".fbtn[data-f='"+f+"']").classList.add("on");
+  document.body.className="show-"+f;
+}
+function toggleEngine(){
+  var box=document.getElementById("engineBox");
+  box.classList.toggle("show");
+}
+</script>
+<footer data-page-node-id="qYxINnRzbbcqlis2rR0Y5o"><!--pnid:EINHj4eab0h2CSR61RAjk7-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="h9mrLwiNcdTSSrhO5oypVU" data-pnid-children="8soCk0Rbl2vAQdXxJQlUtM">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="Dm5OvCTxswqAx4tYwU6x7J" data-pnid-children="kkXN2OT5dWkBxQyWw1VNrG">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="jnqyRsiNdmij5xGNxL3pkc" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="NKBXWvtA3cTGFruqLCkQ6R" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="xrnqCd13BB26q0LGDr2rbr" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="2pfc6NIvDcdkNLqlTkPX0p" data-pnid-children="nfIzBvVkyBMFLg1e6jKNxK">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

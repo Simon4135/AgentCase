@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html data-page-node-id="T2sZD6wT0zgiyJxw7FbS7o" lang="zh-CN">
+<head data-page-node-id="NSEwUFA1xxnWO3TMm5SBgl">
+<script data-page-node-id="LWRjIFwF1Eba02dsfqySf0" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="vNdfS77eqYC7DfzwUdtswf" charset="UTF-8">
+<meta data-page-node-id="MaP3c1WGpyunpUpzsZgPjk" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="1XOVXzVfpv7mDocKRT4InY" data-pnid-children="zW4PvqOwhEZXrHkWFtCIoS">三份文件工艺指标一致性核对</title>
+<link data-page-node-id="GtLBR7bmN4hweedO2EVTQh" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="i4PDuWr5AsoclXR6JQomRb" data-pnid-children="Oz0As9f6fOH9z2BIQJWjxK">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="V4xrUZ6Iw3LjwcCfF26Dwi" data-pnid-children="9CWUWbzqbC1p6rQataPtdi" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="wytke2RqnBIErARBGfw7yH" data-pnid-children="XL4DrLZYbsdvjGJXmiK5S7" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="Vymu7vXYNFC2AaGQhOhQax">
+
+<div data-page-node-id="Udv5jCwvPxzP9wNrrDxJi2" class="wrap">
+<section data-page-node-id="Q4JB3iTKpvqFAxizMNUuEz" class="page-hero">
+<h1 data-page-node-id="gK8k6QihwTGfkCc0MxVVuB"><!--pnid:Jiy3v4jpujd2MGqB1TTq9i-->三份文件工艺指标一致性核对</h1>
+<p data-page-node-id="HLeI17OLBurr4OF7p7qFOg" class="lead"><!--pnid:sZLliXac6xOIVgWJrICJFk-->操作规程、工艺卡片、DCS 报警值三份文件各写一个上限 · 法律要求它们必须一致</p>
+</section><nav data-page-node-id="8ATMGUK8Y2P3oHoQSp2Dlf" class="subnav"><a data-page-node-id="igujn3bDNgwcLOsHFFGGQJ" href="场景引入.html"><!--pnid:y0S5Ajkyt96uomiMAZpv4l-->场景引入</a><a data-page-node-id="81kLRWhFYmizkxcHWDIgLn" href="LiveDemo.html"><!--pnid:4uIcovKo5wQjKZYfu9EF3L-->Live Demo</a><a data-page-node-id="ZJGwqc9ObqZ5Ey9nPHdnSv" class="on" href="#"><!--pnid:qdZCVQEtpAjeXr0q3TC9Ka-->推荐任务</a></nav>
+
+<section data-page-node-id="J4xQEENlN3vDu9xqwGwlOc" class="blk">
+  <h2 data-page-node-id="kBOYC1qrXRXPLsW27FgU9j" class="h"><span data-page-node-id="fLWAvYTspV47ns8Z0K38Nc" class="num"><!--pnid:ZskpRA4dpCUJoAmGVoBRlV-->一</span><!--pnid:zDEk58LTZzHhxs7SxMeaj6-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="vbI6NQlfBNtMUWgLuL0JjY" class="subline"><!--pnid:4KileNgwbvfFUm4wg6toxn-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="iDNIK1NZdXEgYXpndha4S3" class="card"><p data-page-node-id="TxhREYRWtvsWmFGjJsB8G0"><!--pnid:4U3Y63tYEhgFB7tigVTcXA-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="ngV9CBAJT5DC3E92OSUdt7" style="margin-top:10px"><!--pnid:U1BRX1ZbS4hA2F1CaHreC2-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:E8AYI0CUXJTCHpYCpSZLiY--><!--wb-skill-start-->
+<div data-page-node-id="i31wvR5W6zI35WmJZM84SF" class="wb-skill">
+<p data-page-node-id="iA7GhFN74AYhI2NwuO21j8" class="wb-skill-lead"><!--pnid:qKth8flDfJI8aGFtGVMqQ5-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="UviS67lPU84UPGzyssd23Q" class="prompt" id="wbSkillPrompt"><!--pnid:NYo3v8qDC3LePNdB685Z3i-->【准备】这个场景的规则都在「三份文件工艺指标一致性核对」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/U19XZ8rGZDnZzWm2pW7Rn0/C-SErKv_T8J0/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="DdsGmFfDQfrXkJfhcyVIUJ" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:DlLgWbXydU8bKmCaXOOgys-->复制</button></div>
+</div>
+<!--pnid:IJXEZ2cybACGetBZ8es0w3--><!--wb-skill-end-->
+<section data-page-node-id="sqoHnp3m9sOgU6USS52Yjs" class="blk">
+  <h2 data-page-node-id="8W9qNf5JVRX9xKSc2CTqaJ" class="h"><span data-page-node-id="CBVdzoaM3V4aGATl4kIeGl" class="num"><!--pnid:n8A1LPyhHhwZC040ZN2zF0-->二</span><!--pnid:ChKIkC6kygJwU1yXD9qNDZ-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="k22rXNwL0mKXimGA1rZZ10" class="subline"><!--pnid:hzkpSaziPw4Xf0ZijUgbxv-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="X2a00LX3weAOLUWHhhX76v" class="tlist">
+    <article data-page-node-id="Gkt6A7LIBBOWzCK8QpIF4D" class="task">
+      <div data-page-node-id="lsDOXrCjqGqpsFD1dqtuJ3" class="th"><span data-page-node-id="mBINZwoh2VRsOCBGI2zcjl" class="no"><!--pnid:3GnnvPGscH77USl6riV6mR-->01</span><h3 data-page-node-id="ZHGd9tKXvGCp00jZiqkV3j" class="ttl"><!--pnid:J1agrDPkwU41MwDTsezWGe-->首推默认</h3><button data-page-node-id="JWpJU0XcEN6vkPBfmcvEnh" class="cp" type="button"><!--pnid:9jNIMLaZHHpG2PGZrUl5ns-->复制</button></div>
+      <p data-page-node-id="tPGFxF3FuWjdl5rwDWFqWu" class="tp"><!--pnid:J1Nn6TOSjvOJl0FgTL3Gaq-->帮我核一下 R-202 缩合段的工艺指标，三份文件对不对得上。技能内置的是：01_工艺卡片_R202缩合段_照片转录.xlsx、02_安全操作规程_缩合工序_第4章节选.xlsx、03_DCS报警与联锁设定值导出.xlsx、04_变更单MOC-2025-041_归档件.xlsx、05_DCS操作记录_近三十天温度设定值变更.xlsx。
+我想知道三份文件的上限是不是同一个数，不一样的话差多少、哪份最严、各自是什么版本。再查一下这个数是怎么变成三个的，顺着变更单里那份待更新文件清单看哪几项真做了。近三十天的设定值调整落在哪个区间、大家实际按哪份文件在操作，也一并核出来。
+产出三份 Excel：工艺指标一致性判定表.xlsx 是正式件本体，逐项给符合／不符合／缺证据，对照重大隐患判定标准第十七条，统一值那一栏留空；三文件指标比对明细.xlsx 每个指标一行，带三份文件的值、差值、最严那份和出处版本号；变更执行缺口清单.xlsx 标出漏改项和超出批准范围项。
+统一到哪个值我不能定，那要走变更。你把清单和依据给我就行。</p>
+    </article>
+    <article data-page-node-id="dB0UAuCx8Qiw0H6in1o6uR" class="task">
+      <div data-page-node-id="1oMClRRMtfM1TKIgsYkltx" class="th"><span data-page-node-id="fiAvSQ42YN09JQ8cPSg9dd" class="no"><!--pnid:azOZ2gPlxQSoqzOi399X5I-->02</span><h3 data-page-node-id="m7qH0uGOTFpNqTZpvH6UHl" class="ttl"><!--pnid:1ObK87FTiiyGRRvd7SGSnx-->只核温度这一个指标</h3><button data-page-node-id="nqe6Ixzh2NFmP0khmN0RT1" class="cp" type="button"><!--pnid:hXA5rNn6hEmYRuB2ifSPc3-->复制</button></div>
+      <p data-page-node-id="jSK09NmnXfABirCzV6bcdW" class="tp"><!--pnid:h50FTNHqO1mvf3lnakmYQ4-->先只核 R-202 缩合温度这一项，不用全段都跑。读 01_工艺卡片_R202缩合段_照片转录.xlsx、02_安全操作规程_缩合工序_第4章节选.xlsx、03_DCS报警与联锁设定值导出.xlsx，把三份文件里的上限并排、算出差值。产出 Excel 一张三行比对表：文件、上限值、差值、最严／最松、出处与版本号。</p>
+    </article>
+    <article data-page-node-id="ylrLX7wAF4pMX2t9j6umCr" class="task">
+      <div data-page-node-id="97X46gQ0Dee0f06YpDx5IS" class="th"><span data-page-node-id="j6GbZBHFpggmtk8VpCtaoj" class="no"><!--pnid:QsNPMG3SlRFMjNS0Q65a3R-->03</span><h3 data-page-node-id="8o7iW3XNHjwzmtmQkheVAv" class="ttl"><!--pnid:VubgHHiOfsDsvOUrwkznvD-->换成归档版当基准</h3><button data-page-node-id="3SxueSdwr175eW3J3ttEdE" class="cp" type="button"><!--pnid:WPGAvXiZwwkhFpH68Uf7z1-->复制</button></div>
+      <p data-page-node-id="t3ym7CBWh95Z88FlSZh9GV" class="tp"><!--pnid:almw2ZKbiLYTbKoR3wqiYO-->这次把基准从现场在用的卡片换成归档的受控规程，同一批指标再判一遍，看结论会不会翻。产出 Excel 一张对照表：指标、现场版判定、归档版判定、结论是否相反、原因与出处，两边差异逐项写清。</p>
+    </article>
+    <article data-page-node-id="RzAdlrFhprMdafFMaI2a4h" class="task">
+      <div data-page-node-id="E9rZkMMOvtF1IFDK2XSfMq" class="th"><span data-page-node-id="WvHP8lp3dHw54UsVTVwuZJ" class="no"><!--pnid:s1u8K2C5Di6F5JTuVAuKLb-->04</span><h3 data-page-node-id="fqXBQmKPQ4HTt74kE1Csci" class="ttl"><!--pnid:hcAhNTYBQGjoCrJYRddTQC-->九项控制项一次过</h3><button data-page-node-id="xu8arn0T5D3vJgh0147WXu" class="cp" type="button"><!--pnid:1qF453se1gi0SxboATK3zv-->复制</button></div>
+      <p data-page-node-id="Qc2T3IAQ1wIKzZFJkKMjW0" class="tp"><!--pnid:dcrNjpRc16m8lBXoePwowT-->把卡片上其余控制项（压力、E-202 出口温差、循环水流量、摩尔比、保温时间、搅拌转速、滴加速率、终点 pH）连同温度一起过一遍。产出 Excel 一张全项比对表，逐项判一致／不一致／某份缺失，按差值绝对值排序，并标出哪几项在 DCS 里没有测点。</p>
+    </article>
+    <article data-page-node-id="PosKvZ2qDzayyYitpyuTS5" class="task">
+      <div data-page-node-id="kwXMoKYJM12sXwU3Hvhoqq" class="th"><span data-page-node-id="GpRjyzyy0vjNMDhB7n4spd" class="no"><!--pnid:55oMx8J1kWbmIyJvk2rDj2-->05</span><h3 data-page-node-id="zLuRJQZ7gC984w1BwFGRvP" class="ttl"><!--pnid:qBpb0KTw39tAKNBhKON0DL-->给安全总监看的一页</h3><button data-page-node-id="NdbMdvtS57wNLbvTz54wJr" class="cp" type="button"><!--pnid:dbA2knbDXd3v6Gt9CQVPVQ-->复制</button></div>
+      <p data-page-node-id="kWgvRWb9UIVtM5dz5WHQTV" class="tp"><!--pnid:wE02yPYxk62BFZPmuy43JG-->读 01_工艺卡片、02_安全操作规程节选、03_DCS报警与联锁设定值导出，把这次核对压成给安全总监的一页：温度上限三个数各是多少、差几度、命中的是第十七条第几项、两条可选路径各自的代价。产出 Markdown 一页纸，明细表和变更溯源底稿不用给。</p>
+    </article>
+    <article data-page-node-id="H5WOeDb2i4hUMcUfxO98t8" class="task">
+      <div data-page-node-id="cbh1gWzrZSK6BAume8qVvw" class="th"><span data-page-node-id="w4opI1w8yMfC1Y7XkxW8na" class="no"><!--pnid:vVMEyKLeYJmPoiESCJBeDj-->06</span><h3 data-page-node-id="BiVPeJjXMRpFkPncEvieXY" class="ttl"><!--pnid:lIpRNRW8ncOc5sPQ1pVGlN-->让它反驳自己</h3><button data-page-node-id="CeEL5WixRikSpvG4LX9HYt" class="cp" type="button"><!--pnid:nDU8WWPexxeD3ipYn3jltV-->复制</button></div>
+      <p data-page-node-id="HFcPms3YINU6LhuKzCt5FV" class="tp"><!--pnid:ctI556NsVV8BQqgZ3nQgdM-->「操作纪律松懈」这个判断你排除了，把支撑它的 32 次设定值调整记录逐条摆出来复核，看有没有哪次其实越了规程。产出 Excel 一张复核表：调整时间、班组、调到多少、是否超规程上限、结论与出处，证据不足就改回「待核」。</p>
+    </article>
+    <article data-page-node-id="9DPeCeyimlCmgnONkBdriF" class="task">
+      <div data-page-node-id="DT1KhLy0bPJte7xibLgnWr" class="th"><span data-page-node-id="rcBcEXlDrZuWNDuDkSIqYv" class="no"><!--pnid:cNohg1LBSQlvvpcN7OHtuA-->07</span><h3 data-page-node-id="VXK3D4sgu7BFi4yy1O5y3D" class="ttl"><!--pnid:S7a74dxmDBP9whkPzi8aM3-->顺着变更单往回追</h3><button data-page-node-id="5jGfha1Ywym95kulwZuAqT" class="cp" type="button"><!--pnid:ZV5w4GghHWFh5pNqoxBOhZ-->复制</button></div>
+      <p data-page-node-id="lGGMsfMkE1rkKvfmDyzEG4" class="tp"><!--pnid:TjNwrV5mtp3MeavLyehUl6-->顺着 04_变更单MOC-2025-041_归档件.xlsx 往回查这个数是怎么变成三个的：变更事由、批准范围、待更新文件清单三项的实际执行、DCS 报警值改动有没有依据。产出 Excel 一张溯源表：时间、文件、执行与否、漏改项与超出批准范围项，各行标出处。</p>
+    </article>
+    <article data-page-node-id="6RfdEWLooM4JbSewufKDhh" class="task">
+      <div data-page-node-id="AMqLtuqrXMnpKy8dmMsbgK" class="th"><span data-page-node-id="wxWnCuAlfj4s8tuOw2pVuT" class="no"><!--pnid:Ff1uxgK8Rvbk5kGdUpBaE9-->08</span><h3 data-page-node-id="auK3xTl6UerRt2EhnO5gXj" class="ttl"><!--pnid:T99PCombyPf5ZNHkZ0jyU2-->对照第十七条自查</h3><button data-page-node-id="ZKJSP5PXpojYo1Xq7ayAME" class="cp" type="button"><!--pnid:VoE2xzDMCMmy8bD7p4Ru3c-->复制</button></div>
+      <p data-page-node-id="Mg9LdVikkSCeMEKSgWtgGO" class="tp"><!--pnid:dYuOY6U4g2OGxEL0ppkvXe-->对照重大事故隐患判定标准第十七条，把这份判定表逐项自查：哪项能判符合、哪项只能判缺证据、哪项证据不足不该下结论。产出 Excel 一张自查表：条文号、对应指标、判定、依据出处、还缺什么证据。</p>
+    </article>
+    <article data-page-node-id="2nifvf0b5YKL2QBZeaGjGu" class="task">
+      <div data-page-node-id="wnjDJIJEUFDk76DiS5cBrC" class="th"><span data-page-node-id="mfc5vDslkMJVUYPRMr31WO" class="no"><!--pnid:HiBVGagfIHdlqzT4zQhdvZ-->09</span><h3 data-page-node-id="zBnhEbpaPj1HargCHmz9Ri" class="ttl"><!--pnid:n1WCG5703J7xvUeoJ5MFQ7-->折成产能与后果</h3><button data-page-node-id="LelzCCH7lQacUaddxVkZqC" class="cp" type="button"><!--pnid:lLoAbwjpK8aiaNMVObIdyA-->复制</button></div>
+      <p data-page-node-id="aZCQkWnfG3OyV3ISwdLAar" class="tp"><!--pnid:H2fY6UAiMe9DuQTYT1CCgH-->把三份文件不一致折算成两条路径的代价：统一到最严的 138℃ 时，按近三十天操作分布有多少次调整会碰到上限；维持变更批准的 140℃ 时还要补什么。产出 Excel 一张测算表：两条路径的产能影响估算、依据数据、以及停产整改一天的影响口径。</p>
+    </article>
+    <article data-page-node-id="JJ9gYuVwtoSIRMslaAzKnc" class="task">
+      <div data-page-node-id="02uTt1qpZzgJffo9r8xTS3" class="th"><span data-page-node-id="9BUgoo0JD4o2RctiBsWdTA" class="no"><!--pnid:GUEH616qu5SGwZuLb0Nhje-->10</span><h3 data-page-node-id="36qswLGRTiiwqVr0ULFrGC" class="ttl"><!--pnid:JA0snzzMib1mUcK30ggIMb-->沉淀成三文件核对表</h3><button data-page-node-id="et9Jn88ZKxbinHc21Qk6en" class="cp" type="button"><!--pnid:j1VW4HcULqbv4QGGBhoT28-->复制</button></div>
+      <p data-page-node-id="tlt9Tve6tEBR2wOeVLvHav" class="tp"><!--pnid:ncSc8aeSJIhtEFQGLKOSbk-->把这次的比对动作整理成一张通用核对表，材料就是 01、02、03 那三份文件：核哪几项、每项看哪三份、一致与不一致怎么判、查到不一致下一步走什么流程、版本号填在哪。产出 Markdown 一份，换到别的工序直接套用。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="MhcKBduOUqmHqtMLfOVREc" class="cta">
+  <div data-page-node-id="ntlxO5DpvRmtcXwSAfbAbi"><h3 data-page-node-id="l6NxhnHcucsaB12jHFoflF"><!--pnid:a63vQj0GSGq1LUkU0jY5vo-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="hYCqQ4RzTJwKtfZdLd10sJ"><!--pnid:GTj6pjaMJzLuZy2gTfwotv-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="RSzr0SfcnjnNz8PAsZ0zvf" class="btns"><a data-page-node-id="2KBIH2bYUtmPWH9BimGuzl" class="btn" href="#" id="ctaContact"><!--pnid:tEzGzSlkrzccOIoGJX9NOY-->联系我们</a></div>
+</div>
+<footer data-page-node-id="P8xEmQbdQLhmM6osSDAO0O"><!--pnid:I6XqZu1BUnbz8SA9dxfRuw-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="XQnHclJmxyygJkSZpgN4Xi" data-pnid-children="DHX258oL8SWh8VXqtdPYae">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="nCHXXHHFC0JFHL4yYEby0x" data-pnid-children="pBNu62eLXTCsvr31LloPja">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="CptsR2yOUlmL55vozlxi7a" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="5zvCgy1u9jK8R4JvUcsfpS" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="SD7XHibd1ygt0xzfybpqIQ" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="fLAtNzVlqpiciDTq2QRVzq" data-pnid-children="f4sIxgyEoFIc88m8VJ1LC1">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="cK4mJ6OuwGFPstuWMEfDsf" data-pnid-children="7krMUConcE0Bh8XRHeweqC" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

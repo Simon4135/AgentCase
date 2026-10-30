@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="TnNg0jlQ9v0lZAxluz1DCB" lang="zh-CN">
+<head data-page-node-id="dU587AybaqZmNncnplkDyD">
+<script data-page-node-id="CoCJRjQflWtrhLDjthjLCa" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="vsvFFhfE7PDCMwROHeCyPN" charset="UTF-8">
+<meta data-page-node-id="8D0pgAs88UwDclRIId7Vom" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="5lnw7ztpgFWmSo2Cyum1L2" data-pnid-children="oTEMAovwJf1btsDHFwGyH6">客户额度占用与超限发货预警</title>
+<link data-page-node-id="MquMlzAZ7ld0iH5iCkzgMV" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="s6wpjyXvyPfAFzxKXhhNOj" data-pnid-children="q7dzcFT0wDy49KvSyOdQ1U" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="0ts5b0cuBaGu185HYoAIqF">
+
+<div data-page-node-id="M3cNMfJf48S3kYiQBznfLf" class="wrap">
+<section data-page-node-id="ruinPl6v5qxbqav9fvFrJf" class="page-hero">
+
+
+<h1 data-page-node-id="sxGsDkLdCJKFmcorRFVISb"><!--pnid:JLLXB91TxcNQVWCDX27waD-->客户额度占用与超限发货预警</h1>
+<p data-page-node-id="JoCqlXLIGgAEX33MoFkOXH" class="lead"><!--pnid:o2SxO3NEEfNRqKiy9i5LSK-->系统里能录信用额度 · 销售开单照样超限</p>
+</section><nav data-page-node-id="BoRtkpz0h8yj7d09nwgC7c" class="subnav"><a data-page-node-id="9ErI5ThJz0YyArihEaaVw0" class="on" href="#"><!--pnid:GrtCq4cVut2zhiEEGZKxmv-->场景引入</a><a data-page-node-id="JNWnhZrlGyWOcOvJJrGvPA" class href="LiveDemo.html"><!--pnid:xzLDPt7TwzlQ7E2PK3YIlh-->Live Demo</a><a data-page-node-id="g43rF5lt2u5esFXHscTh4w" href="推荐任务.html"><!--pnid:1xDcvgU6pN23IINaA6NmTe-->推荐任务</a></nav>
+<section data-page-node-id="5MvYaIQ9lNmuziQR6oVftG" class="blk">
+  <h2 data-page-node-id="MFpqg41nycyFGVCPcqmhg9" class="h"><span data-page-node-id="uLQWTB5QS5DW6r9LKAMzuM" class="num"><!--pnid:XyPH0eyqRU0zlvqLT5ZqQh-->一</span><!--pnid:P6IE70MFA6LMTcb97H4Xze-->这件事现在是什么样</h2>
+  <p data-page-node-id="Aws34PT4xU2DOxArhwMubA" class="subline"><!--pnid:MvRngVJd7AYbriR35IZuuC-->回款、额度与应收风险 · 真实业务触发</p>
+  <div data-page-node-id="exLar1j9EcFXP1s9sbpRXo" class="card"><p data-page-node-id="Y0ZJberzQ5xOxRDLoqqvlk"><!--pnid:E0IgsNeTZS7SDOTWphSUK8-->恒晟精工的新订单 186 万元要下单发货，销售说「他们额度够」。而额度够不够要算三个数：在途未清应收、已批未执行订单、本次订单金额 —— 这三个数在应收台账、订单台账和 ERP 三个地方。承接 QC-01 折扣核查与 QC-02 合同偏离的结论。</p></div>
+  <h2 data-page-node-id="wMYz2mYc7qDpOOaJero206" class="h" style="margin-top:22px"><span data-page-node-id="JyB6t48Pi6pjt2gj1gjXBK" class="num"><!--pnid:P3v0Gy2H5vSMU2up9YvRBe-->二</span><!--pnid:IuyW5p4DIFCG32Zpo4hdm8-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="CuRlwpDE83ikwH23tNeKBf" class="subline"><!--pnid:3S63jqZgooOAOBdkZwO8Cb-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="pijt7ImWZxcsqpIdyiBQCj" class="pains"><div data-page-node-id="h9xdiFGbOe1xDziossaGcj" class="pain"><span data-page-node-id="D6mtWZWtiMd5Bu8jQKjSG5" class="i"><!--pnid:TjWTHIb7rkwFhlGNJe1DIj-->1</span><div data-page-node-id="Y6YB3CAWW72J7Vtpp2NjrV" class="t"><!--pnid:LF6YOtHIHkVhaHc8PXHp01-->上市公司已因对应收账款已逾期的客户仍继续赊销出售商品被证监局责令改正 —— 销售端额度控制是会被监管直接点名的事项<span data-page-node-id="dXTTPke1EgOj3EEkpliroU" class="src"><!--pnid:H9fzItNDr6IFXGQzZtKxrU-->依据 · <a data-page-node-id="XMmfOcFJyF9dCl4KFBjm17" href="http://www.csrc.gov.cn/" rel="noopener" target="_blank"><!--pnid:52Me8RXwY5YEtSKyLuD9Vv-->世龙实业被证监局责令改正，原因之一为对应收账款已逾期的客户仍继续赊销出售商品，未按规定评估客户信用与额度占用</a></span></div></div><div data-page-node-id="G78JRI93WARrdXAzcgtnWw" class="pain"><span data-page-node-id="igUXj59HKR2Bn7BtyxLa23" class="i"><!--pnid:Hl2SXLGjKSBK2r9etQ9BQs-->2</span><div data-page-node-id="MII7QMP3fnqw100SmaO6n1" class="t"><!--pnid:w4Wop2To8fCe7m49deFh1I-->已有公司内部控制被出具否定意见，涉及应收账款与销售循环控制缺陷<span data-page-node-id="8ppVWkJyi8FWX4w9f2UbbY" class="src"><!--pnid:6Xzqy13sXt73J1IQFNCyVa-->依据 · <a data-page-node-id="HfJOUpgoiD29rx07t02dQG" href="http://www.sse.com.cn/" rel="noopener" target="_blank"><!--pnid:nE1EAfmIqH75K7iRIAI2U9-->观典防务内部控制被出具否定意见，涉及应收账款与销售循环控制缺陷 —— 说明「销售端额度控制」是会被监管与审计直接点名的事项</a></span></div></div><div data-page-node-id="suO8YQ1RbYj24bfPmvSMc6" class="pain"><span data-page-node-id="ZjdCw9EkQc4uXdnsvEKcVR" class="i"><!--pnid:bY8im5R8Mgjy4lGqoDmicO-->3</span><div data-page-node-id="3EOWhJEhji2XjW2au8huAC" class="t"><!--pnid:gMWeeDI0c2M4KhVB8AcCAF-->额度占用的正确算法要销售、物流、财务三端数据聚合，而中小企业这三个数在三个地方 —— 所以系统里能录额度、销售开单照样超限<span data-page-node-id="EkeVLJUayt5pkIxTJa1up7" class="src"><!--pnid:SfoyrBO0rP7EhdMnuK457Z-->依据 · <a data-page-node-id="Can8DslJ06ekqhYBL64XdG" href="https://www.woshipm.com/" rel="noopener" target="_blank"><!--pnid:VDohGlmfghjxAwCQH5wr8h-->多系统数据割裂的真实后果：销售、财务、仓库各自维护客户信息，同一客户在不同系统中名称不一，年底数据核对时差异显著；审批结论在审批系统、业务上下文在 CRM，两边不通</a></span></div></div><div data-page-node-id="E6NbKW8xL8qEimgjeqosEd" class="pain"><span data-page-node-id="IwPwZFmw5zu2MAcLc52arJ" class="i"><!--pnid:Wwi1dTIs2JpGN0p3gxXyR4-->4</span><div data-page-node-id="fcVHYY7LdQIyV0DTJSalNj" class="t"><!--pnid:sS0tEI4hJLln3vrtX79W6G-->信用额度核定表通常一年只调一次，而客户的实际风险是按月变的 —— 额度是去年的，风险是今天的<span data-page-node-id="35EjKr9shXXZplQhykxMBT" class="src"><!--pnid:2bR7dMvniJ77dGLQGRUVpl-->依据 · <a data-page-node-id="pJu54NQG4PD1TqLAmAhxek" href="https://www.10000link.com/" rel="noopener" target="_blank"><!--pnid:kqN8z6supBQFfEh5NcpY5s-->《中国供应链服务及产融调查报告(2025)》：中小企业应收账款周转天数 2024 年前三季度为 134.80 天（2023 年为 116.09 天），民营企业应收账款周转压力 125.44 天，为国有/民营/外资中最高</a></span></div></div><div data-page-node-id="VKiHB4ghJKEgOss4e6dZQ6" class="pain"><span data-page-node-id="AoJNfkxFNCaylSv5QfI24x" class="i"><!--pnid:Kyiwx6b3RFj5bpqVnBM6fu-->5</span><div data-page-node-id="ASsOmEZqGMAELADKmNCtXW" class="t"><!--pnid:2vbOfq0uAiDoD7BQqdRB58-->中小企业应收账款周转天数已达 134.80 天，民营企业压力最高达 125.44 天 —— 额度这条线本来就绷得很紧<span data-page-node-id="EqR12aU9SB7xs1HnEuyrXJ" class="src"><!--pnid:pgIKjVeFgmH9zmnG67eF7h-->依据 · <a data-page-node-id="FU8lr4v5cLDYzJDKnX5cYZ" href="https://www.10000link.com/" rel="noopener" target="_blank"><!--pnid:9bgLPTnMhKZewCpmaWryr0-->《中国供应链服务及产融调查报告(2025)》：中小企业应收账款周转天数 2024 年前三季度为 134.80 天（2023 年为 116.09 天），民营企业应收账款周转压力 125.44 天，为国有/民营/外资中最高</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="XI7pyoSxIq2QzwDJdDmyFS" class="blk">
+  <h2 data-page-node-id="DUgNc5IbHYa6sbF9NqAR5y" class="h"><span data-page-node-id="O5PvZO8NO0NioNdt3aEwZr" class="num"><!--pnid:DyyvR9tOEgaELoUIrXXNf4-->三</span><!--pnid:YxV8h5zpytsAlQkFD3pIuG-->换个做法之后</h2>
+  <p data-page-node-id="1GRIdwf7R3q5WZmtwZq9lm" class="subline"><!--pnid:QM3sp2MIvhjibC2hK5G32M-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="Xz8cQVOZTbt3eLShvy7QrA" class="cmp">
+    <div data-page-node-id="jZj3XgxZ1AG00rgK1JO2f3" class="old"><h4 data-page-node-id="cCyBfhy5RJoEkcBULBiWvo"><!--pnid:2GEWehBnePQyUTE9zhVUZt-->✕ 现在的做法</h4><ul data-page-node-id="jN8FSvJZJgdCrP1LLkbtvJ" class="list"><li data-page-node-id="ObJqWbOVlwcNj62bpFNrxa"><!--pnid:Tno7FtNWRtwo1CB6tp5bmy-->上市公司已因对应收账款已逾期的客户仍继续赊销出售商品被证监局责令改正 —— 销售端额度控制是会被监管直接点名的事项</li><li data-page-node-id="SG0xMLxy1ukU2y8rzOjXL5"><!--pnid:xo9oQK1wtetyQSfYppQaL9-->已有公司内部控制被出具否定意见，涉及应收账款与销售循环控制缺陷</li><li data-page-node-id="xdMuZFCKfl7OXwotCcBP7H"><!--pnid:f4OeJvNZmGVg7yBEUCzNkg-->额度占用的正确算法要销售、物流、财务三端数据聚合，而中小企业这三个数在三个地方 —— 所以系统里能录额度、销售开单照样超限</li><li data-page-node-id="BaSTRC8nYqwYzwp0WcwX3w"><!--pnid:LiykLFIlW9xKQUHi0OpdhA-->信用额度核定表通常一年只调一次，而客户的实际风险是按月变的 —— 额度是去年的，风险是今天的</li></ul></div>
+    <div data-page-node-id="R0QxAYylaSmcb6l5JsJwDk" class="new"><h4 data-page-node-id="o8CVSi01fWmpwjaK4j41hb"><!--pnid:6sgz0yLtvvyEQLhGgFh3do-->✓ 交给 Agent 之后</h4><ul data-page-node-id="QnEoGg85wNmakTChirk7El" class="list"><li data-page-node-id="ZwKv6l8bs6osF52NxkyaQW"><!--pnid:kMjDVtOe2NpjW1hqSp64dZ-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="SORIRHyzNgHdCHkqJWjiGT"><!--pnid:fs96fHYMhelhWbhT01snFJ-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="pRVuQ1SXSCQ87twfgMNni9"><!--pnid:Qv2TTjqrQKuBE8Es6HwPPn-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="u2LwTy3eXUItQprW18CsgB"><!--pnid:5c7GXTR0YyZrDhWho4okqS-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="TT4rgYuffxfYZmZkTu824D" class="blk">
+  <h2 data-page-node-id="ChIppnwLSEEAQP2a110gRC" class="h"><span data-page-node-id="UMFFIBaRuDrt6axHBgW3lC" class="num"><!--pnid:wgeWDs8wgo69lG7KmldNkD-->四</span><!--pnid:uzB2nJUt1LwjyAQZ2eyJES-->场景闭环</h2>
+  <p data-page-node-id="iYdaBKTvuQHozEvVE8JH9S" class="subline"><!--pnid:EPQaL6PXiMJezzfTZT7iQC-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="6kYXUoo6F2pCaSEOJTO7tY" class="flow"><div data-page-node-id="E3GQSQeHhOQbc5VDHE3ZrE" class="step"><div data-page-node-id="mknIUxL1xVj3LceoYD39sR" class="n"><!--pnid:9DbENS2bCu360gNjRgcWx9-->第 1 步</div><b data-page-node-id="7g0UiuSJw2w60cfEVTsKlr"><!--pnid:qFzlqmdU29p1t4Ey9QBGz7-->主体对齐 · 先确认三份表说的是同一个客户</b><span data-page-node-id="iNKAHbafs9nAqf3YR9sdkQ"><!--pnid:fwGd8nL93FOTX1P42uJ4xm-->客户名称在三个系统里不一致，按统一社会信用代码对齐并标出依据</span></div><div data-page-node-id="egm2SHBMKmT7XgFfCSEdj8" class="step"><div data-page-node-id="2LyC7PoLOAFg5NtPJhOpa2" class="n"><!--pnid:j4SYaUcsCJp1K2hpAHEZ0x-->第 2 步</div><b data-page-node-id="fxLbxMcPWp2gnTNlFcgdYC"><!--pnid:yAIuRii3ZUUp1GTuTmVMNF-->占用测算 · 三项相加算出累计额度占用</b><span data-page-node-id="W59zfcGRYLlKSqBoe8K1jW"><!--pnid:5m42Us15lTI6yyAIa76OYd-->在途未清应收 + 已批未执行订单 + 本次订单金额</span></div><div data-page-node-id="aINSiGep54ZhnetCDF4DtC" class="step"><div data-page-node-id="Vqb4bgeTZQsHuCUaOqaIay" class="n"><!--pnid:wk4gXP4HRDkleVAdcfQxXW-->第 3 步</div><b data-page-node-id="3HfCT23Gqpm9Gi4XmQ4nQl"><!--pnid:0TszJtk3GFVL3LXOiNi2LP-->超限判定 · 与核定额度比，算出超限金额与比例</b><span data-page-node-id="PXDWAEsVAsqqH8f1N6lq7F"><!--pnid:na9HWGwMOWwbRFP74SWxRN-->逐项列出构成，超限部分标明由哪几笔构成</span></div><div data-page-node-id="P0b7fNjG6i5aGy4axouRGs" class="step"><div data-page-node-id="NydjFwua1egGoNobRoDage" class="n"><!--pnid:MNoYiEEfSH6n39EnBdD9xW-->第 4 步</div><b data-page-node-id="IniwIismS3qI4DuxXLgCCq"><!--pnid:EqAryWrchgaprauKWcWw4e-->风险叠加 · 逾期与公开异动一起看</b><span data-page-node-id="7HwIurPTUv2tSz359EZaby"><!--pnid:eKLhbg4wSOnuVv6DpV5Y42-->这一步要用到那份平时不进核对范围的工商与司法公开信息</span></div><div data-page-node-id="cbDk8P2WJqGfXge9Ku9cNw" class="step"><div data-page-node-id="q0EtBNfmmw6yffTlCc8Znb" class="n"><!--pnid:YTrNaVhmZ5EYWGM6IwiO62-->第 5 步</div><b data-page-node-id="LaWxRvUDAt6l00vzbOU49Y"><!--pnid:e2hLdbeqDuZfejX2Byy7Os-->建议动作 · 按超限程度给分级动作</b><span data-page-node-id="Zk4opIZppFXjmNeHMGczXK"><!--pnid:HhbF5K4Fir4iH7QLKKkXeY-->继续发货 / 部分发货 / 要求预付或担保 / 暂停发货，每档写依据</span></div><div data-page-node-id="U956vOvrLR4x0XXyyLstsG" class="step"><div data-page-node-id="pI8nUw4saUCB2QNNnk0wNQ" class="n"><!--pnid:AGkmr2itVfD9kj1FhlE8aX-->第 6 步</div><b data-page-node-id="JOvbffUOxNXxjwSq7Zubrh"><!--pnid:1HjPnWQkPTJI3LRGwKbk5O-->留证与签批 · 生成可签字的额度核查单</b><span data-page-node-id="Up4w40od4WDAEs9Xiz8QtS"><!--pnid:ouKJwP7s8WdHOjeButFc5j-->占用构成、超限证据、公开异动、建议动作、签批栏一次生成</span></div></div>
+</section>
+
+<section data-page-node-id="uo3UawJYDLtZQrR4rv0VAp" class="blk">
+  <div data-page-node-id="hSS1jkriMOw3XLt9zGF6Wa" class="g2">
+    <div data-page-node-id="1iYXrwiUdG44CVE13TnwkC" class="card"><h3 data-page-node-id="cyY7ZepKQy62dXz3s1Yyj3"><!--pnid:YS0IYpQ9lentbCZvAbVXyW-->要准备什么</h3><div data-page-node-id="KHSl75LKbDrPvEaado4SMM" class="src"><div data-page-node-id="MCilLW1VcxbCzNFt45e63V" class="fn"><!--pnid:quxoVBNBImzTYmvnxVg4fO-->应收账款台账.xlsx</div><div data-page-node-id="BloCRuRt85m0Jo7cfOxMyu" class="fd"><!--pnid:nl9xlp39tdQLnjIdljiX9T-->含发票号、到期日、账期天数、未收金额、状态</div></div><div data-page-node-id="VU4JY9LynQ6sG4yrcE1aCp" class="src"><div data-page-node-id="NMzYzu5al2VyTKnBb6DI4Y" class="fn"><!--pnid:MFMAbHn6piLHHHyXAymhrx-->已批未执行订单清单</div><div data-page-node-id="gOLgLMStxxcErdpILiugUe" class="fd"><!--pnid:SrkQBs9S1WvL0enDOVmWaZ-->已审批但尚未发货的订单金额</div></div><div data-page-node-id="lArZBR4VKQNkFEBCYHkYEG" class="src"><div data-page-node-id="juU8QpidN82BLUcYSYBfed" class="fn"><!--pnid:MuPCupQEAK8cGuO9vEXfdx-->客户信用额度核定表</div><div data-page-node-id="GYIKWficVyR94mKvxhKdIE" class="fd"><!--pnid:Z73z6kA4ZkvVbJTqwND1RC-->财务维护，本年度核定值</div></div><div data-page-node-id="JwiJwXgSVqxh7M4pUrzvjO" class="src"><div data-page-node-id="M05piO22ugl6xWk6Wytgew" class="fn"><!--pnid:z6qkxduGXICpVaJmLfQuZg-->本次订单与合同</div><div data-page-node-id="g7f7xmIsFIktjlnmHTrL34" class="fd"><!--pnid:fPh4eC22lVolQVecVtrBGz-->186 万元，账期已改为 90 日</div></div><div data-page-node-id="uTgDgOEb2CICm1plkNYtKa" class="src"><div data-page-node-id="OwTe3HW3uC00c9PUl0NOVj" class="fn"><!--pnid:3XPaBnrjWhJt3lH1dLzHZG-->客户工商与司法公开信息</div><div data-page-node-id="kO4WlFWY50mk9s4phgzwmi" class="fd"><!--pnid:Q8FOabU97xFRQj4CE3M7nZ-->这一份平时不进额度核对范围 —— 但它决定这个额度还算不算数</div></div></div>
+    <div data-page-node-id="T5Rjy4pFzVjhujqArGc0p5" class="card ev"><h3 data-page-node-id="IFizTavullUyaarrEHfPxP"><!--pnid:uj2ZMVPdnswUTVT3oBftM9-->为什么这个场景值得做</h3>
+      <p data-page-node-id="1aWv6R1TSboiedfgZc2RvF"><!--pnid:nRquvAcT3yYMveNA25HRim-->痛感 5 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="GCNTuJ9uQfBl41NxtDOe2B"><!--pnid:VW6PzgwAytnCNRDWZeE4Zt-->10.0</b></p>
+      <p data-page-node-id="XZOd9hzWd1XO5SrRSYSpaU"><b data-page-node-id="6mphcFInocMXMb4osNgeR7"><!--pnid:6sf8hbH0C4C5kHVAfKeckq-->最大差异点 ·</b><!--pnid:XFlmgk5IoxJRSsvv7JLDeW--> 不要求先把三个系统打通。应收台账、订单台账、ERP 导出的三份表直接扔进来，客户名称不一致的由本场景对齐并标出对齐依据。</p>
+      <p data-page-node-id="IzLztP2USMmeleZ97qEM11" style="color:var(--ink3); font-size:12.5px"><!--pnid:HYts7ShEL0HyQ2qNjj0LrR-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="bbz1qrLbHs591oVECPcNd1" class="blk">
+  <h2 data-page-node-id="alqEKhAfQKP0xIuIZo9rRp" class="h"><span data-page-node-id="wO3zoDhSHx6O0mmMmjOp6S" class="num"><!--pnid:A3koAqZCl9qNegK0qLDU85-->五</span><!--pnid:lDTQlyC2Gqn2gptL1KzKPb-->会产出什么</h2>
+  <p data-page-node-id="CHQHsCRFyw5hc9N7MjirKs" class="subline"><!--pnid:Cpbzvv698HvP8fHHaMcDGU-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="DI0C5RHD2T2e3GqFjqGVoY" class="outs"><div data-page-node-id="88OfQscNZttCa3lq709gRF" class="out"><div data-page-node-id="MmwmU29y4olPXje4WF37Sn" class="on"><!--pnid:skeLkipY8K5R5tkD2HbOS7-->正式件本体</div><div data-page-node-id="fMeuk6xcL6uazKATC4vFwU" class="ot"><!--pnid:kbuJCmM2lKETDYij2CBsSc-->额度占用核查单.xlsx</div><div data-page-node-id="o4Wqz7tv2Ps6ZeYrrs2d9a" class="od"><!--pnid:vJH0mshUk5cjfCUYJVBhpD-->正式件本体 · 5 sheet · 含签批栏</div></div><div data-page-node-id="UCteNCsz7iJXnqNNjzo56b" class="out"><div data-page-node-id="8z6OcxOWuUQwM75ttCejn9" class="on"><!--pnid:sYK1FHxptBL8M1apfjb1V5-->可派发清单</div><div data-page-node-id="TnVwsDGeiNwNvCII2Qd0bN" class="ot"><!--pnid:QREQimarRYG8Nyic1LBnpR-->超限证据链清单.xlsx</div><div data-page-node-id="X65w6CLpSRjMtZWv4qoUe4" class="od"><!--pnid:VJw3ov6jFSvcOnPDCWWxoU-->可派发 · 逐笔带单据号与出处</div></div><div data-page-node-id="QhHViIEZzfLk8PpkJFpsmU" class="out"><div data-page-node-id="RkxTBrIRMfePAtDXmpcRSv" class="on"><!--pnid:LuGuYdOovqD3lI9WlNuyw1-->可派发清单</div><div data-page-node-id="1G1KfSZdEtHtuDItYz8M9D" class="ot"><!--pnid:79pkKFukwl0LrtjWUtAWsf-->客户风险异动摘要.xlsx</div><div data-page-node-id="eomlNfWHU5uVpkfjjR9sw2" class="od"><!--pnid:HqXNVqQZiaPYfcpgAhXX6S-->公开信息异动与应收逾期并列</div></div></div>
+</section>
+
+<section data-page-node-id="a0ZPciuNmIRGKhGstDZFmb" class="blk">
+  <div data-page-node-id="2Xg13jTcvVKyIt59rutCFA" class="card warn"><h3 data-page-node-id="lcfg8juTDhixBe6dHB8oH5"><!--pnid:9Qqtf57JtPvVtQWMzM0nvb-->这套东西不承诺什么</h3><p data-page-node-id="8q5i4xA2IETz5taXNO2cMM"><!--pnid:cpF15ckiy9hUdUPy7Fovuo-->不做授信决策，不核定或调整额度 —— 内控规范明确要求超政策的赊销实行集体决策审批。本场景产出的是额度占用测算、超限证据链与建议动作，签字权在有权限的人。不自动拦截发货。</p></div>
+</section>
+
+<div data-page-node-id="WzmZmPb4Rtn8zhgf1etZaX" class="cta">
+  <div data-page-node-id="xUsfY273M9qmuqTwvixsjO"><h3 data-page-node-id="xzLu1RSIdXx1VgW2lvOte9"><!--pnid:eAFyRZ664WTVvvqRDqJlSm-->想看具体怎么跑？</h3><p data-page-node-id="HU5PsaZWZ0SPRJKqTH6aNs"><!--pnid:69qTPWvuUfQ3CA7lbkcDHo-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="8rai4AggpEzCQLJtdVPqpl" class="btns">
+    <a data-page-node-id="BwkizgWz54tpwsGVv2AoPZ" class="btn" href="LiveDemo.html"><!--pnid:AgN2o44Fwl3aGQvZjBhNQA-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="alR62Iu5KpTuxFSdeM13Ae"><!--pnid:HKOK3cuK6CqZYoQUF1eisK-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="V8qliBsRLDsCmdfl5BrQVb" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="dt6JgaxdEa6iv9j5emaHKB" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="PxCbvU5nWw7aOYqDT888Rw" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="zlTP3gUt5tQaJC5nicIuOM" data-pnid-children="OK77aJpo50YazKyu0W0AzS">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="I0yjPpKVa8z1oiPmuB6EXa" data-pnid-children="luqHnHPJNCiFgrH6CcM2M1">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

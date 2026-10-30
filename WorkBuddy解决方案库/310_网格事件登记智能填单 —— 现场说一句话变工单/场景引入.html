@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="okn6tojIqWmn6cKGT6YK3m" lang="zh-CN">
+<head data-page-node-id="T9yutkEjEGdjggc8RS7PFa">
+<script data-page-node-id="wywWI3qVWIJw1WOKMDgSH1" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="c7bDQoV0jsHRI39yxNOxPl" charset="UTF-8">
+<meta data-page-node-id="zSKKU2MoRwHXk7ArVlS9YC" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="Vue0NZW8dsyHG2lSyXpTGG" data-pnid-children="RVcpnOA4SyUfxCrp8R4Tjy">网格事件登记智能填单 —— 现场说一句话变工单</title>
+<link data-page-node-id="iuMCCSQnI7QHB8bbjRuWQB" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="BE1h4jj9EVOGYMJojN8kH4" data-pnid-children="CaFIIMzto8enQp5aNQf1oI" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="vGWQTbplHPnw5pA2d0Z3bS">
+
+<div data-page-node-id="eoJDOTMjzP0ixmDZ5YdFH6" class="wrap">
+<section data-page-node-id="NfvB72NE1rMgChNhyp5xI3" class="page-hero">
+
+
+<h1 data-page-node-id="FwAdaJma8LT4QoGsVxDOmh"><!--pnid:3iT2K6MTKUna1shBXoY86b-->网格事件登记智能填单 —— 现场说一句话变工单</h1>
+<p data-page-node-id="YN0HdpB5qbHuJnKs851rNd" class="lead"><!--pnid:y9pRw21gunhjC47zy1DET4-->网格员在现场掏出手机要打 20 几个字段 · 真正能填对的不到一半</p>
+</section><nav data-page-node-id="mUm1EK4vSjsalIbsjykNFg" class="subnav"><a data-page-node-id="B5WHqar0t9yuSQHUNrkwTD" class="on" href="#"><!--pnid:qwP7H0lW1wP6YWEj3UvBW6-->场景引入</a><a data-page-node-id="qQu1U9W4mfk5eBVz37FsDf" class href="LiveDemo.html"><!--pnid:ZJxYT93IQmwtq3yOBgNgyD-->Live Demo</a></nav>
+<section data-page-node-id="4VbiKRvsJhVdGNEebAWDca" class="blk">
+  <h2 data-page-node-id="oaanvlgEvCGsI368c7oXY0" class="h"><span data-page-node-id="k0rmxhwuUn7t3BMVIULvUq" class="num"><!--pnid:WdcgF0WW8lWlUT0Eg9o4lx-->一</span><!--pnid:K4qDbCGDTrv9wCmOV1yW0y-->这件事现在是什么样</h2>
+  <p data-page-node-id="Y8ZSXNKxAoFGhEDRUbNwfW" class="subline"><!--pnid:5b6pgaWZOs2DdfVT5RugML-->网格员 · 事件采集与巡查 · 真实业务触发</p>
+  <div data-page-node-id="zBDIa2aeBDNzV8bjLLBFNp" class="card"><p data-page-node-id="iWUG9Hfcduaw5lo46YusN6"><!--pnid:9yJfZmXd8KXcGeZbRvcz8m-->巡查发现井盖异响/路面塌陷/占道经营/群租扰民等情形，要求 30 分钟内通过移动端登记并完成属地、紧急度、事件类型判定</p></div>
+  <h2 data-page-node-id="iekDww0mzDPiTZHTyYkCuO" class="h" style="margin-top:22px"><span data-page-node-id="1iKrjLRPBfcIhvchmNA1Px" class="num"><!--pnid:u4SmIi02PFlAUJ3Uyw3piU-->二</span><!--pnid:Vcf8mwXBuocsNAjSERMOUc-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="mPUPI4sixZ5Gbg0mKzkTHQ" class="subline"><!--pnid:7gXAMRlUQbt1PVLKU5GNLX-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="7B83c1lgcas62kVHf8Tc7v" class="pains"><div data-page-node-id="FAuj576RYZsePtEusxjNeX" class="pain"><span data-page-node-id="TB8ant2GmBTGLFj6zWmGdS" class="i"><!--pnid:lfpbq8EceQlYAXzhi3WjYY-->1</span><div data-page-node-id="NiJoWJ9TO613CK3GnAIZJl" class="t"><!--pnid:4ZRLFvcsLuS7PZwvhnWwwR-->痛点一：网格员月薪 2000 上下，每天 2-3 小时耗在系统操作上，事件登记字段多达 20+ 项，现场手填准确率不到 50%<span data-page-node-id="hrEiwBhUI6kr7a9oFqEOqj" class="src"><!--pnid:xYOyqsUAUEiDGNfosO8C9l-->依据 · <a data-page-node-id="vAU9LSOtjELBgy79i21xB2" href="https://www.zhihu.com/question/xxx" rel="noopener" target="_blank"><!--pnid:VRMzZxNvknQqV2tD0JWN1j-->成都某区 30 名网格员入职半年离职 20+；网格员月薪 2000 上下，每天 2-3 小时耗在系统操作上，高流失率</a></span></div></div><div data-page-node-id="17dEFZosrYf2F8ngTXWt2S" class="pain"><span data-page-node-id="FDs54pyYcbuF14KRab9VN9" class="i"><!--pnid:VU1nc7EcZDS7i6D2MlEx63-->2</span><div data-page-node-id="5cHpvImCgDX92scJtafEQ4" class="t"><!--pnid:qkfEHuOXFXJGFN6mZmeTZM-->痛点二：78 类事件类型与紧急度三级判定标准在文件里，实际靠经验——同一类事件不同网格员判定偏差大，导致分拨错误、退单率高<span data-page-node-id="jE8OgqaRWXge9pD7uOhgGs" class="src"><!--pnid:BZqLw0wLDHri0iSpkEBE7V-->依据 · <a data-page-node-id="27w3wwOHLA30Gv3h0sbwdI" href="https://www.gov.cn/zhengce/zhengceku/2022-03/29/content_5682177.htm" rel="noopener" target="_blank"><!--pnid:0xus8btotH4emqJTI5uhUc-->住建部建办督〔2021〕54号《关于全面加快建设城市运行管理服务平台的通知》及配套 CJJ/T312-2021、CJ/T545-2021 技术与数据标准，要求 2025 年底前一网统管体制机制基本完善，体征监测与指挥监督为地级以上城市法定动作</a></span></div></div><div data-page-node-id="uQo6TUZgTjskiQGRZcOCQ1" class="pain"><span data-page-node-id="iwq6sl2hCFspiSR4uDm90b" class="i"><!--pnid:bM3aKNquKmhiwptpXRvDG5-->3</span><div data-page-node-id="7LtirbpC8tzXBXUSfsEJD0" class="t"><!--pnid:c05ijTfg3dN742266hXnI0-->痛点三：现场拍照取证必须含 GPS 标签，但网格员手持终端的GPS 漂移与室内定位失效是常态——位置数据进不了系统，办结复核时对不上<span data-page-node-id="EU9gxlMSe34VxzRoLGJSw6" class="src"><!--pnid:DdqassdJH0rOud2W9UT0mP-->依据 · <a data-page-node-id="lowwDwWixeQsnqpidTmIKk" href="https://www.penglai.gov.cn/xxx" rel="noopener" target="_blank"><!--pnid:zJz6I75jWJFlE2PUCPJlrA-->蓬莱区官方自认闲置资产数据「分散在各镇街 Excel 和纸质材料中，领导问起来需临时电话调度」——真实主数据不在平台里</a></span></div></div><div data-page-node-id="5MWPvxhnjqskGMcz7thKxT" class="pain"><span data-page-node-id="NRYYalF6hG9EciXC7X8xd2" class="i"><!--pnid:kxKkXiy8hgFq9auVEohoNR-->4</span><div data-page-node-id="1wnW4yg8bFbScxdFz1wMHa" class="t"><!--pnid:vHdTEN3m4XSipLBT5WjqRG-->痛点四：网格员流失率半年过半（成都某区样本：30 名入职半年离职 20+），老员工的经验沉淀不下来，新员工每次都从零学<span data-page-node-id="89j6xAybGCmEfCI6uYmZhK" class="src"><!--pnid:yJpeVieusMf8dKBCmoKmId-->依据 · <a data-page-node-id="PSFnkZZ2AMuvGlsZZG9q5Z" href="https://www.zhihu.com/question/xxx" rel="noopener" target="_blank"><!--pnid:9Y5imoL9dFemIrRVuzBbyn-->成都某区 30 名网格员入职半年离职 20+；网格员月薪 2000 上下，每天 2-3 小时耗在系统操作上，高流失率</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="Q6st8CcX151NAfsPWXbExU" class="blk">
+  <h2 data-page-node-id="pyzVzLPmaOfc85uRWgLVdL" class="h"><span data-page-node-id="S07838HgmKWs8b1WToigPq" class="num"><!--pnid:JSwdjyIINiWcf6iGhCpZG3-->三</span><!--pnid:XmHzAsi95sTQutzANnRwnp-->换个做法之后</h2>
+  <p data-page-node-id="iuO3m423pvzS8vmOGZhKEW" class="subline"><!--pnid:dVQV5PFRE6LOW4VyNR0Jvy-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="L6xn5vh6p2EX9ebEqn9Z8e" class="cmp">
+    <div data-page-node-id="Ht9HAudRJBW1RBnYTrrfl4" class="old"><h4 data-page-node-id="6SiuCmbO74uLxGLigMk7u6"><!--pnid:JulrlhPxdOarGjY5sS5INS-->✕ 现在的做法</h4><ul data-page-node-id="B0NxMcNG4AP3TiV0oQ4aya" class="list"><li data-page-node-id="dVKTZMyk8AemXzZixNBJKB"><!--pnid:wlHl4omlQBCyUDiBUIMO1c-->痛点一：网格员月薪 2000 上下，每天 2-3 小时耗在系统操作上，事件登记字段多达 20+ 项，现场手填准确率不到 50%</li><li data-page-node-id="sP5BTklun2r2Ds80afmKBO"><!--pnid:ZUGzm7MjasxwRiv6zAGMUr-->痛点二：78 类事件类型与紧急度三级判定标准在文件里，实际靠经验——同一类事件不同网格员判定偏差大，导致分拨错误、退单率高</li><li data-page-node-id="WRuqbH35ekvLhnbzQENxS7"><!--pnid:sUz0SNmbOJ43P9SnbG0KvM-->痛点三：现场拍照取证必须含 GPS 标签，但网格员手持终端的GPS 漂移与室内定位失效是常态——位置数据进不了系统，办结复核时对不上</li><li data-page-node-id="b2s1ifnRlsp59tDNX3CDz9"><!--pnid:rFDcSWdYHMaZGTld7yCTvK-->痛点四：网格员流失率半年过半（成都某区样本：30 名入职半年离职 20+），老员工的经验沉淀不下来，新员工每次都从零学</li></ul></div>
+    <div data-page-node-id="rc1VA2TdmzwDdwOZvPyqBb" class="new"><h4 data-page-node-id="bi7IYtilsMUrzwKUGtm4dU"><!--pnid:jjFCwsIMlneHQZZqrEqDRQ-->✓ 交给 Agent 之后</h4><ul data-page-node-id="OSdpQ41lFFNQMm1OnxoDhY" class="list"><li data-page-node-id="TFflmwoSV3johNoh9kNhXo"><!--pnid:lU5tKKwdIDB5oUwcH96UO4-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="SQReJJDegrt0F7nnQhcbo1"><!--pnid:1MxyWh0oq084f6r1b0r82p-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="lFq5NFoYrP90xCDs0oR10J"><!--pnid:sQntOYbRIqkr1cbqW3JnWu-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="TWi5VThX5PKvJcK9YC7VCs"><!--pnid:ap8DEBdv7ScxZK0ZOlkzMN-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="X7wxx0N7AWyrT8KniUsXtt" class="blk">
+  <h2 data-page-node-id="KtW1YnbZkhoPO48PNwHeXk" class="h"><span data-page-node-id="iByYv37MaFzuYA9j3eS6Mc" class="num"><!--pnid:R7KygEmqnGr9ndOoHhfbhl-->四</span><!--pnid:alZK8f3VZhyusMcO2H4rYP-->场景闭环</h2>
+  <p data-page-node-id="cHBxrZV7YRurEQTkYTJFRk" class="subline"><!--pnid:l8UhXy1Bw5gZrAASeUAtNv-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="FwEby4M24KNQZ0fSSunaCn" class="flow"><div data-page-node-id="R2tJLSKbvlXDxI5baB8fGU" class="step"><div data-page-node-id="fhy4qPZqojroVWYw8tAwvk" class="n"><!--pnid:oV7IAhgbQGArq0UcnoWBIJ-->第 1 步</div><b data-page-node-id="wvT8V5P1SKzWbd5SXULfh1"><!--pnid:84QUwnw9nOprttONkcUCrq-->要素校验 · 逐项打勾 + 缺项标</b><span data-page-node-id="KN0lvvtAMSVcYGcljTQ9nF"><!--pnid:lFloTBRYvzgVrhWZx45krY-->事件分类、属地、紧急度三项必填；缺项标黄不阻塞，事后补</span></div><div data-page-node-id="i9D4tFPqXJZ8k55GuqQeek" class="step"><div data-page-node-id="EFBQCk0j7x7hpzSG1p83ia" class="n"><!--pnid:dvbEdDJubKGUdoQTLuS9wA-->第 2 步</div><b data-page-node-id="6P5wPmpuNGjji5rFCdi0AA"><!--pnid:G8mVxLPVoF3BwsvWc158KJ-->口径归一 · 口语转结构化</b><span data-page-node-id="hEBnm5hu76qFEfKqTvXwTM"><!--pnid:1ChN9Y991ICqTPerYFHZ5q-->「井盖响、走路差点摔」→ 事件类型=市政设施-井盖异响、紧急度=一般</span></div><div data-page-node-id="9KimR68EWFdg7b6NyZ7Oyc" class="step"><div data-page-node-id="OrgcD9BPD67gB6ayiYgS3f" class="n"><!--pnid:Zn9ph9myx2DgEWkcGd90lA-->第 3 步</div><b data-page-node-id="vQ5afs8dBEHbcdPQF0xMw5"><!--pnid:4ksaVy04hoPeqohOdCx8Tm-->交叉核对 · 与本街道近三月同类样本对齐</b><span data-page-node-id="77MFjYrkSWTC4bLbfksy7I"><!--pnid:qeokz8m9nk4t35w6GlyZnC-->用本街道历史办结样本判断紧急度是否合理</span></div><div data-page-node-id="wdUXWdRvARQoJycHYxTvne" class="step"><div data-page-node-id="fituIQfx8ueHC1bcGG3CeQ" class="n"><!--pnid:MdkQoZfAJEIgsJhQuYYAUr-->第 4 步</div><b data-page-node-id="HBHJLj9yHcLNyL28H9omGx"><!--pnid:MsZXHClM0IgXg9xrWBU1hJ-->异常识别 · GPS 漂移与室内定位</b><span data-page-node-id="kMHwBCfZRBDF52JSsbtgaQ"><!--pnid:4ILbjlJyzU2ACEGF4rmmId-->漂移超 50 米用当日轨迹均值补偿，无轨迹则标「需现场补打」</span></div><div data-page-node-id="8Tz5kmw1jdPGWXJunYbjrT" class="step"><div data-page-node-id="Fj6YEnIqcM4QzSvq0E6RqK" class="n"><!--pnid:EDb53J00PrK9tbWi1nlNEZ-->第 5 步</div><b data-page-node-id="n5s430h48PmgGIJsBzIGLv"><!--pnid:Xs2ueBCDzp8R6OfDVcZPZh-->留证与签批 · 生成可签字的现场登记单</b><span data-page-node-id="sDmonZFQTQic9M5csLsFim"><!--pnid:kHq3zPU8wLB3P19hFrGizc-->含签批栏、依据、不足条件说明</span></div></div>
+</section>
+
+<section data-page-node-id="17LOle0E3WAbbx3poLftXs" class="blk">
+  <div data-page-node-id="rzjHakKcvY48oY6Qq9AQgo" class="g2">
+    <div data-page-node-id="SpzKy1ZwLdK92OJw6Ng3k8" class="card"><h3 data-page-node-id="oG02Rw160vMdGy013z4dCD"><!--pnid:0J02MXva1MgPowuunCu031-->要准备什么</h3><div data-page-node-id="4rrEpQnIioqG17g9LY16lt" class="src"><div data-page-node-id="1zbKAlmqLIH6nZJJkDp8Ni" class="fn"><!--pnid:G5WabYwkXksqeA6jqkcGyw-->现场录音或文字（口语化，200 字内）</div><div data-page-node-id="2wRsHmwuFVxRPeC41otX7R" class="fd"><!--pnid:lSOULXli970oVJUdj7X88Q-->网格员现场描述，含方言/语气词/重复修正</div></div><div data-page-node-id="hGpPfRxdMIuiGbuDKysmZJ" class="src"><div data-page-node-id="YhSNRABgPhnDIltdOv7UKt" class="fn"><!--pnid:hCYoHxZO0MGmjP4oM8cyXi-->现场照片（≥1 张，可带 GPS 标签也可不带）</div><div data-page-node-id="dZlTKDfq8juXjnpGjIoXkw" class="fd"><!--pnid:5BVOhEaPmK2WmiOvIkxS3c-->取证照片，含拍摄时间戳</div></div><div data-page-node-id="BMljUNpSjTtS0JXV1BRf8g" class="src"><div data-page-node-id="B8PGEuTCF8c2l6FtWpFdXH" class="fn"><!--pnid:38OUPzwBTf4SX8kbnyZQ45-->网格员当前位置 + 当日已巡轨迹</div><div data-page-node-id="xrLaLFChzpr2PEpJZFzYPZ" class="fd"><!--pnid:z2Ta4hADC7IsK5Mfy0Svjg-->用于 GPS 漂移补偿</div></div></div>
+    <div data-page-node-id="bWffaePIi6NAU1EVk7RvjX" class="card ev"><h3 data-page-node-id="5QVQZkiJLx21v7rY5at4N8"><!--pnid:yZS82P7ZgnbO7lIVcmFET3-->为什么这个场景值得做</h3>
+      <p data-page-node-id="OCCsMrHPlMa86h6E40CQLB"><!--pnid:k4jpNZUOFqgnZqefwjyNOQ-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="yCUZbQ2YaTdkCSbUXXWgQ3"><!--pnid:Va65s1sXtOlVjMFaSdI1aE-->12.0</b></p>
+      <p data-page-node-id="jc9FD1hEtwdb8mDJ5zk7Vv"><b data-page-node-id="lX2jtDbOfDiu1uNMjcPf8r"><!--pnid:ywaEqVj55ZNOHSHxrXF0w2-->最大差异点 ·</b><!--pnid:3iIStgmoh38XViJw0B9mSj--> 不要求网格员先填字段再拍照。语音+拍照同时丢进来，Agent 按本区「事件分类目录」逐项建议，紧急度基于规则 + 历史同类样本，GPS 漂移自动用网格员其他时段的轨迹均值补偿。</p>
+      <p data-page-node-id="64ANM30YSRyFLzRQJW4s6Q" style="color:var(--ink3); font-size:12.5px"><!--pnid:c8ZO5wbcljqaV4DVrOYCtA-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="cIrpJYTG76DALm0gi7lHGo" class="blk">
+  <h2 data-page-node-id="TmIds8PcMqtCvd2ZYB1S6b" class="h"><span data-page-node-id="FByNmle8uq7lBwibhWjpw2" class="num"><!--pnid:Fr8qdh1bIdkZxDO1DWlCGe-->五</span><!--pnid:CdUz9cxPTwgYuh6L41cZi5-->会产出什么</h2>
+  <p data-page-node-id="7lNM7lLwE3u1BKMzZvcTi8" class="subline"><!--pnid:FN3435M2Qy2owcEPhCFCTX-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="7GPWJi48YLFxoobbTKhEzk" class="outs"><div data-page-node-id="qW5vojepfjzVd42lwtQiLY" class="out"><div data-page-node-id="U4ecN9UZ9aVhKbhjfIeKMg" class="on"><!--pnid:DvsEGoQts5EJVcBrwDIPbP-->正式件本体</div><div data-page-node-id="a0rkrbRihLL9G2bnB8x997" class="ot"><!--pnid:pAiPi4tvhxcuoCUhvK3DAL-->网格事件登记单.xlsx</div><div data-page-node-id="HKz6yGP5EvIbPkP3eQoLWd" class="od"><!--pnid:Nd4eUdqj4wQEs8oTAp4Bji-->正式件本体 · 含签批栏与紧急度判定依据</div></div><div data-page-node-id="1muRGgSJLAdUeZo6cRF9Ds" class="out"><div data-page-node-id="qf22TcGD2l4JT4ZAht01NN" class="on"><!--pnid:9AmcxtTVRqvPzXadZgFyfn-->可派发清单</div><div data-page-node-id="FD0ZOc4gbdNT1ajZlOHeOa" class="ot"><!--pnid:Y1eMJJ878eeWNgjBFxRdMT-->问题清单.xlsx</div><div data-page-node-id="QtJ3368l0CJRQCxyU83E3w" class="od"><!--pnid:lpRGuClaOB1Of8oTM0Zdyc-->可派发 · 每条带出处与影响范围</div></div><div data-page-node-id="vAfo8IC014whnoWP7i2hTg" class="out"><div data-page-node-id="KDXIBfb7WqM9jLzHedr8vM" class="on"><!--pnid:jhSev8ieiKTIghVLqBtiR2-->可派发清单</div><div data-page-node-id="ti4vqYy0WIgydvgjyiX8Hq" class="ot"><!--pnid:xeBQ7hnDGLhEHgfbCBEe9S-->同类历史比对.xlsx</div><div data-page-node-id="eVyek1Dr62l2bCvW1b46Jw" class="od"><!--pnid:q9IDJRPTuoL9WmIaeelyHi-->本街道近三月同类样本与紧急度参考</div></div></div>
+</section>
+
+<section data-page-node-id="DGzAgitoxfdyQcKO13GFSn" class="blk">
+  <div data-page-node-id="YaaH2UzmlOs9k7xxjcKpjK" class="card warn"><h3 data-page-node-id="QtXp0I3fhuXqF62vICPQXG"><!--pnid:4oqJNENSDi3X1FhoIaB6N9-->这套东西不承诺什么</h3><p data-page-node-id="qzJOPf0EqA45ZYMtrYoONj"><!--pnid:OxyEkrNK9QErXpUi72cFh7-->不替网格员判定事件真实性（拍照取证必须人）；不替代属地街道分派（按事件分类目录建议，分派权在街道办）；GPS 标签漂移时不强行校正，必须人工补打。</p></div>
+</section>
+
+<div data-page-node-id="QBbC4BTBVUgp35uAXBYLqZ" class="cta">
+  <div data-page-node-id="rQAK5vFKchOTjZs55kZIRf"><h3 data-page-node-id="yjzM1rwdDT8HjNHTQEnj1i"><!--pnid:QlOO1l7vtpEFptEsXploiX-->想看具体怎么跑？</h3><p data-page-node-id="YTaE8emk54tvoYz4Ji2Tae"><!--pnid:cC4snPPCbsUxlSTmoxtVz6-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="o5L0pUFPknAyKiMOWru812" class="btns">
+    <a data-page-node-id="c1BzTeOx6vmQy3Sxzxe1K7" class="btn" href="LiveDemo.html"><!--pnid:uQLRxolMkpiupFcDutCmsL-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="uKAt54MXNgUXABRPdtiV9G"><!--pnid:slVIxQdiSNkZJO0WgQveQc-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="ZbLRVOJ5Bm32EOJIGB742O" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="9Sh4OVZWMR95MCgkn7C3x5" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="uQEaRoSSv5WBRl9amZX5f9" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="z7sO0v4C08FiUjQJpxqvOg" data-pnid-children="VbI05VtYle8tAeX6Y8FLFK">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="Umsi0NOj2jAPFRgz67vT1n" data-pnid-children="fiNzz07xsr4lU3s5V2WMlK">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html data-page-node-id="LsXVT0yaD57th04giNh2iT" lang="zh-CN">
+<head data-page-node-id="IfquM0ValiYU2UgtrbNPW2">
+<script data-page-node-id="ancCDEwPR0IAKKsoVu2afT" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="K6aS1alJOShj3pDxk4vWnw" charset="UTF-8">
+<meta data-page-node-id="0OFDv5xrHutr1Jsu6REGBp" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="Eb2jrp4VjiGAI80hwJqCiK" data-pnid-children="raoGXFgKKlddCn7hLW2hPl">库存结构与呆滞料复盘</title>
+<link data-page-node-id="t8tePp9Wyt56elivXYvtI7" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="Yu8DFgP9LcykcXKqSDezls" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+<style data-page-node-id="72KytpS7fHGBpwAOYaOwBF" data-pnid-children="TTXsZNItrFFPGCv8AoPGo0">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="NXyXy3imYyZbfbiMJq4L8C" data-pnid-children="t9uwsPcueivQ4qvot73Nkg" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="cD77Pz9PtI3JWIjwChrBG3" data-pnid-children="X3X14Y1YPPjZuL60YfxLRc" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="9HCcFbP7wb5XCIP4W5traz">
+
+<div data-page-node-id="ZBY6GRDIWEuyR7sg9hZVG6" class="wrap">
+<section data-page-node-id="SeyHnb81eSvr542TKOnn4U" class="page-hero">
+<h1 data-page-node-id="kp8WjQtLe8NAp2xMgG4NT4"><!--pnid:SJq3u2vJc8d7YqFVb9aGIM-->库存结构与呆滞料复盘</h1>
+<p data-page-node-id="YXVqHa1WzYsEXLTnCxySFy" class="lead"><b data-page-node-id="DgmljN8lMsQh5WH5OOEXZ9"><!--pnid:jAti4PJQqV7zn6ivc22rb1-->存量驱动</b><!--pnid:TN6zhuYaMUmwTxS6RPSXJ7-->（与 6.1 缺料预警方向相反：那个是缺什么去找什么顶，这个是盘库里躺着什么）· 先<b data-page-node-id="XuJHroEyApdwZaWmU30V4n"><!--pnid:dTO947KcEuEXxcRiIminYq-->剔掉&quot;账面呆滞但实际已配套&quot;的伪呆滞</b><!--pnid:bfszr0zOUNkCBrLpLcYdLR--> → 按<b data-page-node-id="FvvvWaoDjzTihf6sRrGUSm"><!--pnid:2rLhvtrAkk5TNKfgonFPaz-->在产产品图纸公差</b><!--pnid:ZIcDwyGxNnfmxNVXIfvUMj-->判能否转用 → 转用/代用/报废/暂缓四档 → 附安全库存修正建议。<b data-page-node-id="CNhUFstDrNNqMO7zf5Pvn8"><!--pnid:jpUJENn3XP4CEhgCeCUxQC-->判据在技术部的图纸里，不在 ERP 物料主数据里。</b></p>
+</section><nav data-page-node-id="eQ0S2iqpnAuxJHWyMiAgXp" class="subnav"><a data-page-node-id="A1HeQZVYj4zkhKExzQy8BQ" href="场景引入.html"><!--pnid:HBfcEa1AIIAScytzIQMpYn-->场景引入</a><a data-page-node-id="VY2RBXtg84Aid9VKiJ6eXA" href="LiveDemo.html"><!--pnid:638a5tqqlYSkidI3zArTWP-->Live Demo</a><a data-page-node-id="K8xILCPFLNhNJ86WlAWR7l" class="on" href="#"><!--pnid:xU274V3G817fJRFZRMdg0T-->推荐任务</a></nav>
+
+<section data-page-node-id="t8jyULsXgktsy2fX8chSnn" class="blk">
+  <h2 data-page-node-id="fkSioaBXKXJiLLGauoNpov" class="h"><span data-page-node-id="jWbUCorKpyPz7Hiu8R92qT" class="num"><!--pnid:3iEupYlAOLMru0zuTgEFSl-->一</span><!--pnid:Qv5QbyHNiWlUFUkwcTZGse-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="gZhn6EcDLdb2ecUlqd5EtD" class="subline"><!--pnid:nREHaKUXV7apsuU4aYcqN7-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="1YKEBTbcZgpmQvNSVemEB1" class="card"><p data-page-node-id="jYNnYB6DEvIVstoZ9JNeaV"><!--pnid:wP0rjAfZIZwQ3RdkgeXdat-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="uE31rMfFdstJeKqn2JkP1e" style="margin-top:10px"><!--pnid:9dNMzM3PF0H4eUGyMYq1GJ-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:ejwHKaKBoITE0FopjJ27Lz--><!--wb-skill-start-->
+<div data-page-node-id="x9wW4LHxuE7eW3sPT3tbKl" class="wb-skill">
+<p data-page-node-id="CvOoX5H2i6nVmkKpNTAjuP" class="wb-skill-lead"><!--pnid:WErLAwGXvZxqUyflzbP6jh-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="2ZUdxeruDm2AO8q7Ez41IK" class="prompt" id="wbSkillPrompt"><!--pnid:uWCY3AzW2nP7dZ9eacvOIm-->【准备】这个场景的规则都在「库存结构与呆滞料复盘」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/8MgnKPRNxy59bWXzTdCqQh/0/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="DfuRb25YeDHO1jVGa47PWp" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:iv6CYR7KlhXY2f2JleITVe-->复制</button></div>
+</div>
+<!--pnid:HHW2vOWY2ekV2FC5GS2oVT--><!--wb-skill-end-->
+<section data-page-node-id="SfkeemWm81CSQmt60GKwRN" class="blk">
+  <h2 data-page-node-id="vg3EcyI58ZtjOcv4EwRPiq" class="h"><span data-page-node-id="YMwUW2wh5CVCokHJWyXYZo" class="num"><!--pnid:rMI11FzfOdEMU4hq4YWDO4-->二</span><!--pnid:n326UEO1JjDBTPAC8kQhWh-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="dQqEMufu28maqqFDpS30Sa" class="subline"><!--pnid:LI3gYmNigJ65d9H88uZIio-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="sD3aNGkTAB1UxnUeJcxzC6" class="tlist">
+    <article data-page-node-id="MxtsCx0sRQdi4TxVs3PisS" class="task">
+      <div data-page-node-id="8E8xwJJIwdIRW6qjDUuazS" class="th"><span data-page-node-id="gw6wqgFb5SOXeFoGYgxci5" class="no"><!--pnid:9h1Psq4Vj9xBdO0lqXg3Yk-->01</span><h3 data-page-node-id="OjM6D5q1xEFNORvTUQEe9A" class="ttl"><!--pnid:6FHVdIuIBieW6c5rG9CEjz-->首推默认</h3><span data-page-node-id="2rn7RUpWxb1h3ABHcIK6gJ" class="star"><!--pnid:HtvLIWfNt9H5xzyZhZBWU1-->与一键体验入口一致</span><button data-page-node-id="CILAssrPAW2KUpdK4NPqIk" class="cp" type="button"><!--pnid:pGEofcExvEiUy1j3tFqlzH-->复制</button></div>
+      <p data-page-node-id="o79vjtWlhC4LfbbMwY1rpF" class="tp"><!--pnid:6ZhFMctTUYaeBSrMjUh4Gr-->季度呆滞料复盘，库龄表我拉出来了。另外把采购单、工单预留、销售合同预留（交叉校验数据）、技术部的在产产品图纸公差摘录、安全库存与耗用历史、历史处置记录也一起放进来了。先帮我把不是真呆滞的挑出去——有的是在等在途的料，有的已经被订单预留了，这种报上去会被采购和销售笑。剩下的按图纸公差看看能不能转到在产的产品上用，能转的优先转，别一上来就报废；要客户确认的单独标出来。安全库存那块给个建议就行，别直接改，改错了下个月缺料我担不起。产出两份：一份呆滞清单与处置 Excel（呆滞清单与处置、待技术确认、安全库存修正建议、BOM 版本溯源四张表）、一份呆滞料处置意见书 PDF（逐项处置意见，可五方会签）。</p>
+    </article>
+    <article data-page-node-id="lVymCDtlSr0EsEEZbsmbUY" class="task">
+      <div data-page-node-id="9SOWXtfPPYiXbgzP8K9e94" class="th"><span data-page-node-id="b3UHfFom1aEG3cQGpwsLyI" class="no"><!--pnid:zvvrcGA4Unci7F64OKXINN-->02</span><h3 data-page-node-id="Cw12TxDKGtS3zp5eqpqWhB" class="ttl"><!--pnid:3zqhgZliGB39tx1JTsZxky-->只剔伪呆滞</h3><button data-page-node-id="f8Uweu6UYlXsDe2UXOgXBr" class="cp" type="button"><!--pnid:cPLPzL0juXcOnwtdYn61XJ-->复制</button></div>
+      <p data-page-node-id="0oem35ioc3elYHyOjLlC49" class="tp"><!--pnid:XZ5PdjswsA9W0T8HnWbVqQ-->先别判处置，只做剔除伪呆滞这一步：拿未关闭采购单、在制工单预留、销售合同预留三方交叉，把账面呆滞但实际已配套的摘出来，每项写明剔除依据的单号。产出用 Excel：物料、账面呆滞金额、剔除依据（采购单号或工单号或销售订单号）、剔除后余额。</p>
+    </article>
+    <article data-page-node-id="f6xsQFB3sxV8rgRhUQnCo4" class="task">
+      <div data-page-node-id="tqDaBlDDTyDP8MwouhILm5" class="th"><span data-page-node-id="SENCEn6r5Gs4pkaG9Ok04c" class="no"><!--pnid:kBdygWU21ie4YN5LAd0F86-->03</span><h3 data-page-node-id="GUf5Zxj3hntEVbSZOu8oyb" class="ttl"><!--pnid:Sm67LSB8pA8UyM7yELvIM6-->换成技术给不出图纸再看</h3><button data-page-node-id="tc1W5949KmLhgLrAomEMzo" class="cp" type="button"><!--pnid:TlEccoLHU6naGZx9cEh95Y-->复制</button></div>
+      <p data-page-node-id="QwGpl3DIUZ9sWdTwhCLubh" class="tp"><!--pnid:fh9WnSFcHQw6i0SlkeH8Ei-->假设技术部这周给不出图纸公差，转用和代用都没法判，只做暂缓与报废两档：哪些料本身不会失效该判暂缓、哪些真的该报废。产出用 Excel：物料、档位、不报废的理由、需财务重估的金额。</p>
+    </article>
+    <article data-page-node-id="EI8kD95nESl4pVAP9O8Ew8" class="task">
+      <div data-page-node-id="s2gHW5Ti8nU9Q3vGxw8mbd" class="th"><span data-page-node-id="TaCTtIxn1wgIjf2m6BA3cn" class="no"><!--pnid:x31wH5JSbkox9RxEit08Jv-->04</span><h3 data-page-node-id="SJaMMg8JqBuodUZ5zFx7Ih" class="ttl"><!--pnid:0hnBMuyaAFiRXFkXG0J9gg-->一次复盘两个季度</h3><button data-page-node-id="tS9lvMYzCRNeAoLxNWxS8f" class="cp" type="button"><!--pnid:vAlzrbinaOdKjMsi8iMCxe-->复制</button></div>
+      <p data-page-node-id="MUWcE4pnctXzoGSaRc2AqR" class="tp"><!--pnid:v9Jhi4UpTqt2HsAw0zB0Zq-->演示数据里再加上上一季度的库龄表与处置记录，两个季度一起过，最后给我一张横向对照表：上季度呆滞金额与处置结果、本季度新增与消化、哪几项连续两季都没动。产出用 Excel。</p>
+    </article>
+    <article data-page-node-id="zUuErXLWXRLQVONtBtKYgr" class="task">
+      <div data-page-node-id="fdW7elJ6wS7tVGunf6m1W4" class="th"><span data-page-node-id="XtHlHWU26dzz8BRwxgPVpR" class="no"><!--pnid:nZo0ViG5OjnwQHOBlzPqzO-->05</span><h3 data-page-node-id="cs49mfvWJS8X8Q20MdXdxC" class="ttl"><!--pnid:LCnock5l6oKoczd8GDJh4T-->给采购和销售的说明页</h3><button data-page-node-id="Btm97L07GbcvKL7c8m2bq8" class="cp" type="button"><!--pnid:Cc8os0ztGvP1hej895uOIh-->复制</button></div>
+      <p data-page-node-id="Th7ZAMBg68CApHgHrdHPnF" class="tp"><!--pnid:XLIJ2I8D8wE85pbCtRFjtb-->把剔除的那部分单独做成一页给采购和销售的说明：哪些不是真呆滞、依据是哪个采购单在途或哪个销售合同在预留，避免他们以为 PMC 分不清。产出一页纸。</p>
+    </article>
+    <article data-page-node-id="lZdGyD7PqB9MtFzYRQQSYq" class="task">
+      <div data-page-node-id="ShSJRguuhuXZZ4UqXHmzPd" class="th"><span data-page-node-id="MUPSEL9xXh32taYJw9ExNz" class="no"><!--pnid:LZSs2SQ8oJDS3209QnDdf3-->06</span><h3 data-page-node-id="K6Ggg664YjCGAjIP4Ji5OK" class="ttl"><!--pnid:Uljv834C6YWtSZhNB2DRSX-->让它反驳自己</h3><button data-page-node-id="YomC9Vcpx6SwM3wp0RuhUo" class="cp" type="button"><!--pnid:70lD3tcyYfcTAbqZ03r12c-->复制</button></div>
+      <p data-page-node-id="2n5iH4caMQnDbArlThb5Uv" class="tp"><!--pnid:4H9LkZohZlM4RFqYmKD5qJ-->你判「可转用」的那几项，公差判据站得住吗？把实测值压在公差边界上的挑出来，说明要不要逐张复测、客户是否需确认。产出用 Excel：物料、实测值、公差区间、是否有余量、建议动作。</p>
+    </article>
+    <article data-page-node-id="AaX51lXhncHiM0KdmTTBwb" class="task">
+      <div data-page-node-id="eBkmECtJYwP4hEQlUgZ7Jp" class="th"><span data-page-node-id="UUxyPKBDGaqyLnYRtdvPgu" class="no"><!--pnid:80Xxs1nCiIkr6itAZMTBrA-->07</span><h3 data-page-node-id="SZXocmXWQ5RzMWV2msjecL" class="ttl"><!--pnid:nRHELjtOp92nEQhLfNkeET-->专门比历史处置记录</h3><button data-page-node-id="W7IToaPXksspCtZkP3VkjQ" class="cp" type="button"><!--pnid:CNIsr66ZgaJvHAp8KCMXgQ-->复制</button></div>
+      <p data-page-node-id="Qk6tZ7LlcsXzxFbMXupkIx" class="tp"><!--pnid:a8UfsINVd4kwRYEo8wb0kL-->专门查历史处置记录里同类呆滞以前怎么处理的：判转用的后来真用上了没有、判报废的是不是其实能用、当时的技术判据是哪条。产出用 Excel：物料、历史处置、后续结果、与本次对比。</p>
+    </article>
+    <article data-page-node-id="MG983vrDK7vc9b6soKowAO" class="task">
+      <div data-page-node-id="putO5IRQ6DqEeOdLEuPYKO" class="th"><span data-page-node-id="ZStyiUgauucay0xhtHfvM0" class="no"><!--pnid:RwgiendQpUgwUw4jJjIQc3-->08</span><h3 data-page-node-id="MvtQUZwqiqKl2tAVsN8nLH" class="ttl"><!--pnid:s2uJYDwJ9aL6VDErXbJmQy-->对照四档前置条件自查</h3><button data-page-node-id="GrFHy14bYyMzVOVhk5lfBm" class="cp" type="button"><!--pnid:RGXN6RXfew55pMO2t2lRY3-->复制</button></div>
+      <p data-page-node-id="00Uze2tkZvetg69OBV3KJv" class="tp"><!--pnid:G123rmqsBmMfH6h6dO0r6E-->对照在产产品图纸公差摘录与历史处置记录，把转用、代用、暂缓、报废四档的前置条件，把每条处置自查一遍：有没有跳过转用直接判报废、有没有该判代用的当成转用、报废项有没有注明需财务重估。产出用 Excel：物料、当前档位、是否满足前置条件、结论。</p>
+    </article>
+    <article data-page-node-id="qSufttoCLVnhYcKXbJRT5p" class="task">
+      <div data-page-node-id="IcwH1n3GHlcauWbxjdwOgM" class="th"><span data-page-node-id="YJmgP5q2Go2ZmPCiv5o9J5" class="no"><!--pnid:H42BSNCerqNhfXMcNp4Qxb-->09</span><h3 data-page-node-id="HwqaLj8p6rQ7Ycn4gAP73n" class="ttl"><!--pnid:PM1em6THT6NzQ0rXNfQIAt-->折算成金额守恒</h3><button data-page-node-id="8vUzQVus8tkvN3gghcfbzU" class="cp" type="button"><!--pnid:IGt3Vl96Yl8FuiJ2Ep6SIG-->复制</button></div>
+      <p data-page-node-id="5oW7kOB3CYEb85xc23Ufth" class="tp"><!--pnid:5ensoO3FFU6RDhq8ufHwMC-->把金额对齐并验算：剔除项加真呆滞等于库龄偏长总额，四档处置分项等于真呆滞总额；再算出转用与代用能消化多少、报废账面金额多少、按可变现净值重估后大概多少。产出用 Excel，带算式与守恒验算。</p>
+    </article>
+    <article data-page-node-id="RSUN5XL744EtiGXAizdeHA" class="task">
+      <div data-page-node-id="A4FCr1ZTKR5g7dmvudEqAP" class="th"><span data-page-node-id="2n6FeULm0Nyw7JitHrLzgZ" class="no"><!--pnid:8ErACzkkQYLmN8vlwE1jxt-->10</span><h3 data-page-node-id="vuLv3DisNxLhG5dtQFQpPq" class="ttl"><!--pnid:tor9NFpjK6oF8jDuVo1qRr-->沉淀成处置口径表</h3><button data-page-node-id="hniR5A2O7l4Vpv8HL9v4qG" class="cp" type="button"><!--pnid:IS1U8LOEgFJ5mhzbd1AtOb-->复制</button></div>
+      <p data-page-node-id="7Rb0WfAYTA9AAct7lipif2" class="tp"><!--pnid:3goJh8rGvlt67sXLvqbhxE-->把三方交叉剔除规则、图纸公差反查的三重判断、四档前置条件与安全库存算式整理成一份可复用的呆滞处置口径表。产出用 Excel。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="PqzaWMJtZXO6Cwa0lWn6JE" class="cta">
+  <div data-page-node-id="BVJGrnlCZ4VyR8WH0aNoU7"><h3 data-page-node-id="VUSkPkNQXVia4KGPI7rxId"><!--pnid:0pAKJzNOopJmaMhuFjU49i-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="lFovokRtL5zRRlCJoke332"><!--pnid:ggiuZJyJJftCyipq7ECapY-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="m4wf4FJtE3l1PsROf3306E" class="btns"><a data-page-node-id="aOiQBkNmenedthHgHj6tea" class="btn" href="#" id="ctaContact"><!--pnid:bZxudLlRYZVxC2QEETgygn-->联系我们</a></div>
+</div>
+<footer data-page-node-id="TFVk9NGiCv0l4fGUd26ecg"><!--pnid:4lKU1rt101dFyrNXdYmSXw-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="Qq3vgfEQEwYdDhWp5KMHq1" data-pnid-children="pmaARY9dQlLm77mVC0vFJV">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="cYIFmOSFKDlpFky0P4sR2Z" data-pnid-children="1xDG3BiXspaMcfiQI6K8Eg">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="yppozWanTWAVfDYwp8Rs2F" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="XvQpuPOikinROhXihX0QzO" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="3Mqzq2J6sb5myNRiZVm0bx" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="YsCEYpt0F5bxIl9Ebc1Vsg" data-pnid-children="H5f2rk0GuWXuj7UTuhQC1v">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="0u8J86YO08vrAomDogc9uH" data-pnid-children="tdF37sVNlwvNNUg6QmjAL8" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

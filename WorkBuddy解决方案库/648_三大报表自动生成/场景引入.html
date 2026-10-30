@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html data-page-node-id="HkatP2NxNangxCFT7MOddc" lang="zh-CN">
+<head data-page-node-id="wIrTwaGN7emRJuSL1vyuQj">
+<script data-page-node-id="ck65LSEpAyTfpmEf5L2KCL" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="NEl8OVHSagqhUWl3nn0FhA" charset="UTF-8">
+<meta data-page-node-id="2vTH8H8jU68XkmEUQQJLzm" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="2i4DQnijSgZZFElWhRVPTe" data-pnid-children="jzkQhsetmp2LLXvsoLrlhR">三大报表自动生成</title>
+<link data-page-node-id="lineCQ1MQOJgjrTgBr2JW6" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="0S0FXIrjhgW6J1YCx3S7hd" data-pnid-children="x2m0j4WLft01fiRKaBHUMw" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="eC3C2Lv9TALzQ54Uoit33e">
+<div data-page-node-id="zNylFojyAoTpTTP0i9y6FW" class="wrap">
+<section data-page-node-id="BB1H1kGizrgXcAu33eVI4J" class="page-hero">
+<h1 data-page-node-id="njhqtlZMYugpjyi6rikuVP"><!--pnid:XyfI9FvboFEXPwU01ElGUF-->三大报表自动生成</h1>
+<p data-page-node-id="jNb3O6hesYEDaoGxNZ793B" class="lead"><!--pnid:7Gwd5nauCKv184gxfaq6o0-->手工编制报表要 2~3 天，跨期 Vlookup 重复劳动，不同人编出的报表格式还不统一</p>
+</section><nav data-page-node-id="ximTirAOhFUxrWCMUU49ok" class="subnav"><a data-page-node-id="s2wauTxX3zh5TAvMD6va2E" class="on" href="#"><!--pnid:qfDC3WDhKvi9I78bprWyaa-->场景引入</a><a data-page-node-id="tCVcwosWWFYWnWInql6KG4" class href="LiveDemo.html"><!--pnid:qQH43z3gnOOMlV9q8tkmdB-->Live Demo</a></nav>
+<section data-page-node-id="GfKmNbM0lfO2Y2SvBuic0G" class="blk">
+  <h2 data-page-node-id="Vs2Cn3vEKttLBYO3aA2Krx" class="h"><span data-page-node-id="OWwYqz92dEgpdpEVe21v2d" class="num"><!--pnid:3XefBRW1BA8STaJPiihkDt-->一</span><!--pnid:5rqnZaK0RP35Xvf1UHF3ey-->这件事现在是什么样</h2>
+  <p data-page-node-id="NKaLnq8dNoPDbMi9QORyvb" class="subline"><!--pnid:GVrTkdXHcrXE1UYJUnQb9T-->财务专员 · 每月结账后最紧的那几天</p>
+  <div data-page-node-id="hTmtyirrZ1UPHv9eLOlPUM" class="card"><p data-page-node-id="LD8yj3WYF8Ymvcr9itAcll"><!--pnid:llFStpR9puQsiiVa4tVfGs-->某连锁餐饮企业，每月结账刚关账，财务专员的下一场硬仗就开始了：从 ERP 导出试算平衡表 —— 80 个科目，借方贷方各一长串 —— 然后打开 Excel 开始编三大报表。科目要一行行对着会计准则往资产负债表、利润表、现金流量表里归，上期金额要翻上月的表逐格 Vlookup 过来，贴错一行，整张表勾稽关系就对不上。两三个科目归错了位置，要对着恒等式查半天。编制 2~3 天是常态，而其中真正「看数字」的时间不到两成 —— 剩下的都在拼表。更麻烦的是，区域报上来的表和公司口径的表格式不统一，审计进场先对的往往不是数，是格式。</p></div>
+  <h2 data-page-node-id="uGiMBBwkH4Iwl4PChDpp0u" class="h" style="margin-top:22px"><span data-page-node-id="vrNjYYQbAtbtd96hXppOZR" class="num"><!--pnid:ARmPpIGsFxhQN2cXN1aczI-->二</span><!--pnid:8umTXzDQb8LbswDpOWXltn-->痛点 · 每个结账周期都在重演</h2>
+  <p data-page-node-id="DhoCwqbtvtnqz0lQYiUXSd" class="subline"><!--pnid:psE7nJVE0zHff0GkapynpD-->不是流程描述，是财务每个月真实经历的消耗 —— 以下内容取自场景调研</p>
+  <div data-page-node-id="JXhKgwUePvN3eigdyBoQED" class="pains"><div data-page-node-id="L6z8ehCITUhVPVR3fwTEPH" class="pain"><span data-page-node-id="5jj7NxySYVf32qLm9I8mDu" class="i"><!--pnid:99ObNgru7sLnWBPGRWsJZu-->1</span><div data-page-node-id="Cobp4LdZerV7pPRJlOCZYS" class="t"><!--pnid:enP4rjDp6xKAzRoBAD3VFk-->手工编制 2~3 天：结账后最紧的几天，全耗在把 80 个科目逐行归进三张表里 —— 真正分析数据的时间被拼表吃掉</div></div><div data-page-node-id="A1xi7WUqC5HtYMrA739dzz" class="pain"><span data-page-node-id="ZdfL7T4GtZUkXUyRMXcgGe" class="i"><!--pnid:cMh7hbwu5ckxcnsZ7L4EkM-->2</span><div data-page-node-id="HevTgUDuqxBs6uAdsSS1J3" class="t"><!--pnid:I7eE206273rcfdrPb3dRPP-->跨期 Vlookup 重复劳动：上期金额、同比环比每期重找重贴，贴错一行，恒等式不平，整张表从头核</div></div><div data-page-node-id="nVHAJv2LUkL3W69xeDuHe2" class="pain"><span data-page-node-id="vjRAvztCp1ls9KwcnbaQKS" class="i"><!--pnid:sLy6sfrGL2yIL1LFyxCnZn-->3</span><div data-page-node-id="WIbYQZsypM0dUT5nGFdRH9" class="t"><!--pnid:e6ZT33CqKP05uJ8QKCBZnO-->报表格式不统一：同一企业不同人编的表结构各异，上报前先对格式，审计先对口径 —— 数还没看，半天没了</div></div><div data-page-node-id="k4tT0k1fOZ6Is5SuXF54Ub" class="pain"><span data-page-node-id="y47d36sTU9VMHxr8S4UmE3" class="i"><!--pnid:siT3fbqzAHabuvepDmQWWf-->4</span><div data-page-node-id="DJ7PO2aCy0YrYoJP0Lunza" class="t"><!--pnid:1clzvrU4aqLO4h4cYfCSud-->异常波动靠人眼找：应付账款同比 +50% 这种异常埋在几十行科目里，看到看不到全凭细心 —— 常常是审计阶段才被翻出来</div></div></div>
+</section>
+
+<section data-page-node-id="kmKdmIKPpl6PAGvCLZwT8P" class="blk">
+  <h2 data-page-node-id="kF8kcUwpGHkP7WmaTV3xhC" class="h"><span data-page-node-id="kWG9V5gdPvh7m9Vs2VJqft" class="num"><!--pnid:EyWFPwIPQ84lIpFbymZJZs-->三</span><!--pnid:vXebLxHE8GaJ2fIxSrY16x-->换个做法之后</h2>
+  <p data-page-node-id="D87hm4DNNR3ALkCeGeRY0Y" class="subline"><!--pnid:HziPaJ3NxiJLQ4sFBK82wY-->变化不在「快」，在「不错」和「能回溯」</p>
+  <div data-page-node-id="HU09Pa8XIo31wJRmFTcMYp" class="cmp">
+    <div data-page-node-id="nJfgy0i23gC2NMKLUezfta" class="old"><h4 data-page-node-id="X5AVfrrMrs0cUTWNNY5psb"><!--pnid:DoBdKYmHexLPXxg5hxaPF3-->✕ 现在的做法</h4><ul data-page-node-id="GWCPjomNZryck8bCvkk4Sc" class="list"><li data-page-node-id="RqNDiXlslg97x90vFoiHTv"><!--pnid:3dWl5wqhJVfOLFadcuJrUK-->80 个科目手工归类，编制 2~3 天，拼表占去绝大部分时间</li><li data-page-node-id="98FQw6p26ZQyt5vtFnz64T"><!--pnid:qyLLzFAgIvNLpwMHrRnDao-->上期金额跨期 Vlookup 重复拼接，贴错一行整张表重核</li><li data-page-node-id="NvIJV7COXt5Dz2o2RcaN30"><!--pnid:Rq5u1fWuVaS6PlGhk2h4QW-->报表格式因人而异，上报与审计前先要统一口径</li><li data-page-node-id="cUmMlMF5K05RaJWmEGfMPa"><!--pnid:R2zy7OT2Z1O0XOVdwd43kr-->异常波动埋在科目里，靠复核时撞见，发现即滞后</li></ul></div>
+    <div data-page-node-id="bYqLX199gzm74XoKMeyHtT" class="new"><h4 data-page-node-id="w4srftApKkzd9xGVBkAFGx"><!--pnid:zFcLl0sLu4ULzYsVN7JwMg-->✓ 交给 Agent 之后</h4><ul data-page-node-id="VskZlPVaadRPpfdSM47Efy" class="list"><li data-page-node-id="jcmjR7HLTTCbdAqbixCXAx"><!--pnid:KAe5bC1WnrtEpbzg0KvZOB-->试算平衡表扔进来，15 分钟拿到三大报表 Excel（3 Sheet）</li><li data-page-node-id="3k1SZBzZlA79aoos8WYraw"><!--pnid:BNy7Z5YHdZsWdMR7xUAjdU-->同比环比对照列自动生成，不用翻上月旧表</li><li data-page-node-id="vWbinZNk7vFwOUkBOx4ot6"><!--pnid:9bNJXctJdk07YQNhQGQwaj-->三张表统一结构：本期 / 上期 / 同比变动 / 异常标注</li><li data-page-node-id="gZZwo9696eE7ZFXkvwXQpw"><!--pnid:zuD0iUDnlOOOjT0sTvDnqR-->变动幅度 >30% 的行项自动标注「⚠ 建议人工复核」并附差异说明</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="xyUDlW0UlWJlXymCBrpi5v" class="blk">
+  <h2 data-page-node-id="Lm19Pe5lJJLAUPxwTDKdkT" class="h"><span data-page-node-id="UAlHtTMeUpqgkK4VqhqfNT" class="num"><!--pnid:Z2FlEc29DKVpq9uUmxEVp3-->四</span><!--pnid:qlnGicraUxtGigKR8HL8rD-->场景闭环</h2>
+  <p data-page-node-id="4wnTdhHCslL5wpWGyf7JBc" class="subline"><!--pnid:WYokf3hNU0e2AuwJqfnsgk-->6 步 · 解析 → 映射 → 汇总 → 标注 → 交付 → 可溯</p>
+  <div data-page-node-id="suGErJyHjL62rmhtof83qX" class="flow"><div data-page-node-id="8H7RlXpQBmZD61LUiPZV17" class="step"><div data-page-node-id="G53arihQABsYQQJaRoYZYg" class="n"><!--pnid:jvCZnbGFIEcXunad7tpusl-->第 1 步</div><b data-page-node-id="KYwlpj2THQKdvkkkZkglH4"><!--pnid:egqFyUVe1trZKuJGsJszOh-->数据解析与校验 · 先平衡再开工</b><span data-page-node-id="Amiqcd9TVTl4HW7ROt4ytB"><!--pnid:cnhzZhRf7LlinOltDYHXgP-->接收试算平衡表 / 科目余额 Excel、CSV，校验字段完整性与试算平衡 —— 借方合计不等于贷方合计，直接拦在第一步</span></div><div data-page-node-id="13WgubcNN4yH3JJg70alUo" class="step"><div data-page-node-id="aDz5MwCAoghrgPPQOSOH7F" class="n"><!--pnid:Pz7cnIgz1hY2il7q5cUXOj-->第 2 步</div><b data-page-node-id="oZef5nmPsouDNcxkBTaGHd"><!--pnid:Ip5XBAZMt5icLyxhs8yTIQ-->科目映射 · 按会计准则归行项</b><span data-page-node-id="KHjCQh59JxyJAsGpOkyWeJ"><!--pnid:BgqegCIn8oJ2emW8lnUYjF-->将科目自动映射至资产负债表 / 利润表 / 现金流量表对应行项；现金流项目按直接法/间接法标记分类；存疑科目标注人工复核</span></div><div data-page-node-id="DSPaLvWEqK6gDmLnHf7COK" class="step"><div data-page-node-id="N24al8vM4yTU1gB6GLcj76" class="n"><!--pnid:Bv4kAs4xqcl5sL9obDado9-->第 3 步</div><b data-page-node-id="WeNjJJNDYMCkklw5JUevHv"><!--pnid:RMYKbDiuWfpGXFgfi6VH7N-->汇总计算 · 同比环比自动带出</b><span data-page-node-id="NbeMbMLqnDZ9cvrGYmduTH"><!--pnid:glhMIyUWCIYBuh6ib6F67u-->按映射关系汇总行项金额，生成同比环比对照列；异常波动（变动幅度 >30%）标注「⚠ 建议人工复核」并附差异说明</span></div><div data-page-node-id="ooSalhn8BgBjXAa5rkPnp6" class="step"><div data-page-node-id="1wapeHcYPlqcKOmbrpA6mn" class="n"><!--pnid:jBkzZvchCYkSF5bEG80O0o-->第 4 步</div><b data-page-node-id="3kRGayjf7guzcyDoDKFzpm"><!--pnid:penhn5oJHVciB11pq9nmNx-->异常项注释 · 每个异常都有出处</b><span data-page-node-id="5TFO3V11XfE5HLSDu4SwHz"><!--pnid:hC8I2I30YW8Nct2MZIhULg-->对映射存疑科目与异常波动行项生成注释清单，附科目编号与来源行号</span></div><div data-page-node-id="DfNnfhPc9HD1ClZPKejnRc" class="step"><div data-page-node-id="4pugk70e4LEJKP7qDwhBLh" class="n"><!--pnid:BRpIIOzLvxl26oZoQJqwNh-->第 5 步</div><b data-page-node-id="07CfdnrMjNR5hpPU4vd3fb"><!--pnid:iJNwsRfHc7n7xdCHY6LhKS-->输出交付 · 三件套一次给齐</b><span data-page-node-id="iaJVqihuF3DZa3CSvJdzp3"><!--pnid:XnSzqVEhAStZPRxGZx2r5Q-->三大报表 Excel + 异常注释 CSV + HTML 可视化报告 + 报表原始 CSV（每张报表独立文件，便于审计或 ERP 回写）</span></div><div data-page-node-id="xWUmf6MO7VdU6yDXgL1PTA" class="step"><div data-page-node-id="8IbaXpahorYr25aiyMUjOK" class="n"><!--pnid:sEVEYyfF6WyZhbzH3yL5HX-->第 6 步</div><b data-page-node-id="jtr6Mmx7Df8Va8Jx1gaq2I"><!--pnid:K0NZaZRJzMTqWyPDnuR9wp-->出处可溯 · 支持审计回溯</b><span data-page-node-id="kTfzCKyUWqQ4ClugA4XgBm"><!--pnid:I4RxsX9U5rZN7sGAHUVMfD-->每条报表行项附科目编号与来源数据行号 —— 审计问任何一个数，都能指回原始行</span></div></div>
+</section>
+
+<section data-page-node-id="pAWvwya8txEPXEpoMk7pfC" class="blk">
+  <div data-page-node-id="W7bcumTip1xLLFBvzal7Uu" class="g2">
+    <div data-page-node-id="2PIbYH3AHjsff2unMxLoIJ" class="card"><h3 data-page-node-id="GcuQeypPNlIYa8IL9xvh1V"><!--pnid:kc23gCNIFQMFEkSwvhjfRO-->要准备什么</h3><div data-page-node-id="SHGHGHrJjW7rV1MXLO9P0W" class="src"><div data-page-node-id="cMRhnaPqg6xF2EcvxtxXJ8" class="fn"><!--pnid:vMz37EafPrJ9UbpUdsOSj1-->试算平衡表 / 科目余额表（Excel/CSV）</div><div data-page-node-id="oxJHtcpPc9Gf9BqvqgGlAp" class="fd"><!--pnid:PJVg0OdxoOdG0axwlDWh0F-->含科目编号 / 科目名称 / 借贷余额 —— ERP 导出原样扔进来</div></div><div data-page-node-id="yz3jjALbmGmceN9YEAvGqT" class="src"><div data-page-node-id="ubRZbsGgGz2ldUtZAYmaRA" class="fn"><!--pnid:pmtTevkry8GvVZbs5YPGdl-->上期对照数据</div><div data-page-node-id="G5wWuAh3wCzf3rhLARbT3C" class="fd"><!--pnid:iWyvHWpGQZSO1SqV8zh6Bj-->含上期金额即可生成同比环比对照列</div></div><div data-page-node-id="bNQAgAiTMcMxGGBowUcl36" class="src"><div data-page-node-id="C0MpG5efnNGfwRRubkWi2q" class="fn"><!--pnid:vZheskDdf41kOW4EN272nS-->试算平衡前提</div><div data-page-node-id="PrXNxWQGAwqRIj88BXFdPl" class="fd"><!--pnid:IkQvzrchEwCD6293BNkWyJ-->借方合计 = 贷方合计 —— 不平衡会被第一步拦下并提示</div></div></div>
+    <div data-page-node-id="cM15ZGkFHfq5UdswQUGQAs" class="card ev"><h3 data-page-node-id="apyjgRmG4kKKGwoV0u46h6"><!--pnid:dFidEnfi3xfZfDRxjX6zIa-->为什么这个场景值得做</h3>
+      <p data-page-node-id="gwXntRzmjybqRW3C0RodRI"><!--pnid:bEFdD0ermr5yOo7TEUVqHg-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="o7VrUNlbyBWVFsTpCQcAkZ"><!--pnid:iPhHLhQtg0tMq9Yb9oqHDX-->8.0</b></p>
+      <p data-page-node-id="qn2OJF9cg67M4PIrDlk1Fe"><b data-page-node-id="MQ6pNOChG5q8Qk5IALOgnp"><!--pnid:9UCCKfxlhpAai8fOZBGEwN-->最大差异点 ·</b><!--pnid:xlkm4L0lRR9JlJ1haJHBJB--> 入口只是一张试算平衡表：不对接 ERP、不改任何流程，导出即扔进来 —— 15 分钟拿到带异常标注的三大报表，财务只复核存疑项。</p>
+      <p data-page-node-id="FTXQaBSOd4ClZYkG2i6bIM" style="color:var(--ink3); font-size:12.5px"><!--pnid:3LA9zR8j2RlJKlk1Xvvyan-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="1PDemg4twzb2arsSUuvivf" class="blk">
+  <h2 data-page-node-id="9P72dxhq4BN3tBmw1Ha6a4" class="h"><span data-page-node-id="JDs3Dd7o9K3kTlIZ8Z7xRt" class="num"><!--pnid:P4J4q0iiyOcMJWHU9ul64d-->五</span><!--pnid:cxXykMdd7fUqaJhHbCUnDH-->会产出什么</h2>
+  <p data-page-node-id="HGLh36jw9Sv7ciBQtaaXnl" class="subline"><!--pnid:2ZIGLLODgcqSoFp2GFSVNK-->判断标准只有一个：这份东西能不能直接进月度报表流程</p>
+  <div data-page-node-id="5GGXyPMmNSCdLf39kzL49F" class="outs"><div data-page-node-id="LEyUWSof9YlxNhTi033egs" class="out"><div data-page-node-id="Y6bp7NbKcIWoZYsV6G3Ekk" class="on"><!--pnid:P8BZU1kwQtJxBrAletCrhp-->正式件本体</div><div data-page-node-id="b5xzBtKnyh2cxBW9sVuRtQ" class="ot"><!--pnid:LvRypvMMdYOONE5azh0sp8-->三大报表 Excel</div><div data-page-node-id="pvJMe7i6oDs4eCNaK68hiw" class="od"><!--pnid:uqGLApZk81gDDsi43V23Tf-->3 个 Sheet：资产负债表 / 利润表 / 现金流量表 · 含本期金额、上期金额、同比变动与异常标注 — 可直接用于月度/季度报表</div></div><div data-page-node-id="UfvWKOl6sWsWowCpqQKE44" class="out"><div data-page-node-id="EV6aAuN95tjZatGBoL5rel" class="on"><!--pnid:4kV2eXbiA4noFzgTHL9dLg-->复核清单</div><div data-page-node-id="WcbXAvJRJV7HSLPDuwGqAY" class="ot"><!--pnid:eTApAQKg6pWyaR9ypo3W44-->异常注释清单 CSV</div><div data-page-node-id="ZSstTZ0YxhhgmY46IEOec0" class="od"><!--pnid:SFmSL9cdTSJ6a4IVphZqhs-->科目编号 / 来源行号 / 异常类型 / 建议 — 可对接审计流程</div></div><div data-page-node-id="eXVjTM4UOs4bCQVSTYNPEU" class="out"><div data-page-node-id="7V2LUqIRA8JHzIC6rySrMA" class="on"><!--pnid:wa82hwWNqGTzAzociGUdZE-->演示报告</div><div data-page-node-id="Bc9uX6d98HeUznBi6JOsYG" class="ot"><!--pnid:vwnFzUbh7ky1s4oHbizhhs-->报表可视化报告.html</div><div data-page-node-id="BdsfhwsshiXAR8UYNPjxc6" class="od"><!--pnid:fJDRe1Nfms9uie1ia9Ro3D-->三大报表的可视化呈现 · 财务主管复核时一眼看全；另附报表原始 CSV 便于 ERP 回写</div></div></div>
+</section>
+
+<section data-page-node-id="hJRgdgVK96Nqdg3J4CjHWg" class="blk">
+  <div data-page-node-id="APYZnTCqFk89eO6wBHJtlh" class="card warn"><h3 data-page-node-id="NkHACI4d78KEPddpXum0YC"><!--pnid:s1pgm5B4Shb20GUFTY4j9v-->这套东西不承诺什么</h3><p data-page-node-id="ZQiZlKriOQicgj7WQaDZ9p"><!--pnid:AAW3bKIzWFJIuMdGrMam3I-->不替代审计意见；不保证 100% 准确 —— 科目映射需人工复核；不对接真实 ERP 实时取数，试算平衡表需手动导出上传；不处理合并报表；「其他应收款 / 其他应付款」等大类科目需人工确认细分归属，非零修改即用；异常波动默认阈值 30%，不同行业与企业规模应由财务主管调整后重新评估；财务数据须本地处理、不出域、不外传。</p></div>
+</section>
+
+<div data-page-node-id="U98xdxXxVUrgFyatEGD2wV" class="cta">
+  <div data-page-node-id="MSjqxfpwdM8jO2tGhUOeOl"><h3 data-page-node-id="AOJeor1sarH9yLvI1IIwzN"><!--pnid:1wArdQHKGtwBKrgg6JKEaR-->想看具体怎么跑？</h3><p data-page-node-id="WuE6AmsH58RSUEU2wjC76m"><!--pnid:F2Vc44HxrIbd8ncHNAwgAU-->Live Demo 里有一个完整案例的每一步，包括报表里哪些内容必须先经财务主管复核</p></div>
+  <div data-page-node-id="8NlQsJzssrqJYaYxnWkK5i" class="btns">
+    <a data-page-node-id="q2D2qU3vivnXxFniJwEUem" class="btn" href="LiveDemo.html"><!--pnid:pQeJcZCcubsEdOJUMsSrSv-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="ua9LBymAeIBzD8IEUXJtFD"><!--pnid:nrSWT7QiO0ZUaDvfVXQyrD-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="qqEhxixlmUUuZJ8xKIku6S" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="HB71DjeX8fQbNjWJDpo186" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="xmQduLY2PMoZBcPvr9ttWj" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="rbwE1lVZIiAGA1FXkITTia" data-pnid-children="WbA4zwU5P1enLcGvyeSIll">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

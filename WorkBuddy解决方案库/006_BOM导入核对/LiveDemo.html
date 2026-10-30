@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html data-page-node-id="oHQspnQ5AP87ob0HFYQeEM" lang="zh-CN">
+<head data-page-node-id="6CClH63q7Z91XkBXfekTeX">
+<script data-page-node-id="FmU6x6hsVRISuOiadsB7uV" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="x06K46yavi0GFI34CSh1TX" charset="UTF-8">
+<meta data-page-node-id="lSOEV6vrX9iuBXptg3Lqgz" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="lITAZYDSSO7pADt2v4dzr2" data-pnid-children="LImJE8KLJRHe0Qy3VAVMN8">BOM 导入</title>
+<link data-page-node-id="AwOKwWkJGk1M3w9EYic3Og" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="9avRXSHNwFUQGcZkEKoqgd" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+
+<style data-page-node-id="Opdy2SqqBpCxltl1pWcg6a" data-pnid-children="E3YBD6wn26rfzFUjvocwsu" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="fLPOuSdd5waQD3zNpWKnfk">
+
+
+
+<div data-page-node-id="ezAGRuh35JNJsw4lk4PM1W" class="wrap">
+
+  <section data-page-node-id="xai3mJIeyA1Oxshas2kN3f" class="page-hero">
+    
+    <h1 data-page-node-id="hjmeXcM9uXENmge5NEgZNA"><!--pnid:Ls7G3L26zUdDVRHbDdl4VX-->BOM导入核对</h1>
+    <p data-page-node-id="z4ptloake06kQwUAsZ6tAD" class="lead"><!--pnid:ZThvg5PegZpJVwM42jCjFA-->案例：<b data-page-node-id="XLBo85gsqRrD72WlN8OcsS"><!--pnid:hGOiQtZfbHfQI5qqhyAFwT-->P-IPC-01 智能控制柜 · 现行基线 v1.2 →研发新版 v1.3 · 研发同时发来Excel、PDF 和一封邮件</b><br data-page-node-id="nVuP5q03Uc5tlnOq2XU8cG"><!--pnid:CkQbZ81u3mKQdyNS0I3ziP-->
+    看点不在"哪几行改了"—— 那个人也看得出来。看点在 <b data-page-node-id="jjr2SiXDwyjDxLpsbLnRxk"><!--pnid:v2vKLHDJFT5SBJlwZrshNA-->Agent 发现了三份来源自己就对不上、发现有颗料的替代关系被悄悄清空、并且把每条改动值多少钱算了出来</b><!--pnid:kV3EUpKopl9y8aYjdy0Nuv-->。数据脱敏。</p>
+    
+  </section><nav data-page-node-id="jSVd3BBoGSXdcki6Rvsuxx" class="subnav"><a data-page-node-id="A1wgflt4b0gX1X2xqrKAgj" class href="场景引入.html"><!--pnid:LrMBgt1VwAisU0g3FZblQB-->场景引入</a><a data-page-node-id="eC8KamXPEHd6V7PgAIDycm" class="on" href="#"><!--pnid:PIGtCx9JO8ipLVWAc8I19P-->Live Demo</a><a data-page-node-id="3T7MGQSvSDb2Cb94moHEZy" href="推荐任务.html"><!--pnid:iY4Vz7rDJdNKkTYg78giW4-->推荐任务</a></nav>
+<section data-page-node-id="6zSAF3X4QlsizhnZyggALk" class="notice warn"><div data-page-node-id="fOFkqYB0PWhaQOJjFa130Q" class="icon"><!--pnid:aypwTB5MMUy7gIORJ1h6GF-->!</div><div data-page-node-id="nNK8C3aCmB0Ixs1twZPZap">
+<b data-page-node-id="jP0qfvrlvoMl7fibUI9ODL"><!--pnid:Nm4pG7IBjMEshoYFfayrKk-->演示模式 · 可视化预演</b>
+<p data-page-node-id="pCEEpDHFJxrz5JmVWjE3mS"><!--pnid:LysVkGAyHx8Ya2UIF9nF1e-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="dk92SX3FPqgxjenl0Dtkob" class="kpi-row" style="grid-template-columns:repeat(5,1fr)">
+      <div data-page-node-id="1E5InYd5lfUlYDo8eCxAO3" class="kpi"><div data-page-node-id="lzUuhTef8yySdLY116GByx" class="k"><!--pnid:SjlkMsmKFWDdcckEN3zko2-->输入形态</div><div data-page-node-id="bHQJbuYDCXdBsRkLYOhm0T" class="v"><!--pnid:1qfUxIdx6xbGRudQyOXW1q-->3 种格式</div></div>
+      <div data-page-node-id="UHDhufGVSZAnpfIgwIevaH" class="kpi"><div data-page-node-id="7kslVt4wl8882EI4ql5ORd" class="k"><!--pnid:VenZRSB6MkgMpRwcJO9Lr4-->来源互不一致</div><div data-page-node-id="iAqelSPCuecOzAz5Nsgkg6" class="v" style="color:var(--red)"><!--pnid:h5huymQPso9uC8cdzCJtLs-->2 处</div></div>
+      <div data-page-node-id="HHPk6NBb4Gk8nBn0Kvt3c4" class="kpi"><div data-page-node-id="1p98P37E5f6hlFuUniWjtc" class="k"><!--pnid:hejpQt88ku8lLtUJKAUvgQ-->体检发现可疑项</div><div data-page-node-id="EgfKcTJVZJhbFBdOIew8XV" class="v" style="color:var(--orange)"><!--pnid:kVvJNSToreO2lVes0xQOQL-->4 项</div></div>
+      <div data-page-node-id="gXRODH4fxpDrxuWxgENRZP" class="kpi"><div data-page-node-id="STiwZq4Y3LAieSfuAtW0L2" class="k"><!--pnid:NNhaqgMRwQRnzlKQihDFhd-->确定性差异</div><div data-page-node-id="D8VAuJU08s8iJJEMU87cGZ" class="v"><!--pnid:BDPvPEJTYBIv06rLaRbqoU-->4 项</div></div>
+      <div data-page-node-id="jmL9Mm6kZagRi1t1kmo8v5" class="kpi"><div data-page-node-id="IZk8MPCtxLx2snDTHIwCDj" class="k"><!--pnid:6UpQWPsLEaU7wIOcOVVBj2-->牵动在途与库存</div><div data-page-node-id="IwcQxBmWQOdN5nPC06kaQ9" class="v" style="color:var(--red)"><!--pnid:4RRkwd4T7f2MGUa3CyUUwc-->约 8.6 万</div></div>
+    </div>
+
+
+  <div data-page-node-id="6sVPgUxu4Lp8H9iIEcycI5" class="dstep">
+    <div data-page-node-id="oteYaVcJ5UZ8ngXB9VEuty" class="dstep-h"><div data-page-node-id="RVYHVN8DJzytJa7zm1eLOh" class="dstep-n io"><!--pnid:wYaHtFeMgDBGnVUsBDELUB-->输入</div><div data-page-node-id="l717gW1YWgS2C4qN8fSYDj"><h2 data-page-node-id="Z6oPpw5FrNTPHFNKNvCIlK"><!--pnid:mCg6rgqxYEDA4KmSWquM5j-->研发发来的东西 · 三种格式，而且内容不完全一致</h2><div data-page-node-id="VrsOFhjbOy28Tl8cYG1u6Q" class="sd"><!--pnid:OGEV22VoPMl2JrWL7CHINh-->这就是真实情况 —— 没人会按你的模板发</div></div></div>
+    <div data-page-node-id="kOi6KjrC8sFIT5f0sqbrwK" class="dstep-b">
+      <div data-page-node-id="cFBylKBZhyqzvS97eLIvnM" class="src-grid">
+        <div data-page-node-id="dAZTpwBcFugYfczfAWABnC" class="src"><div data-page-node-id="cX9vcxpEN5YqIxcre1QFUN" class="fn"><!--pnid:18BxESvlrlDueLnfhRapFS-->P-IPC-01_新版_v1.3.xlsx</div><div data-page-node-id="HPPd779HzD5qVKG5LuLCPi" class="fd"><!--pnid:hYS3d9rV8776HmE9Sesztj-->研发导出的新版 BOM · 10 行料</div><span data-page-node-id="QCpY0bXJWzKUpQbn4r0lHs" class="fw"><!--pnid:FiL7JVkWXdWOFkdxRkGtHO-->邮件附件</span></div>
+        <div data-page-node-id="KyVcTr3sj6c5igqrBBx1k2" class="src"><div data-page-node-id="dWJTP5dtsvBZVmFFDoWYIn" class="fn"><!--pnid:z4SyjtbiZo59UNcFg5LIr1-->P-IPC-01_新版_v1.3.pdf</div><div data-page-node-id="CsfuX6hmuTGPUZ6aXUj5Up" class="fd"><!--pnid:vQSupYCFDHMAmeLRV7yl7W-->同一版的 PDF 打印件· 给车间看的</div><span data-page-node-id="96z5vuYdvDlrGRF3REWcJM" class="fw"><!--pnid:qf2oSn9gcpt6ZJbKfKIU3f-->邮件附件</span></div>
+        <div data-page-node-id="bq7MKNO3ZkDVJdiNWBx4mX" class="src"><div data-page-node-id="WJhQ3euLuzJ0RY7d2YXhIN" class="fn"><!--pnid:cOBMFMJ3s5YOiBH4uANfaH-->研发邮件_BOM_v1.3.docx</div><div data-page-node-id="YlEbdd7Cr8nW6IiJ5PCzv6" class="fd"><!--pnid:abJKgxQIjITfYKO6fRd1hL-->邮件正文 · 里面有一句话很关键</div><span data-page-node-id="H9laYNtlHTjuMl2ncSPCIf" class="fw"><!--pnid:Lvw8Hk25az01vKOxECVCRo-->邮件正文</span></div>
+      </div>
+      <p data-page-node-id="5xXorKa7vuXJQqTf2hNJpg" style="margin-top:12px"><!--pnid:jtRK0E3TzFHv0jiwmAGjeN-->对照物是 PE 自己从 ERP 里导出的 <b data-page-node-id="Wtpyrj7tdS2LLQwG3Y4E1g"><!--pnid:lJpcSY3EgnkJdQacjGfKcd-->现行基线 v1.2</b><!--pnid:SFoJefQG2fg6nxQMNn7i5I-->。</p>
+      <div data-page-node-id="fIgNREPXQFMDgfrg6Jksad" class="think" style="margin-top:14px"><span data-page-node-id="PRfCt8n8Opy0tPwaXS2Z1i" class="lbl"><!--pnid:r6cm3sVMgSIQqjAJOQQblU-->这一步的看点</span><!--pnid:1BZfoSFvkdnAOM3HGbdKZF-->
+        传统做法这里要先干一件很枯燥的事：<b data-page-node-id="v8Gbas2ln4XRKB98udFyEb"><!--pnid:sK4xd3qjKnWboLAjKnQvs6-->把 PDF 里的表格手工敲成 Excel，再把邮件正文里的话摘出来</b><!--pnid:ibuRTugwfKk7aFj35DaZtg-->，然后才能开始比。行业里这一步的耗时是实打实的 —— 一张复杂 BOM 光录入就要十几分钟到半小时。
+        <br data-page-node-id="hs6nH0iFAUJgIeUQBFkrbi"><!--pnid:kDPEJLWw0Jl42zeGykxDn2-->Agent 这里做的是：<b data-page-node-id="Cxkqttr5CWluSBQO0m6sW7"><!--pnid:SDBPtpLl3Q6qAF1aMUOCR0-->三份文件一起读，各自解析成同一套结构，然后先互相对一遍</b><!--pnid:piMtqVkxPI4oVJ5QY9ORNs-->。这个"互相对一遍"很关键，下一步就见效。
+      </div>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="WG3oEqcRGP1Ica0QZA1gXF" class="dstep">
+    <div data-page-node-id="N2fJxq5FgoJZOC179XeGHb" class="dstep-h"><div data-page-node-id="YJTC864po2V5dnd5OKEACD" class="dstep-n io"><!--pnid:itTq0XK8BZu626ClZRXJin-->触发</div><div data-page-node-id="zwBgI0MhF4JY1DagNdzpjx" class="sd" style="margin:0"><h2 data-page-node-id="22umeg94nEG7Jz23oQwXAo"><!--pnid:CMk6hwUeQIDYIVW1rDPpy0-->PE 就说了两句话</h2><div data-page-node-id="uPDyEUpbe3iJJ0L3vMPyBc" class="sd"><!--pnid:MMrZoWAGPCry52QGjZyarw-->专业规则由 Skill 兜底，不用交代步骤</div></div></div>
+    <div data-page-node-id="H4wpkfjdnl1GIdBNbppFR7" class="dstep-b">
+      <div data-page-node-id="4GBLtlFwWOgYhDBUUx4dhl" class="prompt">
+<span data-page-node-id="VpcutOwyakXmjgfHNlBamI" class="cmt"><!--pnid:OtcanLZDmuEtmsp8fOsjIC--># PE 输入</span><!--pnid:IyQWBHzcj1UUrT1IiRMJVH-->
+研发新给了一版 <span data-page-node-id="CMEiAWx1ribN09DBxxK7ly" class="v"><!--pnid:3llCmcwYHKxAAYbgkaxVsd-->P-IPC-01</span><!--pnid:Y5GFFJtu6l2smxYclAIF4c--> 的 BOM,放共享文件夹里了,Excel、PDF 和邮件都在。
+帮我跟 ERP 导出的 <span data-page-node-id="k5psrBDWugEKjVs0rAPsKa" class="v"><!--pnid:CNAWuMEdHm6I1x9dfAMbJ2-->v1.2 基线</span><!--pnid:OStXSRAyk37sYHZ7pDy3Mx--> 对一下,差异列出来。
+
+<span data-page-node-id="Ycrg5MwXSHkcHYYxEgIg4w" class="k"><!--pnid:rlrwfvMT6XOQmpByf0Fbxw-->哪些地方你不确定的，也一并标出来，别替我拿主意。</span></div>
+      <h3 data-page-node-id="FQgpaRHtO1RpsAyWZqqJpm"><!--pnid:wXrbxZWihctFx0KyMwh5f5-->Agent 接到后自己做的事</h3>
+      <div data-page-node-id="LRngLCLfheq9DoGYlXcXAC" class="agent-act"><span data-page-node-id="MQWIEMoqo8xxftNoScABHD" class="ic"><!--pnid:65GO6tjVZlm574I7OdyugY-->1</span><div data-page-node-id="T7cDVyV3FkKAXoHDJjIEoC"><!--pnid:Plrb0LHGFwwnDJlXO1xp0W-->没问"哪份是基线、哪份是新版"—— <b data-page-node-id="MTt2bawyXrzoCycIBQcyc7"><!--pnid:ZTBDi2deFKhFkecWEyA4Im-->自己按文件里的版本字段和导出时间认出来了</b></div></div>
+      <div data-page-node-id="CEeNTPr32NNBQI9PRKHuKy" class="agent-act"><span data-page-node-id="g8awEkHyBS6XGqeqd5vE80" class="ic"><!--pnid:Q2Wv94iIBKsriXhkFtuN07-->2</span><div data-page-node-id="TQvdKr2TVSDm0v9zEshfEx"><!--pnid:2v1OTeEaYYBnyEjo8EaPZw-->发现同一版有Excel 和 PDF 两份，<b data-page-node-id="f5oEfwdUUMfGlsImNpzJhl"><!--pnid:5uWHrCf40sAncvoITzIYDZ-->决定先把这两份互相对一遍</b><!--pnid:d13AOgrpEhfjUCyqxAA2Ab-->，而不是随便挑一份当准</div></div>
+      <div data-page-node-id="7GfKMmUjzw2TLmaxtQDPXE" class="agent-act"><span data-page-node-id="NChckMBgtaj9rczRtX70vo" class="ic"><!--pnid:2oJsys20MCvwExAGrHPq4b-->3</span><div data-page-node-id="HZimkIomDLqpF3MKeaXAYU"><!--pnid:Kzghw5CIKkrnDkyCEWMEEy-->把"别替我拿主意"理解为<b data-page-node-id="yHsbsAoY9I8ocIzEH1YO32"><!--pnid:nMF9YEFuuzb6NpkelrRf9Q-->要做置信度分层</b><!--pnid:NFwfjlSMbCaGxkz6f7nan7--> —— 拿不准的单独列，不混在确定性差异里</div></div>
+      <div data-page-node-id="o6BsPSiTyiIUb40nxPErjX" class="agent-act"><span data-page-node-id="snc9GP4QMeLKdNvf9rADaJ" class="ic"><!--pnid:sqtcPHLgzbmSdZW5sIJZMV-->4</span><div data-page-node-id="kxxcteJ3MWDDGEA5gBz3Kk"><!--pnid:BUKTgXMcG55AbXy9ufeyG4-->邮件正文没被当成废话，<b data-page-node-id="vqja1iMlMyL2EWVRBr8FfY"><!--pnid:oGdVsTxjES7Flz4MhXgdir-->被当成判断依据之一读进来了</b></div></div>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="q32HSwdMBNTjl1hhSOuOpW" class="dstep">
+    <div data-page-node-id="UuRbycA7zzCodjYmTYXp7d" class="dstep-h"><div data-page-node-id="z24rmciJyToC4XzLJJgOnh" class="dstep-n"><!--pnid:ESQzJcmHHxCeMjaiqi1SVw-->1</div><div data-page-node-id="IUetOxWrWoYSLPCqsXKymf"><h2 data-page-node-id="nFTv46scbebt6ja3rO44dl"><!--pnid:pUpF4osl7oaoYPO5s9Rktz-->还没开始比对，先发现三份来源自己就对不上</h2><div data-page-node-id="TGVZ2Jautn71tPVWr3bWK7" class="sd"><!--pnid:l9PO9BFvH9WpR1TzF2Bw49-->这是最容易被跳过、也最要命的一步</div></div></div>
+    <div data-page-node-id="4rwe1tTRYsoAozKBrBpE91" class="dstep-b">
+      <div data-page-node-id="Ig0McuIQcOELB0fmxR1H10" class="tbl">
+        <table data-page-node-id="Fz8EizeLwg6Di6MNIZII9I">
+          <thead data-page-node-id="dFm4Z13ACycH1TFRaqFQ5T"><tr data-page-node-id="hiUeDC2QOcb8u6cKYzU17m"><th data-page-node-id="0eultYzyINPAdX0tK7XYOH"><!--pnid:CqKiulDNUNlFnunO54xQNm-->料号</th><th data-page-node-id="E5wMZFfprQ9r09kHhZp8z5"><!--pnid:Q7ZrOHtdeN1srn3VeJpamP-->字段</th><th data-page-node-id="6h3vE8ssEnTdaTR76aHhnI"><!--pnid:pDB5hwPgJiYgNSTNm1MK0w-->Excel 里写的</th><th data-page-node-id="bKNvykZORdHUfzmEgQ5eWi"><!--pnid:Stu4MEIpkihHw6WaIvrG0M-->PDF 里写的</th><th data-page-node-id="wXPiKTHrKCND4vLARaDTAD"><!--pnid:iy5okCv7coHj4yVkA4MwfT-->Agent 的处理</th></tr></thead>
+          <tbody data-page-node-id="0JQVuT0tUqCogEVbjqWuHI">
+            <tr data-page-node-id="SvvvAu1HLhe8yDkwUns2nf" class="mod-row"><td data-page-node-id="pc3N98OhnYaUMjNG5Goia4" class="mono"><b data-page-node-id="tHPYLopGqtaONmjvLE5NhU"><!--pnid:qhkRXVOdmXWKYJyAjjyp0F-->M-FAN-002</b></td><td data-page-node-id="X1QOyUiRAKT0r4Of8brDg4"><!--pnid:aESGO1a60vrwfwTvMgtSDF-->用量单位</td><td data-page-node-id="EDZzTHAbCz2tezILXX3qWv"><b data-page-node-id="WQXyKXBkW4QhVaWKB0dn6M"><!--pnid:rAmb6ck8h9dgQaePPks8Ff-->2 个</b></td><td data-page-node-id="SncQ5wGWJd5SdRkivibr4z"><b data-page-node-id="Q3BWZT5B6ZbPAbM3ULtnvy"><!--pnid:0FdXYOc27m7TASHa00oQqs-->2 套</b></td><td data-page-node-id="dF0BvM04ktLApmx2q4UW6k"><span data-page-node-id="4uUUYmcynVTWYsphuIxJ5j" class="tag r"><!--pnid:lGjKvJyr2HkS4DMwVFcDvP-->阻塞</span><!--pnid:sNnwXnLh4wzVqYfaZXHtSj--> 一个风扇 vs 一套风扇组件，差价可能几倍</td></tr>
+            <tr data-page-node-id="iFlrkNeGG5H3bMO0DjCSgu" class="mod-row"><td data-page-node-id="1yaFYuZnkl4YwUu8ACgJ54" class="mono"><b data-page-node-id="RVnk8z5zYdBFS3HJVhT1s9"><!--pnid:P4GWdQ6Qrq3aXGLApqOw4L-->M-TERM-05</b></td><td data-page-node-id="R9vOXBLMmlZKnLdXQvD2kJ"><!--pnid:EyVG2fAGsflL2QLLBkCfcu-->用量</td><td data-page-node-id="TJDRm8dUsXLjmFGc2Q8cI1"><!--pnid:eifuj4LMYERC53BjoKO9Mk-->12</td><td data-page-node-id="SWHOyFMe73AitpqOdnmMEs"><b data-page-node-id="hfZynwtJGRdnbLVcgh9RDE"><!--pnid:UkUW2urBrffX2PWfHGSh8w-->18</b></td><td data-page-node-id="6o7trizAUuaYzOTxebVU97"><span data-page-node-id="WQAqnUsgegeOlT9repQ9nx" class="tag r"><!--pnid:9CWNHMp9T5AwEBTCdFME13-->阻塞</span><!--pnid:LnXB4QUOirgc1vJ7B6pnYO--> 两份来源数量不一致，不能猜</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div data-page-node-id="gBO6ppBMDiHDDYslVhLYFC" class="think" style="margin-top:14px"><span data-page-node-id="W4CQ8kA221kSaSfOoodYPt" class="lbl"><!--pnid:jN8BQ37wGCqt0LJ52XEPVG-->这一步的看点 · 为什么这一步最值钱</span>
+        <b data-page-node-id="SK8LnlpDpPlgoNNlqlROyV"><!--pnid:tewOwUXxAsG0UIhA280wB1-->如果直接拿 Excel 那份去比对，这两个问题永远不会被发现</b><!--pnid:sqSshY2PDJ3oxuMO5l1hjR--> —— 比对结果会显示得干干净净，然后带着错误一路走完审批、下采购单、发料。
+        <br data-page-node-id="KDt75QqQZeuE7aPUaXs0FY"><br data-page-node-id="Tn0sXBYssgijeb9iBL4iyd"><!--pnid:CF8lVV9JWsU5XWPCzg9N3d-->单位那条尤其典型。行业里有过实打实的教训：<b data-page-node-id="FKCxGWxvzX8DYO7hxirVvE"><!--pnid:pDLQmj3qToyJqVcWByVo2A-->一个零件单位把"个"写成"箱"，几十万物料闲置了半年</b><!--pnid:ovF0I2i94WgiE8YhmruOvp-->。这类错误的特点是——<b data-page-node-id="4281p5H1APFcRXnfehyOWJ"><!--pnid:5ioVA4rmgWl3KoYEQROPR3-->它不会报错，它会安安静静地一路生效</b><!--pnid:BC4pc8zT1Lzp0xlMJaVHAF-->。
+        <br data-page-node-id="cCxchbjw7W9AaWop0IsgZo"><br data-page-node-id="tFvZXX5XMPzIBzmdzbYLUc"><!--pnid:6Ztv8bk5vXVDBPraZZAa16-->Agent 在这里没有自己挑一个"看起来更对"的值，而是<b data-page-node-id="YlcX3WdDQ0bsOXl5piXGdR"><!--pnid:botwHfzYobm9lTzsD9Uy69-->直接把两处冲突标成阻塞项</b><!--pnid:Dvghv2bwxZE1cJ7XhwKLli-->：研发自己发的两份文件都对不上，这个必须研发自己说清楚。
+      </div>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="WcHY9LkPD8O9xgQDbOu8ax" class="dstep">
+    <div data-page-node-id="Y4C2SWMzdhOtZXLJlJr4fj" class="dstep-h"><div data-page-node-id="5h0s1CpB39r3ZlJ3vFejig" class="dstep-n"><!--pnid:kl5dC5g0SC37qFhjzsY3eD-->2</div><div data-page-node-id="IWDKCHzvUTSoRX4zfRG7VX"><h2 data-page-node-id="v9PCaLHLMq8bzahWXYhqme"><!--pnid:waw6knzDicR4scGUo37pVO-->脏数据体检 · 比对之前先扫一遍可疑项</h2><div data-page-node-id="n3mtDuyK2QYddcEmK4tKg7" class="sd"><!--pnid:xuo66cRvINUolzj0rjhO2z-->不需要 AI 判得多准，只要把可疑的捞出来</div></div></div>
+    <div data-page-node-id="1PtpLA5JMj8IvHJKs0lm0N" class="dstep-b">
+      <div data-page-node-id="N8iamRAOcOJWBRLabYEbzf" class="tbl">
+        <table data-page-node-id="K6lwWAwWSFav6qNweL5kt9">
+          <thead data-page-node-id="ZYbJvuvYl6So2rfehnjiV1"><tr data-page-node-id="4etTej6DSMLdQIE9rwIvdq"><th data-page-node-id="tTiw8D0YaUQhtXKBXX4I6b"><!--pnid:5fdwyJKF1dzEX3iyEsQGvP-->类型</th><th data-page-node-id="GqCdcr3mdBN9P3z7bmWuRk"><!--pnid:vUVLj5exI3T6fHRf0aAvDb-->命中项</th><th data-page-node-id="41riNrCJlSPl7ToSI3h5XF"><!--pnid:Qh6iHAfwEOhUVcSkwkr1ph-->为什么可疑</th><th data-page-node-id="Vyiwrb9FshHx6UpFohoR70"><!--pnid:6HhfOPFYx4yPToivalvxMy-->建议</th></tr></thead>
+          <tbody data-page-node-id="pDSddp1TeCTC9s2A2c1I7p">
+            <tr data-page-node-id="jpQ3BIWsdHt0zzBtxMT0xa"><td data-page-node-id="s6MhlyR2VajPRaLwkd6JHY"><span data-page-node-id="HbdohTpxRLFHrQeLa5be3p" class="tag a"><!--pnid:ADRlYi2CJADpyGXB5hR0yz-->疑似重复料</span></td><td data-page-node-id="SQgNDwzMiYyXNyCecX3nDU" class="mono"><!--pnid:CpXRHmtcUNhv2bHVLcF4eV-->M-TERM-05<br data-page-node-id="COrHIwo6aIO1tlEmxq5uO1"><!--pnid:FXZFVq3Wu8R6Q7VflezHdR-->M-TERM-5</td><td data-page-node-id="LmeEKqGXX3GueedIlNmT8w"><!--pnid:k1jRUmgaVgSHdt81llDqtU-->描述都是"接线端子 5.08mm 绿色"，<b data-page-node-id="14Kh54gSgz9hXMpgACJyvK"><!--pnid:CUBJ92TdX4lg1azbP0MVe5-->编码差一个0</b><!--pnid:M7D9FvDJcmBYY0yWPaBjLc-->，基线里两个都在用</td><td data-page-node-id="9o3voLPQvyy3Az3Itd5oKJ"><!--pnid:DHyCBspc0fupyGUekksNUk-->并成一个，废掉另一个</td></tr>
+            <tr data-page-node-id="taKbbDHQUxt4jbVqfFClKB"><td data-page-node-id="eXbhCMqmE5wUUrzLBkKYXW"><span data-page-node-id="YGrNXCTyKpHlfz2EmIVVfT" class="tag a"><!--pnid:KQDTJYzoc2mbwdLrpi6w1R-->单位混用</span></td><td data-page-node-id="0pPIvgEcqHhj2veyCb65rb" class="mono"><!--pnid:qGu1FOE5X3XQLjZqGdICF7-->M-FAN-002</td><td data-page-node-id="NUmYuIDWkUSy7H5rldsvXp"><!--pnid:IJepp21kePtkyQA8FaG4Z8-->同一颗料在基线里是"个"，新版 Excel 是"个"、PDF 是"套"</td><td data-page-node-id="H7YebgIF0MZS7LeLSg1ZRW"><!--pnid:SVPpcuf4wIIV6CL7sc9xHO-->已列入阻塞项</td></tr>
+            <tr data-page-node-id="8kqFjgsy0GgjurumYm9yxf"><td data-page-node-id="NJQsGQ2y5g6zJfgj3wyO8H"><span data-page-node-id="wJe7Xix55dl7fzLmtiylVl" class="tag n"><!--pnid:Dh4bLrAQmGjBM8TQp20O5x-->用量为空</span></td><td data-page-node-id="lqqBqOTU8eAnaMWrb2HeYL" class="mono"><!--pnid:qJVhWJHxpqi8tuW1RAGxnB-->M-LBL-003</td><td data-page-node-id="stoeQp1m5g1llyxH6OC2DS"><!--pnid:WEvCfGK8NgrCyNlDUqr9HF-->新版里这行用量栏是空的</td><td data-page-node-id="wMTnR8ph2Dd1hhWThQCc3p"><!--pnid:37gLNan5fFScNF2JLLuSiB-->确认是漏填还是该删</td></tr>
+            <tr data-page-node-id="gWIO9sa4c5jj9CAU6qS7cw"><td data-page-node-id="0sHJMvF7617c1ZGGVNE4Ud"><span data-page-node-id="X3rMaPAni6UOj0d84Vm2pU" class="tag n"><!--pnid:ty3r92RudGoqUpi0c0YgRf-->版本号缺失</span></td><td data-page-node-id="4i7D8x3fTiOK4S0SgYZ1Ft" class="mono"><!--pnid:eB9SZUg6P0PIekCUIdBnFI-->M-USBC-01</td><td data-page-node-id="wXsk17E8BLdShjRYcSevBh"><!--pnid:A8bpVuOuLvMYg1TsLv7BYu-->新增件没写版本号</td><td data-page-node-id="ijR2SR4cKW5Ol0yi2xNUUH"><!--pnid:BYMSSXwoyEg9hyAed5L9kd-->补上，否则后续没法追溯</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div data-page-node-id="aMKJHMbPrPpngH5utRJ7sR" class="think" style="margin-top:14px"><span data-page-node-id="qWAkz0InZQZVahhiDw6f5H" class="lbl"><!--pnid:FVy7N9Ua3czB7Urk8gjR1L-->这一步的看点 · "一物多码"被抓住了</span>
+        <b data-page-node-id="a4Oawm25iTQfc2vFjkQnEg"><!--pnid:016UrpKst41o6X5VIooxzi-->M-TERM-05 和 M-TERM-5是同一颗料</b><!--pnid:hu2ckfKYWUdCimxQZmnfb3-->，编码差一个零，基线里两个都在用—— 这就是行业里最普遍的那个病。它的后果很具体：<b data-page-node-id="yIIgS65IPpnS37FBxrgWSt"><!--pnid:idI8GhotaZAt0r7bt6dwcQ-->两个编码两个库存账，系统显示这个没货就去紧急采购，回头盘点发现仓库里还堆着一批</b><!--pnid:V26gtKoGqXRePyIl2TMPJv-->。
+        <br data-page-node-id="5UBq44NjyQH4caJtL8qVyk"><br data-page-node-id="hmKlSawXJwowolvdju6msn"><!--pnid:WsdyRImN6WN5idqniNK3Hw-->注意这一步<b data-page-node-id="W1BqkSgrVUyGaHt8NtuxJI"><!--pnid:7YCGkqmidCTKKCLgPbRjoF-->对 AI 的准确率要求很低</b><!--pnid:p0VFTeE38RBOCzm6gKFXTO-->：它只需要把"描述很像但编码不同"的捞出来给人看，判不判得对无所谓 —— 人一眼就能确认。<b data-page-node-id="nFdugM7yM5QDKBH72twacB"><!--pnid:kJiStigSk081DpsVwjYf7O-->但只要命中一条，就省掉一次实实在在的损失</b><!--pnid:8dHS5GluTcFAspkJSZiFu0-->。
+      </div>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="c6hIS79JaPeP079eWbGGeu" class="dstep">
+    <div data-page-node-id="haxtj99fiuF94lqXh03Zjc" class="dstep-h"><div data-page-node-id="AM4x4EXEfFEbD4E4mciZRT" class="dstep-n"><!--pnid:WOIB8xlWD6tKYaVNopErRu-->3</div><div data-page-node-id="ylUj92SgketWA67XK3Pzfd"><h2 data-page-node-id="N8ExRYb9qOAHmO6FodkPje"><!--pnid:raZZCGjf3gCc336um63LZn-->差异清单 · 按类型分组，每条附判断依据</h2><div data-page-node-id="evFeq1Nq5MtJoj5UOnq5jp" class="sd"><!--pnid:kDDRm0Q7oR9BhTeOF5PvWG-->分类用的是行业本来的语言，不是"标黄"</div></div></div>
+    <div data-page-node-id="UXeHCOePnxepkM7HKWF726" class="dstep-b">
+      <div data-page-node-id="RSHlemk8KTfItIaM6wEtHT" class="diff-grid">
+        <div data-page-node-id="fEZOeeFtgEMpmSPd3HeLdN" class="diff n"><div data-page-node-id="VCXGoIIsFWWD2KkE2TcLk1" class="diff-h"><!--pnid:26mnPH2QaUnLP5AlCPAoUT-->🟢 新增1 项</div><div data-page-node-id="0s90VcViJonvkwR6zq6UIW" class="diff-b"><div data-page-node-id="tuzXub3rQv318G0GeebOGZ" class="code"><!--pnid:8bO96ACbqKjD0znObKi8oZ-->M-USBC-01</div><div data-page-node-id="CPdtEZmLXZ5hswhHoPeKO8" class="txt"><!--pnid:hFaiRsHLNBOMmq9mrjKDSg-->Type-C 接口 ×1 · 替代原调试口 USB-B<br data-page-node-id="0LseWkQTHsgpq9ktxkwoSH"><b data-page-node-id="fEJxsEAa8kbQHut7OUCMpC"><!--pnid:gyepTRpTLKHGhsVAn6gJZZ-->置信度高</b><!--pnid:sqUvbizSc32QFqlWZXNQnM--> · 基线中不存在此料号</div></div></div>
+        <div data-page-node-id="mzAPwlCZ4HBLgRERSAIPHx" class="diff d"><div data-page-node-id="29L9JfA7ZrEhupibUl2icE" class="diff-h"><!--pnid:zxGreHwEAjNdbmbgyjejOy-->🔴 删除 1 项</div><div data-page-node-id="f7TO8G4LPJeuW4A7sqmRFJ" class="diff-b"><div data-page-node-id="i580xV2Vajmw1hMHjrpRVV" class="code"><!--pnid:oPqQsIvv43aMdOjGN8Rb5E-->M-USBB-01</div><div data-page-node-id="sb2IIXw80ANPLVMUANC6Fk" class="txt"><!--pnid:XQ2xzhUqn1ofRW6liVTc9A-->USB-B 接口已废弃 · 由Type-C 完全替代<br data-page-node-id="vuXAmSRTtEetUNefgKcCqJ"><b data-page-node-id="GFiH86tutt300EjLMgv46h"><!--pnid:w8TQYIWy1z1FmkSbYzuqkQ-->置信度高</b><!--pnid:xdJhWEJVE8wwCtY7fn0qzp--> · 新版中不存在，且邮件有说明</div></div></div>
+        <div data-page-node-id="xiXteFdaPocmIw9A4G7bgI" class="diff m"><div data-page-node-id="z2qqzLbFsBKf65rUNgFL2F" class="diff-h"><!--pnid:UClvL6F8xZykmNcT3swQAL-->🟡 信息修订 1 项</div><div data-page-node-id="aGe1WAYqQitrw75sNMBdw9" class="diff-b"><div data-page-node-id="S5lXlPsAo0A59NXW4xcOYw" class="code"><!--pnid:4m3ZF1LFFb7uzt1cMO0HnY-->M-CAB-001</div><div data-page-node-id="LSRSqIlsuIVjLIN9gZXFXw" class="txt"><!--pnid:w7bfXRZZaOLr9NwjDvVZkK-->机柜箱体 v2 → v3<br data-page-node-id="2sMLlBFDt6YvU29SOrsGKj"><!--pnid:N10ZUv81AG3FcWknywK2xF-->研发说明：散热开孔调整，安装孔位不变</div></div></div>
+        <div data-page-node-id="DjaGp3Q7Fo2iWfzqvir2h5" class="diff q"><div data-page-node-id="wnrITKTh0VAx4HDJBlJLmw" class="diff-h"><!--pnid:Wl1SDBzzeqhvlHC0hAozSY-->⚪ 待澄清 1 项</div><div data-page-node-id="jHQW940hyfVZoTb1O2Vu4r" class="diff-b"><div data-page-node-id="sXdacWB8tcvWZzVg9k1Who" class="code"><!--pnid:1znDrpbhLM2N8T3VjTZnyN-->M-PCB-001</div><div data-page-node-id="V0NYyMEaK1b0Io5YGGEH0A" class="txt"><!--pnid:nq7jz7EjycMJ1yWlYURqOB-->替代料字段被清空<br data-page-node-id="BeUCH78pnxE2d7UrgdCT1z"><!--pnid:PvBBYSEOZkbYuihZWBnhGx-->基线里原有 M-PCB-002<br data-page-node-id="L2WBgrbAMW4EzTQuOtdx7W"><b data-page-node-id="TjviXrXHljIaJZrIMlp27c"><!--pnid:jtn6B6Rl68M8zYM7JACTJu-->有意去掉还是漏填？</b></div></div></div>
+      </div>
+      <div data-page-node-id="3zQsNSbqmEPfuBQJsShvu0" class="think" style="margin-top:14px"><span data-page-node-id="9gttF1ErpWJxmrOJiX8JCk" class="lbl"><!--pnid:LwrWZ5ExQw8zqR6NX9s7Bg-->这一步的看点 · 每条都写了"为什么这么判"</span><!--pnid:49eH7Q2DlHgbyKCjgkIwc0-->
+        注意每张卡片上都有一行判断依据 —— <b data-page-node-id="Y8EY80f4k3imP2MbStJp6c"><!--pnid:dOYYTqeSpgyAT2zhd1PJDD-->为什么判成新增（基线中查无此料号）、为什么敢判删除（新版没有且邮件里有交代）</b><!--pnid:ZU8ivkmNIKzlGlLX6Xie4t-->。
+        <br data-page-node-id="sjIxvUTksMX4CR59fxWtQ8"><br data-page-node-id="VU9GQG0Obq2NrkRC4ynQAZ"><!--pnid:Lg86rhcBhANc8rSVenAwaC-->这一点看着不起眼，但制造业买的就是这个：<b data-page-node-id="WDI3l0ARCD9eRyFfU2R665"><!--pnid:Y3wdeYOW9YFp0UzEClsSeY-->能审。</b><!--pnid:Qq7b7zJwqHOzoSK5NTAe7z-->人可以推翻 AI 的任何一条判断，但推翻之前得看得见它凭什么这么说。一个不给理由的"已完成"，在这行没人敢签字。
+      </div>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="UTTxskgzvCT8k07riDLJUK" class="dstep">
+    <div data-page-node-id="7pAQfDMRm7oZxi5gT6FNVq" class="dstep-h"><div data-page-node-id="JHGszlHcsCBz1u3MI7lo3U" class="dstep-n"><!--pnid:NlXc4dY4aPNo30oZzzloes-->4</div><div data-page-node-id="Jdq3x2GCFqmU3dEtKjmOTT"><h2 data-page-node-id="gjc4AaFAt9zPbYeL5sKhu1"><!--pnid:u6Y2qHu6Mqgn82GpGnCOLk-->Agent 把邮件正文和BOM 字段联起来了</h2><div data-page-node-id="8yNHf5Ol8aLL9cbKHLP9P7" class="sd"><!--pnid:GDOOpOAIWozNZ6DybnnvtE-->这一条是老师傅才会注意到的</div></div></div>
+    <div data-page-node-id="YWhTLNGIxwJihvYg9CwbE4" class="dstep-b">
+      <div data-page-node-id="Ix3yNB1RJvmE2gV3TTHti5" class="think">
+        <b data-page-node-id="3L10sYq3U6FA6F10HfZHsW"><!--pnid:zS92DA12XHaZGdUjFo7wlr-->研发邮件正文里的一句话：</b><br data-page-node-id="ReFu3O3tsXGDMdmq0QnQ2F"><!--pnid:6TpTMOm9Iveo1Dyb8Q78sW-->
+        "主控板 M-PCB-001 现供货紧张，考虑到未来 6 个月产能，请PE 评估。"
+      </div>
+      <div data-page-node-id="pIsDcNAQ5ODLQTTepcCycu" class="think" style="margin-top:14px"><span data-page-node-id="ZMQThmSugPdTTTmZodb9sD" class="lbl"><!--pnid:migYGBJYhTDUmqKZNog8wg-->Agent 的推理</span><!--pnid:cVyVskv4MHMm54EfvjtM5U-->
+        单看BOM，<b data-page-node-id="iyUoSvEnXwNxM264PdtJZ5"><!--pnid:GToHG8INcAL4U5lXGRVBWg-->M-PCB-001 的替代料字段从"有 M-PCB-002"变成了空</b><!--pnid:4mFZiPUmxVJCylLBdrG30u--> —— 这最像是研发导出时漏填了。
+        <br data-page-node-id="PLAzqkQLeeGx4XhtQLQJrO"><!--pnid:A6TV04faULQCdZouTFkajN-->单看邮件，<b data-page-node-id="bU2RxsZ9TvOPHw5SaPQHll"><!--pnid:UsunD87YavJ6OgCPcKnZ66-->"供货紧张，请 PE 评估"</b><!--pnid:WrymYtfS4H8XMBrz9kXDUi-->是一句很容易被当成客套话滑过去的提醒。
+        <br data-page-node-id="vbJlru5XWSeW0VEgl8UvdY"><br data-page-node-id="qZB30DaIx4ZZNZAZ0LAw0c"><b data-page-node-id="BFh3CPgZZJA0bVWblBCeaw"><!--pnid:neCHB3B59w8d18p6XL43w5-->但这两件事放在一起，意思就完全反了：</b><!--pnid:180oD2BLsYPk7EIkbO2HQJ-->替代料不是漏填，是研发<b data-page-node-id="GJXvf1XN8Kj12MqeAv2B4d"><!--pnid:nWRjnzagHcHOHWqsVH0Yrv-->故意留空，在等 PE 接话</b><!--pnid:zh90Yq3VVJrc6i1iI13G0J--> —— 他想说的是"原来那颗替代料现在也不保险了，你重新定一个"。
+        <br data-page-node-id="6Tza3DwHbW8zyeSdQJ1zDX"><br data-page-node-id="Uhhkfq9ZM6SFTxhJqyOmdP"><!--pnid:IwVhCRS0fgYUsgYt37vkmc-->如果按"漏填"处理，PE 会顺手把M-PCB-002 填回去，然后带着这个已经不成立的替代关系走完审批。<b data-page-node-id="NAQHDHsdoNeNKGNpIzpmqS"><!--pnid:HqBMQyL63CghnTsJ9Ynbaj-->等采购按它下单，才发现这条路早就堵了。</b>
+      </div>
+      <p data-page-node-id="IlThYNQlTBF1zcVouVgQkn"><!--pnid:1KYkZwvfIiis0ptjbGGFK4-->所以 Agent 的建议不是"补填替代料"，而是：<b data-page-node-id="gb2HLOvmYffwJA3BphULDm"><!--pnid:1QFwRvjje2FbnQeyZrsJZa-->这颗料的替代关系必须在审批之前重新定义，先找研发确认，别让它带着模糊状态往下走。</b></p>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="1ISOi5dJ6amlTyUgKUmORl" class="dstep">
+    <div data-page-node-id="o5cPXlUKEqpOBLTfl9CKp1" class="dstep-h"><div data-page-node-id="ff83rCGaAYvNjVntS24fjQ" class="dstep-n"><!--pnid:4lQzY3FPRv5ip6toLQW1D1-->5</div><div data-page-node-id="PE1d9qyxZO87CkNkbZp6Dm"><h2 data-page-node-id="uO2ojZHHS80wW3UdepGQR6"><!--pnid:ZNS7wNdH7aoMYOltmNp8i3-->每条改动牵动多少钱 · 这一层是给老板看的</h2><div data-page-node-id="XdJgaWGII83IydHTg9rYaQ" class="sd"><!--pnid:8aKzzAEXYARNSLSdkzZWDs-->把技术动作翻译成金额和风险</div></div></div>
+    <div data-page-node-id="3M1Lcop5nNxIqwtBHQw9Wk" class="dstep-b">
+      <div data-page-node-id="56UqPUQqJYB4Knn52nR2ln" class="tbl">
+        <table data-page-node-id="nTW3F1Q96cXLieR38WYsQr">
+          <thead data-page-node-id="C1dD1yoAgCWOsjvgJZy4Mz"><tr data-page-node-id="1QxuXIlA8ImYIVTc6qWza3"><th data-page-node-id="8zl1NhmwPYXXpoL78TGRaJ"><!--pnid:7zL6Ni1ogCV0mccyLDEogr-->变更项</th><th data-page-node-id="tOsArzadHROwKl6Cxc4B79"><!--pnid:URRcLPLXRd4W0QxsPzsyaM-->牵动的未完工工单</th><th data-page-node-id="Z0FnDxASo5ojKmXgZNxikb"><!--pnid:1kU4Rru64yfX4EduNFkzfL-->已下采购 / 在途</th><th data-page-node-id="3t2Sadq9zmL3LwVfZUWZkX" class="r"><!--pnid:fnwBdAZq8pTZKplvC86K5E-->旧料库存金额</th><th data-page-node-id="c3bBkH6eHfJ1rLg41pJRlE"><!--pnid:kIGAnth7qsyFHnbWox2ENR-->要做的事</th></tr></thead>
+          <tbody data-page-node-id="wO6HaxVexrPEVUzQWSuHgG">
+            <tr data-page-node-id="UWKU6b7Nprd3aNf37pIg3t"><td data-page-node-id="l2WYVFoXZRXrspLlKk08PB" class="mono"><b data-page-node-id="vjgEnib0m0iPVGGU6EAyrZ"><!--pnid:oNxm7bIpAGaf6SbU37ThCG-->M-USBB-01</b><span data-page-node-id="EUvROSoXAJ3bDHkWmuIrkm" class="fm"><!--pnid:glXqCA2v6fXS1u3Y5KKGvP-->删除</span></td><td data-page-node-id="6x09cZf6c8VzF32eEmKTiN"><!--pnid:NPt3b0cNpSKTblVIwxZIOb-->2 张· 共 60 台</td><td data-page-node-id="qdEiTcbaH7Twpya5xCi8EU"><!--pnid:ikeA823JKfSiFpXKINPlON-->在途 200 个</td><td data-page-node-id="3D3IttyMW8OXt5YCNmKtww" class="r"><b data-page-node-id="9fvbixYZTYZee6OOXglScg"><!--pnid:kI1fteVN0K6NoW8iX74u13-->¥4,800</b></td><td data-page-node-id="LnaKiA8IJE4bR4NLAeeO0n"><!--pnid:sFM3cz54ZBRxWXybyeg1j2-->联系供应商能否退/ 改用在其他机型</td></tr>
+            <tr data-page-node-id="Uf5QTCEw9j6AV3iY4hmyO2"><td data-page-node-id="mOvmyz3a6npwKET9DDrXQs" class="mono"><b data-page-node-id="PZwK7qA9hTSPgbvQsffwQw"><!--pnid:w2QVEy7LW2FZxZt856WgwU-->M-CAB-001</b><span data-page-node-id="V8KFZF4ZmE1JO7uWBdGi7v" class="fm"><!--pnid:gx4MDRdWCu3MeDBQZDduiu-->v2 → v3</span></td><td data-page-node-id="0e6Jd90NpkwmPot1UN3Zxk"><!--pnid:yVgjg9JgWh5ex06TSSJJmB-->2 张 · 共 60 台</td><td data-page-node-id="lc2UBHe4UygKinp42t6wXz"><!--pnid:PWzGNXTJmqqnm0hWhscSZs-->已下 80 件 v2</td><td data-page-node-id="TTeL3uzjp4yQw8m5wCpOw4" class="r"><b data-page-node-id="duMuroNMx3ZQUs0GxYIMiL"><!--pnid:CtBKXzc1Qn91Q2ysl6L0LP-->¥62,400</b></td><td data-page-node-id="fNuIKqp9Xw31znOjOc5aWV"><!--pnid:kcyRcxFS7Rp6aKHRePvcAO-->确认 v2 能否继续用完，否则要谈变更</td></tr>
+            <tr data-page-node-id="mvh5EuzXXmKdXB0GeXfP0H"><td data-page-node-id="hvdsfE6Cpbq9ZLRNC6KBXq" class="mono"><b data-page-node-id="sxxLwqKWcn3FKjUWclPZ8G"><!--pnid:eaDKgDdZMQJNvYKMS8FMtJ-->M-PCB-001</b><span data-page-node-id="LlHyabgG2462nHSfEd22b3" class="fm"><!--pnid:4Lk0E9RiBnpvdXYTkIwQf6-->替代关系待定</span></td><td data-page-node-id="mcoVJwwnnSp01yb8bFbKpX"><!--pnid:BwoxMJh5zMK4IqmkMfplea-->2 张 · 共 60 台</td><td data-page-node-id="sZcPo1EfClv4LfXo9VZp03"><!--pnid:4zMff8y6YPc0lqv8vqbjy4-->无在途</td><td data-page-node-id="0Bx4gJoPiXaD1wgzUCnxxI" class="r"><b data-page-node-id="xXq0hfeQCPcOtqKnrYdOxj"><!--pnid:WSCmDn1dsajol2Fr05LPUY-->¥18,900</b></td><td data-page-node-id="2xNeC5ChhC5uIRRo8Aljvv"><!--pnid:a7HZU5jsRbO5jLT6sALaoM-->替代关系定了才能下单</td></tr>
+            <tr data-page-node-id="mbL9UpHlGbbRrLYPocjFsM"><td data-page-node-id="zVl0EtfF3SDV2r4GUiY2st" class="mono"><b data-page-node-id="5XIh7J1Yb38K4XWk28x6zx"><!--pnid:dAzanqHvntcvLHbehGemdu-->M-USBC-01</b><span data-page-node-id="0oMxpCVtxXUZ0L8EH7RBU2" class="fm"><!--pnid:mBhE91wvBCvCrIzsdfW9Zd-->新增</span></td><td data-page-node-id="PbOGvVaTkSEMTC0NDNTZm5"><!--pnid:ZlmWNA0YZmKjHHr02JAJTq-->—</td><td data-page-node-id="OfC2tC5vZimuUa9ITkUVQO"><!--pnid:m0GWJaS61tu0r7NWwwVNCw-->未下单</td><td data-page-node-id="FUDw25NGlpJjev1dFEF13i" class="r"><!--pnid:YJzbe7KpGnzghql97kdBza-->—</td><td data-page-node-id="AlYvO9tsBJUdAWP2oboAJV"><!--pnid:yzdcnYWq9Vr35xZLO2korL-->新料要先建档、询价、定供应商</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div data-page-node-id="MolPMeQSZbVpFqTiWUgfiy" class="think" style="margin-top:14px"><span data-page-node-id="Us4ym3SqH98pnXblZqeB31" class="lbl"><!--pnid:rzQarqN56Lf70wY5vkVFao-->这一步的看点 · 为什么这一层最能打动决策者</span><!--pnid:j1OytZ4ElufMnPDOYaSy0Q-->
+        前面几步的产出，工程师看得懂、也知道有用。<b data-page-node-id="7kKK4gbZYhiPU5LFpexSYg"><!--pnid:nvcz0CCcEJGi7H1h7KPIX2-->但这一张表是给老板和主管看的</b><!--pnid:64GiL5aj8pPZH0Uu2ZGx3Q--> —— 它把"机柜箱体版本从 v2 改到 v3"这句技术描述，翻译成了<b data-page-node-id="pfxQIsxBQx8MYeQhREcylu"><!--pnid:6wy53LeJj3grSJmX6cV2mv-->"仓库里还压着 6.24 万的 v2 箱体，你打算怎么办"</b><!--pnid:H228tUG1sCCas3pPO6HwB3-->。
+        <br data-page-node-id="IlKtiUaSf7N4rPlEx4Yuab"><br data-page-node-id="JcGEKLUuZCzyaiUWKKWlqi"><!--pnid:9Mbl6qNwp0cFQEnk0l3dze-->这也是变更评审真正要拍的板：<b data-page-node-id="c1DSB6uGPdtu2jsA4STxQF"><!--pnid:yHJHCdkOxPmiPR2Th6dqrs-->不是同不同意改，而是旧料怎么处理、在途怎么办、什么时候切版本。</b><!--pnid:opKdjM1HAWTZSPTwoccmsN-->没有这张表，评审会就是各部门凭印象争。
+      </div>
+      <div data-page-node-id="mtOvX2kR9796iHQJj6V602" class="verdict">
+        <div data-page-node-id="uyw8PdcJgDcc7i6wMtXI6q" class="t"><!--pnid:62uWMho76IpfxQLE8jRyK1-->⚠ Agent 的结论：这份变更现在还不能进ERP</div>
+        <div data-page-node-id="Y7vJY1dl35ZzBJeSim2T7U" class="d"><!--pnid:94MsnJ4hUV5dQlQ2sQj2dT-->
+          有<b data-page-node-id="qEMhu7kPXQ4u5VhE7LYJJV"><!--pnid:aA4DPwxzyP4sBsrmJSlKhR-->2 处来源冲突</b><!--pnid:gz7BKzugqcNTNOM0bbldl0-->（单位"个/套"、用量 12/18）和 <b data-page-node-id="tHBsIWM13RUet9uaclUk71"><!--pnid:wYt4zXnENwxcxq7X43FLrn-->1 项替代关系未定</b><!--pnid:nbHq8dO5PueMswCfrTdxqt-->，这三项都必须研发先说清楚。<br data-page-node-id="z8KozEKyWQSK6uNZLBbCBj"><br data-page-node-id="s9yqCyxcBxdIaVp8B0XszU">
+          <b data-page-node-id="M6JFq3aLsZ9GNdAfbP0gOJ"><!--pnid:R2ocC8F4pOJSuqU1bEGAe6-->但不影响先动起来 —— Agent 把能推进的和卡住的分开了：</b><br data-page-node-id="LD8stGQWLYkiz5IXyZf6VS"><!--pnid:zKulrPpjFppOrqeOWkMdqP-->
+          • <b data-page-node-id="fxYD2k6CriIeVbk9TEI95W"><!--pnid:jneRdoXWGPCcxr2wSk7CK6-->可以先走的</b><!--pnid:VMnFdvJCCHBSjtdkDxHcLr-->：Type-C 新增、USB-B 删除、箱体版本修订这 3 项，依据清楚，可以直接写进变更单送审<br data-page-node-id="plXIGrIRKj2yXyDJAwWyBQ"><!--pnid:NqjVdPZDoJnpasBTnFgdl4-->
+          • <b data-page-node-id="7z9HRLvnoSRlN4a4vGOC8u"><!--pnid:7FK2nqPFuICqZQaKyPh3S6-->必须先澄清的</b><!--pnid:pURm82gTXdshtAdB9w5bba-->：单位冲突、用量冲突、替代关系 —— 已自动生成一份问题清单，<b data-page-node-id="iIxEuZIeeSh6ICPGUtfiRb"><!--pnid:sCiisOyiJ0E7TmrBd4ze8e-->3 个问题一次问完</b><!--pnid:DnbapcmlUoTeTMLWv02OFw-->，不用来回三趟<br data-page-node-id="vjilxuAjVutzjPSMgMqqDm"><!--pnid:hLN5ZtW76f1nWXcnVljgUv-->
+          • <b data-page-node-id="5EhDxuHTxwPTTi9UzB1CO0"><!--pnid:nKrwQ88ZL4dg7yTMCaqr1W-->顺手要处理的</b><!--pnid:ZTfPGIALrXvVDjnT6tLnCh-->：M-TERM-05 / M-TERM-5 这对重复料，跟本次变更无关，但既然发现了就一并清掉
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="MrQDu86HnNDBoARA2XHYtO" class="dstep">
+    <div data-page-node-id="hwDzlXHxZmG2wimoEQb09P" class="dstep-h"><div data-page-node-id="nFLoKD4PyIVxzZAJr2WJcE" class="dstep-n io"><!--pnid:HBG7zuMeVSUbeykLXkMXvl-->之后</div><div data-page-node-id="ttRMpEZ6e4ctF4UuAZSXEF"><h2 data-page-node-id="l8Cph3AKIOmds2Vufvaldr"><!--pnid:mmjGe4u4A9ecNqWVNQlEAe-->这一次核对完，公司多了什么</h2><div data-page-node-id="IQEDR8ubPXuTh4F00W2zW7" class="sd"><!--pnid:TejGhSwD2J0KVVHHxDVxSU-->不是省了几十分钟，是少了几个隐患</div></div></div>
+    <div data-page-node-id="6FMJJ1m45vlPwUULDPpFHm" class="dstep-b">
+      <div data-page-node-id="8k4EyL2SrBxVHWMNeMOorx" class="agent-act"><span data-page-node-id="Hf9fNlv3mGcJCYUtKiKdj0" class="ic"><!--pnid:EyIyRABpJHb4nT6LDakBHg-->✓</span><div data-page-node-id="YzKSncyAiNrknyp1VRYQ9B"><b data-page-node-id="sbjAE2CVfipr4S1pGvHbqk"><!--pnid:ukl9qCUbZLaJbykwuzudL9-->两个本来会溜过去的错误被拦下了</b><!--pnid:yQ3349py7eRNcIKz7TtGJ8--> —— 单位"个/套"和用量 12/18。这类错误不会报错，只会安静地一路生效到停线或退货。</div></div>
+      <div data-page-node-id="7Xq66Ak5yins8Y45iiySnF" class="agent-act"><span data-page-node-id="0Zq9kD9lOAq2RzhL16TRuh" class="ic"><!--pnid:yJ7sPNcDPYxrnqr11Y1udN-->✓</span><div data-page-node-id="h0xRfJBGIvy7tJ6NJFsX6y"><b data-page-node-id="2nV4zlXXDWUEQNqOCvYIwL"><!--pnid:N340BLnQ5VyMqTxPqf20qb-->一对重复料被清掉了</b><!--pnid:4WyT7QS28BTBO2B3jjBvJj--> —— M-TERM-05 / M-TERM-5。跟这次变更无关，但少一个重复码，就少一份将来对不上账的可能。</div></div>
+      <div data-page-node-id="OCUKmfJXBwl2vLMls89DzU" class="agent-act"><span data-page-node-id="Y5X9gUkSmKuF7qXi3OkIlS" class="ic"><!--pnid:8QiqncO9fY2k85ca1d1ExB-->✓</span><div data-page-node-id="0w9xTjj5sbfe4iKgiagpEB"><b data-page-node-id="jlroXzQw0MqZidp23ISOlr"><!--pnid:sbWNoEUzSM6ltaPArA8Vxf-->一次把问题问全了</b><!--pnid:VqiKw1lv6AJipEjR0qBMbD--> —— 3 个待澄清项一张清单发给研发，不是发现一个问一次、来回三趟。</div></div>
+      <div data-page-node-id="qZw3UZA6ZQFpldfOkv0UGn" class="agent-act"><span data-page-node-id="eFbfka3Fhfo1uHypwbe8tm" class="ic"><!--pnid:9zd3jvLg0PWrs5wgRXeZ5K-->✓</span><div data-page-node-id="gJp61KGruYW2iMCxU76zLs"><b data-page-node-id="WtDTHTg8459WNYJOnEvWw5"><!--pnid:kcCAXvYw7D14VR7oX7hs1P-->留下了可追溯的依据</b><!--pnid:WGO2ERejVAHOuuTmSqL5Is--> —— 每条判断为什么这么判都写着。将来复盘"这个改动当初谁批的、凭什么批"，有据可查。</div></div>
+      <div data-page-node-id="ErRy1WqO2tKnyD5IkOLUVQ" class="agent-act"><span data-page-node-id="qaLe9DxTYKJPoUqOPvZxmU" class="ic"><!--pnid:3teKQyGMu2NmrnCQsIbHE3-->✓</span><div data-page-node-id="8FVDmPgQsc32Q4lSAwe9EA"><b data-page-node-id="4kGIzEUewv2fgzQW81N5KK"><!--pnid:iImVX09Pt3hLO08TTrcywc-->PE 的角色变了</b><!--pnid:b5QRo2iUGjnwMENmWBTELc--> —— 从"逐行核对 + 手工敲格式"，变成"看Agent 标出来的可疑项，做判断"。<b data-page-node-id="m87328aeW0W2rs6HrRISlD"><!--pnid:gK8xLiPAuJpTdlfVijSp0F-->省下的时间花在了判断上，不是眼力活上</b><!--pnid:bgsvAXJfn2yb7Vm4dkxCbW-->。</div></div>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="dhKCjnxPyrq5LJYvtdwydF" class="dstep">
+    <div data-page-node-id="Pky0MPsxGeiHtaso3BC6Sf" class="dstep-h"><div data-page-node-id="78LySsIEc1rLHX5sG22gnZ" class="dstep-n io"><!--pnid:2RRO0yMJ98Osuu8mJhU0HT-->ROI</div><div data-page-node-id="v32yrsqa2SFBn0a7zmiYLK"><h2 data-page-node-id="NxnQaFbMhoTB7fGQ5NYlX6"><!--pnid:BKDcOgOS07HonhjRdcQgsD-->用 Agent 前后，这次 BOM 导入的账</h2><div data-page-node-id="blajSnH2a92n7qThROBQ87" class="sd"><!--pnid:sUehHbrOqTMdbmlj0Zdr4G-->传统耗时来自公开行业调研 · Agent 耗时按本页流程推算 · 均为估算口径，见页底说明</div></div></div>
+    <div data-page-node-id="X9QMxBQEW1QHbUJLgcz9iH" class="dstep-b">
+      <div data-page-node-id="rMUCK73Hb5Osm2xfo1joK2" class="kpi-row" style="grid-template-columns:repeat(4,1fr); margin-top:0">
+        <div data-page-node-id="vs27FJArkQNLzQyCLnAN9C" class="kpi"><div data-page-node-id="5vlbfSM1g4ORaFn7J8YCWq" class="k"><!--pnid:kZiP4uzddEJIKwD15kv5u0-->人工投入（这一次换版）</div><div data-page-node-id="USMm51Oq1vRhgp7jYvTGbA" class="v"><span data-page-node-id="5KSOTxX96WkI95naos4npc" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:AL6HI1OeBc614slCLG2IXO-->3-5 h</span><!--pnid:ORziRtQaJMnOE5q83ZxyMQ--> → <span data-page-node-id="xQAYtNBkMHpHRvAC39626s" style="color:var(--green)"><!--pnid:daIgRWzUgHtSZV1WU0xelC-->≈ 0.5 h</span></div></div>
+        <div data-page-node-id="QB0w36emknrbkH4bVGu3zH" class="kpi"><div data-page-node-id="tmH6VcFqHNCms21JKKtjNt" class="k"><!--pnid:EchxyTB9518h5GM7gwmEyl-->端到端周期</div><div data-page-node-id="advh3nsOjMy3aquqPJOkeh" class="v"><span data-page-node-id="yChOMiqaYdZI1NTXkY25oT" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:m0Jbm0JC9lqUIyWSxC7lbm-->1-2 天</span><!--pnid:90Fw31qJnoQkvAPacvJGkJ--> → <span data-page-node-id="odv6Mi9NAU3gmx86mqQGfJ" style="color:var(--green)"><!--pnid:viMpHMoyASIkbwE5zHGoHp-->当天出清单</span></div></div>
+        <div data-page-node-id="lDIkqzVk0eL2EabtQ7OYbg" class="kpi"><div data-page-node-id="ltX3idFBw0y07WqsMVIfhQ" class="k"><!--pnid:zC9YAN53AILoLsL1y7fG9P-->参与方式</div><div data-page-node-id="5Lgb9L6uX9NUPdrfakuyJR" class="v" style="font-size:13px; line-height:1.5"><!--pnid:9jIy1saZRDI3b8YliLI55Q-->PE 逐行核对 + 研发来回答疑 → PE 1 人主理<br data-page-node-id="jVnAdz4t3VWfQAPo0MvWWe"><!--pnid:lkgrBHdQQ8QKGBwPKtnpbJ-->研发只答 3 问</div></div>
+        <div data-page-node-id="slxpzvVg1XrDubLlzpknMD" class="kpi"><div data-page-node-id="uvliHHWXXyB5s0COb7ceRd" class="k"><!--pnid:eJxCTE3PiUCkHzrXBQcWjr-->异常行拦截</div><div data-page-node-id="E0XGjndmZZmPCpk65fyXQ0" class="v"><span data-page-node-id="BmKSZ52Xm9zkmySSNwMUip" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:m35uqdMJnaun9zlsOlxiUU-->靠眼力，易漏</span><!--pnid:5FtdUhh31TzvvF4F2tF1sK--> → <span data-page-node-id="ZbXnErODMxD41OnQ1gFThu" style="color:var(--green)"><!--pnid:OMRv8nUFPzMcJ6spbUcPyn-->2 冲突 + 4 可疑全标出</span></div></div>
+      </div>
+
+      <div data-page-node-id="knWBWDPx0qjrvDxnNrifQt" class="think" style="margin-top:14px; margin-bottom:0"><span data-page-node-id="jaVtJuhW7jyeMRPBgjBY7c" class="lbl"><!--pnid:rocpdz6mnLlQZ09tWUnjA6-->数字口径与来源 · 都是估算，建议落地前用自家数据校准</span>
+        <b data-page-node-id="Rj1FCMNnfAgC54ennN8VwW"><!--pnid:pf90LVOMXtS1yzNCXIRobi-->传统耗时</b><!--pnid:kXQpOKsGELcOqYuPD96Xeh-->：来自公开行业调研 —— 研发圈实测单次 BOM 全量核对人工 <b data-page-node-id="oyZhLKDNc26Hi1sM0eNkg3"><!--pnid:qnuwPoGxanKWqdIeYvxHsA-->3-4 小时</b><!--pnid:JRR9e9s1qNXnPypobbS1EN-->（ai-indeed 行业文章）；SMT/PCBA 行业单份 BOM 人工整理核对 <b data-page-node-id="8MkUbWqgC4Pzw8RQKAOR49"><!--pnid:X6MVx20VRqZVK9y0U2Idwb-->2-4 小时</b><!--pnid:dKl3inEppfEAgxBXIptQtL-->（中国工控网案例）；中国机械工业联合会 2024 调研：非标件企业平均 BOM 建模 <b data-page-node-id="dzjd8bpsku0igCKtcJqDtr"><!--pnid:DidDd8w69G6YRC4UNEEYiq-->8-16 小时/产品</b><!--pnid:BlSwzQUKhB32yCDwF5CKnf-->、出错率高达 <b data-page-node-id="YYXrPy2feN0Q8NzjwIcY6m"><!--pnid:QpxhtKLPbZiIqexqo6K03E-->18%</b><!--pnid:wsBpOGoHxrdrf3k4xOqsj0-->；中国质量协会数据：BOM 错误导致的平均损失占订单金额 <b data-page-node-id="4ZWXI9wlLcuxoU69ZbX5ff"><!--pnid:qTCv021Ew8g87fg4eCFZzM-->5-8%</b><!--pnid:tN1jgJqBxd6oIPmRNgtjsl-->。
+        <br data-page-node-id="F9a1r7KnjNaOUfYuCnSfMn"><b data-page-node-id="YAVlswDe2dJdkHILR8MXF1"><!--pnid:x9Tg1jdwLLPgWnGT2wolLl-->Agent 耗时</b><!--pnid:6F702hfZgQmoENyWAu4RMs-->：按本页 Demo 的工作流程推算 —— PE 发起约 2 分钟；3 份文件解析 + 来源互校 + 体检 + 比对 + 影响测算约 10-15 分钟（实际受模型速度与文件量影响）；人工只兜底被标出的 3 个待澄清项，约 20-30 分钟。
+        <br data-page-node-id="epDFAGRc5QIl2CRhxRgikT"><b data-page-node-id="61Yj9IwYJynkzZFZM81of0"><!--pnid:QCpHexVWzHmnRI5bn2mYIg-->测算为演示用途</b><!--pnid:Qt2DQQWzpYaglaZb7kyrRB-->，未含系统部署与 Skill 维护成本；落地时建议取 10-20 次自家真实 BOM 导入跑一遍，用实测值替换本页口径。
+      </div>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="HWRzplR9GhiuwU9cL0Ljab" class="cta">
+    <div data-page-node-id="nh6GXcrXOGXzf76JBSuuL6"><h3 data-page-node-id="GHHLDVzI1MntyTwt72c0z2"><!--pnid:WGkOIIiX203mLmcQmSKLho-->想了解来龙去脉？</h3><p data-page-node-id="ubLI9blPPdWbcwclTdfTQE"><!--pnid:1xLL3lcKpxNBsUGjQbDGWT-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+    <div data-page-node-id="pXCvQIqLhbxODwab70iU1e" style="display:flex; gap:10px; flex-wrap:wrap">
+      <a data-page-node-id="A7NOnaUj2ffcErNOPNH947" class="btn ghost" href="场景引入.html"><!--pnid:eZnvdTXfrS1gLxh6EIi1Y1-->返回场景引入</a>
+    </div>
+  </div>
+
+  
+</div>
+
+
+<footer data-page-node-id="vvdux5iUdEUR7SIK9wh3kH"><!--pnid:kLSOgnksDqA4TaGMm5OAOI-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="0C7Y9drgqRvcCPSgrFHQZb" data-pnid-children="vH8SoJIQyGEgRjaYws4R8n">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="uv9ocoBUXFkZrrp653BezN" data-pnid-children="j9ZP3KQY8ecLZQN1bapNaF">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="8ozeaOriQPV4O6aDiqtXpo" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="AQrkNRg1pEAQmmheOGxFgU" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="8rNymhKNpFTuBB8SqSiU4A" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="B0L8cSiZQIsTVmf7Jc10Cl" data-pnid-children="Zbzuc2MOYSyYNOOSMK6Vj4">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

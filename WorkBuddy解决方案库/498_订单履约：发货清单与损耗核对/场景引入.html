@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="3H1XSUzJqDJfuPjgkiwp8E" lang="zh-CN">
+<head data-page-node-id="HFiEbJurHM53Y6gFmnzm2Q">
+<script data-page-node-id="A0oeu8eKKbXzZGKHGYaAjk" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="ndJ2JFmqWbKp8uJxKkbKSp" charset="UTF-8">
+<meta data-page-node-id="HnDhSoY6MIuFFnaoAjVUoS" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="yoKHelprKxmT6p5JYLEurT" data-pnid-children="19oenXTrd3OoCFKdoYB71F">订单履约：发货清单与损耗核对</title>
+<link data-page-node-id="SvY4EAqzMn9778jbgUJOQo" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Bno005qGZS1DtZr0oVomCb" data-pnid-children="zr2cv7XNUEhNufkRhHeYZD" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="yryDgTrv7hvQXqn5gai4H6">
+
+<div data-page-node-id="YbfiZTsQO9my2ShK7L8fMu" class="wrap">
+<section data-page-node-id="bXc7d40IzZE4HdvqQjIALS" class="page-hero">
+
+
+<h1 data-page-node-id="ticF1byKm0YtjfinYhlfQS"><!--pnid:DnFDxo3s6Ex8cAIZdNXnMw-->订单履约：发货清单与损耗核对</h1>
+<p data-page-node-id="buciVtca3nvXwUdlD0w4Ze" class="lead"><!--pnid:rLVSnVaHktVvBwWLaPjtsf-->货发出去了就算履约 · 损耗烂在哪一段从来没人算清过</p>
+</section><nav data-page-node-id="DjHRzwUqs1cAR73XBR9HzC" class="subnav"><a data-page-node-id="BPxxMHfGKyhJLgEniHDfJ8" class="on" href="#"><!--pnid:X0WK2xMmq55MTwVHGHq3an-->场景引入</a><a data-page-node-id="k8R3SFZ4tOLy7vqaLyroUE" class href="LiveDemo.html"><!--pnid:6vqP9GE5pczbKKyNPfSOD2-->Live Demo</a></nav>
+<section data-page-node-id="sTBfbPsqZfwv3SRJBKyYrq" class="blk">
+  <h2 data-page-node-id="FUopXqb1d9oThDrg875Fjf" class="h"><span data-page-node-id="TKV4XYZk9ZXEQL41Tn0lLL" class="num"><!--pnid:y1f8PXDLhdkj0YV6lAH6sA-->一</span><!--pnid:PHabPjGVJqQ3VlZDT6VX8n-->这件事现在是什么样</h2>
+  <p data-page-node-id="Sr57fgt6jwcFLK9rh9Jzc0" class="subline"><!--pnid:gc2fRYMmlfdksrlThQtycC-->销售订单 · 真实业务触发</p>
+  <div data-page-node-id="PseqqdkhseVQ4Ba75Up5wm" class="card"><p data-page-node-id="P04Yg4i1dufZzCyWkbgbK6"><!--pnid:rwvQTTGksaZ04POVsTqd2v-->每天按商超/电商订单发货，还要经得起「这单为什么短重、损耗算谁的」这一问。</p></div>
+  <h2 data-page-node-id="sTNY9WQnHVhnSG0lcP8XRi" class="h" style="margin-top:22px"><span data-page-node-id="2ndl1H7yMoJesoiCtwD4oA" class="num"><!--pnid:XTfMstdJnbCGtNjQJ7nwEz-->二</span><!--pnid:y6pdhB836UiVg3uzxgNOYt-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="JMWPG85gUNaGPbBNgxaR1Z" class="subline"><!--pnid:55aeSKs6AxfOQG8EvxFRy8-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="NzIxH9RA4KHhjTzLPq9ARw" class="pains"><div data-page-node-id="ki3vaXDYI1bxhOAkkYYgoz" class="pain"><span data-page-node-id="kXQmp7ZZtmzR6RwdZJkPfd" class="i"><!--pnid:B7jiNBrDFB8WKaV2ZnCBvM-->1</span><div data-page-node-id="rs3jM3jlfXd3I2SERppMBM" class="t"><!--pnid:9SqqFKwhSayXS4Cgs6vJXt-->生鲜流通损耗20%–30%，蔬菜全产业链总损耗27.7%，远超发达国家5%<span data-page-node-id="zgaDzMSwL43fWiPwNe7fQ9" class="src"><!--pnid:97rDoYrpuEFdnoWWhHpwf7-->依据 · <a data-page-node-id="zt4cYVroSyvkUVfvM5lWZO" href="https://www.guanmai.cn/classroom/2026082138106" rel="noopener" target="_blank"><!--pnid:1qIb3xtTGts4Ie4Zte1Vw7-->观麦白皮书：生鲜流通损耗20%–30%，蔬菜全产业链总损耗27.7%，远超发达国家5%</a></span></div></div><div data-page-node-id="BF47nNj84iLH4zzdfH2sU0" class="pain"><span data-page-node-id="NAv3vbs2xMZNOzgZdNzkjN" class="i"><!--pnid:JPJzQUJy0WcOGdLDiHIMfa-->2</span><div data-page-node-id="RmGA0IsmlMYJDDevqhTgQe" class="t"><!--pnid:7IK88Pgp0FISB0x2ED6Q16-->生鲜电商行业平均损耗12%–15%，冷链覆盖率仅35%<span data-page-node-id="5VLPAFmOGGnDbynuqUF4J1" class="src"><!--pnid:n7cHVh9kxR0gEDkDPLSDBz-->依据 · <a data-page-node-id="IpVpPAtyqScdiey2bM05ux" href="https://www.10100.com/encyclopedia/6/18173687" rel="noopener" target="_blank"><!--pnid:cOtkpclve1JnchUoTe7OBq-->生鲜电商痛点：行业平均损耗率12%–15%、冷链覆盖率仅35%、最后一公里冷链断裂</a></span></div></div><div data-page-node-id="QkNvbHXWarEspNpWrZiRvJ" class="pain"><span data-page-node-id="zrVEXrfSWbnu9nlkc0MSzZ" class="i"><!--pnid:mhPe5tXhqPjYHmbpgwiq9b-->3</span><div data-page-node-id="qQCV0vHspfjiTVTAQHBrVz" class="t"><!--pnid:J6KLLlnn2DPJo3PofwtjiB-->最后一公里冷链断裂，变质后责任难界定，投诉只能退款了事<span data-page-node-id="UF5Xu7B61K4ofcmWQE5TH6" class="src"><!--pnid:6EGUCEZgoj9UyBWxZhmwIM-->依据 · <a data-page-node-id="sUEih0BtvKew75hs0Pp9PR" href="https://www.10100.com/encyclopedia/6/18173687" rel="noopener" target="_blank"><!--pnid:B9WRedc0YqjaYAP6V5VLBy-->生鲜电商痛点：行业平均损耗率12%–15%、冷链覆盖率仅35%、最后一公里冷链断裂</a></span></div></div><div data-page-node-id="VQkryYywBR3PLCzbftjOoz" class="pain"><span data-page-node-id="jwM3RafM3UnEz7qM0uDG7k" class="i"><!--pnid:XRThfwhHW2WR2SyUU3Paum-->4</span><div data-page-node-id="iofmZaHUiKTuLINO5Iug9P" class="t"><!--pnid:C1XzHLOWz2vSHxMoUYQe5x-->产销倒挂、农产品滞销，供需信息不对称，货堆在地里等不起<span data-page-node-id="7E90CoixWxiZbvYIpCaztF" class="src"><!--pnid:vzv4GNlDHAfqw0A4nwqEud-->依据 · <a data-page-node-id="StJ6QDgX23hNCR0E5Jmos4" href="https://www.henan.gov.cn/" rel="noopener" target="_blank"><!--pnid:FzUCvuKs5JOhUcNayOn35C-->许昌产销倒挂：农产品滞销，供需信息不对称</a></span></div></div><div data-page-node-id="kQzCQW5Cla2gMxuua54s2A" class="pain"><span data-page-node-id="48RUEKVHQpDE3IKSJm4wBe" class="i"><!--pnid:zvlNH7mJEgyb8IUB2jOrVW-->5</span><div data-page-node-id="ZtgiX6OTYtuDr3mmre4L89" class="t"><!--pnid:MbPZonkUCsj7B7jJwwIAhh-->订单履约链路长，重复装卸、仓储、二次包装推高成本<span data-page-node-id="pDMBHWAXRt2McQzWmRzXI7" class="src"><!--pnid:83C75tuIEIPy1Uw57ZFghO-->依据 · <a data-page-node-id="dXVirRk9jj8PUizK60fM46" href="https://www.guanmai.cn/classroom/2026082138106" rel="noopener" target="_blank"><!--pnid:1IsJTHdMBDy4eQo17OsrZu-->观麦白皮书：生鲜流通损耗20%–30%，蔬菜全产业链总损耗27.7%，远超发达国家5%</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="eD3XL5SQ3UhsABE79L7uOO" class="blk">
+  <h2 data-page-node-id="OCkn5iItdGvewvCf8NcqEG" class="h"><span data-page-node-id="TNlHN4zZzzOeFad8Uev9Zw" class="num"><!--pnid:vs8a7nk5tzIqwn73kR9vuU-->三</span><!--pnid:FPrjwbRpy2o2X3tfOonMf7-->换个做法之后</h2>
+  <p data-page-node-id="3fAWFBFHpBTq0QPDtQHyG3" class="subline"><!--pnid:Vo02CNSG5vnujKUubKRs3V-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="xY9rJ2QFsZ95eavLODoRJh" class="cmp">
+    <div data-page-node-id="1X98vwXHMyHIDRbZsA0AAJ" class="old"><h4 data-page-node-id="xxyvPtTGQ9xQ01kFByY8U7"><!--pnid:apQwTcLP1y9J5mApTGwwes-->✕ 现在的做法</h4><ul data-page-node-id="UmuGQ0CKFPOj8E7CDag94c" class="list"><li data-page-node-id="oLb9Mwc73E022SuOMPSKdr"><!--pnid:9bWEh8ctfM64ZfzgMhdL8P-->生鲜流通损耗20%–30%，蔬菜全产业链总损耗27.7%，远超发达国家5%</li><li data-page-node-id="k89QjZcabsNJZmLywmIVFL"><!--pnid:19QmCt7txQ2Hxk77fjZw3s-->生鲜电商行业平均损耗12%–15%，冷链覆盖率仅35%</li><li data-page-node-id="4JFWxRCVz01KCyCVDZtLAg"><!--pnid:EGKhpjTFHkPdh1ii24zaQD-->最后一公里冷链断裂，变质后责任难界定，投诉只能退款了事</li><li data-page-node-id="pnVPxAYQP074QKPLn2TL3I"><!--pnid:h04EOuq4jMwMPpKIWmzs0E-->产销倒挂、农产品滞销，供需信息不对称，货堆在地里等不起</li></ul></div>
+    <div data-page-node-id="1pWPJdJbBqDTOfhYFj9Rck" class="new"><h4 data-page-node-id="xqZlFNnhZuZ4pz3ymzgHiB"><!--pnid:bFFfexAzK2cNiJEtF26eFY-->✓ 交给 Agent 之后</h4><ul data-page-node-id="89nANGHLSWXVc5P5fRkcY6" class="list"><li data-page-node-id="OirQhoEuYXr1OjJqp0eAZv"><!--pnid:6MVx14YeZxgDYBw5c0ewYW-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="LGDLh1LFLOGMoGfBMxvHf7"><!--pnid:2pqsRqLsDvWzxkGj9SchxM-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="W6jF1piqAOhjM56Pbm4O8P"><!--pnid:LVc2z3JeeFijliA666owdn-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="aFWmCdDv1Xvk7Ifk33W7fp"><!--pnid:JlWkiZPQm3BYTKUSCPwQdx-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="E1N06j641vXtq6N8XBqnML" class="blk">
+  <h2 data-page-node-id="wpuZX3UAhrB7lh42R2rOf1" class="h"><span data-page-node-id="sZs5AofDIIdTykiIZEMCVG" class="num"><!--pnid:dqtlPhv31g3Kl5pYaQK021-->四</span><!--pnid:v4JFuqn7YH4T6pBbpY8pTp-->场景闭环</h2>
+  <p data-page-node-id="KMoANLQHXYJWWpurKrDJom" class="subline"><!--pnid:JoerwbdzXAuKik2sriuq9L-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="msqdRjJN7VcJkgBLXTYIOO" class="flow"><div data-page-node-id="OwJFgb5YimNi4y7Zi6tzIf" class="step"><div data-page-node-id="TCKZwJe1tqULFVlLtKGthk" class="n"><!--pnid:tjzTkihgxJBWHo2GI62GTp-->第 1 步</div><b data-page-node-id="9zeQnf72j1tUmBrFYmgWEp"><!--pnid:xr6XiC0vdXZKxc5sZpPKeG-->订单归集 · 当天发哪些单、发多少</b><span data-page-node-id="K9c1isAV4ihBgckU7mFP7u"><!--pnid:WxrFSdwBoQH4e0AGGlHxyF-->订单按品名、规格归集，缺单标出</span></div><div data-page-node-id="96YXgVK8LKtZ8zB54xcTsq" class="step"><div data-page-node-id="ViOua74MBnJrVyHmdnCHlC" class="n"><!--pnid:ymsuo8zmhOhZLbnJAzjYpu-->第 2 步</div><b data-page-node-id="zWCl0d08jwIqYgDG0UzjoG"><!--pnid:cFnXyXYZ3Awg2NQ8R1SMmQ-->重量比对 · 出库重量 vs 到货重量</b><span data-page-node-id="natxidauzM8zwNvYjGCFPG"><!--pnid:M9H7WWNZem2Q7BdrZx0JMs-->逐单算重量差，损耗率逐单列</span></div><div data-page-node-id="SWGgS20ZulRub4kv13IO8r" class="step"><div data-page-node-id="ffFYAUKqobJf7ezxSIiZTN" class="n"><!--pnid:Nmni8Dkj8bQU3qGp1l9nLZ-->第 3 步</div><b data-page-node-id="11EldZE4vO7oSqdauA73qe"><!--pnid:a6uf1S6fxOdfZPLTrLcqGc-->损耗分段 · 判断烂在哪一段</b><span data-page-node-id="lPy5OyNbaegvxP6Qg5dPRZ"><!--pnid:kAX23exynbtzVmPqx4jlWO-->出库前、运输中、最后一公里，逐段归属</span></div><div data-page-node-id="Z3MghXATFELJUVAzxnodu8" class="step"><div data-page-node-id="YtP5ARLwxSgamJDbujkgJp" class="n"><!--pnid:vMKg8NRy1KHH9GXTJRAVFo-->第 4 步</div><b data-page-node-id="md6oigErXItVSKSdrMKq0M"><!--pnid:QGnntXjbRXMXGotDli8FDW-->责任判定 · 哪一段损耗算谁的</b><span data-page-node-id="QdXcgwxPMBOs0JW25BKGs9"><!--pnid:OTOhqcwIbPKpk1kzkQnpyI-->按物流回单和交期判责任方，证据逐条列</span></div><div data-page-node-id="ymnhFhHzzA6VcSDi6OLPxw" class="step"><div data-page-node-id="27EymV7clocVtAeeLOhO3J" class="n"><!--pnid:mqn3hwWbqcS3QeE4UQDOkU-->第 5 步</div><b data-page-node-id="uS2YEeFMi8CxjtP1BoHjnQ"><!--pnid:lJkwXZTZcZXB4RuZaj1wNJ-->留证与归档 · 生成当日发货清单</b><span data-page-node-id="XvtLRsKSBPE4cGBZJXoVKo"><!--pnid:w8YmvSyUDJdQ1VC2uElRaf-->签批栏、依据、差异说明一次生成</span></div></div>
+</section>
+
+<section data-page-node-id="P5HYzCVp6j8zfrkgeZyjnS" class="blk">
+  <div data-page-node-id="sxTauFQjG7YTB9HOOGsDqt" class="g2">
+    <div data-page-node-id="cKdgrnVHdajkeFHv4PeFcP" class="card"><h3 data-page-node-id="nMcPZHwPtGKdQXjkb9VELw"><!--pnid:jctIofyu1V54zPZsOXneJC-->要准备什么</h3><div data-page-node-id="vKOJLu7ZLJI1SUMZQ8q6gf" class="src"><div data-page-node-id="AH7Hta8idFcWtJJeGm9KfH" class="fn"><!--pnid:hYCJCqp8Ni9couF7I0qchl-->当日订单表（商超 / 电商 Excel 导出）</div><div data-page-node-id="fhhgl7AGulEyDKuMhiVa9v" class="fd"><!--pnid:yMmuXotCBgrW3mvqJ0VxTs-->品名、规格、数量、交期、收货方</div></div><div data-page-node-id="1gbzyYaWmogVMWKPdVR8B0" class="src"><div data-page-node-id="AL7LefJBwfnA6nEXUrRQLi" class="fn"><!--pnid:UB7HQ9OZmKPUHQ8TfTKWRI-->发货称重记录（出库称重 + 到货称重）</div><div data-page-node-id="nBzH3GVw9sWhv9WvYkPplu" class="fd"><!--pnid:z95MxArVy68ePWcYQ7WOrv-->出库、到货两套重量，损耗就在差里</div></div><div data-page-node-id="PVtwDYE9Ma0Mb5c6PmrxDs" class="src"><div data-page-node-id="i3RRFFhgiIn9c9IoYYdIUV" class="fn"><!--pnid:sjRnqJbvs173f9WDgcqrpZ-->物流回单（冷链对账单）</div><div data-page-node-id="sw0UP0QIVorSpkTpFFFPpY" class="fd"><!--pnid:8M8UfEsWLV3a2jMTbDGTRp-->哪一段的损耗算谁的，靠这个判</div></div></div>
+    <div data-page-node-id="RBNo4a6l7prm0DFLP32Ysx" class="card ev"><h3 data-page-node-id="U2lcCvhpPsOc2JA6oYks4d"><!--pnid:g8e3xW9eeMh43SkfmP6u1I-->为什么这个场景值得做</h3>
+      <p data-page-node-id="SyiWYney46MEFFI9IEGvEx"><!--pnid:9Rn7Ubj3xKSsUtxqUoAAuV-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="3tDaOyQXSOOuzPuvfp5tDd"><!--pnid:uxpd3zMm3YrmhvFCKm22vS-->9.6</b></p>
+      <p data-page-node-id="HlsUokX680GKE1q78OB4Ka"><b data-page-node-id="w9fuWq2LBzxR69MhVZzd8K"><!--pnid:ck4Gt0cbVQW240xImKafxu-->最大差异点 ·</b><!--pnid:EPRDA9xhokzNuCmxdPwCpz--> 不要求先接 ERP。订单表、发货称重、物流回单原件直接扔进来，逐段算损耗。</p>
+      <p data-page-node-id="CpIVHBxakChRGw5Y3sO9Pw" style="color:var(--ink3); font-size:12.5px"><!--pnid:DUN0GuOh34mKHgJTA3U4El-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="kINlHlQFqKZiTJH5Z65zIo" class="blk">
+  <h2 data-page-node-id="p3AAHU4mzogPnZhSTQVP62" class="h"><span data-page-node-id="UEhmrG9tmumRwHbpx0J6RA" class="num"><!--pnid:4n3jBicLSg2veOLXJv6VCt-->五</span><!--pnid:UAzCwojgZQRERnBWRb41pn-->会产出什么</h2>
+  <p data-page-node-id="umvKJLHZ9vzBJTkKPKGtxR" class="subline"><!--pnid:I7rysrOo60hluLt7FJARIy-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="NMoSkVHA89cMjgG0ZemHJj" class="outs"><div data-page-node-id="CqfmYf2rcSsalZapMrGXXo" class="out"><div data-page-node-id="DMMU2HWLFVzuB02qZCJz84" class="on"><!--pnid:zFVPNTslSthLzdhLfFIRwk-->正式件本体</div><div data-page-node-id="t713QyrIhrPW4dvy9yY1uF" class="ot"><!--pnid:6VIGTJI0yBVARZzlXVBBlr-->发货清单.xlsx</div><div data-page-node-id="7tvrTrdrq4imcbPntFH6eM" class="od"><!--pnid:jiC8RdYSNTJ5TeBnyKoOcZ-->正式件 · 订单 ↔ 重量 ↔ 责任方</div></div><div data-page-node-id="Wp8FJflvUQwCy0X75a28le" class="out"><div data-page-node-id="A6pusxtNUUC61fPJvuz9p9" class="on"><!--pnid:iqRX8R9I6zTdcsAnXhG10w-->可派发清单</div><div data-page-node-id="gZ57s7DzvckVAtsntInzaw" class="ot"><!--pnid:3ZwCkvQfklfnxsP7dPCvC2-->损耗核对表.xlsx</div><div data-page-node-id="TwQOHK7wqRrtXOQhqqnTRu" class="od"><!--pnid:LjhVLT8Q8FiiqUSTIQqoC0-->可派发 · 逐单损耗率与分段</div></div><div data-page-node-id="WvHcKzSuIDLrqyxHV1Yb4m" class="out"><div data-page-node-id="vvWuuoEQV5W9aN3SonhzhY" class="on"><!--pnid:zmi7xax0FROGwpDN5PScO6-->可派发清单</div><div data-page-node-id="8U0bJ2vFbtbzQ6I3tijK4r" class="ot"><!--pnid:HMyOZx3b1K0JFDJCB5aIEk-->责任方清单.xlsx</div><div data-page-node-id="aSVlw6L6WOPgQsabzH2wI3" class="od"><!--pnid:iDvZpRMO84qKbKqLqsZxS7-->每单损耗归属与证据</div></div></div>
+</section>
+
+<section data-page-node-id="JfJHc7tyrUzUoZOLVp8QxQ" class="blk">
+  <div data-page-node-id="dD1iCw87RIc5rIPN3rb95f" class="card warn"><h3 data-page-node-id="UQWc9Yzl4iwxKsGOG54tZS"><!--pnid:mp0wsSbeH8lsbnTjRNyQHt-->这套东西不承诺什么</h3><p data-page-node-id="dMabcOau6s0kvhmgBHb2CB"><!--pnid:qjX2RHDpAiRAERVEv7n4Dw-->不做定价、不对客户承诺到货时效。损耗核对只算清每一段的重量差和责任方，售后话术给建议不代发。</p></div>
+</section>
+
+<div data-page-node-id="lYYTq16NbijzMfGktNWEFL" class="cta">
+  <div data-page-node-id="vIRQ6J0olPr16jRBlGYIc6"><h3 data-page-node-id="idaZvh6tZy0dRTwJZC3rOH"><!--pnid:aLuon9Q5suu16nYCRDxMlG-->想看具体怎么跑？</h3><p data-page-node-id="rypOZKPJhc13cpJGt0jJso"><!--pnid:oHClTbk1KYMre2DPXMq0XE-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="RKAMM1uR4tvFgNK8NVsgFm" class="btns">
+    <a data-page-node-id="kvdAiQTu5MIh8Srp4BSmln" class="btn" href="LiveDemo.html"><!--pnid:4joM4wpmcluDWmWTQemBix-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="NGSgE9dkmZB7W3L8RRjBca"><!--pnid:OKTRWKnw7GqYrdIqAEN8Wz-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="r9Cu05uYr9w019pSZRDK3m" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="mMrs4doEJPsspIWvUbPmQG" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="INOGZIT3Yqu3jYmjpArKmX" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="dUQjZm8AbWicHRWONksewc" data-pnid-children="ChNbG2tLKfghCPC2kY91iX">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="yL8S0aPSaQSiFUTZsmU51J" data-pnid-children="O07R4YKtjX8ahWsc4PVPeo">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

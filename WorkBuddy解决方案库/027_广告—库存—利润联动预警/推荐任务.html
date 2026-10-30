@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="2t2RgrKZCcmtrklcFS9B5Q" lang="zh-CN">
+<head data-page-node-id="4f0E4yISeTKGAttXDL8VnK">
+<script data-page-node-id="ZW30w3OtI1ujhUvZ4OxMQp" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="bElUBd8z6oePLsKmf0Yvo7" charset="UTF-8">
+<meta data-page-node-id="kkQuh7vy7OPO9yCIvT7QTj" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="gFewYEZ2mN3frNNjpRl1pz" data-pnid-children="lwG5uYh6ZTiuHjSvlsbPJp">广告—库存—利润联动预警</title>
+<link data-page-node-id="wuxYm1ToXKJHdKzxtwBHlx" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Oof4BfThGTa2M4zIMLAlJt" data-pnid-children="mkcyeaDRSZ7okHfr2JAySQ">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="KJbblJ0VjQkzaVJwfF3Tuf" data-pnid-children="DWnG0pNZdWyIW4DYXMj5UP" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="msNQljxC0B2mu2gMu23uRd" data-pnid-children="NitNvcPw7eYb2XMU3dFtZ1" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="6f0Vp5rJRciCBiZwMJgblu">
+
+<div data-page-node-id="p1bewM2J1eF9FJv0A4tUa3" class="wrap">
+<section data-page-node-id="CUBFYqV2Nzm9b7LIXrqqbj" class="page-hero">
+<h1 data-page-node-id="8uAkYCe0aHpMLfe0ZBISg1"><!--pnid:TBm5ZlDnuem3lwwdkG15Eh-->广告—库存—利润联动预警</h1>
+<p data-page-node-id="vPEVwlmwFaopjbUOA4wDc2" class="lead"></p>
+</section><nav data-page-node-id="uffjU9m4146VMPKL10kl4j" class="subnav"><a data-page-node-id="6CofFMIDqhWPQ1se7kBJPf" href="场景引入.html"><!--pnid:7gdZyCdALE2keSIALxO3rp-->场景引入</a><a data-page-node-id="RyxNbs15MDdtpWnEBqcp9V" href="LiveDemo.html"><!--pnid:tvkZrx4fU7FweHhGC6DQSS-->Live Demo</a><a data-page-node-id="5r1ogmpM31VGDzSdkErpBP" class="on" href="#"><!--pnid:HsnPzEKzqOReKZz5itkPBQ-->推荐任务</a></nav>
+
+<section data-page-node-id="EmZoCJZJUes5S6CDNbaigo" class="blk">
+  <h2 data-page-node-id="cDbzlBCBJxFxrY5UP9Bet6" class="h"><span data-page-node-id="CUuiKQ8xrbIXxBB0wSNpVH" class="num"><!--pnid:zBaoD9mmsRLwZ5cidjNdvz-->一</span><!--pnid:WfbIKDSZwi41y4wlSLNGJ4-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="bPaGMwm9bdh7Wb3bKJDzPd" class="subline"><!--pnid:aLd7chqfFx1t4r2xdA9CSk-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="WRQkvGIrW764iddkMnRzqF" class="card"><p data-page-node-id="h1Q6iEJJx7JY3DHDpI9lG5"><!--pnid:EvKkZfqRWMypD1IuNGEzWt-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="t6DnBXS9rjWNDrdnlu3phe" style="margin-top:10px"><!--pnid:m41IBd4RJ49weBJwpabgfi-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:ktQKDWgyXtNZfP1RgVEWgC--><!--wb-skill-start-->
+<div data-page-node-id="U8q6WiVE3ppXTA6dMSw1K7" class="wb-skill">
+<p data-page-node-id="kTmqwlJGxSLcnOz6TA1y1k" class="wb-skill-lead"><!--pnid:3BdyeIRKEZshHrELER3M0u-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="PQtYemkxK1GvPBYYmyHZ4A" class="prompt" id="wbSkillPrompt"><!--pnid:YOZjXMW3UdGuW315ucH4UK-->【准备】这个场景的规则都在「广告—库存—利润联动预警」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/LONc7PTsfCE3lqGLI2efDh/0NQdVhvDhBoo/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="YH6jH5pZXmy79CUUXIGyZ5" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:JIHVl5j8el30ssqNQLujuT-->复制</button></div>
+</div>
+<!--pnid:FDW4zf8s4X8eeghg7dd1jV--><!--wb-skill-end-->
+<section data-page-node-id="vZA1939Qlk3mPoD66fJQFg" class="blk">
+  <h2 data-page-node-id="HvNCluwUdQJdpLFMfuvvqB" class="h"><span data-page-node-id="iuz66enggkuDbHXEXrFtf7" class="num"><!--pnid:RlaBmCdUVKazXPYM1TYxdL-->二</span><!--pnid:jkw8LKEl06WVNA98vAfj8H-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="jqL4K0N0dxgQ6CL521ypju" class="subline"><!--pnid:tuqIRNrdRXVJNI9O93zDIx-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="fva0yFKZWVj1FJMFR9b0eL" class="tlist">
+    <article data-page-node-id="qMVNlrTxHgugnhrVxNiHMX" class="task">
+      <div data-page-node-id="cXSF2P23sI7IQBe7o5uAUb" class="th"><span data-page-node-id="l5KWRZCH8r0oL1m4RFveTL" class="no"><!--pnid:2HmGnvThQlfMk1qbfPRCub-->01</span><h3 data-page-node-id="FmkwKPbsOTKfPZtMAfAO08" class="ttl"><!--pnid:074lPE8GNS7pBtR3LoDHru-->首推默认</h3><button data-page-node-id="2z8Zd5KJWNxDLjyOFV8jsk" class="cp" type="button"><!--pnid:yLVbuuWmawhIo3SKjjdzFy-->复制</button></div>
+      <p data-page-node-id="cpNTlarVquMba5rGndPErz" class="tp"><!--pnid:j2lgswx55MdaQb56Tg4Mlk-->HT-JC01 广告效果最近不错（ROAS 4.2、日预算 800），我们想加预算。材料一起拖进来了：广告日报、库存三态表、近 30 天销售流水、海运与空运报价、工厂刚发来的排产确认表。你走完整流程：先把可售、预留、在途分开算清，再按近 30 天日均销量算库存还能卖多少天，把生产加物流的到仓日和库存耗尽日排到同一条时间线上，如果有断货窗口，给我空运救、降广告撑、硬扛三个方案的总账。产出《广告库存利润联动决策单》一份 Excel：第一张 sheet 结论摘要，写可售库存实际能卖多少天、断货窗口多少天、三案结论对比、限制声明和素材来源，带签批栏；第二张 sheet 方案对比，一个方案一行，写清额外成本、保住的销售额、丢掉的排名与销量、现金占用、主要风险。加预算和空运的决定栏留空，我自己拍。</p>
+    </article>
+    <article data-page-node-id="AQFbbakdAIal5CmdI1i6DC" class="task">
+      <div data-page-node-id="VN4FUXPb4crEweAc3sGnsC" class="th"><span data-page-node-id="MMkWvU0UoV4VhjzcjFpJ2i" class="no"><!--pnid:dbl8eeQ40SefHUn1TVroS6-->02</span><h3 data-page-node-id="M6rA26ffl1JX2Vw6GVnqDK" class="ttl"><!--pnid:jf6pD5nbMRvFhcceRE0u6e-->只算库存还能卖多少天</h3><button data-page-node-id="8ui207VBLmc7ATbRxfSL7a" class="cp" type="button"><!--pnid:jN0keRtuUox2qdWGhJfa1e-->复制</button></div>
+      <p data-page-node-id="IkXmpbkcuHTEMZ4u5zmmkr" class="tp"><!--pnid:kcQLN4VT0MWvNi3NNqbCdS-->先别管方案。只把库存三态分开写清楚：可售多少、预留多少、在途多少，按近 30 天日均销量算各能撑几天。会上被引用的那个数到底是哪个，直接指出来。产出 Excel 一张表。</p>
+    </article>
+    <article data-page-node-id="uT8oTl560P6InjTg0cjZm4" class="task">
+      <div data-page-node-id="706qJsvrDb1zrE0Jv5X8DJ" class="th"><span data-page-node-id="ejZDAx2ikxKHfBspKpdHwz" class="no"><!--pnid:v5hDnGTxELo0xNum3V4ar7-->03</span><h3 data-page-node-id="W9FevYGAbwcPFx2ZjPF6Io" class="ttl"><!--pnid:NRPKovPb4E2GOunBMOFp0P-->换成工厂交期更新后再算</h3><button data-page-node-id="PgqI7CeQ6muR7JN5rYU5AC" class="cp" type="button"><!--pnid:pDDVJHMYdU4I7vyhgtNnkj-->复制</button></div>
+      <p data-page-node-id="wX5SXGR4AgxdvH0UvZznUJ" class="tp"><!--pnid:Q15xmk3POvshHyIjZYdtZN-->这次交期用工厂排产确认表上的日期算，不用采购系统里的记录，并标注两处差几天。重算一遍到仓日和断货窗口，跟用系统日期的结果并排比。产出 Excel 两张 sheet。</p>
+    </article>
+    <article data-page-node-id="MDrCmZfxcYiSgM4VUyJO6C" class="task">
+      <div data-page-node-id="sSIW8vwkQyTa5z5FgYdPZ1" class="th"><span data-page-node-id="yZ1JLyijlbi3lh4sfYKXjW" class="no"><!--pnid:hWZJcBJelggVjtNyTBAwe3-->04</span><h3 data-page-node-id="Cm1Fh9X34VMJ3OUp70cD7h" class="ttl"><!--pnid:ooMEUgWSX5KisDIQTI7W8X-->一次看三个 SKU</h3><button data-page-node-id="dpQ7q7RvAg5iZqUZU0CulC" class="cp" type="button"><!--pnid:clgy5JfuiEZO8itrvA9t6B-->复制</button></div>
+      <p data-page-node-id="IIVul1gqimzx5Wy0522lTJ" class="tp"><!--pnid:3XNkFfceFZrrvCovIEKCPZ-->演示数据里再加上另外两个 SKU 的库存与广告数据，三个 SKU 一起算，最后给我一张横向对照表：各自可售天数、断货窗口、需不需要空运、空运金额、建议优先级。</p>
+    </article>
+    <article data-page-node-id="aD7MiodhOw1aBX9FoW94Gs" class="task">
+      <div data-page-node-id="xfsX9yzvRVEvz1J3CafNS4" class="th"><span data-page-node-id="MGgV8sy2qP7QbLz8Io68sD" class="no"><!--pnid:iMQZjf1ueaJEBQAjiAqgtB-->05</span><h3 data-page-node-id="miG9Vps2MyQ47odz2dQtIO" class="ttl"><!--pnid:OMZZ5k033OJ6A49GJzUrzG-->给供应链和老板各一版</h3><button data-page-node-id="iDItmMHnqoX4zVoz7yGnUQ" class="cp" type="button"><!--pnid:TrjbNSy6Os9PTRlPpHc7Il-->复制</button></div>
+      <p data-page-node-id="KPAYoLgqg3eeGsDuM9474p" class="tp"><!--pnid:Z20ts9tj0e4b31AHzP8n6d-->出两个版本：给供应链的只留到仓日、断货窗口和三案的时间安排；给老板的只留三案总账、需要批的金额和风险一句话。产出两份 Markdown，各一页。</p>
+    </article>
+    <article data-page-node-id="JefsbT8FNcHZN3k3RVFB2T" class="task">
+      <div data-page-node-id="LPPPZ81MVFyglfrFmiey5E" class="th"><span data-page-node-id="YnV4zfD49xlwWwhXgmdHl2" class="no"><!--pnid:fyScsscuPvr5YU5v00KXIX-->06</span><h3 data-page-node-id="sogAhRJjSgqdCEW36G735x" class="ttl"><!--pnid:SjbAJwj9QxecClepxbfKoJ-->让它反驳自己</h3><button data-page-node-id="lan6FlLfHmR0fJqUzFLSxX" class="cp" type="button"><!--pnid:jgNLxy9H7bT8dBJXec9mBi-->复制</button></div>
+      <p data-page-node-id="8LeOqisxknsQrXoT3H8uZ0" class="tp"><!--pnid:8LoOXBw9Ci26KTS0cgvPnV-->对照广告日报、库存三态表、销售流水和工厂排产确认表，你判断必须空运，把支撑它的库存、销量、交期数据逐条列出来；同时说明如果日均销量下降两成、或工厂提前五天发货，这个结论还成不成立。站不住的部分标出来。产出 Markdown 一页。</p>
+    </article>
+    <article data-page-node-id="ZWswzjW4unyOojxdvv1mCX" class="task">
+      <div data-page-node-id="s8qvPhgc29IS3vjSt0L93j" class="th"><span data-page-node-id="3DzeUeeIQD8uXe4Cz5fzKA" class="no"><!--pnid:2Nr2pgYIqe8hu1AkccClEE-->07</span><h3 data-page-node-id="YBo54jWhDpkHSGzkZGZKMF" class="ttl"><!--pnid:WsJbapEGSg3kOiBgILKu6h-->比对上一次断货</h3><button data-page-node-id="xnKTVuvNfD30BWzuCyeQJ3" class="cp" type="button"><!--pnid:H5qD5qbSEdestuCs7LUu2t-->复制</button></div>
+      <p data-page-node-id="W221BhnZfbavIs4rumjUUE" class="tp"><!--pnid:klkcNKDnKtDlhvdfhbCzUl-->把这次的时间线跟去年那批 100 件丢损后断货的记录比：从交期预警到断货隔了几天、当时丢了多久的排名、恢复花了多久。像的地方标出来。产出 Excel 一张对照表。</p>
+    </article>
+    <article data-page-node-id="2pMGxHKYwYXoiPfdMb7pc3" class="task">
+      <div data-page-node-id="7PoOUmc640yNky6FS1IWQ2" class="th"><span data-page-node-id="z1EX7pZ7OqHid6UDn6Ymgu" class="no"><!--pnid:XwryolhzlevqLCEjyHmOnF-->08</span><h3 data-page-node-id="ZOL0aFHLYuwEoC4cH9X4qw" class="ttl"><!--pnid:kUVt97fsokf7pr0Ck0YcsL-->对照口径做自查</h3><button data-page-node-id="FxZFnwF4W5c4A3BCGVLW1w" class="cp" type="button"><!--pnid:CB8AOFFdhnnTsYEfjbD8c1-->复制</button></div>
+      <p data-page-node-id="HmtM6JPVpac0kFk5fjbu5I" class="tp"><!--pnid:4Gp63043eDvN87ZEcDJffB-->对照库存三态表的口径，把这次测算自查一遍：可售和预留有没有混算、在途有没有重复计入、日均销量的取数区间是不是近 30 天、运费报价是不是当期。缺的列出来。产出 Excel 一张自查表。</p>
+    </article>
+    <article data-page-node-id="DxYcFYbR70go7K6bmNAIus" class="task">
+      <div data-page-node-id="H9dS3uEAKiE5mSlSLdHqZr" class="th"><span data-page-node-id="JyFJ3ZId0XcVQ11ynCDNcV" class="no"><!--pnid:w67Y6kWZ8UghFWydPs99mJ-->09</span><h3 data-page-node-id="CvwoQIisf4v38EdXEmC2tI" class="ttl"><!--pnid:YOjMnyrf7cpJc10kIilVnn-->折算成三案的金额差</h3><button data-page-node-id="aOUJ5DK1HuNYjpJwjAdQOA" class="cp" type="button"><!--pnid:xTEt07wfHOOLmamYiP4bap-->复制</button></div>
+      <p data-page-node-id="0Iw8ckfZJleKnpI9i5kjCz" class="tp"><!--pnid:WsBjUdmp1J9GyD5nvZDhVK-->把三个方案折算成同一口径比：额外现金支出、断货期间的销售额损失、排名下滑的后续影响折算金额、保住的毛利。给出保守和乐观两档，写清算法。产出 Excel 一张测算表。</p>
+    </article>
+    <article data-page-node-id="isn89bjB1rJy0wKiC0INo5" class="task">
+      <div data-page-node-id="20lRFEv4gIcXihiXLdxzsv" class="th"><span data-page-node-id="7DpZ4Xp8NkeqXdnHTuH8tC" class="no"><!--pnid:sA1ko0XCkTCh0YzpEkJV3N-->10</span><h3 data-page-node-id="DWHhttLVmsPUkJtjhByQEd" class="ttl"><!--pnid:v5TlBcS5lFCuTVM1VNhsG3-->沉淀成备货预警口径表</h3><button data-page-node-id="iW2RHqk7FIDXhAnZThyGvK" class="cp" type="button"><!--pnid:1vnrY4Kya6AI0FfBtXSOAN-->复制</button></div>
+      <p data-page-node-id="ZQl6Fj2oEXvQ1mPVeBgyJf" class="tp"><!--pnid:TpYnFT7zISf1Ppu0e8pi6V-->把这次的判断口径整理成一张表：可售天数低于多少天要预警、交期以哪份文件为准、断货窗口超过多少天必须上方案、三案各自的适用条件。下次直接套。产出 Excel 一张口径表。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="2XN1umFqRGf2wVUSN6Pgg6" class="cta">
+  <div data-page-node-id="mgNw0A02dUw4UcudL1GhTR"><h3 data-page-node-id="ClsIAwdbAwyPQ3XLKdqx4H"><!--pnid:bDiMwDC7ZO9anD2afgsGm4-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="0iGZ1l46uqYLxsGy9bYYqf"><!--pnid:vShiD3ZQjUJbkWXCuyjD0y-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="M651uK6QmZoBMDOtq7SBZQ" class="btns"><a data-page-node-id="V0t1Coitm6eBLCKDdubRoI" class="btn" href="#" id="ctaContact"><!--pnid:o7Ed5IcGM3wVfRzc50oZkH-->联系我们</a></div>
+</div>
+<footer data-page-node-id="izmHTF4snsvHepq3w2b5MI"><!--pnid:aMBY1Z1gIIIYW69Kh8Npxx-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="0A5737OJ84PBc33EcP32x7" data-pnid-children="QdCfkc5iSwD6prhOnVpXCh">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="5BpsUyKYoMRPi4dyxINN1b" data-pnid-children="fIKxsuB4a5fu6LT7UzrFiG">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="vMt0unQMObUN89MAH1hkRw" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="XGuFoczR78aOqynMOFx4Ue" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="sZuYZDVfE3FGVVpJm2z4ub" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="J90vofgqMgJoGelrzBlxu5" data-pnid-children="o5rgbsryVnYOcGqOa69QZ8">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="4BRcH460oNmpreMGVJ3W0X" data-pnid-children="qRIvo5Mc3VlzQbK97Gvd8M" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

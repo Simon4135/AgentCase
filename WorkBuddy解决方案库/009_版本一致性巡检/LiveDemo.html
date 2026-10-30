@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html data-page-node-id="a35eq8B4MTHDvVlqNL2Nui" lang="zh-CN">
+<head data-page-node-id="x2pkO3HxznE0XsXiMsrJvw">
+<script data-page-node-id="B5pqHkBumE7avZo6CRDxHt" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="3EOznRpd8wKVDKkdtlfkgf" charset="UTF-8">
+<meta data-page-node-id="eiYRro7cVpZ73XtbJXXVbw" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="BKLVtinDJp6vs1SHOjlIEo" data-pnid-children="oUSKzk77hpIhnCKKHVUnGc">版本一致性巡检</title>
+<link data-page-node-id="8u5l3sm8Q327gK3NMm7kI3" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="lejmvOQCLk5cThgLKeb6fW" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+
+<style data-page-node-id="71MctcwyjCM3S5Ohi28Zgq" data-pnid-children="bQKJArC0W0PF07raccZC2v" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="2xMKULZ20mng1dhNJZSDVX">
+
+
+
+<div data-page-node-id="66sxOO3c9hDkdygcTnaoRm" class="wrap">
+
+  <section data-page-node-id="8ej5neMTERQhd5iRw2jeqa" class="page-hero">
+    
+    <h1 data-page-node-id="u1DGzIT7YHHMlOvDlugQg5"><!--pnid:kVbrdsPcdLlIRcWWWqdBLW-->版本一致性巡检</h1>
+    <p data-page-node-id="k7oRNumeEGKE667q1xF4pO" class="lead"><!--pnid:t2qbl18326INuBjsOIY8As-->案例：<b data-page-node-id="h3nqzVf4cktzoNpJabQFWZ"><!--pnid:VywywnlFq2cLkkrCRelxSe-->P-IPC-01智能控制柜</b><!--pnid:HUwYJteD9Hp6QzkpkzBI3H-->· 定时巡检 8 份受控文件 · 数据脱敏</p>
+
+    
+  </section><nav data-page-node-id="RY51T1M6ohMI2R1TZzEEUs" class="subnav"><a data-page-node-id="FBq1YKWrxGxsZrj9Hw2Ssz" class href="场景引入.html"><!--pnid:tOHiW1keuGLjoQeNI0FXC2-->场景引入</a><a data-page-node-id="ZGZZFuWayPr2aeDCYXWbQA" class="on" href="#"><!--pnid:uADGsVbeZPU3s4DfQ2W0t9-->Live Demo</a><a data-page-node-id="CW4LKjEpITvoJY9pmsU6KZ" href="推荐任务.html"><!--pnid:NsUYmkU1JfYuGzLr5q8PJl-->推荐任务</a></nav>
+<section data-page-node-id="JYePRR57zbRgY4QasEhIQa" class="notice warn"><div data-page-node-id="2XGkpDyz0pVnjMjufKFoTd" class="icon"><!--pnid:rH1OOgMkkfslMgaGTl8ykd-->!</div><div data-page-node-id="Ro9NHUSk53Pa24Po7pknRT">
+<b data-page-node-id="QpRnMxEcSCb1zB99h0wecn"><!--pnid:dDPYmC4yY8eS3AjNzaHGtX-->演示模式 · 可视化预演</b>
+<p data-page-node-id="VONJpWgp3AmmB5yDwAG7Ea"><!--pnid:xMu4I6g2N8G9JmHeQSmCXX-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="5KJePa7HVkFg2hH7DnCUo6" class="kpi-row">
+      <div data-page-node-id="uLiEADI441oc0vEYYnPKO7" class="kpi"><div data-page-node-id="gpvz01GooNwE7xx9Sk7pjZ" class="k"><!--pnid:1bcrOJhM5aLbfqFQ1focKS-->受控文件</div><div data-page-node-id="yOuF0oqOANho2OJYZW9Hdx" class="v"><!--pnid:5qeAvuSehZJP95BGS7jfSe-->8 份</div></div>
+      <div data-page-node-id="fugSj4v3CoPqQl0snENAmY" class="kpi"><div data-page-node-id="qgb0k8xDqTQsUxbyyvZpmu" class="k"><!--pnid:PXsNRjYQrWMBoW63CcbGOy-->不一致项</div><div data-page-node-id="Rl0Ta5ETqFIJbAT56bd1mu" class="v r"><!--pnid:DWgzMq5iu0xfjUgwwP1E0h-->2 项</div></div>
+      <div data-page-node-id="Im01g41f4PA0UXRGxxOoam" class="kpi"><div data-page-node-id="Sf6MxIs3a0KjmtAOq8yNiQ" class="k"><!--pnid:oRJ2W3AohPuvv9eYoyoiD4-->现场备注解读</div><div data-page-node-id="gGleHZyF9MXJCNqGWUqdWd" class="v"><!--pnid:EIu9WIuwX5A1vmyXizEzuZ-->2 条</div></div>
+      <div data-page-node-id="l6RMtxrJnUQOcIQx7YIVv5" class="kpi"><div data-page-node-id="EfUd0E0BrqOlnExmmB2vDS" class="k"><!--pnid:hu6C9YJgzepGKlCJjhzP4Z-->分部门待办</div><div data-page-node-id="cg4OWRRvTmH58U22HJqDmw" class="v"><!--pnid:44YVv77dIiFzcwNVlE3inq-->3 项</div></div>
+    </div>
+
+
+  <!--pnid:fWGYWohFMRK1kRs3s8wghB--><!-- Step 1 -->
+  <div data-page-node-id="p10zsOMCeayozcbROUVKLp" class="dstep">
+    <div data-page-node-id="NXKLU52R0hnc8YO5VbYmYV" class="dstep-h">
+      <div data-page-node-id="z2JR6EH5h0lrwib0flSSaH" class="dstep-n"><!--pnid:YdrXVYOnvEa1sDsojpcZAU-->1</div>
+      <div data-page-node-id="g3aHgfhI3DNy1LZYzRnPSv">
+        <h2 data-page-node-id="bXJU0Cpkx7wTk95fHtRZi1"><!--pnid:NV1jMniHUyEjyTTeNJuuCj-->原始数据 · 系统侧 + 现场侧两份清单</h2>
+        <div data-page-node-id="KVE3G3W71Yev2xyiBCdMbb" class="sd"><!--pnid:pU5NfuxinS0XsT4yuVnAtm-->系统侧由研发 PE 从 PLM/ERP 导出 · 现场侧由工艺 / 品质 / 生产各岗把本工位当前在用版本导出</div>
+      </div>
+    </div>
+    <div data-page-node-id="pDW3iQ6j1QFoi72ETcQTfj" class="dstep-b">
+      <div data-page-node-id="UPGaYehB4dCTcyz8VbvAEL" class="source-grid">
+        <div data-page-node-id="d7U4lHmXDiEBFUaPYXamKr" class="src">
+          <div data-page-node-id="yBMpD3NXglxTkH1VFkuSoo" class="fn"><!--pnid:C50DZsgNmMEa6jzojjIsU1-->系统侧/受控版本_20260729.xlsx</div>
+          <div data-page-node-id="c4OKjB1FSUhTqYLBGFOOCI" class="fd"><!--pnid:aJSZavd9cEtxcGKeVPr5fo-->PLM / ERP 里当前"受控发布"的最新版本清单 · 8 份文件</div>
+        </div>
+        <div data-page-node-id="w7C1KUhbmmsc8pwKlEyLcB" class="src">
+          <div data-page-node-id="nMmJ3KfP1694bQtm0QRoVO" class="fn"><!--pnid:wrVTIh6lzH4oqgzMk4Za0N-->现场侧/发放台账_20260729.xlsx</div>
+          <div data-page-node-id="rp2DZOrRMCxSfSOrg7Jrvw" class="fd"><!--pnid:P8UVh1igiA4QiYoi9lxpBA-->装配一线 / 检验工位 / 包装工位当前在用的版本 · 附现场备注</div>
+        </div>
+      </div>
+      <p data-page-node-id="PGiy8DyJCKFWNVwUs11ybf" class="think"><!--pnid:XEU3Kbb2ENkzdZQdYTPE4j-->💡 <b data-page-node-id="j0lfNxBK4WodG4OiWIj2DU"><!--pnid:fXuwk45uXOlLHHujrISMBL-->可以每周日 08:00 定时任务自动导</b><!--pnid:nWC8PeNTeAC7KIhkAKrW1v-->，AI 之后自动跑。</p>
+    </div>
+  </div>
+
+
+  <!--pnid:wwIYm57Sw9wAmYtz5kg8ll--><!-- Step 2 -->
+  <div data-page-node-id="MeVKuFvwRLpKBxuAfqveNd" class="dstep">
+    <div data-page-node-id="OjsDgDrifcTrrk6yWVYpea" class="dstep-h">
+      <div data-page-node-id="fetueW3QEHQHAICVcNfRdA" class="dstep-n"><!--pnid:04rfKxOxnfiGpnhGgLECyu-->2</div>
+      <div data-page-node-id="Jtmaqdg7Q8q3y1Wg8ZvN5W">
+        <h2 data-page-node-id="vPhydgBZ0OsC2TQh5b4nqZ"><!--pnid:molLEEC10HlVEwpDeuj1tK-->定时触发或一句话</h2>
+        <div data-page-node-id="YwMyFe4AMUEjcd7whsl1M4" class="sd"><!--pnid:qUYUCpbyctSjyGq0YjbvYM-->每周日 08:00 自动跑 · 或研发 PE 手动触发</div>
+      </div>
+    </div>
+    <div data-page-node-id="w3Q3eg1tRPLXAdxuT0Choc" class="dstep-b">
+      <div data-page-node-id="rKXEelmJBhzgKFTtQxZAJA" class="prompt">
+<span data-page-node-id="Vs9VYNqdW8fBErh3TaQLOp" class="cmt"><!--pnid:P46LFo3Obg9RrnQKiPXABK--># 每周日 08:00 定时任务，或 PE 主动问</span><!--pnid:aVWYJ7U5EJMCJyLObLNkkO-->
+帮我扫一下 <span data-page-node-id="0Cc41GJ7Gf2UfRIoRQX6a4" class="v"><!--pnid:a92D7L5dsN1bFjh2qazLH6-->这周的版本状态</span><!--pnid:x6WPonOf0xDKfCJSj248CA-->，
+有哪些新版还没在现场发放到位？
+生成一份作废 + 发放通知。</div>
+    </div>
+  </div>
+
+
+  <!--pnid:3jkYNnEXESYgxfn6rqVLRL--><!-- Step 3 -->
+  <div data-page-node-id="ZWPlI0rbBYttUtw6WlvihV" class="dstep">
+    <div data-page-node-id="tIl8fAKYEenClMknCedoZ2" class="dstep-h">
+      <div data-page-node-id="GBkLARai1maz6X7BjudRWT" class="dstep-n"><!--pnid:dVdV1uN5jCJq23VTaeFTXl-->3</div>
+      <div data-page-node-id="iX8i9vU6Dt3VsN5ZnXjMfa">
+        <h2 data-page-node-id="DGt2G0QlspzwdDK8yvUGkV"><!--pnid:VA0p31ReSL4Zhwq7u9e8VC-->Step 3 · 版本一致性巡检报告</h2>
+        <div data-page-node-id="M7p9ZvUSgRZXcp2gzjmMz2" class="sd"><!--pnid:RD5rcZe3HtsKq5xNxNCuHl-->扫描 8 项 · 一致 6 项 · 不一致 2 项</div>
+      </div>
+    </div>
+    <div data-page-node-id="gSCfCCvFwRyQhQ7n9wORos" class="dstep-b">
+      <div data-page-node-id="SZe7OyABdyVZnmB2MdIcFX" class="tbl">
+        <table data-page-node-id="JnlZEeTbyRSyLgCQhMlsjY">
+          <thead data-page-node-id="zjK62CGaTIyzoYD07czUrq"><tr data-page-node-id="0nBLsWaMhSJOMZ2helI6iG"><th data-page-node-id="chf29d3jEgkkiuNE3kigZl"><!--pnid:KEbuz7vqh2R0MmSs9TDSom-->文件编号</th><th data-page-node-id="8l18pJ8XtTR07fAHA9b56j"><!--pnid:mv6XoxrSWKmu3IysP0sXfy-->文件名称</th><th data-page-node-id="NDCQObgQE10af9hioLRud3"><!--pnid:TanUnAvY7Bs9tcwW1bkKeR-->系统版本</th><th data-page-node-id="hLtHUv3QmMu7aqm77BfHrJ"><!--pnid:jSbf3SAqtu8j4vzMpc4y4y-->现场版本</th><th data-page-node-id="CJIpAP0BiiRH1NMiCC5I0m"><!--pnid:R7ihDhki37vbapvAL9ytIQ-->状态</th></tr></thead>
+          <tbody data-page-node-id="kbJ3tiTF7UAHYCanAyX8Kp">
+            <tr data-page-node-id="h65oosMHbhYHDgIoNFUgAl" class="diff-r"><td data-page-node-id="E1lZ246hoEKY2TwgiScdss" class="mono"><b data-page-node-id="Db43wgyteKfHLjZzSnBDEb"><!--pnid:h4QctyMIOpGwQIyLE6qQ2z-->SOP-A-06</b></td><td data-page-node-id="0NWt54YFvSYzVtHL0sqmWG"><!--pnid:q7tcwWUQcE6zmxVMQojoHb-->智能控制柜装配指导书</td><td data-page-node-id="xyZ3kveflDCmx3vplE83Po"><b data-page-node-id="xXBOz5FpJ4CMIohJQSpsun"><!--pnid:nqJ6PTSrcWHkYDYB65Mwzo-->V1.3</b></td><td data-page-node-id="KW0IbUDxZrqLFbbG7bejVX"><!--pnid:dVGlUcYe02RaMHxRxNtV99-->V1.2</td><td data-page-node-id="TMH5cCPpHQjLajFNzcEayO"><span data-page-node-id="QUYU4ZvEJCjIPbzHAHB0JK" class="badge-s b-r"><!--pnid:dfC0TdstjmSn4ZeSQ7vcDK-->🔴 不一致</span></td></tr>
+            <tr data-page-node-id="uVIlamQx7CCG5NF1doTsjC" class="diff-r"><td data-page-node-id="q1UQgLXB01zAuoLjj5MrGu" class="mono"><b data-page-node-id="19pDQ63OoIBADtym4kJlbb"><!--pnid:f1VDUOMvMOwqkRjjF1qQrw-->DRW-M-PCB-001</b></td><td data-page-node-id="4vW3oG7ovG22sN4bi5WUaE"><!--pnid:83roXFCcRZ29ypO2NU2WzL-->主控板机械图</td><td data-page-node-id="w6qPpVTOLtImsNQL9wV9FH"><b data-page-node-id="mtjVIgb8va46DhCQnhihy3"><!--pnid:H7pUCPKN8GWfa0WQGdmmkx-->D-025</b></td><td data-page-node-id="MOK3sFpa5mC6g14342w10i"><!--pnid:9ueKLuskgIkiPAMF2mipEE-->D-024</td><td data-page-node-id="9BiHQO7Yedaox1TlWTGtjN"><span data-page-node-id="QxB9nq6cKnX3ubC54Rrc4P" class="badge-s b-r"><!--pnid:nsUgNuPjQjxo3jlFh0oDRO-->🔴 不一致</span></td></tr>
+            <tr data-page-node-id="641A9yxAru2wVgcxvV6k72"><td data-page-node-id="bp4L2xTH3rCMceMKbAYoco" class="mono"><!--pnid:UR0ot9P19h20MH4O2cPmtG-->SPEC-M-CAB-001</td><td data-page-node-id="8oYbvL0K0d0YxOLTY5paOV"><!--pnid:hjdSR2FrEVdaCX6SCKutMh-->机柜箱体规格书</td><td data-page-node-id="ImpPjoPxmx7aJ2sJasv7NN"><!--pnid:j51NGxGik6VQ5knPAY1bfU-->v3</td><td data-page-node-id="dc7tCa2SnmlxPKzK94gI7a"><!--pnid:rel9eMCpnCFxfLAGd68CiP-->v3</td><td data-page-node-id="clSnDNncCLGSTUn2euwxF9"><span data-page-node-id="oDwqTzrMSKtGZL3oTUMNfm" class="badge-s b-g"><!--pnid:LnEqbotOC2tnDHo3AsrGnZ-->🟢 一致</span></td></tr>
+            <tr data-page-node-id="NK6b4MJJ8Kg2v4M9og5HCI"><td data-page-node-id="FKlSJKeG04BMxo6d0tZnSv" class="mono"><!--pnid:R5i8N8Xqy8iUjniZitfnWQ-->SOP-A-07</td><td data-page-node-id="w0nVSGFXuVn2DfH7NmyPuk"><!--pnid:cJtBk0GZu4dehgvfAyCHuc-->检验规范</td><td data-page-node-id="qnzkT2S9a39W8q4tHPovVn"><!--pnid:wyZcLnYV5ph9KY3nm7qMTX-->V1.1</td><td data-page-node-id="Gh6YGRTeFZ8HzP70TQ5A6A"><!--pnid:4qt3A9Hom32KUT19v6ZcCh-->V1.1</td><td data-page-node-id="mRUtIAKzqm5Vu2SAPXaiua"><span data-page-node-id="RjZIkw0yE9SULZoJYgj1VG" class="badge-s b-g"><!--pnid:mBExUWlV6jUsEPUsjggos2-->🟢 一致</span></td></tr>
+            <tr data-page-node-id="6v6PRZyHMLRORFm1esqT6B"><td data-page-node-id="08Ym51uLvo36w01vrvQp3U" class="mono"><!--pnid:NI4PmqcQJ4Cg7vA9rQ85Cq-->DRW-M-CAB-001</td><td data-page-node-id="i4ZUwO2MO1oYBP7SZPalaH"><!--pnid:v8QaL99rhOCFV2Jm33WZVz-->机柜箱体图</td><td data-page-node-id="Umm5WfG7Fk3yH4uo3X1Dia"><!--pnid:ifJbCYHXCCvnumkNZ9DkjQ-->D-018</td><td data-page-node-id="pNN3l13N30W9ZsNMWiJKAB"><!--pnid:0PWpIEVWr4aVsaT7Z9iZ6n-->D-018</td><td data-page-node-id="eIAFius0WsvrK6rv6hwEew"><span data-page-node-id="lUekTosMIym4jqCuyvXXZl" class="badge-s b-g"><!--pnid:d2Cb9p8W6G7QQPXQcXHCr0-->🟢 一致</span></td></tr>
+            <tr data-page-node-id="Iairz7qo9HUrMf55gmGBeM"><td data-page-node-id="6PQIM058k3wlneQkJceSQa" class="mono"><!--pnid:dJsYcPOnCIQjtEwqL2skCD-->SPEC-M-PWR-001</td><td data-page-node-id="e4Nc2Y88170ZNmE5gVRTS1"><!--pnid:Hnvc64STvg9DqMmtVrb6nn-->电源模块规格书</td><td data-page-node-id="6oUF2JwkLVHZBMofi89qFM"><!--pnid:qfn498c4kmKPyrtChUXw1i-->v1</td><td data-page-node-id="oFawJuBguc39AXM3DtMUt3"><!--pnid:WMSlWgJ02r6Z0UpgwjbBZb-->v1</td><td data-page-node-id="ItflhQevEUIlyYQHAXmpEG"><span data-page-node-id="VkljCC0YZo2CvtGaaE04HA" class="badge-s b-g"><!--pnid:hjOs7sTPIfPO78MmhpKlOI-->🟢 一致</span></td></tr>
+            <tr data-page-node-id="OJ28wAw3rFJDvbNEsmEMA5"><td data-page-node-id="KVlKdCq7bj6AuP2iyEhyxV" class="mono"><!--pnid:8u0NmRWhrpvdN1YoyisRna-->WI-ASSY-01</td><td data-page-node-id="F5O4yJyXJAnjWtoM4gn8C7"><!--pnid:6nKXMkGg4zIg35hU3gU2yI-->装配一线作业指导</td><td data-page-node-id="EvZr7sB6Jj7hx3qSU6GpwT"><!--pnid:vRykaexdI734GiTPg3EICj-->V2.0</td><td data-page-node-id="MfGwAMHTahbLg0HcOXa2Ty"><!--pnid:XKxuXHaqsoKEt4605g5G8U-->V2.0</td><td data-page-node-id="5dWulkAu1g3r9VVgqyQY5l"><span data-page-node-id="a0CqWzQ9fVWHSfIDfvWciU" class="badge-s b-g"><!--pnid:eabkj34jqY4utmZzp0n4xg-->🟢 一致</span></td></tr>
+            <tr data-page-node-id="O2qFlsEv8Ij4lBVK2L3pl8"><td data-page-node-id="tyHXDvjVCzKnffnsslgBdn" class="mono"><!--pnid:273TAHoMnfXzgQyocRUzt4-->WI-PAINT-01</td><td data-page-node-id="1qnJ0AN2DZvohJldj1Szl7"><!--pnid:kOZtz3VDBVCYuG2HR91uJ9-->喷涂作业指导</td><td data-page-node-id="PNIz0FeJcgSCiZRqtvUk3m"><!--pnid:OBRh1OHadsmbdIDOoLcFVC-->V1.2</td><td data-page-node-id="xbqYKi7YPepiH9bwik0lii"><!--pnid:3DzRlpfrGr5mcC2HAenm5R-->V1.2</td><td data-page-node-id="Vzw5xjy3L7Hy2CKykB6Dio"><span data-page-node-id="B49kMlLXumAyPEq5tu8HRy" class="badge-s b-g"><!--pnid:NAPQBgO18Oz4AVEEtMp9un-->🟢 一致</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:heWlQaY1wpEJpLEUK9ovdf--><!-- Step 4 · 现场备注解读 -->
+  <div data-page-node-id="18RDzEqwoQarpEmZ00enP7" class="dstep">
+    <div data-page-node-id="EwpF34bEsV1Z89XRIsXmiY" class="dstep-h">
+      <div data-page-node-id="vpl7N9Nj0o4ejfEOh8tKoc" class="dstep-n io"><!--pnid:i2PVK3n4nEtGPwnjBJakdp-->▶</div>
+      <div data-page-node-id="nPtk1nl8tMkvHjBquxmVpX">
+        <h2 data-page-node-id="xxMqFDeOQaDFAZKD1kTFiV"><!--pnid:JroDoMR0pjSCSmJrlXUAPC-->Step 4 · AI 补充分析 · 读懂现场备注</h2>
+        <div data-page-node-id="p4aOc8o1K2vXxLp2YhZpiN" class="sd"><!--pnid:08ejZvnh42ZClQ5z0GnlYR-->从工艺 / 品质留在台账里的备注，自动归口执行侧延迟原因</div>
+      </div>
+    </div>
+    <div data-page-node-id="eiv0SP9i0BrvH0zecQzU9K" class="dstep-b">
+      <div data-page-node-id="Aa8pjDZUHtO4uwozKCsboc" class="note">
+        <div data-page-node-id="45nVBSUBHu79P4JVMRR3PQ" class="h"><!--pnid:JXqTS8AKL5eGdwWoRyJ4zt-->⚡ SOP-A-06 不一致 · 归口分析</div>
+        <div data-page-node-id="H1goRktOGwvPmVQf6LkAso" class="r"><!--pnid:qRMb2fDfbYvDQIXA3Cz1p8-->工艺张工 2026-07-27 在台账留言：<i data-page-node-id="UXZMEZ4Aw0r7eCG6xrUxqN"><!--pnid:a3yr8033sTdxAD9ZSKYOlc-->"打印稿还没发下去"</i></div>
+        <div data-page-node-id="s2nskzvzQPeRWMHSeqEtD5" class="r"><b data-page-node-id="0KVajtPiIJhIhx5B5Db0tO"><!--pnid:gY9N935heUuUGTWg0JZStc-->AI 归口：</b><!--pnid:QDRCOZResDnBENfFrCOWcD-->属于 <b data-page-node-id="7IOc7D3lRmiZfwduvd9jMt"><!--pnid:9KJj6PBBCDzFCZnlphMwd1-->执行侧延迟 2 天</b><!--pnid:ZqA2M2KXswp8p1pIerYzyl-->（不是研发发布问题）· 责任人：工艺张工</div>
+      </div>
+      <div data-page-node-id="pr8ftB6mobFt2WfSw4gFaG" class="note">
+        <div data-page-node-id="YQYBL6bwdpnne3nE8KMRsN" class="h"><!--pnid:zaaauZQ1z5ia4YCuH3QHE3-->⚡ DRW-M-PCB-001 不一致 · 归口分析</div>
+        <div data-page-node-id="gJBEoq7tRnmarRKHsfKLIi" class="r"><!--pnid:N6UebnQrufRgTP5OyUwUPy-->品质陈工 2026-07-28 在台账留言：<i data-page-node-id="Hyl0xvT5Fyx6wiPeezDHUX"><!--pnid:pHT3lQPy4YYUnnsJO6sFRY-->"D-025 电子版还没打印"</i></div>
+        <div data-page-node-id="lSNgEBefp9vzQwLZwh3I6C" class="r"><b data-page-node-id="ZTq1A8UT9p918jvMKcAVQ8"><!--pnid:eAYyRos0VBV0nm1uC4FjS9-->AI 归口：</b><!--pnid:p8Ud5bg2EVeswAtHGK1LZW-->属于 <b data-page-node-id="5NUvz14GYeLLhNMm9kOfeo"><!--pnid:r6oCjZD63O6jEXx1hJBkTp-->执行侧延迟 4 天</b><!--pnid:O2L0SS5511hrHYXETYxW0d-->（不是研发发布问题）· 责任人：品质陈工</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:CVuouzJ6GEaD0qlNT8KjJH--><!-- Step 5 · IM 通知 -->
+  <div data-page-node-id="xxSBLFdvAaDcbhTEzFcxce" class="dstep">
+    <div data-page-node-id="jYE1HeboAskOtG4MnLDweb" class="dstep-h">
+      <div data-page-node-id="g05ngGUPwgHDJm8DohGBL9" class="dstep-n"><!--pnid:CRSjroZIR72AXs9mxhwkAW-->5</div>
+      <div data-page-node-id="pIsl9NudQpKoCvWaG8ElUv">
+        <h2 data-page-node-id="aD7b0K5PCUlt0Dg4I3eDRP"><!--pnid:4eHoWVXgoReZma76YmV6xk-->分部门通知稿 · 一键推IM</h2>
+        <div data-page-node-id="lIZTK7BnP5ou9rR1iIUwNZ" class="sd"><!--pnid:UFd90s1V5G7P7R7S328Ws1-->按岗位分段· @当事人 · 责任面清清楚楚</div>
+      </div>
+    </div>
+    <div data-page-node-id="Q8hj1Pev1B2ansUqSlpc5r" class="dstep-b">
+      <div data-page-node-id="OAyyk5MJWH8GQCestmwE7X" class="im-card">
+        <div data-page-node-id="EhNoS9N4AcymtbBZu9k6vk" class="im-hd">
+          <div data-page-node-id="8lKxC6JbN3fizjQd1Y4kfg" class="av"><!--pnid:7m2HLHzRpgVd2L62sPifqO-->📎</div>
+          <div data-page-node-id="LQ1FmSHb2gRyNxzZPJE51n" class="nm"><!--pnid:BV4z5XnTaR6EJb5tgczCvd-->受控发放/ 回收通知</div>
+          <div data-page-node-id="cxN1U7HQTy2VuAQvmbdTyv" class="at"><!--pnid:5FzC2PLAfywC6XHauGC9nX-->@工艺 @品质 @生产</div>
+        </div>
+        <div data-page-node-id="3Tu2XLuPKPlvwGCd6S7lBG" class="im-bd">
+          <div data-page-node-id="cULIcYEmTh7xNoWOQc7ZAh" class="title"><!--pnid:JiR5pzeRbQ2RgsS8MfEoaq-->📎 版本受控发放 · P-IPC-01</div>
+          <div data-page-node-id="OuyeRIgEMfkEz95i2gTSv7" class="kv"><b data-page-node-id="f9qzWoa1tPftqg4epdGrCt"><!--pnid:Ozyl77y7zDhPst90M4KfSE-->SOP-A-06</b><!--pnid:YIybv1Fo2aUkRSCf3hM7DG--> V1.3（2026-07-20 发布）→ 请工艺/ 生产回收 V1.2</div>
+          <div data-page-node-id="USDI1VFo1Wwrz7Vh9eENRF" class="kv"><b data-page-node-id="wzLNji7kh0M5HyzgPUS85S"><!--pnid:sB7Z1GL3bCoYTQmKJiV7hp-->DRW-M-PCB-001</b><!--pnid:eLMmkZxA2HuFlaEmAAmS05--> D-025（2026-07-25 发布）→ 请工艺 / 品质回收 D-024</div>
+          <div data-page-node-id="demrbMRYalOH0RfHRX3Taw" class="im-todo">
+            <div data-page-node-id="ym8ITSKETp3celgiZy6RS6" class="row"><span data-page-node-id="v8ecJ4l2Ry9HsPSxjOmwxv" class="who"><!--pnid:6azCFOLkCQOBDqPw3vjWoU-->工艺（张工）</span><!--pnid:DVBVPFYS3xtdlPRNffoCs2-->打印新版 SOP V1.3 换到装配一线，回收 V1.2 存档</div>
+            <div data-page-node-id="2brNp0V4Re62jDKP3oyQuF" class="row"><span data-page-node-id="6VEpormCUR235Y6TBz08X7" class="who"><!--pnid:poF0B2CLMXyB6FjxYSyqQO-->品质（陈工）</span><!--pnid:hcBRKVK78iux3hSikvzQ9v-->打印新版图纸 D-025 换到检验工位，首件校验按新版执行</div>
+            <div data-page-node-id="oPijwvXWP1Ei3cdSxFm6TW" class="row"><span data-page-node-id="mUgA5RDj6eEnGDera355gg" class="who"><!--pnid:vveAlIXcf9h2M2W9MNqJXC-->生产（刘主管）</span><!--pnid:ouole9Gi72NSjUpQiFTI7d-->配合工艺完成换版，装配一线现场文件同步更新</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:tB4kWd6TbOK0kk2ckH6Rla--><!-- Step 6 · 下一步 -->
+  <div data-page-node-id="JlZZ7XRHhoPpLZjvRzhuoF" class="dstep">
+    <div data-page-node-id="kD3ZHh15lC2DJsx7kmstql" class="dstep-h">
+      <div data-page-node-id="xkr2ecJjzfKKxIVgmVcy6e" class="dstep-n"><!--pnid:PlGTaRX9L36Bfd9KCatwek-->6</div>
+      <div data-page-node-id="0fzHARVFIa2gEhtFuLFAje">
+        <h2 data-page-node-id="2L0IkCWYnyj3JYLqgsofea"><!--pnid:2CLh7jiNM3dRGGKgUHohYw-->下一步建议 · 建立闭环机制</h2>
+        <div data-page-node-id="p8MxkbJGXCNwBduQDQn9WN" class="sd"><!--pnid:eHBOCrV9FG7IPTRp7Hv2j2-->从"一次巡检"进阶到"长效机制"</div>
+      </div>
+    </div>
+    <div data-page-node-id="Jv5YWGYj7W10PLVea4zaO5" class="dstep-b">
+      <div data-page-node-id="75bm3Hm5fXpcwwBRsdkckm" class="tbl">
+        <table data-page-node-id="vQZyaswj76L8UUF2Z304P4">
+          <thead data-page-node-id="kcFO9CX0hCTNw82StKJNv5"><tr data-page-node-id="1YqPljkhjA5BrX9qlcvEiY"><th data-page-node-id="3UQveVxonIdaDlCAk4ArZG" style="width:4%"><!--pnid:BoLStl5pxacmzuQYckeB3Y-->#</th><th data-page-node-id="XvKsgDjyGWXe3K5P1yw9X3"><!--pnid:V49gWlevQKXd6bTRkmCkfQ-->动作</th><th data-page-node-id="fRd4kD1rTlu69CXZnvtPBH" style="width:14%"><!--pnid:GQ7z28rocdEd7NbdM3TNOC-->周期</th></tr></thead>
+          <tbody data-page-node-id="KN1krn6xV5t6iVX1oTMKka">
+            <tr data-page-node-id="us2XF7uEnqYHsMDbk0A1HD"><td data-page-node-id="0yMozNj8GbmsLnvGvIssFJ"><!--pnid:KPBPP2gMitGLGQq9E898oL-->①</td><td data-page-node-id="i9Zbq51cq8YLaL2lvrPC24"><!--pnid:J2Z3AUxVF46pin5PFzBlCj-->立即推送通知到企微等 IM 平台 · @工艺 @品质 @生产</td><td data-page-node-id="tg8tp0LWvqyC41viYEgfIo"><!--pnid:Ur4cdF2x3KkOHdi0C248kS-->本次</td></tr>
+            <tr data-page-node-id="MCpLfItEswScofdaBHMOwJ"><td data-page-node-id="FzOJbBTR4aeVklwUaThHvB"><!--pnid:wAVSdAWZQd7d0VSzkLQ8yG-->②</td><td data-page-node-id="E4J9nhiS93DWKSdXZ7OYNG"><!--pnid:OBuB5KS36PkVHi5DsDf3tC-->建立"新版发布 → 48 小时内回签"机制 · 超时自动提醒</td><td data-page-node-id="Y6rDrnfAhwFNfx1InAQud4"><!--pnid:wzKOPyLo2otoX0gKIWf3lE-->长效</td></tr>
+            <tr data-page-node-id="9ACUvdiSNZnnKYF9W6CmxO"><td data-page-node-id="BYH6W8W0cAX5X8uh7vGwiS"><!--pnid:eALEFGrqXzdcxblqbaWqid-->③</td><td data-page-node-id="3Fzc6RZ0ZHNFvzIR1Dkf2A"><!--pnid:iDl1x3pq7dB2VrDMeGsyeb-->每周日 08:00 定时巡检 · 扫描结果推研发经理复盘</td><td data-page-node-id="Wl13Ee5kgUpl4ZKD3Cbdbb"><!--pnid:iUYgqa0mKQIigBwG1SOQJm-->周巡</td></tr>
+            <tr data-page-node-id="nzdO7yHRtzHeCNtUA1oujQ"><td data-page-node-id="ihYFmGa68x4wNszmq9SIMF"><!--pnid:pKJeyEF0P2ag5RWvZWlEuA-->④</td><td data-page-node-id="VpQFxZYnSTZTF02XiWmhq9"><!--pnid:P0JaHMTopqh6HHRRhU10WC-->每次巡检自动留痕 · ISO 审核时直接调取</td><td data-page-node-id="9LjwieYxpmlaZr4tyKAICi"><!--pnid:216jrosq3ZRg3eaZTUmF7Q-->自动</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div data-page-node-id="KVSVAXGsMhsLdqEy8rKvAT" class="dstep">
+    <div data-page-node-id="A9tCAgxoH0tqYqMUQ8VWuQ" class="dstep-h"><div data-page-node-id="STvrSsqZko0MALnpI2XnZK" class="dstep-n io"><!--pnid:QKd0kaSg41mz2laM4UfBIW-->ROI</div><div data-page-node-id="alVZz3G3FUUOXVRY48dVRy"><h2 data-page-node-id="0TmI2WaR8NS341ZATX88sZ"><!--pnid:uTCVygt1VJ4G9wNtZPymSf-->用 Agent 前后，这次版本审计的账</h2><div data-page-node-id="BHJijbXt7NtzdlPVu0ZFz6" class="sd"><!--pnid:WLyVTy0JYLmzT2Um1smw7U-->传统耗时来自公开行业调研 · Agent 耗时按本页流程推算 · 均为估算口径，见页底说明</div></div></div>
+    <div data-page-node-id="rXjWXWjOjhJv9SmGsz367S" class="dstep-b">
+      <div data-page-node-id="trE8e7pQNhkMQ1RbmnxCGR" class="kpi-row" style="grid-template-columns:repeat(4,1fr); margin-top:0">
+        <div data-page-node-id="Z3f3uN1oUtr0hgBcEOVWZm" class="kpi"><div data-page-node-id="GDQnSvG2SLD91Uks9gIiWM" class="k"><!--pnid:WOybHiwUOPiEoIcCFg9GKJ-->人工投入（本次巡检）</div><div data-page-node-id="nkEmqDUZ1LGu4RkdzYFDW3" class="v"><span data-page-node-id="MBXD5eA7lJzMZa2HxMNsA3" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:wHE3lJsfa8PZrGYwWTmmXS-->2-4 h</span><!--pnid:dkO5trFLrlBzOFzAvMHnqr--> → <span data-page-node-id="zdPk7malEDnqCJimGPfLYW" style="color:var(--green)"><!--pnid:VLPbHOSRma9PW3SuA5DNWj-->≈ 0.5 h</span></div></div>
+        <div data-page-node-id="H72GIE7geecfuRUb2Vik4g" class="kpi"><div data-page-node-id="Sk5XMv6d8P5hvPcRbHIkzl" class="k"><!--pnid:z9jL8PdK9j4Hv4xaxZ9tva-->端到端周期</div><div data-page-node-id="ydMLHq7tFk7CkfsFt9KlNM" class="v"><span data-page-node-id="JNTYVbJaf7xI0Q76rZ4WVc" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:eJTTyjIusbbgGbTSxqS7gc-->1-2 天</span><!--pnid:xLTwJD8yKQIZxbDyVWI8zp--> → <span data-page-node-id="g4YjhEIJqnIc9WfMRZYhzQ" style="color:var(--green)"><!--pnid:bffAcCeIXbLTDtBiUbNAnL-->当天出报告</span></div></div>
+        <div data-page-node-id="YSr05qvcvKnuVABIaJm5Xj" class="kpi"><div data-page-node-id="ri9gZNk4C8SwdPOoowVWA9" class="k"><!--pnid:pMLHfmK6OSC7VCHuUDBKJ8-->参与方式</div><div data-page-node-id="suLhydeFRHsPDl0UCpyBJn" class="v" style="font-size:13px; line-height:1.5"><!--pnid:x0haypQ1oRBTDFfz5KTOBk-->PE/工艺/品质/生产 4 岗接力 → PE 1 人主理<br data-page-node-id="0XkotYxvkaEWa80xDbPZ55"><!--pnid:tTcbrWcUcDxYyNhi7TaxSh-->只兜底被标出项</div></div>
+        <div data-page-node-id="nHuxE5k4JoegYuOeU2wQdj" class="kpi"><div data-page-node-id="VieNpUjnuai4sjcmaDbc1J" class="k"><!--pnid:SCejbf4AzORCA1YyoYmkT9-->用错版本风险</div><div data-page-node-id="ISpTwMxJxPPSb7ZdsHJ1xN" class="v"><span data-page-node-id="XclNRy8cjGOrtdEL6NlmI2" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:tR1eNhEHRobVGi1kRbi4Q3-->靠人记、易漏检</span><!--pnid:pXnqG16fozmb4x3Lob9JS2--> → <span data-page-node-id="IQVeqwP8Hlnbk93QGaE0qr" style="color:var(--green)"><!--pnid:6W4qd6Rz5zFsY7qU6Jiq4Y-->2 项冲突全标出</span></div></div>
+      </div>
+
+      <div data-page-node-id="3OMmitJr62PwFFOMjvDIW9" class="think" style="margin-top:14px; margin-bottom:0"><span data-page-node-id="7NFP1a6DLx2abOhv51c4zz" class="lbl"><!--pnid:WMFA4nzZlBQN0jXEEqBWkX-->数字口径与来源 · 都是估算，建议落地前用自家数据校准</span>
+        <b data-page-node-id="XoELb6m9CWhKV48p4ckuxq"><!--pnid:i0ySli5JR2zGSGnVPJYenA-->传统耗时</b><!--pnid:siCe26jkOkLfZwoZXIneML-->：来自公开行业案例与调研 —— 小家电企业 PLM 实施前"查一个产品的图纸状态，得打四五个电话、等半天才能汇总"（三品软件客户实录）；跨部门找图占工程师日均工时 <b data-page-node-id="QZRke6ZucaEic4mRQQnULW"><!--pnid:dmcjNAUwbwrCGwNteyhlKy-->12%（约 1 小时/天）</b><!--pnid:tgGy40knPlpKH554sWZOhc-->；设计变更人工传递周期普遍 <b data-page-node-id="pWoXKpqbeIRXumj24ks8dq"><!--pnid:0e5oDCVEasH8UO8LFpBct7-->3 天以上</b><!--pnid:HdbSs77ewjDFtvn6g2Yvt4-->（三品图纸管理行业统计）；某汽车零部件企业因图纸版本未同步批量生产 2000 件不合格品，单次返工成本超 <b data-page-node-id="CRfRnknP3UfIKDXGvbnqgr"><!--pnid:MGbf5q3ob7H6DnkgId9PTR-->80 万元</b><!--pnid:8YIGVXp11d6DK4WHBQuYUn-->。按 8 份受控文件逐份人工核对 + 追问备注 + 写通知稿估 <b data-page-node-id="zzaRSNZs2LqaWCRy7ayo60"><!--pnid:ABiz6qA5mB6vYiWBE9tYSj-->2-4 小时</b><!--pnid:9ciWNOIO2TGE0x1hjeorKW-->。
+        <br data-page-node-id="KMjXC4LqSz1ahRpr8K0Z5q"><b data-page-node-id="KLeThCvvnbMI7LELuRwsbQ"><!--pnid:6FDLAHCNpyBxfQHXNqwa4F-->Agent 耗时</b><!--pnid:RPHLwGVd4EpXHE5jkimqR6-->：按本页 Demo 流程推算 —— 发起巡检 2-3 分钟 + Agent 比对 8 份文件、归口 2 条备注、生成通知稿约 10-15 分钟（实际受模型速度与文件量影响），人工只兜底被标出的 2 项版本冲突估 20-30 分钟。
+        <br data-page-node-id="5bIKY2tvJSbd9733vC0twf"><b data-page-node-id="yiBvEmmzAsAwyO6ZQCMu3K"><!--pnid:HqKf0bQ05hlyTbi1uM6KzX-->测算为演示用途</b><!--pnid:5Fw6t9UTMH6iHzGsMd2t4A-->，未含系统部署与 Skill 维护成本；落地时建议取 2-4 周自家真实巡检记录跑一遍，用实测值替换本页口径。
+      </div>
+    </div>
+  </div>
+
+
+
+  <div data-page-node-id="nAeUNg33NwiJs9FeiQf7as" class="cta">
+    <div data-page-node-id="NZhyOP0XpUl1QW34jubrwX">
+      <h3 data-page-node-id="IGo3GQCoiKJzjf4wjuC79y"><!--pnid:a022vveSTlwDQ674pquCz3-->想了解来龙去脉？</h3>
+      <p data-page-node-id="b5kIdBIExMZAZQik9Pfk9R"><!--pnid:rewiRrX7W62cVh4lLa2Geu-->回到场景引入，看这个场景的痛点、做法与边界</p>
+    </div>
+    <div data-page-node-id="gsH5g109LJOWy3EKs99gUk" style="display:flex; gap:10px; flex-wrap:wrap">
+      <a data-page-node-id="d34YIzxxINLbTjt0NOwQeU" class="btn ghost" href="场景引入.html"><!--pnid:aFMpzV0wDT4OiYeOC8vD9N-->返回场景引入</a>
+    </div>
+  </div>
+
+  
+</div>
+
+
+<footer data-page-node-id="0vvELcOx8WtEzpzpCGAEh7"><!--pnid:5JN82ODQYhgpaR9uXCWp27-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="eglBv3KqF4ajzoxcTa3fHS" data-pnid-children="Ygqa1OvmucKtInMWpymz4L">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="iTBG809PZJPbJb3TunTx0T" data-pnid-children="seKGVepcdud6TjuPGVschU">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="fDlkJuLWUXXl9T77djynhp" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="ev6bQJIjTOdvRxjUzvriMM" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="UB2RDCDsC9qflNz4oRcJtu" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="ucW0pikRCElLfJOy4OucSS" data-pnid-children="FQ7y8JqMFsOOZSIfU44stv">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

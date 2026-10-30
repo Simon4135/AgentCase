@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html data-page-node-id="rycXLRroADlzTfoHCFatB4" lang="zh-CN">
+<head data-page-node-id="JHEI4xDrhQVMx1IU7wp0eW">
+<script data-page-node-id="uMXxeoRoW37Nnppi0bw5ue" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="Zk74fWgKVMVoxx9YKO4O5V" charset="UTF-8">
+<meta data-page-node-id="YKZOCHLTTq7YiO8tmmCbzG" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="mbSGsYOeM5h2sjtkw0Pej2" data-pnid-children="H5gTQoHZXkqJU9a4m8oYnH">工资条生成与异常波动拦截</title>
+<link data-page-node-id="tryFyxNcnCoEMdhFKeQnuj" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="AVtNyaGyM7b3G7KNpnEJPN" data-pnid-children="iC27B9CK9Uae6hsY5kSXeK">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="3KI87DgNwrOIGQacDp14fC" data-pnid-children="vidiDFRNzEpXvGyp05Qii8" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="IpYtATSeE9higRjQv6reA9" data-pnid-children="e4bFs8ji0LweQbZut8ugbu" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="R6EyqQK7RS9ATanhsm47hY">
+
+<div data-page-node-id="XXNQyvNk5rRIvCfBmoKbbg" class="wrap">
+<section data-page-node-id="YOfoRqRjvXx2OvwcoeDBwt" class="page-hero">
+<h1 data-page-node-id="ngGgBVpt5QT9tB1MJVL0Hq"><!--pnid:40CIYfdWryrZYMCJ44supW-->工资条生成与异常波动拦截</h1>
+<p data-page-node-id="1uG9tHkd3EAMVbjmTaumt8" class="lead"><!--pnid:3SXfNIGgG6Mnsj8TD2UPiy-->多发的人从不说 · 少发 200 块的员工拿着银行短信冲进了老板办公室</p>
+</section><nav data-page-node-id="neBOB51SkHUJpMCo7pEJIP" class="subnav"><a data-page-node-id="whVSgf376Gbld10LJ9VTOW" href="场景引入.html"><!--pnid:GmmqBBNWzK8dNsRsXT3Vla-->场景引入</a><a data-page-node-id="Xr9imT12MJJmssUpRHiCVO" href="LiveDemo.html"><!--pnid:Ue5gGuvdf8a3YjVp2O6CuS-->Live Demo</a><a data-page-node-id="p7N1uqBIlCKcKHp8FQryej" class="on" href="#"><!--pnid:0T1EDdTo8afKbpk5ZHU0PX-->推荐任务</a></nav>
+
+<section data-page-node-id="8IjRecO04IONX1eVkdd33o" class="blk">
+  <h2 data-page-node-id="kXOLBQhzLasp307R0szcgH" class="h"><span data-page-node-id="WUY6sd5BqOOevOC4TldHwv" class="num"><!--pnid:vDEdcUdfUaTbgTVQJZ6whH-->一</span><!--pnid:Qybfblr7XG7g6Baf5C4cDA-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="qm7wuBBzF60t4rUkxmMsl8" class="subline"><!--pnid:CdJvrdVzNf3d402dMusIAa-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="gIgdbrdaffFWPvYBtwSc0k" class="card"><p data-page-node-id="xE9dO5YgMkg0dRBokwOpDB"><!--pnid:sKDtuJnn3sjEM87r1j0zPw-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="MN2UwnKB2OiTuOJwqIYNZ2" style="margin-top:10px"><!--pnid:A8qCWZ6xWqg1pUDL73RmHP-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:ByphCLkDJd30hiLoyc45M9--><!--wb-skill-start-->
+<div data-page-node-id="btaNYKFFqy4qjYUxsVFEeQ" class="wb-skill">
+<p data-page-node-id="SfArogXKalDk2elGcrhchx" class="wb-skill-lead"><!--pnid:ztM3xDow0Hb8FoDtXOsHD7-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="xHaEeJJIZUoriDCdKWtDX7" class="prompt" id="wbSkillPrompt"><!--pnid:jpIUpxGdg2ynsX0YGEdZ40-->【准备】这个场景的规则都在「工资条生成与异常波动拦截」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/gQ6REpxgCRF7ZT0rZghqzv/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="LTjb38Nhm6cmIr9YcbTqut" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:iYu0DIH6EL0EekbCAwEk6V-->复制</button></div>
+</div>
+<!--pnid:NlBJuHdp2yxM7cwvcevoVW--><!--wb-skill-end-->
+<section data-page-node-id="uAIZgnHJgbMgnW9hy1IJPq" class="blk">
+  <h2 data-page-node-id="y4XQnlIFyYn1mshaschQBQ" class="h"><span data-page-node-id="bm6zATlWK84pioaVCr9lvY" class="num"><!--pnid:gpN0E8rpNiuO4S0wRIZmh4-->二</span><!--pnid:HO60B44dH80OJgJnHrL1Xg-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="9SMQ9JEy7s7hEajt8t45hn" class="subline"><!--pnid:fAIdClinp9z2RNoGWrebzN-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="mESc9tBOcc4uH2956hIXHX" class="tlist">
+    <article data-page-node-id="330Q4AaA4b6ed1PfsbcGMr" class="task">
+      <div data-page-node-id="GvH5DVqjfuiJB4sa5AcFA5" class="th"><span data-page-node-id="id3pusoRUHyBGC84nEX9U0" class="no"><!--pnid:QGCIqUXBKaADg0Y24Kv3mK-->01</span><h3 data-page-node-id="w2FcKJUzMkqLoS708hFOEn" class="ttl"><!--pnid:BrstAKvz7PkcWd0hB9fnOO-->首推默认</h3><span data-page-node-id="3fj1TuyRfV6hivd14jw1Uy" class="star"><!--pnid:tAdmqCPxikbAKBGyLJ05yN-->与一键体验入口一致</span><button data-page-node-id="DhvyhUUrCX5X5GLlyrY4WV" class="cp" type="button"><!--pnid:CP8SkO3wtpQJ5YrI6oOtIb-->复制</button></div>
+      <p data-page-node-id="dfPmIvT7hUQ7L3tEdJ5hKU" class="tp"><!--pnid:Q8AMGnUiVIL7nFU83xcC8m-->这个月的工资表拼好了，上个月的也在这。帮我生成工资条，发出去之前把有问题的先拦下来。
+
+比上个月差得多的、差得少的都标出来，正常的人员变动先排除掉。
+每条异常给我个怀疑方向，我好去查。
+
+拦下的名单和确认过的记录都给我留档。</p>
+    </article>
+    <article data-page-node-id="ixERdmvdWLiJ0LSrlLaczr" class="task">
+      <div data-page-node-id="hjtzDVZUAzEljkPCxyupE2" class="th"><span data-page-node-id="h22IlqNwLt3wSTX6Kx3gUk" class="no"><!--pnid:cF4naxC4bxgMRZQ90GxPyS-->02</span><h3 data-page-node-id="VBgn9iFxOF4IQNMhErCk7z" class="ttl"><!--pnid:lHx1VzXraanMzKPOdQOPuA-->只做环比比对</h3><button data-page-node-id="8r2XXRPp63NZZVjHTIEDmS" class="cp" type="button"><!--pnid:eecaBujewsXLCNpW22vEfT-->复制</button></div>
+      <p data-page-node-id="nwYfZ0nx1flnwEvLKe1bkk" class="tp"><!--pnid:XUxcvQ086jiCrHmgXVZIjC-->先只做环比：把上个月的工资表跟本月逐人比一遍，正负两成的都标出来，工资条和拦截清单先不用出。</p>
+    </article>
+    <article data-page-node-id="d5UghVpqY8EPeBlRX6q9eT" class="task">
+      <div data-page-node-id="iJMj1pxuGg8Qti6Dfkjl4p" class="th"><span data-page-node-id="GxkAzPiVf96CqptcaxsPRU" class="no"><!--pnid:3Lr6hIDt6Zfk4I5nu0c32B-->03</span><h3 data-page-node-id="fvZ1OUZoz6SrowVt4TyN0K" class="ttl"><!--pnid:ck0OGJ8Vow00HzOMkieSJC-->换成 10% 阈值重跑</h3><button data-page-node-id="9cfuV1rdCYy09WGabO8vUn" class="cp" type="button"><!--pnid:PcU93pJq78DaVq67OZ8vt2-->复制</button></div>
+      <p data-page-node-id="P4RSEdKNTBZVsXc01QvP60" class="tp"><!--pnid:yzzR7OTx7ioPYk0SB7yz6b-->这次把标红阈值从正负 20% 收紧到正负 10% 再跑一遍，看看会多出多少人、哪些人本来属于提成入账月份的预期内波动。</p>
+    </article>
+    <article data-page-node-id="8B8OBtIyOlSE22utKCFsz0" class="task">
+      <div data-page-node-id="zz07RFK1K1pBBdXKfmhrTx" class="th"><span data-page-node-id="LvzXoLmw7syz0AWGobwPbb" class="no"><!--pnid:B8YKxf6dFVqXmRyZzUiv1o-->04</span><h3 data-page-node-id="EkHNBUPfdTsn1Adlhx2LJ0" class="ttl"><!--pnid:Si1g6SOQo5UDoPBKsHCMaR-->一次处理两个月环比</h3><button data-page-node-id="0Rpuxr9KOSX1Y9jbQ2KjC1" class="cp" type="button"><!--pnid:aLZqZEkSbUUvPjuKjjSvHX-->复制</button></div>
+      <p data-page-node-id="1yv31Oj414E6WRLXunlKtS" class="tp"><!--pnid:3h37tuyzHGdNUP4tLo2sUl-->演示数据里再加上上上个月的工资表，连续两个月一起看，最后给我一张连续两月都异常的名单：姓名、异常栏位、各月差多少。</p>
+    </article>
+    <article data-page-node-id="H6XLQ7Fp4wAYOEsfBEFEdd" class="task">
+      <div data-page-node-id="Hox7UxKboiqkxwn9THKia6" class="th"><span data-page-node-id="HZ0V5uTD3UApQldMFxQXTB" class="no"><!--pnid:xAl9FP3K1Z5bnCsBBZwCAO-->05</span><h3 data-page-node-id="wjKatjafoMgKA5QK0ZB9Wb" class="ttl"><!--pnid:nbyzW3tWbqHwZkihFtnppI-->给 HR 主管签字的一页</h3><button data-page-node-id="NCcWTLEEtasBXLqNlEnUtt" class="cp" type="button"><!--pnid:Uis728lAgTJUdOk6Ukt5aE-->复制</button></div>
+      <p data-page-node-id="EgiZMESnSzA4vmC49hU9Gr" class="tp"><!--pnid:7dXwerXzPi5gpsmjgqWJiL-->把拦截清单压成给 HR 主管签字用的一页：拦下几个人、各差多少、怀疑方向是什么、谁在什么时候核实，其余不用给。</p>
+    </article>
+    <article data-page-node-id="GB4LnZYJ7lRbLLSVSWKk2T" class="task">
+      <div data-page-node-id="KzxoMFULPJYFRsC8Ac2E2n" class="th"><span data-page-node-id="lC3HW5plTQao4Pr7eYwdHc" class="no"><!--pnid:goTNmZvCWJ5SkmHSoc4Wos-->06</span><h3 data-page-node-id="TzygKEhnapxyb9g64XreZG" class="ttl"><!--pnid:fJSgVDr1GSbgfHKp4zlbe4-->让它反驳自己</h3><button data-page-node-id="HXOg3YDCkjsjBNWl3hGksE" class="cp" type="button"><!--pnid:GZES6SAH0ysCfYWWFexfJY-->复制</button></div>
+      <p data-page-node-id="6j8WNcmgV7mMmW0Xvkut7r" class="tp"><!--pnid:qL0YQLeRsXsdILJZHnKIf6-->你拦下的这 7 人里，哪几个其实环比波动能解释得通、是我拦多了？把可以放行的标出来，并说明依据是哪条规则。</p>
+    </article>
+    <article data-page-node-id="TugWsTRqoCAKPXq3292PnP" class="task">
+      <div data-page-node-id="cWXgwR8O9QTPVjPwOjhvPU" class="th"><span data-page-node-id="AJnLf5AZCuGkPGKUtkIvbF" class="no"><!--pnid:e2qFCX61RMrYzGF4TlCji3-->07</span><h3 data-page-node-id="EsiVC0Y4d8TdihIJrtjpXe" class="ttl"><!--pnid:7PdxtTSOP3Ue3Sjslr3aNb-->比对上回全勤奖事故</h3><button data-page-node-id="ewdwcrDQVHfOwGw3GbAv38" class="cp" type="button"><!--pnid:eZy5cfeVUILSYKethFcMqY-->复制</button></div>
+      <p data-page-node-id="hEt2atLpEzT6BuKdpJTMZq" class="tp"><!--pnid:dVRhETr6CZtKvN9CAiRyXt-->把这次的异常模式跟上一次那笔 200 元全勤奖的事故比一比：是不是同一类「规则用错但数字自洽」，像的标出来。</p>
+    </article>
+    <article data-page-node-id="o1klBGeHS0aclf5tRyQIlv" class="task">
+      <div data-page-node-id="Kvs0L5EYgP56SGCHSsR6xT" class="th"><span data-page-node-id="ZOEh0DIKhDXdNQV9N2QcDs" class="no"><!--pnid:A9gbJkZmYwty3nRqF3ErOM-->08</span><h3 data-page-node-id="V9cg7eAssgCLhgMRsMo0vn" class="ttl"><!--pnid:JXJYCL9of5H6qxnqxGnmZK-->对照法定栏位自检</h3><button data-page-node-id="MKSffUOr7FWNsMaxCPmiK4" class="cp" type="button"><!--pnid:XIMrxbgZtLQBGXDlwXjl2D-->复制</button></div>
+      <p data-page-node-id="bqkgTbv7UiBaX38QiUvWhC" class="tp"><!--pnid:BErr4PKFU2IEimD1ZcpvjO-->对照法定工资条栏位自查：应发各项、代扣各项、实发能不能让员工看懂每一行怎么来的，缺哪栏补哪栏，全勤奖、加班费这类最容易被追问。</p>
+    </article>
+    <article data-page-node-id="0tKGTeHnykrqifU6O9knmo" class="task">
+      <div data-page-node-id="wJkhAFyjRkKWdQJo0Hlw2C" class="th"><span data-page-node-id="0HeTHQW2FfQKuvUz98pchT" class="no"><!--pnid:aNSniqznGuGZb2PKGSWhqC-->09</span><h3 data-page-node-id="CJyYd0ThUaVmJgYGbbGKnX" class="ttl"><!--pnid:dEdQv7KcPQ8O6LnNLN5jdc-->折算成发放前差额</h3><button data-page-node-id="5veUopVHKaQ8e2xZFi9rje" class="cp" type="button"><!--pnid:j5Jeiva2RwlGXIVqt4EZ5z-->复制</button></div>
+      <p data-page-node-id="GoFd4BnS0jxM4i4I0CTZ5x" class="tp"><!--pnid:FhWqgd4agTU9HaRfca8npM-->把这次拦下的异常折成钱：多发多少、少发多少、合计多少，再说明多发追不回和少发伤人心的代价差在哪。</p>
+    </article>
+    <article data-page-node-id="LA6vZvIaDFznMZ0XDPR0Cw" class="task">
+      <div data-page-node-id="qZq6lgxTxt2Cao6HjqVuu9" class="th"><span data-page-node-id="O1T5uaWACRf85cktFa7lA2" class="no"><!--pnid:cRzGAD71dqANA0ClqMxNMC-->10</span><h3 data-page-node-id="16wGjj7KoEIRPzQEdIS6uf" class="ttl"><!--pnid:zjRfH1MmZjW9N0godrSogy-->沉淀成发放前检查清单</h3><button data-page-node-id="n4BxClo5S9BL2tRNI03RSv" class="cp" type="button"><!--pnid:IdrvmCACqBVOd6VhILyeZz-->复制</button></div>
+      <p data-page-node-id="x4LWOZt34LkN3ilik0xGLp" class="tp"><!--pnid:ymS3KbtqhjGEDSKWgV7W0s-->把这次的拦截规则整理成一份发放前检查清单：必查项（比如全勤奖为零但考勤没大异常）、标红阈值、排查方向都定死，下月照跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="7GTNH44WnQFPOw1VgsgK7P" class="cta">
+  <div data-page-node-id="yEw57fRBCO76TDvzAkIPse"><h3 data-page-node-id="ztWyp358NajkahruuXlHhM"><!--pnid:u5MeTJRFl8j7YoJrtO3pCa-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="yATLNtD3D6t35FohLIGqJ5"><!--pnid:leWZE04hRewki7WU86OZde-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="pMbwrnwAMFx8iBQH08k0zt" class="btns"><a data-page-node-id="Gvw5xmsPPPJXsDEnm8GbJ2" class="btn" href="#" id="ctaContact"><!--pnid:HXaGxxviaITmUWvbkOK1U0-->联系我们</a></div>
+</div>
+<footer data-page-node-id="YaCw1sAF15SUe4AAEm9DCI"><!--pnid:i1voaZL2jurhpFxwfVyFda-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 涉对人的决定一律人工终审留痕</footer>
+</div>
+
+<script data-page-node-id="8lWytlICpYkAmGFeGdwQ5s" data-pnid-children="CXMNFCUQxdQwU3FhOLSCDa">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="xfRvlyyJXmXU2EMglEiFwJ" data-pnid-children="Gt5tXCYOGYpKf3LMcyDpF0">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="hJydzoorsYMMu0uZ9rHWCA" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="DrbyxNrsRbn9bovKTX2Lye" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="oxyg5Xzs3VL0QY3Rxg1EU6" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="62v3RxbGHcam0LDDJMZQkh" data-pnid-children="cSqVPlHfhIHTPsoo6hW8B8">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="SDCgNYpV8rhX6eJDK7o4Hi" data-pnid-children="vjCzdXqmgy2Z6dnsReJS6z" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

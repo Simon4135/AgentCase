@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="ItfSho8RVcwJE7ICQhDp1c" lang="zh-CN">
+<head data-page-node-id="eeSMqtgxT1Lc1qTbRangbR">
+<script data-page-node-id="ZSBGFf1FeXFFM0yvYTCkzb" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="0YneH3csOxFxtvuVmX6KAL" charset="UTF-8">
+<meta data-page-node-id="fmoEe8JxuSkHc9LK2jPgf2" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="XfYhScDLM4wsRnoDyQuNbf" data-pnid-children="3cRTbaL3XdSbZnCLQMmKO5">往来对账差异清单</title>
+<link data-page-node-id="JyIVKdrf6NgcpjwHXKcUtk" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="ups0RyPYrmrwOqf2LE3HGH" data-pnid-children="ZwOQW3kKLC4waYNebTNhCV">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="bfIETLnGksP72YX13qWVNA" data-pnid-children="m2YcoC2UoT6dYNvEfFgKCK" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="OTIM05EHBhY09LpSWBplCc" data-pnid-children="UIlTAXGqXAURfyDvfpXahS" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="BrNfuccHQzTWRCNjbBIz6H">
+
+<div data-page-node-id="aARLw2qiKIOqivETUTbCeE" class="wrap">
+<section data-page-node-id="QvtUZq8kXGzQgH5p0ygsoi" class="page-hero">
+<h1 data-page-node-id="RYCSUm8dkKHZ3Ux6vUqqiu"><!--pnid:2m1T3E16mWSLWhEQuzAbQ7-->往来对账差异清单</h1>
+<p data-page-node-id="kQOaXSlwAagLrTkjJXgW20" class="lead"><!--pnid:mMBZJIcNP7ulFVQJmXeORx-->和客户对账一对就扯皮、所以一直拖着 · 拖三年的账，最后是张 2 万的红字发票没冲减</p>
+</section><nav data-page-node-id="gE0eDGnNLbqRVGOgwbegPp" class="subnav"><a data-page-node-id="57hvbZbzYon8k1skAPtc32" href="场景引入.html"><!--pnid:s4jou3NFQsp6hH27khLon2-->场景引入</a><a data-page-node-id="z5AJQtJkXZZ9nItb0foyu7" href="LiveDemo.html"><!--pnid:aa9M80pXt0wZbadGEQCwxV-->Live Demo</a><a data-page-node-id="63wHaxjT5eGeADjKxaR2dR" class="on" href="#"><!--pnid:jUjq7fSLauckzpYPKUdLXJ-->推荐任务</a></nav>
+
+<section data-page-node-id="qTWwsVmmgDBCWkt2yVyajF" class="blk">
+  <h2 data-page-node-id="IlFayocFOdKTVGP7GNXZT0" class="h"><span data-page-node-id="DcafOwPDiezDYXVtXmclTY" class="num"><!--pnid:r6q5YCjpTZHq1h3gZWv0zS-->一</span><!--pnid:IReUSCvpnZH7aOGL5Z12vM-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="BHI94dv7oy0RRdcQOrI9O7" class="subline"><!--pnid:SUR0HjIdTy2CB1xRuV4vkR-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="E6IYzOM9a0OL10PsiX0lRI" class="card"><p data-page-node-id="nhiafMen5X3vIdMCptfDkJ"><!--pnid:WibeCjsu0ey2a6GHWIsZ10-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="fMIyFxRPHYfGFN18ukrut1" style="margin-top:10px"><!--pnid:1FHbaGcMFvsF7NbyjLSHFq-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:HX6VTdiOVIMTXXFccBQ7Po--><!--wb-skill-start-->
+<div data-page-node-id="hGiBzRykqInvkfztMIe8yI" class="wb-skill">
+<p data-page-node-id="OmMtIfxNZJ23rIRjgGJpEq" class="wb-skill-lead"><!--pnid:aUsIAer939XCPZUVzi3oVc-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="zAZE4VqgQKF5DYQg3FYbqZ" class="prompt" id="wbSkillPrompt"><!--pnid:1LvZX3RHrEZKqaWUtKX1ci-->【准备】这个场景的规则都在「往来对账差异清单」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/YM3SdF4Z4p88QwOgwCPCuT/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="OpGqp6LKaG3PgicVUseVr0" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:JUYCJnLc8Ostiewf67RuT3-->复制</button></div>
+</div>
+<!--pnid:ZQOVkWvR8KiFCs0sr7lcNT--><!--wb-skill-end-->
+<section data-page-node-id="SFI9Hmegz9ZufsabbDtXJk" class="blk">
+  <h2 data-page-node-id="qsRhtwIbF4A7zyPHmFbEUo" class="h"><span data-page-node-id="0aDrCyrQynKbvUmGj5MQZS" class="num"><!--pnid:cm0s0Sp9k9KGTf92fzHC3g-->二</span><!--pnid:vc6hDsSgxdkH9C7dhaZu6g-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="2InmFunfGFq7FcrVCDETaX" class="subline"><!--pnid:7VnJl699aj2YUkCzFPWgr6-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="bKpvz43wBXgcm0b1z6rMoj" class="tlist">
+    <article data-page-node-id="kudVfTml9w2D1r2ipH23Is" class="task">
+      <div data-page-node-id="k6X0jHiUEFjbcZuPQkSPET" class="th"><span data-page-node-id="R5NnYURnDRueyD2Nf6iry8" class="no"><!--pnid:mBzK8WjHy5wKOglP22UUF9-->01</span><h3 data-page-node-id="sVB06GNbRGFeyB89jnXJPd" class="ttl"><!--pnid:hCV7dMw3Dim1tYEUd6hSQ5-->首推默认</h3><span data-page-node-id="PP4JQkKlww3r2k9DqrriwM" class="star"><!--pnid:P3N145InTwFNO6ULSt6F02-->与一键体验入口一致</span><button data-page-node-id="cXUhyphuV8n0EpfetYGOzg" class="cp" type="button"><!--pnid:JsgJYLxEwlV9bnFAecp1qb-->复制</button></div>
+      <p data-page-node-id="EQoTkhrVeeUD0m8tQcGYZc" class="tp"><!--pnid:5s5V8lGUT5aQxseJJ1oNPb-->年底要和客户对往来账，先把手上这几家做完。技能内置三份材料：我方应收账款明细账、对方发来的对账单（邮件/PDF/Excel 格式不一）、回款记录与红字发票台账。走完整流程：两边逐笔对齐；把差异归进四类（发票未入账／回款未核销／红字未冲减／金额对不上）；红字发票单独专查一遍；生成对账函底稿；差异逐条留证。
+产出三份：「往来对账差异清单.xlsx」，四类差异一条一行带出处；「对账函底稿.xlsx」，按客户名称／对账期间／发票号／未税／税额／已收／未收／到期日／逾期天数这些标准栏位，带双方签章栏；「红字发票专查清单.xlsx」，退货、折让的红字发票是否冲减逐张列。
+差异原因只给提示、不做最终定性；对账函只出底稿，别替我盖章发出；时间差那类能排除的单独标出来，别当欠款去追。</p>
+    </article>
+    <article data-page-node-id="M2r8RNDXEHhYv7qBRZWEVe" class="task">
+      <div data-page-node-id="n51B78Guj9tqel2Ih3cZTT" class="th"><span data-page-node-id="PuUFAnl3V1qlsNcWin2FF5" class="no"><!--pnid:fyu9CjYSX5qxZvOudFNOyo-->02</span><h3 data-page-node-id="DIlYUg1nQILkeQ3ffZkvj7" class="ttl"><!--pnid:LBLqOx9ozWr7jmxWJk0pzg-->只做红字发票专查</h3><button data-page-node-id="QX4431IUjEw2h9uHYPrYCi" class="cp" type="button"><!--pnid:RwEnVDZ61riYx3d3wd67PM-->复制</button></div>
+      <p data-page-node-id="CDwP8baKJ8BjboacZHnSgO" class="tp"><!--pnid:7wPEZBpFjVM5TZ3vhrHpS1-->先只做红字发票专查，其他三类差异先不动。读回款记录与红字发票台账、我方应收账款明细账，把退货、折让的红字发票逐张核：有没有冲减、对应哪笔业务、开票日期、金额。产出「红字发票专查清单.xlsx」：一张红字一行，末列写「本次需补冲减」或「无需处理」；没冲减的那几张要写清它挂在账上会让余额多记多少，并标出对应哪家客户。</p>
+    </article>
+    <article data-page-node-id="ZxMX5fwoA45CabutdUBEmm" class="task">
+      <div data-page-node-id="4AEgCKL8JGeVU6R5URu3Ct" class="th"><span data-page-node-id="r01VC3oq1tG11O2CyQfYwe" class="no"><!--pnid:iewcsTsMCj7S6ozHbRL6kc-->03</span><h3 data-page-node-id="7G9hiFM6fTwFlHuSQR9Tar" class="ttl"><!--pnid:dGC3Fy4CTMTGyb5LqTMdWA-->统一截止日重对</h3><button data-page-node-id="nKDc1RQybnsXJbBTuKVSkR" class="cp" type="button"><!--pnid:dQS5N2fxeeuLrnmmc8Zdlo-->复制</button></div>
+      <p data-page-node-id="7u9YLWEjd1EB1lAjpSCHzz" class="tp"><!--pnid:kEoaj4gcWPY0B4rsswsTaB-->把两边口径拉齐再对一遍：双方都按 6 月 25 日的截止日对。材料还是我方应收账款明细账、对方对账单、回款与红字发票台账。产出 Excel 一栏对照：上次因为开票时间差造成的差异，重新判完之后哪几条变了（时间差改判成真差异，或反过来），每条写明我方开票日期和对方截止日。变了的在「往来对账差异清单.xlsx」里同步改过来，原判断留作备注。</p>
+    </article>
+    <article data-page-node-id="0jC3myRSTShM67UKna6ykz" class="task">
+      <div data-page-node-id="PPY995f3wC3zs8hmCy39Gc" class="th"><span data-page-node-id="zygFG5tqVMVsOviFEC2OA8" class="no"><!--pnid:eWbiEYTEYgMl3IBb0cQ28N-->04</span><h3 data-page-node-id="vSEjBcqsOmuNscyOPi6AaE" class="ttl"><!--pnid:m5chOjqdC5L3gBj2350x8V-->一次对三家客户</h3><button data-page-node-id="xzvEccnICh5bb7NNvx96Yc" class="cp" type="button"><!--pnid:4ijzd7WOhjsdZ2OrqOnpmr-->复制</button></div>
+      <p data-page-node-id="gAcZTCM9B9ggYdoVZxw8ou" class="tp"><!--pnid:h17oRdK6jWAGy1dD4dLVhU-->演示数据里还有另外两家客户的对账单和对应的回款记录，三家一起对，四类归因口径保持一致。产出「往来对账差异清单.xlsx」，按客户分组；另加一张横向对照表，一家客户一行，列写我方账面、对方主张、差异合计、四类各多少、能排除的时间差金额。哪家对方对账单读不出关键栏位（比如没有发票号）就标出来，说明哪些差异这次定不了。</p>
+    </article>
+    <article data-page-node-id="WLUmUdlsBslqF0T2uMX6o2" class="task">
+      <div data-page-node-id="u7vijjTBsICPFD0lemJOMX" class="th"><span data-page-node-id="UZ5smqgpCDLWLTvJOHGgFl" class="no"><!--pnid:j6iuElUwtZTJWurs9MAEeW-->05</span><h3 data-page-node-id="Q6kDL74mNKUGEAIXYHZKpV" class="ttl"><!--pnid:v6skPDNZFrNTKwOUo06079-->给业务对接人的版本</h3><button data-page-node-id="phPBdsFp0oNUSwJcNgqyt6" class="cp" type="button"><!--pnid:IvfV1UrCYua0gOxftmHyyu-->复制</button></div>
+      <p data-page-node-id="QA1AhnnS65ElG6BTpGiBJU" class="tp"><!--pnid:w0TcLkOizz4REN606EGVN2-->压成给业务对接人的一页，Markdown 半页以内：每家客户差多少、要他去找对方问哪几笔、哪几笔最该先问（金额大的、卡在红字或争议上的排前面）。明细表不放进这一页。只列要问的问题和对应金额，不要替我写「对方错了」这类定性结论。</p>
+    </article>
+    <article data-page-node-id="8zyl1qkyVUAS2eg8zMdSQ5" class="task">
+      <div data-page-node-id="U174Q29UkwmrTNJB3iFkRy" class="th"><span data-page-node-id="kWoohreKfgoL3m7ePJLwpW" class="no"><!--pnid:DDfAaxuVuWHbVaaBnGgJFj-->06</span><h3 data-page-node-id="jx7qnG5SsceKSM3PSrbwYX" class="ttl"><!--pnid:UliZQxVFZJQjyHZR9t2C9B-->让它反驳自己</h3><button data-page-node-id="f99WSZVgod5sD5PqJfe0dM" class="cp" type="button"><!--pnid:tdCzDuCR3AK1C5UQWYQwTc-->复制</button></div>
+      <p data-page-node-id="7NeBdYN5AI7p4AmlNYaZyx" class="tp"><!--pnid:xW5XdHLwfRkDkTCo4L4bLb-->你说明远商贸那 3200 元是时间差不是漏账、依据是对方对账截止到 6 月 25 日——这个依据够不够？逐条回查我方开票日期和对方对账单的截止日，写明两边出处。产出 Markdown 一份《判断复核》：站不住的改标成「争议」并说明还要找什么凭证才能定；对账函此刻能不能发也给个明确说法，发不发我自己定。</p>
+    </article>
+    <article data-page-node-id="8kCiyOYhX8AlYDsNcOsX4W" class="task">
+      <div data-page-node-id="Dmkok2l7s5AbZ44iFkqgO1" class="th"><span data-page-node-id="FFlpFjNNnxJQbl3p7msW8R" class="no"><!--pnid:E5UAOlh3NzNRBojy6NDP83-->07</span><h3 data-page-node-id="t58i6G7sNawPLwhNq2tEn6" class="ttl"><!--pnid:sYsiZ2eftvCssVUiMHqHzh-->比对三年前那张红字</h3><button data-page-node-id="04XEXOZizcEdiXWDQlSTjK" class="cp" type="button"><!--pnid:GAtshFHzipVtzGD4hatBn8-->复制</button></div>
+      <p data-page-node-id="kFCkTn7tdR2OlWQbSqwdH3" class="tp"><!--pnid:ZORSGCxIOmEipyYjWN4g1Y-->三年前跟恒通汽车零部件对账扯了一个月、最后查出一张 20000 元红字发票没冲减——跟这次的红字专查结果并排列出来。材料用回款记录与红字发票台账、我方应收账款明细账。产出 Excel 一张对照表：上次那笔和这次的红字各占一栏，列写红字发票号、开票日期、金额、对应业务、当时/现在的冲减状态、账上多记了多久。末尾写清同一家客户有没有又出现同类问题、涉及金额多少。</p>
+    </article>
+    <article data-page-node-id="Kbg7T4JCTAfqpCfOpipn0y" class="task">
+      <div data-page-node-id="ElElLmmobUYjb1okC1CnnR" class="th"><span data-page-node-id="boNSDidiZQB5p8tjYXPiCo" class="no"><!--pnid:KVUZbz6eNJwK7gTq5kgxq2-->08</span><h3 data-page-node-id="sRjiWCgPVUy49LlLroBZiM" class="ttl"><!--pnid:kl6PHGdT1vkMM9DwNos3g3-->按四类口径自查</h3><button data-page-node-id="WgPbLbC7DqaHHSscHJJcj0" class="cp" type="button"><!--pnid:lOMlItzKpM9mS1VhjXRzwQ-->复制</button></div>
+      <p data-page-node-id="d2to9PZiAjSGvaTtiej6c7" class="tp"><!--pnid:o7BvG69u7eDkf9GNMG8Lxy-->按四类差异口径自查这份清单。产出 Markdown 一份自查表，逐条过：有没有哪条差异既归不进四类、又被当成欠款列了；能排除的时间差有没有单独标出来；红字发票是不是每张都核过冲减状态；对账函底稿的截止日、双方签章栏是不是空的。列出来别动手改。</p>
+    </article>
+    <article data-page-node-id="mHbMpbm1srWzFKa8qot43x" class="task">
+      <div data-page-node-id="nue5Yk942hEfvMFv3pCYiu" class="th"><span data-page-node-id="N7mXMlJ0q8LH1JkBKMMXT9" class="no"><!--pnid:TxqRTz8RylGxE74KHq6sYo-->09</span><h3 data-page-node-id="yeWzHwobACUpon3EZ08gjO" class="ttl"><!--pnid:C121nPU3hI43PHH0EKQgFc-->折算成要追的钱</h3><button data-page-node-id="deJgtzP4jdXSSXfDsiRNAA" class="cp" type="button"><!--pnid:9WFyMRE7pwgL7dCPIZ4u32-->复制</button></div>
+      <p data-page-node-id="HmtfhkBFL7EVFhreQr9iA8" class="tp"><!--pnid:mXI7eWQMZZYblAqaNUS0Qd-->读「往来对账差异清单.xlsx」。这轮四家客户的差异合计 81200，产出 Excel 一张表：按客户和四类拆开，时间差等可排除的多少、真正要追的多少；要追的部分按金额从大到小排，每条写清是哪家客户、什么原因、下一步找谁。只给金额和归属，不给「该不该催」的建议，也不做坏账定性。</p>
+    </article>
+    <article data-page-node-id="adADmdMwOkCWKFxO6dksQa" class="task">
+      <div data-page-node-id="5KW2YmgbduSp9OkRL2HFr4" class="th"><span data-page-node-id="RBMJ610659aW6251sC9IRG" class="no"><!--pnid:dlOD7sCRwqRhmljsulcFWp-->10</span><h3 data-page-node-id="q7nYgwozyPZgO5bVRzL2nx" class="ttl"><!--pnid:XPNWZvDWpBoobag4GYKHP0-->沉淀成对账底稿模板</h3><button data-page-node-id="MgOi8vpTxXHSpHa6ABkqod" class="cp" type="button"><!--pnid:wEBhN2Y5y5Jh2GR3rVntrI-->复制</button></div>
+      <p data-page-node-id="Y2mJizBsspMbnq9jz6v8B7" class="tp"><!--pnid:UOJyRzFO2TX8BryioPCQ20-->把这次的差异四类归因判断和对账函栏位整理成一份「对账工作底稿模板.xlsx」：四类差异的判定线索（出现什么迹象归到哪一类）、时间差怎么识别与标注、对账函标准栏位（客户名称／期间／发票号／未税／税额／已收／未收／到期日／逾期天数）和双方签章栏。下次对账直接套用。只写这次真用过的口径。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="GUIpEQdxHwylTOddbxBNIC" class="cta">
+  <div data-page-node-id="jCvHGGOkFytgIpnCpVmt7d"><h3 data-page-node-id="0DbInlnQscowyeRtHkokkW"><!--pnid:ptMaxZwhoGsEwTk0iG3tUe-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="Xg4Bzza0bVs4tCT9mR9JlS"><!--pnid:xgVfKHNqncaZvoPNahnei2-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="EST8jXfllOjSmluJJp2YwT" class="btns"><a data-page-node-id="S5Mk8Nyeq8ZWzrusvsni4g" class="btn" href="#" id="ctaContact"><!--pnid:7N7evtdnsk7eqkhk86ORyu-->联系我们</a></div>
+</div>
+<footer data-page-node-id="fRTcdO9lRWIHfrb9asffU6"><!--pnid:7nbHRS50pun6p37gwMknm5-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="u3y2UQAxLgV75YaiT1ErcA" data-pnid-children="Pa09l3qUh2MZ5dp8WZCPKI">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="pSlFmrlOS8mZn1awITgntn" data-pnid-children="JJcvdUVBWY3wZwl1pUkvKX">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="UMfdcq88XPcXgkxOR2140F" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="VJwpDZ8A0F38wdm0i92r2c" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="JyKSbuAawGowIfDgnEqWvk" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="xQ8wDaii21Q3Lw3Z00jf0U" data-pnid-children="lOwNXenay7RqoOWg9yPFCB">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="uKihItxdhQOASTfQy9zRPf" data-pnid-children="BmQFY6mjOBsXcxsjv3hddB" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

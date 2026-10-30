@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="ZQKCB0u5wBcBice56fZ62z" lang="zh-CN">
+<head data-page-node-id="VpBShOx4sb87kBecPc3NGP">
+<script data-page-node-id="QDNr6OVw4JQS4zDLxjOgK4" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="jdnPR0QPqD9XxE5GvbQYyP" charset="UTF-8">
+<meta data-page-node-id="cjk1uIBKwjLUTr09Q7FGIF" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="45YNQuRRqDzJ7zft9x6u6G" data-pnid-children="7oh1KuPolEx1E0xVBwryKM">预算编制数据收集</title>
+<link data-page-node-id="68U0YWgFQOncXwoFFNJtNj" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="YVhPDlsgn1lcCWv8eebGAL" data-pnid-children="tzzKvgvfxAYnG17Ayv8mwc">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="b3x3KPVWZILcyAnd1aT4ys" data-pnid-children="mBTDuuZKp5cYxZTf8mT9eY" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="qlVBFYcFVMsJBTj46crKHT" data-pnid-children="IKYuK7xEipGsB79Lq6U4Ud" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="qVly3tbg0AtQBLnydYvvjE">
+
+<div data-page-node-id="mQh6gHI8gfBbpwpbQxD2Yb" class="wrap">
+<section data-page-node-id="aOHlhdJIqfQ8A9wscyOu64" class="page-hero">
+<h1 data-page-node-id="AbEOu6sLttBucIETumhi3M"><!--pnid:EFE3dGQjH1jndoNdZwoYXe-->预算编制数据收集</h1>
+<p data-page-node-id="6jlN9ukeVZCuACSpCpN6H8" class="lead"><!--pnid:yqw8TbXsAfN5F5ckUHWRzr-->预算到最后都是拍脑袋 · 因为各部门交来的表格式五花八门，根本对不齐</p>
+</section><nav data-page-node-id="If8384W04gXs9n1UdZN3zA" class="subnav"><a data-page-node-id="9vrw9Sm5EwCZVUK1beLLn7" href="场景引入.html"><!--pnid:HQwIXELFqU2osZXJPZILB6-->场景引入</a><a data-page-node-id="yBgcwwLL6ZzbMRGXmlJZUK" href="LiveDemo.html"><!--pnid:geLtBgVNXctXZHFQGdaktd-->Live Demo</a><a data-page-node-id="jfuFVeOETmcqtUxf5D6mDn" class="on" href="#"><!--pnid:9MYjwEbFCGgbD3GsVa37GH-->推荐任务</a></nav>
+
+<section data-page-node-id="gr15IurYa5aoskwcZkmmLH" class="blk">
+  <h2 data-page-node-id="tqVfMV6AtfigYB6WGtmvZB" class="h"><span data-page-node-id="MBEAAPtsaR9FqxHW5ulszR" class="num"><!--pnid:YaC6di4ZGyZ0yiXJdZQhSv-->一</span><!--pnid:jcddcfprRMEAgNvKhv53cJ-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="tGzgx6hKPCMcDxPkCvoqpH" class="subline"><!--pnid:VuwgBdl0O4rvpyppkmNi5p-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="ysuHXKiHsnsnt7A1sO7LYq" class="card"><p data-page-node-id="PW8vtd1MQqLuP47Uj9duMV"><!--pnid:mY7LRZgAI60q4kLtIPxgYI-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="B89FTUPLLPZq2zsy2jUwri" style="margin-top:10px"><!--pnid:yO4yH7LtyEVy0tJiCuSIQH-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:N90YBfkCwWH8RuB2sMfyjM--><!--wb-skill-start-->
+<div data-page-node-id="mfxGlcaUdcVyKSgPbY3MBU" class="wb-skill">
+<p data-page-node-id="HunsTIc61yQrFpbHmtuleH" class="wb-skill-lead"><!--pnid:itXMGHxuANGX43UrMZKLgb-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="qEun2Bp1sZs0UETEuJdAmo" class="prompt" id="wbSkillPrompt"><!--pnid:pdQgg8WB9aX9I3D5bPPq3I-->【准备】这个场景的规则都在「预算编制数据收集」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/lMyCI6aBhQ5MpU4BvV5Ddq/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="k1fujJ9m50NCyRykOizSFg" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:HuQ8Hlo7SYZXRkWrX6J5vX-->复制</button></div>
+</div>
+<!--pnid:mLEjc1rUUzTfC3wMl9yGfZ--><!--wb-skill-end-->
+<section data-page-node-id="bgOZnaSG5mwwgr36aTWzJZ" class="blk">
+  <h2 data-page-node-id="QvLEVNl5h6T6exmdrRtWTb" class="h"><span data-page-node-id="XbarQJ5hsVA2Tf4BDExziQ" class="num"><!--pnid:VdKSUv2fcYFER3sPJUgnAU-->二</span><!--pnid:hcnaRz5CnbrPNbBJKGLC6o-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="u9KZvARcTqtTDjoEtlRWDX" class="subline"><!--pnid:8pjcDfzEDnVdTN3xpQyTlk-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="SOIfDwlq1FqdnYXGKLnVMk" class="tlist">
+    <article data-page-node-id="e8XUEVxJa8hn7QYHZ8Xl2e" class="task">
+      <div data-page-node-id="E0ULVrzPpTNJKBaQSwfnFV" class="th"><span data-page-node-id="kDurq5fOYsFBTXNsPxSjnl" class="no"><!--pnid:1oG6hEwzO3YtFodF3oNuFL-->01</span><h3 data-page-node-id="MDQabRiGFxWZbKTKMLrzJr" class="ttl"><!--pnid:cjgI3ZTTGKv4N5pcHE86xI-->首推默认</h3><span data-page-node-id="aIKZWHI71jbmWR2fzeseXT" class="star"><!--pnid:pKKKwTCaHRvgZByx6hMyiy-->与一键体验入口一致</span><button data-page-node-id="njKd7xrAMxb2zmHTFFlno1" class="cp" type="button"><!--pnid:pgViA6WQdKT9DMrfD3lW2w-->复制</button></div>
+      <p data-page-node-id="t3Wi3H4cT2hcXagRyOh7pE" class="tp"><!--pnid:nj92PPy24vnhA3UV5u5eso-->明年预算要开始收了，先把各部门交上来的表理一理。技能内置三份材料：各部门预算申报表（销售／生产／采购／行政，格式五花八门）、历史预算与实际数据、业务动因数据（人数／面积／业务量）。走完整流程：各部门的表列名归一到同一套科目；同一科目下口径不一致的标出来；汇总后做差异检测；再拿申报数和业务动因交叉比对看合理性。
+产出三份：「预算汇总底稿.xlsx」，按科目汇总，行里写清是哪几个部门报的、口径说明；「口径差异清单.xlsx」，同一科目口径打架的逐项列出；「申报异常清单.xlsx」，与业务动因不符的申报项一条一行，写清差多少、按动因该是多少、找谁核。
+只做汇总和标差异，不要在底稿上替我拍任何一项预算数；缺动因支撑的标出来，别硬判成异常。</p>
+    </article>
+    <article data-page-node-id="4jJDIeNn34XsnGDbCV1W7M" class="task">
+      <div data-page-node-id="J4aIZ3SYiMNCbBBxfqSY5y" class="th"><span data-page-node-id="zjY1jNvVnHclulZ4SzZxri" class="no"><!--pnid:vZtuGd60XZmLGlUvGTJcyP-->02</span><h3 data-page-node-id="vcnrshLm6Ph3gEPI0td5ME" class="ttl"><!--pnid:HZZQWSy8ik3fE4w6BPgWDT-->只做口径对齐</h3><button data-page-node-id="MBoYSkufZAJB6nPvzdE2Zz" class="cp" type="button"><!--pnid:HGf8ATgc3utIzKTWtPY5Bm-->复制</button></div>
+      <p data-page-node-id="6Ax6PUIltPRQsPNNCnWzHV" class="tp"><!--pnid:ZSHTLKkxz5lraPxCtM1RTv-->先只做口径对齐这一步，其他先不动。读各部门预算申报表和历史预算与实际数据，把同一科目下的口径差异挑出来（比如制造费用一个含折旧一个不含），逐项列出两边各是怎么报的、差多少钱、按哪边统一。产出「口径差异清单.xlsx」：一项一行，列写科目、部门、申报口径、金额、差异、建议统一口径。别替我改各部门报的数，只在清单里标。</p>
+    </article>
+    <article data-page-node-id="CU3qZQmBn8b5G60fUzqucw" class="task">
+      <div data-page-node-id="mbDIKuZDx87uRkvFKerTGg" class="th"><span data-page-node-id="nFxEiNqkoYsmrlUdinzf6b" class="no"><!--pnid:TCiLYFEqvdViVQHCfoKiRX-->03</span><h3 data-page-node-id="sdufs3OZmIMaeJL9NfWhKT" class="ttl"><!--pnid:HrJft6cxPbTc5aA217oH2y-->统一含折旧口径重汇</h3><button data-page-node-id="cVeG0pLYxpoQRgp5S57VgH" class="cp" type="button"><!--pnid:e86tHteASOtPdVy2YmEdN9-->复制</button></div>
+      <p data-page-node-id="5JQXr30dm4PbYrTl68wWNG" class="tp"><!--pnid:EhzR2R7sXW7Xoq8SJUPMCD-->统一按「含折旧」的口径重新汇总一遍。材料用各部门预算申报表、历史预算与实际数据。产出 Excel 一栏对照：上一版汇总数和这一版各是多少、哪几个部门受影响最大、各差多少，末尾给汇总数差额合计。统一口径时缺折旧明细的部门标出来，写清缺什么才能补，不要用别的部门的折旧率套。</p>
+    </article>
+    <article data-page-node-id="DblZiBRNjehglDhFMFoNDa" class="task">
+      <div data-page-node-id="YsTDWluqhI8WgWfsyZjVgU" class="th"><span data-page-node-id="JpctLRiB3BRgSsK7DYp1SY" class="no"><!--pnid:DDgyvWgEUuYyEpjH5zf0Oj-->04</span><h3 data-page-node-id="rYNTe3NSLiH8OD3kQBvLgM" class="ttl"><!--pnid:LmULr8Q6Fw3f1h9GlqUjYq-->一次收六个部门</h3><button data-page-node-id="1XBk8oeCm87uVgX4YRytez" class="cp" type="button"><!--pnid:H87CdbCJ5NoVoZ37wUYSkW-->复制</button></div>
+      <p data-page-node-id="AQiK3oTMgZpwensVEQtRv6" class="tp"><!--pnid:KeqboNeNBQ0ZKuPbdJyBX0-->演示数据里再加两个部门的申报表和历史动因数据，六个部门一起收，科目归一口径保持一致。产出「预算汇总底稿.xlsx」，按科目分组；另加一张横向对照表，一行一个部门，列写申报科目数、申报合计金额、动因支撑是否齐全、口径不一致的科目数、异常申报项数。交表明显缺科目或缺动因的单独标出来，说明这次哪几项判不了。</p>
+    </article>
+    <article data-page-node-id="ShjFdLL0IG31Yw2Xx0bPD9" class="task">
+      <div data-page-node-id="pIuhR7amdbfP4ULGL0qQFg" class="th"><span data-page-node-id="KiSJPIhyuFrqVvZ1MfvjyJ" class="no"><!--pnid:rLKY7IUEVWaBJAZFikk3kz-->05</span><h3 data-page-node-id="0OIfNMdmWnJJC3zXYBMTad" class="ttl"><!--pnid:oZ7ZAY76kGttuKVHec40TP-->给上会用的版本</h3><button data-page-node-id="3SgtXwAKVGj393gju9b2pM" class="cp" type="button"><!--pnid:E4FDeZDbGcuZHNSDnu9kZP-->复制</button></div>
+      <p data-page-node-id="9m9MYxGJqewV3eO1X2hdEy" class="tp"><!--pnid:wMOTY5SkuiDBxCQAVJ9hwy-->把底稿压成上会能直接翻的版本，Markdown 一页以内：各部门申报合计多少、哪几处口径还没对齐（差多少）、哪几项申报缺动因支撑（差多少）、哪几项按动因明显偏低。各一条，不铺明细。每项后面注明出自「口径差异清单.xlsx」或「申报异常清单.xlsx」的哪一条。这一版不下预算结论，也不替我定哪个部门的数该批。</p>
+    </article>
+    <article data-page-node-id="rBegRUWuJuaebodimSg4z8" class="task">
+      <div data-page-node-id="K7ev0FuaoQEa4NrDSpw10N" class="th"><span data-page-node-id="TPSbk5FWstrJNmnszscbpp" class="no"><!--pnid:WsszynKE344ykEepX9NVMB-->06</span><h3 data-page-node-id="EcWDeA3nuC46z2pJ0BgOMZ" class="ttl"><!--pnid:MfCxJsfGiMnsFG0fahQiy2-->让它反驳自己</h3><button data-page-node-id="WsUs4l3lvzbCXg6YZgdJfb" class="cp" type="button"><!--pnid:fhaLGtaQGCSf6C11eGlpnL-->复制</button></div>
+      <p data-page-node-id="v6Z3cp3tznQEp9DU0Wq4rF" class="tp"><!--pnid:dMvhELDyNSqs55XNcOyDDY-->你说行政部办公费涨 40% 是合理的、依据是明年扩编 20 人——这个依据够吗？逐条回查业务动因数据里的人数、面积和历史上的人均办公费水平。产出 Markdown 一份《判断复核》：解释不通的申报项标出来，说明是缺动因材料还是真报高了；「有动因但幅度对不上」的单独归一类。别为了少让部门返工就把依据不足的放过。</p>
+    </article>
+    <article data-page-node-id="DMCFwOPkg0gzioyE3baC6l" class="task">
+      <div data-page-node-id="l3A0wWe3KOwwR0zhwBlaXB" class="th"><span data-page-node-id="V389nYRLb3LeJATEcRl3FU" class="no"><!--pnid:z8tbmwcE8aAN2HiNYNxXJW-->07</span><h3 data-page-node-id="jPcOCmiaZkJxMZWgU3D7Wu" class="ttl"><!--pnid:J1BCNY2v9sN6fGQAOmLEcm-->比对去年差旅费那笔</h3><button data-page-node-id="Ts0YIXeUOCKjmsdGWzpEWn" class="cp" type="button"><!--pnid:VfZN8zfdtioFY61LeYfaLr-->复制</button></div>
+      <p data-page-node-id="UoxnrqVtgFX1hSOIix6DOR" class="tp"><!--pnid:E7ChgzYq1ou3uiVQdq3LgM-->去年销售部差旅费按人均 2 万申报、实际花了人均 3.6 万、年中三次调预算——跟今年各部门的申报数逐项比。材料用各部门预算申报表、历史预算与实际数据、业务动因数据。产出 Excel 一张对照表，一行一个部门的主要科目：今年申报数、历史人均或历史实际数、按历史水平该报多少、差额、是不是又报低了。报低的写清差额，并注明历史数据取自哪一年的实际数。</p>
+    </article>
+    <article data-page-node-id="mI67C0sfMShJOeassIzK1Q" class="task">
+      <div data-page-node-id="i8mKdkYm4vatfVKhInnlVR" class="th"><span data-page-node-id="QRvhPu2ERNVUTX92Kax9Lp" class="no"><!--pnid:EmxqclidGjrcXf14k9Zcaf-->08</span><h3 data-page-node-id="O1Q7xkNd8A2B8J86iRgY77" class="ttl"><!--pnid:VYRQVq1r8BYaqTfZbEP5cy-->按科目口径自查</h3><button data-page-node-id="cimk11NioXVgT1lYKcWAzK" class="cp" type="button"><!--pnid:UIaL3iKkV1p8a29LusTGep-->复制</button></div>
+      <p data-page-node-id="CSZNt4UUWNQBnUMLRIwaTX" class="tp"><!--pnid:cvQXKNfwoMuMfKZzOuJX0m-->拿各部门预算申报表和历史预算与实际数据，按「同一科目口径必须一致」自查「预算汇总底稿.xlsx」。产出 Markdown 一份自查表：还有哪些科目两边口径不同却没标出来；哪些部门交的表缺了科目；哪些申报项换算口径不明（含税／不含税、含折旧／不含折旧）；汇总数能不能对回各部门的申报数。另外确认底稿上没有我填的预算数——拍板那一栏保持空白。列出来别动手改。</p>
+    </article>
+    <article data-page-node-id="KgZnJtsKWSXhD5duLNhMjf" class="task">
+      <div data-page-node-id="iTRqmhtsdFI8vHztpJB5Ff" class="th"><span data-page-node-id="rJchACrHPrG4w0sLHsPRoO" class="no"><!--pnid:Hh3JSOVsjsuSUYYc4oTrmz-->09</span><h3 data-page-node-id="jTVXEd6R7AKz83SOHenVtS" class="ttl"><!--pnid:wRVArbOTN3olYHrZPLSbkG-->折算成基数偏差</h3><button data-page-node-id="G4S3caZyKscpjw5nMhJbWp" class="cp" type="button"><!--pnid:vwBkk3cxQH671S0W6lDlvP-->复制</button></div>
+      <p data-page-node-id="9O20xcCzscOthm9vpSldRn" class="tp"><!--pnid:TCGEKdGLIdo2WmwEQIf53E-->读「口径差异清单.xlsx」和「预算汇总底稿.xlsx」。口径不一致的那几处差多少钱？如果不先对齐就上会，按错的基数往下算，全年预算会偏多少？产出 Excel 一张测算表，一行一处：申报差额、对齐后的数、按哪种口径继续往下算会偏多少、影响哪几个科目。算式与假设写清，给区间不给单一数字。这是把偏差摆出来，不是替我定统一口径。</p>
+    </article>
+    <article data-page-node-id="SwaANXBZlaxUc01hhJ1nLm" class="task">
+      <div data-page-node-id="V7aZRg4fChlbbVdBcUn8zD" class="th"><span data-page-node-id="P4zAxDYFdS1lkMoMIojHBu" class="no"><!--pnid:fzEgdUsDLQMlhJQCQubkAc-->10</span><h3 data-page-node-id="Mon3JyF9kULLmQz5n2Kd7f" class="ttl"><!--pnid:yxxSDih77ez91qlF5q670X-->沉淀成申报模板</h3><button data-page-node-id="ydpMhF7jmkJgMNa7KGtL7k" class="cp" type="button"><!--pnid:FJsCnE2jWhlb7QI1jwF1eb-->复制</button></div>
+      <p data-page-node-id="JHlPZY5tlLpc517P6LJ2QD" class="tp"><!--pnid:Z4e0PusALsAo7qrMIt5jnc-->把各部门申报表的列名归一规则和口径对照整理成一份「标准申报模板.xlsx」加一页口径说明：写清必备科目、每个科目含什么（比如制造费用必须标明含不含折旧）、要不要附动因（人数／面积／业务量怎么填）、金额口径（含税／不含税）。明年发给各部门照填。只写这次真用到的归一口径。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="M5Ry1BsuRg3NVxzhXsOhKu" class="cta">
+  <div data-page-node-id="UL1Zb9PDwOBLslZs4XAfM1"><h3 data-page-node-id="2BWGFfGpUD7tW8o97Ymka5"><!--pnid:jILNNnf68wi4RIcUz0f34Y-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="pO3djRaJJvP5xBquF1fORT"><!--pnid:SsM7KwQCVVjcM1ho0qt1qt-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="2LjGGODP8v5hW8yp6rVUJY" class="btns"><a data-page-node-id="ZgaM5ww02bA8JnqTJH9ilk" class="btn" href="#" id="ctaContact"><!--pnid:anCuSy0bglcxWWTHwd3aYL-->联系我们</a></div>
+</div>
+<footer data-page-node-id="CxQeOcFu92uzFR1YhefQdQ"><!--pnid:Fm1s1sPPX1KBkEalDad2Jc-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="A9nvRqhv0EqDp7Xoz5cDpY" data-pnid-children="bkAN9HmWXZ9vlBuGMovB60">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="sTk4Wyk6wkJAqejJmgXRC6" data-pnid-children="xbOjjCpVpzHNiJM1dI0vAo">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="kPviZAhQjXRrvZB6KSnaIO" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="mpZoN2WVeGx7YIXvgDQpGF" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="YVB02aGKdfUtBXF95E86tK" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="v6OyYj4lxwprgnvgulH99f" data-pnid-children="dK6YgUDNHbeaUIdExRfBKr">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="YMu64tDgm5C702rSa0wpfw" data-pnid-children="F3NLYtQPy2Rpk7V074mZZA" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

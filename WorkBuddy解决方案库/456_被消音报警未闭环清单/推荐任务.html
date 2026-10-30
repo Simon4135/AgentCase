@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="gWwDWoKLH30fDSdwf4836a" lang="zh-CN">
+<head data-page-node-id="QMix7L0kLcaOBt9VJSpHUP">
+<script data-page-node-id="qR5JVArnZODwkCg8Q8YICc" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="x0NlzFiNEkfPEA6MCjbIxX" charset="UTF-8">
+<meta data-page-node-id="qticbqS5szA9EYNLCAfQ3f" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="geBxjPH4pvB0Nz3pFP4spV" data-pnid-children="aMWKhfC3ptrPMT9k0XMY74">被消音报警未闭环清单</title>
+<link data-page-node-id="ZYJXVT6T0moI9HCUsAfjAr" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="rOCCO85ow0srq1xgFWN71S" data-pnid-children="cKUb48jh6C7mp2qOzwUHOp">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="bm4QVCDzqqmkdwjmHHywnI" data-pnid-children="2FmfBTbzjtjXSFLgKD1YZg" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="exomOPs08IAJ1J0TTu0Bn1" data-pnid-children="kkQ7csf8LySRLjmACgJwaI" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="PHmQNSIcsQ3Em5MYKVXf32">
+
+<div data-page-node-id="FzMLnWHkhInKI3ad9Pze1i" class="wrap">
+<section data-page-node-id="k6GOwRKQ2MhKbKuvRRAy2i" class="page-hero">
+<h1 data-page-node-id="t4qsW4cyfUaul2gvH4VPXH"><!--pnid:tkCALbv6xZW2oIz8TZV0fD-->被消音报警未闭环清单</h1>
+<p data-page-node-id="H9tH9rcB5ts5v0e5vMd4dc" class="lead"><!--pnid:f08mqiyZNQ9dBWGd7U2Ohr-->每一条报警都被规范地确认了 · 二十一天里没有任何一条留下过原因分析</p>
+</section><nav data-page-node-id="jEZbD6u1li8BFflX7TSNNB" class="subnav"><a data-page-node-id="20Ugx9Zf7y8oKm0zETi6VL" href="场景引入.html"><!--pnid:bdvzldpAx9Zm7A3zNAcryI-->场景引入</a><a data-page-node-id="lCK5MqXDg4zYtq87II2WjX" href="LiveDemo.html"><!--pnid:uNRFZTudNppKbhDmWg7XTC-->Live Demo</a><a data-page-node-id="c2ouf7gJFWAsAdi7GOUOfj" class="on" href="#"><!--pnid:9vxNbfiykwdUiiE4IymCR3-->推荐任务</a></nav>
+
+<section data-page-node-id="zjQoxr8FNskrM1taT1YBHQ" class="blk">
+  <h2 data-page-node-id="Qokc0LwNf9SxpjACZZbBrC" class="h"><span data-page-node-id="K3FETThh83YplXNRlhYy1g" class="num"><!--pnid:6PDRcjBxthsvp8v0AqV1lr-->一</span><!--pnid:Ge27RA9PrD5tWs0L0f4DGp-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="4SDZyBkZ4eg8o6y0xZajQD" class="subline"><!--pnid:hXozKXEAsaadntWu04kddf-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="bhg8ROOFXcQmQeoX3nzu81" class="card"><p data-page-node-id="IoVa9fO122hogLU3Sht0td"><!--pnid:2AyzcQpkpssmWvOKfe4KVf-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="KZ2jrNKYzmCIpYshxvoKy2" style="margin-top:10px"><!--pnid:suPVEvbzOvbXOWAJl6gpH1-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:9piOnY7PxmvWXvoKWAPij0--><!--wb-skill-start-->
+<div data-page-node-id="34n3vR4TvS9bO8UnyitCTc" class="wb-skill">
+<p data-page-node-id="nVkP3XiFUYtpaaDf43gKSv" class="wb-skill-lead"><!--pnid:zYzffXWfa52NnPYJfxiFIE-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="sF3kfNdtcz0K3oEfaRShGg" class="prompt" id="wbSkillPrompt"><!--pnid:HQXpUqQRg8Azu3x1mzFKiC-->【准备】这个场景的规则都在「被消音报警未闭环清单」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/TaGPIyTz2StvX4qBdMMjpq/a3VQ9r80WSpx/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="UaOwfIe0R4S8rkgtZsfM6a" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:4X03hNuBQDDkWrwZVEQH3N-->复制</button></div>
+</div>
+<!--pnid:ZuWsvToe8PaqlKYccSBAOC--><!--wb-skill-end-->
+<section data-page-node-id="hiJbLVn7uC38Jt2AYHapEZ" class="blk">
+  <h2 data-page-node-id="jZHQMYUeAZr3h8gwUGOABP" class="h"><span data-page-node-id="tnj95pIjiRrxb2j1UClpCz" class="num"><!--pnid:rhkY5ldww3BusIpdELHZm0-->二</span><!--pnid:2QYC6RmM1uPMzAuQ5Cy69l-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="LmDPK6me6d7FdjtYiQKWyq" class="subline"><!--pnid:bqN4YxuJYgUMMdOQED1D9j-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="rsQm8zaBJ4BtdMeLEdticj" class="tlist">
+    <article data-page-node-id="wdUyDazPyHWMfCfTqauU0u" class="task">
+      <div data-page-node-id="rUgWYedSPAo8RN1CIQ5ftC" class="th"><span data-page-node-id="wrgbsc42oTJAYMwGJznwyb" class="no"><!--pnid:rPKgdeT7938bpbkfI7mZGS-->01</span><h3 data-page-node-id="LxUH3ZYQCsIeD2G2JYYzVF" class="ttl"><!--pnid:MMWnbn2DIg5GpELIPb0hfx-->首推默认</h3><button data-page-node-id="hDm0y0UMx9qF3rd5eeEgCF" class="cp" type="button"><!--pnid:jkEBlMwWtayZeI3g8EaoXY-->复制</button></div>
+      <p data-page-node-id="oV4zVcIgSoRFUTrYx6fqAa" class="tp"><!--pnid:MoR0swqReVEIzrihCxd8wi-->帮我把近一个月响过、被人消掉，但没留下原因分析和处置记录的报警梳理成工艺副经理要签的那份统计记录。演示数据里有：01_DCS报警确认记录_近30天.xlsx、02_交接班记录本_近30天扫描.xlsx、03_DCS报警与联锁设定值清单.xlsx、04_检测报警器台账与现场读数.xlsx、05_隐患台账_报警器相关条目.xlsx。
+同一个位号跨班组跨天的要串起来看，我想知道有没有哪个位号四个班都碰到过。报警值本身设得对不对，也跟工艺卡片限值对一下。读数长期不动的检测器挑出来，跟隐患台账里过去登记过的同类条目对一下。对照重大隐患判定标准判一下哪几条踩线。
+产出三份 Excel：报警统计记录审核表.xlsx 是正式件本体，按制度要求的栏位来，审核意见和整改措施两栏留空等工艺副经理写；未闭环报警清单.xlsx 按位号聚合，缺哪一步写哪一步，带跨班组分布；检测器疑似失效清单.xlsx 逐台写恒定天数和判定依据，结论栏留空等现场校验完再填。</p>
+    </article>
+    <article data-page-node-id="T3bPh49L7YKA9DH8e2r2Dp" class="task">
+      <div data-page-node-id="eeZLwDSTTy72ZIKRpBg5eh" class="th"><span data-page-node-id="VE8D7DvgVJ583Y9wDsU53f" class="no"><!--pnid:i4XXsTvPYllnVI8hOPrnJ8-->02</span><h3 data-page-node-id="QnNzw88ln3eybPVrz4pTEM" class="ttl"><!--pnid:Canm1LpTzCPlLuQxiyhjuK-->只查闭环三要素</h3><button data-page-node-id="KEWbfG4jwuWvHxd7jWDke9" class="cp" type="button"><!--pnid:cIOxdhASctZgdcbuEdxkyo-->复制</button></div>
+      <p data-page-node-id="5ECo7TZTIAkoGDjbEw3CPP" class="tp"><!--pnid:R0mdWew7fxGg9rkrWKq4Pf-->先只做闭环核对这一步，不用出审核表。读 01_DCS报警确认记录_近30天.xlsx 和 02_交接班记录本_近30天扫描.xlsx，把需要逐条追闭环的那 38 条按位号过一遍：谁消的音、有没有原因分析、有没有交接给下一班。产出 Excel 一张未闭环清单，缺哪步写哪步，带跨班组分布。</p>
+    </article>
+    <article data-page-node-id="3NIXDlwihBzJiYMeCsxbkr" class="task">
+      <div data-page-node-id="Tpp0PSJpjXCypYEm2XIHRC" class="th"><span data-page-node-id="bjRv0P3noqYA8zVu80lFDv" class="no"><!--pnid:2i9QY19MHAN9GqCgFYB80v-->03</span><h3 data-page-node-id="c3CKd6ZVIOOBoXgQv46LZn" class="ttl"><!--pnid:FCsqiLp65b4u3gPwmj9lrc-->换时限口径再跑</h3><button data-page-node-id="khWT79Nm3rFiCrtYjGTbE3" class="cp" type="button"><!--pnid:N1BrDzsSPUWhqzFWZ7dMAO-->复制</button></div>
+      <p data-page-node-id="NeXAw1lvEMsWtTXpS8UcGS" class="tp"><!--pnid:Y57c4ip2j5skcmubEDvaE5-->这次把口径改成只追「消音后 4 小时内没有任何原因分析」的报警，不用现在的全量口径，同一批材料再跑一遍。产出 Excel 一张清单：命中哪些条、比全量口径少几条、每条的消音时间与时间差，附 DCS 出处。</p>
+    </article>
+    <article data-page-node-id="pl6egiWoNmvb725XG9g86d" class="task">
+      <div data-page-node-id="dyNRn43iurETzzEBZ8oZ73" class="th"><span data-page-node-id="issh6nBd9AiAFo2NRpCTHh" class="no"><!--pnid:A2v4vHQHMgmDNZacNiWXWq-->04</span><h3 data-page-node-id="UARMJpddy6saDUnm4eEjYs" class="ttl"><!--pnid:sgFRfrR9vYFFaN2jItcfbQ-->三个位号一起过</h3><button data-page-node-id="DOgBiun4xt5gwYPhmEYgdd" class="cp" type="button"><!--pnid:sfMxVWhuPFaL6oMU13X4uS-->复制</button></div>
+      <p data-page-node-id="rws5RktxKOjApJD2ZjZ4ul" class="tp"><!--pnid:KES2fwvrVmIAEQ6HxMd7od-->把报警最多的三个位号（TI-2021 14 次、TDI-2028 9 次、PI-2015 6 次）各出一份闭环报表，材料用 01_DCS报警确认记录与 02_交接班记录本。产出 Excel 一张三行横向对照表：报警次数、跨几个班组、缺原因分析几条、峰值区间、涉及哪个批次，按缺闭环条数排序，明细各自成表。</p>
+    </article>
+    <article data-page-node-id="GGIJEB7u9aDDImCxaCeSQO" class="task">
+      <div data-page-node-id="NNchvcDTSuRuYIN6nu7SJg" class="th"><span data-page-node-id="EiQeJZLENciOE3dd7uR9xr" class="no"><!--pnid:FgodhXPMuFzLq5L5XpKHBr-->05</span><h3 data-page-node-id="FPpYBfcOYzCyvD0S9jv2Gj" class="ttl"><!--pnid:z5rlOnhFMnJT4amHFuWNh1-->给安环部看的一页</h3><button data-page-node-id="hbUUUwoK638Pg9ZAg0kPVf" class="cp" type="button"><!--pnid:TZKTy4oK8j8Dhj2d2COYUn-->复制</button></div>
+      <p data-page-node-id="WENFYZiX8HLIVWa2g1Nz2r" class="tp"><!--pnid:mayDGBHCmFcExBeY272R7P-->把结果压成安全检查前给安环部的一页：哪几个位号反复响、哪几条踩到第十二条(3)、各自还缺哪一步、下一步建议谁在什么时限内做什么。产出 Markdown 一页纸，逐条明细和台账底稿不用给。</p>
+    </article>
+    <article data-page-node-id="ZtKHPRNLLpJzBtZuI3YwFn" class="task">
+      <div data-page-node-id="hhExN8Y3XmCiN5VVdT4nyK" class="th"><span data-page-node-id="nL6iXvUJxNXCLeuVa1lC2R" class="no"><!--pnid:d8dI98nah7DiYbYINNu9fl-->06</span><h3 data-page-node-id="K7LV9RSt9d20HhEmcclGwN" class="ttl"><!--pnid:oQ6oZUwAY3EHHMpmPCazmO-->让它反驳自己</h3><button data-page-node-id="4hciL5SqfytWz4g0BItqW7" class="cp" type="button"><!--pnid:YCOyDf4s1PbcQ2sMJizhB1-->复制</button></div>
+      <p data-page-node-id="rpNWJtmVe5LMYRtBCezn08" class="tp"><!--pnid:310wymPgH7a5B6YVQGcoXr-->「报警值设置不合理导致虚报」这个解释你排除了，依据够不够？把 01_DCS报警确认记录_近30天.xlsx 里 14 次的设定值和实际峰值逐条摆出来复核，读数落在哪一档、有没有虚报。产出 Excel 一张复核表：报警时间、设定值、实际峰值、是否真实越限、结论与出处，站不住就改回「待核」。</p>
+    </article>
+    <article data-page-node-id="f44R6ccGFUflolXqVYWS3f" class="task">
+      <div data-page-node-id="AgLgNQfR7BAPsFpPTgyb0J" class="th"><span data-page-node-id="hyji0F5oJaLKPctosjwQA2" class="no"><!--pnid:4xP0APxH3EV6MJfcZifvTr-->07</span><h3 data-page-node-id="ypJjR77bNospjfzbz4Nkkh" class="ttl"><!--pnid:fCXnrNAzJpUwmpF0OI8zId-->比对巨化的处置路径</h3><button data-page-node-id="jW7987n9md7YyQ8oaVUHQ4" class="cp" type="button"><!--pnid:xlPFO24NpiJAmi9I1qGBok-->复制</button></div>
+      <p data-page-node-id="IIPqZ1iyptarjz8mApCv6Y" class="tp"><!--pnid:i96TGIdgdS4Jd8nyIJQESo-->拿 TI-2021 这 14 次，跟巨化那起消音后没做原因分析、二十一天四个班组巡检都没发现的路径逐步对。产出 Excel 一张五步比对表（消音、原因分析、现场处置、写进记录、交接班）：两个案子各步做到没有、差异在哪，出处标到时间戳。</p>
+    </article>
+    <article data-page-node-id="69qVdctOrRgEIMa7nvWaYg" class="task">
+      <div data-page-node-id="7eRN8EkqPGbGaJo6mgF3D0" class="th"><span data-page-node-id="stY9ba5KjlDyefMTP1PDy3" class="no"><!--pnid:1G57mVcoQTQ1HacFkmqqAS-->08</span><h3 data-page-node-id="DrAvMY7WG3jOssycE9O1nn" class="ttl"><!--pnid:gaPdAcVXFgL5M5dUoNnnT9-->对照第十二条自查</h3><button data-page-node-id="86LNHYgAkThcpDNNSaG8S0" class="cp" type="button"><!--pnid:FmzcOHtQ0ikTToTdW5yGxr-->复制</button></div>
+      <p data-page-node-id="gwJAaKTcUIxsfCQhzvdnBl" class="tp"><!--pnid:IirqdrMjfNPSAaSaWahQKx-->对照《报警统计记录》审核表该有的栏位和重大隐患判定标准第十二条(3) 的口径，把这次的输出自查一遍：该有的栏位缺哪个、哪几条只有现象没有结论、哪条属缺证据不能判。产出 Excel 一张自查表，逐条列条文号与出处。</p>
+    </article>
+    <article data-page-node-id="25HTyD4thiLddXRewz9ir8" class="task">
+      <div data-page-node-id="WNuArvknBp3p9TG0ANj9jU" class="th"><span data-page-node-id="DiXVxgdVydc0fD68zeBPZm" class="no"><!--pnid:9MHoncue6G5b8Dw3mRCRiJ-->09</span><h3 data-page-node-id="aP64jAKZqmWaXVwWnPNsDS" class="ttl"><!--pnid:1doDp5OqT8cG6EP9mzN6jB-->折成批次影响</h3><button data-page-node-id="IIeszpHkMG2rvYugpH4trW" class="cp" type="button"><!--pnid:ED3liCGij4drPPrk5BArdI-->复制</button></div>
+      <p data-page-node-id="4wgOoqd0WtoSzHY8XU8u7l" class="tp"><!--pnid:8kA3ZLUsjv2cv2u1vSGcAh-->读 01_DCS报警确认记录_近30天.xlsx：把落在 B26-0817 反应时段的那次报警（08-18 03:14、超限 47 分钟、峰值 142.2℃）折算成影响——这批 24.6 吨的处置分布、退货与降级的量、以及追溯时温度这条线索当时拿不到意味着什么。产出 Excel 一张影响表，写清算法与区间。</p>
+    </article>
+    <article data-page-node-id="G0o163TwkOa9lG0hiGKHbT" class="task">
+      <div data-page-node-id="X3RB8CMmrtgMA9YxbrFPeQ" class="th"><span data-page-node-id="ePWMmDChVkc6p0YSZ1UuzC" class="no"><!--pnid:9qIB4O7ApyO2HOh0IYnTEz-->10</span><h3 data-page-node-id="udSKodpYFaFusGsoYIFUdE" class="ttl"><!--pnid:6FIliFNCJRsRFnRO146Hib-->沉淀成月审清单</h3><button data-page-node-id="wvqQRpRn8M3YRm6c1m9XCI" class="cp" type="button"><!--pnid:I7EMo6pL06mQo7TpoJHsLw-->复制</button></div>
+      <p data-page-node-id="rQbw0cKj2TOOWMfo6rC0hB" class="tp"><!--pnid:amAMwsiF8ZhcIIkKLR55yU-->把这次用的闭环三要素判定、驻留与坏演员的区分、对照第十二条(3) 的口径，整理成一张月度报警审核清单。产出 Markdown 一份：每月核哪几项、每项看哪份导出、怎么判、判出来怎么处置，工艺副经理每月照这张跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="asjR4ATvuSSjZfUa6aKPIa" class="cta">
+  <div data-page-node-id="yYA6aQUaki1xCBY6ZkmTpg"><h3 data-page-node-id="sJQpFZpwQstGLBriSegW5A"><!--pnid:iUcMyKDYc2o2eVYa1ITDGE-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="1TNW9K9cOUm87KvCqGvGPs"><!--pnid:PKyZC2it2yZhF5SV2ktYoR-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="SBNx7ON2I1fLurOajeGgMg" class="btns"><a data-page-node-id="QznRR125hOXBsRSIkRZJwx" class="btn" href="#" id="ctaContact"><!--pnid:HhSUBGYVEYQFxeM8YXV5Tj-->联系我们</a></div>
+</div>
+<footer data-page-node-id="hAK6668BTWMu2Y2AeaKehr"><!--pnid:UDomHrFQU2FdYmkypVi1Sc-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="CqnV03eX38pSYlUECqagSs" data-pnid-children="nXSvDgyHfL4qHPEIRkNTEd">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="kLfTJQLv5n2wytswtoSFKZ" data-pnid-children="FdCndWucJDoTclC6hredqm">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="RFm8jWcPJdRpUM0h1s4oPV" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="7zM8lS2ui5LGrY5XgD0Bm5" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="KHdqYuMosPGr6ppgODuYe6" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="DPxE1cH16f4zfr7QU39JMF" data-pnid-children="wkGKk5dDB1JAVrpEc7Guek">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="l3MPyaVJiHwfU5L2RHmVoT" data-pnid-children="ERBgVx6IN3EJwztO6VRt7x" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

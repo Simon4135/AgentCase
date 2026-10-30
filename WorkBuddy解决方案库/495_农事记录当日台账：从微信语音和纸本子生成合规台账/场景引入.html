@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="RcJivIsIdDwVLEAjf5AExm" lang="zh-CN">
+<head data-page-node-id="2UhnciKJHUWEMFpQUYO0cQ">
+<script data-page-node-id="BCWaEPamCqBKuGPzpTEgjP" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="W8W03j7kOA4w2qFw2Nknxl" charset="UTF-8">
+<meta data-page-node-id="BZgiAmy2oa6RZ5KouYAjyZ" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="aTVpy3wyv92vmdIri91rPv" data-pnid-children="7ZbNkzDf6naqFGWsWVcGWG">农事记录当日台账：从微信语音和纸本子生成合规台账</title>
+<link data-page-node-id="Bv8xrnH8mP6XZPBy1y3EYS" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Kpq5mVuYELw8Gm9qY0Qmep" data-pnid-children="5nc34ttYeGER7uryWYDicY" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="XHtgf8DClzzml7kKljC9g5">
+
+<div data-page-node-id="ahbSBpFamxcKJo9wURbe8C" class="wrap">
+<section data-page-node-id="Wwavl6RpEscpvOMntEvD5o" class="page-hero">
+
+
+<h1 data-page-node-id="2RsZqMeHSOnlgv4uUtVJEY"><!--pnid:5hxwecPxcwHJ2ELDzHzIr7-->农事记录当日台账：从微信语音和纸本子生成合规台账</h1>
+<p data-page-node-id="fdsfB64p7BYWpOwKU9Lz2V" class="lead"><!--pnid:E0XKCTN01EqUCEQAefvg5b-->本子上每个字都写了 · 换个人看根本不知道是哪块地、打了什么药</p>
+</section><nav data-page-node-id="TZeXoQUTLN456K0tzkabof" class="subnav"><a data-page-node-id="ACE9OOr0hYmj46WDaxwpA6" class="on" href="#"><!--pnid:HgYMwEdME9A6QfMlQHBQeY-->场景引入</a><a data-page-node-id="tFvFAJ6fMr7rTjLQBvXLW2" class href="LiveDemo.html"><!--pnid:UwQyKLdTpk179psYahzSLr-->Live Demo</a></nav>
+<section data-page-node-id="gk1a7q2OJOmVlSVDGAI9nT" class="blk">
+  <h2 data-page-node-id="3HGZD4zqiSBoYkWBVfYfkn" class="h"><span data-page-node-id="h87C20uWjY0wNKD7PyDnOc" class="num"><!--pnid:z73fFdw26XobZHQb9C63vf-->一</span><!--pnid:2GoS2KCgpo218KwMW5mEm0-->这件事现在是什么样</h2>
+  <p data-page-node-id="BVFTd6QK0jxywUnEOYxdIc" class="subline"><!--pnid:pQWqyX4rO6jtMc86JrwVli-->生产农事 · 真实业务触发</p>
+  <div data-page-node-id="4S2oQbfIcMOmGeEncPbEqZ" class="card"><p data-page-node-id="IcwSD4LduBprT0IXELFKKE"><!--pnid:axrHfqQK5iOvoNA0uUsdjR-->每天收工后，技术员要把当天的农事记进台账，还要经得起「这批菜用了什么药、安全间隔期到了没」这一查。</p></div>
+  <h2 data-page-node-id="dM99AOkCcR6mVVFwNua76D" class="h" style="margin-top:22px"><span data-page-node-id="uq1qC3C86wtv2EaGTFjzBe" class="num"><!--pnid:aO5Y1ZcVaOsAHWtercGdEA-->二</span><!--pnid:bx4UhihauU9HfaqeUdkkFz-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="KyNQc8tqLECOpCNz9DFgSO" class="subline"><!--pnid:4RbMHr2TYZMyP8CoBRmiqu-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="5nhptp7poAp5YqMZLsu4g5" class="pains"><div data-page-node-id="78bnCsUCIz2kVuFboFeX72" class="pain"><span data-page-node-id="cqCohH5BT6NoIOfDci7vkK" class="i"><!--pnid:r9TDBUHEN6iVRzl7Qo4vxq-->1</span><div data-page-node-id="JIxCXgwxQTFVbMOnheudLQ" class="t"><!--pnid:PpV23TUJbbCNwfWyQ9ZdUD-->农事记录靠本子记、靠脑子记，漏记错记，年底算投入产出算不清<span data-page-node-id="oPXUZIiosnktCkbBn1qKgX" class="src"><!--pnid:nQj62SW5SA0ZLFGPNsheJz-->依据 · <a data-page-node-id="AKMEr71DvWJhutyIelFFlP" href="https://new.qq.com/rain/a/20260709A03D6H00?refer=cp_1009" rel="noopener" target="_blank"><!--pnid:Bgd4SgovIJSvVX71oEnHJi-->会泽烤烟告别纸质台账：传统农事记录更新滞后、数据零散、错漏率高、溯源不畅</a></span></div></div><div data-page-node-id="yCWedgiikFfawge2eoTwH7" class="pain"><span data-page-node-id="ekquawyXUvAlVOlGD0j6Dg" class="i"><!--pnid:Z7TWN84h8G7dbout6CQQUn-->2</span><div data-page-node-id="ArViIJR8OHQFPZMYRn5PHZ" class="t"><!--pnid:svLW0umH09R0bf6tiZEs7G-->微信语音和照片散在群里，和本子对不上，同一块地两套记录<span data-page-node-id="ZMymUTqNsc8BI13nps5QUk" class="src"><!--pnid:XlvznCcZC5lAczgigCRdmu-->依据 · <a data-page-node-id="S4F99dJTwBSvkeQI0TOrD6" href="https://news.sohu.com/a/1068868433_121681251" rel="noopener" target="_blank"><!--pnid:9mVhdrsGbkOeorNP8caVuy-->农业台账「三宗罪」：记录散、更新慢、利用难，地块建档是数字化地基</a></span></div></div><div data-page-node-id="R7drHvcC7sECerZOOqboHN" class="pain"><span data-page-node-id="limmVV53AlaF3dI0aBlJ7b" class="i"><!--pnid:0m9gUXzXMBZiPy46Pza51c-->3</span><div data-page-node-id="1CmGZsrEvKZpYNzKche3M2" class="t"><!--pnid:l6ijbbWm0s288myq2Jld88-->法律要求生产记录载明投入品、防治、收获三件事，保存二年，现实中根本没按这个记<span data-page-node-id="y6D4pRdM5FHHUvBEwoVb23" class="src"><!--pnid:AJ0dYJ168lTsis5l7qvURt-->依据 · <a data-page-node-id="LHqHYUHyW2znaLPd2zQuca" href="https://www.gov.cn/zhengce/2022-09/03/content_5708043.htm" rel="noopener" target="_blank"><!--pnid:TMZEoDnDTzeRgkrRqDn6kS-->《农产品质量安全法》第二十七条：生产记录载明投入品、防治、收获三事项，保存二年</a></span></div></div><div data-page-node-id="ryFF15Biexn2F0lN8NYVql" class="pain"><span data-page-node-id="NDUehPc7WGE0UY8MsxpdXR" class="i"><!--pnid:zkiBGEVz11DXemIZAiX0hC-->4</span><div data-page-node-id="LMkkpWVxbwkfOjgz2CEwuJ" class="t"><!--pnid:0S0OJ34mS5tlto3xpg9wrT-->农资打假每年查处数千件，投入品台账是追溯起点，不建台账就是给假劣农资留口子<span data-page-node-id="FBnxdfqOzSFP7kwskEaa8o" class="src"><!--pnid:TKr6DyF9WVf2KzH7YZNzGO-->依据 · <a data-page-node-id="6INFHTRe7bJ3fKdmJxfx8u" href="https://jgs.moa.gov.cn/nzdj/201904/t20190418_6186175.htm" rel="noopener" target="_blank"><!--pnid:jqZ4O2bMV1xjNZKfQq0O9s-->农业农村部2018年农资打假十大典型案件：查处假劣农资3878件，挽回经济损失1.25亿元</a></span></div></div><div data-page-node-id="2vyULBqNjscqtQLpkuhh4o" class="pain"><span data-page-node-id="usT8KYKFuVDaLkvj6Xml4N" class="i"><!--pnid:qvRaQu5cnHSPwFF6aNhHkY-->5</span><div data-page-node-id="fbASB6fIUnw0Sq2qYuldtb" class="t"><!--pnid:kl7Buk00RbNSisQQ15X9qT-->没建立或伪造生产记录，罚2000到2万元——这是真金白银的担责<span data-page-node-id="BQyjbVB9SuowLpAZznO7T1" class="src"><!--pnid:HlNufbONjFxxLvWBCkB7zN-->依据 · <a data-page-node-id="m7vSznFOOKYbBwnHHPlu4g" href="https://www.gov.cn/zhengce/2022-09/03/content_5708043.htm" rel="noopener" target="_blank"><!--pnid:f2bFwBes6UGhS8yZSdmqqJ-->《农产品质量安全法》第六十九条：未建立或伪造生产记录，罚款2000–20000元</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="l5QgDBtBpvhPhMoX2QLO5T" class="blk">
+  <h2 data-page-node-id="FrJcOsHMxocUnc7BFgKdpN" class="h"><span data-page-node-id="S6WV7ljlpAQVBihXRqAQ37" class="num"><!--pnid:uGYxn09JXlFgU4hZAPO7Y6-->三</span><!--pnid:Oa2hKp0tfMJUjs05ySP4Ta-->换个做法之后</h2>
+  <p data-page-node-id="1hjOBjNfQcy8KdOcZFwGbH" class="subline"><!--pnid:s7a8P8nWk4ixkCjwl5Lt3X-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="kiwmfSOlUsTbUahpDztIsq" class="cmp">
+    <div data-page-node-id="m6uZCoABl6aeNuyMIsL6k5" class="old"><h4 data-page-node-id="Oh9htiFQE7Re6hb3saNvDl"><!--pnid:3WhI8tdRwjwl5sPa036UD0-->✕ 现在的做法</h4><ul data-page-node-id="MoBwgIuNWxCLnGyS2Acwzs" class="list"><li data-page-node-id="mC2nULvkhWGl7fJMs2sO7R"><!--pnid:TDJuxCmdqoNJActEy8ZPRA-->农事记录靠本子记、靠脑子记，漏记错记，年底算投入产出算不清</li><li data-page-node-id="1NiOt5foBFBSQoBNFCJmx2"><!--pnid:TiJvle5jOVNDs736R5n2ku-->微信语音和照片散在群里，和本子对不上，同一块地两套记录</li><li data-page-node-id="1wGOysJZI1q9fWNwNALf1a"><!--pnid:99afqZ3MuJKctUDc1TglUa-->法律要求生产记录载明投入品、防治、收获三件事，保存二年，现实中根本没按这个记</li><li data-page-node-id="ZuOr8yAnKYEtUiSJXIo3A3"><!--pnid:BegdH3foacGHjy5qQZh3Zk-->农资打假每年查处数千件，投入品台账是追溯起点，不建台账就是给假劣农资留口子</li></ul></div>
+    <div data-page-node-id="kqOfyDWN6vuJ3wlmYxDIS6" class="new"><h4 data-page-node-id="5p8O8z6SWuhJLooAkKTf33"><!--pnid:4UfWgCkdrNlvaCoASZXScR-->✓ 交给 Agent 之后</h4><ul data-page-node-id="68UW3Te4ak5R0wpDmRcMjF" class="list"><li data-page-node-id="JGOTpwmveW90WhcEercOBZ"><!--pnid:6fYv7P06ZmkLoidwKYUvfr-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="9d9XaCMraCu5W74hNqFlLV"><!--pnid:v929tBR2PLBs2LtpbPfPA6-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="pWHB9yxsWWbPaHWy7BiQQS"><!--pnid:gtksD7xkkSGBtlR4hGDLa2-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="ozRBG1fUPepWoewh4hOrQs"><!--pnid:HHlvkn23TvClihzGD0O0V5-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="aM592mw8FvcUjMjVsBTJIu" class="blk">
+  <h2 data-page-node-id="sQZsTIe0FXyIUjtq7Ud9xD" class="h"><span data-page-node-id="IfcC2pvpM9qJ5JDyruk3Gj" class="num"><!--pnid:c9OTKHYeoNvJ2Of7yjCTNb-->四</span><!--pnid:aNOfOrqwV2mnoEukYQ9RdR-->场景闭环</h2>
+  <p data-page-node-id="89ZckreyYVyPLFKttINabH" class="subline"><!--pnid:ZqogT43JVcohWFoqBs6Xqi-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="c6yhonCYTgyIW75HNMrbdQ" class="flow"><div data-page-node-id="L2rCJKM4KoLl5SzHZm08Sd" class="step"><div data-page-node-id="cxNAYYMrUK2INTftfRsk83" class="n"><!--pnid:L0GRCF5qjRkg5cja4UhBld-->第 1 步</div><b data-page-node-id="gwAFASfttUm5ORpvLyUos2"><!--pnid:2DGujcBRpeatCpn9wwVtfW-->要素校验 · 判断今天记了哪些、缺哪些</b><span data-page-node-id="duQTsxAqD3OzFBS6Wd5so3"><!--pnid:bn0UmZeeIauXI3lT17XYaP-->法定三事项（投入品、防治、收获）逐项打勾，缺项不阻塞</span></div><div data-page-node-id="KqiKV85uGXrxlBsTNvkY9b" class="step"><div data-page-node-id="WkhuyU8ynWpSInubFXd9wj" class="n"><!--pnid:3kRUjgeJn3LRR4OykA6b8L-->第 2 步</div><b data-page-node-id="pa80XpTv9OkGYR9crUW85X"><!--pnid:9fo7YcCUasWxsRWjhFvk3V-->语音转记 · 把口述转录成标准字段</b><span data-page-node-id="uOUO0AaKCO1kiee2R0fWwC"><!--pnid:gAAlCM3wmGnX6gbcOybgGI-->地块编号、动作、用量归一成标准字段</span></div><div data-page-node-id="1b9WV6pVDEcNhTvbMmWmml" class="step"><div data-page-node-id="aihdgWCpuFqhdOKuhef3BT" class="n"><!--pnid:KxWSpsAgW5smCd3wb0dwQ2-->第 3 步</div><b data-page-node-id="ehnn2mqT3PlTIcStRftvh4"><!--pnid:I1e8FsDUNjTo7AOO5WtJuP-->交叉核对 · 与农资采购单对用药</b><span data-page-node-id="BKWBwuLOjcYDPQHDDdrmk2"><!--pnid:Qoudn24P25UsyaPWGhq2MG-->同一批药的采购单号和记录对上，对不上标黄</span></div><div data-page-node-id="Pa3trShIlOANJnMLHHJxh0" class="step"><div data-page-node-id="2pTRsD4I7XBMbgcFGGU05Y" class="n"><!--pnid:TKeFmkmObz4tSrAsvETUpc-->第 4 步</div><b data-page-node-id="EF2CTfwhzeuwAkPwlSlZm2"><!--pnid:e60UanQhZvqokIzQHdz5gI-->安全间隔期核算 · 从用药日反推采收日</b><span data-page-node-id="O4ojJQF6nRY7OUQ6tKZprb"><!--pnid:8ZvRE6qfopmu5vIwbfs1pr-->采收日没到安全间隔期就标红</span></div><div data-page-node-id="FazD9TDlgTLwflVqdetslw" class="step"><div data-page-node-id="JGx5R1EYddWJRrOcsGKFbC" class="n"><!--pnid:UjOwhXyB5wXf52IxH3M7gl-->第 5 步</div><b data-page-node-id="GIU2Bd5Ypsr7LPXfn8p2QC"><!--pnid:j2tlAVUkMs9Rx7dRoLDJ3a-->异常识别 · 找出对不上的地方</b><span data-page-node-id="Sugt33i9t1KE9Wrt7a7o4W"><!--pnid:t8d81hYvVsbRDoo6cSdZ7w-->逐条列出，每条带出处</span></div><div data-page-node-id="DjnTEDiih0M64MFdrLRTZg" class="step"><div data-page-node-id="uq2zXYUfHf6ykezxLDbL0l" class="n"><!--pnid:zAmh265HsyRGvWhg7Ltjs5-->第 6 步</div><b data-page-node-id="l0LHOaW6aHmhTkQIs2cYyN"><!--pnid:LsS0QYLXS6YGsZHBGYjL7f-->留证与归档 · 生成当日的合规台账</b><span data-page-node-id="OBM3wkSRMGhp2brtczazPk"><!--pnid:6liq5GsmKAlccsF5AWIwxA-->法定三事项 + 签批栏一次生成</span></div></div>
+</section>
+
+<section data-page-node-id="TNrtlvLrcZvmmrEhISYaYK" class="blk">
+  <div data-page-node-id="W6BB2jL2T4eYjh4CxTiI7p" class="g2">
+    <div data-page-node-id="7gQQ1IMeRSXkMPduxf4TnG" class="card"><h3 data-page-node-id="o5Ar4P5tigtL0iXT9BQ0Zh"><!--pnid:Om1hEteLCPxWsjMuYfzo1Z-->要准备什么</h3><div data-page-node-id="Gym5kDY5yHxiFVPibAmUWv" class="src"><div data-page-node-id="CQhmD73GL6HLuEkwhSp2DC" class="fn"><!--pnid:tGkF8BdQJfvhDGVobPnQTx-->当日微信语音 / 照片（技术员口述）</div><div data-page-node-id="U0gGrdyeoKPo9QOcmZpO9g" class="fd"><!--pnid:QBcWKpXuJqy6Tg8rKycQrn-->语音里说地块、动作、用药，口音和简称要归一</div></div><div data-page-node-id="fZ5bKDt59dqQfNl0I7hT7q" class="src"><div data-page-node-id="TRu8aeLfaGROWG6rygOPCH" class="fn"><!--pnid:t3ildWZDqMPPgCvnwa3hdr-->纸质农事记录本（拍照）</div><div data-page-node-id="z0edwdK3sPwsj04TqAqbrA" class="fd"><!--pnid:jQ37RkC90LsDrrBG4v9aaT-->字迹潦草，栏位不全</div></div><div data-page-node-id="QJNSiQ2WsJy4V7QSyVaFBJ" class="src"><div data-page-node-id="3tLYCOT5wQCOQ2tsJsRxKQ" class="fn"><!--pnid:2N02HX2rkbMQ5or4gULCPz-->农资采购单（NZ-2026-0412）</div><div data-page-node-id="m8zdDKynCXXXMzyayt0Yd8" class="fd"><!--pnid:iS2YlcaDhReWR1wXkclj8D-->这批药用在哪块地要对应上</div></div></div>
+    <div data-page-node-id="JhgVUJU5sx9NQBvWItg7v0" class="card ev"><h3 data-page-node-id="GJbNx5BEYPHojEuTE6tNgC"><!--pnid:n2Nlj6Kyq0ri95exU92wG6-->为什么这个场景值得做</h3>
+      <p data-page-node-id="85o4sTQTVFnwfPuoFr70Ds"><!--pnid:YuZcBZROU1zft4NWGHjghM-->痛感 5 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="1yJ8KuPv7BS02mkzQZY544"><!--pnid:6saonvgbWUVehIRRsvRkld-->12.0</b></p>
+      <p data-page-node-id="IU9RJ8foY2hIaaARuuKgfM"><b data-page-node-id="qiKVjNRc6CuZc1sk4GTsrU"><!--pnid:GrMRHZ5DYgYv9VnaS2vCn5-->最大差异点 ·</b><!--pnid:G6JAEOtkqeeeJN5ecBfFCj--> 不要求技术员改用 App。微信语音、纸本子拍照原件直接扔进来，Agent 转录成法定三事项格式。</p>
+      <p data-page-node-id="BeWnxd7iRQyR3gIfT3SbG2" style="color:var(--ink3); font-size:12.5px"><!--pnid:IFgWuDsERToroGR5fEQYdW-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="vKgmoYXBLEVAVBS2U42YiG" class="blk">
+  <h2 data-page-node-id="bOQ6OfwFy3Z5EXXc53Rppy" class="h"><span data-page-node-id="eidiQToekld7JE0n4aoe8d" class="num"><!--pnid:anbPrl5kWeHBFO1DXQUbgk-->五</span><!--pnid:XsuHe7LRybYsdAUfc03E7Z-->会产出什么</h2>
+  <p data-page-node-id="UliBrjZEJencTjcT1xFxaV" class="subline"><!--pnid:OmGKlOekZ6mNabcLzeI7Em-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="QwUMqj2ryFiFRd9xU8HUR8" class="outs"><div data-page-node-id="hQfZarEbiwD3v0GqiwdhOb" class="out"><div data-page-node-id="YkBaTUnN3oyxeiGxIpxxko" class="on"><!--pnid:AaVFoCjVTjuboYyhmtyPLv-->正式件本体</div><div data-page-node-id="1VFt8fTKmQQWU9aHaWjKKt" class="ot"><!--pnid:NSsT2lMZ6gLhPGyHEnI8ft-->农事记录台账.xlsx</div><div data-page-node-id="WeQX1AFRnC6DNUCHCGHoIo" class="od"><!--pnid:QcleiJN50AxBTTynFVFT4O-->正式件 · 法定三事项 + 签批栏</div></div><div data-page-node-id="kNltVrkjH6aYzO06NI8Bn5" class="out"><div data-page-node-id="HbMml6CZnmUboRjHD8T0LK" class="on"><!--pnid:G8Q23x61Si7Zj5rHBnMgIK-->可派发清单</div><div data-page-node-id="yHIt6D7oWOTX9JRHIYDkOV" class="ot"><!--pnid:BeQGnIIy1y5DIlxIWe1gYn-->缺项清单.xlsx</div><div data-page-node-id="qFYGur1G8zqGJTdbiiOTnz" class="od"><!--pnid:bPgM0PDWpyAL0AoMHqum1N-->可派发 · 今天缺记了什么</div></div><div data-page-node-id="FNJNRWwHTlxXejZRZZpT57" class="out"><div data-page-node-id="OOxpPnUlC7ukcYzP6br4n8" class="on"><!--pnid:XsAju6lfCYaZZ9UUa0l2IZ-->可派发清单</div><div data-page-node-id="FaGRxjkSEdJaHbvy07vqy4" class="ot"><!--pnid:Mg9hckIAJEEihPhq1ibY6T-->安全间隔期提醒.xlsx</div><div data-page-node-id="eUuDATh3fbdgMZeI1mw5lI" class="od"><!--pnid:ECY1G8ro8wyUTGjp4ovmSt-->按地块列出距采收还有几天</div></div></div>
+</section>
+
+<section data-page-node-id="mlfxi0ju6fVs1o0fzHosAN" class="blk">
+  <div data-page-node-id="5YH8qqCal0qZ4tQrPgryxn" class="card warn"><h3 data-page-node-id="nt7K2A9aTeqxQ9gq6F7xWq"><!--pnid:LzmelLukfquilLeLhXjk6g-->这套东西不承诺什么</h3><p data-page-node-id="D54THgG4o6uxICQO2TRQur"><!--pnid:JfedBRB5sFbKAJ68nghKn8-->不做用药决定。台账里的用药记录只照实转录，安全间隔期算出来提醒，但打不打药、什么时候打由农艺师定。</p></div>
+</section>
+
+<div data-page-node-id="Zz0BPdKHBekK46KS5Baltl" class="cta">
+  <div data-page-node-id="Oj2aSn8t0tHvsX8IvM6N0m"><h3 data-page-node-id="7xEjWELxi2ZEc0QzcXl3Vv"><!--pnid:zUy3I7Pfn1cZCDtC85cWD2-->想看具体怎么跑？</h3><p data-page-node-id="Z8hpjdXj0YLF1WOvOBq6Ki"><!--pnid:CxM1AjEUzhmCaMtJKBtcEa-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="6EE4w2kk8ztjXLXMoNL7Y7" class="btns">
+    <a data-page-node-id="U79gz75w3RataPBNYhJnQX" class="btn" href="LiveDemo.html"><!--pnid:gDzeQn7mjaMn1dEzZrlFC9-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="lLgGC2VuAmfKnQ2lS5N8rt"><!--pnid:TUgRvbS7jZcZ0WoWftyPEt-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="3TeyZpmJ2fc8HiR4x0Zx0J" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="STZDeSSxiGL0ljd4ymvETt" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="zTu5S4PYqz60MljLiKvNjw" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="Z8iFz9mzjfWCLaqOF7Q7ML" data-pnid-children="u48rdHKrSpd6zXAavu0VAd">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="lBp5Y5zkFbfjior1okFshc" data-pnid-children="joIa9j0Gu8d6FRvRfYmcnW">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

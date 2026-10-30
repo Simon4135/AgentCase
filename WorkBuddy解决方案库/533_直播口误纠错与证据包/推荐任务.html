@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="BhsMkMCtol2Oa7q5SgzRhL" lang="zh-CN">
+<head data-page-node-id="7LwVbakHpt2ujrsZCGvOcI">
+<script data-page-node-id="P5IHtdx8OEcI4qhbuw97Lv" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="py0cs7yTnZT4tlOMm5eh2R" charset="UTF-8">
+<meta data-page-node-id="ulY4fpBKTIXiJfzKS6woLe" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="HjEALeMYztIRglDgesniPY" data-pnid-children="eU956y3QZudI6nGNdhWNny">直播口误纠错与证据包</title>
+<link data-page-node-id="fHSxRyKNMzJADj8tMm28qT" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="BuXBp4MuqdtSxNYkN3GpIX" data-pnid-children="IhRwfRCh5ol7WQ7TBx3qgg">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="ktjr7tweZjXCRaQXCG3L8T" data-pnid-children="79CYbTk8BZw70ohPOtNkGo" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="9Zabf4MPO0w0jI9hQJJED2" data-pnid-children="VFnJqmwzhXC2kRweAY1CEi" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="YOamcOn1rEs9ig5VribSqw">
+
+<div data-page-node-id="yd0vAjbZpWXvCNMJkcWbFE" class="wrap">
+<section data-page-node-id="rF9yhHi5zoYJOxDINDMaT8" class="page-hero">
+<h1 data-page-node-id="pBXKstyrnU6wPdtAqve49z"><!--pnid:clNbSrawRN2Gu5Jtp3F2Yv-->直播口误纠错与证据包</h1>
+<p data-page-node-id="HHJWgO9KdmqzcaSS0zEDpA" class="lead"><!--pnid:f1WN1kszwed65AfoNRyMAT-->标准脚本审核通过 · 真正出风险的是主播临场加的 3 句话和一张旧贴片</p>
+</section><nav data-page-node-id="fa0daKDUj4aY8pwMzVn5fT" class="subnav"><a data-page-node-id="zCWkOifc1HpQjQtUzMYC6p" href="场景引入.html"><!--pnid:hNtipqMBFC8jKxdzDHZ8TD-->场景引入</a><a data-page-node-id="Y9ahH6y9CMBg9N3VsexXIW" href="LiveDemo.html"><!--pnid:5UuS8D4faW8SoSrOVmqKuo-->Live Demo</a><a data-page-node-id="trKu7yttWSufDCtzGVje93" class="on" href="#"><!--pnid:CNkb3sQas9LfrcoYzvzFxC-->推荐任务</a></nav>
+
+<section data-page-node-id="AFYrqiNRl9SVCqDAlNH6bd" class="blk">
+  <h2 data-page-node-id="2D2AOvcDfkViATk1nLs2wM" class="h"><span data-page-node-id="oV75kL0UpGCJs0b0I7wIHK" class="num"><!--pnid:IvT9yJ0Stclkv2YLObRumC-->一</span><!--pnid:SbNaAdpN1Moiyu61b7q1wb-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="2vBUpWL0O1NPYuT8itlfXJ" class="subline"><!--pnid:WV6GGRryxP5d4Fwx0vIrEJ-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="ZgiLVY4TgjEKdFLcgKDq1R" class="card"><p data-page-node-id="tUqzSiPJMZotXRxBSBwUL6"><!--pnid:EWAMos8kUtGJqdzUpsCnfr-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="ftz1BItXCsXWTjvba6QNFd" style="margin-top:10px"><!--pnid:f5KGkUmRv5iKRxzBgV9EqY-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:kJtQEfy8o6sYIamvV4DVaI--><!--wb-skill-start-->
+<div data-page-node-id="P3LeZYrX1nAQ9pXVYBM28D" class="wb-skill">
+<p data-page-node-id="vaThkCznYFTVlsohk4lcWL" class="wb-skill-lead"><!--pnid:pUz40SX5jO8qwNEeMeWMCH-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="0nXZ3YoyAafrIKrS3b550H" class="prompt" id="wbSkillPrompt"><!--pnid:lciqYzFA53y4xqVMu3G9Q4-->【准备】这个场景的规则都在「直播口误纠错与证据包」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/HpkCN3cDAkXTmwleLz5qRp/hsANtc7mso1x/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="b7ITCFp12WE6cngVsTzOVz" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:EpIXfGMMOUwXSlYaHO7EoD-->复制</button></div>
+</div>
+<!--pnid:c9MMvYUqqvwdawBE4eqL9Z--><!--wb-skill-end-->
+<section data-page-node-id="w9XHyU6WzMQEDCqFVwzTJx" class="blk">
+  <h2 data-page-node-id="ofHTwRTIJ8y26Icl5D0i1Y" class="h"><span data-page-node-id="t5F37Kgn1Qo73vGAil8jRo" class="num"><!--pnid:NPVy7hfpMdxGkTm3hi4KNK-->二</span><!--pnid:uzeLSdGzfe5Bxwi3YyjsWF-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="PlFDHyQ8Ea02Ivz9u8TLUO" class="subline"><!--pnid:EmhkVcGrcWDCe67xGPQ113-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="MqHIZVyY4z59NdHyVoyhrt" class="tlist">
+    <article data-page-node-id="TQ4DUWzYZSIQvzOdd2WO1F" class="task">
+      <div data-page-node-id="VCOaiw8noLZSfCdwbsTn41" class="th"><span data-page-node-id="q3GyTG3uSwAYe7oPF9RRCt" class="no"><!--pnid:UNuVwaVvaYIFErijnnDo9i-->01</span><h3 data-page-node-id="JHoGU7hFUyQKyX7vxDSEM6" class="ttl"><!--pnid:cRycDcRpbZ6kb14NqpR8PW-->首推默认</h3><button data-page-node-id="Q5tzSrpEFLc6Db2DyNnl2C" class="cp" type="button"><!--pnid:xC59HMQcTMa3coUkV44kvm-->复制</button></div>
+      <p data-page-node-id="ma04fdrgRrIVgUWEJCnW9F" class="tp"><!--pnid:kquf5oYCVvgmRH0BpyOLhD-->2026-09-05 秋季专场（场次编号 CG-LIVE-260905）下播后，中控群里有人说主播把「参考价」说成了「原价」，我得趁证据还没散失，把原话、纠正动作和影响订单定位清楚。材料是这四份：「01_主事实台账.xlsx」是这场的纠错现场状态，「02_历史异常与复发记录.xlsx」是往期口误与纠错的历史记录，「03_经营影响金额明细.xlsx」是影响订单的准备金口径，「04_审批与群聊记录.xlsx」是中控群的发现与提醒原文。产出两份：直播纠错与证据留存报告.xlsx，一条时间轴一行，写清回放定位、原话、是否纠正、证据出处和签批栏；高风险片段与补证清单.xlsx，列出回放定位、影响订单数和责任人。对外怎么回复我自己定，你只给可选纠正语，别替我发出去或提交申诉。</p>
+    </article>
+    <article data-page-node-id="bqOZrzRzEnRsy0qC5hrl5r" class="task">
+      <div data-page-node-id="hkKYC0VXrliEYPvTafxY4I" class="th"><span data-page-node-id="Xz06RhlqDkzrZZC692oafG" class="no"><!--pnid:vXCocUY2bGIMqPN9aHTUov-->02</span><h3 data-page-node-id="7ZJF7Jk8o74KXt5mkTSjSl" class="ttl"><!--pnid:uMg39xY2njpnMMBNKhfkd7-->只排时间轴</h3><button data-page-node-id="spU07N1rszjPG6fHkvTXIA" class="cp" type="button"><!--pnid:clOjdSWLLvceNafgBQbwyx-->复制</button></div>
+      <p data-page-node-id="u4XD91j6ijbK3XOKU7XhxM" class="tp"><!--pnid:xhwhNVV5kTOGOzCqbclv4e-->只跑「时间轴排布」这一步，不出补证清单。读「01_主事实台账.xlsx」和「04_审批与群聊记录.xlsx」，把价格口误、2 处功效扩展、旧版贴片这几件事按时间戳排开，标出哪处有纠正、哪处没有。产出 Excel 一张表，一条一行，写明时间戳、原话与是否纠正。</p>
+    </article>
+    <article data-page-node-id="5MgFRCFSe1aZIaBK3ctj9e" class="task">
+      <div data-page-node-id="QafdQGetijI8ge3YW4AhDo" class="th"><span data-page-node-id="BXb3njAXFewRW8kNkZUNPx" class="no"><!--pnid:qvDzV1fBHRK9t6ZnCxHThh-->03</span><h3 data-page-node-id="T6FS5a05KQLekVu8Pxa2c0" class="ttl"><!--pnid:NADWAXhTaCMNgpvEhWzNZ3-->换成只核贴片版本</h3><button data-page-node-id="KZ05cPPMXKj538ecCEufED" class="cp" type="button"><!--pnid:m15p3NObp4ek1Xa5oVhLMb-->复制</button></div>
+      <p data-page-node-id="PKhuYpCPZLmd8fdNoeN3sD" class="tp"><!--pnid:vga4npiV6i8echL9Xo4duk-->换个切法再跑：不排口误时间轴，只核贴片版本这一项。读「01_主事实台账.xlsx」和「04_审批与群聊记录.xlsx」，查旧版贴片展示了多久、哪一版是审核通过的、期间有没有人拦。产出 Excel 一张表，一行一个贴片版本，写清批准时间、实际展示时长与出处。</p>
+    </article>
+    <article data-page-node-id="N4J2DI1iGMlWZ2LKLp5FBd" class="task">
+      <div data-page-node-id="yNGlnNE8VaiUOW0dz6V1yG" class="th"><span data-page-node-id="TnaPqjXD2O986LLbOPGbLD" class="no"><!--pnid:LkQ1WrDb07S9JPwMX7EYIb-->04</span><h3 data-page-node-id="SZGCeIJoBMigjCPSftAOU7" class="ttl"><!--pnid:YzwwsiWYiYwwn8QNAFbM1i-->一次核三场回放</h3><button data-page-node-id="KJz1K5O2ZgAdQJSYSEtYfE" class="cp" type="button"><!--pnid:p7dBJM4SWHuPzGq7WIso7a-->复制</button></div>
+      <p data-page-node-id="zU6aK9mOhHRAyZoXx2p0RZ" class="tp"><!--pnid:LQAw8fpwqTf6buOhot7rbD-->把这场连同前后两场一起核：演示数据里再加两场同类纠错台账，仍按「01_主事实台账.xlsx」和「02_历史异常与复发记录.xlsx」的口径跑，三场各自出报告，最后给我一张三场横向对照表：口误处数、未纠正处数、影响订单数、证据缺口数。产出 Excel 一张表，一场一行。</p>
+    </article>
+    <article data-page-node-id="k9HIaecC3lQ5HBUYFvIZrJ" class="task">
+      <div data-page-node-id="Vh40dEtuluT4YWUhINzeUV" class="th"><span data-page-node-id="XH8wGruUdJif1acWJypgQV" class="no"><!--pnid:dFZn3m0De5HJRF4mMgMDQE-->05</span><h3 data-page-node-id="EOyiiebyj4wWDaWfCF1gCq" class="ttl"><!--pnid:oGacu3oiPnX7A77QQQphJN-->给合规负责人看的版本</h3><button data-page-node-id="nlZynRO4JYT70xFDikV4an" class="cp" type="button"><!--pnid:9XJME8axRV8d3vJ8W3IRy9-->复制</button></div>
+      <p data-page-node-id="jShiL1rPDJnWWS87b36Pp7" class="tp"><!--pnid:2FkW7mJ6mLrWVjWRdRt0g7-->把报告压成合规负责人下班前看的一页：只留未纠正的那几处、各自影响的订单数和缺的证据，写清哪几项必须进正式记录。产出一页纸 Word，不附完整时间轴。读「01_主事实台账.xlsx」和「03_经营影响金额明细.xlsx」。</p>
+    </article>
+    <article data-page-node-id="7EAOWHhvC33keB7YkzxUc4" class="task">
+      <div data-page-node-id="rDWmgQP9plrt9HNgg9ooJX" class="th"><span data-page-node-id="6nPcAatNCNiMqn1QUQFxk0" class="no"><!--pnid:5QhnAXhgaVLiKUoJ1C80u6-->06</span><h3 data-page-node-id="TNxOXSAgCKVdqMv9O8us0Z" class="ttl"><!--pnid:nBnOW8ioCstjmQ6CLjfAdR-->让它反驳自己</h3><button data-page-node-id="IfyUYGUlSRaOQcXJWUzeUU" class="cp" type="button"><!--pnid:LFlWzH66geebQv9quzT8eS-->复制</button></div>
+      <p data-page-node-id="UcqKWxYk1w2mDqtTJ5C86G" class="tp"><!--pnid:FADOYQBrROKwiy4O6jT2cb-->你自己挑刺：标成「未找到现场纠正」的那 2 处功效扩展，会不会其实在别的时间点纠正过、只是没进群聊？读「01_主事实台账.xlsx」与「04_审批与群聊记录.xlsx」逐条说清依据，站不住的就改成「待核」。产出 Excel 一张表，一处一行。</p>
+    </article>
+    <article data-page-node-id="d8qC32DRKiDdJ62NIucLXB" class="task">
+      <div data-page-node-id="DVhVJHSRDXWVnhzcP36sph" class="th"><span data-page-node-id="IV3tsGy0MHXT6D9Yh9Mr5m" class="no"><!--pnid:TISGQN8ZwPo9kECdqoMv7J-->07</span><h3 data-page-node-id="CdxFMIrtlu3ds9ycJJ98S8" class="ttl"><!--pnid:Rja8AndO7oye2JxtTzoNp6-->专门比往期纠错先例</h3><button data-page-node-id="g0xKHAiGN5PJPU4d9p4ui1" class="cp" type="button"><!--pnid:azMs1OQCxgtSCe2Pga0zTW-->复制</button></div>
+      <p data-page-node-id="BaaoymxH3ZuKXT3K5bSZDe" class="tp"><!--pnid:vc4ye7eEIpndR7rDGBb5uC-->专门翻历史：读「02_历史异常与复发记录.xlsx」，把「价格口误未与订单时点关联」那次 22000 元和「群里纠正但未进正式记录」那次 8000 元，逐条对到本场的对应片段。产出 Excel 一张表，一行一次历史异常，写清当时处置与本次相似特征。</p>
+    </article>
+    <article data-page-node-id="7eh65qwLqVcGRINXqw4Bgl" class="task">
+      <div data-page-node-id="PcVMHE33iPaq74cLt69P7X" class="th"><span data-page-node-id="AXHrd8qjzhNgLxWl6AVXC7" class="no"><!--pnid:1rqQoh4LFbAQr79Klh8Jkd-->08</span><h3 data-page-node-id="VqSWnddEto0HK7shfjiuPE" class="ttl"><!--pnid:NM9mlUU6cw1JhWTQggoT1O-->对照留存要求自查</h3><button data-page-node-id="Ds1PND3Pa4wf9hWtIJbL6c" class="cp" type="button"><!--pnid:5U0OF4ZMmar0wplnzD5n97-->复制</button></div>
+      <p data-page-node-id="HQ9vE5OJITPePxNqMeEzSx" class="tp"><!--pnid:FLU3hacLFsVIBwZffyDZQZ-->读「01_主事实台账.xlsx」和「03_经营影响金额明细.xlsx」，对照合规那条口径（证据不足的表达不得进入主播手卡），把这份证据目录自查一遍：回放定位、群聊原文、审核版脚本、贴片版本、订单快照五类各齐没齐，缺的列出来。产出 Excel 一张表，一条一行写「已留存／缺口」并注明责任人。</p>
+    </article>
+    <article data-page-node-id="yCjH4GK3hKXieHCdPp5bBR" class="task">
+      <div data-page-node-id="Vc0ysw1IgPTxaJjtNQRLou" class="th"><span data-page-node-id="NjDaTfrc7QkBZOyVCNL7Xb" class="no"><!--pnid:NGEsh6Xg7xMPsS550Wf9sj-->09</span><h3 data-page-node-id="u75lb7DDzyBNi4114fjdRY" class="ttl"><!--pnid:rdSDQKfFN1wgp6DnUMZJW6-->折算成订单与预算影响</h3><button data-page-node-id="fk7C6D85Iq39E4cv52zyQA" class="cp" type="button"><!--pnid:k9Gx8ipRJVmS1puGspcvrg-->复制</button></div>
+      <p data-page-node-id="PkWOXYjA0OiJQhxph2azY2" class="tp"><!--pnid:mbuNOEVUGi0ucdzKIeB4j3-->按「03_经营影响金额明细.xlsx」的口径折成钱：43 笔影响订单按订单上限算多少、暂停问题素材预算多少、补录证据与替代贴片各多少，合计多少。给出每一项的公式。产出 Excel 一张表，一行一项，最后一行合计，待签那项单独标出。</p>
+    </article>
+    <article data-page-node-id="dvbdcNIczHBS8H44dca3BW" class="task">
+      <div data-page-node-id="Q9LMNRNzgjU2qmj8zLfHUw" class="th"><span data-page-node-id="rRUGsqzbZE6S4eM9i3co3X" class="no"><!--pnid:MbUB9hS9eUyP4cPgi4fbHi-->10</span><h3 data-page-node-id="j5fsVDlgGWiNyV79i1U3nb" class="ttl"><!--pnid:BUUyRhVV216tPEDYaTbbrW-->沉淀成场次证据目录模板</h3><button data-page-node-id="n8hP12Fbjjj3QU4Ldk6cjL" class="cp" type="button"><!--pnid:ZnNBiiLg242Km74pSW7PMF-->复制</button></div>
+      <p data-page-node-id="iVrhoIrNgxQ9yGLTUoSexS" class="tp"><!--pnid:mnwgrVmORmAGvbsn1AuoM9-->把这次从「01_主事实台账.xlsx」和「04_审批与群聊记录.xlsx」理出的证据留存做法整理成一份通用场次证据目录：一场直播要保全哪几类证据、各自存在哪、缺了谁补、留多久。产出 Excel 模板加一页填写说明，下次开播前就把目录建好。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="qVJT6OQssJlRT9LPkpu6US" class="cta">
+  <div data-page-node-id="XW18XydwT76IPCUGKK7MS2"><h3 data-page-node-id="aOasHELCmlOtp7USp2GgmF"><!--pnid:BpFa2ZrdYqtCnCB9Z7mskR-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="uXxZf7oi4U2634xENdtXgu"><!--pnid:wHsHmLzUWfTRVY66EcSHR7-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="EfBJUpRItFe6wCEaqvLSaJ" class="btns"><a data-page-node-id="KomH2IPWKO3MK1dCOASQYm" class="btn" href="#" id="ctaContact"><!--pnid:dqjSPX7MV7elgEDm2Yyina-->联系我们</a></div>
+</div>
+<footer data-page-node-id="t3cohaxC5hQoYXJylalJDv"><!--pnid:5bnctPN0AU4j5wqEm8IDQ1-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="Fa3vUEs3irKhwyucVie7mN" data-pnid-children="k417uF3kpAL3C3Lt6AClxb">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="6GbrSiHrHeRD1H8E8c0TGq" data-pnid-children="gSzyi4ANGWIPionm2A2nR1">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="ijC59pmp2q1dyYv79JYwkL" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="KSmevCx07NaOmU332LEMVn" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="BV9WUjmfd9HffyaEWfPvz0" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="HjpypEx4WUWRtoyYkcccti" data-pnid-children="t6LH1MADhAmqnlX8afqyoM">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="XP5BW1f3WFFKJypzHN44Nd" data-pnid-children="G4xoOkw2egU6ycemwi05QN" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

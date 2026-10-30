@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html data-page-node-id="coi3blhXwCWsEupmaClhgK" lang="zh-CN">
+<head data-page-node-id="bwcC72Y7fmok6UorVYxQtp">
+<script data-page-node-id="IrzPP4zug4d06hLkmJmAwK" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="2hAr62BhEXlM8KTl1utvWf" charset="UTF-8">
+<meta data-page-node-id="K10Zzz0yWPPiPEQNpfdW5f" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="oEfV3OtkWpleF4OnZzKiTx" data-pnid-children="okkbQm6P9kZcEa04w11asz">BOM 脏数据清洗与一物多码归并</title>
+<link data-page-node-id="5TJb3Uvf9nAb8UPBpUlIAo" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="21qi72YxZccmFMGFmZBm22" data-pnid-children="MnwjnWCbwwQy13mkavhnbQ">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="TOskyhJgxIlIAAGb7fbqPN" data-pnid-children="Ffbkrn77HFLfid1z749lTE" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="rE9bCNJw3EYm1SS9hNpjSp" data-pnid-children="39comGzZmGjkfuseyplEn9" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="aNHWkPNXlfioZA1gQa0dkV">
+
+<div data-page-node-id="iYWJnCDNS6zpJNiZazAk71" class="wrap">
+<section data-page-node-id="uQSyOo4yK9xldy7meQEp5l" class="page-hero">
+<h1 data-page-node-id="53tf2ZNQBclUmPZ3yWf8bF"><!--pnid:cVu5Dw5QwVN7RTWgan6FWD-->BOM 脏数据清洗与一物多码归并</h1>
+<p data-page-node-id="jH5fytOHazYXIYbTmz8hs6" class="lead"><!--pnid:Z5NhPJU0AJjDZ2QhARZiSK-->同一颗气缸在系统里有两个名字 · 下单下了两次、库房放了两处、盘点对不上</p>
+</section><nav data-page-node-id="ebIo9M6OqInLu4PLizGW8v" class="subnav"><a data-page-node-id="Q5Pn20kW9qJyqWfx7n2xHG" href="场景引入.html"><!--pnid:aEELNV9fdfpTBZ6Q3kK8zj-->场景引入</a><a data-page-node-id="Q5awT51TeTn0ieaO5i4Wu7" href="LiveDemo.html"><!--pnid:mjceidgau4P4UAGRAHE1DJ-->Live Demo</a><a data-page-node-id="Mwod3hEIGxHIjzwbmijNn5" class="on" href="#"><!--pnid:NMtulXcGmttGJzYFRng14C-->推荐任务</a></nav>
+
+<section data-page-node-id="Z83VbtfF8aCxl9Gx3km1bu" class="blk">
+  <h2 data-page-node-id="dMn1nchvwmTP0DCP3LZYUl" class="h"><span data-page-node-id="sxCyFhzC4BGb5Njzmu2eMv" class="num"><!--pnid:MnZ6pLI8XQaJj5xHJr5AL1-->一</span><!--pnid:CXNNHvj5UHPBJMDkGGvdOE-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="OzMT9GjTpMuOHouNihcZE6" class="subline"><!--pnid:mtg343Bp7ZEloaufYbMSlg-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="AF4Xt51Y60ad15mskn8adW" class="card"><p data-page-node-id="TkGlDCauuMZ8mdVVRo3D8q"><!--pnid:q0wnHYiqy7bqfd7ogi1WUJ-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="EhdqTtKh1mP9LVXX1XgGCF" style="margin-top:10px"><!--pnid:Ix9nJPy6NpHDW9Wr0OfniT-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:45uAzdEehNX7mE9Q0ljnng--><!--wb-skill-start-->
+<div data-page-node-id="TaRH23GA9Ai4bta6svQxKh" class="wb-skill">
+<p data-page-node-id="rPfWeEFDGU3gMY1UD9J8D0" class="wb-skill-lead"><!--pnid:QbgtqyUpMO5VyNHyt6BFwB-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="6sbuNIWvq9liy8EtIYPC3D" class="prompt" id="wbSkillPrompt"><!--pnid:BK3o96vKruOKgFQ8Ecr6iJ-->【准备】这个场景的规则都在「BOM 脏数据清洗与一物多码归并」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/bShStq7Ww8evKjUw81UsXG/ykPmlPDO8YIu/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="Sf9EtlHrWpNF27uvZrs0rK" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:pbYvAhXYpWxUKMjlYO5hzM-->复制</button></div>
+</div>
+<!--pnid:WL4EGQp6unJK8WT2FSx1bW--><!--wb-skill-end-->
+<section data-page-node-id="bHEf3ai6FnKHPwWOCGMGkt" class="blk">
+  <h2 data-page-node-id="0c9csC6OpVPWDhqqqqadvG" class="h"><span data-page-node-id="UaEmf9rh2aepzjKTlvk5Jy" class="num"><!--pnid:VyPDUN1OB36NUpNscuuD8U-->二</span><!--pnid:8AulolKsm1yHmDHUfoQx73-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="e0QtbF8H9ZNQvI33BVXCH2" class="subline"><!--pnid:ZGVUQa2N1UaGG0zFKrp4j9-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="LQfgqJxdGEedPs94Q05I7a" class="tlist">
+    <article data-page-node-id="5fXWWFVJTeFZ4SNIZu3rBy" class="task">
+      <div data-page-node-id="04r95LJ4Lx9m8YMUbQNNZY" class="th"><span data-page-node-id="FeI0hJW4Y9CJPUNlDa7y69" class="no"><!--pnid:A3puYvwTytZAQeQjpiVgkY-->01</span><h3 data-page-node-id="aaD3OoJCkxsSAhJV5CS3sL" class="ttl"><!--pnid:QKDMFReCRNmIYOlT9FFFpQ-->首推默认</h3><span data-page-node-id="ajcujkzVxjni7H3n32RyRL" class="star"><!--pnid:dMte2T71W6kkcTo5vYKSbC-->与一键体验入口一致</span><button data-page-node-id="0SifM7FhFCBuhCYVefInaJ" class="cp" type="button"><!--pnid:5krPSFMjOBa4QsB8Umy09q-->复制</button></div>
+      <p data-page-node-id="CVtm2yDBmi70HkqnaGtWtE" class="tp"><!--pnid:Fe1l5plRYUEHelli4yOI8K-->BOM 清单、采购订单记录、库存表都在这，帮我把一物多码的都找出来。
+哪两组其实是同一颗料，依据要够硬 —— 采购记录里各自下过单的、库存里分开放的那种才算实锤。 只有型号像的单独放一边，让技术部去判。
+重复采购多花了多少钱，给我算出来 —— 老板娘要看这个。
+怎么把两个码合成一个，别直接动系统，给我个稳妥的办法。</p>
+    </article>
+    <article data-page-node-id="wlX2CKQ7aqT1ikMniTH0uB" class="task">
+      <div data-page-node-id="tLgfynBNucJatD7vBEb8Jp" class="th"><span data-page-node-id="hLi9kyr6YLZnEQ4yHsY098" class="no"><!--pnid:9P1KWsHl1LheeoEPjAd2ot-->02</span><h3 data-page-node-id="iAjIEwdTShKX3aQ4pMdzzr" class="ttl"><!--pnid:EMGhQfikyDD0LqiR3MrVtF-->只做三重信号扫描</h3><button data-page-node-id="E9b5zmpWaBzxVufEvBiFG2" class="cp" type="button"><!--pnid:TfuekSHrldSqf06RqHBLHj-->复制</button></div>
+      <p data-page-node-id="6VRTabcukAa0JUzYvT4IMQ" class="tp"><!--pnid:zQ2NfnK2a3McaP8CEkufKg-->只跑同物识别这一步：按型号相似、采购交叉、库存关联三重信号扫一遍，把三信号齐全的分组挑出来，其余的先不下判定。</p>
+    </article>
+    <article data-page-node-id="DSEhMOVtVl0i704zhUWQCs" class="task">
+      <div data-page-node-id="RtuPXw1DIIoQQ1uAyG1owj" class="th"><span data-page-node-id="wfsQYxj6p7W3W822TQ1RBB" class="no"><!--pnid:n83RMcTl5LxuY5Yv1qDVcB-->03</span><h3 data-page-node-id="lFxonN1AOrSYFVTAa7U56z" class="ttl"><!--pnid:k1RJijbLP7snaUwkam35YK-->换成只看重复下单</h3><button data-page-node-id="Pl87RsJxlM4xIj2bFaa308" class="cp" type="button"><!--pnid:2cIXO24myYwP4QdGXfjzv2-->复制</button></div>
+      <p data-page-node-id="lpiO6Pi1nf7BWQ5Z2ODv5O" class="tp"><!--pnid:5oKGQFLt4MBiSVsAUfYnM5-->改成只按采购记录这一个口径扫：近 12 个月里哪些编码各自被下过单、合计买超了多少，先把这部分实锤出出来。</p>
+    </article>
+    <article data-page-node-id="KcxDqrInS8DXdoXn1i89qz" class="task">
+      <div data-page-node-id="CZaKwN8f3PiSWsAeEgEpvL" class="th"><span data-page-node-id="0nbmDeuMGAz4hm5JoS4iPh" class="no"><!--pnid:93uWzh9xPwqwZNJMKm0rDd-->04</span><h3 data-page-node-id="Feqkl4IM6WbXlaFGko9G6F" class="ttl"><!--pnid:bEI7X4NCpm5g0K6JkhTWQ0-->一次盘两版 BOM</h3><button data-page-node-id="gr61APWzFMy3Ru8bnrUvoc" class="cp" type="button"><!--pnid:kY2rkXVOljJ3ndErrhX7ZE-->复制</button></div>
+      <p data-page-node-id="UcvbgFiOOxpj3R1Fpw6UD2" class="tp"><!--pnid:vHR5NrkedTIBKemewwtNGs-->演示数据里再加入上一版的 BOM，两版一起过，给我一张横向对照表：各有多少组疑似同物、哪些是两版都在的、哪些是新增的。</p>
+    </article>
+    <article data-page-node-id="3UKWHcfQTTRfW6VRYCzkrT" class="task">
+      <div data-page-node-id="kD4tyksez4neZi6jrw3z9h" class="th"><span data-page-node-id="b217reMrXxG4a7TgH1VjoO" class="no"><!--pnid:YRmH7TqYvtXhreh6cdmAKD-->05</span><h3 data-page-node-id="VlMl7H1nYSXNk1vBVaQ2XR" class="ttl"><!--pnid:hHlaApNo6Vo2z2SHU8ByEl-->给技术部判定用的版本</h3><button data-page-node-id="ZMCvdEesXGHNhtex1Gjkr4" class="cp" type="button"><!--pnid:HEOIeXhPaUpWeSJaI9p2M2-->复制</button></div>
+      <p data-page-node-id="JiL8vrED5id8XosxWjSoEC" class="tp"><!--pnid:bdkLLUGadaXwqqZEFQmDq8-->把单信号那几组单独整理成给技术部的一页：两个编码、型号差异、为什么判不了，让他们逐组给个结论。</p>
+    </article>
+    <article data-page-node-id="xT56KRJP4zALa2iQlny0uy" class="task">
+      <div data-page-node-id="OwH6vEkBG3pX6LjL425ofW" class="th"><span data-page-node-id="mrf1eTFEJ3yS4oEUYBMnQt" class="no"><!--pnid:xqs9Q7cIav52rplIDXoaFa-->06</span><h3 data-page-node-id="AC7I8tnt9cOBCXjOXID2WF" class="ttl"><!--pnid:7Am5DekGVH5J7iLyhQUITf-->让它挑自己结论的毛病</h3><button data-page-node-id="M6CTRizODwSsZIVHbmL66s" class="cp" type="button"><!--pnid:6gIMpTR8KM6WsvaKAPdlzr-->复制</button></div>
+      <p data-page-node-id="94YfJ1mhgAzpIfFwNObMft" class="tp"><!--pnid:1GS6n55E4VotIegTlFqnFG-->你说「不锈钢带 304」和「SUS304 卷料 0.5mm」是同一颗料，把各自下单记录和库存位置列出来，证据不足的移到待判定。</p>
+    </article>
+    <article data-page-node-id="hpUhoJOCpzK8XPSo2xaqEr" class="task">
+      <div data-page-node-id="bYvghAIRGf5tXsDmaudZyb" class="th"><span data-page-node-id="BXz1GgopB1rqVNQ9kkVKBS" class="no"><!--pnid:fyjUPaXJuHlBxBceUtrVOM-->07</span><h3 data-page-node-id="oiEd3fbnGa505Lpb0K7RS3" class="ttl"><!--pnid:zSFyvaZqCMw3o19IfKHopC-->专门查重复采购金额</h3><button data-page-node-id="u9oQDWRwoKcTfQPYlu1IgN" class="cp" type="button"><!--pnid:p0R0xxrYOtL2DAgmkDjJqW-->复制</button></div>
+      <p data-page-node-id="rwv6OF0nHPt0dkNhvJI3Pr" class="tp"><!--pnid:VcdM7u5ZJoayJgldsMCVG6-->专门算重复采购这部分：23 组实锤各自的重复金额是怎么来的，逐组给算式，最后合计多少。</p>
+    </article>
+    <article data-page-node-id="0u7Xc8eoWq5NxUl69bE1nn" class="task">
+      <div data-page-node-id="OnJuav7D0ts1dzRPzqT3W4" class="th"><span data-page-node-id="uPFlbS1iylQjYie99rezVE" class="no"><!--pnid:XZrVkCLxXQPhv1BNOB5VP0-->08</span><h3 data-page-node-id="vLkWSR6GOZiMqScIgmTUeJ" class="ttl"><!--pnid:tNXu3c9LgoUcYIZJpwemOK-->对照判定口径自查</h3><button data-page-node-id="UpQKuXOjTr0vIBSot9Zh9X" class="cp" type="button"><!--pnid:fwAM2NVrHnOyRpBV6O29OP-->复制</button></div>
+      <p data-page-node-id="RjyythbItzAts71rtPbyZr" class="tp"><!--pnid:eUTrPf1GlLe2186KCiYWPE-->对照技能包的三信号口径自查：单信号分组有没有混进高置信度、空值行有没有被编上数、主码建议是不是都留了确认栏。</p>
+    </article>
+    <article data-page-node-id="FSbmaNdhDDWKwjN7FE99nw" class="task">
+      <div data-page-node-id="pvoYVP19rbvr0XE2h5rpm9" class="th"><span data-page-node-id="eHM1nZUa4y1PPyJ1YLcRju" class="no"><!--pnid:kdq9dSSrAJwar2661sjqrp-->09</span><h3 data-page-node-id="EQzxGlk3AderqoXVIuoars" class="ttl"><!--pnid:T9BfdpPdmp0DTBpdc2SZOq-->折算成现金占用</h3><button data-page-node-id="2ien4ZpDJgze69yiTJHqbz" class="cp" type="button"><!--pnid:NfkL0suVkmaUGBIUJGjK8Q-->复制</button></div>
+      <p data-page-node-id="MkSnIdJT7n47ywu2SbEGdq" class="tp"><!--pnid:y0mRbrVXP4RbUjv57XHedY-->多备的那部分库存按料值折算一共压了多少现金？逐组给我明细和合计，看看陈在库房里的是多少钱。</p>
+    </article>
+    <article data-page-node-id="KpEwdzzdzlmVhXORZowWKo" class="task">
+      <div data-page-node-id="pbEVRDuJQu7JkSxizUPrXn" class="th"><span data-page-node-id="Chxn88WJ1x29jq5CEFq5yr" class="no"><!--pnid:B1l9qxfERyGt1akUTzkR5c-->10</span><h3 data-page-node-id="qqC4koSuBQ1qfCqa46PSck" class="ttl"><!--pnid:YjQ3pW1Q5HcMecXXUlQ99e-->沉淀成归并映射模板</h3><button data-page-node-id="VFIi2le5W7ay2BjmMsCMbk" class="cp" type="button"><!--pnid:iwVlrMdAYN5yMxKJjpmIZJ-->复制</button></div>
+      <p data-page-node-id="8dtQhWWtR6fjtiqi74ArMd" class="tp"><!--pnid:Hn5MM8V0yGKvzZKGnmYqms-->把这套三信号判定口径和归并映射表整理成一张模板：新料怎么办、过渡期怎么查映射下单，下次清洗直接套。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="jwQsxvnWvQ4He9flRE7eom" class="cta">
+  <div data-page-node-id="4K58SX0lnrWDMitScB6had"><h3 data-page-node-id="ao3ESEUoUFWldGoLjCNhrz"><!--pnid:lYgfhgpXWISyJYnjOs5KaX-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="Ch0KfFEGSlACtOgXOpRmkH"><!--pnid:AfUDWFWYXekExwJvmqQWv0-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="cl6lbvhHe67UKPzFFNYNji" class="btns"><a data-page-node-id="W4OPhDthXfoz8q4MSCBV4X" class="btn" href="#" id="ctaContact"><!--pnid:U1d9U5rJdA7EBUXxDjLI93-->联系我们</a></div>
+</div>
+<footer data-page-node-id="fktTGCdLTEevjbXVzaWFQT"><!--pnid:LmMQ7SualcECmtxQi3wsEA-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="sNVfym5PaB8uUzzBF6eXem" data-pnid-children="1G8cwcdrZdHrCM8VDCnilS">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="uNtknJdRDwBX8off9oxzAe" data-pnid-children="yCxjAvKWLzVqQfaxxUYpCz">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="sfHjghB4du2XKhQb9eDIfC" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="Hb4DbvCKBvRWlUiVNysGS8" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="mgdMmWPrqmcNf1hz7UnK0Z" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="Fa5xnqNZ2feM8eWjYBf5Nv" data-pnid-children="EMnt4hq4mhFLkOHg3nwH4J">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="ne7bmhIF8TWgIl8twChf3d" data-pnid-children="zHIe67CrRNvkOKVuiEg4yv" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

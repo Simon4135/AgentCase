@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="utKpoVqbXj4bwv53uYWZue" lang="zh-CN">
+<head data-page-node-id="bv8PM0SlackPw4RtL2PDpA">
+<script data-page-node-id="EoJ6QtnNn7aJNfIucPcCll" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="wuU1a6O3vU9liPbHlwstcY" charset="UTF-8">
+<meta data-page-node-id="TPOJsbVUpHKDtAyW9bYVvu" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="xWjtr9TaGLGpH59KjTcSB7" data-pnid-children="AnP7YkXY7ZrlPxGKWDnjde">接处警记录要素提取与分类 —— 十起警情回所后，先补齐每一条的受案判断要件</title>
+<link data-page-node-id="NszrphDCRv9vyfzBKQx8yG" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="07rX7UZNU0Z1pIPfxZx1RW" data-pnid-children="iF6lIgnvNmPcJ8LdOzyeSz" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="XhZDX9Hzk17oZgO0Jrd0cs">
+
+<div data-page-node-id="W9bX1AoAOIitxECUgpV4ej" class="wrap">
+<section data-page-node-id="3fke7tCxYSFBX6q028ZhLc" class="page-hero">
+
+
+<h1 data-page-node-id="AuaEwn4pAPgFVEVXebdzHZ"><!--pnid:qGw5qQqQ0kBwX2ThFUOTYZ-->接处警记录要素提取与分类 —— 十起警情回所后，先补齐每一条的受案判断要件</h1>
+<p data-page-node-id="iT2AY8IQ41GNiAiokDsFef" class="lead"><!--pnid:kPpSQXiBrZAjvZRXG2HVaD-->一天十起警情当场处置完就晚上了 · 回所还要逐条补记录，哪条该转受案全凭记忆</p>
+</section><nav data-page-node-id="ndd0olxUpY9byEvmvFFSMI" class="subnav"><a data-page-node-id="LROuoY5zuB3IPK8ahbUS9q" class="on" href="#"><!--pnid:pIyt3SaPeKD5VvoH3ogFWT-->场景引入</a><a data-page-node-id="7EFBLYPphQh9UD2ksuFdkO" class href="LiveDemo.html"><!--pnid:e0DXWzqsq7yfgkp0juRhKx-->Live Demo</a></nav>
+<section data-page-node-id="A2x8Rm6vm3fMaxyCKQPYpU" class="blk">
+  <h2 data-page-node-id="HPBV6Q8WjsgwGHIKwCgACY" class="h"><span data-page-node-id="aOY6pNKDHex9n3VRhzEQF0" class="num"><!--pnid:qUe9ZstkjyffibhEe3EaVF-->一</span><!--pnid:rMGVhNNgXKanUANuXfPtQc-->这件事现在是什么样</h2>
+  <p data-page-node-id="DsJqIfB8Dgynu1LCbegylH" class="subline"><!--pnid:s6HTE5pzPpwyTaaYXKhfbP-->接警接访与受理分流 · 真实业务触发</p>
+  <div data-page-node-id="YAGTNZwiY7kQr9JT7FU5EY" class="card"><p data-page-node-id="HCECBiiQCjRcB0DUJryRJX"><!--pnid:UrU9tgAAudU1UQ30uzFkEH-->值班民警处置完当天警情回所，手上有速记、执法记录仪编号和几张现场照片；要在当班内完成每条警情的接处警登记：类别、当事人、处置结果、是否转受案——并经得起「这条当时为什么不立案」的倒查追问。</p></div>
+  <h2 data-page-node-id="5B8uWiceid3nHx9SyrEeIV" class="h" style="margin-top:22px"><span data-page-node-id="6WIAi3KRp9J1EpWI3HFEOy" class="num"><!--pnid:QTJDRjI2LVBWadyd7rpTpE-->二</span><!--pnid:Fw1MPdvRKOc7j5GWBiOPOj-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="7OIdA95CEec0Q3M9bcmTND" class="subline"><!--pnid:lpp0Pn888bpv7W3TbtFlxF-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="AStw09VM2C4WRH4EibcyaA" class="pains"><div data-page-node-id="23QPm7vYRXRBQUBOdod4RB" class="pain"><span data-page-node-id="idyWIHwbAFU4rdV8UQ9Y0V" class="i"><!--pnid:FOhj0SsklZEY0RKP5RpsC0-->1</span><div data-page-node-id="QhTdcSOUSPLfY4XMunPCs0" class="t"><!--pnid:LLjZtZA03ERh7FKwRsgdNi-->基层民警一天平均接处10起左右警情，回所第一件事是补文书，「感觉最累的就是文书的处理」<span data-page-node-id="fy6g5EZiski8cWrsUhOFHw" class="src"><!--pnid:xe96OiSauzD1ITCLx8Scxv-->依据 · <a data-page-node-id="N79Onjlzc7W2PCviVK31gg" href="https://wenku.baidu.com/view/fe86953ebb0d6c85ec3a87c24028915f804d84f6.html" rel="noopener" target="_blank"><!--pnid:Bhb1utryWszQgTtnijshD8-->基层民警办案自述（《派出所工作》2019年第02期）：一天平均接处10起左右警情、四级审批、十余份文书装订成卷、简单案卷不少于30页、「感觉最累的就是文书的处理」「一个错字重新制作往往需要几个小时」</a></span></div></div><div data-page-node-id="ufE9izAaqWCRIFyphLFsEZ" class="pain"><span data-page-node-id="aKwMRWGtYgny5EhBi0G2R3" class="i"><!--pnid:x5AL4rh2vcEH2QgAK53Hyk-->2</span><div data-page-node-id="GJLt4W4nrTK9ImlyxZ0iUU" class="t"><!--pnid:6a5xAhBLUYgK0SEZwms26L-->「无接处警登记表和无受案登记表」是执法倒查的最高频问题——2万余起警情起底排查时，记录缺失直接指向办案民警<span data-page-node-id="1J0uxWOL7YUH6dFPcc8J33" class="src"><!--pnid:jedQdNnFh9mxHAUUPjhPMb-->依据 · <a data-page-node-id="GgdsrU9fG2LJc8nKNFCc6a" href="https://www.sc.chinanews.com.cn/bwbd/2022-07-19/170951.html" rel="noopener" target="_blank"><!--pnid:RDOkEO4LxL0H7vZuBI4wqV-->四川恩阳区执法突出问题整治：起底排查2018年以来2000余件刑事案件、3700余件行政案件、20000余起警情；一起寻衅滋事案倒查出26个问题（无接处警登记表和无受案登记表、处罚决定书适用法律错误等），主侦民警被取消评优+组织处理</a></span></div></div><div data-page-node-id="OPuTr929ulqjtLHXtBziN7" class="pain"><span data-page-node-id="NZLR78tVNGmyMGxxgSXyMX" class="i"><!--pnid:bjauJOL61Zj6m3TbUqHuq8-->3</span><div data-page-node-id="T43ocOQKER0DDUU5oDddDX" class="t"><!--pnid:1lewuW0iNwfuwUn3pu3KSU-->警情类别决定后续流转（治安/纠纷/求助/刑事），但现场情况混杂：一起「酒后纠纷」里可能藏着伤害案件，分类错一条就漏一件案件<span data-page-node-id="cXvWDcHBWcsrkaIDWY8jhD" class="src"><!--pnid:Jiwfssj93JJJXX8ymIqxoK-->依据 · <a data-page-node-id="t4JLjZ8k0FesUP3wvcBmDo" href="https://ima.qq.com/wiki/?shareId=47bfc22d935e81969256da3b0f7cd9160a7d0f7044ab061608112019e23015a1" rel="noopener" target="_blank"><!--pnid:ftb0bQ31uC5frzJNkHdchA-->刑警自述：进刑警队半年同时走6起刑事案件，「时时刻刻都在担心案件超期，时时刻刻都在担心自己违法，每天加班做案卷」；抓捕后至少加班两三天、一天大概率通宵</a></span></div></div><div data-page-node-id="iUN8PAJgt0NBEQMmpKKSGb" class="pain"><span data-page-node-id="k18lL1A0zlmfBHHExG8uqW" class="i"><!--pnid:qOsskiaAGRbP4ysJzwr0vp-->4</span><div data-page-node-id="qNOP7PQZnCJOZm9CVP8SLa" class="t"><!--pnid:crpNisJubg9vGdmAhjkVxe-->执法记录仪音视频按警情编号关联在内网平台，与纸质记录对不上时，评查要逐条核对「这起案件的现场视频提取了吗」<span data-page-node-id="qld1Phq2S71NtgsEgYBR8P" class="src"><!--pnid:nEaB0SalXMxbThAA3WoQyz-->依据 · <a data-page-node-id="WwllfqkAYc10MytGWhvuCr" href="https://epaper.cpd.com.cn/szb/wwwcpd_9/dzb_16465/rmga/2026/2026_04_09/16466_2026_04_09_44841/426/t_1228186.html" rel="noopener" target="_blank"><!--pnid:8mx6eKFIhd2JekrkgWgr8M-->山东五莲县户部派出所「三级盯案」：日自查（办案民警每天下班前对照五栏清单逐项自查）→周评议（每周五兼职法制员对全所案件地毯式审查）→月评查（所长逐一阅卷、结果挂钩评先评优）；兼职法制员发现的问题具体到「笔录中的一处修改，当事人没有按手印」</a></span></div></div><div data-page-node-id="89XO1gv4n5haFCS5z7JYYM" class="pain"><span data-page-node-id="RqSAnRm2R6oFgIZw7cnzry" class="i"><!--pnid:k4UDcM8ZJJx2RzcTZeuIe6-->5</span><div data-page-node-id="fmRvvTIkmeK57ZlIu8OeyW" class="t"><!--pnid:Sf8sTA6yrrK0FvHl89Vo6l-->六盘水谢某案：锁定嫌疑人后未及时立案上网追逃，嫌疑人后续再犯重罪——受理环节的判断缺失以刑事追责收场<span data-page-node-id="RPC0SSdnbQq7VLpweDhvAE" class="src"><!--pnid:YN4qAc9LA4FEHN0qsFb9dx-->依据 · <a data-page-node-id="6rpdXgRDLOpLEEwgEeKLmh" href="https://news.youth.cn/fzlm/202409/t20240927_15548488.htm" rel="noopener" target="_blank"><!--pnid:D6Dee82boGFcCcFF2aBOl6-->贵州六盘水民警谢某案：2019年办抢劫案锁定嫌疑人后未及时立案上网追逃，嫌疑人后续又实施强奸、杀人被执行死刑；谢某2023年被立案、因玩忽职守获刑</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="obtXTPUEUq3KJVLZFYIxWj" class="blk">
+  <h2 data-page-node-id="ZSyhkbyOY22Nf8y6ELUR0z" class="h"><span data-page-node-id="rQupoZ3BvBnoQX3DQxE8ua" class="num"><!--pnid:05ZwJ5SSj8ZeKik6bkn00Y-->三</span><!--pnid:P5mNhz7crEUpLgrwy0QFRf-->换个做法之后</h2>
+  <p data-page-node-id="OVOwcAtgB3oBOPFJ7DVF1T" class="subline"><!--pnid:HbvNd05EsHrgcamRlBx92D-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="tPs1catEe40Jd6omZSksN7" class="cmp">
+    <div data-page-node-id="noCMKhrzG41rEKHT48yvP6" class="old"><h4 data-page-node-id="fRNTR7JijwvczmMUBYlIOf"><!--pnid:wd4b0BCyB15iigobDKEcnX-->✕ 现在的做法</h4><ul data-page-node-id="NzVK4kiMgWK0W1mJIARxY0" class="list"><li data-page-node-id="Xm7urez5fnwq9Cv0fhVQYp"><!--pnid:voXelSAEthITMw7ahjiIVB-->基层民警一天平均接处10起左右警情，回所第一件事是补文书，「感觉最累的就是文书的处理」</li><li data-page-node-id="l90lRnrFmSiNYsyoybKJwy"><!--pnid:RQWuV822HsIATjEs9k0Ki1-->「无接处警登记表和无受案登记表」是执法倒查的最高频问题——2万余起警情起底排查时，记录缺失直接指向办案民警</li><li data-page-node-id="irvhgMw8Hp1nZE2jmg2H0w"><!--pnid:RInHU3CcPXJ3SIlSclJNWw-->警情类别决定后续流转（治安/纠纷/求助/刑事），但现场情况混杂：一起「酒后纠纷」里可能藏着伤害案件，分类错一条就漏一件案件</li><li data-page-node-id="8a3R438bpoc5FjZ0XCWtNx"><!--pnid:2UBxkEiPMMUAftjaWsrvRN-->执法记录仪音视频按警情编号关联在内网平台，与纸质记录对不上时，评查要逐条核对「这起案件的现场视频提取了吗」</li></ul></div>
+    <div data-page-node-id="BcKFlNLmx0As2F1LMKsAN7" class="new"><h4 data-page-node-id="Uvu8VCPDp1PsLijXWjhSJ3"><!--pnid:yEq2lfRsn1x1uPE3DMZss6-->✓ 交给 Agent 之后</h4><ul data-page-node-id="tycESYT7oZU8992g27bEFO" class="list"><li data-page-node-id="7fm6LWfUXuhIHC1XRkY5J9"><!--pnid:OvBknKGMqghHMo8LJyB7mt-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="OFiFsVBuNpdSu9iTUHz1xO"><!--pnid:fCb5yCDB0NtVlID832K18j-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="GFEDH0szvnjvvkAsXpZYAj"><!--pnid:dp36SQ7L5Hg3NuAfN1XkD5-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="10Y1myvydGWa6HbN5CmVpb"><!--pnid:ixVPL9Az99DylxbvWIFRiX-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="aWEWbQ0sOR9KAQChszze1I" class="blk">
+  <h2 data-page-node-id="tCDJZ1C3z9693iOxLA6HQy" class="h"><span data-page-node-id="iJ35tRVO0PK61e75OLpaww" class="num"><!--pnid:0pzmlXvBjx8drNXdZ2pO3Z-->四</span><!--pnid:wck46wXcKScQL3FwAV8F7v-->场景闭环</h2>
+  <p data-page-node-id="KDd2L75SFSalcc0QNUQ3hc" class="subline"><!--pnid:CXBtts3QCa92FM3iZRtIfD-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="MPV86AjZkpdl3G2jswCMGg" class="flow"><div data-page-node-id="lWLSwKA1fHK4sznP0MeRil" class="step"><div data-page-node-id="ATwreLcR7vrfLNOKujroM0" class="n"><!--pnid:H5puDdO10XFUB2Jiwjtpd5-->第 1 步</div><b data-page-node-id="0NeIMWElYYn5w4wYxw0PeC"><!--pnid:mstW4YxDr1vNAirNKHh7Zg-->要素校验 · 速记够不够补一条合格登记</b><span data-page-node-id="jH7AGbHt26VC3GShCKSdNb"><!--pnid:hhYx7R1xhVQswk0rKFklDJ-->逐条抽出时间、地点、当事人、处置四要素；缺项列出</span></div><div data-page-node-id="mq08CLDqtlSvXSKIMTgTVd" class="step"><div data-page-node-id="9jztj6MlfyXpnbFoVs7jQi" class="n"><!--pnid:1yY3xVDu6QVWVNyvbdqqsQ-->第 2 步</div><b data-page-node-id="vyfaoxBe5MWiKeaOGC4nDa"><!--pnid:g2FfxNiuVK188cdNw92Du0-->警情归类 · 十条速记逐条定类别</b><span data-page-node-id="hyhLEIaICf2X8C3FMggJVH"><!--pnid:YMD5OPnZN9rUTcf3LpmN1n-->按本局口径归类，依据写明；表述含伤害/数额/持械关键词的标出原文</span></div><div data-page-node-id="YipxU1PkZZjUzej9tIYFBh" class="step"><div data-page-node-id="9tDxA2xZM5PsSGt4kNUmg0" class="n"><!--pnid:rwIC08IJV4et0cjaVqxv68-->第 3 步</div><b data-page-node-id="23zceMQ2Fm2Wh68YknDikq"><!--pnid:NEXhVHpDmVnUdjEaH8aDtl-->受案提示 · 哪几条必须评估转受案</b><span data-page-node-id="Hrf8KZ5vWXW7eQZCzEgUYn"><!--pnid:WgjGwZExOH7YwNOmxQ73F4-->对照口径清单逐条给出提示与原文依据，不上结论</span></div><div data-page-node-id="AhUhAG4G77FmzH1smODeB6" class="step"><div data-page-node-id="i0m8YdEtFn9Q2Gkap7zmGK" class="n"><!--pnid:YPIQzWHY9Mo5DyCzlfsPcV-->第 4 步</div><b data-page-node-id="GWDtxvk7jdP9s4alJf16kB"><!--pnid:Xt5HJ4iMUrXJJ1AM5VNugn-->记录成表 · 生成接处警登记草表</b><span data-page-node-id="ZieDCH2uP0MShGFlVKlmWM"><!--pnid:IWMP8HpiSMOCBIPHMwMaQX-->「是否转受案」栏留空待民警勾选，执法记录仪编号栏预填</span></div><div data-page-node-id="pWah3jsMbhxzodfttYFTWw" class="step"><div data-page-node-id="yMJ59UGggraifPmaP8kLVI" class="n"><!--pnid:kxJP0UYctLX7NxuMZlLtyr-->第 5 步</div><b data-page-node-id="UdQqFOJPtqYz0W2NuxVJIU"><!--pnid:PIjZeZkJJSJv7vqBE4v5JQ-->当日小结 · 十条警情一屏汇总</b><span data-page-node-id="CGg8hKxXorCprS8mX397xE"><!--pnid:IdA6mTuopHXIDGC6mKPGyt-->类别分布、待转受案数、缺项清单，供值班交接</span></div></div>
+</section>
+
+<section data-page-node-id="clxaL3GuBnfvRpylow0Gvl" class="blk">
+  <div data-page-node-id="md0IaLOSNJM0275POub9an" class="g2">
+    <div data-page-node-id="2IiVQJKjJhXM6ggSiZvHVb" class="card"><h3 data-page-node-id="u9CTQHpkuPeykxHmwopMwM"><!--pnid:4WvOZBjDENk7vVNp43RUKH-->要准备什么</h3><div data-page-node-id="pURMo3ctWChQ78Hm20DrbJ" class="src"><div data-page-node-id="yBRWpu53bNo8spku8Ao3nw" class="fn"><!--pnid:qZBLC5ZGC32C14dDIUoqbj-->当日警情速记（txt/照片）</div><div data-page-node-id="OrHLNAsDEBZtBv1uy5AFI8" class="fd"><!--pnid:vNyjaerOTyE2RY8dsTA1Hp-->现场随手记：时间地点人物事由处置，格式不统一</div></div><div data-page-node-id="txFQUnhNUAlrjoPrAjDGgl" class="src"><div data-page-node-id="F6U3oYNTdUDApcayUOMfbo" class="fn"><!--pnid:zI5QwVmzzUGGwIOkW7DYL6-->警情分类与转受案口径（txt）</div><div data-page-node-id="PYTUATchtsN8opEOcsUazW" class="fd"><!--pnid:rBrhk91QMnpeZTHBoAUArS-->本局对哪些情形必须评估转受案的规定</div></div><div data-page-node-id="YnhvblAG59Jts2qgrwnLw0" class="src"><div data-page-node-id="n5AVLMmcmW18SzR9iynLR8" class="fn"><!--pnid:d1xENp7oomy1sqd27C3DSJ-->接处警登记表样表（xlsx）</div><div data-page-node-id="nurt7GSFLicQjB77fFbWG8" class="fd"><!--pnid:2uQgEsdK2MpCrBWrrsVgD5-->栏位以本局现行样表为准</div></div></div>
+    <div data-page-node-id="Vt0J4PvbyWPkNNT0Klxutq" class="card ev"><h3 data-page-node-id="yPA6QgWsxHbup6HNQbUV6y"><!--pnid:QOlHGeRtICgrDb9sjJsuOr-->为什么这个场景值得做</h3>
+      <p data-page-node-id="tSCh0e2xC2jhlHKGwOzKPe"><!--pnid:3D1Gnzdv9WaWKJgHuBI2ce-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="snkUMT7laxuIs5UghxNWMa"><!--pnid:e8bTp8MbPOrhWKd75A322y-->12.0</b></p>
+      <p data-page-node-id="VHZOChD3qMgP8LEoyJxaOq"><b data-page-node-id="v7oUlsD7BIfZZ1ZO1VM5z1"><!--pnid:hJ2vyhyrNOSXf5FPZS5kwR-->最大差异点 ·</b><!--pnid:ATBSWzccIr3yCX2v6o9aSt--> 不要求民警先规范速记。现场怎么记的怎么进来，要素由 AI 对齐登记表栏位；转受案提示用的是本局口径的关键情形清单。</p>
+      <p data-page-node-id="pKdlkrKkvrA0y3XhwZyre3" style="color:var(--ink3); font-size:12.5px"><!--pnid:FFUPMVKtKaRjdTy1gGsvyj-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="P7CvXxCSSwA4yAvMxZzIBl" class="blk">
+  <h2 data-page-node-id="AcBpmpKjLOsm2IXPXMZHV6" class="h"><span data-page-node-id="WAfNODMaNAHAQv9xvEyuTl" class="num"><!--pnid:N7XzWrpgQ0JG9IhS3N9Vr5-->五</span><!--pnid:62p3Xi2hOq3wXa9EPlWD3r-->会产出什么</h2>
+  <p data-page-node-id="ZO1zW56YuxfP6JSMLrl9by" class="subline"><!--pnid:FPv0kRhuDdAeHRNiozMFCp-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="HPFZjmwskByQjdrM0GzBPF" class="outs"><div data-page-node-id="b71IUUtjT7Q66pW9htqr8Q" class="out"><div data-page-node-id="fud7OMGk4FNMqV5sAgbinY" class="on"><!--pnid:UnQPLRyPasJtsuYwYmD9hM-->正式件本体</div><div data-page-node-id="GCQpAFMyw2GpRrcKP5pW2f" class="ot"><!--pnid:z3Ej3DfyGSPIynZYWrK8Xt-->接处警登记草表.xlsx</div><div data-page-node-id="S4zWcRecy4UmWeJBryxRvB" class="od"><!--pnid:xLb5tiNeF21U28sk3xFtWB-->正式件 · 与局样表同栏位 · 转受案栏留空</div></div><div data-page-node-id="zlU6sX22h8AfmGflwueCEQ" class="out"><div data-page-node-id="FWgbZybVX42qoFQmzTowEp" class="on"><!--pnid:qEQENs6UBjczsYWj2Gglca-->可派发清单</div><div data-page-node-id="gVQvFW84ICrzTHvi9aSeXT" class="ot"><!--pnid:F2cCHfdhWHcaBCFJvPacMC-->转受案提示清单.xlsx</div><div data-page-node-id="0qviUS4rVcdcr0MqloCeTn" class="od"><!--pnid:JIdhpKHC7AbJXpneRO5Kro-->每条含原文引用与口径依据 · 供民警勾选</div></div><div data-page-node-id="alidQim803PymgpncObxnb" class="out"><div data-page-node-id="012Jhwj3EsHD6N2jePESqt" class="on"><!--pnid:cNPTsnQVxrmlrStiujNP9R-->可派发清单</div><div data-page-node-id="dghd9cjCB8EuvIXvKYkA8L" class="ot"><!--pnid:nvS0pTtLdbG44DHsm1vHFv-->当日警情小结.xlsx</div><div data-page-node-id="zF1YG7xlZgAJ8e4fxk02Lt" class="od"><!--pnid:ksrpNSkNSE1eHLUMVtsYVM-->类别分布与缺项 · 值班交接用</div></div></div>
+</section>
+
+<section data-page-node-id="RCHB8E1eqQQWbuXiGAu7P7" class="blk">
+  <div data-page-node-id="Pr4WHEdvowu45cckdrqnp6" class="card warn"><h3 data-page-node-id="sy9nmS18r8XyDp3ASwvOq8"><!--pnid:KVK4U6MdzWvJkdHnKHIL3O-->这套东西不承诺什么</h3><p data-page-node-id="1FkbyevU9KRWme5gqin9cm"><!--pnid:wLNERvwqHFHusBNM5JVMAx-->不做是否立案的判断——「是否转受案」栏只输出证据提示（表述中出现伤害、数额、持械等关键词时标出原文），决定权在办案民警。不接执法办案系统内网数据：输入是民警提供的速记/打印件/口述。</p></div>
+</section>
+
+<div data-page-node-id="r4SicldWnKHkRyfmjqsUjM" class="cta">
+  <div data-page-node-id="Xy3P9rKJp2wJqWCNTdC8yY"><h3 data-page-node-id="snSm8mDfd86z6j0E2NTn6Z"><!--pnid:tAuTmaoYOGplNhU6Atoghd-->想看具体怎么跑？</h3><p data-page-node-id="z2GL96FfypEEnvkhZX1EvJ"><!--pnid:MzpF3xCRE174VbZEBGDuRk-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="uqJjzkGRmuXDASVglqEqbV" class="btns">
+    <a data-page-node-id="WaK1jP1NN5bdxPf2xwvDod" class="btn" href="LiveDemo.html"><!--pnid:cVKG3GQYJlygEdn7nYjw4f-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="hqhLC8aeiVVdyljHrUmp1a"><!--pnid:HG5gpfElZECpIivssfhu4j-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 法定决定与签字权一律在人</footer>
+</div>
+
+<button data-page-node-id="xOqjJ9poAybkMgA922ddCc" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="1jzt8VI2k4qKBin7N1MkMD" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="mxDgMXvLMKrJuiT36vZLMp" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="ENxdzA7qe983TNxkLDfWfE" data-pnid-children="zOWU85TqKAtge5QoOlDfSk">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="I62mLpVeIyNyoCQ0l3xE6V" data-pnid-children="DFGKSLqZ9s8EXiA0pwmWA1">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

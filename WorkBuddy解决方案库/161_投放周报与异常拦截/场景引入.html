@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="Am8d0y10JQSbGpeC2eWM9S" lang="zh-CN">
+<head data-page-node-id="JJgm00ysVHlue1nxBTbyel">
+<script data-page-node-id="HbTH6bYnVKUiHTOlvxhesI" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="V0LhRKx5GhbB2eAUrGEWml" charset="UTF-8">
+<meta data-page-node-id="x1d3N4GdcUxmzOZwvSwFxw" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="VHuvhjgKElyZzJpcQpj4pF" data-pnid-children="AJ4FLsQEYIZHj2wHByTeLU">投放周报与异常拦截</title>
+<link data-page-node-id="I0f2m3VS3iYgwG55atiI48" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="sTXrl3VatqkZ0oI8PEO3Yv" data-pnid-children="BSmHFfO1xFtszLjZz6GR2N" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="LtFjNWvK5nIjZ8Opm9sWo4">
+
+<div data-page-node-id="UNHN10ozXXPb0wCM2SjKbW" class="wrap">
+<section data-page-node-id="aS3KJXtz19SsVwfsv2W1lS" class="page-hero">
+
+
+<h1 data-page-node-id="3ULKQnLylYuxItlD6fRWLs"><!--pnid:P29h9JXw1idmYUv9rPSHwz-->投放周报与异常拦截</h1>
+<p data-page-node-id="Oi6uZWDSv6kxkTZoNlHMCE" class="lead"><!--pnid:iOgNtzxoyrms5d9614oCxB-->SEM 账户的默认周报是「消耗 5,200 元」· 老板看到的是钱，看不到的是那条 1,733 元的线索成本</p>
+</section><nav data-page-node-id="j2g1OnnbWUTX7IkN7BKJ5o" class="subnav"><a data-page-node-id="w8jf8E4W7N76PZSJfKMslU" class="on" href="#"><!--pnid:E99Hf7CoDeaDIcsvj7Pc6E-->场景引入</a><a data-page-node-id="6THBKEnAd9TYvwfzXsjDht" class href="LiveDemo.html"><!--pnid:gNvUErkwxPlx8yRDujnbcL-->Live Demo</a><a data-page-node-id="1jcZZJdQ6o5sUJVVEbJYYq" href="推荐任务.html"><!--pnid:s4QprCE4E35SoAGm93U64k-->推荐任务</a></nav>
+<section data-page-node-id="qHmvujnclwdSeHZVrquHDW" class="blk">
+  <h2 data-page-node-id="GeW0RuEfqIQ60nZAuZsltw" class="h"><span data-page-node-id="xNLgUavzgA98N3jIGyNF7h" class="num"><!--pnid:lsCQvDln6YIOTu9ImXdA7a-->一</span><!--pnid:NRhl1IBaBQQqoRP9UQAePP-->这件事现在是什么样</h2>
+  <p data-page-node-id="Vojmp5OmfYIYS8Y6syEpkQ" class="subline"><!--pnid:eo57ioPhqdWaUcp4wOxRpZ-->线索与交接 · 真实业务触发</p>
+  <div data-page-node-id="BKmmVmpdHRYialg6ekzF3E" class="card"><p data-page-node-id="2jG1uK6JugVpHKjEATG6ct"><!--pnid:2D4BieMAkbVyYYdwWa7cxh-->周一下午，方蕾照例截图百度后台发沈总：本周消耗 5,200。沈总回了个「嗯」。她不知道该汇报什么 —— 后台里其实藏着一次异常：这周只来 3 条线索，单条成本冲到 1,733 元，是正常周的 5 倍。</p></div>
+  <h2 data-page-node-id="5T1VJi199SZoJhowm89bnO" class="h" style="margin-top:22px"><span data-page-node-id="WybGI0Su5Bjnalvk6Z5nBq" class="num"><!--pnid:CZseltTguVRBi3NMr6d4LS-->二</span><!--pnid:qJ0tLigcUWVzU3XSR3G4E6-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="CoFMzwQMj6YAwNyU4ZVE4c" class="subline"><!--pnid:1vnHiJ2Ycsip6CbtydjGF7-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="xBMVaA0QtsgQDYVcmK0uqu" class="pains"><div data-page-node-id="rZF5vGZbwrpQkmoSxhUiAW" class="pain"><span data-page-node-id="gjXUzhtqRuF3Mc9QP9lVb3" class="i"><!--pnid:l49daj1a9CKROdF1eki5mL-->1</span><div data-page-node-id="Zrv3aKkaYwgh2MMeXUcNh1" class="t"><!--pnid:t3gZ8kwmQVVREjWgmP4Siv-->「每月只看总消耗，不拆解线索成本、不否词、策略常年固化」是九成账户的通病 —— 老板看不到 CPL 就只会砍预算，市场部没有任何辩护数据<span data-page-node-id="Jezdv0onyb4N7ujODEMpq7" class="src"><!--pnid:OnwW3JFAHMDE63nCArfH3v-->依据 · <a data-page-node-id="SFopILjSt3txFj2iu5w7Cg" href="https://so.html5.qq.com/page/real/search_news?docid=70000021_1276a155fb139152" rel="noopener" target="_blank"><!--pnid:uHr2e9R6c7Yi59lVtoXk5K-->B2B 工业软件真实案例：SEM 月投 20 万换来 80 条线索、成交 2 单 —— 单成交客户获客成本 10 万元；「每月只看总消耗，不拆解线索成本、不否词、策略常年固化」是九成账户的通病</a></span></div></div><div data-page-node-id="DMfhsSI7MZnBz5V6YbxYgO" class="pain"><span data-page-node-id="ebQpFsW4jZexMsIOfh091c" class="i"><!--pnid:9ZTIVfiK110hiO4TcoSQ1M-->2</span><div data-page-node-id="MMf3OJ8k8wbVWNFo9orSa9" class="t"><!--pnid:Q2BioNF6bFSzZbqnc6AUuB-->B2B 工业软件的真实案例：SEM 月投 20 万换来 80 条线索、成交 2 单 —— 单成交客户获客成本 10 万元。数字不拆开看，钱烧在哪永远没人知道<span data-page-node-id="WUpu7ZsU11mR3veE4pjmz3" class="src"><!--pnid:JCN2h5vO9HdG7qYL0A4MzX-->依据 · <a data-page-node-id="eJGFMjygNMuv9lEEwLRahC" href="https://so.html5.qq.com/page/real/search_news?docid=70000021_1276a155fb139152" rel="noopener" target="_blank"><!--pnid:eAReFrcApSV8AwkBfxK61s-->B2B 工业软件真实案例：SEM 月投 20 万换来 80 条线索、成交 2 单 —— 单成交客户获客成本 10 万元；「每月只看总消耗，不拆解线索成本、不否词、策略常年固化」是九成账户的通病</a></span></div></div><div data-page-node-id="pJeiWSX2jQlf7Gn8aOiGdc" class="pain"><span data-page-node-id="BoD9yW2m8EaN5KXj9IXnor" class="i"><!--pnid:Nsmn9n9xuP6InGJu7ri3ET-->3</span><div data-page-node-id="oEYbNgzPFTI4dWmexYxMWi" class="t"><!--pnid:VOpgm1rNP8SruiHbEbw6te-->现状的周报形态是「后台截图+两行字」—— 老板的注意力只有 90 秒，截图里没有他要做判断的那一个数<span data-page-node-id="HsUxOrh99fMM8g6XrG7KhK" class="src"><!--pnid:vz2ZhEuFwJVG8JJXOEjb7u-->依据 · <a data-page-node-id="rxCtaXt0trk87vosNBTOqv" href="https://wysera.ai/templates/monthly-marketing-report" rel="noopener" target="_blank"><!--pnid:tHbPRSgVeFjONXE6tqqCIc-->大厂月报模板自己写着「CEO 和董事会对月报只有 90 秒注意力，5 个指标封顶」—— 中小企业老板注意力更短，12 页 PPT 的命运是翻到第三页被打断</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="IhyLPCekPmRGyd7MdDBHFl" class="blk">
+  <h2 data-page-node-id="LSAuPBfdxnqXyMesocdQEi" class="h"><span data-page-node-id="U3jGfxcs3llMIErzvpaoqj" class="num"><!--pnid:YxxF3gwRw3Q9SEB9zhVTSd-->三</span><!--pnid:cwSAcEz2UWgWT2ZHGATxyv-->换个做法之后</h2>
+  <p data-page-node-id="pVEySMCVIxDPkHTsMwJjQi" class="subline"><!--pnid:kItijwNMDlIS1zDvyWPlC9-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="g21k50MyXshwape4x0bUHE" class="cmp">
+    <div data-page-node-id="z0flH4eQzVp9sYgv5glXYC" class="old"><h4 data-page-node-id="6RF1C6nUshEy6kgWTVSLS7"><!--pnid:z2d4ASbS5fshhnVLsxSqzO-->✕ 现在的做法</h4><ul data-page-node-id="3X8Wnti54bNpXpYzt0dLzG" class="list"><li data-page-node-id="sR4zO8eAn3JyI0BHkgAxzN"><!--pnid:woB8xSUC7RiJRwHq4ziBnK-->「每月只看总消耗，不拆解线索成本、不否词、策略常年固化」是九成账户的通病 —— 老板看不到 CPL 就只会砍预算，市场部没有任何辩护数据</li><li data-page-node-id="SZFrnOw3GRViEqyd60aAFV"><!--pnid:bfXJjWjklzGMGFkLR12Q0A-->B2B 工业软件的真实案例：SEM 月投 20 万换来 80 条线索、成交 2 单 —— 单成交客户获客成本 10 万元。数字不拆开看，钱烧在哪永远没人知道</li><li data-page-node-id="s6RjWojAtttcB6KWtgpnEr"><!--pnid:VN96suAe8WB9NVGLlW2QHn-->现状的周报形态是「后台截图+两行字」—— 老板的注意力只有 90 秒，截图里没有他要做判断的那一个数</li></ul></div>
+    <div data-page-node-id="2X7uCByCro9OU7EkMUZokm" class="new"><h4 data-page-node-id="5L1PvIjMqyLFnZs7qPa4z3"><!--pnid:odZYUMhrK0tuCBOgpP7i9E-->✓ 交给 Agent 之后</h4><ul data-page-node-id="rZJ8tX91zx7NyK4BJ9dQap" class="list"><li data-page-node-id="l2WVRWLpiSeVVs5uBZtQUo"><!--pnid:aKPGN3gWnXXzATfAxqOANX-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="Rwsws0mp9pYrsoTHbxh9kE"><!--pnid:riz75nmtq5COUzzMe6FitB-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="l93Ob0SZnxg64Qs0waaSwM"><!--pnid:Ej2JiXlZKOk1WEypypYzPG-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="RmpAs0OrBUSXJFUWyy3Ed2"><!--pnid:qGpDX5KvrXi6mjnFh7ehEF-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="3TIDsTgOlv4Mv39nDEY6l3" class="blk">
+  <h2 data-page-node-id="8zNdtXwobT8iiN8PgAnuhY" class="h"><span data-page-node-id="lIjoMerjgCX3U7AqxHoh1F" class="num"><!--pnid:6AGwqnUjqhd4msyFwJ2kKv-->四</span><!--pnid:ITSwZcGadnoNx5Jx6m4IOL-->场景闭环</h2>
+  <p data-page-node-id="och6eTW4YAMQgCnqKBUnSs" class="subline"><!--pnid:4T55VOwUGUferxbyRJaWmU-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="ybSetfGyclxm3nUpxdLVAf" class="flow"><div data-page-node-id="MZ2JNorpkbUl4G2s1PaIDV" class="step"><div data-page-node-id="vJ4nbe6KZhfNiaB0Ilr7kw" class="n"><!--pnid:LoRCyqF6eLPoBFuzQ8Gjut-->第 1 步</div><b data-page-node-id="LBkgFNssorWwCvb7qejEBF"><!--pnid:bewAgQTMpg7YagAzSOd1Gr-->三列口径 · 消耗 / 线索 / CPL</b><span data-page-node-id="JP5oQuI0Z0lXYIGXylJVRr"><!--pnid:0IQOPNBZ4uu2HOATnWbMPS-->CPL = 本周消耗 ÷ 本周表单可归因线索 —— 分母只算真线索（垃圾已按 留资线索清洗与分级 剔除）</span></div><div data-page-node-id="CNqj9AyaraUaSGwR4wGHdz" class="step"><div data-page-node-id="Cnv4nAz1PdN0cbhxxKDPWT" class="n"><!--pnid:VmGCffUs4MocJUB9xRkhT0-->第 2 步</div><b data-page-node-id="D5A6qzZbYxiOKAmHk5mb2M"><!--pnid:M2M8BDgmcW3lXp6yq66bdw-->环比对照 · 与近 8 周基线</b><span data-page-node-id="1Bekh05IXrL5T3vk1cwByD"><!--pnid:Y7JAuxD4jwit6MFZokZSWg-->近 8 周平均 CPL 337 元，本周 1,733 元 —— 偏离 4 倍标红，附异常定位方向</span></div><div data-page-node-id="gYEokTlSp26Xy0ludylpUV" class="step"><div data-page-node-id="XUBdFyeG8BEtigdX8n6J4w" class="n"><!--pnid:1K42rtj5mGN5RpI2PpAjn8-->第 3 步</div><b data-page-node-id="qp7x0Q4UyQr1H7OcXVGvjf"><!--pnid:iPRyKndwqSO2HWrkD9r6i5-->异常定位 · 钱烧在哪</b><span data-page-node-id="IyxV4FPmkTbDfJtFQJ0610"><!--pnid:GADcpPrbEN3pRgRElTelmT-->本周消耗 TOP5 词与线索产出对照 —— 某行业大词消耗 3,100 元、0 线索（SEM 否词建议清单 否词清单的直接输入）</span></div><div data-page-node-id="UKycF5kKRlvJzyc0S6e5aK" class="step"><div data-page-node-id="MdLDD0WycpmaKLZyAyvvGN" class="n"><!--pnid:zFRqrQWqpzLqQp6d7U0Hiw-->第 4 步</div><b data-page-node-id="nGzeZDfVj4eBy9ArNoFupO"><!--pnid:sE3HzESnX1uNoiG2SaJVKT-->动作建议 · 下周怎么调</b><span data-page-node-id="7MVXkGsMca6z31CkDbhPNb"><!--pnid:Q9ci2ZRF1AfHOZ1bgQse0x-->降该词出价 / 加否词 / 观察一周 —— 每条建议带预期效果，决定人做</span></div><div data-page-node-id="BqZYhe6K8RfBKA42dniaSp" class="step"><div data-page-node-id="gn8nWSvYvPRZOrONGHKNyv" class="n"><!--pnid:tVik60TYPUls1fd0108CbD-->第 5 步</div><b data-page-node-id="XXUnFuBW3FJfAMztDiR2mS"><!--pnid:3b9FOWRDDrjYSQcLcNH89v-->周报交付 · 微信可转发的三行</b><span data-page-node-id="b8pRedy9y6NALhtErYCSQl"><!--pnid:JBZAwbHRtP8B7F4j3MCybd-->本周消耗 / CPL / 一个异常一句话 —— 沈总 90 秒能看完并回一句「调」的形态</span></div></div>
+</section>
+
+<section data-page-node-id="8M9XC5R0FFBVR4DaxB3WKG" class="blk">
+  <div data-page-node-id="ygFIeMbdCeZQzinrLgd6dE" class="g2">
+    <div data-page-node-id="3juXL3PBW90QB2GrQzhzLl" class="card"><h3 data-page-node-id="ElRrSVUixgGxK0hu16IPrz"><!--pnid:ewvI44pS6nFan7S7yfAFJm-->要准备什么</h3><div data-page-node-id="FZ6TOxLf7qlIrJLyyyouJB" class="src"><div data-page-node-id="MbaYZZKOZP1SjkuCx8MojO" class="fn"><!--pnid:3eHCwUoFDaK7I0d558CpU8-->SEM 后台周导出（消费/关键词/点击）</div><div data-page-node-id="DrVP0FY5momXB9DFQbKUZz" class="fd"><!--pnid:7speS7VFEhHIE6IXORUj6Q-->账户后台自带导出 —— 每周一次 2 分钟</div></div><div data-page-node-id="FpwnyjbTOFVA7dApRTUody" class="src"><div data-page-node-id="nUZdkQigWRYCDHpJd6LHOH" class="fn"><!--pnid:MJ1qQpIygnenc8keJhockA-->表单留资记录（对齐线索来源）</div><div data-page-node-id="VkZsqzLQ6lFUIv8A7wyLTS" class="fd"><!--pnid:SAt93HwKuIM43NwVKzieCu-->哪条线索来自哪个词 —— CPL 的分母</div></div><div data-page-node-id="N4Ln2VpNteAmxHMf5vQfZ2" class="src"><div data-page-node-id="XLYoh84FgYXUoSPa6bC6Pj" class="fn"><!--pnid:ECeCkl7oYfSpkJ2jjg8mnl-->上周周报（如有）</div><div data-page-node-id="rAxHS0b1orPiq3TX9yqNU2" class="fd"><!--pnid:rgccj9N4PL2a5MVufvaoJN-->环比基准</div></div><div data-page-node-id="TzMTxW6HlUi7tZdNv5Lkqd" class="src"><div data-page-node-id="6deOxZTNUoSDTzITQhunYi" class="fn"><!--pnid:8OQivbrGKX2iOyGG891W5W-->预算约束（月上限）</div><div data-page-node-id="7CtbTvNV4MdIwBNf81ZN55" class="fd"><!--pnid:2fDWKzazsUNG0BeNHlnIEG-->异常判断的参照 —— 月预算 1.8 万，单周超 4,500 即预警</div></div></div>
+    <div data-page-node-id="HsIeYi7nGpPftOF8pjgaa9" class="card ev"><h3 data-page-node-id="cy5EeL9PbX4pU5umid4BwX"><!--pnid:5Q88dfh87M6ySSjEQKCkYv-->为什么这个场景值得做</h3>
+      <p data-page-node-id="dgNo6hQ8BQqQ0kGvL0lyM3"><!--pnid:MyJW6ozVIS1Zt0MoI8XqL9-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="llAPvu5djFumQs1oRZdUIe"><!--pnid:mnYl4hp2tRx3a8fqnJPsJ1-->8.0</b></p>
+      <p data-page-node-id="JZdKWohQDI6Tlcf0ktySLq"><b data-page-node-id="And0gF6RcgsjqOJBUCltV7"><!--pnid:98sIho0rUgpIrxlow6JrYn-->最大差异点 ·</b><!--pnid:j70TR3vWE73vVgvZord3A3--> 不要求装任何报表工具。百度后台的周导出（消费/点击/线索三列 CSV）扔进来 —— 周报与异常标注一次出，微信可转发的形态。</p>
+      <p data-page-node-id="wdBeTz4GUd04CfIqlGQXr9" style="color:var(--ink3); font-size:12.5px"><!--pnid:oO7iyp8zuQ6Dn8oMoJG0b1-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="hemhMaJjVS5nIAx3Um3kVf" class="blk">
+  <h2 data-page-node-id="6XN7xOHkqNvMyOToGr0J4d" class="h"><span data-page-node-id="8k0EZSgj4dpAhLA7454Ttf" class="num"><!--pnid:nDj3eWAt1QUMVwHoDMGDVx-->五</span><!--pnid:Fj4ocbBckCGiVQC4ZNB71m-->会产出什么</h2>
+  <p data-page-node-id="MIYSCCgCBGQkV7FnoU9Uvs" class="subline"><!--pnid:QZXJgnqbRrZW059EyyV95o-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="KvmXy5gn7Em5jmDQR35ape" class="outs"><div data-page-node-id="CPuepOAr83rKdRZGcxUBz1" class="out"><div data-page-node-id="R2afruPmau8ERAH6VUx0mp" class="on"><!--pnid:61ffZwq5OPomVtUvS36TY7-->正式件本体</div><div data-page-node-id="KoMfyRCw0XkOGW5HaRk9Pj" class="ot"><!--pnid:Sqc65cuH9Wh7YnoWNE1m9N-->投放周报.xlsx</div><div data-page-node-id="kAAx9ZtGtOWlhvoPGsbWK9" class="od"><!--pnid:4liISCgrZKvQrEkRzG2Qf5-->正式件本体 · 三列口径 + 环比基线 + 异常标注 + 三行结论</div></div><div data-page-node-id="MuwAeZXQHZcUphl9O50aaG" class="out"><div data-page-node-id="ggCulU7Cqd4G8GgbgUvLxY" class="on"><!--pnid:aaK6ovkhU71HHpihw1Gk3w-->可派发清单</div><div data-page-node-id="7nanGqDLVlrXP1dFu3BTXc" class="ot"><!--pnid:63OMfjYRcxN2QBOKGFgpXa-->异常消耗定位表.xlsx</div><div data-page-node-id="Y8nzt7HGcewYyq1VpUqfYk" class="od"><!--pnid:J38VUXfV5EYT34P086ioQK-->TOP 消耗词 × 线索产出 · 吸血词清单（喂给否词场景）</div></div><div data-page-node-id="PsR8EU70fV6e3eXms3Hm0K" class="out"><div data-page-node-id="bcX2C5wtkXSy1pWIGCxAeZ" class="on"><!--pnid:eKInqf1TOHcaDCf1eBWC4e-->可派发清单</div><div data-page-node-id="BcujgOi8Phs9qmYQ8BLBya" class="ot"><!--pnid:FqFIp4Bk0ciSxheRsZhoCi-->下周动作建议.xlsx</div><div data-page-node-id="WW1faPBsSQE8MFam1FRN1k" class="od"><!--pnid:CiixiT58AObMAb1N6gqlJF-->调价/否词/观察三选一 · 每条带预期效果 · 人拍板</div></div></div>
+</section>
+
+<section data-page-node-id="k7AdKCaipuBwlZN3FoeTAW" class="blk">
+  <div data-page-node-id="xDpu6UwZY1rtUNqgkz1tVN" class="card warn"><h3 data-page-node-id="rElQbBz3hm2dzeqBwIMUz5"><!--pnid:n96T3YKOORAGduQaq6AT49-->这套东西不承诺什么</h3><p data-page-node-id="E1TBY5LIE2qjQwJPyBYUdZ"><!--pnid:dCccU28THOfByktjq19V1h-->不做「自动调价/加词/关停」—— 烧钱动作必须人拍板（全托管 ROI 从 3.5 跌到 1.2 的判例就在行业里）。本场景做的是看数：CPL 三列、异常标注、下周动作建议 —— 动手的是人。</p></div>
+</section>
+
+<div data-page-node-id="iY1a746edlx8MPSQeDeOMm" class="cta">
+  <div data-page-node-id="agiUprDIaCytDAf1dc68gw"><h3 data-page-node-id="t0PTcypzCDi7wuG8ZJGARC"><!--pnid:prtt8Cdivdz7fZo1y90VyY-->想看具体怎么跑？</h3><p data-page-node-id="0U1Ih1vB2tkuXfh82QJCQ0"><!--pnid:y13HWeDE2sE7eozEfQy8F5-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="9LA3P8GUlcnX8E7EFvZcxz" class="btns">
+    <a data-page-node-id="6Ksvif5ex28aizl4B9h34E" class="btn" href="LiveDemo.html"><!--pnid:UYoaQj69spZXdG0E39qq43-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="PP07KEAsEpNcpQhfk1QfJb"><!--pnid:HINa2dvs6roc1r8JviA8wG-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="KnYDemFu7wToPUdyvggx1x" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="MohRMZT9YZDAdPZi127ggR" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="p2w8279qAZLbHOfXT1LfPp" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="SyVMlHnRU25tAMHtw01uc6" data-pnid-children="8gbvCvjsGoVgu7zPkTLeTD">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="Fhqc3HJz9MAzQx06WXVef3" data-pnid-children="l1dD5x6PYjX5Y0IKiDstfr">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

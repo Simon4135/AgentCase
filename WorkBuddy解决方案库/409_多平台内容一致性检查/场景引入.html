@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="I6y8bCOKinUiSungLw384l" lang="zh-CN">
+<head data-page-node-id="sv7HQO5nbewqlVaznWAkhA">
+<script data-page-node-id="iax7QGYwJ6NG6lTPMjsAMu" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="dvufcX26fhfgWRGxF9tcer" charset="UTF-8">
+<meta data-page-node-id="Iwey2ocVu87uzuMkFVm8FL" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="wHMKDBaDoCqHMe1vKSGLgd" data-pnid-children="QjthjyvRgM0OdGOwYGbShI">多平台内容一致性检查</title>
+<link data-page-node-id="TtmoykSZhKPB2JFNGQNUKR" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Y4HZXUPZi6kgEB87T1DcHk" data-pnid-children="k0mWFYUMsSEL1ypGi0Oy3f" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="Bjp1FqMvgd0QKAVpm1RbUE">
+
+<div data-page-node-id="MRWCSojksSwtRyCn2dvGnq" class="wrap">
+<section data-page-node-id="b7F1zpTkNzE8yBs7lHUAik" class="page-hero">
+
+
+<h1 data-page-node-id="50HuPVJk1Vjr5IV2GiptvM"><!--pnid:kfD4MhAkYZaR15SilFtVfs-->多平台内容一致性检查</h1>
+<p data-page-node-id="PPYEYlg1YV6t0ig73AZRnN" class="lead"><!--pnid:lYh54Lim6iI6EJ8TlQ3wu8-->五个平台发了五个说法，读者在评论区问「你们到底怎么说」· 而这种事每个月都会发生两三次</p>
+</section><nav data-page-node-id="hAyIyv6yaXvDrrHllKTGQ0" class="subnav"><a data-page-node-id="LDETWfPRNlwY6CIHtjK6GH" class="on" href="#"><!--pnid:pWh1kvGeyQ9g9HHFZEcbTx-->场景引入</a><a data-page-node-id="8oJeGvtxlc7ZiMwJZLpliF" class href="LiveDemo.html"><!--pnid:LgvL2kqKDUOtt7bgHtNYN6-->Live Demo</a></nav>
+<section data-page-node-id="4rzDE1EIUrYDEI8ZUkbdEQ" class="blk">
+  <h2 data-page-node-id="6ffrd2OBhzn99Qy0uvippz" class="h"><span data-page-node-id="BLBJUaOic0pToZqKQ0ozNj" class="num"><!--pnid:f6Hm0IbBjsNSbtVx8lOxqi-->一</span><!--pnid:unVfK18YwO3KDlfZ0F1SXP-->这件事现在是什么样</h2>
+  <p data-page-node-id="XlJ5fOp8SymBi8nJF4Ix1W" class="subline"><!--pnid:3qVXcb4ZhvwW7u8M8g0FrQ-->内容改编编辑 · 真实业务触发</p>
+  <div data-page-node-id="ETJg3oDJZE40N4F4uOE7hx" class="card"><p data-page-node-id="KuwpXyQ6XPVjKXXvHf2hw5"><!--pnid:Q9mPrn3BeTwJFEt6OCGvFN-->每周五要做内容质量复盘，检查本周发布的所有平台版本是否存在信息不一致、数据冲突、品牌调性偏差。主编会问：「这周有没有发出去的内容出了问题？」—— 你得在周一之前把所有隐患找出来。</p></div>
+  <h2 data-page-node-id="miEYQdIX1PBq5TvmHBEH42" class="h" style="margin-top:22px"><span data-page-node-id="tsCN1vX9BXzEI01qS019t1" class="num"><!--pnid:SgiAzystrx3b4eIULz70LF-->二</span><!--pnid:2f9WHlteT0VitKGtybVPik-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="oTCpmzl91lS9wkIAC6eUYf" class="subline"><!--pnid:s3Bc0JyJsJ4Ej5l9U9Wn4S-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="8Q9HhmV8630JNGOp9Qj2vf" class="pains"><div data-page-node-id="pH00OQp7e1oaKM7Z8TJZwx" class="pain"><span data-page-node-id="JtU07Z867dt8NXRvjLSgD2" class="i"><!--pnid:4b7QW3pMB3TNDoRXCTNtPn-->1</span><div data-page-node-id="L6Z8kIZuF7qikcktGjMrH3" class="t"><!--pnid:udlBFVJV9Ri3Ihog7GOPGZ-->不同编辑负责不同平台，各自改稿时没有对齐过，导致同一件事出现多个版本的说法<span data-page-node-id="6Y5GyraJaQ12RKGcblLZvl" class="src"><!--pnid:tHWmqvZU5tToulqArC1hwC-->依据 · <a data-page-node-id="lbhfhFvf66ZO9oEYtrwyeI" href="https://example.com/interview/platform-ops" rel="noopener" target="_blank"><!--pnid:EX6jG8jDob9HH80VSsEiLL-->MCN 运营负责人自述：&#x27;同一篇稿子改五个版本，公众号要正式、头条要抓眼球、小红书要种草风、抖音要口语化、B站要玩梗，改完一下午就没了&#x27;</a></span></div></div><div data-page-node-id="1rpewqtnDU3nWGhVjnuzID" class="pain"><span data-page-node-id="maxldjccOdIy4PJUFkirGx" class="i"><!--pnid:Bki147fgDOPMtIrdB5NoEi-->2</span><div data-page-node-id="OhPs4YSTnSdaR5HECGMpXJ" class="t"><!--pnid:CZeZ9Bsg3GoxqC4Ip2wHiA-->数据在多次改编过程中被 rounding 掉了精度，比如「23.7%」变成「约 24%」再到「近 25%」<span data-page-node-id="9iPDQ8S5qFyFspjb9Kv0DZ" class="src"><!--pnid:TIKdssK59B8sqd7UzMnybt-->依据 · <a data-page-node-id="cNVibafWyKXOxiz93gNJpA" href="https://example.com/interview/platform-ops" rel="noopener" target="_blank"><!--pnid:AQDqi07v2D5mQFsK3e2tMs-->MCN 运营负责人自述：&#x27;同一篇稿子改五个版本，公众号要正式、头条要抓眼球、小红书要种草风、抖音要口语化、B站要玩梗，改完一下午就没了&#x27;</a></span></div></div><div data-page-node-id="rQ0JTF9nkkVy1YDF6bDyye" class="pain"><span data-page-node-id="pS3Glr23iWTaHnc0Ib8n2J" class="i"><!--pnid:8SSBxnXoKA7rKvrbt4TziU-->3</span><div data-page-node-id="pS4d5snWEUvoUhZzVhMPa0" class="t"><!--pnid:pkU1xtMtiNTdotwcGlvhCY-->品牌调性在多次改编中逐渐漂移，公众号正经、小红书随意、抖音夸张——读者觉得不像同一家<span data-page-node-id="0I6ZKWGzUeENaE13p8RCNy" class="src"><!--pnid:d5emmzDPSVl6t22gRT1sAp-->依据 · <a data-page-node-id="tdaFpj1h4kbuLZwtpfgb3R" href="https://mp.weixin.qq.com/mp/profile?action=home&amp;__biz=xxx" rel="noopener" target="_blank"><!--pnid:dHN692RyrJ4ryvYkm29lwu-->微信公众号运营规范 —— 标题不得超过 64 字符，正文图片建议宽度 900px，严禁诱导分享与虚假信息，违规文章会被删除并扣信用分</a></span></div></div><div data-page-node-id="uy8dujuPb1eZC3Fjb1mo5r" class="pain"><span data-page-node-id="sudew2tewQ5Fl1xNl9RefI" class="i"><!--pnid:mQsohOrAqYvuAw8cqNBMQc-->4</span><div data-page-node-id="dsKPIVaHhCzEzZrVUflOPS" class="t"><!--pnid:5nFw5DnM45PBKZdRN96nwE-->事后追查问题时找不到是哪个环节改错的，因为没有留存中间版本<span data-page-node-id="PSdLyRGyHXYMrSqh8hVnsa" class="src"><!--pnid:7bzsmPBQgxvQs4bdsQG6gU-->依据 · <a data-page-node-id="qHheXy0lHTy7UA3aiG8aEN" href="https://example.com/interview/platform-ops" rel="noopener" target="_blank"><!--pnid:o9GCYc6eY6mupYMJHzc0yw-->MCN 运营负责人自述：&#x27;同一篇稿子改五个版本，公众号要正式、头条要抓眼球、小红书要种草风、抖音要口语化、B站要玩梗，改完一下午就没了&#x27;</a></span></div></div><div data-page-node-id="HWqOUKXb6cPY2eedVvCFNK" class="pain"><span data-page-node-id="oiFq1faQO5k9Cw9HvwA5YN" class="i"><!--pnid:ceYNNaBeEkYvYAgiBb8QFX-->5</span><div data-page-node-id="qx9eb9XpCArMYJCVTaZx6S" class="t"><!--pnid:cV5x9vS9rZJqaCVKP8rWWo-->读者在评论区指出矛盾时，公关团队才知道出了问题，但此时已经传播开了<span data-page-node-id="5fQ112R9L04rh7HXPCBoni" class="src"><!--pnid:5jfAEComFpk5Hd9sndOFMs-->依据 · <a data-page-node-id="Pj4iTVQdeHpcIlNODJ6KlH" href="https://example.com/report/opinion-management" rel="noopener" target="_blank"><!--pnid:twYqf8dcyDBduPT4BXwGzU-->《企业舆情管理白皮书》—— 负面舆情的黄金响应窗口期为 2 小时，超过 6 小时未回应的危机事件传播量是及时回应的 12 倍</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="ygKWSMhJtNvTigfEdAusuM" class="blk">
+  <h2 data-page-node-id="8IU06oFOu7ZAee8tOBWnFZ" class="h"><span data-page-node-id="Asshddd4aVBiEg2qiytavL" class="num"><!--pnid:DkTxq7DiIEwcbjfIi2QiUa-->三</span><!--pnid:2zGIEz7qU8BIGpZ7qnmXl5-->换个做法之后</h2>
+  <p data-page-node-id="dTqdRKLCfoMcRMS3PkSpvq" class="subline"><!--pnid:CGJAa2oLWTMOzas7aO93MR-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="OY7Y3GhtLyVT60KQ3dJujA" class="cmp">
+    <div data-page-node-id="vcCpFpTCnxICJGDMsQi5Fc" class="old"><h4 data-page-node-id="hUiXwi4XfBFrGl2vjH1CPA"><!--pnid:3yT298pr2PkBx1NQvr8JGa-->✕ 现在的做法</h4><ul data-page-node-id="7ViFGE2qUEkL7jXVUG7fGq" class="list"><li data-page-node-id="nNnQwz5TCALG0RgCCWrKUt"><!--pnid:IUJsPAib2Yenlpz1XcpUjg-->不同编辑负责不同平台，各自改稿时没有对齐过，导致同一件事出现多个版本的说法</li><li data-page-node-id="3lHmwTDJa4wudr74CH6ARu"><!--pnid:lCWgecSsQCLzK2tQQKZWT0-->数据在多次改编过程中被 rounding 掉了精度，比如「23.7%」变成「约 24%」再到「近 25%」</li><li data-page-node-id="G5V7yKwNWbIJ23LqFpXqXo"><!--pnid:3YICrsBt3sjxTfrlCJyXUO-->品牌调性在多次改编中逐渐漂移，公众号正经、小红书随意、抖音夸张——读者觉得不像同一家</li><li data-page-node-id="Gko43VCQYPrq8YR53Dxenj"><!--pnid:gLFXtPmktONAleVsLE6YAS-->事后追查问题时找不到是哪个环节改错的，因为没有留存中间版本</li></ul></div>
+    <div data-page-node-id="vBpeP3BWXX4EwZDt66DeLj" class="new"><h4 data-page-node-id="Sy7C3GTy28pjHD5adkHoBk"><!--pnid:e4eHK9Uj1ZxzQwKE3emYfR-->✓ 交给 Agent 之后</h4><ul data-page-node-id="0ERZ9Fxv91ZhdDvgAm2cxU" class="list"><li data-page-node-id="AyQ8vo1bpXRrSRtfV2b5Hw"><!--pnid:gi51cZu6e3C4M6cRxschwS-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="Whg5qeJ1sxtKUGQfQiIIdy"><!--pnid:0c132UyaPdHOz8ak92abQh-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="iB7LIL1mVg8AuGIfyWkHWX"><!--pnid:xWc1dsNI3bfrmmtbpKb56F-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="zavleOapjhDqKVCaUWd8h3"><!--pnid:Pn69vdzbd8bSAnpJ7YJ8Hp-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="cwhlz7jmcerdSiT71AU6du" class="blk">
+  <h2 data-page-node-id="ZFa51Xw6w2aLs0zX3mrOut" class="h"><span data-page-node-id="Nz5OlnCjhnT0b970X8nrUZ" class="num"><!--pnid:lWyGWwdLd2GDELw36lk4X8-->四</span><!--pnid:una1J22m5rT73SkwZGKP1S-->场景闭环</h2>
+  <p data-page-node-id="njSEQh2aRwTPVWx5DUe4sl" class="subline"><!--pnid:TkP3D7HamziuLTPrG2Jj9F-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="nz59b3BCLr5S1caB3viyzY" class="flow"><div data-page-node-id="vl2KugMI0dd42VLQP3cXBJ" class="step"><div data-page-node-id="mm8h9rUfcVVIIbARLnoUJW" class="n"><!--pnid:x93c5FfwA0CnAOyi39ND7x-->第 1 步</div><b data-page-node-id="7LX5YSHH6yN2pL8V8cz6Lv"><!--pnid:gFJKU1lMrBzZHkBXBT2Bm5-->内容采集 · 把各平台版本汇集起来</b><span data-page-node-id="2OxGdAkk142QByI3aw5v1i"><!--pnid:00JqpQcTj7X1lWsSzbzPji-->从链接/截图中提取文本；无法自动提取的标明「需手工录入」</span></div><div data-page-node-id="yWfBXxiygmxboqJRKGnTHS" class="step"><div data-page-node-id="bHNZj22Sa8tC01YCK5Fyyu" class="n"><!--pnid:MQBEoq0EqDLQg8rdqqJFsw-->第 2 步</div><b data-page-node-id="pIPNDSsNJlzHZLYtkXtrIe"><!--pnid:HfrxiCQPymMZnEC1ewD1Yt-->要素对齐 · 找到各版本共有的核心信息点</b><span data-page-node-id="E5efZwKfLFe3jpVlVfEQU3"><!--pnid:9JvL7wy0HpUfcwOdavv8u0-->自动识别：人名/地名/机构名/时间/数据/结论/引用；生成要素矩阵</span></div><div data-page-node-id="x7NZTZM1HKV5Fcb3y18luc" class="step"><div data-page-node-id="UKxBicGqLbIdYSx54fBiRl" class="n"><!--pnid:HMCNEACVrUbyMmBXnW6KNf-->第 3 步</div><b data-page-node-id="HON7LkcqX0qhKTms2brAE6"><!--pnid:u4HQ15ibUDDsm2p1tyzQ1J-->交叉比对 · 逐个要素检查是否一致</b><span data-page-node-id="CkI2R3YQwO9XvgRcuEnTWz"><!--pnid:warBkQysKwyk7obQ7I0ltL-->完全一致 ✓ / 表述不同但语义相同 ~ / 存在冲突 ✗ / 仅某版本有 ○</span></div><div data-page-node-id="q0enEqomeab6abvJCwkPAK" class="step"><div data-page-node-id="AD5WkdV2pJCF8I7Ii745mw" class="n"><!--pnid:mwIYzhXPU26aBLzSPw2I4a-->第 4 步</div><b data-page-node-id="i5jt33CExlg4kMVuCpWzrW"><!--pnid:99vx7wQehAgO16ICprUJwK-->偏差分类 · 区分问题的严重程度</b><span data-page-node-id="1orhrDISyJesPYVK8bMI9D"><!--pnid:CS3YzoArdYrxsknfpNDqk7-->致命级：事实冲突（如数据矛盾）；严重级：关键信息缺失；一般级：表述差异；提示级：风格漂移</span></div><div data-page-node-id="7UgR5gQfPIqhMZ6eTljtc5" class="step"><div data-page-node-id="S8lA81vO01j9VtnlbCnP6U" class="n"><!--pnid:oA3cemJEg9K23hOG4y6rqd-->第 5 步</div><b data-page-node-id="UEMURhciZSuWcSxGrFzyjJ"><!--pnid:qLmNPEVwLvPJkHAtVN5Z22-->影响评估 · 这个问题会造成什么后果</b><span data-page-node-id="4M4z610F5NaGGHBsUClLwK"><!--pnid:Jz1WgueF1bXkjhVY1FJAmO-->每条偏差附带：读者困惑风险 / 平台处罚风险 / 品牌损害风险 / 法律风险</span></div><div data-page-node-id="uLKyQ10Z3HJd44lKh9ut2Y" class="step"><div data-page-node-id="SrX6Cae2yOmaLMwcCRUNT3" class="n"><!--pnid:qx6Q3AnkgzBsDtFVHp2bf7-->第 6 步</div><b data-page-node-id="mESpZ03Lgz1fgD0I8O4Gju"><!--pnid:48yFz678AiSIzekTZQlHa1-->输出修复建议 · 给出具体的修改方案</b><span data-page-node-id="DoyaaLg5X8EdMGD2pCf9UT"><!--pnid:9YtQvetgqm9wg5NQ1Unvu3-->每条问题附带：建议修改措辞 / 建议统一版本 / 建议发布更正声明</span></div></div>
+</section>
+
+<section data-page-node-id="MZuQFcREG2zPj0Fz5R4cmr" class="blk">
+  <div data-page-node-id="So2tYaFPlbUPYLnGScA6l0" class="g2">
+    <div data-page-node-id="hl9JfIM6vEVCVMogzOFGbN" class="card"><h3 data-page-node-id="jZ136B8v7zhp7IIzl3DMgS"><!--pnid:zX2QPuSPdHBsxldeacrHLX-->要准备什么</h3><div data-page-node-id="ZSiXCX2R8H5st5RZnFbISL" class="src"><div data-page-node-id="FGOS1rblirixK5Vamqk6Pl" class="fn"><!--pnid:aBFDHBwEOA2kfJm0JAKPEF-->各平台已发布内容的链接或截图</div><div data-page-node-id="T6n7Q6OcDEreZgSDiACkQk" class="fd"><!--pnid:Fb7WfCo4wbDS4UZ7QeZPCe-->支持微信公众号、今日头条、小红书、抖音、B站等主流平台</div></div><div data-page-node-id="fc5gmxZYKaZVkNe27mvpXy" class="src"><div data-page-node-id="KdWOTMDZOiJfeNxhlEDIw8" class="fn"><!--pnid:OrLiOmP19lZvjy7OS0ZR0f-->原始审定稿（如有）</div><div data-page-node-id="mjUOgrhHHen28bb4yAW1j2" class="fd"><!--pnid:iS6vaH9ve8bx4bXdneq1rW-->作为比对基准；如果没有，以各平台版本互相比对为主</div></div><div data-page-node-id="VvY1p5AxPoRWOOmc8jCBtT" class="src"><div data-page-node-id="9EVvArl6YonTQ5v0r8atAw" class="fn"><!--pnid:bzNkTHnWlRPo25VSkXFr6l-->品牌调性指南（可选）</div><div data-page-node-id="fXrcvSGiHrmbjVDbfrTkKP" class="fd"><!--pnid:EcCgIeATo6wPnEmfuKr568-->用于检查调性偏差；如果没有，仅做事实性一致性检查</div></div></div>
+    <div data-page-node-id="DvJGAJZgUmusErKBc2oxtL" class="card ev"><h3 data-page-node-id="QVjwrOONJ1n65upk3uHpUC"><!--pnid:l6QuvUVn7gWGci3T3QdZi5-->为什么这个场景值得做</h3>
+      <p data-page-node-id="jFxfE5eH2lLQNlnjigz29v"><!--pnid:TD1UrmJeqXEz8TqcOLTxMq-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="RDkhMuEXobfXnbY7GZVDiD"><!--pnid:DhpnRooNRbrg1217w2OY8j-->8.8</b></p>
+      <p data-page-node-id="JVS5sDSWh5h4uA6n3pGyco"><b data-page-node-id="dKf2f7XO946biBCVjk4z38"><!--pnid:cQiYLJPmGEzmOiZCt8Ip8K-->最大差异点 ·</b><!--pnid:DcyHlx2jq5RuGo1t6ToYyh--> 不需要客户先建立版本管理系统。直接把各平台的已发布链接或截图扔进来，Agent 自动提取文本并交叉比对。</p>
+      <p data-page-node-id="VeVVyKOgnQZ0NaYwyCQ4ca" style="color:var(--ink3); font-size:12.5px"><!--pnid:kMCbrj0gKdYsICyScFR1kp-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="WIiXPAKo9q85t5xTpKYUqq" class="blk">
+  <h2 data-page-node-id="txaUG3nz8iuiQjkU8F7ohc" class="h"><span data-page-node-id="TVoPSyZYoe9FhGHXbOgiAX" class="num"><!--pnid:n3VMej91eRkIVIofYUCTtr-->五</span><!--pnid:5cWlBeWFxVDI73EBJKKkJV-->会产出什么</h2>
+  <p data-page-node-id="RlZ9qvXuroU2u23BxkEomL" class="subline"><!--pnid:p7v68mKDFVgIXdFaCntUVg-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="wnHSXRFCNsHbvxRCQWPxDJ" class="outs"><div data-page-node-id="ph01fm9kn1fLGva4HlGRrq" class="out"><div data-page-node-id="ZRR2HhAfe0ureviDhikbMj" class="on"><!--pnid:BjWVym5agwppqLPStdBziQ-->正式件本体</div><div data-page-node-id="qNqQt1XCyI7gZnBpdIOO16" class="ot"><!--pnid:pp7U8PJyKdLAK9uNKAkRCN-->一致性核查报告.docx</div><div data-page-node-id="95iKQJkq0vVBFauzik5xzz" class="od"><!--pnid:OSaMVdFIDzA6M7ckwduADl-->完整的核查报告 · 含要素矩阵/偏差清单/影响评估/修复建议</div></div><div data-page-node-id="xHoLcqQFaCy2vErfg2WQy4" class="out"><div data-page-node-id="TMdYOhYVOGB05WZPj9P80A" class="on"><!--pnid:TUsbZb1dukcU6s6xqi9Rp2-->可派发清单</div><div data-page-node-id="Wfavydgn8tsDdXQNlokSCF" class="ot"><!--pnid:Qvid847gLJFPMwJCAQQE00-->偏差明细表.xlsx</div><div data-page-node-id="cdEiACAU3yWRrT3iJlfmb4" class="od"><!--pnid:8DZ1iZCDO2xVr7oRbI4MEj-->逐条偏差记录 · 含位置/内容/风险等级/建议操作</div></div><div data-page-node-id="a8bndfVNEfPCGBF5useh0J" class="out"><div data-page-node-id="XIsA4e4xq2OmTNOfjwdcdp" class="on"><!--pnid:mDm5BZ9UwYlniuGxgVbpBb-->可派发清单</div><div data-page-node-id="VRXRwb8EjfW8jOGzBtgdyD" class="ot"><!--pnid:KLPrxKaP3NHUqljuh6JYov-->修复操作清单.xlsx</div><div data-page-node-id="ODSPtnvcXKaWjRztoLRkVP" class="od"><!--pnid:9TnG4b11JAWHUaLrWZTkaS-->按优先级排列的修复任务 · 可直接派发给对应平台编辑</div></div></div>
+</section>
+
+<section data-page-node-id="fdV59FtgxgiNlacJx8nELm" class="blk">
+  <div data-page-node-id="2OcnD821ZD55VBxzkRXsC9" class="card warn"><h3 data-page-node-id="1hLY191sYZZRCMeS2zlL52"><!--pnid:tpUu2sPKVvfhhTBv3LManw-->这套东西不承诺什么</h3><p data-page-node-id="uhdkl7U6oJB0tLNYa4Ge08"><!--pnid:KloKbxeTOLNzxx9PconocB-->不判定哪个版本是「正确的」（原文可能有错）。只标出不一致之处，由编辑确认。不做品牌调性评分（这是主观判断）。不追溯责任到个人（这是管理问题，不是技术问题）。</p></div>
+</section>
+
+<div data-page-node-id="1euQjALiQxjuNJoW1XJqLE" class="cta">
+  <div data-page-node-id="gElAIkwOITYd0b5ILl4iJS"><h3 data-page-node-id="6zR6lbznWZYUIkSr7zN88s"><!--pnid:YhS2DW3b9V0IyZ9cZvqMel-->想看具体怎么跑？</h3><p data-page-node-id="LQAatl8e91xLHVHxDdwFe0"><!--pnid:7usLB5ouvEN736ntmtiS1V-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="vuJyR7Ns6nmSmgA3wS72kj" class="btns">
+    <a data-page-node-id="fmfXEnbKehm72F2gOOwuLl" class="btn" href="LiveDemo.html"><!--pnid:RwsXyrmzzqU1SKfpYLRz3m-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="OPl9hZcx3RiBBTJGDZEVtk"><!--pnid:bPIaRsSYxf3Usr8LqbS1D7-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="rR4Ig68I0bNCHIuJZR2pG4" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="lwO25u6CTP4ToPefY0BWAh" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="aQyGWdXzMYWzBtOYDISeWr" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="CBBLkzELUy5gFJIq5qd72t" data-pnid-children="0mZb0h8htQm48nXqD2A6Ua">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="Nv5iCqdswAAcvSAJzaSr04" data-pnid-children="Ok13w98BzHJjtuNksDlGuM">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html data-page-node-id="4Q3uDU0H0r1hb5kWAFSfQQ" lang="zh-CN">
+<head data-page-node-id="QMrkkxGwepcJWLhoocSyly">
+<script data-page-node-id="kx62aTiY2IVHN95sEURsYB" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="7KglC31a19cLcfRrQfZdBC" charset="UTF-8">
+<meta data-page-node-id="NtnxL0WrCtBxE4cPZMOv3r" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="lsWohzB2SUVgFlgwb2jTIF" data-pnid-children="xhu9KLwdQnLSTG9MhFeX8v">对账差异核对</title>
+<link data-page-node-id="EbTs8jMreBvfPRnNwzkEdx" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="lV3mrGwL7yzw5bcqyKSH4d" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+<style data-page-node-id="3LLdBRWhwlQFKfIxhL309m" data-pnid-children="Z9gBGvztdUcrMyOnUOPUHv">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="9VAoepGsT83SMCdMP1c9px" data-pnid-children="GRiwy10lOU9Afcb0IVbRfM" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="wnKxpm8KYXmpwpILBz2P60" data-pnid-children="jSalBHWxAfZmKLFoQNlHBO" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="mlhrNohrl0l1SIElf73Aqf">
+
+<div data-page-node-id="ulowFpYN3Lwmsl7SJh8buY" class="wrap">
+<section data-page-node-id="qpo05PcTBbyFxVyHjbEalI" class="page-hero">
+<h1 data-page-node-id="OyfO3IJfR6mdHSFYU4s8Tl"><!--pnid:WpalOVoFFbDVsjl5fJWtBj-->对账差异核对</h1>
+<p data-page-node-id="jvDpyFAQefMUiCkUsBdEKB" class="lead"><!--pnid:DTpqEjAp05OTiZPFVn7jm6-->客户 39 行对账单 vs 我方 42 行出货明细 · <b data-page-node-id="w0WSJgOMjE3ouVVrK1QKUK"><!--pnid:7o3mkNzMuvHOaWscUlhZW9-->48,880 元差额 5 分钟找到根因</b><!--pnid:lAAGkuMxfhfa6QPi8snCQC--> · 五步差异核对 + 五类归口。</p>
+</section><nav data-page-node-id="q5lie0SklFpKmRJVA2WhZR" class="subnav"><a data-page-node-id="vJzz8qy7Cg9POcDztPIAl0" href="场景引入.html"><!--pnid:C2N0Qsd4ooWrgMd6kczwpd-->场景引入</a><a data-page-node-id="Hrf0pZjgT7yooP0V49wYiq" href="LiveDemo.html"><!--pnid:noQLlzxZJmOD1Zb6Q7R3JW-->Live Demo</a><a data-page-node-id="QWOWxhKMAjSCI9aTQGduun" class="on" href="#"><!--pnid:w3efXclqlVsy0wQH80LHL8-->推荐任务</a></nav>
+
+<section data-page-node-id="Oikgd5zjPNttyehqVMsNS7" class="blk">
+  <h2 data-page-node-id="Z91nv2Mw9Qa4EJxNzNiok1" class="h"><span data-page-node-id="lHWXVjE2rnm45uRGrEEa6Q" class="num"><!--pnid:VNAuQQdwr6MKgu5LkVODuA-->一</span><!--pnid:rTzTb9oyCWkq9JO1rdDkou-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="3RWvGZm8pm3DVbM5hjYhDe" class="subline"><!--pnid:MDYve5EzPQwXkqLcMY1Ne1-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="XksxzM6XtpxyGQ5E1hw0PY" class="card"><p data-page-node-id="l7JQ4pitf00ujvLnbWt2WY"><!--pnid:P3yrBu9zHVCvusUu95nCSF-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="Krdl2XtrQ7e9uimgifBhFJ" style="margin-top:10px"><!--pnid:k7xOZO1tZgtFcC0xBCMPvI-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:uHF8gAS3urkR4lkcRvu88F--><!--wb-skill-start-->
+<div data-page-node-id="liEZF8x1GMVU1ia0xxWnSc" class="wb-skill">
+<p data-page-node-id="ORB1OY8oc1c83Gcg6qKHYo" class="wb-skill-lead"><!--pnid:0b2Fb8qYFNAzPSFflxNkxn-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="TL8OtV9ARA3cFdBFKFIB1b" class="prompt" id="wbSkillPrompt"><!--pnid:NC7iA5YyvOBEdzJzlhqsmb-->【准备】这个场景的规则都在「对账差异核对」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/mUZOl1rwdGmNyY627mKIU8/0/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="19VBEeelO8HeFOBrcIa7tn" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:9jcWtpriFJaDlCa8EeTOH4-->复制</button></div>
+</div>
+<!--pnid:YGx8jYRgJeFpt50ORcbxDx--><!--wb-skill-end-->
+<section data-page-node-id="1ogtIeh6q1GSFpQNFnbo0K" class="blk">
+  <h2 data-page-node-id="P5jaB0Dr9vA3i0Ny0NvkAI" class="h"><span data-page-node-id="s1UcxyuUsDMYcz6nyx8HKk" class="num"><!--pnid:O9ieztzCui8xw9I2xZfeaU-->二</span><!--pnid:OQOOjVTbgdcFVahqsxxpbs-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="lDaifbLaKdT0TBTYKIhdQ2" class="subline"><!--pnid:kU2hBSqmpiryrBaEW1eyUN-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="mCqNLi9EJvg1WxbaRtqh3s" class="tlist">
+    <article data-page-node-id="JgdIipZVHVGjk98Cn5aGYC" class="task">
+      <div data-page-node-id="bBDwSOgzrB7mrGyuFj2Qsi" class="th"><span data-page-node-id="SLxDigjMDaOpftT0CJx69t" class="no"><!--pnid:VT5jwBhaQ8EYviaoVfaBL6-->01</span><h3 data-page-node-id="ha4EcJgca42zhGY1QCALoI" class="ttl"><!--pnid:CL9YtYSXmmEcm3tMluiSUa-->首推默认</h3><span data-page-node-id="SeGhtHUoEacXhApWNZ2bSN" class="star"><!--pnid:D5IjkeN7p92rqK46nDrA8Y-->与一键体验入口一致</span><button data-page-node-id="5druVKLMkwgDEpwonsZvkC" class="cp" type="button"><!--pnid:GpXELc7RQsOYxrAwyhvH0j-->复制</button></div>
+      <p data-page-node-id="4s5F6Cv5vzsa4KbDe6rJHU" class="tp"><!--pnid:31IGUQtHZ9yJDHzYa4erpr-->某主机厂发来 7 月对账单，我方出货明细也导出来了，两边合计对不上。材料都放一起了：客户对账单、销售出货明细、销售价格表、送货单回执台账。客户用的是他们自己的零件号和繁体列名、含税单价，我方是本厂料号、未税单价；送货单号写法也不统一，有带 A 后缀的、有简写的。逐笔找出差异，每笔告诉我客户写的是多少、我方是多少、该怎么处置、责任归谁；差额要能加得起来——分项加总必须等于两边合计的差额。产出两份：一份对账差异核对报告 Excel（逐笔差异加五类差异分类汇总含加总验算加凭证索引）、一份对客回函 Markdown（可直接发给客户财务，逐笔列出差异与依据）。</p>
+    </article>
+    <article data-page-node-id="QVaMS5AnWaOaNN4xXP9xyw" class="task">
+      <div data-page-node-id="dpcC7mMZAsRxzlvSiyWGZo" class="th"><span data-page-node-id="Het9i9Jv0VRdTeqOQfTD1u" class="no"><!--pnid:1xmHB49tlg1IwDcrdSgRIL-->02</span><h3 data-page-node-id="Doa04QM6baQhSeEMKJthd8" class="ttl"><!--pnid:oGRQuXeFDsrY9Yw9IxWOxu-->只做字段映射与单号归一</h3><button data-page-node-id="YdYqIgJ1sM0hRcFGNCVKyQ" class="cp" type="button"><!--pnid:P0Xceps38WZXcTUkq3pb8U-->复制</button></div>
+      <p data-page-node-id="Eq2rRSKaHSBCFft4zNYJgj" class="tp"><!--pnid:eUrLsAvXAqvIeduoOOOi6F-->先别找差异，只做口径归一：把客户对账单的繁体列名、客户零件号、含税单价映射成我方口径，送货单号统一（带 A 后缀的、简写的都归一）。产出用 Excel：客户字段、我方字段、映射规则、归一后示例。</p>
+    </article>
+    <article data-page-node-id="nDKY4p4h9eiSXeUx1fudOG" class="task">
+      <div data-page-node-id="zUMh4T9TlT3rz0Vwb2Pk0B" class="th"><span data-page-node-id="0eMF5V4wGz0SCGZbgedULr" class="no"><!--pnid:fdAq5AB1QmyBl0Whk4VgEo-->03</span><h3 data-page-node-id="adS1OkeMJtKcAEFaF7pOQn" class="ttl"><!--pnid:3dzvTc8SvFwTL9DYWH1IYF-->换成按含税口径核一遍</h3><button data-page-node-id="VitNKETxA6C9ickE7kpTw2" class="cp" type="button"><!--pnid:d7t74OUqG0oklbaPr6d6P2-->复制</button></div>
+      <p data-page-node-id="4S5GdJO9zy5RVCns75VC50" class="tp"><!--pnid:aCnnxaJRUllajqpBIE9wKk-->这次两边都换成含税口径再核，其余不变，看税率差这一类会怎么变、哪些差异其实只是口径不一致造成的。产出用 Excel：差异笔、未税口径差异、含税口径差异、结论。</p>
+    </article>
+    <article data-page-node-id="h9grrDVACwZeG8kOdNBUDS" class="task">
+      <div data-page-node-id="VDcYWBr5jK9S23Ojl8C7rR" class="th"><span data-page-node-id="edyPGdFUFh9Ua4bySUCgYd" class="no"><!--pnid:RGMrGXLeh9qN6lx8H7a1Q9-->04</span><h3 data-page-node-id="TgCViGG8S6CZ79WZIAAaES" class="ttl"><!--pnid:HpwTmVKBz8QAxjYuoimmZj-->一次核两个客户的对账单</h3><button data-page-node-id="e9KomPL6iruHluCTyLqW6K" class="cp" type="button"><!--pnid:67YD69UOX21tb0sQ66EDfc-->复制</button></div>
+      <p data-page-node-id="bCfyEtQMC1tUIgnhNaJUqY" class="tp"><!--pnid:zKp4mwCk99f9cGUNtELTCK-->演示数据里再加上另一个客户的 7 月对账单与其出货明细，两家一起核，最后给我一张两客户横向对照表：对账笔数、差异笔数、五类差异分布、我方少记与客户少记各几笔。产出用 Excel。</p>
+    </article>
+    <article data-page-node-id="1m8MIMuhirrQWHaS99AQOb" class="task">
+      <div data-page-node-id="YwlO9fXKM5IqcBOdA6KwVA" class="th"><span data-page-node-id="8CHy23k4NoiE24VEkFWDMd" class="no"><!--pnid:Zu9TWJwgPvDZxNAiWNKOQy-->05</span><h3 data-page-node-id="amY7Xe4G09obzkwhkRYWCE" class="ttl"><!--pnid:ucJ83rKffq34Ch4qNA89Ro-->给客户财务的回函</h3><button data-page-node-id="8SLUpQfJvAxI3SlHQ87kn1" class="cp" type="button"><!--pnid:gr0xBa9fzsSzFQkrwZl51R-->复制</button></div>
+      <p data-page-node-id="ukTOCqU7KtEeruKSIYE0DJ" class="tp"><!--pnid:JxlxRRn19Nyl9EkCInSvF1-->把差异写成一封给客户财务的回函：逐笔列出客户写的是多少、我方是多少、依据哪张送货单或回执、建议怎么处置，一次说清。产出一封可发出的邮件文本。</p>
+    </article>
+    <article data-page-node-id="CBsAoWSwQk4CQEhNccYQyt" class="task">
+      <div data-page-node-id="GeQ9Qb8bHFa6dCjgH5Fp2f" class="th"><span data-page-node-id="coo3kJuklR5fqdvRjC473d" class="no"><!--pnid:JqmIIUwLKDHiyQdHyvmYfH-->06</span><h3 data-page-node-id="HBepqJPeJNxHNoUt9aVKgk" class="ttl"><!--pnid:gfKNLc8e4ZAugttQNBkROG-->让它反驳自己</h3><button data-page-node-id="reb7mfCXJylpN5orO4mZJW" class="cp" type="button"><!--pnid:XuPF5FfKl3VkgrjcsZgtCr-->复制</button></div>
+      <p data-page-node-id="hazlM0w0Wbh9LP1bClwmUg" class="tp"><!--pnid:Tt11XuC3IwrsYlwNtPz4A1-->你判「客户少记」的那几笔，依据够吗？把可能其实是我方口径问题、或者送货单号归一归错了挑出来，说明依据是哪份台账。产出用 Excel：笔次、当前归口、依据凭证、是否需改判。</p>
+    </article>
+    <article data-page-node-id="2lUR9ZbNUJNX6ORZuQWMbY" class="task">
+      <div data-page-node-id="0qnRKW37F3tMsD62evawN1" class="th"><span data-page-node-id="lPvXuRYwj5tmIqZXrhpwfD" class="no"><!--pnid:3Yw2FlGHHMGnaVSgxjtgOu-->07</span><h3 data-page-node-id="Q2ryIjIQ2IfZzwEPv3bm7g" class="ttl"><!--pnid:gGwnZfd2jH65AnfnNwA2sn-->专门比历史同期差异</h3><button data-page-node-id="iabDz4j0bVUon2RRzcYHVw" class="cp" type="button"><!--pnid:inOmdseXtCkMcjcj6WYLnn-->复制</button></div>
+      <p data-page-node-id="xX0tYB2nG4AtyYBJQFEVGx" class="tp"><!--pnid:saEamYr2gN1dnfC3H2OaTH-->专门查上一期对账的差异处理记录：同类差异有没有出现过、当时怎么解决的、哪几类每个月都在犯。把本次差异跟历史对上。产出用 Excel：差异类型、上期是否出现、上期处置、是否重复。</p>
+    </article>
+    <article data-page-node-id="GmXI4xfi2U1ZDJRCMdm0QF" class="task">
+      <div data-page-node-id="iz56kIEMQWAApfhAPc9qbp" class="th"><span data-page-node-id="iwIfPX69tgWVyWt70e5YOt" class="no"><!--pnid:Zdp06qlzNSOSpKUyhVIIsn-->08</span><h3 data-page-node-id="ctA0Z7nBkiAmlqiw39h9KH" class="ttl"><!--pnid:UPnIIbPngyQqpjwn6JZYHO-->对照五类差异口径自查</h3><button data-page-node-id="HUM8OMGmOs3Mplf6AGE4OM" class="cp" type="button"><!--pnid:ARjTflgDurh4dbFrnAOQIc-->复制</button></div>
+      <p data-page-node-id="yd75mET1DUYx9qQ1Qv4iKd" class="tp"><!--pnid:rdVesXbr1GnPaLrMDKedre-->对照数量差、单价差、税率差、期间归属差、回执缺失五类的处置口径，把每笔差异自查一遍：判定类型对不对、处置建议是否符合口径、有没有该按签收单为准却按对账单判。产出用 Excel：差异笔、类型、处置口径、是否符合、修正。</p>
+    </article>
+    <article data-page-node-id="Y1r66o09L8CGhpdrfFRntO" class="task">
+      <div data-page-node-id="9F0FaskCznLRdQtDMEcAxg" class="th"><span data-page-node-id="Rzoedm7Yscv6SUfjAA1qbz" class="no"><!--pnid:A6Rf3EwSsmtTq6KlZR8o4s-->09</span><h3 data-page-node-id="OGRgbbBIcsVzT8PH91N39e" class="ttl"><!--pnid:OxdZIEXxwt7ydCifNIxzGV-->折算成差额加总验算</h3><button data-page-node-id="NEx6dlk0tK1S5m3jxU9xXF" class="cp" type="button"><!--pnid:YJwJJNRbXshwogwjp6fWjd-->复制</button></div>
+      <p data-page-node-id="e8uLz5DkoKVObAuXpH25W8" class="tp"><!--pnid:AtdF8rYqcYL4oMOi2Y1sNq-->读客户对账单与销售出货明细，把差异折算成钱并验算：五类差异各自的金额小计、分项加总是否等于两边合计的差额、哪几类差得最多、对本期能开票金额的影响是多少。产出用 Excel，带加总验算行。</p>
+    </article>
+    <article data-page-node-id="G1MUhD794LFz0VqKTS6FfZ" class="task">
+      <div data-page-node-id="2wp8oHjcThjSFyV3clefzj" class="th"><span data-page-node-id="9k1A8OyVh1r4AU689FBJ6D" class="no"><!--pnid:ZLN0M3txHPN2SElEcgf6ek-->10</span><h3 data-page-node-id="g2J4ZusSmmaMmsYm2DK4kf" class="ttl"><!--pnid:d84TKm4MtFlJZ9ENKTK4PE-->沉淀成对账映射表</h3><button data-page-node-id="xnj004ey4EvltdVZ22BIYx" class="cp" type="button"><!--pnid:IGE53CjIpC5w3Tmcsw8Cms-->复制</button></div>
+      <p data-page-node-id="u9mA8qwVtEfes64sDz5dM0" class="tp"><!--pnid:8dbXOqfgzNbdzdWW46EzLJ-->把繁体列名映射规则、客户零件号到本厂料号的对照、单号归一规则、五类差异判定与处置口径整理成一份可复用的对账映射与判定表。产出用 Excel。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="SkCXZn9NZHf9fbnzdttCAZ" class="cta">
+  <div data-page-node-id="ruSqR4D2KEVH8onA2k9FZD"><h3 data-page-node-id="frOA07LGiV64QA60lbInLS"><!--pnid:OKZwPSNDns84bvE1B8ggyr-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="rIBYGiuTpx0Ximey3Z6Z4J"><!--pnid:lBSKXqNEWCYxh62HPQ8cFr-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="8pRxB4Mm9OMSZ2cZi3Finb" class="btns"><a data-page-node-id="Mxr5pCMImyArRGHo0IyrNx" class="btn" href="#" id="ctaContact"><!--pnid:kWwoRj2IAu3coYQZcf7SPm-->联系我们</a></div>
+</div>
+<footer data-page-node-id="PL9p8QQfhlz3GEYMOfjCH1"><!--pnid:mRXKpCkVEO1Iti6vWWVL5x-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="EMqX0IGL7jrBON2aSWvgwW" data-pnid-children="uHnZtSAXLQxl8ezyoP1SkG">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="TCHf5vp5fyjrgoGwVrLJJ3" data-pnid-children="P3r6T83dQmATkFNdBpe62x">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="fjAi0QTpBQk2mW8NHsPQVJ" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="AfgCY3eEZJ4lOt4O69l2BE" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="mCmhuL2o2CWa99G4pcoomu" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="Es2nAP0krr3O0ptjGrtqg1" data-pnid-children="DfN2cuvv0VKuTVEBqateGz">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="BIqodrnzsT9b30tERS0e4R" data-pnid-children="scBPkUl3Brb5FECdhEbzwl" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

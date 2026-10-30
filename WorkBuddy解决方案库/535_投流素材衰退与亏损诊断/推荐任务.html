@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="rpnTjhtZaesYXpb60kyfU3" lang="zh-CN">
+<head data-page-node-id="AwXyYqcJxYsoskmcVzBfTq">
+<script data-page-node-id="F60hl5PSlAGKv9zBzz4CGp" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="2s0lzcOsfuayTKXI0npkRR" charset="UTF-8">
+<meta data-page-node-id="SkGLAIdzSwXLtN3TJlCnly" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="QLAVwA7Sm7MmBqRHb3UBMo" data-pnid-children="Vlz9YPdP3TnmaWWhmmVGxn">投流素材衰退与亏损诊断</title>
+<link data-page-node-id="rGIblEF7Glw72c6vjgc0E6" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="3WXAtyh5PTkPK0aqJNWLn4" data-pnid-children="fRfKe2wmDiFNPnYfTYehbE">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="LYxdGqMfVWQcPMUAEHA88f" data-pnid-children="SYqlQufJI1P8CPGti7vyq0" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="kXAPVZiJyZ1GKhYWnvI9Ty" data-pnid-children="vv8Xeerf8TwYxoSNbDE3N1" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="vhAnFh2XLoZ31UdPiQmUq3">
+
+<div data-page-node-id="iabJ42Mw3FAZcTh4O8nIIi" class="wrap">
+<section data-page-node-id="hODYESUx9gP5bowyhrWjan" class="page-hero">
+<h1 data-page-node-id="vmkTBNT6oIH1PATbC2GCpc"><!--pnid:wJVRPDL8DYGL4UMf1GpMe8-->投流素材衰退与亏损诊断</h1>
+<p data-page-node-id="UT4wmPYtjtLA0KPq23YYRP" class="lead"><!--pnid:XqRpjfisvqhq6OOalNb7Pp-->素材 A-17 仍在带来支付订单 · 退款与授权到期把它从明星素材变成风险项</p>
+</section><nav data-page-node-id="ZpGwy66Z8Ge7rPpRd6upKv" class="subnav"><a data-page-node-id="6sd801QdxHpXSkJ4aPCFlS" href="场景引入.html"><!--pnid:PrTmaGCf5Tfz0NU7QLmfdI-->场景引入</a><a data-page-node-id="If3icW4Tomq1DYBvcr8dq9" href="LiveDemo.html"><!--pnid:yvw7ynLoHegaqKRU93f6H4-->Live Demo</a><a data-page-node-id="0BVVOX5oZtts9DaRyYJVWw" class="on" href="#"><!--pnid:eOoUviBN65Eog8eexyxNFV-->推荐任务</a></nav>
+
+<section data-page-node-id="fjhe3pWXYDauFADwzYaN9u" class="blk">
+  <h2 data-page-node-id="804JErs0EjddqfLw0fY30i" class="h"><span data-page-node-id="AZbSheIXZz5mBr34trnuCv" class="num"><!--pnid:N50c2z6sMAuMYm9bntxfMC-->一</span><!--pnid:oZ1kR9JPPNklrP9JLLQbEa-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="Qi1E2y9jjcJXu6Ctligejf" class="subline"><!--pnid:3LCsMo6NbfC8YyvZeLb3rc-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="w2RaaQyZkw5l6PsuodnCbq" class="card"><p data-page-node-id="alE3HyvIPeoJyZI1VzBu00"><!--pnid:m9Iykrw3fxGHZqB2p61yxz-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="f6NBGVimBUnC7lY9HTjWmj" style="margin-top:10px"><!--pnid:2w1qHHSvqsDALhZK9r55EN-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:jk0WFkmte8kowspygkH1xK--><!--wb-skill-start-->
+<div data-page-node-id="tNsXrLScxqR02vwh9lH3l8" class="wb-skill">
+<p data-page-node-id="j2cZkNkWYKE7UyisMTRsP5" class="wb-skill-lead"><!--pnid:SjYO84imd5fFj7Xnd58mTx-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="a8G50EAoZ8H5A8IGXj8S7I" class="prompt" id="wbSkillPrompt"><!--pnid:yIUFXkoCGRpyy02H1vQuFr-->【准备】这个场景的规则都在「投流素材衰退与亏损诊断」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/lXkRmrN0bLMQp1l21mtdxq/qgf9CHySeRnO/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="17AJc2xegKlNCjMujwnTOu" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:8dLFmxHCjMDjSErHbvZZyx-->复制</button></div>
+</div>
+<!--pnid:yIuslZZ2FVjcv7FZJUkH8r--><!--wb-skill-end-->
+<section data-page-node-id="cfUgLxCiOw5XFObOIOi2we" class="blk">
+  <h2 data-page-node-id="oUeyhtZvuGD4ATLto2afEZ" class="h"><span data-page-node-id="Ah2tJECXY777ZsBQtA5cnp" class="num"><!--pnid:H2t9KblUManGyDys58ZCew-->二</span><!--pnid:mgLtcaeBFCd1wG5mbwkps1-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="BpbYjOAJY5zsyJE76LyliT" class="subline"><!--pnid:HeHOgXSl8IONSkl8qttvh6-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="suwnAGPHfyAAqQAbZ4lvQO" class="tlist">
+    <article data-page-node-id="di2Iii6ixChupp2sG31lxz" class="task">
+      <div data-page-node-id="GVpsfzO2hW2VdIpM4set8k" class="th"><span data-page-node-id="q1J0dSD5yDfVFwU50ZqaVN" class="no"><!--pnid:9b3thj9Br5KagsVpDsqY8x-->01</span><h3 data-page-node-id="lBCAf66WBFFUUPQP9tYTdY" class="ttl"><!--pnid:2TgXND4ODFz81ahbEJLKsS-->首推默认</h3><button data-page-node-id="B41RgqP6eJXiHhw4oq6yzW" class="cp" type="button"><!--pnid:prVMWQJoeu6r2w8jTOVzpg-->复制</button></div>
+      <p data-page-node-id="An7T9v4wRSDZFroOoWjlwd" class="tp"><!--pnid:UDbdMpqNbC1mn7ur8hidDM-->素材 A-17 到现在还在带支付订单，平台侧的 ROI 还在阈值上，投手要给秋季专场追加 30000 元预算，但财务和客服说这条素材对应商品的退款在涨，我要判断还能不能继续放量。材料是这四份：「01_主事实台账.xlsx」是素材 A-17 的消耗、支付、退款与授权状态，「02_历史异常与复发记录.xlsx」是这条素材和 B09 的历史处置，「03_经营影响金额明细.xlsx」是待批预算与退款侵蚀的金额口径，「04_审批与群聊记录.xlsx」是审批与群聊里谁提的停投、谁还没签。产出两份：投流素材净贡献诊断表.xlsx，一个素材一行，支付口径和净贡献口径并排列出，含签批栏；停投复核与改版任务清单.xlsx，写清风险素材、要改的变量和负责人。预算加不加、投不投我自己定，别替我调预算或停投。</p>
+    </article>
+    <article data-page-node-id="O3ADodXaEW4yNrZ6Xm5uFC" class="task">
+      <div data-page-node-id="Utum2MLSvEKkGkJFmX8vO6" class="th"><span data-page-node-id="m4mmnSSI6IBqyJS8v5xFLg" class="no"><!--pnid:bLcYFv0OY89U9cJAbqKJLp-->02</span><h3 data-page-node-id="FvGT3lneADYEsySVNzfzN8" class="ttl"><!--pnid:KYo80npo4unnfhntidE1ls-->只算净贡献这一层</h3><button data-page-node-id="dUemA7HChi9efgpX7gNNyu" class="cp" type="button"><!--pnid:KRU2qXwYX7YawXhwpthMrQ-->复制</button></div>
+      <p data-page-node-id="XmHN6edJQhlnjCq2RNaKQx" class="tp"><!--pnid:xxEcVBNwpL09ERGP4jiAY2-->先不做改版任务，只跑「净贡献核算」这一步。读「01_主事实台账.xlsx」和「03_经营影响金额明细.xlsx」，把素材 A-17 的消耗、支付成交、退款、商品毛利摆开，算清支付口径和净贡献口径各是多少。产出 Excel 一张表，一行一项金额，写明公式和原始值。</p>
+    </article>
+    <article data-page-node-id="yUcH7j01QDC1TUxHL4blpk" class="task">
+      <div data-page-node-id="qWfmaZxjNzF6VfrFJ0AGll" class="th"><span data-page-node-id="eOz3Q3WFX951g7IsIw7ntc" class="no"><!--pnid:7fUSqLHqNJVVIhP7Bpg7V3-->03</span><h3 data-page-node-id="gfhoReXXrINRbUXQIHsy9W" class="ttl"><!--pnid:O3RtYbqEVRzDQd2MOUFu7J-->换成按授权期限口径</h3><button data-page-node-id="r9L71RRoR92QwmYBNclgH7" class="cp" type="button"><!--pnid:SvA0KsoZeUK8KjJgUZi989-->复制</button></div>
+      <p data-page-node-id="NH54bQVf40qx9fSl4soe65" class="tp"><!--pnid:JyHov0AtczO1bTjT1X9EVu-->换一个切法：不按 ROI 排，按素材授权期限排一遍。读「01_主事实台账.xlsx」和「02_历史异常与复发记录.xlsx」，找出授权已到期或 30 天内到期的素材，标出复用风险。产出 Excel 一张表，一个素材一行，写清授权到期日、当前状态与继续投的风险。</p>
+    </article>
+    <article data-page-node-id="7BGKXqkbOonlRHaTpmeqOb" class="task">
+      <div data-page-node-id="XAYOCGw5ec8rCQv2uPviuc" class="th"><span data-page-node-id="AS9kStBu9yH7kzqVqbRZzl" class="no"><!--pnid:ghyURS0ynL6HsLsjoYpHXC-->04</span><h3 data-page-node-id="1gJoItWIgLPZVW78O1yaEA" class="ttl"><!--pnid:K9VQhV4CtiCT2vG19ZZpab-->一次诊断三条素材</h3><button data-page-node-id="Kxusz5e331vpayyvtANs5X" class="cp" type="button"><!--pnid:5pXkBufVED6hgMzJNu2P3d-->复制</button></div>
+      <p data-page-node-id="xgbaZFidhqF4r4XInfknQn" class="tp"><!--pnid:G5KuyVWy8s6TLPHU7MVntD-->把 A-17 连同另外两条素材一起诊断：演示数据里再加两份同类素材明细，仍按「01_主事实台账.xlsx」和「03_经营影响金额明细.xlsx」的口径跑，三条一起跑，最后给我一张三条横向对照表：消耗、支付、退款、净贡献、授权到期日、建议动作。产出 Excel 一张表，一个素材一行，合计行要对得上。</p>
+    </article>
+    <article data-page-node-id="0OHAvarSIcBFvQuehwR1NA" class="task">
+      <div data-page-node-id="kRPmS7GxOhLDi6Z8SYBRDa" class="th"><span data-page-node-id="DL5V5fGyDuZWRBGLlaTj8P" class="no"><!--pnid:Pzgkk0D2SdgrE5QLHBCnt7-->05</span><h3 data-page-node-id="Q0FWwbHTXvuXLehh6yHigB" class="ttl"><!--pnid:xSgn2x6Bh7K1KD0VdLtza0-->给投手看的一页</h3><button data-page-node-id="DuypQ6DZqIqCNCCMLD4CHG" class="cp" type="button"><!--pnid:mb7gERzLWtVaiziJYWSf5N-->复制</button></div>
+      <p data-page-node-id="SGcMWX7PQcIVyHbZWWVSGE" class="tp"><!--pnid:Sm3g3lnchGqrbGmS7VeLVe-->把诊断表压成投手加预算前看的一页：只留素材 A-17 的净贡献差距、退款侵蚀金额和授权到期日，写清继续投要先补哪一项。产出一页纸 Word，不附完整明细。读「01_主事实台账.xlsx」和「03_经营影响金额明细.xlsx」。</p>
+    </article>
+    <article data-page-node-id="Msku652t1atQ4wM0YuR7qI" class="task">
+      <div data-page-node-id="dCbOKHFy9Otc8HaCDtxtCC" class="th"><span data-page-node-id="CfsdL5Yo60fvo5aRF63xUl" class="no"><!--pnid:od3nodkrsyxFZgZgYkkka4-->06</span><h3 data-page-node-id="IOP5ew6dKI0hc1QcOIU3rf" class="ttl"><!--pnid:Cyvg3EAr21bOHebqXDjwaE-->让它反驳自己</h3><button data-page-node-id="yNiQ0tUplIK1gb5lFPDkEJ" class="cp" type="button"><!--pnid:ShHoZdNod4y5Dc0BDeZkI3-->复制</button></div>
+      <p data-page-node-id="rtRuMM37GfB1l7hlOJclBW" class="tp"><!--pnid:H7oR36za2By7M9mqYHStYN-->你自己挑刺：判 A-17 该降预算的这几条依据里，哪几条其实只是相关、算不上因果？读「01_主事实台账.xlsx」与「03_经营影响金额明细.xlsx」逐条说清，站不住的就标成「待验证假设」。产出 Excel 一张表，一条一行。</p>
+    </article>
+    <article data-page-node-id="Og6PXTV66XQMKKLtsAyQff" class="task">
+      <div data-page-node-id="N51FY3Q3lDIVCgdbGGlpua" class="th"><span data-page-node-id="GFwPzVaawhEHZEzI1dXiZr" class="no"><!--pnid:ctacc6wT0HBSHyZnqJAt18-->07</span><h3 data-page-node-id="KJMUMWFiNvtJBUl34JA3yt" class="ttl"><!--pnid:IGtrzKw64rnEhVuQJOP9sG-->专门比 A-17 上次转负</h3><button data-page-node-id="zg1VOYitsrkbEIaVsynB7t" class="cp" type="button"><!--pnid:NQyjeYC6yo4Zcuuo0Gk8C1-->复制</button></div>
+      <p data-page-node-id="6H1pwNKeM2rTMsJ0dkeSiy" class="tp"><!--pnid:q2eaVwdzVoX5K7b2KGM4Os-->专门翻历史：读「02_历史异常与复发记录.xlsx」，把「支付好看但退款回填后转负」那次 28000 元和「授权到期后仍被复用」那次 12000 元，逐条对到本次素材上。产出 Excel 一张表，一行一次历史异常，写清当时处置与本次相似特征。</p>
+    </article>
+    <article data-page-node-id="OwLEYl2ikVUINuViYQnJ3y" class="task">
+      <div data-page-node-id="UbTrlyGLqw62f5vFyZTLFe" class="th"><span data-page-node-id="3niulD77BHu3f3YMvI14W4" class="no"><!--pnid:tdlRrDUD6CSNkPhMxkTVnC-->08</span><h3 data-page-node-id="tUN0VOVaR1gUabutx0TtBW" class="ttl"><!--pnid:AYcl1zuMLFNUkneORZOo1v-->对照授权与审核台账自查</h3><button data-page-node-id="W6BkShup7Fhxje0YzjyVTm" class="cp" type="button"><!--pnid:Ww1Oqu2VK3y6MCugJiYMD2-->复制</button></div>
+      <p data-page-node-id="EIWobNlzztjNueo6uOYL0M" class="tp"><!--pnid:8svuTUchTxop0XXCpV3UTN-->对照素材标签与审核这一节，把诊断表自查一遍：授权范围、审核状态、卖点版本、投放平台这几项，跟「01_主事实台账.xlsx」里记的是否一致、有没有超范围投放。产出 Excel 一张表，一个素材一行，一致与不一致分开列。</p>
+    </article>
+    <article data-page-node-id="DjSv46V8Vi81mrclVGj6wu" class="task">
+      <div data-page-node-id="dYVw84MxA1xfu0su9EeODj" class="th"><span data-page-node-id="HzD8freWwemHHBkFqAlVol" class="no"><!--pnid:DDxgVINedy1pQUr2zyhoFp-->09</span><h3 data-page-node-id="lMPFQBp1qrqkkJZZnB4C1O" class="ttl"><!--pnid:FT8xvxD1IYudMU2StGYQ6i-->折算成预算与净利影响</h3><button data-page-node-id="TGs7XAcn7TAyBOQQXcRusK" class="cp" type="button"><!--pnid:WnSaLNML9KEL03WL2g4a3O-->复制</button></div>
+      <p data-page-node-id="ouJb6rX49x24jZ3GrSpyxI" class="tp"><!--pnid:BD6WLSuVRrcMhF4PO2Mk3W-->按「03_经营影响金额明细.xlsx」折成钱：待批的 30000 元如果原样投出去、退款侵蚀的 19000 元继续扩大，净贡献会变成多少；授权到期重制和旧素材剩余消耗又各是多少。给出算法与区间。产出 Excel 一张表，一行一项。</p>
+    </article>
+    <article data-page-node-id="LnAO07VO9U0j99wyeViI6W" class="task">
+      <div data-page-node-id="AGQFNKY1oXvKFp1FJ8gWR6" class="th"><span data-page-node-id="LL3iO6YYvUtbhHJtZxzXNs" class="no"><!--pnid:4BIjd3oeXIC9ufeUBHUcRC-->10</span><h3 data-page-node-id="juPlQn6UOjAA7eLzZbpxgx" class="ttl"><!--pnid:GPpwEbK5VVu1mJbfglS05H-->沉淀成素材净贡献口径表</h3><button data-page-node-id="pVYYBwbtSGoKs3mqXXKoIg" class="cp" type="button"><!--pnid:61zL6XqW9Fp2xcpiM5KYMR-->复制</button></div>
+      <p data-page-node-id="8BUaufCmQk35FbZVZuTgOv" class="tp"><!--pnid:taH1gL7YS3AnCQSbHHSdGs-->把这次从「01_主事实台账.xlsx」和「02_历史异常与复发记录.xlsx」理出的核算口径整理成一张可复用的素材净贡献口径表：消耗、支付、退款、毛利、仓配各从哪张表取数，净贡献怎么算，什么情况下必须人工复核。产出 Excel 一张表加一页说明，下次别的素材直接照抄。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="SJcm4490iLuNa2GoIgOmPl" class="cta">
+  <div data-page-node-id="PhY8NtOwcyTSFjjGfcmLEj"><h3 data-page-node-id="Q2awgNOXtmlVjYJCu7XaaT"><!--pnid:dXgtoPeAXrziXiUgcSTfLB-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="QU5Mb3RSEBErcc5JjqE8bS"><!--pnid:BXze6cZBuGhMzVPmxbOGNp-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="iqgWppy0pFTfZpvCnhcPu1" class="btns"><a data-page-node-id="mAklbeVQrS1W0DQ2MN4auS" class="btn" href="#" id="ctaContact"><!--pnid:vdHJFs0975eHkl6vimOjtH-->联系我们</a></div>
+</div>
+<footer data-page-node-id="FmRm816lU7zF3P49fQRBcA"><!--pnid:PLJK4ZBHIyTF1hZJkq7oKV-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="HUdO0MKOVSS3ILczUuGIHR" data-pnid-children="fWzdZThSIKQ7M9xY4fEehm">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="RHjhCHyJLa3S23ouVuTbVZ" data-pnid-children="zBpEepRcP8uR2WLLKEepfS">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="jJCQuofZ6zcGYS58UD47V3" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="2rdcusQvropisx4VVtT6Cs" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="aTU9ksE3XSRjMG9YhMyeyc" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="0R1A05A2McKxaH9qhof6CG" data-pnid-children="rKO2bVyktLm8ZB4ml9zrEc">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="bDNGTYipMj5FZCp2a9gxiT" data-pnid-children="ib1pOY3vvt70yHZJuxSQps" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

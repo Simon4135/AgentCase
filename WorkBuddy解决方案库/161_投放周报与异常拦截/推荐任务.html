@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="N8nDYYyFcNoDUV2Pq8VkMi" lang="zh-CN">
+<head data-page-node-id="GYn2pdfM1hiPlRzXZvNIDX">
+<script data-page-node-id="docMP6fWonBVjgssELSiK4" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="hTeMChAwcaV2QMunimUDQy" charset="UTF-8">
+<meta data-page-node-id="QjST09IxTgCrUxO2SvcowH" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="XNR4mSCCzYSyiMUUkxrpYS" data-pnid-children="Z59CqAsBC3pEhnOlYG0B7K">投放周报与异常拦截</title>
+<link data-page-node-id="bOuSzyoOsvV4enriPFdkSH" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="cpzmPZsXwxbYAZD1gtf1jX" data-pnid-children="fiRQ7pdcsSzSAs2lUh1wOA">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="LOZ91IrTLBfneX0HvKEsRy" data-pnid-children="GAtG7Korco9cifzptEEVS5" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="xmzT0PsqQ0ikTctd0eROtM" data-pnid-children="LzbS4BomY2dRvBUJXZH8bS" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="NLve0qbcmpb69zaOT1ka7I">
+
+<div data-page-node-id="X4gQjdYKWRIEFLNfweMePf" class="wrap">
+<section data-page-node-id="Bap7AwcENuAyRbRhIRdQah" class="page-hero">
+<h1 data-page-node-id="ZB7okJaydN34lJgz3U4cN8"><!--pnid:nTLsrquZDmOOS3IVWEiaq6-->投放周报与异常拦截</h1>
+<p data-page-node-id="ijcxp7sDsy2WkLnADWqvtQ" class="lead"><!--pnid:c0nEhR2C0qurnmblQyFFeH-->SEM 账户的默认周报是「消耗 5,200 元」· 老板看到的是钱，看不到的是那条 1,733 元的线索成本</p>
+</section><nav data-page-node-id="L34qltn2q50ecZthpL9esZ" class="subnav"><a data-page-node-id="rTY8iMLmmSVjWK96VHRBd5" href="场景引入.html"><!--pnid:7eHpw2neU1uCxltH0iKQ82-->场景引入</a><a data-page-node-id="BzNp22PnALfQbafSDNgPGY" href="LiveDemo.html"><!--pnid:PSDdqukDJ1mSMYhqp7lcif-->Live Demo</a><a data-page-node-id="y7q4we73vKTS68t89LCkzS" class="on" href="#"><!--pnid:oLteflH8lDv3ldslHlF6nt-->推荐任务</a></nav>
+
+<section data-page-node-id="vXCUS5AsUbYWChviZmMTc6" class="blk">
+  <h2 data-page-node-id="VigS64xWsg9pOE1Yuqqs2D" class="h"><span data-page-node-id="OhVuqad8Z0YwaZzAcR8ywT" class="num"><!--pnid:tCk5iHVMbTUZO2ocGOYIlt-->一</span><!--pnid:6hanijLBkLOHTRdBW4YEnR-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="VCpB9OXrgKXMI2j4e7IRjh" class="subline"><!--pnid:37WUsiTvH8QBkSQZZZXZkp-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="7p1UJBQAF9BAkHDHkOu3kV" class="card"><p data-page-node-id="uPBlYyG1giH3ATHt392zDJ"><!--pnid:FPFmtpbEaRhNcl72Ww7G56-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="lxs0DrkSyoIOCnpU4f76cv" style="margin-top:10px"><!--pnid:93nVFYszADti4AchEeaMAu-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:UcAOnHec5UJT5CsipaJSoY--><!--wb-skill-start-->
+<div data-page-node-id="lcUuosUwjVo3D37epw1q98" class="wb-skill">
+<p data-page-node-id="YbWqO9Wh09YRFRaMZZehTK" class="wb-skill-lead"><!--pnid:rqPNeWnTalklwHjbCZQqG8-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="AR8Zzax5EoMpsowR9sryXR" class="prompt" id="wbSkillPrompt"><!--pnid:vey4mDAxLRHqxKqniw0p7N-->【准备】这个场景的规则都在「投放周报与异常拦截」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/guVFlhZuFwtYfq6L5gbi2G/9Kb0xTJq8mG4/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="TP4m0rpE2vLljLLciNTGbs" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:ic4qfK9PSDthY6JbTH63H5-->复制</button></div>
+</div>
+<!--pnid:fVJa1vlu9ZTztKHqJTkluL--><!--wb-skill-end-->
+<section data-page-node-id="c4dUe09a53kZYoxmrKgVan" class="blk">
+  <h2 data-page-node-id="YaxRDcsThgjpVTFCFL3dsc" class="h"><span data-page-node-id="AuqqMZ8sWcbTs3x7ZWS0Z1" class="num"><!--pnid:wBllQNm5dqh474eFNK6eGf-->二</span><!--pnid:GJwdHVEfKWZzSFwKtlHvg1-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="KclyJjisKOignr9s77VEQW" class="subline"><!--pnid:s9s3IhL2Ie1hLiTDAHH1Xg-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="MqNk9LVQ9qGDwbE1qCwsB3" class="tlist">
+    <article data-page-node-id="6kyuM2kKQSeA1igzl9Thm1" class="task">
+      <div data-page-node-id="UuD0DwNbJZqC0kM6yCW5te" class="th"><span data-page-node-id="xl8JhEnpVeQ2fLgTe3ZV8v" class="no"><!--pnid:3I3xyuJmf0KqZTnBiDHEne-->01</span><h3 data-page-node-id="lu4kw3yinRxIyBkkiIFfCE" class="ttl"><!--pnid:29NEmGPWV4Bl2s5q9s1DxX-->首推默认</h3><span data-page-node-id="THkAgwjnneUfwj1TBfmNQd" class="star"><!--pnid:GMhgtOyyQML9mmxBUnmNLI-->与一键体验入口一致</span><button data-page-node-id="l9vkS990hx4rO0c6b27tI7" class="cp" type="button"><!--pnid:Rf5lKhkF94E5p2gsgIuUu9-->复制</button></div>
+      <p data-page-node-id="leYj9AMkXOM7UpopasRQPB" class="tp"><!--pnid:SoqUuvmI60glCZcaDNJJcV-->百度后台这周的导出、表单留资记录、上周的周报都在这，帮我出这周的投放周报。
+消耗、线索、每条线索成本三列给我，跟近 8 周的基线比一比，不对劲的地方标出来。 品牌词带来的线索单独算，别让它美化投放的效果。
+最后给我三行，能直接微信转给老板的那种，太长他不看。</p>
+    </article>
+    <article data-page-node-id="3blDJ7dxcMa9U9tZpihXhH" class="task">
+      <div data-page-node-id="XF4EqNuEmjI8ugOIoEPdYN" class="th"><span data-page-node-id="Kz6jwc8cdobysldA08b2bc" class="no"><!--pnid:HE2EB6aZbBFXyjYDfl4MqK-->02</span><h3 data-page-node-id="9erMkX8iHgT72bCwNCuzFe" class="ttl"><!--pnid:yG0SN2iBBfktjsUPFCYqgc-->只做异常定位</h3><button data-page-node-id="jI8i6rvg4RXZXDZ7wlx5z9" class="cp" type="button"><!--pnid:iY16wegidaOTY8J1bioRmh-->复制</button></div>
+      <p data-page-node-id="8zJoYz67JMieJTnRf5Kqkw" class="tp"><!--pnid:KafqOGcD74fRFcXWOz6rb2-->先别出完整周报，只做异常定位：把本周消耗 TOP5 的词跟线索产出对照，哪个词花了 3,100 元还零线索，给我个说明。</p>
+    </article>
+    <article data-page-node-id="tMClDF5IGevuqpIKr06SHK" class="task">
+      <div data-page-node-id="UWB7n4it7LN2jWm4724KtM" class="th"><span data-page-node-id="Asmpc5ErIdUfBdIUsVqLX1" class="no"><!--pnid:otrwTYOixkTJ5X1WUJBSQZ-->03</span><h3 data-page-node-id="NxBo0TIHZsB0F8FnLLEyAg" class="ttl"><!--pnid:N7mkGpYQeADdUYtajjzcbf-->剔除品牌词重算 CPL</h3><button data-page-node-id="l62AMYKPY0jIWkM7LYdTaz" class="cp" type="button"><!--pnid:cHGxqP6Y35fEA5klSZ6k6l-->复制</button></div>
+      <p data-page-node-id="hukpDz3hhdpMpNgxyepoMy" class="tp"><!--pnid:oiTT0hSSf9yliEeeF0xFbS-->这次按「剔除品牌词」的口径重算一遍 CPL，跟含品牌词的那版摆成双列，看看差多少、哪版该拿去汇报。</p>
+    </article>
+    <article data-page-node-id="1we0AiBlsFgal8aGc33lKj" class="task">
+      <div data-page-node-id="CjHB0acknOhDj0xeEDzIRl" class="th"><span data-page-node-id="NWqdtCHAMjrqjAeE3wJnUT" class="no"><!--pnid:Rg3muABKrvXtLE02ZALhIr-->04</span><h3 data-page-node-id="KohttVgaGCQWEkYbKNa60G" class="ttl"><!--pnid:9BP4WaDEFUaSqLPQUDXc3t-->一次跑三周导出</h3><button data-page-node-id="5b4fG7Q3CGCNvDogEdmt12" class="cp" type="button"><!--pnid:iadhUARzKVilLxS2nodOke-->复制</button></div>
+      <p data-page-node-id="10x8bd1FtKjkoE4qVBO4vj" class="tp"><!--pnid:QDN2nkHdEzRXh8SBhENAcl-->演示数据里还有前两周的后台导出，三周一起跑，给我一张三周横向对照表：消耗、线索、CPL、异常项。</p>
+    </article>
+    <article data-page-node-id="kD09C6PCaTZ3BShtUkdG2l" class="task">
+      <div data-page-node-id="DMy1t2gCUqtAwXlrng4f9v" class="th"><span data-page-node-id="ZSvtodqFqqQrmkYICLNkQX" class="no"><!--pnid:BmVl2Jux1lqDp13FKJbVGy-->05</span><h3 data-page-node-id="BovNM50RwhnQVZnBz1ry0O" class="ttl"><!--pnid:WaxdHcGsJ3V7pvH2D3UuEH-->给沈总的三行版本</h3><button data-page-node-id="PT8ioXUtHQTgBCaXadJuwP" class="cp" type="button"><!--pnid:8iRmxgYSnfBbZuq77jqNR1-->复制</button></div>
+      <p data-page-node-id="cZCW2MVfpyT1KLr4YINOII" class="tp"><!--pnid:M3bHay8s6hB81Lyg8K0Miu-->压成三行微信能直接转给沈总的版本：本周消耗、CPL、一个异常一句话，多余的分析别放进去。</p>
+    </article>
+    <article data-page-node-id="YkZDO4c5Qufq1xBXnwd0z9" class="task">
+      <div data-page-node-id="nBtU4fYpcrdHTTFNQeJCBd" class="th"><span data-page-node-id="zXG9a6aQlkatYP2cS9Jvva" class="no"><!--pnid:5DtPGvOtAfkPZGBgIvZ9jO-->06</span><h3 data-page-node-id="05PuzgInIEuMGM1ddT3ju6" class="ttl"><!--pnid:pcHea0WY17x9NE58Qm9GYb-->让它反驳自己</h3><button data-page-node-id="2rt7OsjLW9KrOAjtIOoVqK" class="cp" type="button"><!--pnid:jOuxJ363clq0NK5jMz3aIF-->复制</button></div>
+      <p data-page-node-id="yNajXUnisXXhKdPk4cyWon" class="tp"><!--pnid:ZsiSP6SPO4HlRBrmS94Ak4-->你说本周是异常周，依据够不够？把近 8 周的基线数逐周列出来，站不住的就改成「待观察」。</p>
+    </article>
+    <article data-page-node-id="kN2mLxKUHJSenAB2OJbsCU" class="task">
+      <div data-page-node-id="dhVRHGzy51Nwo3e0GSdJKR" class="th"><span data-page-node-id="DieptlKkf9yUe8tyNzBcQi" class="no"><!--pnid:oi7ojKXWzDp2LfmxmRt1TF-->07</span><h3 data-page-node-id="x4IvkntlKTFFfQKPRcPGko" class="ttl"><!--pnid:sP7vLjz5BnEhXWXj82EU3H-->比对三次冲高的规律</h3><button data-page-node-id="TQq4utFALiIzXyTRVppqeV" class="cp" type="button"><!--pnid:wNDzPrLlI5bwq2EAmiVXY9-->复制</button></div>
+      <p data-page-node-id="RTWcV8SfrzM6fQjqtsEwDS" class="tp"><!--pnid:rJXmAS2y7bboZYmyG5vM13-->把这次异常跟近 8 周那两次 CPL 冲高逐项比：分别发生在什么周、哪几个词贡献了六成消耗，像的地方标出来。</p>
+    </article>
+    <article data-page-node-id="5jYowADCgqwYABwVm6TrUW" class="task">
+      <div data-page-node-id="VdpF8MofUGRHBRX7euOwhh" class="th"><span data-page-node-id="6JPXQHFnQOgIXaKxJwSIjs" class="no"><!--pnid:sRKcyensBzx0fVcEYXPbxH-->08</span><h3 data-page-node-id="bD7SPWVXEsXuAoZfUOhgV5" class="ttl"><!--pnid:59dovIc4e4lXNfTOqrUy2p-->对照预算预警线自检</h3><button data-page-node-id="yw9zrva1wjoUtfLWwvhaR3" class="cp" type="button"><!--pnid:uqbD0nIKGFkekqTDxyEM5x-->复制</button></div>
+      <p data-page-node-id="rOBkWyACXyCjPbhBFhfsjR" class="tp"><!--pnid:1dxigTtLmgagVji9nDnLRr-->对照月预算 1.8 万、单周 4,500 的预警线，把本月每周的消耗和预警状态自查一遍，超线的列出来。</p>
+    </article>
+    <article data-page-node-id="sYYUvT7xfWrMmzqxUJe6ln" class="task">
+      <div data-page-node-id="A205Qi3AtQ4SAbkKziE1zo" class="th"><span data-page-node-id="lbpN1tPtKkRB7BNSKcKmYF" class="no"><!--pnid:XLvmw7GtXS6qDjrDyobQeb-->09</span><h3 data-page-node-id="WqsgIdYyOH86c8yVRQbaOu" class="ttl"><!--pnid:uUZoNzYIsRhZ03zLglydnJ-->折算成多烧的钱</h3><button data-page-node-id="6XH3QR56txbllW2NDeEb6h" class="cp" type="button"><!--pnid:SPqIY77qmVSxSat9gH6Q8Z-->复制</button></div>
+      <p data-page-node-id="m3QELjUUlKb31LPIurNUWT" class="tp"><!--pnid:QqE0lrgaMzuzbVawdZDhBy-->按近 8 周基线 CPL 折算，本周异常多烧了多少钱？8 周里三次异常累计烧掉的相当于月预算的多少？</p>
+    </article>
+    <article data-page-node-id="lvXgygWAghx5qBT6EOOPUu" class="task">
+      <div data-page-node-id="RjbPIHntVewVrPoO9xqpv4" class="th"><span data-page-node-id="4zb7EEArVxYLR7mvX0WeRQ" class="no"><!--pnid:ECC5goc984WKBtFuuOBV2m-->10</span><h3 data-page-node-id="J0z7dy7JukClCgCV8G8RKx" class="ttl"><!--pnid:SI7zW09o9Kum1DCVaqcmOz-->沉淀成周报模板</h3><button data-page-node-id="dArtYXX9MixQL3rpqnS5CW" class="cp" type="button"><!--pnid:YjcJ8WSSmdtCm98yiTz3RF-->复制</button></div>
+      <p data-page-node-id="iVoXmCZWZKgSaRzOpQqYPg" class="tp"><!--pnid:9MRA05nB60GMLu0M4gHTIs-->把这次的三列口径、异常判定阈值、周报三行结构整理成一份周报模板，以后每周照着填数。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="0XkAJ1q1u3JBKxrmXt834F" class="cta">
+  <div data-page-node-id="yDFAx3izNBadBz3BPMRWv3"><h3 data-page-node-id="EQD2OVyjOdaIDRykOmXM40"><!--pnid:ffyvU1Rv46oTs9TnZ9XzI0-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="rUW6jzgghDdi9jmzardZRM"><!--pnid:QkdxeolcEwq3pzPR0ZnFQp-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="9WIioqFmcBjQ4EO0vqEBke" class="btns"><a data-page-node-id="434ffJBSDlvIDZyLJ0ZPDx" class="btn" href="#" id="ctaContact"><!--pnid:9rdAYmruOSbmvE8tLXremn-->联系我们</a></div>
+</div>
+<footer data-page-node-id="6OX0Q6egQVzBkYofDrqFlk"><!--pnid:urrgGZiQjw5fGdAH1zNiiU-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="uSnaynpuTDsgty1aH5XF6R" data-pnid-children="n8dKAToJMQbuZAbOPdcqG7">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="ReiMtvDUna4DXpYpTfwLLn" data-pnid-children="8ranfjTG4KgxD7oCn10XF4">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="on7vqGw6Z2bH0mZOs065M7" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="AfV4Ml7UDa8PV5yHCfT5Hh" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="3jQ3RwNUgfR3ULdeGoXwmI" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="JfX2XDq8PljgOySQwHjK8H" data-pnid-children="dHBftgas8YJ0TMiLWn5q6l">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="Ubv5N4DEqrlLlQiqLnZ2Zk" data-pnid-children="aCA5v6nchmMBDV4MKhZM0n" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

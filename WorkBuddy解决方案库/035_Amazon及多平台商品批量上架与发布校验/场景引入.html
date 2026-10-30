@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html data-page-node-id="I5ZijH7fpQb0TYQyW7yeYY" lang="zh-CN">
+<head data-page-node-id="Q7SMSe71GIyGqKPvD5poSH">
+<script data-page-node-id="DjxE9X71WTUaoiHSQDtk3m" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="bf7Fz9IyvcrCfxVLStANlf" charset="UTF-8">
+<meta data-page-node-id="VJeHAleDUkAbA5dof76dnI" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="4HSTUh7cZe4QoCuMxIWiLJ" data-pnid-children="AITgilG3o0WY4F01tSrLu8">Amazon及多平台商品批量上架与发布校验</title>
+<link data-page-node-id="Z9mnTlPH6eXvVgFSlPgmxm" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="KzNdFHSD17ir2X2viJ9r2d" data-pnid-children="cbaMT5AJ56GmnDbsUwf8a5" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="ismcmR2Q67rsTQLCulTbVX">
+<div data-page-node-id="do8ePEe6VaZfKr4vwIsC2r" class="wrap">
+<section data-page-node-id="CpDEBi58PMAsULHQFYsPHj" class="page-hero">
+
+<h1 data-page-node-id="4dF6Qt1n1MSycRRrZhHV9o"><!--pnid:PnMhFplhKhUM1gkrEXkYwT-->Amazon及多平台商品批量上架与发布校验</h1>
+<p data-page-node-id="axsT2cCU7IKiPcLUHmTm85" class="lead"><!--pnid:dHnfayg3jtm2QcQKSnOTZk-->美国站要上 HT-K09、HT-L10 共 <b data-page-node-id="ZMQRNsasG9FJNgoaQiWyQb"><!--pnid:Uaf2VyUoySWcwsicOrpgt2-->6 个变体 SKU</b><!--pnid:unVv4cxOiKS55exR5XXHET-->。AI 写 Listing 不难，难的是：产品资料 → 平台字段 → 校验 → 审批 → 发布 → 错误回执。ERP 第一轮回执：<b data-page-node-id="3netj6HTllcj9VzV6b02Ve"><!--pnid:3rDf2iZgd4MzKov18NSVAV-->2 个图片尺寸不足、1 个类目错选、3 个变体关系挂错，合计 42 个字段错误</b><!--pnid:WIsWTtmbc4uH2jXNjN7kft-->。根子出在一张没人想起的旧映射表上。</p>
+
+</section><nav data-page-node-id="q1XTW1z2p0483mXEn9bt0t" class="subnav"><a data-page-node-id="3TK20ySqqiMLqCJJv8lJtq" class="on" href="#"><!--pnid:gpQK06DJYCJsPMLXA5YPoc-->场景引入</a><a data-page-node-id="jM9QbrFKFKie8v86FX43Hd" class href="LiveDemo.html"><!--pnid:cCUpRAFBnJGqJ74fjOAzd3-->Live Demo</a><a data-page-node-id="z3nm76P0ZDG3kg4EWpRlgE" href="推荐任务.html"><!--pnid:8TpctNkjBUz7OftpK9ofBL-->推荐任务</a></nav>
+
+<section data-page-node-id="nJLRyIEVjxyZdvGV1rA4Bw" class="blk"><h2 data-page-node-id="F50W5Qwxw9anczrLBFAkUz" class="h"><span data-page-node-id="sTpLpEanWfuzaJqS2IBO2m" class="num"><!--pnid:GGNULo3Aid6RmEZ45QnJPD-->痛</span><!--pnid:XmUtitDbdsx5TojKpWGuTO-->这件事现在是什么样</h2>
+  <p data-page-node-id="wVWYUEhzcVZeTZOw4qvHmN" class="subline"><!--pnid:tQA1dssSMPtQxjEzDu3pNb-->每条痛点都有出处</p>
+<div data-page-node-id="OvqI25nwbsCIMCcvWU68MD" class="pains"><div data-page-node-id="OzBGZoUzSvh0sjz98bHXy3" class="pain"><span data-page-node-id="ZkzajBTwfelJokwyPkwD7o" class="i"><!--pnid:u2kWGDVlcAfPxiiIykCIBV-->1</span><div data-page-node-id="xvOWGXiezo06q962W2Ho5i" class="t"><b data-page-node-id="9WrcluKB3gPxPsJ64JeYZ3"><!--pnid:0j4eQpasEv7gCVwszg5VmU-->批量上架的错误不是技术错误，是主数据错误</b><!--pnid:hASWsqA4LyNoNSwk1kKJaJ--> （高频真实）变体挂错、类目错选、属性缺失，根因多在主数据与平台 Schema 对不上，而非刊登工具不好用。ERP 回执逐条点开排查极其耗时。【源】research/01 调研</div></div><div data-page-node-id="BU8PTMBaWRnSJHiG4qvtJN" class="pain"><span data-page-node-id="tfVm7n7b60rDG2egmDzScH" class="i"><!--pnid:a16OdbeomLb9u6ANDOejQe-->2</span><div data-page-node-id="xWYEzr6oLbarCrSv2foNoR" class="t"><b data-page-node-id="re6Pan3bTkYefOsyJjXqIS"><!--pnid:xIWpuvbJa4eLobhEVtcGB2-->旧系统的 SKU 规则和新主数据打架</b><!--pnid:FcpDQQv2ucTmpiGSXwFfKs--> （迁移通病）老 ERP 把颜色变体建成独立 SKU，新主数据要求父子体，两套规则并存时，变体关系必错。【共识】ERP 迁移与铺货实务</div></div><div data-page-node-id="dnkrvNiD5ZyLGCMC4J0x80" class="pain"><span data-page-node-id="m2FRmYrJOaYulHx63dfDyB" class="i"><!--pnid:AM3ahSh6TfhJUNljgJIcDU-->3</span><div data-page-node-id="Lwr3BPmO1gBBbWKB7B8A0B" class="t"><b data-page-node-id="ICitk33dQI87kb15Hj494k"><!--pnid:kPGHEHO7tzQmQZUNYrKexb-->错类目带来的损失是隐形的</b><!--pnid:ReQyRLf5NcBQfTmVOSFYXo--> （流量错配）类目选错不会立刻报错，但搜索流量分配全错——海拓的 HT-K02 历史上错类目 7 天损失约 1,900 USD 销售额才发现。【共识】类目流量机制实务</div></div><div data-page-node-id="PGg7ozJoB6MxATHUR3O3KC" class="pain"><span data-page-node-id="XyXrFUGoNTEmqfepgnZlHo" class="i"><!--pnid:dTA4gO3aepvQuFzhDAWMyd-->4</span><div data-page-node-id="M4GJdSIqPeB55rlI3D9cNt" class="t"><b data-page-node-id="b9L3RUHdYQlPr21v7uT2Xs"><!--pnid:bGeXAwr4Bb7TO0jqrfxSP1-->发布动作没有审批和回执闭环</b><!--pnid:fxoNNAnA3a5NGLnOaxKndB--> （风险敞口）批量发布点下去，谁审的、哪条成功、哪条失败、失败后改了什么，没有留痕，第二次发还是同样错。【共识】research/02 调研</div></div></div></section>
+
+<section data-page-node-id="xMRzW7zvwdHnAnx9Usl0xs" class="blk"><h2 data-page-node-id="ljqik0FoZw3EPCqAJwybPA" class="h"><span data-page-node-id="mcW8EpZ1G00DcQIHIebkMp" class="num"><!--pnid:RXLOPGmAaBSSCrI2rJXqrx-->比</span><!--pnid:Wk9gvAdeqUbnC5wlfD9Qky-->现在的做法 vs WorkBuddy 的做法</h2>
+  <p data-page-node-id="c6IlFyJk8phZMTf7NNPFF2" class="subline"><!--pnid:EBbB7ta0qrSmAnqa8BIFNL-->差别不在快，在于有人把散在多处的东西拼到了一起</p>
+<div data-page-node-id="zPGvGhXvGNhwV1PymPFeYw" class="cmp">
+<div data-page-node-id="DjfPDyGPG4CepfWDIf9jU3" class="old"><h4 data-page-node-id="kbw3frEw7Aak99TDW7z81P"><!--pnid:DtBzy81H2XcNvdoxh1R3sH-->现在的做法</h4><ul data-page-node-id="xRHEx3PowWdgif206XWI34" class="list"><li data-page-node-id="c2t5y4WKcYuunU69exNf2o"><!--pnid:aWgHKy8taJOYlKRqi5LFVp-->运营对着 ERP 回执逐条点开 42 个错误</li><li data-page-node-id="SQWkVJHLsN0GiFfzvTh4vW"><!--pnid:F8c7x0uRUFPQWFs6aAXy1x-->改完再发，错了再改，来回三四轮</li><li data-page-node-id="WA9N0zQsjmCc5R2C5JU5xd"><!--pnid:9mGYFaaynMLCFSCyAkSIxp-->变体关系凭感觉挂，挂错了父子体被拆</li><li data-page-node-id="5bgwnZps3FNBbZtEwhYCj1"><!--pnid:BfWWxzs8WsQVP2pkkCTqd1-->没人记录这次改了什么，下次上架重新踩</li></ul></div>
+<div data-page-node-id="rQAYqZ5svFmkK1KRO4RjpE" class="new"><h4 data-page-node-id="Y7bKRmNjhqyl416R1mSzQy"><!--pnid:QDJsn2T0aCfP8MjnG5a6ry-->WorkBuddy 的做法</h4><ul data-page-node-id="eq5yVQZ6Ir1ZzJuK51aZTk" class="list"><li data-page-node-id="YVjobpdC4fhe4K6NkKfZ9f"><!--pnid:QOf8LxfiS8kFhiqEvavkuL-->主数据先校验：必填字段、图片规格、类目、变体</li><li data-page-node-id="HgUX05wNhEOLvU5HyRWTDC"><!--pnid:Oc2J5K37w7X4SjHNHyiUqn-->错误按三类归因定位，每条给修改对照</li><li data-page-node-id="KY1NyeizSc58Tnv0hrBCR8"><!--pnid:rn42f7vxyEzxvGCQuPcZJx-->星标素材：旧 ERP 映射表暴露变体规则冲突根源</li><li data-page-node-id="2gsnavOR5J8jT5UtnpfYUs"><!--pnid:qNM3u7t31m09y1zrUtTjPs-->发布分批：无争议先发，争议项修正后重试，全程留痕</li></ul></div>
+</div></section>
+
+<section data-page-node-id="UpiZvctlxwUaInKtCS2gUU" class="blk"><h2 data-page-node-id="2UrDbJpXcbCYk97pZJ6gJC" class="h"><span data-page-node-id="rSAM1RRy2Cj9VHuez3usdv" class="num"><!--pnid:JirbhgV5GiVAjGh08dqhMZ-->流</span><!--pnid:C2yyGK6EM8wS2kviKskRnL-->总体工作流程</h2>
+  <p data-page-node-id="uqDN5JpRj08wypbAXMuR14" class="subline"><!--pnid:WBZf2eOMjAdyCdxtuPg9yW-->每步都有正式产出</p>
+<div data-page-node-id="y6SiyBnPxFBO1PqFQkhewW" class="g2"><div data-page-node-id="5ZOj99XBKSeEchVOMTmhN4" class="card"><h3 data-page-node-id="8NmXMb09OWA64qnqHmdkjk"><!--pnid:gPt3mp6EBfRTG8PiD17L81-->① 主数据校验</h3><p data-page-node-id="0cOxqm4Ilbjhe9fUZG0XiQ"><!--pnid:8hXyNeNBdSYUcYNzGeEz71-->必填字段、图片、证书在发布前先过一遍</p></div><div data-page-node-id="ldFKZrZJDXd8qMlI1nLFRx" class="card"><h3 data-page-node-id="XiCqQO7NnndNAXrbIVqWiO"><!--pnid:1VqhbfSQ7FfTotUj5jGWVW-->② Schema 映射</h3><p data-page-node-id="SJHwhDvSC3ZV8Fli9yTBwB"><!--pnid:cknrkoAusjWJxuk4VAoomu-->产品类型、属性、枚举值与平台要求逐项对齐</p></div><div data-page-node-id="kCy7ZmyS2Gbn1aAw3gEZpV" class="card"><h3 data-page-node-id="rV77HKiz26A1eRIv7TIGeK"><!--pnid:9M3cwt4XP5Z0BxVdA4atl9-->③ 错误归因</h3><p data-page-node-id="oJ4SQmsOkEEaa7xU0byd9g"><!--pnid:6bNjE5fiBYAoi8ohyr9F34-->42 个错误按图片/类目/变体三类归口</p></div><div data-page-node-id="NMM9MgPPzYeSRcbrLlBDeW" class="card"><h3 data-page-node-id="xUzfhPm0kwsBumiEBZCiGY"><!--pnid:j8YZES3uMt1PEkszh9s9YM-->④ 分批发布</h3><p data-page-node-id="a1cGBwxB5q3hWhMrEtM8kA"><!--pnid:PFipB9uqr78CNy6jvLY1Zi-->无争议先发、争议修正后重试，回执闭环</p></div></div></section>
+
+<section data-page-node-id="wrDcEKpN0Rsn391P4VagnO" class="blk"><h2 data-page-node-id="PkxLkOCXl39dSgTlp0Knm7" class="h"><span data-page-node-id="d6AtRBGIvzxdN1AjH8eoV7" class="num"><!--pnid:o5XS5PdBqFyBLtbnNhHzE1-->例</span><!--pnid:Gvc4NMtgjNURe8d3r5N4yx-->案例钩子（脱敏构造 · 逻辑可核验）</h2>
+  <p data-page-node-id="WBCh2XjuS1luuSHWshJInj" class="subline"><!--pnid:5HufqbNqYL6cXUtPr8l3DF-->海拓生活科技 · 与全库同一案例链</p><div data-page-node-id="CHovsG4ViNaobTqrVVS75Q" class="card"><ul data-page-node-id="FjU044lTQmoKBEjWlPIVPS" class="list"><li data-page-node-id="Ml3P034ygggvNtUASdetRV"><!--pnid:msE78i6e5gul3h8DX2OGpb-->6 个变体 SKU 上架美国站，ERP 首轮回执 <b data-page-node-id="oXaFKNBKAWNKH2IXmw83U2"><!--pnid:HIVX8tHFTswNfkerhuHITc-->42 个字段错误</b></li><li data-page-node-id="ZjpR7XvLZcarZWnjM8rF5r"><!--pnid:rDhtGA1Z2t0bo9rCu5Lls4-->三类错误：图片 2 / 类目 1 / 变体 3，全部定位到具体 SKU 和字段</li><li data-page-node-id="YdO0qIVfGUanJECXt2G7l5"><!--pnid:iMELErNzftigNsUkyo4oPQ-->星标素材：旧 ERP 映射表——颜色变体被建成独立 SKU，与新父子体规则冲突</li><li data-page-node-id="kZY8119Bw0rPDRyyni4vgZ"><!--pnid:x1lLOKpH5C8Iz00GKvsVQi-->错类目的历史代价：HT-K02 曾 7 天损失约 <b data-page-node-id="aTkxYkM06xEqJeFI5HYpCF"><!--pnid:dZilW5OmcwW5akhvzWiWTt-->1,900 USD</b><!--pnid:Ctj6Z5nI0mwHj9t2AqnQd0--> 销售额</li><li data-page-node-id="pXb6Yhlwqtk7ZGNPaBeers"><!--pnid:xay8ZKw8bAHUjqgRcyTskM-->结论：变体映射未确认前不批量发布，方案一先发 3 个无争议 SKU</li></ul>
+<p data-page-node-id="B41ckBsJYaDacHkEYuw8hs"><b data-page-node-id="28zGPEifFzrN1BHAGB2aP1"><!--pnid:8mu6H8SO5jiOAyFHfVxid3-->演示时第一句话：</b><!--pnid:9KMKYOFOdQUE7Gw96SEgeI-->「你们老 ERP 里那张 SKU 映射表，现在还有人维护吗？」</p></div></section>
+
+<section data-page-node-id="EWjjbXZRPywuZnI8i7WxFu" class="blk"><h2 data-page-node-id="PYGv6zX26Mv2unG62ggXlp" class="h"><span data-page-node-id="SybnY4rGz1nteyybiEdhmD" class="num"><!--pnid:zgRmzkuoLMWC0yyQqEIPAd-->界</span><!--pnid:4mRmCwVBUADgx8xpX9NFcy-->人工边界与真实性</h2>
+  <p data-page-node-id="l7EgllQDK1sMPV0KjdJAsf" class="subline"><!--pnid:qCLMFKNeItpcWjAdvxJN2S-->哪些 AI 做、哪些必须人做</p>
+<div data-page-node-id="MLHo3ZAmx85fSIYio46dwV" class="g2">
+<div data-page-node-id="d1d3SCmE6blvKWYJjMIf17" class="card"><h3 data-page-node-id="KF0wlw07hc06LsxCJ3CRUl"><!--pnid:smx5bZCa2IotyuA9qVYiH0-->AI 负责</h3><ul data-page-node-id="y8wS8tAWvB7sYkOFUDS6Ar" class="list"><li data-page-node-id="snuScVT8O4pIoTBMQQpUIM"><!--pnid:ywqxdajaudf9B7KVgXzKP9-->主数据与 Schema 校验</li><li data-page-node-id="pCVK2QHAJvsIZzpfB57WC8"><!--pnid:OiQE03cQFguJrzvkEhH3Rm-->错误分类归因</li><li data-page-node-id="U9lECrPWfbZxGg8EUGCDY4"><!--pnid:35FtxXErfN5zOOMuOgFcD1-->修正对照表生成</li><li data-page-node-id="MXadjSOc0BN2O06gzqaqyy"><!--pnid:BowqjhqZBTkTXB8Xih19s0-->发布批次与重试队列</li></ul></div>
+<div data-page-node-id="BN1CjbY92rzqyzfHBbvm9V" class="card warn"><h3 data-page-node-id="mh1TO0jE55CCzO26jNfNvR"><!--pnid:MkJw0NkptVTONxnDJMiGPK-->人负责</h3><ul data-page-node-id="aco6mGcb8VuUmOlcbUsRnq" class="list"><li data-page-node-id="E42LxYuxU844cXHNHofkii"><!--pnid:7rYTNdO5HhIjJ91DEeIMps-->变体关系的最终确认</li><li data-page-node-id="LKQq2cTGK3Si5CZ0X1ayot"><!--pnid:c8t2u6hpGBjCA7zMhepO5v-->类目选择确认</li><li data-page-node-id="82evEntNSfeHPfTYQIvYD7"><!--pnid:ZOZwdWJm25a7lyXpNuXbHj-->正式发布按钮</li></ul></div>
+</div>
+<p data-page-node-id="Zb7JQpV1VAqVB0MtJaxYym" style="margin-top:10px"><b data-page-node-id="QcsjaachPcWndA7JGS8QuI"><!--pnid:6l4Dky86a7cfKb0S6GPBWX-->真实性 T2+T3：</b><!--pnid:CjokCZYjH2NCq0Ar6pq8Bl-->Listings Items API 的创建/校验/错误回执机制来自 Amazon 官方文档（T2），错误类型来自铺货实务（T3），数据为脱敏构造。升 T1 还缺：客户真实刊登回执与主数据表</p></section>
+
+<div data-page-node-id="2HcOVZnIYZm4afIod9gr1U" class="cta">
+<div data-page-node-id="g8R7amuM5M2nbAmgWPjJo2"><h3 data-page-node-id="uKccoLPwIYaH8AdceaPTcm"><!--pnid:PJbP5kaTarxJ4Hce4DmQ99-->看这件事具体怎么跑</h3><p data-page-node-id="8B8UP1l1h1KZjoziwLlNT6"><!--pnid:dCUHFMjyeuma9SDDvvcrNe-->Live Demo：素材 → 逐步判断 → 一份「还不能提交」的正式件</p></div>
+<div data-page-node-id="BdOcUNfkiXUzJObqq7nDfO" style="display:flex; gap:10px; flex-wrap:wrap"><a data-page-node-id="ogwywGcWvYDG8hSDRb61Fq" class="btn" href="LiveDemo.html"><!--pnid:0oe5OB7uT6eVDiNcHzjK6z-->查看 Live Demo →</a></div>
+</div>
+</div>
+<footer data-page-node-id="ARUeEtR5Dw6K95nsbL3m1u"><!--pnid:lpjj0gMThPhQ7qnrmrpxVe-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+
+<script data-page-node-id="kfEg1DNGRo7zjvwJc2bDkR" data-pnid-children="xZNm76BSxgcAxMUzfGrftw">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="fh9VqrHGc7Jjob3aPw9Ock" data-pnid-children="Ud0EsrjbzWHWZv4A54ywhk">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="2268rBw2PvS1sH0fg2DgT8" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="sRhIUlld85NOSBoYSwOFXz" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="UPs8Yzyoo2tdWL9c5IOcWd" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="Kigh3jw5E9QjeMqQA0MWVK" data-pnid-children="pBBw3htQDsVp3FNhYj6ZLN">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

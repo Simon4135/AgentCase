@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="gaOgxyc6jOjn1Btxc8ul5J" lang="zh-CN">
+<head data-page-node-id="WJJxz2sNIbZOKVgC4ie3Dp">
+<script data-page-node-id="TTY2H0G1CI9THedPQy7ulq" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="Hz4nxpWdrzBBqD8exxCOo9" charset="UTF-8">
+<meta data-page-node-id="xvjfzjhyHBucBniZiDjuvQ" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="P34tAcmnQ2Kv5X77wjpSOs" data-pnid-children="7wVBLuQ2SyjLUtR3uZvrdM">丢单复盘归档</title>
+<link data-page-node-id="Gi8pY2rr8Lmbp2GpGIBWJJ" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="w3fXuhf29A4OY4jqK8lrBY" data-pnid-children="nACv0GGWykOqqumFpnX76L">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="ZmkDBwXPBRkdiHskmbK7iQ" data-pnid-children="pr4bgDO57JB4SpFBSWJxJY" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="zlLw37ndOaYCOB8MHsptfR" data-pnid-children="D1fFsH9jOPNaNr8QbBeQL0" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="dHC3Ck4hhlayuXTukKNKTw">
+
+<div data-page-node-id="2SYAKyDmeyp3ipVmaXdaVn" class="wrap">
+<section data-page-node-id="KQnCPhJmAan5CLrWpr5u0V" class="page-hero">
+<h1 data-page-node-id="ssDKjtVF1O4OcYKigioUMc"><!--pnid:qJSzBAf1CawuqpN0hbCalm-->丢单复盘归档</h1>
+<p data-page-node-id="oK36bSgyiFkuEVr437yyQI" class="lead"><!--pnid:gPFPPeB0aUNuux6ydlkoHe-->丢单的复盘会开了半小时 · 结论是「客户预算不够」，然后所有人去忙下一单</p>
+</section><nav data-page-node-id="9musBW8SMHdHDw8iMZJh6k" class="subnav"><a data-page-node-id="hHv3w8yIeawkqptQckwIAz" href="场景引入.html"><!--pnid:tUWGci3BXW3vEB4qhpIKxx-->场景引入</a><a data-page-node-id="Oz7sNFfemYNFfE0eynj7Bh" href="LiveDemo.html"><!--pnid:x9QlwNtYsYHhewbs6CAwPq-->Live Demo</a><a data-page-node-id="vQuWFoCbGfIJlI153Lv1J4" class="on" href="#"><!--pnid:tgnCtaESlJSlGd63f3VPB5-->推荐任务</a></nav>
+
+<section data-page-node-id="X1uRRssXuWv5TWqV86gWyB" class="blk">
+  <h2 data-page-node-id="uph6A2UfsOEc9b5ohHP3tJ" class="h"><span data-page-node-id="JzcdLVXve2zued5sbOwpcl" class="num"><!--pnid:R7JY0x8TDNhCMQKr3TdS7W-->一</span><!--pnid:gXeXOqgziRghrMeYsVzcMu-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="ZPf5gF1fvgcIDnS8N3zKcQ" class="subline"><!--pnid:VRLzjzE73uC0MJe5zCch6I-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="fARnp2D0gO4c4bKaWYjoW0" class="card"><p data-page-node-id="2DvkC6mzPzAy0SP0IM3tfG"><!--pnid:8LryMlPwmf4kOZhimp9B2J-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="2pPCTVGQyrPC9x0o8XSKUF" style="margin-top:10px"><!--pnid:Nc5kVbBxZinMmNr8bVFAc3-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:13aewfeD9t2sdBEeBCeOvN--><!--wb-skill-start-->
+<div data-page-node-id="0n7SkzCDw4m3oFDVl9u1rN" class="wb-skill">
+<p data-page-node-id="5JT1C5E1wVosdrLCK1J9LK" class="wb-skill-lead"><!--pnid:0cyETrFDTJtP9i8nfqH46k-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="Wspb7K8utW2W2r20Sjf62G" class="prompt" id="wbSkillPrompt"><!--pnid:jm0v4DDSJFZqfDFtOikMSY-->【准备】这个场景的规则都在「丢单复盘归档」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/kKydVMX84sDN1YeiEZm1EG/_jts_r74m9ur/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="JIYFK5G8pXva73fqQkbLsU" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:oUmFzHUfqfWT96oN7uwapO-->复制</button></div>
+</div>
+<!--pnid:MPHbCMCWAVHqKmxwW475MU--><!--wb-skill-end-->
+<section data-page-node-id="upWWbhoS3cT0RfmROukL1a" class="blk">
+  <h2 data-page-node-id="XJVKG6blDAoaf9mE807aPQ" class="h"><span data-page-node-id="1w0BhnPMmtpjuH0lu6FBiG" class="num"><!--pnid:yBbTBfXVxxxjYrAuSH5qrr-->二</span><!--pnid:kN7p5lpS0C8oXI0kErZWSc-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="Ox9B853N6fPd58JlOXDipE" class="subline"><!--pnid:jXi1hwgiigmYedvkSBlxUs-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="Mo9JgKksKIYkRV9ViCMCJ4" class="tlist">
+    <article data-page-node-id="TPSUpzbh36pYLPNFG0oGlU" class="task">
+      <div data-page-node-id="SFxgmIHcq1PjB0mp1ClXC9" class="th"><span data-page-node-id="sYUYPKBndwfVkoo3W07C7Z" class="no"><!--pnid:sag15K30iLmZsqj5SgpOUS-->01</span><h3 data-page-node-id="3EcUjp90zDYBWH7k4XvaMr" class="ttl"><!--pnid:GXqV84cgrKL6sVI1zWXmt6-->首推默认</h3><span data-page-node-id="tOzAYtjqQwLRjeLQoVmPC2" class="star"><!--pnid:TUPyLfLR9wDGo48saHeHrL-->与一键体验入口一致</span><button data-page-node-id="44pUYybYbFxNuvI1VLXckx" class="cp" type="button"><!--pnid:fuU5EGFP6Yt5EVIkl9X00C-->复制</button></div>
+      <p data-page-node-id="ZeTB8Knv71iXOMO1E6V8b3" class="tp"><!--pnid:xvt2evdqdoiNXCd2peIIdL-->恒泰那个 220 万的单子丢了快一个月了，梁总让复盘但一直没做。四份材料发你：丢单项目的时间线、我方报价明细、客户最终反馈与传闻、那次走过场的复盘会记录。
+帮我做个正经复盘，别走「客户预算不够」的过场。输的真正原因是什么——把「输在价格」掰开了看，两家报价的口径先拉平再比差。哪些是本可以避免的、哪些是运气，分开说。 教训要能入库，以后写方案别再摔同一个跟头。现在过了三十二天了，还有没有翻盘可能、窗口怎么算，你给我个说法，但翻不翻我自己定。推测的东西标清楚是推测，别当结论归档。
+交三份：丢单复盘报告（恒泰）.xlsx、反面案例卡.xlsx、翻盘监测与动作清单.xlsx。</p>
+    </article>
+    <article data-page-node-id="chDqTccdXzNRB9uXYVyUe7" class="task">
+      <div data-page-node-id="l6uKPS1DbQPWemrlSpSQJI" class="th"><span data-page-node-id="DpBBtRobfnpccUb6ktCjQ7" class="no"><!--pnid:IGXk0vsQ1uY4GBgsPRaXAD-->02</span><h3 data-page-node-id="spduTL5oc6PRh8f7JQSeQl" class="ttl"><!--pnid:rUqzmpD1DtqpVQhfzCeNZW-->只做报价口径拉平</h3><button data-page-node-id="FK8clrFy9JzxQDsVUTf1gM" class="cp" type="button"><!--pnid:1Dl6Ly3BjcvSFs28EuKsWU-->复制</button></div>
+      <p data-page-node-id="MsusZnYlIKuIgC6db1oTdM" class="tp"><!--pnid:n5pMbNTvqJNm4yNABp7yTL-->先只做报价这一块：把我们的 220 万和对手的 204 万拉到同一口径再比。名义差、全包口径差、差的比例各是多少，对手那 204 万里客户还要另掏的运费和拆旧算不算进去。产出用 Excel 一张测算表：项目、金额、口径说明、拉平后的可比口径，最后一行给两个口径下的差值与百分比。</p>
+    </article>
+    <article data-page-node-id="rUgOblNJ7RfgvxAT4TgOai" class="task">
+      <div data-page-node-id="FElywxv2oHyt10aR4TDxNX" class="th"><span data-page-node-id="sGs4tPouoKXTZhfNslv7rr" class="no"><!--pnid:ZfTJtDLh6YbR51nzEcVG8A-->03</span><h3 data-page-node-id="EOtV1Mq7xcoJKh7b0kBXtx" class="ttl"><!--pnid:JfJ2FSEKdbip5VjGRqqouT-->换成赢单复盘口径</h3><button data-page-node-id="ZTiiotifBIMyzcpWwpNGOP" class="cp" type="button"><!--pnid:88BDWsLW4zK7hWY7Fcm1vo-->复制</button></div>
+      <p data-page-node-id="eHqRcy9XYTXGxFDxoFpenO" class="tp"><!--pnid:TYxaT4vVD08SeUm271apZT-->换个口径再跑一遍，这次假设是赢单：同样五步走，但归因换成我们赢在哪、哪些环节起了作用、哪些赢了但不可复制。产出用 Excel 一张表分三段：赢的环节、起作用的原因、可复制性与否。这份以后是方案组装的主力弹药。</p>
+    </article>
+    <article data-page-node-id="zt10jk35mKe09Azp0bYmB9" class="task">
+      <div data-page-node-id="S3FOom6saP52zdCovKGRtL" class="th"><span data-page-node-id="VkHwbEA9k4TffZeGVLgsmD" class="no"><!--pnid:hBGO9dMxkRfvV03FlrBVGJ-->04</span><h3 data-page-node-id="HZPk5nyibLyDrHoGTJWOct" class="ttl"><!--pnid:LscjcsQ0nyi3oGHPd4bmoQ-->两个丢单项目一起复盘</h3><button data-page-node-id="kb0yGnzu4Nr4wdTFhvajAQ" class="cp" type="button"><!--pnid:AROg8tE4xMo8pzTTFE09Bn-->复制</button></div>
+      <p data-page-node-id="sT4RGw6zTTk30Rfwb8w6zj" class="tp"><!--pnid:xXOsPwXeUGm3hP1qoLf9Rk-->把今年丢的单一起过：恒泰 220 万这条，加上演示数据里另一个丢单项目的材料，两个一起复盘、各自出报告，最后给一张横向对照表：丢单阶段、归因三条、可避免项、翻盘窗口、教训类型。看有没有同一个坑摔两次。</p>
+    </article>
+    <article data-page-node-id="KzXLBIrYJ7Lw6e86mKVIyq" class="task">
+      <div data-page-node-id="xkZcLxBlCTRSAAKmhzTFjD" class="th"><span data-page-node-id="yVsG0fbLHAo67c7EmlnOEG" class="no"><!--pnid:zaKZck44qLdkz4piK5EBmW-->05</span><h3 data-page-node-id="v1RnIELaJbD3Iy1xgWpEr9" class="ttl"><!--pnid:MkRm2r2auB3jZfl4CVY6G8-->给周会上念的一页</h3><button data-page-node-id="l7Qkv769EwunJqFQ2Z2roJ" class="cp" type="button"><!--pnid:1D0jhCSq0LZO9emGw5STTZ-->复制</button></div>
+      <p data-page-node-id="0smgOC4p70nl9fzwQy6WK1" class="tp"><!--pnid:sROgLrx2AB7U7RbEgILzkJ-->把复盘报告和客户原话一起，改成周会上念的一页：丢单事实一句话、真输因三条各一句、可避免项定位到哪个流程、翻盘窗口还剩几天和监测什么信号、教训进了库以后保护什么。产出用 Excel 一页纸分四段，每条不超过两行，别写人名。</p>
+    </article>
+    <article data-page-node-id="N8Ybpj6D0C13CrGDB9h86r" class="task">
+      <div data-page-node-id="xi6g2MxwNK94bnub5U0F56" class="th"><span data-page-node-id="vFAwbBmXzlkgVw3Mdys5IV" class="no"><!--pnid:ctbVrbKMoNlnjaUo0jR5AC-->06</span><h3 data-page-node-id="aUqbkcBxTA7oKd2DCSq9Gc" class="ttl"><!--pnid:ILJZZMbglJwOsNMD3r2vph-->让它反驳自己</h3><button data-page-node-id="EPjwlrFxaO44RyZqF9VBne" class="cp" type="button"><!--pnid:VFCiBrmLPbN6E4BGQ6pss8-->复制</button></div>
+      <p data-page-node-id="znmM8vQzK87WPBR1DtR1jA" class="tp"><!--pnid:34eR7D7hE5r7J9ZItWxFL8-->拿客户最终反馈与传闻这份材料，归因里「对手关系硬」这条没有证据，你自己反过来挑：还有哪几条归因是推测冒充结论的？把每条的支撑证据列出来，站不住的移到「待验证假设」并写明验证方式。产出用 Excel 复核表：归因、支撑证据、证据类型、是否维持、维持或改判的理由。</p>
+    </article>
+    <article data-page-node-id="BQqEUhtddb077adAYyy3ni" class="task">
+      <div data-page-node-id="bqbEpn9PjKbykFQ4lbLvwG" class="th"><span data-page-node-id="IKXjwJ8ikot2XNaHOatQIv" class="no"><!--pnid:bnQqWny3QnSGOr00NHY0I5-->07</span><h3 data-page-node-id="ZysBaeQM3fTB38uYbcP4yP" class="ttl"><!--pnid:ebFDzYY5hduzhdxAWIAa9z-->专门比对客户那两句原话</h3><button data-page-node-id="7aLkP2ajxeCGnaDqdNNKQv" class="cp" type="button"><!--pnid:ey68quPQCeBUoV2xQavBew-->复制</button></div>
+      <p data-page-node-id="KRVmGEyj7Pz8FNVUUJOsio" class="tp"><!--pnid:iZlzO9i49JO6JKxlCvLj7U-->专门比历史：把客户 6 月 10 日「整体不错，节拍那块我们有点担心」和 7 月 24 日「另一家说 16 到 18 秒，我们觉得实在」这两句原话，跟时间线上的每个节点对起来，看我们哪一步本可以调整。产出用 Excel 对照表：节点日期、我们做了什么、客户当时怎么想（原话）、本可以怎么不同、属于可避免还是不可控。</p>
+    </article>
+    <article data-page-node-id="v7otVPp7MT1WSfxsNyeOgS" class="task">
+      <div data-page-node-id="FHpGDOC1y8Y8aqVe8UTJ3G" class="th"><span data-page-node-id="PPmKWYzjKbMcOuR8LKqcxJ" class="no"><!--pnid:jYWl1EJUs8CcZD0q2qCwzD-->08</span><h3 data-page-node-id="h3bfeFsR9FxDdqI0ONXvTv" class="ttl"><!--pnid:Y9tFl7DhmQYFz4IEQg91U9-->对照复盘五步自查</h3><button data-page-node-id="XJyXnQKrORSjWC6I9dLF1k" class="cp" type="button"><!--pnid:F1fRhrQRNSXvzjXIsPwWaM-->复制</button></div>
+      <p data-page-node-id="QPsQAeePhvhpFPAXbgg8Kc" class="tp"><!--pnid:PwHlzlLQwqfPI3Ml6xpjre-->对照五步复盘的口径把这份报告自查一遍：时间线是不是只还原不评判、归因有没有下钻到三层以外、可避免项有没有落到流程而不是落到人、反面案例卡有没有写清适用条件、翻盘窗口的天数是怎么算的。产出用 Excel 自查表：步骤、检查项、本报告的实际情况、是否达标、要补什么。</p>
+    </article>
+    <article data-page-node-id="fBMNUhBXRPgySDCcquRMaU" class="task">
+      <div data-page-node-id="sxhXnY5siNw4FdJoEoRkMw" class="th"><span data-page-node-id="XdxMO45UEbJiz0ty517SUW" class="no"><!--pnid:fZARudVZkfNe8cuTyDiAhh-->09</span><h3 data-page-node-id="G26wylsdlpGSEgfeMtx8Ux" class="ttl"><!--pnid:xR4pGSrDp54YC122Op5GZw-->折算成窗口与预期损失</h3><button data-page-node-id="8zvg8MJyRnziHUJlEn0lhJ" class="cp" type="button"><!--pnid:Aw5dzgMLn2R5ZRBQvhGdfV-->复制</button></div>
+      <p data-page-node-id="qxKqaoMjV9jVB6ZdbdWavy" class="tp"><!--pnid:wqHiYE4t21Y4acCPsIDDNq-->折算一下：220 万的单子丢单 32 天，按行业翻盘概率与竞品 30-45 天的磨合期，翻盘窗口还剩多少天、监测什么信号；反面案例卡不入库的话，按同款跟头三年内再摔一次的概率，预期损失按多少算。产出用 Excel 测算表：情形、天数或金额、依据与假设、算法。</p>
+    </article>
+    <article data-page-node-id="OUcj0nP8w7qMRSmCUPiQyj" class="task">
+      <div data-page-node-id="p2imEMMLm7tIUSA4PSSd8U" class="th"><span data-page-node-id="yA2G1yCIdE481UOVNFQs8c" class="no"><!--pnid:YDu9mZT8LqsGHLcrhqo3tK-->10</span><h3 data-page-node-id="yIaAV3Qj39zm0wKXBWrDpX" class="ttl"><!--pnid:RpWrIZFRcQvuPuGyDhj4Dy-->沉淀成复盘模板</h3><button data-page-node-id="NXSyEqhu5xAH6pdJmdzwx4" class="cp" type="button"><!--pnid:FN6ZRjdJAFshkVecs7wa4F-->复制</button></div>
+      <p data-page-node-id="Jk6n2Sf6gErQvkTgJ2iAq2" class="tp"><!--pnid:cqDTkDtG12zkXEzwTCNdYd-->把这次从时间线、报价明细、客户反馈、复盘会记录里用到的口径沉淀成模板：五步各步的产出格式、五问法下钻的写法、可避免性怎么定位到流程、反面案例卡的必填栏位与适用条件、翻盘窗口怎么算、什么规模的单子走轻量版。产出用 Excel 一份模板加说明，下次丢单或赢单直接跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="7p6vYYKHpT81HwBnzLl5t8" class="cta">
+  <div data-page-node-id="Qa31LsrW5wcVWSGnsuaYCg"><h3 data-page-node-id="fersReXL4SqjLuPvwZt4yc"><!--pnid:bER6CgM5ADOX3VYZ0JjTVk-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="mX4tPhUkQbspCzObT0pqlY"><!--pnid:TTAo97nW3lJZKyxeyXmury-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="ocsHjXzdsJJKuLlFqCHuyp" class="btns"><a data-page-node-id="QpQv8VSPHpWN4zObHEXo3R" class="btn" href="#" id="ctaContact"><!--pnid:Kuj6rrJu0IlGS74pSXUySx-->联系我们</a></div>
+</div>
+<footer data-page-node-id="DWiQoINxHv2KVHp5dwfTew"><!--pnid:AwXKfx5z1c9iL9WLY5iU50-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 对外动作一律人工确认后发送</footer>
+</div>
+
+<script data-page-node-id="nlyj0wTAUGAVRlpNatHLZp" data-pnid-children="aHo47tdVmQQj0hqjc2pGpk">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="2DbA9EO6tkSLaabR2oatg5" data-pnid-children="WnbuUUtQGjbf57p5ZRtwPc">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="o7lQYNtDGzMZp6k2Qsxiry" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="VZLNrTboA3Ne5VJubadVPq" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="Qu7u0sbORMMATjYd8gFCNV" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="vvSbg511n6bRjO37XOpFrc" data-pnid-children="EJoB4UIUf47EqSDxA3w7dx">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="FcTW4fUFVvtgoOAw6QiANr" data-pnid-children="BAgPL3koj1PdTKXBDY1UZM" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

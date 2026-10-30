@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="ICPiEuqEVBaPdP0N6Z7Ph6" lang="zh-CN">
+<head data-page-node-id="AJeXDQKRicS0c20mKjLX50">
+<script data-page-node-id="NlCiVdHqtqVa2FiLPwLbAf" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="6eKBxTrUJR3VMK4jhsxMup" charset="UTF-8">
+<meta data-page-node-id="zOULBJlytApK9RYCvhyM99" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="Z6RKg43Ev590nzgVbAyiYL" data-pnid-children="r6ZZ3D0iQL070rLLxIWDEG">每日效期扫描与报废</title>
+<link data-page-node-id="aC1zIee8hTv63ZymextFnG" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="v0HjlFxjGqRNx9mHSIrbBV" data-pnid-children="N5PqIYaZVUbYG7vdNxIp3i">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="CEjWIFqARCwKq36K5LgO7P" data-pnid-children="79uIEDtMcC4zfbY60kpiUT" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="xaxPyTIIFoXLIVBVmmdOrN" data-pnid-children="2vaBcQBxoba6ECrYO6QTwt" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="a5kzdrqvQsS3rzGWcOz1lB">
+
+<div data-page-node-id="KyN8Yvdk7zrG5h9r0yqzeX" class="wrap">
+<section data-page-node-id="JhjLTvJnycECCFZ55w8XA3" class="page-hero">
+<h1 data-page-node-id="qqRNH8kgHDdbP2YDUki9xT"><!--pnid:F5v3ovoi8KMLQ9ap2EuiTM-->每日效期扫描与报废</h1>
+<p data-page-node-id="Se8JBqRWoyfP3Y6EO2PLx3" class="lead"><!--pnid:yVh4PQxJzsKOi7SH3YYAgW-->后厨原料效期全在标签上 · 过期原料被做成餐品，一单罚5万起步，还可能是10倍货值</p>
+</section><nav data-page-node-id="S1eiXqJ5tuvi0tQ4vR6lhK" class="subnav"><a data-page-node-id="ypvDKwUE4tXZpVKxLokGcP" href="场景引入.html"><!--pnid:oKxapLj9UGTP4UGJuCmSdQ-->场景引入</a><a data-page-node-id="mySKOP2R9cJMq7PqaPe0VL" href="LiveDemo.html"><!--pnid:pDtsUOf4bKb2cMlhu4mL3J-->Live Demo</a><a data-page-node-id="16HGfutBMNwcNKTrBXIqWN" class="on" href="#"><!--pnid:yIWIEZhYdLrlA8Ong4yyPl-->推荐任务</a></nav>
+
+<section data-page-node-id="eTbfrXf8BPTiDaLREw73jc" class="blk">
+  <h2 data-page-node-id="UrUbe3aE7XEW6SY1rtEa4n" class="h"><span data-page-node-id="Poj3souw2kHoeuGEVU20gU" class="num"><!--pnid:NlONxTrvEqdscTb5P4fuJE-->一</span><!--pnid:QnLcDbbkL6hSQ7KBK6d4yE-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="IWBBcYXehhNqG2Kda9oYRM" class="subline"><!--pnid:tSOEAGviIBfuOGDNKANOHZ-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="U0ZfvHIYmCSjfoJTtELwqc" class="card"><p data-page-node-id="yjhCHWLJxGRjmrywx6rY2M"><!--pnid:ayZn64Cc8vEXZOSTEWsdvB-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="vEmrulnDlRZIRtXEzfaXVV" style="margin-top:10px"><!--pnid:DqkGesID2Z90QDIcqgHyFG-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:QpuUbkytoeJOAsxCL8w7TF--><!--wb-skill-start-->
+<div data-page-node-id="Vv4Go8zbT2PuDD4hmVEQpR" class="wb-skill">
+<p data-page-node-id="ppqWzB6KJ3JJnVVg1vTziE" class="wb-skill-lead"><!--pnid:bfUt5KkWcjwdi0kRWyIdv3-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="YKG5kZN4ibgu4kxQ3MIYmd" class="prompt" id="wbSkillPrompt"><!--pnid:sq6bZ4hVdX7re86IBjtVuL-->【准备】这个场景的规则都在「每日效期扫描与报废」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/ZFWLxVzdctFrJlvCR0z54O/2DSMPP1ybp6B/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="BdocdJMTgtYb16JzfFcFjU" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:YzNz0xFsXP9gYZVMYjMXOs-->复制</button></div>
+</div>
+<!--pnid:DpSsxPGZfblWHbeVz5NpD2--><!--wb-skill-end-->
+<section data-page-node-id="sGpOUytv5KQYQ1K7Wdmska" class="blk">
+  <h2 data-page-node-id="PfmijF1wB0sHElMk4PMO4W" class="h"><span data-page-node-id="lP6nNSPnMv1yDnzzPoujud" class="num"><!--pnid:MnuPeLJkk5c5XF1adsAEjc-->二</span><!--pnid:TiF90zQRGpnJabmgASwbFl-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="rYF53TGTlV8xZX2BuTf73b" class="subline"><!--pnid:839RQqB64W7lYcvDmWClxI-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="lTyXVwdFlkc0I7k62YZmD8" class="tlist">
+    <article data-page-node-id="Rd2aOh7kz8OiuHwTg8Ea4f" class="task">
+      <div data-page-node-id="fhH3koPfpdmV8EXlGWJ8l8" class="th"><span data-page-node-id="iNyXdU7JZdR3XsAe49J05f" class="no"><!--pnid:LpsISyCPX7kd5dYbFk8gVR-->01</span><h3 data-page-node-id="f9OLwUZop1pJRvm1qBMWQ5" class="ttl"><!--pnid:OE2ySHnoAv03yemH1AZit8-->首推默认</h3><button data-page-node-id="K2SbS2XXnIsShFY1KjNAlV" class="cp" type="button"><!--pnid:Rzk7B4cRl925zEm8ir338B-->复制</button></div>
+      <p data-page-node-id="kh8bKowzFcl6DGeGaESXqM" class="tp"><!--pnid:WubK9VhVcsT1esBZkFe4RX-->今天开店前的后厨效期材料在这四份：「01_今日效期标签照片索引.xlsx」「02_进货查验台账批次.xlsx」「03_昨日报废记录.xlsx」「04_开封后二次效期规则.docx」。帮我扫一遍，按原料分三类：今天必须报废的、今天要处置的、明天要盯的，剩余天数按二次效期规则折算。产出三份：效期预警台账.xlsx 三类分开，每项带剩余天数和处置动作；报废处置单.xlsx 是正式件，写清原料、数量、原因、处置人，带签批栏；效期异常日报.xlsx 把标签抄错项、批次对不上项、昨天该报废今天还在的漏报项单列出来。番茄酱是开封酱料，效期要按开封日期折算，别按生产日期算。标签看不清或对不上批次的标出来。能不能用、报不报废，我签字定。</p>
+    </article>
+    <article data-page-node-id="WA0udlFmmRzrO9feqm7NpV" class="task">
+      <div data-page-node-id="BHsxBcn4tB9zzik0EDRq73" class="th"><span data-page-node-id="7LUP1GhhxSG4LjTgh63uEu" class="no"><!--pnid:STRILMmi0bZ2VIG1OhXH83-->02</span><h3 data-page-node-id="MLb4P2BQx4NCufyAV5dp1j" class="ttl"><!--pnid:xSxBqhB1S8BEQz9EVSWLYD-->只做效期折算</h3><button data-page-node-id="rq4OPh6Vyf1WdnqYhMR0vM" class="cp" type="button"><!--pnid:Pi0lgDjP8ZGukOGXN4oquD-->复制</button></div>
+      <p data-page-node-id="Go7K9OWloRfoYvpX0lYrZ3" class="tp"><!--pnid:oJxoLeR021wev1NMxorgkK-->先别出报废单，只跑效期折算这一步。读「01_今日效期标签照片索引.xlsx」「02_进货查验台账批次.xlsx」「04_开封后二次效期规则.docx」，把每项原料的到期日、剩余天数、状态算出来。产出用 Excel 一张表：原料、到期日、剩余天数、状态四栏，一行一项，按剩余天数升序排。</p>
+    </article>
+    <article data-page-node-id="LCqab3pTAZUKOWCCArUnLi" class="task">
+      <div data-page-node-id="gScu6Q0oLp0ZOqrCplmHKx" class="th"><span data-page-node-id="ovzFgkfomIxVtfJngG0Sqv" class="no"><!--pnid:NapdbvhmkqLTDJJaHd0zhG-->03</span><h3 data-page-node-id="snaXp4t5PESD40RcCB6Vpx" class="ttl"><!--pnid:qOWXydjrqNyPB1sSR4sleA-->换一套临期阈值再跑</h3><button data-page-node-id="fXtkVKquDCTQiSSV3Dh3X8" class="cp" type="button"><!--pnid:BMJbssR0y8ccrPbPU5DXzU-->复制</button></div>
+      <p data-page-node-id="W1AZ2GeoUQkhXgADbNuqOb" class="tp"><!--pnid:phMMudKeTOwflyhQvMzkna-->这次换一套临期阈值重跑：临期放到剩余 ≤2 天、即将临期放到 ≤3 天，看哪些原料会被提前拉进今天的处置。读「01_今日效期标签照片索引.xlsx」「02_进货查验台账批次.xlsx」「04_开封后二次效期规则.docx」。产出用 Excel 一张表，把新旧阈值下的三类名单并列对照，一行一项，标出因阈值变化新进来的项。</p>
+    </article>
+    <article data-page-node-id="jkOUIu77sOHWwsBVHl8Lcn" class="task">
+      <div data-page-node-id="D3LBuqvfgmxAd75hL9efeV" class="th"><span data-page-node-id="YhhR3NuSeo371NhuflL7w1" class="no"><!--pnid:vJ0YaIILyOVi2eg3K5LgYi-->04</span><h3 data-page-node-id="IYWSZOxkMq9Vc3DAhcwcJo" class="ttl"><!--pnid:9rptuZlShEchUZ7zmAdsKm-->一次扫三家店</h3><button data-page-node-id="BW2AEDgrJ1xLsmizJKHTNH" class="cp" type="button"><!--pnid:oEA6K5o7oXGvHhb4Zygp0d-->复制</button></div>
+      <p data-page-node-id="8xSryxgfecOM7HHY49T8iJ" class="tp"><!--pnid:ptWrxWs0uNuqNN45kAovBN-->演示数据里再加两家门店今天的效期标签索引和批次台账，三家店一起扫。产出每家一份效期预警台账.xlsx，另加一张三店横向对照表（Excel 一张表）：门店、过期项数、临期项数、即将临期项数、预计报废货值，一行一店。哪家标签缺项就在那行标出来，别拿别店填补。</p>
+    </article>
+    <article data-page-node-id="zWFUnqdA21j4GO2lnrTnBj" class="task">
+      <div data-page-node-id="kEgOXzjbsJJHmFofzwZC9J" class="th"><span data-page-node-id="aBOCBkJAwsmQHDLnS13eFi" class="no"><!--pnid:5ikCRDCfRsbu2iaz2SnedQ-->05</span><h3 data-page-node-id="O4z6ODcjfWjkBsezWoDeRV" class="ttl"><!--pnid:32wMjq8FEhxlIkFx8rjrr4-->给后厨组长开店前用的版本</h3><button data-page-node-id="Q3Ey32nRpAw3VepPaF7Qdp" class="cp" type="button"><!--pnid:BzS4CZe3sldNE3Fc8mcQKv-->复制</button></div>
+      <p data-page-node-id="kd6q7kCAVu5g5n5CQCXNbQ" class="tp"><!--pnid:WJzgGl2ik2RCbLXlxKjsfj-->把今天的预警压成给后厨组长开店前用的一页纸（Word）：只留今天必须报废和必须处置的原料，写清原料、数量、剩余效期、该谁去处理、几点前完成。台账全表和异常日报都不用给。</p>
+    </article>
+    <article data-page-node-id="Ft0vmyUlljFsaidypc0rTy" class="task">
+      <div data-page-node-id="IcqhMzHxU75yKTKhhrYiM4" class="th"><span data-page-node-id="utS1nIMudsHFOWhkkTPAQy" class="no"><!--pnid:p8fX3BIdSWRXHdd8rjgR2e-->06</span><h3 data-page-node-id="Gram98n90x1RXLHzmR752C" class="ttl"><!--pnid:I5TVzAFJ2M6jU6lFJ2cAyV-->让它反驳自己</h3><button data-page-node-id="cq4mOWtRI4wDwwmhKBkr2v" class="cp" type="button"><!--pnid:eKkVJcTl2Aqgl170qpho5h-->复制</button></div>
+      <p data-page-node-id="odlJATdu8gJG5Sl6xp7c9R" class="tp"><!--pnid:4I24WuwG0s3lqDyk3uYdjr-->你说「牛肉和生菜都没过期」，依据够不够？读「01_今日效期标签照片索引.xlsx」「02_进货查验台账批次.xlsx」「04_开封后二次效期规则.docx」，逐项把标签日期和台账批次日期摆出来对。产出用 Excel 一张表：原料、标签值、台账值、折算结果、判定是否站得住，一行一项；矛盾的两边都留着，别替我选。</p>
+    </article>
+    <article data-page-node-id="0jUgs8axZtxvOMiAh6lmfG" class="task">
+      <div data-page-node-id="1e9byqBnoi8oMOhaMTU559" class="th"><span data-page-node-id="XcZRKbLgI3wvQfqUnUVBIQ" class="no"><!--pnid:mEfVzOqCMvXKoSWp4b1s3R-->07</span><h3 data-page-node-id="nYPHpMbQzRcoA8Bg7wmSbq" class="ttl"><!--pnid:siQls20dk438aXCzDu8ax4-->比对昨天报废记录查漏报</h3><button data-page-node-id="XlP0pq1LifXyojsYXFiPtP" class="cp" type="button"><!--pnid:cHrht5Jz8MidgiAKgEcY0S-->复制</button></div>
+      <p data-page-node-id="Rg0rtJCGba3LsQPg9I3AqR" class="tp"><!--pnid:rlUQxnC4mUffQJS1zxWOa7-->专门比历史：把今天的临期项跟昨天的报废记录对上，看有没有该报废却还留在货架上的。读「03_昨日报废记录.xlsx」「01_今日效期标签照片索引.xlsx」「02_进货查验台账批次.xlsx」。产出用 Excel 一张表：原料、昨日报废情况、今日状态、是否漏报，一行一项，漏报项标红。</p>
+    </article>
+    <article data-page-node-id="OQdFVtqHGFZ882Nio7qIU2" class="task">
+      <div data-page-node-id="Xciv98gZPLosvU2uAcNSQV" class="th"><span data-page-node-id="Ce02yfJD2XgobLQRusO9wQ" class="no"><!--pnid:ihAVnXqN9cUbBKQbs3ZHta-->08</span><h3 data-page-node-id="dwaG1CoSkWLBQUCkHAvvja" class="ttl"><!--pnid:iF0Mg0Cw5JDY1aOzD6GSOC-->对照二次效期规则做自检</h3><button data-page-node-id="V9P32sKAVNwVZVY6jFQJZG" class="cp" type="button"><!--pnid:C46AIqecmMVi0iN8RHgSDa-->复制</button></div>
+      <p data-page-node-id="A9SY251Fi70GQKQrIk5m9v" class="tp"><!--pnid:gg6qeXCWjwu9aY2oujDg3d-->对照「04_开封后二次效期规则.docx」把今天的预警自查一遍：开封后有没有改标二次效期、散装食品有没有标生产日期和保质期、有没有只按生产日期算的项。产出用 Excel 一张表：检查项、现状、违规点、该怎么改，一行一条。只列出来，不要自己改完就算。</p>
+    </article>
+    <article data-page-node-id="Z00hOlO7Usp7ZY1BbGcdij" class="task">
+      <div data-page-node-id="mVnNDoioISuUZXO465sGPk" class="th"><span data-page-node-id="w3nDtkvJwJtTWFeiUqRO7q" class="no"><!--pnid:B0MTf5B02Bsqvl1tRolNYK-->09</span><h3 data-page-node-id="KencZciMTYwbzbw9Rs9yPh" class="ttl"><!--pnid:ZuXxtAOh6wEMmarrRWAznK-->把过期项折成报废损失与罚款档</h3><button data-page-node-id="wCUAum6MeuxPJVrsgTmID9" class="cp" type="button"><!--pnid:9VoIuEDTVdiXaxMjH2iEtY-->复制</button></div>
+      <p data-page-node-id="8jOKxjfhwFh9g1Jrqs3zoC" class="tp"><!--pnid:hCDrpHaN4qFoTpO2882UmJ-->把过期和临期项折成钱：读「01_今日效期标签照片索引.xlsx」「02_进货查验台账批次.xlsx」，按每项数量估出报废损失货值，再按「用出去被罚 5 万起步、货值超一万按 10 倍」标出风险档。产出用 Excel 一张表，一行一项，写清算式与依据，最后一行给合计；估不出的写「本项无法分析」。</p>
+    </article>
+    <article data-page-node-id="nJmfMkJmrcDOixz42PSO5l" class="task">
+      <div data-page-node-id="sMq3CZzbGyImRzkr5FvLUs" class="th"><span data-page-node-id="95Y70IuCmFgPz6ITTRfXaH" class="no"><!--pnid:HpTGezXA0X6BmPJhcW3aB4-->10</span><h3 data-page-node-id="37ExC2aOwC8S1IhLfhB1FP" class="ttl"><!--pnid:GwGUain0XaNniiS5CF0zwA-->沉淀成每日效期扫描口径表</h3><button data-page-node-id="qopiOVnMpOLe2ZfDqhV0Yr" class="cp" type="button"><!--pnid:fezoQbLYpWdb6AGVdmnkmf-->复制</button></div>
+      <p data-page-node-id="sCb3bOmCJNYECEdvNmIFjB" class="tp"><!--pnid:JYBP4v2bIlzlNzPZuvSpMN-->把这次的折算规则和三类处置动作整理成一份可复用的《每日效期扫描口径表》（Excel 一张表）：各类原料的二次效期怎么折、临期阈值是多少、三类状态各对应什么处置动作、异常项怎么标。写成明早开店前直接照抄的样子。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="6fU54saDdtwsZ48ZLuNukL" class="cta">
+  <div data-page-node-id="4dHKYvAp04irgWFFMGkg7y"><h3 data-page-node-id="oELehCdl0PvGye1x8xWbCY"><!--pnid:6nQrxm3m8ewuMCE7Jfjh7o-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="9zTxB0ciCTa7UoHx6ZjKBY"><!--pnid:LN7eR2MkMD6fzMx9kgvlBr-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="j3sWXg04JomejxEDva3mCx" class="btns"><a data-page-node-id="4IFNWxb6N1Fzb7R4oBoKkY" class="btn" href="#" id="ctaContact"><!--pnid:6QB53SUWoCgvbz4c8azuy6-->联系我们</a></div>
+</div>
+<footer data-page-node-id="jhznq67KrHGWEqntrnNRU9"><!--pnid:FeiW0LxTz9wnWtQ2UuMyhl-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="C0VzCq53g8UBPm2VvYhZDT" data-pnid-children="NaxedOrOcmBQnWMWdccxNz">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="oupeDaAkHhglfczn7JUeSb" data-pnid-children="HPWLJDNYnHEjHEeALhhdgb">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="Dh1RwBLfxMxQSyQGsAIS6F" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="LwI9A2d7o04sijyrpXFxga" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="vZRxXm3EjWhQSj8wqDRywh" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="A0Zs8aQwBdYG3mwgx8inzS" data-pnid-children="0mWoLSqXeDqTkt6yy5udy5">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="f4xvnW1RUcodTRrC0tI9pQ" data-pnid-children="GXPDV7bWXWKx5RD4vlDTG2" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html data-page-node-id="PGmCSWBBbj8NyijxUVPXcE" lang="zh-CN">
+<head data-page-node-id="fwsJ7RQ2PMYonTC1sHvjeq">
+<script data-page-node-id="rGU1RyS4i2g7jJzqs31u2O" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="0CfRniHCQiha9xVeACVJut" charset="UTF-8">
+<meta data-page-node-id="06ZpTihvX1eyTkEDZYbQFW" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="nVkwRwMQXX8vdkIU2Epf3I" data-pnid-children="kPhuI1qSZfMA51vcF4QXiK">交期平衡</title>
+<link data-page-node-id="4F4rz5OS6XDInBkzMMmMBS" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="bNQgR4rhp1nKDJyWFDnUc3" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+
+<style data-page-node-id="zw1fPnj9Tgw92eFBvUq5SY" data-pnid-children="Ro4ujiRNkTK0LOhrafSk2d" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="bxCIPjA93Vn7fPX34gVIpy">
+
+
+
+<div data-page-node-id="huihYaAlRavVDsYClpOMUv" class="wrap">
+
+  <section data-page-node-id="YL6k3vzUpHSzBrNXmOWDan" class="page-hero">
+    
+    <h1 data-page-node-id="3BbJOjpz1JBGGXzBSQ8dWC"><!--pnid:f10FiH5FoXcrvzz9qA0k3T-->交期平衡与产销协同</h1>
+    <p data-page-node-id="tScOYBSF5GyNOo1MEW9pmQ" class="lead"><!--pnid:LuzPN91JXu9ut7ljCU00wC-->案例：<b data-page-node-id="e398CrlhGYIQtfnT27c5Dm"><!--pnid:fR4EDV7Al7cmbJYEilhv82-->周五下午 3 张 P-IPC-01 订单挤在装配一线 · 650 台 · 喷涂 100%瓶颈</b><!--pnid:7599hZqLrRVlavmi4j8G9Z--> · 一句话触发三维评估 · 数据脱敏</p>
+
+    
+  </section><nav data-page-node-id="7o7gYjg45UIuS4aztTAQ0Z" class="subnav"><a data-page-node-id="AgmLyqGYYYUyprGVzQcHPh" class href="场景引入.html"><!--pnid:QLfr5RlJqwrCTpaPMFUkmv-->场景引入</a><a data-page-node-id="ay6kbMZBUHgIsE3ow57sM9" class="on" href="#"><!--pnid:8QYmN1yu55O0M7Wd4QoVTG-->Live Demo</a><a data-page-node-id="8Mt2DRW6GB17LpygIwKqbI" href="推荐任务.html"><!--pnid:GkqKZUbS06u9V98VynN1WF-->推荐任务</a></nav>
+<section data-page-node-id="PMWOvsVzzr2L9WcCsjkeWZ" class="notice warn"><div data-page-node-id="6jzKAvTM2gm5zPPHQjYe8q" class="icon"><!--pnid:yRYc4jVLf4jeJ3y4qIRFPn-->!</div><div data-page-node-id="mf7Vqy5VP8T0BqlrBDSwg8">
+<b data-page-node-id="aBMXwzLE5y0Rk9uXYcp8Qr"><!--pnid:JcP0JmgLtPbOhKRlGaPJe6-->演示模式 · 可视化预演</b>
+<p data-page-node-id="7TnjaFvvNVa21clcSSEAKn"><!--pnid:to4Xrk6zwibreHfOwSeIwL-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="D9PYi8ZKBYsY99SI3J2hGg" class="kpi-row">
+      <div data-page-node-id="93qW0xOdDu6xhQmLZKGw4S" class="kpi"><div data-page-node-id="UwArsJ479lBfTV5gtPZaCz" class="k"><!--pnid:uwciX8LRvs3pAIqqlwzq18-->冲突订单</div><div data-page-node-id="6BOGl9FIh3qcGiZrg89VHJ" class="v"><!--pnid:nEiKTt6SYwhbyiWkmM00kv-->3 张</div></div>
+      <div data-page-node-id="hRqSuPtl7L31IvMx7TXBNq" class="kpi"><div data-page-node-id="O2jd3i7IDGlb6WhPKHLaab" class="k"><!--pnid:KGSVlemJ79byJyhnvzlGw0-->合计数量</div><div data-page-node-id="9QT38CGuphuKHMjTWnNF2J" class="v"><!--pnid:Pbb5yR5PQujcKxsFEwwuXj-->650 台</div></div>
+      <div data-page-node-id="8IgCiYLzukJvgXfK2IaOGF" class="kpi"><div data-page-node-id="3GIvx1yZM5iOFkxKqwtpIQ" class="k"><!--pnid:4K9tg1Aw2U9jtVIk3ixaS3-->🟢 守</div><div data-page-node-id="TJUzi9ighEYB6KQWapSxfd" class="v" style="color:var(--green)"><!--pnid:YI6WsufNMOe1Ldr9ldo9G8-->1 张</div></div>
+      <div data-page-node-id="DlxnQRFz04oB7BqPNQpPMH" class="kpi"><div data-page-node-id="KCwhOAUnOkOfcX6IhZuvgy" class="k"><!--pnid:3uArerWDIbiwW34jnjr6ET-->🟡 拆 / 🔴 延</div><div data-page-node-id="Oxa8hORUqQTQ8BWYgbFpaF" class="v" style="color:var(--orange)"><!--pnid:W4OhyvfpeDBGIGBNXcixMb-->2 张</div></div>
+    </div>
+
+
+  <!--pnid:mC3kX5w9QOnJHzzj76SHQv--><!-- Step 1 · 数据源 -->
+  <div data-page-node-id="kRL3ZaFEtl2fr04dzsEbf0" class="dstep">
+    <div data-page-node-id="ISI33iAXu8Ni9YenWdUBsQ" class="dstep-h">
+      <div data-page-node-id="JmJdK6F6Tku1igNWovMzie" class="dstep-n"><!--pnid:QadRe1RS3s1pKhSIzEz0HP-->1</div>
+      <div data-page-node-id="69GFrgkVX06m3axJjg8EW7">
+        <h2 data-page-node-id="GU93eQtjPTjZDhZBriYPWf"><!--pnid:pGt9YIkbKbfcu4P27aYjw3-->原始数据 · 4 份共用报表</h2>
+        <div data-page-node-id="mnvEkmjPrvx1gGSUdBpigA" class="sd"><!--pnid:Okj2Q6Kc5sx5mDfjh9kS2n-->和5.1 用同一套沙箱数据 · 三个PMC 场景无缝衔接</div>
+      </div>
+    </div>
+    <div data-page-node-id="3MleLeyVm6Z2wsgCStxuKg" class="dstep-b">
+      <div data-page-node-id="duH488T5AxCyJUBm9zIhSg" class="source-grid">
+        <div data-page-node-id="S06sAFG3SkL4CUqG9UC5Fz" class="src"><div data-page-node-id="i3GrrxLHeHzlnAlVtl5HrH" class="fn"><!--pnid:Ka2hnZ6LOKYguce2hIA7eW-->订单清单.xlsx</div><div data-page-node-id="ds1EtxekGeDcBpEhb35Zid" class="fd"><!--pnid:HDkdzRXN0LpXDm2R03Ya4j-->冲突订单 3 张 · 3 种客户等级</div></div>
+        <div data-page-node-id="agQECIvtWvzXVmhhj1By4D" class="src"><div data-page-node-id="dd6SDGpu5wLbdU60ELwdLQ" class="fn"><!--pnid:LF9layjNfwQxOIH3ieyJXH-->工单清单.xlsx</div><div data-page-node-id="aXxwUaIdYW3bGYImq63AJb" class="fd"><!--pnid:vxMU0NMYQrulkk70NMZLnj-->装配一线 6 张工单 · WO-083 已滞后</div></div>
+        <div data-page-node-id="AOw3GAZZyE8N1ut0vOPI7I" class="src"><div data-page-node-id="BLLlW3MeRt9hAuOoXDhAmL" class="fn"><!--pnid:Xr6Vb8QvINEOgvTHDEKh31-->齐套报表.xlsx</div><div data-page-node-id="l03v6WrwtZMjk3nZNIqyk3" class="fd"><!--pnid:oZWleixOeOIDP4zXcIX0sx-->主控板缺 60 · 替代料可补</div></div>
+        <div data-page-node-id="rQBr70thly5LMoX4RIYEDM" class="src"><div data-page-node-id="zv6YIQmWJeQKkQHXl3LlUq" class="fn"><!--pnid:6ppGX7gIpfcBzGFdmFuXMH-->产能负荷表.xlsx</div><div data-page-node-id="UJ2fohp1xbdtU8wv43avd0" class="fd"><!--pnid:pQdfKZncI4QzowmvEf3Y1n-->喷涂 100% · 装配一线 95%</div></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:po6mgsI4AwcquJbMrgxj2g--><!-- Step 2 · 一句话触发 -->
+  <div data-page-node-id="CYWr6LkRsOcYbF552lRHie" class="dstep">
+    <div data-page-node-id="xTbfDsZyBbtovDNITCORnl" class="dstep-h">
+      <div data-page-node-id="6MSd6ke4pnaOq9eeWseAPb" class="dstep-n"><!--pnid:PQKJROy0KUe4iNMpK48Jk1-->2</div>
+      <div data-page-node-id="11FtqB2Jw6dOQUY8D8vLk5">
+        <h2 data-page-node-id="sSPzQkbxYiynJJ3tUNiBks"><!--pnid:he9QyFwvm3cJKYOTRT1y9v-->PMC 一句话触发</h2>
+        <div data-page-node-id="Z5T2R25NJhtTTfz8HdAa7l" class="sd"><!--pnid:SFBEmEIMUYBFffP7uXUdzl-->对着 4 份文件直接问 · 不用一张一张单去评估</div>
+      </div>
+    </div>
+    <div data-page-node-id="ktQJDbazPY0ZPZSdNGwYkV" class="dstep-b">
+      <div data-page-node-id="OGZTWO9O2sfa131j4MV5OE" class="prompt">
+<span data-page-node-id="ecMDtoTAegVRg7JhWJWuWi" class="cmt"><!--pnid:EvXxWVBceel6k8Wj44lkAJ--># PMC 输入</span><!--pnid:0lmzZEJBjJm5J10rTQ6rU7-->
+本周有 <span data-page-node-id="osrk0eEgxTim8X8ekpb8k8" class="v"><!--pnid:I2RZzGk9LPqjlvK5zcghLb-->3 张 P-IPC-01 订单</span><!--pnid:G3EzNmM2C0cCWs1DGMOUN6-->挤在装配一线,喷涂又满载。
+帮我看下哪张能守、哪张要拆批、哪张要跟销售协调延期,给我一份口径。</div>
+    </div>
+  </div>
+
+
+  <!--pnid:dTM1zdfk0DpXwbNmBhCVeP--><!-- Step 3 · 三色决策 -->
+  <div data-page-node-id="EtoRXuBTanWn5SyO2zlUvI" class="dstep">
+    <div data-page-node-id="ty14EMcvm9ODu2Qv78KI18" class="dstep-h">
+      <div data-page-node-id="L1tn5u6z3IBgHnbwNmDTdH" class="dstep-n"><!--pnid:8a3CtU4HS25C4D2WSFf5jF-->3</div>
+      <div data-page-node-id="0phnB2bSfL2pD8klHJWxSe">
+        <h2 data-page-node-id="nQ6EK7A93uNa0Hmt6nSAxA"><!--pnid:ofw4nCLs9PPtH1XD2i0KXq-->三色决策清单</h2>
+        <div data-page-node-id="XMRIy6mGLgPVp1yZGi2N31" class="sd"><!--pnid:z8nkpTWpW9JOaWSJcDK8Mr-->客户等级 × 交期紧迫度 × 齐套齐备度 三维评估</div>
+      </div>
+    </div>
+    <div data-page-node-id="XBFyyV5jJaA91juURniEop" class="dstep-b">
+      <div data-page-node-id="YcNnI8KmEhStpVnhxCZEuL" class="decision-tbl">
+        <table data-page-node-id="15vDNQZJwxHK6SbEa975xj">
+          <thead data-page-node-id="7KMFwznrd0L1zz9E4yrDwf">
+            <tr data-page-node-id="QgklREgKyb0FwdD4DPANnR"><th data-page-node-id="8i945Is3XHrmK5DQLDPB88"><!--pnid:OdliYGLtt1A9axElXavcTp-->订单</th><th data-page-node-id="xP4sSSyIPkb3iTvGDYXR1B"><!--pnid:DIpbA6cvITnDQZfeSiCeoU-->客户</th><th data-page-node-id="BnZYbLinqUx3NwvO8RAEYl"><!--pnid:2EDs1IrgzIH81bxlG00u1V-->等级</th><th data-page-node-id="2WlpK7yfPegRDK3xOD3WiX"><!--pnid:aP7mGAYiSFR9dgjNhP2lAU-->数量</th><th data-page-node-id="OdCCGGXHnHeGfw3DU7Q29K"><!--pnid:AHmW6XbgGbTmhwsPRVbbQE-->交期</th><th data-page-node-id="KZFSwOTBEbNd17zf1kLMpE"><!--pnid:JHC6wVFCoSwiyd1i1iboLO-->建议</th><th data-page-node-id="Bct1GaNnHWtDlnWH50Dt5V"><!--pnid:IW3BMlsECe1uLpAN3S1xfu-->原因</th></tr>
+          </thead>
+          <tbody data-page-node-id="qud1DKMrc0EZRQ1UprbDKI">
+            <tr data-page-node-id="XXMgzBnyFY0Fdubi4Zp81g">
+              <td data-page-node-id="HAedBi3mmKUOzwyXIdDEcI"><b data-page-node-id="BqyDkbhwj6p5TEVLtKkTJs"><!--pnid:zVlEz3B9UUpOcb0aIJw4PH-->SO-20260708-001</b></td>
+              <td data-page-node-id="oE0SF4OvmkwmFJuZDQDBEe"><!--pnid:fNql4vxFBO5inilnJpWscH-->华东能源集团</td>
+              <td data-page-node-id="9ajQWJWfiibqaFEsgnEo9c"><b data-page-node-id="lVMgVFvbhbZ0qL36OAXNEP"><!--pnid:SRwpYScvNoGSRSGrAXucXz-->战略</b></td>
+              <td data-page-node-id="BePCvODyu8LUv8Wqhizvnr"><!--pnid:nqbc2S4gRglq2IqTE2ujof-->300</td>
+              <td data-page-node-id="2ArD14eiKD9Ipy8tUb425V"><!--pnid:HGjl6dqa3kDoP7Rlt6kikG-->2026-08-06</td>
+              <td data-page-node-id="wPnEmXIOle2o5U57T24DN5"><span data-page-node-id="qtGTiBiCSg0dpyRTmVxcSa" class="verdict-tag g"><!--pnid:elgWuSnU9SHaoRCwVrsKq2-->🟢 守约</span></td>
+              <td data-page-node-id="f45p3CJ5cd2owzcL6zZG3i"><!--pnid:pIyh0rPE7IkT3JvQL6S4y3-->工单升紧急 + 替代料补齐 · 战略客户不可延</td>
+            </tr>
+            <tr data-page-node-id="m5lyEj3MCvgdqxFdUra2fS">
+              <td data-page-node-id="NvCTNDay5e8La5DBZSL7Lc"><b data-page-node-id="szaanHT9vdWni9XHcasR1u"><!--pnid:Xjx7OYrXuCO5k0fykBwLiM-->SO-20260710-004</b></td>
+              <td data-page-node-id="4tq0uu2YxnHntL1ct1heEo"><!--pnid:xov5T9CJPeT9tEPVHjHBee-->南方电网</td>
+              <td data-page-node-id="b6wZSz7oxVtdaq0FzjcBsd"><!--pnid:iNrfZ1NZM1MOcBkqkLXSwB-->A 类</td>
+              <td data-page-node-id="bE3l9dbBDVmwg0s7RX8pAC"><!--pnid:jmHH9e9stE0YPn2yd7vube-->200</td>
+              <td data-page-node-id="nC6gB0QJCODS05jHEiX2YL"><!--pnid:zsm1PVuZA7xsZQEseaV09k-->2026-08-08</td>
+              <td data-page-node-id="n4og4jImboDHTLbZ9oyat7"><span data-page-node-id="MHEXQBxv45N3i9OTWlg7yg" class="verdict-tag a"><!--pnid:8PdU6fMF18BUfilxiDUMzz-->🟡 拆批</span></td>
+              <td data-page-node-id="slzumyiu78iztQti8gnFJC"><!--pnid:xjlJQ94XvqWERgY4ZXixpE-->先发 100（8-08） +尾数 100（8-10）</td>
+            </tr>
+            <tr data-page-node-id="LS4xmVhgj1UGfw5uKEjAPc">
+              <td data-page-node-id="J10mP9NXBcu9PaKX8P9k5U"><b data-page-node-id="0sNsvNQ9wJr9MCOZYQcrif"><!--pnid:4nJMVdbHo04VmwMjzGanzq-->SO-20260712-007</b></td>
+              <td data-page-node-id="OOeUeLDfRZR2iVFBqkVUQZ"><!--pnid:G4cU0KQdAdajmncL1zY6UP-->深圳某新客户</td>
+              <td data-page-node-id="mkbdsTYul1ffw7DRQdhmL8"><!--pnid:kh2Wv0ZD7XFVZZGrXBpnnw-->B 类</td>
+              <td data-page-node-id="Lz8dV2HjwkBJlxmsf4w2GW"><!--pnid:8tMCgBd9LJjkr5uEIyquzl-->150</td>
+              <td data-page-node-id="vKFNPowyyvAxTLQyYHfUwN"><!--pnid:rI5A4aAEd9QAa6uwk6dBAA-->2026-08-10</td>
+              <td data-page-node-id="2p9UqAMewqfYq36hTcF0Ot"><span data-page-node-id="pJJRblZ02VOntRLbayrwr0" class="verdict-tag r"><!--pnid:o3j9qEkqP4go0pLOszT5DU-->🔴 协调延期</span></td>
+              <td data-page-node-id="LvXlJ7EUSVYpHjj6ZVw6Rm"><!--pnid:Pr9QmK12syGfEvY5LHAIOk-->建议改 8-13 · 销售即时沟通补偿方案</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:HL57azZmg3u8lSN9EBsNtl--><!-- Step 4 · 对外口径 -->
+  <div data-page-node-id="jRkZRntDDM7MHt5z9EHyh6" class="dstep">
+    <div data-page-node-id="Cl485iJDmbtZfQlf8YeYXv" class="dstep-h">
+      <div data-page-node-id="Ge3axCTMV2mfflQQjivxuV" class="dstep-n"><!--pnid:kzoOpTZalbbBm1c3eC9lnA-->4</div>
+      <div data-page-node-id="8yQ4WtJuxG9Hbj2Ab9jMiQ">
+        <h2 data-page-node-id="hfexM2hMH2zxv8XHdyB0sI"><!--pnid:KA0atyGs5WaIB4jdUEFML0-->对外沟通口径</h2>
+        <div data-page-node-id="rC2uX6pA1Ck3vBaXa6UktB" class="sd"><!--pnid:E8nSRKnNWH9OI7CYeQAizJ-->销售 + PMC + 客户三方口径统一 · 避免"两边不一致"翻车</div>
+      </div>
+    </div>
+    <div data-page-node-id="zCrypxx8dU3GplXOIZzsCp" class="dstep-b">
+      <div data-page-node-id="mTHpoTGBPazKf5Dspuq4sm" class="talkbox">
+        <b data-page-node-id="dtHjAmDBOiSufE8ptNzZwu"><!--pnid:K2jESMR5E9kDdlNq7AJr4L-->本周装配一线 P-IPC-01 出货节奏：300 + 100 + 100 + 150（分四批）</b><br data-page-node-id="3Xs1mweUk6fmVv6yAVyYRK"><!--pnid:uQwAW9MLZmhAx76nzCkJAF-->
+        战略客户不动 · 其余按客户等级顺延 · 深圳新客户由销售即时沟通延期理由与补偿方案。
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:9lhwgFBMvLQKgXCwV86DFy--><!-- Step 5 · 分部门待办 -->
+  <div data-page-node-id="V5CdhaVqa8687FBUPAIQCn" class="dstep">
+    <div data-page-node-id="IrmQuSsbMXlHkvZMUI0FNp" class="dstep-h">
+      <div data-page-node-id="3ikGAOs124br5lcfOYZmdb" class="dstep-n"><!--pnid:0AMSLjA09VCMi65QAkq6EM-->5</div>
+      <div data-page-node-id="BqE3YcGHCuVHI8TJF8yTVO">
+        <h2 data-page-node-id="bEFmtYRW7CGpLh2EniqYK1"><!--pnid:uHAAnpNIYDRKhnYUqg2v9Y-->分部门待办</h2>
+        <div data-page-node-id="A9IWwZRuTyLaQHD91ZkDew" class="sd"><!--pnid:gPGEYUN8GmpyYe1hXNld21-->每项都有负责人 + 完成时限 · 可一键推到企微等 IM 平台分部门群</div>
+      </div>
+    </div>
+    <div data-page-node-id="kQ1kPINUQCpSELkNEI54aH" class="dstep-b">
+      <div data-page-node-id="or8FxkUTqnWqeiY7XVPcF4" class="todo">
+        <div data-page-node-id="gHH94b69aLZO7pO40uFraw" class="todo-h"><!--pnid:EcOD9j5IycbL7Acx7hdKGj-->
+          销售 · 立即联系深圳新客户
+          <span data-page-node-id="8jv5tPOMvWMDLbpPb1MM7z" class="who"><!--pnid:GmIgA1Ck2sjvtK7CPLmplv-->李经理 · 今日 17:00 前</span>
+        </div>
+        <div data-page-node-id="ylF2EDiu3MkBuOWzMUfHKS" class="todo-b"><!--pnid:n80kSyyulpEbuWVGmrCdOA-->说明理由与补偿方案（延期到8-13）· 先电话后邮件</div>
+      </div>
+      <div data-page-node-id="dWuB7jazv9cCWu1Emg155T" class="todo">
+        <div data-page-node-id="sNdrkepWx8GirWj1Z5kz5g" class="todo-h"><!--pnid:cILyAV7xsUHhYjLoUtTHDe-->
+          生产 · 按新顺序开工
+          <span data-page-node-id="VvcxOVdoGvK47bjKMyt2bs" class="who"><!--pnid:9uNxLtMmd992FlYQhbT17f-->陈主管 · 8-01 前定单</span>
+        </div>
+        <div data-page-node-id="yFOt9MRyQ43iGK59e4XRRB" class="todo-b"><!--pnid:MCRDqcVebte7lyuU8ai8Gh-->喷涂 300+100+100+150 分批过 · 优先华东</div>
+      </div>
+      <div data-page-node-id="9ZYsC8BfBUY8cXBztyewDE" class="todo">
+        <div data-page-node-id="6dwVQq6VMbELjYfVlYpnKH" class="todo-h"><!--pnid:w6OZb8ZwXIl7ohWBIDZ8OF-->
+          PMC · 更新护航台账
+          <span data-page-node-id="W2SNWjYeoOVLUHmXxe75wj" class="who"><!--pnid:jBWSOexRrUPJpgp7VgUC1f-->王工· 即时</span>
+        </div>
+        <div data-page-node-id="bg90v0UMuzIXb8lRqJVuyN" class="todo-b"><!--pnid:JWxNHuzwP6OepeDQTxlRPT-->每日盯执行 · 有偏差即时预警 · 群里同步</div>
+      </div>
+      <div data-page-node-id="Qee1a5GvB0J9pbg3Gqp5wk" class="todo">
+        <div data-page-node-id="IZNpA0FygDmxyC3xd8w7aH" class="todo-h"><!--pnid:DEPna0VKPVl8doWHtPO26z-->
+          物料 · 确保替代料到位
+          <span data-page-node-id="ngHIIkD8HMQeBjThaMk6zY" class="who"><!--pnid:W5JbfJIrCy9Adnolzqt6T0-->刘工 · 8-04 前</span>
+        </div>
+        <div data-page-node-id="XGScnn04xeLkhbrt3GgguJ" class="todo-b"><!--pnid:vtKL6UA8VrPrrHTtu4pawv-->主控板替代料 M-PCB-002 × 60 到位 · 已通知采购</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:jhNa92tK15x5eZKNtvSMjD--><!-- ROI · 用 Agent 前后的账 -->
+  <div data-page-node-id="frR06G39IGfrcUYTVrYJ84" class="dstep">
+    <div data-page-node-id="d3mDgNIDDmcCb6GCwSCM5x" class="dstep-h"><div data-page-node-id="EKW9eoH1Hvog6t8j21vDHY" class="dstep-n io"><!--pnid:ErPEYp2TuQD68ts0bRXS2j-->ROI</div><div data-page-node-id="jlDcJ9F2nkqC07YN9iFliY"><h2 data-page-node-id="SW3xTNlg9Dk36mAd8L1Jze"><!--pnid:IRAslUO0AJwf9it3uuH31a-->用 Agent 前后，这轮交期平衡的账</h2><div data-page-node-id="ZYGutRrI2uLRCuyd2lLVC1" class="sd"><!--pnid:UHQ8ccSpixOBnrc8FEpygS-->传统耗时来自公开行业调研 · Agent 耗时按本页流程推算 · 均为估算口径，见页底说明</div></div></div>
+    <div data-page-node-id="p79age39YN6dxd8GyTqWg1" class="dstep-b">
+      <div data-page-node-id="xGm3jfiJXDZPJJk0RQCozX" class="kpi-row" style="grid-template-columns:repeat(4,1fr); margin-top:0">
+        <div data-page-node-id="DydNhmM35UQkyyYK23h3FW" class="kpi"><div data-page-node-id="aLNSbzJwiBiTzD445zRCLt" class="k"><!--pnid:GAyA7U2BcCDtxtbtnH61ln-->人工投入（这一轮）</div><div data-page-node-id="92TwAbb0eutm7Xvj4WfDnm" class="v"><span data-page-node-id="EONJcnhHnVWskzNFpUcKay" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:aWXXtfoWXmNEeA9huJCfpN-->4-8 h</span><!--pnid:362jmhOiof07UDLVnwVC8S--> → <span data-page-node-id="dwSnYnVvzd5w1JckEAmD2q" class="green" style="color:var(--green)"><!--pnid:OtWTHiCkW6zQFiHZKEzUEX-->≈ 1 h</span></div></div>
+        <div data-page-node-id="1drhU6Z1rLJctBU0wKHr6B" class="kpi"><div data-page-node-id="kPCQZubKd3aOy3zt7YNbYw" class="k"><!--pnid:LTTTigkjqMjwjFL7rG0kvx-->端到端周期</div><div data-page-node-id="OKJ9f6mlMzkF5b602T0tGY" class="v"><span data-page-node-id="3L0G48kgdDEgPvRsA3Lk7B" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:Wfmth4vGz8WtbwT7HbMgJr-->半天-1 天</span><!--pnid:5u376mbl6XTTnfVeL13sf2--> → <span data-page-node-id="knB4eH9R3eMsSAnZnE3ci9" class="green" style="color:var(--green)"><!--pnid:WUeuKtLUK9CRxSRo5EwxJH-->当天下午给口径</span></div></div>
+        <div data-page-node-id="bM2D19rcfuEZj7p9CCFcnb" class="kpi"><div data-page-node-id="zdPbNVJrOK8L3zAlU9ETHy" class="k"><!--pnid:INw4vJPFb3Y4f7oa7SyQlh-->参与方式</div><div data-page-node-id="B8Q4RxOSZBHwlrLOtIpbNR" class="v" style="font-size:13px; line-height:1.5"><!--pnid:NioR09uS0C1L9EiAo4Xfle-->PMC+销售+生产+物料拉会接力 → PMC 1 人主理<br data-page-node-id="zSODYmtdjjUIfyGB8bC6Pv"><!--pnid:5gISqLGTt8Szw9amEKzTjR-->销售只跟 1 张延期单</div></div>
+        <div data-page-node-id="Z3X0wfB8asfLX04F1woUCQ" class="kpi"><div data-page-node-id="9H6MIbpYaGVRZOgL6kGU84" class="k"><!--pnid:mW9XSyMalCVnaNGsmqPOlB-->调整依据</div><div data-page-node-id="SpIO75J8vYF4wlMFt76T2d" class="v" style="font-size:13px; line-height:1.5"><span data-page-node-id="cqsreiM7RsweeLGH1TzUmf" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:iNzJfEgrw28MnaBwXEaqbt-->凭经验拍板</span><!--pnid:0LMMFIRn5fJefjTaTbPzPj--> → <span data-page-node-id="pytNh8Y1jStXWFVf3cUsZa" class="green" style="color:var(--green)"><!--pnid:nxwxMFX57cmyLCopYHFH7f-->3 张冲突单守/拆/延逐张有据</span></div></div>
+      </div>
+
+      <div data-page-node-id="81SkxYsoEH8HfNkHfds8ZC" class="think" style="margin-top:14px; margin-bottom:0"><span data-page-node-id="u1uAN595ykHG7tvS1pyJg0" class="lbl"><!--pnid:Ocwn4YZRu7xO8qUdwwJU8X-->数字口径与来源 · 都是估算，建议落地前用自家数据校准</span>
+        <b data-page-node-id="svW0EiGUDxlz28RvTrnCYk"><!--pnid:xkl5py5eCCmG28Hn78UhaA-->传统耗时</b><!--pnid:Gnx93FHsxrGdR2hEvpq2hO-->：来自公开行业案例与调研 —— 用友对制造企业一线的调研：计划员每周手工排产约 <b data-page-node-id="ap07NY7u7qu07DnzOlmTuV"><!--pnid:wT0vBfkBHDuVLaOnjVY3jg-->4 小时</b><!--pnid:n0vTmWrBhVcp9ih2ZDiXQs-->、月底旺季翻倍，一次插单/变更重排"半天就过去了"；简道云行业分析：人工 Excel 排产需反复核对订单优先级、物料、产能、排班，"动辄耗费<b data-page-node-id="xWCDGrH0GQvvCJWBRMOmjY"><!--pnid:FVbA7iqmsHAVBhBwT5bc3z-->数小时甚至数天</b><!--pnid:fWB4bxVq9EeREgqx0Husxv-->"，遇插单往往推倒重来；Gartner 调研亦显示制造企业计划人员 <b data-page-node-id="FlizLxLJUSDggUWmq032Uh"><!--pnid:dmdahOjfyo4kLjFePtp3v4-->60% 以上</b><!--pnid:ipJtEHAN6W0nSuC783P9vj-->工作时间耗在数据准备而非决策本身。本轮 3 张订单冲突，按"取数拼表 + 多方协调会 + 重排出口径"估 4-8 小时。
+        <br data-page-node-id="M5CQ5v8aP8RKMU9DRGipsO"><b data-page-node-id="lxJW5TQGWUHP4uvia9MDEW"><!--pnid:z7hG2Hu2Rn6CFcFILA4JNm-->Agent 耗时</b><!--pnid:ddXqJRCKPFSN9bbhExYoua-->：按本页 Demo 的工作流程推算 —— PMC 发起约 2-3 分钟，Agent 读 4 份报表 + 三维评估 + 出三色清单和分部门待办约 10-15 分钟（实际受模型速度与文件量影响），人工只需兜底被标出的 1 张延期协调单，销售沟通与确认估 20-30 分钟。
+        <br data-page-node-id="TX29aM8CWE9vs0BLCUrPOX"><b data-page-node-id="MrLV52ZAGvlO7POvdEshLi"><!--pnid:0eEcrKZkwyRubeNYjwHREs-->测算为演示用途</b><!--pnid:HUBXZFM0dIwmZ4YIiJslvE-->，未含系统部署与 Skill 维护成本；落地时建议取 10-20 轮自家真实交期冲突跑一遍，用实测值替换本页口径。
+      </div>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="HIB4jSiel7M9iqdNuj0LvK" class="cta">
+    <div data-page-node-id="5FWehoUUCKg6o8usDWgKmR">
+      <h3 data-page-node-id="Pr4ers9HHasAnx1m08ksyb"><!--pnid:NQrgABHKzFZ537sdhbNSW5-->想了解来龙去脉？</h3>
+      <p data-page-node-id="eImzr1x0F7Ai4hh3vuemCk"><!--pnid:B7F9wXyPhYhGYpKiddaLMI-->回到场景引入，看这个场景的痛点、做法与边界</p>
+    </div>
+    <div data-page-node-id="2EGxYlpMvPPMgOVkifUseu" style="display:flex; gap:10px; flex-wrap:wrap">
+      <a data-page-node-id="ZxAmSOtms6K8VBfesCBlwc" class="btn ghost" href="场景引入.html"><!--pnid:KYQbFMo7WkG76RRRCGQkGM-->返回场景引入</a>
+    </div>
+  </div>
+
+  
+</div>
+
+
+<footer data-page-node-id="pdczqMl8YGFBXsdkiZJDVW"><!--pnid:KozX6eKmC4Ky6GImrNhHsF-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="9FImNTooxKgHyYMJZ9lvSZ" data-pnid-children="AX60Nflrs72H5m2XrscBht">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="dXlhDrKHvogo42Ya1xuJie" data-pnid-children="uYhuonmmRtaTNjx5YprwfY">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="7Yr8E4MyzANaG25Zg14iDr" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="b0MMoNBjKDCmV5C5EIn3TA" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="ITiZ4cDVvcpP5TKi3NiV87" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="bXinNIbifTVRYjCCvMburh" data-pnid-children="LVi9OEsr0dvZJgtjXyqbUT">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

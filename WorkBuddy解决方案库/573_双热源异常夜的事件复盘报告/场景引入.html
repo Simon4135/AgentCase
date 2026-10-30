@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="7Vv4NyV0o3W1JJ9GO0LlTW" lang="zh-CN">
+<head data-page-node-id="Ya9dj4OqBRnjqtJupjabTn">
+<script data-page-node-id="QepGgkZ4jHHPfflxUABMYu" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="4tt5sJEzh4C8yKHHgHoojN" charset="UTF-8">
+<meta data-page-node-id="OJKxjSTBDVh0Uksfm7Q03Q" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="MdRcVGXaRspmpgCQOtAahp" data-pnid-children="4FFiGKUuZGselgTFgYFXhA">双热源异常夜的事件复盘报告</title>
+<link data-page-node-id="ZdudbFdvqC0zlJT7cyhxQk" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Crk9zqQj2oziRdJccYuGag" data-pnid-children="FeizEj2IQeuNI2eFmoF0a9" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="Ip7f5j8DjJIp6sAkJ57u0G">
+
+<div data-page-node-id="2U3kc1f2ZVpqUUi3CIdZ9R" class="wrap">
+<section data-page-node-id="hdS7pd9a9CD6dLu57hZOTm" class="page-hero">
+
+
+<h1 data-page-node-id="NyLWK6fe170ryG1WbSIUZd"><!--pnid:dRJG00DPoc9ArHzBGXmZA5-->双热源异常夜的事件复盘报告</h1>
+<p data-page-node-id="v4BKpllLQMps3DMtoMuSys" class="lead"><!--pnid:YW6Xece0Bo30pz3r7Zsfr2-->那晚两套系统同时出异常，值班员凭经验扛过去了 · 三周后写复盘，谁也说不清当时参数到底怎么走的</p>
+</section><nav data-page-node-id="8QoNoiDtOZLAJYNgJVtnI0" class="subnav"><a data-page-node-id="OT4DNoxhPOP9a3xO9JVNh1" class="on" href="#"><!--pnid:fpV8CUDRyRK9PuEaSZGZfW-->场景引入</a><a data-page-node-id="MrJFNFPo1qGHZ2CEWQWOc3" class href="LiveDemo.html"><!--pnid:zd2s2DkeBzBKXk4jbXDsOS-->Live Demo</a></nav>
+<section data-page-node-id="6Jd0tejxgGpXGdHrQusSdD" class="blk">
+  <h2 data-page-node-id="20454npG1kGwOyia3HJG95" class="h"><span data-page-node-id="PY0oA5N8dMEmp0E5xY3eOu" class="num"><!--pnid:lBHcTPrd4VdhMQfPngu4nq-->一</span><!--pnid:CjtrsslMQV20uKuDO81V0T-->这件事现在是什么样</h2>
+  <p data-page-node-id="LpzRqEnUbYwK7sRDi49IHp" class="subline"><!--pnid:wDxLEhoLj5imdWMuMH8SSJ-->生产运行值班 · 真实业务触发</p>
+  <div data-page-node-id="LIjOabVTOBuq0hvexAqEUj" class="card"><p data-page-node-id="08IfxAzBPeEpw7FykJCJwI"><!--pnid:7ik46PtEj4ZTBSMw6nI6kt-->11 月 15 日 02:17，寒潮前夜：热电 2 号机供热抽汽压力波动，同一小时燃气门站出站压力超限切断调压撬。双热源同时异常持续 41 分钟，值班员手动处置，未成事故。集团要求 12 月 5 日月度安全分析会上交复盘报告，并要回答「这两件事有没有关联、暴露了哪些管理断点」——记录分散在 DCS 曲线、门站日志、客服工单三个地方。</p></div>
+  <h2 data-page-node-id="mEi4S5PsMqr5tjBQJVAnUy" class="h" style="margin-top:22px"><span data-page-node-id="iKdfEUjJWo6c9xnZv6ApUx" class="num"><!--pnid:b3I0wsysAh4ncEkBIwchdO-->二</span><!--pnid:2qcEwsJOb7gor2vEFLPmIh-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="1cwnlafXQKB8bo9EG5ClPY" class="subline"><!--pnid:CiQFa2t28qq1fH6xIA6A3D-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="J2IsbPcTikBkt0tQaCO798" class="pains"><div data-page-node-id="6CmAOPGS1tWxKvsdrQ4maj" class="pain"><span data-page-node-id="ELcBV9G9o6UDngqDN36WsS" class="i"><!--pnid:M9jF45g6WEudbSe6kGL8oz-->1</span><div data-page-node-id="530FIKAGk7yvZxltOVOGq7" class="t"><!--pnid:diUfmAtw7VJvC0mICYfmmq-->事故调查的标配问题是「系统性隐患为什么没人聚合」——十堰 130 次泄漏报警分散在系统里无人归并，复盘报告最值钱的部分就是把散点串成时间轴<span data-page-node-id="wHFPsOnDNoaQP45c180FjY" class="src"><!--pnid:tMfR0e8alg6ekmwGRcZpBg-->依据 · <a data-page-node-id="y5H8URBFlykLPIIZ7c6InM" href="https://yjt.hubei.gov.cn/yjgl/aqsc/sgdc/202109/t20210930_3792103.shtml" rel="noopener" target="_blank"><!--pnid:aJhgoqCjAge0JzwoElpZpm-->十堰「6·13」重大燃气爆炸事故调查报告（湖北省应急管理厅）：中压钢管严重锈蚀破裂，管道穿越建筑物下方形成重大隐患；运营公司持续 5 年未对危险区域巡线，事发后巡线员伪造补登巡线记录；对 130 次燃气泄漏报警与压力传感器长期故障等系统性隐患熟视无睹；巡线班组负责人不会使用燃气检漏仪。26 死 138 伤，直接经济损失约 5395.41 万元</a></span></div></div><div data-page-node-id="j2laacS2RsdEmFY465JSy2" class="pain"><span data-page-node-id="2DLKH9s3M9MMrQws10usNB" class="i"><!--pnid:LsqqVBVA29nsALFOD3qPw7-->2</span><div data-page-node-id="uFseH7vxhyqPZ3bA9Z0EUc" class="t"><!--pnid:gQj2qbuJBCR9tzBQscKyiY-->运行人员自述：误操作的心理压力极大、一个疏忽就是非死即伤——复盘若变成追责大会，下次没人愿意把异常写进记录<span data-page-node-id="RYwDyke9wJ7pw5wPVbYQc5" class="src"><!--pnid:OhsUcbTDSeh4YnjzszJ6KP-->依据 · <a data-page-node-id="LCYMfv2IcblwtXbpWerauQ" href="https://www.toutiao.com/article/7360633631599034915" rel="noopener" target="_blank"><!--pnid:dbjoAxmZjykrIO96tObd2l-->火电运行从业者第一人称自述：五班三倒上了 8 年运行，下了夜班整天昏昏沉沉，凌晨三四点偶尔干呕；各种安规、操作、证书考试一年一个轮回，休息日被备考和开会占去</a></span></div></div><div data-page-node-id="90AYsfM48szfJlMn8nacP1" class="pain"><span data-page-node-id="SKqDqOkm6yqgiC1GiV2FXg" class="i"><!--pnid:m1rligS7Oy6oR19v3e0JPw-->3</span><div data-page-node-id="ZNJIlaJ7XV35ktYKtBybqW" class="t"><!--pnid:r7QNZsTntJijVspokruaei-->交接班制度规定事故处理完毕后才继续交接、处理过程要有记录——但「处置了什么」和「记录了什么」之间的落差，只有复盘时才暴露<span data-page-node-id="8mYmGX4coFJu58eEe7hJlb" class="src"><!--pnid:ge2d5G9kYcjGucqWdLBRSX-->依据 · <a data-page-node-id="HdgrAHFXwxpAIFmZbPbceU" href="https://www.safehoo.com/Item/317060.aspx" rel="noopener" target="_blank"><!--pnid:mgblGO8cxnp4Wxnz1KLDW4-->35kV 变电站交接班制度（行业通行模板）：交接班必须交接七项内容——运行方式、保护和自动装置变化、异常运行和设备缺陷、倒闸操作及未完成指令、检修试验与安全措施、仪器工具材料完备情况、领导指示与其他事项；交班前应检查各项记录是否及时登记和正确</a></span></div></div><div data-page-node-id="lVYpQNck22cOwBIENbUVy8" class="pain"><span data-page-node-id="qgR1AygHvhrOwk5w7ET9Tf" class="i"><!--pnid:6eg4uI3YI34uSEFscTTLd7-->4</span><div data-page-node-id="iKZLBJgUmsTIfSzCilzLhw" class="t"><!--pnid:TPniT8BTBVQMJRWOEPPd3d-->运行岗日常就是监盘抄表巡检，没有整块时间做跨系统的时间轴拼接——复盘报告常常是安全员凭会议记忆拼出来的<span data-page-node-id="IFDNe2baUo0tnzYad498cE" class="src"><!--pnid:WC8RrSMdM7QB81CdFcEcjI-->依据 · <a data-page-node-id="46YJ9yrt5hW9nV5fgFyBRR" href="https://www.toutiao.com/a1870776176825356" rel="noopener" target="_blank"><!--pnid:0pVDUdH1ecvd8DrDq5OgT8-->电厂运行岗位实况拆解：日常监盘、调整负荷、监视参数、抄表、巡检；一个误操作就是跳机停机、经济损失、安全问责，容错率极低；运行岗薪资全厂最高但年轻人两年就跑路</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="HCafrNYoTevsrH7U0MtII0" class="blk">
+  <h2 data-page-node-id="AHQ1CBNr2wgm8Ap7NLNDla" class="h"><span data-page-node-id="zZfJmadkmSZUz76Lp3Va8A" class="num"><!--pnid:nqHbxVSjUUe5QDqcCXQnjF-->三</span><!--pnid:lrwzFz8TsW2LHSbmnAJU6b-->换个做法之后</h2>
+  <p data-page-node-id="1QxgszEkEeUbZrXwTm33Xy" class="subline"><!--pnid:QskhONqUkjXgulni68kD0z-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="iqctfmjSrTpJX7mUrJBEeW" class="cmp">
+    <div data-page-node-id="hROrJzc8WXArm2YzgbnE01" class="old"><h4 data-page-node-id="DR3LKbfcI2kPFPRN5C9cRN"><!--pnid:jfME7a1xhJP1NX5iwO6xbH-->✕ 现在的做法</h4><ul data-page-node-id="pq0nkTkzDggkUl5JlQchSZ" class="list"><li data-page-node-id="lW4U1dmBmURoW5aB5sr5CQ"><!--pnid:r0AoeijHBXzAymn5djccEN-->事故调查的标配问题是「系统性隐患为什么没人聚合」——十堰 130 次泄漏报警分散在系统里无人归并，复盘报告最值钱的部分就是把散点串成时间轴</li><li data-page-node-id="mXj9heLKbqdU4NhK0ZJIPS"><!--pnid:8O9hpqSUe79iuZCNiTrpt3-->运行人员自述：误操作的心理压力极大、一个疏忽就是非死即伤——复盘若变成追责大会，下次没人愿意把异常写进记录</li><li data-page-node-id="zYuqb4HQlnB17ddG80bJi3"><!--pnid:QmheRVhJevJfyQddbtw30V-->交接班制度规定事故处理完毕后才继续交接、处理过程要有记录——但「处置了什么」和「记录了什么」之间的落差，只有复盘时才暴露</li><li data-page-node-id="dtGTy40FsG3gsVgevqvBvy"><!--pnid:HSStG5NpFJheRUYL4hYzqe-->运行岗日常就是监盘抄表巡检，没有整块时间做跨系统的时间轴拼接——复盘报告常常是安全员凭会议记忆拼出来的</li></ul></div>
+    <div data-page-node-id="dGSY5CP1ikmbhxshJD2HL0" class="new"><h4 data-page-node-id="OGIr1mYFe6YTEe1lwvFFEz"><!--pnid:cPFMbTtyRAJBZ224hrUOpz-->✓ 交给 Agent 之后</h4><ul data-page-node-id="5vhDG1zoe3IuTTBnQEQokz" class="list"><li data-page-node-id="i9vYDvFzhQHhqgvczcnTsR"><!--pnid:r13QIab5FEeIgT0cfEJkju-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="SXMV3U79S2bwX2yxqc8MEX"><!--pnid:6a8XQduhv3G9QFFzic6irH-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="swHPdMY3cPucdWb9uNdckl"><!--pnid:vPS2p1TDbeLxcey1K1ef5b-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="KB4VBJxoRb3gc37WiGG0dd"><!--pnid:sPxQQcvGSVssR4WCR75T3y-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="KIof9wjZkfXQcmGM6gR0vL" class="blk">
+  <h2 data-page-node-id="fegf4Uy1VzHJmzWVWGnaPB" class="h"><span data-page-node-id="zdfmprGduRuMnXEkc8kBta" class="num"><!--pnid:c6SiqIznyRvLTOlqzlnqyR-->四</span><!--pnid:RNB5f8mWr7me8G2tdm6wW7-->场景闭环</h2>
+  <p data-page-node-id="0zHaWIQpAsI9hSOIzPSNQq" class="subline"><!--pnid:VbP9vQJbsDOcJOgCg2fAn2-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="Xw01icSdpQsaE6X3E03VH7" class="flow"><div data-page-node-id="H1RzgX7iZdp1oLYS8Nnk9k" class="step"><div data-page-node-id="Nf6JceJcG81xmiT3vexYwD" class="n"><!--pnid:BiOpDjuwDoBaBwkHmTRo2l-->第 1 步</div><b data-page-node-id="3uZsGAroCcDM2O9cjC6SNL"><!--pnid:RtoWgxdtOrUQIF1nYSNjvc-->时间轴拼接 · 三源对到同一分钟轴</b><span data-page-node-id="NMmf4ClSbYfQqj3OSbNpJV"><!--pnid:JX1dNTxGTz52WsnzDBsNDJ-->DCS、门站日志、客服工单按时间戳归并，矛盾处以系统侧为准并标注</span></div><div data-page-node-id="CtnSqrlKcRbdaN33Ci5dUi" class="step"><div data-page-node-id="kXbjuBsw6C9QoqSx4LxRaO" class="n"><!--pnid:KXkWv5HB5Zcasdee2qb2Z3-->第 2 步</div><b data-page-node-id="ixt0IIn67urkMHYchFYoAq"><!--pnid:29RJ4c8GQvIQTRCU2wWka8-->处置链核对 · 每个动作都有记录与下文</b><span data-page-node-id="7XLBitJZuDVfpyXuT9iNMl"><!--pnid:gdTf0MVXElxMybN2teUCoF-->值班员做了什么、写了什么、哪些动作没进记录</span></div><div data-page-node-id="oDzWpWnKlmV1xPr9DXLQSL" class="step"><div data-page-node-id="vnv4flfYqvef2nHnUz5sSn" class="n"><!--pnid:PBQ2LtvzKByff9Y45AjqLm-->第 3 步</div><b data-page-node-id="kua9TdOmc87iwW3jKSmlLM"><!--pnid:08Wzl0XAOTEgRBLgBhHdCg-->关联性证据 · 两个异常的先后与耦合</b><span data-page-node-id="FyDAFxv5qGEIi9AvL4C6jZ"><!--pnid:BRO4MVSUK97VZEeXmpsaEx-->抽汽波动与门站切断的时序、共同外因（气温骤降用气负荷激增）</span></div><div data-page-node-id="oigNNik5yZmYDZTm0FiFnx" class="step"><div data-page-node-id="T1Osca3fVmc30sE1uAwLS6" class="n"><!--pnid:CyJd31CaUmC3Los0fveC6b-->第 4 步</div><b data-page-node-id="LysZPlGOXGXCRFRXMLOStj"><!--pnid:p0jvExLp3KcQGO0BsZ2JEK-->断点识别 · 这一夜暴露了哪些管理断点</b><span data-page-node-id="IcGaqq8aWYc4wxtxcGE4Cc"><!--pnid:gWS6EYLCqZE41wFduAbFiL-->重演一遍：同样的参数再来一次，哪一环还会卡住</span></div><div data-page-node-id="POUSrdvtBMyPcOMo2Rq6rf" class="step"><div data-page-node-id="fPE8xcDbNxEau1LeUSoPcP" class="n"><!--pnid:AUZ1E1Uv0fpJbheVq0zlk3-->第 5 步</div><b data-page-node-id="QBwCWUuAu5P9zEZYsjNZGK"><!--pnid:ECyp1Xf5anoyYsSezDIcDF-->复盘报告 · 事实链+断点+建议措施</b><span data-page-node-id="kfhak2aNyNuuIUOuqSm8m0"><!--pnid:9GJeqWwceSyRd9AQBaWtUX-->每条建议写明改哪份规程、谁负责、何时完成、拿什么验收</span></div></div>
+</section>
+
+<section data-page-node-id="vhFEfJ3Jp2Tz4zhJs4ZlWf" class="blk">
+  <div data-page-node-id="m5YuKnmptBhaVm4GAYgbLO" class="g2">
+    <div data-page-node-id="zk9y21jqw5owEo1NzRd2OC" class="card"><h3 data-page-node-id="P01XVgdehUevf397av8ChW"><!--pnid:zQ3xkalOQXmXddm0heFRoQ-->要准备什么</h3><div data-page-node-id="7DWaQrDE1rBxS5GDU7xRsJ" class="src"><div data-page-node-id="Z8ME0rVAN6b8fyukxKGTHA" class="fn"><!--pnid:2kfzRxrznPKkhI8At5BUka-->事件当晚 DCS 曲线与报警清单（截图+导出）</div><div data-page-node-id="DIN5iBsSrlezVIJEPQDRiP" class="fd"><!--pnid:fwVidtnAhO51bIT7Io9wIV-->供热抽汽压力与门站压力的系统侧记录</div></div><div data-page-node-id="xI0trk2PUNmH5U0cskI1IK" class="src"><div data-page-node-id="97zAMlDvrcRTvoTq5Y7dps" class="fn"><!--pnid:sylp1hgsRov2Qh4utghfhh-->门站交接班记录当晚页（照片）</div><div data-page-node-id="hQKLzgfdiTRUGV84lCed0W" class="fd"><!--pnid:NUd0bAji7V2UGDBbBc3FdM-->值班员手写的处置动作与时间</div></div><div data-page-node-id="J8aVfB6VHoLSSF33ryD7PJ" class="src"><div data-page-node-id="rqJTJbljzv9JeygiTDYkrs" class="fn"><!--pnid:SyIah7IIvCOwhnG9LjnX6j-->当夜客服工单导出.xlsx</div><div data-page-node-id="JK16NNUUqKWuOhwAxfwhev" class="fd"><!--pnid:jNpwhhIyWtx6GaSbDswR0M-->片区用户来电的时间分布——异常的用户侧证据</div></div></div>
+    <div data-page-node-id="CeOfnMPD50CKdvyOTqfg6Y" class="card ev"><h3 data-page-node-id="5WxTNXrF979lVy6aoB8IPk"><!--pnid:3h5TPpWFffO01SyDaHNvUv-->为什么这个场景值得做</h3>
+      <p data-page-node-id="8Kf0vY2lJCqu9DdTxOpQny"><!--pnid:E6N4h8PL899ezqHrY8PtBQ-->痛感 5 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="vvIzSQSz3pMoDlWFvJoI3n"><!--pnid:U7K7Fq98JkJstmyEeLs2m5-->10.0</b></p>
+      <p data-page-node-id="EuSwwe0jqOjF3LIrCoGDKE"><b data-page-node-id="CfKeR807sxE0YUJsLJEwJz"><!--pnid:WwIT432J1FTjsoMYs12A06-->最大差异点 ·</b><!--pnid:vIUK62xP5aYbtWaLB0SKzV--> 不要求先上事件管理系统。DCS 曲线截图、门站日志照片、客服工单导出，三样东西拼出一条分钟级时间轴——复盘的骨架是时间，不是模板。</p>
+      <p data-page-node-id="sm5u3lj72st66B9ODIAIxA" style="color:var(--ink3); font-size:12.5px"><!--pnid:cPhVx3vaJo0iOo8Svso7eV-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="wR8xRYZwoqeKZxqc2fWFD7" class="blk">
+  <h2 data-page-node-id="2KHmcxcgecVO4AMVHgNiUD" class="h"><span data-page-node-id="UM4G21qZfnSUgXkF5hfXvJ" class="num"><!--pnid:f44CfjzsGCZWmzlEe8E8Ax-->五</span><!--pnid:hdD7qzO18epUVGQ7cERbkE-->会产出什么</h2>
+  <p data-page-node-id="LDUc3WlW7yrQWAMB5O9IA5" class="subline"><!--pnid:a9PTO3ORDYjG6CVaBOXdZ9-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="3oejYkw82u1xhBA19oTg13" class="outs"><div data-page-node-id="pg9CAZP1RG6t9szZA6Q1um" class="out"><div data-page-node-id="UGb9Ywt1lQnJtlGssd7dTO" class="on"><!--pnid:cJULEqbnzmo5dlG6JTf5Lt-->正式件本体</div><div data-page-node-id="MIOWBwBRrsHbeXDb5sePPM" class="ot"><!--pnid:PQXNU4ZZ5FNgCl43Aau9vl-->事件复盘报告.xlsx</div><div data-page-node-id="uK7OcXP5FDxLeOlPEJ0UMQ" class="od"><!--pnid:fNaQB9rDsgFR6uBFa7erOx-->正式件本体 · 时间轴+断点+建议 · 含签批栏</div></div><div data-page-node-id="hLm3R7nbPqZIqatXyrUNrh" class="out"><div data-page-node-id="tkw6w939GFsrrARqmWRA8q" class="on"><!--pnid:towoIRpz88uIQL2cK1qizI-->可派发清单</div><div data-page-node-id="1fdmw79ZHTgzONpgcP2qKV" class="ot"><!--pnid:jDWEh86RwClbcFB6lhalKO-->管理断点整改清单.xlsx</div><div data-page-node-id="tsE1WCxMX828DEfM6xVaFq" class="od"><!--pnid:gAgRLjFr7UFysZMYsNZwXh-->可派发 · 每条带责任人栏与验收口径</div></div></div>
+</section>
+
+<section data-page-node-id="azK42KpsqiMV4gGenW5bJZ" class="blk">
+  <div data-page-node-id="8Q2YRurobHUn8LYOflwKI2" class="card warn"><h3 data-page-node-id="Aa5zVU5R8N7rSNJcq3Fd0p"><!--pnid:9awt2RAd38G1HCLMIjDqXM-->这套东西不承诺什么</h3><p data-page-node-id="MIjV1p698VMRGN5ZEkuddd"><!--pnid:CU5nu0kmpl3D8c3SzIjAEO-->复盘只还原事实链，不做责任认定——责任认定是调查组和人事部门的事。「两事件是否关联」只给证据链，结论由专家定。涉及具体值班员的表现一律匿名处理。推荐意见栏留空。</p></div>
+</section>
+
+<div data-page-node-id="Pw43taE1BtX0Eu1IXgpP8U" class="cta">
+  <div data-page-node-id="sdfET4o6pjlRqR8WYEI1aq"><h3 data-page-node-id="ECPqTkI5GhAs2CS5J2nz5k"><!--pnid:IRKB09vxNiNwaIdtCiDzX2-->想看具体怎么跑？</h3><p data-page-node-id="8b0ycfsCTesiUBriyqFs5k"><!--pnid:gEQQ7Ml4rW1VQCzGUqzH1O-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="gUkAwkHqo2w36iynmviMGQ" class="btns">
+    <a data-page-node-id="vx4Ab8jr9yLoYA1iUrRrsG" class="btn" href="LiveDemo.html"><!--pnid:eQ7UV8AjELDUzoMB5a6brz-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="tPGMjRB7tqXKjPZD3zE60L"><!--pnid:Lqv8d1BRj7LN8XRz4ZOhNI-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="Zj7RaAoQmtvACgoHXrLgne" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="eot01zku2wi090DmpDidsW" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="3SnjSXhB3PUNpRfOq4gQU7" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="ZIgew0XpZ3k2jw1bVdCPPB" data-pnid-children="KW7dVBASERkFQLvQHGK4ru">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="K12mK9R9JiAKqvZGZnHPfE" data-pnid-children="W6zg1yddyo1nQztQ8zke52">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

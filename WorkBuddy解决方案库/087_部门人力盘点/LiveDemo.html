@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html data-page-node-id="UnjPZhBHw2S1gTR8jJLR4R" lang="zh-CN">
+<head data-page-node-id="gqNjWj8zPk925B2I2W6CgK">
+<script data-page-node-id="xJtXrqYqJmDXNWqa5bXNNS" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="cn9raB9mrv4BgQeDz9mZkD" charset="UTF-8">
+<title data-page-node-id="F1S3RXA1fCS0dBbnjMbY4Y" data-pnid-children="O9ZHeVwJoNbVBj7QdQrUXE">部门人力盘点</title>
+<link data-page-node-id="Sa2BGM1HhrBFs50hMgf5aS" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="LwRSMGC3H3OMnMnkgzAh5C" href="_assets/shared/hr-extra.css" rel="stylesheet">
+
+<style data-page-node-id="AJoUVLkIiqaf6c5D5244B3" data-pnid-children="ihgr6CEtVXUMo7vrSAG42h" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="faGfUIyLxJKOrw9DeMwhC2">
+<div data-page-node-id="FqnJyyPPLGWHWsIFhozxAe" class="wrap">
+<!--pnid:MOa5ArO3vOCJENtNDqzi0U--><!-- Hero -->
+<div data-page-node-id="71CIbZxl5k9C7R6S1fVTxi" class="page-hero">
+<h1 data-page-node-id="2c7d5Y3Sbx7lpG7ASIzwM4"><!--pnid:iLto4Up3IFfbP5BOnCJByM-->部门人力盘点</h1>
+<p data-page-node-id="5aU5g4dgClOKvUrLPzRlIf" class="lead"><!--pnid:y1aRr2rJyAzQPQx3KjCVh2-->OrgHeadcountAnalyzer Skill · 编制对比 → 三色缺口 → P0/P1/P2 补人优先级</p>
+
+</div><nav data-page-node-id="ivb3a2R5MC9VrD24EuWPFO" class="subnav"><a data-page-node-id="dbeyK9PedORnD0UNLcNnDI" href="场景引入.html"><!--pnid:y880HyaIKrhggFnyNSiiLA-->场景引入</a><a data-page-node-id="ijlJGeTMxxljLTb17X1RH0" class="on" href="#"><!--pnid:kNCYY0u06C6pF6pxBNqmsx-->Live Demo</a></nav>
+<section data-page-node-id="JjwoTmjvuTd2RKMgd2nPup" class="notice warn"><div data-page-node-id="V4Ijp5sO26xl4liyZr6cYg" class="icon"><!--pnid:Wl27ndY8g2RJrUv6CiR6cP-->!</div><div data-page-node-id="iW8xrwTBPERh0wXh9UBPSt">
+<b data-page-node-id="dfyfFOugd7xrvZQd5MrFd6"><!--pnid:zzMhVUW8gLHFqDY1gIEsJ5-->演示模式 · 可视化预演</b>
+<p data-page-node-id="1qKRIWECUtT7IRYSvgHTFw"><!--pnid:RJLUFDoeL10Y7aquxBebW7-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="rRPivFNB0nYl2mhxLPgzr2" class="kpi-row">
+<div data-page-node-id="OzUbbpFRsm4sIF3ystr0Xw" class="kpi"><div data-page-node-id="Z9fsLGIvRl1cwLCAwwS1i8" class="k"><!--pnid:PWn7iHRKMkPg4C9TYwBaR4-->总编制(HC)</div><div data-page-node-id="t6i3X7D2twT9no3EWhG0Pt" class="v"><!--pnid:i7LczUL4omtWnH0NSO3hNO-->117</div></div>
+<div data-page-node-id="9h3ePzxkwNCXi46FwgbHCf" class="kpi"><div data-page-node-id="mCNTgX4SWkVqk13chVYez5" class="k"><!--pnid:pqEIGrjZD8u10t5Nhdap8E-->部门3色分布</div><div data-page-node-id="uCCBeApgLdxVzOkEAjmVqJ" class="v"><!--pnid:TNcjhwFhhincYINLKeZ4fW-->🟢2 🟡1 🔴1</div></div>
+<div data-page-node-id="SCPsPWHSMiT2D4z75CyPpD" class="kpi"><div data-page-node-id="MPzX4yoNeReBGwt82E6lXZ" class="k"><!--pnid:wSwyZoYLR5dxjj0RG5uTqY-->总缺口(8.5%)</div><div data-page-node-id="Y9Y1F4zYo9kwnCl0P5s7aM" class="v"><!--pnid:wdACoyYJ1NGLoGHvunhDoA-->10</div></div>
+<div data-page-node-id="rwEsLvd8NH63RJuOKhGdFs" class="kpi"><div data-page-node-id="6llH3sjxsEpc4WORFOCsaH" class="k"><!--pnid:5525yc9siku72O3B5Z7jIc-->关键岗位缺口</div><div data-page-node-id="0KU52L5rOwdZKxw7oEpgY2" class="v"><!--pnid:aOAAh6tGBycAhwXXgDOZzp-->4</div></div>
+</div>
+
+<!--pnid:QmS31Yglf5jPD9N14WwOcD--><!-- Step Flow merged into card titles below -->
+
+<!--pnid:obEO2diACh0L60bHNzT7Bh--><!-- Raw Data Card -->
+<div data-page-node-id="2mstbX5hvPs0RbgwFQjrNB" class="card">
+<div data-page-node-id="9dquna3FmXlKYKE1gVfbbN" class="card-h"><!--pnid:6tOIR0DSl1rTRU8KLO66MJ-->📥 ① 原始数据：4 部门编制与在岗明细（沙箱模拟）</div>
+<table data-page-node-id="TgxYTWpcdOT3w5hcXve0sz">
+<thead data-page-node-id="WWW7pxduW3N6zzAJKDcHGU"><tr data-page-node-id="35hJXZBXKFvqW1fRNwqTDc"><th data-page-node-id="ODvIKxvTHTvXTXj55vpZkX"><!--pnid:CjTCawuutlLZIeSA0McAg2-->部门</th><th data-page-node-id="YavezuOkKTS5pDknizMqYc"><!--pnid:TX9TvOjV7q8JIA9mJoHon8-->编制(HC)</th><th data-page-node-id="baU9mRbyux2QJNAO81TsxZ"><!--pnid:3D7Wod7ko146M6k8C6eAOf-->在岗</th><th data-page-node-id="PrldU7TnSFdeO1CX8qRYSl"><!--pnid:ee9AOWlnmc7yMEA93Eeqvt-->缺口</th><th data-page-node-id="NfMUYg9JLURoPEqhoiS9xn"><!--pnid:fJes65asPAE04wtpqPI8Lf-->缺口率</th><th data-page-node-id="gJZSAbS7D8QN4nw2ThIdlF"><!--pnid:LTOJAN7QcYY7Crmu2s5zDv-->关键空缺岗位</th><th data-page-node-id="Ef5DAicEeynE76eICAKY5M"><!--pnid:1fAiTcTu8tgfFpGFDEJDfQ-->备注</th></tr></thead>
+<tbody data-page-node-id="Pn8w1PiR9F4vDyiccNFvzg">
+<tr data-page-node-id="K9F8j4gm8mXSavFqs3RvU5"><td data-page-node-id="TyuXAIe1nz9QKm0zaDhvok"><b data-page-node-id="yVGdNaMd6IDRHP3VrJOcLY"><!--pnid:MmOhcX4Qv1zEDxDQZiTSUo-->制造部</b></td><td data-page-node-id="bNhFSVYzUjLgpvT79MJA7o" class="num"><!--pnid:VNgcWmBpo7Oqstj60LYeFH-->72</td><td data-page-node-id="WikDfgVDgmViiNhTdiBBcS" class="num"><!--pnid:LVDXd9W2m6nu2vlqiHM5Vb-->66</td><td data-page-node-id="x2sZ5f1CwwwH1nUhEFPBs0" class="num" style="color:var(--red); font-weight:800"><!--pnid:3BqTunAnRPEcA9bjb17NTy-->6</td><td data-page-node-id="HPe7aEVDBtVgMe2SfnelcD" class="num"><!--pnid:9x2mI4L4JC4iimcfqW1XzN-->8.3%</td><td data-page-node-id="rWjtIY2BzqgkKJ889ybrPM"><!--pnid:dkTsjKOUof3HywAIMGtIIE-->设备维修技师×1<br data-page-node-id="FGn1LhQQY0GlgQY1YvEdeT"><!--pnid:OY9OAv3MpxT5xb66ClAJR2-->产线操作工×4<br data-page-node-id="wkwk4i0AY6rpBK6mRWHnUm"><!--pnid:jDUKP0ownokn20IzAkICdm-->班组长×1</td><td data-page-node-id="kd0lMq2Hu7ZmgDK6WlahnD"><!--pnid:JFv1aYsO4Z2vdiFryy8Vij-->含 4 条产线；近季离职 3 人（夜班补贴低）</td></tr>
+<tr data-page-node-id="N6o235NuEsg3OLDgEzXBst"><td data-page-node-id="8UuQzugH8jBbM5GNbtwpKi"><b data-page-node-id="4AmNH22x1mfuLQ0hDAMqZ5"><!--pnid:9nHGn4I5ULFw8FF1DFtItD-->研发部</b></td><td data-page-node-id="zMC7Xerki3paVwx0aFXS5j" class="num"><!--pnid:wO7esup9ciEdLbNoEKgwSN-->18</td><td data-page-node-id="pIqmB35nkL6kV7sDmUcA76" class="num"><!--pnid:ugIVRJkMbp8BhL2ceunwol-->16</td><td data-page-node-id="nKDDUZsKzUViGbdqzUAvg1" class="num" style="color:var(--red); font-weight:800"><!--pnid:N8XOiPahkl83jUBfWBYEBm-->2</td><td data-page-node-id="Toostyct0rSHa8Al6Vt9ql" class="num"><!--pnid:eblOuISRNbTUYm4m7kBlDE-->11.1%</td><td data-page-node-id="2POGLypKWo8YbQxJaBNdI9"><!--pnid:9geeDOkdOe2eUyJM9Cz2PS-->硬件工程师×1（缺编）<br data-page-node-id="wOZz35wxbPM6hRvwS1S8Mq"><!--pnid:2d5okq2nG5Mty1EP4npeQF-->嵌入式软件×1（在途离职）</td><td data-page-node-id="DbpPaIPf5kxQOqobJ0jgRr"><!--pnid:XJsBsSsqzWfYTJhENDdd1o-->双新项目启动在即；晋升通道不清晰</td></tr>
+<tr data-page-node-id="WE1scUFEefu7ZqotjLsFAR"><td data-page-node-id="PVJ1uTgPmuYVTUM1vtm4Z1"><b data-page-node-id="tL4fKIDwVYeDY4RhnbUX1B"><!--pnid:0gVBgnx6lb3LS1spukjQEk-->质量部</b></td><td data-page-node-id="1TP9c6TKa5XQGeouPxPQpC" class="num"><!--pnid:UIeOHcUHNlpS28d9AYWxNh-->9</td><td data-page-node-id="rdG6tthlOrV9kscsijwR5z" class="num"><!--pnid:R3T4sFtJjnVAFzeNDqq7Wa-->8</td><td data-page-node-id="FaFERahCCPlNeuO2x5MMM5" class="num"><!--pnid:IKgjnr0cL5ZrfpIHJEWsYn-->1</td><td data-page-node-id="ldisDqwO30fREHPHsiHPST" class="num"><!--pnid:rruREKPUNVdoGGVUGuQjRT-->11.1%</td><td data-page-node-id="vrTTcWzcHH6enkwB0SNPXU"><!--pnid:kySq40iHi2WGwlk5lbuTBE-->IQC 检验员×1</td><td data-page-node-id="VOxb6nYCjGzUyQlg0EiXwK"><!--pnid:6h3z0SAQeqYRHP8AyzB834-->转岗在途（内部调动）</td></tr>
+<tr data-page-node-id="eGTVixJuGcCNtPR8sghHld"><td data-page-node-id="4Xc3senN7zTbclQGSYOS8Z"><b data-page-node-id="N2u2GbZXBKvY2lt97DG2F4"><!--pnid:KjkxlHyNMpVP9AMXUZTdkh-->销售部</b></td><td data-page-node-id="WjQKC9IsCmcE7edpaLLdeh" class="num"><!--pnid:766tUenZEPp8WHAweehoBx-->18</td><td data-page-node-id="84s9hxumAZqoT4ChpUVxVc" class="num"><!--pnid:Zw71TaeOs9Ib1wI3Jqty7I-->17</td><td data-page-node-id="FLBb7P0klDsm4ciE601xMZ" class="num"><!--pnid:rxNgzGnX3nUYgP5GGcNpjl-->1</td><td data-page-node-id="99XVTMpdfmkAl7TwN91M6v" class="num"><!--pnid:7iPxfjGqOQE7lJ2OL0jIE0-->5.6%</td><td data-page-node-id="7Gbb3pNWeThdYVpiFsG39X"><!--pnid:DyZvIhHWU2872KlAWqT86H-->大客户经理×1</td><td data-page-node-id="i4ueyxDVvFC4o0aBl3AnHr"><!--pnid:pZEenkil21Z0XWeHXBPyGB-->猎头推荐中，预计 2 周到面</td></tr>
+<tr data-page-node-id="5aAT3K0jTsBJIwjil6GH5s" style="background:#f8fafc; font-weight:700"><td data-page-node-id="nKnevIl3InhkMe7GuX5wZ6"><b data-page-node-id="nxwMkRe36vibAoQBGUQLDy"><!--pnid:X2fQyrABDdK3Te5jxLpOfr-->合计</b></td><td data-page-node-id="oiFe4sESgp6aVncMimfkVu" class="num"><!--pnid:IZgVvDQh5wjtwYCpxgVQhw-->117</td><td data-page-node-id="RTpgamQs9Yrgc1f1jXR68g" class="num"><!--pnid:vbSgAXdX43OrTEkrMoG121-->107</td><td data-page-node-id="LeDnZGNgX7DIZmoxCuX4UU" class="num" style="color:var(--red)"><!--pnid:UUiXho6bFD2aUS5lYAMQ4a-->10</td><td data-page-node-id="3Q3Oq9VFknLB8FlRcIpFIl" class="num"><!--pnid:ZT1CimAWpripCdgMb5V0nD-->8.5%</td><td data-page-node-id="yZwTboaA2GvWVXhtM1Mhyg" colspan="2"><!--pnid:JYmu7sEKPs0xLGI6wNgwzA-->—</td></tr>
+</tbody>
+</table>
+<p data-page-node-id="tkrqlWmGAt6bSUQDj6SYPr" style="margin-top:10px; color:var(--muted); font-size:12px"><!--pnid:gpjI2bqvV0e1Y1aAEOnL93-->💡 数据来源：HRIS 花名册快照（2026-08-01）· 编制表版本 v2026Q3 · 异动窗口期近 90 天</p>
+</div>
+
+<!--pnid:zfjFLsYMvQaFgCkXK5rzdW--><!-- Result Section -->
+<div data-page-node-id="TdMhkpfjkl4hQYFzl34EMx" id="resultSec">
+<div data-page-node-id="Nu65CF4ZowVKoE55zH0hNV" class="prompt-box">
+<div data-page-node-id="SDVC8SmvTUUujZxjLfOmk5" class="pb-text"><!--pnid:XL5qqDzGU95XEJDxLJzgek-->
+你是一位资深的 <span data-page-node-id="sRwm4lxQsgWajV30WdLZyT" class="hl"><!--pnid:5TqbQLgTGTBbuW9Pe994k9-->HRBP 组织诊断专家</span><!--pnid:YerU6iRF5GeOnFSga7LPYq-->。请基于以下编制与在岗数据，完成人力盘点分析：<br data-page-node-id="DONwd8puLMrwPHlA6nXv2Y"><br data-page-node-id="VIu8wA0nSidlMqZwI7Uln4"><!--pnid:SEU2ALvlW9IfrMhy6Q72KT-->
+① <span data-page-node-id="oFskIPLjQOAEsDbqtZrSJ5" class="hl"><!--pnid:Cgz3HohnuyROInRvqr5ybE-->逐部门计算缺口率</span><!--pnid:hnIDVIsnJJme1Dw40lkaHi-->，区分普通岗和关键岗（关键岗定义：停线风险岗 / 项目依赖岗 / 稀缺技能岗）<br data-page-node-id="vLDkk2Ea8K6EuSMGQavc8b"><!--pnid:Stn4mouiHbUQfAufQpdA7r-->
+② <span data-page-node-id="JgfntqtFZcF0rirkkysm28" class="hl"><!--pnid:zypJIYkn2ZoCQfcSnjjC0q-->三色分级</span><!--pnid:C6IaTYLsdrSWAejfktGBZE-->：🔴 缺口率 >10% 或有关键岗缺失 → 🟡 缺口率 5-10% 或有非关键岗持续空缺 → 🟢 缺口率 <5% 且无关键岗空缺<br data-page-node-id="JD9uM5z2daWy7l52z4CjPs"><!--pnid:WMp9YMOQSpLrQCys2gH8yX-->
+③ <span data-page-node-id="RaVapNZuDcgcuXBM6UMqET" class="hl"><!--pnid:DaNtrbrGhnJAcldQOtg8BR-->输出补人优先级 P0/P1/P2</span><!--pnid:axaK03HsXHN317DAu8SBoQ-->，每个优先级给出具体岗位、建议渠道、预计周期<br data-page-node-id="jojrnMOuyJ84VZngeMGMnr"><!--pnid:7uHAiPplV9WiXSskTPexE4-->
+④ <span data-page-node-id="ervfjvsAzAxf04WAhbSdiB" class="hl"><!--pnid:SEH8od7pxSMJMEAAkoyLhH-->识别编制合理性疑点</span><!--pnid:0hQBmegNobrgYTJ2JJKZge-->（如某部门长期招不满是否说明编制偏高）
+</div>
+</div>
+</div>
+
+<div data-page-node-id="lRALI55TwKWXXERSwwuQ8b" class="gap-row"><div data-page-node-id="WECc8qVaR9aeNCEb3la9yk" class="gap-label"><!--pnid:492aFtycAcAbCkLXz4bthV-->制造部</div><div data-page-node-id="pwlw6hpmpd164iVDgYVBPS" class="gap-bar-bg"><div data-page-node-id="O3rsw2AuG9mmjdFirMRSe9" class="gap-bar-fill gap-ok" style="width:91.7%"><!--pnid:D7bukpLbC608pTwcsXU1Lq-->在岗 66/72</div></div><div data-page-node-id="CuXPyeaY3GsE7NGgqeO5M2" class="gap-pct" style="color:var(--amber)"><!--pnid:hidM12GVao1nPhdiBcmBwO-->91.7%</div></div>
+<div data-page-node-id="iycCql5rRkiQVMLCHWCMJ2" class="gap-row"><div data-page-node-id="EHj7axGJHplCbl6TV1Bcn4" class="gap-label"><!--pnid:qtqzib9wDHoC0tOtYHWjAj-->研发部</div><div data-page-node-id="nrakFq4HdG24wthcJq4OUb" class="gap-bar-bg"><div data-page-node-id="f8IfF3sUrtVMQIKrqHU9e4" class="gap-bar-fill gap-ok" style="width:88.9%"><!--pnid:TE5nSGBndZhR9pGEUi1Wjp-->在岗 16/18</div></div><div data-page-node-id="qKzNj02XSVbHa8ZNTjVV1t" class="gap-pct" style="color:var(--amber)"><!--pnid:W7bMDnUxTcRbfr0XCi2t97-->88.9%</div></div>
+<div data-page-node-id="X6DY4IRAumnk6I2HLXo2B3" class="gap-row"><div data-page-node-id="icsKw2MZPRFCXzSZsrkYmx" class="gap-label"><!--pnid:Hmu4VBKCu5zUpCmJD8bHhe-->质量部</div><div data-page-node-id="v3hmyUkzQUGItuMnTkzfQI" class="gap-bar-bg"><div data-page-node-id="2iou59hRIlHZZubDt84GoM" class="gap-bar-fill gap-ok" style="width:88.9%"><!--pnid:RlLxX7XUOJOnBvFF5LIu6p-->在岗 8/9</div></div><div data-page-node-id="4k3oze1oWpwEcylKVlZZEM" class="gap-pct" style="color:var(--amber)"><!--pnid:hBFhwNPXh1or3JWtOFQXgK-->88.9%</div></div>
+<div data-page-node-id="obGzsyBNEaCt5bHPfFEYvH" class="gap-row"><div data-page-node-id="IvbJn0f7vDqF6BrUb7O6DG" class="gap-label"><!--pnid:PsVSaKOtwpbJl2FxUXCXdF-->销售部</div><div data-page-node-id="oPQPs4sUzIQZhLJdq95e1G" class="gap-bar-bg"><div data-page-node-id="uIW6H8g7YagP4kW6Y4n7sX" class="gap-bar-fill gap-ok" style="width:94.4%"><!--pnid:DvTj4k4xrESNeArPpgsY0W-->在岗 17/18</div></div><div data-page-node-id="pwVBHYo7mPoe7IEhsPfu3P" class="gap-pct" style="color:#059669"><!--pnid:FFDkHLiOBLFvkER6Br418W-->94.4%</div></div>
+<p data-page-node-id="qN4axmWWsa0KxzlTWXW65g" style="margin-top:8px; color:var(--muted); font-size:12px"><!--pnid:eW497tPQKwJloLWTHMrQXZ-->⚠️ 制造部虽然覆盖率 91.7%，但绝对缺口最大（6人）且含关键岗；研发部覆盖率最低且双新项目在即</p>
+
+<!--pnid:Y0K4aUfZXOQKIE116xccAt--><!-- Three-Color Report -->
+<div data-page-node-id="PIxmgbdR7MsZJ3IgxENHQ4" class="card">
+<div data-page-node-id="1bNyOsTaPLvhSQppDcZjFr" class="card-h"><!--pnid:tdn5qmcIPFUuhCvv2DJD86-->🎯 ③ 三色分级报告：各部门缺口状态</div>
+<table data-page-node-id="m2vLMWTf8dEfESo1QqSTii">
+<thead data-page-node-id="U6JfcYhZZ4u8Cm5xd8dc7i"><tr data-page-node-id="IBf07B2JTWtTfnItM9pt6n"><th data-page-node-id="zhjS1411eLSg9KqKFi5Tgc"><!--pnid:n0Ozc3UT05XxdQ9bhY1BcC-->部门</th><th data-page-node-id="Zc1ie1hW7ioLfCyvTt9gRz"><!--pnid:HbqSdclzgcJtBXEOx4Goxt-->编制</th><th data-page-node-id="EiO7Lmb0826GtDQMWqZgUE"><!--pnid:qgsbNgkfrOlG7S97OEIujk-->在岗</th><th data-page-node-id="GPlf6KUR4ezeGjDYkJOVJB"><!--pnid:yYYjD8pkJxWGqrQFmKedqW-->缺口</th><th data-page-node-id="uTY0MDGD2gEtKwb4r1CPtE"><!--pnid:Gx10jzb3f35AhoKjQS2r7O-->缺口率</th><th data-page-node-id="Sk4p6tpYEH0urpYiHmU3yZ"><!--pnid:tzZ3hgpidKJPZiWsiUaY4y-->分级</th><th data-page-node-id="s8GtRFRREPo6otNati8dXA"><!--pnid:TvnKabmpmpZyC60d15dScy-->关键岗标注</th><th data-page-node-id="SZhrV4ZJapzp586n1hDXUp"><!--pnid:JPx5GQ4lpJzca2eY8Znjf8-->风险等级</th></tr></thead>
+<tbody data-page-node-id="dwZ8ee7JtR5XMG5oNQkUce">
+<tr data-page-node-id="8inxqKRvgWtmwyfPOWGBA3"><td data-page-node-id="HeKEHS4eWfQzNNwVL2xFvR"><b data-page-node-id="DmxaVhmLCIAEsNqEWchsWv"><!--pnid:nxBXNJZHeRwB1n1wj7Nha2-->制造部</b></td><td data-page-node-id="7STCPwJdH1Ypbb2kL45Xuh" class="num"><!--pnid:fGkNqeGFzjLaXcWXQ8Gmlr-->72</td><td data-page-node-id="VvqoXZyDOpcKR3kseK3EQO" class="num"><!--pnid:LQXwjuRR0VdSHq9BQTpPvt-->66</td><td data-page-node-id="eOlntVUi3TkxABYUum20j1" class="num" style="color:var(--red); font-weight:800"><!--pnid:HKDgzulP3YVrFY3GNWw7Kf-->6</td><td data-page-node-id="RHvsYnjC7A1WSwAoPf89cP" class="num"><!--pnid:zmhe7GwMjiDz17jynE0bwl-->8.3%</td><td data-page-node-id="NfY9t66wTZ4j6PPkqUKiMs"><span data-page-node-id="EnhuAXz8H78EAykd4U3rbD" class="tier-r"><!--pnid:A7bTZqMYMVvTn2NVu2hKes-->🔴 高危</span></td><td data-page-node-id="Isxflu9tqhL2tV7L2sZ9ak"><!--pnid:8hd3uvNJncSD5mlirKkYHy-->设备维修技师×1（停线风险）<br data-page-node-id="BNPJb7u46yEJDj0W6Sq70I"><!--pnid:xd0trTRDUouEIz1hjIpD6v-->班组长×1（管理链断裂风险）</td><td data-page-node-id="6jzdukSZGWCmEx5C7XkmeY" style="color:var(--red); font-weight:800"><!--pnid:yuVGfJGrnIqLYml8M5e0Jt-->P0</td></tr>
+<tr data-page-node-id="0kFaLYa1YMum85satUuqQp"><td data-page-node-id="m9FIqy6ztJxgbr9h4RC9oz"><b data-page-node-id="RPHAof47KbnNuiZYaFKYpt"><!--pnid:MCUlISC3TEH9sirb3InSbo-->研发部</b></td><td data-page-node-id="KCVTxo4klvavhzp25XvHiD" class="num"><!--pnid:QIKoNqUUYHSDfdKVf0Oj1k-->18</td><td data-page-node-id="7aHwXEQFGvuuxQgkYrmZAe" class="num"><!--pnid:IlgePChfybuHYidV5EkRVr-->16</td><td data-page-node-id="pPbg1Rv4ddaNiqYf99mRlc" class="num" style="color:var(--red); font-weight:800"><!--pnid:QuRPoHFzDuzo8HVQpZ1Uqy-->2</td><td data-page-node-id="6rDUTsONpp7aLFp4wtRHgD" class="num"><!--pnid:QQrpDEs5TCgANlGLvesgyA-->11.1%</td><td data-page-node-id="HDU8B0LrId3JLfJgVRsnFw"><span data-page-node-id="Nb129PfDCjEYlMVx6gtf6h" class="tier-r"><!--pnid:ZkEA4NiDEBsgNam0AU6Fk2-->🔴 高危</span></td><td data-page-node-id="N9pw60PlgpWq7cxknDHMr9"><!--pnid:tJqAq4kN7viScE3nmxVUDZ-->硬件工程师×1（新项目依赖）<br data-page-node-id="r8y819EPeoGyaWdkh0E2pa"><!--pnid:2g4Jnf6jkPNbvQw1koIeKt-->嵌入式软件×1（在途离职）</td><td data-page-node-id="IwTCdOzQXdE3jttR2wiQZj" style="color:var(--red); font-weight:800"><!--pnid:o1dJKR9OlTewNfIy597zFz-->P0</td></tr>
+<tr data-page-node-id="jO6khByUmklcwGwoHmO1kP"><td data-page-node-id="08XJ0ifK02hjKLbr3OAFwk"><b data-page-node-id="DYHJQDaOtTHID1AL0LHJMe"><!--pnid:hVemP91bDl2D2j7xlGYXh3-->质量部</b></td><td data-page-node-id="VdUTtLHPI9TKDip2fcDNCj" class="num"><!--pnid:iUDm1ECVdgyk3NDU7a9lJd-->9</td><td data-page-node-id="eOHVskFrTuCqdto5SPWwUU" class="num"><!--pnid:8liBVg7TpRjOkD0W2lP5KS-->8</td><td data-page-node-id="Keatr8hukwqyU9ZIlhE4mw" class="num"><!--pnid:X6IeHCd93nAzgMLaTreNdO-->1</td><td data-page-node-id="kU9JFU2ytQhMjR7o70oACc" class="num"><!--pnid:2chRANINd8IQedHFREg4KK-->11.1%</td><td data-page-node-id="bTlE66xPU9tYXfrfLSJdOb"><span data-page-node-id="jSN9ZUGI45jBu28664IbnF" class="tier-y"><!--pnid:hreGtqStTDV9GdXoKT6zOz-->🟡 关注</span></td><td data-page-node-id="ueFv53R9kV7xXyIazsZhFd"><!--pnid:0KM3im5hslYk6q3GXJg7Pz-->IQC 检验员×1（转岗在途，非紧急）</td><td data-page-node-id="JhiEJACVIgCP3WCJzw9Ep1" style="color:var(--amber); font-weight:800"><!--pnid:fA1pS902fiOH22y4tRlk9r-->P1</td></tr>
+<tr data-page-node-id="79rqAYvniVv2lrF6TzSLWW"><td data-page-node-id="8L8NpkoJnGPHstlvUbyZEb"><b data-page-node-id="bTbiFQKTn8rSJAH5N741hU"><!--pnid:A28L1lsUQH0mm8oQfaau0F-->销售部</b></td><td data-page-node-id="E2CkSkgn7QJvgXlavmLefu" class="num"><!--pnid:dXe8KaFjs33oJD6YidL7Lx-->18</td><td data-page-node-id="eyrepz0ItaM6KCFnAQ1bVW" class="num"><!--pnid:coucMBPcWHMjd338Kh2Mml-->17</td><td data-page-node-id="pWo1Nk5dCWKEzcz2sKO19r" class="num"><!--pnid:XELNgMuRzzl4G2jxXI9P62-->1</td><td data-page-node-id="Y0DVBByOd2gR5DmgxIj5uu" class="num"><!--pnid:rbX5znFBWUW1X3w3zJVL0u-->5.6%</td><td data-page-node-id="xtYY6492Hku7fU0tqye87X"><span data-page-node-id="AeF1JQaD22zZQRxzOQ1xfq" class="tier-g"><!--pnid:HYtdjqCn8ZqlUcWu76i0ih-->🟢 正常</span></td><td data-page-node-id="xHxULbfECoTF8tvFvcgSuu"><!--pnid:PdLDHJDPFSvXp4HpFD0cEX-->大客户经理×1（猎头推进中）</td><td data-page-node-id="2f4rbNgi2VZxoeDqm2GXbz" style="color:var(--green); font-weight:800"><!--pnid:DXceGQEGxYG3KWVnKQer1b-->P2</td></tr>
+</tbody>
+</table>
+</div>
+
+<!--pnid:KOLSLBevyxNzpPekJgxTv4--><!-- Priority Action Table -->
+<div data-page-node-id="LkZ5I4PpJQscUOAAuJRBvc" class="card">
+<div data-page-node-id="6VSQYIJxnJZNjTehdVG5eT" class="card-h"><!--pnid:rl2oocCTeFv5TPgvowXXSM-->📋 ④ 补人优先级排序（P0 → P2）</div>
+<table data-page-node-id="D38Y54S67j154kkp3JENQm">
+<thead data-page-node-id="D7ZZPlS2OVbY832czUrU0l"><tr data-page-node-id="G1ejw8ifszrJygFMwkmei4"><th data-page-node-id="C6hPEOQwlr8ygkOFUERanQ" style="width:40px"><!--pnid:BOjMTyOXJilEax0qmTnpsB-->P</th><th data-page-node-id="QxmMH2VDWh8JIco86OdeHG"><!--pnid:uwexCBfEGTiZVJoan5GdHr-->岗位</th><th data-page-node-id="MPBXTIpD5xpLZwaYIMlTwW"><!--pnid:OOfvkIxHBcOyUswKNKOUt5-->所属部门</th><th data-page-node-id="lLgi9Gg9foMLrfP9o1J7qs"><!--pnid:v7Q8qp9RdM8yJ977htKB1g-->缺口原因</th><th data-page-node-id="wFihxDFUDmWPgyKUulde6T"><!--pnid:Ov91gE1LQ1jSPrtvz9zsqs-->建议渠道</th><th data-page-node-id="O9GH0Mo2MwR6e4PVwbCOu5"><!--pnid:60MDmsa764rnNwYEhzZHKg-->预计周期</th><th data-page-node-id="HJnw7BMT8Bb6cvlHJCBZs3"><!--pnid:5wswmSllUmCYM1G2szvQyc-->预算影响</th></tr></thead>
+<tbody data-page-node-id="Cpq2P9HuhvFKMnCm6IAPcz">
+<tr data-page-node-id="ex9N0zMimBsfLoLGiqC5c8" style="background:#fef2f2"><td data-page-node-id="4enS0UFftjiyDa0eUAcQGO"><b data-page-node-id="FE5L96S3GRlkwbYCBY4T4M" style="color:var(--red)"><!--pnid:0BAKNFx8HyxaGmvSxLwQqx-->P0</b></td><td data-page-node-id="6PpsrFqrIa9dMzQqcVvlPQ"><b data-page-node-id="EyBYsMRcRUMOVCaDeuakp4"><!--pnid:WmALaKtoEhz85WAy4S4yBR-->设备维修技师</b></td><td data-page-node-id="BTKULmnRNjo7u25Ai1YOHs"><!--pnid:CigVOUom7emMDUtDNmaWkQ-->制造部</td><td data-page-node-id="MKhOxuxcAwVI8Vc1ZT2ZTA"><!--pnid:keL3AoYpPYmm5XRxawvZxN-->老员工退休 + 夜班流失</td><td data-page-node-id="sTAfAdXuYarrkS4AOqlOxH"><!--pnid:mkcvJVHKrwWIt0fNMeJ83v-->内部培养(2)+社招(1)</td><td data-page-node-id="4umR2q6qZaC5OYVPdUZNEt"><!--pnid:KKLbgKKcbI0FrR82J1Jzqf-->4-6 周</td><td data-page-node-id="EK7tj4CNE2m8sQ4MJClR0Y" class="num"><!--pnid:UdVk5pUZdM1VrSgclBQGnN-->¥18-25K/月×1</td></tr>
+<tr data-page-node-id="ZkTQ54AvaI8pgzmn8FwPtu" style="background:#fef2f2"><td data-page-node-id="QeSUsslvPtHoq5UuRNXsdn"><b data-page-node-id="4LHOcpvEA4NjXFXYec5zJ3" style="color:var(--red)"><!--pnid:HvYjVhvpvBGeuhyIi3O0jT-->P0</b></td><td data-page-node-id="zwUlSy1j0fgnrS0ENlXmRP"><b data-page-node-id="CWaWLu0p14R8Z31rJltd2y"><!--pnid:wnuymAl8EOiDmCn3rOOAGV-->硬件工程师</b></td><td data-page-node-id="OkGhgV6cZWo0cVfc0IeMVP"><!--pnid:4ihGa4I3gtK9BoR25Wz6RW-->研发部</td><td data-page-node-id="K7808bdSfO11sQUh0g9kvk"><!--pnid:ii7Ph3QGSoQt3dnpmd0UNq-->编制未补 + 在途离职</td><td data-page-node-id="XAmCEEyyAekuRib7ypXBRy"><!--pnid:GOsPSfnmz8LqFpsQ9Eat51-->猎头 + 内推</td><td data-page-node-id="r7XLY9kK6gm4xlzQWHFpma"><!--pnid:OM95J72exYDvF3dmwPklRH-->6-8 周</td><td data-page-node-id="zuEkaPRHdTLwIKyQdi0mRr" class="num"><!--pnid:vGLycp1SOW3mA0AoMfq632-->¥25-35K/月×1</td></tr>
+<tr data-page-node-id="fop6tRbj9FCqC4p3WG16qr" style="background:#fef2f2"><td data-page-node-id="o6D5X0PVDwJv5Jx9sskLi6"><b data-page-node-id="s4xEr0tNR88H1nzbDzAYEn" style="color:var(--red)"><!--pnid:zTj0xW0PCwwc0FDzBiDM66-->P0</b></td><td data-page-node-id="O50x9Lqqp9dmcgXQPSQ16U"><b data-page-node-id="6grqSpPvqtPxaniDpIqbsr"><!--pnid:LzCGpN0g9tQL6dIiKmJv2L-->嵌入式软件工程师</b></td><td data-page-node-id="bbqwOGRx7h39KqkMtFhauN"><!--pnid:8cY4njKjx6LuMt35Aa5Tmz-->研发部</td><td data-page-node-id="aQGOMifgN3sryDh7DA3SMs"><!--pnid:TTccwCKxbviJ16OWSTlbhs-->已提离职（最后工作日 8/15）</td><td data-page-node-id="JvSfFoZZosyYUd3JQTRt6j"><!--pnid:HIB03H8NoNLYKdpEeOhWk7-->紧急社招 + 猎头</td><td data-page-node-id="kUw9MM7csWTy9XrlkvB3ml"><!--pnid:W5gdpg9bliLKb4nrFXRGLA-->4-6 周</td><td data-page-node-id="WghMRe2ic8PZfE3AL8SmdT" class="num"><!--pnid:5UjZzHidPtTpYX5D13Y1US-->¥25-35K/月×1</td></tr>
+<tr data-page-node-id="XlO0TuF1ljpmoL7dsiXlnq" style="background:#fffbeb"><td data-page-node-id="9NPhOsPTVv53u6xchelOZ5"><b data-page-node-id="YrRr0l3rRbfvzshsD2UWMO" style="color:var(--amber)"><!--pnid:Od5CeCBtabaMpVzdMNKUuI-->P1</b></td><td data-page-node-id="rq3F5sbYgywU8dVNua82MJ"><!--pnid:YRcc15oZeGQYzaHrAA2Kaz-->产线操作工 ×4</td><td data-page-node-id="aq1OIslvLGZmNQgXQdZ3BH"><!--pnid:eMviaMBvJyMZw5fsxT21ju-->制造部</td><td data-page-node-id="kgvmFc373sTgV66lOQIK4F"><!--pnid:7oA6xobyvKxkpr4SQKELSH-->批量缺口（夜班补贴低导致流失）</td><td data-page-node-id="pOeFK1w1M4HeDfB2Km0Wxm"><!--pnid:vSB1NN2S1dP84n6Lw2sF43-->劳务派遣 + 校招</td><td data-page-node-id="mEq92aNCb3LBiVPkZINbfF"><!--pnid:k1k2nel73pDZE2b4iqOJRb-->2-3 周</td><td data-page-node-id="adYbEBoMKh1kKJBXmU6A0E" class="num"><!--pnid:vbw1mh63NNHZwFXWCeo08S-->¥6-8K/月×4</td></tr>
+<tr data-page-node-id="BxsT3iyhSsirTllEeVEGKZ" style="background:#fffbeb"><td data-page-node-id="cD7SRlDbtvy5OEX8GVLZ8U"><b data-page-node-id="FJyE7eNH4DRfcnyUK2UnjM" style="color:var(--amber)"><!--pnid:0SZKDY5UJufy2Muv09MJpD-->P1</b></td><td data-page-node-id="bv42J8isuqlGsygLEbMs7d"><!--pnid:wYTAWhsF0hN0iqvXwZUGRY-->生产班组长</td><td data-page-node-id="pAY2HSOjnRubNqHVwwAF6v"><!--pnid:nWg9vHnFADcq6Ts53To8tv-->制造部</td><td data-page-node-id="gDZC96HjToNFk1ko0FsU6F"><!--pnid:1Dd6byX4NSTBg65k8LzQxA-->晋升后原岗空缺</td><td data-page-node-id="byREz638wEkYfHD4hDfO2K"><!--pnid:nXa97LHNxjftoQy96vNhvn-->内部竞聘优先</td><td data-page-node-id="JeVcTFtJ86hBh5skaf02Jo"><!--pnid:2QP6i8MvxAzxngnMr93srw-->3-4 周</td><td data-page-node-id="7nYxWNCm66zvAo3FqQ8imo" class="num"><!--pnid:rXFELIWKywdCxtxw86TLtv-->¥10-12K/月×1</td></tr>
+<tr data-page-node-id="5mG3ul3uo4yuM7x3x0nSV9" style="background:#fffbeb"><td data-page-node-id="7XUAiZUwb5hbNvYPJpJT64"><b data-page-node-id="BCsVkjKKcJ1PZgdgjaIyni" style="color:var(--amber)"><!--pnid:Wbowiq4M9HAxdsi8v0fB0W-->P1</b></td><td data-page-node-id="h01AfF58984iIQjQFkayNf"><!--pnid:m1t5M8lyrcZJuo8zFUmHse-->IQC 检验员</td><td data-page-node-id="uQzAr63tePNake0S1KRM1P"><!--pnid:CQlmPDFtKjBUtYTnweo4xe-->质量部</td><td data-page-node-id="ZMwU832HXUWxfu9MahfCWg"><!--pnid:SgCF9kig4NFP2CUNgeEciT-->转岗在途（→销售支持）</td><td data-page-node-id="99UtO8meOB7OEsq8R3swmy"><!--pnid:3607VHFfT6iC48vN6ZPDMu-->内部调配或校招</td><td data-page-node-id="3R28WUlJRt73rSYaBPrOx5"><!--pnid:VvF9H5K4SuXzWKyptROoyt-->2 周</td><td data-page-node-id="4u31mJCXVCZscVqoMzWEg8" class="num"><!--pnid:fA6vf3HGjUs21Flk7sBQoX-->¥5-7K/月×1</td></tr>
+<tr data-page-node-id="nWbLMKBsV5cRd8OBR4Xj8p" style="background:#f0fdf4"><td data-page-node-id="Z7iWkm5gOAtyzP30dPP88y"><b data-page-node-id="mpZxwOWHNS0Tab1ozTxKaF" style="color:#059669"><!--pnid:cMpVEGBPbhnBDE0l9H4m21-->P2</b></td><td data-page-node-id="QQdys0Kc8ueZSmgmc6x7d4"><!--pnid:pGRKFl7doFiROTpomsrL5k-->大客户经理</td><td data-page-node-id="vMIM6N2uwnDilU8wLqOCcn"><!--pnid:HCKmPbkLB919oh4b7UriO5-->销售部</td><td data-page-node-id="XrXTX9ILVK6LW6QdH8eDRZ"><!--pnid:jBB67iCX4ZJfFtZak1US3G-->自然流动空缺</td><td data-page-node-id="2QtjYFd6uMxDCuDWIH3son"><!--pnid:FHXkA8nneNN7shYYijLRGJ-->猎头推荐中</td><td data-page-node-id="KDFMHHUEhGPvcZVEr9NXWw"><!--pnid:bYUlVlH0Aluw8Azx4IaGLr-->4-6 周</td><td data-page-node-id="VtDgGZ3udYQ6Tu6HDON2Aw" class="num"><!--pnid:pRivlNepsPjI3G8ciMwGIX-->¥20-30K/月×1</td></tr>
+</tbody>
+</table>
+</div>
+
+<!--pnid:7TbhZXELvnMWh8KZ9quCZB--><!-- Verdict -->
+<div data-page-node-id="MJgUYAYBjSb3ZKKHZVrYEp" class="verdict-box v-red">
+<div data-page-node-id="PsD3mfrli5binls2MypXyP" class="v-title"><span data-page-node-id="9NrzXtQJ5SsT0wx1rx1FwL" class="verdict-icon"><!--pnid:7WMbbkf3qKF6hJ07eTeTE8-->🔴</span><!--pnid:PMgACJ39QinHKD4oeh6YiS-->盘点结论：整体缺口可控，但关键岗集中告急</div>
+<div data-page-node-id="wGwEi9yKYLlqNqOvSZuLY8" class="v-conf"><!--pnid:zc7aIylfC9wPJlCjbgqp85-->置信度：高（数据来源 HRIS 实时快照 + 90 天异动全量核验）</div>
+<div data-page-node-id="4iVrtGn0Rhc5zjAi5bpOhG" class="v-detail">
+<b data-page-node-id="TTg3TbzrBZI72UcCTacwon"><!--pnid:JfXosEhBMPgsuClKRBSk8C-->核心发现：</b><br data-page-node-id="8cnLrIvNn0odEtQw8fQu0U"><!--pnid:1VnR87iQRaXM3DvFHD4xqx-->
+• 总缺口 10 人（8.5%），处于制造业健康区间（5-12%），但 <b data-page-node-id="Kp9stlEq4AufPxEuJzrg4A" style="color:var(--red)"><!--pnid:0KeKtVtP7INn0B61Yr6H9U-->4 个关键岗位</b><!--pnid:41L92rR4UJrTVkC4YANePI-->集中在制造部和研发部<br data-page-node-id="jqzGENP4mFw9T6Nyj1zy8w"><!--pnid:WxUFQBBAVaqFweOowhg0KC-->
+• <b data-page-node-id="FF4YBFM6tEI0IzlzqYgTDL"><!--pnid:lDNj1QqQcltPUzP609HiDK-->制造部</b><!--pnid:VNcGdIjx9AJTuJ6U9PwwpT-->：设备维修技师为唯一不可替代岗（平均修复时间 MTTR 直接影响 OEE），建议立即启动内部师带徒 + 社招并行<br data-page-node-id="Qh2dOArmnswj7LSGYNC7yE"><!--pnid:ky9WhNXzFaHuDpROJSSPAE-->
+• <b data-page-node-id="NpNhOkvTBBNWa7phMEwmZ1"><!--pnid:C3rx5vEM8zgwIHlsk6IL0g-->研发部</b><!--pnid:44VPn1PeDcm02l2e8UVdxM-->：双新项目（智能控制器 V3 + 产线 MES 升级）9 月启动，硬件+嵌入双缺，需 <b data-page-node-id="XYAHJQawlchzfxkMsQlv7N" style="color:var(--red)"><!--pnid:E5pQjAUIv9UNbEZwD0NqYE-->提前 4 周到位</b><br data-page-node-id="H7zNQhqEjA3ieVinI8g9hv"><!--pnid:ibEapsLbvu6vEaevASe4QZ-->
+• <b data-page-node-id="GLLOUfNl5SKA3T3Aq4FywN"><!--pnid:SRESy4DrfMmkzurPQUYRE8-->编制疑点</b><!--pnid:CJtyBkcHxj4d2rWVgeNlxx-->：制造部操作工编制 52 人但历史均值在岗仅 48-50 人，可能存在编制虚高，建议年底复盘时重新测算人均产出
+</div>
+</div>
+
+<!--pnid:qcABs9Gbj0DdroMFnovQCF--><!-- 3-Step Actions -->
+<h2 data-page-node-id="iyNaGEmZDhx4IGjLKBHfuA"><!--pnid:eAdyyoULvKy3QOY2Yw9cvE-->⑤ 建议行动（3 步）</h2>
+<div data-page-node-id="oyTUHdOJYSiKddgdqTsESr" class="card">
+<div data-page-node-id="mdTWDmnW2tLI3tadkLRd52" class="action-list">
+<div data-page-node-id="LvXEA1lVtYqPOiJdifsvbc" class="action-item"><div data-page-node-id="nm1umbm69gkkHjf7m0qt42" class="action-num"></div><div data-page-node-id="EZBqaylFCsUFsghonZE75U" class="action-text"><b data-page-node-id="xSCxlvGkEtKACtmheHePP0"><!--pnid:c8UtKtu8PHkBOtSWHbvPUC-->第 1 步：P0 关键岗紧急补人</b><!--pnid:dxwrkr3bUokNjdyhQ8qNrk--> — 设备维修技师走"内部培养+社招"双通道，硬件/嵌入工程师同步启动猎头内推<span data-page-node-id="Oplkw7B7fIaGXNpAYmQNgN" class="action-role"><!--pnid:epGipYbQP2i71dMmKowhEw-->HRBP 小BP 主导</span><span data-page-node-id="WREgyKjJo0s10D811KRJJB" class="action-role"><!--pnid:eS11s1x37SRmVBuZMZ1B2M-->招聘组执行</span></div></div>
+<div data-page-node-id="alaCJs4Fix671AQWXim7SO" class="action-item"><div data-page-node-id="X7u9bKPjDgcfZiUpWsNwlc" class="action-num"></div><div data-page-node-id="I9AI0PkKMZkDRNDTqrjQpS" class="action-text"><b data-page-node-id="pQciR0pcXdudEGtQFmWB7Q"><!--pnid:t5Xx4WMf8L9JHEnkFn3uNa-->第 2 步：制造部流失根因干预</b><!--pnid:CHSfeIGUXS2LGF2WrH3szb--> — 评估夜班补贴上调方案（+15%-20%），同步推进操作工劳务派遣补充<span data-page-node-id="0skcAlUQIHTKPNlzXt2eIc" class="action-role"><!--pnid:xrnDuzXv7kylcMWi3L5Ez3-->制造总监审批</span><span data-page-node-id="FFdduInAudM4ZvCm9RMZXT" class="action-role"><!--pnid:RbL9exNwUl0QZyJAvWkm1K-->薪酬组测算</span></div></div>
+<div data-page-node-id="65rMIQ3T1aLtL7ePxgQBKX" class="action-item"><div data-page-node-id="nJbtcwqdvtMuyU1kVmvelk" class="action-num"></div><div data-page-node-id="pIT3aFmmD7bQSkPLPLiRgi" class="action-text"><b data-page-node-id="Gr4ICVzYStfCjYChDu7f7V"><!--pnid:beKzN9igwnlEYV305vJYgF-->第 3 步：编制合理性复盘</b><!--pnid:kkyreqnlqvqXoGFuNzHSfI--> — Q4 启动制造部人均产出分析，为 2027 年编制调整提供数据依据<span data-page-node-id="eYLuxH6yuhiUZWzTMiibYZ" class="action-role"><!--pnid:qbqZEGdu3p9laZ2tTDIe29-->HRBP 小BP 发起</span><span data-page-node-id="6QGPdsP22fbFpxNwphtSyj" class="action-role"><!--pnid:kANZuzjmkREDeZNm5HvjNt-->COO 参与</span></div></div>
+</div>
+</div>
+
+<!--pnid:Wvcw9ql6Zx4uy07nfbY69p--><!-- Follow-up Q&A -->
+<!--pnid:URS9TA9JnjHeiPVpiMtz2Z--><!-- Footer CTA -->
+<div data-page-node-id="uoa6tNtk84kgKIiJvBMIFd" class="cta">
+<div data-page-node-id="wEzmof3X0uUx4CJ8DylSIe"><h3 data-page-node-id="nZybdD1Rv0LCLGUlulwNJV"><!--pnid:y4k3yEYaghvglVeXXClmLq-->想了解来龙去脉？</h3><p data-page-node-id="0Te61fZClysS61QIz1QYsz"><!--pnid:nirQwhewVyOIYNZfAXgxy9-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+<div data-page-node-id="VOEF4serVbNcDdCDZ0tdUb" class="btns">
+<a data-page-node-id="VuzrGktEp0Hh4zsNgqyo6h" class="btn ghost" href="场景引入.html"><!--pnid:zgXw6bVaxavajpNnuo0ylG-->返回场景引入</a>
+</div>
+</div>
+
+
+</div><!--pnid:l2f5EVG3X3owTGeFmjK8D8--><!-- end wrap -->
+<footer data-page-node-id="wtA0S81uhu6XvGNRloYWOI"><!--pnid:AAen6CR5xVlP9w2ZuR5L5Z-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="imSMGYqO8W6wFFDYiwZ3Jd" data-pnid-children="E1m8o8loW3ClRSKrJwkRDH">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="H3a2bR0BCyRHfHk1LmjhKp" data-pnid-children="yEJ1C7wBWl4yXTdgheNacR">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="l8WoR3IvqQ8OYNLDbPZvBi" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="s92G3TzSyWcjQJctSTnHhl" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="DMxGzAKutviP8bDWD2RklO" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="F5OWxJbqYJ4b7MdfiGE8Zq" data-pnid-children="Eq2aFaHJ4h6eMoA4UFnX8W">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

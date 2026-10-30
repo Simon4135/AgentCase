@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html data-page-node-id="M8ejqEdSLDkaby9mf4P5Yg" lang="zh-CN">
+<head data-page-node-id="zYk1uZtL6TsePeYi540jO5">
+<script data-page-node-id="WqTKEYH4DLo7nQzuOgQHzE" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="SbAudCzk7z3hSQP8PKXh4v" charset="UTF-8">
+<meta data-page-node-id="b8d6xImDdTDUnkj22040T9" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="YnyXpQHKjKRiZTXvbhgxrM" data-pnid-children="QAQZdZSRl2cHdH8RlMDA3A">续租与换租决策包</title>
+<link data-page-node-id="i7hJ35hE0Y7tMqqwtjppyj" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="DE4YR1OGvh31WtfDtgqouv" data-pnid-children="30ILM4E7M7gMnUZaWiVZmv">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="1YZDHa1l2Isd9uAfsDM2D2" data-pnid-children="WTL8JUNoOaLPNc4T6s1IAy" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="UflhSyDIyyQ47EBTDmOrTV" data-pnid-children="e0hqe4DwcyJw1eOHF1qnl2" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="Jl8nArsTSQaUkEUnunV4Hp">
+
+<div data-page-node-id="QdeDGjX76DfDeO47Ung4tC" class="wrap">
+<section data-page-node-id="3np6TVt2nWkhm7GKz8pJdB" class="page-hero">
+<h1 data-page-node-id="coLXcd5OKAkZ7MJWIU57wq"><!--pnid:Uu9Jt8VxV4SxKW5MpHXw0q-->续租与换租决策包</h1>
+<p data-page-node-id="5x4MWjmWVDud9pleYZv5p9" class="lead"><!--pnid:fRPViFdnqAtW2x33jYV2Vd-->租金看着降了 · 但把装修摊销、复原义务、空调加班费算进去，可能比现在更贵</p>
+</section><nav data-page-node-id="5DlzLer3UFp9FQyYJ10TEP" class="subnav"><a data-page-node-id="U6Bh0Bzr39Q5BussbssnXQ" href="场景引入.html"><!--pnid:ARmusVU67Xs74ERrDv9PIf-->场景引入</a><a data-page-node-id="Uk3UOxim08jXUmLyIe0Tj3" href="LiveDemo.html"><!--pnid:xQFUR3VWamVhqE3BhJHFlJ-->Live Demo</a><a data-page-node-id="3b1RXiqFT30UzVo8GjenQ9" class="on" href="#"><!--pnid:8ZzcvQBPCnOxpUWpa5sjBQ-->推荐任务</a></nav>
+
+<section data-page-node-id="Ag1fpBqiLfrdpZHV1UK9bp" class="blk">
+  <h2 data-page-node-id="zSGgzDLgvFuYuu4sPsC7lj" class="h"><span data-page-node-id="dTYCXdhSj8ENeAXSQMBUX3" class="num"><!--pnid:Cx1QAVcqbMNeq76WwATWqU-->一</span><!--pnid:TlnfCPNsFDULU5tHDDc7sY-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="p6au6iYXHpu9K2bdApKNr2" class="subline"><!--pnid:3V9UZEmlcIioq7fq5TkNaO-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="LGRrVXXK9o9yQaR3kYnw8q" class="card"><p data-page-node-id="igutTn2yUKyXNo0b8nCprE"><!--pnid:6eRAzZM3MbAi9MNrYkRCsP-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="VmlkehvjvvydMgWO1Gavmh" style="margin-top:10px"><!--pnid:YAwvWKtAzHtJEIDJWQ5xqu-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:iDZ2lwvrwPpTU8Fu38R959--><!--wb-skill-start-->
+<div data-page-node-id="rOMkX0Qm74bgVg6WqK9FWd" class="wb-skill">
+<p data-page-node-id="sx217kYpaX49b7rr6OP5nO" class="wb-skill-lead"><!--pnid:frssGXgJsA22pm7fjYXtdE-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="F4gUg7wdiVnc4QtXY0BPOr" class="prompt" id="wbSkillPrompt"><!--pnid:D27VxSzF4Bgb61x2ctDBYi-->【准备】这个场景的规则都在「续租与换租决策包」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/1fNnHqZL1LCfpZhxpsIIuf/KLlWBa-lM1zZ/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="811VtNY3IQsBfVeBHDRldM" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:fcEj37Mp2p1qGFDtMhhnE8-->复制</button></div>
+</div>
+<!--pnid:AEXOziFJdulHyOTi9MU1mQ--><!--wb-skill-end-->
+<section data-page-node-id="11z8QNM91nSa6oueCy8ucy" class="blk">
+  <h2 data-page-node-id="JdtZ834wx4Jw6p6m1G5da8" class="h"><span data-page-node-id="F2pV2ACnucX7BtIRPWegCe" class="num"><!--pnid:FsREMQZ7MMrKZwi1wlUPtO-->二</span><!--pnid:rYk4sMdz95QPyftmk85YaE-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="0cn2Q66VaPmlexAOgm3ccz" class="subline"><!--pnid:ZciUzE9BVCW4J24j1Kc7Lf-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="WElYx8MbIGbI1qzC1vVtZa" class="tlist">
+    <article data-page-node-id="9cMKRrs2bp0UwOJiUOI70H" class="task">
+      <div data-page-node-id="eg05SMosAgC2IkUvA1rfcZ" class="th"><span data-page-node-id="5UJ5cCdaYE5MiZxvM90YKv" class="no"><!--pnid:jAYU3QZoVBUb5oumjZnOWu-->01</span><h3 data-page-node-id="33Q3KCaH2gKIKzfs04a92l" class="ttl"><!--pnid:KNCg89JyBwBZDVxmOEs5yE-->首推默认</h3><span data-page-node-id="IJU4jvAwry6srmYCtR4lPR" class="star"><!--pnid:LryKhZix7oplywgHINNP6y-->与一键体验入口一致</span><button data-page-node-id="7YuPmWovXepFP5N8ACI8gc" class="cp" type="button"><!--pnid:CmuP3WQL9Hjt8IiA588NtC-->复制</button></div>
+      <p data-page-node-id="VkHB88RfCkRduz24r4wbxZ" class="tp"><!--pnid:FP2Hm15n0ryUJWIth28CjJ-->这是我们现在的租赁合同，还有中介发来的几个候选房源，以及装修投入和物业账单。
+先帮我把现合同体检一遍：建面和实用面积差多少、递增怎么算、提前解约什么条件、 搬走要不要复原、空调加班怎么收费 —— 每条写清是第几条。
+然后算出最晚什么时候必须做决定，按通知期倒推。
+再把续租、换租、缩面积三个情景的三年总成本算出来， 装修摊销、搬迁费、复原费、空置期都要算进去。
+最后告诉我谈判时该先争什么、什么可以让。缺数据的地方明确说缺。</p>
+    </article>
+    <article data-page-node-id="JlTFn8xuchZVwVSiU9Qatu" class="task">
+      <div data-page-node-id="LzHpNRmYafA3dwKx7X7PSU" class="th"><span data-page-node-id="yHGg9CSqPls6zAxX1HO8sC" class="no"><!--pnid:oFvp2HcmB5kDjzsDUjb896-->02</span><h3 data-page-node-id="A5w1wXMwVRMrOyMSSGdsnr" class="ttl"><!--pnid:kmEaRwH2qlI8Hl79ZLmswO-->只做条款体检</h3><button data-page-node-id="r97c1Eusr4sUyzBjc1vBCK" class="cp" type="button"><!--pnid:dvoDM01ngfNclCcSZP4DpQ-->复制</button></div>
+      <p data-page-node-id="HQWSuCitTI3ruYHl68Efpf" class="tp"><!--pnid:rvS8CCy5aetj4uE0W5pAKr-->先别算成本，只把现合同体检一遍：建面与实用面积差多少、递增率怎么算、提前解约什么条件、搬走要不要复原、空调加班怎么计费、转租有没有限制，每条写清第几条。</p>
+    </article>
+    <article data-page-node-id="sTi88cUn9WSxJqSMkTIkxk" class="task">
+      <div data-page-node-id="FsjA70JkmIVq0lF2JnPAPZ" class="th"><span data-page-node-id="zSkMiLmR0bTHUwayq1p5gP" class="no"><!--pnid:9TExkTkmZLQjqis0tnUAIs-->03</span><h3 data-page-node-id="myidhjdKOQ9VihGW2tMjSH" class="ttl"><!--pnid:n2SwlWSdvrftEIqSN7vTrK-->换成缩面积口径</h3><button data-page-node-id="we0su4VOMytFUXMI5EOM1N" class="cp" type="button"><!--pnid:pTmjderfjud9ClKIvIhENC-->复制</button></div>
+      <p data-page-node-id="tNc3F2pxPYsjBHon0Mhu3A" class="tp"><!--pnid:sMMvGgHg8FLKZYPp4Q5KOd-->这次换个口径重跑：不算三情景，只按「缩面积 20%」这一种情形算三年总成本，把装修摊销、搬迁、复原、空置期都算进去，看比续租原面积省不省。</p>
+    </article>
+    <article data-page-node-id="djq2OnPZD2FGCyuR3ir7Jp" class="task">
+      <div data-page-node-id="9TRMZmygpwSz2PyII2Qu9w" class="th"><span data-page-node-id="3icTUN2l7ctSPsK3Nf4mCA" class="no"><!--pnid:0iZtReLGoo0cik8074PHiv-->04</span><h3 data-page-node-id="lUJVe2sSXAY5OAufpjAGGi" class="ttl"><!--pnid:2QgVzBDgRUbQjO4sKYIOdB-->候选房源横向比</h3><button data-page-node-id="cJr1CmGHd7l56KuznwkPVp" class="cp" type="button"><!--pnid:1D8cZUrd6IOKtDvGZU6qub-->复制</button></div>
+      <p data-page-node-id="q7HP1YgET6jsg3dLsR2SeJ" class="tp"><!--pnid:kulHdDeiwZrNspx7Gc1rWW-->把中介发来的几个候选房源加房东续租报价一起过，给我一张横向对照表：建筑面积与得房率反算的使用面积、单价、免租期、递增率、三年全成本、装不装得下现有工位。</p>
+    </article>
+    <article data-page-node-id="SCFJo1nc9Qi7AZ70Ue9ZUo" class="task">
+      <div data-page-node-id="E20YXg9ZUVu3onrgmnhkJC" class="th"><span data-page-node-id="xpRjRvwEITbAV7mekPycVk" class="no"><!--pnid:wBMCWhtEO8wrQWlrNu8RMH-->05</span><h3 data-page-node-id="aMl5g9kT2J7PaPNpjDIwcS" class="ttl"><!--pnid:DfT1UGMac4kWhoDrGPX1cg-->给老板上会用</h3><button data-page-node-id="eaGDGpWy2JeVPCsS9M1zgI" class="cp" type="button"><!--pnid:NJRm6VEiAGpM1d5iUq7fYU-->复制</button></div>
+      <p data-page-node-id="d4h59nQB4TugjdFTgMw3Ye" class="tp"><!--pnid:s8Thmj5TznvfwlhyAEglRI-->把决策包压成老板能看的一页：最晚哪天必须发函、续租与换租的三年总成本各是多少、搬走要额外付多少复原费、缺哪几项数据所以现在还不能下结论。</p>
+    </article>
+    <article data-page-node-id="LMxhQ1eqVD0xh7tjEcGCM5" class="task">
+      <div data-page-node-id="mYbOWzFjdXfagtA7Lun85j" class="th"><span data-page-node-id="aBgIzt3npyUOrc2O4bhx0m" class="no"><!--pnid:8XDXeq2JOrXXR5q7O823Xi-->06</span><h3 data-page-node-id="cpqiFP1mASqCu0mxMh5bsO" class="ttl"><!--pnid:BS6LS3mL0PAnJcEjlbvrnu-->让它反驳自己</h3><button data-page-node-id="7UojryQVfW9r8vOmO2745i" class="cp" type="button"><!--pnid:Jmghl8AvvO16X6VhiZ3qXZ-->复制</button></div>
+      <p data-page-node-id="S4T0EEQmOVHaqemQnC417S" class="tp"><!--pnid:ye93Ij2o0uD6S9BqsaNoCS-->你说「候选房源 B 装不下现有工位可以排除」，依据够不够？把报价单面积、得房率反算过程、现址工位数列出来；反算依据不充分的就改回「需现场实测」。</p>
+    </article>
+    <article data-page-node-id="cbGwshCT9rCcDjxTdXTlD5" class="task">
+      <div data-page-node-id="KvYS4w9ZDYeI95OYkrzgCu" class="th"><span data-page-node-id="zbm6ANyU11bR4GEMb08cwS" class="no"><!--pnid:3LBecmxlMpDr7uN3ahydxU-->07</span><h3 data-page-node-id="Ijc6gPKOtFepfdsSC6jJvo" class="ttl"><!--pnid:FdqRLhucVhBAkvWnpvn9Ay-->比对补充协议条款</h3><button data-page-node-id="t3F3WZFiUCmFhxoh2uTed8" class="cp" type="button"><!--pnid:GJPgy2n5Y2fgAXOE6SyB15-->复制</button></div>
+      <p data-page-node-id="wezbYFMcQUoWFmn4Bzh19w" class="tp"><!--pnid:7Bv46XH0T5ita3fhzXPtK5-->专门比历史：把现合同条款与当初签约时的原始条款对一遍，哪些被补充协议改过（递增率、免租期、复原义务），改过的那几条各自影响三年成本多少。</p>
+    </article>
+    <article data-page-node-id="K1ClpTAebEKbQD4YwJAqG6" class="task">
+      <div data-page-node-id="ad47c4VsZVuzZTx2ILeV7A" class="th"><span data-page-node-id="V729DFlQckZ8eB5ucySEuK" class="no"><!--pnid:RUj0p25sQojRuVEFiI865F-->08</span><h3 data-page-node-id="vgFCj1raWNNYzBC3xjJeAp" class="ttl"><!--pnid:Jy3RnDNVSTyoERyuTldTE4-->对照三级风险自查</h3><button data-page-node-id="3it6Zp8fXXrfVfgkejk5SJ" class="cp" type="button"><!--pnid:Cr08YUVlJk03OCMzZM3KEK-->复制</button></div>
+      <p data-page-node-id="TbrAxgMPLT2fNQ85PTyGsM" class="tp"><!--pnid:MrtEuPPHmHgVFOVhrPez8j-->对照「必须改／建议改／知悉即可」三级把这份决策包自查一遍：有没有该归「必须改」的落在「知悉即可」、三级是否每条都带了条号与页码。</p>
+    </article>
+    <article data-page-node-id="nEpTtbgoy1VT661Yvn44rg" class="task">
+      <div data-page-node-id="3OFgvVkJsjAW6f0xMfjTJW" class="th"><span data-page-node-id="8fxsPYC48pQTziBLXndzWV" class="no"><!--pnid:v4c1Q0torah1QxITrf6kqB-->09</span><h3 data-page-node-id="OMsRnchtI64pPXIQGH8AIf" class="ttl"><!--pnid:GRZO5f4LggdSnUMOtsIlaW-->折算成复原费与期限</h3><button data-page-node-id="NUPtwUyJsSTBzHu29lmJkh" class="cp" type="button"><!--pnid:TooHrKs4I5Y96H1wPHXr28-->复制</button></div>
+      <p data-page-node-id="NYJpvo20UjFllIFjMrIW3n" class="tp"><!--pnid:83ohB7qF3pjPgDxtLWasjj-->把复原义务折算成钱：如果搬走除了搬迁费还要付多少复原费、这笔钱加进换租方案后三年总成本变成多少；再算最晚决策日距今天还有多少天。</p>
+    </article>
+    <article data-page-node-id="SCout2PthGW6H9Zx3xtCd1" class="task">
+      <div data-page-node-id="gpg70h0Nn2qsSCi3h9WjXH" class="th"><span data-page-node-id="rODsXbzj6MNHto3y9nDy0v" class="no"><!--pnid:qgKLDmrDkhfCFb13eX7Ir9-->10</span><h3 data-page-node-id="XogRodjlVRjLtOWRg94KNb" class="ttl"><!--pnid:dLg4kQUj9WiGGh0VLzahhy-->沉淀成测算模板</h3><button data-page-node-id="vEr5w5rqWEzoWnwRAXdbkO" class="cp" type="button"><!--pnid:AKs1CFxHatg9NX3lTo4p2d-->复制</button></div>
+      <p data-page-node-id="MnjXc7KbeijmPuac9EPCaj" class="tp"><!--pnid:gDlOtdgaH3dBfdDFym54t8-->把这次的谈判与测算口径整理成一份《租赁决策测算模板》：三年全成本要算哪八项、关键日期怎么倒推、让步优先级怎么排、缺哪几项数据就不能下结论。下次续约直接套。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="YRgOTQ6Mp2QqcWILNuD0hU" class="cta">
+  <div data-page-node-id="lCJdmtjsnSUQOxLVcTeMnQ"><h3 data-page-node-id="6eWoYUzBJ4d6iXkBBM0dN6"><!--pnid:ijeLktjLmcEm7NHoYo3PWc-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="1V7dmgZknZdNvg3Cmjg8vP"><!--pnid:TbyMhON7Dx1AZk38lVmgMj-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="yrIK19iLniyG0dgNDu7amR" class="btns"><a data-page-node-id="UBHYM2BfYyiNJArG0jZcey" class="btn" href="#" id="ctaContact"><!--pnid:KYGqTOadS51xVYkQV9Ktv3-->联系我们</a></div>
+</div>
+<footer data-page-node-id="HxBEYTWhzA4em5sU8A5nhc"><!--pnid:w41VrEPekLHbmOc0WIPJ2Z-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="cj2PsovwOFpe2kxWblIDyS" data-pnid-children="rSFNnJuW68Pwb82GTY94pA">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="hvV0DjZzLWu9l1WDE77rqY" data-pnid-children="eAIyo7BUWNEmW8FuCwzAzB">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="THyOA2yLYlVyjRGFiHPNyC" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="iFXUND7xb4l2E5txKlF58Z" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="jMp6SkmHH21IoATolqTQpa" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="n7sJ8gV9t1KE50kPII7KG4" data-pnid-children="32s4EltEdopvAfJBzYTGlF">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="QwFdjcMAOZADgkMv8l32jn" data-pnid-children="b4Sn2TfGvKz3T7er7fVuvP" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

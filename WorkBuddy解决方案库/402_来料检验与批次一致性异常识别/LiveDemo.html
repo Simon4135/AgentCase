@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html data-page-node-id="YVDuCvVmS5SNkelpEISvEh" lang="zh-CN">
+<head data-page-node-id="5KkUrAWDWsgjoZIwGZVQjl">
+<script data-page-node-id="dmK2yviwHJAZoSydBSEV55" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="guoaayrIHAdYif1CkigkOb" charset="UTF-8">
+<meta data-page-node-id="nFrQ0YFiEUpgkqiKIhlLiR" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="6WSMxZPCXjYgicsFFD9Ew9" data-pnid-children="4FEahmJOQ7U8mVhFV76Eql">来料检验与批次一致性异常识别</title>
+<link data-page-node-id="2I4Uvs0CwWHR6h5RjpSyok" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="n7s9isWSjp1It82ldxgXLf" data-pnid-children="ArFcheXS0y8abU2twws0oW" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="khw1O5eG8Iqs5JAoE4PElA">
+
+<div data-page-node-id="K1I2uRiXHuwJWgDqINv6RX" class="wrap">
+<section data-page-node-id="GHQbC6kYY6skNCNUQpTsNc" class="page-hero">
+
+
+<h1 data-page-node-id="Pva32211tRMD4hBDXNr6JE"><!--pnid:WzA2nIo7rUqwDEy93rJvmn-->来料检验与批次一致性异常识别</h1>
+<p data-page-node-id="PtbT4w2D7LqxzWSwbi8WzG" class="lead"><!--pnid:W66rqiZNwTb3MGQQp2xUHc-->供应商的 COC 上每一项都合格 · 问题从来不在那张纸上，而在没人拿它和外包装标签对了一遍</p>
+</section><nav data-page-node-id="QaQ10TAuPHfqBmXdhNUBa5" class="subnav"><a data-page-node-id="31ehu0YSBu7um6KLY2QUKt" class href="场景引入.html"><!--pnid:EAQgCMreGnf0WYXIpnm1o7-->场景引入</a><a data-page-node-id="1izeZCbQY5WKHLji1TLQie" class="on" href="#"><!--pnid:goyzfpCuWvbUt8Sq5oYpdq-->Live Demo</a></nav>
+<section data-page-node-id="ka0oBTpbxRGNr9sZC0ruug" class="notice warn"><div data-page-node-id="i9AVAemVBK7KlcUWF9BDMw" class="icon"><!--pnid:SRae7nppCOlYleFU5V4uFG-->!</div><div data-page-node-id="4Rn8Bvo8pkf4rq3DV6RUbA">
+<b data-page-node-id="NmRu1ybfoJxTF2oWAnk6oM"><!--pnid:pSqhd4gYcpE0WEB9EA6Ujw-->本场景的演示数据正在制作中</b>
+<p data-page-node-id="3Va9UKGLgS9Rszyg3mE5ny"><!--pnid:rcF0Z8dyRKm48A2Xf4TISg-->下面展示的是这个场景的执行骨架与四类看点。完整的逐步演示（含真实表格与拦停结论）见同一角色下已完成的场景。</p></div></section>
+<section data-page-node-id="OTjGxsXLeSHWwirYrhP4VG" class="blk"><h2 data-page-node-id="mNZGBYS1dWxIBoUp8ETiPB" class="h"><span data-page-node-id="wNAfNXWxVTO5qWiXBe8Cmv" class="num"><!--pnid:qEraW9Fc1vmwhrhcoBYzwg-->流程</span><!--pnid:8IGtfbSwGTWKc65M7vnpvn-->5 步执行骨架</h2><div data-page-node-id="f2kmeqnh6sKUJsUXZD2CDW" class="dstep">
+<div data-page-node-id="dySrEBvuKPEb5YXc6qwNJ8" class="dstep-h"><div data-page-node-id="IhEvi4ikGiY53nv5Ycq7KI" class="dstep-n"><!--pnid:I13rzBYhg0VKdUGzmSXQMa-->1</div><div data-page-node-id="fDjND2Qip287UESALbrH6G"><h2 data-page-node-id="bEUXSydA17MlEAUtFc9YFA"><!--pnid:1oppznk7jZrt6wPYLZddxm-->四方对齐 · COC × 标签 × 扫码 × 配组规则</h2><div data-page-node-id="YceAtlpPnk71PrJH0HfsxK" class="sd"><!--pnid:wiY4LJ63JiUOjaTMb6YfHr-->逐只比对生产周次，标出 COC 与实物不一致的位置与箱号</div></div></div>
+</div><div data-page-node-id="AlOdJRxq4EtpwRchFPg4op" class="dstep">
+<div data-page-node-id="YDZ1SeMxPn27NvsinEzE4h" class="dstep-h"><div data-page-node-id="GEPOSFw7mpNhJPWZQMpcb4" class="dstep-n"><!--pnid:rxG98scmLFcRXQEaRhZd8r-->2</div><div data-page-node-id="pSLxkWOu9lRZAwOCGWpOo1"><h2 data-page-node-id="MsqS93j0EZL4TfZlKAhHU6"><!--pnid:FL6DHOMgrL2jGJJRhruXQC-->盲区扫描 · IQC 九项之外的三项</h2><div data-page-node-id="juwlWWDlLerqtI2skV77Y8" class="sd"><!--pnid:wYVoqiWLGV0XtpApSXdaDA-->K 值、DCIR、生产周次 —— 三项都不在标准检验项里，逐项给出是否为盲区</div></div></div>
+</div><div data-page-node-id="DI0BIdsXXMg9l6706Bj2qW" class="dstep">
+<div data-page-node-id="8em5RztaPCXVyzh88Uc85S" class="dstep-h"><div data-page-node-id="1n5k37Vn5lGKWbDMTQChAH" class="dstep-n"><!--pnid:PVtKwQgGbxkGDNIQBPZwuV-->3</div><div data-page-node-id="wiXYa6BK5BhSt2wKegZRST"><h2 data-page-node-id="5IFyBusrBr2IdMA8eKQq9l"><!--pnid:hiMZnPM5hI643Afsp1FOv6-->配组模拟 · 按本厂规则跑一次能否配成</h2><div data-page-node-id="PLnAliPrpeJWTjT2ao82il" class="sd"><!--pnid:r3QK5qKq8GnGNByedc8B5K-->跨周次的数量、影响多少个 PACK、拆成两个子批后的 PACK 数量变化</div></div></div>
+</div><div data-page-node-id="tL3N2j2JOeVtsyg5VUJDGA" class="dstep">
+<div data-page-node-id="yNur0671exWUkNO2iPTmkB" class="dstep-h"><div data-page-node-id="D5FA8PKKXuVMOl46nXA1pf" class="dstep-n"><!--pnid:8GJjxlMyiJgZeIUDRzj7tv-->4</div><div data-page-node-id="xQNksfG4aVP9Aihed2nlr0"><h2 data-page-node-id="N0j8gxRJbJ9pdYMw5475GX"><!--pnid:NY4jYtfO8rZgy9eprczTzb-->历史回看 · 上次混批的赔付与根因</h2><div data-page-node-id="XvVMfImlZPPB2lkoNXf1lj" class="sd"><!--pnid:dTLR181YWkQVJROActVFfA-->从事故台账里拉出同供应商、同情形的历史记录与赔付金额</div></div></div>
+</div><div data-page-node-id="kJwHhvAsd5Xfr3RkO8IEI3" class="dstep">
+<div data-page-node-id="jmbe6wvOWMhmrDcAyJ3w6S" class="dstep-h"><div data-page-node-id="DWlsGYCSYqkrJERIxDQdud" class="dstep-n"><!--pnid:7iJO5IBow4qSW3QRjlxsf8-->5</div><div data-page-node-id="Rj55xUkoNVKS8NbY7cGD7a"><h2 data-page-node-id="d3lVWgI1YDKFGTNDXFKa6g"><!--pnid:vt6iiaR74I2G4rPTrdzr52-->留证与反馈 · 生成异常清单与联络单草稿</h2><div data-page-node-id="bGhtzvBGJpJ8TSPBW3gVZg" class="sd"><!--pnid:eXDHJc3WzdPVSQuw72sf3t-->每条异常带证据位置、箱号范围、建议动作；处理意见栏与采购、质量两级签字栏留空</div></div></div>
+</div></section>
+<section data-page-node-id="wj3hFpAsnFD2iLuKhhQucQ" class="blk"><h2 data-page-node-id="T5TVJsh24pSwsVbBdFvLMc" class="h"><span data-page-node-id="QmNqW1CK1qJq2LnHxV2OBd" class="num"><!--pnid:OGbaEQR5yPg7yMYeTugK2i-->看点</span><!--pnid:QeomPiC2ejf4FGOXjjz35t-->这个场景最值得讲的四处</h2><div data-page-node-id="TG222HnogRf8kk2A9gZzkr" class="think"><span data-page-node-id="ZpRRzgR8r47wydjjnDiof2" class="lbl"><!--pnid:8uvcUtM4rc0yiR4JibN20j-->从 2024 年那次赔付里，翻出了同一个供应商的同一个动作</span><!--pnid:UbHtNJ0ANNCPkhthVcnaMU-->事故台账里记着：2024-09，瑞能新材 B-2409-280Ah 批次同样是 COC 标单一周次、实物混装两个周次，当时未检出，装进徐州项目，14 个月后 DCI R 实测0.31mΩ（供应商报 0.20mΩ），赔付 186 万元。而 IQC 的九项检验项在那次事故之后一项都没改过 —— 复盘结论写在当时的邮件里，没有进检验规程。<b data-page-node-id="OSYOiQrlZ7ZTsvvRlqw9hy"><!--pnid:lf8arESAP6VOMuzxNOtaVi-->这条不靠当年办赔付的人还在不在职。</b></div><div data-page-node-id="jPaFZrEvN7HfheantqBWpE" class="think"><span data-page-node-id="GcxXiVn8smT9s3fZ4zWF2n" class="lbl"><!--pnid:XuDmY9eVlKAtiQzav6Fd1F-->该拦的地方拦住了</span><!--pnid:9FoEGuJ8Ipbv2wqToialUe-->8,640 只里有 1,847 只外包装标签为 W19，占 21.4%，而 COC 上只有 W18。按本厂配组规则「同一 PACK 不得跨生产周配组」，结论：<b data-page-node-id="ocJi9E3KdxaQAyh6maQfMC"><!--pnid:dIabY4f3BbtvDVxYTcRZsV-->这批不能按现有配组方案投料</b><!--pnid:4ltwIpKSCvs3Xq4DIW2ycx-->。两个替代方案：方案 A 要求供应商提供逐只生产周次与配组建议、重新配组（周期约 3 天，占用分容柜 216 通道），代价是投料节点后移 3 天；方案 B 按 W18 / W19 拆成两个子批分别配组，代价是 PACK 数量由 160 台增至 162 台（多 2 台舱位与 BMS 从控），成本增加约 11 万元。结论：先走方案 A 要数据，若供应商 48 小时内给不出逐只周次，直接按方案 B 拆批投料，并把「跨周次混装」写进供应商质量协议的违约条款。</div><div data-page-node-id="fD3WzIBQDqVIZ4VdKpyv8C" class="think"><span data-page-node-id="zTrbaX6TJxllDW0C9t4ziv" class="lbl"><!--pnid:LNz3LH7acnpVLaoOVGvob0-->排除性结论</span><!--pnid:oOV0yqYTvaHYJjMJvA9u5Q-->外观、尺寸、电压、内阻差、容量、容差、环保 RoHS 七项可以整体排除 —— 1,847 只 W19 电芯的抽检结果（168 只）与 W18 无统计学差异，<b data-page-node-id="ojCmCXpiOl7me1NK2BR8O8"><!--pnid:P8wCShFdqZkG85oYauKly2-->这一条省掉了一次全批退货申请</b><!--pnid:EEA1G6luksDdiLkLCBDsCW-->。但 K 值与 DCIR 两项无法排除：这两项 IQC 根本没测，没有数据就是没有数据，不能反过来当成「没发现问题」。</div><div data-page-node-id="SNtbSSdCZScI7yB0Vt5aqn" class="think"><span data-page-node-id="qq2v9ehrnuUJwS4gQJ0KzJ" class="lbl"><!--pnid:N0oCfUHN7KDkVFoUauLaVu-->把技术动作翻译成钱</span><!--pnid:GqX77Aqn6WD7Mm8WIey1AM-->蒙鑫项目质保金为合同额 5%，即 930 万元，其中容量考核是主要扣减项。按 2024 年同类混批的实测结果（可用容量损失约 9%），若这批 8,640 只混入主批次且未重新配组，容量考核缺口按同比例折算约 83.7 万元；而拆成两个子批重新配组的增量成本是 11 万元，要求供应商提供逐只周次的成本是零。换个说法：<b data-page-node-id="XViRyoxCVDmcd7X4qK3r2m"><!--pnid:YwEG07Yg7Mnoy6MrlWF7Hm-->这事最贵的做法，就是什么都不做</b><!--pnid:tLfi3HdLJfnAZLVJqkGX0K-->。</div></section>
+<footer data-page-node-id="rrs2mLeDj2eqqIX0Ar7Muo"><!--pnid:ANBRQiYaKS4YF2a9gHucut-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="qQcJM8LzMQqjQzRhIvrTHS" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="a7Gs3Sd8deYqKOqjIpReJu" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="SIpksGar017uD3CKTZW0SD" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="Fj1tgB1vO0MDHUkWSMpfG1" data-pnid-children="EYZF8Bf1qLfL4AfF06TAhg">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="0Oi7HQjpFZecIfjC23rp0e" data-pnid-children="lBYf5IRTjI3qEsmNy6mB7Z">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

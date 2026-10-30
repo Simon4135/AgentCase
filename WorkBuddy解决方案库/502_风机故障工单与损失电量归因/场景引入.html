@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="xGu9d3diNNGb1WtZYf0aJM" lang="zh-CN">
+<head data-page-node-id="Y9plKKoLJA97sZ1JlnM4nR">
+<script data-page-node-id="rExVnywTt1l7gnFF5MkZoh" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="vrC1VNO4qWyCjDqwGaJnxL" charset="UTF-8">
+<meta data-page-node-id="GKcz19YDVM6kA9uIJjqnlu" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="dxRobCzSBMSXEcNhhprk3u" data-pnid-children="ey3toHUhJEMis3uXlw6OdW">风机故障工单与损失电量归因</title>
+<link data-page-node-id="1nD9neh5yDCkJ6IbQcOto1" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="wVgT0OCHOyLkbMzAUNBmey" data-pnid-children="phpjwxCy4YHPOWIhZzXDYS" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="TgruEFhZo9Vz3BE0STjR2d">
+
+<div data-page-node-id="a2qT3d8RqpjRDgc5WZpDSn" class="wrap">
+<section data-page-node-id="76SQrpZo4d5TXk9uigiK4Z" class="page-hero">
+
+
+<h1 data-page-node-id="7V6y2UXxMvXVYW4qs1kWwl"><!--pnid:vPTVznJrfgjn4W6bfuv9go-->风机故障工单与损失电量归因</h1>
+<p data-page-node-id="wJsTlYUIgem7ped7pDBYgp" class="lead"><!--pnid:HtfT0gS25FwgDqF9Ztt0Rt-->137 张故障工单都闭环了 · 没人说得清这个月到底少发了多少度电、亏在哪个部件上</p>
+</section><nav data-page-node-id="hC1qIegcMRgEkMWKwEI4v6" class="subnav"><a data-page-node-id="U2K7DmqU6NfVXi6mg9MS4S" class="on" href="#"><!--pnid:0HCWCeH35sQ45ZjYleLKAj-->场景引入</a><a data-page-node-id="ndPNqDuxcDaKrVaC9WXkFB" class href="LiveDemo.html"><!--pnid:tjvAPtRyaTWyIfeLDqT16D-->Live Demo</a></nav>
+<section data-page-node-id="1sdhyQgi4BHT4s7mSEN7d4" class="blk">
+  <h2 data-page-node-id="c5hlOwHyFCvQp1KL7NTu3D" class="h"><span data-page-node-id="RCdW6nBXPwG6rwTEJm2Fcz" class="num"><!--pnid:YJ6hwOmYoZvZ0EBn47zrpJ-->一</span><!--pnid:9rOkG7dzDmx2ZooyPC8fpz-->这件事现在是什么样</h2>
+  <p data-page-node-id="qsID0wJXEoK4fWL2j7psMt" class="subline"><!--pnid:sIWGBFD6TIqcY0AFdENdjI-->发电与新能源运行 · 真实业务触发</p>
+  <div data-page-node-id="cb3OujqNaarDdBw6SOvkqc" class="card"><p data-page-node-id="YMqqmmA9AktaCCIvh3ybRV"><!--pnid:txyITCw3z0rIgh9zqUscxH-->11 月风场故障工单 137 张全部消缺闭环——但月度经营分析会上，财务问「这个月风机故障到底损失了多少电量」，运行值班给不出数：工单系统里有机号和停复电时间，没有损失电量；备件台账里换了什么件，没和故障原因对过；限电损失和故障损失混在「少发电量」一个大数里。要求 12 月 5 日前给出可复核的归因口径。</p></div>
+  <h2 data-page-node-id="m5YTJ5Hsl5BudRPtojXc1m" class="h" style="margin-top:22px"><span data-page-node-id="OnySEDy9vDKeJ2IbpEG8Sz" class="num"><!--pnid:5LSZ3VHxln0g3sF73TS2II-->二</span><!--pnid:LziA3IuVLHU2kKQHl9F2Lg-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="izjAQF6EDAxZj7Kyk5JepW" class="subline"><!--pnid:TtBxLPihGcfnbNRZsGSdAp-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="EUPmPFSdU6AiCkcdn3w5es" class="pains"><div data-page-node-id="0zhjLaVzFgjhmdtt56EeDB" class="pain"><span data-page-node-id="IGn2RIJIB3FJg3uD2TSKbi" class="i"><!--pnid:KkMC3ZBDBUPcShojxI0z5u-->1</span><div data-page-node-id="oWXcdywrZByafHo3dBNYwr" class="t"><!--pnid:F7TmEwQ2VJl8sRLMN1CEb7-->某风场全年 547 台次故障、停运 10330 小时、损失电量 468.74 万千瓦时——故障工单、备件更换、损失电量三本账从来没人按月对齐过<span data-page-node-id="KeifNfZPeVLqduMVAqXmaR" class="src"><!--pnid:RWRYnekQk4LkIt761FQXaG-->依据 · <a data-page-node-id="qwxaahbbwiQdCJIRY3yg1I" href="https://www.researchgate.net/publication/396159284_guanyujiaqiangfengdianfadianchangguzhangguanlidesikaojijianyi" rel="noopener" target="_blank"><!--pnid:pZAbmK2CRX2z3zKbgL4hIX-->卧牛山风电场故障管理调研（水利电力技术与应用）：某年全场 547 台次故障、总停运 10330.53 小时、损失电量 468.74 万千瓦时；变桨故障占 33.82%、变频器故障占 26.69%；全年更换备件 370 件，其中 IGBT 33 只、变频器继电器 40 只——建议每月将配件更换与故障原因比对分析，并强化备件预警管理</a></span></div></div><div data-page-node-id="mQI7mg6fOtR5N91YdqjQTq" class="pain"><span data-page-node-id="roOhd3v3sC1Q8sPcrnpONn" class="i"><!--pnid:G6lZ8g9jOj0bfvUU4HP2rn-->2</span><div data-page-node-id="3sFJbshscbCgTlpz6ehUIn" class="t"><!--pnid:9v0y7eTOBkCWkW2RBcQKap-->变流器故障频次最高（0.20 次/台·年）但单次停机短，叶片故障频次低但平均排除要 229.54 小时——损失电量的主力是「低频长停」部件，只看工单张数会看反重点<span data-page-node-id="LGYf53EDRvIvH0sXvogdD7" class="src"><!--pnid:Qzut2mMdjaq6JQuEaQCSIG-->依据 · <a data-page-node-id="PLzUS2re2XCe6U4mHHWxkH" href="https://www.kepuchina.cn/article/articleinfo?business_type=100&amp;ar_id=253636" rel="noopener" target="_blank"><!--pnid:gIOwHGtDv2e5f6aGuGq4HR-->大功率并网风电机组状态监测与故障诊断综述（科普中国）：全国风电场调查报告显示变流器故障频次最高约 0.20 次/台·年；叶片平均排除故障耗时最长达 229.54 小时，齿轮箱 158.01 小时、发电机 105.93 小时——故障率低的部件对应更长的排除时间</a></span></div></div><div data-page-node-id="ti6Jf48hzpy9YMGFHCRkBD" class="pain"><span data-page-node-id="DVdqzEUsjNKYRNXWYFgzrr" class="i"><!--pnid:VLw53ahI6wsei7KYi0jelU-->3</span><div data-page-node-id="xNzy6D0i7CkmFyL68qW07P" class="t"><!--pnid:I6ty83AHZ0qN4H4Juxkot4-->IGBT 模块失效导致 22% 的变流器非计划停机，全年换 33 只 IGBT——换件记录和故障原因不对账，就永远不知道备件钱花对了没有<span data-page-node-id="QsoQQGBktGTUsRh2AZ9q3y" class="src"><!--pnid:yJF0szGbhoVLTapCYvGvJr-->依据 · <a data-page-node-id="9JDmg0PqnJJmglL711yVe8" href="https://www.toutiao.com/article/7676029343533662729" rel="noopener" target="_blank"><!--pnid:l5TyanwVGDHB5kLGWVlxWn-->风电变流器可靠性分析（行业统计）：电气类故障中变流器相关故障占比接近 32%；多国风机故障数据统计表明 IGBT 模块失效导致 22% 的变流器非计划停机；海上风机出一次故障，出海抢修费用可能数十万、停机损失上百万</a></span></div></div><div data-page-node-id="w8586JloEUOk4vsfDAlIjo" class="pain"><span data-page-node-id="2P26EZtaR1XctLqjtnoThz" class="i"><!--pnid:J006V89XasVif45azCZaAu-->4</span><div data-page-node-id="cPChNyuWgpLH9GElYmHvN4" class="t"><!--pnid:Ak399DWE6Tyucxejm4puid-->值班员夜班后整天昏沉、考试一年一轮回——让最疲惫的人手工归集 137 张工单，等于把最需要细心的事交给最累的人<span data-page-node-id="uqchq2tpsqjS7jEF1mTEkh" class="src"><!--pnid:T9Bmr03r1hNIyhy9k9v01H-->依据 · <a data-page-node-id="r1CiePxc0Chs8s8Isw5vbW" href="https://www.toutiao.com/article/7360633631599034915" rel="noopener" target="_blank"><!--pnid:GmpKzfSXkjfFqLWfjHjllE-->火电运行从业者第一人称自述：五班三倒上了 8 年运行，下了夜班整天昏昏沉沉；各种安规、操作、证书考试一年一个轮回，休息日被备考和开会占去</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="BRVOc1YcvMAcBx4LgC6nAq" class="blk">
+  <h2 data-page-node-id="gquZZsH9uI5Mo9CZJ8d7n1" class="h"><span data-page-node-id="P4NNRPjoRGvYsijrybf7ls" class="num"><!--pnid:8QfK4FcvmsdfPijCxIgjrd-->三</span><!--pnid:tTBDCykWSkViKQ77xjDlEX-->换个做法之后</h2>
+  <p data-page-node-id="5YLLuZHr78ocfrPuwpexGp" class="subline"><!--pnid:8QI2rG4WQOTxhqttKx5qUM-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="5gHU5M7smK7awU0YCNheyI" class="cmp">
+    <div data-page-node-id="ZAWztjS3bbw5ORY906AxrM" class="old"><h4 data-page-node-id="rTXUSLdnSsmEFYM0Saq6YS"><!--pnid:J4RDmjeRgQTT1nI1UIL3Cb-->✕ 现在的做法</h4><ul data-page-node-id="WjYNtShaKsf658qGBZW9ai" class="list"><li data-page-node-id="0JccY5zvYqcMEskL8DTcr9"><!--pnid:IqM5iaXt1Bk0ULu0wacIDc-->某风场全年 547 台次故障、停运 10330 小时、损失电量 468.74 万千瓦时——故障工单、备件更换、损失电量三本账从来没人按月对齐过</li><li data-page-node-id="3ktvpspT3Q7fRaxYODZ6mP"><!--pnid:WM6uZSd0w1tmo0Jb8pXsHu-->变流器故障频次最高（0.20 次/台·年）但单次停机短，叶片故障频次低但平均排除要 229.54 小时——损失电量的主力是「低频长停」部件，只看工单张数会看反重点</li><li data-page-node-id="vNZySN8dLedjoNXV41GUbC"><!--pnid:1yaG6KPlxYBttk2Ls6UMCG-->IGBT 模块失效导致 22% 的变流器非计划停机，全年换 33 只 IGBT——换件记录和故障原因不对账，就永远不知道备件钱花对了没有</li><li data-page-node-id="gfxIKsMQi0ucWyIGkmb3Z2"><!--pnid:JU2gwWfu9faFr0H27ZuDvV-->值班员夜班后整天昏沉、考试一年一轮回——让最疲惫的人手工归集 137 张工单，等于把最需要细心的事交给最累的人</li></ul></div>
+    <div data-page-node-id="bbDKXv5oKWjw4mAXCfkvOP" class="new"><h4 data-page-node-id="kbo3AtIy10NGDTQXFKQumj"><!--pnid:suOimJY6QKjbJXAzfGPU4U-->✓ 交给 Agent 之后</h4><ul data-page-node-id="2q7dIjHsmhfBhbVADZO6Lo" class="list"><li data-page-node-id="Ktv6exMaS2oUjGoixxqq9I"><!--pnid:ruEUS7QmxrnunuC05v64qM-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="cJc8xBzaERnAavDH1fvDVC"><!--pnid:cUWLnaQ6YqdO47gILbYyew-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="toyZbLfYYy1uuXRS8CPJQE"><!--pnid:0QTjG35msF0eFpJJFwU1ZB-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="HjbGZeEy77aEVp6RpqHlMm"><!--pnid:MT7Kaz1KStaDOkYanbaUEw-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="gS9gFlXKSSvXFIHcyDVWlN" class="blk">
+  <h2 data-page-node-id="KLt7Gbsr6iC6KzcUWNtO6D" class="h"><span data-page-node-id="NHU6Ntsl9sp98JFrMJLQRg" class="num"><!--pnid:IBZaKLRX7or2FhrM3wagQf-->四</span><!--pnid:M0EZ2Vi7kX6aombHClIOB6-->场景闭环</h2>
+  <p data-page-node-id="eZL8DJqxG9mgQCukB9Bt2h" class="subline"><!--pnid:VbGKn9rZS9um9BrxZgy9bi-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="CRKzPn3TV5VpDMUeZN2skF" class="flow"><div data-page-node-id="cJwTGhikOOMJ3OAE0bIlLY" class="step"><div data-page-node-id="HA2Bp2KAx3iw6E6zv2D1fv" class="n"><!--pnid:oBmfP6SwPkUAG8W0CnknKh-->第 1 步</div><b data-page-node-id="n1X72TDUtwHW1IRLO65Ghy"><!--pnid:y4V3az600U7hJ0E53QOMc0-->工单归集 · 按部件聚合停运时长</b><span data-page-node-id="mBmjMS3JjoqBRfbUEEiEgL"><!--pnid:DP1EVGQNQTTE3TnzmXZP5h-->137 张工单归到变桨/变流器/齿轮箱等部件桶</span></div><div data-page-node-id="79657E7mSDZrbMvQ9CnDzJ" class="step"><div data-page-node-id="5Kq6k26q0WWcQp16FZz2X0" class="n"><!--pnid:5E0mP4G2mhKfHMIurbzHec-->第 2 步</div><b data-page-node-id="wAaxqnQhqPYgX0qusF1csJ"><!--pnid:jOrSGl2o8FqHYxWNlMpIcR-->损失核算 · 停运时长 × 容量 × 容量系数</b><span data-page-node-id="uqPwUBJVtO1vjXEDfMTTR7"><!--pnid:Bije4iWkYv0AlDLe6ZiV4Y-->容量系数取同期实测，折算依据写明</span></div><div data-page-node-id="A4999b7MMQMvw78lW0AyHp" class="step"><div data-page-node-id="h62Kztszid0K3zoCSJzyGP" class="n"><!--pnid:dihjKflmbr04JD0bLO5hJ0-->第 3 步</div><b data-page-node-id="ilZnNxsVJQlNgJLjv6bKnJ"><!--pnid:20LNSBj4iYLWcz8zxDwKuq-->备件对账 · 换件记录 vs 故障原因</b><span data-page-node-id="nJNqFlbjZuIv5o8d4Nb0m2"><!--pnid:v9kXwu6ET8WSRLizh9Qv9A-->换了 IGBT 的单子，故障代码是不是 IGBT 相关</span></div><div data-page-node-id="Q5u9r9SvSknlE6pyqjlMNo" class="step"><div data-page-node-id="ObQHBfl9Jh1VgPqfX2gES0" class="n"><!--pnid:9rzlzzEs4Hm5hufLCPT3Ef-->第 4 步</div><b data-page-node-id="B428Qo0xMm96AuTrVuSmZx"><!--pnid:6uWubIILUV3pUMIKNN4pQZ-->限电分列 · 故障损失与限电损失分开</b><span data-page-node-id="75pj8P5kYJU9u5IMyMDvW4"><!--pnid:UnhDyfXi87NnbHWByJlMGt-->两个口径混在一起，谁也说不清各自的责任</span></div><div data-page-node-id="hXX3BlXvZg0pFeIhXvJDad" class="step"><div data-page-node-id="6eXkiTUTUPETxHtjajjsst" class="n"><!--pnid:PCb7y8q4jbmu5qXoCszXBy-->第 5 步</div><b data-page-node-id="Sr1IsbLJhDlUfXF51MRYZj"><!--pnid:iWoVppzbcgiw0WxP9cnBR5-->结构排序 · 损失电量的部件画像</b><span data-page-node-id="oksdMGF6T5WNh8dpPeg6ZG"><!--pnid:pS73LNMNHZ6o2gIibrYtbM-->张数最多的部件和损失最大的部件不是同一个</span></div><div data-page-node-id="0zHGlA3UjWToMUSPAKTJ8z" class="step"><div data-page-node-id="dwh9eDqeuxoRufdfiCm1rs" class="n"><!--pnid:GDfaDzcbYL14CvoNZD6gL2-->第 6 步</div><b data-page-node-id="KiqEu1Fc9vSbdQfUZDIzfP"><!--pnid:2PLFOP4kDka0o71B29J4wE-->留证与签批 · 生成月度损失电量归因报告</b><span data-page-node-id="GvqtyPYYxaPnsp94MIlikA"><!--pnid:15wgzprS0U2gc5TqKJ5HvC-->每个数都能回到工单号，签批栏留空</span></div></div>
+</section>
+
+<section data-page-node-id="plDSZjVSFCyW4h7GTJuJr7" class="blk">
+  <div data-page-node-id="SNAuZutdOkJ4KwgC2dK5rW" class="g2">
+    <div data-page-node-id="7fOEBtYcVetwuhDTOJFXBC" class="card"><h3 data-page-node-id="gCSVBivxAuEf2g6zUnLEuS"><!--pnid:CIA1sn3CLGFn7Zmso8W4yV-->要准备什么</h3><div data-page-node-id="RCmHCs5G9wiSIBQT8MeW8c" class="src"><div data-page-node-id="lclo6fyjx9GFNkoOKof37N" class="fn"><!--pnid:PCFbw7qCVkdepkJdvUwdz1-->故障工单导出.xlsx（11 月 137 张）</div><div data-page-node-id="htUDFVA21Y5DsXiI5Ubrc1" class="fd"><!--pnid:GLcGbXDXbAOyjixUHdoQo0-->机号、部件、故障代码、停机与复电时间</div></div><div data-page-node-id="jq5mdDhJCx5Hgxt2J0qbEV" class="src"><div data-page-node-id="dqWMCiVR1DOWaw83AFgXVn" class="fn"><!--pnid:nYwMO7DoASkiKnONnsugwW-->备件更换台账.xlsx</div><div data-page-node-id="dgYu2dhNmtGrEcQobY7LXy" class="fd"><!--pnid:gaDZIFdN7MV11cm5TentEb-->换了什么件、数量、对应机号</div></div><div data-page-node-id="zJPisTOeNBKVUpkHG178rr" class="src"><div data-page-node-id="WH2JC903EHIHr5moPxapRT" class="fn"><!--pnid:GZryc0jQDFpBBMb0iGlWyB-->限电记录与应发曲线.xlsx</div><div data-page-node-id="yxmo84D5iBbFcvkeSAoNuY" class="fd"><!--pnid:TcTd9frJ2hXgDbH0P0122W-->调度令时间窗 × 应发功率，与故障损失分列</div></div></div>
+    <div data-page-node-id="crIIGrhmXUCPKEkiTI5uo6" class="card ev"><h3 data-page-node-id="W3RRQzeDj7WpSuZTtBBwYG"><!--pnid:SciYt3TRDx4luNrOebmvc0-->为什么这个场景值得做</h3>
+      <p data-page-node-id="cQVrYWsLMJkAB8v0sgpdvA"><!--pnid:ny21a51dYhXoSIVLXi6oic-->痛感 5 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="hTkDoYZaeCMWRfPQ57NYcD"><!--pnid:cakFdRG9oywifi9P4W0zsK-->15.0</b></p>
+      <p data-page-node-id="mVSFrvkGlbesfQMMZ6Rn9l"><b data-page-node-id="7dA737mTOlvfSxHbuPrQhw"><!--pnid:lHRuy8UZcu6s9HluZ5ws4U-->最大差异点 ·</b><!--pnid:OdSGIr0K4KDlJ65jOdD28O--> 不要求先建损失电量分析平台。工单导出、备件台账、限电记录三样东西凑一个月度归因——容量系数取自同期 SCADA 实测，不用客户先整理格式。</p>
+      <p data-page-node-id="aU9yovbjWyASUQRjNc6gUg" style="color:var(--ink3); font-size:12.5px"><!--pnid:mTjgpi0nsscyztskFcRyWu-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="emQXXeGOJNfvd0z4urFMnO" class="blk">
+  <h2 data-page-node-id="UKfU0oujss7NY8eNxxQaNk" class="h"><span data-page-node-id="5hZVzwY1JewcDKtNRQxxo1" class="num"><!--pnid:N7QvT8yQKhHoZrnwodBfFN-->五</span><!--pnid:prZCAOgcW0jkikB4hcaZ2d-->会产出什么</h2>
+  <p data-page-node-id="mftlbgDEML1x4Pq1sV3cpB" class="subline"><!--pnid:cXnNdVJPl3x7XMdMRVNHGQ-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="xzJ0IwfnyXYnToTBN87LWq" class="outs"><div data-page-node-id="c18E5YwTbz9FiuEAmvfqE2" class="out"><div data-page-node-id="oWtRS2mqlUzKuX3IL2KV5W" class="on"><!--pnid:HMhmiBopcwdu2z7hfkLG7W-->正式件本体</div><div data-page-node-id="xNvIB42ok9Gz4iLkTy2PeW" class="ot"><!--pnid:aSIVOgJG9v4Ell79e97tRT-->月度损失电量归因报告.xlsx</div><div data-page-node-id="4L7iKvgXLP482JIcMy02Xh" class="od"><!--pnid:tMueSAkYJLiST77dLRh1ay-->正式件本体 · 部件归集+备件对账 · 含签批栏</div></div><div data-page-node-id="wOT0mHxSzhmQy1GEc3vlmy" class="out"><div data-page-node-id="P7apBtRToSpzBWyiVfqFqJ" class="on"><!--pnid:V7EEmkqyMaypLz4yxHoN8u-->可派发清单</div><div data-page-node-id="wqXnXmlEUY66DKrI2C0mil" class="ot"><!--pnid:HuGjBvJTkLzarZbj5iH5Kg-->重复故障机号清单.xlsx</div><div data-page-node-id="MXjpC27jAHZjHrwSDYhMQD" class="od"><!--pnid:5lfYwvZ9Oy3SdyffoeYCnA-->可派发 · 每台带工单号序列与换件记录</div></div></div>
+</section>
+
+<section data-page-node-id="QHgNVbpN45YhsbEdxtP6qa" class="blk">
+  <div data-page-node-id="SayEGaM8OKfBSA7ggwY5CW" class="card warn"><h3 data-page-node-id="21HuVa2Uhm2LUwrAnxbEep"><!--pnid:1p74CrchwH0QGQxMqt2uL7-->这套东西不承诺什么</h3><p data-page-node-id="2yfbLlmBwLrL4ub2FcjK5A"><!--pnid:Z5p4t4YBg1U62LTxCjg0LS-->不替调度解释限电合理性、不评价消缺质量——归因只算「损失电量结构」，不追检修班的责任。损失电量按公开口径（停运时长×容量×容量系数）计算，折算依据逐项写明，可复核。推荐意见栏留空。</p></div>
+</section>
+
+<div data-page-node-id="36zIDIY26ibmakTDm1Zrfx" class="cta">
+  <div data-page-node-id="5dGIj4f7SfxsJRoOsaGAF7"><h3 data-page-node-id="k4V6iGvulDkBpwIcGT0iSC"><!--pnid:shZlxIyyv0zDYMZNubloMu-->想看具体怎么跑？</h3><p data-page-node-id="m0zxT2YEaUQ6MuYF9S9K1s"><!--pnid:u699gu3AB4Z4MX1ag8v2wP-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="KYSuE6qVYkxZviF7EjNsjQ" class="btns">
+    <a data-page-node-id="Fo0UuXEqBjmvPotlSndiB2" class="btn" href="LiveDemo.html"><!--pnid:LraI9ifaxqqfiU2GnvfUu7-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="YlK5DYGZPdMI1jYIYgyWxY"><!--pnid:d1g0HugCfElU42H4PxDXxA-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="X7l1UDk8q9WhEMdmFuF3Mr" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="1uciBJ7nWhitSx48nOvbdZ" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="yeehmQdRzaKkmCouk5q6hg" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="E8WseDpYmz5OjFirlNCpjR" data-pnid-children="p41uFwubVBYXubFPZjn2OC">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="0GvAUmfmUXPMa5Il4JN3jp" data-pnid-children="Ri7irh3ZfsN9mKlvr1Vr0w">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

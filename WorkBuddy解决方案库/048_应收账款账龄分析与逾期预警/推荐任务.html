@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="qDVCMywQkspwhxjjkfK7Qf" lang="zh-CN">
+<head data-page-node-id="UIuJerjcafTVc6X99OArcT">
+<script data-page-node-id="9asg31cUq8rrL9kgsy9WdA" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="6d5aSPVbat3SGj0teqULXc" charset="UTF-8">
+<meta data-page-node-id="cgPr2a9wLh3tV61iFHKq2r" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="VIpyblWrjPIRUyAbjtlqlR" data-pnid-children="eOPXzptx38vHdjzFwjYhjt">应收账款账龄分析与逾期预警</title>
+<link data-page-node-id="fbKcvGl0cJMGIHOpLT6fxM" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="fNA4eRxpqVShost3OILnrz" data-pnid-children="0XPqtbLgoWYFi2xS3i80CN">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="RNKJWtl1XBjfUbBiQKUyRd" data-pnid-children="2eQXinXsGkanUp7nzUCYlx" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="WYLkVvQA8Z13BgqTXkijWW" data-pnid-children="LDpRHlv1hthntJLy30kjC6" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="oJBCwuFozhIc6D1v5lW0El">
+
+<div data-page-node-id="nbmzPBVE81WVvQ8p0cNt8p" class="wrap">
+<section data-page-node-id="AQJtcGQCI0boNl4Pq6G5SR" class="page-hero">
+<h1 data-page-node-id="ckU02WktT5GlOT1RYxbtPF"><!--pnid:Oak0XQsQNVKjyn2qOqqc8u-->应收账款账龄分析与逾期预警</h1>
+<p data-page-node-id="MKo9uCRdB6MwipQHCQshsu" class="lead"><!--pnid:G0JgicFUUOTGUmIc0dj39v-->账上躺着 300 万应收、老板以为都是钱 · 逾期超过 1 年的，核销概率高达 80%</p>
+</section><nav data-page-node-id="IxYMF5i9Goo9Ax6oTbxKKM" class="subnav"><a data-page-node-id="0Y2LtenpoAd8E0VLxCjkqi" href="场景引入.html"><!--pnid:tDWNb82WwYlW53HqywHTEH-->场景引入</a><a data-page-node-id="o7IvuMDwzkoG1DtsnP9aBD" href="LiveDemo.html"><!--pnid:Xbx6jfjrL0B2EetGkh1FPS-->Live Demo</a><a data-page-node-id="vuvZe8Cfn3o6lq41xk1OMp" class="on" href="#"><!--pnid:LAL3zNkeRO8oVMknhc1aro-->推荐任务</a></nav>
+
+<section data-page-node-id="IAL3Mf6GZ4YGFlXXThWp4O" class="blk">
+  <h2 data-page-node-id="PUyel71UTWg0PtapSWBbH9" class="h"><span data-page-node-id="101KnDD7j8dZzMzWxtDBLI" class="num"><!--pnid:C5clfa9lmNk1RTs6cvvjJM-->一</span><!--pnid:c1fOFPSqB7MozSL9yRgRJ9-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="kIRHDaRXtojR7wvTzztrSe" class="subline"><!--pnid:MFlhzLJcFtlIgS5aZgz78F-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="a2ap2Iru98ASpTnPiXxDuT" class="card"><p data-page-node-id="jqwjMuXsacenMMGTEzKTjg"><!--pnid:4qq49fyTa3dIfeGDuWdgIz-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="FpMj2ZYd0kKvNHoy9e0t67" style="margin-top:10px"><!--pnid:2uBV8qXuoKtjqIE6hiAGFf-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:EHXNn641DeXng8vkIMOQSr--><!--wb-skill-start-->
+<div data-page-node-id="sZzia8RA7vqAUBx7Q9ZanS" class="wb-skill">
+<p data-page-node-id="Vw1Y1sioHb3HsZQQvxbW7x" class="wb-skill-lead"><!--pnid:VJqNpy3rj6gUqBFhsv6pzf-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="uh0yUBCL5xn1vVLEBqX5l9" class="prompt" id="wbSkillPrompt"><!--pnid:e4ysB18hZonK4zlb0h7uQu-->【准备】这个场景的规则都在「应收账款账龄分析与逾期预警」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/5qItKebpnKCChBmCVwOaVk/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="NDOW7oOSyBOxqN8eQGpily" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:jW7TK6cxrDdiD5IbYcVT1g-->复制</button></div>
+</div>
+<!--pnid:E6MuF7XXyrOSvw4KljKX86--><!--wb-skill-end-->
+<section data-page-node-id="VylYDQNHEUPdz59N1vDq9O" class="blk">
+  <h2 data-page-node-id="RQ5vovvMT9a52Gz2sjWvbX" class="h"><span data-page-node-id="YcUtFsHS4kRs8NQObPrQ8P" class="num"><!--pnid:t6kiYwErmuP2NXWEtqBv2m-->二</span><!--pnid:cDdQnAvvBMgoaLvgGS2mw3-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="EyAZPMiUIFaWGTPOhu8Xd2" class="subline"><!--pnid:szjiWrBO5QU6OBfkNg7bIa-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="snIU2GRwnE3ldY0pV6XGIR" class="tlist">
+    <article data-page-node-id="IB4uWU0zk5hFAFwkRI9QXf" class="task">
+      <div data-page-node-id="w9ejCs2QaRltjc9qWKelVe" class="th"><span data-page-node-id="5EyzYUqbT4pEPamVXnlStJ" class="no"><!--pnid:0UN01Aj8qcnPIOgVKLJjWJ-->01</span><h3 data-page-node-id="qqB22oXXYVMpck2N595POc" class="ttl"><!--pnid:jQAgLywZGulSvO1kRk6IWk-->首推默认</h3><span data-page-node-id="sKMxPq3XX2xMaNzGjmz2gl" class="star"><!--pnid:sM7X2YqlIc562UeFZSp2Tf-->与一键体验入口一致</span><button data-page-node-id="9ECTlXrliIlW7YuFpeukVn" class="cp" type="button"><!--pnid:OHKlW0RDxk5IgaPu8sOJTJ-->复制</button></div>
+      <p data-page-node-id="0iE14dyWMpZyvG4m9CFwr2" class="tp"><!--pnid:mivspaRqJTdFMd3IiF64Ms-->月末结账后要做账龄分析。技能内置三份材料：应收账款明细账、销售开票记录（订单量口径）、银行回款流水。走完整流程：先把销售和财务两边口径对齐、差异逐笔标出；再把回款流水逐笔匹配到发票做核销，算出每个客户真正的未收金额；然后按 A 正常／B 1-30 天／C 31-90 天／D 91 天以上四档分级，按账龄计提比例测算坏账准备；最后出逾期催收排序。
+产出三份：「应收账款账龄分析表.xlsx」，四档账龄＋坏账计提测算；「逾期催收清单.xlsx」，按金额×天数排序、附历史核销提示；「回款核销差异清单.xlsx」，已到账未核销的逐笔标注。
+客户信用评级和授信建议那栏留空，我自己定；催收函不要替我发；已到账还没核销的钱不能当欠款去催。</p>
+    </article>
+    <article data-page-node-id="kXZNaHPwXmS3f6Mh039g2E" class="task">
+      <div data-page-node-id="LMi8XtkXkkoUKmhc3bnjVN" class="th"><span data-page-node-id="dk8unYh1KlkRiOUf6WjgoS" class="no"><!--pnid:7tg6rw917SFDSBnR2JQKFV-->02</span><h3 data-page-node-id="VaBKvVxuQw1r3ufMWaH8JC" class="ttl"><!--pnid:WZZpmOZFnNTOyUkVhKvDNb-->只做回款核销</h3><button data-page-node-id="kg5O6htJ4Lm3iZbnJiiTed" class="cp" type="button"><!--pnid:GJixaHBDmwUb8VJH4aJJSK-->复制</button></div>
+      <p data-page-node-id="7034fEAYtduO9j5QAXhIGu" class="tp"><!--pnid:yYLwzZaih307D985qJ4VQl-->只做回款核销这一步，账龄分级先不做。读银行回款流水、应收账款明细账、销售开票记录，把回款逐笔匹配到发票，算出每个客户真正的未收金额。产出「回款核销差异清单.xlsx」：已到账但还没核销的一条一行，列写到账日期、对方、金额、对应发票号、影响（账面多挂多少）；匹配不上的单独一段写明两边出处。别把到账的钱当欠款去催。</p>
+    </article>
+    <article data-page-node-id="bV4QPWNY74oQhKnH4k377v" class="task">
+      <div data-page-node-id="qRRM4wm4fIRO6G9v5EMXhz" class="th"><span data-page-node-id="jVcB61wIpGnd1CCtTcobHG" class="no"><!--pnid:tYMaUDeA2PdboLvbnyKjqt-->03</span><h3 data-page-node-id="98bhmRXZTrRNJRiqMbwKtA" class="ttl"><!--pnid:8w1eDAnybJ0gXfqfrsmTll-->按合同账期重算逾期</h3><button data-page-node-id="s0fSCwUbtckzoLkDT52D7R" class="cp" type="button"><!--pnid:75JqV0X4SQ4gmftqgwxPog-->复制</button></div>
+      <p data-page-node-id="OJZs4VgXLlLjbfdPTRriOB" class="tp"><!--pnid:hjt8whVUnwxcKSbh0iap4k-->换个口径重算逾期：合同约定账期写在销售开票记录备注里的（比如那笔货到 60 天付款的），按约定到期日判，不算逾期。材料用应收账款明细账、销售开票记录、银行回款流水。产出 Excel 一栏对照：按开票日口径和按合同账期口径，两版的逾期客户各是谁、逾期金额差多少；上次被误催、这次该摘出来的写明依据是哪条备注、货到签收是哪天。</p>
+    </article>
+    <article data-page-node-id="YFLrEqXdlIG0c1Nl1W1qSb" class="task">
+      <div data-page-node-id="Vsqwm1EneRUYQhxiLePGUX" class="th"><span data-page-node-id="uFwDFCUkUhn7ieLv7MOdIu" class="no"><!--pnid:HDeQRcDgSw652RpohNIcwa-->04</span><h3 data-page-node-id="jTZ0VtdaFsJNg50DEOYUjS" class="ttl"><!--pnid:IyVU9SbqVeeQG8tg3tHRTU-->一次算三家公司</h3><button data-page-node-id="8sS2v7RrVBhCu2fJog6gux" class="cp" type="button"><!--pnid:EDEov4uiUwAwPZmPmwh0in-->复制</button></div>
+      <p data-page-node-id="XyRG460LqACPRqLvcHXAcj" class="tp"><!--pnid:SSx7SX8RmbyS9dzaHERkin-->演示数据里再加两家子公司的应收明细、销售开票记录和银行回款流水，三家一起跑，四档口径和计提比例保持一致。产出三份「应收账款账龄分析表.xlsx」，格式统一；另加一张横向对照表，一家公司一行，列写应收总额、D 档（91 天以上）金额、坏账准备合计、已到账未核销金额。哪家缺了回款流水就标「缺」并说明哪些指标这次算不了，别拿另外两家的比例套。</p>
+    </article>
+    <article data-page-node-id="cmvSLW3Mpn30NWnpO2D62Y" class="task">
+      <div data-page-node-id="jzTUumptId9Atg9AACYONe" class="th"><span data-page-node-id="TjQbnmmAh8WDGSfRPjqazD" class="no"><!--pnid:FusKeVPKhBAL7y2SUw9RcD-->05</span><h3 data-page-node-id="QbTX3XP6oLbyCfNtipAxJ7" class="ttl"><!--pnid:EENKGFLKEvrmbyUuS3Vk2C-->给销售负责人看的版本</h3><button data-page-node-id="fh2q4ldVQHVO3WsycYsaLy" class="cp" type="button"><!--pnid:pC51LxR1cyRwJ0sD83o0dW-->复制</button></div>
+      <p data-page-node-id="3JU0m8oCZiVcW8iMtdec10" class="tp"><!--pnid:dw6invU8g1lFTbNGghfnfy-->压成给销售负责人看的一页，Markdown 半页以内：他名下哪几家该先催、各欠多少天多少钱、哪几家以前被核销过。明细不放进这一页。名单和数从「逾期催收清单.xlsx」取，逾期天数和账龄档回「应收账款账龄分析表.xlsx」核一遍；排序按金额×天数，有历史核销记录的排在前面并注明。这一页只给名单和数，不下客户信用结论，也不要替我拟催收话术。</p>
+    </article>
+    <article data-page-node-id="fQf0Gs2ksPisa2gygK45vO" class="task">
+      <div data-page-node-id="RyNnjujjYRxV7dQkfct5a7" class="th"><span data-page-node-id="tmabxSUZclYh0eAV2VYOeD" class="no"><!--pnid:A0BS3yjGCk33CIIekLxC84-->06</span><h3 data-page-node-id="E7CuMO3Ejfs1pix46HJmNP" class="ttl"><!--pnid:FptpMYJD8FyONF2w6eLxMY-->让它反驳自己</h3><button data-page-node-id="5QBkGUOd7t5Cjxftqo8Vwt" class="cp" type="button"><!--pnid:yWUg0GuICIg6N1vF6p7MOH-->复制</button></div>
+      <p data-page-node-id="htyo8d9AF7C64N0P3UYu6c" class="tp"><!--pnid:VKakHbVulM10w6tLoQpmBF-->你说华瑞供应链那笔 80000 不算逾期、依据是销售开票记录备注写了「货到 60 天付款」——这个判断站得住吗？逐条回查那条备注、货到签收日期和明细账里记的到期日，两边出处写明。产出 Markdown 一份《判断复核》：站不住的改回「待核」并说明还缺什么信息才能定；别为了少催一家就把依据不足的放过。</p>
+    </article>
+    <article data-page-node-id="Ab67Dyoed7HDgFoO7iOPSw" class="task">
+      <div data-page-node-id="bHV0JiBQHBly0wZiCnlLRJ" class="th"><span data-page-node-id="iXMnpsDe3bAIN2Y3hAWF8x" class="no"><!--pnid:9tAbcFn0Fb5wZT2LEVuUem-->07</span><h3 data-page-node-id="DPaQDSoqhOkAqHHhgUDTEF" class="ttl"><!--pnid:7Gc5729srw4TdidDegldwW-->比对核销前科客户</h3><button data-page-node-id="St5wv0zc9QHUQcOewPsjh8" class="cp" type="button"><!--pnid:jzhontPYlr9ByeS6P54EnB-->复制</button></div>
+      <p data-page-node-id="xkqVbXp9lhs9Bt9HlnZ857" class="tp"><!--pnid:JkCOVxIP0Utg1MrFabH4sC-->两年前恒通汽车零部件那笔 24 万应收最后只收回 8 万、核销了 16 万——跟这次账龄表里的客户逐家比。材料用应收账款明细账、销售开票记录和能翻到的历史核销记录。产出 Excel 一张对照表，一行一家客户：现在欠多少、最长逾期天数、历史有没有核销记录、核销了多少、这次该排第几催。有前科的排前面并注明；查不到记录的就写「无历史核销记录」，别猜。</p>
+    </article>
+    <article data-page-node-id="eZZYwXuboJfkHN4JbbHOVI" class="task">
+      <div data-page-node-id="ml87Lhllyzv2uid8RoIpjB" class="th"><span data-page-node-id="zl101QC9QxCOkgk2JM8qGd" class="no"><!--pnid:X10MhwoTlfXlj0VYC8RRvH-->08</span><h3 data-page-node-id="Sg3QJ54I38Z7mpPXVGEvVf" class="ttl"><!--pnid:FTMdTRdEwwJfKSj3bTMpnt-->按四档口径自查</h3><button data-page-node-id="XFPCZ8s0uDEfDZCNklpPMP" class="cp" type="button"><!--pnid:weeF8khu0LcLiTNuK6oXnH-->复制</button></div>
+      <p data-page-node-id="PTZxb9zneT5m9IR8QRIqU0" class="tp"><!--pnid:L8upwLAM2tb5xXB1p6MQap-->对照 A/B/C/D 四档口径和账龄计提比例自查这张表。产出 Markdown 一份自查清单：有没有客户被分错档；有没有回款已到账却没核销、导致账面应收虚增；计提比例有没有用错档。虚增部分单列出来写明是哪几笔、合计多少，并说明照着虚增后的数发催收清单会有什么后果。客户信用评级和授信建议栏保持空白。</p>
+    </article>
+    <article data-page-node-id="TvMfcmvQjPjbiZHPwW0IPz" class="task">
+      <div data-page-node-id="9eAiHk0thCmoLnuxwkftfS" class="th"><span data-page-node-id="t1EI5kCuJyo03K1WmYk18U" class="no"><!--pnid:EAUfrRXguVb2IXDfc24SWt-->09</span><h3 data-page-node-id="MNc9xBz7gRe4WsEkpN7igJ" class="ttl"><!--pnid:ssykwz6zVNnxY1uyZcQbrt-->折算成收不回来的钱</h3><button data-page-node-id="57kp8PYF46H4rSQd7lsl6d" class="cp" type="button"><!--pnid:vurBRlhXf2HlrHZ2Wesbst-->复制</button></div>
+      <p data-page-node-id="SiUWmQ0dtQFmFkElqlYtA8" class="tp"><!--pnid:RFVBTDINq56DkldYHqStMb-->读「应收账款账龄分析表.xlsx」里的四档账龄数。逾期 90 天以上的金额合计多少？按逾期 1 年核销概率 80% 折算，潜在收不回来的是多少？产出 Excel 一张测算表，一行一档或一行一家客户：未收金额、计提比例、坏账准备、按核销概率折算的区间。算式和概率来源写清，给区间不给单一数字。这是测算，不替我下核销决定。</p>
+    </article>
+    <article data-page-node-id="uNj3Pm54Wpvluu7lK6RSfA" class="task">
+      <div data-page-node-id="dILdMqWIyKVDJZGOVUNMzl" class="th"><span data-page-node-id="vsJqJkojM6bq8gg3Wk6vS5" class="no"><!--pnid:CX8iuXPsL8pKscpcC3ykHQ-->10</span><h3 data-page-node-id="yRXzNANduTq3bKUAygNPoV" class="ttl"><!--pnid:A02p8xkjmqsW7dG6LfZWdX-->沉淀成账龄核对表</h3><button data-page-node-id="nw49KPUxCOiIKAcVAhlpYk" class="cp" type="button"><!--pnid:6f6k2MuZT5o2O1CwBR38yg-->复制</button></div>
+      <p data-page-node-id="cSIKXYNDcPxiLfHK3zVZSp" class="tp"><!--pnid:PMk1UFSJR4aK4xzI6CR1AG-->把这次从应收账款明细账、销售开票记录、银行回款流水里跑出来的账龄分级口径和回款核销匹配规则，整理成一张可复用的「账龄核对表.xlsx」：四档的判定天数、各档计提比例、回款与发票的匹配规则（金额一致怎么算、允不允许部分核销）、销售与财务口径差异的标注方式。下月直接套用。只写这次真用过的规则。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="UmTyjvXaHHWT5cIJYEMkan" class="cta">
+  <div data-page-node-id="WA7MrJCmVieVB6FixeK8DF"><h3 data-page-node-id="VNvH75pFyVRovEB0XL0XsD"><!--pnid:2kLqiFLwm7ut0tCpcyDZfT-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="Z1xwmqnZQAijruNNJlXmcl"><!--pnid:7tHcNCNr9H7ctSJZgtllX9-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="n2bZ0S3hzFyCY8l2LCeZ3D" class="btns"><a data-page-node-id="O1KAW5Hyqwus2gZVpsuPyD" class="btn" href="#" id="ctaContact"><!--pnid:GiHwUvgKXDOvG8Ox07XVcM-->联系我们</a></div>
+</div>
+<footer data-page-node-id="mmSlilCn7leNDNTwUdJZIg"><!--pnid:8IHfHM4ECqr92ZxQiapPpy-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="ukLktjSsanruINgAavLChn" data-pnid-children="oUNxOJxqaWBI8pm2a28y80">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="wdFzNOp8fnJLV32y60NLy0" data-pnid-children="R8d9BrhvwIKI8GSGeWCnlr">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="2KEqF8gJfTFphYQI4sOzPv" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="v3wiT7Nz1accxQDuI6ggCR" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="yAOLG7OWw4ds3TO5xhDyWa" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="jtSPaguvvq2sgJjFXHgPIq" data-pnid-children="mOgXKg2ZWyFIL2NoEUrpmA">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="cgIAdidmOBPpv27pE1m0AE" data-pnid-children="fEfMpfwU20X6Z25azIIkxg" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

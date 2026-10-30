@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="6nA0XQgk6s74RuegvlgV05" lang="zh-CN">
+<head data-page-node-id="qSKzNTo52JIlVG8RTGADTO">
+<script data-page-node-id="7iEOZcI9Au2vOohcAxsxjj" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="sjNLQeK8lnFQmTaMgxT9Iy" charset="UTF-8">
+<meta data-page-node-id="XyoGoh9VhQF1AsAKArI53I" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="E6s1VGTM1tO5TXeB96i2UE" data-pnid-children="VAu6Y4389c2a2DtP5aJq8e">对账函与签章补救</title>
+<link data-page-node-id="DrEzgM2Jv1OSmkJOJvxuE4" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="50gpwjqR9dHtSifJwuAxna" data-pnid-children="H4FT0JNU0Jgnel22MNjORO">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="JK8tlFcRyT5N25SyinDiLd" data-pnid-children="3fldJ8RfoT9bpQthpEVy4R" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="MGoYSMKT8qnFwKNp863kfs" data-pnid-children="h1z8CcZlfiNKDphoaAAu3x" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="4ZxhBhFEz6gz6JZiRr80vw">
+
+<div data-page-node-id="vt8zcHfN6dl3Z3w59iTaDx" class="wrap">
+<section data-page-node-id="bBTmAWseuI0MrKGufBGTwp" class="page-hero">
+<h1 data-page-node-id="xlQybTOMqWk9lwgl1eZqjv"><!--pnid:x5Okjob8yrajIMDKxhlkAZ-->对账函与签章补救</h1>
+<p data-page-node-id="odjdDk2NuP7jxjeeFmy3Kd" class="lead"><!--pnid:vUl8Bxv8n4jtjYoRWTxNHG-->过了时效的 19.7 万还有救 · 前提是让对方在一张纸上盖章，而且别惊动对方的律师</p>
+</section><nav data-page-node-id="slH0ukGb8JVKIqEijMgL0n" class="subnav"><a data-page-node-id="pNcS9iJoNUOmz0JpiaAMOl" href="场景引入.html"><!--pnid:oeJCEiNDCDHvNBRstIRcTY-->场景引入</a><a data-page-node-id="VI9JHcWfbdGu6SiDEXyGMg" href="LiveDemo.html"><!--pnid:vXYjN4uy74Rp8IrFN21XnU-->Live Demo</a><a data-page-node-id="r2L0PSdoBZtpwPw93Y88Pz" class="on" href="#"><!--pnid:W9X7yWbSm4qCQsyJ5xOK8W-->推荐任务</a></nav>
+
+<section data-page-node-id="oZZl32lwPxWafGqvGV3tnv" class="blk">
+  <h2 data-page-node-id="ornaNM1apaTzCWL06bk6PO" class="h"><span data-page-node-id="WtzMEed2kbgIrN0oLmFj2d" class="num"><!--pnid:zSJ8iyvgaXZe0iujmk4a3b-->一</span><!--pnid:N8b924HA48dnkPXttI6IQo-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="KMH5Y4ktDdVgHJBBLKx0fT" class="subline"><!--pnid:kPOsLF9ku6kSSiAOXdWTVd-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="KKgd8L1TnqDdoxZoE7jspi" class="card"><p data-page-node-id="OB4Lf92Pj0fmmmFHNDAd57"><!--pnid:hKvFH0hobFwh2S1nsGruJP-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="Rfax1bMOxYt1vO2220cON1" style="margin-top:10px"><!--pnid:AoFL3s0wnbJpUbzHLlf6a6-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:YusYpYU3EiNFgJ1n0vyFBU--><!--wb-skill-start-->
+<div data-page-node-id="r1d5dfeAdOKrl9VAMsMapb" class="wb-skill">
+<p data-page-node-id="PY5adfMROP0Z5eJzcA3jPU" class="wb-skill-lead"><!--pnid:C24kvXd5CGIgpnqp131PKl-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="SYGP4Cy67VE9rQNF0z3tzr" class="prompt" id="wbSkillPrompt"><!--pnid:RFlWyFMFytieI6yId4h3N8-->【准备】这个场景的规则都在「对账函与签章补救」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/uvSwPbbSZX6OfdaxzmYbCJ/-QYAYCIwiTdy/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="ztX6fvhhtWhSJPf6YhlZUi" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:r8741vWU6AGlCUQ4YiZq6e-->复制</button></div>
+</div>
+<!--pnid:Yaz2t82KMuD9fOTOVO9J2T--><!--wb-skill-end-->
+<section data-page-node-id="NI818vQjO3xgR1NxD12lB4" class="blk">
+  <h2 data-page-node-id="Rt8lrWL2LKqamwDQkfAirQ" class="h"><span data-page-node-id="mL8BPcoKND9WNuCEcjKNMB" class="num"><!--pnid:Q1DZcLo00kbl9UeJIEqdRC-->二</span><!--pnid:aQii6glAPUltm6BcN01ksC-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="r18Y9XZGubewyJ5ymr6nGd" class="subline"><!--pnid:y7s5UsSGiPWHE89ULzOhmp-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="2i26rjXiaZgVQtoKFtsJei" class="tlist">
+    <article data-page-node-id="FKeFxYivsyscL38r0wxg76" class="task">
+      <div data-page-node-id="A84vqdJlB3vIcIOatgTe3y" class="th"><span data-page-node-id="4HvzncCPl4HxGGeoDtLkNs" class="no"><!--pnid:67PBnMV9BUcwKJcuVru1CM-->01</span><h3 data-page-node-id="Gslk6xFjzMEIBx311S41VL" class="ttl"><!--pnid:8HBeQrYUuQlEAM8Jalc89i-->首推默认</h3><span data-page-node-id="vhpNAXkKcA43tndfwfgEOy" class="star"><!--pnid:a3HiE9Mqu3FAkgpuPjkOCV-->与一键体验入口一致</span><button data-page-node-id="ikh4ybZHO5qDpqptudIfD8" class="cp" type="button"><!--pnid:MSZnX6vZxkZlyG5InWAMYx-->复制</button></div>
+      <p data-page-node-id="uiWOMOmTi1jh9e77ddoujQ" class="tp"><!--pnid:jW8hDHmtdUleMgHVlDDcFr-->锦泰那 19.7 万要按重新确认的思路抢救，帮我设计一份对账函。
+要写得像例行公事，但每一句话都得为重新确认债务服务，盖章的位置要设计好。 微信上怎么铺垫、什么时候发、对方要是拒签怎么办，一起给我个方案。
+函里哪些话不能写，你帮我把把关 —— 别好心写两句客气话反而坏事。</p>
+    </article>
+    <article data-page-node-id="0ACs7uSeQr4JZwUrLv6EKZ" class="task">
+      <div data-page-node-id="PFu802ALIaJkafSQ5VR2Xs" class="th"><span data-page-node-id="AoQ2hhnJVlu3Z6b368ya0w" class="no"><!--pnid:XfIGCij5GXoZ8AYPtZbM6f-->02</span><h3 data-page-node-id="jCEaJCBT4yKSxW8wbJNzXe" class="ttl"><!--pnid:DmqvRYrk6OTLj6HIOAkNqt-->只出函稿正文</h3><button data-page-node-id="C6g6TFsj66IAlzB81DLiiY" class="cp" type="button"><!--pnid:qlIv6Oj36CdeAozhMxAkid-->复制</button></div>
+      <p data-page-node-id="fArPDG9pVK1Pg8uPyKpkLh" class="tp"><!--pnid:t5Ym3Q4WlRpjuPKgyRdFl0-->只出函稿这一步：把「经双方核对，截至某日贵司尚欠我司货款 197,000 元」为核心的对账函正文写出来，先不做时机方案和拒签预案。</p>
+    </article>
+    <article data-page-node-id="KFL8DDN47TmpKIqjdAQcDL" class="task">
+      <div data-page-node-id="jW46284vrf4QSwcdOURdc3" class="th"><span data-page-node-id="HBxXU7mjHtL25VrjhVNBe2" class="no"><!--pnid:ZB4KxkDLY5dPUJP1YOIvOQ-->03</span><h3 data-page-node-id="VffQWWzs1LSVlzOstL0Jy8" class="ttl"><!--pnid:uEk5DFkXalALWWOBrJe6dL-->换成附送对账单名义</h3><button data-page-node-id="ZCk7knqsCCFRxsECYlT7ws" class="cp" type="button"><!--pnid:1LIqTVt03XYFn7Hq1fnrJ0-->复制</button></div>
+      <p data-page-node-id="tCgj76WDLp15Uavb8a0Lxh" class="tp"><!--pnid:vh9ry6E2P4G4lexDcSZqMs-->换个发送名义再设计一版：这次不挂「年度例行对账」，改成随当月业务单据附送对账单，两版的签章概率差异说给我听。</p>
+    </article>
+    <article data-page-node-id="v8Df10001SClwpKkvcg5li" class="task">
+      <div data-page-node-id="XHHn9ldtofgEJLd2CFwmM7" class="th"><span data-page-node-id="utoxFJPcV0rnu6PggDUdNs" class="no"><!--pnid:06kT3vH6d5IVPRgZGYXiRg-->04</span><h3 data-page-node-id="7jL9QPTHfNuBAWWFt68adD" class="ttl"><!--pnid:W7dg1s92aWvitvMnw2qXJ8-->一次设计三份对账函</h3><button data-page-node-id="cxCdZ1HT64KfkLGnZavIxs" class="cp" type="button"><!--pnid:RUPfjg7tEHeOuuSDiaorY2-->复制</button></div>
+      <p data-page-node-id="YonR1YgvUJ6uw1gD0g9gfC" class="tp"><!--pnid:cm5oL9SutWsgFMRXvvC6Xi-->演示数据里还有另外两笔已过时效的欠款材料，三份对账函一起设计，最后给我一张表：各自金额、关系状态、催签难度排序。</p>
+    </article>
+    <article data-page-node-id="QqB6hKCmLHFIe5ePK8bSPh" class="task">
+      <div data-page-node-id="BAOiDy5NrEzxXQqw2JLr3X" class="th"><span data-page-node-id="asO3mOVc1S9bkhYArtOuIe" class="no"><!--pnid:Icn119pG3KXCI6yxP6aNLk-->05</span><h3 data-page-node-id="khLIIz4JEpoQ5BDHnB90Br" class="ttl"><!--pnid:AGsEQS4rk6G8KALLDxDdD8-->给老板看的一页</h3><button data-page-node-id="TJfbc7CDx4mHx1CfNgXwvZ" class="cp" type="button"><!--pnid:4H9roC6mLaKIQh2vbZVGcn-->复制</button></div>
+      <p data-page-node-id="K7CL1s5mz2rkIQi9WRNPaC" class="tp"><!--pnid:x9HPx9I60mdylgcuuXE4mW-->把这份方案压成给老板看的一页：为什么要现在发、对方为什么会签、拒签后走哪条路，各一句话，别提法律术语。</p>
+    </article>
+    <article data-page-node-id="9dZto3rWLlevRJ3BWL2jvO" class="task">
+      <div data-page-node-id="mAOIEQK0ypIIvBmKAeOnyP" class="th"><span data-page-node-id="HZzWvaRQMneVzvcQc4d2zv" class="no"><!--pnid:knRqgGLjVw5DaCKRAnV9B0-->06</span><h3 data-page-node-id="qro91CTcnU3O5QIM3CNvOj" class="ttl"><!--pnid:fnhgr6eRRFEbUaEGlSyiQt-->让它反驳自己</h3><button data-page-node-id="8sLZPaTbJAOUBJUlGV94jG" class="cp" type="button"><!--pnid:9KQV2HEYL3kfXqy3VU1Zwh-->复制</button></div>
+      <p data-page-node-id="plmyKfvZJHO8Tuc5uKOu15" class="tp"><!--pnid:7n0dA6OmMWWCesI3GU4VT0-->你说「因贵司资金安排原因支付有所延迟」这句必须删，依据是什么？把对方可能拿去抗辩的路径写清楚，我看看风险多大。</p>
+    </article>
+    <article data-page-node-id="pwoK8CxTlMjoqB0tGI20qv" class="task">
+      <div data-page-node-id="MtZDrhVMUMM6ijGVcBGKSz" class="th"><span data-page-node-id="iTmqXxOLD6wq6W3B3HMBGM" class="no"><!--pnid:gBuJ9MEz7bOFz4KyHW2sSv-->07</span><h3 data-page-node-id="3FKcYvbmp8nNJ3k5Ih9cGq" class="ttl"><!--pnid:yZJqIPtNz81GenzHrU8GrD-->比对 2023 年旧函</h3><button data-page-node-id="cW4PsOhbbbiPjoRSZAOJHd" class="cp" type="button"><!--pnid:q0LHoBk9QHKPBnzJMfJXXv-->复制</button></div>
+      <p data-page-node-id="YkUk1e1zJ9Vr5Lxb4StZH7" class="tp"><!--pnid:3c1I5xRPqpeQ9g71lgdNMO-->把这次的函稿跟锦泰 2023-08-02 那份旧对账函对一下：哪些格式沿用、哪些话这次不能写、当年签章后时效断在哪天。</p>
+    </article>
+    <article data-page-node-id="f0GvWOyLRswZwWVdG3SXYp" class="task">
+      <div data-page-node-id="WM1QihKB3p81YqMOXyr85V" class="th"><span data-page-node-id="kkdV85qcL5223sAaKhZRJh" class="no"><!--pnid:qf4RVN3nH8v9tgp8NXR2hT-->08</span><h3 data-page-node-id="QHS5lDdYCiVhs4uPwhU7Qx" class="ttl"><!--pnid:vAJFs2F8rZmA3dhY91fHmJ-->对照负清单做自检</h3><button data-page-node-id="TXwnAF4aDH1no65lokbWto" class="cp" type="button"><!--pnid:QITllefsyC4pY4fVn2l8lk-->复制</button></div>
+      <p data-page-node-id="s42Ild7czTNT4xBRym6Flb" class="tp"><!--pnid:JFnUxoI7tLhxNoMUOy7eL5-->对照「函里不能写什么」的负清单把函稿自查一遍：哪几句是寒暄、哪几句替对方记录了延迟理由、哪几处签章位不够醒目。</p>
+    </article>
+    <article data-page-node-id="whO5hstDNPTW2CXfb6bb8W" class="task">
+      <div data-page-node-id="rB6LY1QSaYycRKLQaSjPew" class="th"><span data-page-node-id="iLADiHFVDsAlaTjdNLaP51" class="no"><!--pnid:BdExwGaHMnvVg8oEQCvsJH-->09</span><h3 data-page-node-id="N7gS9cGvfaRnHOdZJYzw8e" class="ttl"><!--pnid:XR6gFH1qUT3XSBpBcurZvH-->折算成一个公章的价值</h3><button data-page-node-id="R6YzyO4m2ussTgk2NQImZA" class="cp" type="button"><!--pnid:LX3ChZzDNlhREqOHJlAfjZ-->复制</button></div>
+      <p data-page-node-id="XIZSyKpu0Wx37tHIX9NevA" class="tp"><!--pnid:dXFmbSLgUsZpQrKvyQIDVW-->一个公章落下对 19.7 万意味着什么？如果按淄博案的口径全额驳回，我们损失多少？补救窗口只剩两周的依据是什么？</p>
+    </article>
+    <article data-page-node-id="N75MUyB0SkNZxKReVuKWNX" class="task">
+      <div data-page-node-id="Pzu8O6F0wboY4bqruBWwi6" class="th"><span data-page-node-id="Q2EQSLVQb5XFcRNcW5E8Tl" class="no"><!--pnid:fCnkquMzkVIoYjQXcXBV3f-->10</span><h3 data-page-node-id="vpJ8QtYP2nMMcL8abTn3OL" class="ttl"><!--pnid:BpHSVdrQNsGjxmzEQ0k0bZ-->沉淀成例行对账函模板</h3><button data-page-node-id="NbsvT2ZNA7qCf1VDGSOpiY" class="cp" type="button"><!--pnid:rZNuljAT1XPGDoz9bs2SEZ-->复制</button></div>
+      <p data-page-node-id="wtIQPfBDu6PQgtC9mBzbk5" class="tp"><!--pnid:YAomgkWW91MS9MUOgIavxd-->把这次的例行对账函结构和拒签两条退路整理成模板，附上「不能写的负清单」，以后遇到时效已过的欠款直接套。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="m1foYFbye4XkdAJ9CedzU6" class="cta">
+  <div data-page-node-id="eaT79KVATilBxtJV1qGjbA"><h3 data-page-node-id="fiywE2KSHBsiPSmruEDOpt"><!--pnid:Bn105mveJ68YXUTy1OaZwI-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="bRt2FTNZmFtWj3z6TWOA6F"><!--pnid:8cTZXaI1cCRmaXmeP4tzXJ-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="sXWJFWWvw2p4XFRzX2AdxQ" class="btns"><a data-page-node-id="fcQV2zUQ6yCxPzYLl9V2LT" class="btn" href="#" id="ctaContact"><!--pnid:s6vMfI4lQ8y0mf0i5ZyCcw-->联系我们</a></div>
+</div>
+<footer data-page-node-id="0SpufeeKQfUqhT1jSCyvSh"><!--pnid:YsD4XLgzmENvIuRwKsSMpA-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 对外文书一律留人签发</footer>
+</div>
+
+<script data-page-node-id="5GBth29of4GLh8F9ZasSc5" data-pnid-children="BLkaoaTvYZIkTbNFlA5aHl">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="DugiBhAasa89WSAkqdEvUy" data-pnid-children="K0jGYsDdc8WgsqpXfWeMng">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="o9oXHlvDZcc4hNOJeZ4BdM" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="NbG95hifFxdBpoiNzgxPcy" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="lDso3rVFT3h6qknyG2c7Xv" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="z1OkiDWY1hbAigzRf7RBJK" data-pnid-children="dqnuvgam7Loq8gF13P7Yp6">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="InrMuLhR9tk9b4JfmU2MGx" data-pnid-children="8isyzupkEmcKiR6XrvK4nK" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

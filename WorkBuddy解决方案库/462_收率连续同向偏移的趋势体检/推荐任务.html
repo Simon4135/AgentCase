@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html data-page-node-id="kPFBJzIACrjUVNSRKMhGjc" lang="zh-CN">
+<head data-page-node-id="6WnCQKrHR6ZXOCsNDYTAnJ">
+<script data-page-node-id="0s5tNuUAPlJ70t0noaaVbc" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="wrICwTaUXgFkxlomr2H23O" charset="UTF-8">
+<meta data-page-node-id="Z5aBfG3zcgY6OASihlMbjg" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="WhUMjgsq2W301c2iUEH5tS" data-pnid-children="HB2Q6TIQRJjCVpSjSjgwsT">收率连续同向偏移的趋势体检</title>
+<link data-page-node-id="Ks9wf6GxoY25FFQPlUs20e" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="bndlf3PbCDUyR3A3kMrmpT" data-pnid-children="k9WciD66EZkVvcqyiRzaim">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="dEA91YL7vbcMFomIQXjVPa" data-pnid-children="OTj1CK5N6L7u7lvarW0TMg" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="pG0BUxcVBefo84hOgC4Vt5" data-pnid-children="JzFcUF1Dkqba2ocE688SAn" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="C33P2FuSYNClIZK2rlkvwE">
+
+<div data-page-node-id="uYW7vNlIB7D5uZwMqguQg1" class="wrap">
+<section data-page-node-id="hJqw49VuMFbHbOskhPoy93" class="page-hero">
+<h1 data-page-node-id="26GakUAzV539PgxKMfc7r0"><!--pnid:fKehESDxzMO25VdSCvOaxH-->收率连续同向偏移的趋势体检</h1>
+<p data-page-node-id="KwEnGjcYbaBX5kZfP2VL3h" class="lead"><!--pnid:jDTtbmiDriUq9xBDuopBLJ-->每一批的收率都在内控限里 · 六批连起来看是一条直线往下掉</p>
+</section><nav data-page-node-id="ce5bBlO0v5KiJwNFEWjPJC" class="subnav"><a data-page-node-id="8l6ZQsFUhLxmVdh1m7hJOl" href="场景引入.html"><!--pnid:WceejPzXlqbylVA4kAdVtd-->场景引入</a><a data-page-node-id="KU6UQwQ4QA4R6Xl5QME6Kb" href="LiveDemo.html"><!--pnid:HGDurqSoFpQ8CupBp06QGo-->Live Demo</a><a data-page-node-id="BaCPun5ztKXYQlsok0Q1kl" class="on" href="#"><!--pnid:nr6uMWbVhTTekyqXt0VN8M-->推荐任务</a></nav>
+
+<section data-page-node-id="KueWFE8XdEyK5ctZx2MULr" class="blk">
+  <h2 data-page-node-id="KNxHJFPX9LMn3XFKpk7nWW" class="h"><span data-page-node-id="vF60ud87Z53K1HL1HnhlG4" class="num"><!--pnid:3o5sNIeXApzaCT0nZDG5Za-->一</span><!--pnid:kbWJHCz8ds1FYQWTmXw7g1-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="TEhs1RnGMJ1BNDn7emOMHF" class="subline"><!--pnid:Bp4yJcgoosPNjDueRDlYwn-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="HPHudw76F0lVd6nEdllqCd" class="card"><p data-page-node-id="o8ew4nIWdrTfi8b3GuT8a1"><!--pnid:lw4AW4rPgX7jNQDmLGasQE-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="UYYKXt6x2DT91NnehCIAuI" style="margin-top:10px"><!--pnid:8kjLkcTI9SKefZ13vqeWC6-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:qNcnfWl197uHVrl1xubJyu--><!--wb-skill-start-->
+<div data-page-node-id="77bbVtaF4ELRywaKpa7F2V" class="wb-skill">
+<p data-page-node-id="kxoOgKBw7489EvZLkKr5bh" class="wb-skill-lead"><!--pnid:AGaPhXfW0sxS8uh4WyvwB6-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="5163sf8KR6p1sN9fXwomNu" class="prompt" id="wbSkillPrompt"><!--pnid:yPJ1K3ylSY31iDmtJW1y4L-->【准备】这个场景的规则都在「收率连续同向偏移的趋势体检」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/pj4YxrBzpGBJx4hlGpgFEr/ryO1BDSOJr4x/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="34fzWdygTuaiOPSNFAYhwf" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:YdftLFZ24XBQT6laI6V0dh-->复制</button></div>
+</div>
+<!--pnid:6znkuw4XfVFHyhNZHIbZXn--><!--wb-skill-end-->
+<section data-page-node-id="BZuhd4Vk3rVHEfC1ZzNXP9" class="blk">
+  <h2 data-page-node-id="pPAfKP9elYbUmGcBQdL5WK" class="h"><span data-page-node-id="HW606kpHXMED0yC1qUmVbA" class="num"><!--pnid:cfcNau6RiIp2JD5xiJEZew-->二</span><!--pnid:DkKBScbAGSwh2Z4PuPzjfx-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="KYypkpkrzeOUml49W20B7m" class="subline"><!--pnid:bMzTXGPhGXT93NbhDu6IPV-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="3uprdMhXE63hzqkzYlxMnL" class="tlist">
+    <article data-page-node-id="wyJAKzRX7DgmfKiL0hPGEN" class="task">
+      <div data-page-node-id="ZhIc5PvCkXrhsQP4TPLVtu" class="th"><span data-page-node-id="Ukp2tKahgP3UJ9h56HIgwY" class="no"><!--pnid:UFCRWM9kEiH9vYFcuIgDZW-->01</span><h3 data-page-node-id="ZLZjR0osXceknQwsLE0v4T" class="ttl"><!--pnid:EdVYXf99sHQdkB6OoZBuEs-->首推默认</h3><button data-page-node-id="V2MFUOkgwkEVdMDI0yojTL" class="cp" type="button"><!--pnid:E7l1CFywNJ4OEzV6wcV5LY-->复制</button></div>
+      <p data-page-node-id="4ophxmWs8KLjIpcjB6JjwM" class="tp"><!--pnid:UBhv8eLKlUnX3nguApcOrb-->这是康泰欣片一个品种最近六批的材料，都已随技能内置：01_月度产量与收率汇总表_本年度.xlsx、02_六批收率按时间排序与环比降幅.xlsx、03_收率数字逐批出处索引_含口径核对.xlsx、04_各批物料平衡页交叉核对.xlsx、05_去年11月同类下滑的处理记录.xlsx。
+六批收率从 99.8 一路掉到 97.4，逐批都在 97–102% 内控限里，所以偏差流程一次都没触发过。我要知道把这六批连起来看是什么样子，以及去年 11 月那次同类下滑跟这次是不是一回事。
+收率取自手写批记录，读不清或有涂改的标出来我去核对原始记录。分母口径不一致的批次单独列，别混进一条趋势里比。收率在掉的时候物料平衡是什么状态，要并排看。
+产出三份 Excel：收率趋势体检表.xlsx 是正式件，含趋势主表、逐批出处索引、口径核对三个 sheet，带编制与审核签批栏；需人工确认清单.xlsx 一条一行，写明第几批第几页、要确认什么、找谁确认；排除项与依据清单.xlsx 写明排除了什么、依据是哪份记录的哪一栏。
+偏差算不算重大、工艺要不要调，这两个结论留空，我自己判。</p>
+    </article>
+    <article data-page-node-id="qIZ9jipWC7nvWIsNBJOzdm" class="task">
+      <div data-page-node-id="n0ZXI4WUZGD1z2DoHFD3aN" class="th"><span data-page-node-id="1Lic2miIdHbcfScqwRviTE" class="no"><!--pnid:nWcn3Bm9BiUV7v3zU4CHhB-->02</span><h3 data-page-node-id="pNNMk1MW3FxUJbRxmcVdyH" class="ttl"><!--pnid:UTI8TcZXFfcv3XJuEgbnj8-->只做取数与口径核对</h3><button data-page-node-id="1MEGcqaeuktORROAdX6nc3" class="cp" type="button"><!--pnid:sed13NZav5RVW9eM0Ugp1R-->复制</button></div>
+      <p data-page-node-id="5Ehg2vN5EoF4FqSkza9MzH" class="tp"><!--pnid:uq4qaHHvbdAvxwOFJyjAHD-->只跑取数和口径归一这两步，不用出趋势。读 03_收率数字逐批出处索引_含口径核对.xlsx，逐批核分母口径是理论片重还是投料量、扣没扣取样量。产出 Excel 一张口径核对表：批号、收率所在页、分母口径记载、是否扣除取样量、能否进趋势，末行给可确认批次数。</p>
+    </article>
+    <article data-page-node-id="T7EP22IDGK87oUv7RBufCa" class="task">
+      <div data-page-node-id="8sE0puOvs1V7HtK94mX1nt" class="th"><span data-page-node-id="JuZinGinhJ6RWe8N7rOHgz" class="no"><!--pnid:LCvyZNX7VltVM3Y30Vtbpo-->03</span><h3 data-page-node-id="4JByBNnVruXqirLYO85Q4h" class="ttl"><!--pnid:PQ6nOMLx2jjVyGSvPUxjCK-->换成看距下限余量</h3><button data-page-node-id="GFmNLRcVZ72y18XsSBCnj1" class="cp" type="button"><!--pnid:2qajvPX4vGn4QFK0GNGpMj-->复制</button></div>
+      <p data-page-node-id="7M3ljXzFTUfFdsIzcAIXOE" class="tp"><!--pnid:VLC9SwTQV10nFLIMqoGdyW-->把趋势口径换成「距内控下限还剩多少」，不用环比降幅。读 01_月度产量与收率汇总表_本年度.xlsx 与 02_六批收率按时间排序与环比降幅.xlsx。产出 Excel 一张余量表：批号、收率、距 97% 下限余量、按当前速率还剩几批触及下限，末行给结论。</p>
+    </article>
+    <article data-page-node-id="J1L8YiIxxJWESZaf3Gdrku" class="task">
+      <div data-page-node-id="MEpkzISpLcWEO41WqQAoqe" class="th"><span data-page-node-id="GrCACELBydcZqUCipc9FKz" class="no"><!--pnid:TJvSNuYgUnv2flHDRdKsMI-->04</span><h3 data-page-node-id="szwGAibrJ7Uye7ytqsafaY" class="ttl"><!--pnid:8PE1zb3qkksJ2ESvXuXgzh-->两台压片机分开过</h3><button data-page-node-id="cyiGvAPBIddRW6hScSyRZm" class="cp" type="button"><!--pnid:wnROdjF0PH8em1pqUHYDSL-->复制</button></div>
+      <p data-page-node-id="4z7Xv6bRGyQoGWwGplDKeM" class="tp"><!--pnid:qnA1IAxCjUjNCVBe3iYy9f-->把 YP-01 与 YP-02 两台机各跑的 3 批分开拉一遍，看下滑是只出现在一台上还是两台都有。读 02_六批收率按时间排序与环比降幅.xlsx。产出 Excel 一张两机横向对照表：机台、所辖批次、各批收率、本机累计降幅、是否同向，按累计降幅排序，末行给能否排除设备。</p>
+    </article>
+    <article data-page-node-id="PyLoFPJczXaipfptNQFenV" class="task">
+      <div data-page-node-id="kEPLIZoLaNfdx9J6WDQRAL" class="th"><span data-page-node-id="8SP7bnRZqUUfPnyqVXRSvT" class="no"><!--pnid:29KhJDwDz1W8KH4EDQnZUf-->05</span><h3 data-page-node-id="xF4xGJMhWAQ3h4J5gWuokk" class="ttl"><!--pnid:NbuL6XphrBQg3pNg1eX7CM-->给质量部讨论用的一页</h3><button data-page-node-id="yHu6QrFsJJHUIb84fGXjYf" class="cp" type="button"><!--pnid:u5WwMK3A1KaepDpF2jgdTf-->复制</button></div>
+      <p data-page-node-id="WMZvKAyFjs5LfbvgFGsxFU" class="tp"><!--pnid:pnj7LOUmqy0FKtqufkIMaE-->把这份体检压成给质量部讨论偏差立项用的一页：读 02_六批收率按时间排序与环比降幅.xlsx 与 03_收率数字逐批出处索引_含口径核对.xlsx，只留连续六批降幅、累计 2.4 个点、末批距下限 0.4、口径待确认的 2 批。产出 Markdown 一页纸，每句带出处页码。</p>
+    </article>
+    <article data-page-node-id="AeY7fxCo3yJ2bI3dzARRuA" class="task">
+      <div data-page-node-id="8IaGNfqLTd3ATJx4sUOlNK" class="th"><span data-page-node-id="PZLZkyltUNaUKgheVZJC3H" class="no"><!--pnid:D4jKomnFag0gXRnJ4XfBwh-->06</span><h3 data-page-node-id="wgTfrhDP0ipsaoBTKWTNGB" class="ttl"><!--pnid:8MC2VsZ34T1tvlnt4RCCBd-->让它反驳自己</h3><button data-page-node-id="VLI7vFQn5eER7lEJRyFTjY" class="cp" type="button"><!--pnid:YAX8N3trqS3YfQllANKDBR-->复制</button></div>
+      <p data-page-node-id="rEn5jcHN0aiCdcsAatRr95" class="tp"><!--pnid:XhO98uBxaaV0vPT2g6RZRQ-->读 02_六批收率按时间排序与环比降幅.xlsx 与 04_各批物料平衡页交叉核对.xlsx，给这条趋势挑毛病：哪几批不该进趋势、哪几段环比降幅站不住、把设备因素排除掉的依据够不够。产出 Excel 一张复核表：结论项、支撑证据、留还是撤、理由与出处页码。</p>
+    </article>
+    <article data-page-node-id="YseSPsIMg9gQKGWQ5DlYu3" class="task">
+      <div data-page-node-id="B0UnMrBfzzc8ZA5bAKBeqc" class="th"><span data-page-node-id="ZqOV8CLLOh2HouWyhBOvHs" class="no"><!--pnid:xmuFEsqHcRiFrgtIGivRXr-->07</span><h3 data-page-node-id="XJIBB4GuWQQ7lFkso4gY6w" class="ttl"><!--pnid:eSA5qifmWXWBFJoTxmCDys-->比对去年11月那次</h3><button data-page-node-id="qukzWCeesNItKnfjBlawE1" class="cp" type="button"><!--pnid:vGEUne7MLOG3ZnYyhlUBfz-->复制</button></div>
+      <p data-page-node-id="V0hV3lwwWDjSCDAz7uLsTa" class="tp"><!--pnid:YwlHZCL9jzn6o1zWSt0g8R-->读 05_去年11月同类下滑的处理记录.xlsx，把去年 11 月那次与这次逐项对一遍：连降几批、累计降多少、当时怎么处理、记录去了哪里、有没有进偏差或 CAPA 台账。产出 Excel 一张两次对照表，标出今年是更深还是更浅，以及当年那条处理记录没沉淀下来导致什么。</p>
+    </article>
+    <article data-page-node-id="WOneQuu1lktdmL5NID0YC9" class="task">
+      <div data-page-node-id="MM1ikMPciClU1pnwtVmqah" class="th"><span data-page-node-id="Y8WhfAzs90wQ3tmhSAkuB3" class="no"><!--pnid:bHCxQvyzXY20GnOBr1MWVV-->08</span><h3 data-page-node-id="Mmem2WivBbDNnMAvkcn0fH" class="ttl"><!--pnid:99emxCKb6HFcq8INhKBd8d-->对照工艺卡片自查</h3><button data-page-node-id="3VUiAzdfsOcXq2vrOBH1eW" class="cp" type="button"><!--pnid:3GJcqPQAep7MwN5QhyFbs7-->复制</button></div>
+      <p data-page-node-id="fcAk14NuLfwRX16x0QCgcx" class="tp"><!--pnid:heCV2RzmX3e5SH5anBIfvW-->读 01_月度产量与收率汇总表_本年度.xlsx 与 03_收率数字逐批出处索引_含口径核对.xlsx，对照现行工艺规程与车间在用的工艺卡片自查：内控限引的是哪一版、两版表述不一致的地方有没有标出来、每处数字有没有出处页码。产出 Excel 一张自查表：检查项、当前状态、依据文件、该补什么。</p>
+    </article>
+    <article data-page-node-id="SvfdrQZX2AEiESgoVIaUBW" class="task">
+      <div data-page-node-id="0eTX9oN1Rlek5s30aS6nha" class="th"><span data-page-node-id="PT25f98J12mHz2lbMHoYNo" class="no"><!--pnid:wxbhhhihlniWkBMv9bkih3-->09</span><h3 data-page-node-id="JV58EhKn2sGQlqna8jnC4I" class="ttl"><!--pnid:XCQcmxJwphqCNjifGuU54J-->折算成原料损失与批次数</h3><button data-page-node-id="dvpEFztFSAonILA0NsnZ9P" class="cp" type="button"><!--pnid:i4CFi0y5NZKc0t0FdbmvPb-->复制</button></div>
+      <p data-page-node-id="g6QBUjHarnl6zRdkSvt3Xw" class="tp"><!--pnid:9eKVt2PNQFY5hedxAUiWvC-->读 02_六批收率按时间排序与环比降幅.xlsx 与 01_月度产量与收率汇总表_本年度.xlsx，按六批合计投料 60.0 kg 与累计下滑 2.4 个百分点折算原料损失金额；再按末批距下限只剩 0.4 算还有几批会触及内控下限。产出 Excel 一张折算表：科目、算法、金额或批次数、依据出处。</p>
+    </article>
+    <article data-page-node-id="8ey4W46JwyQZN333GQv0uq" class="task">
+      <div data-page-node-id="Qz2mAqTKQMgTGchtUxnJ3x" class="th"><span data-page-node-id="et6CGbOzZAxdoBARNEmDWi" class="no"><!--pnid:9UslceKCK9toZ5OzjPdlPh-->10</span><h3 data-page-node-id="hvFrHsFLMOIzJFYIU4IoUM" class="ttl"><!--pnid:x9MhgcfYozgZZPG1Gaixan-->沉淀成趋势体检清单</h3><button data-page-node-id="MLRgMwewqPYyuRhXzlNKRo" class="cp" type="button"><!--pnid:BZW7eblBRgaSNdveYnhSQq-->复制</button></div>
+      <p data-page-node-id="91wFZpAOwFvVQATULzDpZn" class="tp"><!--pnid:aYiGy8oeSkm0UQWzs68PmT-->把这次用到的口径与核对动作整理成一张可复用的收率趋势体检清单：每批读哪几页、分母口径怎么核、口径不一致怎么标、趋势怎么算、谁签。产出 Markdown 一份，换个品种直接照抄。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="k94afNrgHTcsfOND7af76O" class="cta">
+  <div data-page-node-id="1ns36910DmYaEdnZZh53dL"><h3 data-page-node-id="pudtgg6ivWxGLwoaz6l4at"><!--pnid:o5n8fs10ScKeJ2Df88FbHh-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="nMWAx93w6XpDoK3Pktyhw3"><!--pnid:AbWu6fWqfguwoj2FMaZrJ7-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="EUCIuNebcLIoO8sEU6fYvS" class="btns"><a data-page-node-id="19Hq87PTIYyX7PMBA9gQZF" class="btn" href="#" id="ctaContact"><!--pnid:2UHkGV2hIpof0l6wNVJuTq-->联系我们</a></div>
+</div>
+<footer data-page-node-id="0NDfyiqJDu5UCagHY27LHB"><!--pnid:8uYOT7mBpssFB2FlFRqYiq-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="kuLOmiTulQvUdQ5l6jiklj" data-pnid-children="7QnLP4gnrASEKxtJBRo5tw">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="l7T5arWnqLzRnt2jrYjoax" data-pnid-children="j5SOIgrNrm2M1a8SePyu1u">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="FiSW3PeNBxEd8Xnkt3ZoRd" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="P6004NTdTsVYdUbKJ7uTFC" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="BGrwJDsnmr0Yq5fwOrxaED" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="hcdFbAT6YqfxQ8ZbUGvbZk" data-pnid-children="I4RdSqzA6QZeqnH8SvFIhY">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="HS1QghtcV2eN2m3eEj205E" data-pnid-children="1wZb1J5mIxyOhcAManHJWz" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="7uhx6sqvMsDZilEzMQR8KS" lang="zh-CN">
+<head data-page-node-id="4nopIKUGvcljSMmbhq3cFe">
+<script data-page-node-id="2Kv302cw8gn7i0TFZIFzpD" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="ANYfkCYjq6CQg2HFPpDY2c" charset="UTF-8">
+<meta data-page-node-id="ptzxHaFfLcOYqKbResdMHg" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="HqlUFG6V0wD6KI0WruFTKX" data-pnid-children="eZwmcYq8u11IyQTTkQOlM9">供应商询价与样品对比</title>
+<link data-page-node-id="lrGfF1QnBBy7LCcAXz8wIz" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="NYtCbKLX8pqx3zMPbI365k" data-pnid-children="HSxNNFsE679shrPiBFRrfV">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="pgpsMYNVTWjGa45CSVt6z4" data-pnid-children="M3foc0eidXMVTrm9tSPdxZ" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="o3GnEcI5Ft69LkYegm8dC7" data-pnid-children="SCQRA1TOJioR2W0GphkiRT" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="je3LlUKOeGltg1qLkQQJiP">
+
+<div data-page-node-id="rn8ZbqYHUDo1svr0KiNSF8" class="wrap">
+<section data-page-node-id="Yu3MQLEfvOGMLb4wtOLUNH" class="page-hero">
+<h1 data-page-node-id="KIKA37c0LNbkNAsyV8j1ef"><!--pnid:WHnjRWCsUJ4CPRdoWHo7Iw-->供应商询价与样品对比</h1>
+<p data-page-node-id="awXZI3Z36F9dn1DDU3liXC" class="lead"></p>
+</section><nav data-page-node-id="k7XDaZyuesGYQoyfRoat1W" class="subnav"><a data-page-node-id="z5rzwXOa20JsLycH5lBOFt" href="场景引入.html"><!--pnid:tFwCn1h3L7qq3g0JTffWtS-->场景引入</a><a data-page-node-id="uF2IJ4VplDjPVMqU12FMaJ" href="LiveDemo.html"><!--pnid:IOunFCdobFOLisWW0Uy920-->Live Demo</a><a data-page-node-id="C6O23TWa9foSUP2fdBK5pl" class="on" href="#"><!--pnid:5YkwidAvGT2nsN6fbt4oZl-->推荐任务</a></nav>
+
+<section data-page-node-id="YRqzH1osCz9iN0yvM3vpJ8" class="blk">
+  <h2 data-page-node-id="k9DmggUVRZHO0hxvVRw3n4" class="h"><span data-page-node-id="2B4m2WFm6C1byZkKighPZt" class="num"><!--pnid:37rjRFMCkJR5pMPIYoQ4JU-->一</span><!--pnid:vw0i9uFOqyjtaoes9FTsiG-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="8Xd6IO1RdxF5vw4mkQMtpu" class="subline"><!--pnid:plBExGL5iihEyBMSk8RRKx-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="whpuI8kAj0ep0xCd8LShu5" class="card"><p data-page-node-id="CUig7eADZ5ieiQ0k63xidw"><!--pnid:SstzLnfyoCVNMxq1kvN180-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="y3dTpOBS2VeE5t7o1fxptC" style="margin-top:10px"><!--pnid:8sHOtcMIXehiKyUTTh1aln-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:AWHoFJhI46rnpfRKdhVfZn--><!--wb-skill-start-->
+<div data-page-node-id="tSx3TUclb5qnNuk1ONTqYR" class="wb-skill">
+<p data-page-node-id="3SrvkAmu0r2PfZRlvH3zUB" class="wb-skill-lead"><!--pnid:M6apLv8WlZ6inm01JZGp5s-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="nufhi0l8VViahf3JbcChRR" class="prompt" id="wbSkillPrompt"><!--pnid:lVFIO6BpCMeAEDZGuZtYdW-->【准备】这个场景的规则都在「供应商询价与样品对比」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/2N2fRVqOOxfbGBIisxmfRV/bCkFctSSO4Zv/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="BKvycjRjWs5TTwsuUpVUES" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:GHMpcO1yKcyFpfzxju5HuQ-->复制</button></div>
+</div>
+<!--pnid:f2L7unzke5LQkmiwn8nDrp--><!--wb-skill-end-->
+<section data-page-node-id="MHk0TDTqJdNQU8oCuMKkRT" class="blk">
+  <h2 data-page-node-id="9YTpaoHRboslyc2HBdLhKb" class="h"><span data-page-node-id="cv7ylc15X7SBXLcKbSAxVg" class="num"><!--pnid:xunQAqimJkXIYPGKSNZFTt-->二</span><!--pnid:dcq4vblXV3MlI1xzgHisMB-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="foNgW8awiov5YQo6y7lD0E" class="subline"><!--pnid:iaOBt38aKNR2hjS1B7JJtR-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="tJQxdN3tXZiXC53TjbbLgO" class="tlist">
+    <article data-page-node-id="x2gzB8ZpD08kMQJzMk8Paf" class="task">
+      <div data-page-node-id="t3FesaaC6RIThb6mFFW5Md" class="th"><span data-page-node-id="8eWIPZZu6mbpolfwD9gkpm" class="no"><!--pnid:pTqmMnHZYcTArOcI4iKvcK-->01</span><h3 data-page-node-id="gIyX8YxlW0xcBgpH9fexz9" class="ttl"><!--pnid:1RxKrS35W8QKn4bPw7uHoL-->首推默认</h3><button data-page-node-id="T5VNpOqRBa2WX4AMhqtkoZ" class="cp" type="button"><!--pnid:VjiG4EV8rcx91QzVEYZban-->复制</button></div>
+      <p data-page-node-id="2OkXxD1eUoidi8mHxipgIf" class="tp"><!--pnid:4jqUcWf1HM4dlz7ynUYVjX-->HT-K09 有三家报价：顺德、中山、宁波。材料一起拖进来了：三家报价单（三个币种口径、两种含税方式、三种账期）、样品测试记录、供应商历史绩效、头程与交期测算，还有我从微信里整理的中山厂样品跌落测试记录（两次 1.2 米跌落外壳开裂）。你走完整流程：先把三家的口径归一化——含税方式、模具费、运费、账期、起订量统一，再算出每台真实落地成本和首单现金占用；然后用样品记录和历史绩效交叉验证，把否决项单独列出来；最后给定点建议和跟每家的谈判点。产出《供应商比价与定点单》一份 Excel：第一张 sheet 结论摘要，写三家的归一化结论、推荐与备选及理由、否决项、可排除的方面及依据、限制声明和素材来源，带签批栏；第二张 sheet 归一化对比，一行一家，分列单价、含税后、模具费摊销、运费、账期成本、每台落地成本、首单现金占用、样品问题、历史绩效。定点决定栏留空，我自己定。</p>
+    </article>
+    <article data-page-node-id="cbTPKEzwZIqCgTFkhx8uuC" class="task">
+      <div data-page-node-id="FXuSrSr7Pw9YZe0xAtXdaA" class="th"><span data-page-node-id="33gnzqAnqbPbWJrzK2SNmW" class="no"><!--pnid:gQX1Z8GhY0J9j9SQm2Ncu9-->02</span><h3 data-page-node-id="LgYxQOKvz9P0Cpu8sDv7w9" class="ttl"><!--pnid:GXl15JHQWsOT9xjD33dVJx-->只做归一化折算</h3><button data-page-node-id="8OyZl9JqirL6fJ4pTlaAJK" class="cp" type="button"><!--pnid:C4V6w9p0KDbzwKnlawYu0X-->复制</button></div>
+      <p data-page-node-id="svoNUxkfp47wLpG7Emrr76" class="tp"><!--pnid:huN6AaHfn58lr7UsRZYH8D-->先不给建议。只把三家报价折算到同一口径：含税、模具费、运费、账期、起订量逐项列出来，算出每台落地成本和首单现金占用，折算过程一项一项写清楚。产出 Excel 一张折算表。</p>
+    </article>
+    <article data-page-node-id="aALQAoo39GDzN9HZU1HKMR" class="task">
+      <div data-page-node-id="tCKHI3kzj24kfOBtokdWaG" class="th"><span data-page-node-id="9BUUWFp06YUj8kN3yRY4Iz" class="no"><!--pnid:p9OmVQUn4Tft00KaWppDls-->03</span><h3 data-page-node-id="SOIqc3zsBn8y74u3GBSBka" class="ttl"><!--pnid:KrOqjh637LkWsoY8uPhXex-->换成只看得失与样品</h3><button data-page-node-id="OYSv03xeXN7SRfO2WnA7U2" class="cp" type="button"><!--pnid:1rINTsqFA0QbJJimcecA8g-->复制</button></div>
+      <p data-page-node-id="GJWp3CSJqaCy7dL3veYk1r" class="tp"><!--pnid:xVJpJ0EZBlMlBsACwohJ2p-->这次不比总价，改成只比两件事：单台成本差折算成首单金额差多少，以及样品测试记录和历史绩效里的问题各是什么。产出 Excel 两张 sheet，一张金额差表、一张样品与历史问题表。</p>
+    </article>
+    <article data-page-node-id="Js0wz70kkKut3y7L0FvG5P" class="task">
+      <div data-page-node-id="yHpdZEPoiZHcysUVBzSb95" class="th"><span data-page-node-id="7JFRVpzN3QsUp3UHZyiXdF" class="no"><!--pnid:QcBjpc9hDXWDJGHoZDFlku-->04</span><h3 data-page-node-id="qBTwaFqmUQb75SCwjEqMrV" class="ttl"><!--pnid:oBcmYvqXCaUU0acvw8RbrZ-->一次比三家并排</h3><button data-page-node-id="17tRTdDFyDVMNV6vwdo66g" class="cp" type="button"><!--pnid:yi0zcWVA55DNet3CKGxupK-->复制</button></div>
+      <p data-page-node-id="GdLfF1eV5vwG74nueTgg7U" class="tp"><!--pnid:8WwAQtRtQpiFyGmSj4w8I0-->三家横向排开做同一套归一化和交叉验证，最后给我一张对照表：每台落地成本、首单现金占用、交期、样品问题、历史绩效、否决项、谈判空间。产出 Excel 一张对照表。</p>
+    </article>
+    <article data-page-node-id="NBTvmwGfF4pGuz4tS3ACY4" class="task">
+      <div data-page-node-id="jMWXwtHl15ZmFO6xlw3Ecg" class="th"><span data-page-node-id="RHfMOOacBinkTD13jDz9LQ" class="no"><!--pnid:McV9rKirR08kBcigrg9eSP-->05</span><h3 data-page-node-id="O7m6KOVM3yKnvo2pYSuCjG" class="ttl"><!--pnid:3NDqQUqF3CqCCfEmmssYe4-->给老板和采购各一版</h3><button data-page-node-id="vUFOiUUQiV66bMeRHlRoen" class="cp" type="button"><!--pnid:iHeOivuOQh7xJazeciNR0D-->复制</button></div>
+      <p data-page-node-id="DAF3M46WQ2Lx3l4cB4NWdq" class="tp"><!--pnid:BBFGHpFamcCY2E2sCG7ZMu-->出两个版本：给老板的是定点建议一页（选谁、为什么、多花或省多少、风险是什么）；给采购的是跟每家谈什么（哪一项还有空间、拿什么依据谈）。产出两份 Markdown，各一页。</p>
+    </article>
+    <article data-page-node-id="HS0k96bWqPyRaNvP8IfA3i" class="task">
+      <div data-page-node-id="CbfitMhOtW7ZsAOknKL64a" class="th"><span data-page-node-id="bAdhizRDUK2kPcEZdvsI0E" class="no"><!--pnid:ywBc3DMCedLN0D03ZKbLxC-->06</span><h3 data-page-node-id="yfp9giU13qw36yikAvoQlr" class="ttl"><!--pnid:XieoLKEG3RoAfDaSUyIIPy-->让它反驳自己的定点建议</h3><button data-page-node-id="lIrkEja1ad90EOoZCF5Z17" class="cp" type="button"><!--pnid:FaJ8Hk8s2RSVaYKF81D9MM-->复制</button></div>
+      <p data-page-node-id="u4dByzBbC1VFM29yL6ZCjP" class="tp"><!--pnid:jSwK9oWvuAYW0AmLDuOO84-->对照三家报价单、样品测试记录和供应商历史绩效，你建议一家定点、另一家保留，把支撑它的落地成本和样品依据逐条列出来；同时说明如果保留那家第三轮测试通过，结论会不会翻转、还需要什么证据。产出 Markdown 一页。</p>
+    </article>
+    <article data-page-node-id="RY5NeWZ7QRZIdvZIvmhzlZ" class="task">
+      <div data-page-node-id="94vspJH2FBqYBs0Kd5ohg7" class="th"><span data-page-node-id="1OTDgT0q0s0mub2cPgegjP" class="no"><!--pnid:ML6BvRgpEUG4QajNdfuEUv-->07</span><h3 data-page-node-id="mH12YrI6K4XRXguzUOeLy2" class="ttl"><!--pnid:WGIHLLGJmOiV2T883LqK2W-->比对这个供应商的历史问题</h3><button data-page-node-id="4MeJkpsCNnZMMshb03gWnI" class="cp" type="button"><!--pnid:AFtC4nVcrvcLAnn04t33py-->复制</button></div>
+      <p data-page-node-id="cnvMMmwnM6ZzyEAQh3rxv7" class="tp"><!--pnid:v976SjbkFyjxddr58tUnd0-->把三家的历史绩效逐条摆开：历史交期延误几次、质量退货几次、出问题后响应如何；这次样品上的问题是不是历史问题的重复。像的标出来。产出 Excel 一张对照表。</p>
+    </article>
+    <article data-page-node-id="g97nNRZ97o9e7aglUPUiMt" class="task">
+      <div data-page-node-id="WlISdAUVDkaQOaY17MhctS" class="th"><span data-page-node-id="40BzhIUfIyruot1Vp9ok2D" class="no"><!--pnid:4rUnJcQEgbJ2jd0N71uGwx-->08</span><h3 data-page-node-id="Ywu3byH1cwJeWDEIJj77jr" class="ttl"><!--pnid:TADOBL4cilWTtLooxWjco4-->对照报价单自查</h3><button data-page-node-id="fmH7PJpNyA3lyFR8MeXI2g" class="cp" type="button"><!--pnid:htkoouVI5JnBd3e53MDHOk-->复制</button></div>
+      <p data-page-node-id="UUEqzpveszinsbJ074NVDA" class="tp"><!--pnid:BsM2cdCgJgTqWQvACINybH-->对照三份报价单原件，把这次的折算自查一遍：有没有把不含税价当含税价、模具费摊销按了多少台、运费口径有没有含关税、账期成本算法是否一致。缺的列出来。产出 Excel 一张自查表。</p>
+    </article>
+    <article data-page-node-id="Mxrwp3NZcW263lmtHcrIaW" class="task">
+      <div data-page-node-id="MurhmHsESwD5qOmZgbLOSf" class="th"><span data-page-node-id="3kL2QDDxFpovc6bI73Skxo" class="no"><!--pnid:ZWmaat41yNaZJtfuB5cKe7-->09</span><h3 data-page-node-id="nv9NkokrWLJzy1DzVltJdj" class="ttl"><!--pnid:zgllCczBoX3ZN9RYnmwyPa-->折算成首单总账</h3><button data-page-node-id="j1Gk4WXXdNVWS9a2JN0iPn" class="cp" type="button"><!--pnid:AWNnNwcQ36OXO3bcJJCHAt-->复制</button></div>
+      <p data-page-node-id="FuQpLRURYGyVCQ2yXhHYtw" class="tp"><!--pnid:2fQGHJ1edCNYS28JEj92bY-->把三家折算成首单总账：货款、模具费、运费、关税、资金占用成本各是多少，加总比差多少；再看这笔现金如果押在别处能有什么收益。给出算法和口径。产出 Excel 一张测算表。</p>
+    </article>
+    <article data-page-node-id="qcNHe8m0nQSZzOgWEjt5xu" class="task">
+      <div data-page-node-id="49zebpSIZronFFJZTGKE4W" class="th"><span data-page-node-id="DDiadl9w5td9dPIzvB9Dcn" class="no"><!--pnid:eNBGOUmH7TVUFINLkVEuE3-->10</span><h3 data-page-node-id="3wKYlgYnbK1hGzvL4GvJCX" class="ttl"><!--pnid:6t13fWFo9dwLr7iZZ1yhLX-->沉淀成比价口径表</h3><button data-page-node-id="hvjDfZB9SfoBkMamHESJsF" class="cp" type="button"><!--pnid:yBG4TRcAPbJouFvQj3NlWk-->复制</button></div>
+      <p data-page-node-id="3tHYeknD2Jp6PjNwtQ3WjL" class="tp"><!--pnid:SWqWCgDTlfLmdv0isi1RSE-->把这次的归一化口径整理成表：报价单上哪些项要折算、怎么折算、哪些算否决项、谈判时按什么顺序谈。下次换供应商直接套。产出 Excel 一张口径表。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="rpNzvguhz1zPPXtASXVjiz" class="cta">
+  <div data-page-node-id="8WqJGBx0c69kax6o1Yfwvm"><h3 data-page-node-id="gOSwItz61vQFq7bHZexfpL"><!--pnid:Ju9onpkimdmLCiJrHyslHe-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="kYSWYk2pfPWFHGFp574waA"><!--pnid:T9e5zpYLCuZH90PaUO4hmB-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="kMnphAlY0XFJz9LqeMPo24" class="btns"><a data-page-node-id="KvM9A0ka5p5WiXMlfA8byH" class="btn" href="#" id="ctaContact"><!--pnid:rDVJ8s3s97BwPa6c8gjZs7-->联系我们</a></div>
+</div>
+<footer data-page-node-id="esXvpUFjqfANMOKTudaaT9"><!--pnid:pwgz9BWuL61yiNQTmzrO23-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="P19DGnpEq8SkFlAO8CE2XN" data-pnid-children="5Om2bn5WlTPATprJ3dCu6F">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="aPTYfMM4TxSUMztsLc27X4" data-pnid-children="1pAfew6bThCHgQKH8bKbqL">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="RNYVTzG3cyGNFVs13nbVnH" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="JMml82DBIGvTsgYf8JpnU4" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="yTyKi3EftcldJxhCzQWp50" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="Y61yD6wbdvEr1hqW8hsx1r" data-pnid-children="KeWBbShQrzaIJrgqK09MtO">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="oOkqmPzwhysMmf7GiCuNum" data-pnid-children="xDTeBx0BvszDTeQfVcLpZ0" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

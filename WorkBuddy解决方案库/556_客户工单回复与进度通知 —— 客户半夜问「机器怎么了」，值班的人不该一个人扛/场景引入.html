@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="CU67mZgBXPOz6dXoaImplD" lang="zh-CN">
+<head data-page-node-id="e321NQDKhtyCayAHUWXdLx">
+<script data-page-node-id="87RSftDP1PruEbfPEkyRpH" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="UaWrm54gUj2nKo9dzhk3e7" charset="UTF-8">
+<meta data-page-node-id="2ACYqnxPpx2VDUeWOKYLzu" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="eCRH5W6OEhtLTpyxDH38wQ" data-pnid-children="NvBwRh4HtiqE4kqu2e12bX">客户工单回复与进度通知 —— 客户半夜问「机器怎么了」，值班的人不该一个人扛</title>
+<link data-page-node-id="CQElN22dbfu5OTILXF9b9R" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="GywdWLDuERfe9YoF7rZGW3" data-pnid-children="n8BwW5e5CZkbbG8OD3iKYl" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="FYPi19PeH7Pq8dUye9lqZY">
+
+<div data-page-node-id="NVGfu7NHNbPjdY8801yJf3" class="wrap">
+<section data-page-node-id="s4uvkHLpfzZoNQ7MhyNwqj" class="page-hero">
+
+
+<h1 data-page-node-id="9paxKRYYaKnG5YtQe6jXxE"><!--pnid:KGTpUhlZxxnqr2JQGrcwNG-->客户工单回复与进度通知 —— 客户半夜问「机器怎么了」，值班的人不该一个人扛</h1>
+<p data-page-node-id="xynJaijJVwVi5eccJzlYN0" class="lead"><!--pnid:rwdSTcg19SiHcc1ZinSlmz-->客户问的是「我的任务怎么了」· 值班工程师手上是一堆看不懂彼此的监控截图</p>
+</section><nav data-page-node-id="XS18Rh6WGf2dZMe1iiNvPK" class="subnav"><a data-page-node-id="cvdN2FYyPJn8UcL5aJV96y" class="on" href="#"><!--pnid:feKPbzxEN7QKiZ3UrupsqQ-->场景引入</a><a data-page-node-id="8IsoGcyDE06dXZc65dCrbZ" class href="LiveDemo.html"><!--pnid:r57r1KXtmZpT8sz8sqKBe4-->Live Demo</a></nav>
+<section data-page-node-id="y0vrH3Be9g0Q0ER5MGN83v" class="blk">
+  <h2 data-page-node-id="NOrlSKFAr2fX9Hu4adsSBU" class="h"><span data-page-node-id="yeAvcT8ulysCYzt9H4iUm1" class="num"><!--pnid:dSppLPV0omXixqi4ylJQHZ-->一</span><!--pnid:IgbmA5Evo13ddYsf36MbyP-->这件事现在是什么样</h2>
+  <p data-page-node-id="YO1A0j6e0s3MA6C4yy7BD2" class="subline"><!--pnid:qZvF1oKEvRMQ77PjIkQ6vO-->算力运营与客户服务 · 真实业务触发</p>
+  <div data-page-node-id="PKuT4Io9qqckrIZOaNHEJT" class="card"><p data-page-node-id="NE8BDASnHSOz2GQtU5o8vK"><!--pnid:BeAyenSyK6PTS2N9ms43Xz-->8 月 21 日凌晨 2:30，星澜科技的工程师在群里 @ 值班：「训练任务 iter time 从 0.87 秒涨到 1.42 秒，什么情况？」—— 此时机房正在处置告警，值班员要同时面对三件事：查原因、安抚客户、不能说错话（每句话都是将来的 SLA 证据）。</p></div>
+  <h2 data-page-node-id="hnxaW4E129wILseazVplyl" class="h" style="margin-top:22px"><span data-page-node-id="H42N9syZv6de3vv2B7PAtB" class="num"><!--pnid:FBLKG5x4OyZuVi10VD4hbP-->二</span><!--pnid:K7Cg8T3I14qSSWj5898K4V-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="qSpUh3kE6GPfBDwpyGaCEF" class="subline"><!--pnid:cAeEmWs2UMEGYYdjQ9SLw7-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="j8TUuF1JGjNv4dCm9BoADc" class="pains"><div data-page-node-id="XrjYhDDL6mrGYIaOPOIMku" class="pain"><span data-page-node-id="105XHYla5sErdBTqeXzPmT" class="i"><!--pnid:Ga4EOhqMzHnNrnwb5CjWNr-->1</span><div data-page-node-id="dqb7y0TdIpfjJh7Y1gfXog" class="t"><!--pnid:G2Hwx6nCBdEDgdM4bV8gwk-->中小 IDC 客户服务还在「电话找工程师、微信发截图」阶段 —— 工单上了系统客户还是打电话，因为系统里的回复没法当证据用<span data-page-node-id="tawns9GmxijtZw47lbCE8v" class="src"><!--pnid:LZxCNQk2UN1fisX3qfLFas-->依据 · <a data-page-node-id="kXBKuMkhtJHV88SxVcFw5e" href="https://baijiahao.baidu.com/s?id=1847829252665800992" rel="noopener" target="_blank"><!--pnid:yqYU1zmL4SlTefaCTYbB4U-->中小 IDC 客户服务大量还在「电话找工程师、微信发截图」阶段 —— 上了工单系统但客户还是打电话，说明系统没被用起来</a></span></div></div><div data-page-node-id="6mLCBxaQwteGedf0FuqxsJ" class="pain"><span data-page-node-id="9J4zczMLubsqOb44q4uAbW" class="i"><!--pnid:gaxP9dVTYVQ7w20t5Q22nY-->2</span><div data-page-node-id="vRDYXD4zSCLPYPUT5vJ6vm" class="t"><!--pnid:1aV8maCXxIvM2aYTpLyDLo-->SLA 合同约定投诉受理后 24 小时内出书面报告 —— 客户群里随口的一问一句承诺，都在为将来的争议埋伏笔<span data-page-node-id="8z2l4DBUsPChR8MtaAoitd" class="src"><!--pnid:iSabQNHEkod3fXz1ZBC364-->依据 · <a data-page-node-id="5eyU6qw9HFg4Xd0AOpQYDY" href="https://wenku.baidu.com/view/d8a2be1b6bd97f192279e9a9.html" rel="noopener" target="_blank"><!--pnid:YvJeRFEWlW2fZFAmxyk7K3-->IDC 托管 SLA 协议明确约定：受理投诉后 24 小时内向甲方提供第一份书面形式的投诉处理情况报告 —— 故障后的文书压力是合同刚性的</a></span></div></div><div data-page-node-id="EdmbTb9FHYzxl1VU1F012F" class="pain"><span data-page-node-id="hO96vvavNHHgeovTuDAROc" class="i"><!--pnid:gFyIFZGNILDQABtmwp5T4A-->3</span><div data-page-node-id="zU4M2EyeYPXTEwbEFwFspX" class="t"><!--pnid:c2SA5qPzyGS01oDMlFvbYI-->故障处置与客户沟通是两件事同时压一个人 —— 误告警半夜频繁响起的值守现实下，回复质量全凭个人状态<span data-page-node-id="lEILeViFebrakYQgZWrQeg" class="src"><!--pnid:F7dvFOUoTHYnhBiscYsAj0-->依据 · <a data-page-node-id="lY28OtgNhUgd8N5tEaS8pS" href="https://cloud.tencent.com/developer/article/2705535" rel="noopener" target="_blank"><!--pnid:GH7bsqe19mCo9IcRNJRmtz-->「凌晨业务流量极低，CPU、内存偶尔小幅波动就触发固定阈值告警，手机铃声半夜频繁响起，起床排查后发现是误报」—— 夜班误告警的第一人称自述</a></span></div></div><div data-page-node-id="urymHuruQXbdiLh5siVpUC" class="pain"><span data-page-node-id="YWx6utsRTftyWRGZUmoCLn" class="i"><!--pnid:ScG07LjVAOjl1F3tmzcovS-->4</span><div data-page-node-id="UzyWuKHRlTjrFTP3ZH2UUO" class="t"><!--pnid:WAqI3P343HgCA6sF44Fj9h-->「传统的做法靠纸质工单或者微信群通知，效率低还容易丢」—— 群里的口头结论三天后就找不到了，SLA 争议时谁都拿不出完整沟通记录<span data-page-node-id="2u2u6UJYfdoa1hUIf62WDe" class="src"><!--pnid:XFcADRMR0fN1Xi6EAVfuV0-->依据 · <a data-page-node-id="B66L1SexBWXXwxlL20FRZo" href="https://zhuanlan.zhihu.com/p/2035039056187357142" rel="noopener" target="_blank"><!--pnid:jhilLEzvqvPUVcB3LbvkBX-->「传统的做法靠纸质工单或者微信群通知，效率低还容易丢」—— 微信群是隐形的生产系统，客户报障、跨班组协作、变更通知大量在里面</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="c5yoJGtb0UMcZr2Z7flg6z" class="blk">
+  <h2 data-page-node-id="CnsmbCl02uFJHx4u3hr1PY" class="h"><span data-page-node-id="wdJqQioT9aL4xL73TpmgJu" class="num"><!--pnid:5KSAv5Z4IfFcF4q4bdlRhE-->三</span><!--pnid:nI2ihij7Nq3caTgp6w1RDV-->换个做法之后</h2>
+  <p data-page-node-id="4PgZ13BWrPptsIGnko0pnL" class="subline"><!--pnid:h7jFVZI0wna7U3vrnaorkb-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="1OMLQxaWyuhkovgWlHkfS9" class="cmp">
+    <div data-page-node-id="bso7RJ6P52mSiRbG2GeliA" class="old"><h4 data-page-node-id="gr5Xs0dZ6rwgPBTWFZKbnb"><!--pnid:3kTur8lrF5GIvha6aIt4C9-->✕ 现在的做法</h4><ul data-page-node-id="XhNgS4J8gaSn3YwQLLU47R" class="list"><li data-page-node-id="qNwRDn1n7bnKG72KTu1z5r"><!--pnid:NjoHVQ4m7s5DE2wZrIu1Yi-->中小 IDC 客户服务还在「电话找工程师、微信发截图」阶段 —— 工单上了系统客户还是打电话，因为系统里的回复没法当证据用</li><li data-page-node-id="F8b5D48G4NLhHUZNXghb5A"><!--pnid:RBStqJDbnr8MzgrrxEztKw-->SLA 合同约定投诉受理后 24 小时内出书面报告 —— 客户群里随口的一问一句承诺，都在为将来的争议埋伏笔</li><li data-page-node-id="KcywWqZs3QWwc6Jc4rmGpL"><!--pnid:6gvu18poZRy3jwm1nLQZWX-->故障处置与客户沟通是两件事同时压一个人 —— 误告警半夜频繁响起的值守现实下，回复质量全凭个人状态</li><li data-page-node-id="l4GyYIwWZMCd9nnIsGHsZK"><!--pnid:V9t0JoCYfdUMWVZuNkQCZa-->「传统的做法靠纸质工单或者微信群通知，效率低还容易丢」—— 群里的口头结论三天后就找不到了，SLA 争议时谁都拿不出完整沟通记录</li></ul></div>
+    <div data-page-node-id="ARcOFapw8tKnUipPd7uPEB" class="new"><h4 data-page-node-id="NlVi50XX6741ocvaT0SC15"><!--pnid:LhvhbnHPNttBnMTwlZ9WoJ-->✓ 交给 Agent 之后</h4><ul data-page-node-id="sZkOkFXCnjFE3zWETsHsyV" class="list"><li data-page-node-id="Uufi5NwtfNSYx8qQCE4TKF"><!--pnid:PANjrynu8qIqS0Thax39Za-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="caR4myzVoYQCcrexaLjfmj"><!--pnid:XIMVpCJBwv45h9QtkeIvSl-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="D8ZzZxCtqsNwWISIYAG780"><!--pnid:epd8GDm43PTKbAERVFPPMi-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="BhJbdCtXgMmkwRS6IRBqHk"><!--pnid:MH16sauOY3KBFnDeJVuHou-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="cgrSxElabv9Nj3mJh9H1LU" class="blk">
+  <h2 data-page-node-id="wxL1RsRuVx8yUa93EF9lQC" class="h"><span data-page-node-id="mzxDXRdGl5ZcpF8BriyGSw" class="num"><!--pnid:J8qEce8pRH1VVjjtIbl5In-->四</span><!--pnid:gcOv71N9YPKjdYLKdYVgQn-->场景闭环</h2>
+  <p data-page-node-id="IsRrjtA2FkPTlmXaNHGJpY" class="subline"><!--pnid:f7TYlsbehC6CZEO6GdD4Ss-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="NUSJ20vJjN3UxKnYt6pLfJ" class="flow"><div data-page-node-id="3XDgKwVVvgvfdlQdHrRmlx" class="step"><div data-page-node-id="lbRzIWvXhz7GRAAVR7ER7b" class="n"><!--pnid:RJ1D07sZ0CQaIVDzKkcT7h-->第 1 步</div><b data-page-node-id="EcExHbQYPh4PHVMNlBSY1J"><!--pnid:m5qcAsOoHYr6AuiImkHxqz-->工单结构化 · 群消息变成正经工单</b><span data-page-node-id="ujjNr0jAU2xx5HmmsVJGy7"><!--pnid:NTEHbrZfKGUL5Q3hlqWgVH-->谁报的、影响什么、紧急程度、涉及哪个区 —— 群里的随口一问变成结构化工单</span></div><div data-page-node-id="lhLeklS0RT3kWX8qoHWgWz" class="step"><div data-page-node-id="tIyzzVC6HURqlfdde8Caon" class="n"><!--pnid:wiMjKtCmuTYFmrfbDfcoY6-->第 2 步</div><b data-page-node-id="TKcAVX9TqQPq6oYIuEQvjX"><!--pnid:WJWhv0GVsfSFCRQwjxsiOy-->客户档案对齐 · 这位客户的服务边界</b><span data-page-node-id="sqxcyp03ZKx3Ydj6mSRxjV"><!--pnid:fZIJHvraje02gVtIYCKuGl-->他的 SLA 承诺、配额、所在区域、历史问题 —— 回复的口径由这些决定</span></div><div data-page-node-id="snsbRIEVzEgmbXRsRQfE1A" class="step"><div data-page-node-id="E6bnxCzE6M8oByhZxZykKq" class="n"><!--pnid:4PPsaAApMJhjMIWnDtMh9h-->第 3 步</div><b data-page-node-id="VmUlcYFMne69DyPDKgUcY6"><!--pnid:DL1AAaw2mkACEggZ55xIV6-->回复草拟 · 能说的、不能说的、待核实的</b><span data-page-node-id="Bz6Q8NMScsyMIv2S3AgAPS"><!--pnid:lv4WRGo842svXHguYr7V2A-->事实（时间线）+ 已采取的动作 + 下一步与更新时限；结论未定的事标注「排查中」，不写任何补偿性表述</span></div><div data-page-node-id="ulw6mua8E2q4iNDvQCpYBD" class="step"><div data-page-node-id="CQW6z7K7nKtAcvl4pTsx7l" class="n"><!--pnid:iaQDlLKeOEd8rwbqBMzwLW-->第 4 步</div><b data-page-node-id="uD6IwCebrE2r7b78OOzuYy"><!--pnid:BSgD5VPikApt6i0sq4x6Pe-->进度通知 · 主动更新而不是被追着问</b><span data-page-node-id="oWl2bSiwL7ClmBumjrQRxz"><!--pnid:sBiuFNGgXGGtoj0hApgcCY-->按约定时点（如每 2 小时）生成进度通知草稿 —— 客户体验的差别就在「主动告知」与「追问」之间</span></div><div data-page-node-id="X8908T5O4bLL0SjtFaGImq" class="step"><div data-page-node-id="vCPXGZgzXHulZDZEW6Eub7" class="n"><!--pnid:vtKZ5AmTicc90prth3FQsw-->第 5 步</div><b data-page-node-id="KNBvmxEs6qlFu6iEjpn2mf"><!--pnid:VHgNTNSVJEGzSrgfLAZybs-->留痕归档 · 沟通记录进工单档案</b><span data-page-node-id="fFxqUO4hak6nLTUTDdnY4D"><!--pnid:irhsLaMNkL7ZJ7JY7xG3Vv-->本轮沟通全部归档并与事件编号关联 —— SLA 争议时的完整证据链</span></div></div>
+</section>
+
+<section data-page-node-id="uDjoJGahxx5PsBLNlDcAzl" class="blk">
+  <div data-page-node-id="9FvJzKjXEVo3Lok5Lj694i" class="g2">
+    <div data-page-node-id="uqaFuBgt0GVRN3NRVtq9ns" class="card"><h3 data-page-node-id="2aTox47DmZEjlQHTuYYUwT"><!--pnid:0t0TVCH50q6HOceI8angjA-->要准备什么</h3><div data-page-node-id="AIbNnf94MLwgKFNoXJeCUH" class="src"><div data-page-node-id="Y1FzPjOGovTJ8P2X4aJgGJ" class="fn"><!--pnid:vlp2VsabiKg9sAPQEyRc3I-->客户消息与群聊记录（触发时刻）</div><div data-page-node-id="lsAcPUyX0Pp1NU6Q2KXPAA" class="fd"><!--pnid:EKWYwgrCZJOz6aJqCpUAJ9-->客户问了什么、语气如何、着急程度</div></div><div data-page-node-id="LuZ2Rq2SDH4ks2Bs5i4kaa" class="src"><div data-page-node-id="m0grwrAEuMlUCFPcAp914R" class="fn"><!--pnid:c3PMxUsRVIv0uQpSUzn8my-->该客户的配置档案（机柜区/IP 段/配额/合同 SLA）</div><div data-page-node-id="ZIFA7jbeFKz8IRUpVkEMFr" class="fd"><!--pnid:mOohY9kcmp6twZid6qyHh3-->谁在问，他的服务边界是什么</div></div><div data-page-node-id="jkCqcs5045yQAQbJha7mlT" class="src"><div data-page-node-id="0ze7eoHz8cq7PyurJUsEmB" class="fn"><!--pnid:eyjEIOPjaizN9XPPZoysD2-->当前事件的状态快照（告警/处置进度）</div><div data-page-node-id="rcXHWeyxEdTqcDtkfFCbxg" class="fd"><!--pnid:kX4CnHsWkhjW4a7kACDKSR-->此刻能说什么、不能说什么</div></div><div data-page-node-id="e4Fc2HnqliiypCvs3qnNPh" class="src"><div data-page-node-id="7WNuyyXOvpExC2kjB0Bpcm" class="fn"><!--pnid:lydEMbYtlEMvCNrxhQpDFi-->历史工单与该客户过往沟通记录</div><div data-page-node-id="mkFsYX20ehd1JamNAIVHwL" class="fd"><!--pnid:1HqtbPSwtCBZ4lofkDxwZb-->同样的问题上次怎么答的、承诺过什么</div></div></div>
+    <div data-page-node-id="DjlVHtC6bhp5uhMc8swfE4" class="card ev"><h3 data-page-node-id="kZ0z5CYNB4B1NwIjGKqTIl"><!--pnid:mIZWqP2EEWfXOTDDwEY7V4-->为什么这个场景值得做</h3>
+      <p data-page-node-id="oigZBHkrikqAct5iXeUZ4h"><!--pnid:C3qDMdcJNCxkjeBdH0T1Nt-->痛感 3 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="dDz6I2KqbbFCzoJMm3u0kP"><!--pnid:QPXc5YyZfUmfW36kSnTSBk-->7.2</b></p>
+      <p data-page-node-id="VyWTfRcouUBZtQIjtsY8gE"><b data-page-node-id="kNA10chpGrLGO3L0B7NHMp"><!--pnid:xTCVPAipZni0ILr57Ztg4C-->最大差异点 ·</b><!--pnid:sunvSvXtssUYoDLLZoEbW0--> 与智能客服机器人的区别：机器人答的是 FAQ（机房几点能进场），本场景处理的是事件级沟通 —— 每条回复都从事件的真实数据里长出来（该客户哪个区、哪个任务、什么时间线），且每句都标注与事实记录的对应关系，留痕归档。</p>
+      <p data-page-node-id="kfLsDPRklusx7G6pzxcLn0" style="color:var(--ink3); font-size:12.5px"><!--pnid:CcZrgT9SY86myeNBXWhcKZ-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="rtU7ohX1CgrhBD5LgIlfsB" class="blk">
+  <h2 data-page-node-id="ohbNEYaf3kBcK099N3u5rr" class="h"><span data-page-node-id="ufXwufoRM7jhVUFkIgdFXK" class="num"><!--pnid:pRZZmlyHJdlglKsMwZgFRf-->五</span><!--pnid:NFsqwCl5XiLUJ6hRzzQvS1-->会产出什么</h2>
+  <p data-page-node-id="fVh4bdIvzX66rIFYzPWCNn" class="subline"><!--pnid:qbasCU2kUjiJLbOOBkX39A-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="Ra1ZHaOMDPKKHD3G4CnqB0" class="outs"><div data-page-node-id="Ji1pivEO90kaLfTzguBWGP" class="out"><div data-page-node-id="IWHQtdzigNZ9UCSbGIpPwi" class="on"><!--pnid:8WXud3HEZF7yk4c9NFq01f-->正式件本体</div><div data-page-node-id="93Hg5tVZduMYD8wFjoHlCd" class="ot"><!--pnid:zw5Bo8fzwVJNHtaBWhzH9i-->客户沟通记录归档.xlsx</div><div data-page-node-id="tafqotMHOxiKWD0IzYJQY6" class="od"><!--pnid:rZwO1LWqHwYmamYqY7jIzb-->正式件 · 本轮沟通与事件关联 · 留痕</div></div><div data-page-node-id="AgB0d4SqhRtfp4OTNjA7om" class="out"><div data-page-node-id="cbbbEE4IXkbb32DVpcxjSb" class="on"><!--pnid:NcoK4wO7SxK6aSkvwNEDhk-->可派发清单</div><div data-page-node-id="7dGPxYEbegygCBbNUZUJZa" class="ot"><!--pnid:iEpNt0QaRpAN5fn9dJu80w-->工单与回复草稿.xlsx</div><div data-page-node-id="0kxg9gc6g9ZGUZ17m6YxjG" class="od"><!--pnid:lAJa2K4v5s1jQAr1WlvpZ5-->可派发 · 结构化工单与审定后回复</div></div></div>
+</section>
+
+<section data-page-node-id="ZZ5cteF6eNfZfMQTLDNAYn" class="blk">
+  <div data-page-node-id="XhjuXMhgrC4ig27fI7aLxp" class="card warn"><h3 data-page-node-id="aVjonA2937ngpVssHHJDHC"><!--pnid:YosRrsKoIO00XM078vUB2n-->这套东西不承诺什么</h3><p data-page-node-id="3xv4T0WRGfUu0lgQUXPw7N"><!--pnid:IeuDcaJyKVr9h1RHdF43t9-->不替人做对外承诺（补偿、赔付、时限承诺一律不写死，只写事实与下一步）。回复草稿须经值班工程师审定后发出 —— 发出去的是人的话，不是 AI 的话。「原因已查明」这类结论性表述在根因确认前不出。</p></div>
+</section>
+
+<div data-page-node-id="ot8hlFOYn8hqhZBcdExNp6" class="cta">
+  <div data-page-node-id="ev5MECWzE8jqjnBpMaySwq"><h3 data-page-node-id="Hb6vCg7QPwDw9U1FSM56BD"><!--pnid:CHb9uJU5Fh9XaG0UZ8BnhR-->想看具体怎么跑？</h3><p data-page-node-id="P0JJt0TRoy7BnzkcV9ITG8"><!--pnid:g9l2MFwWaADQYuaXUaCeZ8-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="9lnTcqGCozj5SND0ynp7JH" class="btns">
+    <a data-page-node-id="1B9PqHQnbHXPsSlPfHXngR" class="btn" href="LiveDemo.html"><!--pnid:HzxreftGEUFBraGEmbg1AY-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="VH8EumDHoO8YIk8yBOa20c"><!--pnid:GgBt6LIqSGAVdPQjkZADMo-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 判定与承诺一律人工签核</footer>
+</div>
+
+<button data-page-node-id="B4UiQnLyRMQdEPVIwegyGt" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="PPCXItbIvP5C4S6Jv83rWZ" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="B6VeMvjChwykmsjWIUvoQz" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="nW5MIuR81Tv0I0RWaC8spx" data-pnid-children="yAtcY7nBpkdlLvH5VRYP9a">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="oZEXMWAAuMyJzewTMSig8h" data-pnid-children="SrnuKVOHTVgAGcNKONYSKq">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="QGaTG6WoYhD1tp3CdJhXvz" lang="zh-CN">
+<head data-page-node-id="XmvxDLhhXpgsDL39isxd82">
+<script data-page-node-id="fA3CGRXEFJRbxBOh5eee5J" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="HK4aVf1IGl8cEt8d6NNk0w" charset="UTF-8">
+<meta data-page-node-id="L2lKJeeGNm5GZtbqgPPbDQ" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="naDv3JZZedDRjsOtBI7uCq" data-pnid-children="YTgTgtJuBFjxtxS0ymXT3J">费用异常波动分析</title>
+<link data-page-node-id="tLA1nP61jOy8tPNPPWYQwn" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="3HgbGzvvijloH2pAFyOPvk" data-pnid-children="0XTBkFlSI9xuLIapPTktE3" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="YrUdos2DoI8PhSi0SaYlbj">
+
+<div data-page-node-id="cSBAqruEWmU9XZhFvMP9V0" class="wrap">
+<section data-page-node-id="UXOLmDZ7mlPBzChtyEMctT" class="page-hero">
+
+
+<h1 data-page-node-id="8cKJeIczHrxbGPBy0nEZOy"><!--pnid:lrglsuV7wV9fHiLUGnRcO0-->费用异常波动分析</h1>
+<p data-page-node-id="bbaiDvymxOoADgdBCIIvtd" class="lead"><!--pnid:QsEzMpVCPxolkqRrsP1KNg-->费用涨了老板问「钱去哪了」 · 财务只能答「涨了」，答不出是量涨还是价涨</p>
+</section><nav data-page-node-id="R6pj0SRUTNl7VN3gXDsOyB" class="subnav"><a data-page-node-id="vDOddJhRY7DUJDe1mdKVhZ" class="on" href="#"><!--pnid:w0jmQZZ0t5D5DcYaRloKyB-->场景引入</a><a data-page-node-id="LdlyFrod51fc1HfW64jjmh" class href="LiveDemo.html"><!--pnid:sr2gYRSf8TPtka45CokMYI-->Live Demo</a><a data-page-node-id="FWGK9Pi6CzD7E2MV8BlNVv" href="推荐任务.html"><!--pnid:jM4I6L9risLjTnLjipCrDq-->推荐任务</a></nav>
+<section data-page-node-id="rS4LePA4WFbhXL9zDEIfPr" class="blk">
+  <h2 data-page-node-id="ip60IQaO9C3l3z97aVYf5Y" class="h"><span data-page-node-id="SYohqq56KFomIx2jq7YlKu" class="num"><!--pnid:MxZdvLdwwEl4I7YCj9EMSi-->一</span><!--pnid:WKRgZyXRx4JAeiLxQkoIKb-->这件事现在是什么样</h2>
+  <p data-page-node-id="alRB51UMfZBBOTK4e3A0IJ" class="subline"><!--pnid:FPvOhsu4L48EGVcwrlJxDJ-->经营与预算 · 真实业务触发</p>
+  <div data-page-node-id="rgXYba60l2BD1NoiZuKzIy" class="card"><p data-page-node-id="HYSQNK5un5klib2t9NAO6V"><!--pnid:yiadFYi9g9RGbaNISOHceD-->月度经营分析时，老板问「这个月费用怎么涨了」。财务要从费用台账里找出涨在哪一项、是量涨还是价涨。但费用台账口径粗、明细乱，量价分离分析从来没做过，只能笼统答「涨了」。</p></div>
+  <h2 data-page-node-id="5chKMx4JSWOlxIquJ3xMr0" class="h" style="margin-top:22px"><span data-page-node-id="cra2fJz5wyoQtODxYGiarv" class="num"><!--pnid:MXxr1bkHIlfTG592FPTKJQ-->二</span><!--pnid:r5ZR8H44TJenBjx2D3jGA1-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="Rf4in8DUN7odfIXcR5a7ZT" class="subline"><!--pnid:jclM1C8RONJCfdntrkHb8Y-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="zOgiW3tuPKp8ob3jNdddB3" class="pains"><div data-page-node-id="4zId7sZydF8tO6VJSbw2n9" class="pain"><span data-page-node-id="l0DzhBnfH1W6od4NqXesJz" class="i"><!--pnid:Y7PrFakfzC1nDDNwxKGNfC-->1</span><div data-page-node-id="KsOKzOq3opcZqDMYkpXzdM" class="t"><!--pnid:VzPllaYeCCItleFyZtQACM-->行政费用分析方法论要求量价分离，但现实是费用涨了只能笼统答「涨了」，答不出是量涨还是价涨<span data-page-node-id="4pEyW3pP8dea46S1X3E7Gh" class="src"><!--pnid:VZc4h1WTJB5nfsPQtCx4i3-->依据 · <a data-page-node-id="1Up8Oaf2zLI9dIGNJwkPzg" href="https://jiaxidaizhang.com/news/1175924.html" rel="noopener" target="_blank"><!--pnid:CDLmz1NlEu8SGLzbAnyKLs-->成本核算分摊案例：家具厂按产值分摊导致板式家具假性亏损、红木家具假性暴利，老板差点砍错产线</a></span></div></div><div data-page-node-id="DGwdmuFAYogBh4midKLrUA" class="pain"><span data-page-node-id="DpePlMmfu1vXsIjJpSMcKW" class="i"><!--pnid:7AR1WF3iIOF4Qz2EBEdkPY-->2</span><div data-page-node-id="Yj7s8UPAtb3TfJLA9NZEqf" class="t"><!--pnid:W5E5FlU549wFQntshHcOd8-->某写字楼保洁费涨20%，实为外包公司把耗材从包干改为按量计费且未提前告知——不做量价分离就发现不了这种涨价<span data-page-node-id="nkNx3OJZ4P6PlrLECHwg0r" class="src"><!--pnid:qYhftgewAZ9aPUg7iGqNn7-->依据 · <a data-page-node-id="koGE4WzQAilpyP8homSYEg" href="https://jiaxidaizhang.com/news/1175924.html" rel="noopener" target="_blank"><!--pnid:vuQSR2IVpri9AtQxbfCK4k-->成本核算分摊案例：家具厂按产值分摊导致板式家具假性亏损、红木家具假性暴利，老板差点砍错产线</a></span></div></div><div data-page-node-id="xT511ctxADgtgrAyy37nim" class="pain"><span data-page-node-id="CRO0CXTTJoPX7LSmiEauvO" class="i"><!--pnid:7YDuXAhTyncDjHy5fSifAI-->3</span><div data-page-node-id="A2omLN9SJpIAHgOPuvg8pE" class="t"><!--pnid:aDKJkARqHSM0CVZtCGwuRW-->费用异常波动是定性场景，容错高，适合AI做初筛——但光是把涨在哪一项、量价各涨多少摆出来，就解决了最疼的那步<span data-page-node-id="FDvb8POGb39QHMNbmkcgfm" class="src"><!--pnid:6TAHbyYfmFLoOe878dbcAY-->依据 · <a data-page-node-id="5KoFtUjcXppaEX49BnG0zq" href="https://jiaxidaizhang.com/news/1175924.html" rel="noopener" target="_blank"><!--pnid:fcG5khSsglFKJ08wMysGg9-->成本核算分摊案例：家具厂按产值分摊导致板式家具假性亏损、红木家具假性暴利，老板差点砍错产线</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="GQB9g52VNvV797DZaJ13aO" class="blk">
+  <h2 data-page-node-id="YPSn8nwTuTwIvBVwj8eciz" class="h"><span data-page-node-id="UqQqaSXnRdSsvyKs64HX3Y" class="num"><!--pnid:iKVNQkNCkmqVAOPVvkqOdJ-->三</span><!--pnid:EXh1zuPuu7BlW5bxqQKBnf-->换个做法之后</h2>
+  <p data-page-node-id="HfREvcMVNFgsCCtdYgOyED" class="subline"><!--pnid:jpxDY6FDdw75sg3fVqjp5q-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="vQYQGhyZ0AltLVPs9xjuMe" class="cmp">
+    <div data-page-node-id="9UkTtZ3PzjWuNbzzzRUE7X" class="old"><h4 data-page-node-id="KM285buwxkwYq2j8VSOeUV"><!--pnid:q11TclGRvgTz4N7Vqy3SeL-->✕ 现在的做法</h4><ul data-page-node-id="3OuizzPbXWFpShkd5YDT2g" class="list"><li data-page-node-id="O8UKq3lMb31djowNe9EwAM"><!--pnid:DiHs3i6jGsYIHXGKdwqIX4-->行政费用分析方法论要求量价分离，但现实是费用涨了只能笼统答「涨了」，答不出是量涨还是价涨</li><li data-page-node-id="vRNRcOvrplsxTPZt6VMrsq"><!--pnid:9kybQrpZynCYq03DmymD7n-->某写字楼保洁费涨20%，实为外包公司把耗材从包干改为按量计费且未提前告知——不做量价分离就发现不了这种涨价</li><li data-page-node-id="fpfRCWsxvn4a3gQOEKN4LV"><!--pnid:fPoEtz4s71FkLaufMITQkt-->费用异常波动是定性场景，容错高，适合AI做初筛——但光是把涨在哪一项、量价各涨多少摆出来，就解决了最疼的那步</li></ul></div>
+    <div data-page-node-id="Sne8FOAOBeOGpiHCpGkn5C" class="new"><h4 data-page-node-id="FEDOV9Dov5mpJZz9K570Du"><!--pnid:3ztcBwGFrFkEmYzDNCPpi0-->✓ 交给 Agent 之后</h4><ul data-page-node-id="vvqBZl4oJzmJIlqoM39PH2" class="list"><li data-page-node-id="JOMWsXsdYr1eJeTSilkAlH"><!--pnid:4M9FAEADsrK8VFVOmz9h2V-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="EK8vbxfDaApYcWyqTwwJ11"><!--pnid:nPaKBd92DZ5R8aPnTxpz6B-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="l2AG4jSmQx7XQx1RUwuNQr"><!--pnid:E0FC9KSUHjkOgxXAhriiCE-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="eKFHuLeX6A3ljMggtwDwaZ"><!--pnid:gvyRuE7ot117a84aL08yaL-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="iLLGSSqs00UCc1FEd8x0XE" class="blk">
+  <h2 data-page-node-id="GYYBpGWNAV3kt7ScgGhHLy" class="h"><span data-page-node-id="mCGKE8QZrERIIBYcEPKEUH" class="num"><!--pnid:Kx8VTlt3INfvI06lLEaWkV-->四</span><!--pnid:7R4wZKnZOKO9kfii0YNmra-->场景闭环</h2>
+  <p data-page-node-id="McDJvHT2uZn8wvTnPmhM9V" class="subline"><!--pnid:CEz2YVJnijuO2pmLlzaqzq-->4 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="aE3Yv8GH4XYxwPiKUBvC7L" class="flow"><div data-page-node-id="qjcaRhyDnXnFPp8ljN2JYa" class="step"><div data-page-node-id="IBO8aVxZHFNcJyO2EAmkRZ" class="n"><!--pnid:eJL7RI3f3vDjZiCc5ZB3og-->第 1 步</div><b data-page-node-id="OgKdFF5YTrt9XIpUL0hCEO"><!--pnid:TndeSrQptcDEd09dqluPSu-->费用环比 · 找涨项</b><span data-page-node-id="bFkpPx7R2cYEcyfsLkzXwz"><!--pnid:R4gKMQCO4n6KFQXqAJA49G-->哪些科目涨了，涨幅多少</span></div><div data-page-node-id="uxIptFpmVeOaip5hYUZQ5O" class="step"><div data-page-node-id="BytcRzFbIjpMANvMvB1jfj" class="n"><!--pnid:04UKyZMmFV28Ub3wKpIqnR-->第 2 步</div><b data-page-node-id="5YW0znQ6j4nx74aRl7k3Km"><!--pnid:DnqbZLW9ZGasKrZITi1jui-->量价分离</b><span data-page-node-id="cHNFfVSUsPiHi31BvLzcEM"><!--pnid:J1MonOYl8duXS030E1B2yU-->量差=Δ用量×基期单价，价差=Δ单价×本期用量</span></div><div data-page-node-id="wRhjOONK5ZLIn2D3IszWRY" class="step"><div data-page-node-id="DEnT5gJ10vm4oL2aCXGU5e" class="n"><!--pnid:Jkp0F6LDqKixLGirkW82Dc-->第 3 步</div><b data-page-node-id="1TaQujMVrNAg5ag7r5hcUy"><!--pnid:K23AFSdkEmk8I0ugfShEho-->异常归因</b><span data-page-node-id="VO2SXVz4UP2zFtIWENkBh2"><!--pnid:5L5xvNZoSdYbQhyZNjVccv-->涨价是量涨还是价涨，计价方式是否变更</span></div><div data-page-node-id="UUxgEZWbt7ZXt9S76AWPL8" class="step"><div data-page-node-id="n84m8fsQbCgoQ8GhMbcU3b" class="n"><!--pnid:jDrFBMbvYCgClRll7M77R7-->第 4 步</div><b data-page-node-id="7te6FGVCS6xccI1WqECdhF"><!--pnid:lGMk7ZghWFrDU3E58yryhO-->生成异常清单</b><span data-page-node-id="cAZQNUrzTvTsixSYQYehz8"><!--pnid:ZwiqXcNW4B0z4VtyIU9c7t-->超支科目排序，附归因</span></div></div>
+</section>
+
+<section data-page-node-id="nEN2cMlBaZHl42usYAYsev" class="blk">
+  <div data-page-node-id="iHAwxAqHWSslp5JaADD1mV" class="g2">
+    <div data-page-node-id="1KAhW6p1WfqBB16igB0ibU" class="card"><h3 data-page-node-id="tsxriK5J7hZGl6DVCDDdwB"><!--pnid:F62DeulCmlIPtnVOHHKv9F-->要准备什么</h3><div data-page-node-id="z1gb8TgReMVyUWx6sIp5hB" class="src"><div data-page-node-id="DxJ37JP3mdEmtJj92DTbEq" class="fn"><!--pnid:WE09Wu4HpAog14eiOYWs1s-->费用台账（连续多月）</div><div data-page-node-id="Zm823x1iiWmA2zsPscvzBu" class="fd"><!--pnid:FSsCbID2rpxHo4TnVS8YlK-->科目/供应商/金额，口径粗</div></div><div data-page-node-id="g7c493k0vn61Ya7OKAlogQ" class="src"><div data-page-node-id="oFnfDSc0C4v4es0za6I9ug" class="fn"><!--pnid:16o4A2zeJSFGFxXiyLHlCK-->上月对比数据</div><div data-page-node-id="JDMYryi5dJAq0pHzmJpSBw" class="fd"><!--pnid:V5aPyqgGJKd6cJACrk1Def-->用于环比</div></div><div data-page-node-id="pCWNPe3b8rMeDppImbhjw0" class="src"><div data-page-node-id="OmokXR3sGFrJQAPsgKNr1L" class="fn"><!--pnid:VP9MSETHF2mzYQbX33N3Cm-->用量/单价数据（如能耗、耗材）</div><div data-page-node-id="NbrbVf3xExM7LaCNWJI9L1" class="fd"><!--pnid:Fe1Jw1XumWJikRaabUiTC5-->量价分离的基础</div></div></div>
+    <div data-page-node-id="e0v26p5Hb3htiwaKeJvMLb" class="card ev"><h3 data-page-node-id="vP0IguEcSomGjHkUZi0Msy"><!--pnid:ziGuPb9RHqw6oKmLkNywvp-->为什么这个场景值得做</h3>
+      <p data-page-node-id="g1vxF30drrIr9630PA72PR"><!--pnid:mYrPnlTtY95STwxeR5kTGz-->痛感 3 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="C1IFTannSpj53mL7AhLSKH"><!--pnid:rb1g5BNzikRiCbIihXnA9F-->6.0</b></p>
+      <p data-page-node-id="JFYxBC0ruLoQ212HYKvnHL"><b data-page-node-id="XWnmVxnZiazi0v3V4IXrmQ"><!--pnid:1pGwrGWlcwqMgMtT6xnbMw-->最大差异点 ·</b><!--pnid:ZOLWxVAHDi2p8M06SbfE8Y--> 不要求先做费用精细核算。费用台账直接扔进来，量价分离和异常项由 Agent 算，涨价归因逐项标注。</p>
+      <p data-page-node-id="ilsjsgdFxh9V0qG3JCNRyy" style="color:var(--ink3); font-size:12.5px"><!--pnid:wPpM5EFT60vL2ii7XyYi8V-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="K2QrBTwsBxqgsPSGwdVtUB" class="blk">
+  <h2 data-page-node-id="4FM38fdwL7GWQ8f8vUdwFX" class="h"><span data-page-node-id="8szZxdovesJyHurp3IXwBi" class="num"><!--pnid:zc1HP1PslV5XcxhbOqWRKo-->五</span><!--pnid:FZ5Syx59mMuaO517xBniOx-->会产出什么</h2>
+  <p data-page-node-id="MW0lqhYbn0Jn5RW5LiHYUE" class="subline"><!--pnid:LpCaZUxEQouqj2ZIVxN8VB-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="SL8TcLacbmwlrpgZfnOsxy" class="outs"><div data-page-node-id="H1wuysf2JPgO4TtdRoxNTf" class="out"><div data-page-node-id="9Zlmlr6cNUMXJF1DoQHW6Z" class="on"><!--pnid:6sFaJPBW7IDohaYKtpLmk6-->正式件本体</div><div data-page-node-id="37hQ7WJ2QKPwiP38pgqyGW" class="ot"><!--pnid:0hQPmHqfydZDH6WaRUxLKn-->费用异常波动分析.xlsx</div><div data-page-node-id="hRS6qfLuEAcnfiuS9hTMSK" class="od"><!--pnid:set8NROGDKL7HGkmI38iba-->正式件本体 · 量价分离 · 超支排序</div></div><div data-page-node-id="erDx2j9Pg2WRAFtVn8zfc2" class="out"><div data-page-node-id="nKMld2ptspufYhdBGRYoeu" class="on"><!--pnid:0q5jw6QdHOqbO49r04AwG1-->可派发清单</div><div data-page-node-id="5zpVTraQ6w7SO1WtdVjFjP" class="ot"><!--pnid:VAziDAHZMstDaoYE0FrAu6-->涨价归因清单.xlsx</div><div data-page-node-id="XQLkc0KW4FwL53urBMW4vM" class="od"><!--pnid:UO3QLPVnr0skuapEMbu0lR-->可派发 · 逐项量涨/价涨/计价变更</div></div></div>
+</section>
+
+<section data-page-node-id="4NTfj4HEgAJzi1EFRrNos1" class="blk">
+  <div data-page-node-id="EMpc0UBDrmf9d1PZzihDO0" class="card warn"><h3 data-page-node-id="1c53ZpIxsq04YozlaB30zn"><!--pnid:0TAgBkuvLrBbhysVFgPEQ5-->这套东西不承诺什么</h3><p data-page-node-id="oGiQsH5IqMD58AYU2Vm2AK"><!--pnid:KIPDdkmKhX54hQCKlKgoos-->不做费用削减建议（建议由人定）。不做成本分摊标准的最终判定（需生产数据）。只做量价分离和异常标注。</p></div>
+</section>
+
+<div data-page-node-id="7RIqva3h91ZxAY1tNlI7nq" class="cta">
+  <div data-page-node-id="Utb0eYuYQThrzwaz7QvPqE"><h3 data-page-node-id="csqVF2L8rJ6sIpFhiCksvE"><!--pnid:jiBBuFOiMlBwBlGkpcXwBy-->想看具体怎么跑？</h3><p data-page-node-id="Vf0wQiOotD50YHX4YwcaUC"><!--pnid:wm92lucdLvyK57m124hza7-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="EQP81EaV2Qdw8KYprtEjeC" class="btns">
+    <a data-page-node-id="wRJzkVTuJI8AdOq63mqEVs" class="btn" href="LiveDemo.html"><!--pnid:2mFJ1ABdKAxCqzTmnGWE0V-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="A23X3ZRKj7gVyqa9NH5qGe"><!--pnid:Y4Of5rMxOCsXmQCmTG4Ynj-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="6PEX2ujmllHUyPwyyUbN3u" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="izoLGeGjajrcbbbDUGDivt" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="BNmwvJGyoodzliqKOtSnh9" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="lTkJIxNUWPoYIvMKyAcQ8b" data-pnid-children="ZS7IBOP4fyFlmBbI2dseX1">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="HnoGJx0KoGug0muATmEhaP" data-pnid-children="9UXFbLt7FCwiKH5w5eWfbj">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

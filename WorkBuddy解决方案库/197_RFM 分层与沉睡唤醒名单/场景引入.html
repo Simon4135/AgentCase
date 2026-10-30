@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="xeVmzKcEm2Hwm9mCFsvaSV" lang="zh-CN">
+<head data-page-node-id="J6WZD5a9YuVLyv5DzucV4O">
+<script data-page-node-id="oHSstc0UQVDlchAKAcHx5k" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="gQByWTkXJOfVHSn8eTpaYX" charset="UTF-8">
+<meta data-page-node-id="C9xAuUj0doBaPlPKfkErog" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="RKBPbkKouA7xFetb0755Ou" data-pnid-children="iz9pY78P0a48ycVtwG1Syl">RFM 分层与沉睡唤醒名单</title>
+<link data-page-node-id="Pb9zCXkBhMi6qnX9RPgGYp" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="YEcibjXw97slDAa2rfTurY" data-pnid-children="ZTj0CuxHndDHIdkncsGXvy" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="8Jtc9kVXF5XpP9pN8wlYec">
+
+<div data-page-node-id="5wALA22beym49Of8Cuu9QP" class="wrap">
+<section data-page-node-id="xs77joXvqF7Lh2T0urYE0e" class="page-hero">
+
+
+<h1 data-page-node-id="La2iYEZuXq4mKjGu4DTG0J"><!--pnid:l49MHP1joH9Em2V2KY61Ko-->RFM 分层与沉睡唤醒名单</h1>
+<p data-page-node-id="SRuHrKIqk52PHQCMk6FJfM" class="lead"><!--pnid:WEmXf9oZ0rar6l9zmbMSpr-->微信里躺着八千个买过的人 · 两千四百个 90 天没动静，他们在通讯录里吃灰</p>
+</section><nav data-page-node-id="GBPKKqkaofyk4edJvWsrQE" class="subnav"><a data-page-node-id="ty0llJmsfsBDDWfcMEepV9" class="on" href="#"><!--pnid:1lIspFf4oyUq5PTaWFtRvE-->场景引入</a><a data-page-node-id="9lnpzat6XcCxNiNgU9GFFk" class href="LiveDemo.html"><!--pnid:nXieWFvPRXiVmTed77pbZJ-->Live Demo</a><a data-page-node-id="uDfvQRpOsHJAkpsy1mGUlG" href="推荐任务.html"><!--pnid:bfdENsd4dYV3phG7ETRYAD-->推荐任务</a></nav>
+<section data-page-node-id="UVOoDJjt9QyJlDaLBYrqsW" class="blk">
+  <h2 data-page-node-id="iFXeHztMpVQDWd9togLkAs" class="h"><span data-page-node-id="uApyPZdUAErQ9dMGkfsa6D" class="num"><!--pnid:UCbOay1PjmX80zZfi3Epwy-->一</span><!--pnid:AB3gXAvmfUk5pTy6DVocyQ-->这件事现在是什么样</h2>
+  <p data-page-node-id="xp7BrZezcwCMSLn7gBmBwH" class="subline"><!--pnid:HZoFz1MwkLLTQeGP0MuwPR-->用户与私域运营 · 真实业务触发</p>
+  <div data-page-node-id="kmJYEH88n2MIZ1c9FXbyGd" class="card"><p data-page-node-id="mJAIw98Op2hBpcIBvBA0NR"><!--pnid:vh0ATIE0BfcHvk0LjwldwE-->大促后淡季，老板娘在群里发了篇「私域复购」的文章，问运营：我们微信里到底有多少老客户？值多少钱？运营专员沈飞答不上来 —— 订单在三个平台后台，企微好友 1.2 万，两边从来没对上过。</p></div>
+  <h2 data-page-node-id="7KqO9QieUlw08ml6PbRjhk" class="h" style="margin-top:22px"><span data-page-node-id="2AlEDwl4AKzMJriBpCkUo5" class="num"><!--pnid:pZ8he38gKpXz4gMrNO86gW-->二</span><!--pnid:aU4RpLfX2MomEJq2hoUgZG-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="saUsYnEZdTZhNNGFj1S2Pa" class="subline"><!--pnid:iZk6SKxEm2txSNjADXsznF-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="NV5Sgll1nVqfC8fDcDs05I" class="pains"><div data-page-node-id="UcHXjf8no5l5LsgOrJa1Vx" class="pain"><span data-page-node-id="e4twnNzcBKgVLPk6SqIl6T" class="i"><!--pnid:qfvLfchFObV5fQjz1tUx0m-->1</span><div data-page-node-id="5EpgJ3Ilh3ig0l8pIWyipQ" class="t"><!--pnid:B74jK0T0wwuNdDLT1WTNcE-->唤醒一个老客的成本约为拉新的十分之一；沉默会员中「以前花钱多最近没动静」的只占 20-30% 却贡献绝大部分激活收入 —— 这笔账多数商家从没算过<span data-page-node-id="fdF5eB9ZaH0RCglR8qx365" class="src"><!--pnid:nUKEKcU22uEJrG23cvQUFJ-->依据 · <a data-page-node-id="SVwsliCOOr9cUnAf45qQeV" href="https://www.youzan.com/blog/articles/77947" rel="noopener" target="_blank"><!--pnid:y18cA7ymG5amLRrMqGrOVP-->唤醒一个老客的成本比拉一个新客低约 10 倍；生活馆 60 万会员中 30 万沉睡，分层后用 AI 语音+5 折券捞回 8000 多人、做了 300 多万 GMV；沉默会员中「以前花钱多最近没动静」的只占 20%-30% 却贡献绝大部分激活收入</a></span></div></div><div data-page-node-id="IWaFof8oil88M27M3E3B0I" class="pain"><span data-page-node-id="CJ5VHIAF5qvTB95T7zZ1Yt" class="i"><!--pnid:AwPtPihisPQnHbOIkkkTPj-->2</span><div data-page-node-id="5cKi1FtC2rOGdHuiW8hn7B" class="t"><!--pnid:7hQawndGZym3MA0mUnc4xe-->社区美甲店只唤醒「沉睡高价值」层：7 天 120 条私聊回店 26 人，客单提升到 1.3 倍 —— 分层唤醒的打法已被验证，但算分层这步把人挡在了门外<span data-page-node-id="HBKEKaL8lklkpGYbtfYUGo" class="src"><!--pnid:kv7iURs9QvfVGOaD9hreT0-->依据 · <a data-page-node-id="CTbCDSFRdxZMWvofV5iADH" href="https://shangjiazhushou.com/article/23972839-663" rel="noopener" target="_blank"><!--pnid:H5eOl6nS5L7mbTVAFfuuRK-->社区美甲店按 RFM 打标后只唤醒「沉睡高价值」层：7 天 120 条私聊回店 26 人，客单提升到原来的 1.3 倍</a></span></div></div><div data-page-node-id="w2PxwOez72NG71f00Gj19H" class="pain"><span data-page-node-id="Tmnt3pNRNw1LADqaVH3sZo" class="i"><!--pnid:AX9izd44B3G6gtwaeKyoAj-->3</span><div data-page-node-id="4GvrfSgP1EcNs1IRGTVXpP" class="t"><!--pnid:zYIzifR6atzGYvLAhW1Wnv-->订单在平台后台、好友在企微、标签靠手打 —— 三边数据从没碰过面，名单资产一直躺在通讯录里吃灰<span data-page-node-id="WuaRrbRsbQgZrehFwWMFIl" class="src"><!--pnid:4WQWldAP1apj9094T8byPQ-->依据 · <a data-page-node-id="dymy2sR6bnHSGV8sYaAV7X" href="https://weibanzhushou.com/blog/tag/%E5%BE%AE%E4%BF%A1%E8%90%A5%E9%94%80/page/23" rel="noopener" target="_blank"><!--pnid:vJxi8oKOGcQntd8BNPUjMo-->私域运营从业者自述：做私域 5 年，最崩溃的不是获客难，而是每天花 3 小时手动打标签 —— 客户群聊发一句「敏感肌泛红」要手动备注，朋友圈点赞一条「孩子早教」得逐一对接标注</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="2pkCmrCzYwHIdVZXPOD8vt" class="blk">
+  <h2 data-page-node-id="THYeg1mhDj2e8dMYdJxJ9E" class="h"><span data-page-node-id="4t2SQZeHk3jXJONT8Pm0Ym" class="num"><!--pnid:NX9FlX5obcSrDena991Dyy-->三</span><!--pnid:buIqRLJ9xil845uxVl60Mp-->换个做法之后</h2>
+  <p data-page-node-id="GKWDBVHFPhnvzo8VqqLfVU" class="subline"><!--pnid:HDufpGeRFpQNiLdHH8WSvK-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="PiDqEvuOcrENeBJ9149peq" class="cmp">
+    <div data-page-node-id="aowzDUC5wTvy5BKlscgX8l" class="old"><h4 data-page-node-id="4tyJAuyPrOkeBynsl4W29J"><!--pnid:j34VyFdsl1ev34ruK3WLg0-->✕ 现在的做法</h4><ul data-page-node-id="MFC2fdtLDyklOI6QOKv6IC" class="list"><li data-page-node-id="nLMCm1kyoo7STdscgyVdY8"><!--pnid:P6wMWv4vAgJLXF1uvoH0Y8-->唤醒一个老客的成本约为拉新的十分之一；沉默会员中「以前花钱多最近没动静」的只占 20-30% 却贡献绝大部分激活收入 —— 这笔账多数商家从没算过</li><li data-page-node-id="9PzrhxS58fIB5izJ5trOFM"><!--pnid:uUcYoGcrlX5tVk3E3Q3jO0-->社区美甲店只唤醒「沉睡高价值」层：7 天 120 条私聊回店 26 人，客单提升到 1.3 倍 —— 分层唤醒的打法已被验证，但算分层这步把人挡在了门外</li><li data-page-node-id="TllFYw4qjTfrItTGF697Su"><!--pnid:g4s5rfvAcmwEQqXDFxfDRb-->订单在平台后台、好友在企微、标签靠手打 —— 三边数据从没碰过面，名单资产一直躺在通讯录里吃灰</li></ul></div>
+    <div data-page-node-id="0moDMe0JU30hk4ENbCsMfF" class="new"><h4 data-page-node-id="W6rmZveSiclLhCuHqkz1eF"><!--pnid:a0f0WWTDDh1jTma0ZrzpTX-->✓ 交给 Agent 之后</h4><ul data-page-node-id="z2FKRpMV97YPpqUoLyZJYX" class="list"><li data-page-node-id="tN1bCeC2YfJAswJqDH1sAx"><!--pnid:4q8Mo1kMZqS2oNuxweHNhN-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="4KcAzAgniYrMQcPlfzEX5l"><!--pnid:lZI0HdueOkzIzpCX72v0r5-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="47iUff5cpsB0UbvKdZOb51"><!--pnid:TMqipCzLhkVjVqMv68XyJV-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="by05kPdiIbhjVuCuVA6nZD"><!--pnid:BQjbjrVDGje86f85sJk7PD-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="AJD0ejQ9YnWv1IYOpFpr0m" class="blk">
+  <h2 data-page-node-id="Y8HSEIJYCvdU73nqOGJ9Iu" class="h"><span data-page-node-id="jPDuIik6AH2EaaqQwcO8Gz" class="num"><!--pnid:XU1T0K9fviw9jRIb3WbRDu-->四</span><!--pnid:iF6WhGfyoVyXkQXkC5rhHe-->场景闭环</h2>
+  <p data-page-node-id="hvXXTyrOW7VTxZLbpQKr1C" class="subline"><!--pnid:sTP51ELiBfG7z7uQWOcyvD-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="uH1tl51MwuHem8W7pA6wiZ" class="flow"><div data-page-node-id="1iFs1RnJUPBGYiKXMGLwUF" class="step"><div data-page-node-id="ZbktrhenD2DXPM9l0d8xBL" class="n"><!--pnid:lRWQIrzLgS07gJv0E6nUXQ-->第 1 步</div><b data-page-node-id="1dDM0HjS3oZ383idBpJcoe"><!--pnid:PLbYNGuNHXiN7vnVVu9HjB-->RFM 三维计算 · 每个客户一个坐标</b><span data-page-node-id="vIfT35nNPyl77oSzEp1d6z"><!--pnid:CM1QHLVNdrt3EvWUwc5gLL-->R 最近购买 / F 频次 / M 金额 —— 按本店数据分布定分档线，不用教科书刻度</span></div><div data-page-node-id="oI8R4G8y1Ft2rPEqi6HCLb" class="step"><div data-page-node-id="W3z7yJazJtwPXtRvx33WGx" class="n"><!--pnid:FFJ03u2Qv9mY6qtgZW5wq2-->第 2 步</div><b data-page-node-id="rQmC5XYioFFAbWBKXvIJZw"><!--pnid:etkORdmms3A14bEWrOPCDF-->五层分层 · 名单先看清</b><span data-page-node-id="4k4PecgERQWDf3sXEFTxB0"><!--pnid:RKpwYA1mYIgGRLlxdVVthU-->重要价值 / 潜力 / 沉睡高价值 / 一般沉睡 / 流失预警 —— 每层人数与累计贡献金额并排</span></div><div data-page-node-id="7kx5ZsXlJNznnyH7axG8dp" class="step"><div data-page-node-id="SPnt6P5N3ER9zYKVaQfWCo" class="n"><!--pnid:QyiDKFOoMn4QCAjt4zKUPT-->第 3 步</div><b data-page-node-id="jCA9ta6A3fJUF5FnmSCy6v"><!--pnid:Fj4INaGTCqUQ5xJNUdokUy-->优先级排序 · 20% 的名单值 80% 的钱</b><span data-page-node-id="ed5WJafRt1zrg25uIvspys"><!--pnid:CsE2H1qjAuvzeKaeUGsm7D-->「沉睡高价值」排第一 —— 以前花钱多最近没动静的，激活收入的主力</span></div><div data-page-node-id="s6BxUf9x08Q3GoaaUuCvdZ" class="step"><div data-page-node-id="VVovo7hRyBk2qJeieOR2y8" class="n"><!--pnid:4dvwVOc4IwwsR2lrILkwww-->第 4 步</div><b data-page-node-id="jbeAq5slcuCQWrryaIsrYr"><!--pnid:PJe8DfKwUYWsomdCLvABio-->话术生成 · 带购买上下文的草稿</b><span data-page-node-id="nNp9QmBuHhlEtQtEWarCYo"><!--pnid:QlCoEINXn2QHwPz9GAw044-->每层一套话术草稿：提及历史购买（「上次买的两瓶装用完了吧」），不是群发模板 —— 人改完才发</span></div><div data-page-node-id="s7YNyLFg5wcV7GSahGLFgS" class="step"><div data-page-node-id="ShgGQLOLAH49xzAFAbjY8p" class="n"><!--pnid:Djk9E5CTa3tWvsFAX1K7OQ-->第 5 步</div><b data-page-node-id="DWRxpgyIOrbtRncF0YRKeU"><!--pnid:opxuVfNsSGnOVVSCcVZWNS-->企微映射 · 名单落回通讯录</b><span data-page-node-id="FES1wFDol0mAxiKFy3yXzj"><!--pnid:JvJQYNPD8LssSvJNa8C1Ff-->名单与企微好友匹配、打分层标签 —— 发送还是人工，但发谁不再靠感觉</span></div></div>
+</section>
+
+<section data-page-node-id="m5FEiEhYczxAGusGQwByKQ" class="blk">
+  <div data-page-node-id="xUZPQ2BeKKBntLHta9vgoA" class="g2">
+    <div data-page-node-id="dH9W46JU4vlAskJUUJBi8R" class="card"><h3 data-page-node-id="NNjC7N7VCtfEy4KkgQrrbu"><!--pnid:bi4EdTsNjNbgYHseVKVO31-->要准备什么</h3><div data-page-node-id="fGolcVJsc07yYawynL6tdv" class="src"><div data-page-node-id="rWCzyLlh5z1zcJ4297pYa7" class="fn"><!--pnid:1VCfwXvlTOpHoqsfyh0K2s-->三平台订单导出（近 12-24 个月）</div><div data-page-node-id="WtNhR4Kh11oQPvHRmGdIBK" class="fd"><!--pnid:WbLfBxXsdKu1bDZB4qOAdj-->算 RFM 的底稿 —— 越久越好</div></div><div data-page-node-id="CknGRHnZQujIiKPoLrsxSi" class="src"><div data-page-node-id="9HfiktZaXNjYKZTnNHAW4j" class="fn"><!--pnid:3ehXH1CBKyiD62q64yJlLH-->企微好友列表（含添加时间）</div><div data-page-node-id="fRhVBwAI7X6yKnwOjGL3bb" class="fd"><!--pnid:gdLlSIOLs4AqUrRXsVmMof-->名单与私域的映射</div></div><div data-page-node-id="MhSguVnY6rrUDu6bGiW2Uo" class="src"><div data-page-node-id="LRrp6WzLLKtGtfYyNMWnXG" class="fn"><!--pnid:22C8Zcv6NemLXtWS8DeF3f-->会员台账（如有，哪怕是半年没更新的）</div><div data-page-node-id="ESeqyTIaMLcpXQI8QDGJVB" class="fd"><!--pnid:OMAL4gupFsLSXiRBpOfctl-->历史标签的底子</div></div><div data-page-node-id="0jkToq6Okoyr2sjNK361Md" class="src"><div data-page-node-id="MsgO0sgMcY7aHXs3MNcQmi" class="fn"><!--pnid:axHwmgWXZMoGGiloNHvsVS-->上次唤醒活动记录（如有）</div><div data-page-node-id="GFJPoo4LmM08dSAaph2Tfh" class="fd"><!--pnid:yt8ygyyghUwX7o52he3HtT-->唤醒率的历史基准</div></div></div>
+    <div data-page-node-id="ePRtIO8TlYZSgX2aGvaZSj" class="card ev"><h3 data-page-node-id="UTABfFM1yRVJwShXL1uspk"><!--pnid:DvZyKmgtKlmU4155le8t7O-->为什么这个场景值得做</h3>
+      <p data-page-node-id="NOuoCSfHPR2StqS5D7KEcs"><!--pnid:H7W0RhW03KqZwoFx5dHwFW-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="RA0e5wwhNgAYAuzQUcZM9F"><!--pnid:IQegOVRTTjztvVPMa1z9iV-->10.0</b></p>
+      <p data-page-node-id="nE8XwxL0dpvqa8OIDb1Io1"><b data-page-node-id="7lyVtzKF8J7y0RsgWQs7Cy"><!--pnid:MHY2Q5Oa9mPwIsHtMKRItx-->最大差异点 ·</b><!--pnid:mXtF2qquRcR1zHeCxAy7eE--> 不要求客户先装 SCRM。三个平台的订单导出 + 企微好友列表扔进来 —— RFM 在 Excel 里算，名单保持文件形态，Excel 条件格式就是最好的分层视图。</p>
+      <p data-page-node-id="lavf8MjOrPOov9j61v5gJ1" style="color:var(--ink3); font-size:12.5px"><!--pnid:dNXWtD1OQzPKqPNyt5td2j-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="GVihzYKSyBixeplIWGRlVE" class="blk">
+  <h2 data-page-node-id="Wy0QCz34fA7LWvOcD6Ohtu" class="h"><span data-page-node-id="NbxluZye6kXeOso7TzfdWz" class="num"><!--pnid:WFhNep7yc9ylKxJ24E0PPc-->五</span><!--pnid:pQvaY4a1QX8iLfJzmzzolh-->会产出什么</h2>
+  <p data-page-node-id="BwxSMHgwz2BtOO3QxUJbT2" class="subline"><!--pnid:vcyKIjeo9ljTxRHBI0G4lG-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="XuP9TTxSLefGyspcAU9U39" class="outs"><div data-page-node-id="JJQnHk8jC6C2V9mwUGIMAB" class="out"><div data-page-node-id="qeP6xwchD9LxjCcFgfK3Tq" class="on"><!--pnid:QsOzGao27teBismOr2snlY-->正式件本体</div><div data-page-node-id="w3WmuUOjpzttuFxoqSpF7j" class="ot"><!--pnid:GNVJ9jJH8U08vY9ZI84hPG-->RFM 分层与唤醒名单.xlsx</div><div data-page-node-id="8QQ1X9xIuX8HN2oA1iz1u4" class="od"><!--pnid:XEoyRvYOo2mRshRiWo0vuv-->正式件本体 · 五层名单 + 沉睡高价值优先排序 + 每人购买上下文</div></div><div data-page-node-id="h9UONad63yp4Nz7URzAnFx" class="out"><div data-page-node-id="djMm9aNtux5DulyK66kKYJ" class="on"><!--pnid:ifCJhFEehxCsZ2NLCDkD1E-->可派发清单</div><div data-page-node-id="LhmOg2f9EKXi0OGVn6H96j" class="ot"><!--pnid:PzXsmwq4gWvlgOG7C22J12-->唤醒话术草稿（分层版）.xlsx</div><div data-page-node-id="WutCj4xRgpjHvNxzlm9Yxz" class="od"><!--pnid:iYLAVwUYpM9bXhSrevoAPd-->每层一套 · 带购买上下文 · 人改完才发</div></div><div data-page-node-id="G2GM8nXcPmBGf4IOLxqUIu" class="out"><div data-page-node-id="8vqEc6xBFgyHezNadvlGY3" class="on"><!--pnid:Kg4qP6BPvUO0bb4PLVWDfL-->可派发清单</div><div data-page-node-id="GO3Jb1vGrwCTEfdD8RQzhO" class="ot"><!--pnid:MTqENYaI2Mrt0m1bEIOa3X-->黑名单与剔除记录.xlsx</div><div data-page-node-id="nH3rEA5Saqlko0fxY7PC2c" class="od"><!--pnid:Kn4GfmZLGe9vnagfb5sWlG-->退款/投诉客户的剔除依据 · 避免误发</div></div></div>
+</section>
+
+<section data-page-node-id="mk8RAf7d1lItJ4GiNAkEkc" class="blk">
+  <div data-page-node-id="kYT8ILv66zSyoLip6WJES0" class="card warn"><h3 data-page-node-id="X9MQA5OexCBpimQHlHb4rj"><!--pnid:XwNb1ccV3im9qB5FBO9uBQ-->这套东西不承诺什么</h3><p data-page-node-id="BAk4jqp7UUW5MM6oPYwRd0"><!--pnid:Fha95ECqrbLCuWDzcMGKQg-->不做「自动群发」—— 名单和话术给到运营，发不发、发多少、什么时候发，人和节奏定。也不做 SCRM —— 保持 Excel 产出形态，名单导回企微手动打标签。</p></div>
+</section>
+
+<div data-page-node-id="yHVEeRFBxJi3NWok7decBc" class="cta">
+  <div data-page-node-id="kL0XHl4i26VdkQuFw6w58a"><h3 data-page-node-id="VR8bnKmxhINbGRof7LqHZq"><!--pnid:9BphbjNqqsjvA0jkqr8pxy-->想看具体怎么跑？</h3><p data-page-node-id="kL6Qtk0yIasEA9mUOhk1ev"><!--pnid:xoGOAeZ1nWGT2nQRJS60IP-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="MPCvzdk7TlEQAApMEseWIO" class="btns">
+    <a data-page-node-id="D6Qx5JDadxp9jL5ujZRNoh" class="btn" href="LiveDemo.html"><!--pnid:7L23e1p1RhFhthAeOxHEYD-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="qDatq6Bhkt83Hr6AwJTxeK"><!--pnid:paG3Rf06doXJf1RTjcscPM-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 不碰钱不对外发声 · 执行按钮永远在人手上</footer>
+</div>
+
+<button data-page-node-id="inqD0feoO18HAONORQJuxC" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="a6DkyNGYXPDtWKzZ3cI6gd" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="QntSg14RRyJKrhTJgMXpUB" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="SHLVCLAxECPv3TxP5VK8AI" data-pnid-children="AQUVreBZxPwvs6m39nj1DA">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="Mym1Nczw3tNLFeTri5VHgL" data-pnid-children="IuKS7Pyxi0DhoPGZEQ0NYX">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

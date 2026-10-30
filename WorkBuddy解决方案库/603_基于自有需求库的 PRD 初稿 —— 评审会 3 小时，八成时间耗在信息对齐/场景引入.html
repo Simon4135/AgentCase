@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="o1lBoxwALTAj2dy4LIbuCN" lang="zh-CN">
+<head data-page-node-id="5x8xDdXhQ2d51hsjertwmD">
+<script data-page-node-id="q5xPFQdCNz5Eor5KdTWVPs" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="mApcqjnrsYrDEAyiJ5yx7Y" charset="UTF-8">
+<meta data-page-node-id="n3VfLD8JRwWpGpbkSprtSj" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="gktQe2YJ0b4m10GXoMxwG6" data-pnid-children="DaVwA2eE88912V1E7K5FDC">基于自有需求库的 PRD 初稿 —— 评审会 3 小时，八成时间耗在信息对齐</title>
+<link data-page-node-id="VXdSFDlp7ftx6pyY9zypn9" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="XNx550kf6oUvtYBvnkPlVy" data-pnid-children="GSJOigXpwi4g0VU7WayEt7" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="tLME5sztjErQhJfXjEpCFU">
+
+<div data-page-node-id="sZy2nbcuDKTRsJgrYuBCE5" class="wrap">
+<section data-page-node-id="Qnz8iIRgXoOuyl6XvlASDv" class="page-hero">
+
+
+<h1 data-page-node-id="5waQZy9S7c0IQQsXby1Ro6"><!--pnid:nu1wAtj2qpYTCl6oJR8L4O-->基于自有需求库的 PRD 初稿 —— 评审会 3 小时，八成时间耗在信息对齐</h1>
+<p data-page-node-id="U9WlX7rfwk21Tc1I6GNepS" class="lead"><!--pnid:o82S2kdLO3FNE8iyB9hdVV-->每场需求评审会 3 小时以上，其中八成时间在补背景、对数据、讲竞品 · 决策反而没时间</p>
+</section><nav data-page-node-id="AQkccqGN6yNJxfYHXqXkiP" class="subnav"><a data-page-node-id="9HT2jwNgIhgJiY9uKlQRfL" class="on" href="#"><!--pnid:ODldJg30bKdji6CVUtgckJ-->场景引入</a><a data-page-node-id="Gg13hQdkHdDqoKFkxVkYzp" class href="LiveDemo.html"><!--pnid:UhZqYGxY07kgyHNFwbSana-->Live Demo</a></nav>
+<section data-page-node-id="vgOTJVn2GG0mb5kZOsTfzF" class="blk">
+  <h2 data-page-node-id="PBbEE6Hv21gisw8Y6ceCf6" class="h"><span data-page-node-id="P7LWLEilU3Qa9iCBhKTpXC" class="num"><!--pnid:h8jTe3Zt06jQRuvjmQW7tw-->一</span><!--pnid:OXojQVIYKjQqUjjnqQMbya-->这件事现在是什么样</h2>
+  <p data-page-node-id="GfpsThpKZtbaX8G1wviBWZ" class="subline"><!--pnid:jxFJVoeP9XHLNbJk25qQhO-->产品管理 · 真实业务触发</p>
+  <div data-page-node-id="wcvZ0IbydX71wDeOsvE6xR" class="card"><p data-page-node-id="srJO0OXsNfXgUPeQ4e3189"><!--pnid:kpvC3guizrFN1WxXK3jWjo-->多币种结算需求（需求池多源收口与语义去重 归一后的那条，证据链 3 家客户 67 万 ARR）过了评审准入，产品经理要在两周后评审会前出 PRD 初稿——背景、目标、功能点、验收标准、竞品现状五段齐全，而且每个功能点的验收标准要写成 验收报告初稿与功能点核对 那种能进合同需求确认书的口径。</p></div>
+  <h2 data-page-node-id="1wsiE5rLjuoJpGsqFGF7X0" class="h" style="margin-top:22px"><span data-page-node-id="9WvM1D4qqNrDe1x76vNBqa" class="num"><!--pnid:cMv5T2VwXtfPxEFMvKdhAi-->二</span><!--pnid:r0Vu1oOtyI98DWvCypOMZO-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="nvD1OjVYKj3RTMmGK6hbRk" class="subline"><!--pnid:fH6GeZtutmleQclCLNzvSX-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="ogojEEZ6SXv1GsQYrqWRwF" class="pains"><div data-page-node-id="aCKl9Sh8cup7iEYEH8VOJ1" class="pain"><span data-page-node-id="aplK3JeBBovffNzpLBjemg" class="i"><!--pnid:BBRusrMTiHsg3YYWeS0XB2-->1</span><div data-page-node-id="A2VOhdXeUgNLt3AeIX7bI0" class="t"><!--pnid:qbALRlwKLMMV40bJyMMCSC-->每一场需求评审会时长都在 3 小时以上——其中八成时间用于信息对齐（讲背景/对数据/说竞品），留给决策的时间所剩无几<span data-page-node-id="fwI4zz3Turb2rVssQiQNyQ" class="src"><!--pnid:UaHrfMktTeFwZsLFvtRfIn-->依据 · <a data-page-node-id="f6plcRLHMZ03PLtPiTttzo" href="https://www.woshipm.com/online/4369150.html" rel="noopener" target="_blank"><!--pnid:JSTM3PDjNLxPcaxitoAFUE-->国内一线产品复盘：每一场需求评审会时长都在 3 小时以上；产品实习生平均每周产出一份深度竞品分析</a></span></div></div><div data-page-node-id="2BNZplvTzT68uF2lB6gmQL" class="pain"><span data-page-node-id="WNBrIFaYN5VG0Tz7NyB95q" class="i"><!--pnid:iEClSTRm0CcW0QLZfuf6Aq-->2</span><div data-page-node-id="u60fjGlIa1SeWO2WtPneb5" class="t"><!--pnid:fNZ8gu3Za1Yxv7tjLL6gFW-->PM 每周 12+ 小时用于收集管理反馈——写 PRD 的整块时间被反馈整理切成了碎片<span data-page-node-id="AHdZXJlabL3hZ88pgpRhdu" class="src"><!--pnid:VVL3Jf577hQp0ZXKuafGyX-->依据 · <a data-page-node-id="HSIevO22eG0Hqv0jsyrHIp" href="https://uservoice.com/blog/product-insight-customer-facing-teams" rel="noopener" target="_blank"><!--pnid:F56JaN47RqW2KSM81K3vdK-->UserVoice 调研（200 名产品从业者）：收集和管理反馈可占产品经理每天 25% 以上、每周 12+ 小时</a></span></div></div><div data-page-node-id="lDwqbo1a1GZUNUeG3p1RJH" class="pain"><span data-page-node-id="jA25DS0JnZbbZ4JAZ07xh2" class="i"><!--pnid:cjRpgpuzdwdUEqPCiJdFj8-->3</span><div data-page-node-id="66nc4tGjNVNC5f42mqLLGo" class="t"><!--pnid:6JT96smjupDEzJ3Z27zHxa-->需求变更代价曲线：设计期改 1 倍成本、发布后 100 倍——评审会上没对齐的功能点，代价在后面等着<span data-page-node-id="5KjF0DuZmms2fa14lRw8tJ" class="src"><!--pnid:jB2IziivPMKsrWvqMZZhx7-->依据 · <a data-page-node-id="pUbCpJbmg95cqnZqSSX4r5" href="https://www.raftlabs.com/blog/custom-software-statistics" rel="noopener" target="_blank"><!--pnid:SPYhpt1g7d6APsP32AmfVK-->需求变更代价曲线（NIST 口径）：设计期改 1 倍成本、开发期 6 倍、测试后 15 倍、发布后 100 倍</a></span></div></div><div data-page-node-id="ALTQu8xTFTC1XjbQjNfant" class="pain"><span data-page-node-id="su8FvGulBqK7NcVJc4JBrX" class="i"><!--pnid:uJrnfVKRAFPm2CWnrd5dPd-->4</span><div data-page-node-id="mRSg1JaOeiZt2aYAzMKrJq" class="t"><!--pnid:wCf98RroTvYicLREoEvT4l-->反馈闭环差的公司浪费最多 35% 开发资源——PRD 里没有证据链的功能点，就是浪费的入口<span data-page-node-id="QdYpZLUdMK16ZZd9RqkB9J" class="src"><!--pnid:hJOxmzwzaPFzlyRv4XGByy-->依据 · <a data-page-node-id="a6Qgw04Mqplk1DTNPloFeT" href="https://www.pelin.ai/blog/customer-feedback-handoff-sales-to-product" rel="noopener" target="_blank"><!--pnid:WiPFKWLADEeM46buw89aCl-->Gartner：反馈闭环差的公司浪费最多 35% 的开发资源去造客户根本不想要的功能</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="2Uk7uIELYhDddg4HXah1jc" class="blk">
+  <h2 data-page-node-id="pd6kqMuh27OxZkaoy6jCNJ" class="h"><span data-page-node-id="tXckpDBsx8kIT9qwvvQhhm" class="num"><!--pnid:XoxobK3NnrPXnjyp29VG3d-->三</span><!--pnid:pKn4vzHiDs7LzLm0YFsISe-->换个做法之后</h2>
+  <p data-page-node-id="5rsTZvPjVaQTHkX00QoRNi" class="subline"><!--pnid:azOhahJlDmnM8p2GsgMUXs-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="M9qWGNCXv1212LNOtuOsFF" class="cmp">
+    <div data-page-node-id="fLxx7ISomVW69Uu45SR9I4" class="old"><h4 data-page-node-id="vSccLcmHATpf4EFsjQc9oX"><!--pnid:OXHxsXBlNgW5abihNILtjA-->✕ 现在的做法</h4><ul data-page-node-id="8xJQXgJqSSl3BpIwxht7gq" class="list"><li data-page-node-id="7UVU0TSAezsRKxRyxQTyVO"><!--pnid:ds3rcpq7xf3pfKJqglIjLb-->每一场需求评审会时长都在 3 小时以上——其中八成时间用于信息对齐（讲背景/对数据/说竞品），留给决策的时间所剩无几</li><li data-page-node-id="95vIAzSpE371oJNX5zXd9F"><!--pnid:3GVCUoLoEHfaomnCfmuMJM-->PM 每周 12+ 小时用于收集管理反馈——写 PRD 的整块时间被反馈整理切成了碎片</li><li data-page-node-id="K76joZ1iM2BruIh8th3SyK"><!--pnid:6b3ZLaVP5L29j03p8OhNdI-->需求变更代价曲线：设计期改 1 倍成本、发布后 100 倍——评审会上没对齐的功能点，代价在后面等着</li><li data-page-node-id="kYNVTBLZXcVzzhgYo6U3Tu"><!--pnid:8SJ3qscYEl9wLMHyVdS3Ot-->反馈闭环差的公司浪费最多 35% 开发资源——PRD 里没有证据链的功能点，就是浪费的入口</li></ul></div>
+    <div data-page-node-id="aoaX814HOa116cMcBkvjST" class="new"><h4 data-page-node-id="qmZG7AKnQCg1jxypUHoawZ"><!--pnid:3M4ENmmVXgsiY4AVeewJcY-->✓ 交给 Agent 之后</h4><ul data-page-node-id="uhdLcayWy7szVL9ZdIIC2p" class="list"><li data-page-node-id="Ehs3hYnc4sI93oNEI0N5Li"><!--pnid:3UzwOlNyAxCdg8p1JLdE4Q-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="DiruIEujOty4jaD4Soz4Gz"><!--pnid:0uBASsbH2rhlDYZpismlPx-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="DEXdILQZuS6fJn82oK6bLp"><!--pnid:Vzj60lqGsCsm9puWVgagbv-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="A7e9WCNjQPQ5bMZKFQDNOr"><!--pnid:tr5ro3EX7GZS5vZLDTeETX-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="2S422gpWISXK82KElyhCXs" class="blk">
+  <h2 data-page-node-id="t5d797FxPabUYfAlLOGNet" class="h"><span data-page-node-id="nbByABOvOmdrp9ItNP9nHr" class="num"><!--pnid:MGHdQmsDT8cS96GfLb0YYi-->四</span><!--pnid:e8BlLkI03LN14Uq7kpaNMg-->场景闭环</h2>
+  <p data-page-node-id="MuqucXlasdC3WKQIIaHgBK" class="subline"><!--pnid:rwAWHZvuUCw996OokjGJCe-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="rX9A8jd924GbbYWJxPS3dE" class="flow"><div data-page-node-id="tfptDCAqDe1ir0pNtoIidj" class="step"><div data-page-node-id="a62XsOTMDSnSIslC58gaap" class="n"><!--pnid:fsOKgShwwL8GSLPmknAaWL-->第 1 步</div><b data-page-node-id="l9lR8M0wfCBQH5Ih1fWo8t"><!--pnid:fkr9NaNwCcMBIGCgqwbofL-->证据链回填背景段</b><span data-page-node-id="7iTM5PcZcqfefgCvVdeHZ2"><!--pnid:OuL16KdJBNMjj7o9fjJIbC-->谁要的、几家客户、多少 ARR、原始表述摘录——每句带出处</span></div><div data-page-node-id="zgOq3zbU33iYsYMwwMfwgg" class="step"><div data-page-node-id="myHm5X5hX8ItqwY5jPVhea" class="n"><!--pnid:4uKXI5UouJno1MR6jb3T2N-->第 2 步</div><b data-page-node-id="zic4qEzesWUNru1SNGTr8b"><!--pnid:X5aiJHyFrxOayyyXWEwKJl-->功能点拆解</b><span data-page-node-id="tjigsquWdi6gYBPuDcKhfP"><!--pnid:SDIfTGDMep6uADWyXP1cJt-->按「配置可解决 / 需开发 / 依赖 API 变更」三态拆，API 项联动 API 文档与代码同步巡检 清单</span></div><div data-page-node-id="YfoxU9X9cZVk4m2tjWQuaU" class="step"><div data-page-node-id="wJYB7cpnvweXoiMgD6WluV" class="n"><!--pnid:JkVkhTTIMcaKAcjzeBL6pq-->第 3 步</div><b data-page-node-id="Y7PyZLOL2YTOWHOgTvDYM9"><!--pnid:2ihZ6b0rB5DZW1tsHfQfBt-->验收标准按合同口径起草</b><span data-page-node-id="lb3L9HyOzvlk9Zy4hw0qtJ"><!--pnid:FpwENujdiZCG2ALOYYOmlp-->每个功能点写成能直接进需求确认书的核对句式</span></div><div data-page-node-id="voA3F2iJ3Ic1vzqyN3lleB" class="step"><div data-page-node-id="avGF0lekz5GBP4dmrbByzF" class="n"><!--pnid:A42cdof95jxf3RpFMHeQlj-->第 4 步</div><b data-page-node-id="7m8auIcX4NdhHo0cbVEvZO"><!--pnid:tjFQHlqHVTpVJHQ1lteF2t-->竞品现状引用拼装</b><span data-page-node-id="Ym2xoCIZiWY0GRISbItEf3"><!--pnid:CYs9Ojb4xC86Sc4SG3rB4D-->复用 竞品对比矩阵与讲标弹药 矩阵证据，标注口径等级</span></div><div data-page-node-id="RpNjZXcm2UV0eXUZkgy8mx" class="step"><div data-page-node-id="HXzV6sgFaJobr0bokn8Obo" class="n"><!--pnid:4B8MRT0CvnP5XSSV780ZHJ-->第 5 步</div><b data-page-node-id="VcVP29nTGiv1Kypb36rjvp"><!--pnid:6YToGQwFFWrHPSU6RRYHw2-->评审材料包成稿</b><span data-page-node-id="NPGNFgHYhQxi10sqDCSVSQ"><!--pnid:s3l1mx0ipi6YSVyj7HiIdi-->PRD 初稿 + 预读摘要（评审会前发出）+ 待决策清单</span></div></div>
+</section>
+
+<section data-page-node-id="HpbKMSVSgEkqxUcoNlfwqT" class="blk">
+  <div data-page-node-id="JUHQ65dGeOp15kPSe9XNiT" class="g2">
+    <div data-page-node-id="MSMeKkDN9IAU7Tv4QRonky" class="card"><h3 data-page-node-id="jLSsvoaH4u9KmEA111NnwB"><!--pnid:MaaG13XPM9Miyxtg4BIAPB-->要准备什么</h3><div data-page-node-id="5iIv8jOOqCNc13SV1jLKQx" class="src"><div data-page-node-id="Ks9aqgiDM1ElcHDqMPC0QL" class="fn"><!--pnid:M9tKqz7gPEKov4hWo3gRdT-->需求池多源收口与语义去重 归一需求与证据链</div><div data-page-node-id="BhakqQ7Cl2yWaF5nCDckkx" class="fd"><!--pnid:dU1rS3nGDbMm1fmGwh9yXG-->背景段的事实基础——谁要的、几家、多少 ARR，全带出处</div></div><div data-page-node-id="DO0uNpIyK9gii6p3lrHFg3" class="src"><div data-page-node-id="tbyzXjNgog2B0QxwZQRiL4" class="fn"><!--pnid:WBDlO55rJikz8SQq5pTbbu-->竞品对比矩阵与讲标弹药 竞品对比矩阵（相关能力项）</div><div data-page-node-id="4B0fZnsTxc9Mun7OWgYlEx" class="fd"><!--pnid:2MvciaMOVrkc99yjsa296R-->竞品现状段直接复用，不重新调研</div></div><div data-page-node-id="l0IR5gkpFyp8pX1Bi2NI7W" class="src"><div data-page-node-id="FJqTbmcadfht2MJVaWMjk0" class="fn"><!--pnid:9aDo6tCU0NdaXoYb7wnhQg-->现有功能架构与 API 清单（联动 API 文档与代码同步巡检）</div><div data-page-node-id="VMfwt18ED2AditO5kEThbP" class="fd"><!--pnid:EiRBEBjbvHVP1nxXXLIoPQ-->功能点设计的边界——哪些是配置、哪些要动 API</div></div><div data-page-node-id="OkUbMOPNeXLfaVUGn0LKX8" class="src"><div data-page-node-id="8wKKAhbVjd6w8FNU26VJm0" class="fn"><!--pnid:glo7rRzrd7AQRDbgAG4gTH-->历次评审会的结论与遗留问题</div><div data-page-node-id="QNZxbHBoexQH43ZsmfQazD" class="fd"><!--pnid:8haGSB7NxkX2CEhGyaWxKE-->上次评审定过的口径，这次不再重新吵</div></div></div>
+    <div data-page-node-id="UV0EdbGdyzfMDh4zaHUDFn" class="card ev"><h3 data-page-node-id="5FTCai9iuEy0ehntehcvlI"><!--pnid:LExatS7vjuDQET1EBAHwer-->为什么这个场景值得做</h3>
+      <p data-page-node-id="KiIxq8URv6ZwYMFlpoYTXm"><!--pnid:Mv8vnNKdWsg7SXactimBE5-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="LUoRAPFXlzXd4eNQlrL0Ok"><!--pnid:k9ON9MCmUCbMQiJOjes2mi-->8.0</b></p>
+      <p data-page-node-id="xBbeGCsEv4rDQrovJAfIv6"><b data-page-node-id="TM9qpCX78aAtYPVczhoBjD"><!--pnid:K2V3ORYFZ5WnptqlxrFJT4-->最大差异点 ·</b><!--pnid:SsesddJzyMU8t7GyechtN3--> PRD 不是凭空生成的模板填空：背景段直接引用 需求池多源收口与语义去重 的证据链（3 家客户、4 条原始表述、67 万 ARR），竞品段复用 竞品对比矩阵与讲标弹药 矩阵的公开证据，验收标准按 验收报告初稿与功能点核对 的功能点核对口径写——三个上游场景喂进来的料，让评审会的前 80% 信息对齐时间直接归零。</p>
+      <p data-page-node-id="DruFZOB6qvZlou9IYx8nx9" style="color:var(--ink3); font-size:12.5px"><!--pnid:hlNFkeFgbHVYSVBTL4jL25-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="x9N7f7285UpNy020mevxR1" class="blk">
+  <h2 data-page-node-id="ligMUkZ4OsPnqj5tFvzPhO" class="h"><span data-page-node-id="WPRtRzkyLxvsBPgT1ap6M6" class="num"><!--pnid:y7dQ6Zycof0XYGmGBcOvrH-->五</span><!--pnid:pCUlkLNmr0YRou1b5I7J87-->会产出什么</h2>
+  <p data-page-node-id="0af9YZBMod17tlE4EpoveZ" class="subline"><!--pnid:pUlLfX0fqbO5joZFPNtW1L-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="pnz28p1G1ZUkKZF8MTXNmz" class="outs"><div data-page-node-id="2zs7Ka9obYZTeBlwwK9SAq" class="out"><div data-page-node-id="uL0rx6YLaXKXDbMLl3gENk" class="on"><!--pnid:hfQCL9B0M7t7I93q1aQz4d-->正式件本体</div><div data-page-node-id="qONzRD7RGzNZZ8ggkaiBe7" class="ot"><!--pnid:hGoMcIPtsCDpEQC8vRY0v1-->PRD评审版初稿.docx</div><div data-page-node-id="2XB1CHuCpZK6UFRfQdS512" class="od"><!--pnid:wFy4zZASroaxRgP9scyTqH-->正式件 · 背景/目标/功能点三态/验收标准/竞品现状 · 含评审签批栏</div></div><div data-page-node-id="lS0a7evc0mTDYkIqnNFAEA" class="out"><div data-page-node-id="odmuDko6q9IYpzbYK6pChN" class="on"><!--pnid:V6mVqnKylJOqTFNCmfhFYt-->可派发清单</div><div data-page-node-id="U4Y56b0XQ0pertX8G7NKuR" class="ot"><!--pnid:gjPGNRftlNRYWTzP88OpQX-->评审预读摘要.docx</div><div data-page-node-id="1e4SWdJP3x3CAubpas8Wpa" class="od"><!--pnid:T4AosjYhl3HftkTYAdQjPo-->一页 · 证据链结论 + 三态拆解结果 + 待决策清单 · 会前一天发出</div></div><div data-page-node-id="O9Bh4hwz5EtjqyjDrRGbE8" class="out"><div data-page-node-id="2w0BmCx9vgEGKFKC1E4HLU" class="on"><!--pnid:P4ktlk90ekWPDkS8op2M6X-->可派发清单</div><div data-page-node-id="Ju6BuMkEhjOq60UIpBcMNY" class="ot"><!--pnid:qZJtzCF4vqT6gUCuGegT2b-->功能点验收标准核对表.xlsx</div><div data-page-node-id="49hV1hiNaqFkuxNtnc51VD" class="od"><!--pnid:HL6ZxFWjlJ5Oy66m3CJPRg-->逐功能点 · 合同口径句式 · 可直接进需求确认书</div></div></div>
+</section>
+
+<section data-page-node-id="kl0xaYxFYTW8QSGNZNgYTM" class="blk">
+  <div data-page-node-id="FUSu8BOlRwLrpvCmf5uPbn" class="card warn"><h3 data-page-node-id="PmKoYSUamPOyfz4aCVQu7O"><!--pnid:W4XZGZExIAuUj8FgmCNeNH-->这套东西不承诺什么</h3><p data-page-node-id="zwRYQHo31OUzhGZuasjLGc"><!--pnid:ycqcGuMOwiTPijhecYITFb-->PRD 初稿只到「评审版」：功能点取舍、优先级、里程碑由评审会定；验收标准口径对齐合同需求确认书格式，但不替代法务与交付的终审；竞品现状只引用公开来源，口径同 竞品对比矩阵与讲标弹药 三级分级。</p></div>
+</section>
+
+<div data-page-node-id="QpLUVZv87vcXJ8JAIJYzsA" class="cta">
+  <div data-page-node-id="afOUDvgXW0gUTyeJjyjAhj"><h3 data-page-node-id="yFrjFHcLI2ieAyBG8WEMP4"><!--pnid:7qEQINzvNuvdWjHb9jUKnE-->想看具体怎么跑？</h3><p data-page-node-id="NyEO1oxDhDElvPIOxvYLaG"><!--pnid:cM6dzCU0h8inTHyAk9OwWA-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="ejYJyPVSiuMIdDp0IA2AkE" class="btns">
+    <a data-page-node-id="j0Re9LvfdJs4jJzGNJQeaI" class="btn" href="LiveDemo.html"><!--pnid:mbCujOlRdFm0WqocY7lGHG-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="gcpdWOxbXYYu1YPTY3gNUT"><!--pnid:OobAUXg7O4Q4LMmtRXTJ1U-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="884sEl1SXIuRo08RQZyvTg" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="6HhUuyblhqs0jjeMFKKX5D" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="SrOZgncNSdO0hlj69U48WA" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="BVyYHXHhKSmERnLGO9xN1F" data-pnid-children="CBel0YrWj1K8YHK1GKmNwc">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="JXZoXZMmoNV5Y7edQqjqLv" data-pnid-children="3609ZfOxg2PR8Y3vpl3v0N">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

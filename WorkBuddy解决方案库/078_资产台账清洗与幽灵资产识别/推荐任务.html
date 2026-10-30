@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="XzVZMK58cAse3Lbxa8xMOR" lang="zh-CN">
+<head data-page-node-id="KRi8MdhBDAWHm2veySZIkQ">
+<script data-page-node-id="waUdFte3wxouopHVjqwjQg" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="nFqfx0fz3Uo5xnQb9dRSZY" charset="UTF-8">
+<meta data-page-node-id="K6CnvvI5J03hyeqN6MnR2U" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="ATlbjJUYA24MOyzml3fJz2" data-pnid-children="yELITsNIXNn1NZihVVx0Fo">资产台账清洗与幽灵资产识别</title>
+<link data-page-node-id="Z55FpC0ePosOduP8j0JNxp" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="ib2ewZiSJxj5uY0zdrMyum" data-pnid-children="Z9lULCmTIBEZlYFrIWoCaB">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="JrT77PwlQy2vSu8V3pY0wS" data-pnid-children="KjLhKzG2GrtBfSMfJUCqbo" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="6OSJelDCAx7uKlWllZFJoO" data-pnid-children="5iOAWUPKwAlQMLao9HSmh0" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="OXJuuTDVEDOnNtAC9OjHap">
+
+<div data-page-node-id="5JyY3gCD7WwTlRQADwpYDO" class="wrap">
+<section data-page-node-id="zm3omLo8EV9kMLqqMnZrEJ" class="page-hero">
+<h1 data-page-node-id="U321jKReCxSVAeMQNVG2N0"><!--pnid:5qLjOB215OR3FEBohhzhD7-->资产台账清洗与幽灵资产识别</h1>
+<p data-page-node-id="PQACf3YMEB1BbCf5bUUreD" class="lead"><!--pnid:po4ntibYcXdlKzLcc22mHU-->台账越来越长 · 虚挂资产越来越多 · 盘点时全是找不到的东西</p>
+</section><nav data-page-node-id="XgqOHhNtadDZXsDQv0H9MW" class="subnav"><a data-page-node-id="OPvA6mDJwdJCNT4ayweJ2A" href="场景引入.html"><!--pnid:fN028TxIdlrz2f7i9yLrDt-->场景引入</a><a data-page-node-id="liZUp4Z9hliN1ycejMVGuf" href="LiveDemo.html"><!--pnid:8wKqLOBMbCDJ3om0Td1olS-->Live Demo</a><a data-page-node-id="7kz7mjbtSwBHHwi4KhOYOm" class="on" href="#"><!--pnid:WGCqBbx50uYa9LgX78xRXm-->推荐任务</a></nav>
+
+<section data-page-node-id="TDeD0oSJb3ATlBq4MrHoHm" class="blk">
+  <h2 data-page-node-id="3pdmzrXhj6ryM2n6BQtFXE" class="h"><span data-page-node-id="DNYZc2zfy2HShV2G5IhLpU" class="num"><!--pnid:nxvXRezHpPVAl9h8zp2Tbg-->一</span><!--pnid:b27oWxr2eEm3nL9ZJ3eD1u-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="cmHZYt4ezmOtj2xdpLgOFz" class="subline"><!--pnid:ghdRtzYWvs2udOFoFUpxuS-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="3Oyk0hnsAISV1HHFxig7xo" class="card"><p data-page-node-id="im2tvnk1MXJWY6bh0SP04G"><!--pnid:62wL2iAaU3zrNeMOmXBFGx-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="Y8YsuP9sqaozEWbUfRapcj" style="margin-top:10px"><!--pnid:lh0AA3kmBffrKFG6N2CVzQ-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:iHRCRbkxvayLfKZGJ75PQg--><!--wb-skill-start-->
+<div data-page-node-id="qXZka8Ie8YMsfaXsn0pf07" class="wb-skill">
+<p data-page-node-id="E3UlSNHw35aOhzb0igH9T1" class="wb-skill-lead"><!--pnid:dk6wxOFqXJDK3ZHrb2pNbt-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="YH9uEoK8wTy5u4T5UTRdnt" class="prompt" id="wbSkillPrompt"><!--pnid:r1x27A6mMb51Wsz4CDoKBz-->【准备】这个场景的规则都在「资产台账清洗与幽灵资产识别」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/ILYY87WONAbMcUA7c6MrOm/VzcuS_pWe_gL/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="n8cZN1CUc0TS2ZKMfudJ0x" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:OtyQzxUIYFipi3P4pDQ9fP-->复制</button></div>
+</div>
+<!--pnid:EXOGCKx8J8u1WF9PoCY9cZ--><!--wb-skill-end-->
+<section data-page-node-id="KYhGnOkdvepGhJkHysSToq" class="blk">
+  <h2 data-page-node-id="YTrGtEi64c4M1nsyxZxgnx" class="h"><span data-page-node-id="74WKwLJyuFFxWEYDHmZTBH" class="num"><!--pnid:uRdqQSP6T1BPMXBmAZZBY4-->二</span><!--pnid:LMSagSF6ghOvuI14LlVSdT-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="mMkiQF9hMNTRzf301TQz3w" class="subline"><!--pnid:gIfnbE55mV6vMnpmvWYYcP-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="7INXARlKa2q80PgvMWaNtg" class="tlist">
+    <article data-page-node-id="MwOvfygLHj7hFrZM8dQT4v" class="task">
+      <div data-page-node-id="m7ubxU0x9sTTcfa3skHTfi" class="th"><span data-page-node-id="HztFFRls0KbEnjxMfuWAxy" class="no"><!--pnid:uOIbKa1ZlGNpz5CVraifGF-->01</span><h3 data-page-node-id="MbXlJ7RFyMtEzStcxSVuqV" class="ttl"><!--pnid:jzHX6egRCAFcVKmHPMPJbn-->首推默认</h3><span data-page-node-id="XfPqK1ZB0OldI6iIgna5Kx" class="star"><!--pnid:Jg2Jlzq1UjY7QfxW3qZA2d-->与一键体验入口一致</span><button data-page-node-id="UCA4QXOW6J03OJQvtKfYiC" class="cp" type="button"><!--pnid:LZoR3AaIoAxy9kmZTTet7H-->复制</button></div>
+      <p data-page-node-id="uA89PZ7T3nqrm7NNa8hwRM" class="tp"><!--pnid:ZxsLiJqoIY8YsaaV1xbSUL-->这几份是我们的资产台账，行政一份、IT 一份、财务一份，格式不太一样。 还有离职名单和这两年的报废单。
+帮我做一次台账体检： 哪些是重复建档的、哪些根本不该进固定资产、哪些早该报废还在计提、哪些责任人已经离职了。
+每条要写清判断依据，以及我该找谁核实、需要什么凭证。 有金额影响的和没金额影响的分开列。</p>
+    </article>
+    <article data-page-node-id="0QSYrhNK75j75sCWbV3G1k" class="task">
+      <div data-page-node-id="xvV9ajAtzcZE0gGeMuhKS5" class="th"><span data-page-node-id="yxogKQzn1Kc3lGB1JO521t" class="no"><!--pnid:AAvjPiCGwG6ajmkMO1UHt3-->02</span><h3 data-page-node-id="pipiPTUNkyX9M8Yp5RGGhS" class="ttl"><!--pnid:JqHsflQouijl8ZZBkq0OEq-->只找重复建档</h3><button data-page-node-id="5dZ6711zOoLBKjcj4wuI9S" class="cp" type="button"><!--pnid:2qiaxvKZc5zUyRT2h7PKPk-->复制</button></div>
+      <p data-page-node-id="rNhPoc9uvYTYRcA9fZpuzg" class="tp"><!--pnid:K57TO9qj5PfxnetmB78GbP-->先别做全量体检，只找重复建档：把行政部台账、IT 设备清单、财务部明细三份按名称＋规格＋原值匹配，同一台设备被几个部门各建一次档的挑出来，算清虚增金额。</p>
+    </article>
+    <article data-page-node-id="ZVQ3uefZH50j6JuqHLuI47" class="task">
+      <div data-page-node-id="mxv2grhbeDNtz6zi2bUOPM" class="th"><span data-page-node-id="pegNLexWm1xsqSlNmhwG5I" class="no"><!--pnid:QKr2ULROFbwuUtwXJcRP6R-->03</span><h3 data-page-node-id="sR89g7cS4wuihU5cqYl9At" class="ttl"><!--pnid:0WTXY7Q0ngZBGWm8HQHM9y-->换固资认定标准</h3><button data-page-node-id="nMuF4SRKerkX7aJvyM7dpL" class="cp" type="button"><!--pnid:L3meBmFHNSkvKPIQQH6CsU-->复制</button></div>
+      <p data-page-node-id="aT0uUJ0D3zqLcnLa4L7RSb" class="tp"><!--pnid:NO6700CplPpLbXo7yRMHhy-->这次换个口径：固资认定标准从 2000 元改成 5000 元，重跑「该费用化」这一类，看会新增多少条、虚增金额变成多少，并标出哪些是耗材类误入账。</p>
+    </article>
+    <article data-page-node-id="fXOnNp6dt7gkOTnvLzXQeL" class="task">
+      <div data-page-node-id="LJWcmWobERRMCnTOsV68Of" class="th"><span data-page-node-id="T9RYULKRS0xkOw8qA32MRe" class="no"><!--pnid:UKqa3wc5UmUQVBzq47MXER-->04</span><h3 data-page-node-id="p99piGVBmeDy9iBpsVWpMo" class="ttl"><!--pnid:goYPIzym7ZYhOFSSThgSKP-->三份台账一起过</h3><button data-page-node-id="6TXb8qpume8z6ORvyQedjG" class="cp" type="button"><!--pnid:FaNbI0oGRz7JhyQYD1K30g-->复制</button></div>
+      <p data-page-node-id="6MgiVpqRaisbQQ1O0RD9hW" class="tp"><!--pnid:AhfMFXvifw6fCq0Ho2h2Vi-->把三份台账加上离职名单、报废与处置记录一起过，给我一张横向对照表：每份台账各多少条、重复建档几条、该费用化几条、超龄计提几条、责任人已离职几条，清洗前后对照。</p>
+    </article>
+    <article data-page-node-id="cLgRbG8BcKAoTAwRdwP4il" class="task">
+      <div data-page-node-id="f6JZGuNLjO43SvAKLsATdV" class="th"><span data-page-node-id="dynnexEdohd8NUyWtff0so" class="no"><!--pnid:Yo6FTvTMF6vmSDGcDNvaX7-->05</span><h3 data-page-node-id="pAGdU8MD3WppJDIlabLgKj" class="ttl"><!--pnid:l2MJZFTdBPxnGVnqIsb7PQ-->给财务与总经理上会用</h3><button data-page-node-id="PXOyWKLWK4F001prnBpMRu" class="cp" type="button"><!--pnid:7g67O2YGzZa1UEricoCGkt-->复制</button></div>
+      <p data-page-node-id="R8kD0EYUyKD8PDyd6UofJO" class="tp"><!--pnid:RkFTvHpz2K6l7AJHuEY5nw-->把有金额影响的部分压成上会用的一页：建议核销与调整多少条、合计净值多少、每条需要什么凭证、按制度要谁签批。无金额影响的那批走部门派发，不用上会。</p>
+    </article>
+    <article data-page-node-id="QmNuvaktPtIumoGEBAKvRi" class="task">
+      <div data-page-node-id="BqtG97UP0B1mkXAhyrsVms" class="th"><span data-page-node-id="X2pKfSiqRvPpSyLJvQ4Xph" class="no"><!--pnid:JRW4FQSE2N8ePPudMJei44-->06</span><h3 data-page-node-id="oH6Bv99kkgVGvwzFvnEM23" class="ttl"><!--pnid:ljY8CQo8Fzr1qc6LbMR0Uf-->让它反驳自己</h3><button data-page-node-id="FA7ecydAoOguqqlsWFBctw" class="cp" type="button"><!--pnid:6TcYHS9Op2L5wPlzITqhd4-->复制</button></div>
+      <p data-page-node-id="OAj6Jm7QOCwtZXPG7L1sMV" class="tp"><!--pnid:lW0mkASvaOUhmofqNNpTL5-->你说「投影仪 EPSON CB-X05 那三条记录是同一台重复建档」，依据够不够？把三份台账的编号、原值、购置日期并列出来；说不清的改回「疑似重复，需实物确认」。</p>
+    </article>
+    <article data-page-node-id="bVIO6Dn1iYYaj6mZw0MMBG" class="task">
+      <div data-page-node-id="rzZWl6b6QDuwoLKk6NMTcz" class="th"><span data-page-node-id="2BZLVszJEDCh4iWDnO1Npd" class="no"><!--pnid:VacXxhG2yhgzW3esItEsnA-->07</span><h3 data-page-node-id="4LZpD2UFQNmnJ0e1d4r0Yx" class="ttl"><!--pnid:e00dh5BOFmC2oonQwhsEbR-->比对采购与报废单据</h3><button data-page-node-id="sJnryI7w0uQzCbLVrB98xM" class="cp" type="button"><!--pnid:DEUyQnrNVpLTJfTpEUNAGL-->复制</button></div>
+      <p data-page-node-id="LSdafdaYJF2W2LRCMmEedt" class="tp"><!--pnid:mW7qoib6kpqBrygF4ZrYEe-->专门比对历史单据：把判「超龄仍计提」的记录，去采购入库单和报废与处置记录里逐条回查——哪些其实已报废只是没销账、哪些是台账错误、哪些确实还在用。</p>
+    </article>
+    <article data-page-node-id="nzF8RGPBDJi6jmSv2EU04I" class="task">
+      <div data-page-node-id="FCprQHNA8GYOYjdYKz9cFc" class="th"><span data-page-node-id="3Fei6ba6OENboLxkCORRcy" class="no"><!--pnid:ZLrmxYOGcVNRcZxug3ld3z-->08</span><h3 data-page-node-id="dpbwUOxv0vdgU68JF1B6CR" class="ttl"><!--pnid:uAVOe8pHDWLFgp9GlmfwpD-->对照固资标准自查</h3><button data-page-node-id="qDn4PN71WYoN1zo1UouSSW" class="cp" type="button"><!--pnid:gfThgWZKl7PbEdKNFnBD9O-->复制</button></div>
+      <p data-page-node-id="0ZvxQ1JqBaaeHuwHUtGgxg" class="tp"><!--pnid:gmzJwsPpxSwvECOaZklxze-->对照公司固资认定标准把这份清洗报告自查一遍：判「该费用化」的每条是否真的低于标准、判「重复」的是否真有跨表对应记录、判「责任人已离职」的是否都在名单里。</p>
+    </article>
+    <article data-page-node-id="1pfdJTTOQ6Ina538BoFArf" class="task">
+      <div data-page-node-id="VkHCbcZk63Pqs1kNUU5TXG" class="th"><span data-page-node-id="cPNi0ONDvrpSTM7siO1SWi" class="no"><!--pnid:ZILqzdz6fNURx8zkGkhF7S-->09</span><h3 data-page-node-id="81w9R3JHIsyJfoO5SbiJtd" class="ttl"><!--pnid:P983erbtpumICsl7kiMOpa-->折算成盘点盘亏</h3><button data-page-node-id="YFiinsPsIjEhMUx0McHjNK" class="cp" type="button"><!--pnid:PhPVFfLu53Y29GPNE8tAY6-->复制</button></div>
+      <p data-page-node-id="FrzcS3jK6gzhdDZnI3ctVm" class="tp"><!--pnid:VMsf5qJqdi275ixw7hy6MP-->把台账虚增折算成影响面：账面净值比实际应有的多多少、年度盘点会表现成多少盘亏、这些盘亏要谁解释；再把 23 条建议核销的合计净值单独算出来。</p>
+    </article>
+    <article data-page-node-id="4mNTBcZPuPZKQXGcpBrRH0" class="task">
+      <div data-page-node-id="CwSCDetzaeuDOtUOPPMJAe" class="th"><span data-page-node-id="11oE7orCUt3cSTXrQx3W5W" class="no"><!--pnid:5rTg70K1Fmu9TAA8vR7F97-->10</span><h3 data-page-node-id="dpv0EAMkyihdaJx2mxWnAy" class="ttl"><!--pnid:qku7xEsSpFTw8S47D36wcX-->沉淀成台账体检清单</h3><button data-page-node-id="z4Onw8KrRQ6GCwnqNKeQJf" class="cp" type="button"><!--pnid:3oKviXhwbTUEaDDm01qygE-->复制</button></div>
+      <p data-page-node-id="BIv8TydhZDgOG56FlsZgJX" class="tp"><!--pnid:EIzRcYL1Z8px24DIEc5F9F-->把这次的体检口径整理成一份《资产台账体检清单》：六类问题各自的判定条件、需要什么佐证凭证、找谁确认、哪一类有金额影响就必须上会。每年盘点前照着跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="QUFXS8LULE9RjOGNmtvi16" class="cta">
+  <div data-page-node-id="Xj1tW73aT8I33sSQAqOI1y"><h3 data-page-node-id="dW5TBoDpOdqYCy64IPfaM5"><!--pnid:kc4xpZMidymHAATRBkJohV-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="q99F4M4kObXlB6QiWMgSE9"><!--pnid:gpafXN3mdwYZuLdmlxQcyK-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="HPvoxAeqkKZGt13fUl7pDj" class="btns"><a data-page-node-id="vsXWsxOzDJrGqq01rjv3ou" class="btn" href="#" id="ctaContact"><!--pnid:oefOnjaOmVEuGNfyajwBFa-->联系我们</a></div>
+</div>
+<footer data-page-node-id="kKL8XcdLudj2WD1iyOE2A0"><!--pnid:pXYa0Tfpkj3M6TqADhjaMA-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="cwAQ0Zvs4B361FU4fxowFe" data-pnid-children="RAe4EV4uAOdfVyfXFAXmPI">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="QOyvvq2U9Ba7fPrVL1S3an" data-pnid-children="cCZcYKRRZWpLPb33v0IkYJ">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="2B9RQEM23oyGdQdfuqsTXh" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="jNzIgfG4K3u2PbouclexCl" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="53PJTusvA1yptojXdj2XJI" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="iJn3u38kZYW9CJIiIoujkF" data-pnid-children="TpGTJAJoyauiRHyPBtQuQJ">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="nt6jJ3si17NxjkSMf9N83l" data-pnid-children="87XvyfKrUZeijjIMjo42Fk" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

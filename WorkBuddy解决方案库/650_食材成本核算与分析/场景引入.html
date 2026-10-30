@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html data-page-node-id="qUScWjMWSy0486coSO769B" lang="zh-CN">
+<head data-page-node-id="YCovnCkWtlox2FuR4ClPHL">
+<script data-page-node-id="VswjwDYi6Xdu79hLdgYuWh" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="yITayX7SbdnqafeIhFZX5B" charset="UTF-8">
+<meta data-page-node-id="yXU1ljSvtpepHUryhbCDK9" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="7dweJrMFxjk6lAHloIFv4E" data-pnid-children="hg5ZFqKozI5hm9f3ih3Y8l">食材成本核算与分析</title>
+<link data-page-node-id="i235yDnKUP5E7SoKjoK72A" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Y0CF2FEEjVLeZE6cqhJ0O1" data-pnid-children="ullGuKO4xxyaPYcPGloucK" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="ZIab4JIat0MVQAwjOJbekk">
+<div data-page-node-id="JI81nOAy2YTsr9MhkuyzlM" class="wrap">
+<section data-page-node-id="MqjiptA4JF510MaXSoOwJs" class="page-hero">
+<h1 data-page-node-id="B6gUpYumjMdEs5KGjDR96I"><!--pnid:jF4uzXKBtVClkHIc6SRZn6-->食材成本核算与分析</h1>
+<p data-page-node-id="PFTEM7EjtrNhA4IQ1RJveS" class="lead"><!--pnid:WNd3nMvY0SnXbbgMviOjnE-->BOM 失真放大虚假损耗，倒挤法依赖盘点准确性，成本异常往往月度复盘才被发现</p>
+</section><nav data-page-node-id="KKSVnGWdL1SIJpSBji0p86" class="subnav"><a data-page-node-id="tQuHZP6y0GbBedUc7KDSOJ" class="on" href="#"><!--pnid:tES9zolvSxs1FzrqC4kM0R-->场景引入</a><a data-page-node-id="qHWFRltWsy2NE803uhYkpL" class href="LiveDemo.html"><!--pnid:UlpbfpsyhZZ1GGk7LscrJH-->Live Demo</a></nav>
+<section data-page-node-id="ZVnUzSJ2uLBSBCrceT1omk" class="blk">
+  <h2 data-page-node-id="b7XCRMPRT2SLLyLrwfd9DC" class="h"><span data-page-node-id="qpNTObwKqxKh3wQQMwFsQQ" class="num"><!--pnid:7B1qi0o91qEiIAsIwJnlsZ-->一</span><!--pnid:GOIc2Ho6HGK32bRdKbY0UB-->这件事现在是什么样</h2>
+  <p data-page-node-id="bl0ERTzGNJCtOSHusTKWGO" class="subline"><!--pnid:5fiv2Due0O15YTjFdFfepR-->财务专员 · 每月一次的成本核算拉锯战</p>
+  <div data-page-node-id="Wpg6u4rjnHtjIcCZ7vq0pX" class="card"><p data-page-node-id="WtRt7D4h37uIvuKlImhnbt"><!--pnid:gzcbrYtZ9pKPdw7Cc3rcn4-->某连锁餐饮企业，月初核算上月食材成本。财务要从采购入库明细、BOM 配方表、盘点表、营业额四套数据里，按门店、品类、原料一层层归集：理论耗用按 BOM×销量算，实际耗用靠「期初+采购−期末」倒挤。门店A 牛肉成本率 42.1%，基准 38.0% —— 超了 4.1 个百分点，但问题出在哪？是采购单价涨了，是用量超了，还是盘点没盘准？更要命的是，新品上市两个月 BOM 还没更新，按旧配方算出来的理论耗用偏低，差额全被算成了「损耗」—— 虚假损耗越滚越大，真问题反而被盖住。等月度复盘把这些拆开，异常已经发生了一个月。</p></div>
+  <h2 data-page-node-id="UblqdpDyw956oXjOFPirlq" class="h" style="margin-top:22px"><span data-page-node-id="Ywcx0B7QdJc8OqIHO9GNL9" class="num"><!--pnid:eD3NHWHEPNQQp1nK4vvmkA-->二</span><!--pnid:Ox7kGnIqwRPFsM91zVRA7w-->痛点 · 每个核算周期都在重演</h2>
+  <p data-page-node-id="HecmoubcTFr5AAMEPE8kKV" class="subline"><!--pnid:xuIdryo9eS3jM0N6FwL7hs-->不是流程描述，是财务与门店每月真实经历的消耗 —— 以下内容取自场景调研</p>
+  <div data-page-node-id="jVSTiXfX118FG7hk3u2ShO" class="pains"><div data-page-node-id="vZQA5seTU6K4e9VUeBGMOw" class="pain"><span data-page-node-id="MsTcLe9blhdBRz9jzhimU4" class="i"><!--pnid:5ZtsVdmtkKmDE5goz5qUYT-->1</span><div data-page-node-id="xePCAIh8bckHdPRqBfnwyS" class="t"><!--pnid:8bsC9lOYxY3QDtqeh3J4im-->BOM 失真放大虚假损耗：新品未更新 BOM、促销套餐未拆解，理论耗用算不准，差额全变成说不清的「损耗」</div></div><div data-page-node-id="GFP3ITIngf9XvMzProEfvn" class="pain"><span data-page-node-id="v3NpS62bsEesBiRcYGRExd" class="i"><!--pnid:mZlL2FI6XjURtOQZC8UmGD-->2</span><div data-page-node-id="ybfS2cJ0Vkm06WECzgyDex" class="t"><!--pnid:U68tCg5NkJ8UqT59VJdDxV-->倒挤法依赖盘点准确性：实际耗用 = 期初+采购−期末，盘点差一斤，误差全部挤进损耗，真实问题被掩盖</div></div><div data-page-node-id="2euQ4XtpIH86DLTfWswBXn" class="pain"><span data-page-node-id="235G6LG6FUR5a7Owv0aZzO" class="i"><!--pnid:6RTSeJaRvAxERvxrCD6156-->3</span><div data-page-node-id="42Hpy1lcspjw5Lny17l55k" class="t"><!--pnid:EgfQmjdlbsB8yGcCizxtpc-->成本异常发现滞后：牛肉成本率超基准 4.1 个百分点这种事，月度复盘才看见 —— 异常已经持续了一个月</div></div><div data-page-node-id="KNxv9tEN8NXtZQDGpqKi0y" class="pain"><span data-page-node-id="mxAkvYwxhJZqa6k8VjTd45" class="i"><!--pnid:g9AzR9BxEemjbUnHqkSBj9-->4</span><div data-page-node-id="O7ji0LWmBeurMUUt6dmZj3" class="t"><!--pnid:JS6iOx5n98khtwWL2A67ND-->异常归因拆不开：价差、量差、损耗、出成率、盘点误差搅在一起，门店×品类×原料三级靠人工拆，拆到天黑也得不出结论</div></div></div>
+  <div data-page-node-id="D7sn2fkuU5GieIP59i9sl5" class="card" style="margin-top:14px"><p data-page-node-id="G1rRRAmyFQOOTrjxWHFiAO" style="color:var(--ink2); font-size:13px"><!--pnid:Aqd9u34f9lETxfQcQ3jI2i-->需要说明的是：该场景与现有方案「费用异常波动分析」的差异 —— 同属成本费用分析，但分析对象不同：本场景聚焦食材成本，按门店×品类×原料三级归集核算，做理论 vs 实际的差异分解与趋势追踪，而非期间费用的波动分析。</p></div>
+</section>
+
+<section data-page-node-id="gtp7OxvWJ6XiaygihzKmpm" class="blk">
+  <h2 data-page-node-id="KhA3iSUQbE2nUffJtUGV0f" class="h"><span data-page-node-id="U0PzbHoiiqitwpl4cJ4c2R" class="num"><!--pnid:COfvFRSQ9V2xZnfU4P2kqz-->三</span><!--pnid:F5H5jxk8s7TMK7MlXvbglQ-->换个做法之后</h2>
+  <p data-page-node-id="yXyyWZMBq5rzNfR25tKpVq" class="subline"><!--pnid:uy2iWILnr70BKMSPWHOQ2o-->变化不在「快」，在「异常当天见光、归因落到环节」</p>
+  <div data-page-node-id="PibGIywqhHsrJkEsX4W5lk" class="cmp">
+    <div data-page-node-id="DlYPZhNfUn4Olbnaw9JTKQ" class="old"><h4 data-page-node-id="2uIAj4Lrmta3ovuk8wlcbQ"><!--pnid:gjV4vpzUqhv2wvtJRw8VPw-->✕ 现在的做法</h4><ul data-page-node-id="K67cD1BhP5kbgvqHSyiZzw" class="list"><li data-page-node-id="xpFPsJ3DPznEmu77dhHKMe"><!--pnid:1miq7UtcdMszVedSt1oTmt-->四套数据人工对齐，核算一次 3 天，月度才能出一版</li><li data-page-node-id="ToP7H7UQtmVbaJP91Rwyrc"><!--pnid:pHTVyces5vMOL9V5pIVpar-->BOM 未更新无人察觉，虚假损耗越滚越大</li><li data-page-node-id="n5CC4PN6PkX1j8Z06AloxQ"><!--pnid:Mk2lNeAEUwZwhKXBEH35f2-->盘点误差全挤进损耗，真问题被掩盖</li><li data-page-node-id="E3zyEFVnxdXb9bZ1ZHINNR"><!--pnid:nmn0vXmW9PZysD3q6bn8Ct-->异常月度复盘才发现，归因靠开会扯皮</li></ul></div>
+    <div data-page-node-id="4FBXZgwJ93ZeFCDPW8FofL" class="new"><h4 data-page-node-id="lnOFoK42lgx71Wtqxj1Zl5"><!--pnid:vhCJrIYW0dnkXtUpFquDCb-->✓ 交给 Agent 之后</h4><ul data-page-node-id="XVB0lfCqx6ypcCZap0OWbV" class="list"><li data-page-node-id="rKvGU36l1qCEPaHyXgfEy0"><!--pnid:5kNPa16CDv6ArTcmzIUnow-->采购/BOM/盘点/营业额扔进来，半天拿到成本分析报告</li><li data-page-node-id="EUbUBZmj6SscA42BTvI4S1"><!--pnid:Bt6Famv8UV8H4AGK70IA8v-->实际成本率对标基准成本率，偏差方向与幅度自动识别</li><li data-page-node-id="U98nVd7QcUqreRwEikB1dm"><!--pnid:hMHLCMUWRneyFRu3SZm4vu-->差异分解价差/量差/损耗/出成率/盘点误差，门店×品类双维度 TOP 异常排名</li><li data-page-node-id="QSB7uvSOQXvC5mMvQVmr4e"><!--pnid:rhWB313z8kYI4SnVm3nbb8-->连续 N 日异常高亮，偶发与持续性问题分开，累计异常自动升级预警</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="P0RC0PUe51bl5gS4pGNKVn" class="blk">
+  <h2 data-page-node-id="4e103qv14H6dxll6ohclMf" class="h"><span data-page-node-id="bFdJjbc9aBE3DfXECnZoyD" class="num"><!--pnid:mqvcO3gdTLExc1MFX0iNZj-->四</span><!--pnid:dXVvh9RC9sj4PiQixPJtA5-->场景闭环</h2>
+  <p data-page-node-id="PGjK1Om3xBclQdyhhmQLRt" class="subline"><!--pnid:AvcAQUfyjeJyWrmgrEomVq-->6 步 · 解析 → 归集 → 计算 → 分析 → 追踪 → 交付</p>
+  <div data-page-node-id="0OKAy0EVTXfhQERPiGWuEy" class="flow"><div data-page-node-id="RfU9QwKPAI2HXRz1TmLdPm" class="step"><div data-page-node-id="omnkjnGeuP4PpFUco4cS57" class="n"><!--pnid:evvKk48GEXAslBoovrulgD-->第 1 步</div><b data-page-node-id="8JTKLgoXFp4ts5HhnbBxt2"><!--pnid:u9i6ZgOe3VQ5HlSH9xu8Tf-->解析多源数据 · 四套数据先对齐</b><span data-page-node-id="Vhh0PHr4ZuLHN3VoPCEYao"><!--pnid:vwx4AlTvcJfREkddH0Wvrz-->读取采购入库、BOM 配方表、盘点表、营业额数据，校验字段完整性与单位一致性</span></div><div data-page-node-id="gxzheAAFSBxEJcKXcCCcJ1" class="step"><div data-page-node-id="8FigQqt7lwqFXjqe9fchJ2" class="n"><!--pnid:BddQtVwLlopsZ0kN9yzAyN-->第 2 步</div><b data-page-node-id="Q5O6HC7POfcJrEk3AyzcAP"><!--pnid:BqDvyOaNYF4GybYrkz6ZlQ-->数据归集 · 三级口径算两本账</b><span data-page-node-id="nDnACECDuVXtDLWFrR3VSH"><!--pnid:qfFuPwFpN7C695b9XNkmk5-->按门店→品类→原料三级归集，计算理论耗用（BOM×销量）与实际耗用（期初+采购−期末，倒挤法）</span></div><div data-page-node-id="QsfKqWe2eAZD63cetYqOcT" class="step"><div data-page-node-id="tKQpVEAgz7ZywP9MlfNhoK" class="n"><!--pnid:VFqsQHV0ZUY2ll9q5KQnNC-->第 3 步</div><b data-page-node-id="TdWtGo9PxJ81Vjok7yyevs"><!--pnid:BmTj6WKuE2EEvHnAGe5OmU-->成本率计算 · 对标基准找偏差</b><span data-page-node-id="FlV6jwNsxPzSpdqbTTmXxB"><!--pnid:hPG5x26cMtFpMs2hRGUPhr-->实际成本率（实际成本÷营业额）对标基准成本率，识别偏差方向与幅度</span></div><div data-page-node-id="bJWdyTwJmXmOsi1hnr9JML" class="step"><div data-page-node-id="28O9QZaAtDtMtroEiJUxCU" class="n"><!--pnid:PwsSEPqeEDDvHLIFYxNapl-->第 4 步</div><b data-page-node-id="W321imidLjMtsyWmiRGOx2"><!--pnid:N09A6GcNaqmpnpLkZzdumX-->差异分析 · 异常归因到环节</b><span data-page-node-id="BSrZRLaT5LnxPQk7b8VFxw"><!--pnid:QuNwRnxYgnJkDnQKDAyKuP-->分解价差 / 量差 / 损耗 / 出成率 / 盘点误差，按门店×品类双维度排名 TOP 异常</span></div><div data-page-node-id="Cn8k7ydFGBzWMqqxgDsBxq" class="step"><div data-page-node-id="hSaeGtX1bgMk1E2EO43QHw" class="n"><!--pnid:fPMovIMY0NZwy3DS3XXSqY-->第 5 步</div><b data-page-node-id="y8IJw3HkTspBksNJhtZBHI"><!--pnid:Gkf1Qq3TpCc90XjLKdow3O-->趋势追踪 · 偶发与持续分开</b><span data-page-node-id="Z5FRoKJ1zujs2t69f44UYt"><!--pnid:UMT7a42QcTbAzCVvcXtPB2-->连续 N 日异常高亮，区分偶发 vs 持续性问题，累计异常升级预警</span></div><div data-page-node-id="88pxJVtrZTVoAsX9w1BO6c" class="step"><div data-page-node-id="vOoM79JPLxwl4ea4FuKuMT" class="n"><!--pnid:tWf7KGgsE9pfKbuQwNl1QJ-->第 6 步</div><b data-page-node-id="SOTXYZ21NmrJqmbpbC4o4e"><!--pnid:d2YNOg9jxo669yq9Mskci5-->输出交付 · 报告加明细</b><span data-page-node-id="QFUhLzAndpXGbK04V2N6CH"><!--pnid:rduQrfsglRzYH7ibtA6jg1-->成本分析报告（Markdown）+ 异常明细表（CSV），超阈值标注复核建议</span></div></div>
+</section>
+
+<section data-page-node-id="e5g4Peum12flvrKJKxnObo" class="blk">
+  <div data-page-node-id="EBXiIRUanO9N3Q9Diyhs3K" class="g2">
+    <div data-page-node-id="CE8IuGSV5IFj8Zk4v2KoU1" class="card"><h3 data-page-node-id="2UJ2NFuyZAu1yR5nasrtCG"><!--pnid:6C7Qat7Q8z6p8kfOI9Mh5b-->要准备什么</h3><div data-page-node-id="EmwEmC1dQKIX5AwkexP1Jl" class="src"><div data-page-node-id="1xXrEUQcuJig2VyvcEEcHv" class="fn"><!--pnid:QpcGPB7bDKfHUh6cf5fH8V-->采购入库明细</div><div data-page-node-id="wxprMVUYLFVMUVjpahTpPW" class="fd"><!--pnid:8fNV8hXUeCbphi8oSc6Dit-->门店/日期/原料/数量/单价/供应商 —— Excel/CSV 导出原样</div></div><div data-page-node-id="Wt4MJyVlZpHNalxtd2Cycs" class="src"><div data-page-node-id="76IRB8w92bbj4MVVnuzCBP" class="fn"><!--pnid:C6o9zJBi12hDSM5R2uyYjC-->BOM 配方表 + 盘点表</div><div data-page-node-id="k8B0JBUHleKKa8oto0wuwM" class="fd"><!--pnid:QutVaQd1zsHtbGzFFkmEMK-->含菜品配方标准用量、期初/期末库存</div></div><div data-page-node-id="IBJH3uTwiA1kCQFf8H3USB" class="src"><div data-page-node-id="QSJFgDYY3HBRHOuyzQFAtJ" class="fn"><!--pnid:LOkvdUX2eCFG8XHaYK5WRe-->营业额数据</div><div data-page-node-id="TP74ez6vaLQeZPsrh2HyRV" class="fd"><!--pnid:KyGAMBPeqJSbcJ2mVyCmz7-->门店/日期/菜品/销量/营业额 —— 报表导出即可</div></div><div data-page-node-id="wS0gHJjtBrt7NOMzYdAxkl" class="src"><div data-page-node-id="BoL5zBmLMQ5xEIgNl4H6bp" class="fn"><!--pnid:qncMfubxz2x7xFN32yQRR7-->基准成本率</div><div data-page-node-id="R5wxv0sf8Tuurg1RvIW9Vn" class="fd"><!--pnid:W9tTKvlBcQ25G0X6lv6ruY-->公司统一口径 —— 用于对标识别偏差</div></div></div>
+    <div data-page-node-id="RhvfaY5mHDwRD4oAaa3PGg" class="card ev"><h3 data-page-node-id="Cha9dMxRvGLsikC3kHyh4v"><!--pnid:ycsiU8WI9zfyx9Xf0389kB-->为什么这个场景值得做</h3>
+      <p data-page-node-id="76gqbUSclZllEKG7fCAjUf"><!--pnid:qScd2Ifld26TdsWfZqNUWU-->痛感 4 × AI 适配 4 ÷ 落地难度 3 = <b data-page-node-id="QAsOYqcdBR45vHr8D3x8lt"><!--pnid:0RJTOtoDc0kg1mOTyEYRnP-->5.3</b></p>
+      <p data-page-node-id="PpvJQRZ80HyNJGVmdK80Cs"><b data-page-node-id="KayRUzVI5TrPB0vTXuq9Jy"><!--pnid:qzsf2kC9UvjfWRvQtbmjZk-->最大差异点 ·</b><!--pnid:wDCTjz8LdYUNdHhHnSvXuf--> 不改盘点方式、不接库存系统：四套导出数据原样扔进来，异常发现从月度提前到日度 —— 归因建议给到环节，厨师长与财务只做复核与核查。</p>
+      <p data-page-node-id="DxAhFkEXSigHCaDFD5sOxu" style="color:var(--ink3); font-size:12.5px"><!--pnid:T2bHUZXmvauYUAYgd0B3zO-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="xwTmDFQbP0nzjqg0PkLqBv" class="blk">
+  <h2 data-page-node-id="QLsKa2JmqTztt4JjqGqVXw" class="h"><span data-page-node-id="joizPvfApG3Wilp3p5FGfl" class="num"><!--pnid:66Lqv2HuYk7KyroIPLKjwq-->五</span><!--pnid:ZuThlffK11FUGu7BPUx0Ac-->会产出什么</h2>
+  <p data-page-node-id="x6lBgj8qAcpYKkTPtijh4q" class="subline"><!--pnid:pyudawgrGM12GlBSTmNWRB-->判断标准只有一个：这份东西能不能直接拿去开成本复盘会</p>
+  <div data-page-node-id="Ym3ipVTHImjX9wwXssBVDj" class="outs"><div data-page-node-id="0qhfajPXDUBwArgssEyVYj" class="out"><div data-page-node-id="u2z5qHfZx1BiKEBWVc5kl2" class="on"><!--pnid:EYI4MCIKiHCtBJy0u2tTfn-->正式件本体</div><div data-page-node-id="21m2QCnEXolbQoszpLdqQv" class="ot"><!--pnid:4dNUcCdgoHWcLfFUp3XWTg-->成本分析报告.md</div><div data-page-node-id="Vmry0p48wqbLeYuJccz4NW" class="od"><!--pnid:qTj40J8iU4BOd441Ju4cW5-->整体概览 + TOP 异常清单 + 归因建议 + 趋势预警 · 可直接用于成本复盘</div></div><div data-page-node-id="nOW3sZuL3xZRkzNLoxYfun" class="out"><div data-page-node-id="O5Vq0bJ08XNAovwuRfeTmo" class="on"><!--pnid:7uTvwsTpERo7sI31V8doWc-->可追溯明细</div><div data-page-node-id="LRV4ttWa2mKgGJTiKHk12K" class="ot"><!--pnid:cEYG0cdlLUk1fgZLHN4DLt-->异常明细表 CSV</div><div data-page-node-id="f2VVoeU09kArQRwpiNnM0K" class="od"><!--pnid:6bYuVp8x9KscIxdueMQ8FY-->门店/品类/原料/理论成本/实际成本/差异率/成本率/异常类型/归因建议/复核标注 · 可导入 Excel 二次分析</div></div></div>
+</section>
+
+<section data-page-node-id="JJE6stma1VDUbvlzqxAsGf" class="blk">
+  <div data-page-node-id="5DCQu3ck8s2oqlO6jAvehz" class="card warn"><h3 data-page-node-id="SaS201fuGH8RU3udu5seMJ"><!--pnid:yRzAkCjiI165WMHdW90cro-->这套东西不承诺什么</h3><p data-page-node-id="ugsOa9yHwRRQux8qyMke3g"><!--pnid:OFIMxGp0OPROI0gPaGS7AO-->不替代厨师长/店长现场核查；不对接真实 ERP/库存系统；不自动调整库存账。BOM 失真风险：新品未更新 BOM、促销套餐未拆解会放大「虚假损耗」，厨师长须复核 BOM 更新日期与配方完整性；倒挤法盘点依赖风险：盘点误差会被全部挤入「损耗」，财务主管须核验盘点口径与在途物资；疑似偷漏定性风险：AI 仅标注异常提示，严禁直接定性偷漏，须走合规核查流程由合规人员确认；产物基于用户导出数据分析，非实时库存系统，须结合实地盘点核验；核算参照《企业会计准则第1号——存货》实际成本法。</p></div>
+</section>
+
+<div data-page-node-id="KSc8DQMS3o9x4xEkhMsQnh" class="cta">
+  <div data-page-node-id="kEmeTfMZhf2blDDxyFyMcH"><h3 data-page-node-id="Eaww5xQwpovB3S7go0kPsg"><!--pnid:pYKWXAshKiRhqpDF34n4h7-->想看具体怎么跑？</h3><p data-page-node-id="DhvQO3p1yHkKfvgYcwdVJ3"><!--pnid:9KRErAUntRBntPvqnMsZm8-->Live Demo 里有一个完整案例的每一步，包括哪些异常必须升级人工核查</p></div>
+  <div data-page-node-id="3O3SEKTXBmgqsTKFoz2GaK" class="btns">
+    <a data-page-node-id="qy1koQdK10ApL3Y63C8cDq" class="btn" href="LiveDemo.html"><!--pnid:2se817c0JJVN2eGHkKQGat-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="eziatrYl9HJSscabRQT4Wj"><!--pnid:DOihrBtYc4u3s83oDnp2eJ-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="vV2f7iKNi12D8YpkEcjIFr" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="bPN4OGeErF5zdXq8WL5WaS" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="grfraayldYngzw2qB7KKgw" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="zOfivpAKE7419gHOEM7cmt" data-pnid-children="rSWGFbL24ddyApedgRlwGm">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

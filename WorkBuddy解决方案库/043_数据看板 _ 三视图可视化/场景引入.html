@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html data-page-node-id="1Fm60z6VzWuFEtj3CdGABz" lang="zh-CN">
+<head data-page-node-id="mDB1s0hp9GnOMFomi59QLm">
+<script data-page-node-id="6a40iB3CXizHPF1mrmjZpz" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="T1AVdE9KJO48xlm8Pmr31Y" charset="UTF-8"><meta data-page-node-id="VWe5ngYEKdsMMtqULlX5qb" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="DRzTd0pdS5PlEs5pSjiSfv" data-pnid-children="CLVTS66CZa6d1OoKAghq6p">数据看板 / 三视图可视化</title>
+<link data-page-node-id="3uEUujBveWhLsd9KzypS8d" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="jjmqZAHhPmi7DguAJ4c8tL" href="_assets/shared/retail-extra.css" rel="stylesheet">
+<style data-page-node-id="6JbClwwtTKZMXodFuc7xXC" data-pnid-children="dEzgUvSBcHfEJ69o59RlUz" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="W2g55hC30rj9BJ0Kg1q8Sm">
+<div data-page-node-id="HfACZbkk1STF60PcKmDJLP" class="wrap">
+
+<section data-page-node-id="HtlGRJUqAsaj9el7qnqoe3" class="page-hero">
+<h1 data-page-node-id="IflBWwYnbVq2phQP1OdhCG"><!--pnid:a9uL95ta1zgm6Y1Q7k05Gm-->数据看板 / 三视图可视化</h1>
+<p data-page-node-id="leDKKPqIITipJkt5yUrzXB" class="lead"><!--pnid:ISmb9E02PhjWyGB0JTu7s9-->共性场景 · 技术开发岗 · 跨行业适用（美妆 / 家清 / 母婴 / 餐饮 / 零售 …）</p>
+</section><nav data-page-node-id="KvwYiFni4hY0yUL0r74U6p" class="subnav"><a data-page-node-id="xoZHcohpyD1IqTdvybOUDM" class="on" href="#"><!--pnid:doqaFuG9uIWhoxbGLeSRp4-->场景引入</a><a data-page-node-id="U660QMqIWwLQqG7xeGa4XD" class href="LiveDemo.html"><!--pnid:8lT9LO4z7hNBlBGXqzMs3d-->Live Demo</a></nav>
+
+
+<section data-page-node-id="dGkxmj4SZIulsBiFEHapLa" class="blk"><h2 data-page-node-id="n5bmQbkf0vcgCDWNCPSJ0Z" class="h"><span data-page-node-id="L4L0wJNI9AA1Z3AocOJ8zj" class="num"><!--pnid:zVYybhMV8f1ebYnzr26Q9Y-->一</span><!--pnid:aCz1ZAo7CEF7CW4kP3JKVF-->现状与痛点</h2>
+<p data-page-node-id="425tAj4ZRX1t9BBoNry2iK"><!--pnid:TRFHA0qJ4wfy4kzCoSFBxb-->数据看板是所有品牌都想要、但绝大多数 Agency 交付得不好的东西。看似"上一个 BI 工具就完事"，实际有 6 个躲不掉的痛点：</p>
+
+<div data-page-node-id="KfzfLWErSO9h9iHAtdUmBo" class="pains"><div data-page-node-id="e0y3JY1uqivehs7fbTmpTy" class="pain"><span data-page-node-id="crYCiY3NF2KPsaAr9u0Q4u" class="i"><!--pnid:PsVmGS2aRvkAafa33nPQMZ-->1</span><div data-page-node-id="ln5AwXCY6TOQIx6pFbBCrG" class="t"><b data-page-node-id="cIbsE1bRlN3FlRvFjhNEhm"><!--pnid:MEDGDL8mQmdP0bgmsBAl1n-->一份看板给所有人看</b><!--pnid:ghVvP9ahgBdM7C7DDsgnUz--> 老板、运营、品牌方甲方看的是同一份大而全的看板。老板嫌信息太多、运营嫌不够细、品牌方嫌看到不该看的（比如 Agency 的成本数据）。</div></div><div data-page-node-id="a9NHNXMUFHtEODDDE5gnft" class="pain"><span data-page-node-id="noIRXCkGBkkobsJYTHk58E" class="i"><!--pnid:SJ4VVBU3HwnwGSj8oBlED9-->2</span><div data-page-node-id="VmKwABXQfel5gMOUwQSTFF" class="t"><b data-page-node-id="S79MZJgWLWN7PpqOtfXj8D"><!--pnid:yQFvENTYPs94Pg83fQYnxX-->每周手动截图发群</b><!--pnid:Rf8Cqt3Nwe605JM1fV9Xyz--> 没有自助访问入口，运营每周花 30 分钟从 BI 系统截图→拼 PPT→发企微群。</div></div><div data-page-node-id="d0amuV7WbBZYke0VlMdNCB" class="pain"><span data-page-node-id="mP6TCw65kG61qFBzEt7d3M" class="i"><!--pnid:J83KwaqgahJm77W1xQlGB1-->3</span><div data-page-node-id="fdKTAFEL7CnubfVs5Fh7UJ" class="t"><b data-page-node-id="bYY5ZxEySFicUleudQJafd"><!--pnid:aYyKVc7TOLORyEZhSOfS62-->只有 KPI 大数字，没有经营洞察</b><!--pnid:flaWqqC7JHzHAj8f66PFBz--> 上一堆数字卡片就完事，缺 SKU 排行、渠道 ROI 对比、会员流转、区域分布这类真正能指导决策的多维视图。</div></div><div data-page-node-id="jH2L4QolsSAMSyZSJeUmHV" class="pain"><span data-page-node-id="WEDvfaghRDRIr7KZbNyEHY" class="i"><!--pnid:yhYUXHzSufyKpWeeq273En-->4</span><div data-page-node-id="GDnk7Ep6AQinF6bI1W8kaB" class="t"><b data-page-node-id="SJhuOsb9tHwKwyTlOh4zLo"><!--pnid:nGbHBETd3t9vQLUtN6QTu3-->指标口径混乱</b><!--pnid:OgRoFbNGHfLDqbqumwX6lt--> "活跃"在小程序里是 30 天登录、在 CDP 里是 7 天访问、在 CRM 里是当天下单。同一个词三个数字，客户不知道信哪个。</div></div><div data-page-node-id="1nokwEewHY3P9Lb0OTdt7i" class="pain"><span data-page-node-id="TDC4raRvAhxpMbMfYCjy9Y" class="i"><!--pnid:q6HGr4Cy6bkqTQbl59nM1s-->5</span><div data-page-node-id="6Z2GQ1qDMpKrJci0OfkhqZ" class="t"><b data-page-node-id="kSNg09BLV7NTWvuHdTkBfQ"><!--pnid:8OcSguEhC38BwnAE6vUo5p-->没有告警机制</b><!--pnid:ABKM0LdxAMnhqc4Lf9buvL--> 客单价掉 10% 都没人发现，只能等下周报出来才反应。</div></div><div data-page-node-id="DybqhOngHSXn6TXi9bJOWT" class="pain"><span data-page-node-id="UnbsQHgDfhUk5uNpDqjOs3" class="i"><!--pnid:fMLYArw1hmJQ673jYVBLsE-->6</span><div data-page-node-id="lEH3Drb8YYiYdhv4OKFXef" class="t"><b data-page-node-id="K53y7itFnuwOoOtVup5WXp"><!--pnid:siyArB8ptFrBkODcrUmra2-->移动端体验糟</b><!--pnid:ehR8Fp2qj0KIoHIJdsqlqq--> 大部分自研看板在手机上看是灾难。品牌方老板出差路上想看数据只能等。</div></div></div></section><section data-page-node-id="XVy0GW0tdLqOym1jAkKMXV" class="blk"><h2 data-page-node-id="H4CTUPyQg2wBikOn5SMTd9" class="h"><span data-page-node-id="wkxmybjkvUXFH4Lsj5Lu5p" class="num"><!--pnid:KLFrFzBBVr2GdYDvPpmyv3-->二</span><!--pnid:RqmF7ZtoLktHS3iU4WbWak-->换个做法之后</h2>
+<p data-page-node-id="mMLsP6n2XdJepbb5lHGsak"><!--pnid:YNGQlqRkViYtAMogFXrjJ6-->WorkBuddy 把数据看板做成一套完整的<b data-page-node-id="bNH5Whrff64DdoE6xExueC"><!--pnid:TKT1NNWNKRj6xRowZAPyDF-->经营驾驶舱</b><!--pnid:IRwdlYhdK4ei14ObIV08hw-->：<b data-page-node-id="gqxpTP46Rs69c3zDOwJCfZ"><!--pnid:BXYZJc8Ife7ErAIRfR8cFO-->5 大主视图</b><!--pnid:nTtCz8cQWjE9MRmZgnbydd-->（驾驶舱 / 商品品类 / 会员分层 / 投放渠道 / 客户反馈）+ <b data-page-node-id="vKTXkFsEfktlV5JxrvV9vv"><!--pnid:NJm0a9ugjAd9cGFDcIongK-->2 个角色专属视图</b><!--pnid:jdrQmNlLRYPtznv5PwDCpz-->（老板大屏 / 客户方自助）。同一份底层数据、同一套指标口径，输出 7 页专业级可视化，一次配置永久生效。</p>
+
+<div data-page-node-id="TtwFZGjqvoBqiaYHPfCo43" class="cmp">
+  <div data-page-node-id="3oRDK3y0iortiQLjKzRYzP" class="old"><h4 data-page-node-id="OcyBl6Py6jRGG14eAbJnRq"><!--pnid:1KL5SNPHhi1GhNoCRMXxmw-->❌ 传统做法</h4>
+    <p data-page-node-id="DB7dckFjBqfCTE2P2FQHIq" style="margin:0"><!--pnid:jiXj0B32KJE3Il8L80scaZ-->上一套 BI 工具 · 让运营手动配数据源和图表 · 每次客户变需求都要重做一遍。结果就是一张大而全的看板，谁都不满意。</p>
+  </div>
+  <div data-page-node-id="KtaIarFlUswmgYLKTVkEon" class="new"><h4 data-page-node-id="fOWXXtFLtRXWDatuF7wbEc"><!--pnid:ld2V7MbmoYwiKRlf1DYjXH-->✅ WorkBuddy</h4>
+    <p data-page-node-id="JOerv1M9cXRh9qafRVHNm0" style="margin:0"><!--pnid:1gJb21JGYvGi3iDCN9XaA2-->一张长表 CSV（date + metric + value）扔进去 → <b data-page-node-id="WUf2VqE7ZxJsVG7aWcCP7w"><!--pnid:MEDO8XqUPCesueTeQxMqe0-->7 页 20+ 图表</b><!--pnid:E5XNfvFIPMzkmIUI0vBmHb-->的经营驾驶舱一键生成 · 含桑基图 / 词云 / 雷达 / 玫瑰图 / 面积图 · 自动异常告警 · 客户可自助访问的独立链接。</p>
+  </div>
+</div>
+
+<h3 data-page-node-id="0zOCzkWHaXstAWbHQVOOY6"><!--pnid:kNfC54UdgKy6iccEJjSdN2-->三个核心价值</h3>
+<div data-page-node-id="mz5iUz9wPQEkCf7mD5oaPC" class="outs"><div data-page-node-id="1IbSQKyvAJ0IhwFYVhtCq3" class="out"><div data-page-node-id="yWBQP9cuvRMf0tvbdrgFUY" class="on"><!--pnid:VHze7XdSuUaAvW792qHpg6-->核心价值 · 一</div><div data-page-node-id="yXtoUhzxFjFzIAZNV9KLyG" class="ot"><!--pnid:MsN0O3yKpGJ3rOk4NYTPR9-->让每个角色看到"刚刚好"的信息</div><div data-page-node-id="ClqElyYXjbN118OB4bverG" class="od"><!--pnid:ESp3TAnt1t8Lz7skTxcepk-->运营看 5 页多维视图（KPI + SKU + 会员 + 渠道 + 反馈），老板看深色大屏 4 大数字，品牌方甲方看绿色成果视图。每个人打开都是自己想看的。</div></div><div data-page-node-id="xmVWhInt6uhbQsCEcQwdmL" class="out"><div data-page-node-id="6UwGjAY6x4pGpCsJwO9gx8" class="on"><!--pnid:V2KZl5TuFC5OjQjNYbUhQ8-->核心价值 · 二</div><div data-page-node-id="ZnSsVHsBDhNBGV10DPZs9j" class="ot"><!--pnid:svxTAx2Spyo6iTC4rhGWEQ-->让异常在第一时间被看到</div><div data-page-node-id="absmGQCBlhGTPmvUnREofl" class="od"><!--pnid:oW18V1Cxg4xfOpeDmTpn0d-->客单价掉 10% 立即触发告警、客诉率超过警戒线立即推送、投诉词云出现"包装漏液"聚集自动飘红。让运营团队从"事后救火"变成"事前预警"。</div></div><div data-page-node-id="6MTUnB2QZh1I3qSOLF8Fx1" class="out"><div data-page-node-id="gakowJEQ0bgGzj0vn4HYUM" class="on"><!--pnid:ySftyfS6A77iIA0WRx6c7n-->核心价值 · 三</div><div data-page-node-id="JdYqMwqCCxJG5RK3a4NgGQ" class="ot"><!--pnid:8tfmVxwOvfFybCNonODzjI-->让品牌方开始信任 Agency</div><div data-page-node-id="oVaOHxanM7xNk0YYD5E5Do" class="od"><!--pnid:WOmeZwXaVsETfalniLjVrK-->给品牌方一个专属自助看板链接，他们随时可以拉数据。这个"信任基础设施"比任何 PPT 都有效——因为它意味着 Agency 不怕客户随时查。</div></div></div></section><section data-page-node-id="55aWMZeloLk8nv8P1cOkIV" class="blk"><h2 data-page-node-id="WllXEXPtot3lyF1848VrMh" class="h"><span data-page-node-id="kwVq4N6v6W4bGDckxlFl6A" class="num"><!--pnid:OeiAtC01HfuYGPEE2haIOh-->三</span><!--pnid:rQ0Z0wEKnY1Qq33WXtUzwK-->场景闭环</h2>
+<p data-page-node-id="qSQ7k2eWwvp3MUuyBExZtC"><!--pnid:Uf1ngijhrT8MisIi9zAH7R-->整个流程只需要在开始时定义一次指标口径，之后每天自动跑：</p>
+
+<div data-page-node-id="2p8uR28MjxotcJgWmTitGe" class="flow">
+  <div data-page-node-id="wBx6qzmOKKB7OmVybI9DeL" class="step"><div data-page-node-id="2eMSGXWM0LWbbcMGoA8nIZ" class="n"><!--pnid:b3alBOsmWhi7VMdqDmBgXX-->Step 1</div><b data-page-node-id="1Bz9x6BUO7lAtFmKcP7ek6"><!--pnid:T7KrIjZ2RJYqRiDvuVbN0B-->导入长表 CSV</b><span data-page-node-id="yXsvuMsyUQOvISL4senmff"><!--pnid:5W2XXhUQUOezQ9Y7AnBuje-->只需 3 列：date + metric_name + metric_value。所有 BI/后台都能一句 SQL 出。</span></div>
+  <div data-page-node-id="ZzhSlQVyoYzvBFMiT4f6FS" class="step"><div data-page-node-id="37uO11S0NkMfEhhpA82gG1" class="n"><!--pnid:6uU2d6fV6FRy7gNy4YCTdn-->Step 2</div><b data-page-node-id="f1HD3CblCt8HEgOsnYyHp8"><!--pnid:GQkZCTaJze9K1cOFvflthH-->定义指标口径</b><span data-page-node-id="aQ6ZZBmBQINj8Fkq7Dvzov"><!--pnid:76VjSXDeAQkmvx7AQVLm2T-->"活跃"到底是 7 天登录还是 30 天下单？一次定义，全公司一致。</span></div>
+  <div data-page-node-id="5aB0jjd5RUMrCDTYs9O6KB" class="step"><div data-page-node-id="SaVCir9W0NA84nsRLWBr5k" class="n"><!--pnid:z4C9twX0eTwKo3eMeEOMgR-->Step 3</div><b data-page-node-id="2zqEjTQzY9xAgWMcOwX6e9"><!--pnid:JqqlERnS8y3tSiTVHah8Z7-->生成驾驶舱</b><span data-page-node-id="No0L3moZKVpK3wnQos4ZMP"><!--pnid:cWrPPHyM8ZZkHnQHmOs7Dd-->5 主视图 + 2 角色视图 · 20+ 图表自动配色 · 移动端自适应。</span></div>
+  <div data-page-node-id="tpQOLWvcbr36Xbor5ZrKxB" class="step"><div data-page-node-id="JKFQgAz7nESq44yP8HowvR" class="n"><!--pnid:lZ7hC042seB41iAX1rRHxY-->Step 4</div><b data-page-node-id="lDyXd9xNXCLWM8zNgKEvLo"><!--pnid:JklKciW5XOibqCDvr9grnA-->告警 + 分享</b><span data-page-node-id="Auagug00ZwJ1AhnD5iwt04"><!--pnid:xbiKQXEorfpbNdpeHvtLVQ-->异常自动推送企微 · 客户方拿到独立自助访问链接。</span></div>
+</div></section><div data-page-node-id="vGJLlzehciazEZgiGDO8UB" class="cta">
+  <div data-page-node-id="eLPqO4VVI55i5PHJfyAMCx">
+    <h3 data-page-node-id="YNFmSd2nArRzxg7Qyul6Mn"><!--pnid:hG4QQZOEWtggL89zD4C4k9-->🎬 查看 Live Demo · 亲眼看一遍</h3>
+    <p data-page-node-id="IG1zp9MR5DmmLLOSTq2HMO"><!--pnid:HjTQ9tJomXss6ypZR32Dul-->1 张脱敏 CSV · 8 指标 · 30 天 · 左侧栏 7 页驾驶舱 · 桑基 + 词云 + 雷达 + 玫瑰 · 交互 tooltip</p>
+  </div>
+  <div data-page-node-id="DSFkfEv5OnOQUnccfpyOu7" class="btns"><a data-page-node-id="NDGFe6d5dghn1DBbne01YZ" class="btn" href="LiveDemo.html"><!--pnid:dljHGa0Bfucfcasc7zKfzn-->查看 Live Demo →</a></div>
+</div>
+
+<p data-page-node-id="MSb80SGVox0lbZU0ch3B4H" style="font-size:12.5px; color:var(--muted); margin-top:8px"><!--pnid:V5HwcwjptQdWcyeQQRQdf3-->Live Demo 里可以左侧栏来回切 7 页视图 —— 从经营驾驶舱到商品品类到会员桑基流转到反馈词云，最后到老板深色大屏和客户方绿色自助视图。同样一份数据、7 种叙事、20+ 种可视化。</p>
+
+<footer data-page-node-id="QRLcyKK7N24K8Tn6LsZ2St"><!--pnid:dvwK5Qpt9m8lVZFX9xDu49-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+<script data-page-node-id="HUJek6E01g18XzvokJwYqr" data-pnid-children="WgN2U0YhTCh3qyOJoR4HET">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="IOhhb3f1iH3z9USD5uXczD" data-pnid-children="xkQjsNd7cBWwzS0mdP8thn">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="PcS3JENfhXJgnFJg1Fd10c" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="n7vWFiP20GXniMNxLFSuRB" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="7JQtX00ol0gQZLOcLyn7Cb" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="KXlSBEDTO4WEjvAItz16YP" data-pnid-children="dje5xTPKNRH9RTCgrIeWza">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

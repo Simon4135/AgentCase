@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="VNfcN7I8RIYGlEAOlYaigb" lang="zh-CN">
+<head data-page-node-id="6qVKcLsRCtYPHiF8Cdhyhk">
+<script data-page-node-id="JVqBKYpJN2bpv3AeVgUouc" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="SOdDNtdUkWSt6lI81ESFwj" charset="UTF-8">
+<meta data-page-node-id="lFtAP8E4x05l4yNlVNURc6" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="UctyiNZd7Y5wTzhP6cPqmP" data-pnid-children="x7vF9b0Jkr0n3xfizQ6flS">生鲜订货参考单（解释型）</title>
+<link data-page-node-id="CfE46VlRb3nwRqNz1XodVG" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Lp3b4zSEM1pjXJcFQ2JUHt" data-pnid-children="qSKKfNjUxgUazvJlFG32YN">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="irsbwtqYf3x3dHoOwlz6LE" data-pnid-children="yVOv9JR9ohf6Pbo4Nm0IBE" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="tJTdpu3ECy5Q5gneHUbcio" data-pnid-children="BLoIIyiPpYeknJ01mQju9Q" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="LD1NNFRInT0LrNuasSfEHL">
+
+<div data-page-node-id="ivbf3WXTMPwQ21iWCWngGG" class="wrap">
+<section data-page-node-id="q2PkDeIu01AO6pEQAuskit" class="page-hero">
+<h1 data-page-node-id="PMFFLVLLDCPeIyCzil3ujm"><!--pnid:rMbVt2DGmXwvzUHErhxk6t-->生鲜订货参考单（解释型）</h1>
+<p data-page-node-id="lJUUrcjrumXY5zBSCmRNVs" class="lead"><!--pnid:f9qqAVtkJCSh9imvhUVRgi-->系统推荐的订货量店长从来不看 · 因为它不知道明天小学开学、不知道隔壁街拆迁、也不知道上周那批虾是谁家发的</p>
+</section><nav data-page-node-id="phKPm175ffN0ejDjsMh6Dy" class="subnav"><a data-page-node-id="rdKVD1dTU1L2gc15qiD063" href="场景引入.html"><!--pnid:ZxCSVxFPECPXHl9lVhOfiG-->场景引入</a><a data-page-node-id="et6CKQNZF6WaKMEZCA3jCY" href="LiveDemo.html"><!--pnid:NNLqAEc2chvZHlmZo8WeKi-->Live Demo</a><a data-page-node-id="7fsV9zguV1IJAR3q1Vf02g" class="on" href="#"><!--pnid:Ng6c5sKNmfYz7ZGnVs1kNz-->推荐任务</a></nav>
+
+<section data-page-node-id="KWOgbrxPsDiHp36UpB45CU" class="blk">
+  <h2 data-page-node-id="O2nFhsxPur8IuJ5Kch79yZ" class="h"><span data-page-node-id="s3kGJdSZLP7caLY1ApU5R3" class="num"><!--pnid:crA8teSzZpbOHLy5LbOk41-->一</span><!--pnid:591wd7ZdjI8h0Y0GWlap15-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="tuuHSzYWLU8C28rP2esPNI" class="subline"><!--pnid:XUCeknG2aAMDnynGVJ0y8Y-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="tq3tJJMCdHqj9O9TSlSAl9" class="card"><p data-page-node-id="38DllR4f4s3aHgbYhMpB4i"><!--pnid:hQF2SJe9KV8zvb5AAqstER-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="ctLmkJ3wCinj0a5W0UUWVF" style="margin-top:10px"><!--pnid:ZISjA5mrsSQCdofzErdE1i-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:eoZG1rJFBQD6FkhV2EJonq--><!--wb-skill-start-->
+<div data-page-node-id="x7fRX3aZWfG98kSFCxvDie" class="wb-skill">
+<p data-page-node-id="kw9DAeFV5ld4Yt9spe4iST" class="wb-skill-lead"><!--pnid:iOKQKJWUeSzTrNRutvplrd-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="48HR6a7Zx8llLCLF3bqZhY" class="prompt" id="wbSkillPrompt"><!--pnid:ugEKO2H10CJgFm3J2zqNg1-->【准备】这个场景的规则都在「生鲜订货参考单（解释型）」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/ktYGwisBDQ7tVq5I5qkXmy/c2Hw9f4EThtE/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="kNw2rVgYNkIZVJpoIjVuhJ" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:sXfyGNRayCL00gWQgaa8Gx-->复制</button></div>
+</div>
+<!--pnid:L1rgE6i9WiSKsWzV2XDohQ--><!--wb-skill-end-->
+<section data-page-node-id="PFmw9hhUm9axaWXAx1iZ01" class="blk">
+  <h2 data-page-node-id="xztsaJaTbirV7OZ4pkiTEX" class="h"><span data-page-node-id="d0N8uGlVwMigfOnuToVJhq" class="num"><!--pnid:MEHsWb4uDrSmOTz20tCmZZ-->二</span><!--pnid:TO0EtKmcUuVJi89ueRu8BJ-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="9OnNVAsVuemwp0N3pzhtSz" class="subline"><!--pnid:9FBQ8DakTHiEJk1g99gm1i-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="vhH0t1qBXJnP316OomUK7C" class="tlist">
+    <article data-page-node-id="HfRgDCIKvuZaPI8cJgCmfx" class="task">
+      <div data-page-node-id="7HKJUBc8zySOINNEWdvUHC" class="th"><span data-page-node-id="8YXbSbtyvqxUb7OkZyDUGS" class="no"><!--pnid:OusvOlxhgK8osNsMVWhDsw-->01</span><h3 data-page-node-id="0cws8BX4qqUqn6Q3tfd9YM" class="ttl"><!--pnid:RgTPBYJICmG0Ss6yIhV7nA-->首推默认</h3><button data-page-node-id="IfKiAryl2TGuNIYT7DjjzO" class="cp" type="button"><!--pnid:1B8xJxuOWXbBrDkMYimZvF-->复制</button></div>
+      <p data-page-node-id="Wwav5vse0JHLxE5gbYwATY" class="tp"><!--pnid:ESIPr6yJUWmVzvXIzdU5lf-->这是我们店前四周的 POS 销售流水、当前库存和明天在途的到货， 宏海水产最近的验收拒收记录也给你。
+明天小学开学，天气预报说有阵雨。帮我出明天的生鲜订货参考单。
+每个品项的建议量把依据拆开写：基础量是多少、因为开学加了几个点、因为下雨调了几个点。 我改过的数量你记下来，下周参考的时候要用。</p>
+    </article>
+    <article data-page-node-id="S4FXtbne29RWfW0hHP0kf7" class="task">
+      <div data-page-node-id="Q4mt1phMV8Pz7WfhUFrWw6" class="th"><span data-page-node-id="qj2WFuowil64uSEx5fw3Br" class="no"><!--pnid:hVWRsT26mvJvlJyPCVTFpC-->02</span><h3 data-page-node-id="b64iCAH6oG5ikRkiJIhuwa" class="ttl"><!--pnid:3rWhee5r1eZLCqQZtaKzgA-->只看供应商余量这一块</h3><button data-page-node-id="wDYzpHxONDf8DHZefS5Btn" class="cp" type="button"><!--pnid:MN2BvXBM4eXTVUHMKV0fgu-->复制</button></div>
+      <p data-page-node-id="EQvB0ImdqEZrH3AfvTqTs5" class="tp"><!--pnid:1T3eEK1KpNqSerOIrqzgO5-->今天先不管天气和活动，只做一件事：把宏海水产最近两周的验收拒收记录，跟明天要从他那订的品项对一遍，该留余量或临时换供应商的挑出来，给我一张调整量清单。</p>
+    </article>
+    <article data-page-node-id="NDNez0iqqXJKPa03ynQYlq" class="task">
+      <div data-page-node-id="kiUhMOVkbWfHpi7C5RxDHc" class="th"><span data-page-node-id="4eHkEB3t7pv79utV41MIg9" class="no"><!--pnid:FzWF0QtmpMMGhundNgVi5K-->03</span><h3 data-page-node-id="fgqu67oHIRzJO1Q8NuZ52T" class="ttl"><!--pnid:PA34MCIGhSsnqsi9sRyDZi-->换成保守档再跑一遍</h3><button data-page-node-id="pOGn8DSp7S2oBOO7UQmnXQ" class="cp" type="button"><!--pnid:7eUuzT4F8Q575CIM4bcbwX-->复制</button></div>
+      <p data-page-node-id="2uiEYGeDKxRp21VhYG8IYZ" class="tp"><!--pnid:gL0fwYDHbjTVd5JSJU4zOh-->同一批数据换成保守档再跑一次：安全系数从 1.2 降到 1.0，看看哪些品项的建议量会变、变化最大的是哪几个，两版的差和金额一起列出来。</p>
+    </article>
+    <article data-page-node-id="CAZMrm5y5FMCkeboc3U3te" class="task">
+      <div data-page-node-id="2v1j00wzRehwrtqGbxuqyr" class="th"><span data-page-node-id="X8oZJzzSWLM5BBuFz2T6WF" class="no"><!--pnid:aYpw4LedY6e937alUQzzC7-->04</span><h3 data-page-node-id="ZAuRS5Z1Q1tp0qxfQ2rCxW" class="ttl"><!--pnid:vfvuecMAgP2Dk0fLdFisFf-->一次跑三家店</h3><button data-page-node-id="F0xfAgvM71AwUVFhcAciaE" class="cp" type="button"><!--pnid:BQdiqsBzGVV9pTfWoSik7e-->复制</button></div>
+      <p data-page-node-id="EZ4WFm5wojXK1vCjVHAvFe" class="tp"><!--pnid:So1ZciAlTiWUqMLYpidjXm-->演示数据里还有另外两家店前四周的分品项流水和在途到货，三家一起跑、各出参考单，最后给我一张横向对照表：建议总量、被预警的品项数、涉及金额、留余量品项数。</p>
+    </article>
+    <article data-page-node-id="IZRomsm5oJ41BvFgSzBguC" class="task">
+      <div data-page-node-id="LHACTtLB7kPPyNj7FW1S5Z" class="th"><span data-page-node-id="TKFHSX18AHTWBOCZKghIJG" class="no"><!--pnid:LwF4DEA7LGQFF6kBI8kbDL-->05</span><h3 data-page-node-id="EIVRwu4rEhYaodSPcc6xax" class="ttl"><!--pnid:VWOwVfOUUhvXa7c9cMiDbi-->给店长报数用的版本</h3><button data-page-node-id="N0QI588B9KkLdyM21JDxUp" class="cp" type="button"><!--pnid:ivKcnBripEaewPVn6w7cEs-->复制</button></div>
+      <p data-page-node-id="daacyh5y03b96474YsPmX2" class="tp"><!--pnid:k5ZVzdLDwrLRiMsOMrm6eB-->把参考单压成一页给店长报数用：每个品项一行，建议量、基础量、加的几个点扣的几个点、要不要留余量，确认栏留着我填，别的都不用放。</p>
+    </article>
+    <article data-page-node-id="6kZ7LqXDKtionH3D1w94PU" class="task">
+      <div data-page-node-id="sbHkhckyfzvYPXDS8tvICw" class="th"><span data-page-node-id="UeuhQeh55Cc5mEBLQEfX5o" class="no"><!--pnid:HOMbsiwfvKTLK8M4YwkZ6x-->06</span><h3 data-page-node-id="zGu9p47jngRVY6hDpkRhEt" class="ttl"><!--pnid:CVykzlT5bheKU5jojkMJEC-->让它反驳自己</h3><button data-page-node-id="rrJ2tdAIDZnuQDsBHadONd" class="cp" type="button"><!--pnid:evhKDXFxx5ycJbKO2K2FUg-->复制</button></div>
+      <p data-page-node-id="v3gNHT3PgQuifFf6d9Ppc4" class="tp"><!--pnid:inbAF8K2zRGFEpyoYH8Jrf-->你说「周三销售额低可以排除天气因素，是本店社区的固定节奏」，把四个周三的天气和销量都摆出来；四个里晴天的要是只有两个，这条结论就得改，改完再给我看。</p>
+    </article>
+    <article data-page-node-id="7s8znHhNaQr9T5o6Y61jWb" class="task">
+      <div data-page-node-id="rpGoaGiUKX0frUChFvWjQP" class="th"><span data-page-node-id="w7vedYSODc7RyKd1ZAwe2V" class="no"><!--pnid:4uO0yOWuZgZjqLwal9aAzP-->07</span><h3 data-page-node-id="lwFYAc1vn6GVV1NKEjYOYf" class="ttl"><!--pnid:BlmQckslWcY80EOGFj4OlY-->比对去年开学季那周</h3><button data-page-node-id="IkHX1xgRKMIFwFSc7g2Njb" class="cp" type="button"><!--pnid:qZ7bVFPtvu3JIxsnPTOzd2-->复制</button></div>
+      <p data-page-node-id="wb29v6UFaN57PjTzCVEaqI" class="tp"><!--pnid:xjgLZIr8ZCytscDluw4MZN-->把这次开学季的订货建议跟去年 9 月 1 日那周对一遍：去年三类叶菜上午十点前就售罄、备货不足的记录在档，这次同样临近开学，建议量差在哪、够不够。</p>
+    </article>
+    <article data-page-node-id="CK7CxEsaLi8YCvO35CK6qH" class="task">
+      <div data-page-node-id="HP0uDnysfkupVm9LJbJFJZ" class="th"><span data-page-node-id="4IUTrsZr8i5AT6jzN5o42x" class="no"><!--pnid:abYn2XLH0EifloGtgNlcCt-->08</span><h3 data-page-node-id="AiyESiOSQUSKsppNqzXHpm" class="ttl"><!--pnid:gxdfPiBj6y1vmPx6r7V6da-->对照硬规则做自检</h3><button data-page-node-id="yMTbqeldyuLorBJGwyQHjk" class="cp" type="button"><!--pnid:5qh55fpaWXUkXkjhYcWgS6-->复制</button></div>
+      <p data-page-node-id="5MN30Kcl073juzR0NfnTRw" class="tp"><!--pnid:PXDZZtsTv3rr0IRVfswekv-->自查一遍：每个数字有没有写清来自哪几周、调了哪些修正因子、确认栏是不是空的、有没有出现承诺销量的表述，缺的和越界的都列出来。</p>
+    </article>
+    <article data-page-node-id="X6hz12rJlV5lMbdGrQFsvJ" class="task">
+      <div data-page-node-id="pJZv6qwx9BHfxLi3cX8y4t" class="th"><span data-page-node-id="lVI4xkCwcRDgO8SirNpef6" class="no"><!--pnid:49rKAPoxy9I821JIPEtuwK-->09</span><h3 data-page-node-id="NZL4ItkvaiAjmSFzeGUWWg" class="ttl"><!--pnid:fROxvE4SnEpDk4IEayeHaP-->换算成损耗金额</h3><button data-page-node-id="vQ4JWB7mUYA2rLYs76FtGt" class="cp" type="button"><!--pnid:BlFXaxroN5br4Qh06pVW5J-->复制</button></div>
+      <p data-page-node-id="mTWdQ0piDfr17Hj0idk8fL" class="tp"><!--pnid:1XkB6VZDwp5Ts7XGJT9hGZ-->把明天的参考单全部折成钱：按建议量订的预估损耗金额是多少，跟上周实际订量造成的损耗金额比，差多少，按品项一条条列出来。</p>
+    </article>
+    <article data-page-node-id="cKckTv5VjXZUvzK9CEjQJY" class="task">
+      <div data-page-node-id="0w7yy0PWqSjxll9IzgnVSB" class="th"><span data-page-node-id="XCnOnsykhTH09P5TPtqCbW" class="no"><!--pnid:HrlY8F5tPl5Gf3o6zP7AAS-->10</span><h3 data-page-node-id="ty6NGxwMs5EoMDXu6dnmlH" class="ttl"><!--pnid:dGybdioOnzzZHojoIfxPQ8-->沉淀成本店修正因子清单</h3><button data-page-node-id="5xSDTg5WUhjbFCILYNduax" class="cp" type="button"><!--pnid:JCiGHdWcx1SOCb8yfmlm2y-->复制</button></div>
+      <p data-page-node-id="7i3obcpEoyuWt51G7v7AZx" class="tp"><!--pnid:elfr01TtyWGzXn9toHqlnB-->把这次用到的修正因子整理成一份本店清单：小学开学、阵雨、社区活动各加几个点，各自依据哪几周的数据，下周报数直接照着勾。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="fH0hC6IczX8ODg5a52kmqW" class="cta">
+  <div data-page-node-id="2wOFZLnLJ8lf9uL4lZL3ZW"><h3 data-page-node-id="OlUZyNQgZWrFNYQlPMPR9H"><!--pnid:FJn0uVsjsOLOdWecaRtzry-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="RQDCYMM1iYACBcWJNCpxGv"><!--pnid:gvY8bDSex2nfozGWNPL8Lc-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="ImP5QmZkM4yAKdPhRI3rEZ" class="btns"><a data-page-node-id="YIAGDWvT7Cqe8NVVQRDoEi" class="btn" href="#" id="ctaContact"><!--pnid:a4INzaKZfxiTWKVNhrp9f9-->联系我们</a></div>
+</div>
+<footer data-page-node-id="ZO4BXQKjnYVFxqxmCa0Rwp"><!--pnid:p12S8ByARE8GZNvYZ8AnHy-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="OTEGLcr93Rrx3tPg24nH6y" data-pnid-children="E8xqg27JBeBeSWY2NAnsg5">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="806DRDHIe4VrahUKlYcZPb" data-pnid-children="zIgGEKWBbLj9KYXYHoeJWW">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="nQeDWMoaW4hbSvOl6LNyak" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="Q2N4YhyA8t2JklL9OEBrkI" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="hoMXXhIIoZjz6zb0XTbKQY" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="McFyEoRES9bUdrxWHf4E5n" data-pnid-children="TvsGUEZHdBdHuViKXXz9UO">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="sHiMpgmvqAjIicGvCpZfPh" data-pnid-children="uysFFPfy4I7NAu5gvFK5om" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

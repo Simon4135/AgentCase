@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html data-page-node-id="jSfpS6yohL0Bt4Ux9T4Okn" lang="zh-CN">
+<head data-page-node-id="orNKDBIN5vwkSzyup2hPoP">
+<script data-page-node-id="gUyNIOFddPJX43kQzmqGaE" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="JtgZ8LtrFsoXwBUfooBmgJ" charset="UTF-8">
+<meta data-page-node-id="PnyFOGrGsJEH3dsQtnByji" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="O8rSUMYeb314Ho3BdtQaro" data-pnid-children="BJVOqSIGxEf5Sm7V46g4Xe">行政费用异常归因（量价分离）</title>
+<link data-page-node-id="CVYqaklpfWRFUzvfVxx5Hu" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="OMoeey58S6XUQHmUSe5vDw" data-pnid-children="Ce8QLf4aCMr13kMr6Vay8y">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="XfISRHv3KZFP6rQKvt0plq" data-pnid-children="Y0L5BaPMs74fbv9iuLuDk8" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="6dy2mEaIoM6bPR0aTE3S47" data-pnid-children="VCJAJr3VHEGsNV4XmZoiJN" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="LgTj6Lsgs3K7zLvWvaPCov">
+
+<div data-page-node-id="bNzsvJPOfK3FZyXzHWKYNh" class="wrap">
+<section data-page-node-id="yKxdUJU1wcabDylecpRLVv" class="page-hero">
+<h1 data-page-node-id="5ZPjGF3h4ktK2myEAcYBHj"><!--pnid:x5eZgw4Syj5LkX4fFSm3e2-->行政费用异常归因（量价分离）</h1>
+<p data-page-node-id="fDNg0IHNkZXeN18Nrp1HR5" class="lead"><!--pnid:9YEkbwaf5CvbeNhdgWpuPM-->都知道水电物业在涨 · 但没人拆过：是用得多了，还是单价涨了</p>
+</section><nav data-page-node-id="YzCMeVg28VVUsP3ga44t1L" class="subnav"><a data-page-node-id="jfAP6oomkSwMuYvXiqWHGu" href="场景引入.html"><!--pnid:oqUkEMhFjdTQ5w7v0ulFg5-->场景引入</a><a data-page-node-id="3ssKtAIsRiuRt1eJBFyqVq" href="LiveDemo.html"><!--pnid:0cm0vQ89kQf0HMi59MLOS4-->Live Demo</a><a data-page-node-id="lQObzecOiDzYKscATFBgKn" class="on" href="#"><!--pnid:2wTtt5JdJyMbyBQkCvIhNm-->推荐任务</a></nav>
+
+<section data-page-node-id="Sim5EsLLZscJeDmU5ByBfo" class="blk">
+  <h2 data-page-node-id="fa6paZRGqqWukcOkZ9aDAu" class="h"><span data-page-node-id="uAS44oZsqSafA2LsDsy09x" class="num"><!--pnid:DWNsHGiznGggkfkJ91Jh2M-->一</span><!--pnid:GF9WoCjngMejWUv2MEcUg9-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="juNeiM94ASQNksh3nQomMJ" class="subline"><!--pnid:KFfkZ5SVlNXBR1HpNrae9b-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="u7pgtJoEB4vfE821KgnCcU" class="card"><p data-page-node-id="yZjFiGTeHd1faspxS2MeV7"><!--pnid:V6TUtBwOjFvxLfsKAzpAFg-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="XoJMpZAjqY56j5JMT5xwce" style="margin-top:10px"><!--pnid:oUSZRO9KGPwdnypuWTZb3h-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:zzAcE3xj4C3qxIEhr02uAe--><!--wb-skill-start-->
+<div data-page-node-id="18bsbeZVJzfUI14V7ifvhp" class="wb-skill">
+<p data-page-node-id="saR6rGBQSFuKesrjGxUozz" class="wb-skill-lead"><!--pnid:LDcLWepArWjyGJhg8OzMQj-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="HNaoYhRd8dE9kUdGocK7Bs" class="prompt" id="wbSkillPrompt"><!--pnid:HHtK5sZ7YnJyVHTmlESJHQ-->【准备】这个场景的规则都在「行政费用异常归因（量价分离）」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/mf8QoMAFv2sKKZgkZQsR2A/aYhtmSROa342/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="crxawLIlQ7JmhsJU6E4nzz" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:HPLl3snjgF4H9Oo6A43ifc-->复制</button></div>
+</div>
+<!--pnid:EVmmFFcFgOr2dohztEBr4a--><!--wb-skill-end-->
+<section data-page-node-id="035BrQkOPaLH2I6vVzj0m4" class="blk">
+  <h2 data-page-node-id="fMDeNYqSY5BlRIAd3ecDY2" class="h"><span data-page-node-id="C4Ec3s9Asx9VUvCbd89uhn" class="num"><!--pnid:Ga6ojvJ34RYRCkSnTsmfea-->二</span><!--pnid:auqAVZF43SuNIDUF7lEQeA-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="lWMYjY7nlvHshorPGWjT9f" class="subline"><!--pnid:dnFlLcIzpawzbzZLmn5wvD-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="aqQXkcN2v7kJsBPjEkynab" class="tlist">
+    <article data-page-node-id="rAvH24fWo985VyPBwVOf61" class="task">
+      <div data-page-node-id="O31o7Tgg3J4tQRgAah9ZF2" class="th"><span data-page-node-id="cRMgIzVSuQp8zFMlL3ITKJ" class="no"><!--pnid:Dhmne259N2JhuhUoM2VBLk-->01</span><h3 data-page-node-id="5lD1C0o3C3nrs3MnrYeg4m" class="ttl"><!--pnid:H6KYI29K8PkWXBFbaSoZIy-->首推默认</h3><span data-page-node-id="nFBqL6DyzVAWmSinNEIwMo" class="star"><!--pnid:nY8rikx9ZLqfReL5WvPpuM-->与一键体验入口一致</span><button data-page-node-id="w9FRpIRnUsB1rNr3dKR3zJ" class="cp" type="button"><!--pnid:QlVuEt6439HIF5jQPnxQwG-->复制</button></div>
+      <p data-page-node-id="FgfNpoCfEfFPClbdNeWkkA" class="tp"><!--pnid:cXbuKKqSp8QbcdwHywVV7g-->这是近两年的水电物业账单、服务结算单和费用台账，还有现行的服务合同。
+帮我拆一下费用为什么涨了。 每一项都要分成「用量涨了多少」和「单价涨了多少」，两个加起来要等于总差额。
+单价涨的，去合同里找依据 —— 合同里没写的涨价，单独标出来。 结算单上计价方式变过的（比如包干改按量），重点找出来。
+账单里没有用量列的，直接说这项做不了量价分离，别硬拆。</p>
+    </article>
+    <article data-page-node-id="jWI2zIVi75zsiH0ZrQWFXi" class="task">
+      <div data-page-node-id="2wR55YhesYXOg7KwhlEHlf" class="th"><span data-page-node-id="2bAIS0hW7CFHTABl99U3OG" class="no"><!--pnid:56Gv3kprkqxPEaNRiQEO3Y-->02</span><h3 data-page-node-id="woY6EKMVHtDZFaHU9w3Tem" class="ttl"><!--pnid:59HOh70MY5RYaFykoC5sKd-->只做合同溯源</h3><button data-page-node-id="Bo4cvj27X5qHvDuUc1P13b" class="cp" type="button"><!--pnid:NFKCbj1x6Y6GhOHWdxiBBA-->复制</button></div>
+      <p data-page-node-id="Z2xDvJ6wVWtP15nm5Z8vZn" class="tp"><!--pnid:ZH8yszdS94TEhAYokEHQxB-->先别做整张分析表，只做合同溯源：把所有单价涨了的项逐条去服务合同与调价通知里找依据，找得到就写清是哪条，找不到的单独列成「无合同支撑的涨价」。</p>
+    </article>
+    <article data-page-node-id="XST2NYPMJaNTrQvr4r483V" class="task">
+      <div data-page-node-id="65z2tgvz6gvkNvVWzR8oN0" class="th"><span data-page-node-id="wBT1RyFv6nyp3LkmzpicH8" class="no"><!--pnid:qkBq4GUabKrMk2Dk8pWiFA-->03</span><h3 data-page-node-id="320SCyLxX0styR2IGIZbhI" class="ttl"><!--pnid:wYxAAQKH6ZJ5XrBl0FcXMj-->换基期口径</h3><button data-page-node-id="xJiqEPS72uDTMYzzYTbhJr" class="cp" type="button"><!--pnid:ANq3ttjkN7pE2Xk58n3FIS-->复制</button></div>
+      <p data-page-node-id="elbNwzX2Z42kwIx49VDmGl" class="tp"><!--pnid:eKOGxzVkXtmn2PtpPEMo3e-->这次换个口径重跑：基期从去年同月改成近 24 个月中位数，重新算一遍量差和价差，看哪几个科目的归因结论会翻转——是量的问题还是价的问题。</p>
+    </article>
+    <article data-page-node-id="ZsDiQRO9puJaeKORJGWOrg" class="task">
+      <div data-page-node-id="IxUHqZothzyz3dFJrMG6Dd" class="th"><span data-page-node-id="p6rT3pxsdTMfxtvCwVT0De" class="no"><!--pnid:pkSRGphg0qTSToPAYac04r-->04</span><h3 data-page-node-id="zNu8Q4u09tap1Sv0gCYfIU" class="ttl"><!--pnid:G5pRVBgw2lL9PGhoE1zwVJ-->五个科目一起拆</h3><button data-page-node-id="pBdJj36JLQIvt8fW9lAXaV" class="cp" type="button"><!--pnid:dwIYRIan0icv1uNiup1pTd-->复制</button></div>
+      <p data-page-node-id="ZxBtVW85QlodMUiKRy2TOw" class="tp"><!--pnid:R7mQ2N6knkxKaj31fE3Rsz-->把保洁、快递、饮用水、空调加班费、物业五个科目一起过，各自拆量差价差，给我一张横向对照表：各科目总额差额、量差、价差、合同溯源结果、能不能做量价分离。</p>
+    </article>
+    <article data-page-node-id="f0KyIJoNaPKkMlur2tt51O" class="task">
+      <div data-page-node-id="MJWuTem3NoSiK62pVh6bN0" class="th"><span data-page-node-id="KIYEDLxQchFTnOdVTSpj3v" class="no"><!--pnid:8kGFbZPJqXVxA0BSSplZqc-->05</span><h3 data-page-node-id="uSKYRz6b0ORs2NHbh9xfLo" class="ttl"><!--pnid:DS8s0MtY4bH0ZMQrPxtwRS-->给老板看的一页</h3><button data-page-node-id="x8t7aOjFvQgpOe1oTkvD8x" class="cp" type="button"><!--pnid:J2bWQttGFhliLT38q6AvxJ-->复制</button></div>
+      <p data-page-node-id="OID29Yhgo3I06pH6DKEL36" class="tp"><!--pnid:LzWua22FkY9vpxgLotCxR8-->把分析结果压成老板看的一页：费用同比涨的 18% 里多少是用量涨的、多少是价格涨的、其中没有合同支撑的涨价合计多少、涉及哪几个科目。逐月拆解页不用给。</p>
+    </article>
+    <article data-page-node-id="MkCkcoMt9w8CTDHjd7n1QU" class="task">
+      <div data-page-node-id="PZO1lc9tXrjr5EomX60W1L" class="th"><span data-page-node-id="AsyBb5zWQUorhO4sFfohHb" class="no"><!--pnid:ebzX68sZqvBdFlkea3xiaZ-->06</span><h3 data-page-node-id="i2ddPMbsuHkllvbgKpy3Ir" class="ttl"><!--pnid:BDkwWc0e4KNvIN26RqsrZE-->让它反驳自己</h3><button data-page-node-id="DBC8xtg29I7WHeInMqSjwx" class="cp" type="button"><!--pnid:ALFqUNl3UoMBIQQtzlofTL-->复制</button></div>
+      <p data-page-node-id="TbeRj68sauV82w7ehEOkf1" class="tp"><!--pnid:W97SXA52FkVGXhZOa6Zgti-->你判定「保洁费涨价无合同支撑」，依据够不够？把合同第 4.2 条原文和结算单第 7 期的备注并列出来；如果有补充协议或调价通知，就改回「有依据但表述不一致」。</p>
+    </article>
+    <article data-page-node-id="vRNAJYcvcbs6NL3ZuytgKK" class="task">
+      <div data-page-node-id="AYpL3NMzNjE7FDxQPLSz0O" class="th"><span data-page-node-id="O31sQ4kVDvABDHR5baMJTV" class="no"><!--pnid:vAI3jViv3iIon6tKPV27vR-->07</span><h3 data-page-node-id="aTrH5xjnja5zJrd4BhzxPo" class="ttl"><!--pnid:lLXk1k3lvrEqH5pFlsflgt-->比对逐月量价构成</h3><button data-page-node-id="qbLi6Fgchym7kY6dHmV8V1" class="cp" type="button"><!--pnid:CAVlYhdbwCKVRwzO8fL0bY-->复制</button></div>
+      <p data-page-node-id="ve8myGRvhgZUPko8PmWlgR" class="tp"><!--pnid:EtEVyqJwH2JCvrrNNXHt3l-->专门比历史：把这次的量价构成跟前 12 个月逐月比一遍，哪些科目的价差从某个月起持续存在、哪些是一次性跳变；快递件数增量跟新分支机构开业时间对不对得上。</p>
+    </article>
+    <article data-page-node-id="5peeEQnqeROhgUtJS4RjUS" class="task">
+      <div data-page-node-id="wwHSw8c9u3welqNeNFPiYB" class="th"><span data-page-node-id="dRMrOv9HKKTGDHC7rjnSST" class="no"><!--pnid:ehiYWa8CSy87f1kkXgw7M5-->08</span><h3 data-page-node-id="WnrbKbNeylGDrM1hfjFFsf" class="ttl"><!--pnid:89Xtespnb7KInBWQ9KW7Fw-->对照闭合校验自查</h3><button data-page-node-id="2svdM8rP1b0aDlocn3XY7l" class="cp" type="button"><!--pnid:C00qUsNtRzuP2wfnPSZtiq-->复制</button></div>
+      <p data-page-node-id="yFsVtSudHxPTt3ZffidlDv" class="tp"><!--pnid:ts4WIkxTdtSP6CVvFMjRes-->对照量价分离的硬要求自查一遍：每个科目的量差＋价差是否等于总差额、缺用量列的科目有没有被误算进价差、计价方式变更的是否都单列了。逐科目过一遍。</p>
+    </article>
+    <article data-page-node-id="7FmfteClcjY8SGvVd9YDaI" class="task">
+      <div data-page-node-id="AUujls0q1gP1DqLTYjD4TZ" class="th"><span data-page-node-id="oSC3E98CvJTzFenZ4HPUuD" class="no"><!--pnid:Omyv2niMutXP8QyUNVEjFP-->09</span><h3 data-page-node-id="MTD0BloIRlRDSxBuj89vry" class="ttl"><!--pnid:Ix5NXLGV417flWujvfMy3q-->折算成累计多付</h3><button data-page-node-id="yuMhLWzCnfSdJgW0IL0hyB" class="cp" type="button"><!--pnid:JOLtfAtk0jjuL2eNbGzg48-->复制</button></div>
+      <p data-page-node-id="7ItsUMoqqAB2G4Nk7clb3P" class="tp"><!--pnid:rN57i1U5c4Z2JhufrVjX6t-->把计价方式由包干改按量折算成影响：6 个月累计多付多少、按全年算多付多少、相当于几个人年度办公费用；再算这笔变更从结算单备注到现在持续了多少个月。</p>
+    </article>
+    <article data-page-node-id="I9HSDJ0a1x7sENgO6dPrmy" class="task">
+      <div data-page-node-id="2k0X3BED7m8jjtc0KxLDnD" class="th"><span data-page-node-id="Wxt3VsZJlkat6Mee9aa2F7" class="no"><!--pnid:Oe2ZvVL6QVRd4maQOGs4oZ-->10</span><h3 data-page-node-id="RlQqW5gZJ5jlcp8EVim8hz" class="ttl"><!--pnid:W4rsNLwxA6HVidf6EPehse-->沉淀成量价分离模板</h3><button data-page-node-id="uCjMMTeFWL9twVnSrAbqfO" class="cp" type="button"><!--pnid:7OEowMjMcCqiOM2YpD3KR1-->复制</button></div>
+      <p data-page-node-id="6bNiGYDK59zT7DFZKDnRnq" class="tp"><!--pnid:Fzz7NTDvKDryaHVqz6L54B-->把这次的归因口径整理成一份《量价分离分析模板》：量差价差各怎么算、闭合校验怎么做、缺用量列怎么写、合同溯源查到哪一级。下次费用异常直接套。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="E5xmy9cztz5jWqkJom8i8Z" class="cta">
+  <div data-page-node-id="q6kN3UXRepQDHtkTgesZZ3"><h3 data-page-node-id="V9rNcgVDIwvhaqkfoOqTbJ"><!--pnid:bxxZznrUJ36HLx0UenDoY9-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="EDGBUNE130fktAf5VB6Nt4"><!--pnid:3SSXDGOGbp5FqBLDFwKcLZ-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="TIHHlv8TjR3VfTHBjwBKj2" class="btns"><a data-page-node-id="gEpPrvP7fJ4BIACRmvzIHn" class="btn" href="#" id="ctaContact"><!--pnid:HbGCdvetoix64Psor1iqeN-->联系我们</a></div>
+</div>
+<footer data-page-node-id="YkNMXYfXdeWp5x3S08PPJ0"><!--pnid:7usSqKxJCeYQLLGUf1s6nV-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="9YepEc34ABCw0zyTuNVXis" data-pnid-children="sfpjRWBFVcbJ7x93XyNQZX">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="9x1mq3YvNBtLMFKvUmJvdX" data-pnid-children="D865rz9fVgIKwUH3ZgXx6f">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="U79hmAVIWTcGNdUqdzieba" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="TNjEZH3qaCj4e8nJd31Yli" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="XdVYoBzqwDFch6HJmx8rmI" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="u9HajnThuHUZGw6cO8JyEa" data-pnid-children="hIQ4DRadJ09y7oHwQGlxeJ">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="IfKfJ6HE1BjRdba2BI3SHZ" data-pnid-children="5ODGdcQHwZDTqhvNfx1RGa" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

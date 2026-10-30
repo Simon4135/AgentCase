@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html data-page-node-id="YZu1M0tAjUxvnD3j7jJ7jf" lang="zh-CN">
+<head data-page-node-id="0IykV4oA6MvU6GEV1RMA3W">
+<script data-page-node-id="jPG4QMdtolarpU6grPSFYY" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="s1KzQwEsILBGr3ogKv6rg4" charset="UTF-8">
+<meta data-page-node-id="1QBQtPeLz18K41POpBvnW5" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="5sM6OnUx2kFwBYJCHi9nHy" data-pnid-children="WOvyvrAaHj3CYX8L5wjzsO">原辅料批号使用去向反查</title>
+<link data-page-node-id="M1Vo3EIPNXbAT9FHwPQ5s3" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="plvAaK2ErsooFTW8faLx6B" data-pnid-children="I3BVesXY5hgrPxHdMR1Lgv">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="tkIDqJhSKZ1INYeJXM7Byf" data-pnid-children="MoUdNegeo35YRj9EnxVDTG" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="tnhMvYbhO3VftuSW7PQc0N" data-pnid-children="RTEp7WFxvB9UNb7cKuJovF" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="WsUh26tHaCUvG86ppYvdpF">
+
+<div data-page-node-id="DQzMqYNqzaGvui90Hdmofu" class="wrap">
+<section data-page-node-id="VAHigkRM3QuBuTJOdc85gm" class="page-hero">
+<h1 data-page-node-id="FNO4mwWIKNpl48BH5SABe4"><!--pnid:NMlXTMU9amAldYj6fxr36y-->原辅料批号使用去向反查</h1>
+<p data-page-node-id="37IfhQbwUOuryzhTzhol8a" class="lead"><!--pnid:wF3xyvfNT28oMwaZlETRK8-->出了问题第一个要回答的是「这批原料还用在哪」· 而这个答案只存在于几十份手写批记录的某一页上</p>
+</section><nav data-page-node-id="JyIAkpVm6RRmWEkbAhIN1M" class="subnav"><a data-page-node-id="sDDvrWp9bSUxt2RB8GXlJv" href="场景引入.html"><!--pnid:WV0ssOVXEQEicChvqdgFaw-->场景引入</a><a data-page-node-id="28VA5kAaCitwzf4wZzZUH0" href="LiveDemo.html"><!--pnid:2iJVtL15ae8xnTZiqt2TFJ-->Live Demo</a><a data-page-node-id="PeDF0uVkgabYnjYxtKmz0K" class="on" href="#"><!--pnid:yZn5vwFemU3JkCHD6O7ByZ-->推荐任务</a></nav>
+
+<section data-page-node-id="lLTLVCcxK1dNN369fIHGeZ" class="blk">
+  <h2 data-page-node-id="0UGaCVtCRXuhanPpxKt3i5" class="h"><span data-page-node-id="nHrlyxQvWfNCLf0uMaZTVQ" class="num"><!--pnid:fnej64pbtMoEGTNyiWesEf-->一</span><!--pnid:XKPbjoBn5Q7mk0RGvdKyEt-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="888wv9nsUs7sIpWXsHZCma" class="subline"><!--pnid:BcAAS1PlkXT9KPVr6OySDg-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="JB8TgAXzeotfOKQyuRqZ0H" class="card"><p data-page-node-id="tDR1oAWqjWTDLiCfMcy25V"><!--pnid:dIF1XvQ052k3nqgD4CC0bg-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="1u1CUzgR2eSALlVfXv0rIy" style="margin-top:10px"><!--pnid:H8diGqS96Hbgcim2n6vsuv-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:jDNxUbkBKK0UplTq9suyrm--><!--wb-skill-start-->
+<div data-page-node-id="I1R0cZEHe68gtHicIUU1y2" class="wb-skill">
+<p data-page-node-id="RzxWsjmxXtcRVMAbz8ocOo" class="wb-skill-lead"><!--pnid:olPTId58KSnEbYKlvZxZla-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="qWlXKsyfCKIiXXuzgv0pbU" class="prompt" id="wbSkillPrompt"><!--pnid:YYFepTQ4yyLQLE7mFzUN0t-->【准备】这个场景的规则都在「原辅料批号使用去向反查」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/97fBnChKlRetnOLXVBEBwJ/UuiYHgOhibMa/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="ZinLKrWFsRNSgHzwXyF3tT" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:ONSTsLIBQutYZ8QP4hoROr-->复制</button></div>
+</div>
+<!--pnid:kioFgCL2RTeGfe9LJq14fD--><!--wb-skill-end-->
+<section data-page-node-id="IH3FjbrLNW1dpuaCbWXoKm" class="blk">
+  <h2 data-page-node-id="Xum3RMfGoElMntPBkD0dt8" class="h"><span data-page-node-id="aUOD2zA7HWGQjEgbYNTw84" class="num"><!--pnid:IIKwrSLyjwdYqBPdccYZbV-->二</span><!--pnid:ejuqxOQtldwwuoyfbRAGT3-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="mtB10gPNUkCVwkBRLmBf0j" class="subline"><!--pnid:0bjnJViY1TR79aZ5GmBIYo-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="dztpLLzXjgzXurqOvJvt69" class="tlist">
+    <article data-page-node-id="9pmaQGa1tRIdSoAKSNH4Js" class="task">
+      <div data-page-node-id="EhdhxJvy9jeL5cZzaGdxHp" class="th"><span data-page-node-id="8lGNP9tBbBeNrfiIt7ZVIB" class="no"><!--pnid:ItTeAHY6bszghCZ8g1tJgk-->01</span><h3 data-page-node-id="DvdENI4JLXed52jxuJkTRp" class="ttl"><!--pnid:2PznkKZERv3YbcC4sIUhDF-->首推默认</h3><button data-page-node-id="L9rq9W7Z0fmg6bk9Lae6z3" class="cp" type="button"><!--pnid:lFDO9HgoCeEfJ1ci4Kl7tJ-->复制</button></div>
+      <p data-page-node-id="TvDnOJyPi8FaLLhMQUfCwa" class="tp"><!--pnid:3GpNWa3jLq3QqpNwk7ypoK-->供应商通知我们原料批 YS-2605-07 的一项杂质检测结果需要复核，这批到货 60 kg。材料已随技能内置：01_近一年批记录原辅料页逐批读取结果.xlsx、02_原辅料台账_YS-2605-07到货与发料.xlsx、03_六个成品批的现状与流向.xlsx、04_本品种近一年全部原料批与交叉核对.xlsx、05_2025年3月同类反查记录与本次对比.xlsx。
+我要知道这批原料还用在哪几个成品批上，那几批现在是已经出厂了还是在库里、分别流向了哪几家客户。
+原辅料页是手写扫描件、各批位置不一样，读不到的批次要明确列出来说查不到，别当成没用过。六批投用量加起来要和到货量 60 kg 对上，对不上的差额也列出来。另外把另三个原料批能排除的依据说清楚，以及 2025 年 3 月那次反查跟这次的差别。
+产出三份 Excel：原辅料去向反查表.xlsx 是正式件，含去向主表、逐批出处索引、流向明细三个 sheet，带编制与审核签批栏；查不到批次缺口清单.xlsx 一条一行，写明批号、缺什么、找谁调档、影响什么结论；台账差异清单.xlsx 把批记录与仓储发料对不上的逐条列出，带两侧数值和差额。
+哪些批真正受影响、要不要召回，这两个结论留空，质量部来判。</p>
+    </article>
+    <article data-page-node-id="AaA38btCBqXhAP2Yu0gvm3" class="task">
+      <div data-page-node-id="FBDMsX59xCluUGo2eRDEka" class="th"><span data-page-node-id="ew02XHkgQbgxVcBebBdzp6" class="no"><!--pnid:Nu01lEUxJAV8vH6PsZ2hFY-->02</span><h3 data-page-node-id="9OafF64PRgR8MaixkEUW3E" class="ttl"><!--pnid:m1zFY1Mn19o7LJiT1oFUc1-->只做投用量闭合校验</h3><button data-page-node-id="7rc2QPm8kfl9dyDBwrzTjK" class="cp" type="button"><!--pnid:x1PURhyAHmMlsZsfsn7u9y-->复制</button></div>
+      <p data-page-node-id="Y8KInIt9PQ5okTQjlB8TY7" class="tp"><!--pnid:zirJpA1OPrsIydcrHfiGSE-->只跑闭合校验这一步。读 01_近一年批记录原辅料页逐批读取结果.xlsx 与 02_原辅料台账_YS-2605-07到货与发料.xlsx，把六批投用量加总与到货量 60 kg 对一遍。产出 Excel 一张闭合校验表：核对项、数值、计算方式、是否闭合、差额去向，末行给有没有漏批的结论。</p>
+    </article>
+    <article data-page-node-id="pMDkHYO5w0IZsPIWfdO5w5" class="task">
+      <div data-page-node-id="lo9ABp3vfj7uOlWBjWG5S4" class="th"><span data-page-node-id="hT6zSYJMdemAmBe6TQGBEH" class="no"><!--pnid:P1mwyP2aLUK77mBIZlG4KG-->03</span><h3 data-page-node-id="xjWH1trtgPvYKB3eGpBZ8Y" class="ttl"><!--pnid:94swjdPYZDyewT2fEQ3OrB-->换成仓储发料口径</h3><button data-page-node-id="DVSRDaZjnE91oGtxdw1IwO" class="cp" type="button"><!--pnid:XrG1reIzQcbVNVUJRbC1sS-->复制</button></div>
+      <p data-page-node-id="H2UtS9PEDqNfiku0Bb9UwH" class="tp"><!--pnid:ZLIqbLYau4RWPndcNTRTe9-->这次只用仓储发料口径算一遍，不采信批记录上的投用量。读 02_原辅料台账_YS-2605-07到货与发料.xlsx 与 01_近一年批记录原辅料页逐批读取结果.xlsx。产出 Excel 一张两口径对照表：批号、批记录投用 kg、仓储发料 kg、差额、累计结存是否可能为负、差异归属，末行给结论。</p>
+    </article>
+    <article data-page-node-id="iLCrwaRfV0hp1AyzLFs2JB" class="task">
+      <div data-page-node-id="2TfIr6CVV3SvJNEIJdK6SR" class="th"><span data-page-node-id="HxixMBCOAHrIS9vy9CDvXQ" class="no"><!--pnid:r1pCMl5T477tpKvrLWgFzV-->04</span><h3 data-page-node-id="4hfbCnxCYi7Pf3kbNL8BtR" class="ttl"><!--pnid:hG3D7GaQ2kbuF9HyfVEviu-->四个原料批一起过</h3><button data-page-node-id="Xud3XtOZyZRl8ox8t2L0TR" class="cp" type="button"><!--pnid:GbZsjuMfOZkSX2GxEerA4v-->复制</button></div>
+      <p data-page-node-id="eZdMBLEaYanHawK2gYnniJ" class="tp"><!--pnid:IPvg5NEVZ4hL5LfuA3M2Ec-->把本品种近一年 4 个原料批一起过一遍。读 04_本品种近一年全部原料批与交叉核对.xlsx 与 01 那份读取结果。产出 Excel 一张四批横向对照表：原料批号、到货 kg、使用成品批数、该项杂质 COA 结果与标准、与本次复核批是否交叉、是否需纳入，按是否需纳入排序。</p>
+    </article>
+    <article data-page-node-id="AVTmWPB8RHXibCnSb01J4n" class="task">
+      <div data-page-node-id="VzMhgwhTwmtI6fMWkbi0yk" class="th"><span data-page-node-id="UFwQrcczQwNhw1mPxPejja" class="no"><!--pnid:HwJWy8UCwkOaBJnbU5PnF6-->05</span><h3 data-page-node-id="O8qC6mBTYd9u7aNFbCPtmW" class="ttl"><!--pnid:7Zjm4uhtt7gFUdRVPBmSF5-->给质量部看的一页</h3><button data-page-node-id="aUSOYrulmGMzUFFpNUUUAO" class="cp" type="button"><!--pnid:GjaVZjnR4KHc3oAGkN9XPi-->复制</button></div>
+      <p data-page-node-id="EVlhJ5k7CyYOdhBS0yTHen" class="tp"><!--pnid:s49N6CuIbknyXlL76yHoKo-->读 03_六个成品批的现状与流向.xlsx 与 01_近一年批记录原辅料页逐批读取结果.xlsx，把反查结果压成给质量部判影响范围用的一页：用过 YS-2605-07 的成品批几批、已出厂与在库各几批、涉及哪几家客户、哪一批查不到。产出 Markdown 一页纸，每项带出处页码。</p>
+    </article>
+    <article data-page-node-id="0gIEw5b0MrS2pVmXEnxWXv" class="task">
+      <div data-page-node-id="VVvp581Ce0IGl5cjurKIh5" class="th"><span data-page-node-id="t9VJ2w89Vn7lEv2pbepusH" class="no"><!--pnid:zOxDD5L1yghiQsZaHZKZr2-->06</span><h3 data-page-node-id="qelAMGRKtHU2SN5DUBtjyp" class="ttl"><!--pnid:D04JjAICGCqnEK0z7FEzlv-->让它反驳自己</h3><button data-page-node-id="i8PqjhUplLMeDHkUMmQ1gj" class="cp" type="button"><!--pnid:0tnGufiDHm5tu2lI7DpQIr-->复制</button></div>
+      <p data-page-node-id="NpNPCCGvJFBpat3A8to1rx" class="tp"><!--pnid:U7nT9JV0MRyTKoOAp44NtZ-->读 01_近一年批记录原辅料页逐批读取结果.xlsx 与 02_原辅料台账_YS-2605-07到货与发料.xlsx，给两个结论挑毛病：KT26-0819 投用量 7.1 kg 依据够不够、另三个原料批可以排除的证据站不站得住。产出 Excel 一张复核表：结论项、支撑证据、留还是改成待核、理由与出处。</p>
+    </article>
+    <article data-page-node-id="gTlRafpzxOqQzhdfxa7swR" class="task">
+      <div data-page-node-id="2ip22NtCnb7PSZx9MBf5xc" class="th"><span data-page-node-id="yCSfK7q4Mq7X9IKXllXXDx" class="no"><!--pnid:mUrAxCE0mAkl5GxzafJTfq-->07</span><h3 data-page-node-id="Jm3jhEvTUH9881KxwOx1DT" class="ttl"><!--pnid:kNzHjFdLUx3wZjnLSfz38u-->比对2025年3月那次反查</h3><button data-page-node-id="cP0Oi0u7fwmpLv9rqLFnso" class="cp" type="button"><!--pnid:zEsWNEjLuqtQF7Kuyq9J5d-->复制</button></div>
+      <p data-page-node-id="NGrjHK0OPEJcf1keTXvPwE" class="tp"><!--pnid:JOsqE7UcqNz3NqOdsmt9uC-->读 05_2025年3月同类反查记录与本次对比.xlsx，把两次反查逐项对一遍：反查的原料批、当年结论涉及几批、同法复查实为几批、漏的那批为什么漏、当年有没有做闭合校验、有没有 CAPA 跟进。产出 Excel 一张两次对照表，标出当年漏批的原因与这次新增的两个校验动作。</p>
+    </article>
+    <article data-page-node-id="LUx4712aPWZReUDIwxOZtc" class="task">
+      <div data-page-node-id="fjC3NrwzJSmagYwqCBImYu" class="th"><span data-page-node-id="yz35V6bIhHNwvV1WLb9u6E" class="no"><!--pnid:tAte20WuWeHgYtIjk49Vvt-->08</span><h3 data-page-node-id="N9maeYh5pL7pczkadrfzQh" class="ttl"><!--pnid:VnWuW4Eix51RzREm7DbIXt-->对照原辅料页填写要求自查</h3><button data-page-node-id="oFiGXnSz0PcmqatFE2TJuP" class="cp" type="button"><!--pnid:WjE4G8Me2pQPVqqBMqGz5w-->复制</button></div>
+      <p data-page-node-id="jThVLAdOEk1FHzez1ktkof" class="tp"><!--pnid:lxt1iCC5IljmdxIfbkmNmz-->读 01_近一年批记录原辅料页逐批读取结果.xlsx，对照本厂原辅料页的填写要求自查：哪些批的原料批号填在了备注栏而不是原辅料页、哪几页有涂改且未按规范双签、哪几批根本读不到。产出 Excel 一张自查表：批号、页码、问题类型、依据、该找谁核，逐条列出。</p>
+    </article>
+    <article data-page-node-id="WnKDZuWmQWCkfP2I9cReOH" class="task">
+      <div data-page-node-id="U8LYu2bofu5aZNA2lgkLsn" class="th"><span data-page-node-id="CP2B0u0J3r8uN6Wo3Kpbzz" class="no"><!--pnid:ktNC6MfQxGeyP3T0NSL1wO-->09</span><h3 data-page-node-id="AMOoNgZMNdWGTX7E7Sdrtg" class="ttl"><!--pnid:3GySXpvTSjcdCL9KKG5Wcj-->折算成影响面</h3><button data-page-node-id="d4XzspYvP6GYNWuBA0SPKo" class="cp" type="button"><!--pnid:ufYTs4chOdCQSXKEmnlQn7-->复制</button></div>
+      <p data-page-node-id="rnKdPz5prnrGhZB5j53mBp" class="tp"><!--pnid:cnlsFmVMEJMxFHSGauAzKT-->读 03_六个成品批的现状与流向.xlsx 与 01_近一年批记录原辅料页逐批读取结果.xlsx，按近一年 23 个成品批、本次明确涉及 6 批算影响面：如果定位不到批次、只能按整个时段圈范围，涉及批次数和盒数会放大多少。产出 Excel 一张影响面对照表：定位口径、批次数、盒数、依据、算法。</p>
+    </article>
+    <article data-page-node-id="NYQvbAz50VsGKMKqOywwUB" class="task">
+      <div data-page-node-id="4lbn3494KdTI0vlCUCnasq" class="th"><span data-page-node-id="Mj96GWjoOBcbiOrUQd8Pkn" class="no"><!--pnid:8xUOJmC8qZ9Nz8MVRHL0NR-->10</span><h3 data-page-node-id="dLjoBszm24T5wa0eJ9kMtS" class="ttl"><!--pnid:Zi4VkzXUydPhT9RBViDuOx-->沉淀成去向反查清单</h3><button data-page-node-id="cRdgiIj2iBTr3H8K4Ou2xp" class="cp" type="button"><!--pnid:DYSzDoju9tpH8jGNxEj3TC-->复制</button></div>
+      <p data-page-node-id="Zzmq1Qh84RQ8KiCp3lJOV4" class="tp"><!--pnid:gwPQNIuZfAx9IVMvIJl7tX-->把这次用到的两个校验动作和出处标注规则整理成一张原料批号去向反查清单：反查前要备哪几份材料、闭合校验怎么算、位置不固定的页怎么标、查不到的批次怎么列、谁签。产出 Markdown 一份，下次同类反查照着跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="zSMgV9oTBUrwTke6Vhdo8z" class="cta">
+  <div data-page-node-id="qG1jxjRF1AiVbjzwAaG4zb"><h3 data-page-node-id="hJSZFHCpq9sQmEVrdRiOPP"><!--pnid:SdbN3cEyhyGvFzCM2cSvB9-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="cf1nmJTThh0TY6bM6UZe74"><!--pnid:k84uFOqCw5mM2jq5hNBnYz-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="N4PCFoYaDkWcIwyNNgNKud" class="btns"><a data-page-node-id="DuZbsoEyocabtJ1bdAvkFI" class="btn" href="#" id="ctaContact"><!--pnid:H0YntYyFB97dhc9ppYa7Kl-->联系我们</a></div>
+</div>
+<footer data-page-node-id="igFrGBE8msCLxYgFWCIRGp"><!--pnid:GLDIg7RFTz8htaxh2F856c-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="FhXdQMDuo3WYQ25yovkphi" data-pnid-children="mQ9DJ8Ge11ss9hPB1yfHGi">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="Lmk4OWwaBzpIqDcb8ju4Vv" data-pnid-children="ScVikTDX4SKeprUFxOGBIV">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="ThfxTvFDfYOwWypvEIzfWU" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="lfjCAMGW9EPbR1ZjQDaCY5" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="P9oAItH82OPkLzRXsGXGne" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="k2urMriTgfUFRicX2GZupb" data-pnid-children="axwUdbj7yIQBXTPSmJZiZ4">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="73S57r2rRZCVCmdY3LSybp" data-pnid-children="9D3q8oiNo8wjR3vmOxb8Gl" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

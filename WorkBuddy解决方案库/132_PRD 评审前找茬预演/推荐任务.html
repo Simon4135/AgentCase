@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="RpDbPEit6KM31FqcdEyRck" lang="zh-CN">
+<head data-page-node-id="62tF8dz7ke1vr6RZYOYpRn">
+<script data-page-node-id="lV7H9XD5B0Udn2ZDdDI3zH" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="EiQEnqJVhKgLvYAfJdIZxK" charset="UTF-8">
+<meta data-page-node-id="Yos5hBXI7YoceP8DmJxQ2Y" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="5Jy7o7SMb3QyNic5GIrqvc" data-pnid-children="AB902LwsFv2eRvhna0LlAK">PRD 评审前找茬预演</title>
+<link data-page-node-id="8pKHxS0gHsSUCFCeoMFmnh" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="0cFsaaIKYKUcjWVyq9tCaF" data-pnid-children="0aUZxOT2Y6v40PMSWOVLU9">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="CgwtxcqktPKOBbH2neP2Mc" data-pnid-children="Znp0YPUzzJkSm68BRqWDhT" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="PBWQd4zvbRXOK436DPUa2N" data-pnid-children="ay4Ohq5KqwqqB46oWuphlM" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="TuRPHbggQY9anXEE1CEguW">
+
+<div data-page-node-id="QhPAR9CVZrIj5gQ9aMLYxg" class="wrap">
+<section data-page-node-id="eeg4x9PGZ6eQHN2oDHrKwQ" class="page-hero">
+<h1 data-page-node-id="gPv5ouUDHOkWr5TXKyjV7w"><!--pnid:MA2MIdU3jWAkvuyxSrwmII-->PRD 评审前找茬预演</h1>
+<p data-page-node-id="a8qNdjw6vkRhWfxKtIAoNr" class="lead"><!--pnid:mOe3qbeIh3JDF0a44rwpbr-->评审会上研发问「两个状态同时触发怎么办」· 这种问题最好的出现时机是评审前一天，不是评审会上</p>
+</section><nav data-page-node-id="pEQxFxr9qXSQDlwaY1aLqx" class="subnav"><a data-page-node-id="xGIKFuYqmNXc5OOUpXi0pv" href="场景引入.html"><!--pnid:LFD187XF4wbxhOINWEzFeE-->场景引入</a><a data-page-node-id="0VN7ulKa2NfcpxCSNUAvca" href="LiveDemo.html"><!--pnid:x3sTF74LbWVjAgVWx09Ord-->Live Demo</a><a data-page-node-id="ZCBKEAav01iw1vpK0jXrB1" class="on" href="#"><!--pnid:S4zceE1PzUraYHVp3YaaAs-->推荐任务</a></nav>
+
+<section data-page-node-id="51kiEHaYs6j9pzlGP0c6ot" class="blk">
+  <h2 data-page-node-id="REurqBzSEE8v2b2ATBaNhh" class="h"><span data-page-node-id="hwfbDNOwD4FTBqUI4LxIOK" class="num"><!--pnid:lNkPIm6PqITuqOUieNAq5Z-->一</span><!--pnid:clBySh2sA97Dl2fheDVD64-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="0S2mum6P95JD3uBcoQyDGb" class="subline"><!--pnid:0NqP6E2tgkO2pVy3nLhkmi-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="fzqQ6CZBgdXJasQMPXpR5p" class="card"><p data-page-node-id="hRbhR2N7mDjS4FoFQWd8bW"><!--pnid:v5wpmoPOVU0aADydazDVWn-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="chuHWZN8qj7PdH7IsB1l3j" style="margin-top:10px"><!--pnid:WmzNHBkZlxBrIzM5x524hw-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:TWKs6Ee8SzCdlqWowhq7Ra--><!--wb-skill-start-->
+<div data-page-node-id="6sTK9mP4EHbq6iKwYS7oxH" class="wb-skill">
+<p data-page-node-id="HGbBS4wdy2TAJ2rIY7ijTT" class="wb-skill-lead"><!--pnid:aveDNiRVhltRZZu3AZ73VG-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="08EEtFVroi2kTdL3CkBttn" class="prompt" id="wbSkillPrompt"><!--pnid:lB1g2BOwrsp3ofCfvvYWes-->【准备】这个场景的规则都在「PRD 评审前找茬预演」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/UNnKsVh6MfeiIvXYJo0T90/dM9TiM0ns4kH/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="px8DE4kMXpOyD3w6sUerV3" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:g8BSm0npDeW0NI0CzW2K0f-->复制</button></div>
+</div>
+<!--pnid:hAQ2VaUG7mFFXfsRr49s28--><!--wb-skill-end-->
+<section data-page-node-id="XDeWZrSgLqgdi8DImoGoZh" class="blk">
+  <h2 data-page-node-id="LX3WUTXDJruzvSZGdlM3wm" class="h"><span data-page-node-id="jemA94DA2WS8EjiML9x48u" class="num"><!--pnid:DmhkcDjkvDQQVSmlScFYOR-->二</span><!--pnid:fmMnwJlbrUmDCpNA23pi3e-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="RSIeVu2rhQwalDXDFMzzUk" class="subline"><!--pnid:NfgHLfzG07tBJx33ialgrB-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="nRtq429dCHTCkesV2pAd1V" class="tlist">
+    <article data-page-node-id="pwodGgXasGhPUf93aDixzk" class="task">
+      <div data-page-node-id="eOSCES7HROlYUoaUCZy30r" class="th"><span data-page-node-id="XMrd8iwZDJ3F0a14eEZqek" class="no"><!--pnid:kbijF9JhArsiuoSkBXEkWY-->01</span><h3 data-page-node-id="uzC4rPQYveAX1NXXYHfkDX" class="ttl"><!--pnid:xDAehThYdn4ec1ueG7Udqk-->首推默认</h3><span data-page-node-id="NxXbDxtyCevZy5l98w3jjy" class="star"><!--pnid:MpRrklkNsF3wEEkYIztQ2L-->与一键体验入口一致</span><button data-page-node-id="tK1cpBUShwadrBxdvMng8P" class="cp" type="button"><!--pnid:6CJtdnwRqUrdf5WfMlZCsE-->复制</button></div>
+      <p data-page-node-id="Gdu838wnzvPizKATkgxtgx" class="tp"><!--pnid:ZP23Ov7rBibspab3Ljneom-->v3.4「导出功能」的 PRD 初稿在这，周四要评审。技能内置的是 01_导出功能PRD初稿.txt、02_上次评审纪要.txt、03_技术约束说明.txt、04_RQ-01证据包（导出需求）.xlsx、05_私有化组织架构说明.xlsx。
+分别用研发、测试、客户三个视角把这份文档问一遍，问题越刁越好；写得很满但没想清楚的地方挑出来；边界和异常过一遍——并发、超时、大数据量、权限、空态，文档里没提的都列出来；每个用户故事的验收标准核一遍，缺的标出来；上次评审被问倒的同类问题也对一下；技术约束和私有化三级架构这两份材料顺着核。
+产出三份：PRD 找茬报告.xlsx（正式件本体，含三视角提问、假设级漏洞、上次七问对照、边界与异常、修改优先级五张分表）、边界与异常清单.xlsx（按模块分组）、会前修改优先级表.xlsx（必须改/可解释两档，每条带预估工作量）。文档别动，改不改我自己定。</p>
+    </article>
+    <article data-page-node-id="xybul6H2YBIz9ZAQxdbwCD" class="task">
+      <div data-page-node-id="NujuNhA6WQQf7GQy9I9dq7" class="th"><span data-page-node-id="2j4glQS2Z2qK9ThxJvOp90" class="no"><!--pnid:x3FE7bKxtxrox8ZavKL2xk-->02</span><h3 data-page-node-id="5GCzHnV3dRPek2Sra2a7yY" class="ttl"><!--pnid:NYwK1KAPu2GevoCkNavBQe-->只跑三视角提问</h3><button data-page-node-id="q43sqJAegGFA3IHb8nCPml" class="cp" type="button"><!--pnid:ZPaHZS4lDa18XI2e0Lyc9I-->复制</button></div>
+      <p data-page-node-id="NbrQ04wklNcCIpiiQphPmi" class="tp"><!--pnid:SDlvZwWBA7f6ddtE5BtEGp-->先别出报告，只跑三视角提问这一步。研发、测试、客户各问一轮，问题逐条落到 PRD 的章节号上。产出 Excel 一张提问清单，按视角分组，列问题、命中章节、为什么要问，末行给三视角问题数。</p>
+    </article>
+    <article data-page-node-id="ZDMoJ7iH7TpcG1gyVLNqOP" class="task">
+      <div data-page-node-id="6vYLOelaLnMMOqoDw7gUf2" class="th"><span data-page-node-id="A6CR4KWKQzKhftJ6wLcsdX" class="no"><!--pnid:0aBO6wqac5KmLwHZGTaetP-->03</span><h3 data-page-node-id="tRp9z2Q611UmROAhonqrNt" class="ttl"><!--pnid:bBUCzuEjTVqCF6m0JhYnmy-->换成私有化专项</h3><button data-page-node-id="RvTWFouopOA70BAa1VCbdh" class="cp" type="button"><!--pnid:H7vunX31gv17YJeLBOEPXM-->复制</button></div>
+      <p data-page-node-id="vyynReIgUllNnb2ft9dBr7" class="tp"><!--pnid:Frd2c4USuiCdeaMh7NvknZ-->这次只按「私有化客户」的口径找茬：三级组织架构下的导出权限、本地存储模式、网关 120 秒限制这几处单独过。产出 Excel 一张专项找茬表，问题按会不会影响交付排期分两档，每条带章节定位。</p>
+    </article>
+    <article data-page-node-id="HDQlNamcn7Eb1yTKprWruO" class="task">
+      <div data-page-node-id="1rzBGitKZcKs59Bz1qCyPP" class="th"><span data-page-node-id="w3UUtX4zk3RCOKVxT9wEDV" class="no"><!--pnid:pr1xGvP1DXq2TDJdNA6KCG-->04</span><h3 data-page-node-id="wQ7KC2r6fqIfviDqdWxKus" class="ttl"><!--pnid:ZyjzflJaSyDctIXv48LqP8-->一次找茬三份 PRD</h3><button data-page-node-id="Hl2TNZ50I7cFruGdyrU5rx" class="cp" type="button"><!--pnid:wvnlKAfzkYRmrERjlVx4Qt-->复制</button></div>
+      <p data-page-node-id="4MIpq4xxVMghLaNdOU705h" class="tp"><!--pnid:oLoayc7GLbpWoBTyErhT07-->演示数据里再加两条需求的 PRD 草稿，三份一起找茬。产出一张横向对照表：需求名、问题数、高危问题数、共性问题、各自最可能被问倒的那一处，按高危数排序。</p>
+    </article>
+    <article data-page-node-id="c4Vti20cgWIEN9Zz2EJICH" class="task">
+      <div data-page-node-id="VCIsaZDYXnRV1vKHrcPYeB" class="th"><span data-page-node-id="l3mYXi0nnnqIWSUbc6ofKJ" class="no"><!--pnid:JxgCnnnmVipb3JNyOizHTQ-->05</span><h3 data-page-node-id="HwnS1F1BJNETb1WvTfgnh8" class="ttl"><!--pnid:FY5oCNl4xdLrgXlc34bWQ2-->给研发组长的版本</h3><button data-page-node-id="4arVJGCv1xvTPYGNtdRH58" class="cp" type="button"><!--pnid:EDdn6Ulcx7P9xgVQ0Jq1bd-->复制</button></div>
+      <p data-page-node-id="M2apCY2JtoV4NhGPR94UYa" class="tp"><!--pnid:FNwKWGQ6v9JKRisyy3ZmTk-->把找茬报告压成给研发组长谭锐的版本：只留会直接影响开发排期的边界与技术约束问题。产出 Excel 一页，每条写位置、影响哪个模块、要补什么，其余问题不用给。</p>
+    </article>
+    <article data-page-node-id="Lrp7qbeUxWI72o3HbQVZrw" class="task">
+      <div data-page-node-id="0ieQS7VKaN8aTaHogkLeK3" class="th"><span data-page-node-id="jNKobU2NgR9xY07enHVPmM" class="no"><!--pnid:1BYZxdH6itJe6KaSh8OUc3-->06</span><h3 data-page-node-id="zGM8n2Vsn8vOv8kRUlCK9s" class="ttl"><!--pnid:EuItC7BkcSDcJvbrTCpVdN-->让它反驳自己</h3><button data-page-node-id="ZQ98moaC4vv1621rvSh7WW" class="cp" type="button"><!--pnid:nu1qodkBvrWanKKC82JGx3-->复制</button></div>
+      <p data-page-node-id="5QaKxyHdbZy1IIMs4e2GYM" class="tp"><!--pnid:NtCtUbfQPf9ogfEKAxfhBy-->你自己挑一下：报出来的问题里哪几条其实是我多虑了、PRD 别处已经写了？产出 Excel 一张复核表，逐条写明支撑依据在哪个章节，站不住的就撤掉，并说明高危从几处降到几处。</p>
+    </article>
+    <article data-page-node-id="mWB7boiGF5MXhLbSNXnQ5M" class="task">
+      <div data-page-node-id="XqiRu4WP5iZG27LLxeaZJL" class="th"><span data-page-node-id="g6gtW5o99HolMIBORUBBkq" class="no"><!--pnid:BBp4RWPkVFXt3nfveUvDzD-->07</span><h3 data-page-node-id="D7JOwgyYfR2xtxdBpP4aRD" class="ttl"><!--pnid:EHJCDZNHbe8KDOs3A6m418-->专门比上次评审纪要</h3><button data-page-node-id="SD8hepl0nOoHe5hEYllCFq" class="cp" type="button"><!--pnid:PjHysSpfeOgXXR7ThAsZ2W-->复制</button></div>
+      <p data-page-node-id="z6PYgCI2CPGToE5nOiObjd" class="tp"><!--pnid:SU5aDtZrrzglyMsAdC9503-->专门拿上次评审纪要对一遍：上次被问倒的那几个问题，这次文档里哪些已经补上、哪些换了个说法又出现。产出 Excel 一张同类问题对照表，列上次的问题、本次对应位置、会前状态、要不要再改。</p>
+    </article>
+    <article data-page-node-id="QHd1m9tsdiaceeyHiB2z1P" class="task">
+      <div data-page-node-id="EaCMFOj6vB4JPovbT1OUcx" class="th"><span data-page-node-id="rBuCHQlyfkmWwxaEpr2Acv" class="no"><!--pnid:XNofbAsSP2tnwJsRTcYm64-->08</span><h3 data-page-node-id="D5MWtiQcShNwzUbjjE2q3A" class="ttl"><!--pnid:nIUszJmjAMm3i3d35BqKtu-->技术约束对照自检</h3><button data-page-node-id="oh8PtvAkvjkwopwnkCV8nm" class="cp" type="button"><!--pnid:gasUbWW4xEhCiTz7INcaGi-->复制</button></div>
+      <p data-page-node-id="0qfGz56MN2UXhjnoXstBf6" class="tp"><!--pnid:itogJR1tWEwbWLvQUqEnec-->对照技术约束说明里的三条边界（三级架构、120 秒网关限制、本地存储）把 PRD 自查一遍：哪几条约束文档里没接住。产出 Excel 一张约束对照表，逐条写约束原文、PRD 对应章节、接没接住、补写建议。</p>
+    </article>
+    <article data-page-node-id="Op2gP3M177nBC3wu3jkftF" class="task">
+      <div data-page-node-id="4JOKIzP6VKT2tsG7jsM3LZ" class="th"><span data-page-node-id="6ZxkRlWkvHcYZnkY2USPP6" class="no"><!--pnid:mnCJzFfWFTRord8dLLMhaC-->09</span><h3 data-page-node-id="hcda4nBLp5ApfJ3WRckzRI" class="ttl"><!--pnid:4qkINCrjv3tc50etPc32FW-->折算成返工代价</h3><button data-page-node-id="4IGbEAy3NEw37VCLEjNx0j" class="cp" type="button"><!--pnid:CQssW5bcMgi3JDmoSUiSo9-->复制</button></div>
+      <p data-page-node-id="Akgdj8WPl6ei8cZIxVzrDn" class="tp"><!--pnid:KiuCovqIEpxrOxYOPKoV5Q-->如果权限模型的缺口留到开发中期才发现，按重做成本估算影响多少人日、评审延期几天？对照 v3.4 周五发布的窗口，代价具体是什么？产出 Excel 一页纸，算法和区间都写出来。</p>
+    </article>
+    <article data-page-node-id="EtJ2nL0kxdlIqnzLzsP4wm" class="task">
+      <div data-page-node-id="CSbkoaBeAR2KABWTYCryZs" class="th"><span data-page-node-id="kXQLOO9mXYAoa1V1E1BeiO" class="no"><!--pnid:sxq7m6Z6s4LcquyDDqfAOk-->10</span><h3 data-page-node-id="ncP8w3Pgn4EiabAwosuXo5" class="ttl"><!--pnid:T0UicHl7XIjcnjKEvfKCuS-->沉淀成找茬模板</h3><button data-page-node-id="HH8b3BQ0hg1KS22wubcAPG" class="cp" type="button"><!--pnid:niFRbbUDgQeOpIJuJ1WKjU-->复制</button></div>
+      <p data-page-node-id="oZQk8vjjOJFTo07YheMpvw" class="tp"><!--pnid:myWhrVUcoP1ligUbaHUQH2-->把这次的三个视角问题框架、边界检查清单、风险分级口径整理成一份找茬模板。产出 Excel 一份，含提问框架、边界清单、分级标准三张分表，下次别的 PRD 直接套。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="9eCt5CstIoko76kVdCo363" class="cta">
+  <div data-page-node-id="6G41DHUab3HuOK56wU06TC"><h3 data-page-node-id="btnJhLkUUYX1TZ78J2P4Xx"><!--pnid:Rm4wDDmWfCVJ7JMcSss3Ck-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="ueeS6lcCtJ1bjXAaOGfIHU"><!--pnid:Z8nXf7bauvNnGR4TYGSqnR-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="vUY5wpPsLOnR56fSz0gHd6" class="btns"><a data-page-node-id="CnGmIpaYXl7VIyOGNEMHzz" class="btn" href="#" id="ctaContact"><!--pnid:nxErJPRMmK4nMF1G3uTb9b-->联系我们</a></div>
+</div>
+<footer data-page-node-id="skhnTtqHSpeKte8DBC9AW4"><!--pnid:wv32E6WfTVdaFlqDzcue6d-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<script data-page-node-id="qysyCmgp8yqMDaXnDvtgmT" data-pnid-children="YURxb3FLUWnC1ilVwYo9jO">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="1gKOgasNPfGQf3nNBUEcXZ" data-pnid-children="ehuaJnD4y1PLP2vMn08RsS">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="x2sxS8WBB9WxnuynTOV14G" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="gsWJIJaAFK8Jv17MtSoMUw" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="8KiE9k8CRGoGiYDraoaBDs" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="lcsvRHVnSAFidxDicyaD92" data-pnid-children="qmjalNu0HH1BAJdtCy6nAb">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="0xR3c8sQ2KptbEu3jmASnO" data-pnid-children="lJTlOKZNLO4DNq49bjmLWE" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

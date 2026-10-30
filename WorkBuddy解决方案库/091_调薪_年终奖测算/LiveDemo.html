@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html data-page-node-id="NKysFdN5g4KfZXihHwuEgD" lang="zh-CN">
+<head data-page-node-id="SJySJMtl46NWjakIgg9Ljh">
+<script data-page-node-id="a6XvfQyhB1FRZ0LkSg5QGd" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="9DECra1LUyuyPGJCMymxE8" charset="UTF-8">
+<meta data-page-node-id="SQi8179bCDo4KSOXJOr16h" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="6EAwKnDEOr8RNsBR34ZQce" data-pnid-children="3olQZWkCuLWex815WZrlP6">调薪/年终奖测算</title>
+<link data-page-node-id="9iuv7CV0sutpU4xcX1XRdP" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="KBZJcU8xJqOUdrzX3fzxi9" href="_assets/shared/hr-extra.css" rel="stylesheet">
+
+<style data-page-node-id="8le8wKkEBCFkbvCKptjlt3" data-pnid-children="Kg2lI2tJIL0t2LFm4X1RkG" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="ubONeRs7Pe6QOAgqN5KXvo">
+<div data-page-node-id="Ha4rtzQdLihCLACxK8mTdo" class="wrap">
+
+  <section data-page-node-id="RIUfCDQXZ6SZJMk1VsCtrZ" class="page-hero">
+    
+    <h1 data-page-node-id="MUO2WztKD5MiPxbss5a97z"><!--pnid:UffNVNsyFqX8jGctvixvOk-->调薪/年终奖测算</h1>
+    <p data-page-node-id="4IZbrcE9sKNhqzTPstt1dV" class="lead"><!--pnid:wMI6VJX9GutxMOk5iGNlbY-->薪资+绩效+市场+预算 → 基准涨幅 + 市场修正 + 预算压缩 + 年终奖 + 敏感性四档</p>
+
+  </section><nav data-page-node-id="IvIUYciFtFqgX5fkKL7vtA" class="subnav"><a data-page-node-id="Knpt19wIZWLBFjr01iQ9p3" class href="场景引入.html"><!--pnid:yCoLsGZMWEuaTPxaofpP7Z-->场景引入</a><a data-page-node-id="BK6nhTwKfplZRoYbK25i00" class="on" href="#"><!--pnid:piFoHDidrCVYHzHmYSeMEx-->Live Demo</a></nav>
+<section data-page-node-id="NgVYi25ZSf50lN3zIGOuQH" class="notice warn"><div data-page-node-id="LClDYUUbh49dH5b9exR6VO" class="icon"><!--pnid:OwGtU6kCyOumNPksPZ15P3-->!</div><div data-page-node-id="nOhEcYC0BS4SD98r3fAbNn">
+<b data-page-node-id="ViZXyWdrswxZDdgiw5ckRH"><!--pnid:Eaci1TdaIB4lI3orDbuDLc-->演示模式 · 可视化预演</b>
+<p data-page-node-id="NXoj8bJC6ysg2LZVq2nTmu"><!--pnid:EDefGc0qbBnP0ai1GaPZ8u-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="UkYcKZ1etiU32Rp8BthkIM" class="kpi-row" style="grid-template-columns:repeat(5,1fr)">
+      <div data-page-node-id="ZM448sXJ60EqB9IQOGhbnP" class="kpi"><div data-page-node-id="AC03yRvJJqVPRZkyxFu4v1" class="k"><!--pnid:wj3jLt3LucUHV0bZ3hUUtc-->调薪对象</div><div data-page-node-id="jBlHhbhGscKj2rfKNWpzla" class="v"><!--pnid:MZ5LDgDY2pbZLBVRkkgBmn-->12</div></div>
+      <div data-page-node-id="OSdxPczc6EL30wr2eXRnu4" class="kpi"><div data-page-node-id="IAEjMrah5ABlQT53fR920W" class="k"><!--pnid:iO9s4GZb69HjGMm3Kgf7QF-->调薪池/月</div><div data-page-node-id="77O5vPNBFIiJwwoo1S1hLB" class="v"><!--pnid:DhKzR228H3he6ZCCfrszzV-->¥14,300</div></div>
+      <div data-page-node-id="NhHwwhNxnSXXBEPZNXHx6a" class="kpi"><div data-page-node-id="2bQ2SDWCISrLaETmE60VY2" class="k"><!--pnid:03eyBNoTx4F2DEL2LhxGZS-->平均涨幅</div><div data-page-node-id="qnaI0A7F0hggzje7VaVIVp" class="v"><!--pnid:wnVtjdr56UfwPmvW3cLczL-->5.00%</div></div>
+      <div data-page-node-id="TzGgf86e06897Jy970Xtdi" class="kpi"><div data-page-node-id="G9zHV8QstlHNfdLTHEstKl" class="k"><!--pnid:Rzcl3IdYB93Zlo33x8sgh3-->年终奖池</div><div data-page-node-id="Iy7SqIneFHV1Er1QKR0lzb" class="v"><!--pnid:xJHOHa1D5zo6F20Mm896M9-->¥572,500</div></div>
+      <div data-page-node-id="J3m7BHiPC9yGQCtgDm9FEN" class="kpi"><div data-page-node-id="ILS7qQHMaGvmnrxO1Zujvw" class="k"><!--pnid:dGBWtr9CsqJbKeLJKvoE8X-->节省人工</div><div data-page-node-id="loGVKSTn92UemXtiwOAmwK" class="v"><!--pnid:xrwymVpvHBxcEcq3mB5OHn-->1周<small data-page-node-id="Y6Hwy9VbLiE76XLGrEXw2P" style="font-size:14px"><!--pnid:0jYZKUQJRSF0NgMktJP914-->→10min</small></div></div>
+    </div>
+
+  <div data-page-node-id="HBRqFEnRoO4EuDqMw5b3xh" class="dstep">
+    <div data-page-node-id="zHcIJwCOXyJ6vH6h25mxze" class="dstep-h">
+      <div data-page-node-id="aFiJL9g7bVBAds6QDcmwvk" class="dstep-n"><!--pnid:51hzhbtQ722kXigYkozroX-->1</div>
+      <div data-page-node-id="b6udTxIQz28UJKDzeiX2b2"><h3 data-page-node-id="x77wrLAuwwCYjfohf9VVUR">
+        <span data-page-node-id="YUHH6iaa6BvsWh9LmUkYMy" class="st"><!--pnid:pox6OEiTg7UpYb2j9zDLRY-->Step 1 · 四份数据导入（碎片化输入）</span></h3></div>
+        <div data-page-node-id="7EHN9Ij59d6Gi0qmOpt6pe" class="sd"><!--pnid:i2LmPsnyWY0lxeqVXLhrwM-->薪资档案 / 绩效结果 / 市场对标 / 预算规则 · 12 人</div>
+      </div><div data-page-node-id="BIMuxcYdLxVxEWtlaxdHbM" class="dstep-b">
+    <table data-page-node-id="sPngmJFa3mzpzn6nltzWj1">
+      <thead data-page-node-id="dxg4tMK4oKttsDg9GHZzoP"><tr data-page-node-id="Q3hiw1XQYfzRQnpZWpnfEh"><th data-page-node-id="nFpXaHwCBuNCFlh10TY027"><!--pnid:ZKizoC1K7au2ICePP5z3NR-->数据</th><th data-page-node-id="zl6Xc3zEQ26COGvo5nsAri"><!--pnid:Fv76En5W0PWJkyL6g6xZ8l-->来源系统</th><th data-page-node-id="TKk4HDNdJNoYNhmAFnixha"><!--pnid:tHB9BtAK48pwRyRkFCgjHe-->关键字段</th></tr></thead>
+      <tbody data-page-node-id="cAyQqFOej5rLigh7cZVoRF">
+        <tr data-page-node-id="aChptNddvHUl2ctSOTlrzV"><td data-page-node-id="ePS14kQBK1OPXNLXKI4ImI"><b data-page-node-id="bd85zzyBt5B7ZEj2JVQGDi"><!--pnid:PygVfNBJYW7qnOnIPXrfiz-->① 薪资档案</b></td><td data-page-node-id="A8zheDMl3AbVUQ7AjYm5z9"><!--pnid:7q58IbWRLW4v8rHbRF0wJL-->HRIS 系统导出</td><td data-page-node-id="lNqYUK77qR4KKKwx6B6hZs"><!--pnid:QoKTSFRnIXOAzwxHSBhVRQ-->当前月薪（=基本+岗位，衔接 月度薪资核算）</td></tr>
+        <tr data-page-node-id="EC8REfEcV7toWJUuiOvATY"><td data-page-node-id="6EmvTjLCtL71Wpkj3lL0BG"><b data-page-node-id="trV7RYNSsnRten2ttQyXb7"><!--pnid:QlIZGEnzyLV1FuuHv6jScy-->② 绩效结果</b></td><td data-page-node-id="Unowhtd3x86dzio1FM4OBQ"><!--pnid:bjwjZq9gP2BkVtVqZps8MO-->校准输出</td><td data-page-node-id="wtWdlmc8FfTHcqIPfilTiX"><!--pnid:bP7lFsD633aN6Op25AOOa0-->绩效等级 A/B/C/D</td></tr>
+        <tr data-page-node-id="eZt5iiS8wAst5wnmxC4c5k"><td data-page-node-id="OCX24f2unrlfmxBUzxGS8r"><b data-page-node-id="QT7mKRPwI51KbQz1bhj55w"><!--pnid:6g8YDoQSB5CdTqMNQoNE2s-->③ 市场对标</b></td><td data-page-node-id="NHBdnPibhQQvA6xPg2FdhF"><!--pnid:Bdb0NrUFZt9rAtbdWCy9dY-->薪酬报告 2026</td><td data-page-node-id="bdiZGVs1dco8Il7wIPipUk"><!--pnid:ukaY9Qf8G8IdHscmxdmnAe-->岗位 P50 / P75 分位</td></tr>
+        <tr data-page-node-id="lLU5MH5LXryfLpPhhJnwkX" class="hi-row"><td data-page-node-id="Pqt9SzUEHug4iwpCgnnNqH"><b data-page-node-id="VnTuKJGdrw6VgBC2AKmjnI"><!--pnid:TCdruNvrJPt71RQjaxfCdG-->④ 预算与规则</b></td><td data-page-node-id="1O6GVyunAeuUWLXkiFhDqd"><!--pnid:3DNeg3cm2RydH5Yr7Eg3UO-->财务预算批复</td><td data-page-node-id="VSZuUnGHeL7e1PEDWRdTwO"><!--pnid:pUlDLzrjOadgVJ1rKQWj8h-->调薪预算 5% · 基准涨幅 · 年终奖系数</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+
+  <div data-page-node-id="lZ4yWp6vo42vqiTM04D554" class="dstep">
+    <div data-page-node-id="EYVc3XmYCo02cY8emU1YHL" class="dstep-h">
+      <div data-page-node-id="N57ye5S15IjhPcrLWADm3K" class="dstep-n"><!--pnid:YIxaJvT2M00ablz2liRxq8-->2</div>
+      <div data-page-node-id="5hjbqQc1AEKTYI96BVMFlw"><h3 data-page-node-id="DsnSaqCEEBTJ0n9gwkF9vz">
+        <span data-page-node-id="lCR3OuyHRfPRPkurdYqNzb" class="st"><!--pnid:1O2AtPy7rljMGP4BjdQuiw-->Step 2 · 一句话调用调薪测算 Skill</span></h3></div>
+        <div data-page-node-id="dqjV6Y5GgUnAplaZa1yS6v" class="sd"><!--pnid:BSopeKGKj14fwo8CY5zJrF-->不需要手工试算一周</div>
+      </div><div data-page-node-id="Nin6wFEK6SX9uEnRUNjvaY" class="dstep-b">
+    <div data-page-node-id="KzPxQvnOay3x4SucEI4hns" class="prompt-box">
+      <p data-page-node-id="DQA7jWJIFh25RgsqnZmJ20"><!--pnid:x8Rb80137a6f5tIZ3B1HbC-->帮我做年度调薪和年终奖测算，<span data-page-node-id="0JgIzKww1XPmEc5xV6cslK" class="hl"><!--pnid:1Ocqg8Y1DYBjgN7kUqnePD-->四份数据已上传</span><!--pnid:NcPLj72HvnKRStzmTr1y9Q-->（薪资 / 绩效 / 市场 / 预算）。<br data-page-node-id="4EPM6Q4Sxv4Bcu6SzgmQlK"><!--pnid:UOc0BKhqTstyVOhps4M0v5-->帮我：<span data-page-node-id="fbqVKnhFGzAOO07y6krKGb" class="hl"><!--pnid:fcPDIa8yUW777GBtEEEnw4-->① 绩效基准涨幅（A12/B8/C4/D0%）② 市场倒挂修正（低P50+1%/高P75-1%）③ 预算 5% 全局压缩 ④ 年终奖测算 ⑤ 3%/4%/5%/6% 敏感性四档对比</span></p>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="Yk48rE4wP5HtzEXTJxenEX" class="dstep">
+    <div data-page-node-id="C9oAWlyZcpDae1yax2lPvG" class="dstep-h">
+      <div data-page-node-id="L9TsFpVj3p0HPK92pfigjc" class="dstep-n"><!--pnid:hfazbSbxaAt3zECg1l8Aiq-->3</div>
+      <div data-page-node-id="7wqHEw5166jTTwKYyc9plt"><h3 data-page-node-id="4YbDPxJzZmL5pipHJVffHT">
+        <span data-page-node-id="r3dWz9PEEQK7ogWznoRjf1" class="st"><!--pnid:lDv03oEb32HXbFZuk2n5Jf-->Step 3 · 基准涨幅 + 市场修正</span></h3></div>
+        <div data-page-node-id="fXUqcmWf0bwYmhcDLWeip4" class="sd"><!--pnid:M4OxDc58Xl4L7hRXBHrsFf-->绩效定基准 · 市场定修正 · 钱花在刀刃上</div>
+      </div><div data-page-node-id="BxnnU8LJBgJCgvj1SANXAC" class="dstep-b">
+    <table data-page-node-id="6cy5vEOC6t5VdYbi5ZlKPi">
+      <thead data-page-node-id="uEp2wiLjyKph1QZ7G7NDvV"><tr data-page-node-id="MJ6TxjCj9dL6BXDyrlDSP2"><th data-page-node-id="BQfckBLBrDyzcxNvtmrKzC"><!--pnid:Pe18ex2opO5zX3Rb5VO1SX-->人员</th><th data-page-node-id="OsdytsLQxv7etXEuo1G6l0"><!--pnid:4qEDiLHq7ncBgf8Fx2oJt3-->部门</th><th data-page-node-id="5z19tNb8JACdUCqTvdSvom"><!--pnid:1lFJ4HlFikqhKHrNcrrwCA-->绩效</th><th data-page-node-id="wImwzdBMvwrUzwJgqqcNxR"><!--pnid:L5QtZpjlSNJboxoxv7SC2c-->当前月薪</th><th data-page-node-id="zaJI4uhMNZqIhNqj8RYz09"><!--pnid:ruqJg3V65MHtnzwmrCCAOk-->基准涨幅</th><th data-page-node-id="acGRcifSzFSrJbyOMyu13A"><!--pnid:mdyQDiX6sYvs9uUXrPVkld-->市场修正</th><th data-page-node-id="dKv96UasnlEeB54FAQkXVb"><!--pnid:w4A64W2VrnU2FqYmaBnhUC-->修正后幅度</th></tr></thead>
+      <tbody data-page-node-id="ntjK2tuVpPJ66VWsKIyWPe">
+        <tr data-page-node-id="9Eu9E0eFDcpQ0v3VlQmtyQ" style="background:#f0fdf4"><td data-page-node-id="ibk2At57TQBdFxfqVkEe0u"><b data-page-node-id="sabAsP967wRXz9GeLLqtou"><!--pnid:9hxEzfaKPeeYKEYVtf0Dyb-->孙志强</b></td><td data-page-node-id="VoDO8gB70hQHGUmorxQOH3"><!--pnid:21UPP4agZ6yijLhj60a6g1-->研发部</td><td data-page-node-id="NIUZXOqWHY68MOygVCOA9A"><span data-page-node-id="hSFklAf7MZCN9P3CLgqmgB" class="tier g"><!--pnid:SJvcsl7Qer50epfKBU7kpq-->🟢 A</span></td><td data-page-node-id="m7Le5HBQkUj4CNzuTuwJFO" class="num"><!--pnid:6TWxuBySDepFqYA0HTDSn0-->35,000</td><td data-page-node-id="j4HxBVPbgzz1WA0pVZjcEf"><!--pnid:q9HaBRb7vCV6xGqYPHJuMI-->12%</td><td data-page-node-id="tTeRXS006hmjGkzXrf9vHB" class="tier y"><!--pnid:SW93UjtgyAIE4Dqde5BAVN-->🟡 +1pp 低于市场</td><td data-page-node-id="vPKHUKGGc8CfO062Bc0Z8F" class="num"><b data-page-node-id="smCqN2XEWIFRBoEOoqglhS"><!--pnid:0m5Z0o5O2t2JqS2tgFKPUR-->13%</b></td></tr>
+        <tr data-page-node-id="Un66QSTPG9YZTvb78nFtfk" style="background:#f0fdf4"><td data-page-node-id="TEa1BpfS3ZsaWLithDD0iG"><b data-page-node-id="PPK7F4uesvh0U4wrTCmD5r"><!--pnid:lJ1V8sY06YiBJEOEtYpX4X-->罗文博</b></td><td data-page-node-id="jbjARAqvpJvk15TE062V36"><!--pnid:3RfepLhZDrCjGWa8UGJd3U-->销售部</td><td data-page-node-id="9VBXyZX61cURaQuvaHJgP6"><span data-page-node-id="clnz7NRkfPohafAJJukLWS" class="tier g"><!--pnid:wzTngdUjdfLfgUS0AzvWBQ-->🟢 A</span></td><td data-page-node-id="L1NYks7WScJNkyc3mfMNg2" class="num"><!--pnid:gwtZwh0PSv3EJZeNQ5JSGB-->35,000</td><td data-page-node-id="H1wuvUjQ215kCAgbbtbXss"><!--pnid:UzOF3Tj4zdlfLpa6qkOZHC-->12%</td><td data-page-node-id="bUNInSBkvYCXvQyS3qfIo0" class="tier y"><!--pnid:BUCZQQsETceEQfLqGNctRe-->🟡 +1pp 低于市场</td><td data-page-node-id="LcNtGanKm81hfZzEPPG0L6" class="num"><b data-page-node-id="Z0NKRw4NhvYTlLEkBzWPRZ"><!--pnid:o5d6xuGFE03FO6eCgFxmCz-->13%</b></td></tr>
+        <tr data-page-node-id="MEqSrB3SSgkfxIJsp8P7QY" style="background:#f0fdf4"><td data-page-node-id="BAavGTKDMNd8Y7o0hRR79J"><b data-page-node-id="9Me9XtUzMIyuIU8dKa8UzL"><!--pnid:FWufJvZWsQD2kL83VBiJqp-->李思源</b></td><td data-page-node-id="xBqyybASX3i5lGG2A72EVI"><!--pnid:OJXCUdc50p8LIQcwCSEvOz-->销售部</td><td data-page-node-id="EBFceEkiSCLFdglcKRLB6H"><span data-page-node-id="QXu20fiJY4v6IfOr8PCAnl" class="tier g"><!--pnid:KxpSI3ucQEJ40t40gE62T4-->🟢 A</span></td><td data-page-node-id="MK1VGx0LMeuWF5eWYUaMmI" class="num"><!--pnid:l13EAEf2nbWyvGnxGb7O5E-->22,000</td><td data-page-node-id="0Hrs0DNYg8TqvmNtsNSSpZ"><!--pnid:bm6G2XJNGvOpbzIMEFEZBK-->12%</td><td data-page-node-id="OaJldjejmDAliKAaeWsntm" class="tier y"><!--pnid:JpAsoPNRfZ1oW4TLgKHyly-->🟡 +1pp 低于市场</td><td data-page-node-id="1xDEArVxzlTgI7UowpmFVI" class="num"><b data-page-node-id="BA4HdzDiUUhKeHs0xHhlqe"><!--pnid:a6PgX8iM5THpS3bImVW0TX-->13%</b></td></tr>
+        <tr data-page-node-id="eEzi5Yu6huJCkewAZKe1V1"><td data-page-node-id="mRKDxudJuPuYRXDHkS8Z0y"><b data-page-node-id="6qQMTsAgwfTfPXLqOD5uZg"><!--pnid:WtgBATy2uEFzp9gC164aJ9-->吴国栋</b></td><td data-page-node-id="mGYfXocNnijGu749kgNc64"><!--pnid:U0Fepsuq7S3UMdZjRBs82b-->销售部</td><td data-page-node-id="1g4EHHbrEVsBHTlMDiGZaO"><span data-page-node-id="mFjmmvJ5GVjn5HBhAIjxrd" class="tier g"><!--pnid:7IqfF6CLjrW996i5Y3YgiM-->🟢 B</span></td><td data-page-node-id="Mx6bRwkMgBpD5R3KjrLCr2" class="num"><!--pnid:UOVARnmYKvcJKRg1paLg1t-->25,000</td><td data-page-node-id="hsscJhVzsTf1XyjkLWgldO"><!--pnid:sV1vdokDrA6GwFSDgytRw5-->8%</td><td data-page-node-id="HOIJfZREG0gVUv41OdEblr" class="tier y"><!--pnid:WP4eijTjaProUii7vya87M-->🟡 +1pp 低于市场</td><td data-page-node-id="MAoxDdMbDOXg1efFRGprby" class="num"><b data-page-node-id="vqZGYsqQ4UI9Y5dcSpqpYa"><!--pnid:jfoihanBnIHkbCRAd8SPqP-->9%</b></td></tr>
+        <tr data-page-node-id="p29Y7Oyzz9SqV7MmCOBUUN" style="background:#fef2f2"><td data-page-node-id="MFEpfLvAW0CwsxmqraT2NB"><b data-page-node-id="z0ycMuNFI20ZOiICUCv5bv"><!--pnid:UTQ3MHVtEfeLGGFGJ27CW3-->冯小玲</b></td><td data-page-node-id="7HIQCsgKUbYnOUUxPe0Us6"><!--pnid:5aVleu4ZTioxsEn02AZWlE-->职能部</td><td data-page-node-id="Lr7XYVl6sEyaWciVPe3lAe"><span data-page-node-id="TyDedcsj8h9WoHQkslPsg5" class="tier y"><!--pnid:6H1ouahhnvykMDLcMucVVE-->🟡 C</span></td><td data-page-node-id="XRPraGEPrLPB3nUDxabSHN" class="num"><!--pnid:tre66a1kD36SIOvDzQF4Op-->11,000</td><td data-page-node-id="wr1j2ofx0jos7eskxSHfsl"><!--pnid:pxcr1a1wTnTOOpiRHGsHn7-->4%</td><td data-page-node-id="pdKh5lEepastwxumnCcB6N" class="tier r"><!--pnid:xjGy5jWeFUY6dFSLEN8oDY-->🔴 −1pp 高于市场</td><td data-page-node-id="WXCvGvbxrKvIdSDabmEP7i" class="num"><b data-page-node-id="5qftAXTRKrn2rReJzUp0L0"><!--pnid:7DT7E1w9T6FMM8y6WkDlne-->3%</b></td></tr>
+        <tr data-page-node-id="qy2O6sTA9To5EC4Xvo5zhz" style="background:#fef2f2"><td data-page-node-id="VSl7evPldPsFFbxbledkDe"><b data-page-node-id="xAfknZNiNR0zTw0DOb0dFE"><!--pnid:Dqdfe4k7mzfOIh01Y5ZsPQ-->周雅琴</b></td><td data-page-node-id="3SQY3otnHfVb6JMP59JqSe"><!--pnid:dOn0kR4jYsjz2jm7W4MyqQ-->销售部</td><td data-page-node-id="iLRvh2WwJkHSmUsn0z8pvv"><span data-page-node-id="l0mdKAratlUcHnIeQ4I4F0" class="tier r"><!--pnid:ByvFxRsaOKtICeqsHQmTDY-->🔴 D</span></td><td data-page-node-id="wVFRLQpx8PasjHbo5BW1By" class="num"><!--pnid:UGZpGMi94P4yvuXw5iS5X6-->13,000</td><td data-page-node-id="auzgBWY2zIIwZPgLABx1t8"><!--pnid:KMC6maoMiiU0YidqN1Cajq-->0%</td><td data-page-node-id="UCxcUyxe95SDotYEpJ4mhk"><!--pnid:o1V4YMxZUb9T9xf2UZBDD2-->—</td><td data-page-node-id="5YC1KHnqXF3fxCvX624XFC" class="num"><b data-page-node-id="NFjoEQtcbYBDuGeBNIlYT5"><!--pnid:OoU18a2jNoRC4ZqRdcRu9Q-->0%</b></td></tr>
+      </tbody>
+    </table>
+    <p data-page-node-id="J5yo5kTT4kvEBXPSvTgYGP" style="font-size:12px; color:var(--muted); margin-top:4px"><!--pnid:3tkD4JOkcr1QbVca59NkYa-->基准总成本 ¥23,980 超出预算池 ¥14,300 → 需全局压缩</p>
+  </div></div>
+
+  <div data-page-node-id="rwJVamsBZAoTbHkrEhdx69" class="dstep">
+    <div data-page-node-id="Vdawl6d8izfBzoTdBce4JA" class="dstep-h">
+      <div data-page-node-id="Fy3uGWC9OUB2QBjhnTBbwG" class="dstep-n"><!--pnid:jqg5VHyZ6dzrq18WEWwbhl-->4</div>
+      <div data-page-node-id="npCJXTqQMvUzk8KC5PuIVS"><h3 data-page-node-id="bEl7EvNFzfsKIAkItPCbxB">
+        <span data-page-node-id="ESATwyKCS30CmlfuJpYMT4" class="st"><!--pnid:JeMkzF3tFk2PUpup9qA4XN-->Step 4 · 预算约束全局压缩（压缩因子 0.5963）</span></h3></div>
+        <div data-page-node-id="DlxDucM0jDr3LbTaDbvbIG" class="sd"><!--pnid:Jhe6GWkWREedAtEdR4m5R7-->每人实调额 = 基准 × 压缩因子 · 总成本压回预算内</div>
+      </div><div data-page-node-id="dHyPl9gsZFJ270aDL2gSsE" class="dstep-b">
+    <div data-page-node-id="hrZSXJ2kYAWVzaGQypxbS2" class="stat-row">
+      <div data-page-node-id="iJhHyhwapHX8AOmTvolbTX" class="stat green"><div data-page-node-id="MCOh0p5pnqVy7TVMJzQFBv" class="n"><!--pnid:AwGo5WfQe6hq0KIH6f26sd-->¥14,301</div><div data-page-node-id="WV79fVxWzdLf3St8a9dVWp" class="l"><!--pnid:LhzCbS14PuqyYrSmH98xA7-->实际调薪总成本（预算 14,300）</div></div>
+      <div data-page-node-id="PRNw4rQAAmD1XJN0hJzwq6" class="stat yellow"><div data-page-node-id="eBI9xwg2mwwLRaiEDC9vbf" class="n"><!--pnid:NozV40cu67qaid7endO3q9-->5.00%</div><div data-page-node-id="VtTA5XWMLyisLmlC7pWkX9" class="l"><!--pnid:XDGBw1OzBTLlwjvfwd5TnR-->平均涨幅</div></div>
+      <div data-page-node-id="sAsVbGX2SYw1GIwVLBITqv" class="stat orange"><div data-page-node-id="deuXfqNg7rVMlt0JxS1zAw" class="n"><!--pnid:6MiaHgdqnNMZPMHynZ6m1i-->7.75%</div><div data-page-node-id="XoSIVZofnNa9eBcgqDYRPc" class="l"><!--pnid:idoy89OVnKJ7RH2OghzjLm-->A 档实际涨幅</div></div>
+      <div data-page-node-id="m95iJFNhelrhT6AFeFTzye" class="stat blue"><div data-page-node-id="POLfaVAMRAgmS1q0wtsWrp" class="n"><!--pnid:fjr9QAaQC7tJex9fyJCAsP-->0.5963</div><div data-page-node-id="C8RE68DQsBJNHx4KZBnhRD" class="l"><!--pnid:rgYps9y11CIF8VAdfaCSiP-->压缩因子</div></div>
+    </div>
+    <table data-page-node-id="oBz5taIeaf4BBsheZ0aWP1">
+      <thead data-page-node-id="AddTvdkKLnNwU8ac8vTIWa"><tr data-page-node-id="Ot8MOmaN89t2pBvnmSWd0C"><th data-page-node-id="Es2J8kGNhK4bQ74Fanw7gl"><!--pnid:G2nrxXblCG8XsyoW7L0ssK-->人员</th><th data-page-node-id="3l0cl97CLNbJaGK1gHnnOs"><!--pnid:dfxz8nKXegZwtNM6ULwhEF-->绩效</th><th data-page-node-id="VZP1kZZGzx4Ycn7IeXUZGj"><!--pnid:w8BMmyHrI1kX6sMxvgy4fn-->基准幅度</th><th data-page-node-id="gWlr8KKTUMp0sHYSvbq8QK"><!--pnid:OqyQbWUbnvlovFNIy5b2Sv-->预算压缩后实调</th><th data-page-node-id="xNzQyvh1xhtRBKLNb77qUy"><!--pnid:AH5G3C2rL6jntDFzg4z09V-->调薪后月薪</th></tr></thead>
+      <tbody data-page-node-id="rvXigU1xrcPRG1QhTV9EaT">
+        <tr data-page-node-id="OhXfagiRAm52e87Q4XJYF4"><td data-page-node-id="w7Zi8sTZpcV3jY2qznyjV5"><b data-page-node-id="H1FXr7CSJKgkQlAtAGa3nF"><!--pnid:IT0hqx1jmP1SymnLpoHWXZ-->孙志强</b></td><td data-page-node-id="WZ5pWxXpsxPbwPWDp3SNuk"><!--pnid:bEhkn0abbkAFuRV4ofyXkG-->A</td><td data-page-node-id="q62o8TwjtKeghaO5Zfgpli"><!--pnid:Iul7UFEdD7U7QI2f77nL8f-->13%</td><td data-page-node-id="BEPwM2VCkWHgttJuQd09IK" class="num"><b data-page-node-id="3t8umpCq7TPXgf9vKRdSL5"><!--pnid:ch0huDALAR8Gz0bN6x1Aqp-->+7.75% ¥2,713</b></td><td data-page-node-id="qTZSBtU7Z7VdFRZZMWBLxV" class="num"><!--pnid:kyiYGyf309JiTIrzQ6gTEQ-->37,713</td></tr>
+        <tr data-page-node-id="qHwnNqJ9w6nuvSrd9DvvDT"><td data-page-node-id="xWiQT6bm5ivBVTJ3JgItfx"><b data-page-node-id="wehrsa0zQDP0TTajK8UHtG"><!--pnid:vRegiUsAyUIFvIkkKu1QZi-->罗文博</b></td><td data-page-node-id="vXFEBFD457o1DHEWp0LUB1"><!--pnid:isxBKrbHktCSf51OaRoiMV-->A</td><td data-page-node-id="RO9rmt9xpMn64rhkuEImDc"><!--pnid:3eSxoixPnWUwfySA7fW9Ol-->13%</td><td data-page-node-id="JofdPFaXwiSfrqNEibPxkx" class="num"><b data-page-node-id="CAx6Dw538eYnVg9fCGSyJa"><!--pnid:Ozd25cfmCMsPk6IEtiAQUD-->+7.75% ¥2,713</b></td><td data-page-node-id="GIA4ZUfDKRfPg0hCHINbCe" class="num"><!--pnid:8gqQpagjypPMiGOHqVZgvG-->37,713</td></tr>
+        <tr data-page-node-id="cSkeJvGR25wWhxpXXwm58v"><td data-page-node-id="H6vzCqUblHp0HcU8A1wDqS"><b data-page-node-id="CsMDFHJGvHUNJYD6pyDMTi"><!--pnid:bnC5qKYEmUDxbMOFrKsJhj-->李思源</b></td><td data-page-node-id="Fq3HEUUmRZvixpqTUuDD9D"><!--pnid:bMX5UmCjUWuvjAtgDJikKi-->A</td><td data-page-node-id="yXISrqmNMKyDNUqf0TD8yN"><!--pnid:4wUQWXlovCjoIEzUxvq2bQ-->13%</td><td data-page-node-id="PMT632qirXy5Y9XcQHCGmc" class="num"><b data-page-node-id="IBpoJEwdLkTOjYxHFtTjvl"><!--pnid:hBbjG3R4WSCj9208z33Kpa-->+7.75% ¥1,706</b></td><td data-page-node-id="WrOfi8x5bo5TD4312fHtiX" class="num"><!--pnid:2iODqUxAbFtV9kiQcT4K0p-->23,706</td></tr>
+        <tr data-page-node-id="A2e2x5xoHZ2II5cAMECgLm"><td data-page-node-id="Dt5BMNYAHf9WtUmDiDGb2Z"><b data-page-node-id="xytpGLONU9oDNINPNLwTuR"><!--pnid:R0oCSppgsoR4Ft4ejOFlhq-->吴国栋</b></td><td data-page-node-id="F7ibopxybBjFWWtiPV3SyN"><!--pnid:42MzxpWmsDOhUjtfAOlvo9-->B</td><td data-page-node-id="jFVThiKl8EYEtawlglkzHD"><!--pnid:ESX8GqGAco2RulsCSaUEFl-->9%</td><td data-page-node-id="H3JhsY5JVDHHv1kWMcRKUK" class="num"><b data-page-node-id="Cu6Sgwwlru9dCEVxD6BLDa"><!--pnid:8dr7KC5vIXpWmknk2FnYDr-->+5.37% ¥1,342</b></td><td data-page-node-id="96D391XIOfST4tVdNP8n9W" class="num"><!--pnid:Pl62sNAPVkH865ikNu6NEv-->26,342</td></tr>
+        <tr data-page-node-id="FwpWtB6214cqY8mkehDnkP"><td data-page-node-id="PicMwLmPRVKUDnepc9H9gc"><b data-page-node-id="z1AJOVyihJYccxF6kWHyap"><!--pnid:TAzig1BYKdYyjpAGwpTqsq-->钱雨晴</b></td><td data-page-node-id="Mg9kdZD031vRcspKXAE86J"><!--pnid:S5h4ehjP5xGQpdAFtXUGCm-->B</td><td data-page-node-id="TEqhxF8SNpK7ZbWCCVVdoC"><!--pnid:iGySbdG5Z7RkT8NIulP6PI-->8%</td><td data-page-node-id="YrkdDzhDiHMReXdge44Y0R" class="num"><!--pnid:bN5hA4WvgaN2HFftdEHi1j-->+4.77% ¥1,050</td><td data-page-node-id="FHBbHViKxZvOaKNplP1PtC" class="num"><!--pnid:ZiMxh4DjXM8bzQnApfPG2s-->23,050</td></tr>
+        <tr data-page-node-id="2HeEBh4I1lc9M9VKoygiPk"><td data-page-node-id="8oQACOqL265tTx0jMNvyvO"><b data-page-node-id="IaDedYY9wb2pPge2fPEDva"><!--pnid:c7P17R0Q4ugaXORSxnIVlX-->郑晓东</b></td><td data-page-node-id="JROIJgEtT8Wm1axOawNQY9"><!--pnid:HUCfNZxZn7kJPPGSIDSdj1-->B</td><td data-page-node-id="w5ppw1uC7JNvnTwz6ZJIQC"><!--pnid:rCVQrmL1zotoMvgNnLzBOX-->8%</td><td data-page-node-id="qObCc97zHmjvDdnl2Agt41" class="num"><!--pnid:3MofCUPqFCtHKt4HeY1O36-->+4.77% ¥1,288</td><td data-page-node-id="eGC1MmnQHZfzCEmFuxZ7cZ" class="num"><!--pnid:uJlYh4HBAPwRpIrEtI1wad-->28,288</td></tr>
+        <tr data-page-node-id="aOikop5B51qt1EYkNp6a1S"><td data-page-node-id="JWcElOsoU9GQ0Ym4vdUYl6"><b data-page-node-id="PaWmDznkRVTgqTCGinAKw4"><!--pnid:WJOzDZyC18olV9xCTbMYR6-->何志远</b></td><td data-page-node-id="dETngJpSz7Zhhm4mL7NZNy"><!--pnid:wDFdo6DWEuxamuOJmNeCWI-->B</td><td data-page-node-id="lnPjCBjBw7wjWVcFlW4tdZ"><!--pnid:5hVZBUbgJv2ooAMCdxi363-->8%</td><td data-page-node-id="QQupIRBfRg6afZpZJQuQ95" class="num"><!--pnid:90YCvjC0mkb9f5wa97xt5Q-->+4.77% ¥954</td><td data-page-node-id="tVcrESvJyKgghdJuCQNqyH" class="num"><!--pnid:YwISAebE6F9c0CYOV3dcp0-->20,954</td></tr>
+        <tr data-page-node-id="WX5XiPA8ZX1uoV2jQ7Nn76"><td data-page-node-id="CTrWv7OWBue1AV2kCi9RJQ"><b data-page-node-id="2fzFngV6moD9uuentMRGal"><!--pnid:sngMJkYsLGUTNGfxxxxXzb-->曹丽娟</b></td><td data-page-node-id="BISf6KGdEzvVM5PCZucF25"><!--pnid:R67KvusUZjKDZKgbUrqJlE-->B</td><td data-page-node-id="43G2IHm3LHWZka7z3sFozW"><!--pnid:TsBxkbH19C1sEqMKzK0c4u-->8%</td><td data-page-node-id="mAj8dGTODw6b4IadNodESd" class="num"><!--pnid:XEFljL35Ssus7tc69v6U9y-->+4.77% ¥1,050</td><td data-page-node-id="dGrMsxgw4OG8Z9u1tVCEpS" class="num"><!--pnid:kqZ7oe3Nld5l9ci9fy1jGB-->23,050</td></tr>
+        <tr data-page-node-id="dE8O3tyaVVWeVchoEDIQjS"><td data-page-node-id="prrl89sc4f0Nr4wuemKy31"><b data-page-node-id="UqfwWhCfLukUC7IMaj3r5S"><!--pnid:0slG5L1FJsqwSk7cq2m4v4-->赵一鸣</b></td><td data-page-node-id="qra0x1YhaZPuIcXlGSO3su"><!--pnid:7oa3V5W47yIXJHNB5fAZJT-->C</td><td data-page-node-id="Ml4FUthnTPkuDskDcvntiq"><!--pnid:wcZS8JxMkanRRj1HGkanyY-->4%</td><td data-page-node-id="zFOjwe7vP4F4RXyIWK2coG" class="num"><!--pnid:cStH0aHnAy7W8A8IVobGUF-->+2.39% ¥716</td><td data-page-node-id="ohn05uZhLYi1b6gBdk6JXf" class="num"><!--pnid:XtaQWEqwZqTRILBMzF5prl-->30,716</td></tr>
+        <tr data-page-node-id="beeyu7XFEcuLAO9AwSWKi2"><td data-page-node-id="UO0M1roN02f5UfoRlSqwyO"><b data-page-node-id="kcNhLwgEAllN5rZeNlhdq1"><!--pnid:YO0SIMfLJNIZtbgubdk5M2-->高婷婷</b></td><td data-page-node-id="Tma1wFEo5nENWq2WNXhANC"><!--pnid:JVtuFb5jX7PwEbi09du7Nq-->C</td><td data-page-node-id="59A02ACEvOGiof50YO38lB"><!--pnid:kgfeEJ18NTlTfE9J0myWBf-->4%</td><td data-page-node-id="XkLQ0nbZyNSkbNCEErfw9X" class="num"><!--pnid:r7qK5uaMVMGctixaxzZ2Yj-->+2.38% ¥572</td><td data-page-node-id="xPms7iZCfNsyGQdhgDz8X1" class="num"><!--pnid:mtJQncG1mJOPf0ruzFqGPo-->24,572</td></tr>
+        <tr data-page-node-id="uSMp2iy4fECX3bhRMyAOdQ"><td data-page-node-id="ZjCqTmILqKnd6VpnKaKdNK"><b data-page-node-id="ze3tYUISYXK7NYq8GELz0B"><!--pnid:mpBePPdWC3Xo5JwNTBTwZN-->冯小玲</b></td><td data-page-node-id="qaC9BPaP0Y9Ueh4bOfzkhp"><!--pnid:fINuKC2AbeW6x4bJRV8wiT-->C</td><td data-page-node-id="GhLy57FPUTgEwbbOOqABzt"><!--pnid:NlrawTHYUWitvkRIEz3tua-->3%</td><td data-page-node-id="qpuwS1pMPxUday0TTYO9Iq" class="num"><!--pnid:xtg3f6eV3MV0HWZNcAEeKm-->+1.79% ¥197</td><td data-page-node-id="mVRMvhGD2Re2UpG01y4ItE" class="num"><!--pnid:e8l0trjHUORcd4MCVDAO9y-->11,197</td></tr>
+        <tr data-page-node-id="isqAMccA3SCq29nzKA2rUf"><td data-page-node-id="9ebTnSSSOAqM5WfpslpJnB"><b data-page-node-id="w2NElIRzF2yohqEHlO0BmH"><!--pnid:VOdZP3OXD7iOhWwUgG5vwn-->周雅琴</b></td><td data-page-node-id="e72O6AtpLRFMDcohiVr9Ia"><!--pnid:TfvOQOqMMvStOrGLwrdJln-->D</td><td data-page-node-id="GnXWRIg7PD3HRZiOZfPMLF"><!--pnid:Gvmbe8jKHiypOAOurr8TF7-->0%</td><td data-page-node-id="IYdxr2TBwOgeJe3LHq2aJo" class="num"><!--pnid:EeXdh10j7tPMnaal08wmR7-->0% ¥0</td><td data-page-node-id="GTci9TcPc7gmMAnEJaPNTd" class="num"><!--pnid:LNtpRKogxaTdtFtNBftDXh-->13,000</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+
+  <div data-page-node-id="HvsmZPfIwPb3KxOHpZes4K" class="dstep">
+    <div data-page-node-id="WAIRNB4CQ7HemDt9gPzk1F" class="dstep-h">
+      <div data-page-node-id="rWgN1xilooB4LAZ980CY95" class="dstep-n"><!--pnid:s0z4oB3YPeOLnpCfjv57cF-->5</div>
+      <div data-page-node-id="j3vRECgUmEHqvn77tFzf35"><h3 data-page-node-id="t1CscN1GaRfaeNAWrWlWN4">
+        <span data-page-node-id="VfjXodehP5kx5CoscLrXyS" class="st"><!--pnid:VQuD6cD3RyZBgis2s4QnSd-->Step 5 · 年终奖测算（绩效系数）</span></h3></div>
+        <div data-page-node-id="qadM3rHsQpj9pu6ydjACac" class="sd"><!--pnid:nD4pH2PiYdyhGXmjJe1b05-->年终奖 = 基础月薪 × 系数（A2.5 / B2.0 / C1.5 / D1.0 个月）</div>
+      </div><div data-page-node-id="i4285DL1lxwAv70m5alnGK" class="dstep-b">
+    <table data-page-node-id="zFFAQDlTtkzoC5uJtfCYbd">
+      <thead data-page-node-id="68a66tUd57Sbo6Rs8H3KEl"><tr data-page-node-id="oBFed5pmdMpi1SL5StoX0o"><th data-page-node-id="TNk1tISY5quTDg5Z5bb78q"><!--pnid:IN9ATtrGQO1Hy4jG2zIRn6-->人员</th><th data-page-node-id="9amXDi2RK9pqmsEMhX74Fn"><!--pnid:STBHP3YStCMYULCI15tEov-->绩效</th><th data-page-node-id="vekefj5ex8hIo6jJgzA2mE"><!--pnid:H9rXPNYpRJUSIDLALVdS8K-->基础月薪</th><th data-page-node-id="nGl5Q01X3g6S6eofINagNU"><!--pnid:yY40Zwsl557dF5gvEk0btF-->系数</th><th data-page-node-id="MRD0OHItoe8lYUOOUt8roo"><!--pnid:kI47uKwMYgIWOAhET83AwG-->年终奖</th></tr></thead>
+      <tbody data-page-node-id="Q3PrnrRKY8PxGtKNpuC1kc">
+        <tr data-page-node-id="l9GVi76qSBlf4XAQM9xqT6"><td data-page-node-id="fpxz1tAR73GVKsOfmsU8eo"><b data-page-node-id="RaQ9iSDBgvdViJ5qNvteii"><!--pnid:cJ8iowxcYVqC5MHOW3atOw-->孙志强</b></td><td data-page-node-id="2LC1eWxDK36yqDSewgB0Lh"><!--pnid:4KA8JUpo0BbB6rWQWKpX8Z-->A</td><td data-page-node-id="kZK1E2jylivD7PygdIU0S8" class="num"><!--pnid:jgpBV1KDoSwJB6LH9FPmFY-->35,000</td><td data-page-node-id="SgSWEMNvFsh9hZUPJYbqkx"><!--pnid:YLPZ9oDVUX4eiDx7wYsIfX-->2.5</td><td data-page-node-id="arkOVYGxBonLFv7tc0toOA" class="num"><b data-page-node-id="ZGw5HYLbxtS7UlUaOmDI8R"><!--pnid:TfxuNNAbXByIWU8HKyjQ7R-->87,500</b></td></tr>
+        <tr data-page-node-id="DJJrHvqlZxkAgjUMgqgejK"><td data-page-node-id="FZgZTE4QwP4jfmFNjidlXj"><b data-page-node-id="n3QBh69zNYAoy7TcwzM71Y"><!--pnid:p2HwY9zvoenE4u2IChj7Q7-->罗文博</b></td><td data-page-node-id="dYjUGkvh8dCsyWYuknjy4D"><!--pnid:dykwHQTAvT7Lc5mKCNv920-->A</td><td data-page-node-id="fZAqeM5Ewv2zFSrHzf4FKu" class="num"><!--pnid:iRhbXrg6FON7Ak1d4hcDFI-->35,000</td><td data-page-node-id="deCOlzjvetX82adQ2rYsrV"><!--pnid:a3l6AcjqEosDEv25OWLfMW-->2.5</td><td data-page-node-id="hWje1XorVmjVMytKrJ2L4S" class="num"><b data-page-node-id="fM28euOWO7XaUV6E6tSp73"><!--pnid:UdBoKzDue7cUoZJacpZkAp-->87,500</b></td></tr>
+        <tr data-page-node-id="el57nNHGDJUEzgmLNdBEjc"><td data-page-node-id="xKYRMe1ka03CFHXMVU8PTp"><b data-page-node-id="0yva8B9ENgQges8wt3ZPIm"><!--pnid:mE86XQmmacjl5GxfByuUWG-->李思源</b></td><td data-page-node-id="fthm7aeV7LEUdqwgNw9Lrh"><!--pnid:azoJNFM8Qd1LmtkG6hUeDO-->A</td><td data-page-node-id="ZH5OeqzelFhXjA4pxLe4fA" class="num"><!--pnid:FQ9wChJaxpJ7xYenVtwrFG-->22,000</td><td data-page-node-id="E7O2jkc3on7mLUpCvqhjoo"><!--pnid:1KysFxe2VnKOTCVLI07wFD-->2.5</td><td data-page-node-id="SmM8P67ZGulumioTxKbuvk" class="num"><b data-page-node-id="cE1UWWCDYSFafpkNiW3PUe"><!--pnid:YKo8JpOoNHrbmoaXpBjaTj-->55,000</b></td></tr>
+        <tr data-page-node-id="TSQ028XeyJ3zIyoQuDQovG"><td data-page-node-id="vrPheqWVpsZScT8vTimBoY"><b data-page-node-id="xNrzINoX5oawMxgYOCNPbw"><!--pnid:pxqZDKp0U3RysGSlkMYPoR-->郑晓东</b></td><td data-page-node-id="7soge0gAwHu9KwW58v3F2l"><!--pnid:rfGYyoLfAhN9yNH9iHaEI5-->B</td><td data-page-node-id="GaLqKtnd2hGVGVMYBCIFGP" class="num"><!--pnid:kIZM8zTXx2CP78jzCISfXt-->27,000</td><td data-page-node-id="CPTssaB3moW7UxExELRDFY"><!--pnid:hqJ3lDpEgRzg7g2tK03PC7-->2.0</td><td data-page-node-id="HH6SU6maMGXoJ0fawyAr2f" class="num"><!--pnid:WeImLbxKyVu2Rl3748o7xW-->54,000</td></tr>
+        <tr data-page-node-id="huwyG7BZZdxQ5nRdsnX1mV"><td data-page-node-id="BNa33xBk4FNf3PuWdZGWP9"><b data-page-node-id="58n4CZA5Oqi7XYPiYpE7wy"><!--pnid:c0houMEAawCqJcqMYLmGSq-->吴国栋</b></td><td data-page-node-id="eVCPrC4OzrGF6qzyz6mMLh"><!--pnid:QoVLq53BEYBfkvaJYcyOE7-->B</td><td data-page-node-id="Xrf76VtxVguuibt8z78bhP" class="num"><!--pnid:w8v2DbqNzmf89WsPl0HHdg-->25,000</td><td data-page-node-id="6Dzg2Han5h6bfN1TbYWyRW"><!--pnid:lLxPxJJUTafdrdW60DlkWn-->2.0</td><td data-page-node-id="kxBEcqMVsAonNXEgd90oGK" class="num"><!--pnid:2UKmkJF5xlTylXuayxKTk8-->50,000</td></tr>
+        <tr data-page-node-id="qQNEbxKVHHP9Y7vvFWywn5"><td data-page-node-id="FkBV75acpLHjoMRkk8ERk9"><b data-page-node-id="4Z04uUG2JsqR0yTM70EI8G"><!--pnid:Up1g7tL09zzcS8bgmEYhbV-->赵一鸣</b></td><td data-page-node-id="qRAJTSIjuBIAjTeoLL2k0N"><!--pnid:AElwCrA0uGqDBfEZ0O3yA6-->C</td><td data-page-node-id="r9rDgsUvVKeMxm7FQpBAhD" class="num"><!--pnid:yYYC4p6fdcIjC66WXi7Ksh-->30,000</td><td data-page-node-id="843Agrp3613o4XTQnCqsiP"><!--pnid:mxKPfjgES28DRpKUl3EA0i-->1.5</td><td data-page-node-id="DPC7KauXFaWmI16uOwkhD8" class="num"><!--pnid:uGRA9wENRpJrDYSjBTuS12-->45,000</td></tr>
+        <tr data-page-node-id="i1JHvmP30YVh1NkVrS0f6n"><td data-page-node-id="b3d6ZbKHuqpsHLBm6rITbf"><b data-page-node-id="AnGgMVM4GBSnZaBwtAF9iM"><!--pnid:uVw03llaf56e2CtAhsPTZM-->周雅琴</b></td><td data-page-node-id="Aql4DWArXYqKQmAnhtnIAm"><!--pnid:qXKKj6VAsmA5JxJncqua0R-->D</td><td data-page-node-id="1X8JVwxbu9jqx21vXghBF1" class="num"><!--pnid:U9yJOLGER8o71J0lMlGebF-->13,000</td><td data-page-node-id="zPHxTbMcZa8yVhJLipjzNP"><!--pnid:YiTN00b4WKzmP11EQmFp7E-->1.0</td><td data-page-node-id="jbnKyc4nVdtSRtWogkn61G" class="num"><!--pnid:hkO7HJKvE2nqrLD5SajJbf-->13,000</td></tr>
+        <tr data-page-node-id="DnRypZyXmNRbfpHB23IVqL"><td data-page-node-id="zAp0AJKK8Mxe6WX0uDklJ7" colspan="5" style="background:#fef7ed; font-weight:700; text-align:right"><!--pnid:8NVX4PPuu06JEcLxYzml1t-->年终奖池合计：¥572,500</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+
+  <div data-page-node-id="3bobHYdJszBfbeIocrRVO9" class="dstep">
+    <div data-page-node-id="tyfmpWXzCsJCz0TWDahHpS" class="dstep-h">
+      <div data-page-node-id="SDGzcRbunYfq8um2cnlBOM" class="dstep-n"><!--pnid:KTBjk3eVe5c8YPgfFRyrFD-->6</div>
+      <div data-page-node-id="GxsCEfbDI17oPDjlp6Mg2a"><h3 data-page-node-id="0o0uSPgB9SEP4WuVNCfx7G">
+        <span data-page-node-id="qjnPNnjap81SMleTtkHCPn" class="st"><!--pnid:448sAN23WH1efEg7wCnSqs-->Step 6 · 敏感性分析（预算 3% / 4% / 5% / 6%）</span></h3></div>
+        <div data-page-node-id="ZyR6ljdboMVH376U3PZUJ6" class="sd"><!--pnid:g255TDDM6kt5Zy31nBJ6mg-->领导问"预算调一调会怎样"——一张表直接答</div>
+      </div><div data-page-node-id="II9CrT6bRGRlOvDPindTAJ" class="dstep-b">
+    <table data-page-node-id="zokWnDJsi3sBlOfNEi23ZZ">
+      <thead data-page-node-id="jXJu4YHxn9BUYUsSl0CTUu"><tr data-page-node-id="ysAsTmdxKNAX1GiYMTl9v4"><th data-page-node-id="9QImPNYkWyLQvZKGzMHHLj"><!--pnid:s3G0o5xZQ9aPjTpNWVWqLS-->预算档位</th><th data-page-node-id="lDcIgI2vp682tvfAOVN5dF"><!--pnid:LUomjsF7UkH7BXV8cDXmTY-->调薪池(月)</th><th data-page-node-id="929bb84U35eAQbIHqKrpIp"><!--pnid:jRorsJQ2ElR8bmpxgqiIJJ-->平均涨幅</th><th data-page-node-id="mSYZpw91bQisZMjtcn9MQs"><!--pnid:4rTYlHyUPAXdI1NVhVafcw-->A 档实际涨幅</th><th data-page-node-id="6r1JobX7G3vW4ju1jRVsqP"><!--pnid:WwU4MZn7aL2KRKKpMF7IYO-->C 档实际涨幅</th><th data-page-node-id="qtFIOjfkmymuOnVHJ4nbzX"><!--pnid:lFqIZAjftiBsTeR6wHpGi1-->覆盖人数</th></tr></thead>
+      <tbody data-page-node-id="j3uCa7BxUeavhVQMvcMJnl">
+        <tr data-page-node-id="tRlvVPCckTuYdl2MsI7VWF"><td data-page-node-id="lX8B3bM9LaeKVvFSIfYTw6"><b data-page-node-id="OG5UCsukSrYmCbs5JMRZn9"><!--pnid:XK5kcjQhAzfi4HawqrdkuC-->3%</b></td><td data-page-node-id="LEM4FUqALCjFPQXomfQlLv" class="num"><!--pnid:9ZYnnzV6FdN1utbDRXygdl-->8,580</td><td data-page-node-id="lKq80Lu9mqcmKun9rvgO39" class="num"><!--pnid:IUgGN1MURg2JpTs0KupBP5-->3.0%</td><td data-page-node-id="gNSopdHZQ5YFtYWdf4rN3R" class="num"><!--pnid:2YdKBf1mEerhiryZy6HW4r-->4.65%</td><td data-page-node-id="PiDxvPDuYHdZxEdTby7GSs" class="num"><!--pnid:cu2UKL3LoWVgePu2Ylv4vG-->1.43%</td><td data-page-node-id="hGwiGt0kyjkwZdWYejJJte" class="num"><!--pnid:1jLnOOTGwjUBiTMTtNfPAw-->11</td></tr>
+        <tr data-page-node-id="dsHcX8q5BJbSsdFdWmzram"><td data-page-node-id="aSPY8icK16JrgNDiwWQGk2"><b data-page-node-id="IPE2vrozJqIizSfhOOJ22q"><!--pnid:YBW1w2p9DMg94UBrl1BUDN-->4%</b></td><td data-page-node-id="QMeMdLgOP7MOZnSi4jgWJy" class="num"><!--pnid:4H09ifiRwLodEqRiU2c69W-->11,440</td><td data-page-node-id="4YOXM2F3i0Z9wrh15a1qDn" class="num"><!--pnid:pkRXKFApX2F6XDRpWApmSG-->4.0%</td><td data-page-node-id="MVOc75jURqKR1ujyrdlS7X" class="num"><!--pnid:wxYEhl3dNucCagTADfuF9r-->6.20%</td><td data-page-node-id="edpdWtbkVWjB2WRO1rlEMo" class="num"><!--pnid:fZGrwF4neGNuOR5xxjj1bS-->1.91%</td><td data-page-node-id="lcYrL5xDOWJBi8LmyDWt6S" class="num"><!--pnid:KjH42E8OLFjV1VtHFRoEiA-->11</td></tr>
+        <tr data-page-node-id="OUwkKftOdhzNaS8a35r7ZX" style="background:#fef7ed"><td data-page-node-id="tjxZKyjyiwzxexKFAD9BDi"><b data-page-node-id="Qbt1RbvT0qSPB7ssezjCbq"><!--pnid:tm4AuCh5vksGp3O5xF031X-->5%（当前）</b></td><td data-page-node-id="KGYZEwOoRCyKPJ8aN9kMC4" class="num"><!--pnid:cw8aP4I1r2kzu1ua3D70Wm-->14,300</td><td data-page-node-id="c3OrA5RvmgJVHC1daqVNDY" class="num"><!--pnid:ovPyJRhpeVKwKFzfmIhMjR-->5.0%</td><td data-page-node-id="P5YNIkqtgJkf7sE3Mu2mNp" class="num"><!--pnid:XV6rZCcvPFmCsFBdVPixZG-->7.75%</td><td data-page-node-id="0jDxrQKu9XeGAi2eHDgKcV" class="num"><!--pnid:KQhXbwySWkgvWyXVJMclR2-->2.39%</td><td data-page-node-id="SsN33dhb3d9wLzgWfqT5bx" class="num"><!--pnid:hnUukGycGHVklAIxuHpVe6-->11</td></tr>
+        <tr data-page-node-id="JyQ7XC52AsxWdIGbiMge2X"><td data-page-node-id="8v3HvTCF96OTh3qIjBRHRM"><b data-page-node-id="t1ClWRt6FbjkHybn9gZRYG"><!--pnid:j3UrZWoQXR652cenSzK9nU-->6%</b></td><td data-page-node-id="qMnqgSqPbovHTGYZnnujJb" class="num"><!--pnid:1skPGR0ehkOcZxiZ5XL0eO-->17,160</td><td data-page-node-id="tc3MfFQN0cyJ5XdjyPoxzQ" class="num"><!--pnid:ze4dnRvZvid6ZDINsMbL6v-->6.0%</td><td data-page-node-id="vyc9st0Z3JZla5rCGPJyfq" class="num"><!--pnid:Z51YZ4cpcTbhLFZngSFQ53-->9.30%</td><td data-page-node-id="4E5Y7yEUAcVnuxsjdLtD72" class="num"><!--pnid:8gJUJHI7JGDsqUUziSJIGT-->2.86%</td><td data-page-node-id="SrRVQhUWk6sqQxo0fYkW5q" class="num"><!--pnid:b1AJgGLo0nDpO7MRKlOh0G-->11</td></tr>
+      </tbody>
+    </table>
+    <p data-page-node-id="YGLCnpGc93QE0XakkLL7dl" style="font-size:12.5px; color:var(--muted); margin-top:4px"><!--pnid:J4WZp01omex0OSvm2K4s8T-->预算每升 1pp，A 档实调约升 1.55pp、C 档约升 0.48pp——预算调整的代价一目了然</p>
+  </div></div>
+
+  <div data-page-node-id="TcaZZfPVdd704Lz0pusf9J" class="dstep">
+    <div data-page-node-id="cVSFJl6QuvmS8VeqXylClc" class="dstep-h">
+      <div data-page-node-id="srAeeRQWNpJziXMlXHl3OV" class="dstep-n"><!--pnid:FrwaMbRfvcqtR916qXYR1Z-->7</div>
+      <div data-page-node-id="tSWLqhc1VSdUULSzshJ2lx"><h3 data-page-node-id="bnpvC4tHcXzLZ8qhv5z0dL">
+        <span data-page-node-id="eygwD1NZDWN0UB6steJI3w" class="st"><!--pnid:LMlQFEXTV6uB481MpaRO0k-->Step 7 · Skill 给结论</span></h3></div>
+      </div><div data-page-node-id="KvhDyvI9QsE3MJi09vophK" class="dstep-b">
+    <div data-page-node-id="iwoTBkkXO8GPocQkqHK92o" class="verdict">
+      <div data-page-node-id="k7Sk4qVbAdfdDMdTFi2Azp" class="t"><!--pnid:BHAUCmVQqWE7UfFnjUtzGN-->12 人调薪 ¥14,301（预算内）· 年终奖池 ¥572,500 · 敏感性四档齐备</div>
+      <div data-page-node-id="0ynLEvxFDhTROw5D0vt4dk" class="d"><b data-page-node-id="uill0KzxSEFetNAE9UQ4An"><!--pnid:MLmasO11D5VXbwNQNNBrrr-->可信度：高</b><!--pnid:QepMK6tBBYVPAhgHCDDOQp--> · 基准涨幅+市场修正+预算压缩全部按固定规则计算<br data-page-node-id="DKNODG8pHGxFzLnE91PCbv"><!--pnid:Rapzh3stqEAIiRqNhYYvNO-->核心洞察：低薪高绩效（孙/罗/李 +1pp）自动倾斜，高薪低绩效（冯 −1pp）自动受控</div>
+    </div>
+    <div data-page-node-id="OM7YYOZF8Cx8UEdbMWzhdx" style="background:#f0f9ff; border:1px solid #b9e8db; border-radius:10px; padding:16px 20px; margin-top:14px">
+      <div data-page-node-id="aAWz6UGQMXxfdsZPueGN2q" style="font-size:12px; font-weight:800; color:#00755f; letter-spacing:.05em; margin-bottom:8px"><!--pnid:WOnuNN769080OO4W4X0FLl-->🎯 Skill 的一句话解读</div>
+      <p data-page-node-id="yQHWwB71XaivPIgqc2G3cP" style="font-size:13.5px; color:var(--ink); line-height:1.8; margin:0"><!--pnid:8tu0MzFdFBoQbZ8NLgz07A-->"这套方案最值钱的地方是<b data-page-node-id="aoOBnsnFt6Wbde2VVYlTiF"><!--pnid:6EjnZtI0qYcIEP2yCobvsk-->市场修正把预算花对了地方</b><!--pnid:QC7a1Naj34dfajG46vKVqW-->：孙志强和罗文博两个 A 绩效但薪资低于市场 P50，Skill 自动 +1pp，基准 13%，压缩后仍是全场最高的 7.75%——低薪高绩效的人不加，下季度就是流失名单。反过来 <b data-page-node-id="fS6mtTW1hmniJdI3EJOmmF"><!--pnid:1NNfZw85ofHKmkfqUOuxNc-->冯小玲薪资已超市场 P75</b><!--pnid:4wyJQtl7ruvoNu6hpPcgoM-->，即使绩效 C 基准 4% 也被压到 3%，压缩后只涨 1.79%——高薪低绩效自动受控。周雅琴 D 绩效 0 涨幅、年终奖只有 1 个月，和 的校准、的汰换评估完全同一条线。预算 5% 正好花完 14,301/14,300，一分不多。"</p>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="FwdeuX2bF4QtoP4EHJGRMO" class="dstep">
+    <div data-page-node-id="lvZieXOIMLgkyMktocq1L5" class="dstep-h">
+      <div data-page-node-id="W4V7rgT0pEYrSaXuQwfeuv" class="dstep-n"><!--pnid:uXmfrgTJ4OixITIuMJlksw-->8</div>
+      <div data-page-node-id="zdvoaOQBl5vACD94VYcDV9"><h3 data-page-node-id="keopSD1UF8W3azaSD20HxM">
+        <span data-page-node-id="LDCKuw8cNBDU26yavbha6H" class="st"><!--pnid:IMTe9xtcDGUGVtoY3EyhDY-->Step 8 · 典型追问 · Skill 怎么应对</span></h3></div>
+      </div><div data-page-node-id="kFoNAtajrNYYTHr7IkzFen" class="dstep-b">
+    <div data-page-node-id="lgYAJVhJ8Pjes8VXTInScN" class="followup">
+      <div data-page-node-id="hDDSdaF7sWv3RocfAjFtXu" class="h"><!--pnid:Na7FdagMEe63M7OLC6bnZ4-->追问 A · 为什么大家都被压缩了？</div>
+      <div data-page-node-id="AbBnWudA9oEJpQBkvqYahX" class="q"><!--pnid:wTn435i6rPGH2Nvb8viaDt-->孙志强 13% 的涨幅最后只拿到 7.75%，是不是被克扣了？</div>
+      <div data-page-node-id="6hnINUqyOTfBPO5QwkhplM" class="a"><b data-page-node-id="175Vjh4BhaDWnkOsxegBrD"><!--pnid:d11N9yNLCMpboI9HImaj1g-->Skill 应答：</b><!--pnid:hYCe6zC1r2WGl8GASGhhGH-->不是克扣，是<b data-page-node-id="rRsKgmmDryjfllYEkW80Py"><!--pnid:4VlLpJHp5uZNiLnE4Olrlb-->预算约束下的全局压缩</b><!--pnid:SBFhmAatoLNVoDPrwjNeCU-->：按绩效和市场算出来的基准总成本是 ¥23,980，但预算池只有 ¥14,300，超了 68%。Skill 用一个<b data-page-node-id="1krN2mEfzQqK7OtTXdAjjP"><!--pnid:ooTKInIlkUUYz9YW0dYPrC-->统一的压缩因子 0.5963</b><!--pnid:g3SBLiKVhIV3qTZEjmlc29--> 等比例收窄所有人——A 档从 13% 收到 7.75%，C 档从 4% 收到 2.39%，<b data-page-node-id="hFjc8MBclWVmEVqFybckdi"><!--pnid:VilWzlFJ33wozR6ElmekHf-->谁都没被单拎出来砍</b><!--pnid:BJnmz5WuGiBojWutu4V1ix-->，相对顺序完全保留。这比"拍脑袋挑几个人压"公平得多，也说得清楚：不是针对谁，是预算只有这么多，所有人同比例让渡。</div>
+    </div>
+    <div data-page-node-id="cmDu5HwMgYpr1hUDEDZgyv" class="followup">
+      <div data-page-node-id="kWUIdVWusX1K2RePKctd4v" class="h"><!--pnid:7KhX4NHuRyNrgb2lOdbBIP-->追问 B · 市场修正的依据是什么？</div>
+      <div data-page-node-id="Ps2nB8TDB0VynNIK2FjOx9" class="q"><!--pnid:xABfXsjjKTNw66zEsF5NmR-->凭什么孙志强加 1%，冯小玲减 1%？</div>
+      <div data-page-node-id="tfPr6q7z36CHXWODGRfmmg" class="a"><b data-page-node-id="FvUQMPHDfikqjgNKasp4U3"><!--pnid:clS1d08U1XcQrFCQNiF5xU-->Skill 应答：</b><!--pnid:XiPVbrW0UT0hpTORm8DoQL-->依据是<b data-page-node-id="XBFBImuJzdICrLBYg1XMna"><!--pnid:CIXSRI6uX4OetsKtVl8PY7-->岗位市场对标数据（薪酬报告 P50/P75）</b><!--pnid:lVxxZrba4NRo8Y1GaUIKsN-->。孙志强月薪 35,000，但产品经理市场 P50 是 42,000——他拿的是市场 50 分位以下，属于<b data-page-node-id="wH2E05BLWBJJzs191cG94U"><!--pnid:D27Hqs339XbU0xDBR9KR3A-->低薪高绩效</b><!--pnid:rEIvsmZvYN0qkH7Yzs1ytY-->，不加薪下季度就有流失风险，所以 +1pp 保护。冯小玲行政专员 P75 是 9,500，她拿 11,000 已经超过市场 75 分位——属于<b data-page-node-id="iMh7tlSNyYAuHjhFqYCTLU"><!--pnid:nhT8NAXs7ZSi34jtTuSyLb-->高薪低绩效</b><!--pnid:ltuEJqkIvyXRRvkfeSn83W-->，再跟着涨就是薪酬冗余，所以 −1pp 压缩。修正规则是 <b data-page-node-id="wMPFB5F1A47SL8hwVQKwaH"><!--pnid:2LIrC4X6kwdFjqDvSgO3vp-->当前月薪 &lt; P50×0.9 或 &gt; P75×1.1</b><!--pnid:mKT2Jp8Pa9x0gRbJHp5pzb--> 才触发，不是拍脑袋。</div>
+    </div>
+    <div data-page-node-id="5OGGfWYSdA4xpTUvW3Lepx" class="followup">
+      <div data-page-node-id="AZ9NUDxrsAgQpDs0MjX9kO" class="h"><!--pnid:xrAbtMQ8YAo249tZd1Bs76-->追问 C · 预算从 5% 降到 4% 影响大吗？</div>
+      <div data-page-node-id="6RxCFCX4u20rdXz7mhyTVh" class="q"><!--pnid:lWiyhikx7qISsQ2ZGCDmL7-->财务说预算可能收紧到 4%，方案要重算吗？</div>
+      <div data-page-node-id="5KVUEgKxsVbI4q5bKQO3rS" class="a"><b data-page-node-id="f37Og1d5SmxCXAXl1WjwLf"><!--pnid:snzITN9tteMWOk2BMSwZOr-->Skill 应答：</b><!--pnid:KbFRhV9iRt0uufV7K3igKi-->不用重算，<b data-page-node-id="bs5UQaZnVKRNE3gMJ0q84Q"><!--pnid:gDPxDrXBFRtWZZ87lZcolk-->敏感性分析已经算好了</b><!--pnid:eg8ndabKLnCVhqfU9u5Dh8-->：预算 4% 时平均涨幅 4.0%，A 档实调从 7.75% 降到 6.20%（少 1.55pp），C 档从 2.39% 降到 1.91%。影响最大的是 A 档——核心人才的激励力度会明显缩水，建议上会时跟管理层讲清楚：<b data-page-node-id="TE9jVReM7vwt76uEvikfzd"><!--pnid:2eqVL6cNjj6NV1FkswBHce-->预算砍 1pp，A 档人才实调砍 1.55pp</b><!--pnid:hWwCixJjL6vnTa022WcVYd-->，可能影响留任；如果预算能到 6%，A 档实调 9.30%，对核心人才的竞争力明显增强。这就是敏感性分析的价值——预算博弈时拿数据说话，不是靠感觉。</div>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="oFE1jOSJwHpoRIiiGCF7Lo" class="cta"><div data-page-node-id="5SbDTy7HLSg0mONI3KB3qS"><h3 data-page-node-id="0N3bWoYfXEwJ3a5V3fnpAm"><!--pnid:mV1jh4Rini4BPTD3PoGHif-->想了解来龙去脉？</h3><p data-page-node-id="dCCRfu4b0dCtfy5w70Q5oO"><!--pnid:gsHGmXn89uPGxISEbwWTrx-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+    <div data-page-node-id="7gppLuw9HcQLiihMIUNwGK" class="btn-row">
+      <a data-page-node-id="vYQahPW6NGqGTqtGqm37lq" class="btn ghost" href="场景引入.html"><!--pnid:IoH63pMRzfaHCpLF0Y6MjO-->返回场景引入</a>
+    </div>
+  </div>
+
+<footer data-page-node-id="3BO3gVA1MaKjZdtlGmqzDs"><!--pnid:CpB6alJxvThw7pk41yoNxB-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+<script data-page-node-id="Xq9GbHfoM4u0ZQyeihvEE1" data-pnid-children="ZHh1CBWsi5HEV2tdQD2Ozd">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="oUlTm453kS5TUhkv14J0Az" data-pnid-children="jV1Jds7zJ2cQonXBX1BcL5">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="lRxWllFiwOVIBGEs9CDzor" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="wKmUUOkHhQenNCCDcf83kh" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="85wEMFQAfCwyXwq1I6A68S" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="MmjGZVpapSiyvgyP7aD9fd" data-pnid-children="csGPR1aRWU1AZfRGCy2hBJ">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

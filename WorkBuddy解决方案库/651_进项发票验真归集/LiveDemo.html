@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html data-page-node-id="wpTACl1dsB2Fsl9ylF12Oi" lang="zh-CN">
+<head data-page-node-id="WOl6Hkaw9BqPXNLnIRfEh5">
+<script data-page-node-id="p2TjYHoUKtBMF5b66a4Bs5" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="vf7XpjwZ2JCmAsoVatGne1" charset="UTF-8">
+<meta data-page-node-id="szm7J1m4IWFzzVoo7jQ74l" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="w4e3X2NZDwkoNdc4Gp8TF3" data-pnid-children="U6orJigthtEE9yb7U9cWVX">进项发票验真归集</title>
+<link data-page-node-id="vRvLKLPl7GIicha6uxBGHU" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="A2j06nKY1W3oTX3VKLomGn" data-pnid-children="hmfyHlRQgXQuatvV2hEhTH" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="V5DiFAhoVMyo3Q8E7M8LGt">
+<div data-page-node-id="RxAZwcvb8LC5YjyzsUSatJ" class="wrap">
+<section data-page-node-id="2R8nHu8eT7zyXOj2FRue8L" class="page-hero">
+<h1 data-page-node-id="7RI8Y4uwDsCBeUushIpQlM"><!--pnid:7QptmmYDCJ64TgfDchdAYD-->进项发票验真归集</h1>
+<p data-page-node-id="SkA6ZAFbDRL0wxR3x4OF32" class="lead"><!--pnid:PjI4T8x6PjpW3PupCo8HiZ-->发票量大人工逐张验真耗时，重复报销与假发票难发现，跨门店归集还易遗漏</p>
+</section><nav data-page-node-id="dFyCI8hZ7BO5RnohAbJhQV" class="subnav"><a data-page-node-id="NrNV2mhHTqXBP84C5Kq9my" class href="场景引入.html"><!--pnid:1OfptoYtplsCixsClgyH29-->场景引入</a><a data-page-node-id="BJ857dTGYO9HtlOH0vfNPf" class="on" href="#"><!--pnid:q9aSXjGbODNNCyAzTbg0K9-->Live Demo</a></nav>
+<section data-page-node-id="hKZXBaWGhiQArugdysNwQA" class="notice warn"><div data-page-node-id="kPcVI6rCnnAccOsfkUZ99E" class="icon"><!--pnid:WJqkHvXmfOUmGEDbm7Nfzw-->!</div><div data-page-node-id="zk7XOReUb16eoOvxmkppuB">
+<b data-page-node-id="MRSv6WlDq2P3TCVptY1tJH"><!--pnid:rFxjZQRIRAljPxKDdZBluD-->演示模式 · 可视化预演</b>
+<p data-page-node-id="ggKXLUvBfJuYWeiz7735j8"><!--pnid:2vBkeDVExj5VL3zWvHbZqe-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，
+不宣称已接入客户生产系统，也不承诺任何效率提升百分比。
+案例设定：某连锁餐饮企业 2026-05 税期，南山店 4 张、福田店 1 张进项发票（纳税人识别号已脱敏）。税务专员把发票清单 CSV 和扫描件全部扔进来 —— 其中两张发票代码号码完全相同，肉眼翻清单根本看不出来。</p></div></section>
+
+<div data-page-node-id="6FiIaFLWMfnfjytsoabV5u" class="kpi-row"><div data-page-node-id="QCXJB4yZ9rF1O5pfkg4WOl" class="kpi"><div data-page-node-id="bvEW21BrL8xs8S7lKBjaGf" class="k"><!--pnid:FNdgbAoTGZQOCI9EGSqojA-->发票总量</div><div data-page-node-id="XuBdePNvHAaD8sTaAWzFi4" class="v"><!--pnid:mh4ATEV1hnlnD7FbXVG6sK-->5 张 · 2 家门店</div></div><div data-page-node-id="7ytI5DluGpGrhjGYre8g3P" class="kpi"><div data-page-node-id="sBrGQ6hitG1vSYB2cBf1UD" class="k"><!--pnid:jKTOnujbD8EmywTc56amSr-->验真通过</div><div data-page-node-id="lDCqqIYy27YezBmTOsNcOe" class="v"><!--pnid:WgT8auY4YjhqTs24PBlVUQ-->✅ 4 张</div></div><div data-page-node-id="cTM4xPGOx7WKUKSy1x1Cmg" class="kpi"><div data-page-node-id="R94LjqJN3mAHTUn2qaEyii" class="k"><!--pnid:eoMZYDzGVzZRtRq8RB63po-->去重异常</div><div data-page-node-id="zDnkkZLvmrxz6shdCirZ17" class="v"><!--pnid:OA5dB75em3JYmeleLyeaPO-->🔴 1 张 · 疑似重复</div></div><div data-page-node-id="I2kT4cfYTdIJ0vOXZjXmvZ" class="kpi"><div data-page-node-id="qx50XCDN0tQTrmmwCVCPMy" class="k"><!--pnid:6VGNT2pHkhAmrqdLY3z9rl-->归集产出</div><div data-page-node-id="TUIYOWf8BCvP0iNo27CkB5" class="v"><!--pnid:S2DFKuaQRG1Ic7zNK6HQ4X-->CSV + HTML 报告</div></div></div>
+
+<div data-page-node-id="PcPaZ2MH1uV5z7APGbPEo0" class="dstep" style="margin-top:22px">
+<div data-page-node-id="JK8DbtwRQ3CTPsR78txF8z" class="dstep-h"><div data-page-node-id="rNIdR89hN1ekTfmkDlDxEl" class="dstep-n io"><!--pnid:YB2uzqvwaaTgEsLHdKbTbM-->输入</div><div data-page-node-id="DlF3hffQVHQpXu63serIRC"><h2 data-page-node-id="VhRMQD08pVdYgOEKJ7L51I"><!--pnid:leVIaWPKdVNaWNBFfjdVEZ-->税务专员手上能拿到的东西</h2>
+<div data-page-node-id="I1AsmiZZxOCFo7P6llaFsi" class="sd"><!--pnid:oX8kP3PXrNIUq5ZqwDNsqp-->清单 + 扫描件原样扔进来 · 不需要先逐张整理</div></div></div>
+<div data-page-node-id="coprawQAa8RBT86sZC1UIh" class="dstep-b"><div data-page-node-id="CykqE3oarbWTo4TQ2U2vC5" class="srcs"><div data-page-node-id="6LlwmUFvjXFCsuNMh4Typ8" class="src star"><div data-page-node-id="hb8qQOKEEXIsDOtE0yBdBG" class="fn"><!--pnid:cqSP0ZBU3jKLUjZz9OxWo4-->01_拟真输入_进项发票清单.md</div><div data-page-node-id="xIVNLmCb14g0vcC4zT5bP4" class="fd"><!--pnid:kB3kIcCvE2UzLwUYGtjqP4-->2026-05 税期发票批量清单（发票代码/号码/日期/金额/税额/销方）+ 扫描件说明 + 归集要求</div><span data-page-node-id="Scmt2xCjiJYJfQeC3156n0" class="fw"><!--pnid:8LOncUXKNbR0uyWslo9j83-->门店寄送发票汇总 · 2026-06-08 14:20</span></div></div><p data-page-node-id="gywQUOXKIqRztBZwhkNSej" style="margin-top:12px"><b data-page-node-id="Jlb7nALZXDH8pGTx5nvwXv"><!--pnid:MCIw03M8qc8vUYOfwRKoDx-->注意这份材料的构成 ——</b><!--pnid:32Dljh8Pdbv4TVayqaxEN9--> 清单里混着一张代码号码完全相同的发票，<b data-page-node-id="HMkipthWUheqHrlmOr4jT4"><!--pnid:gMuxX3cDVFw9pFhiutQQDE-->平时要靠肉眼逐行对才可能发现</b><!--pnid:1y1BlnyCXOUKU5kHLPQAQu-->。这个场景的价值，很大一部分就来自让重复与异常在第一遍机器比对时就现形。</p></div></div>
+
+<div data-page-node-id="A3kB0YzmGpJiEnYviLG1Qo" class="dstep">
+<div data-page-node-id="eUYaveudYwcOKxGSiVcUvc" class="dstep-h"><div data-page-node-id="79Sj5nfWOi0Z57VkwizXD6" class="dstep-n io"><!--pnid:zmTOj9kX3VptCA1PpHP4L5-->提示词</div><div data-page-node-id="DBKJRzcZlpeIcb6faXLXoH"><h2 data-page-node-id="mTPvAjfArRxZcy981O77W4"><!--pnid:a1VlT3tuVbIPIvAWY5qf8T-->就说这么几句</h2>
+<div data-page-node-id="q8UPdkvu8RqS2hTWWIqJmR" class="sd"><!--pnid:S2sKZSSYCM4XtDrJSkW7lQ-->没有模板、没有表单 · 验真去重归集规则由 Skill 兜底</div></div></div>
+<div data-page-node-id="1Xxx0wY5EsWQepMciRAdD1" class="dstep-b">
+<div data-page-node-id="oxcwQcl09KZNxAGmMuRY9p" class="prompt" id="lp"><!--pnid:S8BSsNZ3yaQ9hneklgP6GO-->这是 2026-05 税期的进项发票清单和扫描件，帮我做验真归集。
+
+OCR 提取发票字段，缺字段的标「信息不全需补录」；
+按发票代码+号码去重，疑似重复的直接标出来；
+能验真的逐张验真，结果分通过/异常/无法验真；
+按门店+税期归集，异常项全部高亮标「建议人工复核」。<button data-page-node-id="d6O7PrVwc35OhPseM1s5PB" class="copy" onclick="cp('lp',this)"><!--pnid:uYve6TSBAbLFdzviLCpVy8-->复制</button></div>
+<p data-page-node-id="k0R6V9NsG7NrQWWnnZyFZF"><!--pnid:AQ9apcKX98V3a2Rv0iuFFM-->短是因为「OCR 字段清单、唯一键去重规则、验真分级、归集结构」都在 Skill 规格里。税务专员只要把发票扔进来。</p></div></div>
+
+<div data-page-node-id="3EQfwC6o89yAWDQLhD5u6N" class="dstep">
+<div data-page-node-id="5R65kiNxhFu755nl9n4Rmt" class="dstep-h"><div data-page-node-id="7sOcgbo2GUrJKdCZMI85yB" class="dstep-n io"><!--pnid:oTlU2qHPQ92mtRQDLC9EWi-->触发</div><div data-page-node-id="5DSIKTryXNc3yH4uXcccdI"><h2 data-page-node-id="ksuHBN47TCqitoILke8ep9"><!--pnid:7qktK4bxn8cCztInWVThkE-->两张代码号码一模一样的发票</h2>
+<div data-page-node-id="MjobcEmK1YxAQGPnRxxLIY" class="sd"><!--pnid:kZUVcfH4cBLlinMSQW4F4J-->验真归集的价值不在任何单张票，在「整张清单的可信度」</div></div></div>
+<div data-page-node-id="nQFO1dvNUkocLcCVNgyHm7" class="dstep-b"><p data-page-node-id="wjWHFylAag98A6ECn5aDuq"><!--pnid:5ostraGgFxHvT36HvqDNpx-->税务专员把清单和扫描件全部扔进来 —— 验真归集的价值在「验真、去重、归集发生在同一次运行里」，不在任何单一字段。</p></div></div><div data-page-node-id="uF2yzDpm6niy2sDuDgxeBa" class="dstep">
+<div data-page-node-id="QvQLjuWs2F6pORfAzeJBjh" class="dstep-h"><div data-page-node-id="ncpCogvXmnuqOZA1mnrbYd" class="dstep-n"><!--pnid:FGAhD9WcqfuEo8mQ5cw2OU-->1</div><div data-page-node-id="bgfLJ9H4l3HHHNsoiq3bm1"><h2 data-page-node-id="jXZfcGtCWpdbbmlZxghguO"><!--pnid:mGRILZYA4kZgmSNAoWUIU9-->OCR 解析 · 字段提取与置信度</h2>
+<div data-page-node-id="C2YmNykmKab6pC7eM61fte" class="sd"><!--pnid:sfTxC6txGqEJOaqBLBRYkD-->能提的字段全部提出，拿不准的标出来 —— 不硬填</div></div></div>
+<div data-page-node-id="S4LBnhQveVt8nDriEFpefB" class="dstep-b"><div data-page-node-id="YlcNCFDnFB0X5vwhzgJdBb" class="tbl"><table data-page-node-id="H2LIzwRu4Ts8Yj9ozyOrlW"><thead data-page-node-id="6xXiBsEauR4Pysa6spaw7p"><tr data-page-node-id="8ArCLaxUkqL22OGjafeeUb"><th data-page-node-id="0vT3ONBSrtO7qHzIdzlgJK"><!--pnid:w9jJD8F0ZsC8RoYYEqQMPp-->发票</th><th data-page-node-id="I5d4Tx0xtHfal5Zwi6Ff0E"><!--pnid:pdzJ2cT5G27UAal7GR2n46-->字段提取</th><th data-page-node-id="EvB4n7PYUMK7DhQcrBa6Gi"><!--pnid:dFm2Y8P63jSeeRFJTKyKGK-->处置</th></tr></thead><tbody data-page-node-id="N6VF2Zf9Wlu2TreXwBaCRg"><tr data-page-node-id="0sWRcZ3GhZPYNbhi5ycNEC"><td data-page-node-id="EAfWOFZzNm2buZqUm1A4A2"><!--pnid:xKFRg97101PRLg7Jlj9fy9-->044002100311 / 88012345</td><td data-page-node-id="XU2PkNmEMk1zIl5TG35N8O"><!--pnid:msqzBAIzsIHojj3XHWBlr8-->代码/号码/日期/金额/税额/销方 齐备</td><td data-page-node-id="WrsHFj7XSJtpGpJbYtjM4E"><!--pnid:e0Qo2yuZV6rgwtyXDNomE6-->✅ 进入校验</td></tr><tr data-page-node-id="ykQfqKUqLLfDa7MyFGTxDZ"><td data-page-node-id="UwWtA6bqAtkALyTacPlIuN"><!--pnid:YqkTggFyFyH9rzGqdNDqIT-->044002100718 / 66009981</td><td data-page-node-id="7X0XcSFNvAiGewzQNV5zJe"><!--pnid:hd0cJzWiPfhdO1pUTOLk6g-->金额区印章部分遮挡，税率与常规不符</td><td data-page-node-id="CKRyrjv4WZtIbbD6pkj9tg"><span data-page-node-id="fSBUDyOyG36tddj4ShUHH7" class="tag a"><!--pnid:NqO1UfsMaHIlmltJzADKhS-->低置信度</span><!--pnid:EXISod0p3YVttqw4O9Dljn--> 标注「建议人工复核」</td></tr></tbody></table></div><p data-page-node-id="C7Ps8tfZCSvJEqj4SfwPKH"><!--pnid:HDWtSFHlbG1VxlWUqrdMpn-->OCR 的铁律是「不硬填」—— <b data-page-node-id="0aaQ8Y7UrUJyAJzekEAgxn"><!--pnid:WM4iCDl4tyKNzQpuvsOCfE-->印章遮挡、票面模糊导致置信度低的字段，标出来让人看，而不是编一个数填进去</b><!--pnid:u2L13qnCwTm3sf8xvg28Ov-->。</p></div></div><div data-page-node-id="TpBXmLVz3UaErUtJ0IzO6R" class="dstep">
+<div data-page-node-id="2lJDHPpLWOIwbRy9nmVePs" class="dstep-h"><div data-page-node-id="8EmLJIoMdfzfDzRxgpHHbQ" class="dstep-n"><!--pnid:jbE15hO7xXcZ0ma1Gj6iWP-->2</div><div data-page-node-id="dYM74pa0JXc1FdFhfHEjeL"><h2 data-page-node-id="cWFmm4eItkcfhjvoibDczF"><!--pnid:tWa9COcZyVw5cnOVTk54Rj-->去重校验 · 重复发票当场现形</h2>
+<div data-page-node-id="0fQuFBovuyYswpRnioOzq7" class="sd"><!--pnid:mPVdlbkaU55faVdbQctCz7-->发票代码+号码唯一键哈希比对</div></div></div>
+<div data-page-node-id="ufNKgreotFelZAo2XyF22r" class="dstep-b"><div data-page-node-id="ClYdD5k2Fin8kKrC3pAWNT" class="tbl"><table data-page-node-id="zZ4Egvtw4IogzdJKy3GTuV"><thead data-page-node-id="k8RtrzhbMNRrn26BpqVKxz"><tr data-page-node-id="0afkpeItvhsaPfB7E2dcTR"><th data-page-node-id="s8kzBZjrKjmv0ywf4OrOK4"><!--pnid:TZAaPM0jCp4nrmLWug9XBI-->发票代码</th><th data-page-node-id="6NQvjtFkRNmi1vH6vFIxJ8"><!--pnid:ZsqL0QINWc3jtNFdq2NYRK-->发票号码</th><th data-page-node-id="BzQgy9YvyEI2DsJNuHsaD7"><!--pnid:5bmFQPKGRhd8z04YQiDRL5-->金额</th><th data-page-node-id="tgdrMR2W2dKJ4brFoXguC1"><!--pnid:tU4fCPmPXEd41TtvDtrS1I-->去重标记</th></tr></thead><tbody data-page-node-id="r79tzv6d9TPWmr0QTwVfVa"><tr data-page-node-id="m5D5s243vIamOgMMW8BENb"><td data-page-node-id="htC0HjL9Qp6AXD93l4aXPn"><!--pnid:knyuqmE8Y48L5shN6LYEyL-->044002100311</td><td data-page-node-id="sdpcakq08qz4OS6rQhEhWu"><!--pnid:kstyTlN9S2I7H4rMhwCnbh-->88012345</td><td data-page-node-id="tVhx1QToUqkvy8afdchQYt"><!--pnid:MGQov0baXNhD1SzMU4uHzM-->¥5,200</td><td data-page-node-id="Q85EEg0G6EpS1Rm7J3VSwE"><!--pnid:xIArpruFsGGJgftr0TBhY5-->—</td></tr><tr data-page-node-id="4ryScBFjqTPrIUlQupBBpQ"><td data-page-node-id="CKBCmGKpSi6dbkDLwBnGjh"><!--pnid:QflN6aftrIqvH1FC4k1X4h-->044002100311</td><td data-page-node-id="SgeXHOLgdgJ8axEd1SAXZ8"><!--pnid:htivG4jIbGK3PlapQwrHsl-->88012345</td><td data-page-node-id="N19ruYfv2EPRbrRdCrg2Y5"><!--pnid:zv1WM8SIc8AcAQ9ZDKpjD1-->¥5,200</td><td data-page-node-id="H8JQIJebE1n52cN2cLtYk3"><span data-page-node-id="g64PI5FHRK3vwLEeJchQdb" class="tag a"><!--pnid:54kCPsnnxglIC7z6IKBLgv-->🔴 疑似重复</span></td></tr><tr data-page-node-id="Nfqu8jyD77hfisFm0SiVg6"><td data-page-node-id="wEvZWTEB0Q4eNresNdrGt3"><!--pnid:YHGsXejlJOrncdhXW15sTs-->044002100650</td><td data-page-node-id="1mbJv92ulkfyQAz7bPFbqo"><!--pnid:hPmQTNK1t4PrGrEQRMCwAE-->55012776</td><td data-page-node-id="zs87pGVBmaDB3IKdZMptpV"><!--pnid:xRztASP0aetlSmanDa1uS9-->¥3,600</td><td data-page-node-id="FHTViKZ3TZBYO3adV11sxZ"><!--pnid:vdys0S9iohNUDFrpVL7RWK-->—</td></tr></tbody></table></div><p data-page-node-id="OxcikbpNRY7SIQQdhryC8e"><!--pnid:YGDLWaj3W8EILueRNWKvdh-->两张代码号码完全相同的发票，第一遍比对就被钉了出来 —— <b data-page-node-id="0gKO46ZcP74WueGdy662FT"><!--pnid:121qKP2f6eQO0fXvDWlW9C-->重复报销最擅长藏在「量」里，而机器比对最不怕的就是量</b><!--pnid:ALxKS5x6Q6q9Q7seCdDQUh-->。</p></div></div><div data-page-node-id="LGbtMUHyecU6D1LWce80tw" class="dstep">
+<div data-page-node-id="jya0JjRRbIarXfCi87pxu6" class="dstep-h"><div data-page-node-id="7VJ812H1MTVkc9pnjTavK1" class="dstep-n"><!--pnid:j5VCybbjTcIVEf4OC767Ad-->3</div><div data-page-node-id="aeX046gfgZTLHumpPaYAwB"><h2 data-page-node-id="nGmIBIb8wVpGHc6ImjGh7G"><!--pnid:yTDswKgTGZ6U5VdZwawT9N-->验真与归集 · 一店一行，异常高亮</h2>
+<div data-page-node-id="q0bncivDHMcbyIqx4nCvIp" class="sd"><!--pnid:PJ2aTFagX3jndf9AxRPvrz-->按门店+税期分组汇总，异常项标注「建议人工复核」</div></div></div>
+<div data-page-node-id="W9tL8osngr5xSkbJT84IuB" class="dstep-b"><div data-page-node-id="DSPA74EpeNVA9rfRiA8e0U" class="tbl"><table data-page-node-id="jvwodFZGxp22lo7ks8gica"><thead data-page-node-id="MTgHwnZJW0IxHxjSgtUn3K"><tr data-page-node-id="B1hukmlazE4QaL68BxWBBk"><th data-page-node-id="0dDGLlEjZSaSEmF3lJPVON"><!--pnid:cOgqbKRRw1Y2qBetIEY41g-->门店 · 税期</th><th data-page-node-id="gUBqz5PPPb2EIEs3ZFYtl1"><!--pnid:UAvamRj65jhFdp2hLIUBDr-->发票张数</th><th data-page-node-id="5Nid0rmEGJaJXfJh0F4PxR"><!--pnid:pH7SYcAFhohcPuXsGbA7ps-->金额合计</th><th data-page-node-id="aW0UOrSEHIG1wCWNH4S3C3"><!--pnid:mgzLa6DBsYlybYa8eFJRuW-->税额合计</th><th data-page-node-id="6tVIEMqBznJvlFqUUeXfve"><!--pnid:yloEZjfhdT1p8E1GHrBceJ-->异常</th></tr></thead><tbody data-page-node-id="QYdvkOd8ng7CkYWMhREoFR"><tr data-page-node-id="tn52BtZjalqF4YD7ZZnPgF"><td data-page-node-id="h2VrlbXi18iofq63gWkkUF"><!--pnid:Hah3hgaxRF1DxepO1WRlno-->南山店 · 2026-05</td><td data-page-node-id="y0y2pbqcUwvHraeazRqyz7"><!--pnid:9n744gorsWRiT9bKzRsCcC-->4 张</td><td data-page-node-id="BNitA5kvNx8LlIcTYhGeUE"><!--pnid:W4ryMByQn3S2o1P5Na0ulH-->¥17,100</td><td data-page-node-id="NespITthcCNUcNb3AvAGcO"><!--pnid:bCY0Dg0mmP6QnmTiDkpaow-->¥1,929</td><td data-page-node-id="hnj3CRi6XFKrHsm3rzhE2A"><span data-page-node-id="0Kuz7H1mdx5WjFISZUdwfj" class="tag a"><!--pnid:TREb414s0CTW7MjweE7gzV-->去重异常 1 张</span></td></tr><tr data-page-node-id="K1q2r85eWmJ5wGylUXjav8"><td data-page-node-id="alhv4SX8FdhYZ0ZpbwY4mM"><!--pnid:6zdtbeNS4z6P3JDPDUgF2a-->福田店 · 2026-05</td><td data-page-node-id="ANo3EJDGyW0RVhhBTfgHu0"><!--pnid:jfkbLJ251RxvDihS5ZhlXH-->1 张</td><td data-page-node-id="d8yMclDdVFwe61on0G2o0M"><!--pnid:QOT9L96yNKAXptGnJGr03B-->¥3,600</td><td data-page-node-id="jobkDUrKXlm4dXJHAPpeJo"><!--pnid:egNXLsgihvAqUF7RjoLoXl-->¥468</td><td data-page-node-id="lk6zMjphvySDDdKkTOykSO"><!--pnid:GCjaH1XrNHS2B4WoUN2KsR-->无异常</td></tr></tbody></table></div><p data-page-node-id="ZiF4Hun416bB59cgtIfIDA"><!--pnid:HlODdPacND2ehyPSpGwtjg-->样例行：044002100311 / 88012345 / 2026-05-03 / ¥5,200 / ¥676 / ✅ 通过 / 南山店 / 2026-05 —— <b data-page-node-id="AUq2AyqeaRpMJ8iG2ACV4J"><!--pnid:6jUqy858nDxWyaGSwyRe1w-->每张票的验真状态、去重标记、归集归属写在同一行里，归档时不用再拼第二张表</b><!--pnid:15JPpPnSYRbCl46hVBs2vR-->。</p></div></div>
+
+<div data-page-node-id="7XTXIw3uLJqQzj1M2Fq6J7" class="verdict hold"><div data-page-node-id="QEJKjFYAd7IZPsjQLCsB1V" class="t"><!--pnid:iDYzIfwNsRQdlrpyERV5Wp-->异常项还不能直接归档 —— 两类必须先经人工复核</div><div data-page-node-id="HQODHCXbUSp6Siz7eIfcrn" class="d"><!--pnid:272appKOIVJ7M5RxnKp9S0-->Skill 的铁律写得很清楚：验真异常、去重疑似、OCR 低置信度项标注「建议人工复核」。两类尤其不能省：<br data-page-node-id="eX018am3EQI2HmFNchjn18"><br data-page-node-id="NNXkdT4KDxFXFVT5sNyDcJ"><b data-page-node-id="38MAdeLxUrdIgJ2s0yQwB0"><!--pnid:1OUs4JjrIlp0SiDNeDmP4i-->复核点 1 · 去重异常未必是重复报销</b><!--pnid:7bkS7hdjVLFcVghSlrZ2K5-->：同一发票代码+号码但金额不同，可能是红冲/作废重开 —— 当前规则标记为「去重异常」而非智能区分，税务主管须复核判断后再处理。<br data-page-node-id="L5qfo3KcRB9GVuPj2pJFLj"><b data-page-node-id="4OHP9aocmzwVZ7tC5zlYoZ"><!--pnid:8dk0fsZvpepYwInOhIg6hc-->复核点 2 · OCR 低置信度与无法验真项</b><!--pnid:fk54xqXJt0tfTl7CUXDp3i-->：模糊、手写、印章遮挡的发票识别置信度较低，可能导致金额偏差；未配置连接器时验真完全降级 —— 这些条目须税务专员逐张人工核验。<br data-page-node-id="JEKRTIrNJP2PBJqcYuCEmi"><br data-page-node-id="zCj9NwD6Nqx6MndoQebpFd"><!--pnid:v7UfUPgd66Vlqn2GkLHWfV-->给出的不是「全部自动放行」，而是：<b data-page-node-id="R4skhhv2JPOwGyRQEz7rzq"><!--pnid:ii2PJI0e0gSkUwbnqi7ZIJ-->通过项直接归档，去重疑似与低置信度两处定向复核</b><!--pnid:GfxCm8GnIaCOKpeVyx2S0K--> —— 复核几张票，比逐张验几百张仍快一个量级，且重复藏不住。</div></div>
+
+<div data-page-node-id="8mPGQTwicTJCDKQWAkOAiz" class="dstep">
+<div data-page-node-id="hYtkkJIcJKhDdsvYflbV5A" class="dstep-h"><div data-page-node-id="jhguK8cxb8N0JvWXX3hi5F" class="dstep-n io"><!--pnid:5uRuCSXBu6DPjh9uT0xe5s-->之后</div><div data-page-node-id="ylnYwX3jZC5JQ9vtZnFfJV"><h2 data-page-node-id="9NeBU9QyUfwNfxpNTlBLXU"><!--pnid:LD93vyIoJAFNjS0GY0TZ3d-->这一次跑完，税务台账多了什么</h2>
+<div data-page-node-id="aYASOw41HGXHAMXPRlRnRU" class="sd"><!--pnid:m0MSPLuQvJwgtWZmEZlo1R-->不讲省了多久 · 讲少了几个隐患、沉淀了什么</div></div></div>
+<div data-page-node-id="xtBgtL5EeVl5o1gfgKZGym" class="dstep-b"><div data-page-node-id="SVVncLlo2W9UpwXLLIXhw2" class="act"><span data-page-node-id="9ovIezHK0mm9JQRK7eU2h3" class="ic"><!--pnid:6yyO0EuGwS5uDjFsZ9rS2J-->✓</span><div data-page-node-id="Aa1Tz30mgv2SfJYJZEZvga"><!--pnid:hZxWKIQdSnWpahPRw8Q9OG-->验真吞吐量从 100 张/小时到 300 张/10 分钟 —— 税期不再被验票占满</div></div><div data-page-node-id="qxutJLCZlf4Z77aoadJFtG" class="act"><span data-page-node-id="qeGBacCMok6Azlw3uIuHQr" class="ic"><!--pnid:rbmGimZg4QzQXbauRUm9Ve-->✓</span><div data-page-node-id="TLbZYzm4YU1S23gsVwfCGC"><!--pnid:JQr5CVEFOR6DVnYYgwps8f-->疑似重复发票第一遍比对就现形 —— 重复报销没有混进当期账</div></div><div data-page-node-id="3RkmTMAEXfqzDDZHGkv6Pj" class="act"><span data-page-node-id="EIbz1EXAEtBvL8xqEL71P0" class="ic"><!--pnid:LlZkwuLV6Yh0b8uDPZBYaT-->✓</span><div data-page-node-id="csFtQRmOTzo0i4twL9WkP4"><!--pnid:zPtmsMSVmiI4RrIhTZLQX7-->门店+税期归集自动成型 —— 抄漏一行、进项全错的事故没有再发生</div></div><div data-page-node-id="NPJigtgsgnOrwSH0NS5eAe" class="act"><span data-page-node-id="SA4y8qQnnnL9O4AISnJkdw" class="ic"><!--pnid:Tast8LF4u7LeQayC3MOVhW-->✓</span><div data-page-node-id="S9S8knXmPpWWJ45IwgPrHw"><!--pnid:GjCBJiWEmmzlo5XPHwuXVt-->每条验真结果附原始发票编号与校验来源 —— 税务稽查问票有据可查</div></div></div></div>
+
+<section data-page-node-id="QJkV3V4SdTb33fI6KNdzM4" class="blk">
+  <h2 data-page-node-id="21M2l43mmBhZdc0hn9poxb" class="h"><span data-page-node-id="MVSrsLaCZbqqIHLhk0U5b3" class="num"><!--pnid:xBhHpfQbl6n9JCNerZUAA8-->追问</span><!--pnid:Uc0QbhLicDMCOAOOwFEL17-->现场可能被问到的</h2>
+  <p data-page-node-id="DQLFVhKX8xQhpyTOlXGd0D" class="subline"><!--pnid:nR9EmgBCTqNbkRj8k1xiUg-->答不上来的问题，比答得漂亮的问题更能决定这场演示的结果</p>
+  <div data-page-node-id="4A1z9xyOOLZoIIlyvNUFhJ" class="fq"><div data-page-node-id="I3m3GgvLV0x25bXCpiWTDk" class="q"><!--pnid:5ulGwX2jF4hS2SwUTkQgCp-->没配置企查查/天眼查连接器还能用吗？</div><div data-page-node-id="TEF6aQLZtI9EHqg8nJ1YFj" class="a"><!--pnid:IPf2UoBkMv1TGu85fDkxmK-->能 —— 无连接器时验真步骤降级为手动提示，OCR 解析、去重校验、归集汇总照常产出；发票真伪由税务专员人工核查，或配置连接器后再运行验真。</div></div><div data-page-node-id="uLf67humaiOO3H7cnAynQY" class="fq"><div data-page-node-id="alExrVVJsWRWzM0CdmBvjw" class="q"><!--pnid:vdd3f8R9x92biP7StYGaln-->手写发票能处理吗？</div><div data-page-node-id="CGzgKmgd776pi5hJn5HqHQ" class="a"><!--pnid:aEjCNsKwG0Xkv7xopVNpcH-->不能 —— Skill 不处理手写发票；模糊、手写、印章遮挡的票面 OCR 置信度低，会标注「建议人工复核」，由税务专员人工录入核验。</div></div><div data-page-node-id="58Mtphz763i2LQ9XFmSRtI" class="fq"><div data-page-node-id="glrmpxn6Gr6NM9tkeZO46Q" class="q"><!--pnid:go4LV14SRbZLZ8ZJ0rxOqa-->去重异常就一定是重复报销吗？</div><div data-page-node-id="BSF3bxJXMHlCtTxCYrjTdh" class="a"><!--pnid:fO9P7jzVbvn87fiD9wY1c4-->不一定 —— 同一发票代码+号码但金额不同可能是红冲/作废重开，规则标记为「去重异常」而非智能区分，须税务主管复核判断后再处理。</div></div>
+</section>
+
+<div data-page-node-id="eGLR1cwRiHbw0KDzzL96Rk" class="cta">
+  <div data-page-node-id="v5PAzz0KKNHJT4YhdTlwIc"><h3 data-page-node-id="xi5SqiivYPvjad6wUEjUAd"><!--pnid:W5zRuHU8jKxdBE2hHvASJp-->想了解来龙去脉？</h3><p data-page-node-id="UaddB4uwJaUWqUcfJT9gZd"><!--pnid:6fK66EJmJEo5QOkKim9F0s-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+  <div data-page-node-id="hUM39sEUgSSyk5FTeBHxsB" class="btns">
+    <a data-page-node-id="U15O1M4onB9GDusyOEs2Ul" class="btn ghost" href="场景引入.html"><!--pnid:a0SRKEqBPbPtUID7vcd5pr-->返回场景引入</a>
+  </div>
+</div>
+<footer data-page-node-id="w3cVAhpSSrjutwLmoi0D4M"><!--pnid:Cnx6pDklPV7Ru8KBf29Tdb-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+<script data-page-node-id="8F7Li7JsWdCo4fWDzGqDkJ" data-pnid-children="DxbWXSiwneqr6XaXO2daQX">
+function cp(id,btn){var el=document.getElementById(id);var t=el.innerText.replace(/复制$/,'').trim();
+function ok(){btn.innerText='已复制';setTimeout(function(){btn.innerText='复制'},1400)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok).catch(function(){fb(t,ok)})}else{fb(t,ok)}}
+function fb(t,cb){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';
+document.body.appendChild(a);a.select();try{document.execCommand('copy');cb()}catch(e){}a.remove()}
+</script>
+<button data-page-node-id="pvU3o8xvxX5DZypwyeNOSV" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="j8pulMKZhulJ2h4K0Qebkf" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="QsH7dVtCLrieSU3eYdy5Gx" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="V76M3whNMg8Ju6y3yqbtJt" data-pnid-children="U5tOoW9mAiSAwHXp4DRzj1">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="0ETzHhlKjjGxK6fEmGjVnq" lang="zh-CN">
+<head data-page-node-id="AenA9yGn2fu87rzmGvWsRO">
+<script data-page-node-id="mkYOLY6pvEVYvo1zof5gSR" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="ugP7zy6mtBxKHtC1MsYjGe" charset="UTF-8">
+<meta data-page-node-id="BBvtd05HDUgXMuvtb0APwK" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="cDELgAoTqUhFPpPA6PRnRS" data-pnid-children="6Pol3neiBdINL35CWr0tGJ">发布说明与迁移指南起草 —— 发了 changelog 不等于更新了文档，这是两件事</title>
+<link data-page-node-id="WqfQtyeiIzzgNwH4dYh8D3" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="ThxBXnRRFyz5TQxQtYHksm" data-pnid-children="tUAE2oZ1ua9houdBOdhq74" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="fOFWaTxdFfYEYsKZ85AP1A">
+
+<div data-page-node-id="hcNZDTC9LrOzz7gkZ1aroO" class="wrap">
+<section data-page-node-id="MAQJJmrtmHSOHA50kDdQJm" class="page-hero">
+
+
+<h1 data-page-node-id="48tlONcIsn0qV9EYEIrmRy"><!--pnid:ypAWvGvNFvZTIhtTWgLpfr-->发布说明与迁移指南起草 —— 发了 changelog 不等于更新了文档，这是两件事</h1>
+<p data-page-node-id="xLSdVasBbzindeSHVWLhjL" class="lead"><!--pnid:SRSYSxEP9ggihaAJcNDCig-->Stripe 给 12 个月迁移期 · 而「发了条 changelog 就当文档更新完了」是全行业的默认操作</p>
+</section><nav data-page-node-id="8UwEmbeR6jDMBwyxS8jS2i" class="subnav"><a data-page-node-id="Fa0n3b1wZlomeYs7fJSZ32" class="on" href="#"><!--pnid:RAKw65YORm608fsftefYqg-->场景引入</a><a data-page-node-id="X0sZKdYrjCbx73ONms9wFo" class href="LiveDemo.html"><!--pnid:9TrUmDCnGHQhR6VBSteCPO-->Live Demo</a></nav>
+<section data-page-node-id="1IzANfAVGK6YqH9vmDs8GH" class="blk">
+  <h2 data-page-node-id="7opiIcneYzw4Ccp6SJ4sOM" class="h"><span data-page-node-id="WD7lDfcbwn2ANOmqGvP25r" class="num"><!--pnid:eFRaoYRt3FGc3DDgMCpnaN-->一</span><!--pnid:q5K2y2BO3EvSf2kK1ab7TQ-->这件事现在是什么样</h2>
+  <p data-page-node-id="VOCMdzPFmpyTBdAqPZTQPJ" class="subline"><!--pnid:P5zLx4bouUE7FtXmBXcTP5-->研发与开发者文档 · 真实业务触发</p>
+  <div data-page-node-id="z7n2AqP67Cecz2HwBd5ats" class="card"><p data-page-node-id="6jwC4DYkxKUt7E75SBjU5S"><!--pnid:CNUSZQt5W3u2kutIxautCk-->v2.1 正式版发布在即：API 文档与代码同步巡检 巡检出的 9 处客户在用漂移需要随版说明；其中 `/settlement/reconcile` 的返回结构变更属 Breaking——集成方需要迁移指南；技术负责人要求发布包三件套齐备：面向客户的产品更新说明、面向开发者的迁移指南、面向内部客服的支持简报——三份材料三个受众，一个版本一次交付。</p></div>
+  <h2 data-page-node-id="uhGRNB9tQ8Q7gWeW9h7bFm" class="h" style="margin-top:22px"><span data-page-node-id="9OZqGkmJHAT6aOzocUzRvw" class="num"><!--pnid:t1BdeJQXtNtBS1YUjVHO8h-->二</span><!--pnid:PitMHhBshxEMUFFNhl24NG-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="PDrkScs6HFh0qdsHnIymgn" class="subline"><!--pnid:rIJeOZlZV40C5DE0t5yaVf-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="UsPHYteONi6xjWycoRWYfk" class="pains"><div data-page-node-id="cLd2zPWLWZis24uOzRVW0i" class="pain"><span data-page-node-id="lHKfhEb2yRqg3zHyZ40fba" class="i"><!--pnid:5ffEbO4a1zB2bxoVQ3hByh-->1</span><div data-page-node-id="T7kcBc7MrSrCJtR9GeCiJU" class="t"><!--pnid:4Bupqdr46U1W72NrPfCsIN-->「发布 changelog 条目和更新参考文档是两件不同的事——团队普遍做了第一件就当完成了」<span data-page-node-id="ZDwGFoc2gQnp8INQ7f1uFl" class="src"><!--pnid:JoHaMZizLpKCmRGAhrcXW7-->依据 · <a data-page-node-id="sRN58BpVXAQlNg75vR6N9M" href="https://promptless.ai/blog/technical/api-changelog-best-practices" rel="noopener" target="_blank"><!--pnid:2Sa9O98zm6CICRKmM5hkDL-->Changelog 最佳实践：「发布 changelog 条目和更新参考文档是两件不同的事——团队普遍做了第一件就当完成了」</a></span></div></div><div data-page-node-id="jRNN8tmt2bH9pVjaojbFtE" class="pain"><span data-page-node-id="K6n67hYc01LZnlbzN5V2qL" class="i"><!--pnid:fPVykWaTVHMfRin4qlJzNF-->2</span><div data-page-node-id="oxYMnnSz9cdbw3V4yxiCCj" class="t"><!--pnid:WLZRVWylnoc6XKsUIc3fna-->Breaking change 标准管理：迁移期最低 6-12 个月（Stripe 用 12 个月）、Sunset/Deprecation 响应头做机器可读通告——而多数团队的迁移期是「发完就算」<span data-page-node-id="5QM9m8NREGDj3Zd5FW7zzh" class="src"><!--pnid:LRn7fJRAoQz8V28uWZYrGY-->依据 · <a data-page-node-id="m25Zchpsua0qScGW9zk089" href="https://apiscout.dev/guides/api-breaking-changes-without-breaking-clients-2026" rel="noopener" target="_blank"><!--pnid:7hwAX5iVE7kEivcq4nelbC-->Breaking change 标准管理动作：迁移期最低 6-12 个月（Stripe 用 12 个月，Twilio 提前一整年通知）；用 RFC 8594 的 Sunset/Deprecation 响应头做机器可读通告；下线前监控旧端点流量</a></span></div></div><div data-page-node-id="VQmrhddqVFeBHAOGC17KK3" class="pain"><span data-page-node-id="qygKEF1xvaUBvvx23Gy986" class="i"><!--pnid:GsqFcXTC3LgAm3WZgrtTX0-->3</span><div data-page-node-id="RHKZg7AHm3LCJIiXwQwbAB" class="t"><!--pnid:jcBBA6mExHZbphyd65k9MS-->「没有 changelog 的 API 在向开发者广播：我们随时可能弄坏你、我们不追踪自己的变更」——发布说明的欠账直接变成集成方的信任折损<span data-page-node-id="wVclCQKdlWyXj0v0AdNYaG" class="src"><!--pnid:BZSdKtozFj6ZWO5KDzWTPK-->依据 · <a data-page-node-id="jqGCbOnx37eUQPqJ8gNNre" href="https://apiscout.dev/guides/api-changelog-versioning-communication-2026" rel="noopener" target="_blank"><!--pnid:fm83cD9q1svadrZRZXBwpH-->Changelog 的信任功能：「没有 changelog 的 API 在向开发者广播：我们随时可能弄坏你、我们不追踪自己的变更」；规范模板含 Deprecated/Added/Changed/Fixed/Security 分节</a></span></div></div><div data-page-node-id="bc8qVIbbsNuflhnULrKHZS" class="pain"><span data-page-node-id="ZSxhuG0nk6sgAblZlTfFSt" class="i"><!--pnid:zYoXFfj7b7pAGcqoHOquy7-->4</span><div data-page-node-id="sYXTGA1RhtelZxJasK3s8j" class="t"><!--pnid:FVD1NQsygIAMl8WiXxT8MM-->金融 API 里错误示例会转错钱且不可撤销——迁移指南里的示例代码质量是运营事故级风险<span data-page-node-id="jPnOVcKqA2ZPFWlwXlSCka" class="src"><!--pnid:sIlpF8u60hjGRcLv82v1Cs-->依据 · <a data-page-node-id="CjDzccpilmYtbm9aWtJ1H6" href="https://www.flarestart.com/article/why-your-fintech-api-code-examples-are-a-liability-20260312" rel="noopener" target="_blank"><!--pnid:JYq87OkMESdaQ3io5ufWL5-->错误代码示例的后果分级：社交 API 里错误示例发错图只是尴尬，金融 API 里错误示例会转错钱且不可撤销——示例质量是运营事故级风险</a></span></div></div><div data-page-node-id="pOr46Ptd5IOZUqB2Iey8r4" class="pain"><span data-page-node-id="XXHh0EWjxTB8b7MiOsbUK0" class="i"><!--pnid:QK1R6cBJyweFFRjXhrpCmJ-->5</span><div data-page-node-id="Y9xHjhz2eZd8syHJ3fVpsf" class="t"><!--pnid:AaJBU5DstQVLaTptj82tl7-->一半开发者每周损失约 10 小时寻找基本信息——过时文档的代价由使用方和被咨询方双向支付<span data-page-node-id="H9AnmShMT80EnZJEtoKSBP" class="src"><!--pnid:ePvX1oiVBFgtqIXo1xdpy9-->依据 · <a data-page-node-id="XecVynlKyys73uQk9Jfdbc" href="https://www.itpro.com/software/development/if-software-development-were-an-f1-race-these-inefficiencies-are-the-pit-stops-that-eat-into-lap-time-why-developers-need-to-sharpen-their-focus-on-documentation" rel="noopener" target="_blank"><!--pnid:R3P0bJUdwmJk8eZWBQscaB-->Atlassian 2025 State of DevEx：一半开发者每周损失约 10 小时只为寻找干活所需的基本信息</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="9ho56K3xfQzs2QIU19hHlv" class="blk">
+  <h2 data-page-node-id="nOHNFsW2FFYHgmWxMFEd6f" class="h"><span data-page-node-id="xMrWTOJ7Cz1GhL4VYrFkna" class="num"><!--pnid:UoVebYPb0NrYOhuiEZXuQl-->三</span><!--pnid:D3YUIPIQyPcwDwleFuEcER-->换个做法之后</h2>
+  <p data-page-node-id="6wpvzTnnQQyBM3g8BgvFMD" class="subline"><!--pnid:MBYF5TM92ySjY8ieeO9IzA-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="AEzCI3MaU22HDfVNzDhD61" class="cmp">
+    <div data-page-node-id="JvGCyFg9zgwwGMS8i6SzS3" class="old"><h4 data-page-node-id="dvuFbmMNtzRGRQefCP9xj3"><!--pnid:o4OuHWnPuUj7ro9mqiWBvm-->✕ 现在的做法</h4><ul data-page-node-id="oWXEcT6rO48ZYEtJABjinH" class="list"><li data-page-node-id="geenaISpP2ItqrOkDHwuaB"><!--pnid:F576TfjQRDnOgNdkUDAama-->「发布 changelog 条目和更新参考文档是两件不同的事——团队普遍做了第一件就当完成了」</li><li data-page-node-id="Qf4jOG5fgpJANQan6nrJON"><!--pnid:OFxSHaGbygxYpVFCDtWOoF-->Breaking change 标准管理：迁移期最低 6-12 个月（Stripe 用 12 个月）、Sunset/Deprecation 响应头做机器可读通告——而多数团队的迁移期是「发完就算」</li><li data-page-node-id="i33HidV5cHNzCu7SyueOLe"><!--pnid:RnemRmVD40r61QLdKG3cNr-->「没有 changelog 的 API 在向开发者广播：我们随时可能弄坏你、我们不追踪自己的变更」——发布说明的欠账直接变成集成方的信任折损</li><li data-page-node-id="4iETf5YXe63SWTNlHYFgsv"><!--pnid:EQsxDTn15AWoawa5PXQP8l-->金融 API 里错误示例会转错钱且不可撤销——迁移指南里的示例代码质量是运营事故级风险</li></ul></div>
+    <div data-page-node-id="mYfNLTmu4d234MdthjSxYN" class="new"><h4 data-page-node-id="m2I2aoXt4SMsv5lykBbFCd"><!--pnid:CsnQCSYHoWUl8Ga4gvJ7p7-->✓ 交给 Agent 之后</h4><ul data-page-node-id="GfNBoYQvTUzuj175qEAIKU" class="list"><li data-page-node-id="pDkVN4re79I9aF9WeAtHQy"><!--pnid:OZoweZDm4knOdcSvwr0zZb-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="X6c1bMeHfWaCzmnYse1SfC"><!--pnid:yvJFE1tY7LE3g1EJ5FBUWi-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="10a9qiAuwzszY2SphFN7z6"><!--pnid:ONixVPSAgwhJgYp2zopXaR-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="HCsolw7JmHyJq8iFMJdGQK"><!--pnid:tIxso84AbKrweVFn5USa6e-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="JO14nAwoRU123NyLKInPF3" class="blk">
+  <h2 data-page-node-id="yFx8Q0sSdUX7GcoCO57Ltx" class="h"><span data-page-node-id="89MXAcDR2lffCGm31LnNIG" class="num"><!--pnid:pijUFhTq5QqBc1utnQWkap-->四</span><!--pnid:s2SeYhEAMSFozZ7hjdwO5A-->场景闭环</h2>
+  <p data-page-node-id="Hj9Pjfc352ItP8HeCh0Bza" class="subline"><!--pnid:PqgI7qomy21yGdzqhKvCJe-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="2UNQcZFdyguPIBQ4GuDBD9" class="flow"><div data-page-node-id="yTsOzDLkvg51hOn4QhjzDD" class="step"><div data-page-node-id="rItjX3MkHuQmEnqf2pGmoB" class="n"><!--pnid:EUq5A9II8VDmBZZs1BnDds-->第 1 步</div><b data-page-node-id="tVmSquZLOVR4umaOB3LXn5"><!--pnid:XpwbzzEPUlPL2g2PGYMxho-->变更分类登记</b><span data-page-node-id="NdZ2Z2VPYUHihizK1byIf2"><!--pnid:kLsQAcA4Itsc4JmuqpxyUa-->本版全部变更按 Added/Changed/Deprecated/Fixed/Security 五分节归类</span></div><div data-page-node-id="zX6ybX6i409ztUGCNEZcXl" class="step"><div data-page-node-id="dlTvmIz8ZmC4MDCWnE6yKb" class="n"><!--pnid:h2OvVfD2YXWc1vWaZwKr20-->第 2 步</div><b data-page-node-id="X8wATutM5tcJNR56d8m62t"><!--pnid:bmUFA1eeBvyvuHSWujruW2-->Breaking 判定与影响挂接</b><span data-page-node-id="irxJsYHNSNR2jPnZLToEt4"><!--pnid:9nHicOBxdWkRGpprM48HpE-->逐条判定是否 Breaking；是则挂受影响集成方与端点级 diff</span></div><div data-page-node-id="XvolifbO9MlHHq1iI41RvU" class="step"><div data-page-node-id="vLzKN0Ff3VgQreYhLuWpfm" class="n"><!--pnid:fu1OAl0YHhsCePCIIW36cs-->第 3 步</div><b data-page-node-id="YnfPowJvRsTFTrDEvtakV4"><!--pnid:Jhg9iGVAIVTEJjpJqrW8qj-->迁移指南起草</b><span data-page-node-id="1dS2u5QjJBKhD8JdejWFVF"><!--pnid:D0r02OgcpqFh1HAWiAUpW7-->端点级变更说明 + 迁移示例（逐条验证）+ 弃用时间表建议</span></div><div data-page-node-id="GBekjst0C6hkPWOIIXDXfJ" class="step"><div data-page-node-id="QlRYrRWS7x5nAFuNF653MU" class="n"><!--pnid:F2OKDNDobrKZuMZjxR94fZ-->第 4 步</div><b data-page-node-id="z2O3Uy9mRA4W02FpBPmEPN"><!--pnid:I7OXDzjPd5kcL1iRTbWzX0-->三受众分别成稿</b><span data-page-node-id="dWKPzYJG2xJQhKe5voTSP7"><!--pnid:60aGQDmDivilW2NrH10pHl-->客户版/开发者版/客服支持简报——同一事实三种讲法</span></div><div data-page-node-id="JjSzlQu5ee2HUi9Rmr76M9" class="step"><div data-page-node-id="KsvxJaACmha6q8m62g3nrQ" class="n"><!--pnid:o9QFp6fhML2qc9JnToLR4j-->第 5 步</div><b data-page-node-id="jPrBn3qMMu2H3yKFle8TIY"><!--pnid:rR9Tv4nWcK8Wyq2J2sKL03-->发布包汇编与签发流转</b><span data-page-node-id="3juaRaUpQuITBiRoL6YDOo"><!--pnid:uTvxYgTFSt9bEuHHas1Kks-->三件套 + 通知范围建议，签发栏留空</span></div></div>
+</section>
+
+<section data-page-node-id="Y9NZt1Gm1XZ1rbSKrfB8Qv" class="blk">
+  <div data-page-node-id="dxJ4XCHhNHlyXQI7NeIatJ" class="g2">
+    <div data-page-node-id="BDJQIPZCmY76ZuDwpyJLP2" class="card"><h3 data-page-node-id="2KZL9rnULPzvmfnAw5QyUj"><!--pnid:RYKiDg2mqPHCSZscyx39w6-->要准备什么</h3><div data-page-node-id="QL3GwcMYaDmkqa3WkFhpcb" class="src"><div data-page-node-id="YRcHYkRIOw4T0VRJ8DEyAE" class="fn"><!--pnid:t1XvvIzGoa0nPHh4XOPV9d-->API 文档与代码同步巡检 巡检报告（本期漂移台账）</div><div data-page-node-id="llNpEO2G82hLm2ZmQs0Yv4" class="fd"><!--pnid:FrNcGm7gFpc6egH6Mz0jUz-->9 处客户在用漂移——发布说明的事实骨架</div></div><div data-page-node-id="jSayooLpUssuOHrSEdif1o" class="src"><div data-page-node-id="zzVAfrIFT2DZYI20hb4YjX" class="fn"><!--pnid:LwqZjOAruWXohpQyONQF2H-->本版合并记录与发版清单</div><div data-page-node-id="TgWRthzZgArKDdUbksPk92" class="fd"><!--pnid:JKpLlKbKyXwEUmCRLAW2b0-->Added/Changed/Deprecated/Fixed 的原始事实</div></div><div data-page-node-id="yU5mXMkI6p11fC8DUqAmZ5" class="src"><div data-page-node-id="MEvTtJ0DRcslr4kM3QEobw" class="fn"><!--pnid:fdf4u8T16lYHimqPkC5YbZ-->受影响集成方清单（联调工单+集成登记表）</div><div data-page-node-id="p3CSgRs7xRD9PktpH3ZFUv" class="fd"><!--pnid:KezOWAHYq4lZeVLpzPrVDn-->谁需要收到哪份材料——通知范围依据</div></div><div data-page-node-id="CQP4P6Vibm4cYHD55L41UE" class="src"><div data-page-node-id="DOgkPoblr2P6SCs2llEW6p" class="fn"><!--pnid:umdv0ytI5CDdOEHwzzHg6D-->上一版发布说明（历史欠账对照）</div><div data-page-node-id="8XOdWo2mEQxrxHC9eM04Js" class="fd"><!--pnid:9XULszUuazQQPXFkKCaCAR-->哪些「上次说要做」的这次真做了——口径连续性检查</div></div></div>
+    <div data-page-node-id="2evxTq6Urzf0rEG8bkC3YH" class="card ev"><h3 data-page-node-id="bks7vFrnMqie7BdFQ9N7c4"><!--pnid:sJnQfLZaLINhPIAXWluQSf-->为什么这个场景值得做</h3>
+      <p data-page-node-id="yQDVzAPyJktYG1rMcN1fGZ"><!--pnid:OY0GD1xbYBAt3SxOkmALbN-->痛感 5 × AI 适配 3 ÷ 落地难度 2 = <b data-page-node-id="SywDJV3HXFMyztN2BpBLfY"><!--pnid:LO7h5oFtY6JkcFAFtu4g3n-->7.5</b></p>
+      <p data-page-node-id="TADUX0Yt9CQDVK2itkP9nw"><b data-page-node-id="Zrb2VyMK3Wa4cw5fa1UWjm"><!--pnid:uL6KmDUoFuLrnLEZbDRK1v-->最大差异点 ·</b><!--pnid:2dgUNqQNhitGNgjNSeYCUV--> 发布包三件套面向三个受众分别成稿，不是一份文档改三遍格式：客户版讲「对你的影响」（无技术术语）；开发者版讲「怎么迁」（端点级 diff + 验证过的迁移示例 + 弃用时间表）；客服版讲「客户会来问什么」（预判问题清单 + 应答口径）。原料直接来自 API 文档与代码同步巡检 的漂移台账与合并记录，不重新考古。</p>
+      <p data-page-node-id="8r5QYJiZowmLeM2loPofli" style="color:var(--ink3); font-size:12.5px"><!--pnid:QdbGSXE42D2GHXqpRkS0ew-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="JzhuQr54Fh5teZjUUNUc2J" class="blk">
+  <h2 data-page-node-id="AMokZudufhRzCYVp5L4DrQ" class="h"><span data-page-node-id="pT7LjP9OcdvIr1nxejMLuW" class="num"><!--pnid:vP3POoLmMZPt6GknkWwvSU-->五</span><!--pnid:3RzWXjx4iRPIYtWLjf2qgo-->会产出什么</h2>
+  <p data-page-node-id="VWKcmUmaSSfSFuTEjjWYBx" class="subline"><!--pnid:rrvlaDW9k4Q7t0tCZG6WS6-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="jLAia0uIr9DPvAyurx2pyc" class="outs"><div data-page-node-id="kZxbHbshUeuFAXxiGLb47A" class="out"><div data-page-node-id="q6P0Wm5XJbS2tTcOMdrvKC" class="on"><!--pnid:Ld5DCH6eZm41piRMG337bO-->正式件本体</div><div data-page-node-id="8C2ijQeAHdlXobKDeBpnbc" class="ot"><!--pnid:nZ1R9fCFSoLU3VyBt9VWU3-->发布包三件套.docx</div><div data-page-node-id="QHgYa5PT4AmUSXuV1MaK1e" class="od"><!--pnid:PATF8b1Vkbz11z3cCS3KCC-->正式件 · 客户版/开发者版/客服版 · 含弃用时间表建议与签发栏</div></div><div data-page-node-id="xsiafqNqeVHuQiYNHTUK5M" class="out"><div data-page-node-id="TrLdu8xvZpdY1wVUjvfxTF" class="on"><!--pnid:dj1WG9zBe1zc7emL8b7S2T-->可派发清单</div><div data-page-node-id="PtClUnBa8Rw3dSKgIdvMXX" class="ot"><!--pnid:rIZReEdRHCmyzQhKnD93NK-->迁移示例验证记录.xlsx</div><div data-page-node-id="rhFeJyiWDgoBdAhwIJ1hHg" class="od"><!--pnid:o75vNfIOR5reRfa3JFIIWq-->11 个示例 · 验证状态/验证日期/失败原因 · 未验证不进指南</div></div><div data-page-node-id="KItpsTZbKyNjhiFe1jsskH" class="out"><div data-page-node-id="H1Td6hgwPTlobSrPqi6pQq" class="on"><!--pnid:xOj095ZzNQNLnlXGkaA0eu-->可派发清单</div><div data-page-node-id="5OBkFHDXBG6nklrWpoCsdy" class="ot"><!--pnid:XWK7JxYFTZiMEUNNCoZlrz-->受影响集成方通知范围表.xlsx</div><div data-page-node-id="ZTG8H8jDGTNxZcglPaOWxQ" class="od"><!--pnid:XjOveMwavQSKI0ldXuk8X3-->集成方 × 应收材料版本 × 建议发送时点 · 客户成功确认</div></div></div>
+</section>
+
+<section data-page-node-id="2mchEcUjlHb7BUUxmtYbpm" class="blk">
+  <div data-page-node-id="7r5d6bqlRsOctFYXaJ82S6" class="card warn"><h3 data-page-node-id="Bdd6S1baz2si3rdFEQI4Nx"><!--pnid:uDNbU3jQHqF91N4ZkBhgGd-->这套东西不承诺什么</h3><p data-page-node-id="dQlwaIjCGUphxcy9gw5Hqg"><!--pnid:6I5uW2vo89GoEu9nEMcRbZ-->迁移指南的代码示例必须逐条经过可运行验证，未验证示例标注「草稿」；弃用时间表只起草建议（对照行业惯例给区间），正式承诺由产品与技术负责人签发；客户通知的发送范围与时间由客户成功确认，本场景只出材料不出发送动作。</p></div>
+</section>
+
+<div data-page-node-id="Ns6fzkQGx6K44y9Muc1FC7" class="cta">
+  <div data-page-node-id="jCGAM3JW4AOaxsXvOWvWRg"><h3 data-page-node-id="0M7H5DYITMQRv58iUmvlKg"><!--pnid:tbPk15kc7CGygtQ4DS5ns1-->想看具体怎么跑？</h3><p data-page-node-id="UJ37JhaI82AQXQew9Oh32Q"><!--pnid:o5FFZ73lB4CJ4cLCI96p2U-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="1qHLchhfATCeHfcX7EFBNV" class="btns">
+    <a data-page-node-id="pBvwhFzi1kSJUt0Et9ZfjU" class="btn" href="LiveDemo.html"><!--pnid:m9eHWyl5DWNFpgYLCZroou-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="duciujBzZtRI8McxbPSAjJ"><!--pnid:lkiud0lghfBaFbUDPUnRs1-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="1Dxzf5XywY2DV4c3UcaXd1" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="E3Tq8LPqkyaCHWBko0tM4E" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="XA3u3Lw8vfxsxeDBvv3C28" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="BDCD6NCXalVF3cGkS3NOOJ" data-pnid-children="tFSbPXpAuEmC1S8bo563b1">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="fKHUWwBztSgr1FdQB51s0Y" data-pnid-children="bkChtxGYQl7VxncKbtSxBF">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="E3XZunm8B7N76B7TDu3LKJ" lang="zh-CN">
+<head data-page-node-id="1PjcoeLrjV709BQN5mYFEN">
+<script data-page-node-id="8gldUXlSaF25LgJzEKaKE4" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="KP5P2TCc1tDStoNLRCm1ch" charset="UTF-8">
+<meta data-page-node-id="QScRM3RdiZfusPi7UFsz2n" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="vhX6CrotbLS0eFrLjFvhWf" data-pnid-children="4LAeMURisytJsveL6yRgOw">故障处置报告初稿 —— 从工单流水与告警记录里攒证据，不从空白文档里写起</title>
+<link data-page-node-id="LOmJ0bdq7YV1gFH0Cbauuc" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="iOXfqbSXcQzWaeZ37dXksg" data-pnid-children="19PFWgWgqpfYATgTxDfMAz" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="67cZBIfZJmpRVCB0BDCAFw">
+
+<div data-page-node-id="HG7g8qu9Poa9bpxyj5INER" class="wrap">
+<section data-page-node-id="Lw4adwbNn89VmvOVcxtKnw" class="page-hero">
+
+
+<h1 data-page-node-id="JUo7TnAeBH58B5qv4RKmSg"><!--pnid:q8svrfnsRNAqz22e4aHt2f-->故障处置报告初稿 —— 从工单流水与告警记录里攒证据，不从空白文档里写起</h1>
+<p data-page-node-id="gPO6VuDAOLkdb36GOz0j2x" class="lead"><!--pnid:FpHnUuGvjnkkhfoj1u4q2I-->处置事件只花一小时 · 攒证据写报告要熬三天</p>
+</section><nav data-page-node-id="xyUefuOjKBMVeb19vwJayN" class="subnav"><a data-page-node-id="TN3IqSxHEUEziu2l6ga0Jp" class="on" href="#"><!--pnid:ShDeQz8w1hgN8HJQ0VSJJ2-->场景引入</a><a data-page-node-id="pcTeIYziWAZvh7lU38YCLO" class href="LiveDemo.html"><!--pnid:1fWdmmsdHK7Rot3jw80tZ8-->Live Demo</a></nav>
+<section data-page-node-id="bRjvZGbGnxfLcQ7gWPalJk" class="blk">
+  <h2 data-page-node-id="2u1sC3rzRkrske3kPdbrgk" class="h"><span data-page-node-id="NRO5qOsUbgWGKYV07inDxR" class="num"><!--pnid:IZWYjGzLAKaXYDxsFFY7FJ-->一</span><!--pnid:Hy8Wf4pt5BSjEd099Pruij-->这件事现在是什么样</h2>
+  <p data-page-node-id="fomM9YtEN2rXnFjaCmiZ2R" class="subline"><!--pnid:6o5xIietzPul9PI2iA5E0n-->网络运维与割接 · 真实业务触发</p>
+  <div data-page-node-id="LpkYvYTtBZxowdPfuy2qhF" class="card"><p data-page-node-id="OQybfKBiuSs7hOLrtIYvbW"><!--pnid:Y5OlORA9GiAnVjZ3oIcrse-->无线一级故障处置完成后 48 小时内要出正式报告，网络部值班经理还会追问「影响范围到底多少用户」——这个数必须从网管和 BOSS 里各导一份才能对上。</p></div>
+  <h2 data-page-node-id="k8FLEpyXRkBYYR5UrG9Ug6" class="h" style="margin-top:22px"><span data-page-node-id="A9sowiMbRohAQNsEDQfey3" class="num"><!--pnid:moHFHbauDZ9q13T8MPmPZ6-->二</span><!--pnid:lxVdgatIW9YLCWI9Yy3uSm-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="l311qrtyGP3wHVEeYOT5ar" class="subline"><!--pnid:e1XOq9WwBut8hM3oCzqGzL-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="r6JNa64BbCKqkipuggRzRU" class="pains"><div data-page-node-id="JGlhlgA6wQCfx1QLV5mNco" class="pain"><span data-page-node-id="8YjIFhNrbDn4aHijWoZenu" class="i"><!--pnid:fLc98OalczRnlBJTmES8fW-->1</span><div data-page-node-id="lItGE4AUcq4KS7UcZpQanc" class="t"><!--pnid:buPtEA0wondZJiH7QGgOat-->从告警发生到报告归档，「处置 1 小时、报告 3 天」：八成精力耗在事后流程，工程师处置完下一单已经来了，报告只能熬夜补<span data-page-node-id="EHGAmnOGRyTJY7Ftmdd9G8" class="src"><!--pnid:rqMupRVYIztsTOxB6iFCpq-->依据 · <a data-page-node-id="nMQ1u4qBRAGtCqMqaFvHji" href="https://www.tuhuan.cn/article/20260723/7828.html" rel="noopener" target="_blank"><!--pnid:Ggd76v4vceDui4POIIgyYC-->「处置事件只花一小时，攒证据写报告要熬三天」：80% 精力耗在事后流程</a></span></div></div><div data-page-node-id="HForJuhGbueeF5f4IPWWD5" class="pain"><span data-page-node-id="YX5lsyATGSMccfhloTrQQ3" class="i"><!--pnid:kgv6WI0eqb5pVcbzkicFNY-->2</span><div data-page-node-id="xYJRahlMSJF2itt1LZavS4" class="t"><!--pnid:YG0crn6kWJuMInbKIrXN84-->代维要同时登录代维管理系统和 EOMS 两套系统处理同一张工单，回单内容在两处各填一遍；写报告时还要再翻一遍微信群的处置通报<span data-page-node-id="hiGJFRlJha0yPQeaN79hm7" class="src"><!--pnid:D9epvADBRXVLdA6ioomA10-->依据 · <a data-page-node-id="17H7noss2nMloIVYmudOcW" href="https://www.docin.com/p-2710034472.html" rel="noopener" target="_blank"><!--pnid:Z9vedO9m5mJ6WXnol8K3Uc-->集中化故障管理流程：代维双系统回单、事故报告法定栏位（报告单位盖章、时间精确到分、主送单位、是否上报通管局）</a></span></div></div><div data-page-node-id="dlMqljbODM2a6eUxNiaRen" class="pain"><span data-page-node-id="dyd2B85cnOSeWZlI8SBlvs" class="i"><!--pnid:sSEAV3Le8sZMl26wqomjli-->3</span><div data-page-node-id="vG8N0Cyh2YdGFvuuUmI4Zs" class="t"><!--pnid:tiwF7jM2aFNKYDPGfbAzKX-->报告从 V1 写到 V10，领导说还是 V5 好——因为每次补的都是同一个数：影响范围，而这个数从来没有一次是从系统里算出来的<span data-page-node-id="n3Z6xXuYQ7QLySSff0KxxK" class="src"><!--pnid:Ep2VUYnmNeHzXAp7SSRGZp-->依据 · <a data-page-node-id="en3nW7yr7ZwYnPnMIQ3dar" href="https://www.yeyulingfeng.com/452559.html" rel="noopener" target="_blank"><!--pnid:xTUz54ZShUwCkxLU8jasvS-->故障报告从 V1 写到 V10、领导说还是 V5 好——报告目的是应付上级不是复盘</a></span></div></div><div data-page-node-id="LXAPA0HytMdlTqkwbjYe5M" class="pain"><span data-page-node-id="frqS1zHd9fi8opCGZcg584" class="i"><!--pnid:AokxrRXMRhCw5G1Xo8wpep-->4</span><div data-page-node-id="PK36iSP37haBeEFJyjxnie" class="t"><!--pnid:lQGo9ETO49NpzauFzlQmyN-->事故报告要「报告单位盖章、报告时间精确到分、主送单位、是否已上报当地通管局」，栏目是法定的，但填数的人手里只有碎片记录<span data-page-node-id="3XjD8PDFoX2VgIeLVzEfA8" class="src"><!--pnid:NFi6ojlf30POIlT32Zea1d-->依据 · <a data-page-node-id="G8gYIEXtS1d5lj9P3Q28cy" href="https://www.docin.com/p-2710034472.html" rel="noopener" target="_blank"><!--pnid:Tjp9hlyfnJ9jSgFYgKjIcE-->集中化故障管理流程：代维双系统回单、事故报告法定栏位（报告单位盖章、时间精确到分、主送单位、是否上报通管局）</a></span></div></div><div data-page-node-id="CZMg8SQVwuMsEganlFqr6p" class="pain"><span data-page-node-id="8Cn3JkFVbE7VRU3kVYpRgL" class="i"><!--pnid:CUZxTCLd7NwCuxyBAvZpZ2-->5</span><div data-page-node-id="oPWwFPk0EyjAucHohLfdcY" class="t"><!--pnid:Mcx6o7iy0YZYyrGBpl2nax-->历史故障报告归档后无人问津，新故障发生时没人想起来 3 个月前修过同样的东西——「knowledge cliff」：老师傅退休，隐性知识跟着走<span data-page-node-id="YGB4rYlELc6TOJxDyRgtqr" class="src"><!--pnid:S3jWnIlVDeMaatOnxLRKVz-->依据 · <a data-page-node-id="GK1nJwWvuEeNJJlO3Yo9Pb" href="https://blog.atso.com/ai-knowledge-cliff" rel="noopener" target="_blank"><!--pnid:14Qk51XbfJs4rlicMwfmvd-->海外电信圈 knowledge cliff 讨论：老师傅退休带走隐性知识，事件知识散落在多系统孤岛，记录不完整、缺事后验证</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="y5W5uM7mfL22feSWZ56LiY" class="blk">
+  <h2 data-page-node-id="LCmvVbvxMSguuO6acJfY3d" class="h"><span data-page-node-id="1obvtXlypZfMUbKrH763Jx" class="num"><!--pnid:r85awouuX9HWdCTUNbgymS-->三</span><!--pnid:K7pb22EcmzPeca0PwjyyN8-->换个做法之后</h2>
+  <p data-page-node-id="7XXKXcGXnmDTyKfT6nDvKq" class="subline"><!--pnid:DYtctiOTMNJyfGsqHqWhwS-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="EFWyZfnT53viDBV4B4w2Qy" class="cmp">
+    <div data-page-node-id="Cc0E9N4JCmHY36ESJSdDfs" class="old"><h4 data-page-node-id="DuIfBWqIlJdPRfUyW8tn9B"><!--pnid:lcwODUBr3kSqVWF5vyHsv3-->✕ 现在的做法</h4><ul data-page-node-id="M18lYQEd0iWwDOW9RfrmVc" class="list"><li data-page-node-id="4SsYRN4LSfQTzWFHKPQb2R"><!--pnid:MeQKUi1pcOCRRvQbIOZm3i-->从告警发生到报告归档，「处置 1 小时、报告 3 天」：八成精力耗在事后流程，工程师处置完下一单已经来了，报告只能熬夜补</li><li data-page-node-id="cpkVVwEmLbebgXMZ13qXfr"><!--pnid:fixifTckQYRcn5Dq9monQO-->代维要同时登录代维管理系统和 EOMS 两套系统处理同一张工单，回单内容在两处各填一遍；写报告时还要再翻一遍微信群的处置通报</li><li data-page-node-id="FJ7fAeMYgiIFCzUXefS1gS"><!--pnid:bljaoA4UWFhlxixuapudlR-->报告从 V1 写到 V10，领导说还是 V5 好——因为每次补的都是同一个数：影响范围，而这个数从来没有一次是从系统里算出来的</li><li data-page-node-id="kqocFvtV8p3VBzEHEIm1uz"><!--pnid:lGfIfD7j0jtIGyxFb9iMVN-->事故报告要「报告单位盖章、报告时间精确到分、主送单位、是否已上报当地通管局」，栏目是法定的，但填数的人手里只有碎片记录</li></ul></div>
+    <div data-page-node-id="2eUOIZQnsuhdYCMhXHO87V" class="new"><h4 data-page-node-id="4l1EBxchfNKi5UEz3XSNud"><!--pnid:EVs3xbcYF4GVRAqWEkgc3s-->✓ 交给 Agent 之后</h4><ul data-page-node-id="2t6eJU8bzzHEhMSpUclLZl" class="list"><li data-page-node-id="V1dsVdxwByyZhKhj1Le6yy"><!--pnid:y5lseGjuVZdqtlB2vwkyCP-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="D0C6QYbzaqa52BXIgkgssD"><!--pnid:1B3Orp4NHQZQsEIXD6h8LC-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="9fjK78MyUFTtAYaDt8ayuj"><!--pnid:VhX5Jer1IT3uSbmqZI7jLh-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="nXINKj8V10HpjCBDgQENVV"><!--pnid:KeQueLwjZAClNrMlgwsX9P-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="KN0Go6FCjpTPis6rSbkYFk" class="blk">
+  <h2 data-page-node-id="UZbO0HbualtMaoDiIfQOsz" class="h"><span data-page-node-id="CRyPisYxvynBca1w53rKlt" class="num"><!--pnid:e6iUuM68V4XaeOMSEJolrd-->四</span><!--pnid:UmmhN5LqodePBenDooBc7X-->场景闭环</h2>
+  <p data-page-node-id="shuJU8uDtBeyCe1NS8GXt6" class="subline"><!--pnid:y9b1AcNP28uNULqJE0NFIW-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="TDj6MFDSCNJnyjOeRSEVv5" class="flow"><div data-page-node-id="3e1ty5XXFnDrnstYY8QH7F" class="step"><div data-page-node-id="bPZfhkqMoEJrqMilJi7jRz" class="n"><!--pnid:Op9MLmBnTKXmbO7EsXhKsm-->第 1 步</div><b data-page-node-id="88El31Va3M2wjyfXiP1Bu7"><!--pnid:0JClBU4E384zMntfdNRh7Z-->要素校验 · 先判断这些记录能不能拼成一条时间线</b><span data-page-node-id="uBe6qUmymbLiVZFtzXtvPu"><!--pnid:0Vk4eYZtDZunvqLkH53PLF-->三份来源的时间戳两两比对，缺口不阻塞，但要算出缺了哪几段</span></div><div data-page-node-id="6GRBE906zmtZN9o2abaK3q" class="step"><div data-page-node-id="oi6hQE5TJiz5L0neArdzJL" class="n"><!--pnid:4f0OkXBz4zwIS500oCkq8U-->第 2 步</div><b data-page-node-id="O2SQSw9YarilVXv4yistyK"><!--pnid:3v8VrMk1rY2Xk2vy7cpWeq-->口径归一 · 把两套系统的工单状态对齐到同一套状态字典</b><span data-page-node-id="dmhQquoDMMoHLhmCJQz1Wu"><!--pnid:O1NQbBapSYTFEVavvfN0zc-->代维系统的「回单」与 EOMS 的「归档」差在哪，逐单说明</span></div><div data-page-node-id="vCcHNnR3UdvUhAziw3j3Ht" class="step"><div data-page-node-id="KTLPm0tc72LRmUtTb4mstn" class="n"><!--pnid:pO9ui6vdNbZdZPDW0JCN0c-->第 3 步</div><b data-page-node-id="hDCUun4Bm43Fud5nxCZXM5"><!--pnid:pY5KG3PY5HgdbIjbZOqnjE-->时间线拼装 · 从告警发生到工单闭环的完整链条</b><span data-page-node-id="QizU3tGgQgu4OLOJOiBGBr"><!--pnid:dJ9CwN7lbdCEbuozG8RfgS-->每一步带出处：工单号 / 告警流水号 / 通报原文</span></div><div data-page-node-id="n9XcFHtQEVUbKIF7RKTjx5" class="step"><div data-page-node-id="Y8S3d1VDamtytASQRAbt4t" class="n"><!--pnid:s93DI3o9vo6HtNN2Mx2VNh-->第 4 步</div><b data-page-node-id="HZMMOoW4GfuK4a1c1YM3TT"><!--pnid:1bATNX86pnRSikDLpeGr8P-->影响范围核算 · 用户数与小区数从网管口径算出</b><span data-page-node-id="gUTMsUgpd05iBKGTrj2foW"><!--pnid:KokOwIVONqaCcRB6E3WAkP-->这是领导一定会追问的那个数，算法与口径要写进报告附录</span></div><div data-page-node-id="lgIJOeS3HnbLylCOyLVrrB" class="step"><div data-page-node-id="oR1K9BmOTSVdpOwFl2n96o" class="n"><!--pnid:3FU5uB6a9eQMnvZ2xAyE0E-->第 5 步</div><b data-page-node-id="fJGIIGcX1jOJqLePAz1dyk"><!--pnid:XfLmC7TuYZcezgYx4FfnRT-->历史案例召回 · 从归档报告里找同类故障的先例</b><span data-page-node-id="BCqpEDVGkymt4dkRjMsNxJ"><!--pnid:ztELn5lQjpwAsMZlYkn8fg-->写清上次怎么修的、当时谁经手、这次哪些特征相同</span></div><div data-page-node-id="OgvfeHAtpTcf8n7XaocYRo" class="step"><div data-page-node-id="92xMBG9UVPsA2wB6r28MVk" class="n"><!--pnid:mE8Dvar5yZ4uXh3BfDyr9x-->第 6 步</div><b data-page-node-id="HizNhDs3scYZ58a8DRUJ0y"><!--pnid:fimU1bFKQ0QvnQWeZeWUGu-->留证与签批 · 生成可盖章的正式报告初稿</b><span data-page-node-id="SuXqUBtSdr5oEg1fNXRY7D"><!--pnid:PfgDOMLz4KXoth7OU6UsIZ-->法定栏目齐套，责任认定与处理意见两栏留空</span></div></div>
+</section>
+
+<section data-page-node-id="zGueFoyNJ8n0ltHCEQzjjz" class="blk">
+  <div data-page-node-id="H8qVZWMg36BSyMboVnRKUm" class="g2">
+    <div data-page-node-id="AOBbEuPONrBD4fF3iAvf9q" class="card"><h3 data-page-node-id="Cn3rDTq6m2R2Nwe42coFxL"><!--pnid:rrxtzFZy78yuGlHDj5W6cO-->要准备什么</h3><div data-page-node-id="HuNFBt7gXBLzoSFpvkzymz" class="src"><div data-page-node-id="xKgiejfaUuplSx5I2izIrQ" class="fn"><!--pnid:8let9CmvSKhqMEEtSYNil1-->EOMS 工单流水导出（xlsx，含派单/受理/处理/回单时间戳）</div><div data-page-node-id="JYDMAKPDMDrXhNh7kX48ms" class="fd"><!--pnid:X6D8gA1HqdJj3802MxqD7K-->两套系统的流水对不上时间戳是常态，要先对齐再拼时间线</div></div><div data-page-node-id="8XJfnuYNPU484aDsBcVwJk" class="src"><div data-page-node-id="mrXGASaH4RhrY3dVQPt5wZ" class="fn"><!--pnid:Hji0ev2nOdqKtgaeAmgpCK-->网管告警流水导出（xlsx，设备号 / 告警类型 / 发生与恢复时间）</div><div data-page-node-id="JMWSpaa3Pug0sHa0QsVqYX" class="fd"><!--pnid:ALm4xqSwvkIvJOHWGYRVHg-->这是「影响范围」栏的唯一权威来源，平时躺在监控中心电脑里</div></div><div data-page-node-id="GH4OzFbSI3u5Oo3mJrauPq" class="src"><div data-page-node-id="zdwV40inZN2TK3gweyXYHh" class="fn"><!--pnid:kOgu0asEmnlGFEAUNIEOJt-->微信群处置通报（txt 转写，值班经理每小时口播）</div><div data-page-node-id="qqZ0X1sKKjzCTtWUBKDbWy" class="fd"><!--pnid:Geow9fsYOrDx6apRudu6qk-->非结构化、口语化，但藏着系统里没有的现场细节</div></div><div data-page-node-id="FJ0MvbomwFsfUPdAXFIer7" class="src"><div data-page-node-id="2zU9MO0AiLASHTCS7h3O4H" class="fn"><!--pnid:CdFb19J7JjgXTfYR79CK0n-->历史故障报告归档包（docx，近 12 个月）</div><div data-page-node-id="D7vRWmyreXcvWOeyLBTwsH" class="fd"><!--pnid:gIGv9GdD4xpXcP9NTRI7LQ-->星标素材——平时没人翻，同类故障的处置先例都在这里</div></div></div>
+    <div data-page-node-id="L6VDIOnt2qpIzhCKRd9m3j" class="card ev"><h3 data-page-node-id="WehxslD8p046ulRep0dekU"><!--pnid:Z3s5PwtaxCOZq7sRQDxBnb-->为什么这个场景值得做</h3>
+      <p data-page-node-id="1J7pPvTEME8bIr2Pib11Dh"><!--pnid:Ghn6v3VjBhLmU09mAGDYiI-->痛感 5 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="CFfikYtWg4AedLtNRyEyfm"><!--pnid:MXloLgWdLEk1v3Da9xMSlK-->12.0</b></p>
+      <p data-page-node-id="k5LmcxhavoVMHYkyT6dzeF"><b data-page-node-id="8IX845ye1unGYWAQ40YZpV"><!--pnid:5FeoZEQz7FcCIYsIQ1MMGJ-->最大差异点 ·</b><!--pnid:frfCIp3y8hpuqUSyEO4XbL--> 不要求先建故障知识库再上系统。历史工单导出件、告警流水、微信处置通报的原件直接扔进来，时间线由 Agent 对齐拼装，每一步都标注出处工单号，写不进时间线的记录单独列出。</p>
+      <p data-page-node-id="5RCwr6j8iSnNUovCl7skUt" style="color:var(--ink3); font-size:12.5px"><!--pnid:9gHxhPebOstZzkn3T6HDC7-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="UQ6dl436X20HfIm3T1iMOo" class="blk">
+  <h2 data-page-node-id="eYbQGTt45z31Ir8Yquszrf" class="h"><span data-page-node-id="vAzXF1hgR1se0QpmGtqxe2" class="num"><!--pnid:42isrweRlkh49eF4K4p1Zw-->五</span><!--pnid:kohWeqgFZQ53WgQ1hfE0f6-->会产出什么</h2>
+  <p data-page-node-id="ujjvd5Jno4hrdCn0HaJTGO" class="subline"><!--pnid:zOCcJveLdurDssjUX87diU-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="LnieiKt3F45JdhUuyrkEfO" class="outs"><div data-page-node-id="7h4C4j1thNYurgsU4JyEic" class="out"><div data-page-node-id="dxMveBWQfJKh1YFMPyIs1W" class="on"><!--pnid:MRxm67H1TqOrKMScDmCQT5-->正式件本体</div><div data-page-node-id="DciqHKBFTvq1X6M8OwsDUj" class="ot"><!--pnid:gCzoczR9xxBPYpKQUFDLmo-->故障处置报告初稿.docx</div><div data-page-node-id="ybgEj6PdaOLgqoDv5yMqK8" class="od"><!--pnid:uW7EeepaokHe0WrR7G2YJi-->正式件本体 · 法定栏目齐套 · 责任认定留空</div></div><div data-page-node-id="e9FbQW2Mn8Mdc0NOl3XpXo" class="out"><div data-page-node-id="Xfwh5DtypKdJsdNfxeLV4p" class="on"><!--pnid:RvcmDvQrKWPJck1ZsGmENJ-->可派发清单</div><div data-page-node-id="PghCBzE5e7jWM5pC263yku" class="ot"><!--pnid:BfCT1iJdhq9BFlXVIJ4uka-->故障时间线与出处清单.xlsx</div><div data-page-node-id="GpiB5qOJndIo1tPjneFj5j" class="od"><!--pnid:PKIutdmndfqGaV4HboxNTL-->每步带工单号与告警流水号 · 可派发核对</div></div><div data-page-node-id="IV5xw6PKjiFFcrc1FSlfz2" class="out"><div data-page-node-id="xQlPkYSEdQYiwNF5VwN4rp" class="on"><!--pnid:NO2Cn8ppTKeI2CQkcomm5Q-->可派发清单</div><div data-page-node-id="VByaFeH6QJ7mke6t47ajLK" class="ot"><!--pnid:qskajiNpLrgh4Hz6zKfOJX-->同类故障案例召回表.xlsx</div><div data-page-node-id="pTGnyqddVN61HtTpCbyCpO" class="od"><!--pnid:zUiM0YxrqWg0lUBE3u42AC-->历史先例与新故障的特征比对 · 供复盘归档</div></div></div>
+</section>
+
+<section data-page-node-id="6g3iZhwUYEIUH1eLTvUAPe" class="blk">
+  <div data-page-node-id="iLKpL3p5zcoCGcDKaO9YMH" class="card warn"><h3 data-page-node-id="oydEOnMEfZJLt5uVAEDBmh"><!--pnid:u05YXzQDByxqzLcfuNCHwk-->这套东西不承诺什么</h3><p data-page-node-id="oMflj9pw3QOSisVktAgvrJ"><!--pnid:EOwewKT1ltJgw8wuqoFijB-->不替人填「责任认定」与「处理意见」两栏——那是值班经理和分管领导的字。报告初稿只到「事实时间线 + 影响范围 + 历史案例引用」，定性部分留白给人工。也不自动提交 EOMS 归档，闭环动作必须人工确认。</p></div>
+</section>
+
+<div data-page-node-id="dlCNvvIOo4fFlrmSaIoPvs" class="cta">
+  <div data-page-node-id="EkJR4dBJt6CSX9e430WiuH"><h3 data-page-node-id="rSgDnBXsCvsHc57YdX9PVd"><!--pnid:eUd3tXoZT2J8wjGxUSDbby-->想看具体怎么跑？</h3><p data-page-node-id="Jr8xam0Wds14zkS1pIHHAl"><!--pnid:gOBxV9e49Zyvw0ds0BSVBG-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="OIParAJaGIigzQeVdIWLQI" class="btns">
+    <a data-page-node-id="hQbbxfEs1PJAlmU64BegV4" class="btn" href="LiveDemo.html"><!--pnid:Ul0FziHnxxsJ4F8kK58Fgv-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="WDjWcsijcmH0oghNdzgEJm"><!--pnid:z2w5k6EZRSU96M7oOumz8V-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="KcrZhPWLiNggib5IRKibBt" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="lTgIlciS0zPyaIcOSBF27r" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="ERj4wro43rLdH4yzphrzEN" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="CsHaTl2a336KhkeXLDgNF8" data-pnid-children="PqiS4bH3eJ6sQ2PVBEXkTl">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="6MOSaV8KxJg3cMbf6rZwoU" data-pnid-children="BJegH22Rdya8z3RO9gKmy9">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

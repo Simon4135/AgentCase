@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html data-page-node-id="uKWLdJmFdovwu5wpCR8DSd" lang="zh-CN">
+<head data-page-node-id="VQCRH9NHZmKyDojQz8yhdw">
+<script data-page-node-id="HflgIHejllIefc7q91VnhS" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="6Q6kwW8eeVNp3cNbaToNt8" charset="UTF-8">
+<meta data-page-node-id="xunXFXRwHtIBbszSC2agGW" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="i1nGC7DeTfN9ZGZOjiFQLP" data-pnid-children="uMIUeyFWEhPv7MJOX4EtmF">茶咖门店时段杯量分析</title>
+<link data-page-node-id="jgEoYChe4acLeAbfRG0mxA" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="JobyfMcpRPDQVvrR3NVsLC" data-pnid-children="qzpBmfCvMOUqfP1Lf5QVvB" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="YYMruTncxyh5tqmXX2d7aK">
+<div data-page-node-id="6dqChp9ZaaTSWtxQtoGSZb" class="wrap">
+<section data-page-node-id="TK9z8wxICNdGamI47upLSl" class="page-hero">
+<h1 data-page-node-id="4ivbzPrBKcV05ymVjxHukb"><!--pnid:ldFXr1CAkoRDo3SNLAq0yG-->茶咖门店时段杯量分析</h1>
+<p data-page-node-id="5GH3fUrezI8oQjH5KpRaeh" class="lead"><!--pnid:8uV0Xo2pSkZkGOybbVNjO6-->时段杯量分布不清，高峰排队低谷闲置，排班备料靠经验</p>
+</section><nav data-page-node-id="ftr5pgBnlS5GQLsu0yVtVl" class="subnav"><a data-page-node-id="vVFk3v6KTR59QBnGfO2HnL" class="on" href="#"><!--pnid:3AUOaZdMXJXGLNR1sKowJQ-->场景引入</a><a data-page-node-id="1Sfcz576t9N3UlmAAjLaQI" class href="LiveDemo.html"><!--pnid:eFDOZfCMbK4pDS62WlS2x9-->Live Demo</a></nav>
+<section data-page-node-id="kBu8dv931xvcME5LxOpVSw" class="blk">
+  <h2 data-page-node-id="w5ZIDM3zzMFPJYkUls70Mi" class="h"><span data-page-node-id="mqrVmhsSBVfRM1jIX94Zwt" class="num"><!--pnid:fw8xy9kEryTWBUjVV9lCIU-->一</span><!--pnid:fqRqEisEfdNNN6PmTZs5ZP-->这件事现在是什么样</h2>
+  <p data-page-node-id="qiLY6hSf0sY6FKeJH6vZvB" class="subline"><!--pnid:lA9FNVmsDIvAEw5fq6MFFQ-->门店店长 / 排班督导 · 忙闲错位的一整天</p>
+  <div data-page-node-id="7r8CqTTUOjH3FxMIFhNK2i" class="card"><p data-page-node-id="R52B468S9zp1PU3BXrLoTF"><!--pnid:l6K2I52cYQXTNt25RhJLV6-->某茶咖品牌「茶研社·南山欢乐海岸店」，周五打烊后。店长复盘这一周：晚 8 点高峰队伍排到门外，2 个店员忙得杯子都洗不过来；下午 5 点店里空得能听见制冰机的声音，3 个人对着柜台发呆。排班表是月初凭经验排的 —— 高峰的人没加上，低谷的人没减下来。备料也是估着来，午后高峰珍珠煮不及，低谷备的料放到报废。一天 821 杯的生意，忙闲错位，排队流失和人力闲置同时发生 —— 哪个时段多少杯、产能超没超，从来没算过。</p></div>
+  <h2 data-page-node-id="eGbswxYR78d9eAo75qy7dG" class="h" style="margin-top:22px"><span data-page-node-id="NLyAG5shEu3SoAntAuYOeN" class="num"><!--pnid:YiPpfvWg4a1tkmj5vgx7yr-->二</span><!--pnid:pdVEdsMffzxoWhw07D5R6U-->痛点 · 每条都发生在昨天</h2>
+  <p data-page-node-id="3gW2gt9CPKCIc3LYBaZb2V" class="subline"><!--pnid:y7lmBjbWHst4U6cUkzG0gB-->不是流程描述，是茶咖门店每天真实上演的事故 —— 以下案例均取自场景调研与演示素材</p>
+  <div data-page-node-id="XrvvfwS5jVCFS3BQdFc1hv" class="pains"><div data-page-node-id="ObteTRjDHt6jhW7jyXKFos" class="pain"><span data-page-node-id="FOaQA0j4tA0ucuvPL2o7r4" class="i"><!--pnid:12vcMNyBrdr8VtUQcT5ztu-->1</span><div data-page-node-id="r8o7Xh8CJqDCQUu1VNav0I" class="t"><!--pnid:yzKqWIzXlEFj9JyQfMbzj7-->时段杯量分布不清：一天 13 个小时哪个时段多少杯没算过，高峰低谷凭感觉</div></div><div data-page-node-id="0teFVjxWxbmsSbmqP03tRQ" class="pain"><span data-page-node-id="h0VjcsNXQIARiPCmw5Z16d" class="i"><!--pnid:AaavgyLvwQYJMRpvV31MN4-->2</span><div data-page-node-id="tyzVHVHCAyI9x2cSj3K826" class="t"><!--pnid:m1JRwlRsvOEgoeXlmx8LXH-->高峰排队低谷闲置：晚 8 点排队流失、下午 5 点人力空转，忙闲错位同时发生</div></div><div data-page-node-id="YK7agwS4eP7gPa1IuRLNiP" class="pain"><span data-page-node-id="PpKkJNf8VCLDG9ewjByZZQ" class="i"><!--pnid:bcGBf2astq0MijiUVUip87-->3</span><div data-page-node-id="0VIslPugtEWDD80LBcGOaI" class="t"><!--pnid:UU9iJ6UtJdzFXeTBIKX9C0-->排班靠经验：月初排的班表和实际杯量对不上，高峰缺人、低谷人浮于事</div></div><div data-page-node-id="5GpeBgpWbpKNsIMJJT5V7B" class="pain"><span data-page-node-id="HiGjYxWIuRoZ0adYfdAU4p" class="i"><!--pnid:thrMPUSixwMpe1l466Oshc-->4</span><div data-page-node-id="jLA0gyyaqdXZbfAH54EnCp" class="t"><!--pnid:SzLx89cbfMtLqCQGOn9ZUm-->备料靠估：高峰前料没备足、低谷备料放到报废，断供与损耗交替出现</div></div></div>
+</section>
+
+<section data-page-node-id="N7rfkLpqTcReA4hXAPPhsy" class="blk">
+  <h2 data-page-node-id="WaTm3CU2g0RCS3LKMPs3vJ" class="h"><span data-page-node-id="cdUZNj0nZIdt8ezynwLflz" class="num"><!--pnid:wEt3QZBJSvqdDGt8yVwXB7-->三</span><!--pnid:KWRmxl18YTW0tF25IlqPOo-->换个做法之后</h2>
+  <p data-page-node-id="XolLGL5YCPuPgzzl3Rxlce" class="subline"><!--pnid:CCKqGSFESFtFWJ93nyniIc-->变化不在「快」，在「忙闲变成可计算的数」</p>
+  <div data-page-node-id="KYjU9AjUYB0IcEUAMZQ6uV" class="cmp">
+    <div data-page-node-id="5w75LH8lX1qmAdTrnrPQ8H" class="old"><h4 data-page-node-id="L0ftSufMGykMRse63NCTIl"><!--pnid:fsNwF6XnzQOvDGNZaSZWvH-->✕ 现在的做法</h4><ul data-page-node-id="HBHEC3VXijh7ZqBGg2y1PY" class="list"><li data-page-node-id="eoTCIWGYZH1XsKguL9MLBB"><!--pnid:Knes33Ms3VpEuvkzuoa8mG-->时段分布凭感觉，高峰低谷说不清</li><li data-page-node-id="Z93fuKSyxTkcYVPut7LQA1"><!--pnid:01HhyPL8GXmWsocWdSE2hE-->排班月初定死，和实际杯量对不上</li><li data-page-node-id="LJEApM041hy1CohFTCV7zv"><!--pnid:FKLZgnHzMEvTg7G0F8JeWB-->备料靠估，断供与报废交替</li><li data-page-node-id="bxdhsiOXzfzL4NAZJ4GmRP"><!--pnid:nulUlEHYdrbmeod2RC46AW-->产能超没超没人算，瓶颈靠顾客排队提醒</li></ul></div>
+    <div data-page-node-id="zlmBw7dK3QQTJIij9PSsS7" class="new"><h4 data-page-node-id="2I4HsL9jUIj9PVD34bTHO5"><!--pnid:FPHhh5wAYMVBIqSr6j3Bvc-->✓ 交给 Agent 之后</h4><ul data-page-node-id="tfq2baRz1NrRC3Yz5C5pFg" class="list"><li data-page-node-id="ed5QsxroYViIgeBowufry4"><!--pnid:4pzTNCtmuH4y78jfAAEBQN-->按小时聚合杯量：高峰 ≥150% 均值、平峰 80-150%、低谷 <80%，阈值明确</li><li data-page-node-id="zgQng7bVnIxT5gZRkWJCqm"><!--pnid:SgZyjKHvGwEvcuVJm3eIL6-->产能匹配：利用率 = 实际杯量/设计产能，超负荷/高效/低效/闲置一眼看穿</li><li data-page-node-id="bV0gNHNf06N3txzIZreTdr"><!--pnid:77OIXej5dUbGl27BU7caa6-->排班优化：高峰增人（前 30 分钟到岗）/ 低谷减人（休息培训）+ 外卖专属通道</li><li data-page-node-id="jypucknDBhDLdlQu6PGiMu"><!--pnid:e7TqPFGlOPxanYszybM2ey-->备料优化：高峰前 1 小时完成备料 / 低谷集中备料 / 外卖打包前置</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="jw98Yb1ycHjTr2pmpcWcmT" class="blk">
+  <h2 data-page-node-id="W8eqWhZPprIR8vydP85Ep5" class="h"><span data-page-node-id="bNC2Pv3R5tADpM8pVIAvYi" class="num"><!--pnid:m0ussjsuUcoXKsUay3z0N8-->四</span><!--pnid:WPzaiRYyrwYquOh8oGPDVW-->场景闭环</h2>
+  <p data-page-node-id="aCLEMf8xtk7f0LGnV2cUt5" class="subline"><!--pnid:2p0h5wfhxjFQwTjTGrAS6m-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="GJYoIlZR0Ah4yX9J988eYy" class="flow"><div data-page-node-id="F7iUptpkSPN1vPVx1V19YH" class="step"><div data-page-node-id="FIBo5mAJCqI7a4qZK4kkjB" class="n"><!--pnid:5apIl3iCnar2Mlx5HAzpJ1-->第 1 步</div><b data-page-node-id="7S7hsn219UzUrTrImLC18d"><!--pnid:akM9VwgcoEauVpCn8I5ZSE-->数据接入 · 字段归一化</b><span data-page-node-id="7yS5lS86dzWlCISA3Syj9t"><!--pnid:5QApSZixDceLxn6J5eGkOz-->解析 CSV / Markdown / Excel，归一化日期/时段/杯量/堂食外卖/杯型/设计产能</span></div><div data-page-node-id="yLyA1yqOTtHGmviR3efaCF" class="step"><div data-page-node-id="a6ddwTST31BvHYDSscxF3L" class="n"><!--pnid:UDdCn2CSNew8oXjI7nQ017-->第 2 步</div><b data-page-node-id="ndFKm7MvPpoL8D0NGUScjD"><!--pnid:XLBpoyho2REZT50nV5qXoa-->时段分布 · 高峰平峰低谷</b><span data-page-node-id="L2nYhW1hhHcOCgyH7sU5YV"><!--pnid:2n1Yd2FeqZmx623QuV8Ifs-->按小时聚合杯量：高峰 ≥150% 均值 / 平峰 80-150% / 低谷 <80%</span></div><div data-page-node-id="DlTHNBDzehRf34aHLkXx4q" class="step"><div data-page-node-id="UChxEDOAsipwvnsp2uf9HQ" class="n"><!--pnid:ZRd545PDPPIBgt6iIQKT05-->第 3 步</div><b data-page-node-id="Yoqru6TKRpmKfZprEwa5xa"><!--pnid:XxmWkAPfraSZjipv3Wi2Hb-->产能匹配 · 利用率对标</b><span data-page-node-id="DEH2GiMWQOHl2GGm4c4dDW"><!--pnid:xcV5LSv30JC2ogRKCRyiLE-->利用率 = 实际杯量/设计产能，识别超负荷（>100%）/ 高效 / 低效 / 闲置</span></div><div data-page-node-id="uT4HV7UYiYfXZUNvYUopVO" class="step"><div data-page-node-id="QL4Tr0PwNi6Mpt6hpxeb3q" class="n"><!--pnid:ToKah9NBgBP1Ai1fL2oT3C-->第 4 步</div><b data-page-node-id="8tOOzOFbJJRJBWWXuNTVng"><!--pnid:o1JviWfTNstvAw6frDU6OQ-->排班优化 · 增人减人有时点</b><span data-page-node-id="mkXsAL4oc3j8YAYhJgzyfn"><!--pnid:owVjKaSgPCJjXUFQV17Mvd-->高峰增人（前 30 分钟到岗）/ 低谷减人（休息培训）+ 外卖专属通道</span></div><div data-page-node-id="T4OIfdd1TzAdasIibbCtEV" class="step"><div data-page-node-id="PSZIthv8hRSk2LssY1g8Lt" class="n"><!--pnid:7WEVQtnoXMBI8m7EVgvEE8-->第 5 步</div><b data-page-node-id="9SAsPv4W9c8l2ovEAqiHpg"><!--pnid:Jum3f6xb1gy5H6rBvqlZuB-->备料优化 · 多格式输出</b><span data-page-node-id="SIyAAeOw4mX5LCl9Mxkvmm"><!--pnid:NBYWNSxxxC5ua1I0oeUtVc-->高峰前 1 小时完成备料 / 低谷集中备料 / 外卖打包前置；Markdown 必备 + HTML/Word/PPT 同步</span></div></div>
+</section>
+
+<section data-page-node-id="iEqL6kvlalJ4rqUuq1zrfV" class="blk">
+  <div data-page-node-id="tKAzE5lLUwHGbCSBCLquEX" class="g2">
+    <div data-page-node-id="d47s0SOhBzSKxM3eChH68N" class="card"><h3 data-page-node-id="86iOzTAMzJ9rnRRdfcYVW3"><!--pnid:zhWWrsfQ7R5imtjp4fiTos-->要准备什么</h3><div data-page-node-id="B1HzduEWc7scqbQ9RN0HAc" class="src"><div data-page-node-id="NSGEeHHlhwFBkxjQCq6KI2" class="fn"><!--pnid:xjxtLBlsGU5enkRuMOaPwa-->时段杯量数据文件</div><div data-page-node-id="J7c3gKcV18R16bHkS1xeJo" class="fd"><!--pnid:i3yZlj8XnbTC4UVQCisNuK-->CSV / Markdown / Excel，1-30 天 × 全营业时段按小时杯量；日期/时段/总杯量/设计产能必填</div></div><div data-page-node-id="502Vr22Z2jnnSIs2y0DRPb" class="src"><div data-page-node-id="PHt83HfGpzYoHKlIqMGSpi" class="fn"><!--pnid:WU43m2Qfaj5beGigCci68G-->堂食外卖拆分（可选）</div><div data-page-node-id="UvyHlZcKsEBxH337M1GHzB" class="fd"><!--pnid:IPnp0rnkKYfvxFrvnt7xYH-->需做渠道分析时附堂食杯量/外卖杯量拆分，缺省自动跳过</div></div><div data-page-node-id="5fKQEfN1gwTTLGK1QdfMCr" class="src"><div data-page-node-id="OVc7ogfaKCx7RUV9ebyT8b" class="fn"><!--pnid:IOjZAXCk6Lmkw7Pc3Bw76x-->品牌名 + 门店名 + 时间段</div><div data-page-node-id="qc5CXXrk6ONJP3fQuZ0ykj" class="fd"><!--pnid:z6VMAMlQCwhKhvWEPycb0w-->报告抬头必填</div></div></div>
+    <div data-page-node-id="M87cxpOpyiPDsLQOiOTcnE" class="card ev"><h3 data-page-node-id="28PYwVrwLj2mxGkNAY4P2j"><!--pnid:FutQbQIp53wncp3nmTwQgZ-->为什么这个场景值得做</h3>
+      <p data-page-node-id="wFX88pVR5jBmsUMIHgsd6u"><!--pnid:9qLLpfX4JT6IfTBFw6AV0y-->痛感 3 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="4C5PDU4XCrYHNIpkBsKgqA"><!--pnid:zMCivso65Z7WaYsGCYNAyX-->6.0</b></p>
+      <p data-page-node-id="HeNdzOi4Bo5qGRAe5t5Q5w"><b data-page-node-id="7cKH8yjtQA0efJBeBv02z9"><!--pnid:kzdugT13gjEOCGPH063LhQ-->最大差异点 ·</b><!--pnid:edE17ze7NmNKHbiD8eyasx--> 忙闲变成可计算的数：高峰 ≥150% 均值、低谷 <80% 有明确阈值，产能利用率对照设计产能 —— 排班备料从「凭经验」变成「按数据」，每条建议落到具体时段。</p>
+      <p data-page-node-id="o8Qc42IMb6RUgWlyzDSDBn" style="color:var(--ink3); font-size:12.5px"><!--pnid:5IaTk9xSP9Y34EL2YtAe4K-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="BqSOUG4WMa7dQViC3zV3CX" class="blk">
+  <h2 data-page-node-id="YhhH6ZIbjsGCNzP5NNiSI3" class="h"><span data-page-node-id="afsI4a0i1oonzeUa13EmXe" class="num"><!--pnid:c1FL7opFK6TI2ZZ1W6bTQs-->五</span><!--pnid:j5nyyK3qxQOR4dhusNyNg5-->会产出什么</h2>
+  <p data-page-node-id="zbPipAN1tZiQlpy1ejPaAG" class="subline"><!--pnid:sEfdD6N45X9MAQTq0XVvGU-->判断标准只有一个：这份东西明天早上能不能直接拿去用</p>
+  <div data-page-node-id="mWcUlzXSL76RP8UhkBxr23" class="outs"><div data-page-node-id="WXIAQ47MCsjHBXrfOxPrVv" class="out"><div data-page-node-id="gl1sx069Wx0roxPGyU7qFA" class="on"><!--pnid:b2qFMYl19eFOuSvSzBYxZa-->正式件本体</div><div data-page-node-id="ZouGihis9KeDwc5yUgJN4S" class="ot"><!--pnid:A53ZOyAwLQiwCrglY9BDec-->时段杯量分析报告.md</div><div data-page-node-id="3LHd9wtfyUXvGIW40l9i3L" class="od"><!--pnid:5uFM3Nf2wUGgqriMsIxtsI-->5 板块结构 · 概览/时段分布/产能匹配/排班优化/备料优化</div></div><div data-page-node-id="JtreOOwfTD6zbZOZtn3GIH" class="out"><div data-page-node-id="M8pGsijPFqNyT4PWdwMr1E" class="on"><!--pnid:HvTQWsaACNQvRfb9D5VBeL-->演示看板</div><div data-page-node-id="WW8iGq7v1fdSihkhR4QUQN" class="ot"><!--pnid:okALmIPsKW6kSJiPiQWgac-->时段杯量看板.html</div><div data-page-node-id="U5BDQJMsHERZnfuks9605G" class="od"><!--pnid:c0yjSeR7PXzLzBhI9BiYxz-->小时杯量分布图 + 产能利用率折线 + 堂食外卖堆叠 + 排班建议表</div></div></div>
+</section>
+
+<section data-page-node-id="lCocpUm4bGkDYw7c6uWQAA" class="blk">
+  <div data-page-node-id="uke9Wxnqk6EG2pDoOv2uro" class="card warn"><h3 data-page-node-id="X7STuQqdMs0aSTmHGtYKgw"><!--pnid:1vRe16rWG2rpUU1E5bdfCA-->这套东西不承诺什么</h3><p data-page-node-id="moA0aFv1BbBHSaIWcdsSWR"><!--pnid:vObOHNt8zmWwvnNowYUjqb-->不预测未来杯量；不评判员工；不修改原始数据；不算毛利率；高峰/低谷判定基于 7 天均值，节假日/促销日会偏移，店长须结合当日实际情况调整排班；设计产能为门店理论值，实际受设备/人员/原料影响，运营经理须定期校准；外卖占比受天气/平台活动影响大，建议结合天气数据综合判断排班。</p></div>
+</section>
+
+<div data-page-node-id="ulkjIhqvjfHbWPdi7R5Sjs" class="cta">
+  <div data-page-node-id="rKKj7aEfAAB1VbsfauwkH3"><h3 data-page-node-id="O5nZ1UmjAH821AGD4yMy6a"><!--pnid:5vbtoW8KI90JskwPRfhTYJ-->想看具体怎么跑？</h3><p data-page-node-id="GiwFXZx6u2Z76PcXpAhgBZ"><!--pnid:Pg8uubwCSfBkCAFeavkpiv-->Live Demo 里有一个完整案例的每一步，包括排班建议为什么必须结合当日实际调整后执行</p></div>
+  <div data-page-node-id="93Vv6uEY3TiqVUZP5WO73l" class="btns">
+    <a data-page-node-id="XZfMz5PQWgPsfpuBD1TnUz" class="btn" href="LiveDemo.html"><!--pnid:JtBHCxWyJxiks599PEDKYB-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="rxyBAytK4SqMNixAxL16nX"><!--pnid:sPaGnwlY57mUllORkPH1bK-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="F6iw4LgrOEYUnY9KQMdlmC" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="vIAoLftDmELZGOMaE5u5Fm" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="YpwAqbFhcjbSOCIEkYLF0E" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="dt71ceCpu6C7c4OTNQ7qs5" data-pnid-children="CiINxXbf2pZgVmzZNjS3EO">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="EIO48UmJQjh1pdlvmLsot9" lang="zh-CN">
+<head data-page-node-id="5NLNlLakvKun8rNKl50oeZ">
+<script data-page-node-id="WEI9HwBuCzdRizPelCuBDp" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="JNUgvEXeIL4GBWNolw8by4" charset="UTF-8">
+<meta data-page-node-id="mnCHHJTyJIrqXPlDJcwYLj" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="dapkCz48q9MQH1I0TjVhCN" data-pnid-children="gnnA8vn0Yy9UtCbta2yRax">费用异常波动分析</title>
+<link data-page-node-id="4ZCzkWjH8nXlodYQBjjWUR" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Cge7vHThlQAr5MlAh6IvQe" data-pnid-children="0pqD0oWdBTzYU2rZRnyyX2">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="SjJ7Z8rbZmUgKrN6BhGmru" data-pnid-children="wbmTGLpKLIlHmepnq8JKHt" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="PQMweWKlKucxBZc6jL9lbQ" data-pnid-children="LAw3c4IhJjC34JhIWWX54x" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="epgSj8yuXdLYrqsTX7vlvM">
+
+<div data-page-node-id="Qy9bSODU1ewwk46u2WaWuZ" class="wrap">
+<section data-page-node-id="sIrBcN4EHoD5FzfZq4iUt4" class="page-hero">
+<h1 data-page-node-id="nzuChTCY2u2nNZ0Rmx2sAT"><!--pnid:39jjjo5ZCq8YFpeOPrCiUR-->费用异常波动分析</h1>
+<p data-page-node-id="nyV6Zpy4QatwQwVTeRYLLs" class="lead"><!--pnid:olYiEHI85MuV6ETAfdanIQ-->费用涨了老板问「钱去哪了」 · 财务只能答「涨了」，答不出是量涨还是价涨</p>
+</section><nav data-page-node-id="T7W5Axat0GG9YNDpdRfqcR" class="subnav"><a data-page-node-id="qcW4xraSihiamquKgCZihD" href="场景引入.html"><!--pnid:f5UetoZTC6YwJSbyxe0EdI-->场景引入</a><a data-page-node-id="kdcHQMxtt0VCGqx8Gt3ywn" href="LiveDemo.html"><!--pnid:P3fuqsPD1Yvb3Ig1NwexhL-->Live Demo</a><a data-page-node-id="GCBn7S5kJyKeTrBfWM66zi" class="on" href="#"><!--pnid:zVfkrqMMseITrlaQmfM8iZ-->推荐任务</a></nav>
+
+<section data-page-node-id="GfkoaNxtTGLpRs3TDNb16k" class="blk">
+  <h2 data-page-node-id="IEWZO38ewxhfpmnWb4yvZd" class="h"><span data-page-node-id="hcgvG2G4u0vUJ3ahpEMHTc" class="num"><!--pnid:K5vBaTlfqKF9kRAKSgomYx-->一</span><!--pnid:PvQTy7rEtRoeAY5e2XUkwd-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="xNtZc5xashLmc34eerOUvY" class="subline"><!--pnid:ViK7jH7KeAAQbz0RwWeuog-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="dbCpyfgFvHLKOm5fE0VgXa" class="card"><p data-page-node-id="dCxCctWNj0Fwf49GtfgGY4"><!--pnid:EJpZZmBw9BJxtQgm1Tr72D-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="os3XXOlgKOiGDykALgUbWV" style="margin-top:10px"><!--pnid:QSY2lDzNhVTRXb8KFOlwka-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:JQAqFboYrlhsxL8WfFcWWz--><!--wb-skill-start-->
+<div data-page-node-id="CIjtbk7RdvR6B7wte9vZ6Q" class="wb-skill">
+<p data-page-node-id="NYwHN0c6vQWLpJSDIrWoVG" class="wb-skill-lead"><!--pnid:leNnXxmvrgV5gJ20LLbhTK-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="9lUVOm5Ssj1pxCjL8lSXnZ" class="prompt" id="wbSkillPrompt"><!--pnid:0GdlNEFlkZfaeC42pekv5Z-->【准备】这个场景的规则都在「费用异常波动分析」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/wYVK1jfjcdjV6hI1b8PnP1/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="Szdd8IUmeDpW8XCGMNERvE" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:7GlURKaLhcGpqbjYH8dQnT-->复制</button></div>
+</div>
+<!--pnid:c5Ab6nwiACcUIOEcGuMqgw--><!--wb-skill-end-->
+<section data-page-node-id="NawXnvshLoiOBZmWWYnXVW" class="blk">
+  <h2 data-page-node-id="SgCAQHdR5W73EhDTRn7idr" class="h"><span data-page-node-id="RJpV9DmhUzzJmmAsOuRVnL" class="num"><!--pnid:mCem8txBhSUb9Y0znMBQxk-->二</span><!--pnid:VhX2SKguydrke0CGHGC5wP-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="KMuGIdgtimBnGKNsdQMA83" class="subline"><!--pnid:zw6CBw2wIprcXNQCNnun0M-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="J2nyUO565Ok2nCICspA2Q9" class="tlist">
+    <article data-page-node-id="FyZOAB1T8FxGqDmPTbWBJe" class="task">
+      <div data-page-node-id="hNufx2RmBSsS7WBkQgPQaX" class="th"><span data-page-node-id="9rJfKIRKuIDR97WvniTPUf" class="no"><!--pnid:4WBwb4wVjDRx12yWvfl5IJ-->01</span><h3 data-page-node-id="QUWAyIZY5ygSfkMK36ZHF6" class="ttl"><!--pnid:zdiDV0v5P6jYS9TRwD2ByM-->首推默认</h3><span data-page-node-id="AvfvSyQAwtVaD711LZltEZ" class="star"><!--pnid:MoS8LgF62R8zO5ueuzHL4R-->与一键体验入口一致</span><button data-page-node-id="FIQ1WM7plOlUXrJmhefxbX" class="cp" type="button"><!--pnid:0zoEx26lRU7vkII3f8Loa2-->复制</button></div>
+      <p data-page-node-id="qcZgAToRXQeSzeBIbbSpRr" class="tp"><!--pnid:OnqtOwtEcpXDHMgpBVhhAs-->这个月费用涨得有点多，老板问钱花哪了。技能内置三份材料：费用台账（连续多月）、上月对比数据、用量/单价数据。走完整流程：先比出涨得最多的那几项，再按量差和价差拆开，把每项归因为量涨、价涨还是计价方式变更（包干改按量计费这类），最后按涨价金额排序出清单。
+产出两份：「费用异常波动分析.xlsx」，一行一项，列写上月数、本月数、环比、量差、价差、归因；「涨价归因清单.xlsx」，逐项写清量涨／价涨／计价变更，拿不准的标「待核实」。
+用量数据缺失的项就写「本项无法做量价分离」，不要估一个单价出来充数；只做量价分离和异常标注，砍哪项费用我自己定。</p>
+    </article>
+    <article data-page-node-id="gvpUTbh9B1H74AZa7QrfF8" class="task">
+      <div data-page-node-id="XdvYbkgNXYlQGIRnTLYnvi" class="th"><span data-page-node-id="kJjSU8OdrK2tFnfZEJG8Xd" class="no"><!--pnid:WTOw8qOVJEVeEU2mt1VAF9-->02</span><h3 data-page-node-id="pDFvNKadKntb9CFcXqjrCi" class="ttl"><!--pnid:CTgAc85ZnXiZxqHQomAjwU-->只做量价分离</h3><button data-page-node-id="2ShbVSJntggGrysevtBJ2x" class="cp" type="button"><!--pnid:ZhvFAUC03CLAjNDloW7MoC-->复制</button></div>
+      <p data-page-node-id="YJwfRJ6HSfW0Y3ho5wBs18" class="tp"><!--pnid:ybn3qbS3OLehTrT9N3irUE-->先只做量价分离这一步，环比涨幅先不用给。读费用台账和用量/单价数据，把涨得最多的那几项按量差和价差拆开。产出 Excel 一张表，一行一项，列写基期用量与单价、本期用量与单价、量差（Δ用量×基期单价）、价差（Δ单价×本期用量）、总差额；末尾核对「量差＋价差＝总差额」。哪项缺用量数据就写「本项无法做量价分离」，不要硬拆。</p>
+    </article>
+    <article data-page-node-id="3yegAMrnuhwoHj4Cj7LKji" class="task">
+      <div data-page-node-id="5fi5RyQkE8j3Ol1Jne3xTt" class="th"><span data-page-node-id="3JMwbNQS4zQVZZ3aCr5gUV" class="no"><!--pnid:waxWfNKBgBHGQFYc0nIt7B-->03</span><h3 data-page-node-id="5Yat3EB3sk3txygcsR6C7h" class="ttl"><!--pnid:zP4yxBTHFp8gT0J7xZj4QL-->换成季度口径重算</h3><button data-page-node-id="UVJKCmehkCiqAyKztNaohO" class="cp" type="button"><!--pnid:V2B31zP0ivV4LERhpG1Tr8-->复制</button></div>
+      <p data-page-node-id="S4owfJXcTak7IMazNBxjiC" class="tp"><!--pnid:uwhuuITzyysmlpXKOI8fuj-->换成季度口径重算一遍：把三个月费用并起来看环比。材料用费用台账（连续多月）和用量/单价数据。产出 Excel 一栏对照：按月算和按季度算，哪些项的异常被摊平了、哪些反而更突出，各自写清是量差还是价差造成的。归因口径不变；计价方式变更的项单独标出来，说明它在季度口径下会怎么表现。</p>
+    </article>
+    <article data-page-node-id="oy456u43xM9L9kE6qZnkZF" class="task">
+      <div data-page-node-id="tCJITYQJ68L6qfAjopaZis" class="th"><span data-page-node-id="pNyuCjlfI4QQBvwVcIr1mJ" class="no"><!--pnid:Bm05dThZREnbOqbIJzyaN4-->04</span><h3 data-page-node-id="I85uXXrnl0N6l0AqDQjvUr" class="ttl"><!--pnid:7fQHruv7LS52Q3ov3TUxnn-->一次比三份台账</h3><button data-page-node-id="xzznYeXnrLa4NY7yMvTlGk" class="cp" type="button"><!--pnid:73KrOW4ZzNh2Bvk2b9k6Gm-->复制</button></div>
+      <p data-page-node-id="dcZas4jHFDo0pHJzFjjjWL" class="tp"><!--pnid:nmv81dblJP7d5jQV4tuu53-->演示数据里再加两个月的费用台账和对应的用量/单价数据，三份一起跑，量价分离算法保持一致。产出「费用异常波动分析.xlsx」，按月分 sheet；另加一张横向对照表，一行一个涨项，列写各月的环比金额、量差、价差、归因、是不是连续多月都在涨。连续涨的项单独点出来，说明它是趋势还是某个月的一次性因素。</p>
+    </article>
+    <article data-page-node-id="j45b3pBrdMcnVhaQQh5fho" class="task">
+      <div data-page-node-id="GdiPJSyEvc4CKauXaVs0Db" class="th"><span data-page-node-id="RkeU3wpf40ifFWnNqYV5Jt" class="no"><!--pnid:2hkBvXZgRp0MOVFwYA7viJ-->05</span><h3 data-page-node-id="ozNib0sQLgxeQZzGUjPkVz" class="ttl"><!--pnid:8iE4783lcEYhA5mYLbsMYn-->给老板看的版本</h3><button data-page-node-id="bggtZsOMph0N9bCmIzRJnQ" class="cp" type="button"><!--pnid:d7NV0E8ywDfr7xGMwFNlb7-->复制</button></div>
+      <p data-page-node-id="HIwxgbWgauxIuktDulUl5J" class="tp"><!--pnid:RR0u7NYe1OFOe7lvUC1ILG-->把分析压成给老板看的一页，Markdown 半页以内：这个月多花的钱里，哪些是业务增长带来的量涨、哪些是供应商涨价的价涨、哪些是把下个月的费用提前确认了。每条写清金额，并注明出自「涨价归因清单.xlsx」的哪一项。不写削减建议，也不替这些数下「正常／异常」的结论。</p>
+    </article>
+    <article data-page-node-id="Mlm7i7Pm0XIlg43HeR5mlx" class="task">
+      <div data-page-node-id="rvU9PwffgVeiU287YBifxJ" class="th"><span data-page-node-id="1ac5LAjomPLUgu3KCeKD4L" class="no"><!--pnid:LzJFKYK2G6L8yhe8apaaOU-->06</span><h3 data-page-node-id="pCMP2P1yO9gnfXaqRruoSd" class="ttl"><!--pnid:kyQ6O9m5qPNQGMgAIQ0uii-->让它反驳自己</h3><button data-page-node-id="sOsefQA5mPCapliddHRYWo" class="cp" type="button"><!--pnid:nB4bsccKx8z6zPgUxoNezZ-->复制</button></div>
+      <p data-page-node-id="ubdhIzeeU33hlhjQIFEWdF" class="tp"><!--pnid:SJpIjaJYFfkGcleUuDAbzw-->你说快递费涨 30% 是量涨不是价涨、依据是发件量涨了 28%、单价基本没变——这个依据站得住吗？逐条回查用量/单价数据里这两个月每天的件数和单价，看有没有调价通知或阶梯价被漏掉。产出 Markdown 一份《判断复核》：站不住的挑出来说明该改标「待核实」，写清要补哪份材料（报价单、对账单）才能定。</p>
+    </article>
+    <article data-page-node-id="BxPbRxcB8RDiPiEi7iuQmd" class="task">
+      <div data-page-node-id="JlLy8fUV9JskzRV7ntWRwL" class="th"><span data-page-node-id="1xlrYsK7gtsWHWrPRFmGjn" class="no"><!--pnid:vpyLiDHodqcSwIrbKNNnRh-->07</span><h3 data-page-node-id="IaIrhMjA30p8Tv7Idrq2MP" class="ttl"><!--pnid:VprUEGkUj4XXuOWGppTUHa-->比对保洁费那个坑</h3><button data-page-node-id="2WOQ3r0g4M0bf3GWURHgOt" class="cp" type="button"><!--pnid:p6p1E8MPq333A1ChLqc16Y-->复制</button></div>
+      <p data-page-node-id="MRDVsBRUiR2klmmeItGnV6" class="tp"><!--pnid:n2LsqAC6ZpCTImIQhPZ3Mn-->去年保洁费从 25000 涨到 30000、涨了 20%，当时以为是人头加了，后来才发现是外包公司把包干改成了按量计费——跟这次扫出的涨价项做同类比对。材料用费用台账（连续多月）、上月对比数据、用量/单价数据。产出 Excel 一张对照表：去年保洁费和这次各涨项各占一行，列写涨价金额、涨幅、当时的归因、这次能不能看出计价方式变了、这次该找供应商问什么。计价方式变更的项单独标出来。</p>
+    </article>
+    <article data-page-node-id="EMKKEVSifTooCNq5AUWvkB" class="task">
+      <div data-page-node-id="9mT3ILOu1DvLcykcGplyhI" class="th"><span data-page-node-id="stgGNvhGFcUWkZ5jEwOeKx" class="no"><!--pnid:VWIK43RnLbbplasjTO8imt-->08</span><h3 data-page-node-id="dOql8eM48mq02hPJ5kJWxG" class="ttl"><!--pnid:dEsCsBcOAJKb6Xj9Yh758J-->按量价口径自查</h3><button data-page-node-id="AnjbFav5nXAcUyvFa8f7Ub" class="cp" type="button"><!--pnid:wf7ZsAmqW9v4fS9BYKGqPC-->复制</button></div>
+      <p data-page-node-id="qFD4XpGOteooGp7Y1nTgY4" class="tp"><!--pnid:OcaPIMSQuBq5hMhpp6TPNL-->按量价分离口径自查这份分析。产出 Markdown 一份自查表：哪些项做了量价拆分；哪些项因为用量数据缺失做不了；做不了的在这两份交付里是怎么写的；「量差＋价差」有没有和总差额对上；有没有把一次性新增的费用硬塞进量差或价差里。列出来别动手改数，做不了的项也不要补估。</p>
+    </article>
+    <article data-page-node-id="lcSDTPbXL55NZOw3K0ufAk" class="task">
+      <div data-page-node-id="BEfooWXZHWHJ2wIZ8iX2jN" class="th"><span data-page-node-id="xJ5rh5MeyXmkoNVq2ZmQlT" class="no"><!--pnid:BSBlSlGXDzf8ktNykPzer2-->09</span><h3 data-page-node-id="eHciucfccYYcCO2WfS3WJj" class="ttl"><!--pnid:YYErM0yWoCNTcv7o9GATOy-->折算成涨价的影响</h3><button data-page-node-id="2OUpcjcLoynhGeBrQySxCM" class="cp" type="button"><!--pnid:UAmMhxsqn5oQ2BuKEOLjaK-->复制</button></div>
+      <p data-page-node-id="DLTzkAKyqppr7BnDjtkdIk" class="tp"><!--pnid:AnZHBr61YXcwDLkaayDXQE-->读「费用异常波动分析.xlsx」和「涨价归因清单.xlsx」。这个月费用环比涨的部分，拆出来多少是正常量涨、多少是供应商涨价？产出 Excel 一张测算表，一行一项：本月多花金额、其中量涨和价涨各多少、按这个单价一年下来是多少、涉及哪家供应商。一次性新增或跨期的项单独列，写明它不属于量涨价涨。金额给测算值并注明假设，不给「该不该砍」的建议。</p>
+    </article>
+    <article data-page-node-id="P3p4YXw64Pzs8J69iB1ljW" class="task">
+      <div data-page-node-id="Cm3PbSMIRTm5LUqI0Ezhol" class="th"><span data-page-node-id="nVI715Xc7MYiBmzXa7NyKR" class="no"><!--pnid:zenKyn0nMq5M9Lwe8kZpAT-->10</span><h3 data-page-node-id="8OMPj4xAxjoyX47P8c0jzy" class="ttl"><!--pnid:t7CbwK68m1CGzeyExVO1d4-->沉淀成费用分析模板</h3><button data-page-node-id="cuHkBbLR4OIzyIxouHlfhg" class="cp" type="button"><!--pnid:v2S2nIWJS5IPykOjkWqoV4-->复制</button></div>
+      <p data-page-node-id="l1JUpIffZmSZdFrtpgGaQD" class="tp"><!--pnid:hFHpGWKrQ2qUVx6GepTK0U-->把这次的量价分离算法和归因口径整理成一张「费用分析模板.xlsx」：写清量差和价差各自的计算式；归因三类（量涨／价涨／计价方式变更）各自的判定线索；用量数据缺失时怎么写；超支排序按什么排。下月把新台账填进去就能直接套用。只写这次真用过的算法和口径。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="yQd0YzGbGAsnejGzNzntVH" class="cta">
+  <div data-page-node-id="ultSgZK7XOxfXxwaTkCmHX"><h3 data-page-node-id="P2rl1Sx6dU8MzmAo7UQIGF"><!--pnid:CmQypRoQP55cNrNPSBV49i-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="PuNq7B2cNCh6O15Ey9vDHi"><!--pnid:1D7W13CI8K0T6I3ZnsR2Ws-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="z5SHTh20UNanjofBQwpzdh" class="btns"><a data-page-node-id="GZkLrv3K59xjuPB6Clpdjj" class="btn" href="#" id="ctaContact"><!--pnid:clVcCHZJJNX2ODx14ZWRvP-->联系我们</a></div>
+</div>
+<footer data-page-node-id="GG16AU8QWPpUs8rzmLPL28"><!--pnid:aD8qphzzFUzUtlzDdWS7DF-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="7uV8Jk1Na9xQMxPg0QPhhq" data-pnid-children="QqTiRzfe5wncjRhnrZBnQ2">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="vTI2VaYqXMqk4e1RmXvrxk" data-pnid-children="6I3X5JgGoJoKSEbA3aBsaN">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="P1ztVZm6iLOBkPeSg89cvv" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="57zw5ZWJ3EfhWYWtZPtgDx" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="h07uTAqk31iiwZmzajqqs0" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="fwxiISkCmWCpZicZFztzN6" data-pnid-children="tKSp3iCglb19OGYPSFM2Cc">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="ISSvhHucshqihtRCFP2WT8" data-pnid-children="3fMAxfcNvmdDNQQE27hDMU" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

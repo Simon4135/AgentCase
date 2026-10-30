@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="8kOpC4BnUAedn1JRM9tSBS" lang="zh-CN">
+<head data-page-node-id="9IIlFFvcVbOxDp0UsEv1Bt">
+<script data-page-node-id="Qov6ZXnfF5JCNy0e7J85q2" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="8ghgIHAOvNvONMxISl5koA" charset="UTF-8">
+<meta data-page-node-id="ujb5z8jqysazZaczuarApE" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="cNZipUSYRaCO29MMpGIMVW" data-pnid-children="bNYuyvnj8vg2X15tBtlfvB">12345 工单智能分拨 —— 退单记录训练的分派器</title>
+<link data-page-node-id="ZCTHpb78WKSIKFxa3KtiO2" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="XXRmJfFaf2qj3si6AIa3TR" data-pnid-children="6knuL8BQQov8lv4LJlehGc" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="goyo3qYrbTeYimKePAUcCd">
+
+<div data-page-node-id="XmooAD8lMSqhoRlp0n9Ipz" class="wrap">
+<section data-page-node-id="VwXhguLo2veNDpCSA8F6Ju" class="page-hero">
+
+
+<h1 data-page-node-id="UWpseGfVyezEtLvMkODpBH"><!--pnid:sMXCvEZnweq370SwJtGVwW-->12345 工单智能分拨 —— 退单记录训练的分派器</h1>
+<p data-page-node-id="AVTdNQbvRjwqhnEFN5kcNA" class="lead"><!--pnid:Fs1mr4gf3gUeKyGDICdXAH-->工单分拨错了就要退回 · 退回 3 次就启动区级兜底</p>
+</section><nav data-page-node-id="PZjV2wRHDL3dXb6gsbLPL7" class="subnav"><a data-page-node-id="EHQMLNxEbTZyt9UpwSurBO" class="on" href="#"><!--pnid:OJMQJCn5kFr7lKO84pMiHx-->场景引入</a><a data-page-node-id="EzclzgoxyLEh04OOW7jAaP" class href="LiveDemo.html"><!--pnid:onGm5OWC0aXdvQH0wBrx7a-->Live Demo</a></nav>
+<section data-page-node-id="2FSaSlfyg2D1dr8xqrKqmq" class="blk">
+  <h2 data-page-node-id="QaXsUYwZncaTMoTN2ezV9W" class="h"><span data-page-node-id="fw16GzWJmNFu1lESnhAPpJ" class="num"><!--pnid:Hn3HK6QYUNAkn1XFQwi5NO-->一</span><!--pnid:A0CT3CUKBr1T1D4onYc15V-->这件事现在是什么样</h2>
+  <p data-page-node-id="dI0kK2IFa9WtEk6yBSS6PT" class="subline"><!--pnid:xpkjbwkZwQjV3DLI5OSp8F-->12345 话务员 · 受理与分派 · 真实业务触发</p>
+  <div data-page-node-id="5jIiftrKCmJN2hnIt2jRvE" class="card"><p data-page-node-id="VZF1KEhxk58BWgT2O8VsIN"><!--pnid:GAIh8skFpCnr3hcKeXLb9I-->工单分拨后被承办单位退回（权属不清/职责交叉），退回 3 次以上启动首派负责与区级兜底，5 日内必须出意见——广州 12345 办法明文</p></div>
+  <h2 data-page-node-id="WL0YIFFarWPsYFKttzKsbR" class="h" style="margin-top:22px"><span data-page-node-id="yXjoKrRZ6o7V32g9UuGiu2" class="num"><!--pnid:pKv5uHQuIUMmrQD0f2QuD7-->二</span><!--pnid:KyDFQ3OYKwkRxxRzWuxeH8-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="S0C5hqeQ9sLpDs0WRFxJE9" class="subline"><!--pnid:KPXr8NXnXhcV5G6ERdn86U-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="ymZlA4p6G7QwnFQ8rAAdbr" class="pains"><div data-page-node-id="YI8ZLusozRlVMVuHyvXMOK" class="pain"><span data-page-node-id="Y2hVkNeepS9QqLNhj1ss41" class="i"><!--pnid:enxuS4v2gV10I4e8IYdEI1-->1</span><div data-page-node-id="lCsT6dGapzfUcLBpnl3k3i" class="t"><!--pnid:3u8GyBF5AcTSZh88oaxQno-->痛点一：分拨准确率全区平均 58%——退回工单占 42%，退回后承办单位推诿，重复派单率居高不下<span data-page-node-id="WSnUhwQcvxwnqAoJSUSIPX" class="src"><!--pnid:POFdLp7SQnzwrcWWoNd3HD-->依据 · <a data-page-node-id="SNlQqAci1G0TYVoKZHXuRJ" href="https://tj.people.com.cn/n2/2025/1106/c408648-41403340.html" rel="noopener" target="_blank"><!--pnid:vpefO8cxIQF7uV1YzD8BN8-->天津西青区用 14 万 条本区工单 + 2 万 条历史退单 + 300 项事项清单+ 2270 条街镇映射训练后，分拨准确率从 58% 提到 95%</a></span></div></div><div data-page-node-id="vyGSoJzx8S8ZKnGKiBjhH0" class="pain"><span data-page-node-id="oRzUB3yosEdfgb5PhPwh9y" class="i"><!--pnid:s5M3zcVXoN1fxriaOfe29G-->2</span><div data-page-node-id="5gclSw80d6CrefGiv9XpAr" class="t"><!--pnid:y7oTgJMCj7HDeLiHJVDqaj-->痛点二：权属不清工单涉及城管、住建、街道办 3-5 家，退回 3 次以上才启动区级兜底——一件工单能拖上一个月<span data-page-node-id="jdzju9Y8XvzxFpx6B8JniA" class="src"><!--pnid:8va2A9iAk3UUHciaM12iLj-->依据 · <a data-page-node-id="BTHk5fkANtesblGGj4rutZ" href="https://www.gz.gov.cn/gfxwj/sbmgfxwj/gzszffwsjglj/content/post_6986357.html" rel="noopener" target="_blank"><!--pnid:ZJvObd4XyuZty0znzTpHWn-->《广州市 12345 政务服务便民热线管理办法实施细则》第 19-20 条：退回 3 次以上启动首派负责与区级兜底，5 日内出意见；无回复证明材料视为未回复</a></span></div></div><div data-page-node-id="dhV3qoaHoBIfLtcbEVJifI" class="pain"><span data-page-node-id="TCJQ3VPDQyv9lxmdf43RCC" class="i"><!--pnid:Nf7PV9PgD1fNKwYsGHr21R-->3</span><div data-page-node-id="nIb5OwFRmTwI7oYZWyLU9c" class="t"><!--pnid:NREFuT4u71Yk4YlxzoBzC0-->痛点三：通用厂商分派器只有通用事项清单，拿不到本区 14 万条历史工单 + 2 万条退单纠错记录——本区数据是重训分派器的关键<span data-page-node-id="xixl75NWII2nU9PNlF1Jr9" class="src"><!--pnid:96iAWeNoQgzbvs3BiGbeI1-->依据 · <a data-page-node-id="VD2Asjo63CNGNE0tO4nxRw" href="https://tj.people.com.cn/n2/2025/1106/c408648-41403340.html" rel="noopener" target="_blank"><!--pnid:Q7SOJgCE6ANpRegEk1HqoQ-->天津西青区用 14 万 条本区工单 + 2 万 条历史退单 + 300 项事项清单+ 2270 条街镇映射训练后，分拨准确率从 58% 提到 95%</a></span></div></div><div data-page-node-id="bE3rznsnVo6Ac37317JuTX" class="pain"><span data-page-node-id="COM8mBXIIuBsf878fdqUsx" class="i"><!--pnid:GoPJ9jqZNYcqpv4oxuS8j3-->4</span><div data-page-node-id="qpU0k9QItXSxoZY2p1kfSl" class="t"><!--pnid:vDBykkBs27kMnM3RRSofvF-->痛点四：分派权在指挥中心研判员，但研判员日均处理 200+ 工单，没有时间逐件核对事项清单与街镇映射——分拨错误事后才暴露<span data-page-node-id="I8Qr4r7qtBQnBhWPGr2clb" class="src"><!--pnid:goRln8RdJuuWzG9fkvpqp2-->依据 · <a data-page-node-id="1JDLZ8T4lA2gsP6b6Eh7U4" href="https://www.hubei.gov.cn/pdbstatics/file/converter/2025/12/19/hg1664610.pdf" rel="noopener" target="_blank"><!--pnid:NPLubJqpuQGlK3Rkg5pjMm-->《黄冈市 12345 政务服务便民热线管理办法》：按时办结率低于 97%、回访满意率低于 90% 且连续三个月排名靠后由政府督查机构约谈</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="5Db7s4GAkBxXLJyTnR5PgN" class="blk">
+  <h2 data-page-node-id="yo0J605kX1FlmKuqR9h30D" class="h"><span data-page-node-id="lDCYHpNJK2NunIbZAq2rOp" class="num"><!--pnid:3UEn83gZTLLzmFEdMgCeBU-->三</span><!--pnid:BF5sk9KqDyoUoPa978N8Jo-->换个做法之后</h2>
+  <p data-page-node-id="japKqYKrWnSHLj6W8txYmr" class="subline"><!--pnid:rTkJA2HoKB6ROLWcOHQraP-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="9QE78JD8hsq3ZgLRY8Z3Kh" class="cmp">
+    <div data-page-node-id="P5CazQ8SZk7unQCn8BB073" class="old"><h4 data-page-node-id="CyUFbTjctOOtUjcyIugqUI"><!--pnid:QCmDjtgHL3AoG8cPA5VuxQ-->✕ 现在的做法</h4><ul data-page-node-id="6FPIBabE2ocbRrId47BKuK" class="list"><li data-page-node-id="g8lGA0ofkgYaIO5Qq3alaz"><!--pnid:I3jvXgzXsDtL6PF4Qgk1p7-->痛点一：分拨准确率全区平均 58%——退回工单占 42%，退回后承办单位推诿，重复派单率居高不下</li><li data-page-node-id="WVVSVDi69MxsAUa3NSALW1"><!--pnid:WdQV92ixuHiK7waEvy38cm-->痛点二：权属不清工单涉及城管、住建、街道办 3-5 家，退回 3 次以上才启动区级兜底——一件工单能拖上一个月</li><li data-page-node-id="tPrue1qeF1LWRM3NDLJD2S"><!--pnid:gi3aXKmTOBb8Dcxef7y9mA-->痛点三：通用厂商分派器只有通用事项清单，拿不到本区 14 万条历史工单 + 2 万条退单纠错记录——本区数据是重训分派器的关键</li><li data-page-node-id="X3IA1kworG7UOglRdQGXBJ"><!--pnid:mf6cqX569oLPw6i4FD6ca6-->痛点四：分派权在指挥中心研判员，但研判员日均处理 200+ 工单，没有时间逐件核对事项清单与街镇映射——分拨错误事后才暴露</li></ul></div>
+    <div data-page-node-id="BGIQkePzYrOh6V1O3TVX24" class="new"><h4 data-page-node-id="bIbr7Ku948LLDhSODy9Aqn"><!--pnid:F92JVd7wiChgWf1ADmDZGd-->✓ 交给 Agent 之后</h4><ul data-page-node-id="NdD76Yd3K8WJh5GH95xzDN" class="list"><li data-page-node-id="osUhe4npBvBxQgeBQHi3hK"><!--pnid:YzcX1aVu5fqANyzeGej8SJ-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="jlWMU4piHSYvZehtkEyAXs"><!--pnid:LjMBj3ttIv10z9t67lPyPw-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="WEKXu8uiNSNFCE8rtFvOLm"><!--pnid:4P65KWGrLMOOUCYmME3ggL-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="A5PPsyfIWwTb8tSE7efpDS"><!--pnid:g7Tt1blEtOpzhSVc24DcFh-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="4u5B9BCHiNeSxdeYlY1fR1" class="blk">
+  <h2 data-page-node-id="BIADsq4iFqFgiRbzCLxuva" class="h"><span data-page-node-id="6AeGRdjLQ3JE0RLl96tyGh" class="num"><!--pnid:EYJUhV4LRvXC9IK4KBDh8d-->四</span><!--pnid:pkcUv7uS0pVwFdGMaPZawX-->场景闭环</h2>
+  <p data-page-node-id="Oi7cvbZFRSA04cBFDF9byS" class="subline"><!--pnid:Vh0ybaZSVXtrT57LvxD6me-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="4zCUPYshK2L5uc7aOhQlSC" class="flow"><div data-page-node-id="0r083Nprql7LKvyD0LRoqQ" class="step"><div data-page-node-id="ap2M9j8rfAKmG4gmyIze94" class="n"><!--pnid:0ULXDi5xzHMVhKYA4ZlFTD-->第 1 步</div><b data-page-node-id="U2C3MNNX2t0xxdJhscUS1k"><!--pnid:ZnhiehamTreylkK6rlCvfg-->要素校验 · 工单要素完整度</b><span data-page-node-id="4M69LA0NHKnh1qZt4nrYn9"><!--pnid:BdBF0CyEAkjCA0zdw025qV-->诉求要素完整度 &lt; 60% 退回话务员补要素</span></div><div data-page-node-id="j0vRMdurthvJFS2r0PZBPB" class="step"><div data-page-node-id="BPTfiO6DuLpCtXikcWR5ck" class="n"><!--pnid:Y2MZrTP3hpEnSHQL6Z6n37-->第 2 步</div><b data-page-node-id="RsBu1PUdUXxuARlJV9xtKW"><!--pnid:I48zEiFWC3fiWaLAX9BRQT-->口径归一 · 事项分类与责任单位聚类</b><span data-page-node-id="V5SAFYA3f5Y5lwa80j5OE2"><!--pnid:H0IcZqCpUy5LLEgs0vyBsj-->按本区事项清单匹配，按街镇映射推荐责任单位</span></div><div data-page-node-id="O7TNoWhvzeqKw88I84qkFO" class="step"><div data-page-node-id="z1HZysUNETmZvf9sbehF0w" class="n"><!--pnid:BstcYZUDIeK4nPoL7FBSWX-->第 3 步</div><b data-page-node-id="f3Ml4IBXy6Og3AKjOp2Mrq"><!--pnid:EBhv8RksloQ5YCXqPXpkXa-->交叉核对 · 与本区退单记录对齐</b><span data-page-node-id="G61O7cpJz3UwIo93TMM2FE"><!--pnid:4vZzgFftlTRUr35vTMNXTn-->调出同类工单的历史分派与退回情况——避免再次分错</span></div><div data-page-node-id="vHtnfS70RPnMsx0x0L1bB8" class="step"><div data-page-node-id="9P35EkceJGOkCqhTwrBib1" class="n"><!--pnid:Q68dvnhhZt2LXtX3iScZIz-->第 4 步</div><b data-page-node-id="Gcz0wGeqUP2RnpkNElZjXc"><!--pnid:E0DGhw7UeNqK7ihu0RaDuE-->异常识别 · 权属不清工单</b><span data-page-node-id="crxhZr21hJDcIrwrpJ8fmk"><!--pnid:cRQm1yrwec0MH91kKWgzwj-->退回 ≥3 次的工单标「启动区级兜底」，附责任单位清单</span></div><div data-page-node-id="9J7UsMTRksqQbl9CPYxnYT" class="step"><div data-page-node-id="JhStzwPaYLrF2NIbN3yGx2" class="n"><!--pnid:vTc3htKF97u9N5MBrOGoRW-->第 5 步</div><b data-page-node-id="45r1ttWHdIP9WDF5CQ2lWI"><!--pnid:0OGppZfiCibRKEWTaSuXCW-->留证与签批 · 分派建议 + 退回理由参考</b><span data-page-node-id="YUBDTxEEmHWucJNQvGfTm0"><!--pnid:exV5K9c8UUpNxvXLjbqLzn-->含分派建议、责任单位、退回风险、办结时长预估</span></div></div>
+</section>
+
+<section data-page-node-id="XPmD3273TrT8erUtoXPELJ" class="blk">
+  <div data-page-node-id="91BQz13x9Zo7bZxFfnFMog" class="g2">
+    <div data-page-node-id="9HTL7A2FiuFjRliNUpeW5T" class="card"><h3 data-page-node-id="NyNAQRVWEfmHSYxoaYyqdT"><!--pnid:H8PAwlXMReNSx0OT5WcXnt-->要准备什么</h3><div data-page-node-id="2B8vbxaaaoCGp5WSJvKp78" class="src"><div data-page-node-id="8UEfPlG2p1sIyGMjhIPlFw" class="fn"><!--pnid:EITzzvP8zvUvHpYHQbJ30I-->近一年工单导出（含分派与退回记录）</div><div data-page-node-id="9LZut9n2yn8EgZBmZ35o1s" class="fd"><!--pnid:bbn1bhUHPHlRXOGUnY6o3v-->工单全量数据，含分派、退回、办结等环节</div></div><div data-page-node-id="SnMQhrOQ7dyDfgT9pHy3PH" class="src"><div data-page-node-id="Fbe0TTvTG265iAP4QmtyFq" class="fn"><!--pnid:Ws8Wp5i7xuAkWbfqcYfWNS-->本区「事项清单」+「街镇映射」</div><div data-page-node-id="95mAnBmu7rY8GvQeP0OSIz" class="fd"><!--pnid:kUfdBLmQB1lCaqWCwLcBcl-->300+ 项事项 × 2270 条街镇映射</div></div><div data-page-node-id="6GPE4PfZ6kASTXUvpJSU54" class="src"><div data-page-node-id="Dr4QhQWqzX8sMX3Mq6SS4X" class="fn"><!--pnid:xl6XVQ7R0t7hGf2rzEreGr-->退单纠错样本 ≥2000 条</div><div data-page-node-id="WpUQcGj8dXsk8Rj7aheNHl" class="fd"><!--pnid:a8btNAV6puwtkVFU4XacjJ-->用于重训分派器，本区私有数据</div></div></div>
+    <div data-page-node-id="sSq6UZnEpKLrhL9XoNvZ94" class="card ev"><h3 data-page-node-id="1z5nbtY9ESuAk4YGtw3sKx"><!--pnid:OP4scaqcUVNvrI1fVLFI6Y-->为什么这个场景值得做</h3>
+      <p data-page-node-id="bPEc4zboOOGPT1MjD5z5Qv"><!--pnid:7fdopyZgL1sOWEW8Z2BTwT-->痛感 5 × AI 适配 5 ÷ 落地难度 3 = <b data-page-node-id="TmnUWMU7ysqbVAbr6jjE0t"><!--pnid:2RVZBOVTsQ13WJa56mqO4c-->10.0</b></p>
+      <p data-page-node-id="MPRLOqMifBzEX9PfHXlibC"><b data-page-node-id="D5oqfICY35JqjeOSoPGvTO"><!--pnid:zrclSy7ji6YZtRYsg2Xdw0-->最大差异点 ·</b><!--pnid:isRXKN5hJT8Xtw7G43gvQ8--> 不要求客户先整理本区数据。直接喂历史工单 + 退单纠错记录，Agent 自动按事项类型与责任单位聚类，本区数据越丰富分拨越准——西青从 58% 提升到 95% 已验证。</p>
+      <p data-page-node-id="lvkkWUb57UbCXtDNlTYRwl" style="color:var(--ink3); font-size:12.5px"><!--pnid:QAAaG48VofMEDbh4RT2k6u-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="yE1wjto0grpjw864RJLzjI" class="blk">
+  <h2 data-page-node-id="nNU457InZGEgfca60A2vCw" class="h"><span data-page-node-id="T3WmQtlVOsLZgTjnBlNIqC" class="num"><!--pnid:MtGjy5kwmLYkvUirRs8InT-->五</span><!--pnid:0ZLQr5YuDDNMmJK9p7kQse-->会产出什么</h2>
+  <p data-page-node-id="3plUSN0JBTxcBP0bwIXOM2" class="subline"><!--pnid:sjqhhDUcVOn7wu4OQ11N5V-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="GdHeptLst3lAbVQRwFsyAD" class="outs"><div data-page-node-id="ssL9mOCceTPkgDF6uf6bvi" class="out"><div data-page-node-id="qzDdyS7bv8XtkN4SKujqwe" class="on"><!--pnid:U59j3BbVeMauX22RwhMJsI-->正式件本体</div><div data-page-node-id="t6FfCYk8Cx754DeN7D4Mky" class="ot"><!--pnid:zYUx420FWoC7GHgpDa71Iq-->分派建议.xlsx</div><div data-page-node-id="ISHa3ksLU1TSbYWTKhIn1I" class="od"><!--pnid:dHkNHghpA6CJtzjPBrHXvm-->正式件本体 · 含责任单位、办结时长预估、退回风险</div></div><div data-page-node-id="2HUxqGwV1ijOga03CuBEI9" class="out"><div data-page-node-id="BpzswvenrqH3UwW5pfenxF" class="on"><!--pnid:2cX69CfESgBpGOtxeunkF4-->可派发清单</div><div data-page-node-id="Ua0WtBxZdOObV7ECMqRvG8" class="ot"><!--pnid:mQ7momLPoOx3OAhxHorZHg-->权属不清工单清单.xlsx</div><div data-page-node-id="2G4UgX4bk5nWfEpDc0gJnz" class="od"><!--pnid:dvh79eZ3t1PM8rnJXlrzwp-->≥3 家责任单位工单 · 建议上报疑难工单</div></div><div data-page-node-id="t3ODIg9EJDDefsNFsZpDZ7" class="out"><div data-page-node-id="s6fHX5hl560kntNiFLS6T2" class="on"><!--pnid:NdIdgWHNoDzSRbniaUzxFo-->可派发清单</div><div data-page-node-id="dvtaTlJPG2i8CYiiwj5hIr" class="ot"><!--pnid:RB1TgEFuNp5mZd1hygc32p-->分派准确率报告.xlsx</div><div data-page-node-id="kHa7pUtXWMLcUwxmv5U1gk" class="od"><!--pnid:p2oEejFE6WWEReKdJ29YZc-->本月分派准确率与退回率环比</div></div></div>
+</section>
+
+<section data-page-node-id="7Q5qq6urX0urmoQrKLxwhK" class="blk">
+  <div data-page-node-id="ZK4gsc153w1o1SQPt55grN" class="card warn"><h3 data-page-node-id="0z9TGWF0svJfDWj0ed6tfu"><!--pnid:AYl8WCAVdudE4FuxlvVzsJ-->这套东西不承诺什么</h3><p data-page-node-id="TQCznUemsaUzeTRLyo2pdf"><!--pnid:CfARtRmCzXReF5GhquJTcV-->不替代指挥中心研判员的分派终审权（首派权在指挥中心）；不自动启动区级兜底（启动权在指挥中心主任）；不跨区共享分派模型（模型归属本区）。</p></div>
+</section>
+
+<div data-page-node-id="iVANrpQhSEB2rYBIiLNQ92" class="cta">
+  <div data-page-node-id="Z8VmWFGKkeOHoXQ18Av8iY"><h3 data-page-node-id="LHZhZdnpgygf2QIxX07m5s"><!--pnid:ANo1BaKW6hapb1vdPCP41K-->想看具体怎么跑？</h3><p data-page-node-id="GcNsVACYolLOoFaaqIKW60"><!--pnid:ej4xXc6Pee9zclKcE3yjpp-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="GJdqBtzoyKOxpou0Rn3sRP" class="btns">
+    <a data-page-node-id="BY6YKD3wToC6D59PBCHTUO" class="btn" href="LiveDemo.html"><!--pnid:SGXbHkm27XSs4Wu5QqqYXP-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="Pa9ky25sA4T8vYMHZnwUs6"><!--pnid:5ufLzv1eOMewsBrWEw7Akv-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="onQthQADsBoXe6lqo1QahV" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="dgzWnkzgkrbg0DogRRY52M" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="tFSjSq5EUqjkt6NEpDxEmE" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="itZVGZTzsQkqKEKYx3mlGA" data-pnid-children="cbK4V6mesRnrk7ufRVg1lX">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="kpFJu8MvCFyXzKi9YOYHZW" data-pnid-children="d0RwcRhp4AR8bH6IfujPi4">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="7sN6mMdmpiwB7dl9x7o4Oc" lang="zh-CN">
+<head data-page-node-id="TYrijaEBr5NlGd3pG8NeTq">
+<script data-page-node-id="B82ONieheFAHUo0eP5vBbb" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="e874pz2gcjVW9w5PYXdHhv" charset="UTF-8">
+<meta data-page-node-id="W3fFyJkd6DdTpL6ECEEnZc" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="oQUO6UMTYzaE7sN8UE7LnR" data-pnid-children="CLM4qwVDw8LMQMfgPFuFQI">语音转结构化跟进记录</title>
+<link data-page-node-id="5EEcp7Zo0sUj16WCw3Swvi" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="MUw58xdK2E5FI3GUJCwjui" data-pnid-children="nHvRJG4aMNWVkD7IWMwOJa">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="XXtP9BPHvhBwEvA9spzpRw" data-pnid-children="pbKUpvbNOK0lr0mD3yzHr5" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="0o0DjxbR1WFjNWRvJAaNEu" data-pnid-children="zup0DMiSLFxLHM5Fz1yvEk" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="p8bWGu6CcK2mK0IogAJ4qY">
+
+<div data-page-node-id="qsEYGrKdlDJ8wXqKRRzSZV" class="wrap">
+<section data-page-node-id="A4dMSOSg9nZZ6q2GyQTsSK" class="page-hero">
+<h1 data-page-node-id="iuXqjHoGCWQL2xllR9SSqy"><!--pnid:RAnnfwq8j5tGzCZ8PS4PPC-->语音转结构化跟进记录</h1>
+<p data-page-node-id="5YKpx9aPZptMjW40pJO03V" class="lead"><!--pnid:PdSaeBMA8XLqxuRhUAzXGs-->周一例会要复盘，CRM 里的数据全是编的 · 真实的跟进过程躺在销售的语音里，没人捞</p>
+</section><nav data-page-node-id="GMHBsZeaA6L5qI91c1fyqP" class="subnav"><a data-page-node-id="vb1kjZd6b6T1VJ8YPGMCop" href="场景引入.html"><!--pnid:dHbriDoIv5Xdpg0koJWgyE-->场景引入</a><a data-page-node-id="1dTaNA2Jp2vpBM7F5dzXQU" href="LiveDemo.html"><!--pnid:vxKnYO8iLRAMUXDJzFpvay-->Live Demo</a><a data-page-node-id="m0wMDyv3awlDoyCTtBJlIH" class="on" href="#"><!--pnid:6qUGkOsq0k2ZCIvB5BR6iY-->推荐任务</a></nav>
+
+<section data-page-node-id="RmBf4bEhO0XUIBnTAb9ixp" class="blk">
+  <h2 data-page-node-id="BDn02QheuC7hqPf2Ux47rC" class="h"><span data-page-node-id="BFtQuFloNZF8bYkLgdfwF1" class="num"><!--pnid:WyEa8r3dlwXSiE9ixHuQVZ-->一</span><!--pnid:CB53mcDuGdOPqGpuP3AdQi-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="h0WNkoHN8yK5I4JopzHAys" class="subline"><!--pnid:LJhwvoUCYLRuSdnY1mRQpr-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="Riolrohx5LIk8hrnU997hc" class="card"><p data-page-node-id="1Q356rW9gZ4BtsUvtWqpaz"><!--pnid:oOh21YF4UX7YcbDb8JkPAi-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="CAWwsjDjmjl58KQOMjaVwA" style="margin-top:10px"><!--pnid:RjAkOckEt4BorpTmCOuuHS-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:VKIZZrSsHrLbWTHGvCy5wU--><!--wb-skill-start-->
+<div data-page-node-id="XCup182cw0M3gOrRsk0YIU" class="wb-skill">
+<p data-page-node-id="sxBSOX46c4vncZCvXOhQi0" class="wb-skill-lead"><!--pnid:7MsF1ICeY2H6hOvoTpzrwy-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="OgoN6MiWsV228inBi5uaAh" class="prompt" id="wbSkillPrompt"><!--pnid:PpqlA5xHky4a3PEwIc7JSR-->【准备】这个场景的规则都在「语音转结构化跟进记录」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/IRaxTAcOFwFsjy3BevFr7p/_2XoZtfjaoak/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="fysZt3ctOwTxGbsy4Azxky" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:Ov2GeletgclYHzVTBeewW6-->复制</button></div>
+</div>
+<!--pnid:Q6SW25nbUcgVM1GG5mdloB--><!--wb-skill-end-->
+<section data-page-node-id="Kmd5gn6f05HC7vtj3nQJLK" class="blk">
+  <h2 data-page-node-id="hnyNWBEDpdvPkLh0f5h08G" class="h"><span data-page-node-id="Vuy7u766nXOOCN6aJIGnry" class="num"><!--pnid:gySDL4bpmZnlmxnNCXXEpy-->二</span><!--pnid:dAqit49JoZ7O72Lf5p3lsF-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="N15EScEuaD9o1bIO2gylES" class="subline"><!--pnid:ErTrYnQRNQG25BLs7uBKPR-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="5cYAFTaaeW2RX5lo4C2Plu" class="tlist">
+    <article data-page-node-id="0UMjodTyHWksjQJUw7WyM0" class="task">
+      <div data-page-node-id="lMsKg7kzNrmsBrVgZMao7E" class="th"><span data-page-node-id="pjkcCpp0zl00sM0UaU3FA4" class="no"><!--pnid:5dY4Xr57vU6J7s3XhI4WE5-->01</span><h3 data-page-node-id="Tz3jV5bdlE6OwFQt4wIoxv" class="ttl"><!--pnid:CFJC6jjkI361vvBTV3MYDK-->首推默认</h3><span data-page-node-id="YcYJpqXJ4D93Y5NElDiEhX" class="star"><!--pnid:C5KQTVHuyH2Z09hbrtrJVu-->与一键体验入口一致</span><button data-page-node-id="taQzSwINrgSMfeJLCl8cu0" class="cp" type="button"><!--pnid:2gH9OzGDrgqdG4uVAD3zRY-->复制</button></div>
+      <p data-page-node-id="oyP0yWnwKgS2VtSud6WwY8" class="tp"><!--pnid:MM0VHqGNkdz7CQSrsojK02-->刚从客户那回来，路上随手说了段语音，12 分钟；这周的微信关键往来我也导了一份。另外两份是现有跟进表和上周的语音转写，一起发你对照。
+帮我整理成跟进记录，按我们跟进表原来的列来，合并进去别另起文件；客户原话尽量留着别加工。我答应客户的事单独列出来——上周答应周五前发案例视频这事好像还没发，这周又说周三前发，这种续期你帮我标出来。 有一条涉及梁总口头答应的 45 天账期，跟合同拟的付款条款对不上，你标出来例会上要过。
+交三份：跟进记录（结构化）.xlsx、承诺追踪表.xlsx（到期标红）、周报复盘汇总（真实版）.xlsx。周一例会我要用。</p>
+    </article>
+    <article data-page-node-id="jJkCcKbqWUEU9FMPcK2YYS" class="task">
+      <div data-page-node-id="7yPzPzZryH6b7sq0QabOfB" class="th"><span data-page-node-id="AqySXf6V6vX9irpv2E21Kx" class="no"><!--pnid:iRELenIEuSTWNBmdrA5u3F-->02</span><h3 data-page-node-id="cNe1TZex7dONqF0pMKtbtn" class="ttl"><!--pnid:kHR5inZTlt6TDZ9DkboRRz-->只做承诺追踪</h3><button data-page-node-id="r4ORcGOQHWCvUmEuKD8Vxb" class="cp" type="button"><!--pnid:F5IwygYcmBOg7itvjVBPoU-->复制</button></div>
+      <p data-page-node-id="rKt0aGo94K3V4ECEclU5wp" class="tp"><!--pnid:Pgb8rGyNw92pU0Jd42h8wM-->先只做承诺这一件事：把语音和微信里我方答应客户的事逐条摘出来，算清承诺日与到期日，跟上周的语音对照找续期。产出用 Excel 一张表：承诺内容、对谁承诺、承诺日期、到期日、状态（未到期/已逾期/已续期）、续期次数、涉及金额或条款。已逾期的标红。</p>
+    </article>
+    <article data-page-node-id="dh9tDvPZ6WHdjuNsVbvtsQ" class="task">
+      <div data-page-node-id="lmGCmWw8loLboI06L7SceT" class="th"><span data-page-node-id="8M6uPSoycgQw9GATUtLFl5" class="no"><!--pnid:NrLBzLu9WL63UzDJ5iraWk-->03</span><h3 data-page-node-id="seYWqShk29SdKeN47Q0Vod" class="ttl"><!--pnid:Cf3xh8imqZkqs0oLxqompG-->换成按客户分组</h3><button data-page-node-id="sqVNP9336mdA1eNDSKHI5E" class="cp" type="button"><!--pnid:5iVJKFgHFx3vgYe12sScJz-->复制</button></div>
+      <p data-page-node-id="r6mS9cHLAlhNs0VPOipRbn" class="tp"><!--pnid:9VAXSeq6DJ1zQXgZqwRirO-->换个口径再跑一遍：这次按客户分组整理，精工、蓝湾、鸿图各一段，每段下面列该客户本周的全部往来（拜访、承诺、客户表态、待办），按时间排。产出用 Excel 一张表按客户分块，末尾给每个客户一句「当前卡在哪」。</p>
+    </article>
+    <article data-page-node-id="Oa4NY36XDqX6h4FdyAJrLB" class="task">
+      <div data-page-node-id="64E2ntXW6uwS6YzMyt8lSL" class="th"><span data-page-node-id="zYa5VjclU3dUmVAPhOiXa5" class="no"><!--pnid:foN3p8O18h4nhIysQm27mt-->04</span><h3 data-page-node-id="jyMnPan97PYk5XnOVLtMDI" class="ttl"><!--pnid:ak5TRhroM28P1LtrXfOL99-->语音加微信加现有表三源合并</h3><button data-page-node-id="bXreCc4TmgIxYeb7Zy1lDe" class="cp" type="button"><!--pnid:KtLvUKqPTI7DSWM91hfsTQ-->复制</button></div>
+      <p data-page-node-id="85dHILW2nbEKR0mzfPHGyI" class="tp"><!--pnid:GfZ2VHJ9YTPBiQIMxuG9pk-->三源合并成一份完整记录：行车语音（12 分钟，3 处口误纠正、2 处句子没说完）、本周微信关键往来、现有跟进表里已有的行。同一件事在两处出现的合并成一条并标出两个来源；口误和没说完的地方标「？」。产出用 Excel 一张表：日期、客户、联系人、事项、原话、我方承诺、下一步、时限、来源。</p>
+    </article>
+    <article data-page-node-id="FL8MLPCISROSam0sRykF6s" class="task">
+      <div data-page-node-id="KetRwD6XhBJ3lSoKo40n8M" class="th"><span data-page-node-id="ejeL15gKlUoQmfhyHj4bpf" class="no"><!--pnid:0wDiaERuBRaLhiOjYsuiNL-->05</span><h3 data-page-node-id="Xlb1ttlVLq4Tp33g5LJhSa" class="ttl"><!--pnid:5Kds3WK0qIYkuqvlg0VqbC-->给周一例会的一页</h3><button data-page-node-id="4TmowNALNqkHO0V1KdO97a" class="cp" type="button"><!--pnid:lb14Wrqp3iv5b5i9odHaOm-->复制</button></div>
+      <p data-page-node-id="LrZf2x6lnMZMQhaFLQzcfR" class="tp"><!--pnid:SZtBHfaSOrKRjWyeTBKxJT-->改成周一例会我照着念的一页：本周拜访几个客户、承诺几项（几项到期）、推进中商机几个、风险项一条（那条涉条款冲突的）。产出用 Excel 一页纸分四区，每区不超过三行，明细表不用给。</p>
+    </article>
+    <article data-page-node-id="1zddFc2Yd6DkOEs4O44hCS" class="task">
+      <div data-page-node-id="hWlLiq4fb4WJfyj6vXAP3q" class="th"><span data-page-node-id="HzPIHcOXDyXLA5CXqjLFNv" class="no"><!--pnid:oc3CWmJHvZPp3r0GTxwCTe-->06</span><h3 data-page-node-id="UEGyFbeYQkIrdLRRS9W3Dt" class="ttl"><!--pnid:zZduMjcH4wMeYlYMybgrxl-->让它反驳自己</h3><button data-page-node-id="x0ZnuhMFW4oNBCxazV0GFb" class="cp" type="button"><!--pnid:mDEwm3mNzhcy7Vkh5Gg734-->复制</button></div>
+      <p data-page-node-id="iSNTLuB7Gvnpfxo5AYJPXZ" class="tp"><!--pnid:FohXo5TLxoVj0Xw2ecgxnO-->拿行车语音转写和本周微信关键往来，判定「精工对节拍有异议」是风险项这条，反过来挑：张工原话是「节拍如果稳定在 13 秒内我们就没意见」——这是条件认可还是异议？还有哪几条是我把客户的话加工过了。产出用 Excel 复核表：判定项、客户原话、你的转述、是否失真、应该改成什么。</p>
+    </article>
+    <article data-page-node-id="mY6eyrPb5unw3iHJQmpePh" class="task">
+      <div data-page-node-id="2AaeUk5sAufen1IoXxVF4m" class="th"><span data-page-node-id="ijgiwe7XGyxC8YJGCLejtv" class="no"><!--pnid:srr4lIAtg2gssAATh2RTzK-->07</span><h3 data-page-node-id="JyzXPlUaarRWPjcmP0VF5i" class="ttl"><!--pnid:ESep8grbQQIYk9LK9yW1qs-->专门比对上周的记录</h3><button data-page-node-id="Rcp8hjXJJVRNw0W6Dl8FSH" class="cp" type="button"><!--pnid:VMEZIoSQfYNWqOKdMhZuEw-->复制</button></div>
+      <p data-page-node-id="0i2hJ5JylDrK5qKE8I8AiL" class="tp"><!--pnid:WDMCRFyJLNoPnld8gdq2r5-->专门比一遍上周：上周语音里答应的事，这一周有没有兑现、有没有被催过、有没有在本周语音里被重新承诺。产出用 Excel 对照表：上周承诺、到期日、是否兑现、本周是否续期、客户是否催过、逾期天数。续期的单独标出来，我要看同一件事被答应了几次。</p>
+    </article>
+    <article data-page-node-id="JNf7RlrmLQWFVDHVfx16EM" class="task">
+      <div data-page-node-id="L1uZZqIuO9aBPrKoy1feP1" class="th"><span data-page-node-id="NpANDnWQu42EK9iBkLv9QK" class="no"><!--pnid:o08bvhayj5NhEHjcUrtqMB-->08</span><h3 data-page-node-id="OkIRCIdLrpe7y1LxZYsQ2i" class="ttl"><!--pnid:oaHUnVkDHpbCzGVNPSLEuH-->对照记录字段自查完整性</h3><button data-page-node-id="64b2ceyxFbvp77QWnmtpCX" class="cp" type="button"><!--pnid:htXdeyzSfg6EmiLfeP51hl-->复制</button></div>
+      <p data-page-node-id="phcIJOk9sD0a7gqJjUjFA2" class="tp"><!--pnid:JdrFdSgPrgwD45GDYlIMmZ-->对照记录的八字段（日期/客户/联系人/事项/客户原话/我方承诺/下一步/时限）把这次抽取自查一遍：哪几条缺字段、缺的是语音里没说还是我没抽出来、客户原话是不是真的原话、人名不确定的有没有标「？」。产出用 Excel 自查表：记录号、缺的字段、原因、补全方式。</p>
+    </article>
+    <article data-page-node-id="AGnE6LcoPWV3C68FHalzvH" class="task">
+      <div data-page-node-id="H9xbUrkS6YTrbTrxcpIV9q" class="th"><span data-page-node-id="8vaFUbDcwSg0cVxgefbqX8" class="no"><!--pnid:LHx7pQQcXuB0s8B3fSHRA6-->09</span><h3 data-page-node-id="iQLuNcBsvoi7zyDd3tWdTq" class="ttl"><!--pnid:1BwOmkCIv2g62l0wCCRnBH-->折算成账期与温度影响</h3><button data-page-node-id="Dlo2574Sovp2Szmw78ZNai" class="cp" type="button"><!--pnid:OkgijsQxUNdljQOSMD8qeN-->复制</button></div>
+      <p data-page-node-id="5fB6KIpICclCWf1DEECCt4" class="tp"><!--pnid:u9KB7I27DEqL4w8YGgDnsS-->折算一下：8 条记录里 3 条是承诺、1 条已逾期（案例视频）、1 条涉条款冲突（蓝湾 45 天账期）。把 45 天账期按 87 万合同金额算资金占用比原条款差多少、多少钱；再说清逾期承诺按客户温度流失的路径会走到哪。产出用 Excel 测算表：事项、金额或天数、影响路径、算法。</p>
+    </article>
+    <article data-page-node-id="rcfiqKh9Gnt6hDZYOLabyW" class="task">
+      <div data-page-node-id="64j4yYECP1LpptLaeNkLvD" class="th"><span data-page-node-id="yG86O8tpG0Gnw8raWKDF9r" class="no"><!--pnid:M6fMae9Qbntm91pnyrkL9v-->10</span><h3 data-page-node-id="UQ8XKjX1v3HEWHvuWmwhdw" class="ttl"><!--pnid:z7N2VMc2PmvQSB9rxbXvl3-->沉淀成口述归档模板</h3><button data-page-node-id="HUJwvVc2WjZugiIW5xUNHJ" class="cp" type="button"><!--pnid:E9w5TSXjybJM7sGG3gBgUS-->复制</button></div>
+      <p data-page-node-id="6VbbSAE3TOIxX1Gl6hUAmR" class="tp"><!--pnid:egv3FLsqvVCDnZShysPr7r-->把这套动作沉淀成模板：口述语音要说清哪几件事、抽取的八字段定义、承诺追踪表的列与标红规则、微信合并的规则、周报四区怎么汇总。产出用 Excel 一份模板加说明，我以后每次拜访回来照着说。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="iVSfTXFX5iKCzWfZ2ZkPa3" class="cta">
+  <div data-page-node-id="5IQnyJRNBxrxgZZfgsujvu"><h3 data-page-node-id="4QvKjKQeI9lXpkDlT0QFN8"><!--pnid:BtTjs5WJfutx3HgZCkm5gT-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="bFOQWhGUZdUGgVIspU8TjM"><!--pnid:jskzAOhw2N41tBPceDHbQz-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="RfHhFvgYDcEcUR0KlBR6Dt" class="btns"><a data-page-node-id="xMBenTBBPlPscnI94DPXbh" class="btn" href="#" id="ctaContact"><!--pnid:XDafp5Aevd7gGaltcgzgGM-->联系我们</a></div>
+</div>
+<footer data-page-node-id="YXUMKhZlUxBw5NndfNLv0I"><!--pnid:mToIDP4OXeWpuHncf3X0yU-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 对外动作一律人工确认后发送</footer>
+</div>
+
+<script data-page-node-id="g2qhCE3NBLur5bZEOkupIc" data-pnid-children="X2dquh3ISdv6bdE2BDcX9T">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="ahQUNdUTAfVU1nEpqfFNdy" data-pnid-children="R9TXzCHKv4Joeha80mwZ5D">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="JoWt6Un7noAggkWEvdqchf" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="Jp62ZpPtdqqXnda7dItMvs" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="hNFozeVj4Hdle2PCDm1DpM" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="mQ53ahRwwnW5cYC99Pwvrf" data-pnid-children="b9BIU4n7ocnU1m6x2TFMwp">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="ob2Mq90lTJW6NPluNkQuPa" data-pnid-children="lg92GMt4qmJDaSkiRGfIHS" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

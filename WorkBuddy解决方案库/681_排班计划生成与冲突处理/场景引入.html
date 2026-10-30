@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html data-page-node-id="GMGW63D7AyoPXQFm3tB9u3" lang="zh-CN">
+<head data-page-node-id="Dso0ssjpdVWSbyBnVVtHeB">
+<script data-page-node-id="m64kVIlJ4iuH8qlSEyjgKy" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="ZqHhmO7IirGdsnCvP0cMhQ" charset="UTF-8">
+<meta data-page-node-id="rL3cn1ygra5ZoxiOl818L9" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="3W2vJGvwUk81iHSdn2Yvzz" data-pnid-children="bxEwtiVibF4n7fcaHmiUZN">排班计划生成与冲突处理</title>
+<link data-page-node-id="1kqvjhRFHnmJpBE4Ecdwa8" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="tJ9lKtYzV9eqXcFJMjaGrt" data-pnid-children="EsPwvqxFJ06RVVTyuyszsY" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="ioWOoapbdMMWEWjmBeQ1yY">
+<div data-page-node-id="nM0RLU8z444CWgDVzEG35V" class="wrap">
+<section data-page-node-id="o6E2czO8H0R2qHz8tnncQf" class="page-hero">
+<h1 data-page-node-id="Tw5Xaw7wvU7g8aPzYKmphb"><!--pnid:cvpGco6t2tcbLUGRcyirJP-->排班计划生成与冲突处理</h1>
+<p data-page-node-id="QVMj043Egx5UZDzIlqm8MY" class="lead"><!--pnid:VsgyJcL0YZUyoQttz7inPQ-->每周排班耗时 2 小时，培训不合格员工被排上关键岗位，工时合规风险难发现</p>
+</section><nav data-page-node-id="3Y1hXdZmSuNp9iS7zlkKtQ" class="subnav"><a data-page-node-id="TvTRGPfMzLynbMG1emO2pK" class="on" href="#"><!--pnid:JBHl3Y1YwBfLQ9leeBxu7v-->场景引入</a><a data-page-node-id="Zat46HO9isVaBmzKuUV4g2" class href="LiveDemo.html"><!--pnid:4sSl57PGYWq991lrD58jcX-->Live Demo</a></nav>
+<section data-page-node-id="2MuGmjX32DkYb3I0rDuc3l" class="blk">
+  <h2 data-page-node-id="TDyxW2kzLJfnTC5zHhAs0I" class="h"><span data-page-node-id="Ywe1liW503VXfkRPsqN9QS" class="num"><!--pnid:trYZyNaAFApPTjUM8NcMmH-->一</span><!--pnid:KnQ2oBEzGM5vmEJRonQpkE-->这件事现在是什么样</h2>
+  <p data-page-node-id="BSRPF3b7LhwbN2MjwbX7T6" class="subline"><!--pnid:08tbpdMwluhanSwmiUbIno-->门店店长 · 每周一次的两小时表格拉锯战</p>
+  <div data-page-node-id="RIkXTi9dPBvrhKxClQV8pG" class="card"><p data-page-node-id="BWutnS7Vk54d2gElilHr6y"><!--pnid:Si6NPwhuAZyOIHpYeNVbwY-->某连锁餐饮门店，周日下午。店长对着三张表排下周的班：员工信息表记着技能等级和五项培训记录，需求预测表写着午晚市各要几人，请假记录散落在企微聊天记录里。排到晚上七点，表格终于有了雏形 —— 但新员工 S003 五项培训全不合格，却被排进了午市收银；S002 的收银操作还停在「培训中」，晚市的班已经写下去了。上周工时有没有超标、两次班之间间隔够不够 11 小时，没人有精力逐项核。这份班表发出去之前，店长自己也没有把握。</p></div>
+  <h2 data-page-node-id="sVS1ZciFoOofkvlyOCabbQ" class="h" style="margin-top:22px"><span data-page-node-id="DvsMLZcNhVaNmd9cIvNgMV" class="num"><!--pnid:VDHAmuv9EdvgjkjiTIsixe-->二</span><!--pnid:x3gyRc8VxSvH4gQE7EVlbC-->痛点 · 每条都发生在昨天</h2>
+  <p data-page-node-id="YLFKX8mNpkvp9JT2vMhfPT" class="subline"><!--pnid:60zLm8ooRwv63reUiHoxy6-->不是流程描述，是门店每周真实上演的事故 —— 以下案例均取自场景调研与演示素材</p>
+  <div data-page-node-id="ugDlkoZBv2rAuJvA4QDSqX" class="pains"><div data-page-node-id="rufazgf0kNtTadxZGXqdtt" class="pain"><span data-page-node-id="yDM0qBghZ9dPdhJf18dXwZ" class="i"><!--pnid:2LoTo4U1ozXD4ggICxfZxi-->1</span><div data-page-node-id="6C0jiYyHylznljjlJuki7p" class="t"><!--pnid:jU1LSwGHpcWulNciAocjxQ-->排班每周耗 2 小时：员工技能、培训记录、可用时段、请假、需求预测五类信息来回对照，一个格子改动全身</div></div><div data-page-node-id="5vMcdQ1VG9qGLWPNVFYOYw" class="pain"><span data-page-node-id="2yaWBe2MKQI9Ts1dndGEOG" class="i"><!--pnid:DBppeQi5EqItVEBkzS3FVF-->2</span><div data-page-node-id="zEPQRMmAZneR3VUQWuuE0m" class="t"><!--pnid:GDFOfvilU7PidzvPOm3Cvv-->培训不合格员工被排关键岗位：S003 培训 0/5 照样进了午市收银 —— 不是故意的，是培训记录和排班表不在一张表上</div></div><div data-page-node-id="bC4efYRWfwUipqx0Pacy8a" class="pain"><span data-page-node-id="jCgTD10ilyRGnAay2CTK4n" class="i"><!--pnid:Fjc3MVaHSlG0v5GwTcxNkg-->3</span><div data-page-node-id="XBz4gSTSjZUsRoLL20GSUf" class="t"><!--pnid:huWJtaNoufy4fZDrGJU524-->冲突靠人肉检出，5 类冲突查不全：工时超标、连续工作间隔不足、请假冲突、技能不匹配、培训不合格 —— 逐项核一遍比排班本身还久</div></div><div data-page-node-id="8v5lL0Bx4FHwE8MvDAGge3" class="pain"><span data-page-node-id="6WqKLDMZw7WYXVGKD5VxCn" class="i"><!--pnid:Nldfi8IKfNyyXMTXoc0HCq-->4</span><div data-page-node-id="q0dAUM9vNjO6pCh3i2LdIr" class="t"><!--pnid:lFgLTwOtlmMTSKQLMy8oJK-->出问题了没有替班依据：谁培训合格、谁技能匹配、谁可用，全在店长脑子里，临时调班靠打电话挨个问</div></div></div>
+</section>
+
+<section data-page-node-id="zeFn3YBEcMThe2CoI21Ft0" class="blk">
+  <h2 data-page-node-id="euBgfSjXeFgpwu6JdAHgOW" class="h"><span data-page-node-id="oeIAbOBh0fgeuk0AKRT5kL" class="num"><!--pnid:K8InqSmX71sNcmSYrihDMw-->三</span><!--pnid:5Q4Y7HqL37Anxo3pxgceo1-->换个做法之后</h2>
+  <p data-page-node-id="O8EAxHe8nHdv5Ex1NF25WB" class="subline"><!--pnid:e0Je5QiWlcsomz0Ovei27i-->变化不在「快」，在「不排错人」和「冲突查得全」</p>
+  <div data-page-node-id="9C9oOhKivnPuTWh8DHwJbR" class="cmp">
+    <div data-page-node-id="5mErckgmsucSywNJeREFGR" class="old"><h4 data-page-node-id="9duZreVnifNZmVIMXX9uJr"><!--pnid:BJTebIf5AFIlUMAqLRes5G-->✕ 现在的做法</h4><ul data-page-node-id="yeg2VZvUHnVJeIjhwhK6Cm" class="list"><li data-page-node-id="tc77YvxGAHLC1CEnLq7hDX"><!--pnid:ySxE954HK3nq1zCXKHZZq1-->三张表加一堆聊天记录来回对照，每周两小时起步</li><li data-page-node-id="udEQmnIpD2OfmBSM8KEYvO"><!--pnid:hpKdOThXhT0U8RpFyoyXJY-->培训记录与排班表分离，不合格员工排上关键岗位事后才发现</li><li data-page-node-id="q2RmoI6g0zZ4XEqsdEVl1l"><!--pnid:qoWJ3RVbiHIylNkxOgpjVl-->工时、间隔、请假冲突靠人肉核，查不全也查不动</li><li data-page-node-id="BSn9WG5EGpMu5ubDS4n4mj"><!--pnid:5ayv86cEBMJ8tgxvx0BzKs-->冲突调整靠拍脑袋，替班人选没有依据</li></ul></div>
+    <div data-page-node-id="TMkGmlN8rCR5scuAqPaKxu" class="new"><h4 data-page-node-id="dUV7WjVJ2z8TrgXOKhfbow"><!--pnid:CP3dmGr0I4oq8iMK9CeMUc-->✓ 交给 Agent 之后</h4><ul data-page-node-id="oFRUNMragrQQbD4HQJqP78" class="list"><li data-page-node-id="7dRd6uhRoAEiL7QaDlhcIN"><!--pnid:6W0KcSkraVDzo60jJAz1Pg-->三类输入原样扔进来，按「培训匹配度 > 技能等级 > 工时均衡」自动排班</li><li data-page-node-id="XxKgylFVEKxyguqVU4UADP"><!--pnid:zldGWOcKQ4iplgDbcWMm1b-->培训不合格员工自动过滤，关键岗位只排培训全合格人员</li><li data-page-node-id="p4HqlphcimUmdL61RVCqj3"><!--pnid:PNTZHH3gB1JjvsZpftlj5Z-->5 类冲突自动检出，排班表红黄绿三级高亮标注</li><li data-page-node-id="UKfhsGWx8B9gOWPxwm41I8"><!--pnid:ps3qK4JVpQpdZ6ZKwcvRLH-->每类冲突推荐替班人员（培训合格+技能匹配+可用状态），人力缺口单独标注</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="NohxFKjCWYldNi08COaxZr" class="blk">
+  <h2 data-page-node-id="DodD2ZI6wNSt8TGqXPmllf" class="h"><span data-page-node-id="qdY4PfjOGRtAUQHmdZaJei" class="num"><!--pnid:d8rFsDWiboCwSYUNUgEjtr-->四</span><!--pnid:gFoxhc9b2QgnhyaLlwUmgf-->场景闭环</h2>
+  <p data-page-node-id="MxTQrFEUrNsDGMnpVHIurH" class="subline"><!--pnid:L4YqiYEC9434dmGinkbw3W-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="EYdGvqsa105MaXynVha2Bj" class="flow"><div data-page-node-id="qwDsPFJAIAzBAYQpmvYdz9" class="step"><div data-page-node-id="KkG0yjERb6cXPBoc8xGXtD" class="n"><!--pnid:I5APwLAGZUScy9TC5bo47I-->第 1 步</div><b data-page-node-id="ZwfFzwPZaBAPGzpU4W5lLd"><!--pnid:XWYrearHYwyAOJ10vXPOvD-->读取输入 · 员工/需求/请假/劳动法参数各归其位</b><span data-page-node-id="Rxhk8rALYY0mCrgws7cWac"><!--pnid:s30ifky2x0INiept9J88Gy-->员工清单（技能等级/培训记录/证书有效期/可用时段）、需求预测、请假记录、劳动法参数 —— 原样扔进来</span></div><div data-page-node-id="eAlMsv79Bv53pXZ7ymejXA" class="step"><div data-page-node-id="k4kfAk4FRaVDIAvir9QF4z" class="n"><!--pnid:SFfWTXJeccklHHQk1YV0hH-->第 2 步</div><b data-page-node-id="J1cpH2QNjCSTLtMvhqvsFh"><!--pnid:teoPamrO3qqJpt5PbNDp1S-->培训匹配 · 不合格者自动过滤</b><span data-page-node-id="kD7IqC7CSWhBxEWVTgZSIj"><!--pnid:fbCTU0HJlYh5llb7jknTO3-->根据时段技能要求过滤培训不合格员工，标注每位员工的培训匹配度</span></div><div data-page-node-id="3B8YmXusMkz6BX8hvrGtb8" class="step"><div data-page-node-id="SM99UyrywQ7IKZFPL2HIPv" class="n"><!--pnid:zSIjXfS6bpY8b83gBS52gn-->第 3 步</div><b data-page-node-id="9J0oU8f8bZ6NOOII2AUfcm"><!--pnid:RSLc2Vd3tiPLNV86sVQiRL-->排班生成 · 培训匹配度 > 技能等级 > 工时均衡</b><span data-page-node-id="W8uN6SRqYp0i5mEF66C0BZ"><!--pnid:V1NhGELLhfNRgP4L5P2bN7-->按策略自动排班，高峰时段优先保障人手</span></div><div data-page-node-id="EnHUFC2QIrwuGT4BYxLK7g" class="step"><div data-page-node-id="lUmysjYwJYnOCGuHcGSkMf" class="n"><!--pnid:Wuf6i8gNHYxzOJyNxbXAhu-->第 4 步</div><b data-page-node-id="nqKtJWnt40Pu3iELAmlaEk"><!--pnid:CQWk6PIKW57Mu5kpf95pXd-->冲突检测 · 5 类冲突一次查全</b><span data-page-node-id="sjW6oabmJjAF7T8uCbObaf"><!--pnid:dl8ofLtR8jJgb53KxJKSsc-->工时超标 / 连续工作间隔不足 / 请假冲突 / 技能不匹配 / 培训不合格</span></div><div data-page-node-id="mCXC060UEDgh3b9sRWPsd6" class="step"><div data-page-node-id="YGOMqyz8VYPmIjWxoy5nQ5" class="n"><!--pnid:AoZ6lC3d2okAp60EwUa91x-->第 5 步</div><b data-page-node-id="Kb0szDRpZj1gh2iyyShVDF"><!--pnid:LhPC1tlu4a8KqRQIsFrYGF-->调整建议 · 每个冲突都有替班人选</b><span data-page-node-id="TITzvSDOacI9zh1k5waicl"><!--pnid:nf5tOOtmByMNhdW1BzxuQo-->按培训合格 + 技能匹配 + 可用状态推荐替班人员，标注人力缺口</span></div><div data-page-node-id="dcZcSe3aCbTX9EGtvcNxTY" class="step"><div data-page-node-id="hJogn8vzAzBdz5HaF88yoL" class="n"><!--pnid:FAylkel7ambaLzhaPXlFFA-->第 6 步</div><b data-page-node-id="rsDiIzgloiwZHnnaPbAC5l"><!--pnid:JROnadW17DtJQjoEo0hyuC-->输出报告 · Excel 三 Sheet + 培训匹配分析</b><span data-page-node-id="wXgxbO3vrU38z6lcL9aCg6"><!--pnid:MozkWtmGpunXPiAs8RaHVL-->员工信息 / 排班表（红黄绿高亮）/ 冲突报告 3 个 Sheet + 培训匹配分析</span></div></div>
+</section>
+
+<section data-page-node-id="UKogkMjRpYHHhP1VZZi5z0" class="blk">
+  <div data-page-node-id="8ei1zNDe9U9YMLWA1ekhil" class="g2">
+    <div data-page-node-id="zPDRq3lmuqKMP0qIvF3bkt" class="card"><h3 data-page-node-id="T1w7CbXcZozmGALVd4N5uZ"><!--pnid:XOsZ5ksPRHHRAXku9CzZQ4-->要准备什么</h3><div data-page-node-id="mifkhMHlOI2CFqwGi13Rhr" class="src"><div data-page-node-id="lAfEtcBbpKFwxXbaA1eF8n" class="fn"><!--pnid:dDlunqaS13JTNSFsOXqfwZ-->员工信息表（技能等级/培训记录/证书有效期/可用时段/时薪）</div><div data-page-node-id="GhqTDGOlGyqoNuQcjSG42W" class="fd"><!--pnid:8pyeVbaLE6KxfC8byuNe8O-->员工姓名默认用代号（S001）输出，真实姓名仅明确要求时保留</div></div><div data-page-node-id="tsrDFSnLMUkztbETsAfBYF" class="src"><div data-page-node-id="khiUnJDjdFdJZLK51MXPsU" class="fn"><!--pnid:Amv2NWcgKegIhrOAKxjIWN-->需求预测表（日期/时段/所需人数/技能要求）</div><div data-page-node-id="YslmBVXonfBAgFRzvgofPE" class="fd"><!--pnid:nll3hzXesuCDbQv7OSm3ZM-->各时段所需人数与技能要求</div></div><div data-page-node-id="uyU6BGMKQFIff49VGd6j1v" class="src"><div data-page-node-id="I8p5zojIajSVmZBDVmmeTz" class="fn"><!--pnid:YzslD7wwdtq06mNMJXSOOI-->请假记录表（员工代号/请假日期/请假时段）</div><div data-page-node-id="2wSNTYos1n26vj9rgnY5AE" class="fd"><!--pnid:w2yz0io4XEI38uJqkIFmAf-->有什么给什么</div></div><div data-page-node-id="zOjcCSkSmz7W4six5qp2E0" class="src"><div data-page-node-id="tFHiNtInvk2yFLnRbYa202" class="fn"><!--pnid:DzTaAmdy9ycVxODWI1fFsz-->劳动法参数（可选）</div><div data-page-node-id="XbVq8TMjpN1F7pYpNRM0UU" class="fd"><!--pnid:OH6RyxCO1404BA7nam4Dss-->默认中国劳动法（日≤11h，周≤40h，间隔≥11h），支持自定义</div></div></div>
+    <div data-page-node-id="1n7h7BYRhywAmGv8A83eRe" class="card ev"><h3 data-page-node-id="8BXSEkUtyw8BR8bsizE3ir"><!--pnid:4SKn33oJeBX2UjiwEdCIXX-->为什么这个场景值得做</h3>
+      <p data-page-node-id="OjXklZz3TxtQZlpJrJLgCW"><!--pnid:7WZRBUWQOhYMZ6piWalrat-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="yBhQdtQlqztRpL9MJpsup2"><!--pnid:tqLkU6VH9AHHsaICSBzhZ9-->8.0</b></p>
+      <p data-page-node-id="1E6Ob1TtgIN3VztnJwQxrw"><b data-page-node-id="JHqS4M9lporTY2L5spG9JF"><!--pnid:4xAGyRHBdBsRlLPL3MZJl8-->最大差异点 ·</b><!--pnid:e3Utywhn2yAQRIAhcpz2pW--> 不要求门店上任何 HR 系统：员工表、需求预测、请假记录原样扔进来，Agent 负责排班、查冲突、给替班方案，店长只做复核与发布。</p>
+      <p data-page-node-id="kLbyS9L4zR3MJxwOiKP5Wx" style="color:var(--ink3); font-size:12.5px"><!--pnid:S6fbQ7B6n00Sfoqhr28kJc-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="6veWwlpWIZeOjxkJGlTKCn" class="blk">
+  <h2 data-page-node-id="dWE8o2w8KJXkbLPSEBdPIz" class="h"><span data-page-node-id="ePAcS66aXfNduI08I8jtC5" class="num"><!--pnid:TYc4qSATYqCnMbNlVc4Zua-->五</span><!--pnid:ZILcjbEMeElsnC1gtMefZP-->会产出什么</h2>
+  <p data-page-node-id="bn4TmUqUgXYeCGg40dJ9nD" class="subline"><!--pnid:WIdSworzM8AUxCYBLslU5G-->判断标准只有一个：这份东西明天早上能不能直接拿去用</p>
+  <div data-page-node-id="TQotMKWYeRg2bbX2jVSheZ" class="outs"><div data-page-node-id="xUGu74z58CHmsLeNvC8Xoq" class="out"><div data-page-node-id="5duXzqbgvKFOp2gQCTsIo4" class="on"><!--pnid:3EungsLtXUYMt7jK6Rn6UG-->正式件本体</div><div data-page-node-id="9wjg60Bl1hOS2Y7CXdV73a" class="ot"><!--pnid:AAXZWpldKya8duPFduVGwW-->排班表.xlsx</div><div data-page-node-id="0kSUYv09PspDwIRaM045dz" class="od"><!--pnid:Mp60kulS88TmN7uAe4MlKw-->3 个 Sheet（员工信息/排班表/冲突报告）· 冲突红黄绿高亮</div></div><div data-page-node-id="HVklJzae0AQFWBKdAq7urU" class="out"><div data-page-node-id="C1Ah0Rb7jzB7C3IWu7Jxs9" class="on"><!--pnid:A7U27FYxYvbVqXCsjlpbcv-->可复核清单</div><div data-page-node-id="l7nzW7eijT9a6dmXcMzIEV" class="ot"><!--pnid:Tu1iok8GJ7B8NTiZ03LyV6-->冲突报告</div><div data-page-node-id="QoxJC1ccbAmoE1wXkdJhAB" class="od"><!--pnid:vIXOIlL8hv8yVJG2pcOkJB-->5 类冲突逐条列出 · 每条附替班建议与人力缺口标注</div></div><div data-page-node-id="Xu5X2YWFPLtPd0o0XSGbCs" class="out"><div data-page-node-id="nTk6CTOoKLnJVaLdrUUUhD" class="on"><!--pnid:j8UTae7J3l4XPKdR0hqZ3U-->决策附件</div><div data-page-node-id="wCkeqhIvNKUrKzdOCGfzvY" class="ot"><!--pnid:1SCkOoBh56CCsG6j3Iw1CU-->培训匹配分析</div><div data-page-node-id="HumHRsWSSjM2vpP9HnMZRK" class="od"><!--pnid:PbpOC1mBoaVJIjUXqU3a8s-->每名员工培训合格情况与排班匹配度 · 高峰时段排人依据</div></div></div>
+</section>
+
+<section data-page-node-id="yMcB6j8jU7dVDGVIwLlrVG" class="blk">
+  <div data-page-node-id="1xsKuHc7CiSkoh1HGBGcdc" class="card warn"><h3 data-page-node-id="Bm0C41SuWBa3wRpN7n79MZ"><!--pnid:YlYXBmSN69iJxxHS9wqxEv-->这套东西不承诺什么</h3><p data-page-node-id="2wkppeIYNbrJHxFwVBDBNc"><!--pnid:fZXeLttq7bdgCPA1y9dFME-->不直接对接薪资系统、打卡机、企业微信请假；不替代专业 HR 系统做最终合规认定；输出排班计划仅供参考、非最终执行版本，须由店长人工复核后执行；未考虑员工个人突发情况（如家庭紧急事务），建议发布前与员工确认；员工培训状态变更后需重新生成排班表；劳动法参数有地区差异，须按门店所在地校准。</p></div>
+</section>
+
+<div data-page-node-id="ebATKBrLZYl34ercbYbrzm" class="cta">
+  <div data-page-node-id="gahxp0RBjihuHM3RAJL5Rs"><h3 data-page-node-id="2oR10yqlw6n9DPGVGMjXmZ"><!--pnid:27kI6MC407ILtO5Gsgwxec-->想看具体怎么跑？</h3><p data-page-node-id="HZuSve91jy3zTnF3VyEbSS"><!--pnid:1zb64Paan5oh9H17R5ctXe-->Live Demo 里有一个完整案例的每一步，包括班表里哪些内容必须先经店长复核</p></div>
+  <div data-page-node-id="lYX3mz5yl46rCS4iPqLYE5" class="btns">
+    <a data-page-node-id="vYXcrShkPgFvXOO1YgdJlk" class="btn" href="LiveDemo.html"><!--pnid:brrMT9PHqCj73U0hU6abQZ-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="1RVgbiICwE8cbtX9VGmSKa"><!--pnid:fKjjuuuYJB6M4N8AYhpcq0-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="2imqmN3CptMn7wtuW9EFyN" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="pBw5GKHmYimUVgdJyllhU0" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="dbbinDYUjcY4bQk6m2peE9" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="KIN9D4cq62qxnrSBPzvKDs" data-pnid-children="8BHO9qDFUJWgc7jC5oVVWZ">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

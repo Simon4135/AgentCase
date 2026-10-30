@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="1GDKprD7EY589dNZGGJtIa" lang="zh-CN">
+<head data-page-node-id="z3e29ILcCOWvVKq5jq9j2R">
+<script data-page-node-id="IKQmAhqE4sRD8fnJEPj4D5" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="R1lzbrefxW1EpsuWx7Mhoa" charset="UTF-8">
+<meta data-page-node-id="Gq8O5i1IQgHZSXLMbTjw8d" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="kktrGg2VgvFBGlzWuINZ3v" data-pnid-children="vXzAFHm1VnJRRlOjfEc40Z">投放周归集与应停投计划标注</title>
+<link data-page-node-id="VVXSC4wLqYUvYSuoy4CjNW" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="AJzBwaYuvPSCulOLJEApy2" data-pnid-children="SZ0OV5zLPeEqfAxQmdNQTu">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="MOvh91WVuGVOVZHYAtOhuV" data-pnid-children="xSc0p8ieZ7k564xjg2fnYw" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="RckALHTUhD1LTOXbET7xWT" data-pnid-children="zyZ1i5eJqD2Wqe7P02EQph" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="IaP1V11v6UJhKn5t4dFtaw">
+
+<div data-page-node-id="gtqgxvShSCtQhl1fwCUQvU" class="wrap">
+<section data-page-node-id="JHJrqnCYdDWiVjjHmA2Zvl" class="page-hero">
+<h1 data-page-node-id="0Hml8etL96syI4rlnWWuSN"><!--pnid:FAMwF6QCPPANEGnQ8SRDi7-->投放周归集与应停投计划标注</h1>
+<p data-page-node-id="NBGCVshKthLeSFSE2VcMG4" class="lead"><!--pnid:GVNsfyDMUafWMxQnRStZHe-->一年烧掉 582 万推广费净利剩 5.3 万 · 该停哪个计划，从来没人每周看一眼</p>
+</section><nav data-page-node-id="xKC03wlW8FVQ0nyKjZUosk" class="subnav"><a data-page-node-id="csTvgv4QXnLiKdSxEr4WkG" href="场景引入.html"><!--pnid:v4Zl4MRWPMMB1daY436cgJ-->场景引入</a><a data-page-node-id="snMVTPCmQ0YSeZgptj2Gzi" href="LiveDemo.html"><!--pnid:2iREUbZSZpSih2JaIuIOgC-->Live Demo</a><a data-page-node-id="mkfSbeccChBBb4GiEqaPuS" class="on" href="#"><!--pnid:XL9Je20p8it5IxAkn8S1EI-->推荐任务</a></nav>
+
+<section data-page-node-id="31VN7JbKq29qacFSmLs3qD" class="blk">
+  <h2 data-page-node-id="jGBXFR9CAD5eEehzFnHKKM" class="h"><span data-page-node-id="29dAhD8bbRZAhYyQ4Y3oCI" class="num"><!--pnid:IoDKgBa1ycHLlEPabUDWCP-->一</span><!--pnid:SvK2KUgemWpiGoUNpFxYbR-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="CtSkxZBRBMcwc37IlcdSVw" class="subline"><!--pnid:dbT58bFhVZlnA0m07UImiZ-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="MlMQEnYckfFgk4AkjPrace" class="card"><p data-page-node-id="vBWC2E5mXPoj0GQ1A5TwdB"><!--pnid:0O5u5baE6HJjDlNTRQctX2-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="8Wz9744v6rK0zpBcCmnt4Z" style="margin-top:10px"><!--pnid:GR6qrSX39AqxFxCqLkZG7E-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:rOmdbYPnvsrhxULt7GBU1p--><!--wb-skill-start-->
+<div data-page-node-id="OJKTnJjTuMdZSIDJS0xhR2" class="wb-skill">
+<p data-page-node-id="UtiL7MsHq4l7nlJwCBDRuh" class="wb-skill-lead"><!--pnid:dmudu0rzP8HuVfKYZYxBLa-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="oMXiqj35Rr5PXrg5e3Nh2N" class="prompt" id="wbSkillPrompt"><!--pnid:5fN8ni9SJRv0j6hhavx1Lq-->【准备】这个场景的规则都在「投放周归集与应停投计划标注」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/jtfwQxhQrnw0kXbQ0KQmCN/dYiLWC6pm_MJ/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="Bqs1txMOUi9khUfLb8uLoL" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:VSkDZlaSEDShz1jTb5Ix1p-->复制</button></div>
+</div>
+<!--pnid:6hjU5DVIJZam2pP6O7QSVD--><!--wb-skill-end-->
+<section data-page-node-id="PFVEEEC83qu0O90Xansh38" class="blk">
+  <h2 data-page-node-id="mLAfpfOCSRo3jq4BnYtwbc" class="h"><span data-page-node-id="2QhwMEN7uMCVmnl3WK0l6e" class="num"><!--pnid:74k6WC1ueyk0vcBc5uamyB-->二</span><!--pnid:QnsVbbBOqattoUCCvaP2RD-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="yjT0IYlKqwpHkIRZ77hvqi" class="subline"><!--pnid:65HbTf7WZ0FERkawnBWI7Z-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="beB8ekoOiW963ZTURUxe0y" class="tlist">
+    <article data-page-node-id="hCtzXfjy4escvnaW7oVhtJ" class="task">
+      <div data-page-node-id="ax5g6mgypkQqHbFh3bhig7" class="th"><span data-page-node-id="BK8CnRkKo2pWJqq5SdtWgB" class="no"><!--pnid:RrSzi8pLJSuQCjbJh0WRWU-->01</span><h3 data-page-node-id="Ss7Kz5L8jFqWAdhfLEluFw" class="ttl"><!--pnid:PL1wFjf09XbUijfrawJvOq-->首推默认</h3><span data-page-node-id="DF0C4AE78daLJTz7hauoCR" class="star"><!--pnid:CXBftuJuyzFgkXuWOlta0F-->与一键体验入口一致</span><button data-page-node-id="TyP7auMwdLLK0YS3gObz0H" class="cp" type="button"><!--pnid:bne55A7ScCvkn5xK0I2tFj-->复制</button></div>
+      <p data-page-node-id="RtpoeIdFM5fQ223h4NV832" class="tp"><!--pnid:HMEYuMCCW576edJyAY4k3v-->我来试一次这个技能。三份材料都读：「01_千川消耗与成交报表_本周.xlsx」「02_店铺成交数据_本周.xlsx」「03_近12周投放历史.xlsx」。周会上老板娘问这周哪个计划在白烧、该停哪个。两家后台的 ROI 口径差异先标注清楚，再统一到一个可比较的口径。产出三份：「投放周诊断与应停计划清单.xlsx」——计划一行，列消耗、成交、成交成本、客单价、成交成本占客单价比例、三色标签（该停/该观察/该放量）、每个标签的依据、连续超线周数；「惯性计划识别与历史损失.xlsx」——连续多周成本超线的计划一行一条，列超线周数、累计消耗、累计超线金额、停投建议；「下周复查名单.xlsx」——标「观察」的计划，逐条写死复查条件（比如下周成本仍超线就停）。标签按成交成本对客单价 30% 这条红线判，付费占比对毛利档健康线（20%/30%/45%）单独核一遍。上周刚起量、正在爬坡的计划别误杀，要改标「观察」并写明依据。停投我不让技能执行，停不停我自己按；推荐意见、完成质量评定、责任认定三栏留空。</p>
+    </article>
+    <article data-page-node-id="wGWXOF8cisbsfFcMIY5acm" class="task">
+      <div data-page-node-id="RWqzc8deczE252jwJMWmca" class="th"><span data-page-node-id="KHtZaovQQ0OXDj29ZNqKwx" class="no"><!--pnid:WIUKBYKqzvD7csE6otY0QC-->02</span><h3 data-page-node-id="mV2LG2qpxDa9fbebAuglz8" class="ttl"><!--pnid:GABMmrWnCSjgEkvlAM1DCr-->只挑该停的</h3><button data-page-node-id="KBFCbKEeAR77pip4yy6tje" class="cp" type="button"><!--pnid:xtsnyb79FCo1YdWFuE9RPD-->复制</button></div>
+      <p data-page-node-id="3bTSNByNoAem0H6cqZSLlP" class="tp"><!--pnid:jeTfr3RGd4Zxc7YkHTeEOo-->先别出整张周报，只把「成交成本超客单价三成且无自然流量贡献」的计划挑出来。读「01_千川消耗与成交报表_本周.xlsx」和「02_店铺成交数据_本周.xlsx」，产出 Excel 一张：计划一行，列消耗、成交、成交成本、客单价、超线幅度、是否有自然流量贡献、建议停的理由、连续超线周数。判定阈值写清楚。</p>
+    </article>
+    <article data-page-node-id="6izW0m0gyhvcwRP7nvAhGW" class="task">
+      <div data-page-node-id="dLeqH3Eq66OhQprI23PBsP" class="th"><span data-page-node-id="WYE2Q8orLAIYb2WaHSeSV2" class="no"><!--pnid:2wuDZteyHi9mOqHEs98XWu-->03</span><h3 data-page-node-id="n7Cstr5gBuTO7tIwW55r8p" class="ttl"><!--pnid:OM2G2WeXDshbX3o1PlKKbn-->换成统一归因窗口</h3><button data-page-node-id="sCWv3mENIEBqNqnM4HsFd1" class="cp" type="button"><!--pnid:XrMMf2tdbXrqvdQhh7qvg9-->复制</button></div>
+      <p data-page-node-id="xY51Lghs7G2bIIntYImlc2" class="tp"><!--pnid:rlhFHowbj6RjevteBOzqZJ-->这次换口径：把千川和万相台的归因窗口差异先标注清楚，再统一到一个口径重算一遍，看哪些计划的标签会变。读「01_千川消耗与成交报表_本周.xlsx」和「03_近12周投放历史.xlsx」，产出 Excel 一张：计划一行，列原口径成交成本、原标签、统一口径成交成本、新标签、标签变没变、变化原因。口径差异是哪几项、各差多少要写明。</p>
+    </article>
+    <article data-page-node-id="hZedwPbN2SS9G18UOD9cbt" class="task">
+      <div data-page-node-id="T2Sit2cmxYhh2vuL4R4zSJ" class="th"><span data-page-node-id="EIFphHx6QtehYpfkeKVVnb" class="no"><!--pnid:fjgQO7M1rXffSiJrj2SBEJ-->04</span><h3 data-page-node-id="xeQmWIF6oXW8i3vKcFDz1m" class="ttl"><!--pnid:XCODlRroiXPfTrhFqlfyD8-->一次过十几个计划</h3><button data-page-node-id="DVfvtBQLOUfgo7qQtYuBpb" class="cp" type="button"><!--pnid:cSBbcdUPqSTSt6kPBUiJEN-->复制</button></div>
+      <p data-page-node-id="knCdKugnFuI39jyzOy1cyl" class="tp"><!--pnid:ON6vxUqygSNOrllCAtZH4N-->把这周十几个计划全部过一遍。读「01_千川消耗与成交报表_本周.xlsx」「02_店铺成交数据_本周.xlsx」「03_近12周投放历史.xlsx」，产出「投放周诊断与应停计划清单.xlsx」里加一张横向对照表：计划一行，列消耗、成交、成交成本、占客单价比例、三色标签、连续超线周数、近两周趋势、是否在爬坡，按消耗从高到低排。</p>
+    </article>
+    <article data-page-node-id="jEPaAYncfoFAnudbJJGRl2" class="task">
+      <div data-page-node-id="aYAWqts13hf3AVY1M7knir" class="th"><span data-page-node-id="I6VsVUXs7fWNGsNHdz6X2h" class="no"><!--pnid:sYNe2ta4GowpFwCBpEa4v4-->05</span><h3 data-page-node-id="QK7MHyZCY9CF9nHyaZyFq5" class="ttl"><!--pnid:UCzl166hinq74ffQqNYucb-->给老板娘周会看的版本</h3><button data-page-node-id="rP5506z5AaheQVTFwtPw2S" class="cp" type="button"><!--pnid:av9CHbJBjaA1qttFC6RkaI-->复制</button></div>
+      <p data-page-node-id="XCv1f6mvtIgUXROp3LuoqS" class="tp"><!--pnid:mM3jx0nDPMQY0J2WI1LkGB-->读「01_千川消耗与成交报表_本周.xlsx」「02_店铺成交数据_本周.xlsx」，把诊断压成周会上能直接念的一页，输出 Markdown：本周该停哪几个、一共省多少、哪个刚起量不能停、下周复查看什么，四段且每段带数字和计划名。诊断过程和口径差异说明都不用给。停不停留给她决定。</p>
+    </article>
+    <article data-page-node-id="mtXTAYgOAZ4hblae1TWECB" class="task">
+      <div data-page-node-id="9gvSunUdlr7HvVfCveOFe6" class="th"><span data-page-node-id="R1Z43FJTp6ZM18o0FrzR42" class="no"><!--pnid:crskj45oyLV81dPqhZZwkX-->06</span><h3 data-page-node-id="svPg1yIzH3ej4uTwT6aP3S" class="ttl"><!--pnid:iwV30Ge5OiNhOG7965Oshj-->让它反驳自己</h3><button data-page-node-id="5mAZp0m6LRXfd3pJOuNDrE" class="cp" type="button"><!--pnid:TEWPh1QkEqDqFOAiETF4uz-->复制</button></div>
+      <p data-page-node-id="YaOkts3xnj1tq9Uvf77AV3" class="tp"><!--pnid:RwdeSXgomxqWUljHR6Bn1e-->标「该停」的三个计划里，有没有正在爬坡被误判的？读「03_近12周投放历史.xlsx」，把每个计划近两周的消耗和成交趋势摆出来，一个计划一行。有起量趋势的改标「观察一周」并写死复查条件；确实没趋势的保留「该停」。产出 Excel 一个对照段：计划一行，列原标签、近两周趋势、是否爬坡、改后标签、依据。</p>
+    </article>
+    <article data-page-node-id="98tLL7mhXlfjErsYGXHBva" class="task">
+      <div data-page-node-id="JC3EeVsLaBE0vdQHwcOxg1" class="th"><span data-page-node-id="q4fSZG4MZbQ5yfXLLg1WyP" class="no"><!--pnid:dgL0h8LZvkrpr0gtK31KjZ-->07</span><h3 data-page-node-id="wAN11xybi5kNBJaqUwtGNL" class="ttl"><!--pnid:XJ2SNg8Bdj3NAdW0eI1l53-->专门查惯性计划</h3><button data-page-node-id="4gTHRgIVdOA7DVStnugJQU" class="cp" type="button"><!--pnid:EZouBo9i4dCNngPvgdjUrx-->复制</button></div>
+      <p data-page-node-id="KiGYSgrxECyDJgFAMNI33X" class="tp"><!--pnid:r9Rhr0nr92xXz85YPfpXWu-->读「03_近12周投放历史.xlsx」，把连续多周成本超线、且超线前业绩已经在下滑的计划捞出来。产出「惯性计划识别与历史损失.xlsx」：计划一行，列开始超线的时间、连续超线周数、累计消耗、累计超线金额、业绩开始下滑的时点、本周停能省多少、早四周停能省多少。算式写出来，取值来源标到具体报表。</p>
+    </article>
+    <article data-page-node-id="b3Rfuf3qt5E018eiYjlrT0" class="task">
+      <div data-page-node-id="fjbJP6bMqUgCOxsKUXYve1" class="th"><span data-page-node-id="zdDe096TE8hlKEUppTZU1I" class="no"><!--pnid:HLKRgmNC36kNJo424ruAJk-->08</span><h3 data-page-node-id="hJ6F3fll6Ku47V5gCIEurm" class="ttl"><!--pnid:lpyOZWlzJu51K3ZjjoeSt8-->对照付费占比红线自查</h3><button data-page-node-id="vyuTvfftJJDRFr1EtBC5hT" class="cp" type="button"><!--pnid:P0U8CQVfyD5hAI2Avfh5rs-->复制</button></div>
+      <p data-page-node-id="8itsI7hZql9div3vawOMwu" class="tp"><!--pnid:Kn7HJDL2ZvfaDD0yH7iXOl-->对照毛利档的付费占比健康线自查一遍：本店付费占比落在哪一档、有没有压住自然流量、各计划的自然流量贡献怎么算的。读「02_店铺成交数据_本周.xlsx」，产出「投放周诊断与应停计划清单.xlsx」里加一张自查表：口径一项一行，列标准值、本店实际值、差多少、结论依据。本店落哪一档要用数据说清楚，不要只给一句判断。</p>
+    </article>
+    <article data-page-node-id="6lprF1lKLm7tbt0aa4iJt8" class="task">
+      <div data-page-node-id="npf7AW0BNXteTZIKp7Q1BH" class="th"><span data-page-node-id="u8CRHP55JvMZSUXjQDXrHV" class="no"><!--pnid:Ap2kJBhY4Ay3NABZ2M79s7-->09</span><h3 data-page-node-id="xGTf71Qyzl3pVyAnp2NLiN" class="ttl"><!--pnid:b0xTgWM1XZSuvIB134mjWB-->折算成停投省下的钱</h3><button data-page-node-id="ux6sfyaLJ7z6JdzoVTjzw0" class="cp" type="button"><!--pnid:RKsetfKaVTdaRwmO8UvqSa-->复制</button></div>
+      <p data-page-node-id="YvceSXoQUkA0gh6XAy6g5r" class="tp"><!--pnid:2lNk4Whw5K6afqimdIXwKj-->读「01_千川消耗与成交报表_本周.xlsx」和「03_近12周投放历史.xlsx」。这周该停的两个计划停掉一周能省多少？如果把那个烧了十几周的惯性计划早四周停掉，又能省多少？产出 Excel 一个测算段：情形一行，列计划名、周消耗、超线比例、停投周期、省下金额、算式。取值出自哪份报表要标清楚，估不出来的写「本项无法量化」。</p>
+    </article>
+    <article data-page-node-id="g9csn337MIUsPmASOMKbVU" class="task">
+      <div data-page-node-id="NdUzzIGsFJz6LQrPkMkfNG" class="th"><span data-page-node-id="QyGGgq5ftdj6coBXHWtH4p" class="no"><!--pnid:JLeWpzGBZm7XOLkwb9i6yd-->10</span><h3 data-page-node-id="pd4P7ciXlbvu183vFKFxrA" class="ttl"><!--pnid:IoR4QJ66P63nHKZTcexgLr-->沉淀成周度体检清单</h3><button data-page-node-id="6nPkgibsICtwzRgti6aRco" class="cp" type="button"><!--pnid:qdkWCUAbdxqzIrq26qJOET-->复制</button></div>
+      <p data-page-node-id="XloTIF1HGKS3GE7Q05KlTq" class="tp"><!--pnid:4tf6AFnmM5bnvrvJrFCCyF-->读「01_千川消耗与成交报表_本周.xlsx」「02_店铺成交数据_本周.xlsx」「03_近12周投放历史.xlsx」，把这次的 ROI 归集口径（两家后台怎么对齐）、客单价三成红线、惯性计划规则、付费占比健康线整理成一张周度体检清单，Excel 一张：检查项一行，列检查什么、判定标准（写具体阈值）、在哪看、多久一次、异常怎么处置。每周一照着跑一遍。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="YkH6Xo5skWdrAQOKuTwUTs" class="cta">
+  <div data-page-node-id="w6pmnnFlcngbNEGH0j6KLX"><h3 data-page-node-id="RcPMzCYrkjpKLjyTXHR7Ud"><!--pnid:QREeMwZmMZvTZBShl9xtOt-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="xvo8sqb2R4ufpSOId2sxM6"><!--pnid:3XkpaL4LrMYDk29Gu6dpsI-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="P2D8tqmkljlBVBzS916rig" class="btns"><a data-page-node-id="EoJyvQ4LajCymWXggCG6uL" class="btn" href="#" id="ctaContact"><!--pnid:EamSxy7h4eYLlFqcq8Nyfw-->联系我们</a></div>
+</div>
+<footer data-page-node-id="ou5g5nrRenAHDXbMOnD2lI"><!--pnid:zFg9DZNaJDsDRKO2ZCwq9v-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 不碰钱不对外发声 · 执行按钮永远在人手上</footer>
+</div>
+
+<script data-page-node-id="NTwcfy9XRU31HhqEo9LIgj" data-pnid-children="VVqJuYHXhl3mDZ5WUQwSVd">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="XujQdg2UL5hz2J1X3mubl7" data-pnid-children="9Dof2C453dudXnzRp48kLf">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="1likBU2XKphXBXRWiRv6Db" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="4kfK4QzhStI2PrBj9p6QU0" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="htBTLmYjS4WOakIUxQD9CS" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="31kFtu063MmBMhardJ7GZB" data-pnid-children="OQmBVap9tA48yuSHTwCvYo">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="hSc4253GREzGBo8TyUHxsD" data-pnid-children="uVJNpxvUXXo4hi1Jy8mW1p" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

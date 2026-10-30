@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="FQ5OeAQRiucaO6luVBRK51" lang="zh-CN">
+<head data-page-node-id="drZ1A8drD9x1Yehc4UtBNE">
+<script data-page-node-id="omSTWV8vLtcax4gfoBN3Mx" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="yDpABuvk6ya2bAWvebnoPw" charset="UTF-8">
+<meta data-page-node-id="9oFtIp0mLXGtuWE5hNX25f" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="4EKIXmzrCW9yCiJdsZAxHp" data-pnid-children="WrsuDctiJPYMejtSBviviw">客户承诺台账</title>
+<link data-page-node-id="ZUWBNJrgB9XfFovggrI1B8" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="BPdoshQ6YAgRR9E5l1WxHl" data-pnid-children="9tYAYgCYGg8uselJ1NWAd7">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="vUZQNDS8ACWTxcR4VHR3qr" data-pnid-children="Q4uA96dLRePcx7UwKA1snI" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="S2jJ5XnnQ1fZlJInSK3ZHH" data-pnid-children="q7ySdWdRaplsLpdY8vLEoS" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="gzSW6qfvUSfkz96RFSBpkF">
+
+<div data-page-node-id="A793TPdOisdwpk4wpfMz4S" class="wrap">
+<section data-page-node-id="nOIptI6nXCJKozMcuCGZSW" class="page-hero">
+<h1 data-page-node-id="R6zRrvm1PH84uJ2xMxgO6I"><!--pnid:JweThz63U7OixMbOAGporV-->客户承诺台账</h1>
+<p data-page-node-id="MkHLMHAD79IeyeP1lTh0ML" class="lead"><!--pnid:EyOlm8XDy7W1kwzgugKGZ7-->销售答应客户的「Q3 一定上」，产品侧从没看见过 · 承诺散落销售微信是续约纠纷之源</p>
+</section><nav data-page-node-id="aKjkCb2fHLXGAdZgSB2Nqj" class="subnav"><a data-page-node-id="ZEsf9LoJzFEoe5xnfLFKo1" href="场景引入.html"><!--pnid:J8CBYKPyqLBZ1YoLMxQsGD-->场景引入</a><a data-page-node-id="kl7DKLK18z1v4l3jdqh44T" href="LiveDemo.html"><!--pnid:GvHnQM7JVXKhSjxgBq4L6a-->Live Demo</a><a data-page-node-id="J1nZXNL6e5ClUiwwnHMM53" class="on" href="#"><!--pnid:7aBZRSInEVV0uuBSQ11Y1Y-->推荐任务</a></nav>
+
+<section data-page-node-id="ZMTZ00CKjlGvRWodNc1FX3" class="blk">
+  <h2 data-page-node-id="2olIxyySnkANyMn75xXbeL" class="h"><span data-page-node-id="sxZCmOAAfj0lODLBU0rxAH" class="num"><!--pnid:bXLTxT6d1U8lVLvhEOqp8g-->一</span><!--pnid:vmgumwaAcJpwuNjvqr13AV-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="VrwUEXftVwOZVRvqbTROHr" class="subline"><!--pnid:UBT9vzJkEM8Y9l4DEmBUnG-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="wkM1ENq1ku08ItvGLIJMLD" class="card"><p data-page-node-id="cZbtHerOAlgEErH7xSDsKh"><!--pnid:LK9Haw4kExJTCrvZcPn13r-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="E4uiiPkYmmCGKQVWPqhwi8" style="margin-top:10px"><!--pnid:gK85WkBy9Q7epQL7e3Cube-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:MTeKOMiWq9u0YR8fmnN7RL--><!--wb-skill-start-->
+<div data-page-node-id="jt5BqTM57YrUk5ljuqYcNZ" class="wb-skill">
+<p data-page-node-id="qVBL7r0pcY2LXtLddtreNg" class="wb-skill-lead"><!--pnid:754uG9L6Uj5SeadX0N59F9-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="KilmBau39wpsQRAzsw9BWw" class="prompt" id="wbSkillPrompt"><!--pnid:76uc3XRdYKCYtxzDETJy8t-->【准备】这个场景的规则都在「客户承诺台账」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/xKrTvSlmvVauR45inYgDMz/_LkhOl7gaVov/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="3Yre2Ytp5KRcel0mmgCzkz" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:49FRN89ulylPrmm2ucQd9G-->复制</button></div>
+</div>
+<!--pnid:zWfRdpiVeMq54ifuQyXcKo--><!--wb-skill-end-->
+<section data-page-node-id="Mqt5CFgHUTefXabVK2yb1M" class="blk">
+  <h2 data-page-node-id="dpwwRxbUJX7cSafQTD7WWg" class="h"><span data-page-node-id="iJS6nJfU6TQ0mZwV5qtqIC" class="num"><!--pnid:SVvgolS7MRN8h2G6IJYPBl-->二</span><!--pnid:vzRoRvv0KYhen9mjunv5Aw-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="lQhscoUgLn4Esd2d9jX5xr" class="subline"><!--pnid:GnLU3Mf8PIBS9PAyLrvZJy-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="n4EQCDDgL47xVvc5ugFdrh" class="tlist">
+    <article data-page-node-id="HxBudgFNIu58ZIidZFkft5" class="task">
+      <div data-page-node-id="RvmLcWUeOCabwEthDOCsvg" class="th"><span data-page-node-id="v7rcP43LHo5aou6meZzLzc" class="no"><!--pnid:GLmn8OgRf5l54Xuqyj7F4u-->01</span><h3 data-page-node-id="ULlA8b3oNJmay2Ya0YiqBC" class="ttl"><!--pnid:2XZITWB1auy8otZIhUe4Ac-->首推默认</h3><span data-page-node-id="5B6O20jsNYUJ2xB6Y7CoFb" class="star"><!--pnid:o5dz8R7ZNvR9lYgxnUZocm-->与一键体验入口一致</span><button data-page-node-id="suvhVr6DmjMQpuJUPMDXmj" class="cp" type="button"><!--pnid:mBwHeC3mlJUOdiKOcYfKzm-->复制</button></div>
+      <p data-page-node-id="9PypbeOGd9RgXnmNSWPveH" class="tp"><!--pnid:moqdFjqLbqnSNnoNd0SkPy-->续约季要到了，帮我建一本客户承诺台账。技能内置的是 01_郑海洋与华正聊天记录.txt、02_郑海洋与民康聊天记录.txt、03_佳润群聊记录.txt、04_需求池状态对照.xlsx、05_客户续约与收入对照.xlsx。
+所有对客户答应过的功能和时间都抽出来：功能、时间、当时原话，是「一定」还是「尽量」，语气差别就是风险等级；跟需求池对一遍，承诺的功能在池里什么状态——缓行、不在池、还是被拒过，三种落差各有多少；每家客户一张承诺卡，续约时间和年费标清楚；每条承诺的兑现概率标高中低三档，依据写清楚；最后告诉我续约季里哪家客户的哪个承诺最危险。
+产出三份：客户承诺台账.xlsx（正式件本体，含承诺抽取、需求池对照、兑现概率与校准方案、池外承诺处置、续约季作战图五张分表）、客户承诺卡.xlsx、续约季风险报告.xlsx。台账只登记，怎么跟客户谈我自己定。</p>
+    </article>
+    <article data-page-node-id="78AmCMtuCoRaobkXK3VTIe" class="task">
+      <div data-page-node-id="2jEK0zdHXIYiVnpRtYRem4" class="th"><span data-page-node-id="nXEbisWeTa38dRcSFV2wdK" class="no"><!--pnid:3AukZG31x7GzwaSa0Kncdu-->02</span><h3 data-page-node-id="Xwhe6d9MymFU3MOaH5MiJd" class="ttl"><!--pnid:liCEjTPbqc6Q6bp95Ssxkr-->只抽承诺</h3><button data-page-node-id="Qu4AqpfIB6ALXGRyLTGSkL" class="cp" type="button"><!--pnid:mhQsJxlfvKdMp5hyZRkasV-->复制</button></div>
+      <p data-page-node-id="jgizK9t03On03UV4uJSsMQ" class="tp"><!--pnid:L5zcbVENgXTr95Z11Ys6ix-->先别做对照和风险，只跑承诺抽取这一步。把三份聊天记录里所有对客户答应过的功能和时间抽出来。产出 Excel 一张承诺清单，列客户、承诺功能、时间、语气档、原话引用，按客户分组小计。</p>
+    </article>
+    <article data-page-node-id="ckIh7mrLdUeMpfDICbSYwK" class="task">
+      <div data-page-node-id="BcfuCujJBdDpvy1AWG2Z6N" class="th"><span data-page-node-id="F4aY48wUMYff0kNcNc7395" class="no"><!--pnid:KWdn2wMPKTbyWGsy9N5wow-->03</span><h3 data-page-node-id="WtfHBnODA9p8cijlbFKg4Y" class="ttl"><!--pnid:HleqYULhOtlclZK2voTH5e-->换成临期承诺口径</h3><button data-page-node-id="2VTXNNghXSFgHpLhNNiSvD" class="cp" type="button"><!--pnid:gfb3I3aLd7f9Euq03DQu10-->复制</button></div>
+      <p data-page-node-id="uBl8hfjzGktpY0Xm4esVyl" class="tp"><!--pnid:ZelCK0fK7aeAM9yTOlFK8e-->这次只筛「已到期或本季度到期」这一档：把约定时间已过或 Q4 前到期的承诺单独拉出来。产出 Excel 一张临期承诺表，列承诺、约定时间、剩余天数、当前状态、超期或临期标记。</p>
+    </article>
+    <article data-page-node-id="EjmdWreXxR1Kq3LRiFlgYx" class="task">
+      <div data-page-node-id="5wE1pkiAeN77kaHeOZrFK1" class="th"><span data-page-node-id="KDIF1JrFrveq2efZ7WgHBf" class="no"><!--pnid:aZqUdeOVkh36lGWf92zUYj-->04</span><h3 data-page-node-id="SxcL91SJrdBzphRRUFicTm" class="ttl"><!--pnid:87OCJEcTSudQstauBH3IwT-->一次建五家客户的账</h3><button data-page-node-id="MlvlCzKUZwQt9Pd5oyXL87" class="cp" type="button"><!--pnid:HFqO4hfs0Q44VfweZI87tt-->复制</button></div>
+      <p data-page-node-id="yGRd13TwfAdA9FJA9x8xvi" class="tp"><!--pnid:R9FxCJGoXFQSVgo5KFCHIJ-->演示数据里再加两家客户的聊天记录，五家一起建账。产出一张横向对照表：客户、年费、续约到期、承诺条数、高落差条数、最高风险承诺，按年费从高到低排。</p>
+    </article>
+    <article data-page-node-id="ZwBya0pbdwEmlkYFRAqhVo" class="task">
+      <div data-page-node-id="wC1LcIT9cuD624DRZwTRbi" class="th"><span data-page-node-id="TftnniVIJiLdvDwYdhZI9Y" class="no"><!--pnid:YDiuZN8vbqWnUvPQ2z5YKs-->05</span><h3 data-page-node-id="XA1AZNaFSM2WiA95eP5kin" class="ttl"><!--pnid:P9iQ4KalHdwPp8iM3rYCWr-->给销售总监的一页明牌</h3><button data-page-node-id="vyyw4CJ09IkmXmEn4cgnnD" class="cp" type="button"><!--pnid:h1Amh4BYUIhDuur43Nnfxi-->复制</button></div>
+      <p data-page-node-id="IP74KRvDkN788EwiwYqa9B" class="tp"><!--pnid:HSZjtkSTu2vbTtXEhvykQv-->把台账压成给销售总监郑海洋看的一页：他答应过哪几家什么、现在需求池什么状态、哪几条要提前跟客户校准预期。产出 Excel 一页，每家一行，其余分表不用给。</p>
+    </article>
+    <article data-page-node-id="etkHsZW9QEnJnbuuZ3PgLI" class="task">
+      <div data-page-node-id="tqRvs4shns6hUCFRCx7GEM" class="th"><span data-page-node-id="rlO8rqvuCP3BRoWWrR4Enb" class="no"><!--pnid:KHIjyInveHTKMJvSIFHKym-->06</span><h3 data-page-node-id="wsmvfW1DtxkCsdtlGbS3Dp" class="ttl"><!--pnid:X0kCwffhlmY1vjP9gWvuaI-->让它反驳自己</h3><button data-page-node-id="gKM0WAgXlOjG9VEbuvnWep" class="cp" type="button"><!--pnid:ihoZOwO1qXb8WhGM6cqUpx-->复制</button></div>
+      <p data-page-node-id="HvfAfErf0yYszbAm44UjqD" class="tp"><!--pnid:QTnZDGnTjRQwNCLzvuPA5S-->你自己核一下：标成高风险的承诺里哪几条其实需求池里已经在做了、风险被我高估了？产出 Excel 一张复核表，逐条写明池里状态和依据，高估的降档并说明依据。</p>
+    </article>
+    <article data-page-node-id="r6H1VhHTsvTgvcTx2OxWEh" class="task">
+      <div data-page-node-id="CGPdmnFPeeJhTQCnv3fZZk" class="th"><span data-page-node-id="UelfxEn5WtDngMBVABScbB" class="no"><!--pnid:2NRKd55Lhz5HbAXSkAnkrE-->07</span><h3 data-page-node-id="uYLR4SwCuO72ADaynE6eMX" class="ttl"><!--pnid:cIJwy7Y1gFDIxHHDCUIzQ1-->专门找被拒过的承诺</h3><button data-page-node-id="sB2t7b6FKjfj6CT2ruXID4" class="cp" type="button"><!--pnid:ncllp2LEYjiYQkmq4Rg7ba-->复制</button></div>
+      <p data-page-node-id="uQvE5iIdAII9RPtHiB8p1P" class="tp"><!--pnid:Kn9UvK9D399ioexdQtso0P-->专门找「已被拒绝过、销售后来又答应客户」这一类。产出 Excel 一张旧账对照表，列功能、拒绝时间与理由、承诺时间、现在的前提变没变，每条注明出处文件。</p>
+    </article>
+    <article data-page-node-id="Ou8EP8AsttAwj1BulJavTB" class="task">
+      <div data-page-node-id="DkA471mp54AvskKujg2oGl" class="th"><span data-page-node-id="vPwAs8HJnbo6aiyxwSpcue" class="no"><!--pnid:35ewE4UIwQ0E1Zb4C2qqL7-->08</span><h3 data-page-node-id="5CtD2ljXiBe9KfQOhWf5Bi" class="ttl"><!--pnid:wTRiR5PgSrzYO5WOUaQLGu-->只登记已发生自检</h3><button data-page-node-id="5AGcQnimLRR1A8tlrOK1HZ" class="cp" type="button"><!--pnid:4DbLhNde1QLLbZfXFFtqp7-->复制</button></div>
+      <p data-page-node-id="BOZRzbIcYDNGD5440YyLoD" class="tp"><!--pnid:3vb3U1nEhQJWGJJrODVtmm-->对照「台账只登记已发生的承诺」这条边界把产出自查一遍：有没有哪条其实是我从销售的话里推出来的、客户那边没确认过。产出 Excel 一张自查表，逐条列原话、推定或事实、证据强度。</p>
+    </article>
+    <article data-page-node-id="8vrJUZ4e6Jgf92sR6Mfo3q" class="task">
+      <div data-page-node-id="JZoeMLBYkScqRfXtlmDlJe" class="th"><span data-page-node-id="kJcf20U2llaZ0BlhvOWfhg" class="no"><!--pnid:WZnEWhAEOwJNG0xkWMFhg4-->09</span><h3 data-page-node-id="4RkQAAVYZmwuogOd0li58Q" class="ttl"><!--pnid:d0F7CC3C7jDqG2zTTzv7hY-->折算成续约敞口</h3><button data-page-node-id="UaGbDvNOZUebpBD4QugysL" class="cp" type="button"><!--pnid:5E6ptlUKFGQAbbm4EpcdRh-->复制</button></div>
+      <p data-page-node-id="x47yXFMEQ5JVCrtUYqhbkI" class="tp"><!--pnid:c0goCx51pduV2o6KEGE7Gv-->按客户年费算：华正 28 万、续约到期 2026-Q4，兑现不了的承诺对续约敞口的影响是多少？补齐承诺又要多少人日？产出 Excel 一页纸，两侧对照，算法写出来。</p>
+    </article>
+    <article data-page-node-id="wE3pWnMHAbnPWbKIc29Vvq" class="task">
+      <div data-page-node-id="YSgIAe5b6fc4llLWDBvO9S" class="th"><span data-page-node-id="8N3f6YhvThNsjWEf67KXGL" class="no"><!--pnid:7Z7aAqdQrEaS1i7Ju4JeV1-->10</span><h3 data-page-node-id="9C0BrCqTE0QvNKOhvE0yML" class="ttl"><!--pnid:txlvwic5cwFQVoymu3TiBu-->沉淀成承诺台账模板</h3><button data-page-node-id="3nSs66khYekPleWLUBJRTO" class="cp" type="button"><!--pnid:qBZvA4bfAPN8ALuiEZjvGG-->复制</button></div>
+      <p data-page-node-id="eEk6AqsxZUGtYHyRlzpBzg" class="tp"><!--pnid:Roy6HVpZMnwjEJT5Eb249h-->把这次的三要素抽取口径、落差分级、兑现概率分档整理成承诺台账模板。产出 Excel 一份，含承诺登记空表、落差判定标准、风险交叉表三张分表，续约季前两个月直接跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="7mEL79iUjdCXUaKg60UmVe" class="cta">
+  <div data-page-node-id="YtYG5opos4VdxRWkHmFIZg"><h3 data-page-node-id="DnyAZsz7ucY2EQCeu8qMSW"><!--pnid:BswMyivv0HLSUvkzaeasSQ-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="Jj8TzkXyAGIRpcf4pGb8O2"><!--pnid:5RFz3jTBxyymsNkNFX79W5-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="WnOtSRF3JLx9w8sVErjQpn" class="btns"><a data-page-node-id="X2SQYm2dwHDqF58VmDsbKl" class="btn" href="#" id="ctaContact"><!--pnid:NRohDUcQtreKA9f8SbnxU3-->联系我们</a></div>
+</div>
+<footer data-page-node-id="U0tsMlzRpeezX0wmNaWqmI"><!--pnid:w0v7H8XTnUzFhYtXbpvX5Q-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<script data-page-node-id="nQHEYLnPjUlES3ywq4yjfS" data-pnid-children="xJdhYafeXN1ylze2WXx8LB">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="pbch2LeiSYzR4T5wwNz9l3" data-pnid-children="4O7n4sYlT0VY4yFXV3S7G4">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="mFhnw7ixVsVDawGADllE3l" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="FlkkT8ILQrwyM2ZKEN2sLt" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="bRPdA2A6ikCPqJB9RMYpBn" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="2vpGbAKAtMbTqqvEXlVpiA" data-pnid-children="5f9lRUpnMBtBaKQ77ceO7f">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="HuJKyOEkPoT6DgJecjCJxU" data-pnid-children="2CVhiTiVjID8u59m7yPJUf" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

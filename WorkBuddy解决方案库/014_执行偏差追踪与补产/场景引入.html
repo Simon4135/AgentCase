@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html data-page-node-id="NfarObAXnwZvGxilXZq1J1" lang="zh-CN">
+<head data-page-node-id="MZHpDJrXzjTBih9lEGHCT7">
+<script data-page-node-id="jJiEqP4xgkhKN2zJsCgPsu" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="pE7o9WGGuZ320q5kftJtTc" charset="UTF-8">
+<meta data-page-node-id="8PgLZ5CKXwWgV4B92bdx6F" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="V9sUCf05FXnogVEssBRjFw" data-pnid-children="n88VNBZVVl1kDPPA9Brfko">执行偏差追踪与补产</title>
+<link data-page-node-id="pr35RNGfYAORL1Sae5Dhiz" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="OyxGxZtgBYNSxKdIDBaPKU" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+
+<style data-page-node-id="xxAKqs8iMePWCZmfOpb4Jv" data-pnid-children="pqFVK2C0DyRjNng0ZwyCxI" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="A5DYJfIdzO5hKHyBiMlZlu">
+
+
+
+<div data-page-node-id="Op5q1hkJKwRpVACABSHQlr" class="wrap">
+
+  <section data-page-node-id="VKBH0JzIQCa2Sm89sw97jQ" class="page-hero">
+    
+    <h1 data-page-node-id="ov9R38udifQqovKlEGkUbc"><!--pnid:j0XLIAX1OQLb8dxBIEK8Jw-->执行偏差追踪与补产</h1>
+    <p data-page-node-id="z2zKiql8rqXUhkShgxmixm" class="lead"><b data-page-node-id="bV55yG4Y6b8QIYwLhPbNCD"><!--pnid:zhownJ0NObKdMX50QQyRhe-->唯一按天循环的场景</b><!--pnid:NGOzjFCoAacvypDkB3JnZt--> · 每天早会前把在制工单过一遍：识别欠数/滞后/返工 → 归到缺料/品质/设备/人手四类根因 → 判断要不要补产。<b data-page-node-id="kBBADjHG774ZC9ezSzD3AK"><!--pnid:GBMJXiBpf1o8Uw4i0JJ6QW-->但这个场景最诚实的地方是：它明确告诉你哪两类根因数据里压根查不到</b><!--pnid:9RwrDGYGyZ4CqWElStt4dH-->，只给候选项让 PMC 勾选，而不是编一个归因出来。</p>
+    
+  </section><nav data-page-node-id="JCe3wi4LLuAZnw6JPAnPKg" class="subnav"><a data-page-node-id="uEMmbLaIcYTzO4sLEHUw84" class="on" href="#"><!--pnid:9SC2h4VfN78sWxkB50QfnY-->场景引入</a><a data-page-node-id="1dhKULV6qvfb1S98Kp0lpD" class href="LiveDemo.html"><!--pnid:3nvcDDogEoyt0YVIPa6eSx-->Live Demo</a><a data-page-node-id="brkJXccCHK854x9mfpAXTe" href="推荐任务.html"><!--pnid:NoGy9Z46lt0NdAqPlqs0h2-->推荐任务</a></nav>
+
+
+  <section data-page-node-id="CE9n9L9SJnie6FpfpfVfxp" class="blk">
+    <h2 data-page-node-id="7p65eeO9Av6YVvxr1ZsPoe" class="h"><span data-page-node-id="pXi0FGMZyKsEHp4APUoHeq" class="num"><!--pnid:Weq5IlJrbhrIIoPXlh9XVS-->一</span><!--pnid:wfjNiGFSlOEMuO3HoYLlnz-->这件事现在是什么样</h2>
+  <p data-page-node-id="8v5HpADNhte7ye9XCnwy0v" class="subline"><!--pnid:9xbNbH9xCtvUm6qn5WjAbF-->PMC 每天早上第一件事就是看昨天的工单。难的不是看数字，是<b data-page-node-id="16Vc8DRQsjDAQ95e6CRTNu"><!--pnid:rTl48vw4KETuQo7dndVL3s-->数字本身不可信，而且解释权不在自己手上</b><!--pnid:dTtdMGSQYU55ftathxxiEA-->。</p>
+  <div data-page-node-id="NOzHgYXepkeiIj6mLNF9Aq" class="card"><p data-page-node-id="vRaIraZVAF7cRd7wTVRbIs"><!--pnid:zcsKHRK2k4GRrSXmeGpLLH-->PMC 每天早上第一件事就是看昨天的工单。难的不是看数字，是数字本身不可信，而且解释权不在自己手上。</p></div>
+<h2 data-page-node-id="LJPBiHd1qhsfbvdTa0sRaC" class="h" style="margin-top:22px"><span data-page-node-id="0QdFGoiBMoCuuORLnXoQuf" class="num"><!--pnid:Gj1CtWtyE29VnKOrDngUXB-->二</span><!--pnid:5mjEvGQfhTUx3fswpUq0x4-->痛点</h2>
+<div data-page-node-id="ewTKM8YGi7cIUj35AUJGPi" class="pains">
+      <div data-page-node-id="fH0fmTFW3WscftRgs3qZxE" class="pain"><span data-page-node-id="NIwfkXUc3hc7tjiX4OLqZp" class="i"><!--pnid:ftR7YdC1KZWE0ySPUllGd2-->1</span><div data-page-node-id="yyNwtl6Q1RoWoQq6c3tYM3" class="t"><b data-page-node-id="VJ7zhinUfVkzS6UfyxbDhY"><!--pnid:wiV2GDA4erBjvrNm40ko0O-->系统里的进度是"事后回忆版"</b><!--pnid:jjnpANhXcnkRcz8w5aPz3g--> — 工人赶工的时候不会停下来报工，等一批干完了才对着工单一次性补录。<b data-page-node-id="cbJnt0Iy4ltJ6Q5pneupA1"><!--pnid:o3rEoVST7GRAC1KANtK3yu-->于是今天看到的"滞后 4 天"，可能有3 天是没录、只有 1 天是真慢</b><!--pnid:3TkYsaPdgSXwX7VCiBoYSc-->；反过来也有工单实际已经卡住两天，但因为还没到报工节点，系统里看起来一切正常。PMC 拿着这份数据开早会，讲的是三天前的车间。</div></div>
+      <div data-page-node-id="2YuIpfQbf2wXPlo3BIl3HX" class="pain"><span data-page-node-id="WxHB45EO0MiFrvnQqStulq" class="i"><!--pnid:qv00n7AILxxc7h1n3Ipe4u-->2</span><div data-page-node-id="OgX2DcfZEiKuVNz360CEOJ" class="t"><b data-page-node-id="116lvEyhN9nRGhfgCZJIyH"><!--pnid:PmaEuRCzi1SqNSKrHhifcg-->进度 98% 的工单最危险</b><!--pnid:o3xLdVmeL8xCsuwKxl5VsL--> — 完工 588/600，进度条几乎满格，早会上一眼扫过去就跳过了。<b data-page-node-id="nVp65lLn7qMBZPcvJs2WlC"><!--pnid:TsSiCOF51ss3hTZNfGx8tU-->但那欠的12 件是返工件，返工完成后有没有补回产量、补回多少，系统里没有这个字段</b><!--pnid:RIUzn9QaFykQsOHrs21jDN-->。而这张单明天就要交货。<b data-page-node-id="tvGqllR7E3G5nKK412kOcT"><!--pnid:z18hJJht9Yw1UTY8VOeuLv-->真正会出事的往往不是那些红得刺眼的，是这种看着快到终点却差最后一口气的。</b></div></div>
+      <div data-page-node-id="LYoE2bzyeuGoxr1xFrbcjq" class="pain"><span data-page-node-id="qYYu5cRZ0oVqGbYSG9yp1l" class="i"><!--pnid:qA2ekp2jx4qnF0i7jSREg6-->3</span><div data-page-node-id="RHaZ51FnqRd3DbNfmDcvsn" class="t"><b data-page-node-id="rVx82AclaVenaGp5P4D97n"><!--pnid:y6cHkE8ju4HzxPPwqjPO6u-->判根因要的资料，三份在别的部门</b><!--pnid:kmbqbFnEpQYttbLzdkwDzw--> — 缺料状态能在 ERP 查到；但<b data-page-node-id="szCb1mjrcLz3MsdloMkPOF"><!--pnid:RxUlszlUWpTgLxmr3mTY3O-->设备停机时长在设备科的维修工单里、返工数量在品保部的纸质台账里、人员缺勤在人事的出勤表里</b><!--pnid:fI73QjyyX0tEyFXZ8nGQ80-->。PMC 平时一份都不看。而这三份里有两份还是残缺的：返工单上数量写着"少量""几件"，出勤表只有缺勤人数、<b data-page-node-id="8ZNNUx5OifaR02hhbb6aYk"><!--pnid:igNULxX7ZN7jx3WcjvW4ro-->没有"当天这个人被安排在哪个工位"</b><!--pnid:ibADrX0KkIAmgp2F3eOAbL-->。</div></div>
+      <div data-page-node-id="qZjLfiAdtyqjSz3V8wTDA0" class="pain"><span data-page-node-id="kve6AgH9zydccoG3iOJUjQ" class="i"><!--pnid:O7KjgM1B7WJvT81JGDHUqz-->4</span><div data-page-node-id="3qliaTq5q2WtLeHcD0Imdv" class="t"><b data-page-node-id="vuALXpdNccmPr68DjjLy0N"><!--pnid:vP3nro7tlC485iCaR0Bs4u-->欠数不是当天暴露，是齐套的时候才暴露</b><!--pnid:T5Mxe4UGWDJE0yWMN1zHW5--> — 单看一张工单欠 95 件，好像还有时间。但这批底座是下游总装的前道，<b data-page-node-id="Acmnv9fXwBFIShbCUfWWcX"><!--pnid:k3wW2VgJdcvnUCxDLqrVXe-->等总装开始齐套才发现凑不齐，那时候补产已经来不及了</b><!--pnid:dAHTPF7EecVmNRNNNIw002-->，只能加急外协或者跟客户改期。<b data-page-node-id="GdBuQF99olxKGFwUsSaeE0"><!--pnid:bzlTa8kTxIXj8hzVoP3M4Q-->偏差追踪的价值恰恰在于把这件事提前一周看见</b><!--pnid:lyTWwTEkMlV4Y5yDLYAYRd-->，而不是等它自己浮出来。</div></div>
+    </div>
+  </section>
+
+
+  <section data-page-node-id="lc7PBI3MUNZQhHexaoCrzm" class="blk">
+    <h2 data-page-node-id="b3xuogT4uV0Kxnjbr1uwVG" class="h"><span data-page-node-id="YlK2oDyEbGp0hzru91h2bi" class="num"><!--pnid:7ysNDlVYL33WJ9hEgK43iK-->三</span><!--pnid:dbpe3TW3EAd1MhjLXe0cxr-->换个做法之后</h2>
+    <p data-page-node-id="rYyJu7lgUG6cvVZev3G6mj" class="subline"><!--pnid:HyZsUmljcNu8TwDP8768a1-->五份数据一次读齐 → 先校验数据时点 → 识别三类偏差 → 四类根因给候选而非结论 → 补产建议 + 早会可打印日报。</p>
+
+    <div data-page-node-id="wP0S4VKe4c8A3uX8oWlLZT" class="cmp">
+      <div data-page-node-id="iDmRkr7UnHsQ5s6XAZYsOG" class="old"><h4 data-page-node-id="qKpUasXe6KmTvPrBJEoeTT"><!--pnid:pgKST5amPrdisnno1KMuBa-->传统做法</h4><ul data-page-node-id="OLo7LIK2LiWWJzkoKPEJxI" class="list"><li data-page-node-id="UJFqt5fp5jS9b0hUNN4yQZ"><!--pnid:nUlgdWIZ3QRy7Fbf7emSV5-->PMC 早上导出工单表 → 按滞后天数排序 → 逐个问车间"怎么回事" → 各部门解释自己没问题 → 记一句"继续跟进"。</li><li data-page-node-id="LMADuH9oUPQ3wRjDKWpsZj"><b data-page-node-id="IPe2L6QrokCYkt6USo9lt5"><!--pnid:KHokKd9IOsLJwxCKk9OytX-->数据是三天前的、进度 98% 的单被跳过、四类根因的资料三份在别的部门且两份残缺，最后归因靠谁嗓门大。</b></li></ul>
+      </div>
+      <div data-page-node-id="hlsJCz8RInFCMfcXgycHEN" class="new"><h4 data-page-node-id="l1NTaS4DJYr5ZtTsLQvEtZ"><!--pnid:Pw6fdJcuY9aYWJ9cToWDam-->WorkBuddy</h4><ul data-page-node-id="1KZgrMOAfvxFvRkzp48ARA" class="list"><li data-page-node-id="WCDZIQCMb0LxWirDCVw9l2"><!--pnid:SjYMvNXP6yiUKWgLNE56vH-->五份数据一次读齐 → <b data-page-node-id="OgLRLka2asYmnwAeVFzUox"><!--pnid:UckMAXE1WVDv3CiFWHBc5W-->先给每张工单打"数据时点"标记</b><!--pnid:Q313NWZ3rPEptElgFTzsLM-->（超 24h 未报工的滞后天数直接标为不可信）→ 识别欠数 / 滞后 / 返工未补回三类偏差 → 四类根因<b data-page-node-id="amOt6i8oydP6evTgBqZ1sN"><!--pnid:WQovVtW4VeIdx3cmIu7sm7-->逐类标明数据可得性</b><!--pnid:nQO8pHeh4flnrA69x4MmNm-->，可算的给算式、查不到的给候选项让 PMC 勾选 → 出补产建议 + 一页可打印签字的早会日报。</li></ul>
+      </div>
+    </div>
+
+    <h3 data-page-node-id="liH6Bp4rmZLMNd39OoFrOn"><!--pnid:cFGoEvdNo4UBKw0H04Ju1U-->核心价值</h3>
+    <div data-page-node-id="jdbKE7YUUPgDklB2GU5EAs" class="g3">
+      <div data-page-node-id="s76PmAVFVWA8eaN4MEiRbp" class="card">
+        <h3 data-page-node-id="8vWS0Z7WGpwtfjZgJIh7ip"><!--pnid:jUcuDyB0CaEwOl2VZIS4rN-->先判数据可不可信</h3>
+        <p data-page-node-id="f2S0W2q6ugLoQjXFkgevOg"><!--pnid:cmw8uGe3TnDEoQiCZOGr1r-->报工是事后补录的，所以<b data-page-node-id="JpONfNoWcIhKbizGfj8jhq"><!--pnid:UR4WIO1KRuVejLXfz8k3P8-->第一步不是分析，是给数据打标记</b><!--pnid:W0nRncb8kveuvpzk7N9eOz-->。超 24h 未报工的工单，"滞后天数"直接标不可信 —— <b data-page-node-id="KWiTFAX0dsqPU1hSbiGkZu"><!--pnid:hhN07rkUKn2t4rE4ZRQvQu-->不能把录入延迟当成生产滞后。</b></p>
+      </div>
+      <div data-page-node-id="bn9lNbi0ZZUkWzMHHyR2Tc" class="card">
+        <h3 data-page-node-id="NrGdCgT9lJQpIwk5eiK7bH"><!--pnid:kafmKfGHuvZ2mYAXrDJ69a-->查不到的明说查不到</h3>
+        <p data-page-node-id="j4mfsFCbfe21WQS5Oo9jCn"><!--pnid:sDSVIOV8xHff7CeQFmevj2-->四类根因里<b data-page-node-id="tzpx4YVX4saR7FViSFxcAR"><!--pnid:Us538jmwkEkgSnzbdQYccA-->品质和人手在多数厂就是查不出来的</b><!--pnid:ACV9igQvwZA3OIbvA1vZCo-->：返工单数量写"少量"、出勤表没有工位安排。<b data-page-node-id="jU3kI2gHX1OAc75o1DweDT"><!--pnid:CYiXxDbDDtW4iQp8F6tFvZ-->给候选项让 PMC 勾选，比编一个归因诚实得多。</b></p>
+      </div>
+    </div>
+
+    <h3 data-page-node-id="dE3LhedPdoqLyCIKOvdyLP"><!--pnid:nzkHuhbGjzkwOxRBjFOR4C-->四类根因· 数据可得性不一样，处理方式就该不一样</h3>
+    <div data-page-node-id="PLHKSpOjMKJkg3WCOahBqx" class="cause4">
+      <div data-page-node-id="KiA53VDXQyWa8SwRJKTlfo" class="cs ok"><div data-page-node-id="NAw3YyU9jo7rgY6dLuEgUF" class="cs-h"><!--pnid:ObPWPcb6MYHPGU32i99ADm-->① 缺料 · 可定量</div><div data-page-node-id="IU859i1tkvBmSxWwuotGeH" class="cs-b"><!--pnid:0wt9JuYtrhCjY0aESdjKWM-->需求量 − 已领 − 库存可用 = 缺口，在途到货日 vs 工序需料日<br data-page-node-id="fINFl5oUAlta5tDm9EkFsg"><span data-page-node-id="Y5tySCB9JoQJkzAHo0Kutd" class="src"><!--pnid:Qie2OgWgB5CrB22unuGUzc-->来源：ERP 齐套报表</span></div></div>
+      <div data-page-node-id="q30lrEU7S4KCrC0a6shnKL" class="cs ok"><div data-page-node-id="14QywUY2VNzKhNS0P932Tp" class="cs-h"><!--pnid:YC5Q8H5wxjr1RR4aPrSm2x-->② 设备 · 可定量</div><div data-page-node-id="VzYpKufPqk9tpWq0IsF3Oj" class="cs-b"><!--pnid:wWvnJhdjptMjTXcuCVnlh5-->维修工单里有停机时长、故障现象、影响工单<br data-page-node-id="09B87Z311PQhx6fAs3ECFh"><span data-page-node-id="GUYBUNRvTqVKhtfhta2dZW" class="src"><!--pnid:wOqH5huv4SmH1dxJ7e2gIz-->来源：设备科维修工单 ⚠不在 PMC 手上</span></div></div>
+      <div data-page-node-id="wZFRsD98kDIKLuvQiG43kn" class="cs no"><div data-page-node-id="XhowDTZ5YgHOs16RycqjMv" class="cs-h"><!--pnid:t8BGBK7HPPZ3wNOYKXjva1-->③ 品质 · <b data-page-node-id="YXQcfZmFjds2JTnQT3hEAv"><!--pnid:4ZyGYNv5FhbnOt5iJXh6AD-->查不到</b></div><div data-page-node-id="KuxRmMkIvu7MrKn7rHxMuS" class="cs-b"><!--pnid:2nMQ0Wwi5IC4nAY17z1O8C-->返工单数量常写"少量""几件"；<b data-page-node-id="uAaaI8vVIRoIlTPbcMyTq6"><!--pnid:jVj3FYxNbgXVISn12Jhkj9-->返工是否已补回产量不追踪</b><br data-page-node-id="evSfexYa2bEVqZDDx98jar"><span data-page-node-id="lJlGVaqTXHBgfkXMwDM55K" class="src"><!--pnid:lUIfc5MTCwWetWcLAPcBKJ-->来源：品保部纸质台账 · 残缺</span></div></div>
+      <div data-page-node-id="Fu4nLT9QsGQY4b2IfLeDzb" class="cs no"><div data-page-node-id="2DWSyfS3OpXZJ6j7MJauLR" class="cs-h"><!--pnid:ccj8cmfGYiQUda9zjg1luY-->④ 人手 · <b data-page-node-id="T5JWz2U5hHim5bwL7gStXY"><!--pnid:bWcxpa5QjA6VWKq2aHmIIi-->查不到</b></div><div data-page-node-id="TdCBZc0nFAeVahihPpTELG" class="cs-b"><!--pnid:tWAnjXwEb4ei5VdGxc4h7z-->出勤表只有缺勤人数，<b data-page-node-id="U6QZgQ8nQuVSArM0R23Seg"><!--pnid:nM9kfxG9tfWVevFGpomtRk-->没有"当天安排在哪个工位"</b><!--pnid:kWykapgxjZJfjag6FsytHX-->，工位调动只在班长脑子里<br data-page-node-id="Ye6o753eTYH7Q63CjktsdN"><span data-page-node-id="ogZeDfg9pUXy6vtwkurwMl" class="src"><!--pnid:ujrvHrUSW3BddYGZLAEZg4-->来源：人事出勤表 · 不完整</span></div></div>
+    </div>
+    <div data-page-node-id="KzhEONHtEiOZS63X3CutTC" class="callout warn"><b data-page-node-id="eW0tLohFt2GNsJ3C97ranq"><!--pnid:OI5jFkJlIwkcVRXolfM6KH-->为什么必须承认后两类查不到：</b><!--pnid:BShDMmC0qfDz4YNdF6cf9W-->如果硬要AI 自动归因，它只能靠猜——"焊接组这三天缺勤 2 人，所以焊接工单滞后是人手问题"。<b data-page-node-id="CkWzQvoFMPuAv22ba9BqpD"><!--pnid:wcHFIugZy2OFpD5oZdGxZE-->可这2 个缺勤的人本来是不是安排在这张工单上，数据里根本没有。</b><!--pnid:G6jISAbSK5PXnH261UyWkj-->猜对了是运气，猜错了会让PMC 拿着错误结论去找车间对质，一次就失去信任。<br data-page-node-id="5Um4tcoqKBwsa4LLrWPKsI"><br data-page-node-id="117yI8o25a4FzDaU2nSnjg"><!--pnid:FjC7GsG1yx5xPei98clQYi-->所以正确做法是：<b data-page-node-id="sod9SDMB3ILLsnYIIkK8NP"><!--pnid:ips91sHt3tpp593v7dswpo-->把四类根因的嫌疑证据全部摆出来，标明哪条是算出来的、哪条只是同期发生，然后让 PMC 勾选。</b><!--pnid:pbdsxi1Ik3JnJ36HMMwT5Y-->PMC 心里其实知道答案，他缺的是把散在四个部门的证据摆到一起的那个动作。</div>
+  </section>
+
+
+  <section data-page-node-id="8D51lQkUYpuVdHp6G902w2" class="blk">
+    <h2 data-page-node-id="baj4lG4AAj3g0fRG9ij528" class="h"><span data-page-node-id="vUXezfa5VVN8sKhEOrXadf" class="num"><!--pnid:CR0SJLKJBwzFIIcuz8XesZ-->四</span><!--pnid:E3PppF8sUQOpDcoRcq2NrU-->场景闭环</h2>
+    <p data-page-node-id="MrHux0glUE6oGdcIYMwcDu" class="subline"><!--pnid:Tgd6brvkMGmGYiMARlcJBv-->从五份数据到一页可打印的早会日报 · 5 步走完 · 每天跑一次。</p>
+
+    <div data-page-node-id="VbAtmoNxqAvXuIra6uokrT" class="flow">
+      
+        <div data-page-node-id="J00e44eU3fjvumQRNBqOlb" class="step"><div data-page-node-id="IOdaETl33dWJGYMPxANYHq" class="n"><!--pnid:WdHmgEsNgZbvmP4uy5oX0W-->STEP 1</div><b data-page-node-id="C7ZHlSeq0BtD4rNcNgPN5s"><!--pnid:iSDZbZRT4FsPFOfmWDphDW-->读齐五份数据</b><span data-page-node-id="3n91lP4CrxejecCdetCW4i"><!--pnid:TCIL1KgXLztJOoZxlla1An-->工单进度 / 齐套 / 维修单 / 返工单 / 出勤表</span></div>
+        <div data-page-node-id="M2NEHNI51jOeO1GkvqMpnn" class="step"><div data-page-node-id="aspSpJJHzSd6EcDHG59UCn" class="n"><!--pnid:jy5uEpoi5QNyb4BqDYunk3-->STEP 2</div><b data-page-node-id="7cJhnwWj4vA1TftGd0tqUI"><!--pnid:fwYzaJJwjINZAWc4Vf4B3W-->校验数据时点</b><span data-page-node-id="hsb7qf1xazECHzXe04JDSQ"><!--pnid:0OFFuVcEziWJ9G7AghsfsX-->超 24h 未报工 → 滞后天数标为不可信</span></div>
+        <div data-page-node-id="Z398ouQZlsUU5tvCYRM1EX" class="step"><div data-page-node-id="DeoiMYEVpECRw1sSM0fbM1" class="n"><!--pnid:HVoOzZHZ6OTOC7PaIJbpd1-->STEP 3</div><b data-page-node-id="5zEKlovHNqIt7nu670BUaz"><!--pnid:3PEmWJq0mCVdSSQR2jyEqt-->识别三类偏差</b><span data-page-node-id="Q3QJymmVONvlniYMnoZ3ao"><!--pnid:bIazGlIcDQsLVTXyUtA5LT-->欠数 · 滞后 · <b data-page-node-id="qn7qboZnrGg5tLQ6ofz8jc"><!--pnid:EgmrYIfUztQE5czG0C836a-->返工未补回</b><!--pnid:tn6IhruDHkd7t42wLRGCEt-->（含98%陷阱）</span></div>
+        <div data-page-node-id="fEDi4r5nksY6WdpEwcAbvW" class="step"><div data-page-node-id="w6ypmSe4ay73us7NgSSukl" class="n"><!--pnid:Ig4MOxHoskVTOPAuWQWTtt-->STEP 4</div><b data-page-node-id="fv8Z3nlD1OPWTlI66EaebH"><!--pnid:H9qO0O7fxUp5lLRA4lNhIW-->四类根因候选</b><span data-page-node-id="33cevgwTKjUvbhCCAIm68D"><!--pnid:e0KKepSFw96MEb1Uy2kwHN-->可算的给算式· 查不到的给候选待勾选</span></div>
+        <div data-page-node-id="6pIJ0UnqA7LkHysD0yniw4" class="step"><div data-page-node-id="6kNPppRFqaH2UA9hLkqOky" class="n"><!--pnid:C75P2Raty29Miiv8e2CHYV-->STEP 5</div><b data-page-node-id="GN8tONKMKrIMOYlAIoIsP9"><!--pnid:4NZZVWhjeg99N2Z36YkhzK-->补产建议 + 日报</b><span data-page-node-id="JAPJhJYxfnghTrTcheSeuC"><!--pnid:CgP3bGmxKbO6Mvlbu5xp2W-->是否需补产 + 一页可打印签字</span></div>
+    </div>
+  </section>
+
+
+  
+
+
+  <section data-page-node-id="QgyuC9pUBw2VNZmUL41QVG" class="blk">
+  <h2 data-page-node-id="OERyJ9NDqofUUw5brKRoqU" class="h"><span data-page-node-id="A1yrEwwCSEqwwvjPGmlcuz" class="num"><!--pnid:6bcTkLYoL2uBIzHugLliBg-->五</span><!--pnid:fvmDd7nAHoannpOJMKZsm7-->会产出什么</h2>
+  <p data-page-node-id="4vPCGlF47zQ1XvGgo7A54e" class="subline"><!--pnid:rtI6rPsHcucA86o6WCPTBl-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="0eDua2xGIzj0RYq8OIyQ5O" class="outs"><div data-page-node-id="6TjUt5DObfYueolmzW4veB" class="out"><div data-page-node-id="X6fDmxrozzsjRtDHGIyp04" class="on"><!--pnid:dJewnuW7OAkGCs3PuLrZXE-->正式件</div><div data-page-node-id="gTIqzfezZwcs28c9JwEDjz" class="ot"><!--pnid:0pNvxN2YmeebjTiNLuyqZ1-->工作产物.xlsx</div><div data-page-node-id="V2152wcKpeuh5CETqMCIaR" class="od"><!--pnid:poiS6CAjPL2Z2Pb6kokycg-->可直接进企业流程的正式文件 · 带出处与判定依据</div></div><div data-page-node-id="FV9nRHlr9cyp6ILruUNX0T" class="out"><div data-page-node-id="R9KwCYJwD2G6LSttXCEZSl" class="on"><!--pnid:5DEsPlalQQR8SLdS63STTh-->问题清单</div><div data-page-node-id="IQngP8EjiJ1RpFoep2eFPD" class="ot"><!--pnid:jHppYBBMT9Afsgr6VK1D2d-->待确认与差异清单.xlsx</div><div data-page-node-id="Mg2zwPoRXQcGyVu9xMRgOE" class="od"><!--pnid:o6oeACij1K5o6cLbcKmjfu-->每条带原因、影响、责任岗位与时限</div></div><div data-page-node-id="41z0bHEhhCpQcW5ws5QDA5" class="out"><div data-page-node-id="bc87ovh1nwDa4wOFQHytGQ" class="on"><!--pnid:k5jds1fZhpyVd4PW9OKw2r-->归档记录</div><div data-page-node-id="BF4xpHhucMNDzQwPphJHp7" class="ot"><!--pnid:q3XbIKddNFo8k6aaoHgjwb-->处理台账.xlsx</div><div data-page-node-id="zXFQY2uAUdW2w5TEyGAHel" class="od"><!--pnid:SeLF033hTsv4AecsSbxts7-->本次结果入库 · 下次同类任务多一个真基准</div></div></div>
+</section>
+
+<section data-page-node-id="qGxstYYBPnw08An5yp5Cst" class="blk">
+  <div data-page-node-id="HoAU9zRPcpD4pvX5OvFUt9" class="card warn"><h3 data-page-node-id="bLqUBRtk00EkSzq5n28ftB"><!--pnid:DBBsCV8CSaGM2oeHKpmhLa-->这套东西不承诺什么</h3><p data-page-node-id="3maNlk7nG19MczeoTqkFpM"><!--pnid:wqloYvvbGWiko8Eef45sW1-->不做「AI 替你定最终结论」—— 关键判断必须由人确认。本场景产出的是初稿和建议，影响大的项一定会被拦下来要求人工确认，而不是自动放行。</p></div>
+</section>
+
+<div data-page-node-id="ZoJzwhUh0imisPJ659PMDg" class="cta">
+    <div data-page-node-id="dAsoyujxZVcoWSSQj6pqIN">
+      <h3 data-page-node-id="VPpqvJbh9KohLzjnEWy0Ma"><!--pnid:Qwgk0AcxDc7rTvHcHbGoLE-->打开 Live Demo · 看 8 张工单怎么过一遍</h3>
+      <p data-page-node-id="PFiwWfx3DHL1HZ5Kcpte6W"><!--pnid:Fw4BRaHEAB0I8Pvq1DXcqb-->数据时点校验 · 98% 陷阱 · 四类根因候选与勾选 · 补产建议 · 数据脱敏</p>
+    </div>
+    <div data-page-node-id="yjUBITJYZhjbtPUTmfO53z" class="btns">
+      <a data-page-node-id="nINDU29rR7aCBIsUCZqTKX" class="btn" href="LiveDemo.html"><!--pnid:Y0uKRhxl93RJjX2TJbxWpk-->查看 Live Demo →</a>
+    </div>
+  </div>
+
+  
+</div>
+
+
+<footer data-page-node-id="ZJ65qTmS28ERDKz7QKZxRX"><!--pnid:zqj0iZu0pfVKJceO4hbaQT-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="tVW1FgtqFT5grxEYQFC4fC" data-pnid-children="BQ37ydaMJVwhffeEdDcPdA">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="UlWCBqqO5zB5IGqczcMHhK" data-pnid-children="f7QYq6Atlfra0VX8NVpeJL">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="7vAWtogucnMmZWIAIeDRUB" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="wXlwd6up6OfnEyRvAZErz6" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="uqLR3Ec8mWCtNrSOuxTdV8" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="YWuhUJ1YstV2IwUn1E7RWf" data-pnid-children="j64Pff2V9fhZLsJodhdVZM">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

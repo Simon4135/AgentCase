@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html data-page-node-id="7eU8aLjkr5cezGfdM8cU55" lang="zh-CN">
+<head data-page-node-id="ajoZLo3O1ATqIVLUVBH0Ps">
+<script data-page-node-id="wJVESG3RgXhZnoIAX2FrgX" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="xYwVmdCfqTeXKn95UwFsLS" charset="UTF-8">
+<meta data-page-node-id="eOeR0vIgGURWcatS6n82sD" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="WmQ4PU3VpHm1qjjVkaLzMw" data-pnid-children="tUKzvq6eBTEAdZ33aQJ7J8">小程序开发测试</title>
+<link data-page-node-id="XlPx39ZHOu6R7ut7XafqAm" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="bIZVr4HYATDaHUD4wkSxpW" data-pnid-children="MS5ynCxSO1zVxom8Uzbl6k" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="lRuDX6nlWWRueD6bpehnr1">
+<div data-page-node-id="qIHkm92lY9ecLhYDMPeP7p" class="wrap">
+<section data-page-node-id="8vHPmYYjPMPX95nHYT3yDS" class="page-hero">
+<h1 data-page-node-id="CSzySKMKvDU8IVdxS6HxdY"><!--pnid:7Z7JfAPiO0W29C6mVRxE9Y-->小程序开发测试</h1>
+<p data-page-node-id="CPePghZ97wqN9hekrmpkz4" class="lead"><!--pnid:Ty9UVbEZCBs1dnr3YrsaNR-->小程序页面组件手写重复，测试覆盖率低，开发环境搭建耗时长</p>
+</section><nav data-page-node-id="Mi0p2PyqGnDujfQDW3kjfz" class="subnav"><a data-page-node-id="VQTaodC6eHcPPSudLBdFgk" class="on" href="#"><!--pnid:zgRSF6HOnmNK2pq1hquN7O-->场景引入</a><a data-page-node-id="fWhqHLed1prdlWx3c0IGTZ" class href="LiveDemo.html"><!--pnid:93dppUhfsbbRzINe2EKYom-->Live Demo</a></nav>
+<section data-page-node-id="QVJno0CIim1PlwwRwdr7Qk" class="blk">
+  <h2 data-page-node-id="xWw4ZUTAdH6zFqQGjjKAgD" class="h"><span data-page-node-id="399fJpY6VlY7xoBEWh50xm" class="num"><!--pnid:tHml34GJn5Nyt2DyRX8uOL-->一</span><!--pnid:mH9e2Qoxlw9RPA6SRpYOfF-->这件事现在是什么样</h2>
+  <p data-page-node-id="HKPAitf40jzxUtR6avE0oW" class="subline"><!--pnid:j9XKNTVVuo7b764IQMYz42-->餐饮品牌开发人员 · 每个小程序都从零搭一遍</p>
+  <div data-page-node-id="tiaB8TPToxOyBIV1GB2aRu" class="card"><p data-page-node-id="LoWzOILWE39MfaF6db3vHr"><!--pnid:wN5cl9cZVVe8xDMWa8KKXG-->某连锁餐饮品牌，门店要上一个扫码点餐小程序。开发排期表上写着三周 —— 第一周搭环境、搭项目结构，app.json、pages、components 一个个手写；第二周写页面，五个页面里有三个和上一个项目长得差不多，照样重写一遍，Mock 数据一条条编；第三周补测试，时间不够，测试用例只覆盖了主流程，边界情况「先上线再说」。到了发布前，隐私协议、类目要求、AppID 配置挤在一起，返工两次才过审。店长问「扫个码点餐要做三周？」，开发只能苦笑 —— 活不难，难的是每个项目都把同样的活重做一遍。</p></div>
+  <h2 data-page-node-id="0JTLMqEn9519WWpB6b43ge" class="h" style="margin-top:22px"><span data-page-node-id="AgkFAZEok8TaDZ8sysu0iD" class="num"><!--pnid:t4QZc63HsZOaCSWyPLY7au-->二</span><!--pnid:UM9CMFrcWE0aKzhd1A9bkW-->痛点 · 每条都发生在昨天</h2>
+  <p data-page-node-id="HelUI9vIRlnMXC7DPN7wAh" class="subline"><!--pnid:vmbpJ5UvOPTE7hwYYT1Yi6-->不是流程描述，是开发团队每个项目真实上演的日常 —— 以下案例均取自场景调研与演示素材</p>
+  <div data-page-node-id="Il9kiWCdwTos0YvPMabUa3" class="pains"><div data-page-node-id="gbK2acfnzCtveKCCbOyXtt" class="pain"><span data-page-node-id="Smbzv9Cx2WwMeWBp8R2EfY" class="i"><!--pnid:128vSt80flCw9de7hbz3te-->1</span><div data-page-node-id="I41OujYY9PKLnWCqysko8t" class="t"><!--pnid:xkguTqUeK7sBrurwvNyr9g-->页面组件手写重复：菜单页、购物车、订单页 —— 每个项目结构雷同，照样逐行重写</div></div><div data-page-node-id="IRZ3d5aTR7Se0Qzp9XOiEF" class="pain"><span data-page-node-id="w0gl6xIbq0qYRkhN511C4P" class="i"><!--pnid:b680YBg9FUPSzdzASkT3rc-->2</span><div data-page-node-id="KOG0WrgYlRZCl3zfBZbT0a" class="t"><!--pnid:kWHP9uYGaADWiYPPWEEm1e-->测试覆盖率低：排期一紧，测试就只剩「主流程点一遍」，边界条件与异常场景没人补</div></div><div data-page-node-id="XkfZ6JAvvH4XSqhi78K7gf" class="pain"><span data-page-node-id="MYv85mH3KqI2jGctL7X84F" class="i"><!--pnid:mhnRkzNtMXPPOxk5NnCSn3-->3</span><div data-page-node-id="HVYe9GynkGIdnCozNNMAA8" class="t"><!--pnid:On29Cs3h0cl6hXvy2CBpfx-->开发环境搭建耗时长：项目结构、Mock 数据、工具链配置，开工前先搭两三天</div></div><div data-page-node-id="aPetkeQoFQwKVRakbdM7cJ" class="pain"><span data-page-node-id="v1Ye0D7g85eWIyBhm8HvfP" class="i"><!--pnid:1On1CjsqcQGGDx12X89USN-->4</span><div data-page-node-id="5udX4ngLO0cuZko0vCkStt" class="t"><!--pnid:AmXbAwf2OoVF78Cd6pgfIo-->发布前检查项多且散：隐私协议、类目要求、包体积、API 兼容性 —— 漏一项就驳回，驳回一次等三天</div></div></div>
+</section>
+
+<section data-page-node-id="qODmdkDPUypIn1kbewVbPx" class="blk">
+  <h2 data-page-node-id="J4FlUVHjZDDURYi8s2oayD" class="h"><span data-page-node-id="KAoQtj98yqLhP4K1nExIno" class="num"><!--pnid:AoHeqROQezuqNpYSDIu2Cd-->三</span><!--pnid:l90icZP0i87DdoBucIgHkf-->换个做法之后</h2>
+  <p data-page-node-id="l1DpGRw91IxQLk9Y8nppZx" class="subline"><!--pnid:GfojFqxAqpURWNdM8XNqlj-->变化不在「快」，在「交付即可跑、测试跟着代码一起出」</p>
+  <div data-page-node-id="95gGLe6HlxVeWxVwO1XPQf" class="cmp">
+    <div data-page-node-id="smqusmDpQzjBmFCbCGJjIx" class="old"><h4 data-page-node-id="CtriuDYbfzZWUGIk5YNpJA"><!--pnid:sTwsq9EkuIlgkMptOYAqvk-->✕ 现在的做法</h4><ul data-page-node-id="wMCNr82XA8h1etoyG2SeRh" class="list"><li data-page-node-id="4fNVHoTuT7kunG26uUtXbP"><!--pnid:2k6o3RFJ2UOyp9bNNZxuno-->项目结构、页面、组件从零手写，重复劳动占一半工时</li><li data-page-node-id="DYGbPuph28vr6AOW6p7W2C"><!--pnid:9dWLz2Hvdt0uA754C5Zt0r-->Mock 数据逐条编，编错一个字段调半天</li><li data-page-node-id="MwZ8WqnnPnQToQO5w4LVZY"><!--pnid:a1dHuObOuSEnEEsHoEjgVQ-->测试排期被压缩，用例只覆盖主流程，边界靠上线后用户踩</li><li data-page-node-id="2l8GPw2m0ClmISuEPU7rpG"><!--pnid:o72gVCevMgpxiNIIp8FPGD-->发布清单凭记忆核对，隐私协议漏一项就被驳回</li></ul></div>
+    <div data-page-node-id="xaMYJctfTi9nXXo4yfRM9e" class="new"><h4 data-page-node-id="xPYQEQpqNkgXWY01b0Fa1X"><!--pnid:MOlwgIafISGsvAqyIZp7sa-->✓ 交给 Agent 之后</h4><ul data-page-node-id="1vZXqjUlW15PXnnziOEqFX" class="list"><li data-page-node-id="npt3A0dzPMTbSoZoKO23lQ"><!--pnid:0UIXjW2d3RVHuR7o1Va96p-->需求解析输出确认清单，架构设计一次出齐项目结构与数据流</li><li data-page-node-id="q7nqLVHlwvj39BQ2iBetjO"><!--pnid:w79JiBHOb9oQMBHftRmkbB-->逐页面生成 WXML/WXSS/JS/JSON 四件套 + 组件 + Mock 数据，导入开发者工具即可运行</li><li data-page-node-id="OsKYjJa6toCtXcXxmJxYD8"><!--pnid:7SNxSLFYaXy0XkqPHcwBt1-->功能/兼容性/性能三项测试随代码一起产出，报告直接可看</li><li data-page-node-id="sgG685F2yFmk6p8I2z6yAk"><!--pnid:eyh5TWdrUbE1aPQ6mHOKK6-->发布清单与隐私协议模板备好，调试修复后输出可提交审核的完整代码包</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="iHLhiK3lUdHg7IXUw4c6Ks" class="blk">
+  <h2 data-page-node-id="RajQQ1zUKADB9Vhtb5wwNq" class="h"><span data-page-node-id="xqR3URlPYyOeIWesErS9jQ" class="num"><!--pnid:pyuYXvRzqxUEeMOZGmluI2-->四</span><!--pnid:8LIgWR8EEMhzduqfSYMDBh-->场景闭环</h2>
+  <p data-page-node-id="zgF8xghwCJPEdjZYqGA8ow" class="subline"><!--pnid:hDb87KtmZ4JDIk2SPhqdNN-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="qhhwT4VcwKKruYtpHLtvJT" class="flow"><div data-page-node-id="7tNJ8jlO4jZgm9qlZuHhRa" class="step"><div data-page-node-id="phnXKyvMSWlmbV0RbKsrXJ" class="n"><!--pnid:llq89t9QpxQieldihE1s1y-->第 1 步</div><b data-page-node-id="nUyRHotldmeNWDIaPd658j"><!--pnid:hWGpq2dU52gwsptOuypFWO-->需求解析 · 确认清单先行</b><span data-page-node-id="xkRayo7nOSVCmWzs5Udmy9"><!--pnid:0469PDNFPEwb677IoRRnXj-->识别目标平台/业务场景/功能列表，输出需求确认清单 —— 做什么、不做什么，先对齐再动手</span></div><div data-page-node-id="Dq3miB6GANk903j19ld7M4" class="step"><div data-page-node-id="JljjchcIBVN37aaJwbaThG" class="n"><!--pnid:xuRPFhWFTCrPSyWlfz2AhM-->第 2 步</div><b data-page-node-id="MVFxZBo3Ydrf1bmYj2ZA0P"><!--pnid:v7SlBQ5GzTblpbHgET6oBF-->架构设计 · 结构一次定好</b><span data-page-node-id="BSxA3dmjsI8uUZHp9JEwLa"><!--pnid:z1M4gaq67lsli3GJcRIE0M-->设计项目结构（app.json + pages + components + utils），规划页面导航流程与数据流，输出架构概览</span></div><div data-page-node-id="ZHlVFoxYb7jE8iFF9RdWzj" class="step"><div data-page-node-id="mMrVewVujVbXXG5uiXdTwZ" class="n"><!--pnid:rjlSpp8tNzv0Y89IYh2CsI-->第 3 步</div><b data-page-node-id="2aZhKQBq4sSrH3A7iXKkZq"><!--pnid:Jgm0DCD9v7VCoo9UgOU1aL-->编码实现 · 四件套逐页生成</b><span data-page-node-id="Rrvdhrv7ZgrMutuPVzWg7s"><!--pnid:HGcKu4OiLgYuuoJFiC1Mds-->逐页面/组件编写完整代码（WXML/WXSS/JS/JSON），内嵌 Mock 数据支持独立运行</span></div><div data-page-node-id="0oEDw7A4jkJ0Yt3m1DAGQ5" class="step"><div data-page-node-id="SPQmFroThGU8uwCEtkSP0N" class="n"><!--pnid:cw7sZ3QIu0ASv72xvktqMp-->第 4 步</div><b data-page-node-id="B1TwUhQMLJUFpxLA3hAwJ9"><!--pnid:OygT2FgEU21IxcpdqCo3d7-->功能测试 · 逐页面过交互</b><span data-page-node-id="ljmxTUmi4jZ0oVyxC8VKIU"><!--pnid:09b0bSmy4ND6z1ibRTK6Ur-->逐页面验证核心交互流程，输出测试用例与功能测试报告</span></div><div data-page-node-id="3rxlYl9uZ8k5RP9V8SpsUw" class="step"><div data-page-node-id="j2quB3W8PUYoCSvVXonNyH" class="n"><!--pnid:TyV5USnqXk3Xi6bRPIWCL8-->第 5 步</div><b data-page-node-id="qnn55WoaZYFRhHEJ8wHN8B"><!--pnid:tF3ERUGobCN5V9WTPsOgAm-->兼容与性能检测 · 双报告</b><span data-page-node-id="qO7cNiKPAlcGJ5lKk4gaU0"><!--pnid:Z2ePwIXHQzyyiIWF43eXjS-->检查 API 兼容性/机型适配/安全区域；检查包体积/setData 频率/图片压缩/首屏指标</span></div><div data-page-node-id="r08sOvqN33GzGZqHkratAR" class="step"><div data-page-node-id="aSFQiQK8MxBQnhVOgsQbee" class="n"><!--pnid:YjUtuZYM1Mvesce5AIZgCi-->第 6 步</div><b data-page-node-id="EUMeAdSkJ7LC5ARerMzDwU"><!--pnid:Zx3ONbSC0BjINmVddETrxw-->调试修复与发布准备</b><span data-page-node-id="kJ6siN4Diph0XQV4E5xfCD"><!--pnid:lsgSFE6S4mkTptLL0TEYTi-->基于测试结果修复问题；生成发布清单与隐私协议模板，输出可提交审核的完整代码包</span></div></div>
+</section>
+
+<section data-page-node-id="Hc58rX3nbV3qbxs3JMKoiM" class="blk">
+  <div data-page-node-id="gyNx6dgZNSwwGoxtNBdJqP" class="g2">
+    <div data-page-node-id="dQ8a7nv9124cqgjm1n032n" class="card"><h3 data-page-node-id="zKstoR7eDNvxmAyDwlfgLG"><!--pnid:92LPTSSwbDgkCrZcMmVZYE-->要准备什么</h3><div data-page-node-id="xSpu1URLIQu8vgZ9yTLPjk" class="src"><div data-page-node-id="5w8lDHfD22cASL2uewsW2u" class="fn"><!--pnid:huNO7GEpEIA7w8mAjrbPK4-->需求描述（一句话或需求文档，Word / Markdown / 纯文本）</div><div data-page-node-id="tNmzRWyHHk1YCy49V644wL" class="fd"><!--pnid:Xd2ihUGQZW7J4hVI3ydaPr-->「帮我开发小程序」或描述功能需求均可</div></div><div data-page-node-id="6wEn3DOp5pnrjjsTV7up7V" class="src"><div data-page-node-id="9EmLXaDeTEQizMXNeecYKF" class="fn"><!--pnid:oR0NuCBN5scmFMLxECy8Dn-->品牌菜单与门店信息（可选）</div><div data-page-node-id="gqiQx2as89NnXeACOt4vpO" class="fd"><!--pnid:HUMGqylhd4CgkEZsQkWMcr-->有则生成真实业务感的 Mock，无则用通用虚构数据</div></div><div data-page-node-id="yLtRlxZp6pFl2NEdJDIC3l" class="src"><div data-page-node-id="h13Nnh4jhdqpvpfZWCbUcA" class="fn"><!--pnid:wHIgtbZAO3Yo7ybhDHzA2a-->发布约束（类目 / AppID 由谁配 / 隐私协议口径，可选）</div><div data-page-node-id="hwdnIFrQJfnAY7DVM0q3Z5" class="fd"><!--pnid:bMqP1ETb6RvCGUXMfVoGvD-->有什么给什么 —— 缺项按模板口径处理并标注</div></div></div>
+    <div data-page-node-id="fdyhO3toPvUNT5pTqswKsa" class="card ev"><h3 data-page-node-id="ijEUOQCEyRJDWnHgZn2AE4"><!--pnid:0Tft4Irz9zG2CqfaQ9O5W7-->为什么这个场景值得做</h3>
+      <p data-page-node-id="C088W4psC6m7fwqbRGvNCP"><!--pnid:kAK8cB9qHwdg8N4CLEr09L-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="6F7477ejzjTBh3sZvqjUKW"><!--pnid:UftkIYEM0WSRlxkxVfnSJ2-->10.0</b></p>
+      <p data-page-node-id="MRHdmLTaBYvnpp0K8FxB56"><b data-page-node-id="AWB1NkerHpdHpE7nNQ2Gwj"><!--pnid:7Ud92tSX5826ERQPb2gmx7-->最大差异点 ·</b><!--pnid:JCKeXjw8K8GQ0HlZckB2RV--> 从需求描述直接到可运行代码包：页面、组件、Mock、测试报告、发布清单一趟出齐 —— 过去数周的活，数小时拿到发布就绪的版本。</p>
+      <p data-page-node-id="bcJRWCUkcwDmRb9wm6uW7x" style="color:var(--ink3); font-size:12.5px"><!--pnid:1vqYOMuhGlCGeVH2WzvbzO-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="A0zozwWqZ9YrvKwpebkhrv" class="blk">
+  <h2 data-page-node-id="VrlYoUx9B3ZxWaU0fTao2N" class="h"><span data-page-node-id="qSijimJqOgvmGollA5OOsx" class="num"><!--pnid:9IkA9EUlTs34o6rCVBL6Zg-->五</span><!--pnid:9PBKCKHnXVRd32YcDycOwH-->会产出什么</h2>
+  <p data-page-node-id="Y0zldb5Ed1l3lj5SPYGa7K" class="subline"><!--pnid:L3Vheqine9Daq3B3GH9EBL-->判断标准只有一个：这份东西导入开发者工具能不能直接跑</p>
+  <div data-page-node-id="B3uWQoRQHcKSj4BbLWfK5Z" class="outs"><div data-page-node-id="URzs7uWvqD8u0aVZ2Or963" class="out"><div data-page-node-id="ggS4xM5I16HBa71lrHf6Au" class="on"><!--pnid:3fIYh1UzXCIcp1n2hDCrMR-->正式件本体</div><div data-page-node-id="bueEHuapLXxrZOb2IQuE6p" class="ot"><!--pnid:kTNZlqWdNp42ooi7rHTcbo-->小程序项目代码包</div><div data-page-node-id="pYdmzhlku4IUOefoDyRNna" class="od"><!--pnid:3qdNxzLWWgBRrighLmSb40-->完整目录结构 + 页面代码 + 组件 + Mock 数据 · 可直接导入开发者工具运行</div></div><div data-page-node-id="nC5tXy2SJfFfLN8D3SBhR4" class="out"><div data-page-node-id="VUtzZ3u1TYOwxGpVGTlHuv" class="on"><!--pnid:SzZeYs9AXzYBrXsYKX0WoJ-->质量件</div><div data-page-node-id="mvfJhzs6NAqfSX2WRVcZUp" class="ot"><!--pnid:69RsGtJld0x9TTtA2ly25F-->测试报告（功能 / 兼容性 / 性能）</div><div data-page-node-id="KGDYcnz9VtVvkUH9644wcp" class="od"><!--pnid:drHaRDSO6yeKR0xf0mOGhd-->三份 Markdown 报告 · 测试结果与优化建议直接可查</div></div><div data-page-node-id="7Wy6yovChwFFKufnyDRBNC" class="out"><div data-page-node-id="AVOBd613i6E83rrZY46kAZ" class="on"><!--pnid:t08HCOKw10HuJ25Xjfmy7Q-->发布件</div><div data-page-node-id="deI3HKIyAYBsOk4A7KxPSd" class="ot"><!--pnid:GvtCugcFNHtxmrRSc0o2Ot-->发布清单 + 隐私协议模板</div><div data-page-node-id="AFBd9eNvC4MVinzHTFaVvD" class="od"><!--pnid:4QWj65b2gVmFGXqS5BKL4M-->提交审核前的检查项逐项列清 · 协议模板待法务复核</div></div></div>
+</section>
+
+<section data-page-node-id="qsYmBPw3MX2con0WXgIhap" class="blk">
+  <div data-page-node-id="ZTfPJuNaeDhquzWAHREa3T" class="card warn"><h3 data-page-node-id="OOqHxa6nbT9uqSFLSvkWG1"><!--pnid:pSjwS3MykvlGFwM5exght1-->这套东西不承诺什么</h3><p data-page-node-id="0DAN4ZNbnlZ0JGex43R3ch"><!--pnid:lLUOmGVXi6Mw9SXoqDyP4t-->不替代微信官方审核，不处理真实支付对接，不内嵌真实业务数据与凭证；AI 生成代码可能存在安全漏洞或不符合最新小程序规范，开发主管须复核代码安全性与 API 兼容性；自动测试用例以核心交互为主，边界条件与异常场景须开发人员补充；隐私协议与用户协议为模板，发布前须法务复核并适配类目要求；产物代码须适配 AppID/域名/业务资质后发布，非零修改直接上线。</p></div>
+</section>
+
+<div data-page-node-id="a5TCTbG8BtIgfvC5DYw8QS" class="cta">
+  <div data-page-node-id="BvSlOcDEbKHxRg2c1v2SS6"><h3 data-page-node-id="ZXy2Aju93RWLJiWKkrQK5z"><!--pnid:w5paLO0rmnRZanpSZQePbF-->想看具体怎么跑？</h3><p data-page-node-id="gtAcIK1r1IcwQDmWynYyo7"><!--pnid:JxCLbrg9JMUWFnJPLJKRsr-->Live Demo 里有一个完整案例的每一步，包括哪些环节必须先经开发主管与法务复核</p></div>
+  <div data-page-node-id="ahC2sqX9Jd4ba6CSnj6GIO" class="btns">
+    <a data-page-node-id="CwYWKlyq4lEmiYaS4Nen96" class="btn" href="LiveDemo.html"><!--pnid:B00vRpysuW5QLJ3hfWVHlv-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="F1OuSgIlWF2nRvyo848rEq"><!--pnid:OL3nrqWBRGo8ZGDBUEYeEG-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="FEIQeqz7mxPMEomiuzUsBh" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="3rMeYQfGb83P39WRQFyoDE" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="cc6JDH9i59ZdbcRQ4Bxt55" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="EOPJqwdoY0IOoRMnogEjGo" data-pnid-children="pvtldL9gEciILvjNIWYVk2">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

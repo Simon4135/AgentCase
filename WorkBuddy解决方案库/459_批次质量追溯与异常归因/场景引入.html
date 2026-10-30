@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="xk5xmEpyvmrDCYEEJkAGk7" lang="zh-CN">
+<head data-page-node-id="l0ZsPJz2UMjwqLvJHbMWZk">
+<script data-page-node-id="FngkDapKjQUbd3Ia7TtgjP" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="u2bbqpzBUVi3LFoo44wUxt" charset="UTF-8">
+<meta data-page-node-id="SgjlBd590YkeVWtrZl5GI7" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="yKPR6MwMZsYU06nmhyiOtn" data-pnid-children="g5Oco2tRjJkPxnM1De99Ff">批次质量追溯与异常归因</title>
+<link data-page-node-id="rrSgkoBROZZqALQ3U275rk" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="RoyZHBk8e6dMSNxUWVciMT" data-pnid-children="RqrQds9Zn8z0AdXJcGHI6n" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="o09tu5mHkHwUCKYst1moSS">
+
+<div data-page-node-id="OCRBq12PDRuD1kddz4iWdi" class="wrap">
+<section data-page-node-id="NscUbS6MiPCw6V2rosoS8B" class="page-hero">
+
+
+<h1 data-page-node-id="bU8NERz3LqcXgX5IwChS66"><!--pnid:ucHCz7ZwEPbFm2W6hhEjrw-->批次质量追溯与异常归因</h1>
+<p data-page-node-id="yzPGzSK1tWNHVFYDwdNqJX" class="lead"><!--pnid:3QTSKESJ2br6qc21X0cQZk-->客户投诉一个批号 · 线索分别躺在 DCS、化验记录本、采购邮箱、报修流水本里</p>
+</section><nav data-page-node-id="W3UOYeXSTVphNJZtUYmE9r" class="subnav"><a data-page-node-id="9Cx5NtfOOZO9B0S0hu01BU" class="on" href="#"><!--pnid:jZ8X11Nl4XoFcAD9ULPlaw-->场景引入</a><a data-page-node-id="oOpgzEBCFJ77m5iwyo0iiQ" class href="LiveDemo.html"><!--pnid:k4ZTCOGz6NuknWB5uJBA7X-->Live Demo</a><a data-page-node-id="VHeAx16emuZ3oeLh68BOn2" href="推荐任务.html"><!--pnid:bi9W6QX4uU6sz8AmQ5sY6I-->推荐任务</a></nav>
+<section data-page-node-id="EndUMXvX1GlZWDnmyZEbAl" class="blk">
+  <h2 data-page-node-id="YuB9uRTQ2KFLYU6jxFvuzr" class="h"><span data-page-node-id="0d2rT7rdgCpB4qNp8GXosF" class="num"><!--pnid:TWgujNMQYvx5BOcQTHPxxq-->一</span><!--pnid:dDqttuWER0mpFXCyH41RMT-->这件事现在是什么样</h2>
+  <p data-page-node-id="RuNqZ5cg8bygIQvMN7bChN" class="subline"><!--pnid:0R8elTG40qp6DevhVtF3rY-->质量化验 · 真实业务触发</p>
+  <div data-page-node-id="5SOXwGK17YpMClxAFIyloa" class="card"><p data-page-node-id="NHBtChcYbBweHHAP6g7pcJ"><!--pnid:pze7WDVSIZfGuJwTXGyMXb-->客户投诉或者内检发现不合格，一般要求两三天内给出初步归因。而且这个归因要经得起客户追问「你们到底哪一步出的问题」。</p></div>
+  <h2 data-page-node-id="xre73XSPGTkiInpLICxajI" class="h" style="margin-top:22px"><span data-page-node-id="Xmd9VbwU1z09AwI8cy6CQH" class="num"><!--pnid:ngKvosbS9neQP8PXf22Zp9-->二</span><!--pnid:k6m8orxMrLy2mowGxeO39S-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="tDZacEacUEcGr42yyKMPr9" class="subline"><!--pnid:GyF4AMDeNY3AXgIE2zGCrU-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="VOXdmC7sCW6v9VVEfXjmVs" class="pains"><div data-page-node-id="p4rKPPNgikrXdGlURVnMkH" class="pain"><span data-page-node-id="Fb84WPMkKxfqFz0SNl8Csr" class="i"><!--pnid:3jVQIaCy6uFHwuyMTwscor-->1</span><div data-page-node-id="O3GKUdnHlMByUSw8is6yRJ" class="t"><!--pnid:g8EhDNMmcLG6FKYYeYgaUy-->追溯一个批次要同时翻 DCS 趋势、化验记录本、原料 COA、交接班记录、设备报修工单 ——这些东西在五个地方、三种格式、两个部门手里<span data-page-node-id="4dKr0NJSbosx0ykCqnAHZk" class="src"><!--pnid:sQZ7FzO5YHvp4kHtBW6IFt-->依据 · <a data-page-node-id="hJVzYUyj5wfo80cuL9pgyN" href="https://www.foodmate.net/quality/" rel="noopener" target="_blank"><!--pnid:mnJTmQy2iDDfiwFCcu8Wur-->化验室原始记录载体：中小化工企业普遍无 LIMS，化验原始记录为硬皮记录本手写、一班一页或一班几行、必须双人签名，月末转录 Excel；记录本「必须妥善保管，不得损坏和遗失」，保存期限按档案管理工作的相关规定执行</a></span></div></div><div data-page-node-id="jeuhyPhyAvOLEndQIccpmP" class="pain"><span data-page-node-id="Rns8lPbsA6lTYMrpVjH41U" class="i"><!--pnid:peVUFrrKuRqr0gaU6cJ7yu-->2</span><div data-page-node-id="sMfS8WbWqkKqjDGzQYan3p" class="t"><!--pnid:bB7fN1kwHnyW65tiKDEcS6-->质量损失会通过下游被放大十到三十倍：约四十一万元的色浆缺陷引发约一千二百万元索赔。所以追溯慢一天，敞口就大一截<span data-page-node-id="0oGH2UjSyIEMjVImaUtvah" class="src"><!--pnid:WI3byUL2TdUuGQfN8yUIGf-->依据 · <a data-page-node-id="6GQhIymPyg7nmulEOvsYVL" href="https://www.ciesc.cn/" rel="noopener" target="_blank"><!--pnid:44GdoI4ypSPkQ9Z0eIz6QJ-->质量损失下游放大案例：约四十一万元的色浆缺陷引发约一千二百万元下游索赔（约二十九倍）；六十吨约六十万元涤纶丝导致三百八十万元布匹回购</a></span></div></div><div data-page-node-id="ScdF8ukKlLvQNIYZMZm8Xu" class="pain"><span data-page-node-id="Zgohsuv1I8r6z3gK8CT5JI" class="i"><!--pnid:52WHeJLhjHoYfwLXAvqRAD-->3</span><div data-page-node-id="E8Sxfr1ApoAuw4xx8Vaj8p" class="t"><!--pnid:ZeqhX6qaB1wtN1ZwJvGzkC-->有案例显示批次不合格的真实原因在厂外 ——货车在高速滞留二十七小时，而已售一千二百件只追回四百七十九件。追溯链止于厂门就没有意义<span data-page-node-id="bdtdqEfxC0h1rek3EAJtNn" class="src"><!--pnid:MPQwXoxcjh9IcWPLeefRJ5-->依据 · <a data-page-node-id="LoxBhCoWWBjlt2o21NdxKy" href="http://www.weishan.gov.cn/art/2024/12/9/art_107000_2754368.html" rel="noopener" target="_blank"><!--pnid:P8kB7AgYx05uIEyRtVEjxo-->食品批次召回案例：批次不合格的直接原因是货车在高速公路滞留二十七小时（厂外因素），已售一千二百件仅追回四百七十九件 ——追溯链止于厂门就没有意义</a></span></div></div><div data-page-node-id="ieWYV6gGkmxeXCfbQMz4JN" class="pain"><span data-page-node-id="vH27V5rkGaTTU9rGAX55O7" class="i"><!--pnid:YtJ3WCmb1XGwfwDyy5euPz-->4</span><div data-page-node-id="rdTqg7zrkQblWelmlBTCbV" class="t"><!--pnid:nBmVKjR1tx3rzfgTvhSCZ5-->MES 2023 年上线但质量和批次模块已停用，所以系统里查不到完整的批次谱系，只能靠人翻纸质记录<span data-page-node-id="emKkJOjCmgawscBtLLIDN4" class="src"><!--pnid:YKt07IRjiHkQ1uJaQTq60M-->依据 · <a data-page-node-id="JiaDnrVN8g7DbwBG4ZL2x1" href="https://www.amtbook.com/" rel="noopener" target="_blank"><!--pnid:8ujAhunw61I4wvQv71ORwx-->化工 MES 与 APC 上线后被弃用复盘：主要原因是基础数据脏、界面繁琐、无人运维、与实际业务流程不符；APC 投用率低是行业普遍现象</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="0gpNVBVNjuIkNC6u0e3L7N" class="blk">
+  <h2 data-page-node-id="ryAc6TdUTHW5ugjZX0Hamj" class="h"><span data-page-node-id="Nt0qB0ER1U0q4zZqOzAeCD" class="num"><!--pnid:0Dfyly8sQDr6Sgr7PvNeFq-->三</span><!--pnid:r1YHk5ww2CoRKERVGJtJQT-->换个做法之后</h2>
+  <p data-page-node-id="OFxoj532I3gXU4cPsbEYUt" class="subline"><!--pnid:TSjlis0bgT5AXWe3fTOQcx-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="fDxsOM5sofzbGulkHJPtCn" class="cmp">
+    <div data-page-node-id="rVRPYAPFDUaxnvgQ8Q8K7S" class="old"><h4 data-page-node-id="CcQokHENkFjx7ZOeqjzfoo"><!--pnid:OL306dPAeyXn3MzlFTXmoB-->✕ 现在的做法</h4><ul data-page-node-id="EKQvJyr8AiKrXzzdfY6Skw" class="list"><li data-page-node-id="laPEDibnBpz7PAm69JC84F"><!--pnid:MyKODsvEiwqyyICgNsyAmb-->追溯一个批次要同时翻 DCS 趋势、化验记录本、原料 COA、交接班记录、设备报修工单 ——这些东西在五个地方、三种格式、两个部门手里</li><li data-page-node-id="cXznIKlv9YrM050p57yWRm"><!--pnid:BOko8BvxNt0Vy0zWgCWSuJ-->质量损失会通过下游被放大十到三十倍：约四十一万元的色浆缺陷引发约一千二百万元索赔。所以追溯慢一天，敞口就大一截</li><li data-page-node-id="UNScKnjQkm8r1ZtWLjflSo"><!--pnid:RXPsAq6KzDube7Dvzop5lL-->有案例显示批次不合格的真实原因在厂外 ——货车在高速滞留二十七小时，而已售一千二百件只追回四百七十九件。追溯链止于厂门就没有意义</li><li data-page-node-id="5pe47AV1k36XpvTILUhP2J"><!--pnid:VbRWtziVi5lFzfZyEDS6Pw-->MES 2023 年上线但质量和批次模块已停用，所以系统里查不到完整的批次谱系，只能靠人翻纸质记录</li></ul></div>
+    <div data-page-node-id="IhNh9fcAoKchBmervUyj1X" class="new"><h4 data-page-node-id="Y3FFpFWhSnzuSsQjDxRge1"><!--pnid:xUSbuUCsD5cnGb1tPtbaJj-->✓ 交给 Agent 之后</h4><ul data-page-node-id="eM1aDe8qGejyFuF5GAD1Uk" class="list"><li data-page-node-id="xJxuFh4bo56w7jPZ0V6xZv"><!--pnid:l3bVMlSGepP64817djBRox-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="SUvYk31vwH3TuwPRKdsQ8G"><!--pnid:sw3W1LuSzEt3pCxhQ73tBI-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="YdeSpOJfXvb9bP6j8ZlHua"><!--pnid:AoqaofqqPqMqklIdytyTyR-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="bizuoq5SnGirpxDc82GzBT"><!--pnid:Cy4XiV6JmV72DHrvaZFrNU-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="LfFD5GQoHg2wPBJJoXjXQD" class="blk">
+  <h2 data-page-node-id="K9TSVnF3JESPwNlb91lS0A" class="h"><span data-page-node-id="iT28fD8fmaJd9cF7MVNUBa" class="num"><!--pnid:my3D0fSy0WkaHzB5AsX4ZZ-->四</span><!--pnid:w0OYnhdVdPGkQhl2bdC9bk-->场景闭环</h2>
+  <p data-page-node-id="G21edJzCCNVOtzo1S44P9v" class="subline"><!--pnid:Y2iAwvlS8YfvWkVAoH23jf-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="YIpbei8j4nEnvD38Dzie73" class="flow"><div data-page-node-id="rMgr48oHxxtDEVn7ZPZMAK" class="step"><div data-page-node-id="KoRMfiXXib5NntONhcJGwf" class="n"><!--pnid:Py9RC6SKR22vBtyTjeYOiS-->第 1 步</div><b data-page-node-id="AiOTF4wezj0n4kRlzs1d2i"><!--pnid:98rmBhSNseEsjRhRPITj59-->投诉要素核对 · 先确认投诉说的是哪一批、哪一项、什么口径</b><span data-page-node-id="dpRfGhhD3saWEGu0Eo2yfn"><!--pnid:bewqzoMa6JnGt2DnZUZ9qx-->核对批号、投诉项目、客户测的方法与我们的方法是否一致；方法不同的先解决口径问题再谈归因</span></div><div data-page-node-id="qrsWcAtMf8IsrFyzVt7HtI" class="step"><div data-page-node-id="DuKnKu5dt4mFt7Q7ZK4jZa" class="n"><!--pnid:l0lF3VCBIWYwByWYfW5T16-->第 2 步</div><b data-page-node-id="7zviJ44hclTVU4gYLszJHR"><!--pnid:qSNyOnzmVt3TD05lhJbj12-->批次谱系还原 · 把这批货的路径拼出来</b><span data-page-node-id="IugETsnRIE76ypUMFoHK2F"><!--pnid:Rk6icnVf3RQfuUuRaYkIUJ-->上游到原料批号、下游到发货去了哪几家 ——同时算出还有多少在库、多少已售、多少在途</span></div><div data-page-node-id="jijJAwA9QuxpbOcqryd6re" class="step"><div data-page-node-id="srav5B7CWiwrEhN9awXi0x" class="n"><!--pnid:m7D0v1LKeA7gvGwWfzd5XV-->第 3 步</div><b data-page-node-id="JCASgSmV3thHUpibqibcM5"><!--pnid:MgWAWfT06rrOrx1J22FJU7-->多源线索归集 · 五个地方的记录并到一张时间轴上</b><span data-page-node-id="F2McicR92v3stOS8CceEG8"><!--pnid:s75arHAW9bpZNQ0Y7Kts5S-->原料检验、DCS 趋势与报警、化验记录、设备报修、交接班记录 ——每条线索标明来源与出处</span></div><div data-page-node-id="aVks68ZajHMjU3HW4N6YHk" class="step"><div data-page-node-id="pNImSYYc8Boq7vIMnoG0JG" class="n"><!--pnid:QfWW5olr28uQkCxoJmNM80-->第 4 步</div><b data-page-node-id="XFQ7h81PUqdKYusXgZsAdx"><!--pnid:rnSeerK3DFBe6ewjpbWgDU-->厂外因素核查 · 出厂之后经历了什么</b><span data-page-node-id="AS9bUZJNVX7BzW3ujkfZTi"><!--pnid:MeS8iqU9yxWoMRArwCdEY8-->在途时长、运输温度、客户端储存与使用条件 ——这一段查不到的明确标为「需向客户或承运方索取」</span></div><div data-page-node-id="jRl5s8ir0QmMilHZXdxygJ" class="step"><div data-page-node-id="mhQf8cYkc6vD9TbHjdgYSK" class="n"><!--pnid:9P6crIXKW1kBQtFkNCMXKH-->第 5 步</div><b data-page-node-id="d0GjL1RE7eQfgO3V6Ng6bS"><!--pnid:UPDBvE9VXpzviosgbkiyZY-->归因排序 · 用 5Why 把可能原因排成序</b><span data-page-node-id="E52GL5ffTBBNGXbweVy0LY"><!--pnid:kj163c1ubhfo2zOBn9MTsl-->对每个候选原因给出支持证据与反证，排除掉的写明排除依据；不做单一结论，给出主因与叠加因</span></div><div data-page-node-id="RzSt6XXf5ZqitXZTgYPNci" class="step"><div data-page-node-id="Yz7pE6MwS0qDd2NiRkAoRX" class="n"><!--pnid:Jz40NoP5AHuTFGwF0ZVrNW-->第 6 步</div><b data-page-node-id="SlqvWGzZlS1Y2LQrFsJyhm"><!--pnid:sSjWEqIlHhdHzzPgud0YQ1-->留证与签批 · 生成追溯报告与处置建议输入</b><span data-page-node-id="AEXX1cc2PXAIN4F2TcbfHI"><!--pnid:mXVeQHoBrwinSkzsjzidT8-->含质量部会签栏，责任认定与对客户答复口径两栏留空</span></div></div>
+</section>
+
+<section data-page-node-id="XcTVMTbseAL0I6Rut31G7X" class="blk">
+  <div data-page-node-id="b6w5ozcRxCqFNRgIsX5mzZ" class="g2">
+    <div data-page-node-id="l3WK4J03iHxCQi9bIDkuf1" class="card"><h3 data-page-node-id="cnvOns3qJkZhSCNtJnch7N"><!--pnid:OdRYT71QonF9k0ImOzibBP-->要准备什么</h3><div data-page-node-id="f2IbYgZvcCY2XWFZVSBL7x" class="src"><div data-page-node-id="0HN0vQAlUJb7AOZp4SZ17J" class="fn"><!--pnid:HEugOYUskrm6HopWxp9Kki-->客户投诉件</div><div data-page-node-id="1tGrklJptQswN8kCCvhrlD" class="fd"><!--pnid:kwca6Y64HJUBJssIskCOTj-->投诉邮件与附件（实测照片或第三方报告）——在销售手上，化验室常凭口头转述</div></div><div data-page-node-id="CNHAvM1T2lvTYlfvFPxUjI" class="src"><div data-page-node-id="KojBMVeqbQqQFMsMbXkHR7" class="fn"><!--pnid:1KjgQEv12T480G62KdgZFo-->批次投料记录</div><div data-page-node-id="EZIvGRob2sR3bQBa9sfTdz" class="fd"><!--pnid:6nVTCAw8jowSjgWoN45Q9Q-->这批用了哪几个原料批号、投料时间与数量</div></div><div data-page-node-id="5e8v0yF5YWsgKpZ59lss36" class="src"><div data-page-node-id="4ZRvI98rqU2JQGJBsZF63d" class="fn"><!--pnid:V5v4cRpfuQ4KB8bImlvPvf-->化验记录本对应页</div><div data-page-node-id="acwZgKIL3pjcjum6bXZZLT" class="fd"><!--pnid:3T0BkS8maxokqCGb5gg0j3-->本批中控与成品检验结果 —— 手写件</div></div><div data-page-node-id="kg0EXHNQlK3gC0F5jKSvBf" class="src"><div data-page-node-id="T5FzBN8eGq64hYlZyJfHZB" class="fn"><!--pnid:li1yMWa3KjJNVrB7NRhNfU-->DCS 趋势与报警导出（本批反应时段）</div><div data-page-node-id="wlKNk2wkFTFakxvN5RX420" class="fd"><!--pnid:kWeGQiiXGQh6McoRWnULeK-->温度、压力、搅拌等关键位号</div></div><div data-page-node-id="XWK2DyS92lTAzhA1sPVxBu" class="src"><div data-page-node-id="cC75SVD2t8erEUSfGW84Bg" class="fn"><!--pnid:9wesQY6EiEaUuiJ6ZWIUWz-->设备报修记录（本批前后）</div><div data-page-node-id="2d3QJ5595QxsltrUuBltW7" class="fd"><!--pnid:7IDnq8UZrq2vLcawVQ7pdw-->相关设备近期有没有异常与维修</div></div><div data-page-node-id="hwZQ6hMZoa1SH04w1EaNNc" class="src"><div data-page-node-id="HpjRsYSNB8I4PPMkNaijH6" class="fn"><!--pnid:VUKHwzk8zQohSUASrw8Avt-->出厂与物流记录</div><div data-page-node-id="EkMBmbkm8tZfpyQpY3LQ7Q" class="fd"><!--pnid:Ixk2sF4bAUM2aP4hIhisF0-->发货日期、运输方式、在途时长、储存条件 ——厂外这一段最容易被漏掉</div></div></div>
+    <div data-page-node-id="GKcLjScFTP6pb5d9mUJkTB" class="card ev"><h3 data-page-node-id="m25PnE45yMQI7bkc8AOaID"><!--pnid:70qIsGnXwxpjbAk7mZ4Zwu-->为什么这个场景值得做</h3>
+      <p data-page-node-id="FaQescKvdSg8DDcocUKWs1"><!--pnid:PareImnkrWxnGeER9ugeWS-->痛感 5 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="2ur7QvbnDyZDCGAWmSXhZz"><!--pnid:rINXptywlKKuNf8cjs2NzU-->10.0</b></p>
+      <p data-page-node-id="6e0390JJTcc5cVCu7fMEuS"><b data-page-node-id="JEWzVznO62ExANh0kcZdua"><!--pnid:aIvXq21xeXeGSngc5R4mY1-->最大差异点 ·</b><!--pnid:y4OgUozZXeffFfGTW56JKC--> 不要求先建批次谱系数据库。投料记录加化验记录本加 DCS 导出，三样就能把一个批次的路径拼出来 ——而且我们会主动问一句<b data-page-node-id="K3MxfhSqrr7afE3dmd3iGb"><!--pnid:6PMHlCIvTISSn1xkpQN0f7-->「这批货出厂之后经历了什么」</b><!--pnid:motyuC3ZhcJYiglZw9Vyyx-->，因为有案例的真实原因就在厂外。</p>
+      <p data-page-node-id="q7svzII79hICc4yw2ZK2pg" style="color:var(--ink3); font-size:12.5px"><!--pnid:9pM7qtvIqyha1swfqOPbLO-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="I8wIpP5d8O1vXELn4nag8o" class="blk">
+  <h2 data-page-node-id="PeloBOKSR54hd5EGv4ar8u" class="h"><span data-page-node-id="Q4F0rHCAyIyuqjUy4HOeFB" class="num"><!--pnid:nP5mMZbjudeU4rmlr5hsOi-->五</span><!--pnid:FiMMGWV1AJjL6mA8f0g5oG-->会产出什么</h2>
+  <p data-page-node-id="579MVGUG5uKoh5rs43Gcij" class="subline"><!--pnid:NVFtswLag5dyWpzMRrIXeo-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="JEqgwrRW0Zh0zgnDd9uHq9" class="outs"><div data-page-node-id="2Hdp2h6DtjvAf0w5srxTxz" class="out"><div data-page-node-id="XCtMg59in7Bcu4fhBidv6C" class="on"><!--pnid:fAVxiUyUYgROh7AYir2b0v-->正式件本体</div><div data-page-node-id="C3dwkb58znvrPxzlnQn7hc" class="ot"><!--pnid:FXuJDMndLnuyjx9PPb52ZI-->批次追溯归因报告.xlsx</div><div data-page-node-id="tkiTQiQO6BNDjlYaSH1wtn" class="od"><!--pnid:3vbaWUaiM3wVQLftTTDoJj-->正式件本体 · 批次谱系与多源时间轴与归因排序 · 含质量部会签栏 · 责任认定与对客答复口径栏留空</div></div><div data-page-node-id="DTAIODMZ2KzKqDaapYZCmb" class="out"><div data-page-node-id="QNMjemxU11rCNpOaEC5kud" class="on"><!--pnid:kJZ7gxPL6URxQt9XHLpw7b-->可派发清单</div><div data-page-node-id="Un1d8Byr5T5FMLmt9baJMO" class="ot"><!--pnid:X0swxHVjndmQ8KxZKtqKe0-->线索证据对照表.xlsx</div><div data-page-node-id="cs4wyDSkN7Er6KTJh85Vb1" class="od"><!--pnid:s9peQoATqQGU5Ji9LtmYmz-->可派发 · 每条线索的支持证据与反证 · 含来源出处 · 已排除项及排除依据</div></div><div data-page-node-id="MiupmC7RRVbHCXe8fNHr2S" class="out"><div data-page-node-id="7kz4t9ikXk8LmljTK1YKAo" class="on"><!--pnid:KBLfFAVD1B1T3kvn0cGKsS-->可派发清单</div><div data-page-node-id="0JdPKtCBHYwFlBxcbdHGvv" class="ot"><!--pnid:SmMKmIc6dBJxjGSbkinuwn-->批次流向与敞口表.xlsx</div><div data-page-node-id="2rHtnrn433yarkkkJLcO9G" class="od"><!--pnid:PzZcq2cJ5WSoQ8KvsuHN6O-->在库已售在途分布 · 含需立即确认的客户与数量</div></div></div>
+</section>
+
+<section data-page-node-id="nmIWYnxbjLBnr4bLWZPdYG" class="blk">
+  <div data-page-node-id="Hx2iqz7gth5xh6sBDl4d1Z" class="card warn"><h3 data-page-node-id="69DyCajqFfO7fTSajFKIr4"><!--pnid:wp0DDdDWy1CZKcF0dtw0Ku-->这套东西不承诺什么</h3><p data-page-node-id="gEWJKbOoCiUyAKkbbOqEgb"><!--pnid:0MIKi9gFSBF4TDLbEEimNe-->不下最终质量结论。归因报告是初稿，结论要质量部会签、涉及客户的还要销售确认。不代表企业答复客户 —— 对外发文属于高风险动作。不做责任认定 —— 归因只到「哪个环节的哪个因素」，不到「谁的责任」，责任认定栏留空。</p></div>
+</section>
+
+<div data-page-node-id="A0QY1nWf2FkRLmOt8Cpv1H" class="cta">
+  <div data-page-node-id="Q2jI5w6cmxjmCzD592SMIp"><h3 data-page-node-id="rq0d2VxwBnJ5WkEmBIYBKx"><!--pnid:wjWYyg8Xh55fj0B83UzjWC-->想看具体怎么跑？</h3><p data-page-node-id="RRedpyKfxur1Qvo7cyuF1T"><!--pnid:fXbFMRWyzTA3qDnE7KLt3Y-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="naXfIddrlzL7B8umwyzYOn" class="btns">
+    <a data-page-node-id="v3HHODmgLvyhHcyNL945kB" class="btn" href="LiveDemo.html"><!--pnid:hiEwbuy0Fx3XWLIdYh2xGI-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="oeYXoGJRQIvVRLKva47rtV"><!--pnid:VxHVclztLyng9hNJ9zjqbH-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="kkwEjvPRJ6YNB5Ac3HpX3g" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="x6iJ6eFowx9mb885cn37A6" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="rLycauWxMCe3jNtixWbAsf" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="f0HgCaQ6ZYpyn2ZEQ6ad0Q" data-pnid-children="hNQL9EBGDWYcFpnqJ4QNFm">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="isCisTxuRGaz5ybXuyOKNW" data-pnid-children="TTQLVnyhPTJ182yN84TBcI">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

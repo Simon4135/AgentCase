@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html data-page-node-id="DbQrrtjqYR4eRQaaFXQ0M7" lang="zh-CN">
+<head data-page-node-id="ALBFFoaXZ5yr80C1IU3ycc">
+<script data-page-node-id="AkBM0hY8drajbiPD1TV9FO" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="54oiA5OakfGaTg7E6xlKWb" charset="UTF-8">
+<meta data-page-node-id="aL3EafpWJJG0H5PcGsFhFk" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="VZJIMxgKJh9FTrnYsGbyjr" data-pnid-children="s5NtHgNbtSsBwZZjuYqQKv">系统监控与告警分析</title>
+<link data-page-node-id="ePspObucGrrR2iNLZrhBEj" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="5zejMtOu3XRXhki8ve2cYv" data-pnid-children="jZBEwjr5SsX1susyzsTknJ" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="HiaVe1RzrDvkTOhYyzoO8H">
+<div data-page-node-id="1IKb6Jwx6axNKA6ezIpKDb" class="wrap">
+<section data-page-node-id="bNNHBM4r1k6VpUNr91vBjC" class="page-hero">
+<h1 data-page-node-id="ueLgm2Vp9a3HXhqWio95ZE"><!--pnid:NvPWxCzyPBKAgUOsVuITh5-->系统监控与告警分析</h1>
+<p data-page-node-id="UGFJ6ldbvrd3hV5Sid3ly0" class="lead"><!--pnid:tEsEyr3hv13IcWalfPg0KY-->告警风暴淹没真实问题，根因排查耗时长，用餐高峰故障直接影响订单</p>
+</section><nav data-page-node-id="gPMfTp1qk7h4P9c9Sp1JAO" class="subnav"><a data-page-node-id="72wSJgrmvShUFjJ95TRaIo" class="on" href="#"><!--pnid:O0rohsMBhC5tFLt5LzAaMD-->场景引入</a><a data-page-node-id="1NB7MUw5i39W2Byzm8snGh" class href="LiveDemo.html"><!--pnid:AfX0eVANmVJZRTK9rRCnIg-->Live Demo</a></nav>
+<section data-page-node-id="bNyw5oEpcmSkat0WdacBlT" class="blk">
+  <h2 data-page-node-id="QFqulb6vpojsuu4BptgEo0" class="h"><span data-page-node-id="5bNUpOgnbxFU6npuhjltLN" class="num"><!--pnid:9fRXcJ5yYW6kU4fE8MdfUl-->一</span><!--pnid:y3ySxLiRsr6beFrWSuhq4k-->这件事现在是什么样</h2>
+  <p data-page-node-id="h7lssJiCSUEB9xcudCgqDT" class="subline"><!--pnid:pgNTiIPphdBumwBG5gsekj-->连锁餐饮运维工程师 · 晚高峰前的告警风暴</p>
+  <div data-page-node-id="jXkchKot0JJ3F7lMixk8Nk" class="card"><p data-page-node-id="4wvvQk2g0OrVHIh2cIGFT9"><!--pnid:nS8hM5qqrhW5yMXEqxZT7B-->某连锁餐饮品牌，周五 17:40，离晚高峰还有不到一小时。运维手机开始疯狂震动 —— 点餐系统的告警十分钟内涌进来 47 条：订单延迟、连接池、慢查询、网关 5xx、队列积压，屏幕一屏刷不到头。哪条是病根、哪条是连锁反应，得逐条点进去看时间、看实例、看指标，再在脑子里把服务依赖串起来。老运维做一次根因定位要 45 分钟，新运维对着告警列表直接懵住。而门店那边，顾客下单已经开始转圈 —— 每多查十分钟，就是几十单生意和一堆差评。</p></div>
+  <h2 data-page-node-id="B3otdUNvuhMLpOJIoSFgSY" class="h" style="margin-top:22px"><span data-page-node-id="E2czyH1OUNw860lMnj6mFb" class="num"><!--pnid:LVMEJh85xg69gWP4th4DNe-->二</span><!--pnid:lrxsq7Fmb87Kfof9n5be4e-->痛点 · 每条都发生在昨天</h2>
+  <p data-page-node-id="a8kzXZ8xsJY3pRYPBMbzDJ" class="subline"><!--pnid:diyVJW7Jgp7ks1ghBtiQrU-->不是流程描述，是运维团队每次故障真实上演的事故 —— 以下案例均取自场景调研与演示素材</p>
+  <div data-page-node-id="gUIgEaZ9etvyC39ACpHMO1" class="pains"><div data-page-node-id="QPx6DPf6FtWfhNo9mkiQkZ" class="pain"><span data-page-node-id="rSS0EiJrom8ha4Jal28omJ" class="i"><!--pnid:GANrQYJIpqLquvcXb3wxCy-->1</span><div data-page-node-id="OvNmqGJEgHhxkwpaMp63Ff" class="t"><!--pnid:VRafEK2E2Tw0sMCDDpBPB2-->告警风暴淹没真实问题：一次故障衍生几十条告警，重复告警、下游告警混在一起，核心告警被埋在中间</div></div><div data-page-node-id="MchzhUNmDsQLUEY78WZbeK" class="pain"><span data-page-node-id="N4nQ5o5AOd2LFeeQ84pSa4" class="i"><!--pnid:8aP3p8cRmcDv0PF1qThKjM-->2</span><div data-page-node-id="EQ9eyjWfcpK8VQaEh3KDDN" class="t"><!--pnid:UksPe5dYkCrYGfmFlXX0sT-->根因排查耗时长：逐条看告警、人工串服务依赖、翻变更记录 —— 一次 RCA 平均 45 分钟</div></div><div data-page-node-id="FTxutEk1RRRzcfi0vmYMUV" class="pain"><span data-page-node-id="KUoFHTsuQSepxFriW2MxzZ" class="i"><!--pnid:ZFDB0x8vOU3nCf5wm7aUN8-->3</span><div data-page-node-id="uxohz5Vfwthdj7epxlsQ0C" class="t"><!--pnid:FGohThwaj5h2ZddJgeVl2L-->高峰期故障直接影响订单：餐饮系统的故障曲线和饭点重合，每多查十分钟就是几十单和一堆差评</div></div><div data-page-node-id="DfR5BWfKc499qMjZlKdPvv" class="pain"><span data-page-node-id="YWEkHkK0cOm8py1Np3ZtAv" class="i"><!--pnid:fs6wWZ90ZIfSj12gS34C7I-->4</span><div data-page-node-id="ai2ZEcOgoymrG1xen7TXK8" class="t"><!--pnid:cEwbDTHMjp1ufRwEVZysnp-->修复动作缺优先级：回滚、扩容、重启先动哪个靠拍脑袋 —— 动错了，故障变成事故</div></div></div>
+</section>
+
+<section data-page-node-id="R4e8XjW3G6cAiwuShF1BAo" class="blk">
+  <h2 data-page-node-id="7ELLCPOf54EtPVLKIGrpPS" class="h"><span data-page-node-id="vZfQ0rXk0wysErCXiCGkbz" class="num"><!--pnid:Xts5TO5NTHyNKYWVGsy3xP-->三</span><!--pnid:wUJVWk2ydBp0dHjnRuiDjV-->换个做法之后</h2>
+  <p data-page-node-id="1ShbGNUbkOuswFmiDgsLKW" class="subline"><!--pnid:GbKBZscN1omiepFel3CpuA-->变化不在「快」，在「噪音被滤掉、根因有置信度」</p>
+  <div data-page-node-id="cn2lBH7DWLl2MRqGG5YSJG" class="cmp">
+    <div data-page-node-id="yzm2yWDa5hxVaq52LEq4rU" class="old"><h4 data-page-node-id="aT6KTUWdfVIN08N0t1cX10"><!--pnid:5J2IxCsSnIsHpq2Mff2X4w-->✕ 现在的做法</h4><ul data-page-node-id="A5nOOdLWPvIFHJZ0gSqmhT" class="list"><li data-page-node-id="KcE3W8MBMau77bzSRwPPEj"><!--pnid:OGx9iZQSSubTkH1EbrGS1e-->47 条告警逐条人肉看，重复和衍生告警占掉大半精力</li><li data-page-node-id="k4kDkNBvOcnYkvsiofV6J6"><!--pnid:CXrAVmyjmT8kXWrGCTeuLV-->服务依赖靠脑子串，新人对着告警列表无从下手</li><li data-page-node-id="7lDHEWUgvlDvM5JMaxmjbk"><!--pnid:qSd23BjJG7nVmm0CdZx070-->根因靠经验猜，猜错了再换一个方向，45 分钟过去</li><li data-page-node-id="mvbqwF92LHQzgYSaBZop7r"><!--pnid:2p6uWAuHKdF4EbRO3jmqVM-->修复动作没有优先级，先动哪个全靠值班长拍板</li></ul></div>
+    <div data-page-node-id="TcLspYIlpBqUZzG2Rjj9G1" class="new"><h4 data-page-node-id="aYYw4RIYNhu4Re6Afni7x3"><!--pnid:1QXgl1GBwzyRTL3rv3OEiE-->✓ 交给 Agent 之后</h4><ul data-page-node-id="apEsvACt2UKgKi1bZhNiB6" class="list"><li data-page-node-id="TSfXgnYo8ugLMBhIonkiSy"><!--pnid:3YUxsraGl3DouzPGisOTLB-->智能降噪：时间窗去重 + 服务拓扑聚合，47 条滤到 3 条核心告警</li><li data-page-node-id="6eXafD9jhWk4swy0bfzo0y"><!--pnid:gP1Q4zlGp8mlVyRZ2kkpHE-->关联分析：时间窗 + 服务拓扑 + 指标时序，构建告警关联链路</li><li data-page-node-id="yiDEUw47TI8YwudLI7cPfa"><!--pnid:i7WErmKDm7M0YOOYSlB9A0-->根因推理：1-3 个候选项，各附置信度与推理依据，来源字段可溯</li><li data-page-node-id="gBauJseAXWGzJMUZAiRYFL"><!--pnid:WKmgbGwzjKRXlCiXEFeVhW-->修复建议按 P0/P1/P2 分级，P0/P1 强制标注人工复核</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="bbWfCTHgbJh7xTg0XBifLr" class="blk">
+  <h2 data-page-node-id="1BMO71cTfQp7VuSzpkDbft" class="h"><span data-page-node-id="MQIjN5Xx8pHhBm5czedCwC" class="num"><!--pnid:CXXOoHXoRQNTFy7I2d1Uly-->四</span><!--pnid:BZR03AUS0ZLdvY2moOuekA-->场景闭环</h2>
+  <p data-page-node-id="9GvjrDaP7M14lJkRrhMxTN" class="subline"><!--pnid:g1SVlgSawwd00gWgYlHbSg-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="HWwuSiudn0DsdoaYXrFbwX" class="flow"><div data-page-node-id="8jYMDJI3E7i3pc0VawcoR3" class="step"><div data-page-node-id="minZF7RBwUoo8Fhe1N18e5" class="n"><!--pnid:J14ynQweVcBcPwwMXbeKi6-->第 1 步</div><b data-page-node-id="BPqYse1JnAaoDB13XHpeyQ"><!--pnid:EU1AWd0jJ3JwW4CVkieKOL-->告警解析 · 字段提取</b><span data-page-node-id="cbw1kHrdRheb9fQBxyIoed"><!--pnid:2cM1e1pvMi86OUtdpVMlpe-->接收文本/截图/JSON 告警，提取服务名/实例/时间/级别/指标等关键字段，校验完整性</span></div><div data-page-node-id="EfXsxo72wzhkU1GqWodSgD" class="step"><div data-page-node-id="WywkHyXHsx3ZYSzJmP0h67" class="n"><!--pnid:cHqNc3jYuVXOvu6ch8wKnp-->第 2 步</div><b data-page-node-id="PyViFMn3qSn8WyPPNWKom3"><!--pnid:mylbZ8G1XrJYQqI375hGr8-->智能降噪 · 去重聚合</b><span data-page-node-id="efzEbU4CBVMHi2woQ2GL88"><!--pnid:boV6LX6h7tPBJFzmepirD0-->基于时间窗口去重 + 服务拓扑聚合，识别核心告警，过滤衍生告警，标记 P0/P1/P2 优先级</span></div><div data-page-node-id="tBcuPoPko9hsljdF9MqWV9" class="step"><div data-page-node-id="JO7J8v8AbISnZKUMDFuVcs" class="n"><!--pnid:CycSmEcyFU2r6g7o7KD4sk-->第 3 步</div><b data-page-node-id="MAvjNrTvduphQ4yHlNfHmg"><!--pnid:2rZW2HTF3dyFYj5RouCdL4-->关联分析 · 串成链路</b><span data-page-node-id="qV3Bb4TCsXFx20UfX3TTFi"><!--pnid:1GjtKEA1vcWfz23fF6tPdi-->基于时间窗 + 服务拓扑 + 指标时序，构建告警关联链路</span></div><div data-page-node-id="qSwOTMS5GIirXbEtlPMAPl" class="step"><div data-page-node-id="myqEMsLDzbwHgIAH23jPbx" class="n"><!--pnid:N2W1FSbV9oLaqfjDWV9Zzn-->第 4 步</div><b data-page-node-id="QK5kDBZfe4aabgSHobpVAD"><!--pnid:fsM0gPpOj7SFOV8lDDkHz2-->根因推理 · 候选带置信度</b><span data-page-node-id="dySlS3iaqCiUTKKGZSjppR"><!--pnid:Fy1L5MyNkfH7qzF0xMkjJm-->结合变更时间线，从关联链路推导 1-3 个根因候选项，各附置信度与推理依据</span></div><div data-page-node-id="EQm4ZOsJr34nfz8apXf1aa" class="step"><div data-page-node-id="qxq85OLAeRZiBJFPxOVFQB" class="n"><!--pnid:EsoexX9jm0ZNSrhenoeiWS-->第 5 步</div><b data-page-node-id="RWw0oY3lWWEsUstv2FjAMF"><!--pnid:d9xn7YghCHmMMyB00lugm9-->修复建议 · 分级给步骤</b><span data-page-node-id="a5fy00GU7Go8n5p7m2873M"><!--pnid:A6j8Y8UNkUN6VrEJNvilAl-->对每个根因候选项给出操作步骤与优先级（P0/P1/P2），P0/P1 标注建议人工复核</span></div><div data-page-node-id="DtY9Jl2GZ0RP6xhTEaxmt7" class="step"><div data-page-node-id="I9u0qIW4RsyyzGj4nlBACs" class="n"><!--pnid:4QRdjBVjiHdyqZxD0VOvhB-->第 6 步</div><b data-page-node-id="PzJ4q8EmzFL8XzeI5auF21"><!--pnid:4FlDaQr5tVoSI7vMxs16E7-->报告输出 · 双格式交付</b><span data-page-node-id="LE0HcrwqxzU9WkCTZ18YLw"><!--pnid:kLdr3SGs9njZzg3uijMwQ3-->生成结构化 RCA 报告（Markdown）+ HTML 可视化（告警时间线/关联拓扑/根因推理链）</span></div></div>
+</section>
+
+<section data-page-node-id="2d2EAjkKJMPFOKm62unSNU" class="blk">
+  <div data-page-node-id="ylAKgcIRRtp38F0UfeKNNS" class="g2">
+    <div data-page-node-id="wcQHFcvFIBVUspr8Q7f7iV" class="card"><h3 data-page-node-id="icVmoR1jNDrKCifQgYxnH3"><!--pnid:BpUwp7ysE902dQeXCEKiXL-->要准备什么</h3><div data-page-node-id="FiHltFiESF9bF8zZNQXNlz" class="src"><div data-page-node-id="z6FvD6iFbDXOOYnSf9hhu6" class="fn"><!--pnid:v4HjqCsNmgwSWITbBVfJ8J-->告警数据（文本 / 截图 / JSON，15-30 条一批）</div><div data-page-node-id="mnXRMQyC6a5lBByY7m0GDf" class="fd"><!--pnid:YmSDYcKJPpfwV0hAU92Kac-->脱敏后原样粘贴或拖入 —— 字段越齐置信度越高</div></div><div data-page-node-id="PcJMZWfoGQGyJZ4x1HcKDT" class="src"><div data-page-node-id="lSmwsqORsKSrivAGxQQOTK" class="fn"><!--pnid:W0Xw0pn1waUuSId1amUYUC-->变更记录（可选）</div><div data-page-node-id="Q3CEsFjZvSBdFmYlMm7lfM" class="fd"><!--pnid:rEo34m6UJSwCspyBTXsgkE-->近期发布与配置变更 —— 根因推理的关键线索</div></div><div data-page-node-id="LysPWjoJrpsXUSJ5BvyYV0" class="src"><div data-page-node-id="3MfldAliGlHMHZL6YwMs2d" class="fn"><!--pnid:jcTrh1JuZBM39pNJ4RLgQJ-->服务拓扑说明（可选）</div><div data-page-node-id="u6IJMHG1qmLkFJhh4pb7Zl" class="fd"><!--pnid:qcgZSWmA2TMRPKuqmUEinx-->有什么给什么 —— 缺项按告警字段推断并标注</div></div></div>
+    <div data-page-node-id="OOjJyOKguXj812TIUqgxn9" class="card ev"><h3 data-page-node-id="wIOv6AveMehCY6XseiPIio"><!--pnid:A3pJUEywxUnPOdqVob3sCP-->为什么这个场景值得做</h3>
+      <p data-page-node-id="8skp5kta6FAFCbCkSLRn8m"><!--pnid:KDr8sfnMxGSKAAnSbmBAYe-->痛感 5 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="Zpc6XLKcwMSRhU0ODhWuwn"><!--pnid:HeEAdHMM5lgFlo2l9FJ9O4-->10.0</b></p>
+      <p data-page-node-id="FOv13gzPRsbZo5fshKjvpl"><b data-page-node-id="2YRSOn0HDbwBmLza3M27LC"><!--pnid:sJsTN5Ox7me6Mo79mirdQw-->最大差异点 ·</b><!--pnid:c8RVQR9nXXGWhV2eQAMffh--> 不接监控系统也能用：告警文本/截图/JSON 原样扔进来 —— Agent 负责降噪、关联、推理，运维只做复核与执行。</p>
+      <p data-page-node-id="ocFq5g1QIDopGS1wUxlfPs" style="color:var(--ink3); font-size:12.5px"><!--pnid:Fofq8ZWOTRol479CzbaRX5-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="z9djrUwlUr7rxUkYIGzQnH" class="blk">
+  <h2 data-page-node-id="nTuFXU4XUoj8rqCJi6wYeq" class="h"><span data-page-node-id="shW7nWXbHigAC5464Sf4Y0" class="num"><!--pnid:i2ScERv9AUmWMpp6WxJ6kv-->五</span><!--pnid:p4j7LkxQCDrTKpgomN9t7d-->会产出什么</h2>
+  <p data-page-node-id="IoxzmFreRifSNSKsrZQdcS" class="subline"><!--pnid:23oY13rvYxoGcJ9hM6geUT-->判断标准只有一个：这份东西故障复盘会上能不能直接用</p>
+  <div data-page-node-id="Qvx9zxQa2UvETBTiDfl1xp" class="outs"><div data-page-node-id="6nDZqkWIZ8XiID5Cp9Oxvo" class="out"><div data-page-node-id="wrp9vR5ZJriwXy292HreFQ" class="on"><!--pnid:XPWmzUn7NMeL8Q5hePKdo2-->正式件本体</div><div data-page-node-id="X6WTRrWt470mqYfsVsASNE" class="ot"><!--pnid:hI5qOr3ZSs16JPQOIdroQS-->RCA 报告.md</div><div data-page-node-id="ND14FYvOXGIUMLc8zhFYBp" class="od"><!--pnid:p6vc7MaOaBAEcISV3DHGMu-->告警概要 / 降噪统计 / 关联链路 / 根因候选 / 修复建议 · 可直接用于复盘</div></div><div data-page-node-id="MOv71aWHsiAK6LFrKBVywk" class="out"><div data-page-node-id="n90oq38cklmg7ipBKrn4do" class="on"><!--pnid:xwsmUqFK68cb1svvPOisFG-->演示件</div><div data-page-node-id="H9ckA05I35UDfrAhxsCrC1" class="ot"><!--pnid:kKzLGgOkVqm5hGdB7IGVjE-->可视化报告.html</div><div data-page-node-id="TVW59uFZiKGXQtn6qplnU0" class="od"><!--pnid:XUNAOaPHg06249hVKncGrb-->告警时间线 + 关联拓扑图 + 根因推理链 · 浏览器直接打开</div></div></div>
+</section>
+
+<section data-page-node-id="SQuWhWu4meL15ZjRFLJtCt" class="blk">
+  <div data-page-node-id="rt2rtKqhDiSl6uLjjq3GzP" class="card warn"><h3 data-page-node-id="SNIKyaQWKu89HDvBUNnlnX"><!--pnid:8vk8uTUSvx5RJYHN57DJ4I-->这套东西不承诺什么</h3><p data-page-node-id="kqlVlCBsk4I4KNGdHeLVmc"><!--pnid:63tAUyF1Ea1mcePCBrtVE1-->不替代运维人员决策，不自动执行生产变更，不保证根因 100% 准确，不对接真实监控系统 API；P0/P1 根因结论须运维主管复核后再决策；回滚变更/重启实例/扩缩容等生产操作存在停服风险，须审批并在变更窗口内执行，禁止直接落地生产；告警字段缺失会降低推理置信度，建议标注缺失项并人工补全后重跑。</p></div>
+</section>
+
+<div data-page-node-id="zpsGqpmEr0hVIkDNGW2qPE" class="cta">
+  <div data-page-node-id="RHJY7sTjAJnic70m2lo8WQ"><h3 data-page-node-id="OR3CYN4vfJEQz5Cs0YbsEK"><!--pnid:9sPnUIjPG9HobFhvAOVJJI-->想看具体怎么跑？</h3><p data-page-node-id="btVhQDoOaVdZKXmPLmBvtO"><!--pnid:Vetm0Xogp0p81bCUkxp1I5-->Live Demo 里有一个完整案例的每一步，包括哪些结论必须先经运维主管复核</p></div>
+  <div data-page-node-id="KzNxwHebvtpjGhxWiosu56" class="btns">
+    <a data-page-node-id="guCJ756TZxt2fGSvuxcb5K" class="btn" href="LiveDemo.html"><!--pnid:fQEmCNkU9MwzWg1WkpBK1T-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="ZTTuNALCeeNAOBq9rebIo9"><!--pnid:jyqNMQwVv6CpeLttcb1O19-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="B1jcI3R55wzWFgVlQsyNIf" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="196ypDK1euBjIOIB5ntCKP" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="Zmj9VSWGxrC78g1ahj9qlq" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="iqWoeWNdECDakZwSXAi1GU" data-pnid-children="8dHZtbzgh4NbxwgaOR7QKi">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html data-page-node-id="0CujwnjQ8PP3s8Sa4WoNMR" lang="zh-CN">
+<head data-page-node-id="IloRfIIVOPdCc4nTFiLpKS">
+<script data-page-node-id="samNl6NcTdXBlIuQojoU7z" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="UNqoIp8uV1nA29agehFiFQ" charset="UTF-8">
+<meta data-page-node-id="zlECgOazKJnDCIIYzVdUJZ" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="C5MdO5o3kCyHIjkzC5eBpE" data-pnid-children="5zFCH3mlo9O7qPPTKt2W87">工程变更管理</title>
+<link data-page-node-id="lw6lPc81nM360gFEG7rlse" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="m3Zg4p3Ht9afjUgZMKA6Pk" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+
+<style data-page-node-id="4mVDPX5woKxzIhcG38Syd2" data-pnid-children="UK0Rm6NrTLps24eu8AJ4lw" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="qswozq2nvY3CWISnRRf1nh">
+
+
+
+<div data-page-node-id="Ku11lFx44X9bVnT4gvP52X" class="wrap">
+
+  <section data-page-node-id="LxcIvf4Nj1j3ujlaGoyQLg" class="page-hero">
+    
+    <h1 data-page-node-id="VheIWtap1wV55NfzjAYAz8"><!--pnid:5CIRTO96WDOaOfABctjL0C-->工程变更管理ECN</h1>
+    <p data-page-node-id="PGpJY6NQWfNVV0Fq9r1Kxi" class="lead"><!--pnid:IV8hVLs4k4GgkAMU7XBF9l-->覆盖变更发起→分级判定→影响评估→验证计划→审批→实施→效果确认 <b data-page-node-id="Jnl7Dj9llxfmz6kUJ16KXm"><!--pnid:i2B3drv4AOwQd6rXY0tgcG-->6 步闭环</b><!--pnid:L2UwV6q5XHuXArbjGd8Brd-->。把"拍脑袋分级、靠人记 FMEA"变成规则化、可追溯的标准生产线。</p>
+    
+
+    <div data-page-node-id="lGjDzNBiClAOcfG8phq78I" class="std-strip">
+      <span data-page-node-id="pckPoOsBbwxwulNZ5HXzmj" class="lbl"><!--pnid:zXAG3khmjqlkqTVS818EDR-->引用国际标准</span>
+      <div data-page-node-id="ZDjtu7tiqnpt03TPNMM5tI" class="items">
+        <span data-page-node-id="OowdrgZoSspn5QVHbuMd9z"><!--pnid:4fV6KtlkcW1WthUV8kT08g-->IATF 16949:2016 §8.5.6 变更管理</span>
+        <span data-page-node-id="OMdLB3mWOg30JRQdZPxeOE"><!--pnid:c7j9TjxUJPWnaf7UEzDP5R-->ISO 9001:2015 §8.5.6 变更控制</span>
+        <span data-page-node-id="vHAX0qDbgG3RPP53pX20WZ"><!--pnid:cn8kHwlixe1eaktNa0Z0wb-->AIAG FMEA 手册（第五版）</span>
+        <span data-page-node-id="LJjaHe9yyKt8ghsydAHDLl"><!--pnid:xJVrzDojEt6r4Qo6M5JXil-->AIAG SPC 手册</span>
+        <span data-page-node-id="a5OQCOSXGknLml7A7g7yae"><!--pnid:tOim1gnvTz3FUCmQFmSCGs-->AIAG PPAP 手册</span>
+      </div>
+    </div>
+  </section><nav data-page-node-id="bLfypNBvZapDvohesOm7ps" class="subnav"><a data-page-node-id="n5xDY5z5LjB1rL8PbaJQqi" class="on" href="#"><!--pnid:EAtv9eNLhUak9LWtnNmGbD-->场景引入</a><a data-page-node-id="StqQvx2YaG325tabZp6TeL" class href="LiveDemo.html"><!--pnid:zMF8i1Sr4p6OL5UhjiIrlq-->Live Demo</a><a data-page-node-id="m6cnQfWmzMh4PmIfv2WJXe" href="推荐任务.html"><!--pnid:3mcBTnRRbwjSXKNn8D0F66-->推荐任务</a></nav>
+
+
+  <section data-page-node-id="QpoFroKO3Fndvcbt1gUSFs" class="blk">
+    <h2 data-page-node-id="IBtVUFm2pLWbpKuACAVYzF" class="h"><span data-page-node-id="WqUSZD8ffU1PjyzcN9Zkhu" class="num"><!--pnid:io172t9bTToKjmPdPp7Cr2-->一</span><!--pnid:18phfJYqIdFtK1EEMpj97o-->这件事现在是什么样</h2>
+  <p data-page-node-id="Bs3zMmBj7xQBQEZMqGgrWE" class="subline"><!--pnid:2Tk1EqgpbBMD4wNwu6HxuV-->研发 PE 作为工程输入接口岗，直接承接变更雷区。以下 5 个最致命的痛点：</p>
+  <div data-page-node-id="4HUbjxbNvNHp3HYnOW2bLE" class="card"><p data-page-node-id="eUh47XwNBIsTYU8XoFuuxj"><!--pnid:BT5gQ2TEjx9Rl5oZ8mVQjo-->研发 PE 作为工程输入接口岗，直接承接变更雷区。以下 5 个最致命的痛点：</p></div>
+<h2 data-page-node-id="htG9Snmjr6ISJq0BsLe9B4" class="h" style="margin-top:22px"><span data-page-node-id="jmneEGuLTARHjOOyZ1xgjb" class="num"><!--pnid:5ke5D9zL5dohoRsoMBjSkh-->二</span><!--pnid:OV3LLqo881WfQrKdouKgFa-->痛点</h2>
+<div data-page-node-id="16gKzQnHKTrCMSvgiBaohe" class="pains">
+      <div data-page-node-id="yaloT2TYFrO8rB7zIDNlTG" class="pain"><span data-page-node-id="vBqwOEJ3Hac4G5DLJavhAx" class="i"><!--pnid:wZGvRnVE9G78THjgsA8Q9O-->1</span><div data-page-node-id="W5el9OpWnayxLzHd7CFRwY" class="t"><b data-page-node-id="Tnzvb1m6JXVdNbPk2uaGmo"><!--pnid:G8FWyLKw5UYkdpyg9x4TJg-->变更分级凭感觉，Red/Yellow/Blue 混淆</b><!--pnid:KJjcCo0KLdmtZ4AVcE4Tld--> — 该走 6 级审批的"重大变更"当"临时试试"处理，抽检出问题就是重大质量事故；一个简单参数调整走完整重大变更流程，18 个工作日审批下来市场机会都错过了。</div></div>
+      <div data-page-node-id="ZzhVzi2awRFj5kJ1DCozWS" class="pain"><span data-page-node-id="oPraHec7Ddwlw96kQWbccT" class="i"><!--pnid:GKzPJ6FEWjrTlJyI5u7Waa-->2</span><div data-page-node-id="4bH5FsbnCwbIiF3DfSsvq8" class="t"><b data-page-node-id="3m26IRJtmhuaoqkuwGZDfu"><!--pnid:txXNjPAXNGfVhL51G8TQH2-->影响面靠人工翻半天</b><!--pnid:nYnhKtrBEJYj3ZURsGSE61--> — 一颗主控板换供应商，PE 要翻 BOM 找"这颗料被哪些产品用"、翻订单找"这些产品有哪些未完成订单"、翻工单找"哪些在制会受影响"。三份表交叉查，熟练 PE 也要 <b data-page-node-id="gXftmgU1FFZ0JP5klJoU5g"><!--pnid:iyATwHtsL95U1zuHhIIhs2-->3-4 小时</b><!--pnid:qs1DqDgIdWiTe02MImRlic-->。</div></div>
+      <div data-page-node-id="NNKVN6UzKYx13rp7n0AVxD" class="pain"><span data-page-node-id="zr3AzGWXLnb6dUkdRFK8lo" class="i"><!--pnid:6dn8D1NOtcZ5NFaFn8vidH-->3</span><div data-page-node-id="AxR9XCozDP8SF1gJzDqitP" class="t"><b data-page-node-id="mQlpfDEJJQRsNW304OTETc"><!--pnid:EzC2mYzW2sgMDeKY065aaA-->ISO 审核时缺乏可追溯</b><!--pnid:2h7GBXz5NmvpgxkNlQmqDP--> — 变更→ 评估 → 通知 → 验证 → 实施 → 闭环这条链路没有系统化留痕，审核员一问"这次变更影响过哪些订单？验证方案？审批记录？"，PE 只能翻聊天记录。<b data-page-node-id="TeOf3Gd3tUKw12muZaVhBO"><!--pnid:JEpIBQSBdScNvvFMzAl40B-->这一条直接决定 IATF 审核过不过</b><!--pnid:X3nbqlXr4j1k1BGdkk4Tpo-->。</div></div>
+    </div>
+  </section>
+
+
+  <section data-page-node-id="vIXrlOIk3v6O8NSo2EbKC8" class="blk">
+    <h2 data-page-node-id="AjhEma8mAq81s1mfiy55dN" class="h"><span data-page-node-id="EL23SHfm2e4a3BcSlXNFbi" class="num"><!--pnid:yqnxQiEzBqZ7DHbbRQ6H4p-->三</span><!--pnid:2oJN4M7UgTl9hJh1dgILNy-->换个做法之后</h2>
+    <p data-page-node-id="0QrgyDXoZM5wYb6Jd90lqA" class="subline"><!--pnid:obX2JTe4oojJuSFjRtC4jF-->用 <b data-page-node-id="dGIgBh3YTQPWHO322aeiIQ"><!--pnid:SsZ2e023hfj9ZnLXW3SNfq-->ECN 工程变更管理 Skill</b><!--pnid:p3RZqiYf0fPmyaco7td2U5-->，把 IATF 16949 规范的 6 步法变成 PE 一句话就能触发的标准生产线。</p>
+
+    <div data-page-node-id="MkDjp9ZZQKeBCqdl0OpXh0" class="cmp">
+      <div data-page-node-id="SAXYUixsFwj2zZPnd3x03d" class="old"><h4 data-page-node-id="Kg7kLuXoAIc1p76a0zXQFX"><!--pnid:GXfgQGUVdvFJMw2LLi9MOn-->传统做法</h4><ul data-page-node-id="xgOGmwPKV02Xqa0Gk9OaiH" class="list"><li data-page-node-id="G0g5kAVOSYMiuMdQnFasdi"><!--pnid:pyx8tjb3YJR5gzKFdyBdYh-->研发发邮件 → PE <b data-page-node-id="mhqQlrvDvB4f5cbCwMOgOq"><!--pnid:sbfr3dDiVOCrCNrPgoU3Ic-->靠经验估变更等级</b><!--pnid:66Ous1MRKI33p9cE8ZOHZS-->（同一个变更不同人估出不同等级）→ 人工翻 BOM/订单/工单三份表 → 打 ECN → 分别通知 4 部门 → <b data-page-node-id="FAkiUrVXjJJjaF8dm812QQ"><!--pnid:6hKY5InYek32D6OuHHUAcI-->靠人记 FMEA/CP/PPAP 是否更新</b><!--pnid:4MtEjXQ5QWy3B8sZaA9hsQ--> → 验证节点靠盯，漏一项没人发现。</li></ul>
+      </div>
+      <div data-page-node-id="bm58L2Tg1MI3rbiOapfldL" class="new"><h4 data-page-node-id="K4XLv3UBhtN7hwxktPNx2t"><!--pnid:76zJHUiY07U8n10J9fzDlw-->WorkBuddy（ECN 工程变更管理 Skill）</h4><ul data-page-node-id="OZtlFnOV26b6AmttR0az7S" class="list"><li data-page-node-id="e4NPvGYZSfYHqhaTG7dVcK"><!--pnid:qKVmAi4Y0ImVJaqgLt4o1z-->一句话下达变更 → <b data-page-node-id="OTmxIZreRk19P5FOVIgBj7"><!--pnid:vPMKHtGC8x7BQ5facEWCrH-->2 分钟</b><!--pnid:4YYvIlyK2ENrbHxzQ6MtFI-->拿到分级判定（Red/Yellow/Blue）+ 6 维影响评估矩阵 + 完整验证计划 + 审批流转清单 + FMEA/CP/PPAP 联动清单 + 分部门通知稿 + 实施节点看板 + 效果闭环检查清单。</li><li data-page-node-id="GmCoUJJS4HqWq1ayl2AJHD"><!--pnid:U1MgH0WN44rYHAP3wANrUq-->每步骤有据可查、有迹可循。</li></ul>
+      </div>
+    </div>
+
+    <h3 data-page-node-id="84X7KSO3NNcIQZFPNgPQQS"><!--pnid:yQvGBlWQV7op7TteAJzLxv-->核心价值</h3>
+    <div data-page-node-id="UPP9fQ8spkesuvNxsIICx8" class="val4">
+      <div data-page-node-id="1JiOX2IxSaYHPQQjhULxEa" class="card">
+        <h3 data-page-node-id="59iNq49MrpfVqzB2WiOGyz"><!--pnid:D6qEEA5jJOUB8RqCWpaWIo-->规则化分级判定</h3>
+        <p data-page-node-id="5pyJbsOP1ulRf0HIu67wLy"><!--pnid:Q8YNccYSYkwnzudofYo9I5-->输入变更信息，按 <b data-page-node-id="dyrZrCLCFT4F5Tv4CNc3vx"><!--pnid:UXJrAI8df9eeWQqAWxRI74-->4 维度</b><!--pnid:ol3fFFxRcKRhkgOEGR1quU-->（影响范围/可逆性/验证周期/成本影响）自动判 Red/Yellow/Blue，附判定依据。<b data-page-node-id="xHxwJr1eiyQtx1pG8UtP6p"><!--pnid:EWkocG3JqcvSeCYSfdPKiS-->Red 走 6 级审批、Yellow 走 3 级、Blue 走 2 级</b><!--pnid:IQ23FxvUPRNN7PWAI9uv15--> —— 分级有依据，不是凭感觉定。</p>
+      </div>
+      <div data-page-node-id="F2ZBGhmfU75itKLduxEXs9" class="card">
+        <h3 data-page-node-id="3WnBRvPYF6iz0xwd7Vel5t"><!--pnid:mbRLD0lxHB97DiSri3VipV-->6 维影响评估一步到位</h3>
+        <p data-page-node-id="VtdaXjCd95W7ynlz9Tdhrn"><!--pnid:MUjJKW7ndIhvCUt2lQXgRt-->设计/工艺/质量/生产/采购/客户 6 个维度全覆盖，每维度按"高/中/低"打分 + 主要风险点 + 需验证内容 + 责任人 + 完成日期。变更批下来，该谁做什么、什么时候完成，一张表上写清。</p>
+      </div>
+      <div data-page-node-id="ARjs3s0rII5clpadjvSOge" class="card">
+        <h3 data-page-node-id="vHHCgsOd0mIvpIVHfCTD0l"><!--pnid:xgy9Ai7yUhRcF3UMchYHo2-->为 IATF 审核提供完整追溯</h3>
+        <p data-page-node-id="YTlGE1zEyMIIN2mbBC6cq7"><!--pnid:9ePTVDFiZDjzzyGpScIK9W-->每一次变更、每一次评估、每一次审批、每一次验证全部自动留痕。审核员一问"这次变更怎么处置的"，PE 直接调 ECN 编号 · 全流程记录一目了然。<b data-page-node-id="C9A1dQbO5hpSWo9987MYdQ"><!--pnid:UvthOHujKiIyCsY52Lhsw3-->对有客户审厂或体系审核的企业，这一条往往比省时间更要紧</b><!--pnid:NRxzPoqqDYcz0sDlzuYUFg-->。</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section data-page-node-id="VV6otv4bXZRNL7zyR0Mxn6" class="blk">
+    <h2 data-page-node-id="hIC2uGjSBsIvj387YP4AEb" class="h"><span data-page-node-id="ZCBtN5zwJSgsPEsys6wDbx" class="num"><!--pnid:1cApQr3H9BCfp7JSq99ZI6-->四</span><!--pnid:YlKZxANMivChg3FKdeio7I-->场景闭环</h2>
+    <p data-page-node-id="h44oLpDDUrLK8Nr3BXHIxw" class="subline"><!--pnid:ZQQC86Rl4QZvq9KvF2FVZZ-->从变更申请到效果闭环 · 每一步都有明确产出物 · 每一步都可追溯。</p>
+
+    <div data-page-node-id="MwjuhyE7HWFmVU09XOqSQf" class="flow">
+      
+        <div data-page-node-id="Ym89piXje8DesMoGw9pz4z" class="step"><div data-page-node-id="2iw99JSrBu7P6N0LGZqrc7" class="n"><!--pnid:x9FCqsBUtqA9lltOsPL1UJ-->STEP 1</div><b data-page-node-id="U9bpaQTa9zZ2skMj6UGGh3"><!--pnid:dsqYfl8EeikJ6iYjRl3CjX-->变更发起</b><span data-page-node-id="U4WGceZGGIVnrgUYHwYzTn"><!--pnid:XWNM3ZWSXBG7M7qfJosJLa-->信息录入 · 分级判定 · 生成 ECN 编号</span></div>
+        <div data-page-node-id="8OK0DZMSf2ToKzxgfDBtQe" class="step"><div data-page-node-id="EaVySNSCulVn9brWnZJ2Zw" class="n"><!--pnid:uKIxkSFchxmxqxccB8fgzt-->STEP 2</div><b data-page-node-id="gIOcF2uS0EMmGmofUhsTGV"><!--pnid:7VPdVSzKaugCVbWBglffEL-->影响评估</b><span data-page-node-id="Ei1Tm7VkZLGoj3EBXka7WF"><!--pnid:c4PJ2AASHKbc5GamFVsHzL-->6 维度评估 · FMEA 联动 · 风险汇总</span></div>
+        <div data-page-node-id="3ShHgIl0PmAfMb8EbLgXup" class="step"><div data-page-node-id="XiXSKuh6i9YpN0YqUwkLNb" class="n"><!--pnid:trXz2RIAiJnSg14xpPnnfg-->STEP 3</div><b data-page-node-id="4l9ROf9oqn6kDBA6MrAkoC"><!--pnid:7weGWWLIDtNGVZf6RhLuKs-->验证计划</b><span data-page-node-id="qblvJ72TB0zz5DvUN5RG7z"><!--pnid:UA8WxFYFT1aWi3wjEU0TxM-->按级别匹配验证项 · 责任到人 · 里程碑</span></div>
+        <div data-page-node-id="zw6a9OG948m9KF0D4biQJ3" class="step"><div data-page-node-id="H325r0vVuMn1EPCBFaOJiv" class="n"><!--pnid:qerzGiP7LHNY1Rhp9WOD8P-->STEP 4</div><b data-page-node-id="Hq56WlyuhcQICCN9XKyMhZ"><!--pnid:ScBuxTjwhv7a5ajwWlc4cM-->审批流程</b><span data-page-node-id="9QWiJsCNPcIDKxMWBwNpUp"><!--pnid:ASMVAQ7suPiZM93mYWbuVd-->L1-L6 权限审批 · 时限管控 · 加签规则</span></div>
+        <div data-page-node-id="VryChbSv00xbECCqiK5VH3" class="step"><div data-page-node-id="Bdfl6siN6hHAU1Ms1Ml415" class="n"><!--pnid:imc7G2Arjk9d65ZXbK4A0E-->STEP 5</div><b data-page-node-id="VxDaC8kEltZWYEFuJ4sKdK"><!--pnid:PXuoc12mhoTIHrNeuxyaQs-->实施跟踪</b><span data-page-node-id="JPZPNWWpr2r8IeuXE9kT1A"><!--pnid:RxzRE2uN7BszAxqSthRpeJ-->进度看板 · 问题闭环 · 文件更新追踪</span></div>
+        <div data-page-node-id="TEwh6HSPi33XfveG3VxW85" class="step"><div data-page-node-id="deGBhmbgTp5Bnd0gEHueCl" class="n"><!--pnid:6PDzNDgnx9SkyPb8zvMnRa-->STEP 6</div><b data-page-node-id="2Gr5NpniSrRFnYzQEjpLOR"><!--pnid:GTfcOrh4YF3qyT8vTPwzup-->效果确认</b><span data-page-node-id="z9nlyGMDoYi6bqHHmwUsji"><!--pnid:CLajtE8GQLu03FNURDPX41-->Cpk / 良率 / 客诉 · 闭环判定 · PDM 归档</span></div>
+    </div>
+
+    <h3 data-page-node-id="HEwYQ8OY7GBDk4Zbmn7NOM"><!--pnid:lPqyWAFbfQJMLBOS7ocCwH-->三级变更分级 · 决定所有后续动作</h3>
+    <p data-page-node-id="dgoJ6JEd85iLqgx1XXiasZ" style="font-size:13px; color:var(--ink2); margin-bottom:12px"><!--pnid:kgl4nEqwQuLkrwYVF8faed-->分级不是随口一说 — 它<b data-page-node-id="oQo3xOOULEZ0uELFtFn7YP"><!--pnid:7kvn2EWnlEelar0rFrfErE-->直接决定</b><!--pnid:VRDMy6rF6bULWhjyJ8RPBv-->审批级别、验证深度、文件更新范围、客户是否需要批准。</p>
+
+    <div data-page-node-id="rbaZgbABqj2acUrQdge0HG" class="lv-grid">
+      <div data-page-node-id="UFYaGnkkzMFOzWUJBiM8nP" class="lv red">
+        <div data-page-node-id="rWFAZHFUyA8T6htXyIfuFp" class="lv-h"><!--pnid:sYOSHj3ySo7dpBHqkOd5oi-->Red · 重大变更</div>
+        <div data-page-node-id="GLF3fL6Hs8BbIsUrzW6SVl" class="lv-kw"><!--pnid:GFXJyClgOJM75R8zfg94mU-->关键词：客户 / 安全 / 法规 / 召回 / 主要功能</div>
+        <ul data-page-node-id="1dmPF3cdUG6XESYj4zVCS4">
+          <li data-page-node-id="M4vPAhEwLYSSVnJB47S7xb"><!--pnid:XagnSTGyKui63HlNY1pWGs-->影响客户产品 / 安全 / 法规</li>
+          <li data-page-node-id="O6Raa8pC6CDiC9FZNaaJBX"><!--pnid:MQy4AIrlwKv1mEeXJ1N4ty-->验证周期 ≥ 4 周</li>
+          <li data-page-node-id="Gs0VcA7040AYOY2SQ8VE3b"><!--pnid:3beJVTYkdrh3sGczRqel4E-->成本影响 ≥ 10 万元</li>
+          <li data-page-node-id="bDU2Yi2d4Rm4I4kIpkWtTH"><!--pnid:dVHOQEo4ZUCfscBhFfMEPm-->不可逆 · 需客户批准</li>
+          <li data-page-node-id="0bg5lg4N1Cju9Z7f1WPQmG"><!--pnid:IzeH2IKsBg5ErmyNOAkl9Q-->6 级审批（含客户+总经理）</li>
+          <li data-page-node-id="2DrhxYr2aH7S3jgBlZM7N9"><!--pnid:ZnN0YkRV3yJBQaFcNNCliK-->PPAP 等级 3 提交</li>
+        </ul>
+      </div>
+      <div data-page-node-id="eWNNWqWpRQCRGyTeWbBWpR" class="lv yellow">
+        <div data-page-node-id="k4RwD11LJQq9TMLcJNCCuQ" class="lv-h"><!--pnid:at0pYsiYRIECaCzpzijYZH-->Yellow · 一般变更</div>
+        <div data-page-node-id="f5n0L1bHstOlidB5kfbKZS" class="lv-kw"><!--pnid:MAcOCoPabzFF8nOEcckCfK-->关键词：产能提升 / 质量优化 / 工艺参数 / 设备换型</div>
+        <ul data-page-node-id="xUAbbIIik6u8N309sIkIIa">
+          <li data-page-node-id="5wQIrANsHhiKmVWbCMmo3M"><!--pnid:GwZ0SOCLBHEfkUZhztLmNT-->影响内部工艺 / 质量</li>
+          <li data-page-node-id="43j9Et1CduWLqzpIBYEOwp"><!--pnid:swqtCw6xSbo2ad1XlnXjiT-->验证周期 1-4 周</li>
+          <li data-page-node-id="ZeS39ka8DU4hHoPW7NldMf"><!--pnid:0co6hKY26WLoIBczDM2Cbg-->成本 1-10 万元</li>
+          <li data-page-node-id="B5nglFavL2XlfkBJ9kS0No"><!--pnid:304FDzBUb5pQu0orFNirzR-->可逆但需重新验证</li>
+          <li data-page-node-id="DTQUn4PSLhAC2zVZjcC6Hg"><!--pnid:JcCuXfT5ybKQj6O2wltLp6-->3 级审批（部门→QE→质量经理）</li>
+          <li data-page-node-id="dfJ69Dzu8Ja1sq3LSeDtrf"><!--pnid:QfdmrUigUTSyJs3oe9ZW6b-->PFMEA + CP 更新</li>
+        </ul>
+      </div>
+      <div data-page-node-id="Q3oGl1kvoe8ePUHdTqvfnM" class="lv blue">
+        <div data-page-node-id="WiQPw4wlh9rPCpLf9Kl8G0" class="lv-h"><!--pnid:6gqSz9O1rbtFtDsT2eFQ54-->Blue · 临时变更</div>
+        <div data-page-node-id="cGxi2X1WB0XtR1eCj13qxk" class="lv-kw"><!--pnid:SEtnj5lP9HpFblhLnTEJTe-->关键词：试试看 / 小批量 / 应急 / 紧急替代</div>
+        <ul data-page-node-id="tLqUukTZjcjuvwBssoIJm2">
+          <li data-page-node-id="lcvBKvkVB0q8kjlcbPVU8X"><!--pnid:TYarwj9fujqw0axHZB8DNv-->单件 / 短期试验</li>
+          <li data-page-node-id="iIg1kcSLGVfU0bhtwgWyJw"><!--pnid:0p2Upjf5Q2PivYIMUCzlF0-->验证周期 ≤ 1 周</li>
+          <li data-page-node-id="Ks2DfLDJ44DZhCBvR7QxKa"><!--pnid:JiD9Da6eLCSlfXcQTM4Dvt-->成本 &lt; 1 万元</li>
+          <li data-page-node-id="7TgkYw0oWPXdyuRnOCQfzH"><!--pnid:71xNymKYFMsMHKMBU9vbL0-->可随时撤回</li>
+          <li data-page-node-id="Xo0hfYGFTVtFV6I9NsIu4f"><!--pnid:CGgxCMbVt3SIqmYOVtUcBp-->2 级审批（班组长→QE）</li>
+          <li data-page-node-id="bRIeEy8s9zy8UlpfGuz4a6"><!--pnid:AdHoKUn3ckBosljC8JCXlU-->首件确认 + 过程监控</li>
+        </ul>
+      </div>
+    </div>
+
+    <div data-page-node-id="6if6RNn0Y4IfmUztVpnSe5" class="callout"><b data-page-node-id="Y1Cj50X9Zm81IuhBaYiz9q"><!--pnid:CgF3aQ67evZp5GcVWku0Vv-->分级判定原则</b><!--pnid:UqBWzS4VycsevsCvoVimtb-->：<b data-page-node-id="07F6rvTK93BBwQkpkkV34Z"><!--pnid:mLq6OS1j16g1QefbT5uxkL-->取最高等级作为最终分级</b><!--pnid:JXiIKAulgi6BhfKuT0R9ru-->。任一维度触发 Red 条件 → 判 Red。避免"拆分变更规避审批"的常见操作。</div>
+
+    <h3 data-page-node-id="OA5nJgKlxUUN4OL0rZpDuH"><!--pnid:9rg8EEqWPtPoIK2SFGtSKL-->FMEA / CP / PPAP 联动规则</h3>
+    <div data-page-node-id="Z3CL8gNF8AxHYAs2vzuVi3" class="tbl">
+      <table data-page-node-id="0URZzQXWoVJIiQK3q6dmI6">
+        <thead data-page-node-id="6Mf9V6fMM0T65oZVugBVdd"><tr data-page-node-id="JMzEZ3MHvDKbPSZnFo502x"><th data-page-node-id="J1lwxgV4GY2xBBQTSaCzyy"><!--pnid:oWIQPSazwTokXYzt5rmfOQ-->变更类型</th><th data-page-node-id="U2A4OShTDwVcNLm91yr2SD"><!--pnid:UgRoa9JBjMH6JdmcatuaBM-->FMEA 操作</th><th data-page-node-id="2W6iyOhiOBkz7ag0TcMOP9"><!--pnid:GKbQfmCIrAY2hV3t883yqQ-->CP 操作</th><th data-page-node-id="1N4ZVcNF1x4bT85xb19Alq"><!--pnid:8KJlQgXs4QWzphcQG56nIh-->PPAP 要求</th></tr></thead>
+        <tbody data-page-node-id="nTbR9kd0MyJka1cItgf30E">
+          <tr data-page-node-id="rwTmqK44eVWD1vqTslg5LH"><td data-page-node-id="AIW7yAO6rUSYFuVDPQSlhq"><b data-page-node-id="L1moK4QXkhMiqp8YD5arNY"><!--pnid:RiPs5GcUObhP4ZLurX9EMK-->新零件引入</b></td><td data-page-node-id="roz4eXgFmHsk0pbPpzbcDs"><!--pnid:LLxNDOxiSSUYCAWl6T3IHT-->创建 DFMEA + PFMEA</td><td data-page-node-id="gmu7p0kBKZ6CnxeO4MOSxs"><!--pnid:9k3S4ff0KAZlwoHLaG4hem-->增加 CP 项目</td><td data-page-node-id="R8cl0sj0P8IBTDsRNfaq3f"><!--pnid:pQiM1iJr7AptPAhzg4cCgD-->等级 3（客户批准）</td></tr>
+          <tr data-page-node-id="YA7ogYZsU65OOhj3PNxWDx"><td data-page-node-id="cuByLahd5BUVEtOYdO07FL"><b data-page-node-id="lEWoIDFdA1B5mDYiwjpndU"><!--pnid:WvE3FJky1KkBtvufZUNTv6-->设计参数变更</b></td><td data-page-node-id="bmHz1JEDmPFrbApEVu3lp2"><!--pnid:0ctA0WuZfGhY6vShd0hbLm-->更新 DFMEA 相关项</td><td data-page-node-id="Vi3opwcbrRSZ0ZxBDDnoRp"><!--pnid:YqTMb5epZRQ7WOuWOnHCom-->更新控制方法 + 取样频次</td><td data-page-node-id="46Xl48GW0Tmoec2By05Ijf"><!--pnid:FnMvIEFA8fHIF6W8yAxzV5-->等级 2-3（视客户要求）</td></tr>
+          <tr data-page-node-id="8viY2ozmdL2qO64Ec06xdR"><td data-page-node-id="jaKhFH8m01g93zVvlAP7O4"><b data-page-node-id="j4Clh3NuqMfPM7Tx3zumfe"><!--pnid:gwF50HNfP0oUmxxTripjJm-->工艺参数变更</b></td><td data-page-node-id="4fOQgnK0WHHyP2JZtVOKcI"><!--pnid:miAajPeqynMqOOOlShrJMi-->更新 PFMEA 相关项</td><td data-page-node-id="IX9ef9JWHNXDOzVQPNCmvJ"><!--pnid:GzTs3bYvWhZzMrkvoNMGAa-->更新控制方法</td><td data-page-node-id="yoA66Wy0RiFrSFVmYI0jkY"><!--pnid:jrHR7WOeTKYcQnvsupudnv-->等级 2（性能测试结果）</td></tr>
+          <tr data-page-node-id="VlEyPKR70WB23TUYFvG6xw"><td data-page-node-id="vVUy6gzKDThtj3KPvPBJph"><b data-page-node-id="SBlVeNaCJKm1OKnGJxP4eF"><!--pnid:kDdJqC3liYp9EARvxxOcZa-->材料变更</b></td><td data-page-node-id="0ElCaym3uBOVQsOBDbNTTU"><!--pnid:R9TZpUsTL0ANRqZTzmqtpg-->评估 DFMEA + PFMEA 影响</td><td data-page-node-id="VxDIv8ZvrLFtXzNJyZQox8"><!--pnid:187VUoLX1dmveTVzoDVXMR-->更新检验设备 + 量具</td><td data-page-node-id="PZoQwKmRPp4jJw3TcLrufu"><!--pnid:ASyAiLVPkHk1w7VBx9peha-->等级 2-3（视材料关键性）</td></tr>
+          <tr data-page-node-id="TxXjOrrP2oXdRG2sIkfBom"><td data-page-node-id="LC12s9WDNbyyDtB3hPPeb4"><b data-page-node-id="mDgGV3kZJvpNC5lFiSpZWk"><!--pnid:re5zHdsWDVIoNPjYfMK22a-->供应商变更</b></td><td data-page-node-id="nRrWhB9bFHE4f6RRsZm541"><!--pnid:g7LamL77WXwi4I8JzNLeOD-->评估 PFMEA 影响</td><td data-page-node-id="mWM796lO66VxZd5rKyMWEX"><!--pnid:YbfmFNpceY2oNBiK3tkH1Y-->更新供应商相关项</td><td data-page-node-id="na47cMYcyROftQML2LrRWf"><!--pnid:FVFTM3xa0UcXmHT9lflgbb-->等级 2（供应商 PPAP）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p data-page-node-id="waeLr4wnbodbExXZ7StWk0" style="font-size:12.5px; color:var(--ink3); margin-top:10px; line-height:1.7"><b data-page-node-id="mzXulG6MAiWmT3EEk7fREv"><!--pnid:P1c000iXROyIvBzMjJQazT-->FMEA 更新触发红线</b><!--pnid:rekmHurP5fwztDugNIIcEq-->：RPN ≥ 60 → 必须制定改进措施 · 严重度 ≥ 8 → 必须立即整改 · 新失效模式出现 → 必须补充到 FMEA。</p>
+  </section>
+
+
+  
+
+
+  <section data-page-node-id="NEpGN4JEH472uADNNqKhdi" class="blk">
+  <h2 data-page-node-id="4SG5SWLNWF5PT1L2Fpvck7" class="h"><span data-page-node-id="B4pbMOBJJSYqITRPxToMFK" class="num"><!--pnid:OpW96HH7ohaaWbDVBlK4NG-->五</span><!--pnid:0cnl4vFYXcpgp0XMVQli6D-->会产出什么</h2>
+  <p data-page-node-id="qWcLjcWHUv3rUaEpVbxbYf" class="subline"><!--pnid:RrAj3pf1vjw3RShoAQypUc-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="WumIjTGNNrpHuJLovX4pJI" class="outs"><div data-page-node-id="CD1upy1hk6KsP6VkZgrgmJ" class="out"><div data-page-node-id="VjaCZKHRzpxW4DTZt6nNMW" class="on"><!--pnid:xhK66VuStQtolIkG8UJHuh-->正式件</div><div data-page-node-id="BVzGOazanKjrSqCslPCrTu" class="ot"><!--pnid:58dTygL7csa2mY1j1P3zk5-->预期输出.xlsx</div><div data-page-node-id="wBkwGRWZReSSKJGfeo3qVs" class="od"><!--pnid:6w3xgqIIzktCrPl0MoY9kF-->影响面穿透清单 · 分部门待办通知 · ECN 变更单摘要</div></div><div data-page-node-id="FTVYTs8lscJ5kdiseuH0Oc" class="out"><div data-page-node-id="3YBsZmPWrEQLMfm13WSwxe" class="on"><!--pnid:L35FM8M0V4hvgUOGO0hC8f-->问题清单</div><div data-page-node-id="VYqWyQNsxzrxpG6PoXroaU" class="ot"><!--pnid:4WBAYcalxHzB8XhX6xNb8O-->待确认与差异清单.xlsx</div><div data-page-node-id="Z5EYSM62xymAoprsQbPB99" class="od"><!--pnid:V3FFXJK8rwwjR2NOqi6CqR-->每条带原因、影响、责任岗位与时限</div></div><div data-page-node-id="hSfhXVtYg0cJGH2bOP3eJA" class="out"><div data-page-node-id="KDIZWiJUWC6RXl7xPLlW55" class="on"><!--pnid:Ftnw1SqQQUsocs720YAm9z-->归档记录</div><div data-page-node-id="yPfkYNueCTIumwlihWjsvk" class="ot"><!--pnid:LITVrOf0TxbuCtWZMg1O2F-->处理台账.xlsx</div><div data-page-node-id="NtOPzP7BGCcuwfB4ZFMRwG" class="od"><!--pnid:PKkNmjPCux9DYaXdxsxH5k-->本次结果入库 · 下次同类任务多一个真基准</div></div></div>
+</section>
+
+<section data-page-node-id="kEW81YA4a5xcEc6JG3tdHy" class="blk">
+  <div data-page-node-id="wPmdkc4gKpGUyTUukGATyw" class="card warn"><h3 data-page-node-id="9zEibARbGjhbVQkIvYwcWM"><!--pnid:afwtt8MF93fweBzMVqANgg-->这套东西不承诺什么</h3><p data-page-node-id="mqMoUrzL035qUl5D5Wkcoi"><!--pnid:5sTE5HbPkF5SBH8ae4fQpK-->不做「AI 替你定最终结论」—— 关键判断必须由人确认。本场景产出的是初稿和建议，影响大的项一定会被拦下来要求人工确认，而不是自动放行。</p></div>
+</section>
+
+<div data-page-node-id="Coq87iGLkslzR3Xl2hnjot" class="cta">
+    <div data-page-node-id="TC2691GpsihbIAAkpIi8Lv">
+      <h3 data-page-node-id="5TrODlbRZRk3jP7KPvrSFz"><!--pnid:F3t3YAPeEmnuy9uqDJ59pD-->打开 Live Demo · 完整走一遍 6 步法</h3>
+      <p data-page-node-id="wYBrVC18igAxmbALzY8xpD"><!--pnid:aoLIVay1NxsmdcMph929AX-->Red 级密封圈材料变更 · 从变更发起到效果闭环 118 天全流程 · IATF 16949 规范级</p>
+    </div>
+    <div data-page-node-id="156z7neseX8RByv6lyezB6" class="btns">
+      <a data-page-node-id="pt3rO7lH4DVbzPvkpn9Hcj" class="btn" href="LiveDemo.html"><!--pnid:o6wVWsoKUx6j300E3zxLWl-->查看 Live Demo →</a>
+    </div>
+  </div>
+
+  
+</div>
+
+
+<footer data-page-node-id="k150G7aY3p6VCG74nqvzLr"><!--pnid:84V2Rhqg2Mt0crnr4q6bb5-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="1bP5eXwaboslab4P5VOeGS" data-pnid-children="IczJhuCuam9x8CPo3NB9y5">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="p4RWaWQrfMxWlxJiiy8UmZ" data-pnid-children="bseNxwVBkJlsXdYqFc2o1D">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="MVAajKxbLv0QY1ZMn6LR9V" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="3LU0sIe75GrkyTCwrfuZu0" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="pYDkZ4ILnz6wa2dVms1GpE" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="loLVxMA19JlVu47kgrkIwd" data-pnid-children="hC6WeDh5kT7uZdn0nsmZdt">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

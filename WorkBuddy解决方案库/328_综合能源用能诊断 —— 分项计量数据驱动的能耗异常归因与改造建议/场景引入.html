@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="2jMHOVre2MkzakjcFRf8BD" lang="zh-CN">
+<head data-page-node-id="3rsdzb1OShSF6fhhuWIXpf">
+<script data-page-node-id="qyd22zqcAOV7ocTT1a0b0v" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="UA9HUjynwrtUvftLzN4ilj" charset="UTF-8">
+<meta data-page-node-id="ZnZy70qOaj3JH905iIlzRp" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="8NFMRHL90OPy4MPrcqOOb8" data-pnid-children="tEtvfZJpSRzUGnuThyiq5A">综合能源用能诊断 —— 分项计量数据驱动的能耗异常归因与改造建议</title>
+<link data-page-node-id="4Nx620uDmeJ5uKs1OXMTf5" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="y8AskceZnl7GQO1VYchXzj" data-pnid-children="0okEF8Hx2wJYS1BmiRlHCl" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="dnUYNRhZ2lVCTgRirhyoUx">
+
+<div data-page-node-id="ri831FtBrgRoeZi6qCrZjI" class="wrap">
+<section data-page-node-id="S6PGgN9xvBWTNDHydfX5AB" class="page-hero">
+
+
+<h1 data-page-node-id="lqeuPgMdxZBcIhW3s1OurJ"><!--pnid:wZOpPQb1BJunKMFLAS69gz-->综合能源用能诊断 —— 分项计量数据驱动的能耗异常归因与改造建议</h1>
+<p data-page-node-id="rhUnw0ih32kCYYeyNLHrEp" class="lead"><!--pnid:1aOvLThIqtKOomIrmwoMVy-->客户说想做节能改造 · 问「去年到底用在哪了」就哑火——用能分析无数据的行业现状</p>
+</section><nav data-page-node-id="OOfKx1EFtBJsrq7wkMExiN" class="subnav"><a data-page-node-id="lUlAHZFPFI0TAlpB2EhK3H" class="on" href="#"><!--pnid:muuX8io0nnC9boZRS4SVti-->场景引入</a><a data-page-node-id="XS5nj8eY9qewCms34HR83Y" class href="LiveDemo.html"><!--pnid:kV3CGjiB4mDGTnvAFKQZMw-->Live Demo</a></nav>
+<section data-page-node-id="S8tY0uBHVbMjWIUjsIupWu" class="blk">
+  <h2 data-page-node-id="DMKxjYGDPTlSewyD6dA3rB" class="h"><span data-page-node-id="MRx6XP3I1GBW0zcb4qrVSz" class="num"><!--pnid:5gObos22rCLwiUOHNtdLZl-->一</span><!--pnid:YezHDD56Y3v79cVY1VvwYa-->这件事现在是什么样</h2>
+  <p data-page-node-id="UM98LvK5cENJz4CNlMVRnL" class="subline"><!--pnid:KoOxGBpIZAKuAPYjGTpxT6-->综合能源与政策申报 · 真实业务触发</p>
+  <div data-page-node-id="BkBOgmS7lQenYGSs9RQb0G" class="card"><p data-page-node-id="IvbhyQVwvhYqveZFIZ4ISU"><!--pnid:C1CJO3DgYvoWRZqXnLsKIC-->综合能源客户经理去谈改造项目，客户第一句问「我们楼的能耗到底高在哪」。答不上来，方案就只能是设备清单报价单。能源审计的地基是完整用能周期的分项计量数据（供暖系统要审一个完整供暖季）——地基不打，后面的 EMC 合同全是空中楼阁。</p></div>
+  <h2 data-page-node-id="Fb5AA8CzaxC019ukDZrSW5" class="h" style="margin-top:22px"><span data-page-node-id="MXIOEecOgOXwCelaHO2PXS" class="num"><!--pnid:huU4Jxzq2pip5R02IKJ2O6-->二</span><!--pnid:ALFAlds1wZ1gpU9l8Vc2Wy-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="mWXVBl6Xd0qTaLee6NlB0Q" class="subline"><!--pnid:nGsLZHE6pCkSuOu6QaYl6P-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="PxbW043cuaFLAsnyRgN95C" class="pains"><div data-page-node-id="GdzSMGgTtbfit7QTUX00Y3" class="pain"><span data-page-node-id="Z0G0v0pJPEkLkixuW7O9mG" class="i"><!--pnid:gxjKgIQKwlkrZqBr4scUvd-->1</span><div data-page-node-id="4oI3TdlA0bdliUWupyWj2E" class="t"><!--pnid:DOf9YyDf9HigDDSIDeJMfY-->能源审计需涵盖完整用能周期（供暖系统审一个完整供暖季）、经双方确认作为基准线——用能诊断的地基是 12 个月的分项计量数据，但客户能拿出的常常只有总表<span data-page-node-id="copxUVP3DNalP6NIJop7qE" class="src"><!--pnid:s38SD39PDrfBEpGS602ZTp-->依据 · <a data-page-node-id="hKzJvUTDMmcahEhj42fJC6" href="http://www.hnntktxh.com/tixi_show.php?id=1077" rel="noopener" target="_blank"><!--pnid:SWGVJDBWMac6Pzgo88UoAr-->海南暖通空调行业协会解读《合同能源管理技术通则》：能源审计需涵盖完整用能周期（如供暖系统要审计一个完整供暖季），经双方确认后作为基准线依据 —— 用能诊断的地基是完整周期的计量数据</a></span></div></div><div data-page-node-id="fshNNrlMHFWIwB4HT1rCJX" class="pain"><span data-page-node-id="dfDZ1VreEleeSGJVizSg06" class="i"><!--pnid:oyjuRId6SFiSoXvTP3MhaF-->2</span><div data-page-node-id="LPCX1U0uSUoqBg3Vzl7JBw" class="t"><!--pnid:zbVaPUKDBin2RDtXIFWsLM-->EMC 纠纷多半由节能量引起——基准线不清=败诉一半（津一中院只能「综合核定」判 70%）；诊断阶段不做扎实，对账阶段就是扯皮阶段<span data-page-node-id="yZw8O4L3bdrOEIm4qcWaXr" class="src"><!--pnid:kcNlgnAgWyeJZYvYOeZYfA-->依据 · <a data-page-node-id="aqnt0EfKXTlmRlI7VnOcpr" href="http://www.gschengyu.com/col_lslj/202608/4B1DB2E3830473FD5E093B6B4DD8A4C4.htm" rel="noopener" target="_blank"><!--pnid:wmqHMrPxvJFWRwOWVpAdnn-->天津一中院 (2025)津一中民终345号：双方缔约时未约定测算标准和修正规则，法院只能结合气象数据和行业规范「综合核定」，判热力公司支付 70% —— 基准线不清=败诉一半</a></span></div></div><div data-page-node-id="5xl2ZVACMxApqftsUTjygA" class="pain"><span data-page-node-id="qxMPwVEvvw55e3arpKyDth" class="i"><!--pnid:5wku613o02702hMb1DXHu8-->3</span><div data-page-node-id="Ql3X3xGEVXqHHHtXCZXark" class="t"><!--pnid:tNq0alMTJT4llXmBJTmC5w-->行业自认综合能源「除医院和办公楼的能源费用托管有一定突破外，并未形成可复制的典型场景」——大平台故事讲不得，单点诊断才是真需求<span data-page-node-id="uNkaPt5HdBqqjpdXL0A22a" class="src"><!--pnid:bs2XesBduNvwI1OwjJaqt5-->依据 · <a data-page-node-id="6Ae79P9OnZsKtv5CoicKxd" href="https://fgw.hunan.gov.cn/ztzl/jnjczl/zhxx/201611/t20161114_3454016.html" rel="noopener" target="_blank"><!--pnid:8W5Fxo6xJT7Ye4YSAhGo0U-->湖南省发改委转载节能量 M&amp;V 科普：「合同能源管理项目纠纷多半由节能量引起」—— 业主负荷变化后从表读数上看不到节能量、质疑测量结果拒绝付款；节能量=基准期能耗-报告期能耗±调整量，调整量规则事前没写死事后必然扯皮</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="HK97w5ZAmjOSBGfgstZ0K2" class="blk">
+  <h2 data-page-node-id="pAtLp973WpBoc5wntTMrBG" class="h"><span data-page-node-id="3wRlrpu7Sr9P9z9qmNiIdx" class="num"><!--pnid:gEv6sArTbJURcvLSjjTR5E-->三</span><!--pnid:CHm8w6sRYp0mjVke4mKSPY-->换个做法之后</h2>
+  <p data-page-node-id="idYDxRZ0mPPWD2h8IFoKia" class="subline"><!--pnid:GzNgZRDZXwycWsTB08YxYD-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="aSsBqkA6op5kxDElUFb6GZ" class="cmp">
+    <div data-page-node-id="7IkMvPkkRmm7us54EkOGat" class="old"><h4 data-page-node-id="XahflPIDtKSt6zln3GC9Gq"><!--pnid:53oVdz0NAW5E0Wu0cxKXoD-->✕ 现在的做法</h4><ul data-page-node-id="0MHoVKZp6PGnGasUAuCVEt" class="list"><li data-page-node-id="DfOePnwpxMUaILICpi593V"><!--pnid:uPe9EIXhUKS6opf6fTdxAy-->能源审计需涵盖完整用能周期（供暖系统审一个完整供暖季）、经双方确认作为基准线——用能诊断的地基是 12 个月的分项计量数据，但客户能拿出的常常只有总表</li><li data-page-node-id="TpOHywMlj00GpBUAX1ywex"><!--pnid:LfwoLrdLWSJcmXG7xjP6vD-->EMC 纠纷多半由节能量引起——基准线不清=败诉一半（津一中院只能「综合核定」判 70%）；诊断阶段不做扎实，对账阶段就是扯皮阶段</li><li data-page-node-id="T8ovgLzq0Ito3chxPVdeTn"><!--pnid:BE0t6mlowVjgk1qx0ud7vT-->行业自认综合能源「除医院和办公楼的能源费用托管有一定突破外，并未形成可复制的典型场景」——大平台故事讲不得，单点诊断才是真需求</li></ul></div>
+    <div data-page-node-id="YkzjSUcHm1ZuZzsf0QnmrT" class="new"><h4 data-page-node-id="xZzGMvCLmWMEGZCHtM5z00"><!--pnid:Y55isL46ZmAEeJUMQcWEPm-->✓ 交给 Agent 之后</h4><ul data-page-node-id="UypNvU6hlJN0DIvuE1WWa4" class="list"><li data-page-node-id="7HUJDgF9Ge2sm5OQAS6y9I"><!--pnid:jpmecBqfjkrMRhEuRYAxqg-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="Pf7S2xSJl988YMOzV0XaZX"><!--pnid:UmjSEOu2WqnLdxBamBKViJ-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="FwCkhpqqoEO8tUjDLormsc"><!--pnid:6USG5WtKTuQmpjno513TXc-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="6NEnfHhiO6ttOPipLNJEC0"><!--pnid:oT9dLSzIe62iuAuFQdazyH-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="5my2JHsrxN1WgIIc7FTMYy" class="blk">
+  <h2 data-page-node-id="wNKz5zbwxDScz90ygUAWc3" class="h"><span data-page-node-id="XDDOvCpmAC1Oa8TCiDHIAh" class="num"><!--pnid:DLY53OEYecBlMMauqb34jD-->四</span><!--pnid:iaoulNItxmHorXZrin3zZA-->场景闭环</h2>
+  <p data-page-node-id="5KI7M45LpznIpHGZHZ8Ar8" class="subline"><!--pnid:k3X1DW7RVOud5bRFdY7QW2-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="uPlbJPEZ9umZ40mw4hNPd3" class="flow"><div data-page-node-id="NTYUMzCnwLxNegQiAfb6DJ" class="step"><div data-page-node-id="ThwopEpkNMbYyfP1xrL7PP" class="n"><!--pnid:dNNOZFP3plT38MZzD1w1nM-->第 1 步</div><b data-page-node-id="WJGZzy054RJB08kTV3ID7s"><!--pnid:OGh2Fzw4ayhqxttGVXUHrc-->要素校验 · 计量粒度先定</b><span data-page-node-id="GWu6BlPnXpzMAXtcJLZAjj"><!--pnid:SJTXBlsXzWvuCDJjVVQkZh-->分项/系统/总表三档粒度先判——粒度决定结论边界，这条写在报告第一页</span></div><div data-page-node-id="qwlEZDINqZWO0KwOYozAnn" class="step"><div data-page-node-id="BDJssNmIYyHAMiHBSO3fre" class="n"><!--pnid:NQnnKohwLHmxSqQtruVeZ6-->第 2 步</div><b data-page-node-id="lzlR61wC8ysrlcNpnDIbtj"><!--pnid:RNI0a6bJkVrtLICNLQLTGr-->口径归一 · 能耗折算到同一单位</b><span data-page-node-id="ST0vZvH6Zh5bUlD87u6DlO"><!--pnid:crH2exrORdIs5ptp9vHixS-->电/气/热折算到 GJ，面积口径统一（建筑面积/使用面积折算系数写明）</span></div><div data-page-node-id="zT0z11HHgbufe50WANaEbH" class="step"><div data-page-node-id="SIoJkm5xmj9j5KwcA4rWJZ" class="n"><!--pnid:OLNNJAe64x3gtOtbAYEeiN-->第 3 步</div><b data-page-node-id="IvDoT0yKyo7Pqb8Dv1kZ76"><!--pnid:k17jqhMFY9ZHnBbs91Htso-->负荷匹配 · 设备额定与实际对齐</b><span data-page-node-id="EGS5erOKVNfglGLze2Dvdb"><!--pnid:5Y2YVPfItyax4WEcsZCvIZ-->「大马拉小车」（选型量程过大）和「小马拉大车」（超负荷）都标出——这是改造建议的第一依据</span></div><div data-page-node-id="bcNQy6PaFzZunimfx7ZwAJ" class="step"><div data-page-node-id="yjEb9MbVrfaYGXI4orWqQT" class="n"><!--pnid:f6qiM1EegQgrd62PLb53Eh-->第 4 步</div><b data-page-node-id="cx7LF0bIKstav9HGoBUk9w"><!--pnid:m0hKpbTMwTWgUDB95KuVSY-->异常归因 · 逐段定位能耗异常</b><span data-page-node-id="veaoPTRDgaeUo858LSb7Pq"><!--pnid:2OyE1gzyTkQ3mleuup809g-->供暖季启动段/平稳段/结束段的能耗走势逐段拆——异常段的归因指向具体设备或运行习惯</span></div><div data-page-node-id="aqjlDwQn4MeWh8VWXCaawx" class="step"><div data-page-node-id="TXmTNm9KNReb0cHqczi6KC" class="n"><!--pnid:SGD5ySdw6Fm7p3cl7SNrz2-->第 5 步</div><b data-page-node-id="uiRqhacgW7TRArt80fM4e4"><!--pnid:cECZG45VGcHU9ZKVL9yNtG-->改造方向 · 分项列改造建议与依据</b><span data-page-node-id="gv9RTlV7QLEbdckY0KuA0j"><!--pnid:YsmfFC3CibV5UaI3HZ6MbX-->每条建议带「异常依据+改造方向+预期口径」，不给投资承诺——那是设计院的活</span></div><div data-page-node-id="NLuDNlluZERIWzrYU7Hofy" class="step"><div data-page-node-id="E3mAx1npG1uIQiq5iSyHXj" class="n"><!--pnid:mokOoKD5PUPtP7f7gmunQK-->第 6 步</div><b data-page-node-id="6WveJGMWhzH65DoNQMnX6U"><!--pnid:6DkHu9ZZirC5Lflcy6yoEK-->留证与签批 · 生成用能诊断报告</b><span data-page-node-id="zq3j2uTm2uKDUa7IV4q7cA"><!--pnid:inU7A8kATUJawKx77mJYcU-->含签批栏——这份报告经双方确认后就是 EMC 基准线的依据，归档要求按合同能源管理通则</span></div></div>
+</section>
+
+<section data-page-node-id="BU66VZOL4asN3JkRoeT9rP" class="blk">
+  <div data-page-node-id="lCDvDTmOof04TUVosRDSsA" class="g2">
+    <div data-page-node-id="2dmlzgBx9aZ0YFexkwLFhs" class="card"><h3 data-page-node-id="40VJF8IqmjaIjMPte34Uub"><!--pnid:7WLT8A9czg2O7GYXbfwD8P-->要准备什么</h3><div data-page-node-id="kdQKCVLHEGKh7xWRZxOFqH" class="src"><div data-page-node-id="Q65e76WM24PbfyjcHjSvJN" class="fn"><!--pnid:Bq11mV3XtrGwA0nWNUhBEJ-->12 个月分项计量数据（电/气/热）</div><div data-page-node-id="ue4ACW1LZeyd1vXNwY2WOx" class="fd"><!--pnid:wiFH6qCkZBaZLgCWjpAkRU-->有分项计量给分项，没有就给总表+设备清单——粒度差异写在边界</div></div><div data-page-node-id="23jTB9FDKJXLfqEq3SBgx9" class="src"><div data-page-node-id="kVTGCAHuh2kyiSiQ7g2l7E" class="fn"><!--pnid:DcTSLCPUsaI0d1NVRlbUEz-->设备清单与铭牌参数</div><div data-page-node-id="YAYNw8kZhJo6tVNymDPH7u" class="fd"><!--pnid:Ny77dj8oF1UoRP8W2LkOOe-->锅炉/空调/空压机的额定参数——负荷匹配分析的基础</div></div><div data-page-node-id="oGh0OEGVJbEG3WwnnePm7q" class="src"><div data-page-node-id="hMSD1TUQSTxQFCbzEudycB" class="fn"><!--pnid:9cFcLQ0w8YzdoaR9E4i08R-->运行记录（启停时间/设定温度）</div><div data-page-node-id="06WmL2wMR9fLA4kVOn6dEp" class="fd"><!--pnid:HqWkYL0SQpiiDFiby1l2tE-->物业或运行班组的记录——「该开没开/不该开在开」的证据</div></div><div data-page-node-id="Rc5a9hgRzfbPIvEgKS3vJv" class="src"><div data-page-node-id="qjYLxpMcMlnLcrnjqQYw9E" class="fn"><!--pnid:cB2tllhBJdeyJSj4aGkD60-->同类型建筑基准（可选）</div><div data-page-node-id="CvpDh1rUnCIIdYYHhZCRbV" class="fd"><!--pnid:mM9VgVOAsZrvlmoPbZGvNW-->同类业态的能耗区间——没有就用历史同期自比</div></div></div>
+    <div data-page-node-id="PcYQ9Jus8wUQo4vc7ly5N6" class="card ev"><h3 data-page-node-id="XtVJhL3nDIFCtRgQl000L3"><!--pnid:dQ8Ni7YX7gyCaACoi0L2JD-->为什么这个场景值得做</h3>
+      <p data-page-node-id="ILRCapnGiv7hRccJfFc80L"><!--pnid:CgExvq9FUXzsTuDNTOOcs0-->痛感 4 × AI 适配 4 ÷ 落地难度 3 = <b data-page-node-id="tSUAeRYvaUDQJ8HWK21h1R"><!--pnid:hhyy5x8NqQmra7my1ZeSqH-->5.3</b></p>
+      <p data-page-node-id="ZGWogzWg8Yjx7txbpxpXAs"><b data-page-node-id="H9iyxpOj3gDdMwUCdaCGWu"><!--pnid:mZwKaIcH7Uq2zHIr3EPzzN-->最大差异点 ·</b><!--pnid:9IkMth3SCV2qOV6JJjEfMK--> 不要求客户先装分项计量。总表数据+设备铭牌+运行记录也能跑——诊断粒度降到「系统级」，这一限制写在报告边界里，「建议加装分项计量」本身是诊断的产出之一。</p>
+      <p data-page-node-id="qRDS1fdzDCphre5qrt0iao" style="color:var(--ink3); font-size:12.5px"><!--pnid:kZtAbIrWqaJCn49zdhZ8dS-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="HEpMSDbxiktPF7e6ZyPynn" class="blk">
+  <h2 data-page-node-id="yLgYOVSnaw7l9mUGeFt89E" class="h"><span data-page-node-id="VJJAE6qOCdyxCH1RZLUchz" class="num"><!--pnid:Syo4Nhv4AITFxjvxzgHQZz-->五</span><!--pnid:stn8PjQzpjKVsAGK2BmaYG-->会产出什么</h2>
+  <p data-page-node-id="dOi7OAJ6UpUqfj6g1SZB5L" class="subline"><!--pnid:QHamNxfoGT0ZUnCNhDQBoh-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="sqEbcntBmgF8ZVoYlcpxdT" class="outs"><div data-page-node-id="oXmwvN4qX5mlntBiI1RkHH" class="out"><div data-page-node-id="xlyNykHUJKfFPVrvPuiFC3" class="on"><!--pnid:MpWke2mQR6UaFlXiq7ESYA-->正式件本体</div><div data-page-node-id="S4n5VeLDVcdgsQABW19b53" class="ot"><!--pnid:kbatb6Pi6K1jLUsEkahXNU-->用能诊断报告.docx</div><div data-page-node-id="b583PJqHAEU31vjtA3Xy4K" class="od"><!--pnid:iOgz5NDxtgep4yaH3lpTx0-->正式件 · 异常归因+改造方向 · 含签批栏与数据边界</div></div><div data-page-node-id="QBurKiERMi1DlJOrM9bYJB" class="out"><div data-page-node-id="9HoudVLBYvtYGMVfzqbAHr" class="on"><!--pnid:AN4NDTXhEIJIclQxCDcIeA-->可派发清单</div><div data-page-node-id="PR8UfVanT3pdNYrC2uDZSG" class="ot"><!--pnid:DoCKkN7yHLdPvkNkag1ZfL-->异常项清单.xlsx</div><div data-page-node-id="wFwwb64Xya27dV1zzBFq64" class="od"><!--pnid:EMlgcWpoqMa0XuMA1KVeI5-->逐项异常+归因+改造依据——可派发核查</div></div><div data-page-node-id="neqUQ4HFZsWFM5Zbhmf8eS" class="out"><div data-page-node-id="WYpRWsSRoFmxzWuIOgXqYq" class="on"><!--pnid:CazrnShZAn3mjiqZe9R02W-->可派发清单</div><div data-page-node-id="sJugvsvPsAIu5NLsOWd7Kh" class="ot"><!--pnid:wBFLlMsL9ogMPonkszk9DC-->基准线数据底稿.xlsx</div><div data-page-node-id="7zfZtG9Z83A7pcQtXUgjgN" class="od"><!--pnid:6Wey8jXOzTKdaimPrVeRKj-->12 个月折算明细——EMC 合同的附件材料</div></div></div>
+</section>
+
+<section data-page-node-id="nzPomkEwrtbpceTXpnXpgS" class="blk">
+  <div data-page-node-id="pY918ibCPQ1KUnZ828XV0j" class="card warn"><h3 data-page-node-id="aWHOSpttlhiS4qg2VVF6zk"><!--pnid:jKE0bAOG4UWwMmo3nSNtaY-->这套东西不承诺什么</h3><p data-page-node-id="Eg89uFSeLXVkOTV6kS9OZW"><!--pnid:Y80k1tk5ApchaxrAPOnilD-->不做现场勘测（要人带仪器去）、不做改造方案的投资承诺。诊断报告只给「异常项+归因+改造方向」，方案设计与 ROI 测算留给设计院——推荐意见栏留空。</p></div>
+</section>
+
+<div data-page-node-id="AWEotlYiZmFidUguhqHaUG" class="cta">
+  <div data-page-node-id="0hGzL3EKuR1xEKoXHbO7pB"><h3 data-page-node-id="asgmvjVyCuzbbHNPLFXOhR"><!--pnid:hflgNMyrelZM1DtIlVon5Y-->想看具体怎么跑？</h3><p data-page-node-id="V2MZCjbx9JwiBt1iqSMuaw"><!--pnid:pJnYjCyZ9tABP4WLGwH32O-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="wGwIdIi1U5H2PpquBCX3qj" class="btns">
+    <a data-page-node-id="OR5gv5pAo9F4mURIGs72Hy" class="btn" href="LiveDemo.html"><!--pnid:TC8X7YRBxAfhs30farxTF8-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="8dmSPdYpz2xrnZRhgvI4Qr"><!--pnid:kIBZmWuxkOxPXGkk5UcXh1-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="VXYUyNDhKC55iTG49eJzz5" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="XCeOs7cuF3MoaoIsDp5xRd" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="giOh2yRWfuwNRMYBiwLUg5" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="Prh2l4uub7WHvj2KkamuCT" data-pnid-children="kL6rGiifw9AnJGhvlrfmUf">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="dh3rYhycs16fiPrGNthfWH" data-pnid-children="TQswo5OmNdamUOnbBgrJn5">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

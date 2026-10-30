@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html data-page-node-id="JS6XcyCywPpIqQYquKRQOJ" lang="zh-CN">
+<head data-page-node-id="C5xn6AHbRz2L8lJMxc0dOw">
+<script data-page-node-id="j1xKeUbAvIOXEleOXuQ1ER" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="WljMRKodASQb2xeRCo76n6" charset="UTF-8">
+<meta data-page-node-id="pPdtlRLejDHjSQiTVe9OR2" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="VgFqvVfNkWL8yoaPqQa3h9" data-pnid-children="B8Uc5IjWKwqnXUv2dcMhix">商品详情图与A+内容批量生成</title>
+<link data-page-node-id="s6F4KKu0YQuRdJyjthM9hA" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="M1QPvlPvENY7yTuwK5VtMN" data-pnid-children="ebakLeb6wZJ8ydW4pK6VhM" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="ty0h1twLJfBD0UAFAB4qni">
+<div data-page-node-id="tdVPFSwdfjeaWF04vJIwr0" class="wrap">
+<section data-page-node-id="nMOOPhzvExbQv4Di5rZROR" class="page-hero">
+
+<h1 data-page-node-id="YqfVti56DUrczt7UFVSiyl"><!--pnid:S6Qprb2z2utzRidXhV42dD-->商品详情图与A+内容批量生成</h1>
+<p data-page-node-id="tYZOj8HKZoagrtB374V7oD" class="lead"><!--pnid:CmYRbI0z0QeiIeWSrK9yjn-->6 个新 SKU 要做主图和 A+。AI 生图确实快——<b data-page-node-id="NvMigz2RRwrxTC7SMNYXpJ"><!--pnid:JbqiBKOGylqtZk6NBrhDmD-->但 72 张候选里 9 张产品结构变形（接口画错位置、折叠方向反了）、6 条卖点宣称没有任何依据（「10 秒速热」没有测试报告）。</b><!--pnid:wHYdUzhPyDfQhSAFEUnqkL-->一键出图容易，出了不错、不违规、不失真的图难。</p>
+
+</section><nav data-page-node-id="ZEt9M4Npe8RDoiKwXDStCu" class="subnav"><a data-page-node-id="bt3BoyPZp8YRWi9zdL6wTO" class="on" href="#"><!--pnid:52BHfEq7kHp7DCyCq9bSHH-->场景引入</a><a data-page-node-id="t3HtNIXIJrwSzKKrXtaA1O" class href="LiveDemo.html"><!--pnid:arT1avZZO1B51dAIrvMovF-->Live Demo</a><a data-page-node-id="XrA72SyH9RQJcUGrqimGJH" href="推荐任务.html"><!--pnid:nmucbeqpj3UJMDtOVbTzAL-->推荐任务</a></nav>
+
+<section data-page-node-id="52H20fbljtIHbd85CLhAho" class="blk"><h2 data-page-node-id="1xF0wJM6HYZ6FkazimwMcf" class="h"><span data-page-node-id="9TBjc9Cux9QrKxkoxpIek0" class="num"><!--pnid:U7tUAn9zzNY0HlxhqDwNQj-->痛</span><!--pnid:g8aS04lipSF9kRBUctVGwQ-->这件事现在是什么样</h2>
+  <p data-page-node-id="davJxectdqwNP9p10Mxrjf" class="subline"><!--pnid:SgsDkAJ4zYBv7dYY2F0JzY-->每条痛点都有出处</p>
+<div data-page-node-id="n6XounznsAXxDc1bokhh5C" class="pains"><div data-page-node-id="HcPPiPlfXAA89HmPsU61Ux" class="pain"><span data-page-node-id="I4PnnkOD5LgdObFQcJuNgF" class="i"><!--pnid:q28rihUR5nzrY1RygEJi7M-->1</span><div data-page-node-id="PEmJDYYrnAFzkeFJFn7CCT" class="t"><b data-page-node-id="EoKO1JUOCiTz9LpSzARAhO"><!--pnid:EbFJb9no9uQ3Pqn9HZltha-->AI 生图最先牺牲的是产品结构</b><!--pnid:GISVWDr2UHDv3QVvxHS36y--> （高频真实）生成模型不认识你的接口位置和折叠方向，「好看但不对」的图一旦上线，退货原因会替你纠错。【共识】AIGC 电商图实务</div></div><div data-page-node-id="e9OfAs8qVvd0SumixKok0A" class="pain"><span data-page-node-id="RAjKUrRsE0K0OUXgXi4thI" class="i"><!--pnid:XujLLL7EUwFbtsCVxrDMRX-->2</span><div data-page-node-id="hGCSGZjRFmthVLPLokFluQ" class="t"><b data-page-node-id="ymWmaFAv71G8Xcz1iuwYdc"><!--pnid:q6hrKuK1VvMWcp4b5tSleZ-->宣称越漂亮，合规风险越大</b><!--pnid:Na9OtlqefOmNekWveYkPbp--> （平台红线）「最快」「10 秒速热」「医用级」这类宣称没有测试报告就是违规，A+ 内容审核会被拒，严重的触发绩效。【源】Amazon A+ 内容指南</div></div><div data-page-node-id="HkJbQ2AyO6GyJHcNWn7ANy" class="pain"><span data-page-node-id="0FO4WDJasq68VkJXjDh0Q1" class="i"><!--pnid:a65GJNYHckYyx2HsXRWKm7-->3</span><div data-page-node-id="PTyPNm6rilUHzA5yaJQ2py" class="t"><b data-page-node-id="2U3BXSj1TmkDj9ZwJWoDkM"><!--pnid:K64F9XLIfrYNv4hl4kVfgg-->运营说「高级一点」，设计听成「暗金渐变」</b><!--pnid:nPXV4J6UOB3Zw80CR4iD9B--> （协同损耗）卖点没有结构化，图需靠口头传达，改三轮还在对「我说的不是这种感觉」。差评里的真实痛点从来进不了画面。【共识】research/01 调研</div></div><div data-page-node-id="ddN9i0vrdbiTS1X7KtxXdb" class="pain"><span data-page-node-id="0TYyhIOfS9HC5lQ9vCcZBa" class="i"><!--pnid:zrTTD9uSqNOUk2qpDRg5We-->4</span><div data-page-node-id="Dgu2qXmtZNpsFIxgwmt4HD" class="t"><b data-page-node-id="O3lqyIsJpt34RRPEVn4uje"><!--pnid:jCxrLw3ycLfwsRaZ2EssBg-->批量做图没有选版和留痕</b><!--pnid:maoObGXGpvZCzoyaAflY3Q--> （过程失控）72 张图微信里发一圈，选了哪张、为什么选、谁确认的，上线后没人说得清。【共识】电商设计管理实务</div></div></div></section>
+
+<section data-page-node-id="IvFIyDKgbkgbvDlcIw9tUT" class="blk"><h2 data-page-node-id="3UWNksBqHnQPmLC6CQDNWG" class="h"><span data-page-node-id="twLZaHUYFbQ152HMRhSXTV" class="num"><!--pnid:pFmvZlOWvkYgBA4tlsKiIV-->比</span><!--pnid:uJObdjiQLyqTkgbEiyfAlC-->现在的做法 vs WorkBuddy 的做法</h2>
+  <p data-page-node-id="3pLKFQ2msgsBJvGqCrm4GX" class="subline"><!--pnid:VgZs11G42PcMjtdvi1tz0p-->差别不在快，在于有人把散在多处的东西拼到了一起</p>
+<div data-page-node-id="jj7XAVjw16xvXXmi0IBJ17" class="cmp">
+<div data-page-node-id="hlMrBgVhOev6RYKPmgrXlF" class="old"><h4 data-page-node-id="obwwwzJOSPfOQoFLJUTBis"><!--pnid:XgUGx22uXxCxMZqwpbu5kD-->现在的做法</h4><ul data-page-node-id="IZupAPcBzKeczyxqHwjed3" class="list"><li data-page-node-id="cckfStuPuGUAJV22GvvrRT"><!--pnid:3JvnercdNopttURUcoDgAW-->AI 批量出图，挑好看的上</li><li data-page-node-id="D2akN4yL4JZxt7AVDOnqoB"><!--pnid:0WiFPRwRhfdrLxr4Z5RDbU-->卖点文案凭感觉写，审核被拒再改</li><li data-page-node-id="8Mr1rlAZgoN2XvSKGYlvq4"><!--pnid:Nd1BflitRVRscGIQpS0Yug-->运营和设计在微信里拉锯三轮</li><li data-page-node-id="TzVmxRA26EtGokUHJ4TvGz"><!--pnid:LCSXd0SCskOlIPbLaXFiT4-->上线后才发现接口画错了，下架重做</li></ul></div>
+<div data-page-node-id="GCYa6A1W2W1Yu425ZQsKrK" class="new"><h4 data-page-node-id="vVLBlbWFrle7JwmGGulZz1"><!--pnid:yCiNkp6grLgZmLG9Dsfw0S-->WorkBuddy 的做法</h4><ul data-page-node-id="4C9sCLMe19KwjPHrJg1JrR" class="list"><li data-page-node-id="FIPouzJKW9oYEkqEDpsfLf"><!--pnid:K32Keg2xdL7Ib4VvCzEPjy-->先锁定不可变事实：结构/颜色/接口/尺寸</li><li data-page-node-id="fsKHo2m5M28pu2tPJ4YdNl"><!--pnid:3xP1F8o0U69xmtdmUGAuTt-->卖点-画面-模块脚本，每条宣称绑定证据</li><li data-page-node-id="RIpN4nk8JtfzP3B5GwO0Xt"><!--pnid:gWTat2iisQroLELz3ONXQL-->星标素材：工程尺寸图逐张核对生成图</li><li data-page-node-id="GvqWcpwMTsvdhvPV2fr49T"><!--pnid:CksWfbSvpPVgcrobMXpfFB-->结构一致性+宣称证据双检，人工选版留痕</li></ul></div>
+</div></section>
+
+<section data-page-node-id="74IMJj3x1BkMvyMLgRT9Ay" class="blk"><h2 data-page-node-id="fWsZvDfmjr706b4TatuxAJ" class="h"><span data-page-node-id="Co1sW90rrG4kDJPKqEol9f" class="num"><!--pnid:XL6FJALS87779TC1rVuZdU-->流</span><!--pnid:Ch98U1XgGM4yTNkJccNKub-->总体工作流程</h2>
+  <p data-page-node-id="6NIwCHUN42Jbi8PffHiyuJ" class="subline"><!--pnid:TKZHOU9SiDlcyLrdl0dxFf-->每步都有正式产出</p>
+<div data-page-node-id="fYtWGfEcW6IH0qcKIO76xV" class="g2"><div data-page-node-id="oBHzGB65wLFr5kuVEChVDW" class="card"><h3 data-page-node-id="VyV1HGmu2c7k2lro47ItLq"><!--pnid:doebGspRUWv1JcxGo0uMeH-->① 事实锁定</h3><p data-page-node-id="u07NfP6G6pbMF8AWzlp57e"><!--pnid:xNH1OHBNbhOjIU1JmVLvHK-->产品不可变项清单，生成前冻结</p></div><div data-page-node-id="V3MzhPDtlUKx3052ihsUMl" class="card"><h3 data-page-node-id="lNRnZ2ld6S3rQPi5dtPkPQ"><!--pnid:UCsy7sysK5rJHZSzeGrLCe-->② 脚本生成</h3><p data-page-node-id="U4jxio3VZmmOglSStjJcoe"><!--pnid:0jbRcZ4xK11sIvLZGhQknH-->卖点-画面-模块一一对应</p></div><div data-page-node-id="nm9ofBMHaB0iQgyjzsDApR" class="card"><h3 data-page-node-id="aNUqqs8HeafPW6jUHhM3BJ"><!--pnid:HbaMZvSdRw9ISSL1P3j2HK-->③ 双检</h3><p data-page-node-id="xVlXUeLolJavNcaaNcklBC"><!--pnid:wNSHyRXDgtAI6rjpamWrKn-->结构一致性 + 宣称证据逐项核</p></div><div data-page-node-id="Nl275OzXz18rlvBGsy98XO" class="card"><h3 data-page-node-id="AxiHbk6dciG67WG4fy3ZoQ"><!--pnid:cMecc17C3csJIvTTSG6qvX-->④ 选版输出</h3><p data-page-node-id="n7aNKrvdW5QcqFCoZC9tRS"><!--pnid:H27Mdu1M3VCNnTq0QGnAzA-->人工选版，批次与上传对应关系留痕</p></div></div></section>
+
+<section data-page-node-id="oiC790CCNVQZtMSPUD2HWM" class="blk"><h2 data-page-node-id="iszsVxVb2vXrasYDULuDOe" class="h"><span data-page-node-id="I2Ck969hwz39hB1dcFICsp" class="num"><!--pnid:Iip7yWm49W2kyc4Gavr1cK-->例</span><!--pnid:hSfqcyuCtdtXG2KMWCbAN1-->案例钩子（脱敏构造 · 逻辑可核验）</h2>
+  <p data-page-node-id="sybtofZQZwqm7pTnjXgMh8" class="subline"><!--pnid:dqN9kiRh2SKktMEJ0Ayouj-->海拓生活科技 · 与全库同一案例链</p><div data-page-node-id="rahTHwIihLFI1qGJjiTtVu" class="card"><ul data-page-node-id="ueWZAGIddh9ZhBf8RgPn6f" class="list"><li data-page-node-id="bOFCzVlGfAVPI1pFwlqG04"><!--pnid:4RDvf0imJu7M3OS4PwAMJJ-->6 个 SKU × 4 类图 × 3 方向 = <b data-page-node-id="YbqZUyK1u4PYR5yHfEayzx"><!--pnid:PRiZiQ4p7ZlrE2mIYPTrFr-->72 张候选</b><!--pnid:yVBMGs1Ncf6UaLAka0EPS8-->；检出 <b data-page-node-id="1qEdxkjZpxyzsA0Iww8MTp"><!--pnid:d8cROqqgwK0e6e8sebldNC-->9 处结构变形、6 条无据宣称</b></li><li data-page-node-id="GR5eGcwgfRB5deltQC4Fia"><!--pnid:0UWCGvVzTnGYN8O4n2KWce-->星标素材：产品工程尺寸图——接口与卡扣的精确位置，在设计不在运营手上</li><li data-page-node-id="8Fx9xdgM0K0SfaKlhsY3tk"><!--pnid:8XJAlMYHVa2O90mwgzx9lD-->「10 秒速热」无测试报告 → 改为有证据的「实测 500ml 容量刻度」（来自 AI选品机会发现与多维验证 差评洞察）</li><li data-page-node-id="Xsn8Mtwyv562nYegSypRBh"><!--pnid:JWyBjDuxkZ8DDrZGdB6zon-->方案一：实拍图+合规文案当日上午上线；方案二：等重新生成（晚 3 天）</li><li data-page-node-id="NNxiRvpbDuqSrMI2ZI0w6P"><!--pnid:K3NY6hvOmInL2MeH6iPfKH-->结论：变形图与无据宣称清完前，一张都不能上传</li></ul>
+<p data-page-node-id="yUSFfaGP6YVWBjvnQII85g"><b data-page-node-id="gQqNd7LeM5gFt8M69hjq1U"><!--pnid:Pdii91HrknFxQn5PZz2pSw-->演示时第一句话：</b><!--pnid:Y7YrGBCmYInzEI4aYpkaS2-->「你们产品工程尺寸图，做图的时候会从设计那里拿过来核对吗？」</p></div></section>
+
+<section data-page-node-id="mI2wuorJkYSgAY3XPrSm5N" class="blk"><h2 data-page-node-id="eG73bsAtdvYcmzI6mkIINw" class="h"><span data-page-node-id="LpZhTI8gwctvk2WdbSpbJA" class="num"><!--pnid:oRP6QEt9rxZ3wo74lXqdwx-->界</span><!--pnid:vaic3scR7uZgGDFsUytx6r-->人工边界与真实性</h2>
+  <p data-page-node-id="0TBjlsUCmPlkvxZDen5euX" class="subline"><!--pnid:Fo5YXMRRgp6TfeEeTism1P-->哪些 AI 做、哪些必须人做</p>
+<div data-page-node-id="RXQ4ec4f8tcG2Wyh3wVWvZ" class="g2">
+<div data-page-node-id="PJG6AvLfXncDpuN3ogLyuC" class="card"><h3 data-page-node-id="s9uHW8bp03MJnmSjTvR7fD"><!--pnid:KFeWSJu8FiiFVBHJQUbZav-->AI 负责</h3><ul data-page-node-id="xjriTe37c79MjKz9XjcMXv" class="list"><li data-page-node-id="TLi2Q2cmWLrAA5RNeTFaRU"><!--pnid:GLdsPeMNtCOJnamk2N4q7a-->事实锁定与脚本生成</li><li data-page-node-id="ir3QUaxXMflrJTX3UYYmBP"><!--pnid:9ujDPA2ugn3975wvPqyL08-->结构一致性检查</li><li data-page-node-id="CHKKm9e0u3XCjiP6cFZ9KS"><!--pnid:61YL0dtBD9VotdJsj9xqih-->宣称证据核验</li><li data-page-node-id="yApoFrEl7lx92AQ16yBlVg"><!--pnid:owUXqilB8CgJBc1t06PLSQ-->批次与留痕</li></ul></div>
+<div data-page-node-id="MV5iGU9gd87BXQLEPcVumy" class="card warn"><h3 data-page-node-id="dchDmHBQZ28lgVdUjI3Scp"><!--pnid:QR7OW4CugL1wm2wTA3E6Pp-->人负责</h3><ul data-page-node-id="2CnFYRCkdJhOwBdFQCCpNk" class="list"><li data-page-node-id="8DOWMv6nfgO96w2A3hg2uc"><!--pnid:xuFGi87t6ugXajOXWXi7et-->最终选版与品牌审美判断</li><li data-page-node-id="RZbESs12UfdFK2qJhxVWM6"><!--pnid:NeKKDLddzSg7sGBrWeGBwV-->宣称证据的补充确认</li><li data-page-node-id="I5vhQsniYpxFdJefXUd1Xq"><!--pnid:l442mNXTmtWwLjTmzDU0Yj-->上传执行</li></ul></div>
+</div>
+<p data-page-node-id="IfrlyZTgbaCz3P9yHW9Ipb" style="margin-top:10px"><b data-page-node-id="K7VcuXjfE3vqXR0nCngYh9"><!--pnid:eZXaAKKoNnpqEBUvBytzTq-->真实性 T2+T3：</b><!--pnid:8ZuW53K8JlucuAf4YoVCpA-->A+ 内容模块与审核要求来自 Amazon 官方指南（T2），AIGC 实务痛点来自公开案例（T3），清单为脱敏构造。升 T1 还缺：客户真实产品与素材库实跑</p></section>
+
+<div data-page-node-id="J4CRTUYYhdZPyYjqpR8elU" class="cta">
+<div data-page-node-id="OhGlZj5N9fC8pKiuSTEbHv"><h3 data-page-node-id="PdOkqZDC0wUNIEYKEN3k7P"><!--pnid:WB0vbNdv9pIjxwom4F7GVT-->看这件事具体怎么跑</h3><p data-page-node-id="t1HEGRU4dAFanM35cwHmCJ"><!--pnid:4MA8xtvsu60O5NMel8RquY-->Live Demo：素材 → 逐步判断 → 一份「还不能提交」的正式件</p></div>
+<div data-page-node-id="oscBOb1CWDUe02OnGZpcmt" style="display:flex; gap:10px; flex-wrap:wrap"><a data-page-node-id="VGDgbOn6UttL63RLDbPBWl" class="btn" href="LiveDemo.html"><!--pnid:gcMjWZpMoxlj8qis3lXuIb-->查看 Live Demo →</a></div>
+</div>
+</div>
+<footer data-page-node-id="4RfUJdlNZXN0ChJmMlZKNv"><!--pnid:lTWfCtmlnbFEyIlICmBBWO-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+
+<script data-page-node-id="lLKJBQR5R9M45s8VXKnAZN" data-pnid-children="RLOcWOlezPVgQkH91ZUJag">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="ukLINPepKseAPcReIptzQd" data-pnid-children="Ye97XkpuFj6YYknAw9GSxj">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="gBl4QhBXyPyqV3ypotFiXv" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="6sUbMKkrx2pAVopLeRfCwG" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="XH6LTxA2VJ1wa8zXnWbMm9" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="YpxV0xj2p7yKI7fIQlPgcB" data-pnid-children="7Iv1OOLdNrGD3lywky5Kbk">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

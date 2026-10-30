@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html data-page-node-id="AQX294cxcIMEZ6RNVpn6M8" lang="zh-CN">
+<head data-page-node-id="5BRr7wv2dshxi20zfWf7TU">
+<script data-page-node-id="0WRNKQSoOkkdtjBOFrhf7D" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="ePIQBQxFZ6wttqXCjFlZZL" charset="UTF-8">
+<meta data-page-node-id="D6JF2WmRd4AzJkUetINEn6" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="wAm2d5s6WrIlWnBnuUxb2R" data-pnid-children="TzN7s8lACp8BEl2A66JLPg">核心人才保留成本测算</title>
+<link data-page-node-id="cszePw1qK7tr7owlTtvWSB" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="GhJC39o1mRBAuTkZNxOYk8" data-pnid-children="1t73m1LQ4ge6L5FBgLSJG9">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="V1vlGh53lqLJPkHtKaul87" data-pnid-children="rrRi1UFLJJfio37fSRKhPH" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="Vwdqwa6TVtnZT2xpgx5xIh" data-pnid-children="H3JU0OsoycttPjrxZRKuwT" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="J96u0SoE3JFFnYbngJpU76">
+
+<div data-page-node-id="EJ4XbaLPYVXBIviAuMdq27" class="wrap">
+<section data-page-node-id="D2WACZhqYIqS1ahVNvaMTT" class="page-hero">
+<h1 data-page-node-id="xAreObEJWVVZcfX6bUYwLO"><!--pnid:Q1gTVx6tIvIqtNPwixVS0v-->核心人才保留成本测算</h1>
+<p data-page-node-id="wPKlxK9eAs6H66I4isXbh5" class="lead"><!--pnid:QIEDW3ziUdv3WJUkEZyhQR-->模具师傅提离职才想起没调过薪 · 招他的成本是他三个月的工资</p>
+</section><nav data-page-node-id="hA2UhWbavNUtQiNya5JCv0" class="subnav"><a data-page-node-id="ikzUNXV0rjmqW68iHrCJAO" href="场景引入.html"><!--pnid:jBQpBiuznBoZLwBmfiPhcS-->场景引入</a><a data-page-node-id="ZLxjLYwgkoHxF1Fh0v4WGx" href="LiveDemo.html"><!--pnid:L1tkBTGelFZSb4lvAK6r0o-->Live Demo</a><a data-page-node-id="nWG0aTLLKj8vyjutoacvPH" class="on" href="#"><!--pnid:Y9jGqzTFUujiFU45tRg6PI-->推荐任务</a></nav>
+
+<section data-page-node-id="yyT8ZXKECqcSNWOpbFwbPT" class="blk">
+  <h2 data-page-node-id="pKAlfMkqR6calaIhGlAMrb" class="h"><span data-page-node-id="yUIDcr2DP17yZBFQ6MAcCJ" class="num"><!--pnid:MllhTop8E4W03MLY8SNSCN-->一</span><!--pnid:pXcbkO9QTITZsWaw8LfKeC-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="WdJe2UK5uYOjgDRaHMfbwd" class="subline"><!--pnid:HLhpqul0KkuB7abLd1EQya-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="BM8UA70kjccWkI9H5KUpZA" class="card"><p data-page-node-id="AObBdkDNwKm6YmV7M2kNyh"><!--pnid:Z8QB4EOXEPmXuPUCxcSz0C-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="dScJr32trsDOxAwxlQVYE0" style="margin-top:10px"><!--pnid:1nir65QsLM6KG8xrTqYWOL-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:DAj8oZV60FJhKoAI4sYxnz--><!--wb-skill-start-->
+<div data-page-node-id="vUIZw3EbT3JVNbO2Aq5hgw" class="wb-skill">
+<p data-page-node-id="VgEryf7ZrjH4sxBbuBWU2u" class="wb-skill-lead"><!--pnid:oukONa4V91p01LEkeiuNQa-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="9puiuCzP09W4XUSsnwdMXg" class="prompt" id="wbSkillPrompt"><!--pnid:QExhkoigVlN4AB6QbOXMtG-->【准备】这个场景的规则都在「核心人才保留成本测算」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/GF0ypkXIknsiSXJdhglXpv/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="bTBg65Nfq210Sccu1gDCsE" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:MyjGf7LKgqqIneIab1LYFi-->复制</button></div>
+</div>
+<!--pnid:n9ny5HwIyy2MtOuossmmBT--><!--wb-skill-end-->
+<section data-page-node-id="FCSUaLAYYTkBmFAkQBzICg" class="blk">
+  <h2 data-page-node-id="dfNtSOf3LslVIAi8m4WvRi" class="h"><span data-page-node-id="h1h9FrBXDMYbIWtJFhQrmH" class="num"><!--pnid:6RoEjbMWQnSy3GbWLtjDt1-->二</span><!--pnid:sJuywxa9Ut53MgwOp0S0VP-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="Uh0oZ5ikinrLnLe90lhYzs" class="subline"><!--pnid:63Ub3LcbUFxphU1KzvkJYn-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="pDzy9s9Ro1TTEeWxPqJRjc" class="tlist">
+    <article data-page-node-id="8RX1XecYWtYDjLJh7Vb8w5" class="task">
+      <div data-page-node-id="jdCc3PyRxLWALTzSgJT9vy" class="th"><span data-page-node-id="xTOGZuTe9CejxcmXRldBdK" class="no"><!--pnid:FH5gfq6gWQphZImbrn8pB2-->01</span><h3 data-page-node-id="kFWkl3UASnpB3DqTXTebbg" class="ttl"><!--pnid:5T3p8WAgfxRRZeIME9cfsE-->首推默认</h3><span data-page-node-id="0Ag5C0jgv3oXHO9IaaAOu5" class="star"><!--pnid:EVlro3zOPeNTY8QEoHltZs-->与一键体验入口一致</span><button data-page-node-id="Y6vb6o5PSIWfGgeBAgHYKm" class="cp" type="button"><!--pnid:36vh6jCUVfwIilBZ7JzULe-->复制</button></div>
+      <p data-page-node-id="Zv86upnrokT37tpq0S9GJp" class="tp"><!--pnid:eHgQVxG9IUpndCr86pm9vr-->模具师傅提离职了，对面开价高 2500。老板要个数：重新招一个到底多少钱。
+
+他的薪资调薪历史、这个岗位的招聘花费、新人生成周期都在这。
+他手上那两套模具只有他会调，这种风险也帮我算进去。
+保留和替换两本账并排给我，谈的时候心里有底。</p>
+    </article>
+    <article data-page-node-id="XWADfZnkPxwDxrTMn7hjtD" class="task">
+      <div data-page-node-id="PJn4Q6cBnNkTWKvOFn9qvt" class="th"><span data-page-node-id="W3FnDs998qalYdPrYBUBuV" class="no"><!--pnid:O3bpkefcDFlVImrhArHRjk-->02</span><h3 data-page-node-id="MaAqGaNHWKGrFN633Ts4ur" class="ttl"><!--pnid:eSp73rIkrADSfT7gkBz6ER-->只算替换成本</h3><button data-page-node-id="d0ZTjZhJhz3FZzm1GZNWR7" class="cp" type="button"><!--pnid:Eb8kIrrFZVzPu1su0bcnEC-->复制</button></div>
+      <p data-page-node-id="qjgW5i6NK2Kp7QIH8CyO3W" class="tp"><!--pnid:skZTaKL9DICkQkBKD5PHDh-->先只算替换这一本账：招聘费、空窗期产能损失、新人爬坡期产能差、培训投入四块逐项列出来，保留那本先不算。</p>
+    </article>
+    <article data-page-node-id="GxErQkVfilECFl9OPO2FzE" class="task">
+      <div data-page-node-id="EMwz6NoW7SZojlGGYeA1tR" class="th"><span data-page-node-id="rKvFKSJONb961yPcIbV8sZ" class="no"><!--pnid:KV2FHoTmzhmtcDS7NoIySP-->03</span><h3 data-page-node-id="CGjm13iZxByfkLmKzXNLfz" class="ttl"><!--pnid:Jay7vS8sEBkksr6JIbiPVz-->换保守口径再跑</h3><button data-page-node-id="VgGlGgl6YQ5VVZtAXjqFBW" class="cp" type="button"><!--pnid:CjCBEu0ejeYZ3ZlpjYSUMq-->复制</button></div>
+      <p data-page-node-id="jsuZnDW12gIZinsRszU2Kt" class="tp"><!--pnid:OJpMrKCCyxdEpSB2eBgIWZ-->这次换成「爬坡期按 4 个月、单点依赖暂不计入」的保守口径再跑一遍，看看替换成本会降到多少。</p>
+    </article>
+    <article data-page-node-id="nKG0W6GFgMn0lOHau98XDG" class="task">
+      <div data-page-node-id="9SPKtvtU8PUGTbnCk24RNw" class="th"><span data-page-node-id="dxH6MYTnsKITekUtlSOHlq" class="no"><!--pnid:M7hZsdbUxHXp2w8ub0Uqtx-->04</span><h3 data-page-node-id="piMBdxt5OZCvh8P6F0tc27" class="ttl"><!--pnid:gpU1RwXpFGh9XPDnPverkS-->一次处理三个关键岗位</h3><button data-page-node-id="DQ3BktXrFRvLM9lm2iZb2A" class="cp" type="button"><!--pnid:zzBT6COxsYmGXeQzgyxr12-->复制</button></div>
+      <p data-page-node-id="f0VPYjaOOHQIJho6FRwEmY" class="tp"><!--pnid:emsWuIDjW4rv5zEc9vmyub-->演示数据里再加两个关键岗位的薪资与招聘数据，三个岗位一起跑，最后给我一张横向对照表：替换成本、保留成本、单点依赖程度。</p>
+    </article>
+    <article data-page-node-id="S8SoMPWziiiY768drn74Fq" class="task">
+      <div data-page-node-id="ZZhfs5FoI3w33g5sGqAE0Y" class="th"><span data-page-node-id="gu2KUVZWmxfmi9d2i5aB2t" class="no"><!--pnid:YhDiEf7CcqlCHmWACJEG7t-->05</span><h3 data-page-node-id="3zl4cJcMxxY3fZKyUiatxg" class="ttl"><!--pnid:5wSK5AgXZA1HUwdVWgr18D-->给老板谈判用的一页</h3><button data-page-node-id="Lb6JyThcUIE2MWW8VnxAAu" class="cp" type="button"><!--pnid:MWsvoeU5ek2nP3j0V432NQ-->复制</button></div>
+      <p data-page-node-id="DsmX9hrOr1qVQBot0Rs0q9" class="tp"><!--pnid:ESpLjmzHTeA3ZOExGvb1eg-->把两本账压成给老板谈判用的一页：留的成本、换的成本、4 个月爬坡期的产能风险，各一句话，其余明细不用给。</p>
+    </article>
+    <article data-page-node-id="UFhQSllE185QSiMaG2ue3R" class="task">
+      <div data-page-node-id="iBYHSnrmRcW5mxSpQwEvcL" class="th"><span data-page-node-id="tsgtLsrmD1AwYlGvZD0nu5" class="no"><!--pnid:YF6eNbN534AIr7ua66lmWg-->06</span><h3 data-page-node-id="9En08pINT8vI0BD8kAnVAc" class="ttl"><!--pnid:cgSD84aU7Bw5XQ3WeIicWD-->让它反驳自己</h3><button data-page-node-id="78OVG8Kmyuf3mSIMgOX3H9" class="cp" type="button"><!--pnid:F1e8kPxfIpNzrc1lRtiEEO-->复制</button></div>
+      <p data-page-node-id="rFoQYQn8G2udWNjfvCnuek" class="tp"><!--pnid:qhC5a3KZQDN5BrLWWlDHd1-->你说「先别拍不留」，依据够不够？把 4 个月爬坡期的产能差和他手上那两套模具的依赖证据列出来，站不住的就改成中性呈现。</p>
+    </article>
+    <article data-page-node-id="fHWphKR1CKNCFrn0MvMyYM" class="task">
+      <div data-page-node-id="o2GjiKBmW2140mqwYfjJ6Q" class="th"><span data-page-node-id="tTMcPnCIfPGNstr7T78gxr" class="no"><!--pnid:RO4yVzV0mid1nNLbA8yRyc-->07</span><h3 data-page-node-id="ypDTYcXKv4mllozTOej1kT" class="ttl"><!--pnid:inF9fDT6jtwNwIcLdt7S8e-->比对近两年招聘记录</h3><button data-page-node-id="5Y334FYtthWkQftnUFi818" class="cp" type="button"><!--pnid:g1QMhM9yH4CcLHvf93r5Dj-->复制</button></div>
+      <p data-page-node-id="DYlfTLHvDpCGsTt9xEMRBp" class="tp"><!--pnid:2Jntm8bvfXoSPg2ZybHyOl-->把这个岗位近两年的招聘记录翻出来：招一个人平均花多少、用多少天、上一个走了之后产能掉了多少，逐项对。</p>
+    </article>
+    <article data-page-node-id="Zng98aLUVeJdtbZe5n6Gnz" class="task">
+      <div data-page-node-id="y7yhDK1eJDnvNeTfdtCpJt" class="th"><span data-page-node-id="QIxC7DThi2rQGz2JYDHNqy" class="no"><!--pnid:PSzcXVH10Nji7CEOrn4HaP-->08</span><h3 data-page-node-id="SszDr8eRAFP8Tp25KKfIN6" class="ttl"><!--pnid:jsUwAKanbrkcet4X9ohkoQ-->对照合同台账自检</h3><button data-page-node-id="18dFWzrk8dP5vnpeSZ4QAB" class="cp" type="button"><!--pnid:ZyFARqcfTC09XtrhGDhgqd-->复制</button></div>
+      <p data-page-node-id="5pc1TUwOa5QOzFlAOUDfPL" class="tp"><!--pnid:2y1lJ2I9UYHeg4PLnR4x55-->对照合同台账自查一遍：这位师傅的合同次数和工龄对不对、下次续签是不是该签无固定期限了，把这个事实核准。</p>
+    </article>
+    <article data-page-node-id="biDsIO5tDB4fPYjGJ1T7QN" class="task">
+      <div data-page-node-id="OSwvpH5zGeQkxIMJ2C795U" class="th"><span data-page-node-id="JGFCI0cVcUkX01JvsTB87C" class="no"><!--pnid:bb2EONIe8o3ng3PX0U8ABV-->09</span><h3 data-page-node-id="B8Svunm9RT7jWaIiVKDlS3" class="ttl"><!--pnid:rb20xbRT4o8mQkTp6ie4rA-->折算成两本账的数</h3><button data-page-node-id="ojFoBwIQYcu3PRQoz0EjBe" class="cp" type="button"><!--pnid:45PqYPhejfWJIHhYk589Ft-->复制</button></div>
+      <p data-page-node-id="OqnlbYK3mRHQI7SUuiS5Eu" class="tp"><!--pnid:dENcRuyNb7AlLu6LDWZpav-->把两本账的数摆出来：保留每年多少、替换一次性多少、加 4 个月爬坡的产能损失折成钱是多少，算法写清楚。</p>
+    </article>
+    <article data-page-node-id="HpFZpEDvkuf14y2dQVzPKN" class="task">
+      <div data-page-node-id="Qh7x4rbJTaYMxSjEnPleSl" class="th"><span data-page-node-id="8tCfplfBqpxMYkRraYO2Xj" class="no"><!--pnid:TtNnM4KB6HpTaBfK87dFe8-->10</span><h3 data-page-node-id="LAc8Q5QMnc0lE9pAzGeobN" class="ttl"><!--pnid:veckTxN02yI1LiXchXiyKd-->沉淀成关键岗位测算模板</h3><button data-page-node-id="XxZdZuyI0P0PAqW8vMp0KM" class="cp" type="button"><!--pnid:PmzkwB7THfj8IPnQnjJTtV-->复制</button></div>
+      <p data-page-node-id="LWHREtf9ec9VatBzdFOQxn" class="tp"><!--pnid:WcL0Fku509jo0yeRJrbNZx-->把这次的算法沉淀成一份关键岗位测算模板：「两年未调薪加关键岗位」的预警组合定死，下次提离职前就能先算出来。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="NMNZinrf5aAMQGWXwykfQt" class="cta">
+  <div data-page-node-id="nXbVFoEZDEraonTL9zoYGH"><h3 data-page-node-id="Izr1sYkApe85Csp3AmeTOP"><!--pnid:OFc7mGSXb7WpeHG2Hz0RpZ-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="dxgAz2uALTVoVzmI9tuVU3"><!--pnid:ujUjj1r0Nq4r5CbUEm4x6O-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="xYCZVn94qKKyn2652O0mY9" class="btns"><a data-page-node-id="z4M2sTLhydnrJ167hMAs7v" class="btn" href="#" id="ctaContact"><!--pnid:eKaJAABOzXTir66md3p7Eo-->联系我们</a></div>
+</div>
+<footer data-page-node-id="XjSSDUQj38dSbEnppYTn1O"><!--pnid:UIdZdhOMBQWgjX54wnMlgc-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 涉对人的决定一律人工终审留痕</footer>
+</div>
+
+<script data-page-node-id="ezGigZA0Hwnpf0ushe1Vsh" data-pnid-children="TLAtK9Nfyu64LD80ttCzr9">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="A1F84FgKzfRUuk27T2D5ib" data-pnid-children="QFJXhuhDpuingoGKw6OYb7">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="Y4Ehbq1IlshTYkMfH5xlip" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="wbYcFT1wKuiKKQsgU57khp" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="jTDIny82T97vUw9GIcFzsm" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="tJg4TGKafCcIMpXJb6haUO" data-pnid-children="zm7Te8W4Wmj9e9TMToeOXb">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="jfdCq8gXNeZNbbhRMMuywd" data-pnid-children="HiF0HkTYmUSIsFkE2g1TS7" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

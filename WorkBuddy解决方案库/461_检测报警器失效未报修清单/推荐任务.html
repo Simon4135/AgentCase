@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html data-page-node-id="9TiHgSvblgzNfwnaN1L0AG" lang="zh-CN">
+<head data-page-node-id="cZGaKoc8jBEIDSYYpoDU0z">
+<script data-page-node-id="CnVQwbXmr96IZ8eajZP1JK" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="2ittEDEH0hh1iG2wV8tNft" charset="UTF-8">
+<meta data-page-node-id="B1S3qjEuFpe10AyVfh9LZp" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="uD7VEyAGFw2KJe9cFQrEMi" data-pnid-children="LPu8yND5dzXfx6nzoQQ9AD">检测报警器失效未报修清单</title>
+<link data-page-node-id="juz0Q6izfyIzFLYRhMgdyx" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="fHC22IDQg1DYk3XufjTKuR" data-pnid-children="5XuYlZqJkbyPRDHhbMynTE">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="f78ecPrmPPHufsv1virGom" data-pnid-children="Q4t5M2OsNc7SlKbszJKK9C" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="DOJ7bjBdm4k0d1uFIfhgnY" data-pnid-children="XDoWkOGmeQWl4J4oHH2DH5" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="li5A6vEFOSFYjbP7s5W8O1">
+
+<div data-page-node-id="dSt2kRBMXGU1eudnnNyhjZ" class="wrap">
+<section data-page-node-id="BPWlsiRbjvxNy0cmonT0TX" class="page-hero">
+<h1 data-page-node-id="GIkBCTWJfDZ8WT4gW1V0Kp"><!--pnid:mNzWdT5Ofyj1cmrF8YH3vA-->检测报警器失效未报修清单</h1>
+<p data-page-node-id="Zcep4m4ZiBhKI4jayg03Gt" class="lead"><!--pnid:uGykhpi6F9zV9oXCGiVlUU-->报警器读数二十三天没动过 · 台账上写着「正常」</p>
+</section><nav data-page-node-id="eIcWuWfHtVtBXbTRFyhV4g" class="subnav"><a data-page-node-id="JJJh8ZwR2oyRLzQQ0TfJ06" href="场景引入.html"><!--pnid:RpzfEegmJl4gWVEeqyk4WH-->场景引入</a><a data-page-node-id="LXMimBuaFLpS40JJhH3DFm" href="LiveDemo.html"><!--pnid:nXw9QCv2Ejt0UdFZ9EIXUu-->Live Demo</a><a data-page-node-id="1LdQH9TZvsGDJNverkBz66" class="on" href="#"><!--pnid:TS9GIqZYlBoWjHlbies6K6-->推荐任务</a></nav>
+
+<section data-page-node-id="caZ95BDjx6lLWnqgeqg4Tf" class="blk">
+  <h2 data-page-node-id="o6e7aWopIKtPRxC35QEOOS" class="h"><span data-page-node-id="7dXuIUrEsRyLwK0zg7awGm" class="num"><!--pnid:vPtgUZSBFLMMXOUDqfGHmm-->一</span><!--pnid:4aHe5FqPGlbrUcehiOidez-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="zEOtHQVMxEgHko4rzkTSvJ" class="subline"><!--pnid:NEJFWHcraKTZD8jTvBsLkJ-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="VePGpuEAXYnsZLwKREaMB1" class="card"><p data-page-node-id="9cIjXw61EqnUjUGpeySsqd"><!--pnid:ARw9fozUvbL1BmTORZk6GE-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="FA53Ccy79AAntqdhEemo6n" style="margin-top:10px"><!--pnid:BMwep88osj7rnNZapcVm4H-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:LIumfnpV1DUhGQS3SwrHOl--><!--wb-skill-start-->
+<div data-page-node-id="DsAjyE8lstdtE07TSWXuu6" class="wb-skill">
+<p data-page-node-id="rA9scVkEgWWLK4N8JxP5Cn" class="wb-skill-lead"><!--pnid:gg5eENe89aN6Dhs1RjnO2J-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="BUB7wm2FEk9KYgEpdzq0r9" class="prompt" id="wbSkillPrompt"><!--pnid:9kjqDCRgeIa3t0pJnxSzZa-->【准备】这个场景的规则都在「检测报警器失效未报修清单」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/p9JYV0siMegmG1gnUAyq3B/MnW19iIeQ-mO/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="H0I7eserCjj9Fx2H9oeE70" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:ZbsHnMsaJs36u1BE7lBQye-->复制</button></div>
+</div>
+<!--pnid:A9CbD4Y1hGKxEZmP6nylMB--><!--wb-skill-end-->
+<section data-page-node-id="Lr8SNjN0fEyh9GoihuqE9i" class="blk">
+  <h2 data-page-node-id="SfMPFKzmuahzBPl8xsGTnF" class="h"><span data-page-node-id="KbqTd9yv4XNfg0P6XbTvAS" class="num"><!--pnid:GjAzvch0hLxd1p67PBcecX-->二</span><!--pnid:7f9l2IV33fpj16FywZWINf-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="rpiQpwTtHMsmjqpa181CvB" class="subline"><!--pnid:zNezf1W5wdPVu4BWZ15q6g-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="Vlq73Hw9JDu2DnoDsgerf0" class="tlist">
+    <article data-page-node-id="BC1vEUSFlOehOr0zmyNuT5" class="task">
+      <div data-page-node-id="SrRfrl8lyf3KYYcKenhRuD" class="th"><span data-page-node-id="somYUxoMvICfs0Yz2V4IEl" class="no"><!--pnid:tXIX34pwU3TMYYKrGWQ0Of-->01</span><h3 data-page-node-id="AbyfejnbrYu3ziJl08jNIg" class="ttl"><!--pnid:avUQQgfdTbEYC8hdLszy5C-->首推默认</h3><button data-page-node-id="YtORHfCLjJPaPx60w4hIkH" class="cp" type="button"><!--pnid:NK84D5ZtsgAK7VwO1gVusI-->复制</button></div>
+      <p data-page-node-id="O6Jalv5hTzYB6afRjxFWEo" class="tp"><!--pnid:C53V4J6vFJRFodFKNna9SN-->帮我查一下有没有报警器已经坏了但没人报修。技能内置的是：01_检测报警器台账_全厂18台.xlsx、02_现场读数抄录表_近三十天_二车间釜区.xlsx、03_DCS报警记录_检测报警器部分_近三十天.xlsx、04_报修记录_检测报警器相关_近十四个月.xlsx、05_校准证书与标气记录_近一年.xlsx。
+我想知道哪几台读数长期不动、跟同区域同型号的比有没有明显偏差、DCS 里有没有被屏蔽或通讯异常的、校准有没有超期。两份表配不上对的位号单独列出来。可疑的算一下从哪天开始不对、有没有报修过、离现场校验还有多少天。
+产出三份 Excel：检测器疑似失效清单.xlsx 是正式件本体，逐台给恒定天数、同区域对比和第十二条(3) 的判定，带仪表主管签批栏，校验结论栏留空；现场标气校验任务单.xlsx 给要去现场的位号、位置、所需标气和注意事项；台账与现场表差异清单.xlsx 给配不上对的位号和台账状态栏与实际读数的矛盾处。
+读数不动不等于坏了，怎么确认你写清楚，结论等我们现场做完填。</p>
+    </article>
+    <article data-page-node-id="hGOECIHgrsRdj3Q3yFG9qw" class="task">
+      <div data-page-node-id="gJK6NJ5l2QO01jUXL9lkEn" class="th"><span data-page-node-id="CoT72tDN9g4WjfTBBOCuxG" class="no"><!--pnid:jEtnFTvty6YtMj39e4N6Ak-->02</span><h3 data-page-node-id="Rw6Ouj3Cv4KQQUwDdzmFuP" class="ttl"><!--pnid:RjJziOYdK3MaFIEdz07wrQ-->只做两份表并排</h3><button data-page-node-id="TwgK0YuV5chyJCkKt9P1e4" class="cp" type="button"><!--pnid:HaK77WzNcCTUJGl27fPOwA-->复制</button></div>
+      <p data-page-node-id="i6ej823s3D1YV0BN9ZSc2U" class="tp"><!--pnid:uYM4p9H9SulOVTGU5gVSPU-->先只把两份表并排对上，不做别的判断。读 01_检测报警器台账_全厂18台.xlsx 和 02_现场读数抄录表_近三十天_二车间釜区.xlsx，按位号配齐，配不上对的单独列。产出 Excel 一张差异清单：位号、台账状态栏、现场读数特征、是否矛盾、缺失情况，按矛盾程度排序。</p>
+    </article>
+    <article data-page-node-id="IuHt0MF6jSLJfZSsW4P0qx" class="task">
+      <div data-page-node-id="3ouV1rTA86Bzen0IiyNZMF" class="th"><span data-page-node-id="U0Mwz2KjYm3Wqd7Rq7gyxC" class="no"><!--pnid:UbUpBzRHOEHLG3DWzsULur-->03</span><h3 data-page-node-id="kMATNJBHzY29L4OzCxtbur" class="ttl"><!--pnid:GjXGhjDt4Ii3Y7nuINAMbl-->换成七天阈值</h3><button data-page-node-id="W2G9sKj4YLIrmzwqKAUXa4" class="cp" type="button"><!--pnid:81Iu6I85fNF6X74x9T5yXS-->复制</button></div>
+      <p data-page-node-id="t3LcyBT2LAT3w7wSUdE4Vh" class="tp"><!--pnid:sKKYooupp5AzykbTZrhLq2-->读 02_现场读数抄录表_近三十天_二车间釜区.xlsx，把恒定判定口径从连续 23 天换成连续 7 天（含以上）再跑一遍，看有没有别的台被拎出来。产出 Excel 一张对照表：位号、两种口径下的恒定天数、是否命中、新命中的台数，附读数出处与新命中的依据。</p>
+    </article>
+    <article data-page-node-id="sgVTJDyLXRdMfmHzxkCPeK" class="task">
+      <div data-page-node-id="Dkea0sOwVaruC1PCL6PLzK" class="th"><span data-page-node-id="RzotexqMuSFXPvwmdoBOcV" class="no"><!--pnid:cluSTsRGzvceNF3RtVNddu-->04</span><h3 data-page-node-id="loChSpLbHZMHYqvmUdAaEv" class="ttl"><!--pnid:LWroiuEPggrnhnctQnQ3Dp-->五台一起过</h3><button data-page-node-id="iU770dq4ksCMGdU3yHWsQo" class="cp" type="button"><!--pnid:8Ka36n1It1ayEZeR1JF3xM-->复制</button></div>
+      <p data-page-node-id="7Dfd0azGGDBgsY38JzMUT0" class="tp"><!--pnid:uwE6z71PtAF4VwCdQUHfc7-->读 01_检测报警器台账与 02_现场读数抄录表：把二车间釜区三台（GD-2034、GD-2035、GD-2036）和一车间加氢区两台一起过，逐台核读数波动、同区域偏差、屏蔽状态、校准有效期。产出 Excel 一张五行横向对照表：位号、恒定天数、同区域对比、校准到期日、判定，按可疑度排序。</p>
+    </article>
+    <article data-page-node-id="bqBu7zOxG4UnvtYoRPq5ud" class="task">
+      <div data-page-node-id="ZVEbutTvwXxKGYq375sdi2" class="th"><span data-page-node-id="B6ie0NSvajipPBKBBm20cs" class="no"><!--pnid:qT9qZcX9XzhFgsUsXXOjNp-->05</span><h3 data-page-node-id="V7U5nXWSObJHB7EOjVCbKH" class="ttl"><!--pnid:aQQkkYiWdJGPGAdSS7pFdN-->给仪表班班长的一页</h3><button data-page-node-id="wtka5RwP22LPOR0niEX5Kr" class="cp" type="button"><!--pnid:VigbboRdjbO5hPHmoF7QDA-->复制</button></div>
+      <p data-page-node-id="Jxdbw3LVDRX6038kQ2ZrdN" class="tp"><!--pnid:B5xoIXsZX4KHQ6nuEUQh96-->把清单压成仪表班班长今天能派工的一页：去哪几个位置、带什么标气、大概多长时间、注意什么、其余十七台为什么可以先不去。产出 Markdown 一页纸，台账明细和差异清单不用给。</p>
+    </article>
+    <article data-page-node-id="UqGRRpF3pIsTDst4Kz5g5A" class="task">
+      <div data-page-node-id="FBDASbiVRTrhLthfYDYVGH" class="th"><span data-page-node-id="Phwc9TgtTZKRQ6MRkx877F" class="no"><!--pnid:mtbAHQjmIrh7eJAxEFYZTM-->06</span><h3 data-page-node-id="RRXRKjEA952rjeONodvsK3" class="ttl"><!--pnid:nhrsMa3f5rM7o12d6ovG5k-->让它反驳自己</h3><button data-page-node-id="08IySEdUaDx8Y1vh1M6Djk" class="cp" type="button"><!--pnid:xc93JvaqqyHFxaFGjAz2jb-->复制</button></div>
+      <p data-page-node-id="ewjhenwM2xq1xOuJUiPwZS" class="tp"><!--pnid:AThghYFMeM177dqAhkARa8-->用 02_现场读数抄录表_近三十天_二车间釜区.xlsx：「读数一直是 0 说明没泄漏」这个解释你没有下结论，把同区域两台同型号的逐次读数摆出来对比复核，看证据够不够。产出 Excel 一张复核表：日期、三台读数、同区域对比结论、依据，证据不足就保留「可疑」。</p>
+    </article>
+    <article data-page-node-id="dmcq4ae7sDKbipHIQX1Amz" class="task">
+      <div data-page-node-id="7IOVs7tszumOpQk7YjEQE0" class="th"><span data-page-node-id="vHNVXAq8ar8DtigMlFiZyj" class="no"><!--pnid:sgdzgY6nJVcKz6VihE5Efi-->07</span><h3 data-page-node-id="EmFeZfXjLhYSEHUK5KB0Ja" class="ttl"><!--pnid:Ur1RYdzx0cmWdlA18XO9Ye-->比对四个月前那条隐患</h3><button data-page-node-id="G8mZPM9ke1IHP08LfKlmdd" class="cp" type="button"><!--pnid:1R3m9VDE66oiCRLBH8lxGK-->复制</button></div>
+      <p data-page-node-id="HhaPwfO2HlrzjCqt55rK2G" class="tp"><!--pnid:rV4HScecsMRyiAPuev10P9-->把 GD-2035 这一次跟隐患台账里四个月前那条「二车间报警器读数异常」逐项对：登记日期、责任人、整改期限、整改、复查、关闭六步各走到哪一步。产出 Excel 一张比对表，标出重复发生与停在半路的环节，含隐患编号出处。</p>
+    </article>
+    <article data-page-node-id="zou9R2HsbBh0gd7pWWHEnT" class="task">
+      <div data-page-node-id="uYsVFsAgJy92r0VvzyQIfn" class="th"><span data-page-node-id="jlxHupOVnwY6CLT2he6jC2" class="no"><!--pnid:qkv9pupAYMRMQIIP6i5Z6A-->08</span><h3 data-page-node-id="yZ9v51dFxcWke664pMZHu8" class="ttl"><!--pnid:19dfa7Pirql8xuPnAektVK-->对照第十二条自查</h3><button data-page-node-id="JyrPR02TTInj4MaikoaelH" class="cp" type="button"><!--pnid:uwNmO6EVvzOkglx4v2Qfnt-->复制</button></div>
+      <p data-page-node-id="vJoOXUmFnwZuvDVL2hSB0s" class="tp"><!--pnid:DrrlphYay5BdKc6AJxsOwH-->对照重大隐患判定标准第十二条(3)，把这份清单逐台自查：哪几台能判符合、哪几台只能判存疑、哪几台缺证据以及缺什么证据。产出 Excel 一张自查表：位号、判定、依据、缺失证据、条文号与出处。</p>
+    </article>
+    <article data-page-node-id="LE6y8F2wij5mdYyjN6ce3Y" class="task">
+      <div data-page-node-id="F4lOgq01NfAoYPczJuKehf" class="th"><span data-page-node-id="78CKrRsTUWJSbQYwcpeqLE" class="no"><!--pnid:ciLQbl0ih4TIOo7jusRtXK-->09</span><h3 data-page-node-id="9bahT8b402opk8LVlCQ08j" class="ttl"><!--pnid:q43bkqC7winx4FfdkYRsh4-->折成后果与处理成本</h3><button data-page-node-id="LdWrAoN4s8kPCPIfGVbg4r" class="cp" type="button"><!--pnid:9yteku8fDq9TcnJNJ0Sjed-->复制</button></div>
+      <p data-page-node-id="irUZV0yk17LORyt5pEE5me" class="tp"><!--pnid:Bluy0lp2eHinXjthCbWP6Z-->把这一台的后果与处理成本并排算出来：判定为重大隐患后的处置口径，和「仪表班半小时加一瓶标气加一次采样点短停」的成本，两行放一起。产出 Excel 一张对照表，写清依据出处，不做结论。</p>
+    </article>
+    <article data-page-node-id="2MfgBHWxpn1HIw6Lc5KBP8" class="task">
+      <div data-page-node-id="17z06N1JQIRzrzbOdLjyie" class="th"><span data-page-node-id="IYi09BcGH8gJeczBVhwKv6" class="no"><!--pnid:BHRdbDxYSriDIPOpHXAgne-->10</span><h3 data-page-node-id="IPkxKxYxNCx8aTwjlIV7Qg" class="ttl"><!--pnid:ZLkYoLaJokgdimaDW3CU2l-->沉淀成周检清单</h3><button data-page-node-id="vtTtjTWBNtTaruDtpHTjRq" class="cp" type="button"><!--pnid:RlYleaK1yGkUdHQN9dOViP-->复制</button></div>
+      <p data-page-node-id="gA7AbNH4iUZ8D1hd18TPa3" class="tp"><!--pnid:9c2hG9WIEorjWLInYsvbMH-->把这次的识别动作沉淀成一份检测报警器周检清单：每周核哪三项、恒定几天算可疑、跟谁的数据比、可疑后走什么流程、校验记录填在哪。产出 Markdown 一份，仪表班每周照这张跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="GqdwYEtCgv38s8FPpVgSwx" class="cta">
+  <div data-page-node-id="A9Bd4F3akWxud6MtLZ2iGb"><h3 data-page-node-id="Crbtf3W4TDBN10Kvm3mUij"><!--pnid:qy4dnBTDa56vDDukT33I1s-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="GOUv3jki5AAUgH7utULL18"><!--pnid:Zc5OfTdPJqP8Zk3bnjRufJ-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="iTQW5ZmTXZrWR4FDf8olf1" class="btns"><a data-page-node-id="kYmIFkHpF7Gr0bOwAdAkUV" class="btn" href="#" id="ctaContact"><!--pnid:uFLnw9ujhSrU1gHXsB6zxR-->联系我们</a></div>
+</div>
+<footer data-page-node-id="L3lJ1YFGGlQrU6DQhrrwPe"><!--pnid:JUWPoTAr526GHa3oBGpiGa-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="oaEtRXl7BPew2ECstJf375" data-pnid-children="HrPcZ47ZnwNEh6iMSK9aQA">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="6umGLZoKCFwVNeira3Avqk" data-pnid-children="EH4E77bgaBeri5RLwvazPB">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="mk2eSCzBAp3ZDbU07aAojO" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="JYYS1XHlIVZhMl0DQcMKTb" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="Hta3k2TEpX3Y1Wo8FpijAu" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="LUxqjwuZsju2gbA0Ie03pP" data-pnid-children="fF7p3net2UIDn0fFxRFuES">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="rTuzwEuBq2tje7EVwT7d7A" data-pnid-children="qiN4Ayy4nApBCcv2whjEtn" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

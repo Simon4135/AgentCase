@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html data-page-node-id="m85hvhUlQvCcYfX63XvD9J" lang="zh-CN">
+<head data-page-node-id="KGp3clTdqlafeSaiIwTuM3">
+<script data-page-node-id="YEz7wpzcpFP53KX5O3Af8F" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="SCau90kx7IhOP6F4oUn2mS" charset="UTF-8">
+<meta data-page-node-id="DBpkcq4gYCN4zDfKUCPTF1" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="BJUyfC4xs7xVEhZSysq3JS" data-pnid-children="FlcPI7QrBowaNhAIsi2g3O">同一位号重复报修归集</title>
+<link data-page-node-id="vGVLzj3d15FrDWfjjcghTR" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="M0dGpDA70XdTCAg8UA3ZuI" data-pnid-children="GqUAqYlAYUyuhOy7JmQMdE">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="CPqJSZReeV2vN5OfKQRgwN" data-pnid-children="qliTday0ub9SRicKoGa1eB" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="0X7yJbs97xhc8jDeVUlqsY" data-pnid-children="ZaFFnoURS6ApM02tlExfXQ" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="eAFT9lcs1zynuAN8dnsWIs">
+
+<div data-page-node-id="64M9qMQyKWkGOgwcygfTcp" class="wrap">
+<section data-page-node-id="jIhQmHidnNPYc6CvW0g97p" class="page-hero">
+<h1 data-page-node-id="tFuUqqy3TSTE0jtR3642qX"><!--pnid:GL6VKCudV5rQNNi6BlvJPp-->同一位号重复报修归集</h1>
+<p data-page-node-id="MzBiFj9EamB0H1LE5xmAef" class="lead"><!--pnid:7BOi6HXV2oMZKWisH6vViZ-->同一台设备十四个月修了七次 · 每次都是几百块的小修，从没人把七次加起来看</p>
+</section><nav data-page-node-id="aYIjglPag06V4atiZyXpiq" class="subnav"><a data-page-node-id="JnfZbFN7Hy6JiTfNvJC7oH" href="场景引入.html"><!--pnid:laDr3LMdb5Nj6GhGXFE6K8-->场景引入</a><a data-page-node-id="PMb3qrl6oATOKmof21HHXd" href="LiveDemo.html"><!--pnid:wVSP4SfnJ519OmnzoMj34D-->Live Demo</a><a data-page-node-id="7Egv0mEQ6mdBzk9L0fEYBI" class="on" href="#"><!--pnid:3QEDGqGIZrTJF3WPwU1Sy7-->推荐任务</a></nav>
+
+<section data-page-node-id="460zugBCWKBjgytwttpgdv" class="blk">
+  <h2 data-page-node-id="zPbuL3CqRHRpgA2re4WNw8" class="h"><span data-page-node-id="Qj2dqhPqXlUxVmxsTSit80" class="num"><!--pnid:tJQYy6T84YKBhlToy32Guc-->一</span><!--pnid:omTa8svudTtOVf0hju6IUR-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="wNppRVPyphYD1z3xvHG47Q" class="subline"><!--pnid:7mInLMiLYyraqLoJVfTNrJ-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="yqUylsujDvXlJ6rIasSFl2" class="card"><p data-page-node-id="dJmMS7mRtioD8f2yvbbqMm"><!--pnid:3QCNipIsY4R4pPb8bMjV1j-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="TSthxGcEZUoVQFsubKTRcg" style="margin-top:10px"><!--pnid:Oezq5frTnwTFZSZdRXCTgA-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:QrSKgcfz1o78d0oNEYrKHm--><!--wb-skill-start-->
+<div data-page-node-id="8XMVqAjKMzFCZzZLX7rqY7" class="wb-skill">
+<p data-page-node-id="jZM3mGjmZO8O3gUqDtTHcz" class="wb-skill-lead"><!--pnid:iS8iIhi5baXn3fmU6n2e1k-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="QgQZsH10hltBqr7q89orX5" class="prompt" id="wbSkillPrompt"><!--pnid:bza6RamS8YJic1eCwr75Et-->【准备】这个场景的规则都在「同一位号重复报修归集」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/s9eVyEroH8ABwc0Zxh6DG9/ARimCSE0ED-E/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="EyMjijKFOI8VR3NFClXwvz" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:yFZ0PwUqkysw4oiMm24Xeo-->复制</button></div>
+</div>
+<!--pnid:mchzRLkAhtuq0LEUSfn1wc--><!--wb-skill-end-->
+<section data-page-node-id="oepk1xT394esf0q2JBXAyR" class="blk">
+  <h2 data-page-node-id="1WSsO2oy6tXzbXGQM1X0jT" class="h"><span data-page-node-id="HyMf4VgnQPOuOU68zA7ZvK" class="num"><!--pnid:5SJuHvb3CvWEjwIRH71Vn5-->二</span><!--pnid:J5zUnXyVPcg0ZeGdvmaWCs-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="Mh55CmmSVkvspG3LOXncEU" class="subline"><!--pnid:l2VzqeYkOHONdhkxkarYNT-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="OK7YzJv1fhr17k986hNaph" class="tlist">
+    <article data-page-node-id="UlzCGr9Iios6DvPjwhO0Ao" class="task">
+      <div data-page-node-id="Or7CL1qPpclKbs6odI56Mz" class="th"><span data-page-node-id="NvpgfVOl2IrYFFlPKNiLOZ" class="no"><!--pnid:VhpsXktHasEeU8REKjDpL3-->01</span><h3 data-page-node-id="ZYBHV1VqBky7jGuCcyec2q" class="ttl"><!--pnid:D2FB4SMDJy9RyWGkW1hRtx-->首推默认</h3><button data-page-node-id="ZS5eaPNqFwqkgtQms8rsr2" class="cp" type="button"><!--pnid:A7pBUGsn8KtjKJ1UP037VN-->复制</button></div>
+      <p data-page-node-id="0zigSIrDeUOPDloGjgoTdP" class="tp"><!--pnid:uqo9hEYgGcRBdjynf2I260-->把维修班近一年多的报修记录按设备位号归一下。技能内置的是：01_维修班报修流水本_近十四个月_转录.xlsx、02_设备台账_换热设备部分.xlsx、03_备件领用记录_近十四个月.xlsx、04_蒸汽单耗数据_近十四个月按批.xlsx、05_质量异常记录_与E-202相关时段.xlsx。
+我想知道哪几台报修最多、每台反复出的是什么问题。同一台每次修完能管多久、是不是越来越短。是不是某个维修班组修的就容易坏，这个也帮我看一下。这几台设备有没有在单耗或者质量的问题里也出现过，跟这两份数据交叉一下，三笔成本各自记在哪个部门也标出来。识别不了的条目单独列出来，别猜。
+产出三份 Excel：重复报修归集表.xlsx 是正式件本体，按位号聚合的故障史和慢性病排行，带设备主管签批栏，更换方案与投资建议两栏留空；故障模式与间隔分析.xlsx 每台设备一页，含故障模式归类、修后运行时长趋势和承接班组对照；跨部门交叉线索表.xlsx 给同一位号在单耗与质量记录里的出现情况。
+换不换、换什么型号我们自己定。</p>
+    </article>
+    <article data-page-node-id="iplmDbvUoh5eE7TqFVcAhp" class="task">
+      <div data-page-node-id="fqetuZk6dLoFlZqX2CtMtw" class="th"><span data-page-node-id="dqytFNHkl24rTwG61PY2pK" class="no"><!--pnid:5oTcE2fUcE6fsDM8mNh7V1-->02</span><h3 data-page-node-id="A1xYychbuUXqPGja2dKpHz" class="ttl"><!--pnid:jjkuYwK5AdHuta7NA7iLCE-->只做位号聚合</h3><button data-page-node-id="CRP5GJq8zg6ngRBDU0ngSV" class="cp" type="button"><!--pnid:EiRg4hTNLGHL8IghREqI6x-->复制</button></div>
+      <p data-page-node-id="t3mMLsGqdOdci9jUIGmLRg" class="tp"><!--pnid:Qjz48lvpQiYP4BfsEpsCK2-->先只做聚合这一步，不用出结论。读 01_维修班报修流水本_近十四个月_转录.xlsx，把可识别报修按位号归成故障史，识别不了的条目单独列出来请人工补。产出 Excel 一张归集表：位号、报修次数、每次的日期与现象、处理方式、承接班组，按次数排序。</p>
+    </article>
+    <article data-page-node-id="tbyqQuD8u46MAX5ywuLVJJ" class="task">
+      <div data-page-node-id="RoPS7BXCDrPG8m7yLVbjpp" class="th"><span data-page-node-id="A61G4mXkM3RksCJBQRY4Cj" class="no"><!--pnid:IJjBoEo7geSLlQawXpN44C-->03</span><h3 data-page-node-id="0rW84bL2BDIhqn1A52KToE" class="ttl"><!--pnid:g24t1jYKABMXuQoyWvtJrR-->换近六个月口径</h3><button data-page-node-id="M3UhGud7I57F3soRKcsqDy" class="cp" type="button"><!--pnid:SBtgYRFdcb0kzVef7KY0Rk-->复制</button></div>
+      <p data-page-node-id="Ne7PJkampcq6IgZsKYXD6e" class="tp"><!--pnid:l0iUcWiQ32QE68Lf15xJjo-->用 01_维修班报修流水本_近十四个月_转录.xlsx，把慢性病口径换成「近六个月报修次数」重排一遍排行，不用十四个月累计。产出 Excel 一张对照表：位号、十四个月次数、近六个月次数、两个口径下的名次、名次变化最大的几台及原因，出处标到报修序号。</p>
+    </article>
+    <article data-page-node-id="yNxrmTdKcfxa07JeYDv06m" class="task">
+      <div data-page-node-id="INVi9Y0R553763v2FhRjOU" class="th"><span data-page-node-id="sXbYWwvAMBmpLIJk16cZVT" class="no"><!--pnid:Jxw0c4W2AqdhKAaL0UkBZC-->04</span><h3 data-page-node-id="s3h5owa5GgDwkI6wg6C9H3" class="ttl"><!--pnid:JQDizzkFNwm7Fh7FgnV5QU-->五台设备一起过</h3><button data-page-node-id="iaLKNDibxSsbqaML8bkkwD" class="cp" type="button"><!--pnid:W1Nhmnow5lhkJAH8iqwoum-->复制</button></div>
+      <p data-page-node-id="yYwWd9IwVsDx2DlfEsyYsI" class="tp"><!--pnid:1bulU5iRL1rv7Z00Clmz5O-->读 01_维修班报修流水本_近十四个月_转录.xlsx 和 02_设备台账_换热设备部分.xlsx，把 E-202、E-201、E-203、E-204、R-202 五台一起过，各自出故障史。产出 Excel 一张五行横向对照表：位号、服役年限、设计维护周期、十四个月报修次数、累计备件费、修后间隔趋势，按报修次数排序。</p>
+    </article>
+    <article data-page-node-id="mM3YNBvPbbIvLut3ut9BvM" class="task">
+      <div data-page-node-id="RpJhrFCrWRi7XeBwBDobQx" class="th"><span data-page-node-id="X2wvnQ0UAEWSkxAPbQ7x5R" class="no"><!--pnid:g0AK9GITKdbf3AUKhfPjjd-->05</span><h3 data-page-node-id="ZWR28t62hGFVgWBEIGDb5C" class="ttl"><!--pnid:EuyNOvrBWVCPva1XMNr81r-->给设备主管谈预算的一页</h3><button data-page-node-id="cerwRN2A9Z2cS0TemfHEMR" class="cp" type="button"><!--pnid:c5YDyvQ7cmGPx12yYrHftx-->复制</button></div>
+      <p data-page-node-id="hDm1bzchIegROcthIGMVRT" class="tp"><!--pnid:CuwVyxP8OnnqgV3TEir16o-->把结果压成设备主管谈预算用的一页：哪几台是慢性病、每台三项成本各多少、缺什么实测数据、立项前必须先补什么。产出 Markdown 一页纸，故障史明细和交叉表底稿不用给。</p>
+    </article>
+    <article data-page-node-id="ImKxzIY2YLLoq6zr5UwCh8" class="task">
+      <div data-page-node-id="l3yOnSW25hzTRXNJs4N6yF" class="th"><span data-page-node-id="Q5qBPNhEVKgwRfESqAbOqY" class="no"><!--pnid:dZ6bL4g7gxN9FPHdJ8zkqm-->06</span><h3 data-page-node-id="4jTaUWCyQo7XbDhe3OqnzK" class="ttl"><!--pnid:gFBHj2BXTZwM8MozAbhEqd-->让它反驳自己</h3><button data-page-node-id="LEx61W99p0zN3ypfOjiLrI" class="cp" type="button"><!--pnid:3Kofj0T3eqHXxnNZdzjxiE-->复制</button></div>
+      <p data-page-node-id="qhXJ6sNdHExrzhN6Tej4k9" class="tp"><!--pnid:E8R04ximEs6LX9Usp8LE1H-->「维修质量不好」这个结论你排除了，把三个班组的承接次数和修后运行时长重新算一遍，看相关性是不是真的不存在。产出 Excel 一张复核表：承接班组、承接次数、平均修后时长、离散度、结论与依据，数据不够就改成「待核」。</p>
+    </article>
+    <article data-page-node-id="nYtlJiJI7fV3SJPdFL0hxr" class="task">
+      <div data-page-node-id="2V7QHDJUiKtpik90jF2Yh5" class="th"><span data-page-node-id="Rz5oKVfqSeTS9ZpPjMWuMs" class="no"><!--pnid:sNg5j1FKk3pPXD9cQ91xLE-->07</span><h3 data-page-node-id="2WKf4fukdNxU2Pkp5jNXbk" class="ttl"><!--pnid:dnfhQG85PS6T2vqdhame9p-->比对五步堵漏的路径</h3><button data-page-node-id="oOwYcNFzhYqkwvfnCU3ies" class="cp" type="button"><!--pnid:f5RdUEdm1xTq32Uj74C7gj-->复制</button></div>
+      <p data-page-node-id="EErwiQxNVYCwTCdltsHu5t" class="tp"><!--pnid:ion5T0szh1YbYwKi7htJOZ-->用 01_维修班报修流水本_近十四个月_转录.xlsx 里的七次记录，跟上海石化那起同一管道五次带压堵漏未根治的案例逐步对一遍：每次的处置方式、有没有根治、间隔怎么变。产出 Excel 一张并列比对表（本案／案例）：处置、是否根治、下次间隔、后果，出处标到报修序号。</p>
+    </article>
+    <article data-page-node-id="Pc4pdLKCelaOnkqfJAQM02" class="task">
+      <div data-page-node-id="d6LAqpj3VzorSqWmBDg0CT" class="th"><span data-page-node-id="pIJO301a9lEBfyVUkkZ4bZ" class="no"><!--pnid:bjNJfJNMfXApeBtO4NB1gK-->08</span><h3 data-page-node-id="uvW6eBoN7uyIc8AKsChjz0" class="ttl"><!--pnid:ajt5DsOzEliyIUIJufTnae-->对照台账自查维护周期</h3><button data-page-node-id="YYptltP9aX3U7hehMkF8XJ" class="cp" type="button"><!--pnid:k33sRXpKm6wcrqWCG0CYVR-->复制</button></div>
+      <p data-page-node-id="PWmfQIAQIsxh0BLRwx4NOY" class="tp"><!--pnid:v1f7c3RJMfN5AuA4LVN206-->对照 02 设备台账里的设计维护周期与设计寿命，把这份归集自查一遍：哪几台报修频次已超设计频次、哪几台接近设计寿命、哪几台维护周期一栏是空白的。产出 Excel 一张自查表：位号、设计周期、实际次数、已服役时长、结论，含台账出处。</p>
+    </article>
+    <article data-page-node-id="bHBeNLqqpvcKQEjkmLVxgi" class="task">
+      <div data-page-node-id="7yMJJ2PpLjyUw1beBGOFig" class="th"><span data-page-node-id="PEUVVFTilU93xHdKFds2dK" class="no"><!--pnid:hqByhEpbZyvfrCcEyxxaE1-->09</span><h3 data-page-node-id="lT2fUNce5PVfNWsYCeFKD4" class="ttl"><!--pnid:l6mdo9tYJDexnVqnkDFsCk-->折成三笔成本</h3><button data-page-node-id="rOuaIARV5BWPu0zgN6zWg5" class="cp" type="button"><!--pnid:5S0r7kutSCSI9G4gIHgWhv-->复制</button></div>
+      <p data-page-node-id="afioR85PJfYqiVwuJS87rL" class="tp"><!--pnid:ZJIyGfQ5qwfdfB6JGFg98r-->读 01、03、04 三份材料：把 E-202 的账合起来算——七次报修的备件与工时、单耗多耗那部分按本月产量折算的蒸汽量、以及 B26-0817 那 24.6 吨损失里它占的那一份。产出 Excel 一张三笔成本表，标明每笔归属哪个部门、算法与依据出处。</p>
+    </article>
+    <article data-page-node-id="U5KnPQcYUhQjBywg74xHDP" class="task">
+      <div data-page-node-id="McJsoPzaZu8rABgQeEZIaZ" class="th"><span data-page-node-id="3kLyzYJUeuzFFnh2W0RWUp" class="no"><!--pnid:LrqnnnEKHX9PGggRO58c2s-->10</span><h3 data-page-node-id="jHHshJSXjbf7uyw12JoSSm" class="ttl"><!--pnid:wKPVTaVEAQL8nG7SgMrCqz-->沉淀成归集模板</h3><button data-page-node-id="ARer9s9GHebENL0dV0PIRe" class="cp" type="button"><!--pnid:huyVWRFRl969JakUmXkXMD-->复制</button></div>
+      <p data-page-node-id="rwnfMVbvkkwejmhv3dirh6" class="tp"><!--pnid:ZpMAi3SzsJwNIQqOdD80N0-->把 01 到 05 五份材料里用到的聚合与判定动作沉淀成一份重复报修归集模板：怎么按位号聚合、慢性病三个维度怎么算、要跟哪两个部门的报表交叉、立项前补哪些实测。产出 Markdown 一份，下次做设备预算直接用。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="PpnOQ38ts58FbcTt2Kx64c" class="cta">
+  <div data-page-node-id="UsBAMv0EID9lzsDm2psdWt"><h3 data-page-node-id="aaZvtIOLGXMenuRtIgOIJC"><!--pnid:rNeucJ0Dvv0lPuyzEMyTw7-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="4fMJ45dIY1G3p6g6v0DBVx"><!--pnid:M28wTPn6GPYYnmTddVH0U6-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="KNMSO1SRyxq8jiiYUjjcqi" class="btns"><a data-page-node-id="IHobbFoJrwGgd4ZaQ4m9GS" class="btn" href="#" id="ctaContact"><!--pnid:sPjblR47Ej6xU8UxgICxrR-->联系我们</a></div>
+</div>
+<footer data-page-node-id="7Xl5wS3ULdvc4zwbilwRRi"><!--pnid:UGT2sgDeKYupTgmCRv8fr0-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="QWxezc7bRPsFXncujaz2EO" data-pnid-children="jENcTFsH39H7dLt4pOM7jc">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="RLYUV1jTha2z6kWbiZMKZW" data-pnid-children="hXP0rzMRih9N2Fwb0oNRUb">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="PiKwE2Qn5KczoRdsXZjhgv" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="sno0BfyALlEmWLTns1XwY8" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="3j6wYDFfvM7cjVPRdDBAxi" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="wMFgSXGeaElyc727CYNuYs" data-pnid-children="VaH0x8Oui3JALKbk2PS9xW">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="iqleaD0FB4zNaiNilFURfv" data-pnid-children="03NAspAmLM4P6R2p3dbqVu" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="xfG95ysTfgymF1sshZfUib" lang="zh-CN">
+<head data-page-node-id="i9t8FHingD9eBwnDbupDPk">
+<script data-page-node-id="U3ENFjkkPsOgaFpskKoRjc" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="u4bCBr4TVRIp28lVnJc3uw" charset="UTF-8">
+<meta data-page-node-id="nosgdFGHcmbwDnUR8eONHT" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="VkXxH0DbItBICcgd00Cou2" data-pnid-children="PpoPeRLf0LQbG7cmPjhIl5">需求池多源收口与语义去重 —— 「深色主题」从三个渠道进来就是三条记录</title>
+<link data-page-node-id="HQrotUQ98wN3s3GNNV62jE" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="ve9dg7TeSiGELZnf9krkho" data-pnid-children="rCOayfeuvJkasI8aj7m24N" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="Xw8OkMvLT1Ce2vlczRPLwo">
+
+<div data-page-node-id="ICSVRjVy3WKFrGb3AeOVrP" class="wrap">
+<section data-page-node-id="y0NESHw20HDlsJTQgRE2b2" class="page-hero">
+
+
+<h1 data-page-node-id="7ChXElDf29zZDnfwrOsDb4"><!--pnid:wX2G5U2xLXxBXrD78jaFgo-->需求池多源收口与语义去重 —— 「深色主题」从三个渠道进来就是三条记录</h1>
+<p data-page-node-id="2F2KgJIotOz0jUhyOkOYAa" class="lead"><!--pnid:jI8Ty3hN4tn8GZ26qcL2bo-->PM 每周 12+ 小时收集管理反馈 · 同一个需求换个说法就是三条记录</p>
+</section><nav data-page-node-id="6ygH4S36Sd5nyphRjURYSs" class="subnav"><a data-page-node-id="1VeK3FKwoA7zIGXhYDwIhX" class="on" href="#"><!--pnid:QnWdcrwtr6o5FlI3vbxO8T-->场景引入</a><a data-page-node-id="8W5P8llqRoraDxZWCl31dX" class href="LiveDemo.html"><!--pnid:MIzpwMubsXR10uPizrfjzS-->Live Demo</a></nav>
+<section data-page-node-id="IU0oaTVCL7PagUZdaGCErd" class="blk">
+  <h2 data-page-node-id="uiY3gm8XGZKXnErIzss2b7" class="h"><span data-page-node-id="q0cFZOmj1bJ6NEF0mMdVOI" class="num"><!--pnid:rT6KRSg3yQDAkaE3eG87zG-->一</span><!--pnid:8Ix0fiGzNHwlPiv0vHYWBn-->这件事现在是什么样</h2>
+  <p data-page-node-id="WiVE0pMw0EH26c0GyPfqiG" class="subline"><!--pnid:t9il76EWhhvL7lbdC3IvSg-->产品管理 · 真实业务触发</p>
+  <div data-page-node-id="vadT5TyTqBWGEo5BQrhyHP" class="card"><p data-page-node-id="KgNO5BJzHdZcJdi13bdId0"><!--pnid:MFufIhu2dy7YFlYhpdq1vs-->季度需求评审前一周，产品经理要给评审会备料：客服工单 240 张、销售拜访纪要 17 份、客户访谈转写 6 篇、现有需求池存量 380 条——粗扫就知道「多币种结算」至少以四种说法散在不同渠道（工单「美元账单对不上」/销售「恒鲜问过外币」/访谈「越南采购要本地币」），而谁也说不清这条需求到底代表多少客户、多少 ARR。</p></div>
+  <h2 data-page-node-id="GGfcv1GBiU0hzGnF4VOI4b" class="h" style="margin-top:22px"><span data-page-node-id="bJbujmbhazYlXTogXpNZ0w" class="num"><!--pnid:WflaBNKj9JGigNfNrXoyWO-->二</span><!--pnid:QbWGLTxJdMNfjDWgMQHReg-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="992dG51Y9zonuzPGx8Q46T" class="subline"><!--pnid:xTAPO9RZzayseDZOytt1kg-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="uQQEVu1xalsI5llqJmtnRh" class="pains"><div data-page-node-id="3tZj6lLTTyXC1Hi69XqKG3" class="pain"><span data-page-node-id="GLodgFRQ9r9PCfIAqJTQvH" class="i"><!--pnid:gMEMno5kqlQb29dDmHcZds-->1</span><div data-page-node-id="DqfdDj6lKcR4H1Zt6Pnrom" class="t"><!--pnid:hI7jLh9iLosuh3WG31sqYP-->需求天然来自六类来源，「大家都能提需求，但没人知道该提到哪里」——重复需求变多、优先级变乱，产品经理被「谁声音大就先做谁」牵着走<span data-page-node-id="u7qfdT1qkwIpKaG76hyP1Q" class="src"><!--pnid:RGb0yACLxbII4y0n85ig0Q-->依据 · <a data-page-node-id="rCnTCnEdHO0CUGjXaDetqQ" href="https://docs.pingcode.com/baike/5236615" rel="noopener" target="_blank"><!--pnid:Ic0lbX85P5kRvDzMDQaLOz-->国内产品管理实践：需求来源天然包括客户反馈、销售建议、客服工单、老板临时想法、运营诉求、实施现场问题；入口一多就出现「大家都能提需求，但没人知道该提到哪里」——重复需求变多、优先级变乱，产品经理被「谁声音大就先做谁」牵着走</a></span></div></div><div data-page-node-id="NKU5O5fJAk9fWfTJVEqnL8" class="pain"><span data-page-node-id="T6C3NgWJzAWE5GjIzu8yRc" class="i"><!--pnid:V3bsIwJfXb5grYQ3W0REUs-->2</span><div data-page-node-id="tf4QUbHYx5ETEvpzsW3wD8" class="t"><!--pnid:DxSOXB6oeTniIXOZHspPRB-->PM 每周 12+ 小时用于收集管理反馈；只有 1/10 的团队能从所有可用来源捕获客户反馈，74% 的 PM 把高质量反馈列为最大挑战<span data-page-node-id="Zelt5H7awcmzJIvQ3f2MJk" class="src"><!--pnid:E7Wg1TuEImEBvlIyaSFebd-->依据 · <a data-page-node-id="YBHpvH8Jd7LkQhM6AFbwwP" href="https://uservoice.com/blog/product-insight-customer-facing-teams" rel="noopener" target="_blank"><!--pnid:9GGbtNhE5OwPXM2czAHWeq-->UserVoice 调研（200 名产品从业者）：收集和管理反馈可占产品经理每天 25% 以上、每周 12+ 小时</a></span></div></div><div data-page-node-id="LBHvgA2fMU2Up4SVAYwCH2" class="pain"><span data-page-node-id="hbzRRUuZvyZdk8VHCy60cK" class="i"><!--pnid:WKuboTEftvTVgSvI8XHATO-->3</span><div data-page-node-id="i4QFlTgmxNJdd7SpHo07Ef" class="t"><!--pnid:7lPgnB9MrXFoI45f4sARj3-->同一个需求换个说法就是三条记录（「夜间太刺眼」「增加深色主题」「重点客户问过 Dark Mode」）；按关键词机械去重又会把场景不同的相似诉求错误合并<span data-page-node-id="ySt7pTkmcfGCzPTezj4BKq" class="src"><!--pnid:w1RQzACNpoRNds4c3OptZJ-->依据 · <a data-page-node-id="s1pUsJtiuH4hQz4Z8V6Smk" href="https://www.sohu.com/a/1065692454_122188698" rel="noopener" target="_blank"><!--pnid:uv5Mrq2hq2sYzW6OQUr2SP-->需求重复录入的典型形态：客户访谈说「夜间看起来太刺眼」、客服工单写「希望增加深色主题」、销售反馈「几个重点客户都问过 Dark Mode」——逐条录入就是三条记录；按关键词机械去重又会把场景不同的相似诉求错误合并</a></span></div></div><div data-page-node-id="2joN708RaGocYQQkB9eml7" class="pain"><span data-page-node-id="z60LSsLMhDXBEfMz3oHke9" class="i"><!--pnid:L7wfrvz8Dpoah3Ri6p8XhR-->4</span><div data-page-node-id="5LyjBRZZgeOMGrY6WLV9H7" class="t"><!--pnid:nOTce33B6QsxOpn2Pdls4Q-->同一个 feature request 散落在工单/CRM/群聊/邮件中互不关联——「三个信号、一个洞察、零连接」；只有 37% 的会议产生明确决策<span data-page-node-id="TwcVAAVGHqLsgmwhSMHvSL" class="src"><!--pnid:bh4tM3Zxi6K6RHVCh5wmIQ-->依据 · <a data-page-node-id="ojsFzhaoVpIbxO0F2NqEsT" href="https://idealift.app/blog/10-product-feedback-management-guide" rel="noopener" target="_blank"><!--pnid:IxYPT0w5vtzbxpPnOP1Njl-->反馈碎片化代价：同一个 feature request 散落在 Zendesk/Salesforce/Slack/邮件中互不关联——「三个信号、一个洞察、零连接」；只有 37% 的会议产生明确决策，44% 的行动项永远无人完成</a></span></div></div><div data-page-node-id="dYBgAcZ3WGLFYS1eGvZCDv" class="pain"><span data-page-node-id="nJYXXUB8zBNlkJH2XMBOZO" class="i"><!--pnid:o7ZHqj4sWV2tAmCk8EyRYr-->5</span><div data-page-node-id="AKq7kQ3Y6k6LxCGxlY6u4U" class="t"><!--pnid:71DR1KQ4WiPxBDnibdD3s6-->需求池治理共识：只进不出、缺乏准入判断、没有分层处理——治理次序是先堵新增（入口收口），再梳分类，最后归档存量<span data-page-node-id="kGA01Wiu5MBFfvNN4vq3qT" class="src"><!--pnid:iyBZJKIkuoTFBkFBkx83lD-->依据 · <a data-page-node-id="zxrh8Mizb8PRPOv45nvIQX" href="https://docs.pingcode.com/insights/q5ogw1vq5e1a0ve0wehanj5h" rel="noopener" target="_blank"><!--pnid:8DoRVaYGwLbbkrB506jyQl-->需求池治理共识：需求池越堆越满的根因不是需求多，而是入口未治理——只进不出、缺乏准入判断、没有分层处理；治理次序是「先堵新增（入口收口）→ 再梳分类 → 最后归档存量」</a></span></div></div><div data-page-node-id="u1RjWWNypOc7lFFmFxafWv" class="pain"><span data-page-node-id="ijSx4gOyDGQ8nmSgJoOOH7" class="i"><!--pnid:7oYTRmPvm6klItnkc4QnwL-->6</span><div data-page-node-id="nfeqEdGMFUMg2tf9NMaI6r" class="t"><!--pnid:LWDN16L3muJoJt0f8INvid-->反馈闭环差的公司浪费最多 35% 开发资源造客户不想要的功能；72% 的高绩效销售组织与产品有正式反馈闭环，绩效差的只有 28%<span data-page-node-id="QXqxPo2DfQvjXAOO9h5ukf" class="src"><!--pnid:FtknW0rXlO8deRBOrwuWGi-->依据 · <a data-page-node-id="UlJdXy1NIGdb8ZKwt64TD6" href="https://www.pelin.ai/blog/customer-feedback-handoff-sales-to-product" rel="noopener" target="_blank"><!--pnid:UedMkkITtDK5DbAePWISjS-->Gartner：反馈闭环差的公司浪费最多 35% 的开发资源去造客户根本不想要的功能</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="WfYxNNa2BaChw2RStqVs6u" class="blk">
+  <h2 data-page-node-id="1S4TeozFYof9wxOpv490CA" class="h"><span data-page-node-id="qvsc75reavhiNDg8GgFYYI" class="num"><!--pnid:7pS0aiQbbojliasXBkv7M3-->三</span><!--pnid:4afZrDKx33746JZsygMlpt-->换个做法之后</h2>
+  <p data-page-node-id="IxNafokOVFWYLbERQWSkNV" class="subline"><!--pnid:QI9JGHvoveBQW6P0kAKcxU-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="Yr5um7uFBuDxn5NOAji4e1" class="cmp">
+    <div data-page-node-id="1YHIkU8nHXq1sCHk0NNeQP" class="old"><h4 data-page-node-id="sz8u30ssVz4GBoQOyD7QwN"><!--pnid:IsJrfhUY3X706YJ04qcr5x-->✕ 现在的做法</h4><ul data-page-node-id="GAsBUgDPNnRlUUvTvz5QDZ" class="list"><li data-page-node-id="sTWgahetz8TEKc97netRJv"><!--pnid:3VExSg4zy9WR6GTNBRcIoW-->需求天然来自六类来源，「大家都能提需求，但没人知道该提到哪里」——重复需求变多、优先级变乱，产品经理被「谁声音大就先做谁」牵着走</li><li data-page-node-id="9GDT9MVM3UwTt2vLIaETBb"><!--pnid:heatHscOHTJa4rtEtQ3dUG-->PM 每周 12+ 小时用于收集管理反馈；只有 1/10 的团队能从所有可用来源捕获客户反馈，74% 的 PM 把高质量反馈列为最大挑战</li><li data-page-node-id="tYWhCwdki8p4wSmywMQZfk"><!--pnid:HPS2oDF8R5PRuVzW5YqGf0-->同一个需求换个说法就是三条记录（「夜间太刺眼」「增加深色主题」「重点客户问过 Dark Mode」）；按关键词机械去重又会把场景不同的相似诉求错误合并</li><li data-page-node-id="lBcK3OfJjFQs5E9S6M8e0y"><!--pnid:hSSzNw40PkVsqgsY5034QB-->同一个 feature request 散落在工单/CRM/群聊/邮件中互不关联——「三个信号、一个洞察、零连接」；只有 37% 的会议产生明确决策</li></ul></div>
+    <div data-page-node-id="Z9C34XX9psxL0vpMsxkEYC" class="new"><h4 data-page-node-id="3SJcImuPmkXeXsx3GSiMDP"><!--pnid:nblgdr62G9XL62B3afOlnM-->✓ 交给 Agent 之后</h4><ul data-page-node-id="eBUZcn6otWXhUbYBCnNXN0" class="list"><li data-page-node-id="W9Rh3hsR0phMQhWjUMKVyV"><!--pnid:WX2RRq2cB5dBoFTGj03042-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="E9TqOTVhzowO4OzOAz4UId"><!--pnid:6k6OwT9fJEEpPHG5W8aM3f-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="aNklVvEC4KALUYamQeaTD0"><!--pnid:w7TbWI4j6EnT56HSQSUzQC-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="vMA7eoMkrCtGJSCbneL2Kx"><!--pnid:FY0Ee7hKb0lzFRJB9pvuMj-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="NyYmqZxlVialKmipuVSWzt" class="blk">
+  <h2 data-page-node-id="Qs5tPwKguG5mWE6B6AvFY8" class="h"><span data-page-node-id="P6RstrWJxDjqeHY4MVqDq8" class="num"><!--pnid:Dl4KMJppnB43Hysn5Hu7p9-->四</span><!--pnid:heXFSffZDqywShfMdbIyYR-->场景闭环</h2>
+  <p data-page-node-id="jACvLUuW0loeUIDtK639XE" class="subline"><!--pnid:INsYpHrbLpIkCbvIVwQ73T-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="s14PU4LUOybw9iHgsZEAtH" class="flow"><div data-page-node-id="9HiSvrW3krrhav8WutDAty" class="step"><div data-page-node-id="mML62UTExgTFGQZ7g3sn5F" class="n"><!--pnid:IyJe5oa9kcHnkQCbMLyKUD-->第 1 步</div><b data-page-node-id="MlYDJHfJH1jgAgEkdMhN2J"><!--pnid:j0zitDTgLSpiFfwev801X3-->多源原始料登记</b><span data-page-node-id="wFZ4nf59DwefLSKp5i0VZl"><!--pnid:cDRNu9MPLNqo3A5v28yG6S-->工单/纪要/转写按来源登记，原始表述原样保留——归一不改写证据</span></div><div data-page-node-id="m6RrekmWjSVSsjinh3qJJI" class="step"><div data-page-node-id="eXriHHRIfdSsOlzrPQmsam" class="n"><!--pnid:3XF0tcafDpzbgYcYLFxouD-->第 2 步</div><b data-page-node-id="umcePsf3AVvwxOiWhtgTX6"><!--pnid:9cRH02K6AXTiyFm0eWhhg6-->语义相似度聚类</b><span data-page-node-id="Ddw1AWTUVdsBUp1IuY3cqz"><!--pnid:ox1n1KUSo3Gyh1FzexQqTT-->同义不同表述归到同源组；「疑似同源但场景不同」单独标，不自动合并</span></div><div data-page-node-id="U4FURYOWcA4GaQVAnMtg3q" class="step"><div data-page-node-id="b2urwToMFMb8nETldwPzIc" class="n"><!--pnid:z8lhDcYsg9FkSwYvd6dFtH-->第 3 步</div><b data-page-node-id="dNuUTw5FKxlHdkLXPT0C8F"><!--pnid:bTvRwFuwUVt79hOMEOHvX5-->证据链聚合</b><span data-page-node-id="zItI3xMT1Jx93XHs2nicrF"><!--pnid:GO0fgIO5kaiBOWFK3CsyZT-->每条归一需求挂：原始表述 N 条 / 来源渠道数 / 提出客户数 / 关联 ARR（销售口径）</span></div><div data-page-node-id="Q4x2bdTWs0n2LI2hksdmBp" class="step"><div data-page-node-id="OQbH5lXzWcgOskU27R9uHv" class="n"><!--pnid:dmCdUSwV46jltyXo4Ukv18-->第 4 步</div><b data-page-node-id="P9xN9QFvx7xfQxMB1xgmE2"><!--pnid:JdXlubzogSoix6VsvIUuxG-->存量池对照</b><span data-page-node-id="npWaz7deIPv4VakOlv97ei"><!--pnid:1k0NpCuYLvGMTWcYbQT4lK-->380 条存量里已存在的同源项标出——新增还是并入，评审定</span></div><div data-page-node-id="p4waSBpZ9cSY1OLw16e3YG" class="step"><div data-page-node-id="Ov3AQ8VXQZqw9hymORKymp" class="n"><!--pnid:acWMrqaXF1uhmDTjSgtnQF-->第 5 步</div><b data-page-node-id="g1Fc6orYX7N8fsQhrvFrSV"><!--pnid:i9tsFMH1Wt9eY4rpPh5Q0s-->评审材料包成稿</b><span data-page-node-id="yCycQJpUx5ZHGJO4UIuVtG"><!--pnid:fedbXJa83GBCmHc8nx2Sop-->按证据链厚度排序的需求摘要 + 建议优先级栏留空 + 待确认同源清单</span></div></div>
+</section>
+
+<section data-page-node-id="82ibZPhbBqd4crjBxPiOWf" class="blk">
+  <div data-page-node-id="j4ML7UFUrd5zRn8Aedhmpe" class="g2">
+    <div data-page-node-id="tjZ3EcJtYqcre4xcMmKr7P" class="card"><h3 data-page-node-id="9EtKdwDvmwGIgZHlkh4Jd9"><!--pnid:K4QLONqvYuFkPOL7mmMGsv-->要准备什么</h3><div data-page-node-id="ztKMyl6ogCQIDJBEzdgvjU" class="src"><div data-page-node-id="0rdDYpv1bn7nlUFouaOh0e" class="fn"><!--pnid:nTgxZABFkf1pe7Js7TFbDN-->客服工单导出（近一个月全量）</div><div data-page-node-id="OVUrgu9fso0yl0r5mrE9bF" class="fd"><!--pnid:wO1EdC3Utegfn4OLei1zmO-->240 张含口语化描述——需求密度最高的矿脉，「美元账单对不上」就在这里</div></div><div data-page-node-id="QO68Pa3wiZAvQh7X8nlMA3" class="src"><div data-page-node-id="5I8WP9qqiG4qMzuzP2Bebb" class="fn"><!--pnid:1n7xdbGZKQ2XZzNNmV5i8s-->销售/售前拜访纪要（微信记录与会议纪要）</div><div data-page-node-id="tx3pC0tC4qdSVp3LdBvTbC" class="fd"><!--pnid:XnmQxmWqtSiP4HIWTcCa0N-->ARR 证据的来源——哪家客户、什么体量、问过什么</div></div><div data-page-node-id="mLV1BKztw1tmHDJgc2Qt2F" class="src"><div data-page-node-id="mA7kPsCZQftodpZfgblokb" class="fn"><!--pnid:CINjoyC2Qu0kMnGAtAnZFx-->客户访谈转写</div><div data-page-node-id="bsvuudktucuhaZBiS6Rjrf" class="fd"><!--pnid:tl9Zm8yZSCKtsTojndF30V-->未过滤的原始抱怨——需求真实形态，也是语义归一的校准语料</div></div><div data-page-node-id="HhdY8uBAYY27NQloqPOpvF" class="src"><div data-page-node-id="SmqB7nXi38eU4meokRxIK7" class="fn"><!--pnid:vVMInrf5QsIbTjugxuyQMD-->现有需求池存量导出（380 条）</div><div data-page-node-id="FgM7vnOhrtpI4W1FTx4Vx1" class="fd"><!--pnid:g0tzDlNe5M2jTVk8Mf37ZL-->只进不出的存量——收口前先看有没有已经进来的同源项</div></div></div>
+    <div data-page-node-id="56v5zBkcbqsXrQ71ZbZpkr" class="card ev"><h3 data-page-node-id="4nz7sxHQ3lLTft8VHf1iA1"><!--pnid:hwaeYyKlDgy2M6TDSn4oCY-->为什么这个场景值得做</h3>
+      <p data-page-node-id="t0hhvhdqRMlEIyA789MLZY"><!--pnid:bd0aVqpJXLegW0UloXD4oa-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="u6iwPE7JbLubQrUBVOiShb"><!--pnid:2M5DiYWvVjICWTEASmPGjB-->11.0</b></p>
+      <p data-page-node-id="eZf4ytKLcVFNz42ihlGUSd"><b data-page-node-id="VGdRB5ESPJkYcWNo3PBENp"><!--pnid:6U4Kl87XvriDqw4HTNcGEi-->最大差异点 ·</b><!--pnid:Cd8gBFeoonrCsseFUoIcuS--> 不是又一个「需求管理工具」：入口从「让人填表」改成「把散装原始料倒进来」——工单、拜访纪要、访谈转写原样丢入，语义去重在收口侧完成。每条归一需求保留完整证据链（几条原始表述、来自几个渠道、哪几家客户、关联多少 ARR），评审会看的是证据链的厚度，而不是谁嗓门大。</p>
+      <p data-page-node-id="Qbzf5Jijq7wwaGzdtzus3s" style="color:var(--ink3); font-size:12.5px"><!--pnid:MtIU0lt1mjoNlsEIWg013Y-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="roWnXSXSLih5FoNETGx53H" class="blk">
+  <h2 data-page-node-id="5bAG2jS9idtQOl0VI1rHWr" class="h"><span data-page-node-id="TU34bqnsGWm7Yz1LXQCkFO" class="num"><!--pnid:RrOPcBUlWw9Usa4CVrKdZo-->五</span><!--pnid:eZnGy6RJGcldYJtBriKoIR-->会产出什么</h2>
+  <p data-page-node-id="WNKVaO3UiNPjfFcHR13wLf" class="subline"><!--pnid:oBgL8ay1nH9yvXgWXkoD6M-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="VSGUxxXQvznrIOdhs2qqDQ" class="outs"><div data-page-node-id="BJrel74dgfQr4Mwr9VpmPm" class="out"><div data-page-node-id="thiEYrYChAIUgnVQ98O7eu" class="on"><!--pnid:tokPnjTnqq4DteVnxF764z-->正式件本体</div><div data-page-node-id="8CPU2dk0hr466EBebN1nmT" class="ot"><!--pnid:udq6t6V8cdtlpMmOkgD0Y9-->需求归一与证据链汇总表.xlsx</div><div data-page-node-id="A61Cy3cUKnlBWV25GsOqMw" class="od"><!--pnid:ZCiTFiQLVmToa6GOpuf8rA-->正式件 · 归一需求 × 原始表述/渠道/客户/ARR 证据链 · 含评审签批栏</div></div><div data-page-node-id="hhT3MVMsaX2RkYVVYSL0Qf" class="out"><div data-page-node-id="ltbxavdWTHvzEXfWKLEGTI" class="on"><!--pnid:4Po456uiMPkIGnaD3l2Dp3-->可派发清单</div><div data-page-node-id="qKVf7Xz6dNWLsH9ami9IJQ" class="ot"><!--pnid:Z7vkkBdbGzS0wK95o4ae0Y-->疑似同源待复核清单.xlsx</div><div data-page-node-id="X85Ycyn9xaxROC3wGQpqiD" class="od"><!--pnid:UQwz6diTRh9OvG2xGWbdUg-->语义相近但场景可能不同的条目 · 逐条给分拆/合并建议 · 人判</div></div><div data-page-node-id="BHCAM4fhIiiKzdKJBes3Gs" class="out"><div data-page-node-id="2MsWgszmDLtAx2S1Ffup8T" class="on"><!--pnid:O6IwiAC3He4921PenWXUng-->可派发清单</div><div data-page-node-id="MNXS65z8XfXtrBfdbYMWIu" class="ot"><!--pnid:FcgGDJirQlz7wsdOpGyA87-->存量池处置建议.xlsx</div><div data-page-node-id="Ik9Yf8DlUAuPRnmz2RV6WW" class="od"><!--pnid:bKf27g17IdcwMlRnurrw11-->41 条已上线重复反馈 / 长期无人跟进项 · 转客户成功或归档</div></div></div>
+</section>
+
+<section data-page-node-id="K9iXwOJqyXLvOjm1bPEJ1a" class="blk">
+  <div data-page-node-id="PsPCdcqlAEtXq7k6j50LoV" class="card warn"><h3 data-page-node-id="wTRZsKcUXn4PRtSrM7rPxR"><!--pnid:ugNWIKqArMv8WLq2gdRV3y-->这套东西不承诺什么</h3><p data-page-node-id="mmUnr9d5gYzTdfrhpflgHa"><!--pnid:LsPeWlUPp80FIGHwnSKJyp-->只做归一与聚类，不做优先级决策——建议优先级栏一律留空给评审会；语义相似但场景不同的条目只标「疑似同源待确认」，不自动合并；带 ARR 的证据链只引用销售提供的合同金额，不估算、不外推。</p></div>
+</section>
+
+<div data-page-node-id="EUgGZcFJvMKwfkRAjPHhG4" class="cta">
+  <div data-page-node-id="HbosbeuOo35eFkYWYkBwva"><h3 data-page-node-id="7fLlTUMIKtUaRmmD8nUKk7"><!--pnid:ckMGQdTsBrtrDdjqsMmGlV-->想看具体怎么跑？</h3><p data-page-node-id="YfzozUerQ78YSra6rcs6PH"><!--pnid:zi7wYwM7WJPAA2gnMRvuOd-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="GS1HFRNbweY1HeZy8smpbd" class="btns">
+    <a data-page-node-id="GOlMve4S0m6JuwrgvpyQF9" class="btn" href="LiveDemo.html"><!--pnid:pYQQIzQI567pS79FnM2TDC-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="XWt3oZQbjp06lXH2sUmuNN"><!--pnid:Wc3KosV8OcVJGyjXT1zfY9-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="MQPOiPsoOr1RlgLsp5dmzh" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="eH0v4f5v7Cp1uBmEtbwdOo" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="uyyIYZfcrjEgTbm8uJVMOy" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="NVGrsX7ZlgisQ9yL5Ne3Gm" data-pnid-children="pj3JZgGayoVjQ8xMaMvaLK">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="h8jNbieeTHN6kiaGKinV1g" data-pnid-children="yZJynxbjjbhtr8nZUHBoog">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

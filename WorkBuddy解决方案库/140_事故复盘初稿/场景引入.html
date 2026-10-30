@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="3qp7TVz88WcoxO1DGtO4GA" lang="zh-CN">
+<head data-page-node-id="LEabzlJwacAgb40JVpTtyH">
+<script data-page-node-id="mhoKCKpU1V6gIEygUg1G0d" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="1XgnQKNIKlcFvP9v0gzoNo" charset="UTF-8">
+<meta data-page-node-id="jFDwbNXu7X1ySYfeAqJo9x" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="0sd36mVLE4kxiHCOOXgE1g" data-pnid-children="7lCzGsbfK4HYTzs5VMoVgX">事故复盘初稿</title>
+<link data-page-node-id="neiZCMGeumFoiG63g7FVUj" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="07tAUlJS3XpVBWtVCQPIoT" data-pnid-children="c2qTXdh7jLTljIAwC1f4hX" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="A6m8Jy7qDb9iqO43ix4r6H">
+
+<div data-page-node-id="3IL8tRNbPP4UJTzHUN8156" class="wrap">
+<section data-page-node-id="up7lkaeNlwl8bXkE2TEZGR" class="page-hero">
+
+
+<h1 data-page-node-id="uv6TIGVGC1113Ohjridcau"><!--pnid:d0SzWPqU3dKWgV16ZHDpQl-->事故复盘初稿</h1>
+<p data-page-node-id="5AthrreGxOLqJZ3OQWc8aL" class="lead"><!--pnid:kJPNFlMQ3bskA0GYrJntcp-->事故复盘停在「下次注意」—— 三个月后同类事故再来一次 · 复盘的价值在改进项闭环，初稿是闭环的起点</p>
+</section><nav data-page-node-id="pTwxfbgiED9Gu7d6QPy8rN" class="subnav"><a data-page-node-id="zhk23FKEP58YR9zg7W7MNe" class="on" href="#"><!--pnid:FDtgI098Dg1ush9SVFA6oD-->场景引入</a><a data-page-node-id="HUFRGPVZtMQ0totfuERacV" class href="LiveDemo.html"><!--pnid:bj3ZlAJhY6D2oz6AaXz2lz-->Live Demo</a><a data-page-node-id="1FYQmdhwQDFe9hzMujnrTR" href="推荐任务.html"><!--pnid:KgL4XJf3nqHASTVEuiPlBl-->推荐任务</a></nav>
+<section data-page-node-id="DX2rqxRURqc1qN8ZuctIY8" class="blk">
+  <h2 data-page-node-id="yTfGTYo2Vtkvj5ao82btWm" class="h"><span data-page-node-id="KiFr96nxfTr7ZuQ1oXdD7m" class="num"><!--pnid:hPKAtigDBnwWHqMz1bvwAe-->一</span><!--pnid:GfIAC8fchYbCZdW4Hf86Ae-->这件事现在是什么样</h2>
+  <p data-page-node-id="9eK7dvZs9KMOz0muFcjV3G" class="subline"><!--pnid:MzC3y6WHe1x8kFla9Cn3OM-->验收与发布 · 真实业务触发</p>
+  <div data-page-node-id="CqV3crkWqMCPoOD5wPOWaQ" class="card"><p data-page-node-id="LHz7ou65SaFq52Wjh4kbFf"><!--pnid:N2BN5cuctLMpv6tNG7yp5z-->周四 15:23，运维群弹出告警：标准版部分客户的巡检上报超时。17:40 恢复，影响 9 家客户、累计异常 96 分钟。陈默要求周五上午出复盘。以往复盘的流程是：江晓连夜翻群消息和告警记录、凭记忆拼时间线、初稿写到凌晨两点 —— 而上上次复盘的三条改进项，有一条「建立发布检查执行留痕」落空了（发布检查清单执行留痕 这次才补上）。复盘本身，也到了该被复盘的时候。</p></div>
+  <h2 data-page-node-id="HoTStj3XYlLW5uQ43AdZ4E" class="h" style="margin-top:22px"><span data-page-node-id="QLWYZDMNzk1eGC4Qawu9r4" class="num"><!--pnid:Dy5vVEvKZUSndVJpsorAYH-->二</span><!--pnid:T534aggJRPUMJXbaVMocBm-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="ap6tQYNu5qBE0ijZrtD2q4" class="subline"><!--pnid:vqCooNy5NyfIvDIdviZjaY-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="4DLZMPSTHPm97EFRACBoz7" class="pains"><div data-page-node-id="hX34eOBJwP6ACA8Wk54bsm" class="pain"><span data-page-node-id="00goMdQr25NBhBTIynI2tX" class="i"><!--pnid:7Zv97ietZma6KIHlHEXBCh-->1</span><div data-page-node-id="HLgmI8RgpuTPwMVeEYZnQM" class="t"><!--pnid:dnwIA0mcN4nZFLCePgtL6U-->复盘的通病是「只停留在口头，下次还会重演」：同类事故二次发生的根因不是没复盘、是改进项没有跟踪闭环<span data-page-node-id="w6CbdU56XMKtM1udKwmMbI" class="src"><!--pnid:KbQldIWA5R53uYcYGUf4t9-->依据 · <a data-page-node-id="b9V7QzGUEVIR9kOGCvGmyl" href="https://www.woshipm.com/?p=6425191" rel="noopener" target="_blank"><!--pnid:hvSmLUPwKUskQOT2pITxJT-->Agent 项目的行业失败率：麦肯锡统计超 90% 企业 Agent 试点即失败，「Demo 惊艳、两周被叫停」的复盘直指责任归属无人敢碰 —— 每个场景必须有人拍板点</a></span></div></div><div data-page-node-id="rCj7KMvnqDzbvVbr3olQ0z" class="pain"><span data-page-node-id="uvHpNh68joaPgPzyB5s75m" class="i"><!--pnid:AKoZolbqL3HmjQEfjrRYPn-->2</span><div data-page-node-id="63PKKLJwUxdA8rDzwAGMCp" class="t"><!--pnid:I1IJF0S8KC76eEFCQU20zY-->初稿的体力活占了大头：翻告警、对群消息、拼时间线 —— 两小时的会议开完，写初稿又要一个凌晨<span data-page-node-id="mohXfInOITibIwSqhxKKNf" class="src"><!--pnid:I4tV3ZICnM0i8B3rL41FAZ-->依据 · <a data-page-node-id="l18KFkdLIb1BnXkC1dcejF" href="https://finance.sina.com.cn/zh_cn/finance/2025-04-20/doc-inetumyz0575807.shtml" rel="noopener" target="_blank"><!--pnid:RQ1IdF2krsvvmMhA59edZG-->连锁反应式灾难上线判例：跨域限制只在生产环境生效导致数据服务失效 —— 需求评审时没拉出影响范围图，一行代码的变更踩了别人的线；「上线后 24 小时手机不要静音，你是第一责任人」是产品经理的自保实录</a></span></div></div><div data-page-node-id="R4n7ZEt4rWGEteJLt8ZO4R" class="pain"><span data-page-node-id="N7pdOVuftGiUTGyBCgxnEI" class="i"><!--pnid:PBQgT9infS1jE4EnEMhoXQ-->3</span><div data-page-node-id="F6Ra5o7ahCKEmBiCWSlqzy" class="t"><!--pnid:QGJOLH6gsQMgRy66ml72Ll-->《如期上线》的复盘基线要求时间线/影响面/根因/改进项四要素 —— 而多数复盘死在「根因写成现象、改进项写成态度」<span data-page-node-id="ji7b2W3Pn1bHftcItpnzOQ" class="src"><!--pnid:Y8UnNn5xphY4iGP5QYofoz-->依据 · <a data-page-node-id="hHULPPXdhuVvFSMbNhA77E" href="https://www.woshipm.com/share/6437626.html" rel="noopener" target="_blank"><!--pnid:yv0udnk27z7GZ9UbP0NsEK-->发布管理的实操基线：《如期上线》复盘模板要求发布前核对影响范围、回滚预案与灰度计划；需求确认书（In/Out of Scope）是对外交付的护身符</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="3bpq7l0s3L8u8RCNPM5ZSh" class="blk">
+  <h2 data-page-node-id="2YLcb3X1uXkDzUVHCoQp7B" class="h"><span data-page-node-id="YsdCD5uMc4uYxoAjAzuFbb" class="num"><!--pnid:vv30hMb1vNeDm3JwNiKvAO-->三</span><!--pnid:6wSWxpUtWncg2cQbevcsZr-->换个做法之后</h2>
+  <p data-page-node-id="67IiN9Yn67clQjGepmOzft" class="subline"><!--pnid:SvWxSLbjO2UoEpvdHnO6l5-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="dqLK9EFonZuoFZsfVQBwXl" class="cmp">
+    <div data-page-node-id="VWkTz5ZAH9iOCMERdIWsGl" class="old"><h4 data-page-node-id="Fu8d8sWDdPsYKq1q5HXxYC"><!--pnid:Ndu42rDUJSGdRlMxdXmkgC-->✕ 现在的做法</h4><ul data-page-node-id="qZcp2QdtvCtin2ZwuZkgYD" class="list"><li data-page-node-id="ibC5xOpR7hD90cj43BWVKt"><!--pnid:fGLD5C52PpIkh8x1aKG6bM-->复盘的通病是「只停留在口头，下次还会重演」：同类事故二次发生的根因不是没复盘、是改进项没有跟踪闭环</li><li data-page-node-id="AtJzqoMlOz6N2Sj3yg7OAY"><!--pnid:SVBaORnzCM01wqL3iHAg6v-->初稿的体力活占了大头：翻告警、对群消息、拼时间线 —— 两小时的会议开完，写初稿又要一个凌晨</li><li data-page-node-id="WSGPl9vJZMTLEkEPUzGiFd"><!--pnid:SBXqzZHq3LaAuIR5bdw9Wn-->《如期上线》的复盘基线要求时间线/影响面/根因/改进项四要素 —— 而多数复盘死在「根因写成现象、改进项写成态度」</li></ul></div>
+    <div data-page-node-id="NOUD4eI9ZToKVd89Sdjapd" class="new"><h4 data-page-node-id="Nls0wrAvs1646p7XgMEVYq"><!--pnid:oqqPxzWHDpwcw1LHmwI65C-->✓ 交给 Agent 之后</h4><ul data-page-node-id="6AQprpu70v9KlvgncfmWNu" class="list"><li data-page-node-id="gpK6zHQ2vbnCPhoItGTnSW"><!--pnid:i50wzb8vpbW4x7vFf6jyRc-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="bhWc4OAmpRvSFHqkzmp5SA"><!--pnid:9JTh4GZ6KVHibEQT9g9btw-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="Ogpwdx2Bviv0eM7NV2YxLi"><!--pnid:NMPLvef7FQwaWdswGTgQAd-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="aYXlA0eCFoBK3B6g9ixNBx"><!--pnid:OJMDAstFqEagjQcl0w2sDQ-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="HhVwWPv1L6r9ZgJ4E166mM" class="blk">
+  <h2 data-page-node-id="RQlTISviyaqHa9JuTeuI35" class="h"><span data-page-node-id="zx22YfoGNydYX2vHUk24i3" class="num"><!--pnid:TLcudDZcLcmdUL52O0Rjok-->四</span><!--pnid:oMMbFn8i3W5UTPvZQTG50b-->场景闭环</h2>
+  <p data-page-node-id="bQ4CuzCJtjIkfKZDIf5Ogn" class="subline"><!--pnid:3GPhZzea9a2CY5F4zKObb8-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="TH88uYJZd5mDTps6rwiwhe" class="flow"><div data-page-node-id="rk5aVH564fYaVfT4bEQtc6" class="step"><div data-page-node-id="0eySvTabWwdZElAqfDUG1j" class="n"><!--pnid:VXo96tnoBdI6mEQI72eBcf-->第 1 步</div><b data-page-node-id="rXZyFiJ7jim54NFeCHsdzy"><!--pnid:wJNfFNkwRzKl4Cqj2SulI1-->时间线梳理 · 每个节点带证据</b><span data-page-node-id="ixnhQljl6f4CpU378Kc85V"><!--pnid:7OVL82KZprh0DXQLHoJTiu-->15:23 告警→15:31 响应→16:05 定位→17:40 恢复 —— 每个节点配群消息或告警的原始引用</span></div><div data-page-node-id="pJZvMxyFVoIearJEyRW9jQ" class="step"><div data-page-node-id="sDHrNVzh7MYoQwoMzEgbbn" class="n"><!--pnid:54AgcEEbHigsjcWBFF2N0X-->第 2 步</div><b data-page-node-id="e5cBUiz8msGfn32Q3n6gqj"><!--pnid:OjzELQo5GcZXC3OJycP7uk-->影响面量化 · 客户/时长/业务</b><span data-page-node-id="lH2nYUDwxZZjFTgIQlpzCN"><!--pnid:KHStNTlOWCzlM2c5Ke6UPC-->9 家客户、96 分钟、上报受影响的工单数 —— 数字化的影响面，不写「部分用户」</span></div><div data-page-node-id="wAIN206Nf57wQMoK7ykUTs" class="step"><div data-page-node-id="BLrK5tFYomlYMdKrhJXdI7" class="n"><!--pnid:nTL37kYg7G3iHomujEl8tv-->第 3 步</div><b data-page-node-id="p9FKGhuowKg1fsDEyyyY0F"><!--pnid:sDq2N4Vo9RcbtzlZSTEhV2-->5Why 辅助 · 每层给证据不给结论</b><span data-page-node-id="AEWy2niJx8e0IUiN3sROHx"><!--pnid:vSvIxwTNo0WGHBDlg4SRfS-->超时→连接池耗尽→发布引入的配置未生效→检查清单没有环境项→模板两年未升级 —— 每层标证据强度</span></div><div data-page-node-id="VIn7Szk391irUK2BF1IfRB" class="step"><div data-page-node-id="h52ZnzisYc0e8F6Cv5ekPg" class="n"><!--pnid:LlZ1swbnNiWAPf54oN8NpW-->第 4 步</div><b data-page-node-id="vepZPBCZFubeC94ILnM5fX"><!--pnid:98aOTDWyrTbz9iV9B67vOt-->历史改进项审计 · 闭环检查</b><span data-page-node-id="Z1tZeJM7p3FXoEX2yH3rd5"><!--pnid:75IIBll5FR08kXzRoyHvou-->上上次的三条改进项逐条核对状态 —— 落空的标出（本次事故与其相关性）</span></div><div data-page-node-id="GtxGZHYsAcoTodAbUN6mGi" class="step"><div data-page-node-id="WcUGYAzfhY1VYIJiFoXvHs" class="n"><!--pnid:dZRFCI0594UTEhIh2MAmLQ-->第 5 步</div><b data-page-node-id="SoxJNrwln0cDISTcNzp2lE"><!--pnid:6a9Ba9a2JNutkTN5SQVY0Q-->复盘会材料 · 事实在前定性在后</b><span data-page-node-id="PtBRFYBwhJlqdQk9t5zQb2"><!--pnid:HicEup3Rn587BXBvE1Qhwk-->初稿只摆事实与证据链，根因与改进项留白给会议 —— 「复盘会开在事实上」</span></div></div>
+</section>
+
+<section data-page-node-id="Eyi12HubwnQWBrkTNsEGc4" class="blk">
+  <div data-page-node-id="WJM4iqFdQAv4m7TMh3KhYq" class="g2">
+    <div data-page-node-id="aY82pXkttNvtY0JE1LzoSf" class="card"><h3 data-page-node-id="J1DKunsqeMf9ETwzbDeITj"><!--pnid:u0lW4dRyhhG5dFTNJ5PVx0-->要准备什么</h3><div data-page-node-id="jGCAjJDN2wIVPICkJAaKbV" class="src"><div data-page-node-id="cH7FsdureQRUGaMmHYUob4" class="fn"><!--pnid:WIhZ0xgNl3z25gl1wOnIol-->告警与监控记录</div><div data-page-node-id="yTFnMPEJ7TyXzO9adP5gZm" class="fd"><!--pnid:jq1YnRnPkbhrLcpciK9utL-->时间戳最硬的证据 —— 原样扔进来</div></div><div data-page-node-id="ZDjU6kIWLAMju4UW56v6zo" class="src"><div data-page-node-id="6yAaw5MMIM5kWDP1F9cPyB" class="fn"><!--pnid:Bvfg9htuDRAPHEB5GHXRSP-->事故期间的群消息</div><div data-page-node-id="sT5SUPB5nPM0vO971gAzoF" class="fd"><!--pnid:Nc6lZlD7h2Y7LoOLJpsXtf-->运维群/研发群/客服群的原始记录</div></div><div data-page-node-id="Xj5Rw8dJOYJqFUhg1rdYBD" class="src"><div data-page-node-id="dtTS325ZXvCMrvCdYrW0zQ" class="fn"><!--pnid:YTYhDWd2Ymsp8OAl5Q6cty-->受影响客户与工单</div><div data-page-node-id="w7eJznkKOzwGuIRSNZwc6Z" class="fd"><!--pnid:JqG7kHJi52JW0UPz6Z0NQj-->影响面的量化 —— 客服侧的对照</div></div><div data-page-node-id="9ibG3aAoR5Gja38Qf1JeV0" class="src"><div data-page-node-id="uNG1EV16ZgLmAdH3vDHpVG" class="fn"><!--pnid:9jLxgD472sO858cnx6fL1y-->上上次复盘的改进项清单</div><div data-page-node-id="YfJuEFn6Jr5Wes3GWFQ78f" class="fd"><!--pnid:7guarWJ4E02YwJzb3Tm9gu-->该闭环的先审 —— 复盘的连续性</div></div></div>
+    <div data-page-node-id="MEUA3z2h6scpdUEllQXy6K" class="card ev"><h3 data-page-node-id="N5eXn1LHTeUAcF9ZE8EwQ4"><!--pnid:ujfSDuoumbF61a882pMong-->为什么这个场景值得做</h3>
+      <p data-page-node-id="e9bNSYPDcqWLfzpMJidyAq"><!--pnid:gywI1yoWywAFJnDNCGChmn-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="iINkShA1xfZIqfiDgM2Tix"><!--pnid:cXuYoXCrTceXqpdDhtE0iK-->8.0</b></p>
+      <p data-page-node-id="oQnBx7LgLhL5LU0emhY7UX"><b data-page-node-id="0WEQHA9dkfd6B1wxmy3fwf"><!--pnid:7wO3EV2hjADzguApafIsmk-->最大差异点 ·</b><!--pnid:vT2QbXlKYnkHFPa839czCk--> 不要求先有 APM 系统。告警记录、群消息截图、工单导出扔进来 —— 时间线 30 分钟成稿，复盘会开在事实上而不是记忆上。</p>
+      <p data-page-node-id="eyQf4DmkvkSWb5KjLZffFN" style="color:var(--ink3); font-size:12.5px"><!--pnid:a78udtEdiaIh7uCf2u4rx4-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="aM2U0bU4vyaiCO723kkOHJ" class="blk">
+  <h2 data-page-node-id="LAnoo2GNGoG7m0Pmzj46LX" class="h"><span data-page-node-id="sMut712o8QM3NBhEwGH5M3" class="num"><!--pnid:KXtxQaY0fMk49nJqVMcGFE-->五</span><!--pnid:2PSXTcqQvDIymAk45F0UUz-->会产出什么</h2>
+  <p data-page-node-id="ANJtjM8BcsaP5UnigQi7W1" class="subline"><!--pnid:vWZBG704S6yxxI57YRuTFk-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="riBvqhtJcnpA69VEhw5vfB" class="outs"><div data-page-node-id="XXkQ808fe9Dyy7hJmKaaI3" class="out"><div data-page-node-id="Gr3cxXBSSG6ZzeKFD4JzFA" class="on"><!--pnid:k67HUD1YcdGJrGZqIt9CFY-->正式件本体</div><div data-page-node-id="94BNZtQMzBfAjPD0KgSiGy" class="ot"><!--pnid:b7sBxFnIuw13tjnxCWeQ1f-->事故复盘初稿.xlsx</div><div data-page-node-id="BFZRGQkq30SuFK6nCMToy4" class="od"><!--pnid:OiV3hde7RxrDKNY1YbVjM6-->正式件本体 · 时间线 + 影响面 + 5Why 证据链</div></div><div data-page-node-id="nYqBFIjQ0vxPsyPEeYuoPu" class="out"><div data-page-node-id="NyY2aNpREanGpqdcnpMh5R" class="on"><!--pnid:YEu3roYAs8MgAhJLDxCa0W-->可派发清单</div><div data-page-node-id="EzPgJVBJ5nceqeLHsDZvWW" class="ot"><!--pnid:SZURqaNKlY1etGQmFfapBu-->历史改进项审计表.xlsx</div><div data-page-node-id="or2bR8fPzVnK88GXlUh1pB" class="od"><!--pnid:cGbl9DYBkXiXGF26jbv3LB-->上上次的改进项逐条核状态 · 落空项与本次的关联</div></div><div data-page-node-id="lzQLQZeDEY1vLfhmXEht2A" class="out"><div data-page-node-id="3sAwFugh4FR5eM0Jg3QWER" class="on"><!--pnid:OfxcfNAuVfBcQ3oRt8NKxa-->可派发清单</div><div data-page-node-id="ybbmIOtalV9dCGlD2964ju" class="ot"><!--pnid:40z1lQqexsexc8fJO91a6X-->复盘会材料包.txt</div><div data-page-node-id="wtIEmBwVuTsq217gnRO29z" class="od"><!--pnid:nPiEOpBBggXPu0OqM6aiBi-->事实部分成稿 · 根因与改进项留白 · 会议议程建议</div></div></div>
+</section>
+
+<section data-page-node-id="UNWmmorWrR26aj8te3QXJJ" class="blk">
+  <div data-page-node-id="i4KXdTOkefqy0HBCYcTZyj" class="card warn"><h3 data-page-node-id="yckMCWpOIY8DBua5yM3VTC"><!--pnid:Uf4PGIcgfFiFa27JV8bQgG-->这套东西不承诺什么</h3><p data-page-node-id="p5YChrg8l7O5htaFYoJQ4e"><!--pnid:9XXGaNzvLSCCjGZbmi0myY-->不做「根因认定」—— 5Why 的每一层都给证据链，最终归因是复盘会上人的共识。也不做「责任判定」—— 初稿只摆事实，定性留给人。</p></div>
+</section>
+
+<div data-page-node-id="3LTDjdBzJDM3WcrT9XRAD1" class="cta">
+  <div data-page-node-id="XE0XDgxaoKa7keiHrDpz2J"><h3 data-page-node-id="pniLSMX3cwCoCvUBqvYOnV"><!--pnid:ahy9UkNZp1yDWG4ELZfvv0-->想看具体怎么跑？</h3><p data-page-node-id="c3soIC1e38ZChtUWlzN2MW"><!--pnid:nkrV34xng7keIiR7zlxDll-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="vCkcwjjktq59ZzUIxEnulM" class="btns">
+    <a data-page-node-id="v916fXfpVGDxw7XMhaIUy0" class="btn" href="LiveDemo.html"><!--pnid:Ed3Vup2uKOGwQMIUKuOHjo-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="oaKTunVHjfOEf83vsujq0b"><!--pnid:sKDHLlHxyvRUJcLFuADNRp-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="vtvHnkKCY6p6VsUSZnYWoY" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="qTXK37j0LPDWnfCcRBr2dG" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="rrxHncaI586NPLEIZ0QYyT" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="XFPMJRVEQp3GqayMNyMfW7" data-pnid-children="LnTsf0VMJtIBilSTbByhLy">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="xf8Dh2dCLnPm2fc7UWCMEh" data-pnid-children="K96INOcLTa5N2F2VVTwTLx">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

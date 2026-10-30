@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="yj3R5upOKehhZIi5kxmYGQ" lang="zh-CN">
+<head data-page-node-id="AZCZo3UfilS9EXow7GCPbl">
+<script data-page-node-id="J2a3bknXIMnBtbAMPU2wzS" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="v1HujgK7q7sn3ibC61HFP4" charset="UTF-8">
+<meta data-page-node-id="KRfB4FW6ggLGqo1sf5blTx" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="aLzoZVS13kytym1JZuQIXN" data-pnid-children="bICACGx6XSnUQnofOuNplw">诉讼节点倒计时跟踪</title>
+<link data-page-node-id="2Zx9bY01BU8XMqFXoW9L96" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="ERPWelzBdOmJtBXnMAmRaH" data-pnid-children="Q3za19KfMN7fkUUTTC4Q4a">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="7Ur5DF6Q67PALXyoqo9F3P" data-pnid-children="L5CoPOWfNpNQaUNZQBUBSA" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="cBA8HVhH2AeY4ZaV8cTRo8" data-pnid-children="rvyOxzvI2R4mZ3jqCHuzRB" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="oXIydRDXTOTYBg8TuOyzNs">
+
+<div data-page-node-id="eVNwjp6KBcJ8bGiU48u6qc" class="wrap">
+<section data-page-node-id="WUorqe72WdJSz3DbWpFseG" class="page-hero">
+<h1 data-page-node-id="L9aL8uPEu5YtRizaLPzbJR"><!--pnid:5wpMO5ia7r5bubjKAPVTVx-->诉讼节点倒计时跟踪</h1>
+<p data-page-node-id="Brxjt03paCOxkAHrnOuZJl" class="lead"><!--pnid:acgRl1VJVGOWrUvHyUUuEA-->一审赢了 33.6 万 · 但判决书哪天送达的记不清了 —— 上诉期、生效日、执行窗口全悬在一个记不准的日期上</p>
+</section><nav data-page-node-id="wzQt29VjTD76FgM9vT8xbz" class="subnav"><a data-page-node-id="XFlpacPEPgJkWsB7Rwzxeb" href="场景引入.html"><!--pnid:EW1q6PEAsSK56VOhJU220M-->场景引入</a><a data-page-node-id="raQMSfAp2go1SHmIN16W3g" href="LiveDemo.html"><!--pnid:tuBQ32pqKy2nzblKsvZv6L-->Live Demo</a><a data-page-node-id="oLs8y1JvLV1MhdnxiHrQQA" class="on" href="#"><!--pnid:0ze1zODI2tdim80HrvZ1BC-->推荐任务</a></nav>
+
+<section data-page-node-id="ITbgZy2qvEgiB6c95zd4Ot" class="blk">
+  <h2 data-page-node-id="I6LZ8DsMneMnD7QYnZrAZQ" class="h"><span data-page-node-id="MaD8mPCciUpK5i73L9oJHw" class="num"><!--pnid:3TTWEjcmeg7geGrkoEz5jf-->一</span><!--pnid:CrRXbpgD8D8cEvf9VlcUlR-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="0BHhghh6zes42fQo6P9TJf" class="subline"><!--pnid:OEJ0YzRXfxryNsruHROd8E-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="u8NpQrbMi7JWmEwriINuWx" class="card"><p data-page-node-id="MSj2l3TfIzbOwnq9724iTo"><!--pnid:tAbKG6WFMSzG6gH7xhnAIj-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="D4M4nErA9wgZ9gDAqAgJaQ" style="margin-top:10px"><!--pnid:CCknvmSttNThgsWMdiBsZ3-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:7PAKGuAHMDHBFtp0o7oK6K--><!--wb-skill-start-->
+<div data-page-node-id="2JdbyFcXlS9W1669lvnHaK" class="wb-skill">
+<p data-page-node-id="ZCCdwAqHgeAmVsO1C6fWQn" class="wb-skill-lead"><!--pnid:Ep6lqgXHw82CP0aBoAPA83-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="itz3eBOlz3qLrPk4rTPS0l" class="prompt" id="wbSkillPrompt"><!--pnid:9FkX4Ti1G5jYg5lD62SDio-->【准备】这个场景的规则都在「诉讼节点倒计时跟踪」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/Jhqci3IDoSkq671AaIE7NK/BuSh_GzdY6BQ/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="FFjvWKnjHu7IUlGWwfo4km" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:qwm2arZnFo6lNaKA9AcAM7-->复制</button></div>
+</div>
+<!--pnid:xlEhbOUqbhWN2X9L6HkFGS--><!--wb-skill-end-->
+<section data-page-node-id="PFOdaT8bB0ypKgnb2UCoIg" class="blk">
+  <h2 data-page-node-id="Iq3neprgGQYQE6lRoGCZjD" class="h"><span data-page-node-id="21nFkiiuUzDJiEBYzQpgs1" class="num"><!--pnid:IfAUON9FrFjqpUqprGofGf-->二</span><!--pnid:TadL6vKqzSrme7R0A4VEZw-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="gt8gd0NT7GFw5V55RGJ8Ak" class="subline"><!--pnid:G3QqoOoS13mX4VEvkRO4zz-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="PxxCuH82P2EZGbFBH43sDe" class="tlist">
+    <article data-page-node-id="fBKJEEun9ZHwk8S0DTpqCP" class="task">
+      <div data-page-node-id="2zudpNqlHCUFT4ioplC5lP" class="th"><span data-page-node-id="klNQGGpXskVAzwAg8ercgu" class="no"><!--pnid:cfjf896ScgD5dbJUu1txlp-->01</span><h3 data-page-node-id="ZIKGDq1mjtUihnzeQouW9o" class="ttl"><!--pnid:uInxFW0hItNlRjWBVbcRNj-->首推默认</h3><span data-page-node-id="7BubSjXwLN0xAGM2uBCLBB" class="star"><!--pnid:NsolcHAxdso0HK6cWlOpId-->与一键体验入口一致</span><button data-page-node-id="r1Zt0HwlvHMgX999DyjntY" class="cp" type="button"><!--pnid:gsjONn3N9kbf0POa9YZ3md-->复制</button></div>
+      <p data-page-node-id="PxSYTrDkdBklwuor4yLZOQ" class="tp"><!--pnid:oz07CYbcPlaZuWbDjqVqH2-->广德那个案子一审赢了，33.6 万加利息。判决书、EMS 签收记录都在这，帮我把这个案子接下来的节点全排出来。
+送达日那点分歧（5 号还是 6 号）别糊弄过去，两版日历都给我，按保守的走。 对方要是上诉怎么办、不上诉我们什么时候能申请执行，两条线都备好。
+执行的材料清单和财产线索要提前备什么，也列给我。</p>
+    </article>
+    <article data-page-node-id="9xYl9SBJwqxeaAb1zRlOvJ" class="task">
+      <div data-page-node-id="qzwvDbk8gFnz8slAUGnfgD" class="th"><span data-page-node-id="vqk3YFZhdjKgKV5AYhXirt" class="no"><!--pnid:ZSeBrFGT7Pzl0wFjQ0aw0u-->02</span><h3 data-page-node-id="gsl6VbKXOOZDTljI58Utdt" class="ttl"><!--pnid:7Y1uUZMgagLEsXvKuzLn4u-->只核送达日</h3><button data-page-node-id="PL4clrd0sZWd3vpgW9zzVX" class="cp" type="button"><!--pnid:4iMBzLeQxsI9h1tBzTAEKI-->复制</button></div>
+      <p data-page-node-id="mDowRFfSyE5IMym1svkSmK" class="tp"><!--pnid:Rh0qTQF2pFRbvselNO1Xca-->只核送达日这一件事：把 EMS 签收记录逐字看一遍，签收人是谁、是本人还是代收、和当事人什么关系，给我一个结论或者「待核实」。</p>
+    </article>
+    <article data-page-node-id="PTca634oLEP5hrSFzBAv1X" class="task">
+      <div data-page-node-id="roETBHheiorzom7dqUSdYf" class="th"><span data-page-node-id="9JQ4kDgKlgPkOjchFKBbFm" class="no"><!--pnid:K4GhWmuCCFN0qO7KRehxLg-->03</span><h3 data-page-node-id="SW4W7UaPHyHfsbaITKII8R" class="ttl"><!--pnid:Ure8l442lbMFfWPAIOrbTP-->换成只排执行线</h3><button data-page-node-id="8bHeCP1DZvpkhS279laxad" class="cp" type="button"><!--pnid:LOPfSGYiU2KAN5SghPYotg-->复制</button></div>
+      <p data-page-node-id="Kc4U8ZxWPv2pmzSVvJUw6s" class="tp"><!--pnid:QVvjE35b2vrF2sFEi1g79J-->换成只排执行线：假设对方不上诉，从生效日到申请执行窗口关闭一共多少天，中间要备的材料按周排开。</p>
+    </article>
+    <article data-page-node-id="aICW5VTDz483ApQM7K33WA" class="task">
+      <div data-page-node-id="KmCfmhO7hvYaZGiHYkbxrS" class="th"><span data-page-node-id="Am2x6byr4HwAicNVI6zWQA" class="no"><!--pnid:RJRUUoDvL0F4GllBBPa3rq-->04</span><h3 data-page-node-id="zHDMlmCbj4FND1EkcdB4q0" class="ttl"><!--pnid:0eIJzz3hpq51L5zyiWTN3P-->一次排三个案子</h3><button data-page-node-id="cKhDfsNXyMNFRRgInkvJHT" class="cp" type="button"><!--pnid:XJL7vBAONJHvh9XPDog4GK-->复制</button></div>
+      <p data-page-node-id="yQUSZf3rwzBi5mHWS39uQ5" class="tp"><!--pnid:SI6J0y5LiK4BjhSNgG2RLF-->演示数据里还有另外两个在办案子的判决书和送达记录，三个一起排，最后给我一张全案节点总表，按剩余天数排序。</p>
+    </article>
+    <article data-page-node-id="fTxbshxSFSG6ZcvQDe116p" class="task">
+      <div data-page-node-id="90XHEoEjai5uc8R1nwtsXA" class="th"><span data-page-node-id="WZufwPEmIws8ct9hZROI66" class="no"><!--pnid:mHRK94JQ2IrXuiWTaCbre6-->05</span><h3 data-page-node-id="1KB7LD5eshD7wmcvQ36539" class="ttl"><!--pnid:mzzKfbiwoasjW2Au5cVkeN-->给老板娘看的一页</h3><button data-page-node-id="kW5nm4aFgv20DpqAnk2WHH" class="cp" type="button"><!--pnid:LG2qlbhdCg5f4LWgu3fJKK-->复制</button></div>
+      <p data-page-node-id="onmXOba6EWxI8y0MgKxdzV" class="tp"><!--pnid:9uZSDK8c4cPnktzjN7dclc-->把日历压成给老板娘看的一页：什么时候能递执行申请、递之前要备什么、对方要是上诉我们的时间线怎么变，各一句话。</p>
+    </article>
+    <article data-page-node-id="0p7WrhVtjp8GHmjI8q43c1" class="task">
+      <div data-page-node-id="YfBv9jlk2BNnmTeIMnYbm8" class="th"><span data-page-node-id="FV07OyCyPXnSHjEIdm7UT7" class="no"><!--pnid:TxGhnuvnzsZbAqTv6bFfQW-->06</span><h3 data-page-node-id="Kz4rkks6JqLVKmkArUlYRL" class="ttl"><!--pnid:0IgVaIsbuIDv7eiskSoAWX-->让它反驳自己</h3><button data-page-node-id="WKN56DWujSsrX3jgSSQAQa" class="cp" type="button"><!--pnid:a8LcsMXU9rxWEsBQDpXLQO-->复制</button></div>
+      <p data-page-node-id="hGXvQDm0uxluSWiqDyaqLU" class="tp"><!--pnid:bH7Lf2fMCTv3bqLBavfsaG-->你说对方上诉概率不高，依据够不够？把「缺席判决、未提质量异议、需预缴 6400 元上诉费」这三条逐条落实，说不清的就别下判断。</p>
+    </article>
+    <article data-page-node-id="iM8LWHpZqZHDNLnlwbPR5U" class="task">
+      <div data-page-node-id="d9q3aqf4VNc8PJNIZxaNp8" class="th"><span data-page-node-id="AsWplGrrDGdJ4IsMjCFpHY" class="no"><!--pnid:MAXqkKOxUWLXoNIxJQoual-->07</span><h3 data-page-node-id="wvlonabZgXskWGeUTLPClf" class="ttl"><!--pnid:BFkj1E5mqAdaoHubrH5NU7-->比对赢了拿不到钱的案子</h3><button data-page-node-id="lzJOP4dOLwpplSk1Ae1liK" class="cp" type="button"><!--pnid:IoGXUXCeTvfrSnrFuA7ZLg-->复制</button></div>
+      <p data-page-node-id="FXqWN1AwCHeW65gGb6ct8S" class="tp"><!--pnid:QmKC7sXMjEVze4rIPsWOOE-->把本案节点跟我们以前那些赢了官司拿不到钱的案子对一下：他们卡在哪一步，财产线索是什么时候开始备的。</p>
+    </article>
+    <article data-page-node-id="reyKWhtONSEHTA1RmE9poe" class="task">
+      <div data-page-node-id="5eMphrpp9JD8rWxh1gMWKz" class="th"><span data-page-node-id="mpiCR5k8Tr0azpHR5VFtgX" class="no"><!--pnid:Bgt6zOV5rYSkdDIycfGdh8-->08</span><h3 data-page-node-id="ppfBhcQrJh7ahKFwbae4Ri" class="ttl"><!--pnid:Qj02X7b4a8PtiV6IDML4rW-->对照节点清单做自检</h3><button data-page-node-id="1lSklbWMUhmLfsmbE5qlye" class="cp" type="button"><!--pnid:vq510lWPSHpOvgPvche9og-->复制</button></div>
+      <p data-page-node-id="YLrA1DXu9hC1lX78sixWw5" class="tp"><!--pnid:bJmLZmtaeeZfDDMIASKGpQ-->对照倒排清单把日历自查一遍：15 日、生效、2 年三个节点的起算依据是不是都点到了具体文件，哪几个还是空的。</p>
+    </article>
+    <article data-page-node-id="DQf1A52zcXj0acyJHlD6Kj" class="task">
+      <div data-page-node-id="yGGMC2bODpIYRWLMibkxX9" class="th"><span data-page-node-id="vsyy3IkmMlXTam3kuvvjL6" class="no"><!--pnid:cls0D32IM6Kt7fsmZuxJYJ-->09</span><h3 data-page-node-id="Qkj5h2PKwHB448efKK3EUL" class="ttl"><!--pnid:9i0sTxBX00kunu2Uw8RPs2-->折算成执行顺位影响</h3><button data-page-node-id="cATv5L29qSN6Dze1DlmskL" class="cp" type="button"><!--pnid:F2Pga8V5KlvuuwGYrcfshc-->复制</button></div>
+      <p data-page-node-id="VBBlDGWxld4DGHrqDLX7TS" class="tp"><!--pnid:Nb1ZKOc9Clu36T5oTx224y-->判决本金 33.6 万加利息 1.2 万，如果执行拖一年，资金成本多少？抢在其他债权人前面递申请，回款顺位能差多少？</p>
+    </article>
+    <article data-page-node-id="faPn0bEzV979jQqxXajUWG" class="task">
+      <div data-page-node-id="LuyNViKYoiAoRY1KVc8he6" class="th"><span data-page-node-id="xy886eEkQbGH5rsv142Pq7" class="no"><!--pnid:wqnuGBLlCuLtDZydSQk9g9-->10</span><h3 data-page-node-id="5u1tRRkTBMA5S3HzidDpUU" class="ttl"><!--pnid:fy67Pcx11cOuhMREHXyJDV-->沉淀成全案节点模板</h3><button data-page-node-id="rx60sP1IPgaErPkvfNhma3" class="cp" type="button"><!--pnid:RgQiUanzRXuKvgts0TnyLL-->复制</button></div>
+      <p data-page-node-id="9vTXqSU4ckZhoqC6ysbRi0" class="tp"><!--pnid:dsxCLdURbm1Q5fulFz2LGr-->把这次的送达锚点核实规则和两版日历法整理成一份全案节点跟踪模板，以后每个案子按案建档。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="xojLJ6mAnnnY6OtWaDdZnv" class="cta">
+  <div data-page-node-id="a68x2In1rZizd7fDloxe6j"><h3 data-page-node-id="22nhYH2kPDkMseWbqlGmeU"><!--pnid:ZaHEK9xgnd3KcLk4KoOhp9-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="pbR8lBCrwqQf8fuy3GMvJs"><!--pnid:z4rT1uOWxWmcyARXDmvLcu-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="b7Ni1GhWdK3kxA4NehPERl" class="btns"><a data-page-node-id="rRYEVHXPzYnY0G1cXa16dP" class="btn" href="#" id="ctaContact"><!--pnid:BN8VjaAclPC8WPdSh7Cz0T-->联系我们</a></div>
+</div>
+<footer data-page-node-id="W6vncrLUuFTUGcGITbzvZw"><!--pnid:yc2zA945RytbduNaFFGfNN-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 对外文书一律留人签发</footer>
+</div>
+
+<script data-page-node-id="51ZvCRvFmIdWGm9PbMr2jF" data-pnid-children="TJcIXYtlUB7STonqE06HwN">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="m1RPqGWEeVgFvuSLNq4B8P" data-pnid-children="ZDjbOGZLmb8GLwSPqH7zwn">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="dshxCnzbIwGqu8dj30GRKW" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="DigDDpJ8l68aPccGROMLn6" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="afPgHAUVoLyK3QF5T325rX" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="5svgcy8bK6MCZswfr0Op3O" data-pnid-children="tMEh2QmIDaGJAtuw0Xvbc9">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="QITQjX7k0XBA36c96szr1z" data-pnid-children="VfbCwhFpUAcFaRVrpEpX2Q" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

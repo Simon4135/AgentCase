@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="dgxIJZk7mhuOYonoyb5PRa" lang="zh-CN">
+<head data-page-node-id="Hbq0kR2VnHULqbfqXOHAcs">
+<script data-page-node-id="Titn6dRJyFDhVpjpNpX4LC" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="I6nb0juj3i1ijlSVBC8fvT" charset="UTF-8">
+<meta data-page-node-id="2Qu17pNlLuPhgfM1RtbXx2" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="EEqFBmLEKCDYlmdQDjG2oF" data-pnid-children="ZUcqrgVNFKQPIIgy31ScIY">开发信个性化与报价 PI 校验</title>
+<link data-page-node-id="hiMADn5EUutLODVZkvyOxj" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="4lngACUrqEBYugAS6toO1e" data-pnid-children="4siqiGLY4aCRtLKQGVav2y" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="8gv9xlBTpvxJ1sgFaZodZU">
+
+<div data-page-node-id="PnnjJ8nXTToBzPj9nFyBSn" class="wrap">
+<section data-page-node-id="sJbEyNeHlB89BSMrmEFbNq" class="page-hero">
+
+
+<h1 data-page-node-id="DEQRFrudxsqxIX53oEO1Um"><!--pnid:cvKehUWfNdmD6HwWYcQVt9-->开发信个性化与报价 PI 校验</h1>
+<p data-page-node-id="10g6svH0KKeMqZKVIyZwj6" class="lead"><!--pnid:AlIKUxqXGCtA0REA4Iwhu1-->开发信群发一百封没人回 · 报价只算了出厂价，订单做下来是亏的</p>
+</section><nav data-page-node-id="Ff3VcMyRbaJllbfEQVksFf" class="subnav"><a data-page-node-id="fgowzwo3R95euprE9RHQHd" class="on" href="#"><!--pnid:KN2nJtGE02g6oecTSSLP0x-->场景引入</a><a data-page-node-id="4IdhsbNTlhXK2Qi94RIUGR" class href="LiveDemo.html"><!--pnid:d5RaFf4wJxgtLczR3GAWJL-->Live Demo</a><a data-page-node-id="m4PUv2Y1SV4BfbOXGbItMK" href="推荐任务.html"><!--pnid:pTHB3PxNos1z30M1pmkVc3-->推荐任务</a></nav>
+<section data-page-node-id="Y7XGRoyjL0cGCTWrVRUPpy" class="blk">
+  <h2 data-page-node-id="q7VSx47YOVigZGqiwWxcNX" class="h"><span data-page-node-id="Y81T8AQroENZCpzyX0v3Rm" class="num"><!--pnid:iAxKSb7V8n6wvKUapRby8F-->一</span><!--pnid:guYotYPuVdRFj5rtyZtm3q-->这件事现在是什么样</h2>
+  <p data-page-node-id="zd2cgWPwya6utIwdmUxXXN" class="subline"><!--pnid:YkH1zaaOh5UGWZ4SemkjHQ-->外贸 B2B 业务 · 真实业务触发</p>
+  <div data-page-node-id="mcJvrZLieHWW8WODxbSSrK" class="card"><p data-page-node-id="yyDk45dzvQIQWtqdTZxIRc"><!--pnid:NClzbD2u9jE96njLSf7Fwn-->询盘分级与客户背景调查 分级出的一家 A 档德国采购商要 5,000 只 BX-500 的正式报价与 PI，业务员要出一封个性化开发信（还得踩对德国的上班时间）+ 一份不漏成本的到岸报价，PI 条款要全、别到时候清不了关或收不回款。</p></div>
+  <h2 data-page-node-id="f9RStMYne3b1x4JdfN2Bzy" class="h" style="margin-top:22px"><span data-page-node-id="YQkS9EtI1czPtZSOxrZrbL" class="num"><!--pnid:eJSvtqDeAj30U2jOPl9YwZ-->二</span><!--pnid:fZbnijmFcEYMiMujhlDD9y-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="8Leu3YWEucXYOWW3z8MPfO" class="subline"><!--pnid:Vu7ycQlH7gWhN4cy9APXOe-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="LmxU011Y16cwCmw7Z9fxt0" class="pains"><div data-page-node-id="Nn90nOOPUeO2v1sCKEHtTK" class="pain"><span data-page-node-id="ahkWINc1hBWFvZgNwmMWde" class="i"><!--pnid:jMMG4dxnymvFxn2Ja1GoNp-->1</span><div data-page-node-id="Gpr94z1xtdNhGhy9dGen7q" class="t"><!--pnid:9PUuWWS7YfNCRuYBIVuPYB-->开发信不个性化、不踩时区窗口就石沉大海；研究显示客户更可能在上班后 3 小时内查邮件<span data-page-node-id="zfTUK31RPQuik5TALhSwYT" class="src"><!--pnid:NYWN9VeLjxJwlCozkMAozJ-->依据 · <a data-page-node-id="Uf0bas7xKhNUv3hZgaFC4r" href="https://www.tradeindata.com/blog_detail/?AId=154" rel="noopener" target="_blank"><!--pnid:UF0TT5yPED3D3yFa3dpz9D-->外贸开发信与背调（Tradeindata）：客户更可能在上班后 3 小时内查邮件，踩准时区窗口能显著提高回复率；开发信不个性化则石沉大海</a></span></div></div><div data-page-node-id="BXfjjhXWfuX9BPtU4dq2dZ" class="pain"><span data-page-node-id="afJsyqsfaYxFmEKpOLwrAn" class="i"><!--pnid:bLCYaHV3hrNN5h9CNJ4cmN-->2</span><div data-page-node-id="hwUznNDGkM4UantnlQMyau" class="t"><!--pnid:iPPg5Df0SR0hEkFEbhAcTI-->报价只算出厂价，忘了退税、杂费、汇率浮动、运费波动，订单做下来可能亏本<span data-page-node-id="gnWl5BtNhP0bhmwAiobIsI" class="src"><!--pnid:0bpLYearAXYUFyvnTpKkJs-->依据 · <a data-page-node-id="Rg2Xu3CG1AjzpCMuLhYL6I" href="https://m.toutiao.com/article/7655531993303695906" rel="noopener" target="_blank"><!--pnid:nH9Yg8A8agv4tCzRo2FNoF-->跨境卖家利润自述（今日头条一线复盘）：月 GMV 5 万美元，扣广告 1.2 万、退货 4000、物流异常赔付 2000 后净利仅约 1800 美元、利润率约 3.6%，只算出厂价即下单是最常见的利润坑</a></span></div></div><div data-page-node-id="84UDHFJXykO07pmioG0m4N" class="pain"><span data-page-node-id="rGwZq9FaHQATYSQmdo94og" class="i"><!--pnid:lna5Lmf8inFMFpYLYBeiYh-->3</span><div data-page-node-id="gOaFCOfqfMGwJ68vUYsZiz" class="t"><!--pnid:hlfcCticKh1K81ibjlbz8u-->PI/报价单一个字母错或条款不全（漏付款条件、交易术语）就可能无法清关、产生罚金或引发合同纠纷<span data-page-node-id="ibjUGqMdIbYFSjG8E6Pd0R" class="src"><!--pnid:Znor3jHbVWP5BWSRuAeJrf-->依据 · <a data-page-node-id="6UrujdpDKnyyjhIuuPDUFK" href="https://shippingsolutionssoftware.com/blog/15-steps-for-properly-responding-to-an-export-sales-inquiry" rel="noopener" target="_blank"><!--pnid:0PJbA43TOiyb7TDvdVgdfD-->外贸询盘应答 15 步（Shipping Solutions）：回询盘前须先做受限方（restricted parties）合规筛查；PI 须含双方联系方式/价格条款/付款条件/交易术语/产品明细/交期/银行信息，过于简单会引发合同纠纷</a></span></div></div><div data-page-node-id="qBKGWkM48z4vYGmBrIjsjO" class="pain"><span data-page-node-id="PeT9bRjxQRpjLYxbDNvTY0" class="i"><!--pnid:wxRBX67YabjVBliTYkbLj6-->4</span><div data-page-node-id="ZjnO9x5WybwUE4EeTE8tPL" class="t"><!--pnid:3BOP0ol7OG71lNdA6wwtkv-->混淆 FOB/CIF 责任划分、为成交接受高风险付款方式，收汇风险大<span data-page-node-id="sGrl3PvtlngNSClY7dlXas" class="src"><!--pnid:sU3o0IXf1GmlvJmu4v8IVw-->依据 · <a data-page-node-id="fli7tgmzTiaG1NgSypGkoV" href="https://shippingsolutionssoftware.com/blog/15-steps-for-properly-responding-to-an-export-sales-inquiry" rel="noopener" target="_blank"><!--pnid:FOhbC9BGzk7FcsbPrO8GQz-->外贸询盘应答 15 步（Shipping Solutions）：回询盘前须先做受限方（restricted parties）合规筛查；PI 须含双方联系方式/价格条款/付款条件/交易术语/产品明细/交期/银行信息，过于简单会引发合同纠纷</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="Ni3eyJaIPSAvx2TBmbHiVw" class="blk">
+  <h2 data-page-node-id="GTOcUJ34I3AYflgvoglnBg" class="h"><span data-page-node-id="vWIxzRDjKhDns09YpjVzid" class="num"><!--pnid:LuMvdc6kSH9t9m8iOfNtDL-->三</span><!--pnid:U0zM53qtcvyxlLfVlZ6X8t-->换个做法之后</h2>
+  <p data-page-node-id="isafq9BvbUfDVfhDGWndmj" class="subline"><!--pnid:XQVMsinqufFXU39o38cjKE-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="oAObyPEKIPEcAeqf5FYhZ4" class="cmp">
+    <div data-page-node-id="c2sdFjttO6QKT8EfHH40to" class="old"><h4 data-page-node-id="GDQnt4Tkj0HPKrNsaWv5Jh"><!--pnid:MA2pLPtkzvR0zGo5zAb0qy-->✕ 现在的做法</h4><ul data-page-node-id="fxUjAF7ma8K1lfM0eALr0S" class="list"><li data-page-node-id="84Z3NEnKoJUaA7IyYxsF1W"><!--pnid:7ZaUlnz8jFGw9sbCIzoI8w-->开发信不个性化、不踩时区窗口就石沉大海；研究显示客户更可能在上班后 3 小时内查邮件</li><li data-page-node-id="kSYqxYx71Y7lAUTJe3RiD2"><!--pnid:o4jCfsQkkVmriRa9U51PFL-->报价只算出厂价，忘了退税、杂费、汇率浮动、运费波动，订单做下来可能亏本</li><li data-page-node-id="7ZfDG3mvdzHDehCbRXjPC6"><!--pnid:pMQS4NbQ5lcWMrPI0J7MiT-->PI/报价单一个字母错或条款不全（漏付款条件、交易术语）就可能无法清关、产生罚金或引发合同纠纷</li><li data-page-node-id="6Zk1btvzHKwKGKtnY5SWG1"><!--pnid:loSfBpisNNtWKWEshgf9hk-->混淆 FOB/CIF 责任划分、为成交接受高风险付款方式，收汇风险大</li></ul></div>
+    <div data-page-node-id="minKdf74wHcYY51aNLYoaz" class="new"><h4 data-page-node-id="bzMJFa1ySKUMnabjq4IrgW"><!--pnid:NkuQ0KLi83J55cdv7S9gK1-->✓ 交给 Agent 之后</h4><ul data-page-node-id="kZjE75Mxc00lfS4cbacW4Y" class="list"><li data-page-node-id="GmTB8Urw7axSm65fiXWvde"><!--pnid:bHotbqeVRUw6kzLrglUlmF-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="7z9phqmMqyS9NidsegGFDx"><!--pnid:qGAoUWlSGpJT8g4McH4Emk-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="wHadFjoSW99B7xem8j6E08"><!--pnid:HZEm1ckeaL6E3B84Ct59Ac-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="DyxCW1vYpuncoFUE9AJFi1"><!--pnid:zz5J7j8o7hcZW5R6EzPNR7-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="jIp7L8CotmYAixcgDKrGjn" class="blk">
+  <h2 data-page-node-id="DA9jV5r44fLSh9ARJqZY9a" class="h"><span data-page-node-id="M97AAukAhTfJvGoXtYu0wB" class="num"><!--pnid:y3aAYHwml2eix7ZZTKZAch-->四</span><!--pnid:Ip6P5J3Wi3eOuB1QjJOosx-->场景闭环</h2>
+  <p data-page-node-id="Vz3NxusxSgLMfd1aVrdjdS" class="subline"><!--pnid:KdBNWfIuGwgnxFbyvJVqbV-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="OTKVJI5CykQUNWvb4yEPRC" class="flow"><div data-page-node-id="PkqVXhU5jrdOOH95HUXhXF" class="step"><div data-page-node-id="RWM523l5AIauoXeeCCZ8ie" class="n"><!--pnid:U1bFWa7pG56RqFfju1cIQa-->第 1 步</div><b data-page-node-id="n0cIGHBrkgf7SLxf1t81Z0"><!--pnid:uy308VS7OfE94zGrVAb2iF-->要素校验 · 先判断报价成本项齐不齐</b><span data-page-node-id="46VKY01eP4hJ3nQSiRxqBA"><!--pnid:Rh3ofwwVGM35urZ8J9QTlD-->检查出厂价/退税率/运费/汇率是否齐；缺项标为待补并说明对报价的影响</span></div><div data-page-node-id="UE3zdKVxdu1MprqzXUffto" class="step"><div data-page-node-id="yULKdy01SjJkL6JoLkARwn" class="n"><!--pnid:DzkSKR1Y7GWMLESTZ201kw-->第 2 步</div><b data-page-node-id="oGZCWuLSYzq5TfSriDSQjn"><!--pnid:k3A96w6kcq8DCqRdKFC3gX-->到岸报价 · FOB/CIF 双口径折算</b><span data-page-node-id="gXRI13SvTe6dHAqI1KZo3c"><!--pnid:s6uU1hg207PCQ7SvVbFMnc-->按 FOB 与 CIF 分别算到岸单价，退税与运费单列，标明汇率口径</span></div><div data-page-node-id="HCYXX53t5RfDsU4ssFO4HF" class="step"><div data-page-node-id="Vfqpqpp8nch6a8S6KYSZzY" class="n"><!--pnid:TpCWoE1sRkiEJ8W1ntbzRl-->第 3 步</div><b data-page-node-id="iLJWyTU0rH10QGDVDw45uA"><!--pnid:RPnmg20yNfBknjogXJSJsg-->PI 条款校验 · 必备栏与责任划分</b><span data-page-node-id="VPQ4fYQ1cPQvOLclE9107r"><!--pnid:58UONNkjQVEzMADDpGgvDL-->逐项核 PI 是否含双方信息/价格/付款条件/交易术语/交期/银行信息，标出缺项与高风险付款方式</span></div><div data-page-node-id="Zhquj4jZ8fwEjOLZS06qEh" class="step"><div data-page-node-id="jSDg47L7W9ANF98u7Ui1WN" class="n"><!--pnid:HKh1o10yDt0tPgaYYncmY4-->第 4 步</div><b data-page-node-id="SfhWCRZiLw7kaXjGjgxKBO"><!--pnid:oQam4t8XPp2NPpeQhbTkJr-->开发信个性化 · 内容与发送窗口</b><span data-page-node-id="kGZjVaeV9EB3xszj402pov"><!--pnid:3jKdRB2TQsYw0KKE185VSe-->结合背调线索个性化开发信，给出对方时区的建议发送窗口</span></div><div data-page-node-id="EheoJdp152SUFxRoVe95js" class="step"><div data-page-node-id="clcWHdGh6vuLvmJEkqYFbe" class="n"><!--pnid:csMMMozSjXFt90wZlcOtCL-->第 5 步</div><b data-page-node-id="6X9XHjcXb2GlO3Qyyrlk4N"><!--pnid:C6GI2vbPmzuMfLooF1vqd6-->留证与签批 · 生成报价 PI 校验表与开发信初稿</b><span data-page-node-id="ehFlyl4Dngj9VGDZ1cyKu0"><!--pnid:ZxL14jZrxFhLOiS5gaXqMV-->到岸报价 + PI 校验 + 开发信初稿，含编制审核栏，报价与签署留空由人定</span></div></div>
+</section>
+
+<section data-page-node-id="s0BUOjpcUN0OCq7crVyHBu" class="blk">
+  <div data-page-node-id="5o03X8cf4MxWCQ9726IW84" class="g2">
+    <div data-page-node-id="reYQ1ohodA0oLjQDbRZewM" class="card"><h3 data-page-node-id="EWAEKHvXcT4FCfjk6l7Crw"><!--pnid:7RFYIsriv08X4eqRCSewLn-->要准备什么</h3><div data-page-node-id="7VLjrUcm1ACOyb0uSFaxnv" class="src"><div data-page-node-id="0L7KOdgVhZLJFkUhQJgm4n" class="fn"><!--pnid:DshBzC9g0bZqDmSzq4q2jj-->BX-500 出厂价与产品资料</div><div data-page-node-id="FtTPcBrmk6IKGCZd33vq9N" class="fd"><!--pnid:BO6pCfotrIIkTyoF1IbcZR-->B2B 批发价梯度、规格、认证</div></div><div data-page-node-id="DS4DYratVAw2fMFcYzu9uZ" class="src"><div data-page-node-id="3t7RWI3rTRuUBFqPO9LKJ4" class="fn"><!--pnid:HZ8XSUTxSA7lLVcNqDxRjY-->出口退税率与实时汇率、海运费表</div><div data-page-node-id="RsiblRuxtBWKVeF7JQMayL" class="fd"><!--pnid:ynoYpfa6FS3uTzxD96lvtO-->报价只算出厂价漏掉的就是这些，星标：报价盈亏的关键盲区</div></div><div data-page-node-id="yFvSgLwQzMxcFvqKT1WZCI" class="src"><div data-page-node-id="oYQxaFiFLnMKR8PhJJzBwa" class="fn"><!--pnid:OPOk4gNJpD97QQ3Nfnehb9-->PI 模板与付款条件清单</div><div data-page-node-id="cG1MHKTzD4l4Zrp60Of2LC" class="fd"><!--pnid:7rbUDAfiGLdoq8LQFxXy4z-->含交易术语、付款方式、银行信息必备栏</div></div></div>
+    <div data-page-node-id="SksAgqP1kMT4c7Y0PlbwD2" class="card ev"><h3 data-page-node-id="f3t0wF4ZICOjuxKbwWI2fX"><!--pnid:uMvqR3vtJYbaCsIcwtmb53-->为什么这个场景值得做</h3>
+      <p data-page-node-id="itfRptiVknTr3Pl6hZL5Uh"><!--pnid:ieiZMbQ4c0aiNi9j4BwSBt-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="7xp5iLHYiZcu7qC5bWVUCq"><!--pnid:s2iqYvGUj9oSWhuudpMECD-->8.8</b></p>
+      <p data-page-node-id="a1z6AplIckmTDhDG6tiHt9"><b data-page-node-id="6AdKSI4DOXCGVxHcNDgPQf"><!--pnid:O4LYp6Z4pjgxN56JUqGntz-->最大差异点 ·</b><!--pnid:76y4CAczU9cD9Yq1BZDIG9--> 不要求先把成本项整理规范。出厂价、退税率、货代海运报价、汇率原样扔进来，由 AI 按 FOB/CIF 两种口径分别折算到岸报价，每个成本假设标出来源。</p>
+      <p data-page-node-id="c2oy0o4cpA46sPCmcXtpCO" style="color:var(--ink3); font-size:12.5px"><!--pnid:2ApGQoKsRHBiVOmeAjE5Th-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="Z3axGOKRMN8ALJMAkpsEvc" class="blk">
+  <h2 data-page-node-id="pl3mOamT55rmvboUXlSUuL" class="h"><span data-page-node-id="9BuKqgA1MXoCVoF0unH8dm" class="num"><!--pnid:SCgvY5Fw0TACbiQbqxLGIF-->五</span><!--pnid:nc5LbZChflfvHRNgGJ7adg-->会产出什么</h2>
+  <p data-page-node-id="6Zp6GfwAWhFDit7dA0lzAs" class="subline"><!--pnid:UU6FZurYD6iCVD5IA1Dk2b-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="VSiC29DeWPnt8Ht70WsrK5" class="outs"><div data-page-node-id="bkjVI2Qf6lwncOSbEZeHHe" class="out"><div data-page-node-id="91hMMQrCmglO55ksLayUKL" class="on"><!--pnid:ZZhamqHkt9VbvqJRQfTjUZ-->正式件本体</div><div data-page-node-id="MWwp7poqDWKQvxJbLzC8QY" class="ot"><!--pnid:G4fuIHvpjmjK69uR6MfrsW-->开发信个性化初稿.docx</div><div data-page-node-id="knSX1hCD0SaQ42Wh0Sc7fQ" class="od"><!--pnid:oXBqv7fbyJOVWow3aujitD-->结合背调的个性化开发信 + 建议发送窗口</div></div><div data-page-node-id="vt4f4w4PCg3MoVNxwKIXCR" class="out"><div data-page-node-id="Y5OrWj6ItOUOI6tBFfsbpb" class="on"><!--pnid:WDNFhs64HIbU82rtGPialh-->正式件本体</div><div data-page-node-id="ZmkKGCWpgOTXf7mYKujI1L" class="ot"><!--pnid:H8mCooWBq7uHpCji53bs78-->报价单PI成本校验表.xlsx</div><div data-page-node-id="ds24ZG0EUIO6IUMCIJyRdb" class="od"><!--pnid:DkWmqyKupre8vJd7lJxsf9-->FOB/CIF 到岸报价 + PI 条款校验 · 含编制审核栏</div></div><div data-page-node-id="QP1ciuOWiXUbN4xZstQFgL" class="out"><div data-page-node-id="mD9zCpcQ4JNI9f1h3pKWpR" class="on"><!--pnid:zAE13rIFo1Vokd3goPOwls-->可派发清单</div><div data-page-node-id="44WWLqPssbtmLWhLtQr9dZ" class="ot"><!--pnid:H5OiddHMvUk6psRu4EYOPv-->报价成本假设清单.xlsx</div><div data-page-node-id="vx5w9tjDCAgXJYo0DKguyS" class="od"><!--pnid:EkrjO2gB5g2mGKgjMeggpe-->退税率/汇率/运费等成本假设 + 来源 + 待补项</div></div></div>
+</section>
+
+<section data-page-node-id="I6OTjUK4vOdhVFOqusEwAY" class="blk">
+  <div data-page-node-id="OQEOaaeSRZ3KMJm5LQ1wGs" class="card warn"><h3 data-page-node-id="8fQkHO4HKyNAu5AVIXdcYo"><!--pnid:EJ2iCuFfhfWXT0WMXhYDmA-->这套东西不承诺什么</h3><p data-page-node-id="4tJcxiBX19hHwzctQryKHI"><!--pnid:4IsP2mbnpQCPoP2cidA7Vm-->不做什么：不替客户拍板报价与付款条件、不代发开发信与 PI；不承诺开发信一定有回复；报价成本以你提供的退税率/汇率/运费为准，缺项标为待补，签署由人。</p></div>
+</section>
+
+<div data-page-node-id="4WX7DPTOcJRTyD7JEMeSj7" class="cta">
+  <div data-page-node-id="nkyRbZMQWxXgZ8IsZmHkiK"><h3 data-page-node-id="zo9cyn60T6eSlYqMQkywkK"><!--pnid:NrL3pC4BWhUMC7OQqVyKeU-->想看具体怎么跑？</h3><p data-page-node-id="pjj6hBPSAGbkm9djlhWhif"><!--pnid:aEKuvA0jaaIQC0EyN3IfSn-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="2oELuDWP0llx4cC2QshdOQ" class="btns">
+    <a data-page-node-id="wVWD6ipyQhKnCfeqxkZQBJ" class="btn" href="LiveDemo.html"><!--pnid:LEGfTYmmyw8j0t9nTU14vA-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="ipptzFtU1PnJQjWPJTYTsG"><!--pnid:koBtJO4ak6DFsXfCe5gLEt-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="QRUQOVzAwUkYE9VaMfwAs2" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="NjBFggEbrqDwvbW65Q8kiV" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="g1Ebr8PemtTJt22hjDYJIK" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="DJddXt9NTWkGYpPU2MIMB3" data-pnid-children="WCBeYzRPOwj2nzoRr9uuri">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="fJOMxkr75s3R8Mxwq1t95y" data-pnid-children="XGRCOCls8gjAm2y8uUkNUe">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

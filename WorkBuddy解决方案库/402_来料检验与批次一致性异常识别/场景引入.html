@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="tWEoGXqoqEqUcw5UHwUXqu" lang="zh-CN">
+<head data-page-node-id="XjsOB27biTFS8g3heD2IAj">
+<script data-page-node-id="O0mxoYG4OXb9zjnY1tI730" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="PCakEkIHWvMcpS5gyFgFxD" charset="UTF-8">
+<meta data-page-node-id="usNOBcFyiO0OkA5SBnc12X" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="ep5xYJMIVJXaY7Hc2dIetg" data-pnid-children="9s1nM3pjvncXC44333X8MC">来料检验与批次一致性异常识别</title>
+<link data-page-node-id="9hZJSCnFoHOGqf76rpzpcu" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="4wvrDmJSN8J7qOVQtBsz95" data-pnid-children="2YxzFCBlyyQno7oeuvC4i9" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="uhjnNIoXgWvpHwRIRiwQbW">
+
+<div data-page-node-id="dtpbkYOtwfSVETEi0Tuskn" class="wrap">
+<section data-page-node-id="8dXI65BwtDhJhLobFJj1Z8" class="page-hero">
+
+
+<h1 data-page-node-id="sxxoCJuJ0hiBGF2HrvcptP"><!--pnid:Lu3HCCHejgnK52bSShT3xB-->来料检验与批次一致性异常识别</h1>
+<p data-page-node-id="l2y9xJfOFXGcUqhxkoy59l" class="lead"><!--pnid:crngSqrLlvUtUZEUDWFbRG-->供应商的 COC 上每一项都合格 · 问题从来不在那张纸上，而在没人拿它和外包装标签对了一遍</p>
+</section><nav data-page-node-id="MLvcILBrfeSX06j2S5nlIg" class="subnav"><a data-page-node-id="nsZPF7zmPAnF0CrtuVAY4e" class="on" href="#"><!--pnid:0Pkkkiw4mL10XhcmGtmGud-->场景引入</a><a data-page-node-id="raVOByf51DXAR6fWLSBo6p" class href="LiveDemo.html"><!--pnid:EgjMx1LBW9cydEHIgFUM1v-->Live Demo</a></nav>
+<section data-page-node-id="uiwwb5NoUFa2RbBLXmQxm9" class="blk">
+  <h2 data-page-node-id="H5Cbyq8OIaSTtD4IVFcmis" class="h"><span data-page-node-id="4NZ75o2uLq0k5yuZDm6lRW" class="num"><!--pnid:UlzYXFawa0OnZ0IwkyRq5L-->一</span><!--pnid:ZdSfFLwlLPXEiG1P6OroA5-->这件事现在是什么样</h2>
+  <p data-page-node-id="omWWAqC1wL71eh3EnYLJr3" class="subline"><!--pnid:SMmBoAFHHVPywPddwTK2lF-->来料与出货质量工程师 · 真实业务触发</p>
+  <div data-page-node-id="ujlx2xjCUT549OfLSVAL8l" class="card"><p data-page-node-id="q26DtQomsF1JdUDgUnZ4Wr"><!--pnid:JAKb5VdVJYGattGKG3xB8V-->2026-05 到货的 B-2603-314Ah 批次共 8,640 只，COC 上写着 OCV 3.285V±5mV、内阻 0.26mΩ±3%、外观全检合格，生产周次 2026-W18。仓库收货时扫码登记，发现外包装标签上同时出现了 W18 与 W19 两个周次，而 COC 上只有 W18。按本厂配组规则，同一 PACK 不得跨生产周配组。这批货下周就要投料，问：能不能投？</p></div>
+  <h2 data-page-node-id="IrhsIyDZvGWTb9M7Vtaii2" class="h" style="margin-top:22px"><span data-page-node-id="T50ibvSO04AHd1okuVAaFP" class="num"><!--pnid:5ZQLLQ19ChOMI6lPB6f6QK-->二</span><!--pnid:RSCTjFeE7xlCE1UmE3zH6Y-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="aZrtEbHGgUYiWDOBxIuQBu" class="subline"><!--pnid:ELYIBan8tD5t1uWklXQlhn-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="1LQ767B5H1sioG1SrItoMV" class="pains"><div data-page-node-id="7qTCcODKi7UsC4Ftblocze" class="pain"><span data-page-node-id="y9A28EJYKtlQQk9PqiTza9" class="i"><!--pnid:QxlpI6A4smjRPRWgEP5D2i-->1</span><div data-page-node-id="mxkc8chS6YU3xR2mGRSDAa" class="t"><!--pnid:E4VGB6fKpoql8yRvBrBfOm-->采购 280Ah LFP 时供应商报 DCIR 0.19–0.21mΩ，自检 2% 容量全部合格；400 次循环后 BMS 报串电压不平衡、热成像发现 5 颗电芯比邻居高 8–12℃，事后实测 DCIR 为 0.30–0.35mΩ —— 根因是同一 PACK 混用两个生产周且未重新配组，损失约 9% 可用容量并需付费更换模组<span data-page-node-id="vW9VM6vHkgqKO62nhvfs0O" class="src"><!--pnid:TiTCsNrue0kFh2mgaySdo2-->依据 · <a data-page-node-id="cr6FFtdFividnvNhfOvYdM" href="https://dlcpo.com/grade-a-cell-definition" rel="noopener" target="_blank"><!--pnid:BoURgQSKxBugBVDtbnhKJ0-->北美集成商 1MWh 项目案例：采购 280Ah LFP，供应商报 DCIR 0.19–0.21mΩ，自检 2% 容量全部合格；400 次循环后 BMS 报串电压不平衡、热成像发现 5 颗电芯比邻居高 8–12℃，事后实测 DCIR 为 0.30–0.35mΩ —— 原因是同一 PACK 混用两个生产周且未重新配组；损失约 9% 可用容量并需付费更换模组。同文给出关键参数 Cpk ≥ 1.33 的判据</a></span></div></div><div data-page-node-id="ORu2PMxiivJcbHTtuj9cdQ" class="pain"><span data-page-node-id="uJo8WbBOJOftygdSCWsOJK" class="i"><!--pnid:jTx4bXdLMJEOLWWrLCqva2-->2</span><div data-page-node-id="XoZKU2OOIH1sNrInkCTwtS" class="t"><!--pnid:S7jwlNpRTVu3c8LtzZLDgc-->供应商 COC 齐全、复检 OCV 与内阻合格即放行，三个月后客户现场32 个模组中 4 个容量异常衰减，拆解发现 K 值离散度差近 4 倍，而这个参数 IQC 根本没测<span data-page-node-id="2apH1KiDx17lYcZedfrGpw" class="src"><!--pnid:LYnLqvtMmaNfqEJ457hOpP-->依据 · <a data-page-node-id="E7O9DEtZOBtRcmjMtsrS5S" href="https://view.inews.qq.com/a/20260318A01TWY00" rel="noopener" target="_blank"><!--pnid:WwCRppIZVjKIt1QHZDc96Z-->某工商储 PACK 厂质量总监第一人称自述：供应商 COC 齐全，复检 OCV 3.285V±5mV、内阻 0.26mΩ±3%、外观全部合格即放行；三个月后客户现场 32 个模组中 4 个出现容量异常衰减、BMS 频繁报均衡故障，拆解发现该批电芯 K 值离散度极大（部分 0.8mV/天、部分超 3mV/天，差近 4 倍），而这个参数 IQC 根本没测。原话：来料检验的盲区就是产线质量事故的导火索</a></span></div></div><div data-page-node-id="bRFTlfplKSdnEGt71L40wl" class="pain"><span data-page-node-id="W4PFQZFfOwB4byn8hS3s6P" class="i"><!--pnid:vjZwVmPyfue561l2J6Pr0U-->3</span><div data-page-node-id="fUZzulr1rhimesXUSXXJFD" class="t"><!--pnid:VV8y7lGsjdGY7T9KhapBOM-->IQC 来料检验清单的标准五列是检验项、检验方法、检验频率、判定标准、不合格处理，关键项含外观、尺寸、电压、内阻、电压差、内阻差、容量、容差、环保 RoHS —— 九项里没有自放电，也没有配组周次<span data-page-node-id="Ky8AcxNTpQMVmc3dvpVQvw" class="src"><!--pnid:HPTTq3DdTfbtIeOWv56U3r-->依据 · <a data-page-node-id="YyuZLSAnvzt5qzNt3lqDNN" href="https://new.qq.com/rain/a/20260531A04RZT00" rel="noopener" target="_blank"><!--pnid:CVohPyPeZkZ8eSJhrFL6Xe-->电芯来料检验清单的标准五列结构：检验项、检验方法、检验频率、判定标准、不合格处理；关键项含外观、尺寸、电压、内阻、电压差、内阻差、容量、容差、环保 RoHS</a></span></div></div><div data-page-node-id="ZjhC6AW4YV2Eg3Ob9e1wVf" class="pain"><span data-page-node-id="LD5mE9JgVTrUWRkDcbDsWH" class="i"><!--pnid:tapIb9pZ3YfUgL97ET6Bha-->4</span><div data-page-node-id="aUwjPuawdm5qqt1hN0FZ4F" class="t"><!--pnid:ku2EG0KOjOweKUdIeeviEi-->来料检验报告要跑检验员、审核、批准三级签字并保存五年，还要判定是否要求厂商回复《供应商品质异常联络单》—— 流程越完整，越没人去怀疑那张 COC 本身<span data-page-node-id="5Iw5fzXPk6E4CaSyV1Kdmf" class="src"><!--pnid:5UAnGa3HVGu17VXEvlIwko-->依据 · <a data-page-node-id="qFsvBh437JZ2KHM0d8tYqc" href="http://www.bodocs.net/doc/2a7932959.html" rel="noopener" target="_blank"><!--pnid:sdIgjNzpyum1HTXVTQyUVb-->来料检验报告模板：检验员/审核/批准三级签字与日期、保存期限五年、是否要求厂商回复《供应商品质异常联络单》</a></span></div></div><div data-page-node-id="hpm0hTQe9DfHgavdthAg7B" class="pain"><span data-page-node-id="P69HdWMyFjownku7fFMW0s" class="i"><!--pnid:wfBs80Vn72wPq7iULHQ1qb-->5</span><div data-page-node-id="M34fJajwV9qwnt2lWl34wa" class="t"><!--pnid:T4W8sV9FpBZMZD2KK9oSeV-->2026 年 314Ah 电芯从 0.31 元/Wh 涨到 0.365–0.42 元/Wh，至少 7 家中小电芯厂停产或减产 —— 供应商在产能紧张时混批发货的概率和电芯价格同向上升，而 IQC 的检验项没变过<span data-page-node-id="BUKng4sd5fFMLes6WSFslP" class="src"><!--pnid:8hv1zHcG6ltHmgNoaMO3WC-->依据 · <a data-page-node-id="ubmWD4qKV0M55DtlwAp7hd" href="https://m.toutiao.com/article/7672639895969530368" rel="noopener" target="_blank"><!--pnid:66eA2OiKbdKHQRYTKYWDNv-->314Ah 储能电芯由 2025 年末约 0.31 元/Wh 涨至 0.365–0.42 元/Wh，部分电芯厂自 2026-09-01 起加收 2% 消费税、2027-09-01 升至 4%，价格联动机制按上一月度碳酸锂均价调整；中小电芯厂至少 7 家停产或减产。集成商痛点从怎么压价变成怎么把涨价传导进合同</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="9YYb1jH7Wxse5K218aKPVw" class="blk">
+  <h2 data-page-node-id="D7KlaQtv5KwpVqHAsPL10E" class="h"><span data-page-node-id="vRHMvXutEXOldOMmSq9FIw" class="num"><!--pnid:ryObd3hqiENR25OwkwZGTf-->三</span><!--pnid:F5nlcbt29b0FMacdQN6Tmj-->换个做法之后</h2>
+  <p data-page-node-id="ombOTSKmGNo85EK4Ql4Bvf" class="subline"><!--pnid:vz5OsD8RbWibkLgVL211r5-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="RrLRPfFT1oFCjlMeMWJgAx" class="cmp">
+    <div data-page-node-id="l8LNoddQHHzMuMvUe1wTmD" class="old"><h4 data-page-node-id="NpbrFeGOfzypehOt3tIXCU"><!--pnid:YXD9QUDGTix2F8NxvZlD5y-->✕ 现在的做法</h4><ul data-page-node-id="FD2pcICVwFHW3F4c0jmVNR" class="list"><li data-page-node-id="Vx8POzwKnlmHN2pO9UmzPl"><!--pnid:4kdjbTWU8EFv1ygoM9Sjzj-->采购 280Ah LFP 时供应商报 DCIR 0.19–0.21mΩ，自检 2% 容量全部合格；400 次循环后 BMS 报串电压不平衡、热成像发现 5 颗电芯比邻居高 8–12℃，事后实测 DCIR 为 0.30–0.35mΩ —— 根因是同一 PACK 混用两个生产周且未重新配组，损失约 9% 可用容量并需付费更换模组</li><li data-page-node-id="qzoXenOvW97W8OOviY3lI2"><!--pnid:mb40tCNJOXfYkR6koYtLUz-->供应商 COC 齐全、复检 OCV 与内阻合格即放行，三个月后客户现场32 个模组中 4 个容量异常衰减，拆解发现 K 值离散度差近 4 倍，而这个参数 IQC 根本没测</li><li data-page-node-id="Muog5ihoIUR7MKc2wfSnDb"><!--pnid:gsj5ZiuqnrNlHoZ2rpqt6o-->IQC 来料检验清单的标准五列是检验项、检验方法、检验频率、判定标准、不合格处理，关键项含外观、尺寸、电压、内阻、电压差、内阻差、容量、容差、环保 RoHS —— 九项里没有自放电，也没有配组周次</li><li data-page-node-id="x425yI7XYMLU01r8BcwlmZ"><!--pnid:LqnagbJ8IUqQWorR6LgY8G-->来料检验报告要跑检验员、审核、批准三级签字并保存五年，还要判定是否要求厂商回复《供应商品质异常联络单》—— 流程越完整，越没人去怀疑那张 COC 本身</li></ul></div>
+    <div data-page-node-id="TNU25veKfCzzBOnAe92Ybw" class="new"><h4 data-page-node-id="QDT0feeq3NlzX7F6seY375"><!--pnid:sKmFmRC41FXFMsKbfuvDou-->✓ 交给 Agent 之后</h4><ul data-page-node-id="L7rEecwFzl3TzLmjxWh2DS" class="list"><li data-page-node-id="r9T2wj8wMfQmgOdhgox3W0"><!--pnid:ZOHpErePBag6I4N6mTebCk-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="WMld5XMbeSRmJEiOz4ybdn"><!--pnid:tGTy9JVqel56qyZsOoJaZ4-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="xQjbsl9mPode0vo01Vm9mS"><!--pnid:oKv2gfDfWIHAZPRYp6701D-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="7SW6iBzk3o75NCdfoZpcOF"><!--pnid:iOwcLV1VTabQhQ1fMutoga-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="0An4lzzozlqkXMKyJ8mkBK" class="blk">
+  <h2 data-page-node-id="wM039HGMSuTG4TkZAcVUPk" class="h"><span data-page-node-id="pM0JFdMmKHwa0h0d63HH9q" class="num"><!--pnid:PwH97Ds6djX9tGG0fcaOQ5-->四</span><!--pnid:RZOJzPMEKvuDSQk29VE17P-->场景闭环</h2>
+  <p data-page-node-id="FetmGl7YoFkzXsegiplSNb" class="subline"><!--pnid:oCfC789hV5IYGvVbSq2qQi-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="mXEDEVhtJM6dKBMAAPJANt" class="flow"><div data-page-node-id="noCPoT8vXDtTDwt1DBl2V0" class="step"><div data-page-node-id="uCCbEzBH8M6F0HNVQPXAeK" class="n"><!--pnid:rsIsRGwXPdZ0PjODwDfIGR-->第 1 步</div><b data-page-node-id="qhfgBDfK2xIQbABmVOZ0Zm"><!--pnid:2IY8EFg0H8nBLfhzZ3BB9a-->四方对齐 · COC × 标签 × 扫码 × 配组规则</b><span data-page-node-id="kvM89IJZYXFJ40I83Lop4m"><!--pnid:DZgxYVYyUyo7beySkKxiKy-->逐只比对生产周次，标出 COC 与实物不一致的位置与箱号</span></div><div data-page-node-id="dDAZFvSbNIlgbmTimwIpnn" class="step"><div data-page-node-id="xMnBtmfpXJDfN5U0BZFzER" class="n"><!--pnid:XKt2kyTSgnRJridotkxfzp-->第 2 步</div><b data-page-node-id="3R0O1iSd0WHxBN5YphywrC"><!--pnid:A8W9i7Ja8SRBNvahxxDhUd-->盲区扫描 · IQC 九项之外的三项</b><span data-page-node-id="QpMdyY9UbKHmbfcRLRpZxl"><!--pnid:jDoZd8Vti0cURDxleZNkZT-->K 值、DCIR、生产周次 —— 三项都不在标准检验项里，逐项给出是否为盲区</span></div><div data-page-node-id="rGazRPOkVVIIM1YUlH9gNR" class="step"><div data-page-node-id="toPKSQv4WNJT6Ka7q8yagO" class="n"><!--pnid:UX0RyL5hsFfuyoN6XmPRjN-->第 3 步</div><b data-page-node-id="Px9rTxFRNHkXyMfDFbwqH9"><!--pnid:LIkykOovE12A1QuGTrEHmg-->配组模拟 · 按本厂规则跑一次能否配成</b><span data-page-node-id="5axXDlAAsZPb2tN9L9OlXB"><!--pnid:jA8w4mREiXp2jCIwSfo4rM-->跨周次的数量、影响多少个 PACK、拆成两个子批后的 PACK 数量变化</span></div><div data-page-node-id="Xh5gwLNV7XbyUgloVt5PR4" class="step"><div data-page-node-id="uoghveQc0q1jg4e3Sfgt1s" class="n"><!--pnid:mbUVxKhBE8YJgA4kH5sG91-->第 4 步</div><b data-page-node-id="6vDcMrsz7DqmNMb5cHH6qI"><!--pnid:GI5JXPG3Oej1TasSr9evav-->历史回看 · 上次混批的赔付与根因</b><span data-page-node-id="5vhSpWQIUuxWoBf3TIbd2H"><!--pnid:586GHAGLDw6ZaLKdp7nXnR-->从事故台账里拉出同供应商、同情形的历史记录与赔付金额</span></div><div data-page-node-id="kY9NGV3dnC3tWOqBdY2E8n" class="step"><div data-page-node-id="uI9vzvhr4s8M7vOhiq91y2" class="n"><!--pnid:rMpLafMgtzKIOWGlWBXrYO-->第 5 步</div><b data-page-node-id="9sOGhvZBM7ofNHIGwSaDor"><!--pnid:SvkR8K9L9a6mOuBscAjOJD-->留证与反馈 · 生成异常清单与联络单草稿</b><span data-page-node-id="bIAU7nmTDtyHqucZI22NPy"><!--pnid:dN5Te2Ypm26jkQRu16MvoD-->每条异常带证据位置、箱号范围、建议动作；处理意见栏与采购、质量两级签字栏留空</span></div></div>
+</section>
+
+<section data-page-node-id="A3d14xPxWAWx2MGcIm1dpx" class="blk">
+  <div data-page-node-id="eipO5HD87qQDTXOAhi9Ule" class="g2">
+    <div data-page-node-id="Kd34i1CVKlqaghGsUcjIk9" class="card"><h3 data-page-node-id="vwEsbv5Tue1EMEK2lEMkkw"><!--pnid:aQ3NJOmCsuZqoMQoozIspV-->要准备什么</h3><div data-page-node-id="ZVHYoLwlh5FleSqbtIBrJF" class="src"><div data-page-node-id="o5vcsOze3KftBEqHejf5TL" class="fn"><!--pnid:EvhFp2xigC0cACrv3cpQ4c-->供应商 COC（PDF，瑞能新材出具）</div><div data-page-node-id="xmAB4pbSHSdx3a5BEnpf5k" class="fd"><!--pnid:y9XxmfshWREL1amBWghO9C-->逐项合格，生产周次栏只写了 W18，无逐只明细</div></div><div data-page-node-id="Gy4z3VD3DgK3uDdfB29Hs2" class="src"><div data-page-node-id="3JrJYiRi8w1JioS5vvBs7T" class="fn"><!--pnid:wIguUc9cGAeNGiOXLUPnhR-->仓库收货扫码登记表（Excel，8,640 行）</div><div data-page-node-id="3RBIbyk6NnOOoSZJ5qNzeC" class="fd"><!--pnid:hp5mbNqqqYaon3KONJVIBv-->逐只扫码，含外包装标签上的生产周次与箱号</div></div><div data-page-node-id="JKeBXxklB1ej0f94FrGdDZ" class="src"><div data-page-node-id="KH4SNvVbsigIW3NjoOK0Xy" class="fn"><!--pnid:wqppq8ZGaxag7KGcAuG5nS-->本厂配组规则（工艺部 Word）</div><div data-page-node-id="paJn5WxCx7BWCLI6gh129M" class="fd"><!--pnid:Tn115IEx5VKsbPWlmafIJg-->同一 PACK 不得跨生产周配组；容量差 ≤ 1.5%；内阻差 ≤ 8%</div></div><div data-page-node-id="p57AlU3nTzGCfU0e0m0fCn" class="src"><div data-page-node-id="3joV0FozJAipoHryijNyiS" class="fn"><!--pnid:Aj8OCt7bCDlQavip13lnR5-->本厂 IQC 来料检验记录（Excel，本次抽检 168 只）</div><div data-page-node-id="2diekTl8dh5BezuLxb5SKr" class="fd"><!--pnid:rZIXgk5tF9eLSrzGaeILrl-->九项标准项全部合格，无 K 值、无 DCIR、无生产周次栏</div></div><div data-page-node-id="0gisbgb8D888C2PDxcwoqp" class="src"><div data-page-node-id="9CKGZTTAHCefHGsrLpnA6c" class="fn"><!--pnid:PqQojpfSGzrNd62TGkgXgO-->历史 27 个到货批次的周次一致性统计与事故台账（星标）</div><div data-page-node-id="vr28dcLs5t67arBES97ZnC" class="fd"><!--pnid:07nToeDwaRGTrWqNZcR8Zo-->★那份平时不在核对范围内的东西 —— 2024 年那次混批事故的赔付金额与根因就记在这里，而它从来不参与 IQC 的检验项设定</div></div></div>
+    <div data-page-node-id="VR77ArwaYyK12H4imYcEt6" class="card ev"><h3 data-page-node-id="smHx56pOlrLOSRRgdBPdw0"><!--pnid:j3v0cwcPebQ3bCmXtZ9URg-->为什么这个场景值得做</h3>
+      <p data-page-node-id="vTHFHYAj326Ez29tnH7zZG"><!--pnid:PRJmJXJ9bzeSiiyeysT57F-->痛感 5 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="Q7AW9NxfDA3WtGtTyAdFXH"><!--pnid:tqWTuIqQSwIoSG4Um8eeGf-->11.0</b></p>
+      <p data-page-node-id="yZLAoLG0CVTz1PGNVuLuEr"><b data-page-node-id="z8849QbHROVpiNn3E0nay7"><!--pnid:muEr9LjMbI5XOQ6b2IYk4Q-->最大差异点 ·</b><!--pnid:fNvnJpgHtTN5ZXdgGsD0Ly--> 不做全项检验的自动化（那是检测设备的事），只做四份文件之间的交叉比对：COC、外包装标签、收货扫码记录、本厂配组规则。这四份东西分别在供应商、仓库、扫码枪和工艺部手上，从来没有被放在一张表上对过 —— 而事故就出在这条缝里。</p>
+      <p data-page-node-id="qK7gD1ILIlplMoSpWsSeKU" style="color:var(--ink3); font-size:12.5px"><!--pnid:dNfP2MTHHjn1M5siT504GB-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="9t0eTwXU55B02qZCR1dSSd" class="blk">
+  <h2 data-page-node-id="9RqDdSj3ZgjRKGOpDxFjl6" class="h"><span data-page-node-id="9Ka9VeQX0ouzBfJxmdLnjE" class="num"><!--pnid:lb4plNSH2j5Mx4ETns6rGd-->五</span><!--pnid:WFiaLYyaQ4QBxPw17Uy6uz-->会产出什么</h2>
+  <p data-page-node-id="xvuRRvyaPjZq2DIUgO7ify" class="subline"><!--pnid:vrPvzNBu9kNUHIDuCt7svp-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="xztb75ZuxNXeyKHN7GSCEr" class="outs"><div data-page-node-id="IWOxmd0LvbnpsEjjmfxo60" class="out"><div data-page-node-id="wBh0peY0zx0MX2YPmbjTiH" class="on"><!--pnid:Zy1PaMYCM4tS7D6Pe6RPk9-->正式件本体</div><div data-page-node-id="tjyttKawOAHLAjVMGM1CDf" class="ot"><!--pnid:AiMn1Z8hevcn0761J2jYS4-->来料批次一致性异常清单.xlsx</div><div data-page-node-id="HSmyhBWY9AggTKqtNb8v39" class="od"><!--pnid:ZX0PJ9yrKBqKa6K3GrLtXw-->正式件 · 3 sheet · 含采购与质量两级签字栏</div></div><div data-page-node-id="mFDR5cbo015lILJTr7ZNsb" class="out"><div data-page-node-id="Sa4CZmqote1b7LECDgEE3F" class="on"><!--pnid:y9NlsOnu4DjqKAfN6Ye1I2-->可派发清单</div><div data-page-node-id="4lEYtQhTrLq7GXxjvVro27" class="ot"><!--pnid:my5YgrSBQs3jD1OacXYiJX-->四方比对明细表.xlsx</div><div data-page-node-id="NDRUeWFApr4BPXiidii9b6" class="od"><!--pnid:2FC9IeWRgJXW2XAeFA7FyX-->可派发 · 逐箱号 · COC 与实物周次差异 · 影响 PACK 数</div></div><div data-page-node-id="OFUVu3A4KKYD1zk6cE0BOH" class="out"><div data-page-node-id="ySliupzaPnhTbdyREg7iY7" class="on"><!--pnid:PbgJT0MNzH0V6hVBkjMeAE-->可派发清单</div><div data-page-node-id="B2gjovlPhXBR0rFIpFK5S2" class="ot"><!--pnid:f4IAGt2nUKCHI1YB91Qy6u-->供应商品质异常联络单_草稿.docx</div><div data-page-node-id="vgCeld6BIFHR85fiYeCVYw" class="od"><!--pnid:I2kXOoteD7dMFHPl5hk4qi-->可编辑 · 每条异常带证据位置 · 索赔诉求栏留白</div></div></div>
+</section>
+
+<section data-page-node-id="aTB4WLvnRzycuub2YL3EuR" class="blk">
+  <div data-page-node-id="c9gwWst0a0iTGiCl2zJock" class="card warn"><h3 data-page-node-id="45d5KLqcG8V3SAS25hwpwm"><!--pnid:6UT72pzU09gR2164Mp8Dz5-->这套东西不承诺什么</h3><p data-page-node-id="ioKdlL7btW8KTOG1zebQRF"><!--pnid:TtvSQ0JsVDUWBKJMajDYaX-->不输出「接收/退货」结论，只输出异常清单与证据位置；不替采购决定要不要向供应商索赔；不修改或补填 COC 上的任何数据；跨周次不等于必然不合格 —— 是否影响配组取决于本厂配组规则与实测分布，这个判断权在人。</p></div>
+</section>
+
+<div data-page-node-id="0uNskfm5gloiCOS4tnGzve" class="cta">
+  <div data-page-node-id="3UmuvvXLORk58IyF37pqG0"><h3 data-page-node-id="c2zOwREfCNdzS0tD0uwi3S"><!--pnid:0E832StpCESdpGrZMThdt1-->想看具体怎么跑？</h3><p data-page-node-id="IgHD4B0u2VrVHIsvcu2sWI"><!--pnid:SBuZ9YmBwd71c5IEPX5S6m-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="zKBrbHFafqUeyxzG1wg4bG" class="btns">
+    <a data-page-node-id="VYRjMBgrsC4FtQEnzyDiLn" class="btn" href="LiveDemo.html"><!--pnid:f6REmH4143DtmufEihs6kg-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="ogVllh5vBJ1uIkp8eIwxoC"><!--pnid:nL4IkDHsyaAW6NJ4JMUNYo-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="4RbY4sk0SPL0BD3zP7vYNX" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="qmojAdEvxVoNCATqpFcsG4" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="W3dVUr7ElpYe7gocttIbok" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="LGg8rkniNNZR8RtWqTY9Hf" data-pnid-children="TwkV8kMwtMswl4vuyX0uF6">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="xJFUCVOkKWFjex78hd8tYU" data-pnid-children="vqTi4BJcyoudACsSikvfJ5">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

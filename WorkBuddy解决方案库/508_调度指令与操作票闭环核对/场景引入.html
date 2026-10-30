@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="dhR1XpzwY2Ks9PoCFTRigD" lang="zh-CN">
+<head data-page-node-id="XHiUjotnDGsOt5UvFgfQmm">
+<script data-page-node-id="WcSPt7Wzd9sQQPiV5OUEl1" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="VoJ1EMMIE4PE0B5WSnZoik" charset="UTF-8">
+<meta data-page-node-id="LZeBMkuEeULLwSCqgVAiGy" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="CkMIj9ly5QHu70rZV9PsGA" data-pnid-children="YQxsuGOb9LriJjILDXtfYu">调度指令与操作票闭环核对</title>
+<link data-page-node-id="zcLK7KcXVDnnoVJl2Pz7eh" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Gq0vKRjUGewPCTUS4LSJFh" data-pnid-children="MVd9OMahYzXsUPPCSxy4Jg" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="nALlmVRdgaPr01yOoAAe5P">
+
+<div data-page-node-id="wdtNhhKLXzq6MoiLa2Qbc5" class="wrap">
+<section data-page-node-id="wjJvZ9ybK0fI5JfFRefoNG" class="page-hero">
+
+
+<h1 data-page-node-id="Q5tEi5rytS0taRjuTsje6A"><!--pnid:annAcZ7flLQ41c5tHlUFJb-->调度指令与操作票闭环核对</h1>
+<p data-page-node-id="JX6kaMOtPveKg0uuqbC3ew" class="lead"><!--pnid:dYFP809iuW3bw6gxzOUavW-->规程要求每一道指令都录音、每一项都逐项执行 · 但「是否都录了、是否都按序了」，从来没人逐单核过</p>
+</section><nav data-page-node-id="XPEU2m1IlDYYeIeVH9F4CV" class="subnav"><a data-page-node-id="HL92XZ1pQ09DRqk9nouTOR" class="on" href="#"><!--pnid:IIkmNacIXS3ITZzJ15PuF4-->场景引入</a><a data-page-node-id="9EIKlIp17BqdLQ4clTcJK9" class href="LiveDemo.html"><!--pnid:fYrBoYLCB8brvI5rgMLIr3-->Live Demo</a></nav>
+<section data-page-node-id="w4482n4usVGnf3qZjl0kjy" class="blk">
+  <h2 data-page-node-id="3GxdBMBwzSoASZi9uvAbOr" class="h"><span data-page-node-id="UmnBGzkUAyrKrgkCuBwCQj" class="num"><!--pnid:PXTdZw6dQOd0YtlF25M5Uv-->一</span><!--pnid:g3oBiUzzXVI1gnS4p4mPtG-->这件事现在是什么样</h2>
+  <p data-page-node-id="XfIdQ01aFN4e7QV4CDh3sC" class="subline"><!--pnid:ai0XjqNQtSr1UjkNs72BtW-->调度与运行方式 · 真实业务触发</p>
+  <div data-page-node-id="j6VYVOvE9PVUlJ2Mq26Eo4" class="card"><p data-page-node-id="CCykO0TGL88bbyDEoDkmoW"><!--pnid:S5AgEQDnmHZChUV3TG04G5-->BX-116 外破跳闸当日，调度处理过程 3 小时 12 分、下达指令 19 项。复盘时调录音发现：其中 1 项受令复诵无录音（录音系统切换间隙）、2 项的完成汇报时间早于操作实际完成时间。调度主任要求：对 11 月全部操作 312 项做一轮闭环核对——录音完整性、复诵规范性、逐项时序，三项全查。</p></div>
+  <h2 data-page-node-id="Ls4pCNn9VXszG8Xv64vcDf" class="h" style="margin-top:22px"><span data-page-node-id="KBItaRALkwnBD5PWHUgYe0" class="num"><!--pnid:6zpgbXcXROu4cF1d527gfC-->二</span><!--pnid:hwi5jbBnI7Zrf3PXVn2xqY-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="nYtKMe9lilTy1dJ85alWG9" class="subline"><!--pnid:XBtoD1e4MYCjEzU3aaP2ZY-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="t2kIjZnlOaLivq5QBmiGtw" class="pains"><div data-page-node-id="DAYAIG3jnd7NDOUKZrWDIP" class="pain"><span data-page-node-id="Jf3EVurkg1GbkWTNBiXMc9" class="i"><!--pnid:T6A4B1lniW17qurx7sCf3c-->1</span><div data-page-node-id="Lc9X84hoUYuWC4XxOKq6fh" class="t"><!--pnid:Rh26LDFo5Q3QBdXVsG4vFM-->规程白纸黑字：任何形式的指令、复诵、汇报都必须录音——录音是否完整没有核对机制，出了事才发现缺<span data-page-node-id="8CD1V9ro1rOIrsoNtHqJp7" class="src"><!--pnid:hqWXKtqJvBunh6Mb0Vy7PG-->依据 · <a data-page-node-id="R7XDD308HYDxJSUzMKekPg" href="https://www.safehoo.com/Item/181158.aspx" rel="noopener" target="_blank"><!--pnid:6QGwk0Y6fMXJFklQDGTT49-->电网调度操作过程和安全措施（行业通行）：调度操作指令分逐项指令、综合指令、即时指令和许可操作指令四种；任何形式的指令、发令、受令后的复诵，以及执行情况的汇报、操作前的联系，发受令双方都必须录音并做好记录；发令受令应使用调度术语和统一的双重编号</a></span></div></div><div data-page-node-id="KC05H6FurxwwxEZ023WDKt" class="pain"><span data-page-node-id="QWSvp0rqLOBK9Gdn9MsPZz" class="i"><!--pnid:kWq1WSajcNjpWRqICm0WPn-->2</span><div data-page-node-id="xqKDcmdhxAa51nSaWajN9C" class="t"><!--pnid:pPQd0Ns1rmIQAJdd2tHWET-->操作必须逐项进行，不允许跳项漏项并项添项，监护人还应审查操作票——「四对照」「五查」写了七条，现场做到几条没人点数<span data-page-node-id="7mK0iBfkWNBqIZt3H7wEcj" class="src"><!--pnid:tmDTrxUfFc36kt7VddtBZz-->依据 · <a data-page-node-id="RY0Bw0VRDQ9fgG1G3e7Bfq" href="https://www.safehoo.com/Item/39717_2.aspx" rel="noopener" target="_blank"><!--pnid:VxjPyBJ607ufvMhl2q4Dth-->电网运行操作注意事项（行业通行）：操作前对检修单做到「五查」，填写操作票做到「四对照」；按操作票执行的操作必须逐项进行，不允许跳项、漏项、并项、添项操作；操作过程中有另一名有监护权的调度员负责监护，监护人还应审查操作票避免遗漏</a></span></div></div><div data-page-node-id="B0tgxUHBMsILmUpeQpzbSi" class="pain"><span data-page-node-id="gBrzei39uFFRajgnGOguTN" class="i"><!--pnid:GxSfhB5Z5trGO4lKkJoU6T-->3</span><div data-page-node-id="j4plcMyZj3zzX6ztAFYr4d" class="t"><!--pnid:JpH3rr1RjTU0E1hCaZBsth-->下一项操作必须等上一项完成汇报并记录汇报人和时间后才能下达——事故复电的深夜，最先丢的就是这条时序<span data-page-node-id="UDFyGWFUhXMYzVgT9Ug4U3" class="src"><!--pnid:17AUUJBhKH0az9wHzerDkS-->依据 · <a data-page-node-id="V0ko3fEPHMOGLlqA9HJUJC" href="https://www.jdzj.com/diangong/article/2010-1-15/16702-1.htm" rel="noopener" target="_blank"><!--pnid:eiweIclMrA2DnyyPfkZAjU-->某省电力网调度规程：正常操作调度员应最迟比计划操作时间提前两小时将操作预令发到操作单位，现场受预令人应复诵无误并记录；下一个操作项目必须在接到上一项已执行完的汇报并记录汇报人和时间后才能下达；正式操作命令应发指令号、操作任务、项号内容及下令时间，现场复诵无误后方可执行</a></span></div></div><div data-page-node-id="MnKLjbChYG220rMYWNd8jo" class="pain"><span data-page-node-id="VU8NSg9IcXWCx2J91B3J7c" class="i"><!--pnid:xqouH4Xi8jVl4Y6VmGQ6Gh-->4</span><div data-page-node-id="IwCKZ6roJNUjf4JmESzh98" class="t"><!--pnid:qrByvZh5xAxM72Q2BV2PXp-->调度录音调阅要申请，平时没人主动听——核对机制缺位不是不重视，是没人有时间逐条听录音<span data-page-node-id="SjM7tfHmQrtPBZOEODLraa" class="src"><!--pnid:yQXKorEZne8IUYEGG0eCsg-->依据 · <a data-page-node-id="uVueENKylOK3exI8MOTJfa" href="https://www.toutiao.com/a1870776176825356" rel="noopener" target="_blank"><!--pnid:eFa423Vo5vu6fQUmE7aJ2n-->电厂运行岗位实况拆解：日常监盘、调整负荷、监视参数、抄表、巡检；一个误操作就是跳机停机、经济损失、安全问责，容错率极低</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="nN0TUQjnBHnmuO73RL7eHh" class="blk">
+  <h2 data-page-node-id="3Jf6Sy4VQ2VB6vlYj1Dvfq" class="h"><span data-page-node-id="4SGW1OyDOfy68o2Opjdvo1" class="num"><!--pnid:9tLqlPkvKb67tRhfzy42k7-->三</span><!--pnid:p6x8Gw5Geckoqt26YL8R49-->换个做法之后</h2>
+  <p data-page-node-id="yUecFXPxGfNYszccmbF7g4" class="subline"><!--pnid:TmqzVqsY5dWNqLfgHWrjIl-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="ezpE5FjnWVrafX6cniRf1K" class="cmp">
+    <div data-page-node-id="vA7qC0GZEFIzjMEpjlFWAQ" class="old"><h4 data-page-node-id="fbjEicP71SELsXkkEpYSkF"><!--pnid:qr7B6U4VPTUSwVfFo9eHsj-->✕ 现在的做法</h4><ul data-page-node-id="5XYsIVRu9AcNYECa5uXPSQ" class="list"><li data-page-node-id="Yqp5lweXYDNsjABn5JWxyI"><!--pnid:OTAEyWUDMlc7O5xBF218U7-->规程白纸黑字：任何形式的指令、复诵、汇报都必须录音——录音是否完整没有核对机制，出了事才发现缺</li><li data-page-node-id="QZ9oAXurCQ3Lb4KPqLQDjw"><!--pnid:gx4uT4JNNEX34ufc5ILyvh-->操作必须逐项进行，不允许跳项漏项并项添项，监护人还应审查操作票——「四对照」「五查」写了七条，现场做到几条没人点数</li><li data-page-node-id="xXByUEPaSDHIrxECW5aGkt"><!--pnid:eYovbwYeN8MiQRncDdNRas-->下一项操作必须等上一项完成汇报并记录汇报人和时间后才能下达——事故复电的深夜，最先丢的就是这条时序</li><li data-page-node-id="48RaZQ87MTbbK3FXJUFEvI"><!--pnid:HIWudJujLqlfuIBH93bvFz-->调度录音调阅要申请，平时没人主动听——核对机制缺位不是不重视，是没人有时间逐条听录音</li></ul></div>
+    <div data-page-node-id="0BW1krJub54cz6OASDVDzt" class="new"><h4 data-page-node-id="EdB09hYBf1i20NRVLzFYiL"><!--pnid:VFeuxf3phiLt4S3u5d2Deo-->✓ 交给 Agent 之后</h4><ul data-page-node-id="pXbqJcCoGL8CtKaef1DN3C" class="list"><li data-page-node-id="So0tQQD5H5epdo4wjFUSdG"><!--pnid:FGH5tLxlmaU7PMdOdilYwe-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="EahMETTtP97tZWDrKvq6iS"><!--pnid:f2w4znPRDJEfh1Diqv6rbb-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="anLHN8TQA8CHKpbWuj4UVO"><!--pnid:6NP1Mu8pFngaVIst5PIYIP-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="7UOL7BirFSTyjRUg9veS4S"><!--pnid:QY30Rl6YOtQMhNOXzaW9X9-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="YqZydms646pSfNooDjeGOs" class="blk">
+  <h2 data-page-node-id="Brv9BN9KgmMBQXqZcCq3Uf" class="h"><span data-page-node-id="kaJO0NNwiOOHi57vxvLaIj" class="num"><!--pnid:lxuBm3EaW8xvHGRDFxWp9z-->四</span><!--pnid:g3aw6I7ADh0ZdlJBjtUDp8-->场景闭环</h2>
+  <p data-page-node-id="0Pwf2OdVmEHBRAoBNGiLav" class="subline"><!--pnid:xRG0a3u39lFUVtN7a33IHb-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="4MFFamib5akZFVlu274HT3" class="flow"><div data-page-node-id="Bi9I7AFxxHQdLl8d7pZNwz" class="step"><div data-page-node-id="soxILExsvTBikVkkFlecFs" class="n"><!--pnid:2ykvE0N2uE8IxvlKybJizC-->第 1 步</div><b data-page-node-id="dyt5MjQdAkcqhm2CG2KwUk"><!--pnid:QuFKFtNQ7fYTBeFSUnqoJm-->票面核验 · 指令号、项号、双重编号逐项点</b><span data-page-node-id="uBL2diGDeu62z24Pd1yoAE"><!--pnid:weKolaSC0Lc6WSBdm8t8fq-->缺项号、非双重编号的逐条标出</span></div><div data-page-node-id="GDr7krBrF1lZbDtvYhG3De" class="step"><div data-page-node-id="hNe6MMEc5n5LuJaWMs7TnH" class="n"><!--pnid:s04ZUSHTvvri01bnOV6Jsn-->第 2 步</div><b data-page-node-id="43oiz1cMWoyOfKHMn4viSW"><!--pnid:sovltbuw8ORo56FfcqoBxw-->录音比对 · 每道指令的录音是否覆盖发令+复诵+汇报</b><span data-page-node-id="N5HUaWnrBLtfaMvNgQUgfe"><!--pnid:0uxdZU7Yt0nI8s2WeRQfTW-->312 项里缺录音的、只有发令没有复诵的分列</span></div><div data-page-node-id="TGI0gtxkcrjFNldKX2h5Ea" class="step"><div data-page-node-id="cCtjuMvr3jXKxIf1Bmz7Sa" class="n"><!--pnid:5LmQAy8NPhZxMVMk89WGjh-->第 3 步</div><b data-page-node-id="0ITakA3pssgXaqekZRCBDP"><!--pnid:sb7r8boPS8W0zrNtzKnimF-->时序核对 · 下令→复诵→执行→汇报的时间链</b><span data-page-node-id="AUrTKEnikyu6ZvjluBm1O7"><!--pnid:E3DxVbBa2KFmZxZ1iPVsQ8-->汇报时间早于完成时间的项——时序倒挂是重点</span></div><div data-page-node-id="V3DiEuoViWnr43GjnNhl63" class="step"><div data-page-node-id="ZOXEcQcBoLQGNzpgBM3bx0" class="n"><!--pnid:QHBDnSruNpU63jCv5qdoU0-->第 4 步</div><b data-page-node-id="M8whojRMtSjIYdhvKNkVm0"><!--pnid:LVIpmf4Dywt4Fnl0ayDQLe-->预令达标 · 预令与计划操作时间间隔 ≥2 小时</b><span data-page-node-id="iEOLcSJAmL9YfoJjHF2JPg"><!--pnid:0MnfqzrVjIZKelQ3U3fXFW-->临期操作单独统计——紧急令除外</span></div><div data-page-node-id="2UlQu3h51kg65ZzwoWRQ8F" class="step"><div data-page-node-id="98NWcJQzbqEcr6B2S2np98" class="n"><!--pnid:34MyF0AYqpHoA96vm2CYVD-->第 5 步</div><b data-page-node-id="ksjXb8PprZSNwPqrMvQzWY"><!--pnid:VpKB7o6mDVYBW425PKvXPg-->闭环报告 · 三项核对的完整清单</b><span data-page-node-id="qXkYfHuuCERNetKPu0FHxv"><!--pnid:poAB7wwKl5tYssLF8iz1SO-->每项带指令号与时间戳——签批栏留空</span></div></div>
+</section>
+
+<section data-page-node-id="EfxewYHhwYJHrwSUtFMDZ8" class="blk">
+  <div data-page-node-id="WxUvTrIY5o7MtV5kxyRfxl" class="g2">
+    <div data-page-node-id="LkwNYviW51MleWIA7YCK03" class="card"><h3 data-page-node-id="v4iEQlStXodShYrWLOGcQb"><!--pnid:JaDfRsJYzzUgGNw8WZubr4-->要准备什么</h3><div data-page-node-id="6wLHJkz0hr1jeBwjM4CfXY" class="src"><div data-page-node-id="l7rx7DE485dIT0pntKmxfR" class="fn"><!--pnid:kK8bXeRMB8nNpe7xxvYGuG-->11 月操作指令票存根（312 项）.docx</div><div data-page-node-id="I93vc4tpFPsw5xr9h8SQ7R" class="fd"><!--pnid:fWcA2b6i8JzRFplAUhoq8N-->指令号、任务、项号内容、下令与完成时间</div></div><div data-page-node-id="6mrCDE9pHgDOlb1rT7epJp" class="src"><div data-page-node-id="qYRRl3hk88kdhIzctgDtKy" class="fn"><!--pnid:3cGrnmuXy37vJuuJcr0Oel-->调度日志（11 月）.xlsx</div><div data-page-node-id="Jf7rhkJwX4sYO9wyLp9Avi" class="fd"><!--pnid:4698nfUB6UBYhXPPfpJj8o-->当值记录与指令号的时间戳</div></div><div data-page-node-id="EVyl2uKczLc4XSmP5nMspY" class="src"><div data-page-node-id="KLBkZUzDE4Vxzo7um8qhHA" class="fn"><!--pnid:LwEi0ZojLGF9NtSPMGiGOQ-->录音系统时间索引.xlsx</div><div data-page-node-id="bb5ivniEM5jrbLeJQgGY5i" class="fd"><!--pnid:ryDPsEjb7LyxDikjd1PXPz-->每道指令的录音起止——完整性核对的基准</div></div></div>
+    <div data-page-node-id="P2QKs8CqbxlJ2mdCt2PObD" class="card ev"><h3 data-page-node-id="t8sOOnNIfQbXR1WmpACcqJ"><!--pnid:KjbUsBIXTM2PYOTtRehSp7-->为什么这个场景值得做</h3>
+      <p data-page-node-id="aDyhRXgavrvqOyAi5rd5UD"><!--pnid:Y5ZqSNfIoE0QTh04PzB7Lv-->痛感 5 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="cHwGS2NJfyzsvt6Z7RWj5B"><!--pnid:DjCoZFI5cLnp5PAsM4RbvM-->15.0</b></p>
+      <p data-page-node-id="O0AcU7ddJQzvWAZUxluOmO"><b data-page-node-id="5RScjh1Yxu57SF8x443Zc3"><!--pnid:RiMtvqc0xowYGc83nbiZI2-->最大差异点 ·</b><!--pnid:f1BjhX4R7zoHbsTP67CYcf--> 不要求先上录音智能质检系统。指令票存根、调度日志、录音系统时间索引三样东西做核对——比对基准是指令号+时间戳，规则来自调度规程原文，不来自客户的习惯。</p>
+      <p data-page-node-id="YjqIMGdNcBZVWplYMOUJWn" style="color:var(--ink3); font-size:12.5px"><!--pnid:fYLGb4StqSvird2d1ep4Ol-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="b7qt30HQRtilOmgvHR9YI3" class="blk">
+  <h2 data-page-node-id="ZLAcifeov4Ye9wZM3AA2NG" class="h"><span data-page-node-id="8pyOkCHppCXzOGGZXMgerF" class="num"><!--pnid:7ea6DgpLhr9veivbKyI4S2-->五</span><!--pnid:dPKCUj9gLjhQWFn4jxg6Py-->会产出什么</h2>
+  <p data-page-node-id="0x326HnrJXwmSBiEF68pz4" class="subline"><!--pnid:ngezws2lMzqNSD3U99nWcR-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="PmthukkG95lESiV5ZUg3ra" class="outs"><div data-page-node-id="BUEWQMK9O78hEobALKXe3O" class="out"><div data-page-node-id="6MML2IfF6gZzGDaMAFtB70" class="on"><!--pnid:5iYRSxCLYoJ7GuiRVIfVG2-->正式件本体</div><div data-page-node-id="snyTpEx0Hdu4fY0ndLDbVN" class="ot"><!--pnid:KEL3SQWv30RizLpNktfuXI-->调度操作闭环核对报告.xlsx</div><div data-page-node-id="6SDfJK6pw9p7UGFgPZRppQ" class="od"><!--pnid:t6KAsMVzExqq5zPSsci96s-->正式件本体 · 三项核对全清单 · 含签批栏</div></div><div data-page-node-id="XAhlsTMrpuvAzq0DhBFMaV" class="out"><div data-page-node-id="csLiZeIXzw86PueNtwOxia" class="on"><!--pnid:sdNhYwsLmvyPg6j8lHo0dG-->可派发清单</div><div data-page-node-id="zZOsRLx1475ALQodN0g8Up" class="ot"><!--pnid:84tZPmuzVughSP3y5YHIIO-->录音缺失与时序异常清单.xlsx</div><div data-page-node-id="QE2SRwN0HbaC1kWUyhYT4x" class="od"><!--pnid:Yg7oWs36WJLcc87QvxBA7k-->可派发 · 每项带指令号与时间戳</div></div></div>
+</section>
+
+<section data-page-node-id="kxaVkXGt3c0OylYHKOxHaI" class="blk">
+  <div data-page-node-id="DSL5xKxruvWmYFk6DBddZh" class="card warn"><h3 data-page-node-id="Wrah7baAJTd7ooZ0DMcNf1"><!--pnid:Prtd8YDHJJHJmL4c4T5eFV-->这套东西不承诺什么</h3><p data-page-node-id="j6ceZqw1irr83rx8lYeaCX"><!--pnid:Yf059N4Yz32nnCEvcZ4Xae-->不评价调度员个人水平——核对只呈现「录音/复诵/时序」的事实完整性，不带考核口径。不重演指令、不修改记录。涉及事故处理的指令以调查组结论为准，本场景只做日常闭环核对。</p></div>
+</section>
+
+<div data-page-node-id="JjeWVFKxk4zKC5X0uBYKr7" class="cta">
+  <div data-page-node-id="cjTz3bMZsUdsMvEMSfouyz"><h3 data-page-node-id="1FRIi4lYcEZxxWJ63OhdZK"><!--pnid:T9rCbKZVPPrYdMBDfPz77S-->想看具体怎么跑？</h3><p data-page-node-id="FoLizDKmme6mloONUVCKG1"><!--pnid:jcmqsZEDHoDqvuYzUkUhvH-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="DAIVTB0H8fAXSqGGEG95T2" class="btns">
+    <a data-page-node-id="aTkObDRVqBJgNg3PaWnJcO" class="btn" href="LiveDemo.html"><!--pnid:p9eSDWLH7wFRQwwXHT9aD8-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="yTbEBmXmFmo6n9EmRRB3Nr"><!--pnid:j82nmkdeUFUgRJDuoTEb8R-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="5kIhg4PCz1wPVCs0PshGvd" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="0eQVfI1Yqz4keGxE7KUzk1" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="wmL9Qo8Z90fiyiJsOchBjm" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="aPHEa3szRCqAiQfMulJGua" data-pnid-children="CoEy3EzUdUFUdDgLnWUQi0">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="TZILAxpfgMknwm2iLIsmr5" data-pnid-children="8RPullBBuUP3AwvdJNfIvi">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="iWZ3vYjaZxANB0soKN3rpp" lang="zh-CN">
+<head data-page-node-id="be5k1bOhcb092oLvlWHQNW">
+<script data-page-node-id="B85qRgRGZVeyy2EZHpLZEG" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="5Lg8Te5iNrTnsO3vGyTbX3" charset="UTF-8">
+<meta data-page-node-id="JZXwUqDRxA6YTJhUOJgJsz" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="eDtTH4NapGkOO9EOM9enR1" data-pnid-children="CNhZlEehHhzcOH3bhxtSCX">银行余额调节表自动编制</title>
+<link data-page-node-id="dLWlKrc2USmH8D0k2iFMsI" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Uh5iqiNHBqC7YpOUIgD8FO" data-pnid-children="S1HE6eU1FAiszslWfMgMQm">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="QiWgLzYFUuwOEUea2wFxBC" data-pnid-children="5zYYkwPbQiwK8zDbzYApkN" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="RFnVD3fWQYw1o7HWmMJbnS" data-pnid-children="IKjFmOgMW4NIVssUZu5g4X" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="nHlVwOoxMIKEwvQ5mw6Tfu">
+
+<div data-page-node-id="P8bJGXf07l3wgsZVLGieJv" class="wrap">
+<section data-page-node-id="8UINEPM5MOnkJeO6QelMHF" class="page-hero">
+<h1 data-page-node-id="yLA8ydHO260rv5ABGAtZKV"><!--pnid:S6RaDr6mTTn0n1hsXJ1bwW-->银行余额调节表自动编制</h1>
+<p data-page-node-id="pmlyI7vxbiV9r75uMUXF40" class="lead"><!--pnid:zEwE9mcaRcqdwFOkd17yW2-->制度要求每月做、实际从没做过 · 长期不做等于把 50 万的窟窿藏在未达账项里</p>
+</section><nav data-page-node-id="9lETJbnANlhXIxBpkdEYA8" class="subnav"><a data-page-node-id="B19BmG6xbBhu4QBKQdgBhH" href="场景引入.html"><!--pnid:Hed9MLzxcTs37odxXWQBpM-->场景引入</a><a data-page-node-id="9Ey3WpEt0Jc4cxnFqNA8Wh" href="LiveDemo.html"><!--pnid:CDPCpFdt2mrxcsEbBPzZtS-->Live Demo</a><a data-page-node-id="73Suvr2OhSm0NiZQQxxMUJ" class="on" href="#"><!--pnid:IbvpBLcb1TREBSvalpOb5m-->推荐任务</a></nav>
+
+<section data-page-node-id="V1rIV193NNJSSd0X2kxl8B" class="blk">
+  <h2 data-page-node-id="DxK78qP1xjD1EhmfQBTDa7" class="h"><span data-page-node-id="kEFUv2y5b40ghvir4t0TCO" class="num"><!--pnid:Le78wZ1T42excXXkiBh2zT-->一</span><!--pnid:DvhnUVdhBG3ztbJybPfAUU-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="lkp2eWbK0cyUEKFnQo7OAk" class="subline"><!--pnid:c2HexpYWugdYVYmMBvxmlT-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="TVfWwjkyq5Gu0bz8QZd0ZX" class="card"><p data-page-node-id="jwADVdwrXdm7ODVzuna6on"><!--pnid:U2KMFa4d5R6iXM0awmhuzF-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="Vz2WymWWIqU07LnK201H2T" style="margin-top:10px"><!--pnid:NmalImhVewjR6SSmQIFukV-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:UAyvCZTOTesS4WP7hEbZIu--><!--wb-skill-start-->
+<div data-page-node-id="30upHYgL4TxOvKV4w0NUNH" class="wb-skill">
+<p data-page-node-id="WhjtZXdzXOhtLaMu6JoPAG" class="wb-skill-lead"><!--pnid:Zqel01gfzZdtiwyZTaG7Gu-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="pv1pHB9TBzuGqsvQ8R3mIT" class="prompt" id="wbSkillPrompt"><!--pnid:vpmB3NWAbi2jNaNHsnvbYj-->【准备】这个场景的规则都在「银行余额调节表自动编制」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/UqToueL1SqfVsC6UyCuaa1/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="Bc4qWzmmbAstHvRM9fp4xB" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:ddHVw0xmJJ6IcCDoPWfAQI-->复制</button></div>
+</div>
+<!--pnid:75UUgkasuQfBU4Kfzb8Htr--><!--wb-skill-end-->
+<section data-page-node-id="uDK7eyPg4dhJ1tHLS6MHcK" class="blk">
+  <h2 data-page-node-id="4BI2jiB2sCWayexl9WgeOT" class="h"><span data-page-node-id="88lVsaesHoyLEaunPq2tAK" class="num"><!--pnid:GdAV88GvYZu5BydkeN4peW-->二</span><!--pnid:3IXUChlSq00oN7P2h8s0Yq-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="JYVtxe6Gm9ZILOMvyY5FGq" class="subline"><!--pnid:Ym1XH3bNeENNcsFeC6QG6F-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="bsWNnT0l3AwO870suGxoyA" class="tlist">
+    <article data-page-node-id="ZaqFsdx3l6mI5sxqMUnltN" class="task">
+      <div data-page-node-id="Ax6m1whfO4h3qJsJ4kPY7q" class="th"><span data-page-node-id="gETeeYZ3kS3wG1FwM8mDkh" class="no"><!--pnid:M7whcmqTycSxQnmhY9kT69-->01</span><h3 data-page-node-id="Eii1xiKcais7TQjIK3oCel" class="ttl"><!--pnid:mo78rX20BJ6gCuidPHcbU2-->首推默认</h3><span data-page-node-id="WBPBHrOw1Rfbd05kErcStg" class="star"><!--pnid:SvEexxAQOdcVjCOMwFL7Cx-->与一键体验入口一致</span><button data-page-node-id="1ZHriNO9PPhU2YsfEYQbWf" class="cp" type="button"><!--pnid:xQ5RrF7sVh7AtvRDNhYgiJ-->复制</button></div>
+      <p data-page-node-id="BmbuA9L28rz34GhxkrmJyd" class="tp"><!--pnid:HmgTzDNrAC0qFMz3lRtjvq-->月初编上个月的银行余额调节表。我拖进来三份材料：银行对账单（工行、招行、建行三家格式各不相同）、我的现金/银行日记账、还有上一任留下的历史未达账项台账——那份台账 2025 年 4 月之后就没再更新过，也一起读进来。走完整流程：先做要素校验（账户、区间、币种对得上才开始），再按日期＋金额＋对方三要素逐笔勾对，找出对不上的每一笔并归到四类未达账项里；历史台账上还挂着的那几笔逐条核这次清了没有，超过 3 个月的标出来。
+产出三份：「银行余额调节表.xlsx」，左右两栏，带编制人/审核人签章栏；「未达账项清单.xlsx」，一笔一行，写清归哪一类、对方户名、金额、出处、挂账天数；「历史未达清账跟踪.xlsx」，上月遗留项逐条列本次核销状态，超 3 个月的标红。
+拿不准的标「待确认」别硬勾；不要改我的日记账、不要生成凭证；编制人和审核人两栏留空，我自己签。</p>
+    </article>
+    <article data-page-node-id="2F6RNn6bD9WxKjjpLV0h6k" class="task">
+      <div data-page-node-id="ExZLYCQjqEIXODzx8qYGYZ" class="th"><span data-page-node-id="0BWdhDR1wIWT8IupYo6AOC" class="no"><!--pnid:hQ6hY37hDaOw7nX4ghAG4o-->02</span><h3 data-page-node-id="2tWRIxYiUG7FUOimuv0awx" class="ttl"><!--pnid:ZBNKFpztI14LiCb87BO4pY-->只跑逐笔勾对</h3><button data-page-node-id="BFnoHjQYC03QnPQEQU9cH2" class="cp" type="button"><!--pnid:ovJkE9WPcuOcQwNgZKjoo9-->复制</button></div>
+      <p data-page-node-id="bpHwtKnOkI5LDJzNrztSXW" class="tp"><!--pnid:X7DJBdiMrOymtQi342cGlU-->只跑逐笔勾对这一步，先不出调节表、也不做未达分类。读三家的银行对账单和我的现金/银行日记账，按日期＋金额＋对方三要素逐笔对，金额容忍 ±1 元，摘要模糊的（银行写「转账」、台账写「货款」这类）做语义对齐。产出用 Excel 一张表：勾上的每笔写清勾对依据（三要素各是什么），勾不上的每一笔列出是哪份材料里的哪一笔、差在哪。拿不准的标「待确认」，别硬勾。</p>
+    </article>
+    <article data-page-node-id="yEW0nVMUaEkqhAcum232qN" class="task">
+      <div data-page-node-id="ftlUDFMapLI4CKROsdbV5D" class="th"><span data-page-node-id="wvvo1ctxnJx6gfY7RVfJiM" class="no"><!--pnid:fvVlDW8VmFfsgsiHPJAb1W-->03</span><h3 data-page-node-id="66kurEwO2gffBCEVmhtr3g" class="ttl"><!--pnid:gHQNnNfZLGeXkjEEeonrzO-->换口径重勾一遍</h3><button data-page-node-id="PD2EprnKRsxGq1EjnWfPHy" class="cp" type="button"><!--pnid:GGaSSFnsg5920XEoCStkls-->复制</button></div>
+      <p data-page-node-id="X081TmWkAOFMHrwV9dZJTq" class="tp"><!--pnid:CtOfAWj3uSpNhNcQVD0OJR-->换个口径再勾一遍：银行手续费差额不算金额不符，摘要模糊的按语义对齐认。材料还是三家的对账单和我的日记账。产出 Excel 一栏对照：新口径下少掉的差异、多出来的差异各列一栏，每条写清是哪一笔、为什么口径一换结论就变了。末尾说清这次口径调整会影响调节表左右两边哪几个数。</p>
+    </article>
+    <article data-page-node-id="G002btkbPzrIcQFhVuuL5V" class="task">
+      <div data-page-node-id="IsJQqkI855Q3phpaho9nSc" class="th"><span data-page-node-id="VklmJrRlkNbdq7z2C67C3b" class="no"><!--pnid:8g10IiX3Gr6dnEImfjodDx-->04</span><h3 data-page-node-id="h2V03IwXkHbz72FZXeewnN" class="ttl"><!--pnid:dZ9B0bb64IfyZrA8psLEEp-->一次对五个账户</h3><button data-page-node-id="cFFZeK69AOH4TcFTud0fqR" class="cp" type="button"><!--pnid:CFuxWLmkgXKAncDdGEacaq-->复制</button></div>
+      <p data-page-node-id="ujNUHToroqtZJlN8LG1Qc5" class="tp"><!--pnid:0BIZd46h1eiT36DOfvXvcJ-->这次一起对五个账户：演示数据里再加两家银行的上月对账单，加上原来的工行、招行、建行。五家格式都不一样，逐笔勾对按同一套三要素口径走，不分批。产出「未达账项清单.xlsx」，按账户分组、组内按未达金额从大到小排；另加一张横向对照表，一个账户一行，列写账户名、已勾对数、未勾对数、未达金额合计、最大一笔的挂账天数。</p>
+    </article>
+    <article data-page-node-id="aXHEs98tdPqnCelUtolnLQ" class="task">
+      <div data-page-node-id="mhN3mhUXbw37FYvgjKJJim" class="th"><span data-page-node-id="hsRLztnr8itHVh3rVUoKX8" class="no"><!--pnid:IjtIVl40BvRJA9t625dyK7-->05</span><h3 data-page-node-id="lE9JhhrFyW9xYCyEjzRTbM" class="ttl"><!--pnid:5VmuN6fU3b5zLHeWX1K22s-->给出纳主管看的一页</h3><button data-page-node-id="KM7S5h9Ym06vw2QDAASMYy" class="cp" type="button"><!--pnid:uwX2pLJhFvVxXHxIWFPCI5-->复制</button></div>
+      <p data-page-node-id="uXqrBmWfef5BWjY0tJq6bR" class="tp"><!--pnid:m2jqvUCqxF4OaYlWdQYgCY-->把结果压成给出纳主管看的一页，Markdown 半页以内：哪个账户还没清干净、各压着多少钱、最急的是哪几笔（按挂账天数排，超 3 个月的必须点到）、这次为什么还出不了能签字的正式调节表。明细不放进这一页。数字从「银行余额调节表.xlsx」和「未达账项清单.xlsx」里取，不要另算一套。</p>
+    </article>
+    <article data-page-node-id="RGMCw1CHUv1wGzEejmniuX" class="task">
+      <div data-page-node-id="nhMw10LogJpexqOD91fNyg" class="th"><span data-page-node-id="6xUE5M4hbSPR4vsoONM6s9" class="no"><!--pnid:Qv4no37eHiDtqXvk3B6VsF-->06</span><h3 data-page-node-id="B2WOpQ0FWsgROb44J5VPKN" class="ttl"><!--pnid:CeLBFuQAs4nB0gfD0i0zli-->让它反驳自己</h3><button data-page-node-id="WhZdN6LJrdk5ZLYCj2bmKN" class="cp" type="button"><!--pnid:93KcOwyrXe9Zinji08OpIS-->复制</button></div>
+      <p data-page-node-id="8gAGLEm9hTthqzoqOZmT2e" class="tp"><!--pnid:mc2pNyovsNB0hyyMg6r1BX-->你判那笔挂了 14 个月的恒通汽车零部件 8600 元回款「本次仍未处理」——这个判断的依据是什么？逐条回查：历史未达账项台账和这次的对账单里，两边各记了什么、日期金额对不对得上、出处是哪一天。产出 Markdown 一份《结论复核》，把站不住的挑出来说明该改回「待确认」，不要下「挪用」这类定性，也不要动我的日记账。</p>
+    </article>
+    <article data-page-node-id="2FQGmkxF6gmvKU6xpRHq2U" class="task">
+      <div data-page-node-id="MCb04Ugzo4Uk0IkpddX1PR" class="th"><span data-page-node-id="JVtKnvcknjNxBtofLdD0hP" class="no"><!--pnid:aLHkrwKhc3mqyX0EvN3iu4-->07</span><h3 data-page-node-id="dronKYDWbjbr9zUdLJqjOl" class="ttl"><!--pnid:Yph34VPLmukXattpXCxKKQ-->专门过历史未达台账</h3><button data-page-node-id="kyFrzFtQRCjGhZVxRKoYLn" class="cp" type="button"><!--pnid:DrRZf0sQClzvwbcwauvj0h-->复制</button></div>
+      <p data-page-node-id="PAXK1dqCXoVJhCeYVmI1c3" class="tp"><!--pnid:IzDW7FmQXRCFBDkWDJMLc2-->专门把历史未达账项台账过一遍。逐条对照本次勾对结果：哪些这次清了、哪些还挂着、各挂了多少个月，超 3 个月的标红。产出「历史未达清账跟踪.xlsx」：历史遗留项和本次新发现的未达项并排列出，列写对方户名、金额、挂账时长、本次核销状态、出处（对账单日期或日记账日期）。仍挂着的那条要写明下一步找谁核实，判断不出来的别写「已清」。</p>
+    </article>
+    <article data-page-node-id="ez4TU8vS2MjwKBzb2m4f1c" class="task">
+      <div data-page-node-id="9lDZbSqTNlh1fO4LE02ibt" class="th"><span data-page-node-id="8OKBueJTNuLjiMdDa3iN0H" class="no"><!--pnid:mUsqec27m8tvxeFoN5fSky-->08</span><h3 data-page-node-id="o6xY9IOtDukLzmZsRYguuZ" class="ttl"><!--pnid:65UVf4XntqcPrOrp7SBF4o-->按左右闭合自查</h3><button data-page-node-id="u4FVAoYUryK6zcd4xGRI76" class="cp" type="button"><!--pnid:TbwJdaTdJ1qhVMYZiyqSIg-->复制</button></div>
+      <p data-page-node-id="nSP041s8mvxpVU7OJ1IuzT" class="tp"><!--pnid:sPsMS3CTkMBU6vQ2KMQSCr-->按「调节后余额左右必须相等」这条硬规则自查这张调节表。产出 Markdown 一份自查表，逐项过：左右两个调节后余额各是多少、相等吗；有几笔是拿不准却硬勾上去的；有没有「待确认」项混进了正式件；编制人和审核人两栏是不是空的。左右不等就说清还差哪几笔没找全，别把表交出来。</p>
+    </article>
+    <article data-page-node-id="OFWviOCWsHG8tBmh1rRlEr" class="task">
+      <div data-page-node-id="bdyQrEoiQWx4B6QShQ1Tyv" class="th"><span data-page-node-id="c26aCFxWWjEG4bCWWuXEVT" class="no"><!--pnid:mcbGcOdnpfHI3tpjtNI5kh-->09</span><h3 data-page-node-id="9nyOy19cAnEg7VWC2UtqrM" class="ttl"><!--pnid:jVePBxaax4luslF3LYrnuL-->折算成现金缺口</h3><button data-page-node-id="wMT11Vxfk4DPqSrDtNEphf" class="cp" type="button"><!--pnid:BrFr8KgcU6HMXVcjyJDiGH-->复制</button></div>
+      <p data-page-node-id="yJSez5YPGmCcMJ8ioChakL" class="tp"><!--pnid:TGKPX2XTo2obtQBJeZpjVf-->读「未达账项清单.xlsx」和「历史未达清账跟踪.xlsx」，把三个月以上没勾出的未达账项加总，看一共多少钱。按四类拆开：银行已收企业未收、企业已收银行未收、银行已付企业未付、企业已付银行未付各占多少；其中重复付款、被银行退回未冲销的各是多少。产出 Excel 一张表，一行一类，列写金额、占比、涉及哪几笔；末尾给「账外有钱」和「账上有窟窿」各自的合计数。只算事实，不下资金安全的结论。</p>
+    </article>
+    <article data-page-node-id="gCXsyvct7MOxABaoFkSOjk" class="task">
+      <div data-page-node-id="ILYGCOVx2Dt29VSTvk5zEh" class="th"><span data-page-node-id="WX2f3IjbEGltn9lzZ8Sth3" class="no"><!--pnid:BuH49Pi1W6iUreIqtGYcCb-->10</span><h3 data-page-node-id="Jo6JOdKrR8yu1Ae3UxIBNG" class="ttl"><!--pnid:0XjBrQ84bA2x5lYAwy2zLR-->沉淀成勾对口径表</h3><button data-page-node-id="wZR7KNsHF0cpQN96ZFclz0" class="cp" type="button"><!--pnid:HnOfetMYI9HDQIMvhkXRSI-->复制</button></div>
+      <p data-page-node-id="YblahbCWeFdtORaAlnxFVL" class="tp"><!--pnid:IDzterMqb63athVY8iLbc3-->把这次用到的口径沉淀成一张可复用的「银行余额调节表复核口径表.xlsx」：三要素匹配口径（日期＋金额＋对方，金额容忍 ±1 元、摘要语义对齐怎么判）、四类未达账项的分类判断规则、超 3 个月标红的判定与升级动作。只写这次真用过的规则，没用过的不要凑进去。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="zEkR0oze93JD38KKL2htcQ" class="cta">
+  <div data-page-node-id="naEtPY3Fw606j3FZuE3HvR"><h3 data-page-node-id="0We2barCM2VUvNJ8CfvvIt"><!--pnid:OMq3dc6uPhDtaJ4A7cBD8h-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="SxYtjNeGnaVayxAalL2g5H"><!--pnid:1ebnEN838rlZz2V4dxtIMO-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="EREvMeEnKhL591k5xPMaaW" class="btns"><a data-page-node-id="96qqtLJXuGr1zggC8sfBdF" class="btn" href="#" id="ctaContact"><!--pnid:3BxqMKdTOtQezmhbqhBEhU-->联系我们</a></div>
+</div>
+<footer data-page-node-id="t45BE46Rq1v6c9v8k4KdAx"><!--pnid:DY3VBXXzMVyqvuhwm8XrzN-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="Jp4NMHKBddFceOtn4ZYXYA" data-pnid-children="coWO3SHl2cB552EmYL35e2">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="HXNGK2VkZjgtB6ICTso86l" data-pnid-children="CDX6VdKGacz6Nm3Oi3E0lu">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="n6Nf5PyqmQuYY9vb79uI4n" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="wl8uuON2InTHTn4VtiBwra" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="wcwFDVAmMskYIh9qR8kUc6" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="O1U7V3kgTpqEQc9uIhjVZh" data-pnid-children="IUu3yVSRPZbkav5ez1cdNO">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="18kTohd10s4VKTY1zxScdv" data-pnid-children="wL8aK2E2pQEkfNJr71cdO8" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html data-page-node-id="awcH2U9GwNflBYunRH0PGP" lang="zh-CN">
+<head data-page-node-id="2ovzwCfXkx4OoradRRX3j6">
+<script data-page-node-id="fK42aS9GkwQ0YltmHVHbco" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="KFrKbXGnieIFjHCIed4Rva" charset="UTF-8">
+<meta data-page-node-id="WNF5cutXftQbBq9ighIAZR" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="neZAndb27s7ncAq3FVdmva" data-pnid-children="PghjHAvpV3fVX1KeC6WCeg">门店设备运行监测</title>
+<link data-page-node-id="o8ko0YBDZxWiISwgKcU7DP" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Qtcteqn3CLV0UwcpAmVTEZ" data-pnid-children="x7eW1QrKpllOzXatCTvD2Y" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="bw6hnLlQQeMD0KmcStAGVo">
+<div data-page-node-id="Zby5W8Qd8d56hCR4y68QI3" class="wrap">
+<section data-page-node-id="IR28rvRJkfFW6eHs0VX15W" class="page-hero">
+<h1 data-page-node-id="dbH6k1vpxrNGyebGoOY7Op"><!--pnid:ip8FFmCDy914cgFKIlSzd2-->门店设备运行监测</h1>
+<p data-page-node-id="tlPgdhN1ku8FUWmcYrhMkk" class="lead"><!--pnid:f0YOgTghwa9MkCpodYYSD8-->高峰期忙乱忘记开备用设备，设备状态无实时可见性，备餐速度跟不上单量</p>
+</section><nav data-page-node-id="ww9Wkd9rL1Thl055PzNUW0" class="subnav"><a data-page-node-id="PuWWVNhp5anB884FSR4bZy" class="on" href="#"><!--pnid:vzDeppcPDSJoET7Nw7SDqt-->场景引入</a><a data-page-node-id="mtlKPTwc4ecKYk4to1wa0r" class href="LiveDemo.html"><!--pnid:9s62KZNgEpiYlFedMXAEUA-->Live Demo</a></nav>
+<section data-page-node-id="RC8TVpinTdk6MbNBsicAOB" class="blk">
+  <h2 data-page-node-id="IPKUwukvfk7mymrVIkOiju" class="h"><span data-page-node-id="kgaxlw3Ca7Y07QfXdRXAf2" class="num"><!--pnid:shmwbvli7tYlLuX3IAE4xw-->一</span><!--pnid:eqj6pK5buN2KW3RCnJkm5l-->这件事现在是什么样</h2>
+  <p data-page-node-id="iTnTxhMppeOuhcJOXtthWs" class="subline"><!--pnid:7oszZc7Sv5vvCKcLVGm3q7-->门店店长 · 午高峰最忙的时候，设备恰恰最容易掉链子</p>
+  <div data-page-node-id="nYdb0bWXNWoFzlBUXvkWFI" class="card"><p data-page-node-id="jpgqcfG7LzJDzlvKmxdI3W"><!--pnid:upumM8wuSMWQvcxuHQu4cG-->某连锁快餐门店，周五午高峰 11:20。前厅单量正在爬坡，后厨主煎台 DEV-002 悄无声息地停了 —— 没有人发现，直到出餐口开始堵单。与此同时，后厨 B 区的备用炸炉 DEV-003 静静躺在设备清单的「备用」一栏里，营业中一直没开：店长忙着催单，根本想不起它。全店 10 台设备，7 台正常、2 台异常、2 台备用一台未开 —— 这些数字躺在导出的运行日志里，没人看，也没人算。等巡检发现煎台停机，午高峰已经过半。</p></div>
+  <h2 data-page-node-id="IeEuHOwvZdUv3AspWLjth4" class="h" style="margin-top:22px"><span data-page-node-id="rojrwLzZcECKgsLSdRIRVN" class="num"><!--pnid:5KqUOuoCC1eu2RE7tnm9if-->二</span><!--pnid:iLMpjT6f7zTD16ZDYwmX0m-->痛点 · 每条都发生在昨天</h2>
+  <p data-page-node-id="fBQsJq6C9cegSX2sGrlTZE" class="subline"><!--pnid:XLrWxwVJbWmxhjzJtVGgLk-->不是流程描述，是门店每天真实上演的事故 —— 以下案例均取自场景调研与演示素材</p>
+  <div data-page-node-id="lPJLc8Nt4D0BMsqVAAu2Dz" class="pains"><div data-page-node-id="5VlKalicvtxxfqqS0Pyknv" class="pain"><span data-page-node-id="WVhMKERYrgGke28EhkcvOk" class="i"><!--pnid:E8ZXlkcmTBaeOR3N0KsWx1-->1</span><div data-page-node-id="OeeLzsWlbb0gvD5c8YhdW3" class="t"><!--pnid:SS1mTfBrzg18EIlLtNowL4-->高峰期忙乱，备用设备忘开：单量爬坡时正是人最忙的时候，备用炸炉该不该开全凭记忆 —— DEV-003 营业中未开启，出餐产能硬生生少一截</div></div><div data-page-node-id="q4CHolmlwbq5DWfbdoGfyN" class="pain"><span data-page-node-id="cqCgHe6P9V5QEpFvEOzWdI" class="i"><!--pnid:DaAQ70XRuZYNiqyZG8zkZV-->2</span><div data-page-node-id="67WFLAUh9zXNMbth1DIL4k" class="t"><!--pnid:NEPlxV8KKwZBnEDk7lsd6x-->设备状态无实时可见性：主煎台 11:20 异常停机，没有告警、没有提醒，等出餐口堵单才被发现 —— 停机原因还待查</div></div><div data-page-node-id="yFWdsldzWGN4er0vIEi4Eh" class="pain"><span data-page-node-id="8MeKASsNxI4dAtPubxsuQ6" class="i"><!--pnid:vdd9cFu0SMDZl8kUXWfdaO-->3</span><div data-page-node-id="oIIzcATUhwubzZfyXtLM2X" class="t"><!--pnid:ZiDeuTxFjKuQqhMM1ZYkhz-->设备数据散落各处，字段还不统一：清单在 Excel、日志是 CSV，「开机/关机」和「运行/停止」两种写法并存，人工核对先耗在格式对齐上</div></div><div data-page-node-id="rc4DY05EE319YbYm3NkOnG" class="pain"><span data-page-node-id="oRODiZYULSuptZ9la99kD9" class="i"><!--pnid:z5w9tdapjp4nWzibjV31Gx-->4</span><div data-page-node-id="qBTkL28wZiG9Zv7UCsE8a9" class="t"><!--pnid:GdIiWnDM323NkUrXL5XB20-->备餐速度跟不上单量，却说不清卡在哪台设备：单量数据在一边、设备状态在另一边，两边不联动，备用设备开启永远慢半拍</div></div></div>
+</section>
+
+<section data-page-node-id="nhFzs6JOCZ3iT5tsa9XFU8" class="blk">
+  <h2 data-page-node-id="CUVyjpCr6N6xWZ08uHT3nY" class="h"><span data-page-node-id="75L3OE6vnnkF0U8vvMwhs7" class="num"><!--pnid:haZhTwsuPdN9FJB8xzUO1h-->三</span><!--pnid:cciaVZaaURlvKWgAtKOQNM-->换个做法之后</h2>
+  <p data-page-node-id="aDNuDi61ldulYt7jrgXTbe" class="subline"><!--pnid:VBgupRwXhpsmMhCGUZEVsx-->变化不在「快」，在「不漏」和「能联动」</p>
+  <div data-page-node-id="WEZoMNkVU5wwDPzRqN9Xxf" class="cmp">
+    <div data-page-node-id="KH3cfuAFyXt8Nx3XhwerS3" class="old"><h4 data-page-node-id="xSxT3qiaSOSjFUHNWM1W07"><!--pnid:eS4n5SGeR42dDhmSTwCyLK-->✕ 现在的做法</h4><ul data-page-node-id="izOTcszUEsRAjDQI5TnFnA" class="list"><li data-page-node-id="6rMswhhti4BZ5dHCH9vFFI"><!--pnid:lTZh8dl2bMAjFYvLwWYZIH-->设备状态靠人肉巡检，异常停机发现时往往已经堵单</li><li data-page-node-id="jX6wyInFb7u7j9KAKciwY8"><!--pnid:14mTeaRtu8Oz1CpfkfDr4T-->备用设备开不开凭记忆，高峰期一忙就漏</li><li data-page-node-id="fCnIATIbfaItXtTNqdqb4P"><!--pnid:85dgAgQ462OMTi9B0OgW3G-->清单、日志、单量各在一处，字段不统一，汇总先耗格式</li><li data-page-node-id="1lnavHsLqNav659RbYRVQ7"><!--pnid:NiaAzOIkszsy9vqdEuWyWK-->异常靠口口相传，门店群里的提醒随意且不可追溯</li></ul></div>
+    <div data-page-node-id="ZacxWpJjN2y7tNfF6mWznT" class="new"><h4 data-page-node-id="FBGlc6DuG4imXlcmWVSXrX"><!--pnid:BsYYXG160qcpkOyugd5A0i-->✓ 交给 Agent 之后</h4><ul data-page-node-id="b2maxZsj2w9ORwq0pkd8Im" class="list"><li data-page-node-id="6YzqGKSTczAVwIaFWimiwD"><!--pnid:P8tmoAWFb2uAuajks497lU-->四类异常自动标记：应开未开、异常停机、运行时长异常、备用未开各归其位</li><li data-page-node-id="yxdJw3MYamWjLP3qr6kVBT"><!--pnid:WQBwOlA3HE64foaTRCAp2A-->结合当前/预测单量输出备用设备开启建议，按优先级排序并标注「建议」字样</li><li data-page-node-id="2nV550iqS1lijWLuqzzDwN"><!--pnid:AqImSocC7z0bUM2VeHy4Xt-->结构化监测报告五部分一次成型，可直接并入店长日报</li><li data-page-node-id="OmlbaYvUa7CmhK9pR4qLcb"><!--pnid:CTUuGrgiyB2YvtQ2IotDHL-->高优先级异常生成独立告警文案，可直接转发门店群</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="PmhTfJDXoIHHod1vijCk9P" class="blk">
+  <h2 data-page-node-id="3hIxdjXbwghWbg539uGO8C" class="h"><span data-page-node-id="8y2VLPaHFGQfoYlUsecM1g" class="num"><!--pnid:Q0eHPg0wKQxfaChclaoIkB-->四</span><!--pnid:563kST8XWXo0zPHoYPMQZ9-->场景闭环</h2>
+  <p data-page-node-id="ZO1yCISmnxlCxCHXeJ3oTK" class="subline"><!--pnid:Bg1jqEvtSi4ymwXSWRf2yk-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="5kwVwR2t2ZnztYA5dmUMQL" class="flow"><div data-page-node-id="3SotGhXf7oydXEXKHHDsgY" class="step"><div data-page-node-id="mAFqkI0BGmziwMTZSsdnXy" class="n"><!--pnid:6SdDK0WnpbOJtYnQAUwpJq-->第 1 步</div><b data-page-node-id="45JrFA3zQqArQNpA54Ov5H"><!--pnid:QYmIrl4d5axTG1n9sFTsDl-->解析设备清单 · .xlsx / .csv 直接读</b><span data-page-node-id="gJt8PPPebnHCraZj5Dd0Ta"><!--pnid:vo5ONpSpOel7ScjOqQDZUT-->提取设备名称、类型、位置、是否备用 —— 营业时间未提供时默认 10:00–22:00，并在报告中注明</span></div><div data-page-node-id="wTTuhclwbib95KW2sFypaH" class="step"><div data-page-node-id="mscTTcjGdxDOWasund5w0Y" class="n"><!--pnid:AxVujrP5INKWmzMAXYAJls-->第 2 步</div><b data-page-node-id="xPpkTVwAFwEaE3TyygHP5b"><!--pnid:dhPninuFDmaUsfT5ekQalC-->状态研判 · 四类异常各归其位</b><span data-page-node-id="az2KuiG3i9CPgFsxJt9k80"><!--pnid:i5ooH0rZ29r5pyZ5O0RFY9-->应开未开（高）、运行中异常停机（高）、运行时长异常（中）、备用设备未开启且单量偏高（中高）</span></div><div data-page-node-id="INrzn4j23QZxDyqz03QdpU" class="step"><div data-page-node-id="e4AM9Tc8oiUTk5kvmo1i03" class="n"><!--pnid:hjXRfSHayIS6nlgQyDbYln-->第 3 步</div><b data-page-node-id="qivkMVkqoeXLMOQ9PpnUQZ"><!--pnid:oMfbLLPNUcB60XZrbYbk10-->单量联动 · 备用设备该不该开</b><span data-page-node-id="WN5bKVewZ98cyBNjFGohf4"><!--pnid:ZmhQpyUiuoNZRkfcWvpHsS-->结合当前/预测单量判断是否需要开启备用设备，输出按优先级排序的开启建议（高：核心设备 / 中：辅助设备 / 低：可延后）</span></div><div data-page-node-id="dVX27EDmHZPMnh59vySRZs" class="step"><div data-page-node-id="TkziyYHgpDiXnGsxbFWQkx" class="n"><!--pnid:Qk0qHngdutEFZxUh3tkTMZ-->第 4 步</div><b data-page-node-id="L7ioLcrOQKTnmXB72vJcnX"><!--pnid:0yxYqBh2icSmA2NTKBGhig-->生成监测报告 · 五部分一次成型</b><span data-page-node-id="Pp5JTVl6pUibtYGz9ydLQX"><!--pnid:06yw2KSukhkEarh1caMS8N-->监测概览、异常清单、备用设备调度建议、设备利用率概览、高优先级告警 —— 结构化 Markdown</span></div><div data-page-node-id="7R1qNOzcPTVJtYY60gdlKZ" class="step"><div data-page-node-id="kuxPz8s3whiadtEPKPbopK" class="n"><!--pnid:XGvd37643lWO35EB2E19pq-->第 5 步</div><b data-page-node-id="eagks1BnB5WE3rAQBC4Em0"><!--pnid:uLNe1m53GytclLPNjRzRjj-->输出告警提醒 · 可直接转发门店群</b><span data-page-node-id="Ofl3wYOdOKUmmAUmSQ9zsT"><!--pnid:rKaBBfxKqfgxF2MgG8OWS0-->从异常清单提取高优先级项，生成独立告警文案，格式简洁可直接转发</span></div><div data-page-node-id="YzZIduOs3t2d18cBVHputW" class="step"><div data-page-node-id="TPhCfha933kai1jUniZmZ4" class="n"><!--pnid:0c5lL5UBmMrAYiJwWfiOKR-->第 6 步</div><b data-page-node-id="FlC2dqL0r8vxo6mC9lPhWJ"><!--pnid:YZO1yAxWsz1cCAOfrDRopk-->可选看板 · 设备状态一目了然</b><span data-page-node-id="Gbu0n1ptjTyFmsZmNzB1Sj"><!--pnid:xxFtb6FeNPlrTP6762K1n8-->用户要求时生成简易 HTML 设备状态看板页面，全店设备状态一页看全</span></div></div>
+</section>
+
+<section data-page-node-id="dB3VpG8RJrFeTuoowK9x32" class="blk">
+  <div data-page-node-id="9hFOGxJzKvkrSyM09UlHlS" class="g2">
+    <div data-page-node-id="hzwskMcgt2vFjIck3RqDnX" class="card"><h3 data-page-node-id="pcSLOEySZtgsy5fe7fhjod"><!--pnid:h2kBeRFoQJQ6L1XKX7JbdJ-->要准备什么</h3><div data-page-node-id="gWV2adZefa1BOCmkVFFJ5D" class="src"><div data-page-node-id="ioUFgVB3p4YCvdfpy04ohm" class="fn"><!--pnid:yBZoRdMbe5LYGa2JSmp1IT-->设备清单（.xlsx / .csv）</div><div data-page-node-id="d99FGo0gugDEsBVhgAycSp" class="fd"><!--pnid:aYzYMSgJD4GzzsjXXk9EZ0-->设备名称、类型、位置、是否备用 —— 字段名不统一时自动模糊匹配兼容</div></div><div data-page-node-id="Lg1W6HVewQWmiwaJTAkWr7" class="src"><div data-page-node-id="tjRoNSYpI7xcjKp4BB65Fv" class="fn"><!--pnid:WSU58veN3g9bx0mUqZM3kC-->设备运行数据（开关机时间 / 运行时长 / 当前状态）</div><div data-page-node-id="i3JIzUfoXScxrgcqxAnq0w" class="fd"><!--pnid:2Nk4tAc44SU53WVxG7cZRT-->系统导出或手动整理均可</div></div><div data-page-node-id="On5AfUVLj0jp97ub88oNpd" class="src"><div data-page-node-id="9COdKB6xJZLeYZoAhvkJiq" class="fn"><!--pnid:LQhpx4XoYXDx2vKPa9VU6a-->单量数据（可选）</div><div data-page-node-id="LsFCedtCfMAK9uy09JNX7u" class="fd"><!--pnid:2pNvz2EbX6vw5bnQ3eg82c-->提供后联动判断备用设备是否需开启，并输出优先级排序</div></div><div data-page-node-id="7865IK0ybhJaphHNlHq3C0" class="src"><div data-page-node-id="FqI2klNBhh43BY9tQbjlwp" class="fn"><!--pnid:vBq6GkG6xCH21i8aUdWiG2-->营业时间（可选）</div><div data-page-node-id="nkWwdJN7wdiVOAfeWF4eGp" class="fd"><!--pnid:htthM09Rmkd6M5whPBtWiO-->未提供时按默认 10:00–22:00 处理并在报告中注明</div></div></div>
+    <div data-page-node-id="kU2pc9vwixDRzaPzR7pzFZ" class="card ev"><h3 data-page-node-id="fYkcXuvSQ8G4mg1wWs7L4I"><!--pnid:DC6qExQTYBkwifWCXeG7tn-->为什么这个场景值得做</h3>
+      <p data-page-node-id="Pf3655dXYaQvMBSeXkqw2F"><!--pnid:oPmlsECDwt5u1AfiBlrpTV-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="ktMEGOgNBSiJqpdcfkbaKc"><!--pnid:vnQXCCAVqW8N0EDmm1Lt27-->8.0</b></p>
+      <p data-page-node-id="mBQWO03mt4wk621DPZ2pJo"><b data-page-node-id="8g6msIQKEHubaTImZa8T8f"><!--pnid:J0HMD7NXtHxdUn6YQIEg6r-->最大差异点 ·</b><!--pnid:LI9mp9Mh2D93jwLtq3cnXP--> 不要求门店装任何 IoT 传感器、不换任何系统：设备清单和运行日志原样扔进来，Agent 负责研判、排优先级、写告警，店长只做复核与确认。</p>
+      <p data-page-node-id="wuzykSsP50JL9EDi6ojQZm" style="color:var(--ink3); font-size:12.5px"><!--pnid:84OdiYkpZrdL9WGycLLIo0-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="LBtTxxjMwaqMS75EUuMLYb" class="blk">
+  <h2 data-page-node-id="J5Kz58ZxYuo3hFH0JFffla" class="h"><span data-page-node-id="RjpEsY9WYfngcw1XI87Ff2" class="num"><!--pnid:KTfHLzAGDHq7CoNs1ppAkT-->五</span><!--pnid:ssi6KllTeQg8G92fQ7Q2Kj-->会产出什么</h2>
+  <p data-page-node-id="Y6VHvzao3b4FuKNadb1bWz" class="subline"><!--pnid:oRXyJjLAwgEZ0U7ggmfhPE-->判断标准只有一个：这份东西明天早上能不能直接拿去用</p>
+  <div data-page-node-id="lmW88c6vJRQThWdBSxLtHS" class="outs"><div data-page-node-id="1ukk4VZhcoprusdPUH7WxW" class="out"><div data-page-node-id="4qhMWSvturwi6SVaTwe0lw" class="on"><!--pnid:y3V0agLDB8yXGZICvUjyLH-->正式件本体</div><div data-page-node-id="ltAtiI1tN1FNA9gmwpHSDe" class="ot"><!--pnid:EucbzzVuAf3ex53Fd35Drb-->设备运行监测报告.md</div><div data-page-node-id="ShP5xkXVSuAvS5iKCCDTgq" class="od"><!--pnid:r8fC3BOkKtAqEDGiIwHslK-->监测概览 → 异常清单 → 备用设备调度建议 → 利用率概览 → 高优先级告警 · 可直接并入店长日报</div></div><div data-page-node-id="ed2ChAriwOjaO6gMETxk8a" class="out"><div data-page-node-id="p0dV8HetcK2kDLVDuttjDh" class="on"><!--pnid:JvjRw2M1HrpQSdtxDgqRZw-->可转发文本</div><div data-page-node-id="wDDxtE0kNQmE47dosMJyx6" class="ot"><!--pnid:WPHshTH9kbM3l4E6Ku2Hrx-->告警提醒文案</div><div data-page-node-id="eKNqUZeHfXAfgMypExr7sW" class="od"><!--pnid:kaSi4Zt8c6RjHDOxMgRBKF-->高优先级异常独立成条 · 格式简洁，可直接转发门店群</div></div><div data-page-node-id="EtN87eSIIwsV6yfGBNhXrU" class="out"><div data-page-node-id="82O4fMDfRxsYcFTA3c4yrz" class="on"><!--pnid:mrzgD7fbZXD727cp99FXwT-->演示看板（可选）</div><div data-page-node-id="UeEbguuPK1useORm1TvcPJ" class="ot"><!--pnid:gCTMm51w9tli6iWfOZjOqa-->设备状态看板.html</div><div data-page-node-id="mZEtEjswdCAOskpxTclUIl" class="od"><!--pnid:gQ9JJ0rkjvVdyxETl2YnRr-->全店设备状态一目了然 · 用户明确要求时生成</div></div></div>
+</section>
+
+<section data-page-node-id="wz3qkcJU93nUsKBaI7soq8" class="blk">
+  <div data-page-node-id="ucP2WhkYNPG6IW2NEhZofd" class="card warn"><h3 data-page-node-id="qJZrN5J6kKXozzn2IOEzLI"><!--pnid:IBLmUeAiOtcDxYL4LA1PBI-->这套东西不承诺什么</h3><p data-page-node-id="ic81stsvIZ8PaMgW4hJeZh"><!--pnid:H97iW7Hb5dx1c1u9aYImic-->不直接对接门店 IoT 设备实时数据 —— 运行数据需用户导出或手动输入，存在延迟可能；不能控制设备开关，仅提供开启建议与提醒，建议均标注「建议」字样、不替代店长决策；不保证设备数据与实际情况完全一致，依赖用户输入质量；告警提醒在正式推送前须由店长确认后发出；营业时间未确认时按默认 10:00–22:00 处理并在报告中注明。</p></div>
+</section>
+
+<div data-page-node-id="eWpMyUFNWAuQCwHsDnsKH7" class="cta">
+  <div data-page-node-id="VHyB4r2Kk2wHohulnriHKi"><h3 data-page-node-id="EiFYfCJ6gMjc1ExZ469qPA"><!--pnid:8QSBiC3yQAvQNxocjyFD9r-->想看具体怎么跑？</h3><p data-page-node-id="dnttnU91h4PRRqWzulVfwE"><!--pnid:DundpWwX77jSyhhhLzfgDS-->Live Demo 里有一个完整案例的每一步，包括告警里哪些内容必须先经店长复核</p></div>
+  <div data-page-node-id="QsZxISbWB55l7366g8O7hR" class="btns">
+    <a data-page-node-id="8Sk8KA99lyTOmhlVJDxF67" class="btn" href="LiveDemo.html"><!--pnid:Cq8bEpelvfgclncW5sAeln-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="kEJ2UBzw5Rx2fDUsuLhy5q"><!--pnid:mdSCShQLmwYu8BQJBNtIJ0-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="h7lCm4tHfhyo4fZWReVFIj" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="mAnugvgwcypRHSrIL5RtSZ" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="adsImlEAzrzct3DUlmnCtF" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="zQHQqZPE8ZPMzYWqSAVDgu" data-pnid-children="b4rp6iyncwfGAkP0NpEGhU">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

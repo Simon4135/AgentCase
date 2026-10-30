@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html data-page-node-id="tke86vxlfgiep7n8V3uj6q" lang="zh-CN">
+<head data-page-node-id="zTjW7QrXSMXHiHm0CDemJb">
+<script data-page-node-id="o4ISP0O2YPzvLwVI6A0X1o" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="IotsaqQogDw30YF2OwFAt0" charset="UTF-8">
+<meta data-page-node-id="VQNMiDYoOkzxZ9w6pJP4nB" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="ZjbVsiJxcIiNJDbmOrixsk" data-pnid-children="5Z0IICMXmGnsMCXgnzL4jn">齐套与缺料预警</title>
+<link data-page-node-id="0mgNPy5O4S5QOm1AWGFCcD" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="sCsnqTKH3Uq9zEzRzS0yyC" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+
+<style data-page-node-id="xa0XOtusu48asb17v4kg4g" data-pnid-children="HigqBfcfAPtIXhq385nheF" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="ATl8Yh53E35MRtF3loOZiy">
+
+
+
+<div data-page-node-id="gWToDGfNOOHkK396xC2sSE" class="wrap">
+
+  <section data-page-node-id="hVUdyseutKEDB6xoN5zb8H" class="page-hero">
+    
+    <h1 data-page-node-id="rmNFzGiAcSQB5MzSvz46WH"><!--pnid:lNBkHBLmlnOejMe6FA2cK4-->齐套与缺料预警</h1>
+    <p data-page-node-id="HMdVJr0S2KwfmsVeuLBqYl" class="lead"><!--pnid:W9wr6XMfkByM7YSZMuYH6k-->案例：<b data-page-node-id="j5cbverljPJzxdr45fvt87"><!--pnid:A0rFPnPXyyvRrDvOzGOrdz-->恒信精密机械 · 2026-08-04 齐套核查</b><!--pnid:7TYsdDl55338sQRPjoWXGd--> · 6 张待开工工单 630 台 · 板材缺 532 kg / 主板缺 60 pcs · 缺口收敛验算归零 · 数据脱敏</p>
+
+    
+  </section><nav data-page-node-id="kmLByjXOrUEPtNdrK1Z6PB" class="subnav"><a data-page-node-id="CFIgeaQkSXsYlclB68CfpC" class href="场景引入.html"><!--pnid:PNE2NaiKl9HCqcFNMsDWMH-->场景引入</a><a data-page-node-id="riJAyXnRZ76L6sI11vRDrP" class="on" href="#"><!--pnid:MChIkhRTh066Xy1RMpwsGz-->Live Demo</a><a data-page-node-id="LaFbMukPPVO9MNEPQdq8ix" href="推荐任务.html"><!--pnid:ae18nstOyLHVRDi7xG4EOD-->推荐任务</a></nav>
+<section data-page-node-id="P2DfnlDVdxvGWx3z4qTnsI" class="notice warn"><div data-page-node-id="6vAviByCvVLJgnGjT7fsvv" class="icon"><!--pnid:gX2H4CpsWytYsZ9QhNHkjm-->!</div><div data-page-node-id="6oYupBgu5gqKQFE7JCorXP">
+<b data-page-node-id="eGQExTkdvPoqnvVf1cL9cw"><!--pnid:CpRE5liTQDdf66ijqy4joG-->演示模式 · 可视化预演</b>
+<p data-page-node-id="vMFqy9aCkPBeKXS3o7k91r"><!--pnid:lbuuDoWPG9dzbaplqWZfFV-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="bP85fsUbgaKhS7S1yOl2TH" class="kpi-row" style="grid-template-columns:repeat(5,1fr)">
+      <div data-page-node-id="CI6agYNuw4Z0jTU4kCOe1L" class="kpi"><div data-page-node-id="vWnQl5LhdeYOHLSZhB77YM" class="k"><!--pnid:kPfXPRGqmWrAUSflkJDMs2-->工单 / 台数</div><div data-page-node-id="zlrfjqnKWfbUlyD5uERE5Q" class="v"><!--pnid:vPWsDXLi8vnHWatjvFqs8f-->6 张 / 630 台</div></div>
+      <div data-page-node-id="1jClajVzbSttamCcpFDXjR" class="kpi"><div data-page-node-id="F6B647XkwPOmJdMbB3nriR" class="k"><!--pnid:J8bqAn3mKTXrjD9mKtCFoW-->齐套物料</div><div data-page-node-id="tp8UmS1oUeaI66mJVmAUh1" class="v"><!--pnid:4MsiTyrk7S4b0tIrqTEgXN-->6 项</div></div>
+      <div data-page-node-id="pQw89rOoATUdb9IymMUfrC" class="kpi"><div data-page-node-id="O6l0LiOOCPCZ7SmDcfZXPJ" class="k"><!--pnid:Hru5GX9ZGq0OcncSlZ6ooE-->真缺口</div><div data-page-node-id="N99mmaoruxbN1wZ3YG5j63" class="v"><!--pnid:okexzODjk2SHanWtokyXPd-->2 项</div></div>
+      <div data-page-node-id="jK7cLMbTbavfdnSfvUcKpq" class="kpi"><div data-page-node-id="LmFPUot5FnKSDs5dXeuHdU" class="k"><!--pnid:nHLsItawiiszQvtrVivrRi-->伪缺口剔除</div><div data-page-node-id="xSPGRgioL7jkuWDD9enu3j" class="v"><!--pnid:MNF7S4rXB7PulbM1GVMNg0-->2 项</div></div>
+      <div data-page-node-id="14CuNIFwYinD2v6DmwgetU" class="kpi"><div data-page-node-id="o4Rj7o5UWMnOkJL6IdqJzZ" class="k"><!--pnid:H8Tx6qaCvv3PVVDTPiH81l-->三色结论</div><div data-page-node-id="07idDRPE3Yc8Itq8ffRsx7" class="v"><!--pnid:Zlxo2EqgfhbuwcKOJhCIzb-->绿2黄3 红1</div></div>
+    </div>
+
+
+  <!--pnid:MV68MOr7MJxcDtLxXGkJ2q--><!-- Step 1 -->
+  <div data-page-node-id="JCHSrzReurfxn8b5Uj73wy" class="dstep">
+    <div data-page-node-id="4D1ootcmsYnKTGiJFmtxD4" class="dstep-h">
+      <div data-page-node-id="6szQbLVr9VO5h7MtHB2Rop" class="dstep-n"><!--pnid:DKbRHoJrdzcpORXDtytpvw-->1</div>
+      <div data-page-node-id="IQK0kGZjPX8W0d9hssyO4d">
+        <h2 data-page-node-id="c0wR2Osyt9Zl3vXPaBhQR8"><!--pnid:dlPsLve1glPgxxS4Vaq3ti-->原始数据 · 七份表，判据分散在四个地方</h2>
+        <div data-page-node-id="9xM9x9JOAHRs3f8xvniEKg" class="sd"><!--pnid:pTUuENgndWANV2HbITDxdH-->2026-08-04 · 最早计划开工日 08-06</div>
+      </div>
+    </div>
+    <div data-page-node-id="v7o0liprHGEUa176juDOTp" class="dstep-b">
+      <p data-page-node-id="WTENqwC4STCFa03uXrF9RY"><!--pnid:d2DbhkGSITfzh1pWwM8bsl-->采购小林手上七份数据。<b data-page-node-id="64vjkUMeqgdZSCcavi5l0C"><!--pnid:kGl63CTCnGxMLXpKlA3N58-->其中四份是 ERP 里有的（BOM/库存/在途/工单），另三份的关键判据不在 ERP 的计算范围内</b><!--pnid:9FHDgpVYaHQ4ZVrdvzRvnV-->——图纸公差在图纸里、客户 PPAP 约束在质量档案里、呆滞料实测厚度在复测记录里。</p>
+
+      <div data-page-node-id="SOvCtgFjXkrMdRf3eCA0uJ" class="tbl">
+        <table data-page-node-id="R8FPe4JdWdqn3ovoEaLNMJ">
+          <thead data-page-node-id="kbBLYpi6FCbUH914OgSC8G"><tr data-page-node-id="gWib2zJ4Ij39iPYIGmg5o8"><th data-page-node-id="5tkOKFw2fL8ygAZSCRdLcp" style="width:20%"><!--pnid:VruwJaihLwAdYAKq1CtZCY-->文件</th><th data-page-node-id="FwPsKuyxs9SBlfXg8HeOed" style="width:15%"><!--pnid:TINyFqMu6zVsvyxraQtMfb-->来源</th><th data-page-node-id="LMWaCutvJ2PSRJkC4GN5sv"><!--pnid:Zx2mxHKe3JsuSJdHgCK9cv-->关键内容 / 判据</th></tr></thead>
+          <tbody data-page-node-id="x8We4bMEdMlKRd0TiWRrST">
+            <tr data-page-node-id="sa9Nfwj2DnHWKAzssypVta"><td data-page-node-id="IeKizofFmqFvMJy3ya0XMp"><b data-page-node-id="UM38j2Re9dkX0IDgnuRocD"><!--pnid:HaY1AvUxvaZRDIYi4fGwLE-->工单需求</b></td><td data-page-node-id="T5qkJEn8aam0rzA23MQB9i"><!--pnid:7UddfoZv8p0ofVEYflgsZg-->ERP 生产</td><td data-page-node-id="x5P37F2pgVXBftRi5GkL87"><!--pnid:veXsEPcNYNFCjr6TpT9fBw-->6 张待开工工单 630 台 · 计划开工日 / 客户 / <b data-page-node-id="e9dO0iNi6EvD5nkdD8WLiv"><!--pnid:GTcolx28hhzm82rP7HaXll-->是否有 PPAP 要求</b></td></tr>
+            <tr data-page-node-id="5N8GXtqKKuCRNNIJLUD9yk"><td data-page-node-id="BTV6EhfSc52v3lsHmL14Gn"><b data-page-node-id="gQ6AnuwnqTS2areQD9bEcM"><!--pnid:grTtuZfVDwLTDXYj9j47qN-->BOM 明细</b></td><td data-page-node-id="lMFv9S2UNTwJNjXaUe4bYE"><!--pnid:0NCSQKtqms2GluHdqfLYuq-->ERP·BOM</td><td data-page-node-id="04C9jEkh4JVlmtRGojp1Nr"><!--pnid:ziUtdWUJVzQ69T18K4tJRX-->单位用量 + <b data-page-node-id="XE1Z2hJur1qkWCTdMqidXo"><!--pnid:W1ysf6fkY8FiP36MPRipS7-->备注列的图纸公差要求</b><!--pnid:2k3JKL1LrlAbaMQ86MOSSI-->（P-BRK-03 板材 1.8~2.2mm 是关键伏笔）</td></tr>
+            <tr data-page-node-id="Knk4AwMYIfWtqo4HLpYBBw"><td data-page-node-id="2QMYEXpAxlYrvr2ljpdcNw"><b data-page-node-id="m6kMU0doR3GgodfgLoxsLw"><!--pnid:3DpCYAN3jlcB9kB2GvcnZb-->库存快照</b></td><td data-page-node-id="GAkygUYPilXGXnNS9veX1I"><!--pnid:TaQ0MPJIKTZLmTZlbJ0Yau-->ERP 库存</td><td data-page-node-id="d5DbZ7ftHsFLiDT58lvFi7"><!--pnid:ml52bPKrRbrtyarAv5z2b5-->总库存 / <b data-page-node-id="NxyoMX2QtX6S3lTIxvpmBX"><!--pnid:z7FD05FD1RBK9Z0Zp8pTTP-->安全库存 / 已分配 / 待检/ 可用库存</b><!--pnid:ElM3t2A57JRPoNS4uIbgmN--> 五列并列</td></tr>
+            <tr data-page-node-id="yTlFElDNQrBfchp4Ji185U"><td data-page-node-id="reZG0HBUv1gk1FX5f633uh"><b data-page-node-id="Zp0krrqkfKerJkmM7Xfxyt"><!--pnid:oVupVVqfstmSFmGcmZA0vc-->在途采购单</b></td><td data-page-node-id="kjpSgyelG9WypprANZCJQ3"><!--pnid:hcOkZjagGieVNecxzztPDL-->ERP 采购</td><td data-page-node-id="0ev75geY0oMvSJDrqrSy0s"><!--pnid:SxVjF6MP61UcoFMXN1GUpq-->9 笔在途 · 原承诺 vs 最新承诺到货日 · 是否早于开工日</td></tr>
+            <tr data-page-node-id="3qEaXj2gt7bl1bE03TTF0r"><td data-page-node-id="A3be7FWoWAV3oHIdp9QUWc"><b data-page-node-id="0dvZDRDjjQ32NI8WAUQtyg"><!--pnid:pSyzXduof5RC63t7Hp5IMl-->工艺路线</b></td><td data-page-node-id="askMh6aaRiOztIH1TG0zjr"><!--pnid:bo28nA0mnAb0LqgquwGys5-->MES 主数据</td><td data-page-node-id="4VBh2z2VDQtfu8DzPvxyc1"><!--pnid:tTfMX4pzsrbTGpxzm6NJnW-->工序顺序 + <b data-page-node-id="eNJXX9giTKML6helkv9kRO"><!--pnid:Mz8z7DaVTj68bwuVxD6LLy-->每道工序所需物料</b><!--pnid:d8ns4uGxLCa5AiepSJcgAP--> + <b data-page-node-id="MYikdypCRdvELri7JZTI8q"><!--pnid:A4FzpubfsyYoBFloF5PnPQ-->可否作为分批投产断点</b></td></tr>
+            <tr data-page-node-id="zc906MUXXT5e9b96VYfB2d"><td data-page-node-id="inV1H7ODTgT1wzbxxdMOzI"><b data-page-node-id="IGhueHTHac8T2gH2Jg1AVK"><!--pnid:LvwsiDt4brTeYl5dhCWRpy-->替代料关系表</b></td><td data-page-node-id="kyMygtbCoATp8eUEG3y6fb"><!--pnid:9JlZ8kLoC4VKYpQUGSRplA-->ERP + 工艺</td><td data-page-node-id="SJOygkm98VlbWESmPpbZiG"><!--pnid:dHTt57nLpfIi9GbSywDDyi-->技术等效性 + <b data-page-node-id="njACjOPcjuKnV1qYQgmSl2"><!--pnid:cKCuqOVlEfOS5puolPg0Ll-->客户是否认可</b><!--pnid:SjGjOVwiYrKDOTwDKmvmv6--> + 是否需重新首件 + 成本差异</td></tr>
+            <tr data-page-node-id="liPLFLuuDPPjQHI0u9kKW3"><td data-page-node-id="N4s4uERuYKpmO3w5xtdtjk"><b data-page-node-id="OAQhJSG3I2JuWCc08BgcWt"><!--pnid:0BuAKLkqCaxnAQxerPErOU-->呆滞料清单</b></td><td data-page-node-id="qRlNAGmlDzMLJE4tOG6rxN"><!--pnid:TU7gJmvXxcOAFcNuZIcMHN-->ERP 库龄</td><td data-page-node-id="iHBQUBZVREA0J6VRcyT4m2"><!--pnid:LyHvbw22ufLEnLGsAguX3K-->5 项 / 12,047 元 · 备注列<b data-page-node-id="mbScKwtNyhtw37PEAO4rpp"><!--pnid:kZXo9Mq6ebOwl5WscFAIiy-->实测厚度</b><!--pnid:lf90V7462g4dyPHLJRYEtC-->（M-SPCC-18 实测 1.78/1.81/1.83mm）</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div data-page-node-id="MuJxpyBZEW6A9NcCIzkuLp" class="think"><b data-page-node-id="XFgTDJehKR33BN6E9QAqMb"><!--pnid:hbupVX0IPMuriSRqMTVaCz-->两个客户的约束完全不同（这是全场判断的分水岭）</b><!--pnid:KavN1wL29cY3VKhUHv5DyA-->：<b data-page-node-id="e1gsH3BwBMTuxOOpssDFbU"><!--pnid:RgIgwE2wTeqQuXimkDEoi5-->某主机厂</b><!--pnid:HzR5ttDVxgUcI7zrAKvIHJ-->是汽零一级供应商体系客户，零件号 HX-xxxx，已通过 PPAP 并获 PSW 签署，<b data-page-node-id="Hda9JROodQB231cSKfCSfa"><!--pnid:ZXqcooSIdj4p74CqCXOwWf-->料号、材料规格、供应商均在批准范围内锁定</b><!--pnid:FCkHzRJ8CiYcyq0bd3BpxP-->；<b data-page-node-id="O6acvNsUPly0pWpLAcQox6"><!--pnid:DSiTfpaF2yD1T6wtgDgMI3-->华东电气</b><!--pnid:0oWf550GNetSbfBvbw4Y1C-->是通用工业客户，按我方图纸与技术标准验收，<b data-page-node-id="1jbp1fXNul0VzP9OypzXkq"><!--pnid:PatD0a5L8ljKz7237hYu5G-->替代料只需内部工艺确认</b><!--pnid:Gv8n4vnFaSaWSDTrgv5bRr-->。</div>
+    </div>
+  </div>
+
+
+  <!--pnid:qtutxjrz2h22qW3B0Tus8u--><!-- Step 2 -->
+  <div data-page-node-id="GAfoW3hdK0Rr8a1fpqFeS8" class="dstep">
+    <div data-page-node-id="F00hOEDHLaN0mei3GaJSfY" class="dstep-h">
+      <div data-page-node-id="0Vi3InGiArQByOwxOzEaXV" class="dstep-n"><!--pnid:z6qSuVKs3y4JbjdsR7CdwN-->2</div>
+      <div data-page-node-id="VgqWT1IEyFpkx8VQY9Vdme">
+        <h2 data-page-node-id="29YZlkopXIrnFIQimJLwx2"><!--pnid:VJZ0KuWeIMvngLGA0Dz3WZ-->采购一句话调用</h2>
+        <div data-page-node-id="Dkf3jq7GIykv8kt66dsyeu" class="sd"><!--pnid:THUVKLKr89iiy6ZnnqaDUb-->七份表丢进去，不需要指定判断路径</div>
+      </div>
+    </div>
+    <div data-page-node-id="eejEbMl4UCF4hVuDxsMu5z" class="dstep-b">
+      <div data-page-node-id="9YWPD8dc42lNH7XyOR727I" class="prompt">
+<span data-page-node-id="rinY31xXrcmVF4tRfBhOWA" class="cmt"><!--pnid:hOuruzVY6QJMcrXoaPhOlB--># 采购小林输入</span><!--pnid:Kjt10gvbgCWk5JkE8EUUrm-->
+帮我跑一下<span data-page-node-id="jaLqumtHyBPFUi76aoL7CX" class="v"><!--pnid:XBqVXOFpljMM72Byg9Butx-->8 月上旬这6 张工单</span><!--pnid:fWaIcB3L1Qz2jCeCrlvf7j-->的齐套核查。数据都放一起了。
+
+<span data-page-node-id="Qk4R3MYeE6PKkv7dtgltpc" class="k"><!--pnid:FUU39sgi8M2tom6kkwIvu4-->先把可用库存算准</span><!--pnid:yNqY4YaembHyYgc0jAp03N--> —— 安全库存、已分配、待检都要扣掉，别拿总库存当可用。
+<span data-page-node-id="yo2heO86gK1nc1YGpFoivM" class="k"><!--pnid:qRyW1a2qCPGoR4EiQH6EBg-->然后逐个缺口想办法</span><!--pnid:n9rObLqGELXNzVkDM49yVM-->：能不能用替代料？库里呆滞料有没有能顶的？
+能不能先开前面几道工序？实在不行才考虑买现货或者动交期。
+每条路给我说清<span data-page-node-id="tudMEmpTZRunVkAae03fi6" class="v"><!--pnid:FVzIP1OLIMvmBOOItD667O-->代价、风险、要谁先做什么</span><!--pnid:kW2azwWNGzElJU0p8Vl02i-->。
+
+最后按工单给结论：<span data-page-node-id="6IgbBECLhxIPHxHsFSenYl" class="v"><!--pnid:BaMVt16AmGlveX02OTZSZO-->哪些能按计划开、哪些要满足条件才能开、哪些必须升级决策</span><!--pnid:J8h4wb4PPezkn9HeYPylwv-->。</div>
+    </div>
+  </div>
+
+
+  <!--pnid:9MIb1xVJWK6pfaxsXYDEpu--><!-- Step 3 -->
+  <div data-page-node-id="xroodvBU8d6xKXczRjacCy" class="dstep">
+    <div data-page-node-id="zYApyu8PeEhwkNMhy7IfC8" class="dstep-h">
+      <div data-page-node-id="Q0Q3IhAdhNs9Lt1ZvmfdWy" class="dstep-n"><!--pnid:3Z8X2ilZbEsz8boFmrNzD6-->3</div>
+      <div data-page-node-id="cvCmR4CtqFyOaZgy7nCQIh">
+        <h2 data-page-node-id="qIu56FlnXID3Grz7SGeItj"><!--pnid:KrJd37exy1vSwVDyXoVZR6-->Step 3 · 算准可用库存，定位真缺口</h2>
+        <div data-page-node-id="zV3TJRGFqvlWMbDlxyFPU6" class="sd"><!--pnid:Zo6jTkDwcrMvcseqeU7xla-->可用 = 总库存 − 安全 − 已分配 − 待检 · 双口径并列剔除伪缺口</div>
+      </div>
+    </div>
+    <div data-page-node-id="6JMtn7oMc8AvADsTi6zXhY" class="dstep-b">
+      <div data-page-node-id="wXBiOpRGokZuhRiZuiFPP5" class="tbl">
+        <table data-page-node-id="4PxC28nt8pubjeGVYplQL2">
+          <thead data-page-node-id="qKEURJpaVyN2p589znXU8D"><tr data-page-node-id="pcegVtR4AgDSAu3a27HsXk"><th data-page-node-id="FY5hqUgu0cLR41hCRhWIcW" style="width:15%"><!--pnid:37aqmloRRGSycENMQ8RXgy-->物料</th><th data-page-node-id="VpFIUdx13IggNe0B8n7xG6" class="r" style="width:9%"><!--pnid:gHtCmzYocZHxPDuYcegpBA-->总需求</th><th data-page-node-id="Gfyd1ZivBAGEsGy8jUqVk4" class="r" style="width:8%"><!--pnid:muNnJS6Jv1EGAvev4jREh3-->总库存</th><th data-page-node-id="bsYRBIhAx1isVgM6bik8OW" class="r" style="width:8%"><!--pnid:a1u7OAJJHID38BLWnWTv9W-->可用</th><th data-page-node-id="pL6ogG0tZMMhTYG91nMEdw" class="r" style="width:10%"><!--pnid:c41TA9o3g7DpxJVkm64epo-->在途可及(A)</th><th data-page-node-id="Du87Epvp180TuAgkKlxrVg" class="r" style="width:9%"><!--pnid:PRwYbmZINl6X5gjmn3zmie-->净缺口(A)</th><th data-page-node-id="fmzQi0rjXDLbBpYOoe72EX" class="r" style="width:9%"><!--pnid:2ddW3yj95XsaS4uhtKMFh2-->净缺口(B)</th><th data-page-node-id="ruJeBEa9PCWYkvVHQNwrjK"><!--pnid:rpzskFHwALt4HephNscPFB-->说明</th></tr></thead>
+          <tbody data-page-node-id="eQsDk1KA9ELMuxZjR8TVpK">
+            <tr data-page-node-id="ESbs3FvsaP0xo7EZ7cve3f" class="chg"><td data-page-node-id="5NA8yciWxvU05vhWQRbVAr"><b data-page-node-id="nlpolU7J0PEujlTgJxHklA"><!--pnid:C7h4VfuTKAXYGjpcONlMIr-->M-SPCC-20</b></td><td data-page-node-id="TALKTwdfsk2p4MiyFLD2eA" class="r"><!--pnid:aEasIGvrNZdHAhT1FychTs-->2,882 kg</td><td data-page-node-id="awZ8Cj0QaXgFkfgCWt9Kw7" class="r"><!--pnid:bhQ6EA2qXGOsLbISxudnob-->2,450</td><td data-page-node-id="iS0F6DZLodUHub2EPhGIm0" class="r"><b data-page-node-id="WM6x4fgpVZYDlLMgpJznrW"><!--pnid:PuuuT8VORzqo8X6UklAgjO-->1,850</b></td><td data-page-node-id="o73XoZ6DdjixtSw6wPuho4" class="r"><!--pnid:Omg0fFf1puf7flDLYSNgAE-->500</td><td data-page-node-id="kiOhBYBv9BhU8rqMwFk3Ra" class="r"><b data-page-node-id="mu1U1zAqQibTNt1aFx7FDi"><!--pnid:eNe3Glw4Lc7gGr74mN0jwm-->532</b></td><td data-page-node-id="gjE4XXOD7m8jWUKX1YTr3h" class="r"><b data-page-node-id="ZOIFxBvITMLxWOjNtVZFck"><!--pnid:mLO4l5ARPDl8hIr4zSb9xS-->532</b></td><td data-page-node-id="clXeOvAOIelX4kvcdKy68y"><b data-page-node-id="HZoxwUwzNh4nEbWBycsBgL"><!--pnid:2nWp2LU2FNpch6AAly5knQ-->真缺口</b><!--pnid:jPRrMTjLFAbNvU55njjXGT--> · 首序下料投料，需料日 = 开工日，两口径无差异</td></tr>
+            <tr data-page-node-id="0lOm18vWQywPYdNcRiyCdm" class="chg"><td data-page-node-id="Rx9fExrBnMCfAfV1zYge0G"><b data-page-node-id="Kwxu7XrRiF8PHh4fyqbYm0"><!--pnid:zoWgfaW8Utv7NvX251HIsW-->M-PCB-001</b></td><td data-page-node-id="QEktRS2na1zlHOpO6U4vHy" class="r"><!--pnid:qpEli71bE3PcWhmIJXYrxl-->180 pcs</td><td data-page-node-id="yUUtzrAhKzXi1YacwhTBEj" class="r"><!--pnid:bdvtqDV5YEPCcDte0EeMji-->320</td><td data-page-node-id="NfJWALBDNgZhFhWe906Fru" class="r"><b data-page-node-id="9h2iaSFMmAu2CCada4g6Lt"><!--pnid:J90YQOjWWobrltmm5sSFvP-->120</b></td><td data-page-node-id="VIH0A8o6HGBq6K5dmR45Qo" class="r"><!--pnid:QrHhJw4JcJQGTY4uudxUyW-->0</td><td data-page-node-id="G1KDATmIbYZackVjqHMb2j" class="r"><b data-page-node-id="8iJIxHcpRRown0yNGpaeUG"><!--pnid:0xFXfnNZoAINv5dYTlLCOT-->60</b></td><td data-page-node-id="VbVA6p98eoI3h2Jy5PurPz" class="r"><b data-page-node-id="hJvG4QuPK6YtWGMOuu6Wfk"><!--pnid:trPVykeRpwnccxNrOd7td6-->60</b></td><td data-page-node-id="tpcPEXyeyNQROtVJpPudoa"><b data-page-node-id="9NU7AMmcSGoPtSlqwxVcOf"><!--pnid:KJK5ZUFO4MGaxyVGxyKN0N-->真缺口</b><!--pnid:RipPMZ9R6iGIWSBGDWZl28--> · 总库存 320 看着够，可用只有 120；在途 08-14 到，晚于装配需料日 08-12</td></tr>
+            <tr data-page-node-id="m3kLLMdvZrt4C1GBcAMYPB"><td data-page-node-id="BiAtacrUn5qpadeApHcT5G"><!--pnid:U30jWitPmy16uC0Uk4CPeJ-->M-USBC-01</td><td data-page-node-id="GHOB8T3LWMC5VgiUvmibME" class="r"><!--pnid:tC5lb7XEmIsYtNbpGt5CRD-->180 pcs</td><td data-page-node-id="LZgy9PBDMO3gXuoblDPom7" class="r"><!--pnid:e6EDvI0r5nrD049jxOPoSa-->260</td><td data-page-node-id="YbnI2yHRhoxzjHujPaCiLn" class="r"><!--pnid:pBChtESsIvcaJ3cuWNeHmP-->160</td><td data-page-node-id="EwnuYc5Rl9XVb4yc0dwK0Y" class="r"><!--pnid:85fuc5qkin0InHCGNdrK7d-->0</td><td data-page-node-id="pZydnPpZNto6AdaDBsoa27" class="r" style="color:var(--ink3)"><!--pnid:o5U0EBaMOQajvdYP7gyzBG-->20</td><td data-page-node-id="22ftpJkdVbGqH53SnCUn1v" class="r" style="color:var(--green)"><b data-page-node-id="GZLEeo7YCqHpJ5ukVHKNjm"><!--pnid:0DecPzCrx0kZaiVdxVOsOB-->0</b></td><td data-page-node-id="W4AOEsofxqWjF7tTQyBzHm"><b data-page-node-id="HtWPndYj2489wnV3CBbezB"><!--pnid:uB7WfhzMUD8CkvH1sQwb3C-->伪缺口</b><!--pnid:QvQHichKPoJ0rjn4P1iMM5--> · 挂 OP50 装配，需料日 08-11/12；在途 08-10 到，按工序口径可及</td></tr>
+            <tr data-page-node-id="9gxrF2PfcoCkdP7XkGCSjk"><td data-page-node-id="wQEeyBMk75YB0mOx4PMHtO"><!--pnid:6HMxbiLjKgWEx1v3t46Xwi-->M-PWD-01</td><td data-page-node-id="q9UiJcl0pvTTbUt3YeLlgg" class="r"><!--pnid:kNAcrecMcwKKkDKNMAN4OO-->218.4 kg</td><td data-page-node-id="KDjlwnvvvtWzZRGwLkJJ4d" class="r"><!--pnid:X9PrWv5G5ROhfEqFwheXFU-->210</td><td data-page-node-id="5rEWjHGnBAHjRpL2lDpGji" class="r"><!--pnid:MlpjbMlz7i024lAsbjOyp3-->130</td><td data-page-node-id="PA4z4E9QzYHxX0TP9Rtjo6" class="r"><!--pnid:BNrKZmQLeOuY1QdxDjo4c8-->0</td><td data-page-node-id="L6uLcaVJg9zFj693AoOESk" class="r" style="color:var(--ink3)"><!--pnid:iRgoKnNsDTQSkdqgnAXr1Z-->88.4</td><td data-page-node-id="Qf6IOgLA9tTSCOaiuNJIik" class="r" style="color:var(--green)"><b data-page-node-id="NXtHEyxp53fqw1UH3TJ86B"><!--pnid:xbXrrnAeYGvbvYphBLHd3e-->0</b></td><td data-page-node-id="C3J5whm4oKGaJIN21G2jvU"><b data-page-node-id="1IMHXfsIteUrFm4ufD78RK"><!--pnid:ZFBZ4cXkySrxPgmp7MkB7s-->伪缺口</b><!--pnid:MAClHUAxHJ7m8RozbY7i5O--> · 挂表面处理，最早需料日 08-10 当日累计需求 107≤ 可用 130</td></tr>
+            <tr data-page-node-id="miYgyUmpPrjK6r557CBmyl"><td data-page-node-id="BtM2LziUvT7Qve1QTA8Hmp"><!--pnid:6i43V52JsSGI3gbpxJ1tkJ-->M-CAB-001</td><td data-page-node-id="jx9BgJUWWvp9ca7d2H52sN" class="r"><!--pnid:hPx4w8fSJwiKJWHYAB8bSO-->490 套</td><td data-page-node-id="1OT1gBdjfxTwdrNLrfvgSf" class="r"><!--pnid:Bo5MtJnacZaMhQ3IKdW7ra-->640</td><td data-page-node-id="BeyQ3KXx0cdEhametEYz7P" class="r"><!--pnid:dnhCNtqMDSLVh9weaaA1gd-->460</td><td data-page-node-id="IkNHJhXdeLsMOCCmKDrGb6" class="r"><!--pnid:YQuvhEVIO6tdgdUsfsW77H-->60</td><td data-page-node-id="yMoMq9yet1rn6XsK0Uo1ZE" class="r" style="color:var(--green)"><!--pnid:uoeGznyMtrdtPpvfugp1fG-->−30</td><td data-page-node-id="bLMFXQlP4U31ZHVgriDbnZ" class="r" style="color:var(--green)"><!--pnid:gsTLSj5xSTowHu3JmF5Pgd-->−30</td><td data-page-node-id="hn4nQElJ1Bya50Stite330"><!--pnid:grKFziKdN2LgPx1EmXFKYA-->齐套且富余 30 套</td></tr>
+            <tr data-page-node-id="UUT9JQbUBeyl2CwlAGTkYo"><td data-page-node-id="gKScpQCjRocumxlliEQeLe"><!--pnid:6KzvQOF6dZ1d2mnzCAZt3T-->M-LOCK-01</td><td data-page-node-id="MPUEX96Omk0UdV34nF2Gfc" class="r"><!--pnid:dQNTSgiXlGJMJjGSwganGK-->260 pcs</td><td data-page-node-id="UuftARdWudLMVbDJtGfE4d" class="r"><!--pnid:Dx7FFYPhg963bWtHb9vOsV-->400</td><td data-page-node-id="VbFmDLiH9CCSk09bGyPwXQ" class="r"><!--pnid:E5JI7BDBNrym4QzNe6ofBi-->320</td><td data-page-node-id="BGOz8ymQ8W1P3gv6sv0dJr" class="r"><!--pnid:QerpHCia8TJ1Jqyl5lj0B5-->200</td><td data-page-node-id="dtunlC6lDAulgil3Ed5RmN" class="r" style="color:var(--green)"><!--pnid:yTkKKdPTUG07s9BkHrTyew-->−260</td><td data-page-node-id="0OWKqy9CYRjFf3H3r0M0Pv" class="r" style="color:var(--green)"><!--pnid:JbsVuXDtCrEKZZCmAO4FoT-->−260</td><td data-page-node-id="vz9YQMSgSevw53ChSivASn"><!--pnid:RDg4Q3RU1rn0MSQEXcug3q-->齐套且富余</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 data-page-node-id="paW8ZTzY3wR9DzIPhsbJPN"><!--pnid:UoSmn5ZaAenVZUtAJCiJm8-->两个口径的差别，决定了会不会为伪缺口花钱</h3>
+      <div data-page-node-id="h20dGAwAYWIZUIlnGpbA9k" class="tbl">
+        <table data-page-node-id="DJIaaZwyrsbiuOb48HV0t7">
+          <thead data-page-node-id="Y2FHPaasKY0sMzKnibmnym"><tr data-page-node-id="QXvtjpEntT9veV1MPMwNiC"><th data-page-node-id="0XarUDVaQliFzDIIsAq35w" style="width:14%"><!--pnid:AK48CD4NBoRuycxgZv85vf-->口径</th><th data-page-node-id="DNgKZ2f9WsTD39m9dDWimq" style="width:26%"><!--pnid:r9yi53Y4S2qz4Dt7q44f7R-->判定依据</th><th data-page-node-id="i7GKlaxIL58d7ZYWqsROns" style="width:14%"><!--pnid:VR41DsEGyJh9LRfd56ZAO0-->报缺项数</th><th data-page-node-id="C45apOxqOJklJEHZw7hkvC"><!--pnid:uAiOCtlStxmY3xyaKDiO1f-->后果</th></tr></thead>
+          <tbody data-page-node-id="wKqwn9QiBzjYro3J5rZhk7">
+            <tr data-page-node-id="VotIzcODuQhm3wiwWzWKau"><td data-page-node-id="CoAa6KWtkjaHD26kDMxOfx"><b data-page-node-id="a9UhSPrRGGwr0W5Uuv1fnH"><!--pnid:48C6bK3aVo9sauJELGqpvH-->口径 A</b><br data-page-node-id="buIQCoR1f3hujOC7PRIZ2h"><span data-page-node-id="zSDoa2wnGsWiXj6S5RoW45" style="font-size:11.5px; color:var(--ink3)"><!--pnid:TS14OuxLPUgtRCCzExZmPi-->ERP MRP 默认</span></td><td data-page-node-id="xNKTsrh1Z9SeqcySireJd0"><!--pnid:mWUQ2Ty2HR9LrPBgY1vd5k-->在途承诺到货日 ≤ <b data-page-node-id="DCbpvrDnoyh50lGdUVSMOV"><!--pnid:bYkiVLvgcr1BUAiscF72vI-->计划开工日</b></td><td data-page-node-id="91DrG7D2284eMInx1Bdcj8"><b data-page-node-id="0H8JG8d7WLuGSudNC8UGCm"><!--pnid:sIUrkVZw7TaXILQ6LcJ5iQ-->4 项</b><!--pnid:awswCuq8myri7vvjy81B1o-->报缺</td><td data-page-node-id="b7kt2n6Ux2qkyt1O7ZY2eZ"><!--pnid:iKo5hxk3gRFrJdXz4KwRCY-->偏保守 —— 把挂在后序工序的缺料也算成阻碍开工，<b data-page-node-id="Z5yibFadhwcCkkFQBu5an4"><!--pnid:JNG9tIL6J7BqEPcVzcocw5-->可能为伪缺口付紧急采购溢价</b></td></tr>
+            <tr data-page-node-id="pDVrqN0FP3aCxbl5EITOWn" class="new-row"><td data-page-node-id="3hm7zrGD45yaa4Ot9GYQR3"><b data-page-node-id="IPz0DPfud08THZOfiJTWaU"><!--pnid:lyeIihOxiScPjnObKN7ejX-->口径 B</b><br data-page-node-id="lx7D6cUg5fhrulnBgrznIg"><span data-page-node-id="AfUaYI52ztqm2t0jSkNJte" style="font-size:11.5px; color:var(--ink3)"><!--pnid:bTziQh2ls9CUN4MGaKxP9p-->按工艺路线</span></td><td data-page-node-id="IHqTM81IyQDHlro0N1dRuk"><!--pnid:CO8wSf8KrPJvTWi3Iuni9h-->在途承诺到货日 ≤ <b data-page-node-id="w7qo6RF8tzUtv5RV4pEwFv"><!--pnid:rWrghyuCp6FP4LBiAGMNWM-->该工序需料日</b></td><td data-page-node-id="XPIa9jWqnmu6amEl1T7OqH"><b data-page-node-id="KAwYkvuYjBlUAkZOPJAhzS"><!--pnid:BKs5YEplNmut23A6hVoqWF-->2 项</b><!--pnid:RFzTQgiZNuwIPcone30hQy-->报缺</td><td data-page-node-id="RydGty3zhM6xLgkV53AgfI"><!--pnid:cNe0AB9nvHsQS1A3Mr6U67-->接近现场实际 —— M-USBC-01 和 M-PWD-01 挂在 OP40/OP50，在途到货早于工序需料日，<b data-page-node-id="8zAmTO39AIMj8WUPK7MLDA"><!--pnid:oj8tV94Jj27p9ONlKgZML5-->本来就不缺</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-page-node-id="k9n3og5ChbtbWzaJzV1Ahq" class="think"><b data-page-node-id="BHT02bhV7H7KWjtFNyE6D7"><!--pnid:dbad91CUEmqBIA3yqCDkAa-->要说清一件事：MRP 用口径 A 并不是算错。</b><!--pnid:eE25gI7i3MUZNTzlL0pY79-->MRP 只负责确定性计算，工序级需料时点要结合工艺路线才能推出来。<b data-page-node-id="2uPcs1iyyTDctzzhZWDLr3"><!--pnid:ictV3VSoE5uA75LOR9NAW4-->这正是 Agent 补位的地方——不是纠正 MRP，是把 MRP 管不到的那层信息接上。</b></p>
+
+      <h3 data-page-node-id="8CmbSObp5oZwko36y4QwuT"><!--pnid:RdKgKItYSDne02S7qu6ySf-->M-PCB-001 的可用库存怎么从 320 变成 120</h3>
+      <div data-page-node-id="F5gdL1lvVH13AcFlnstw5J" class="tbl">
+        <table data-page-node-id="SKUl7ECGyxOoB6EDMqvQaU">
+          <thead data-page-node-id="hAvVFSJqVC100sbUHUH1KB"><tr data-page-node-id="6Ls6q1ox4z0hjyUzkn8oHp"><th data-page-node-id="hrzxGQIQKUbXXaVcnIPNeH" style="width:22%"><!--pnid:niTHBlzckHXV1ZuChbAJHX-->项</th><th data-page-node-id="9U8ArPByrrCmmSwEGr7zyy" class="r" style="width:14%"><!--pnid:UUe87lsDF4bRdrHiUUEUZs-->数量(pcs)</th><th data-page-node-id="ndhrQrCroKdXO5HU7RObEG"><!--pnid:daJk2C3XHjwmc6H5PukSih-->说明</th></tr></thead>
+          <tbody data-page-node-id="TEegmNRsMNd2JrdSc2e6dj">
+            <tr data-page-node-id="WkeVUEkCBqVZiXhB2uKULi"><td data-page-node-id="ciN8KeAVDeaEgLe5dvKxu5"><!--pnid:X7KZ7ljxwWiPEyTs0hiZLv-->总库存</td><td data-page-node-id="4pc1SoFu7pCPpe73wDVYiC" class="r"><!--pnid:ovzMcYzBM0kjzNBNeLVXAM-->320</td><td data-page-node-id="zyAmzgdQK6de2epvRf0wGW"><!--pnid:tqfDyk2QrxsKpGrgJ6erbp-->物理在库</td></tr>
+            <tr data-page-node-id="rZLKQO5GPlooIOcdCN15GH"><td data-page-node-id="6tM9fdZSblmAKQL52NLiIX"><!--pnid:oMNlQLBPMiAibyHTpcw7uv-->− 安全库存</td><td data-page-node-id="HjClC345t0ldCdx7bjT22F" class="r"><!--pnid:01120J2AuAXYCpbEGLVVBj-->80</td><td data-page-node-id="XjYru05FqAfq4s5Yb8L9Dt"><!--pnid:jy9NOCEWPItcWEPERVnbpz-->3 天用量的断供缓冲，<b data-page-node-id="woMdEjykNbzQtzAmMiuX2j"><!--pnid:Tdy7PZ4cZptRiqKqS2mNTZ-->动用需采购经理审批，不参与齐套计算</b></td></tr>
+            <tr data-page-node-id="TKz2gnKeMgauPu6UXSZjfi"><td data-page-node-id="RCBTwjm184rJfOf6d8rcY1"><!--pnid:bHWoynKpZQSabStmSOgrWW-->− 已分配</td><td data-page-node-id="JLUAbob2OoIrY2LWdGqbW8" class="r"><!--pnid:fUInB4wUBkNBofqeJjfb1h-->100</td><td data-page-node-id="jg7DORbyG145YjcRUudJTe"><!--pnid:LzP3D5jeUmdg7ApXdqJZqh-->WO-2026-0798 在制工单已锁定，<b data-page-node-id="iCRQ9Ev7IujDgG7N9H1IEo"><!--pnid:WwSxzJsny9Olrd7aqkdoD0-->物理在库但不可挪用</b></td></tr>
+            <tr data-page-node-id="hE8VBCtQh4YxzXqNIXLMMq"><td data-page-node-id="2s6AUMiANtHJXCvlqCu1fo"><!--pnid:C8Uo3MVIoK1ns5HZOrD2JK-->− 待检</td><td data-page-node-id="HZCr5hNguDc98Ido4Lmivd" class="r"><!--pnid:ZyyGmyu4CIUsscj7fZiJ29-->20</td><td data-page-node-id="DykKnyJGjxFiC0qWjBe1nZ"><!--pnid:ZALIm5mDhXdzX5GqXS9i3I-->S-010 立讯 07-28 到货批，<b data-page-node-id="YdHFo0lheWsY1oM12LeS8B"><!--pnid:awmQaGcfcbrFaLUfUtZXb1-->IQC 未放行，不得投产</b></td></tr>
+            <tr data-page-node-id="dyjESutZEvlXVamnLFRRZw" class="new-row"><td data-page-node-id="INriTh2NTXxnDAX3th25BQ"><b data-page-node-id="BqJbybHO6esgeIshM5RNm2"><!--pnid:czdJyQsOIrOoHrS0fW3sEZ-->= 可用库存</b></td><td data-page-node-id="saCRCu6r0lUtPtJpL0722m" class="r"><b data-page-node-id="ejDWv96xL9Ohos93Y29QGK"><!--pnid:MN2CxD69ltAaNytXquTf2M-->120</b></td><td data-page-node-id="FnqCO11Y3ny83K2Wv1ZWo2"><!--pnid:42cdprlLJhrUA6CLBET3W4-->320 − 80 − 100 − 20 = 120 ✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:0wzQiFmDtMuburXhxFc9jH--><!-- Step 4 -->
+  <div data-page-node-id="88yLoBLBiyh6wpkx18fJI5" class="dstep">
+    <div data-page-node-id="nX5jZkRKrNZYuRXV2Dj1aQ" class="dstep-h">
+      <div data-page-node-id="D2c2ZpzbcIVFy9Na151ky4" class="dstep-n io"><!--pnid:FbU1q7SIdkqlToZijQoF16-->▶</div>
+      <div data-page-node-id="s8BmHkj8Qpv6RXfQZqOvIA">
+        <h2 data-page-node-id="v56Qcifuh3gIRTwoo6m3Y0"><!--pnid:oBt8ZlAq1JOLFoZbV5M13F-->Step 4 · AI 主动关联· 那批呆滞了8 个月的板材，其实能用</h2>
+        <div data-page-node-id="3M2sNlUqqscHXu7BOp7BqS" class="sd"><!--pnid:aKtc2LxMrvcHcHGot6eQqf-->判定顺序是「实测值 → 图纸公差 → 客户认可」，不是「规格是否相同」</div>
+      </div>
+    </div>
+    <div data-page-node-id="efzYgJquU7OPNbD1A0QpRT" class="dstep-b">
+      <div data-page-node-id="XjEsHSumacS6v1Mw6hzYPJ" class="think"><b data-page-node-id="nqLKA3WdcjjGcsIqbRYRvM"><!--pnid:Being4zYAXAgwdCP8zWRZZ-->AI 主动发现：</b><!--pnid:MvcKMCBHJBWWLKkMoIGRrR-->库里有一批 <b data-page-node-id="QXU74tG90yQJzEhisCqQgP"><!--pnid:bjYkAn8fu2zgSaznBu0CLB-->M-SPCC-18（冷轧板 1.8mm）</b><!--pnid:upZTWL82T6hfHcLTeunUrM-->，批号 RM-SPCC-2512-08，<b data-page-node-id="N5bPfydmnKz9D6SSLLjGdt"><!--pnid:UIqUq4Hl20fuPiYRUwtRAk-->呆滞 8 个月、460 kg、2,829 元</b><!--pnid:SifWKcPXT3vbe41yRVyrMA-->，呆滞原因是"客户 2025 年底改版取消 1.8mm 方案"。按物料主数据看，它和本次缺的 M-SPCC-20（2.0mm）<b data-page-node-id="O1CBDVYnso673NzKTKrSAs"><!--pnid:w9N9Cunvtn3OiWcHCBa4ET-->规格不同，不构成替代关系</b><!--pnid:fmM26Olqvxo6266QVRkZ9t-->——这也是它躺了 8 个月没人动的原因。<br data-page-node-id="jY9n8dy7lAbPzAt70fUAvx"><br data-page-node-id="FduKATQayfY6s4ZClZXy2T"><!--pnid:R3PZfC17JnLCfpAcEFW5cd-->但把三层信息串起来看结论就变了：<br data-page-node-id="xoHj2eUcezNjAQXya4WIwn"><!--pnid:IRAoBLckeFJcKzq0H58hZE-->① <b data-page-node-id="q07DYbRpyDkXDBZl7AMkct"><!--pnid:SelaoPTRKqXQ220QRsZjHU-->实测厚度</b><!--pnid:lZjOGvCLCadBQ567ERc8PS--> 1.78 / 1.81 / 1.83 mm（3 点抽测，2026-07-30复测），材质证明书与炉批号齐全；<br data-page-node-id="47iyW2pTqGVGfRtlZ4pDn2"><!--pnid:lA7HjdpX3CBFFd3ZwpGuUq-->② <b data-page-node-id="8QkYE6Tk7SreGgSVVhTKn6"><!--pnid:cbnDZMktZyl7p8TqP6SjW7-->P-BRK-03 的图纸 DWG-BRK-03 RevB 板材厚度公差是 1.8~2.2mm</b><!--pnid:75iJiADs5147vWZXXnzT9U-->（结构件非受力面，公差比另两个产品都宽）；<br data-page-node-id="oRJQsUki35302nSP4tjNrv"><!--pnid:G72Oww8yKXMEIxIMsWo8a3-->③ 实测值落在公差区间内 → <b data-page-node-id="rNMGyqSY5JDaKGiu7iFgpb"><!--pnid:7HCm3fwihBNfplrKn3SINH-->技术上可用</b><!--pnid:ZtozbnTn0fSR8PprLfcBBV-->。<br data-page-node-id="jiUWkYdmzqieBgZKHXTVMC"><br data-page-node-id="7U96hFhp0zu4jpxG4Rdq6v"><b data-page-node-id="bdOkdJSWorl75xK155TnUk"><!--pnid:5oFUhz4JzLhJcZ04kG0gji-->这层判断只可能来自图纸，物料主数据里没有公差字段——所以 ERP 永远推不出这个结论。</b></div>
+
+      <h3 data-page-node-id="3denojTqxrebGKmVqnhvgi"><!--pnid:QmyOaVjlcH3Mdtf6Gxv3fg-->同一批呆滞料，四个产品四种结论</h3>
+      <div data-page-node-id="CtqiUVqk2BZU1mwbrkIRVr" class="tbl">
+        <table data-page-node-id="E9qQH4blYQqsE4IijkK0yR">
+          <thead data-page-node-id="5VWPqAct9gFbYdovnMBK9B"><tr data-page-node-id="wDABQ69MS9OQTlZpy6s6L4"><th data-page-node-id="sYRWj2Cxod5pPvyx3cQiUY" style="width:16%"><!--pnid:8Z6mrcWMtuPDpDWN2dzZpO-->目标产品</th><th data-page-node-id="f9t0gFlfZbysS7XR9nNLuK" style="width:22%"><!--pnid:fTCkfkjqJVuCIvQDSY45gS-->图纸公差</th><th data-page-node-id="C8OFTHrOJhgN92cTbbSliz" style="width:14%"><!--pnid:fAj5hwwSHp0FpGktfOuqnD-->1.8mm 是否在区间</th><th data-page-node-id="LX02RvOqJcGASa6FQHyd2U"><!--pnid:VXXvE47E9YjLG8bNFtzSK5-->技术判定</th></tr></thead>
+          <tbody data-page-node-id="5nBP1lunmwTZPC1hsxIK0k">
+            <tr data-page-node-id="C01FCk3jsQJ9JvDNWXeQxG" class="new-row"><td data-page-node-id="7UqutkPCfLip9RPsQmz5Tn"><b data-page-node-id="Te2DCXCBdfoble44QwJsPv"><!--pnid:8o8bZbpVO9xVQXgIHiIgoa-->P-BRK-03</b><!--pnid:sShUrkKuLC5ohz9Ub9guKx--> 精密支架</td><td data-page-node-id="fO3xjdQ66aSSZS57Hluvio"><!--pnid:av04unEFwxoZKhXlh92TXP-->DWG-BRK-03 RevB<br data-page-node-id="lel7bdTtun9pvuQ4LH15bK"><b data-page-node-id="1NwG9b9mOnHUQtlqqatiBu"><!--pnid:32CEnsd2g3tXA2hUX7dAsk-->1.8 ~ 2.2 mm</b></td><td data-page-node-id="leoypPiOTtJGi7Bb4fgH20" style="color:var(--green)"><b data-page-node-id="ysrtfx4lgqPHVRQqSUOOFl"><!--pnid:U8dObLz5JlyzqHat2a6siN-->✅ 在区间内</b></td><td data-page-node-id="Cakby2pWjEdZVSOlaTvh7G" style="color:var(--green)"><b data-page-node-id="bg91i51OIisE9QLzbtGyV2"><!--pnid:7iIjVyNuDGzSS0A1LKG2ou-->可用</b><!--pnid:TGW7j8puDcQVXcwsvV47Ol--> — 结构件非受力面，公差放宽；需 5 件尺寸 + 载荷测试</td></tr>
+            <tr data-page-node-id="EVv2G0W2QBw9FFyU6WiXP1"><td data-page-node-id="ZdRQOf3rhiM9CjEUVipH5T"><!--pnid:KXmXzpP9WGmoaSH5JPso7I-->P-IPC-01 智能控制柜</td><td data-page-node-id="Jr9g4fKVnwfdbodyzO7Bcc"><!--pnid:D4qT2NW7gRaZ0qyaa0QdKR-->DWG-IPC-01 RevD<br data-page-node-id="wopE66VSoluAukVGw9psOC"><!--pnid:LhMpvihTouSi3NZvbgsiba-->1.90 ~ 2.10 mm</td><td data-page-node-id="S7Sj0j7tMxiOfjozbZfT4M" style="color:var(--red)"><!--pnid:6jHQimd7zoNI6s0sDczGxK-->❌ 超下限 0.10mm</td><td data-page-node-id="XdPRd1gKWdpiJTpOIfnQfc" style="color:var(--red)"><!--pnid:fLBW9t9miRGwLzkzrvG8rf-->禁用 — 技术不等效</td></tr>
+            <tr data-page-node-id="n65RI9JtKsOiTF0DUSd4Yd"><td data-page-node-id="wCcgCDtjXKXAmgqv7LBxL5"><!--pnid:w5QESFH5K209r55N5fKCeY-->P-CAB-02 户外机柜</td><td data-page-node-id="odobjWAucwCEpLJflpAvYV"><!--pnid:rC41vVSfcQ11xJkF40Ph0M-->DWG-CAB-02 RevC<br data-page-node-id="UxADShIlOZT9jMGFgV4qgR"><!--pnid:rWBDMEHsIVddyqEN6rqi3c-->1.95 ~ 2.05 mm</td><td data-page-node-id="EgCXvnY3hiV70XxrYvBxqm" style="color:var(--red)"><!--pnid:Zcmga65JJZckAzaobPfriI-->❌ 超下限 0.15mm</td><td data-page-node-id="FQEjGPyHmbnJWECjwEqFY9" style="color:var(--red)"><!--pnid:WVhs91oOhb7oDxxe9VtfPC-->禁用 — 且户外件承受风载雪载，减薄影响结构强度</td></tr>
+            <tr data-page-node-id="iT3N3nDZKTbOazmASkSU32"><td data-page-node-id="XJrkyw6XqrZHZPWZLHdSR8" colspan="4" style="color:var(--ink3); font-size:12.5px"><!--pnid:WmjvegseWzATPIENQ9u6ph-->另一批呆滞料 M-SPCC-15（实测 1.48~1.52mm）低于三个产品的公差下限，<b data-page-node-id="TzJvaVYXT5FT978EkG0ThJ"><!--pnid:aBV9oP79LlutLLfX9wUpMn-->无任何产品能用</b><!--pnid:3BEASg2JbCTzRAh9lGbUWm-->，转月度呆滞处置会 — 排除性结论同样有价值</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div data-page-node-id="4xxW9Uy5w7LOrAB0ICcsTw" class="think" style="background:var(--amber-bg); border-left-color:var(--amber)"><b data-page-node-id="FToe8u2GW488lZMcMbqt4j"><!--pnid:YLue97yV85BS8hrh5Pkx4K-->但技术可用还不够——同产品同图纸，换个客户结论就反了：</b><br data-page-node-id="3HbUjP9Vv2ZPjQe7dEQPAi"><!--pnid:bjRrC5i5umLdfK3GkkdXnQ-->· <b data-page-node-id="02xdtEUI17m09Xketwz9yn"><!--pnid:yc2JR3kPGvmFQxUMhg5wet-->WO-2026-0804</b><!--pnid:CXG6LLNuTVVKCmmjtbNPfn-->（华东电气 P-BRK-03 200 台）→ <b data-page-node-id="ZlxOwWEppubVkxvJg8E64m"><!--pnid:1gUUvBiY7y7cvsNINiBAy3-->✅ 可用 320 kg</b><!--pnid:6MDEHaMynxrDQwSl0w5BIp-->。华东电气按我方图纸与技术标准验收，图纸公差覆盖即自动认可。<br data-page-node-id="gDNAhgLPYoRX1lg3uZwC0r"><!--pnid:aYqgpu6VE5pCweChtJOiEl-->· <b data-page-node-id="gPr6bvPa1M2xWYJdY5O0Py"><!--pnid:17avqV7LkGEc4cnQPcxpPr-->WO-2026-0806</b><!--pnid:mpMcupUsni3jWjHxHS1PfP-->（某主机厂 P-BRK-03 120 台）→ <b data-page-node-id="Xs5YPyPoDnOSolv4Q264ln"><!--pnid:Hqp7cOuNgdOp717MEjgjRF-->⛔ 被否决</b><!--pnid:JZToAqaA6XqaqVr6xOomzU-->。原材料规格 2.0mm 已随 PPAP 提交并获 PSW 批准，<b data-page-node-id="WAHxZ8MdhMX6iTUDYwFBQH"><!--pnid:eLIhNfNx0EqL3w6yCpA4l5-->厚度变更属材料变更点，须客户书面材料偏差申请批复（周期 5~10 个工作日，赶不上 08-11 开工）</b><!--pnid:rtsGIAbJ0z0sPIAjyPqyuJ-->。<br data-page-node-id="xI2KVdn2LQYLC4jcIyrpTb"><br data-page-node-id="w4x2a2DCWZNRBFviDb3iLT"><b data-page-node-id="fnE1qOQgzlLsSwSgr4gZwg"><!--pnid:nNncp5QUvj7LWoQBOipjIF-->区别只在有没有 PPAP。这就是为什么替代料判断的第一道校验必须是"客户是否认可"而不是"技术是否等效"。</b></div>
+    </div>
+  </div>
+
+
+  <!--pnid:QIrtwMY07YireaiyHnZeHx--><!-- Step 5 -->
+  <div data-page-node-id="OTmBlLbAtBdSVbEPD1BvUw" class="dstep">
+    <div data-page-node-id="ZPoSIiEoA7AaFCdI9w1PlN" class="dstep-h">
+      <div data-page-node-id="gPo4QVusGWYgtf1nExX6V0" class="dstep-n"><!--pnid:AmFezW6dkhXpB4jZijlElR-->5</div>
+      <div data-page-node-id="eqePn0piZklrqCtvCul9t3">
+        <h2 data-page-node-id="hu2RepwH03EsWC7eYN5d1W"><!--pnid:RwvxcTokTpoNz72gmpIkmW-->Step 5 · 六条路径漏斗 · 逐条判定</h2>
+        <div data-page-node-id="vawcR45MCllNh25fz1NWDJ" class="sd"><!--pnid:k6Xaeing1dH4YIyQZKTku0-->先用已有资源（不花钱不延期）→ 再用时间腾挪 → 最后才花钱或动客户</div>
+      </div>
+    </div>
+    <div data-page-node-id="9Rpchu9IhGKNb5Vpd890Xy" class="dstep-b">
+      <div data-page-node-id="elrnMyAoSuJNHsQsIkbrMV" class="tbl">
+        <table data-page-node-id="t44OqNdOyNd2ykfa6IyKkO">
+          <thead data-page-node-id="C1DMt9r7NSvI1IAj0YK7yv"><tr data-page-node-id="xmzZ5WC2yZjI6O4pz4CKXj"><th data-page-node-id="GyfE18kN7W6zKDv9iBwW29" style="width:5%"><!--pnid:u5a6W9dy0Wp60TebIc0xgM-->序</th><th data-page-node-id="1ErtUSqHxg9QWu18qysH9X" style="width:13%"><!--pnid:MVxFBfLDxeRaxCb80xnRGS-->路径</th><th data-page-node-id="LglwHxDzC4bWAxv0QbsOi9" style="width:26%"><!--pnid:36CbW4RjBehtEzXdScUVDk-->方案</th><th data-page-node-id="R4cYJAZnzwaBC444hlKohs" style="width:10%"><!--pnid:nYWkXwgoL0GKjgzzkGOgrH-->判定</th><th data-page-node-id="kGkEJX731DTPl1t4d6fGr3" style="width:20%"><!--pnid:MkCh1qVVOe23omTU7a5zb5-->代价</th><th data-page-node-id="lGaYzrQuw1rRnugMmlpNnJ"><!--pnid:mXPO5NRdV09jnV8deIT4Mx-->前置条件</th></tr></thead>
+          <tbody data-page-node-id="ruqOVsCjsn7t3XVURaWYdR">
+            <tr data-page-node-id="f3gBn9pUu2P5mIkTK9C8iR" class="new-row">
+              <td data-page-node-id="bD3mhjNZojYsnvfvna6Vby"><b data-page-node-id="3aqB1tftF0kLP0pfEWzJ00"><!--pnid:DO0apww02l0kvcPZDqaKOl-->①</b></td><td data-page-node-id="YNJssRecdYPFp9pBxBOckV"><b data-page-node-id="h8gMCxy81bTJW26sVRyfYk"><!--pnid:nPDifRt5icZ4JgLCgB3Zpv-->替代料</b></td>
+              <td data-page-node-id="HmwGneKIEDb0PGTBWcIEHR"><!--pnid:n8jJBE4bTN7pz6WFYKJfCs-->WO-2026-0802（华东电气）用 M-PCB-002 替<b data-page-node-id="tkKas96BZy1vK7Qh9okbO5"><!--pnid:t2bSj1uD4Z6rA5Fl1peHS8-->60 pcs</b><!--pnid:fikGxkVToevnxun3XKCkvc-->；WO-2026-0801（某主机厂）不替，用原料号可用库存</td>
+              <td data-page-node-id="iBOsctCS31M8qrFNXvX3Nh" style="color:var(--amber)"><b data-page-node-id="HuIMKfiT4M2yrB2QRWvOAI"><!--pnid:BPYx7L8pi9wA9T2VqNnpVa-->部分可行</b></td>
+              <td data-page-node-id="7j84vOpIsjVEturbwYiX6b"><!--pnid:aL3nsT9Ak9ZmA86dsWVAsL-->材料 <b data-page-node-id="hb41hMrxXzaMeXxcJ8qwQV"><!--pnid:X4aUs2U9bsGb9qAh05MDbn-->+144.00 元</b><!--pnid:uAgnGJvDsUE76qkcA4rEnw-->（60×2.40）<br data-page-node-id="Om7hBp94NFMprtlXD1GJke"><!--pnid:jYKhTNSwkEdd0agZBSIrAW-->增首件 3 pcs 测试 + 4h 老化</td>
+              <td data-page-node-id="i0T2VjAU5ekIDledVIDC34"><!--pnid:1KdsBjpWm2Vf0IIDu6VySH-->工艺王工签首件确认报告 + IQC 该批全检</td>
+            </tr>
+            <tr data-page-node-id="QFLCARbfqyhCG3qj97eJeD" class="new-row">
+              <td data-page-node-id="CoHnoRjhHPlZBh3cjedHbr"><b data-page-node-id="3Zihy4axjZ41xCe7bDPcLz"><!--pnid:v45J0DU831811qxBG0Q8Pk-->②</b></td><td data-page-node-id="SeniVtPWIimawPrM5q5ab7"><b data-page-node-id="SQpLzkj6sCvYdFUFaV9aTH"><!--pnid:lfrMiIqAo8GnPeKBFUnbcm-->呆滞料反查</b></td>
+              <td data-page-node-id="5YTj4FSpSwMGsDn4wbhTQv"><!--pnid:6qWQBwbuvfYxOYDYn0FSna-->WO-2026-0804（华东电气 P-BRK-03）改用 M-SPCC-18 <b data-page-node-id="BkatWGET3nIoDWBUzjvISZ"><!--pnid:QZmXwWNQIIfDHuZjxLr6va-->320 kg</b><!--pnid:O63jZOC4mnoljSIYltiHNT-->；WO-2026-0806 被 PPAP 否决不可用</td>
+              <td data-page-node-id="6RwbnwMzPpMcrvdxmH8HxV" style="color:var(--amber)"><b data-page-node-id="jDsjU6XWgYcZOfBrQqD9bV"><!--pnid:eWFvGR0zGbhy1Vd4pIPjn0-->部分可行</b></td>
+              <td data-page-node-id="auJflM0PXQGdh6uBsCB6ll"><!--pnid:kDL9JQ39SNAHMhtFc26WrF-->材料 <b data-page-node-id="6aPafylnJKfQmO1DTa1NyD"><!--pnid:T1fMUkr5ESxWujhDDDNuKv-->−592.00 元</b><!--pnid:KXkDjGVH4CtE8gQ1NvKgu4-->（320×−1.85）<br data-page-node-id="iS0KeJQTUKgkCizI5jvihs"><b data-page-node-id="6x0yVefVseDopwdCmPfnMZ"><!--pnid:W4CR4opa6Kdx1MlRd7gJi3-->顺带消化呆滞 1,968元</b><br data-page-node-id="TTrErQdXvMkmUoSbc5SzNx"><!--pnid:szwOI3x33TrBpAVqrH43xy-->增 5 件尺寸 + 载荷测试</td>
+              <td data-page-node-id="5o4jMSGMXb5WZG2KK98BL9"><!--pnid:BXA2jFhXwdPrESH6ItV6y7-->逐张复测厚度挑出 ≥1.80mm 的板（实测最小 1.78 低于下限）+ 仓库转备料区</td>
+            </tr>
+            <tr data-page-node-id="Xz3G7L0qRirmvQpdm6n8qu" class="new-row">
+              <td data-page-node-id="3zCnhNVD1METJC0iIlolYL"><b data-page-node-id="EAMssEmmeM9TUdpwfShrPP"><!--pnid:uW3HFgPRV5owEn6qmjZgGZ-->③</b></td><td data-page-node-id="qALz5USf5YJbDb5407DU2Y"><b data-page-node-id="4rO3Qqaq2dv3sF5gUscttd"><!--pnid:UAoa0YRJwRZ4M89NNuZt7N-->分批投产</b></td>
+              <td data-page-node-id="A7mqPqnzNWIqMWFfXBcHpF"><!--pnid:WTc1aHaxf8spuXZXoWqJ6t-->M-USBC-01 / M-PWD-01 按工序需料日重判—— 挂 OP40/OP50，<b data-page-node-id="KHXkv08XEHc02siFRKTqXZ"><!--pnid:rAIW3ff8s3z1isXxEQOCOU-->不挡 OP10 下料开工</b></td>
+              <td data-page-node-id="nBkJbYGrH9YnWaQVoJb1TF" style="color:var(--green)"><b data-page-node-id="85RReMkLSaNwqhncKsf0ZP"><!--pnid:6OFBq4DS8OSzZ1VNIWZ0ac-->可行</b></td>
+              <td data-page-node-id="l8jbqqkL7hNR6xjw8Sd8Lq"><b data-page-node-id="6X7ZR1Oiql5lma0eI0TBqz"><!--pnid:E90jPhkP6D5zi1Q0HwVG9c-->无额外成本</b><br data-page-node-id="A3jc4Euw2slA0aGmAUR72I"><!--pnid:dA71uT8Ozs4oXiIeOn3pl8-->PMC 需按工序建到料节点跟踪</td>
+              <td data-page-node-id="ESrKwrI8PARplpwuRAQZE9"><!--pnid:rOWj0FKxXIMmNL9GkcOIt2-->PMC 老周把两笔在途到货节点挂到工序看板</td>
+            </tr>
+            <tr data-page-node-id="beV5E6iH8QioGjlVaqJl6L">
+              <td data-page-node-id="CLM8cvP5k5XbzLZQL6FmYT"><b data-page-node-id="BEzQGoJPeYtCS6lyfIv084"><!--pnid:N21tJIKC6ycXYbRSfcXQTF-->④</b></td><td data-page-node-id="dhV7bABSoCpwvuir5CcdUe"><!--pnid:RWSeyPSzHaOTJ6cAEXhFMT-->紧急采购</td>
+              <td data-page-node-id="VJI6QV170Ba5qeJcJTK7cE"><!--pnid:HEUHPEdBMOrcM70N0pxFj2-->S-012 授权代理商现货 2.0mm 板材 <b data-page-node-id="BMJwuhS4k4YngQPZNkkdeb"><!--pnid:pyP8aEeIXdocC5VjgTNX1V-->200 kg</b><!--pnid:rdjzn1QnCeRdJpnmUtmUJC-->（MOQ 200），08-08 自提</td>
+              <td data-page-node-id="q6dGup13PZfpaHixPrMqAU" style="color:var(--amber)"><b data-page-node-id="IzB9XinOYeGe4Uzw9jdV3t"><!--pnid:6zF1Q311ngAefSHQNzQjJa-->部分可行</b></td>
+              <td data-page-node-id="dQfbUWWt4twLpzjTLELHbt"><!--pnid:sM2edmwDqB4HLwHbySAUsA-->溢价 <b data-page-node-id="xetRWmx5dDCj6slxOSQVLW"><!--pnid:n66cMFEUVr8lPaOqKbOiwA-->+320.00 元</b><!--pnid:bh7B5uTYfQ3GbNi3YsdwYY-->（200×1.60）<br data-page-node-id="cm0fJKG5KMqyfomukn9M32"><!--pnid:ojMIPXKVR5sH65v3jljA9Q-->自提运费另计</td>
+              <td data-page-node-id="B3rAr0zMZ8mnkXZnkwgu2M"><!--pnid:bLXPoA0P33wzw6R3P4aRcY-->采购经理审批溢价 + IQC 核对现货炉批号与材质证明书</td>
+            </tr>
+            <tr data-page-node-id="6foBELCZ0MqFTeuBZmixwP">
+              <td data-page-node-id="To6pE7wBXQgohiEg0v8SGE"><b data-page-node-id="IWG7eMRVspBtkLRrmCMQ3Y"><!--pnid:J1Xw1t9B0GTlx1ayKNEyPm-->⑤</b></td><td data-page-node-id="NK6AVEZw9XgkXCrfkf6ZsY"><!--pnid:viAVqmFeK2OkUwLFf3lxqX-->调整交期</td>
+              <td data-page-node-id="YNMEyzDFynj12M4Hvzb41q"><!--pnid:tYeiYufsKlajZ7kusu6s0M-->方案 A 与某主机厂协商 HX-3155 交货 08-19→08-22；方案 B 提材料偏差申请</td>
+              <td data-page-node-id="ob7rliljD9GP3mb5WhuXDe" style="color:var(--red)"><b data-page-node-id="V8HFCjNTtkA7R15EsR2vX5"><!--pnid:vrPGfDa8CpaZOEUEiJGoLO-->不推荐</b></td>
+              <td data-page-node-id="9xGu5SJbnBmTWzt0nfW6BY"><!--pnid:BQSaj9ai51Kdxbv362eV3M-->A 计入供应商绩效扣分<br data-page-node-id="HALlBr8NRRc2CpbwovNEO5"><!--pnid:YvoTVuUtHP25RzkuymVRos-->B 审批 5~10 工作日赶不上</td>
+              <td data-page-node-id="AIneLWjCm81OM1nKJjx20L"><!--pnid:pOsqhp4USUp07DG0nORKR7-->A 需销售出面；B 若客户不批反而丧失其他路径的时间窗</td>
+            </tr>
+            <tr data-page-node-id="dHB7x7b1bHklDEocPjz6e4" class="new-row">
+              <td data-page-node-id="DKBPO2JjtNA70rkVpYtYYk"><b data-page-node-id="IIPyaSJ9295sZ0MuZYfcZo"><!--pnid:05p6Wzc9KVoEisRJT6Rmlv-->⑥</b></td><td data-page-node-id="74wQj269mlJqLahIO4Jay9"><b data-page-node-id="MVR6CAA1caNNDY32mpo8m9"><!--pnid:J15jASMbbPMaN5TQx77XSy-->拆单</b></td>
+              <td data-page-node-id="QWNMkCpFeO9kE1JpheNv5X"><!--pnid:d9H3l3huLv7lTpKPDZaSPP-->WO-2026-0806 拆为 <b data-page-node-id="QjclsLGEWbAxwzfpwFECUo"><!--pnid:nAlSrpApTyZCrkqDcyIZ1Y-->0806-A（112 台）</b><!--pnid:rVDAsASUeRylywItjYZxHI-->用现货余料08-11 正常投产 + <b data-page-node-id="IHD9E5Z9THceCrZ3GsRpDn"><!--pnid:iAWzBbD6lv2mCSkNROpo8s-->0806-B（8 台）</b><!--pnid:DEgZ4kvLk29Vn4rvQ9w2X7-->待 PO-2026-0726 到料后投</td>
+              <td data-page-node-id="BGDnZFP9CYueQCG6xdrzQe" style="color:var(--green)"><b data-page-node-id="3uHluPeTKW9lC9JvL1ipi4"><!--pnid:lfQlKHzpEaPxchxXufp7ct-->可行</b></td>
+              <td data-page-node-id="CydYMMjVzaMrqbcuJk5K4x"><!--pnid:NaBBPfuVnw0JmVk274NCkT-->多一次换型与首件<br data-page-node-id="SR8QHcYonCdpHnhMdFEEd8"><!--pnid:ZrzJTDsFHjw9LQK5YD1nsH-->多一次入库发货批次<br data-page-node-id="hFekif6Nw20Ee4oXGV9ijI"><!--pnid:WHsNvgk6e5ZtmBjAEzBpvf-->0806-B 交付零缓冲</td>
+              <td data-page-node-id="rPwc6HG7wx3I2fmxSScUB3"><!--pnid:X0jKnyBH3eZrLC3WMjc2Pz-->某主机厂对分批到货需提前报备</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 data-page-node-id="JkqQU8XweRLFlnW5cgtmc3"><!--pnid:YQzLbhvpPXopAiwTwtae7a-->缺口收敛验算（这一步决定方案能不能签字）</h3>
+      <div data-page-node-id="KJMNWg9hAoIBjfsiyRphdE" class="tbl">
+        <table data-page-node-id="kGYKwr3SHmGKjcoOhUvYfi">
+          <thead data-page-node-id="WfkdNFSrUuehFNOeTyHi15"><tr data-page-node-id="4Ezx1ctg9aCnNafPV3Ckiu"><th data-page-node-id="AsiGEYvGG5a5fNIw3InkKG" style="width:16%"><!--pnid:PBDiWc03n9d0zqqGapr9iB-->物料</th><th data-page-node-id="WgayFDWgSiaISy13d9coUx" class="r" style="width:12%"><!--pnid:BeugHSGwlb8JE5j494Url2-->原始缺口</th><th data-page-node-id="AJXQfQnqQPEXLtCQ2E5jlD" class="r" style="width:11%"><!--pnid:ZUW2nncnJ0NVG5F4780xVx-->①替代料</th><th data-page-node-id="fvdWxqms6Kle7kO3hR0rvY" class="r" style="width:11%"><!--pnid:7v8HaZHTdUvyIyIEBDTOFp-->②呆滞料</th><th data-page-node-id="OEOWwiL5sLtVM8Mo1NYER7" class="r" style="width:12%"><!--pnid:GkqBjYMadCq3F8BpUVkIrv-->④紧急采购</th><th data-page-node-id="yNCLjnWFsA70UZNgjnTvax" class="r" style="width:9%"><!--pnid:g9N52cbCziOTgUBSgolRq2-->⑥拆单</th><th data-page-node-id="TwUD1b2O6NxEwHff1RHGWH" class="r" style="width:11%"><!--pnid:EfhzAUYCqZTKKnfDSfX4wJ-->剩余</th><th data-page-node-id="hJN46Wmq4r6JHJKGlv9UK9"><!--pnid:3qf7ZMVwQDn2WwNVveuwqs-->验算</th></tr></thead>
+          <tbody data-page-node-id="hfrOroQLMnHIrthr4dktZG">
+            <tr data-page-node-id="H4LhYT7pnNTZgjg6CuGhNr"><td data-page-node-id="DUOWL2z4GrdyuiisSTu8rV"><b data-page-node-id="FwpBN5sdlPqL35cAIJQKa3"><!--pnid:2RKtAjWa4TtaVeDkqtaaND-->M-PCB-001</b></td><td data-page-node-id="9bgQvqxfVCtn2RLNP73G1v" class="r"><!--pnid:9UQbDcmpxe0flCOuU4kuyS-->60 pcs</td><td data-page-node-id="i79jQtFbw4PooTB63AT8HC" class="r"><!--pnid:dgZP4h79fCqqFoO8AGsfE6-->−60</td><td data-page-node-id="sp2iLnDJzIjCPq5dxqXWeR" class="r"><!--pnid:M4F40XTrdpqD9ZGnlaTMb9-->—</td><td data-page-node-id="2HAdgcAWMpwQT6OYxyjia4" class="r"><!--pnid:YJyrxpul9MNWykXSGoXU44-->—</td><td data-page-node-id="qVkxxlzNQoZHIToTCSVVjj" class="r"><!--pnid:5Ofwde3lacTyD1hozWhRpY-->—</td><td data-page-node-id="fCK4laZFK2HtGmMWUS6Xjk" class="r" style="color:var(--green)"><b data-page-node-id="MV6Y84Ahebke0MBvtACoJ0"><!--pnid:gOfvRbvaH5VLo6xSy8UasT-->0</b></td><td data-page-node-id="I3a0URCjo4w7HbaDddq3yM" style="color:var(--green)"><!--pnid:ZkOgujApkyhRBGI0GxSq2P-->60 − 60 = 0 ✓</td></tr>
+            <tr data-page-node-id="CwHMjD2Ng4PRGIw0b2eon3"><td data-page-node-id="aCUG6EdJnNGBxVfIDJqIdc"><b data-page-node-id="aLhCNdqVrpusgRZHMHEcND"><!--pnid:VDSCiiLpSFqUF6bV34MaxO-->M-SPCC-20</b></td><td data-page-node-id="oEWm84YFRgwi4mzV0kWOCV" class="r"><!--pnid:mDRDeuVfxPJp7VtW8sSid6-->532 kg</td><td data-page-node-id="ZxLdhrkNcDU3F0khF8mHzY" class="r"><!--pnid:rtOEM9LJP5sacquxC1NsuL-->—</td><td data-page-node-id="ejHWNnB9N9KhUoXnaBeATl" class="r"><!--pnid:3Uy93KUxayqjU5Dmr3rtjx-->−320</td><td data-page-node-id="OCKm4BMMYdh2KYIqw75jbk" class="r"><!--pnid:QIWC6kUWKyP5yPPH99Gs16-->−200</td><td data-page-node-id="edMtDQG1944l7mycYTYS3t" class="r"><!--pnid:wN24fcmuFUsJRuPrq3CbGZ-->−12</td><td data-page-node-id="hYWWiOAY3SDrbZ1vrG2AOO" class="r" style="color:var(--green)"><b data-page-node-id="kLrp9QvxbxQsa1m6Wu2shM"><!--pnid:H0QD08gZjQxt5c43sKkeHu-->0</b></td><td data-page-node-id="TxzWiJv8eMc9kXWxDn88Y7" style="color:var(--green)"><!--pnid:FfBe7NyyPbkWBoBjo8ePnJ-->532 − 320 − 200 − 12 = 0 ✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div data-page-node-id="k1O58RKxjY7uE0tXBgXkgj" class="think" style="background:var(--green-bg); border-left-color:var(--green)"><b data-page-node-id="BbsVaz3hB7SBOQxTHaKogU"><!--pnid:U4DaKMDJ1yUicAkYof1pZb-->为什么顺序不能乱</b><!--pnid:iOHjkoG20iz2joP9LnkeMQ-->：① 替代料和呆滞料用的是<b data-page-node-id="HWqrN7SW6eayEhytzsmnOc"><!--pnid:NC7nvzKhqU7MDTDjLpy8I2-->已有资源，不花钱不延期</b><!--pnid:NasmM8QJEYosebKNChzb8H-->，必须先试；② 分批投产不消耗物料，只是把"开工日口径"换成"工序需料日口径"，<b data-page-node-id="827MPyT3L8sK9wOj3QzAkB"><!--pnid:immbVyfBVTlduasDTks5nq-->能直接消掉伪缺口，放在紧急采购之前可以避免为伪缺口付溢价</b><!--pnid:KkRPuwBRuTYZmAIqoIor5Y-->；③ 紧急采购花钱但不影响客户；④ 调整交期动客户，代价最高放最后；⑤ 拆单是前五条用完仍有零头时的兜底。<br data-page-node-id="U6HOej91oYXqgKRCBIN4Ad"><br data-page-node-id="hagIxbR0MTXpupqjgfKi3H"><b data-page-node-id="1k3lS8EmmePHa2m09hzVRz"><!--pnid:fbHArXETWtb439E6wkdDo4-->材料成本净影响：+144 − 592 + 320 = −128 元</b><!--pnid:vr2i1zxS0ah0djjaDYC3V1-->——省下的比多花的多，同时消化了 1,968 元呆滞库存。</div>
+    </div>
+  </div>
+
+
+  <!--pnid:LmlIuD5XCnolVAtVPwwaDJ--><!-- Step 6 -->
+  <div data-page-node-id="aOBMdJ2gvtENLpRJ9fEoKM" class="dstep">
+    <div data-page-node-id="Vp4jMsV3bN5WhPd2oVMM51" class="dstep-h">
+      <div data-page-node-id="5XIBf0y17EAEvi4hFsh7vz" class="dstep-n"><!--pnid:4W2oPMsd21TwbVjWWkiA3D-->6</div>
+      <div data-page-node-id="2ICrDeaDrL37D2iwb7EorP">
+        <h2 data-page-node-id="tOb1wtv4EJYVfTTJl1fu10"><!--pnid:MbZd8SjdDZPhrwyqlZ9Ifh-->Step 6 · 三色开工结论 + 前置动作</h2>
+        <div data-page-node-id="1THGKW3mOBcyuH9oMis2Z2" class="sd"><!--pnid:Ci4RJ1M0RCkYeq2ZovMnup-->黄色不是"有风险"的模糊说法，每张都要写清谁在什么时点做完什么</div>
+      </div>
+    </div>
+    <div data-page-node-id="gNpaRRrd6p3A3hTDUSG9Sj" class="dstep-b">
+      <div data-page-node-id="dWSnhyf0sRinCed7aJN7O2" class="tbl">
+        <table data-page-node-id="Q1LI55ICISo4i1m9PTUdD5">
+          <thead data-page-node-id="WTr2aGzPaEodwgtDKplfTO"><tr data-page-node-id="e5owjYplngiyYQB0pEjrti"><th data-page-node-id="T4E4vuxc99BDxPdHpKbnlm" style="width:14%"><!--pnid:ULCV76jkxXOyGunZkdMzVf-->工单</th><th data-page-node-id="fUxYUYyAPFlQnVmmK9Sl7u" style="width:8%"><!--pnid:Pl2Ihu13t96iC8ym4YsDIu-->数量</th><th data-page-node-id="Sxlozf4STnsByhMB8bsDi0" style="width:12%"><!--pnid:CHS6Y4SZOB6K2BJ4PPw3ZK-->客户</th><th data-page-node-id="M26XjQwb40cAH0ZQACVDDv" style="width:8%"><!--pnid:tDr3gd8R7HlSV7s3Jy6hOH-->结论</th><th data-page-node-id="6ck7qM3WpuaLmk0oVPhT86" style="width:26%"><!--pnid:tjiaH0z9fSrFVeu5Qyc0mD-->缺口与化解路径</th><th data-page-node-id="z5a3NAB19IF5NJfPyDW7xy"><!--pnid:Lv6lslf3EBiqi0FjUTvtrV-->开工前置动作（谁 / 何时 / 做什么）</th></tr></thead>
+          <tbody data-page-node-id="BqqrXarNzUxbfn89grAlRZ">
+            <tr data-page-node-id="tH7UVGebyE95u97hCmVsqQ">
+              <td data-page-node-id="68HONxjArQ0X1mNs3PEkYa"><b data-page-node-id="gLywkqjeJkyMk6v0rIk62I"><!--pnid:yg3iG1grAyuHkjmxCmENlq-->WO-2026-0801</b><br data-page-node-id="lJ5YMHouDSEfyvhaxE5p1V"><span data-page-node-id="dUjN8Zncpo4onpdKXOFip6" style="font-size:11.5px; color:var(--ink3)"><!--pnid:boxR2ywwhTLuBwt8yqEdFo-->P-IPC-01 · 08-06</span></td><td data-page-node-id="BK7Mv0elJTzJsFinWQYIBv"><!--pnid:qwz114aBrr9giUcinWUrtr-->100 台</td><td data-page-node-id="1nFnzWuBWj83Zx9P39Mnzw"><!--pnid:NJetOYalzBmg4oxjF0OLFV-->某主机厂<br data-page-node-id="aQC9XX412VD4dkJCJLgamf"><!--pnid:YtzF5hpa2aPIdH0oj2GoMw-->HX-2041</td>
+              <td data-page-node-id="V6JK3xOh6gliYeKKkb3dHx" style="color:var(--green)"><b data-page-node-id="P6u3BOa5OjyxuuhvdYFd3A"><!--pnid:fwVyKK0iNinYF6vr9ccoKa-->🟢 绿</b></td>
+              <td data-page-node-id="tg6gpMZE2XKkLOVKxXfBAz"><!--pnid:uxRadRAwnQVeZYZXbviT59-->无缺口。M-PCB-001 100 pcs 由可用库存 120 <b data-page-node-id="Fa8bSewF1K1MADLijgDwTy"><!--pnid:bALS4TU6yh3NsTJFlryPTC-->优先分配</b></td>
+              <td data-page-node-id="1FCg1D2A7PQZvz3lB1LVS7"><!--pnid:DM68NMEIHG8KCVXVmV2vLC-->无— 按计划 08-06 开工。仅需 PMC 把后序到货节点挂上工序看板</td>
+            </tr>
+            <tr data-page-node-id="FAxsmjAg3TFpqJ2STnkdrY">
+              <td data-page-node-id="s4RFrY0dl19AU53N0qWVox"><b data-page-node-id="JUN1aZJMHMFmw0glcSrIvc"><!--pnid:GCAfQRBYKOcUN64EB7bk1M-->WO-2026-0803</b><br data-page-node-id="uGUWHbXNjPb3EkE8sWfsOY"><span data-page-node-id="BwBN17f9p8wklV4EKj5tP9" style="font-size:11.5px; color:var(--ink3)"><!--pnid:MUOAW0WQXhzpsisRHnqzmz-->P-CAB-02 · 08-06</span></td><td data-page-node-id="1zk0hppinXlQStyD6K5MEw"><!--pnid:7a0COxYX5Gc1LPgXcCDjL6-->80 台</td><td data-page-node-id="tdcfLvVfPGpj9TSj09VEoG"><!--pnid:8Z4jhSgtfOVm6b4KsLePSv-->华东电气</td>
+              <td data-page-node-id="mlCQzgsfgL9XPCVaMEMRTg" style="color:var(--green)"><b data-page-node-id="Cd9v6qwKj2l0v05ZhewUF4"><!--pnid:XAC8IjMfBz2qh59NyFKQtN-->🟢 绿</b></td>
+              <td data-page-node-id="dGkSYqK6rs5CGcJgF43cj0"><!--pnid:udnXvScKTCuAWccsF97cMg-->无缺口。08-06 累计需求 1,410 ≤ 供给 2,350</td>
+              <td data-page-node-id="NA0hw5I0c1z3AmhHzDtu52"><!--pnid:mKfB3C5qeIzTZeKcShENWD-->无 — 按计划 08-06 开工</td>
+            </tr>
+            <tr data-page-node-id="x3HT0B1uLNYtyZFIBA7JKl" class="mod-row">
+              <td data-page-node-id="wPtx1ghun4hfccm5JCaIFp"><b data-page-node-id="Y3SUAZdOI0CwiYLbqhGwi8"><!--pnid:eJi6hytmmEm751Tp7OxuTc-->WO-2026-0802</b><br data-page-node-id="3wBnwKyIhnqB6v12IZkhlL"><span data-page-node-id="ysFMQHUxuEZ7R8wA3OuoxX" style="font-size:11.5px; color:var(--ink3)"><!--pnid:etm0m2b1gMUYFs0OvAesfI-->P-IPC-01 · 08-07</span></td><td data-page-node-id="pNJi9uizCeL5f7eyh73QVe"><!--pnid:qRO71DJixl1SeuCinKCeWX-->80 台</td><td data-page-node-id="f2gHCZb2VsR1L5USEiXLVy"><!--pnid:2cwkZDjHcG9yxUTesVVvYo-->华东电气</td>
+              <td data-page-node-id="1hYvoGHKT0nuOcqO2FxFeT" style="color:var(--amber)"><b data-page-node-id="brwJwDBAozMugFXz4mPOxI"><!--pnid:1l5XJxIKZNj6YNE643mWRv-->🟡 黄</b></td>
+              <td data-page-node-id="L92soZzBs8BrRMPyRdkDnJ"><!--pnid:jYDOk307BI6ay0IYbpddKX-->M-PCB-001 缺 60 pcs（可用 120 已优先给 0801）→ <b data-page-node-id="sPTyIqZndMMjKeRTPCIBRC"><!--pnid:jH761QvHRJ3sGoc7wrh83l-->路径 ① 替代料</b></td>
+              <td data-page-node-id="J0jOhAlo5BPf6N24xP0oQL"><!--pnid:VKqQ3oL5r2n2nMdSv9S9JC-->① 工艺王工 <b data-page-node-id="9QZNqQMyVpH0YlbYtgvXK4"><!--pnid:FwjmEvpPOEt6x9UY54rIuB-->08-06 前</b><!--pnid:Z6Ok2sxCLP4OodHWK2urUG-->完成首件测试并签确认报告<br data-page-node-id="0zJ9OHYf6NisyTvp16rFyz"><!--pnid:vj6HNaEELlZavfbF01w20n-->② IQC 08-06 前完成该批全检<br data-page-node-id="o7ctnSTwrCh7ZsqA8zKPOt"><!--pnid:B4MISK5KVjsYBE8Y8ZBNYB-->③ 采购小林 08-05 前提交替代料备案</td>
+            </tr>
+            <tr data-page-node-id="TDcbY0zFCbHAFR7EtYb2uW" class="mod-row">
+              <td data-page-node-id="65wVIUSvs2mt6ONLtHJj3g"><b data-page-node-id="axVIv45uprdurBvyn76cjz"><!--pnid:c5btO1oYXuUt11MCgAqatF-->WO-2026-0804</b><br data-page-node-id="LbDO3bpdLwkeLgRhHRN8VP"><span data-page-node-id="CnJPu5whBmltk9mjH1iRiD" style="font-size:11.5px; color:var(--ink3)"><!--pnid:3jBZqFCN9TSc6fUB6zBpSa-->P-BRK-03 · 08-08</span></td><td data-page-node-id="QwRtewVcJfAHgRy1pIsRJr"><!--pnid:QqGxqYgDLUcE2sJzV7unVe-->200 台</td><td data-page-node-id="mPRkSIALZlzMJHJGvgWcTs"><!--pnid:vAnNy8lFFErE2dpOiBCksf-->华东电气</td>
+              <td data-page-node-id="R4JNBAGPPFjrUqfbCCZYSu" style="color:var(--amber)"><b data-page-node-id="m5MMxm0ibTjZIzYOkAwylN"><!--pnid:2quPwMu39GhwpVdt0Io3d1-->🟡 黄</b></td>
+              <td data-page-node-id="W8L0lTvWzM8hmMYQ9kSEKb"><!--pnid:NDAi1sY1xoXgrnxQBLDEwO-->需 320 kg 板材 → <b data-page-node-id="lko3VCx0KYJbPirSOf20lL"><!--pnid:9ji7xC1gz244RRjoTmXNOK-->路径 ② 呆滞料</b><!--pnid:6EHZ4bl5yWIa8lnrFlQ7Wp--> M-SPCC-18 顶 320 kg</td>
+              <td data-page-node-id="Egg6ZMQo681Fsap7sjHLY9"><!--pnid:1sqf5JgjKBvjmXR01HVyjC-->① 工艺王工 <b data-page-node-id="DAeKgV4qHCziPZTIjLGkzQ"><!--pnid:dm3dtasctGOTjdPDkSg7li-->08-07 前</b><!--pnid:DjJGaHfe8uYXp3Na6x9md9-->逐张复测厚度挑出 ≥1.80mm 并出公差符合性确认<br data-page-node-id="oT9g1jv2BkbMcRzk4jnExC"><!--pnid:KOpOn9ZXo8VOZr78JdykQh-->② 首件 5 件尺寸 + 载荷测试 08-07 前合格<br data-page-node-id="ASUC5JRSpmYO5rAJ9m63Fd"><!--pnid:5yEzilWsVVRFZX8jMhR2A3-->③ 仓库 08-07 前转生产备料区</td>
+            </tr>
+            <tr data-page-node-id="3K92b91Uc34AVlWoICW08C" class="mod-row">
+              <td data-page-node-id="e6bqXeBzfiSBGU2VZEHQgT"><b data-page-node-id="2B1qhnWVbfHxUUT6sBdHvm"><!--pnid:Jn2ScEfHWKp6V5e2ByIQTe-->WO-2026-0805</b><br data-page-node-id="FGjM0jTf1eolEOMVX1xkEW"><span data-page-node-id="W9mjimSG2LjrCXsO0BvCIJ" style="font-size:11.5px; color:var(--ink3)"><!--pnid:84KyDDR34FjY51wPlJKXHY-->P-CAB-02 · 08-10</span></td><td data-page-node-id="gXR0djlAa8ansx4E79rGYU"><!--pnid:4r8WMCXi14Hrk5QKYRorj9-->50 台</td><td data-page-node-id="3wWlA3if4lQkQ3g90ekjto"><!--pnid:LBeoV6XB96EGFQRtkAbUMy-->某主机厂<br data-page-node-id="rP4FWJyzFJACFNbHtR3wAg"><!--pnid:rMNgyrn5vczvV44uv5cfMM-->HX-2078</td>
+              <td data-page-node-id="PFhsTgzFZaOUrzYCUsjKx8" style="color:var(--amber)"><b data-page-node-id="WzAG2Yljbiggzz6jkgr52j"><!--pnid:efA5Q700FwUBUJS2pMIYyM-->🟡 黄</b></td>
+              <td data-page-node-id="GaGTta3ovlINhfOAuHADu2"><!--pnid:iCsJXfW6CkATjx9bK9OGfF-->差 20 kg（08-10 累计需求 2,370 > 供给 2,350）→ <b data-page-node-id="Pu6mbMF6qMt7QW27uGomn8"><!--pnid:yMU9ZMdOsQnBrdOwqnAk02-->路径 ④ 紧急采购</b></td>
+              <td data-page-node-id="tqysPG50A3Z5fr4tCa3Fa2"><!--pnid:noXk5nROYuzfKjfWtlRWZA-->① 采购经理 <b data-page-node-id="y45vW73pnZtYiU7E2a5sh0"><!--pnid:X2CHphS6zPVj7PAc26vpWh-->08-06 前</b><!--pnid:V3KVgaJrEzI9TQNYKri685-->审批 320 元溢价<br data-page-node-id="jy91osohXpOutZWRzjggRL"><!--pnid:qrz6p7dw6Ph7GVlUTLw9u8-->② 采购小林 08-08 前完成代理商提货入库<br data-page-node-id="Md88uPWoHHGHXSnbz0g2rp"><!--pnid:1X4ZRkx9BQ8DYKReczG7rJ-->③ IQC 08-08 前核对炉批号与材质证明书</td>
+            </tr>
+            <tr data-page-node-id="G3dbnwLKmrjxpwsg3cN3Qr">
+              <td data-page-node-id="Arow1yyllRzXqFVKocU5DD"><b data-page-node-id="HCQaqvSKmsW9m5xBry3L1p"><!--pnid:Ft8EAmoev59ktSpOFGk5Do-->WO-2026-0806</b><br data-page-node-id="VLUSUHSO9zNxowMYe32Yex"><span data-page-node-id="xnvwNQSkO5g9KpI45CArYz" style="font-size:11.5px; color:var(--ink3)"><!--pnid:q9Ev26qJxR2ybd1Mm0fVmQ-->P-BRK-03 · 08-11</span></td><td data-page-node-id="xYbCthDspNa4qyl7PVLcqT"><!--pnid:WjRwHLMvZEUxVyxV4cVEVZ-->120 台</td><td data-page-node-id="hTLg4rNURR84RyiNwjyTB9"><!--pnid:CreeLoO2ovnxnB1n4bTlm3-->某主机厂<br data-page-node-id="8VbNd86PBs9RlzBZQ7jmZm"><!--pnid:eZytU1qcywr94otcebsBsS-->HX-3155</td>
+              <td data-page-node-id="nw7UMy7t6X411SXGbOSBpw" style="color:var(--red)"><b data-page-node-id="BkMpHX4sF5yHuFpqhdwwJv"><!--pnid:rY6GfqFck4Flgp5oA8M0ro-->🔴 红</b></td>
+              <td data-page-node-id="7x3s3vvX48eCBye2NMwFzX"><!--pnid:xqj4FnhwwFd35k4ShkX6Zz-->缺 192 kg。<b data-page-node-id="RfY5mPjPag6vlJozInhKfj"><!--pnid:a2GtQqQ1Ybm5t9MBbTASJ7-->呆滞料被 PPAP 否决</b><!--pnid:JhXDpMKTbxNrZR6LHNTDFU-->；在途 08-17 到晚于需料日 08-11 且轧制排产 08-13 无法提前；现货扣掉 0805 用量后仍差 12 kg → <b data-page-node-id="mfc1DrlbMU6ehat5ZLESOK"><!--pnid:AMmBvsssgZvgb1ZEh5bU5Q-->路径 ⑥ 拆单</b></td>
+              <td data-page-node-id="jcRYMpsK43F2ne7uM2Yr7a"><!--pnid:vCuFTMEvfr8tLpx7DFC9Cm-->拆为 <b data-page-node-id="B7qb6lVbl7y6J78THBgjmp"><!--pnid:Et8CqacNsdJjRAA1CHsrP9-->0806-A（112 台）08-11 正常投产</b><!--pnid:e9G7xmrdydGKFx4Mmfm4Vn--> + <b data-page-node-id="Da0sUpyzpb6IoMryKRhZUm"><!--pnid:8KIhSExbhlr02KjP54FLID-->0806-B（8 台）</b><!--pnid:kD2ZK0WceQKpZpGLy8cBUG-->待08-17 到料后投 · 需采购经理决策 + 向某主机厂报备分批到货</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 data-page-node-id="GhMAMbYTPczHTfZFGe0FEn"><!--pnid:v0mIkZUmT24f60ecUQ5kgt-->结论验算</h3>
+      <div data-page-node-id="XIs3RngJJ1I75Lty1e6lDx" class="tbl">
+        <table data-page-node-id="goxnDVqJef1zBPvgO7XB8t">
+          <thead data-page-node-id="viFmGa4IlSKRvgOMON6IIj"><tr data-page-node-id="tbbnakB2Z3dhSjHj1dCn3e"><th data-page-node-id="zTdyjh6Mu7MNU3LKMbI11C" style="width:14%"><!--pnid:8cp5sO8ISEMafIohLFqPQ7-->结论</th><th data-page-node-id="ARHZeYZ6wsilsYRUDqKgNA" class="r" style="width:10%"><!--pnid:WtZG3Zj496K3jVKTtm2K6b-->工单数</th><th data-page-node-id="ARm8CNbf9YTvlCRGNCLx7W" style="width:36%"><!--pnid:6cynzGMkrvfmaHxURAVz5w-->工单号</th><th data-page-node-id="FqGTnaHcXqWdS43vtnRU3M" class="r" style="width:10%"><!--pnid:EPeB9X2xr5fa1mTA5KTP9N-->台数</th><th data-page-node-id="ttUWX6cTL6eI8VLYSJyfe1"><!--pnid:wDlYi6aoaQo94AzFctRFcY-->算式</th></tr></thead>
+          <tbody data-page-node-id="vvc4kEoEqPftslJ1GQEk2i">
+            <tr data-page-node-id="UnzMClgAFg5O0lRkFCHRXD"><td data-page-node-id="xXeon5VRa2XukBXOwtAKf0" style="color:var(--green)"><b data-page-node-id="CGMOpVrUO2koomcLosR30B"><!--pnid:6s0nHViXaKYhUwdoQG8isI-->🟢 绿</b></td><td data-page-node-id="JxyLfoyjZhjnNtr5p1J65a" class="r"><!--pnid:IaoSeSSsG2eDiRXSN9hKzH-->2</td><td data-page-node-id="x1CliF5X433vdndnPknNdC"><!--pnid:I4k9JKfo2Gp0vwKTTXRTmt-->WO-2026-0801 / 0803</td><td data-page-node-id="9vNZ8d5WzUUXwaOVGLD3Tj" class="r"><!--pnid:Ss7OOVOdl4UU2trfQ2gprx-->180</td><td data-page-node-id="vkEAGTBmyEFi7dTPpDB3dl"><!--pnid:IROYjFGKdWfJfuKUPsV9Ot-->100 + 80 = 180 ✓</td></tr>
+            <tr data-page-node-id="1JdUy0RtcOu6b7X1EjYdzu"><td data-page-node-id="oizovefLdkytPqitosPAEx" style="color:var(--amber)"><b data-page-node-id="tcegfS9sFJjbr2nDQa1Sci"><!--pnid:ZXfftZdse22BodWC1jyS28-->🟡 黄</b></td><td data-page-node-id="HTQwEWkKBcHlYGi0qxfJHa" class="r"><!--pnid:hWWzAFGthViSgtV9IRe6xp-->3</td><td data-page-node-id="OWtKaZjvyiWr7qDdW3q8G8"><!--pnid:6BwHxzxIvp5dAFPKldMNbQ-->WO-2026-0802 / 0804 / 0805</td><td data-page-node-id="ToOlwgtuLnlpSAXNHtGleL" class="r"><!--pnid:FsKCTfx6mtf8GF9ZFbWRV6-->330</td><td data-page-node-id="N8PvFZF89xfnYHqEeCBxHE"><!--pnid:Dw7RnIfkwp82c8CRTD1mmt-->80 + 200 + 50 = 330 ✓</td></tr>
+            <tr data-page-node-id="44izNDsH60xxhRF80fg15K"><td data-page-node-id="A16NlAVAuB2C3kXlOGO1rb" style="color:var(--red)"><b data-page-node-id="koDAS5BHAposFLQ53F7L5l"><!--pnid:BT3jEC6LmQl8u18dik1spl-->🔴 红</b></td><td data-page-node-id="XGPZQf0CGEfv0AJ9C8IGqD" class="r"><!--pnid:DfIMG9F6PkGVajOr9KChDn-->1</td><td data-page-node-id="zySeuat7K6pSGtqUaTMBYA"><!--pnid:5nUaeaXeIx0VEAAjhp2UQw-->WO-2026-0806</td><td data-page-node-id="PxOHVjIbY5yx1Utc4wMGUW" class="r"><!--pnid:RbL0a4jl4vSmpSn3BqASkX-->120</td><td data-page-node-id="GRnuStr4Al7uWFP9BXR8Dl"><!--pnid:usSHUQja113Lh7ipHxNvF3-->120 ✓</td></tr>
+            <tr data-page-node-id="BI5h9PemWFxwVYylK9dYso" class="new-row"><td data-page-node-id="kxC7OSLQzyx4xIBvVldFkZ"><b data-page-node-id="R82M3OW1nNTMipkeoZoUpB"><!--pnid:iH4w5l02DTbr8wegoqCjO3-->合计</b></td><td data-page-node-id="zQJCVZ7nsVnfc8VGAsX4J3" class="r"><b data-page-node-id="Cl0NXVTL5uckWVstcCUzim"><!--pnid:wQB4okyywIMSgYoNxGeVyY-->6</b></td><td data-page-node-id="hlHhETFWCDdjXoh4uNnI0d"><!--pnid:JmCeM3QIjS0HBnlcnmqTdC-->—</td><td data-page-node-id="wYOTdrh6DL7nncDdlgQGlj" class="r"><b data-page-node-id="QH1oHGFR8t6PcnCWH70GDe"><!--pnid:WiNh7xkU9EmFHWnH6hnjMy-->630</b></td><td data-page-node-id="kIxxl9UukEekgVqWJhXKbF"><!--pnid:OVB6XzLlBfF3tUSCslE30c-->180 + 330 + 120 = 630 ✓ 与工单需求表一致</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-page-node-id="Nv5QEXtRfGNbEGcnCWLNGp" class="think"><b data-page-node-id="TRSoNnxVB5lTW6jQc53tVm"><!--pnid:6fXjh9hrpI9eY9FmlCjs9A-->关于黄色工单</b><!--pnid:s53qz9psNKMzIOy7uzwt8p-->：黄色最容易烂成红色——因为"有条件开工"如果不写清条件，就等于没结论。这里每张黄单都落到<b data-page-node-id="DyOZXEGGeGSsiOuJCSPRhk"><!--pnid:CnLootP7cWOrVqrHdlMn6o-->具体的人、具体的时点、具体要交付的东西</b><!--pnid:p0gZ1FQFVJE4vl5PCNtWFd-->（首件确认报告 / 公差符合性确认 / 溢价审批单），到08-06 早上一看就知道条件满足没满足。<br data-page-node-id="dcIKkMF9vWcm75POUkmKrn"><b data-page-node-id="vUwXGub9uBE0ZiohHNTeby"><!--pnid:sODACi3zTbPwN2grMEy4r0-->而且三张黄单的客户交付日都还有缓冲</b><!--pnid:niYBZF7NDHfuNAGqkQ2nOL-->（0802 交08-19、0804 交 08-20、0805 交 08-20 且完工留5 天），<b data-page-node-id="HvQUf6iIvIG0y36byZRWBE"><!--pnid:cEw628vku18geO5K1UJMDR-->即便前置动作晚一天也不影响对客承诺</b><!--pnid:Dskd8wJZ5jkbNfd7gadabs-->——这个判断也是算出来的，不是感觉。</p>
+    </div>
+  </div>
+
+
+  <!--pnid:35wpsfh6umQtkb3QwGFuX4--><!-- 边界 -->
+  <div data-page-node-id="rxq9Eyf44tyiNv2w5ZwzbL" class="dstep">
+    <div data-page-node-id="aIuaiVJD4AK5hWZRHY1YH5" class="dstep-h">
+      <div data-page-node-id="LvSWqL8BAEHUtnaljtDrYd" class="dstep-n io"><!--pnid:QoKpzTVVnyJGBsQRModX4l-->▶</div>
+      <div data-page-node-id="mnhR929zpvP0Mqk3Gh7TF1">
+        <h2 data-page-node-id="pua9L0f8Jb7vYQQTIxl7Mo"><!--pnid:Xqp9C9GusbRjVUrh9YvMF5-->要跟客户讲清的边界 · Agent 不替代 MRP</h2>
+        <div data-page-node-id="lhGTCpofEqmafv1xBvnvlM" class="sd"><!--pnid:I6MQbKfyqBmoh9JuObCFl6-->这个边界不讲清，客户会以为你要替换他的 ERP</div>
+      </div>
+    </div>
+    <div data-page-node-id="yskWMATWzmI8m99YFWVs5I" class="dstep-b">
+      <div data-page-node-id="R51hIqEitBalPz0PB843Bg" class="tbl">
+        <table data-page-node-id="ZQ3wsdrERcK6ZMerhE8u3D">
+          <thead data-page-node-id="7lne0kfB0b4GLXeNAQVsWC"><tr data-page-node-id="AX2TSicc4MCFsHLLrwVlX6"><th data-page-node-id="MllJFS9KQK5yljXgAI5G9q" style="width:26%"><!--pnid:pVdKiuOAApWo2gJVGI557o-->环节</th><th data-page-node-id="NOvkqLczabAJKJrwAWtp2I" style="width:20%"><!--pnid:PHaVt23aSSnBwBmD70jnPD-->谁做</th><th data-page-node-id="OFQyd7QaV7VybkH3dcFZOB"><!--pnid:gmCcWwW6gpQD7OGlib3iOj-->原因</th></tr></thead>
+          <tbody data-page-node-id="UwHe2zEnb1FoFTgu2mbTuM">
+            <tr data-page-node-id="EPe3NyLmHPangcW0ZQrgy5"><td data-page-node-id="4qFrlRXk5HVU0CAvSYeEAe"><b data-page-node-id="jrHedPiCXB8SHHpAM9WbgP"><!--pnid:PUgAGRdXhr1ua22oLOc6Td-->BOM 展开、毛需求计算、缺口数量</b></td><td data-page-node-id="zaQjcmcZdi0KeviEmUMabz"><b data-page-node-id="lAQuJdjKAIVkkrE6NYdob2"><!--pnid:Yx4zgiIHQdz8ycQaeMrJcg-->ERP / MRP</b></td><td data-page-node-id="FxdyrA2nqMr6mnV0tfhXtL"><!--pnid:EKrOPNJRjl2DscHh6oUIrb-->确定性计算<b data-page-node-id="pKhfwHeqKb7IDdc8RXXglo"><!--pnid:wPP7Fu7g2rbm374vKco8Gr-->必须可复算、可审计</b><!--pnid:GJg3V4v2NPDaZ7vGPLjSf9-->，同样的输入必须得到同样的输出。这部分 Agent 不碰</td></tr>
+            <tr data-page-node-id="ZX5s51w5zp9tS6jodSc6Y4" class="new-row"><td data-page-node-id="PZ3nKEYHFTqEkxN9aeqQ2k"><b data-page-node-id="ENkSqoBAyb0vW5uM15uEF5"><!--pnid:ukR4jbRWmiIqIemUwPU2Wk-->缺口出来之后的化解判断</b></td><td data-page-node-id="84r85nVakgq77LmaXone5R"><b data-page-node-id="GMG6rh8vUtJsDW6l6dzsx1"><!--pnid:wVCOwU9lQmrS7Ge6Kx2nOn-->WorkBuddy</b></td><td data-page-node-id="JOvKvfD2pCUhEFkEDRdfdy"><!--pnid:h4oKb6fmkT549w52mWfp4Q-->需要图纸公差、客户 PPAP 约束、呆滞料实测值、供应商现货 MOQ、客户绩效影响——<b data-page-node-id="mi6ffHWqUiCJhFEG65Ak5s"><!--pnid:IODFzt3o4ViK7zYI3WdmbO-->这五类判据都不在 ERP 的数据模型里</b></td></tr>
+            <tr data-page-node-id="PesK4Vyw5OZUvFCNUZa9N0"><td data-page-node-id="8c6UX5zISrRftdQHZHf4AX"><b data-page-node-id="2p4rnrKFp61LrMP0cYsIKi"><!--pnid:Ha9dS59BlNtOztOArXYLyZ-->最终决策与签字</b></td><td data-page-node-id="ktUsSJVPiMETTyedlDuusj"><b data-page-node-id="N60HqJpKblFV53QgbFeBlO"><!--pnid:HCf8Ekt4x1EWksZpnJHSrf-->采购 / 采购经理</b></td><td data-page-node-id="XzagYjVI2UiblSoPCQAX4F"><!--pnid:52gbbTCD3SkacgfUfN0IXK-->溢价审批、拆单报备、动客户交期都涉及商务责任，<b data-page-node-id="gDlLltfnhm5RNTlbITeEsA"><!--pnid:1SZVUfD7xdCyFkcEBJkVhQ-->Agent 只提供带依据的建议</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div data-page-node-id="RQhVxBJQ7QCYsmPvjtlRGA" class="think"><b data-page-node-id="hblG8eXiCLtNaJSxoYRdkK"><!--pnid:Zl9N5seFsoO9UtxbGusIAt-->一句话说清定位</b><!--pnid:VQJDj0tPVFrmIvTJnjZ4Bw-->：MRP 能告诉你缺 532 kg，<b data-page-node-id="RxmMqQGraAQh5iu8UlwylT"><!--pnid:0cqLWUd2IzH1LTcb4C8VJ4-->但不会告诉你其中 320 kg 可以用躺了 8 个月的呆滞料顶掉、而同一批料换个客户就不能用</b><!--pnid:kWKR9HqfPPPlmuWKAouYlJ-->。Agent 做的是把散落在图纸、PPAP 文件、库龄复测记录、供应商沟通里的判据摆到一起，<b data-page-node-id="rvH3i9Su1x2Rz7bfxdc40m"><!--pnid:NXdv5lQB6PAXMOuGL1eO5c-->判定权和签字权仍然在采购手上</b><!--pnid:9fcstKqB9RUru3NBCI8Q1V-->。<br data-page-node-id="avCGfSLuN8NzJD3i5ZAjqp"><br data-page-node-id="XgH8Z1aakzSIif25dS4hCw"><!--pnid:NewEd0K0uC04RqH0EDs2L9-->这也是为什么这个场景要坐在 ERP 之上而不是取代它——<b data-page-node-id="qPLhud8WYb0qrFLsWYksty"><!--pnid:bp9eLxmtlOffzonJkFEX3T-->客户已有的 ERP 投资不用动，补的是 ERP 天生管不到的那一层。</b></div>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="yYB3KdeWqHyyqxvoBX7ppl" class="dstep">
+    <div data-page-node-id="A6RJgbxePgTPPxXjMMRP7k" class="dstep-h"><div data-page-node-id="m6rTkSG80LJhQ8s0j1X3fu" class="dstep-n io"><!--pnid:SxlyimuKzFL9kBNnNXDTzA-->ROI</div><div data-page-node-id="X74VDqHCW6eN9ICvKP7vwh"><h2 data-page-node-id="Ty3IHSXciMEUWyagmDWyxd"><!--pnid:Qw3x7bgfE2ccwEuzUzyyk5-->用 Agent 前后，这次缺料预警的账</h2><div data-page-node-id="ycMGd5d9Hk9pRvTOCFon6N" class="sd"><!--pnid:P8mqqtOfVXMu49jAsuGIyp-->传统耗时来自公开行业调研 · Agent 耗时按本页流程推算 · 均为估算口径，见页底说明</div></div></div>
+    <div data-page-node-id="6hbxXASsKX6KZfFtbVFXYR" class="dstep-b">
+      <div data-page-node-id="pIxXQGspAw99YOrKxroNwR" class="kpi-row" style="grid-template-columns:repeat(4,1fr); margin-top:0">
+        <div data-page-node-id="UmYdthWAX3gj1AIz588BVL" class="kpi"><div data-page-node-id="EQX9Nn50DKx09mUzBMFWRQ" class="k"><!--pnid:LU5evOhnHChD8nibepItLi-->人工投入（这次核查）</div><div data-page-node-id="Im7SqrHtlIaPz1QjzMXGs2" class="v"><span data-page-node-id="m6wvlQfaIiTR722PUGcNt6" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:wFzAKv93j1dH38DkjtnXW7-->0.5-1 天</span><!--pnid:ywSyIMRVAC43lTqRKcdSfM--> → <span data-page-node-id="cFuCpmRDkEo1RrSG4SsBIz" class="green" style="color:var(--green)"><!--pnid:7E2oeF2CESlI6hhWdKCWTW-->≈ 1 h</span></div></div>
+        <div data-page-node-id="HYTEF8aNvOGXDinQSkXa63" class="kpi"><div data-page-node-id="K6auCswLCmTKU5vwrQkPqD" class="k"><!--pnid:EHTqjlniOmb1pCAaMZ1sib-->缺料发现时机</div><div data-page-node-id="zWADmQfcpOf67WA7JayglC" class="v"><span data-page-node-id="jDttwqYu4E8R5tGC6LaTNN" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:lKVpNFoEVqSwXAffK8VsGN-->开工时才发现</span><!--pnid:P3kiOpVnuJShB6l4ejdkdt--> → <span data-page-node-id="pjGxvvQz360Cnk0d3TSD3M" class="green" style="color:var(--green)"><!--pnid:UrrXgZlHaU08BGAGIAferG-->提前 2 天</span></div></div>
+        <div data-page-node-id="ZkzxuffdUPqF8lXlRB0LWm" class="kpi"><div data-page-node-id="znswGRyoHROb2yp7ZbpXlm" class="k"><!--pnid:a3f1F5Ty8smIbmMNWJh1VN-->参与方式</div><div data-page-node-id="QlgDVnyEw7j7ZVtihkTj3U" class="v" style="font-size:13px; line-height:1.5"><!--pnid:FwFOJ6uDWwF1LeG7lVz2HJ-->采购/PMC/工艺电话接力 → 采购 1 人发起<br data-page-node-id="Jm6Y9Aya694Ay11YcmmWi8"><!--pnid:Z1deKubxDkQh9cixvkkVTP-->前置动作落到人</div></div>
+        <div data-page-node-id="HSseJ364GJzGvLGF83MJlS" class="kpi"><div data-page-node-id="i0yu1RlqEq0sY4aWEJDdTO" class="k"><!--pnid:LDS4GyP6QI41El6kMozhxv-->报缺口径</div><div data-page-node-id="HPfna95FzYxSXWoCHuwXpO" class="v"><span data-page-node-id="23lFkjIfJk47t2DY8jlO9a" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:fw4AaJYxzC4P9aKCu3X5vw-->4 项报缺</span><!--pnid:B7o2v4h8v32Loq1WNJrFUz--> → <span data-page-node-id="FdyiqcB7FhTpdgJJ8Q5P8P" class="green" style="color:var(--green)"><!--pnid:68lUQWYl9gW3pfiXI1BEJv-->2 项真缺口</span></div></div>
+      </div>
+
+      <div data-page-node-id="KiWppzVD6vJGoEn9FKEsfb" class="think" style="margin-top:14px; margin-bottom:0"><span data-page-node-id="0VE40ylIx9N9mSOJnX2nlH" class="lbl"><!--pnid:ATKR0JMZlPKTm9xIcgN0It-->数字口径与来源 · 都是估算，建议落地前用自家数据校准</span>
+        <b data-page-node-id="MsZTxe85UldrykeC2BN78j"><!--pnid:iZJ4qaSmddnmhwhigg6oRu-->传统耗时</b><!--pnid:GcwhilTSvHgKCsy0tF4qnB-->：来自公开行业调研 —— 计划员面对几十张工单手动核对库存、在途、在制，"一圈电话打完，半天过去"（物料齐套分析行业观察）；缺乏齐套预检的企业平均每周发生 <b data-page-node-id="5JY2KgQfE3VNRcFXbdDcKq"><!--pnid:xpMKH6z2STgUIyvy6ArPB5-->3.2 次</b><!--pnid:9p9zMS8IMdfTeEJU7TCztJ-->产线待料、单次停线损失超 <b data-page-node-id="khN6Gok5Ln54WAprCZ2EyN"><!--pnid:8TlPmC8cacbsuZfaMHScz6-->8 万元</b><!--pnid:klt1YKRCYybGD8zEPigtlN-->（行业调研数据）；中型制造企业月均缺料等待超 <b data-page-node-id="PqCqk0JTd18pwr6TJdmiCi"><!--pnid:AGfZ6Xwr7HkiHFRY9xS942-->42 小时</b><!--pnid:o07Jxhtb3XHdS5i7lzGsBz-->（ERPClub 行业调研）；某轨道交通装备企业齐套问题平均处理时长 <b data-page-node-id="T9GmClVWX1IaJ5TfGvYgzm"><!--pnid:lvVpk577JnGLmB2G0QqR5f-->4.2 天</b><!--pnid:rqXzggH1VDlFDcMFYLLrpZ-->。
+        <br data-page-node-id="hLOIQhW5G9zP5Okkc12LSx"><b data-page-node-id="DpzgN2JzDW1SnPv1WR0eZA"><!--pnid:6INJHuJp1w3ugdeUjS2Kcx-->Agent 耗时</b><!--pnid:CKYbJQPqsevpE8b45RILYv-->：按本页 Demo 的流程推算 —— 七份表解析 + 双口径缺口判定 + 六条路径推理约 15-20 分钟（实际受模型速度与文件量影响），人工只处理被标出的 2 项真缺口与 3 张黄单的前置确认，估 20-30 分钟。
+        <br data-page-node-id="7oI67Ztw15ot2yN2l6pEfu"><b data-page-node-id="Tjre6V7QVbTE1mrOmc1TMx"><!--pnid:v2GCsGD0QP35hHKl063iXO-->测算为演示用途</b><!--pnid:qETKfpS9eaTZG4JQXBS08s-->，未含系统部署与 Skill 维护成本；落地时建议取 10-20 次自家真实齐套核查跑一遍，用实测值替换本页口径。
+      </div>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="GUlAyp8u6k4vABUW5QNBa5" class="cta">
+    <div data-page-node-id="hMuizglpXgnNi30koeoAAY">
+      <h3 data-page-node-id="DthkrzQBTwvwchoSnhAHz6"><!--pnid:aa2MQtCrRHK3k361g0Qg9X-->想了解来龙去脉？</h3>
+      <p data-page-node-id="0zz6AyGRxVDzdybNlDl2Is"><!--pnid:ziCYE9HZVMqaAKlFgznLNH-->回到场景引入，看这个场景的痛点、做法与边界</p>
+    </div>
+    <div data-page-node-id="14LLQMvmRAUQC9ckAIKFZO" style="display:flex; gap:10px; flex-wrap:wrap">
+      <a data-page-node-id="mt9U19HndHTwUQa7IK0gPT" class="btn ghost" href="场景引入.html"><!--pnid:bL4hKvJI9Y6vF7ZLxTYYfb-->返回场景引入</a>
+    </div>
+  </div>
+
+  
+</div>
+
+
+<footer data-page-node-id="mIGwCsptRZNqNhF59dVNMA"><!--pnid:BEDiXqdp0MbizFZxVPwnuu-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="MSXJjl73sXY4HdjDuNnkbk" data-pnid-children="KgmgdpktiqPTy0xagrKI6t">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="wFuZIS3vyqSfOKdNEPXr3N" data-pnid-children="eLWtHlnM9KgLn1MDrtSXDm">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="273ntDhVBV6NXdr0TZLUq1" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="qLzArNp9U4R35zYOtCbPW0" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="nudVjBQrWA9LyufewzJlZj" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="CMAA4em7sR4qpQ3V8kxsWJ" data-pnid-children="mYTVdCkFrMtt298RodVVWG">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="4WmgEBqIDGOUgPamvX7kvG" lang="zh-CN">
+<head data-page-node-id="z98TdK4Odw2GUsq5PSMGi9">
+<script data-page-node-id="jcUUYykjBvRoqzmj8kotoY" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="r63te8kEi7ftuvKYHoK8pu" charset="UTF-8">
+<meta data-page-node-id="oEeZDV7oxV8kkggUtz0wx7" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="dO968rCLddI9tAl1W7hqgF" data-pnid-children="7civZVz6FR7hfPtAl0hPd9">基于本行台账的贷后检查报告 —— 数据自动填充，消灭只改日期的雷同报告</title>
+<link data-page-node-id="vlqYbiXu93BQ7qSTm2izje" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="SSi8K0jtBqrsFX2PJp1O9k" data-pnid-children="OONYVgP9AwEJpKzL3FaER5" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="XP3spE2Tsbdk1H2tYlVWBf">
+
+<div data-page-node-id="drflxMzYYpgG0CRl7lJvcl" class="wrap">
+<section data-page-node-id="k6WXuICpfX3pR70YOQ68kX" class="page-hero">
+
+
+<h1 data-page-node-id="cdwJ8wiy64PFni7vZpWPjd"><!--pnid:nOjVpOiZ6Fj0dj3agsPz19-->基于本行台账的贷后检查报告 —— 数据自动填充，消灭只改日期的雷同报告</h1>
+<p data-page-node-id="7QSQrhZG4fQ8hz9MbE1p1J" class="lead"><!--pnid:2hepdFJLtLT7No7mpWDljn-->贷后检查报告人人都在写 · 审计局的原话是「套用模板」</p>
+</section><nav data-page-node-id="ff5fVum3Nmhx0tBoUW5KXx" class="subnav"><a data-page-node-id="esNgJ4fgFtytDGNOC5Ret6" class="on" href="#"><!--pnid:BwfdBadA0mt8QUPGxP7kF5-->场景引入</a><a data-page-node-id="JKkB32Q4xDPr5p4zS0ULwL" class href="LiveDemo.html"><!--pnid:58NWo7o27sRdhvp4LpD9JJ-->Live Demo</a></nav>
+<section data-page-node-id="PKM57krN6R6MjYNDnwYG4J" class="blk">
+  <h2 data-page-node-id="e0EmzHKEP9aqF5NhMCGDka" class="h"><span data-page-node-id="JAYkQClNTyaocbUQKRlAjM" class="num"><!--pnid:GJqVUBKeLUOZJVc629GP0F-->一</span><!--pnid:wNpdUu0FDlGdCveP3L4O5W-->这件事现在是什么样</h2>
+  <p data-page-node-id="l4EaCrTEXlwmwD255ekiKG" class="subline"><!--pnid:gYuZr1krBVN8beeHOcywY4-->放款与贷后管理 · 真实业务触发</p>
+  <div data-page-node-id="s2QFinKQKJD8UCUchjaiUI" class="card"><p data-page-node-id="Z74FSwEKSxvj5GEmzX4YeF"><!--pnid:OmSgMzazn2MZBQbfxr0q01-->放款后第十五个工作日要做首次检查（查用途与资金流向），按季还有一大批定期检查；检查报告要移交入档，五级分类认定意见要经得起监管抽查「这份报告的数据哪来的」。</p></div>
+  <h2 data-page-node-id="rNyvjQzyn8M1iXJTRJiu4S" class="h" style="margin-top:22px"><span data-page-node-id="AXInplkLYeIbHh7ohrRcQQ" class="num"><!--pnid:lDTdOqqUv9Q1X2rdzWUi1x-->二</span><!--pnid:e7ZCDrsEZ1Gcsk3Y4z8Gyk-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="ea6CqJBqDqoNaL83qBFPfS" class="subline"><!--pnid:YI6R9e5maDE0YQSd1E3iDG-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="P7duUHcwKILeuO4r2e2w4l" class="pains"><div data-page-node-id="35SXbvkIX7zxT1jfU6dSi5" class="pain"><span data-page-node-id="oG194gxSeEjveeRmbztinq" class="i"><!--pnid:WLD3NiQyyTVcMK5viKC1JM-->1</span><div data-page-node-id="N8hwu7wsVThSp3q22CirRt" class="t"><!--pnid:CAMCFiTs1oanHWkfPOii5e-->宁波审计局案例原话「贷后检查报告套用模板」「贷后检查执行流于形式」——客户经理套取 190 万信贷资金期间，雷同报告一路绿灯<span data-page-node-id="y0CCjPQB5hqNzCkR0p1sVj" class="src"><!--pnid:vaDZxUtDilxL0R5XcUhxty-->依据 · <a data-page-node-id="E90mQyAtariqJSgSoKj3w2" href="https://sjj.ningbo.gov.cn/art/2021/11/25/art_1229539861_58919776.html" rel="noopener" target="_blank"><!--pnid:GpGJTeM2W19iJ1FKyw6khn-->宁波审计局公开案例：A农商行客户经理套取信贷资金190万元，审计原话「贷后检查报告套用模板」「贷后检查执行流于形式」</a></span></div></div><div data-page-node-id="i1CeBLm61RHmyysnk2SMoR" class="pain"><span data-page-node-id="JE3K4HpaUaZisB16VVL78M" class="i"><!--pnid:0daZftHrKn02dI5a3CChZ6-->2</span><div data-page-node-id="jR6jwZNX1ml64u76pxeJql" class="t"><!--pnid:OUq122TjWrQ8cUOmuBGuzo-->湖南农信官方文章承认：贷后检查闭门造车、小额贷款「从发放至到期从未贷后检查」、报告内容与调查报告高度吻合<span data-page-node-id="qpUf4zal3mdTJ8LDqujbWP" class="src"><!--pnid:RAHMb6uSsCCNNLdgLvRua6-->依据 · <a data-page-node-id="l23CgW5YqwkM42CAu6C5bo" href="https://hnnxs.com/info/826.jspx" rel="noopener" target="_blank"><!--pnid:VTFa921JQIPj2UwKItGYxe-->湖南农信《农村信用社贷后管理探析》官方文章承认：贷后检查闭门造车、小额贷款「从发放至到期从未贷后检查」、档案涂改、交接不清</a></span></div></div><div data-page-node-id="SO4IizrHHNDAY75l9eXzTf" class="pain"><span data-page-node-id="ioGQOsdg3ujWVU1bJsZA5s" class="i"><!--pnid:4IZc1u0ORNg6DpGrUgwMVp-->3</span><div data-page-node-id="481AgX5TRUU486yGOAb8gk" class="t"><!--pnid:IMiS7oUX58uSVXcPdZ1cpI-->「贷后管理不到位」几乎出现在每一张中小银行罚单里，且罚到客户经理本人——武强农商行一张罚单点名 5 名个人<span data-page-node-id="BRjXeq5bkiNWRvLCd8JOcL" class="src"><!--pnid:Nfw87TXhHxINbTzitJl1Dz-->依据 · <a data-page-node-id="GsZGuK6hD0MwmySHUQ9TYm" href="https://big5.nfra.gov.cn/branch/hebei/view/pages/common/ItemDetail.html?docId=1195952&amp;itemId=1822" rel="noopener" target="_blank"><!--pnid:WX9ylEg2TGIbJyyBT498kD-->武强农商行2024年罚单：贷后管理不到位、信贷资金被挪用，罚款100万元，客户经理部经理/副经理及两名客户经理均被警告——罚到个人是常态</a></span></div></div><div data-page-node-id="m6vHai0qUABW8W8IKevS5V" class="pain"><span data-page-node-id="pmBkwLUJTw0fOvaHYk6oJP" class="i"><!--pnid:PKl7xBWMiDNuRVhWaajLpu-->4</span><div data-page-node-id="RaZ2WUm1vp60NGyyqSi02J" class="t"><!--pnid:lHaA8OdMvusXft7gDFSj0C-->报告雷同不是写的人懒，是没人看、数据也拿不全——真正有价值的版本是让报告里的数据真实、异常可追溯<span data-page-node-id="lSeeh1TCyt1plnnpA7HWu6" class="src"><!--pnid:7FfLYTmKCr3HCFkoQriMGJ-->依据 · <a data-page-node-id="odWi0idtXtEywA9zxL8xiB" href="https://www.toutiao.com/article/7659910704752886322" rel="noopener" target="_blank"><!--pnid:IBiF8GRU0IeibN2Kyi0IhA-->一线吐槽台账形式主义：「花90%精力做台账，10%精力做业务风控」「同一套数据按不同格式反复填报五六遍」</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="5NVs6hPbAUfUUUD1N4KPdU" class="blk">
+  <h2 data-page-node-id="2A7hZPM0ZusDLhuIEqx3Ll" class="h"><span data-page-node-id="NxylutNFfYk7rvpKHEBAuH" class="num"><!--pnid:TxjNIxUwwjY2VPC28r8sfZ-->三</span><!--pnid:8S7PfNOt8vOmQIhw3wCFbt-->换个做法之后</h2>
+  <p data-page-node-id="JsY6QFxY4WZ6WBuI8N5OCo" class="subline"><!--pnid:K4TzSHWZH2okV7Db4U8sWd-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="X39IMiSmNK5WWbBQuvtoMZ" class="cmp">
+    <div data-page-node-id="A11hfciheHq15E43pnyyXC" class="old"><h4 data-page-node-id="uHF5C4n6GVja8czmLEANCN"><!--pnid:9xEgfLQgio0wd0qFYTSLcm-->✕ 现在的做法</h4><ul data-page-node-id="1V1X6nNNAeXNAB01mfOJ8P" class="list"><li data-page-node-id="OOkwTVUkHGp0gkmXJSw2Le"><!--pnid:LoYrg0IkkcY0QzuNuNhh28-->宁波审计局案例原话「贷后检查报告套用模板」「贷后检查执行流于形式」——客户经理套取 190 万信贷资金期间，雷同报告一路绿灯</li><li data-page-node-id="s3zl7WzYPb2IUpUCHJcn6S"><!--pnid:MnIiPmITGeJgPPevQ7xrBC-->湖南农信官方文章承认：贷后检查闭门造车、小额贷款「从发放至到期从未贷后检查」、报告内容与调查报告高度吻合</li><li data-page-node-id="K0HcFYfFCEmklLyAJ085Kc"><!--pnid:Zz95MPzqJ8cp04gys55SO5-->「贷后管理不到位」几乎出现在每一张中小银行罚单里，且罚到客户经理本人——武强农商行一张罚单点名 5 名个人</li><li data-page-node-id="DVmZfrErvPpH56QITexFTG"><!--pnid:BDG3OPIdyz4c15euOiaHTX-->报告雷同不是写的人懒，是没人看、数据也拿不全——真正有价值的版本是让报告里的数据真实、异常可追溯</li></ul></div>
+    <div data-page-node-id="GfeZtqjPWcItJ8j33OE5tt" class="new"><h4 data-page-node-id="UmTgfMQGmwFh2iNPSspXQo"><!--pnid:GqwDLhdeXRBnFTzfKyliB6-->✓ 交给 Agent 之后</h4><ul data-page-node-id="P0kl9C7gSzm97G2ZUlHV5D" class="list"><li data-page-node-id="BllwFY6vZoHw3nX2zzgDsR"><!--pnid:tJpfI7m6hlNwEd7guA1Wg4-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="bVCas6dCuWwPvUDcLVataN"><!--pnid:g6Q3sOsH7szqw7iPCxRGKK-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="SuNtSeGWLmb11GWVPUTCTP"><!--pnid:Vf4DvVtCcAxsaP2SwwLOPL-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="XV4xdf0gDgZC9KjEvKfuNL"><!--pnid:TIxxXzg63bDqpZ2S8s3CwH-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="1aIe06nMkPmkEWY2SErtkv" class="blk">
+  <h2 data-page-node-id="2Mg0Vc6vvViYU6IdWMjWkf" class="h"><span data-page-node-id="kWEEIRY0VYtR5vFg1Lrj0z" class="num"><!--pnid:wptLRL6sviw94bKl515MmX-->四</span><!--pnid:l9fbdCZcdqvHTCEQA8fLS4-->场景闭环</h2>
+  <p data-page-node-id="TkypTNBFOnISWsV92C5cDM" class="subline"><!--pnid:60NJk8OHhaBt4L3bvylcWh-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="v1WlLKCG1Ef6cdBxFsN9tt" class="flow"><div data-page-node-id="QvGXZZigIkXzhLvfSrH7RE" class="step"><div data-page-node-id="uyRLWqXuEXOTybmwc2j4es" class="n"><!--pnid:LDMqsdcPh6JQaH9W54vIKG-->第 1 步</div><b data-page-node-id="qgZRR6UDPfAIKfPeXhMand"><!--pnid:cKYu8r1idpHGpSITLLHsZc-->台账装载 · 这笔贷款的全部本行数据</b><span data-page-node-id="8vH02Qc3FWWkN4agb3IcPH"><!--pnid:KSNvsWp103O1LOCHvnXlIo-->合同、余额、还款、划转、代发、代扣一表归集</span></div><div data-page-node-id="6BYLTEKN9g0m5C3dm7w2Cp" class="step"><div data-page-node-id="K93h7HwQni2g7DmapvxQpx" class="n"><!--pnid:TtNgWEZxd1hH2Lihs1zu4G-->第 2 步</div><b data-page-node-id="kWMQgA0WtlE4gdyJSyN2DS"><!--pnid:pDXOLc5NFIqRcEilkRRtga-->用途核查 · 放出去的钱去了哪</b><span data-page-node-id="5OPIyB3aRR4mY6DcBlQpX0"><!--pnid:Zn47SRfLag5Q5u2ZheVsPk-->放款当日及七日内划转逐笔列示，受托支付对象与合同比对</span></div><div data-page-node-id="IDwx2rYNIEmZuV32cBLVgU" class="step"><div data-page-node-id="18zhxvYFFGQEetcUGVuRYK" class="n"><!--pnid:WyNUs6HrdaHEcZE0S9GWXg-->第 3 步</div><b data-page-node-id="VWA3Ehm0T6FuAyHEXeNIyr"><!--pnid:EpETkETjI2mwMebhcdREou-->经营旁证 · 工厂还活着吗</b><span data-page-node-id="fgd3AGO24qoaOieEnnsoHH"><!--pnid:FgMZDKSTjM8s9tF9BafqyB-->代发工资人数与金额、水电代扣、回款流水与上年同期对比</span></div><div data-page-node-id="ANF6tFUC3lPcGy6kyGgu1r" class="step"><div data-page-node-id="P9ZxvOdk6NMbBDq4HpovSj" class="n"><!--pnid:gbR2xxXgcJlw9gHZ1fkPbf-->第 4 步</div><b data-page-node-id="HkCrZYdpiUuWTbe4G7nysD"><!--pnid:WckYovjz9UyirXqMT8esVz-->异常链路 · 本行账户内的可疑划转</b><span data-page-node-id="6aCgmeyX9jQNQ9vIqln3a2"><!--pnid:S6Gd7WTwsZw34BxreXRXPi-->同名划转、整数快进快出、关联回流，逐笔给时间与金额</span></div><div data-page-node-id="24SByJoC8nAvcZCJU8bJfW" class="step"><div data-page-node-id="fmAK2LLSy3C3lUVyGc90ld" class="n"><!--pnid:qtrzjdfVj2bVc3fLKswZR8-->第 5 步</div><b data-page-node-id="9m12rFnnGl0OzQ2WZuco2Y"><!--pnid:UvT8SQQIMqhHezucSP160c-->报告生成 · 四段结构数据全填充</b><span data-page-node-id="VVIundM1QRZQhI8eqMsSRk"><!--pnid:SG90pEiW37hUANJN8p7xza-->基本情况/检查情况/检查分析/分类建议，每段数字标台账出处</span></div><div data-page-node-id="5PAkydFmIfuEcq8R5hOfF2" class="step"><div data-page-node-id="pvYHTElMeQ91eYeL16Cswi" class="n"><!--pnid:6qCMMK7CpoSPFar499xBps-->第 6 步</div><b data-page-node-id="1aXU0dxSeSqsRhaPC7j5OX"><!--pnid:MEI2bWTaJPgASTyswqls8f-->留证与签批 · 检查报告移交入档</b><span data-page-node-id="NHKFKI1kuFGzHxzMQPktTO"><!--pnid:WcezXzEIfWH65xpcFNEHKw-->客户经理签字栏、中台复核栏、材料移交清单一次生成</span></div></div>
+</section>
+
+<section data-page-node-id="8kAmpquEapQZVWX8LhPT4S" class="blk">
+  <div data-page-node-id="EQfzGR4M6Zwcs5uYDfF2gA" class="g2">
+    <div data-page-node-id="OgT4dmnQWBRPl15hg0RA8g" class="card"><h3 data-page-node-id="YFZlLoqSYGx9BsWoWhnm2x"><!--pnid:4Qgp3euZL1uCyZuQcAFZnk-->要准备什么</h3><div data-page-node-id="bdIJE0EcQAvRiWscOpvKIP" class="src"><div data-page-node-id="p4hXaQNuO4qwnbshTnOOIW" class="fn"><!--pnid:lqnumPrvsMtLi3jpS5OL3b-->本行信贷台账与放款流水（系统导出）</div><div data-page-node-id="Irfb8uGXKJpcDiUjiGBhAk" class="fd"><!--pnid:tRpx16yOor3UMLXfmpQsD0-->余额、还款记录、放款当日及后续资金划转明细</div></div><div data-page-node-id="yGClrvh9xMVzUA4IjJRRPA" class="src"><div data-page-node-id="2p4kARFe8k96gJMWCuBRtn" class="fn"><!--pnid:uVxZiZxvn9QDQ515dC47ib-->上一次检查报告与调查报告</div><div data-page-node-id="Ja70Isq2RlWJyjgo4Qhte7" class="fd"><!--pnid:kRyGPNhudywG0DPOQRvk6l-->对比经营变化的基准</div></div><div data-page-node-id="gVTcrm0euDBJU1MUc93pxu" class="src"><div data-page-node-id="sFy7d5YO6FAjRgOO79iNJN" class="fn"><!--pnid:f5YiZMuTGwIhKscOgkw5K0-->借款人代发工资、水电代扣数据（本行渠道沉淀）</div><div data-page-node-id="wOYL5wMglEgZkRyKxyMz3y" class="fd"><!--pnid:ZFwIWZfspOGfXNXEIzXtFW-->经营活跃度的旁证</div></div><div data-page-node-id="X7jmQnHXRCKasp17WFbYRO" class="src"><div data-page-node-id="xDPIOBwTPUg2pKlzKatXn1" class="fn"><!--pnid:eaOOR049UP8RH6Ztpc1I9y-->押品影像与权属状态查询</div><div data-page-node-id="C5cG09gFoJ04j6dzumFA8E" class="fd"><!--pnid:I5gAbjzj0fws7S0Ea6c4S9-->抵押物现状</div></div></div>
+    <div data-page-node-id="fwPe5MjLH3l85JK7qkbLzQ" class="card ev"><h3 data-page-node-id="DFTO0IizQDXw6ENBtwRPe8"><!--pnid:367JLYxnU823FkVsD0OalA-->为什么这个场景值得做</h3>
+      <p data-page-node-id="RtjqGMRBfSA7UjuMQzjL3E"><!--pnid:LwMt0rmLVIJNa3cdk8MQCu-->痛感 5 × AI 适配 5 ÷ 落地难度 2.5 = <b data-page-node-id="RY26fnYbduyaAcRdSwrqJP"><!--pnid:yGGwM03UMBCIUMNagtIcYc-->11.0</b></p>
+      <p data-page-node-id="n6Qw7mryteFCKWbZD7Q52W"><b data-page-node-id="DRwWDTMw5rzFsqLOIgCIpD"><!--pnid:VyG5d6dbErESfQqo2BdUlZ-->最大差异点 ·</b><!--pnid:cTUL4615HVlD9a4oX30fku--> 与「贷后报告提速工具」的区别：不接台账只换措辞的提速版没有价值（数据还是不实的）。这里每个数字来自本行台账与流水——用途核查、本息偿还、押品状态三段全部数据填充，异常处直接给出流水明细。</p>
+      <p data-page-node-id="ouFSd2QMFNaZdYm0YoKcx7" style="color:var(--ink3); font-size:12.5px"><!--pnid:vSmxN3fWHqyfupOS4Hy0f5-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="h5GmVqL29ssunoD17iZpDQ" class="blk">
+  <h2 data-page-node-id="wet1VsBARaEnCK35GGwwbk" class="h"><span data-page-node-id="1GjaDf2aeNndOO01wr2igK" class="num"><!--pnid:QJvgKS9XR74l4XaZGbCmgK-->五</span><!--pnid:ptnNUhKK9kmqs8vyvBKpj5-->会产出什么</h2>
+  <p data-page-node-id="aoj94sqcWUjvBq7L2whb4K" class="subline"><!--pnid:ZrU17j5jLf0JZuN42xrV8H-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="wtyXTjNAcPRt9ptDqN1xGX" class="outs"><div data-page-node-id="Gi8pk2heQLpCoOTH5MJyFz" class="out"><div data-page-node-id="3Ec5VmgCw3qsxy78FPQucJ" class="on"><!--pnid:TTuJgUeE7VxtNRZO3hOdT4-->正式件本体</div><div data-page-node-id="fuf3jgVoMqv6pvKsY46LcO" class="ot"><!--pnid:iQfW1MyLNw15QIwL3AIS1u-->贷后检查报告初稿.docx</div><div data-page-node-id="KcQAfzZDE3G7eCDOXTx9KP" class="od"><!--pnid:4iOpGYtSfnyuDQ0jSBmvuo-->正式件本体 · 四段结构数据填充 · 含分类建议栏与签字栏</div></div><div data-page-node-id="191MnehhOrQEWtaC6ybZDS" class="out"><div data-page-node-id="xnAwboa3y5gang4kUrYvQJ" class="on"><!--pnid:WOjMUbKkfHgDRdWziOYf1P-->可派发清单</div><div data-page-node-id="RMtDBOoOcmtZe6G4026v9V" class="ot"><!--pnid:G3uXX2IvI33pg9qbWMvhnG-->资金划转明细清单.xlsx</div><div data-page-node-id="IBPAu21qg9x3Ym6Xd4Vww4" class="od"><!--pnid:Hh7fQYDnxR5SN8AhYUHj3Y-->放款后逐笔划转 · 含受托支付比对结论</div></div><div data-page-node-id="0fyAOFV9kNIXT241jjIZ4P" class="out"><div data-page-node-id="TGFyUp0vMGO4Zsvm1Y0w2Y" class="on"><!--pnid:HLFh79R9kVDczB4dreeys5-->可派发清单</div><div data-page-node-id="Ov448mLFdQj3cvLMGZLmzH" class="ot"><!--pnid:R3E4w2JFTOfPIlFFx0hIBG-->经营旁证数据表.xlsx</div><div data-page-node-id="O7GIAEVkFyg0zx3zj6pLtg" class="od"><!--pnid:lTJ1LzvoEmgC0YnkI4AbWO-->代发工资/水电代扣/回款流水同比对照</div></div></div>
+</section>
+
+<section data-page-node-id="B8ebtfz63flSzpiNOxqwcz" class="blk">
+  <div data-page-node-id="AZyG5qctmpW0o0t3sYU5se" class="card warn"><h3 data-page-node-id="JYCZq4aotXY7zKPPd0ZNxD"><!--pnid:TBPgMq2R9JaT6PE5KLZPse-->这套东西不承诺什么</h3><p data-page-node-id="XvlsrcY6sIsXRi7wRYopXp"><!--pnid:SCmkYgJnzprQ88eooj7rHE-->五级分类给的是「分类建议」并注明依据，认定意见栏留空——分类认定是人的责任。跨行资金去向不推断、不臆测，只陈述「本行账户内可观察到的链路」。提前收贷等处置动作只列选项，决定权在风险管理部门。</p></div>
+</section>
+
+<div data-page-node-id="Zi4t6JbUMbk76nF0ahoTTP" class="cta">
+  <div data-page-node-id="Wb2me5RmzT2HzTRaLJOzCK"><h3 data-page-node-id="KA0W9nrsuYOuLR8G3Vk6cL"><!--pnid:99tanegJytMzFtIXZ1961q-->想看具体怎么跑？</h3><p data-page-node-id="nxNwjQ2073s7hiqt5RL2hw"><!--pnid:ZC7npEqCtIp00tjoaza41l-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="6QEuHrnMb90SccbbFR7nuk" class="btns">
+    <a data-page-node-id="9D9mX9brouo6MmpK39qDpy" class="btn" href="LiveDemo.html"><!--pnid:RiK4A2HxqXFf551PxbUuEU-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="AwF7dki0oUN9YkIVlvhLvh"><!--pnid:rboFegyoEsbUjjCQMWCQU4-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="5ycx0OOvcIKEjxDhrFexTE" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="hB7OOkS5boO4WWYPfxDsWU" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="a9FZGWeTl5GL9zMjwXJdjL" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="yZpZ6dsetGeyPI16QqVXRS" data-pnid-children="2BsIP3kHYIoqziwWehCiQo">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="F0KxuBD4piebqNxeduUdmt" data-pnid-children="GXtFBPSxScICb90Fnyh0pD">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

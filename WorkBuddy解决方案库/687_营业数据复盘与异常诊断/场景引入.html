@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html data-page-node-id="gjyES6fQNs7mWq3kJvfHva" lang="zh-CN">
+<head data-page-node-id="2MHpouWFfPHX7EFKTw8JRA">
+<script data-page-node-id="mt7A7aVyLFyuS0UhWVTC3K" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="X7aJMNw732FPtcwljnEgIU" charset="UTF-8">
+<meta data-page-node-id="bytiXtkx1xW8Wa2iokRtjv" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="sRZl9XQefPacKfNBsIF8OU" data-pnid-children="PD7ZqJ8NXCRNiTUllD3Tke">营业数据复盘与异常诊断</title>
+<link data-page-node-id="Fxoh6HPLPZmhycYEPoC1o4" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="PjVRJV2g7JZBJOGNCTH6NA" data-pnid-children="Y3q7zxYCYog4VTO4ot002W" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="yKXh04hPVywJa7zBbDXFRw">
+<div data-page-node-id="cAQdnQc54782E4ZQSramdP" class="wrap">
+<section data-page-node-id="pPbhjiQKBxTa8TwlWgjzkI" class="page-hero">
+<h1 data-page-node-id="gKhMOTh5SW14eHSrBBNqyN"><!--pnid:ECDxEWwUCqvUCeMvXp1oNy-->营业数据复盘与异常诊断</h1>
+<p data-page-node-id="8crD9B4wZhq7vLuskW7oz3" class="lead"><!--pnid:lr03XEcE7Db1s5UQ3tElgl-->多店数据散落多表，异常门店靠主观判断，改进建议缺数据闭环</p>
+</section><nav data-page-node-id="gFNhOQH7x1gtPtB7pUyGWT" class="subnav"><a data-page-node-id="GrXGl2KCgTVn0BpuIWiaRJ" class="on" href="#"><!--pnid:ffDnwn98dY5wBKhc6NH1oF-->场景引入</a><a data-page-node-id="34ArHIQm3QjOt03jKYzu0n" class href="LiveDemo.html"><!--pnid:zt1vL5QOsWzuup9gYrO9Ta-->Live Demo</a></nav>
+<section data-page-node-id="HCejNh0ltDKBp28eA0zaj7" class="blk">
+  <h2 data-page-node-id="ptrcVYGg6W8ghymGkBAFfe" class="h"><span data-page-node-id="SLTZATYufLYDOKlsuizrap" class="num"><!--pnid:iSGaPfE4kdLvYicrY1C2oK-->一</span><!--pnid:w5fk1wWR0ruDHsP8WTZ7kx-->这件事现在是什么样</h2>
+  <p data-page-node-id="QgpodZCff91nj0Wm5qfSxk" class="subline"><!--pnid:IBCi4KdgI0vQNFtJg07jLc-->区域经理 / 门店店长 · 每月复盘会前的硬仗</p>
+  <div data-page-node-id="nOBEbuPToI378cM7kH2wuX" class="card"><p data-page-node-id="oVY5wGenRaindZ3MkzOEed"><!--pnid:3GSty2uNCupfXYTlRq5dRI-->某快餐品牌「鲜锋食客」，7 月 10 日早。区域经理要交 7 月 1-9 日的多店复盘：8 家门店的日报散在 8 张表里，先花半小时对齐字段。哪家店异常全凭印象 —— 宝安店有两天特别差，是店的问题还是那两天大雨？没人说得清。罗湖店日均全品牌最低，会上被点名，店长喊冤「我们商圈就这样」。光明店数据缺了好几天，报上来的数能不能用都存疑。建议写了三条「加强引流」「提升外卖」，下周复盘照旧 —— 没有数据闭环，建议停在纸上。一份复盘报告手工做 3 小时。</p></div>
+  <h2 data-page-node-id="hgtO2ANJEe98kr3JCCXgT7" class="h" style="margin-top:22px"><span data-page-node-id="T7yYC2HUICzMqw3EtdLxfK" class="num"><!--pnid:xZFbCLdlDpvd7xStVL8ZSN-->二</span><!--pnid:1BR6e3gYaiDc7E1fY1XykK-->痛点 · 每条都发生在昨天</h2>
+  <p data-page-node-id="ugDD6oDgGnm5l9rtQeQXwD" class="subline"><!--pnid:gbMmLXAjz8Fan2kXMeLVJD-->不是流程描述，是区域团队每月真实经历的消耗 —— 以下案例均取自场景调研与演示素材</p>
+  <div data-page-node-id="0P8zrkFDN32tXy7KPIO1qH" class="pains"><div data-page-node-id="AAokWuFr4k0VwhXgWI9P9s" class="pain"><span data-page-node-id="XwDk7oKED0Is2AyJKec1s4" class="i"><!--pnid:xl3GB6vDef5fKGu1hsy2Bp-->1</span><div data-page-node-id="lJjEKkpZyuh92IHh6XUgpk" class="t"><!--pnid:28CLj0TIQ9MIlkI4aM0QcP-->多店数据散落多表：8 家门店 8 张表，字段口径不一，对齐先耗半小时</div></div><div data-page-node-id="2oqg7JU73uYIX41B6CH3Op" class="pain"><span data-page-node-id="KM2VI9T2wMuPpMRtAhlSWX" class="i"><!--pnid:HqTJxOmfZFS4kP1PlLsKCn-->2</span><div data-page-node-id="oDZGTWGzqSdK6zOPGaiMY0" class="t"><!--pnid:jyxYyRXbcA0IcRPedWHKmq-->异常门店靠主观判断：哪家店该警惕凭印象，被点名的店长喊冤「我们商圈就这样」</div></div><div data-page-node-id="1d6gNHu7zFcnKFLDwG1JQR" class="pain"><span data-page-node-id="d5BvkenF2IT3t4Oqfklwyj" class="i"><!--pnid:sXD9omaBSrxhXZ4ztNwIsh-->3</span><div data-page-node-id="DOlhUEvYPAs39rk876XMdM" class="t"><!--pnid:1HcvDrzfvHuXf4xGTPjl2y-->系统性与结构性分不清：大雨天的下滑和店本身的问题搅在一起，归因错位</div></div><div data-page-node-id="lZgSrdeEGhcpkGJi1EWG6r" class="pain"><span data-page-node-id="NIcg78eZ3JL0DPdLHn3c4E" class="i"><!--pnid:cbqe3k3lwlajpUGIVxLa4m-->4</span><div data-page-node-id="nA0HRAP0ZRD1tMZ8FLRSQI" class="t"><!--pnid:dp0xd196RwIQcjQ1KULXs5-->改进建议缺数据闭环：「加强引流」写了没人验证，下周复盘照旧</div></div></div>
+  <p data-page-node-id="6or7dpeYOOAD4CwGMCX9HZ" style="margin-top:12px; color:var(--ink3); font-size:12.5px"><!--pnid:Ni0nMqamwYIhqlxhKxQ6iO-->与现有方案「品类结构月度复盘」的差异：同为零售复盘、对象不同 —— 该方案面向多店多日营业数据的整体复盘与异常门店诊断，品类结构复盘侧重单品类结构 —— 两个方案并存，按复盘对象各自选用。</p>
+</section>
+
+<section data-page-node-id="fvN3qMYKzlAvgjtWgcJIRt" class="blk">
+  <h2 data-page-node-id="aNldbV4DxI9RvEpKPxBkUf" class="h"><span data-page-node-id="R2jNqfiVkqHvuU30oAXDl7" class="num"><!--pnid:qlxbgUOripoQWCDUJbniFC-->三</span><!--pnid:XguuvqPCY0o13rIylYKGGb-->换个做法之后</h2>
+  <p data-page-node-id="o4x37qNes2cpR5Mkr1B02h" class="subline"><!--pnid:8KDGAepUCxwLYS1NdWG562-->变化不在「快」，在「有标尺」和「能对账」</p>
+  <div data-page-node-id="y3f0hKzpvYoFY1Ci1aO3dV" class="cmp">
+    <div data-page-node-id="ULZot0bTcKMjrnFvj8VCEN" class="old"><h4 data-page-node-id="YLhBzfCcMuNbJl5hgYPVC2"><!--pnid:9F4Kv1jITtTkKTomIlmJgP-->✕ 现在的做法</h4><ul data-page-node-id="78xCuyuzWpwkkTv3up6Af5" class="list"><li data-page-node-id="2ywi9FyIQa86zdRG1oF4ko"><!--pnid:qZfzLCa3n6f2Sb613sxpOT-->8 张表手工对齐，字段口径各说各话</li><li data-page-node-id="nWtaPIu5JhcbsEHLhw5jEC"><!--pnid:nl5ClIrnHj4R0NXbeemMDV-->异常门店凭印象点名，店长不服</li><li data-page-node-id="zTBVOsvEmV3tNBjnB34du8"><!--pnid:rJ2IGdD7c9LPyyuBXucpAa-->大雨和经营问题搅在一起，归因错位</li><li data-page-node-id="GvGT6HoRIzItpydae5Jhrf"><!--pnid:7y5dUngByE5gAsI5Mtkp2R-->建议停在纸上，没有数据闭环</li></ul></div>
+    <div data-page-node-id="X7eZm6mjgMLLr0JWbzc1Dt" class="new"><h4 data-page-node-id="VpJS9TFf10cpn4ft91myzU"><!--pnid:MNVKCRtCAwJxlBNfwH30AG-->✓ 交给 Agent 之后</h4><ul data-page-node-id="tE8fvxpIjAlIr5AI9R7IhD" class="list"><li data-page-node-id="CtAMVvV1K25IWqlsRPyBcZ"><!--pnid:2ceho2kAPI4DEedVxOUZxO-->字段自动归一化，覆盖常见命名差异，数据概览先行</li><li data-page-node-id="SdM2YmnFxzeSwLCWH9FRJN"><!--pnid:CinQAlfhdgKRl30P5jWQOq-->三维评分排序：波动率 40% + 日均 40% + 数据完整性 20%，警惕门店清单附核心问题一句话</li><li data-page-node-id="9JjuHQS610k6tP4oeG3VIU"><!--pnid:x1bDGwI5SRYPpbC6x000iY-->天气归因区分「系统性下滑」与「结构性问题」，无天气数据自动跳过</li><li data-page-node-id="FTXkeysci9RqpqxxmvjEI8"><!--pnid:gmHhqRI2r8zlQBO5gS0MrQ-->品牌 ≥4 条 + 逐店 1-2 条双层建议，每条溯源到具体数据点</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="edDpvT65OpwWYbZDoFErWt" class="blk">
+  <h2 data-page-node-id="bWCgMZ4uubV7gdhmm9a0jf" class="h"><span data-page-node-id="X6WkZ3rUvfnvOsRi3cBYws" class="num"><!--pnid:Ok75aBYaIsxkEQxHKE58Yd-->四</span><!--pnid:2FMmGufZFufz4zho12gZrj-->场景闭环</h2>
+  <p data-page-node-id="YGlDTzuX70w2KZzL04QOQc" class="subline"><!--pnid:e47cYUeDte8RPrT6kOs4Hp-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="HQNnmgIgENO1Wkf1DR3Mjj" class="flow"><div data-page-node-id="eCh3S9MCUgr5CPpeqny32x" class="step"><div data-page-node-id="7SRDetJafxwXjqWsgwrchW" class="n"><!--pnid:ZchnXLPDuKkHzd71P5Qr72-->第 1 步</div><b data-page-node-id="cjFHwdP0mdk1skwZemSNt7"><!--pnid:kHNxXuSOuZEdIfaKTEV3em-->数据接入 · 归一化与概览</b><span data-page-node-id="bRHL4Ue6TNoToLxtiV9Yvm"><!--pnid:zCP70JhrYjBhEWyrAdLmTB-->解析 CSV / Markdown / Excel，归一化日期/门店代码/总营收/堂食/外卖，输出数据概览（门店数 × 天数 × 字段完整率）</span></div><div data-page-node-id="rYro28DKpDkpMT1MVTe1Kz" class="step"><div data-page-node-id="IBbGyj7eEsITwcUliBCoeR" class="n"><!--pnid:ki4unT7YvpJjQSWyV31LQ8-->第 2 步</div><b data-page-node-id="iEHUnZum3L1H7MG9IPBaCg"><!--pnid:t6zLczATYkAZL1w1bWB6he-->整体指标 · 7 项算全</b><span data-page-node-id="TRIQyZKs6JCTbdSpju78Lk"><!--pnid:3BqCHX0k8NA1yqQBjZMNgX-->覆盖门店数/统计天数/总营收/门店日均/堂食占比/外卖占比/整体波动率</span></div><div data-page-node-id="1sUyiUnxlh16A3gBzF1P5U" class="step"><div data-page-node-id="GYrQuARD46thDCtFRNXA2j" class="n"><!--pnid:qe22tuJKV2LftMoSGCnNTz-->第 3 步</div><b data-page-node-id="dqS1iKmzYmRixTkp3AzNTz"><!--pnid:nj6vnIXH6JQ2QnSr5WCVUV-->异常排序 · 三维评分取并集</b><span data-page-node-id="qvTbseUDjAcnbibZZwt6iq"><!--pnid:InxQDSdlm1jXdS9oJMWXzp-->波动率 40% + 日均 40% + 数据完整性 20%，输出警惕门店清单（含核心问题一句话）</span></div><div data-page-node-id="pko41eszW2egEbQ8cK7ENS" class="step"><div data-page-node-id="4pSBAwnyfB4JdBvg1KHigQ" class="n"><!--pnid:m0EtiuLYNKFG2y7HPjXSNK-->第 4 步</div><b data-page-node-id="jLUMQroWoQaVPGtuQI87X1"><!--pnid:CgI0uADH2eiU03zxTbb51f-->天气归因 · 区分系统性与结构性</b><span data-page-node-id="HPMDz533LHIRIDm783KAQU"><!--pnid:cUwwvD9OMdSNbbeSNPHV07-->提供天气数据时区分「天气引起的系统性下滑」与「与天气无关的结构性问题」；无数据自动跳过</span></div><div data-page-node-id="VMBOJL36wdoFjyVwgT2ISg" class="step"><div data-page-node-id="E6COLIbg1UmF1hFB4Esz7C" class="n"><!--pnid:1HJgZUtuMA0kwl9MpE977t-->第 5 步</div><b data-page-node-id="u8JzdtJfjwi5XJ3LWqVf5o"><!--pnid:s2R1GR1Q5gyjktwKi6Pi8j-->双层建议 · 多格式输出</b><span data-page-node-id="ggocDRmxMOyuoQ62AFEV7k"><!--pnid:ARpLJODVQAx5rjM9tv5ra4-->品牌层面 ≥4 条（会员日/周一/外卖/波动管控/数据补全）+ 每家警惕门店 1-2 条；Markdown 必备 + HTML/Word/PPT 同步</span></div></div>
+</section>
+
+<section data-page-node-id="1aLH28p9F4HjZ7hvg09Uzi" class="blk">
+  <div data-page-node-id="ZlQUMy5xNd4DWnctQ6LX8r" class="g2">
+    <div data-page-node-id="B6TZ7DzaKltel0cYp4vuy7" class="card"><h3 data-page-node-id="gq5vl5tIzjkYHbm0UQlOG3"><!--pnid:sv4T4dA5AtDXtIOLDa1Au6-->要准备什么</h3><div data-page-node-id="dPYZVm2ANjZRtni2dJg3G1" class="src"><div data-page-node-id="Hq1kMxMa4ZVJIV2TrgCRAO" class="fn"><!--pnid:EdMgrBBIw5fjoyPO3t5U9M-->营业数据文件</div><div data-page-node-id="A1absTPjliqDzmOlgLGUcy" class="fd"><!--pnid:iPX12FPMx07ixXGyCEsLiI-->CSV / Markdown 表格 / Excel 任意一种，1-30 天 × 5-100 家门店，日期/门店代码/总营收必填，堂食/外卖选填，字段完整率 ≥70%</div></div><div data-page-node-id="1B5CvAgRtLN6zVmww8loif" class="src"><div data-page-node-id="XpL0hMSSB6xMskiORAnA8U" class="fn"><!--pnid:WaLLktaCrhvcUrBWOTPpnS-->天气数据（可选）</div><div data-page-node-id="irYmq0C0uKjOoqEvK3n3jS" class="fd"><!--pnid:JJVxFjyBfrrl2YJrZGxK7G-->当日天气标签（晴/多云/小雨/中雨/大雨），或营收表追加天气列；无则自动跳过天气归因</div></div><div data-page-node-id="y8ElTxqs475JU3X3db2r0S" class="src"><div data-page-node-id="ICIe95XumNjj6z0xIuGpY0" class="fn"><!--pnid:m6rkzPJS8ahzG3O8owWOZa-->品牌名 + 时间段</div><div data-page-node-id="ifLq2DKYKdAWwEGqYtDzM6" class="fd"><!--pnid:yw5PF75dpPqxo8Xz8tIlwR-->报告抬头必填，如「鲜锋食客 7月1-9日 门店运营分析」</div></div></div>
+    <div data-page-node-id="2h4AOF2kL8klIM7SCgLzRJ" class="card ev"><h3 data-page-node-id="hAYe4wXzY6uKLDkEJmQvoP"><!--pnid:EDt3DwhgI9zIdHPS9w4SZi-->为什么这个场景值得做</h3>
+      <p data-page-node-id="kfBJvcuQbKcxXKYcJy05yc"><!--pnid:QbKJflt6p0zWQSvB9GbCw8-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="fvAivDFPwgsRbqq4hyCmk5"><!--pnid:ORRwEl2KFEwvicC4hk74tv-->8.0</b></p>
+      <p data-page-node-id="H91TtpNKOdix1bPxTjfxG2"><b data-page-node-id="EuZJtWdehBp9IGX1bkIdUj"><!--pnid:51OCUErf3NkoJrNAVWEFHe-->最大差异点 ·</b><!--pnid:9kqfMUsRELNpbZhd7bsQYD--> 异常识别有标尺：波动率 40% + 日均 40% + 数据完整性 20% 三维评分取并集，警惕门店清单附「核心问题一句话」—— 不靠印象点名，每条建议溯源到数据点。</p>
+      <p data-page-node-id="IKKI7VF3elPnogMbSFxxMV" style="color:var(--ink3); font-size:12.5px"><!--pnid:mZosauOpWHEuNzbH4a44gB-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="6Qbi6PUiZS2LN2qQXnMUfr" class="blk">
+  <h2 data-page-node-id="VX7SNy6Nt3kXZp3VPZdo1q" class="h"><span data-page-node-id="kl2Bmr2EN7ZT2B3j2b6i8T" class="num"><!--pnid:CZLNmnrv9R4I32BnNEVgEe-->五</span><!--pnid:CWZbrkDyzA40aHQFWt3hV2-->会产出什么</h2>
+  <p data-page-node-id="z8aSYm284eAkzFJs13MQB8" class="subline"><!--pnid:cRmGc2nd5rrC6xoZA49PY6-->判断标准只有一个：这份东西明天早上能不能直接拿去用</p>
+  <div data-page-node-id="CU4dBvsyiv78nZMyWMOJwW" class="outs"><div data-page-node-id="mmIViNph3BSUwmqucUkDYu" class="out"><div data-page-node-id="0nkWmUUe3fgfVPXZZFCBKK" class="on"><!--pnid:MX5B9KMueDdqnEYjhpBgUC-->正式件本体</div><div data-page-node-id="ftYCKw8NEjaJKm2GMoE5jt" class="ot"><!--pnid:8HAZg2yiogVo7nO6Bjpz1C-->营业数据复盘报告.md</div><div data-page-node-id="IK4yqZfj4RuO5lftvLLUUL" class="od"><!--pnid:TW4bpIeBK9f8Mecc3TIRHg-->6 板块结构 · 整体数据/天气影响/警惕门店/品牌建议/逐店建议/数据完整性</div></div><div data-page-node-id="b3xqQndaJcvpgRRVYkzuVm" class="out"><div data-page-node-id="0cirSNiYaSD0SUsTRWrZBS" class="on"><!--pnid:gMQ18vgcX6HeO6o20GLo3I-->演示看板</div><div data-page-node-id="Uw1uh7QDltATHr8JpLCjt6" class="ot"><!--pnid:szTiY8XduzRK2dkUm0DLM4-->异常门店分析看板.html</div><div data-page-node-id="Fp7t4OOHgOUBwSHzQ7XlUn" class="od"><!--pnid:iguK3S8impkG605JPc4ruu-->指标卡 + 警惕门店排名 + 堂食外卖堆叠图 + 趋势折线（含天气事件标注）</div></div></div>
+</section>
+
+<section data-page-node-id="INhKXcfZkzMGS9LoSWF54v" class="blk">
+  <div data-page-node-id="5s1jdilvmwU83Z7uGzRjdH" class="card warn"><h3 data-page-node-id="a3eXQV57vN7mLK6kSz8zc9"><!--pnid:8bScZ1PgamvVPG8onyIjle-->这套东西不承诺什么</h3><p data-page-node-id="bMzj3lhVm6LwttGY1vxJuS"><!--pnid:sFQ2IQ1pACOfI8CsncTPNf-->不预测未来营收；不算毛利率净利率；不评判员工表现；不修改原始数据；不输出未经验证的传闻级建议；数据缺失门店可能被误判为异常，区域经理须复核数据完整后下发整改；品牌建议为数据驱动初稿，店长与区域经理须结合本地情况二次校准后执行；产物不可直接作为人事/财务结论。</p></div>
+</section>
+
+<div data-page-node-id="LdorLCRUlP5M4MlJJ4fDKb" class="cta">
+  <div data-page-node-id="HwOJLNFZiFXE2KrSLWm29W"><h3 data-page-node-id="L7mAcN3yQEHAQ4L5RgI3j2"><!--pnid:H4AhrnefOrzvHxSoA6MOs8-->想看具体怎么跑？</h3><p data-page-node-id="2MfuuWhSiE0coTQy5INQgW"><!--pnid:7XsVFQNEKYXYD0aD5kHDJR-->Live Demo 里有一个完整案例的每一步，包括警惕门店清单为什么必须二次确认后下发</p></div>
+  <div data-page-node-id="R2Id1cCgYg2ew6fwRS8mGG" class="btns">
+    <a data-page-node-id="vzitNe1q2uMNFLp5EhesNV" class="btn" href="LiveDemo.html"><!--pnid:J0woYrljrwjZ1oWZYVPSFc-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="AKzFwM3w66msckrI1EeJlJ"><!--pnid:Mtkqk2N7RsTRcvs9oXYHTe-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="PSbSU71ySIKSTy9AGHl2Dh" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="0Dzd2Gota5B4ISDoV3NI2l" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="3K5qUFNUHOLlbC7csW34Zp" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="ELRRS11WqVbP9mgWipSr9c" data-pnid-children="NQzRpqtt7gp3D8niSXGS6X">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

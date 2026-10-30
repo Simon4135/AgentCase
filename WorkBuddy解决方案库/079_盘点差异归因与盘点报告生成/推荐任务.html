@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="ovq5mWzAejBlaO6hdxpOCs" lang="zh-CN">
+<head data-page-node-id="PYwLQUogjprzGSs5yxtyiL">
+<script data-page-node-id="nzU7dpNIEj7J6NfJOKegVS" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="rh4g8kmP5OIi2aNwnMZ1tz" charset="UTF-8">
+<meta data-page-node-id="gvf70eilL60HX9JAWjCG5J" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="AZDq3gM5SJ1ec1WpnZqTQf" data-pnid-children="gXnTtBnWwkcESHMhrqlleC">盘点差异归因与盘点报告生成</title>
+<link data-page-node-id="rsqKNDZYEDLQ1K9QEmFWkw" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="h3ceLRCL0Y4RDMqFLAb9JE" data-pnid-children="ztwsT5UhNW2FQNUW3XYskR">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="QTYcVdNAmIVuhXla7Vdjvk" data-pnid-children="vJn0Lon7hEnxhRFVd3TF8s" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="yloO9bcu0Be8v6zNTqW6be" data-pnid-children="1quvt60adKzyzjTJp6pWiZ" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="BrRdqKX5lhTy0WiEIYCRUr">
+
+<div data-page-node-id="1dCmwNkxTsrjbHa7jJNYuM" class="wrap">
+<section data-page-node-id="KcWDAIW50nXIz2jyi6HOm9" class="page-hero">
+<h1 data-page-node-id="E0lc5eUhrVlvxLiCCroC8c"><!--pnid:5pn65O1LbZf3j28OOIYgS6-->盘点差异归因与盘点报告生成</h1>
+<p data-page-node-id="AWwUuOxRC5ZeyhCODPJGX0" class="lead"><!--pnid:5eKt1G5x5yaEWmcJg002wM-->盘完了，差了 27 台 · 报告里那一栏「差异原因」，最后往往是随便解释</p>
+</section><nav data-page-node-id="iOsbgXBWTr2HCJ0ZebfQVG" class="subnav"><a data-page-node-id="9f6OtjlvhegbPrk0n7QlKd" href="场景引入.html"><!--pnid:OuMxpoIAm7NQKfeY7UspSQ-->场景引入</a><a data-page-node-id="vX3cNqcpX0WKwdnhy8Smmp" href="LiveDemo.html"><!--pnid:XImP2opyyyOvv6CwaHj7ni-->Live Demo</a><a data-page-node-id="KwKpN7xxDjoWSs4pcP1ZH6" class="on" href="#"><!--pnid:aY03GSzmaL7EJx1dqdgQb7-->推荐任务</a></nav>
+
+<section data-page-node-id="bx4WfPv5Ip31qbTBcLZ8Qv" class="blk">
+  <h2 data-page-node-id="lew2VqdcC726KUCm8iUDTx" class="h"><span data-page-node-id="xhmwPuz4YJ8kPTCcvGsEeF" class="num"><!--pnid:hMqZJ7fsPnR9KQifswTXAD-->一</span><!--pnid:FFAoT11PhPn9zJDj5PxVGv-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="uPu2IQnJRGM328z1Mi6w7B" class="subline"><!--pnid:zr46EviRt5FPkY3XKE8qDz-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="05mlUmuNzXN22B36yBrbnX" class="card"><p data-page-node-id="xIzgDi4b6HQMsNQFJiSBM5"><!--pnid:fYv9Pn1I8q8U8nCryCQBzp-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="96gZKOceJ2JLZ0bYHumvRq" style="margin-top:10px"><!--pnid:TX7BHreKcItHjZlnUglC1G-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:ZHtGpSmlq9KewvSboviKWF--><!--wb-skill-start-->
+<div data-page-node-id="Hgsqc5mGvRztlOPQGV1jZ8" class="wb-skill">
+<p data-page-node-id="GcbiLBE0qMVnIcn2ss61sW" class="wb-skill-lead"><!--pnid:ZnF7LfRGoNgvIfNDDabUMR-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="b89vO59X6IuBg2XFF0yrdy" class="prompt" id="wbSkillPrompt"><!--pnid:dgeXvkHrlpHxVUtVLloRAs-->【准备】这个场景的规则都在「盘点差异归因与盘点报告生成」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/CVIBnyB5lqYdMU7al78afq/RQvbasCHRayr/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="O0YD8Xq2rKkGEZzqq8XS9W" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:HvEw5wkKRDu3sJUDdVdz70-->复制</button></div>
+</div>
+<!--pnid:cAGia551WkdQG0jLNtFaqG--><!--wb-skill-end-->
+<section data-page-node-id="RaPyj1owyfCmjVtBIFR9Xf" class="blk">
+  <h2 data-page-node-id="Dzr6BHIFE8zGheSaetWasv" class="h"><span data-page-node-id="Rgx7oYa5mdNXufZsaLGyFf" class="num"><!--pnid:v1uPJJuZVRtCpSO1W7rVrD-->二</span><!--pnid:UZMDfbZgskduCJ57yEQNQj-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="QkRULET6ELf8pzaL9iRPCr" class="subline"><!--pnid:NYChymWlmJqrFlkw0xamqC-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="uLc3UTPi6ChI9JSAvJL7Of" class="tlist">
+    <article data-page-node-id="AaYQg4VrQMpjLMz3efhSz9" class="task">
+      <div data-page-node-id="yBfzFqcjzxoN9TYGTb0bkT" class="th"><span data-page-node-id="8tkSuBCRbbNp2UU8QO7Jrv" class="no"><!--pnid:AarmNQNCJn5LQwDYtJjPMY-->01</span><h3 data-page-node-id="VfT4VWQQlhg6BA92M8K4Oo" class="ttl"><!--pnid:sfgCskNf6TGUKruIlxzY34-->首推默认</h3><span data-page-node-id="J5oWwhbzDjE3c8EEZ0vo6b" class="star"><!--pnid:XyoDUISn5U5d1eNh7et145-->与一键体验入口一致</span><button data-page-node-id="M7opKnyYbaL9J0E73UVpGD" class="cp" type="button"><!--pnid:kCthceITZfR5toI9zdBBQS-->复制</button></div>
+      <p data-page-node-id="TRaeF2yhtsZTEQVWCjPJLh" class="tp"><!--pnid:FRxEvlK5kjkL9Rpx2OACQu-->这是台账、盘点结果，还有这两年的采购单、报废单、调拨单和离职名单。
+帮我把差异一条条归因。每条差异去采购、报废、调拨、离职记录里找线索， 找到的写清是哪张单、单号是什么；四处都找不到的，明确说找不到，别编原因。
+原因要归类并算出占比，报告要能直接上会 —— 该有的签批栏留好。 整改建议要写清改哪个环节、谁负责、验收看几个季度的数据。</p>
+    </article>
+    <article data-page-node-id="nEn1wXSwQbd49zLkIk3NmE" class="task">
+      <div data-page-node-id="XmBW5wpN0IF37DGT30cS9r" class="th"><span data-page-node-id="UPnTHpPzNl5kOuBdEU6df4" class="no"><!--pnid:ul3mMuHkWm4fiONjv3Hv2j-->02</span><h3 data-page-node-id="ZOGtMT5H6brA7As2mlC2VK" class="ttl"><!--pnid:PEZeSSOnwFinPOxPldngY5-->只做跨源回查</h3><button data-page-node-id="AMOrVvbPxeOoBr7jYFfqQW" class="cp" type="button"><!--pnid:iQAWaMbSInDfsoJZGPkKC2-->复制</button></div>
+      <p data-page-node-id="Ftid8WLQQqkyROdNdUGMlI" class="tp"><!--pnid:EbBpwi9RVgkN643D4yWxgU-->先别出报告，只做跨源回查：挑出盘亏和存放地点不符的条目，逐条去采购入库单、报废与调拨记录、报修记录、离职名单四处找线索，找到的写清单号，找不到的直说。</p>
+    </article>
+    <article data-page-node-id="hfMf0h4FGlk8otLmE9yZDw" class="task">
+      <div data-page-node-id="ebnothwlD0hC5TNB9rUGVK" class="th"><span data-page-node-id="YyV2jVwAlawtTjQonLwcnk" class="no"><!--pnid:44aetIltbIs6gt3YNBMn4i-->03</span><h3 data-page-node-id="21TZVjj1ZjhQfug1Y6nGTT" class="ttl"><!--pnid:Frtk0CLKQGhPrrl1lr8K7y-->换归因分类口径</h3><button data-page-node-id="WIFncPZCRficwRKtnuNdKG" class="cp" type="button"><!--pnid:Wb78pdZsjWqM6aidj372P2-->复制</button></div>
+      <p data-page-node-id="0iXns9YPXzmo7w36xB2MDz" class="tp"><!--pnid:EIM94vMcWREsc2B6IOBpLw-->这次换个口径重跑：原因分类改成「单据缺失」「流程未走」「账务未做」「实物变动」四类重归，各算占比和金额，看跟上一版的归因结论差在哪。</p>
+    </article>
+    <article data-page-node-id="ou1u04nwLvr8WSE21YYhGt" class="task">
+      <div data-page-node-id="bcQ0adpo1jfW4QJ7IvIsfC" class="th"><span data-page-node-id="fbZaOYoREsCF2zcESklIOH" class="no"><!--pnid:fEetxEuoRCtP7Gpzw36hXF-->04</span><h3 data-page-node-id="bMl4FCamHdKFnMFQjVLpCy" class="ttl"><!--pnid:j5a3eLFoCXFGhRfmAgwn5x-->按部门分开盘</h3><button data-page-node-id="VpuhKMzgMmeZhAvCHouFmY" class="cp" type="button"><!--pnid:67caeH1eUSWV0XM3hbSBnG-->复制</button></div>
+      <p data-page-node-id="BeeCFQkcl7XbwnMWN3wD1D" class="tp"><!--pnid:eZ7pVPtlq1IICwvqXFNlyP-->把技术部、市场部、行政部三个部门的盘点差异分开跑，各自出归因，最后给我一张按部门排的横向对照表：差异条数、金额、账实相符率、无线索条数、主要归因类别。</p>
+    </article>
+    <article data-page-node-id="6bKCrvDWEkzkJHVI6k3vPC" class="task">
+      <div data-page-node-id="gZIheZ5dj0avNzdVKQaCax" class="th"><span data-page-node-id="ABHodtv0ucjevBUVnofq7K" class="no"><!--pnid:Gutgz9IKhPplLGu1EKj6oM-->05</span><h3 data-page-node-id="vqgVFNjohx1FR6zg1y3R7S" class="ttl"><!--pnid:ygl8A7LSXt8ZsYoNO9J6CM-->给复盘会用</h3><button data-page-node-id="AWFF5iWhBGLyYeXN4mXeIW" class="cp" type="button"><!--pnid:QIme3Lz6HMJTZa4DGe7Ex5-->复制</button></div>
+      <p data-page-node-id="EzkdUWuPuV7ixtUaEJUNuM" class="tp"><!--pnid:aZRbXN1MvgskAshvkKRVZJ-->把报告压成复盘会用的一页：账实相符率多少、差异多少条、五类原因各占多少、无线索的几条合计净值多少、每类建议谁在什么时候前处理。</p>
+    </article>
+    <article data-page-node-id="pi9kkzEy4iO8ngdz4aJhKk" class="task">
+      <div data-page-node-id="2fBWvMrS3RMOfLcEQjikKS" class="th"><span data-page-node-id="cVWbx64luIhzy3nUi0R2Yx" class="no"><!--pnid:yGZvcR9aXkcP7SloIVuml2-->06</span><h3 data-page-node-id="NZrgkJVz9JMSWPZApNxGGX" class="ttl"><!--pnid:GZg1VnHSErTjMmGUU3of55-->让它反驳自己</h3><button data-page-node-id="xQtehqX2RQH7yvVstUHgqK" class="cp" type="button"><!--pnid:Mv3GsXYLIMxRzNouI6wZ6Q-->复制</button></div>
+      <p data-page-node-id="a0YfaJu0i5D9SiO1MfT537" class="tp"><!--pnid:9g0rTGWjlzJzwifvwUCCz1-->你说「那台 ThinkPad 盘亏但很可能还在维修商手里」，依据够不够？把报修记录和离职交接单里的原话列出来；依据不足就改回「需向维修商核实而非认定灭失」。</p>
+    </article>
+    <article data-page-node-id="SyvCrAm91UEIAIn6jwveGi" class="task">
+      <div data-page-node-id="PW987Lp8VLvhxCfoE1OB5d" class="th"><span data-page-node-id="BXTisNt3Je8wctnfktfnrM" class="no"><!--pnid:4nMApdeoAZkQsH2l076wSX-->07</span><h3 data-page-node-id="gb8DtM8eHaS0CfgHTYSUYT" class="ttl"><!--pnid:bvMWEwqTFdb1q1WEfifLI3-->比对历次盘点</h3><button data-page-node-id="PgMjlv8u4Eq6l09LgiPUf2" class="cp" type="button"><!--pnid:EV5IOnVNvEGz0NDGEg4wrI-->复制</button></div>
+      <p data-page-node-id="b6XEoa1wksZ9RBgVJRVsec" class="tp"><!--pnid:ltBUiQsAzCZ69P9Q2H9Y6S-->专门比历史：本次差异里哪些类型在过去两次盘点中也出现过，把历史同类差异的原因和处理结果找出来附在对应项旁边，看哪些是老问题一直没解决。</p>
+    </article>
+    <article data-page-node-id="o1mR8JxQ1SFsCUPVlr8UX8" class="task">
+      <div data-page-node-id="Zvdlg4Yx9LKTMC3kkY2SBR" class="th"><span data-page-node-id="IXwNmYq2Ra0sNJdJrhhEI7" class="no"><!--pnid:TDcdxz7Hkhes4STEK1RSvN-->08</span><h3 data-page-node-id="oAskq9NeF068aSiPgxFCAS" class="ttl"><!--pnid:FK7dinH3rdcyyZA1wfTvXx-->对照报告要素自查</h3><button data-page-node-id="nhh6CRyJpCPySQNb36hRrd" class="cp" type="button"><!--pnid:76KGuVNUU8fA8tQlyOSMLL-->复制</button></div>
+      <p data-page-node-id="HdWzPcsN2kdJVHD5kxqGXl" class="tp"><!--pnid:dIJKQ602sWRpE5QBy0NXTX-->对照盘点报告该有的要素自查一遍：账实相符率的算法和分母写清没有、归因占比合计是否为 100%、四级签批栏是否齐、整改验收是否写了看几个季度数据。</p>
+    </article>
+    <article data-page-node-id="y95G9ufVKQOcOVBK3NGh5Z" class="task">
+      <div data-page-node-id="KV9yS3SuAVAYlcxbXCtvHY" class="th"><span data-page-node-id="hUrItaXOUsWI4Ou5O3b2cN" class="no"><!--pnid:S9hnoSAkYXcHxwDBo0k0ql-->09</span><h3 data-page-node-id="uksrEeuMbYSwFjfyWkYFBV" class="ttl"><!--pnid:PrYvMViurCsKCsp5xnXLgk-->折算成盘亏归属</h3><button data-page-node-id="Y5x0NgcuITQmq8YABb7rdo" class="cp" type="button"><!--pnid:0tv45Oy2v6rpDLjcxPXtMq-->复制</button></div>
+      <p data-page-node-id="lH6TAcqOrZK3hWByo13ONN" class="tp"><!--pnid:SzpWTIidS6mSGL1aYjGr7I-->把无线索差异折算成后果：这几条合计净值多少、按制度无法说明原因的盘亏要由谁承担、这笔钱现在有没有归属；再算拖到下一季度复查影响面会扩大多少。</p>
+    </article>
+    <article data-page-node-id="yzOE8OLsqBXSDjjTrrVz4u" class="task">
+      <div data-page-node-id="c65p1xWgVnyonVh7Z8k3C2" class="th"><span data-page-node-id="PstooDTlSZHE9bct4aqO0j" class="no"><!--pnid:pMMkIDYKePq0hnW2ifXvGL-->10</span><h3 data-page-node-id="7qjOliNHf1I1S0E4vZXkqw" class="ttl"><!--pnid:tYhDj1OW0P4dT7jwaTf0W1-->沉淀成归因对照表</h3><button data-page-node-id="mTlLkngNFHQWRCzn0XLpUv" class="cp" type="button"><!--pnid:NHBEL3oAz95cmdtkFtR9zW-->复制</button></div>
+      <p data-page-node-id="GiutAauaj6pEnm0lcgaC12" class="tp"><!--pnid:A3nIXm44pUsp1GgBTjpCHF-->把这次的归因口径整理成一份《盘点差异归因对照表》：五类原因各自的判定线索、该回查哪张单、无线索项怎么写、整改建议写到什么颗粒度。下次盘点直接套。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="KVmpytOfPfoiKfnKnpEZ8Z" class="cta">
+  <div data-page-node-id="oJmNNkbOIx1GUDg6IxaFfG"><h3 data-page-node-id="wp6IK6uEGnQhh5p6reCTJv"><!--pnid:dsaKJMrNEIlnK60BKQtZ99-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="OFA0drJXJAlWKHg5yoxz7C"><!--pnid:E3akGcug5IH0icT8m69jfw-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="OneWFHKsxpgBSQuKpz0Odm" class="btns"><a data-page-node-id="6VxU1nGGNZwxrh9CuoLraF" class="btn" href="#" id="ctaContact"><!--pnid:LxRrelUxviI3cND4IX1f6l-->联系我们</a></div>
+</div>
+<footer data-page-node-id="5VwC2S6Ldhfuh2jtgGemdB"><!--pnid:zQTDe8OkIArBs7irpkQGIO-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="5DK65LZURAv1sR2GK6rCXC" data-pnid-children="VUrxveGn7BuE7O3rHZI3zN">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="RTMkZRmryXTubMePgmP8C7" data-pnid-children="IgFZGYa1zYH3ti9OBJLugp">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="vUMxVblNVqnD3LAc8lomp2" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="siRGQN6TLJeQFHnMmHIl4p" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="CNe7amOfLReiwbnQvfeLko" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="9e7ovJDZBG7k3O2rUdklAW" data-pnid-children="TYVeQqfv0AQTgMZ1B2thxO">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="Xc8LK18tYIvQWS9ZKz8imd" data-pnid-children="sOH5QwtTNC0FIwF4eiklgo" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="X5jOyCKWi6qiCf7hhxjUPG" lang="zh-CN">
+<head data-page-node-id="QUGY0nf8vbXDi5lCdP5bsP">
+<script data-page-node-id="aCvulXmNSwPwboa28XTlwX" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="zIZNDnL7u8uhPCzMDfgqO4" charset="UTF-8">
+<meta data-page-node-id="8Fmnj75WscSwlvIudXJs3b" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="IjdLuUAwx1zeHSTUfWLh3I" data-pnid-children="KhTZTS4gbYQP1wySeg0mHT">制度冲突与失效引用排查</title>
+<link data-page-node-id="g2hZDAjhuAYOm6RpVChHw3" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="OuTnpsq1Ey9mvfJu4orYrL" data-pnid-children="HpW92gFzDEwC3WVw45STX7">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="CdgAGSwcI7X37VBOU3FgDn" data-pnid-children="fR8hBZLRNMwrQcdCprmj0e" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="wbHWSfg9MQKi0QlWKTmDy3" data-pnid-children="Ek0plaHtNZJSUwpTLeJPF9" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="kTZKQHeNdT8lXTpIbnkqKa">
+
+<div data-page-node-id="QHvAd5FL9BDM2aIxNhGvRZ" class="wrap">
+<section data-page-node-id="XlkB1QoD0mstpKU2JaZQxw" class="page-hero">
+<h1 data-page-node-id="6K3gpc9y8lIyT7pfEOKCME"><!--pnid:0ljpfu4Oe4jUDDrjksiR6q-->制度冲突与失效引用排查</h1>
+<p data-page-node-id="ikhCIoxKArjla0O4A3jCzX" class="lead"><!--pnid:k48n4fmhkMa9k4KAZtIu6B-->考勤制度去年改了 · 用车制度里引用的还是那条已经作废的条款</p>
+</section><nav data-page-node-id="qSAcDIItnfZR1TDcKlCIc8" class="subnav"><a data-page-node-id="IIr8A5zd3NxT0WudiXCmQh" href="场景引入.html"><!--pnid:0nWaaYYkYRORK19bVZy3mp-->场景引入</a><a data-page-node-id="fs39kSA6LwQQ3Id7IHAtX1" href="LiveDemo.html"><!--pnid:vvoZ2QElzQMQ3ywvvDmxGd-->Live Demo</a><a data-page-node-id="WvqPFfrbWp7Dyc3aLiuF0t" class="on" href="#"><!--pnid:7qP3VcSxagK4WtoG7DiYh3-->推荐任务</a></nav>
+
+<section data-page-node-id="eIiLlBPBFyXxRSIfbZx2P7" class="blk">
+  <h2 data-page-node-id="Ho25IGkjdjI4g9VbhUX8Cc" class="h"><span data-page-node-id="BYvx2EvwwyMJsAEL7c5j3E" class="num"><!--pnid:toWV2OEIQgtEceBLy6cKO2-->一</span><!--pnid:YAqq2SAjpjxYxkXZbiswCw-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="NQ1yz7Kd4xkZJ2yOUMTe1g" class="subline"><!--pnid:MFcl52aUz4jC89V09orKMG-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="trk1RTeyOm2aqvRDUDrc7z" class="card"><p data-page-node-id="uUTEoIOPagPhCXcbvZSpgR"><!--pnid:t2ilLI7tEkBsouiECzGMJU-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="cbjsZvMfdvVjgVFZPpgpzS" style="margin-top:10px"><!--pnid:dFKVzHdHQlXnjp33DSpRJT-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:7Jeee1Bx3N3wze4wNbPS5Y--><!--wb-skill-start-->
+<div data-page-node-id="H1mFFn1bPiWk2VTuGyxEdM" class="wb-skill">
+<p data-page-node-id="fmxqJBZbdswyRfRhupLoOR" class="wb-skill-lead"><!--pnid:7wVlTydgfUHFwc8K6tMDGG-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="opMMstTRPpH4ivnxc3ug5S" class="prompt" id="wbSkillPrompt"><!--pnid:aOSxHtYAh69jlFo90EsbNu-->【准备】这个场景的规则都在「制度冲突与失效引用排查」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/uxANkrMY0oD1KSGNgn63D8/AAquiZg_c1bA/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="eYcEFCRBVaEq5wFOUrkDJB" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:lnQO7fkM6zSzHzdx8fBYgP-->复制</button></div>
+</div>
+<!--pnid:BYTKWBbZYpJVrQ92CbeXxO--><!--wb-skill-end-->
+<section data-page-node-id="fR2VjRQ0XUIwV7KKaRQdzv" class="blk">
+  <h2 data-page-node-id="NjwqZLEa2qt0ih1kRs2wSQ" class="h"><span data-page-node-id="eHeQGmpQ66MxVkUse50mDu" class="num"><!--pnid:7AWMJZ5AA9efiBOXOcrwO2-->二</span><!--pnid:VOdKFfkRpXYQPqaV9XcuLb-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="FLwlwcLGiSisdjYDIiQWZL" class="subline"><!--pnid:goI6D8pw6r5GQi6knGncF6-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="QDH3Zpj5yDFyoc2EyT5Sf1" class="tlist">
+    <article data-page-node-id="BFu4IL5vpEooG6m5ijjpXn" class="task">
+      <div data-page-node-id="iEjO9SQ5AH4RtFwfgqHP3S" class="th"><span data-page-node-id="PyGvfMxkn5P9W5sNCUPlZq" class="no"><!--pnid:c258nDJ50KgHhHSIUq7rpy-->01</span><h3 data-page-node-id="4n4aRCZUJvSsahU6zATfLG" class="ttl"><!--pnid:Ug6zeBCdtxrN5dnAFZ6OXw-->首推默认</h3><span data-page-node-id="Oly21bv4L9dPVhmktIQrSz" class="star"><!--pnid:PHW6w8BLnbpllTF7SpYsRL-->与一键体验入口一致</span><button data-page-node-id="33GerB76Ujio4164GQ6Nv8" class="cp" type="button"><!--pnid:RCQ2UeSGeHoPwdCCtMUwHg-->复制</button></div>
+      <p data-page-node-id="Wo7objTN9YKF4Odg1BF4y2" class="tp"><!--pnid:SqXDId0Sq7IsQ6a2I0tlm2-->这是我们公司现行的全部制度文件，有 Word 有 PDF，版本比较乱。 帮我查一下：哪些制度之间互相冲突，哪些引用的条款已经作废了，哪些已经没人用了。
+每条都要写清是哪份文件第几条 对 哪份文件第几条。 修订建议要具体到改哪一句，别写「加强制度管理」这种。
+不确定的标出来，不要替我判断该按哪份执行。</p>
+    </article>
+    <article data-page-node-id="owF2rwfunHVWiSomIWeZQ6" class="task">
+      <div data-page-node-id="Ga9ggO0KRPbQ6Ud4KrFfUE" class="th"><span data-page-node-id="LtwAKXt3NOJesASd5mSCbC" class="no"><!--pnid:hPmuQRO5vg746KebBBTft5-->02</span><h3 data-page-node-id="uSPwmSmPjrevkJPZcOoxBg" class="ttl"><!--pnid:AIRdZiMvhc6MS69SZVHUpZ-->只查失效引用</h3><button data-page-node-id="oHsi2TefqpdSzDpq3j0yXm" class="cp" type="button"><!--pnid:yVwgouo4QO5UhWSAh3z2oU-->复制</button></div>
+      <p data-page-node-id="EU3NuEaOb74gaT2bC0v7Rp" class="tp"><!--pnid:duSJw0rB5aYqQVXiNOEn0v-->先别管冲突，只做失效引用检测：把《用车管理办法》《费用报销制度》里所有「依据……第X条」「按照《XX办法》」的引用抽出来，逐条回查被引条款在新版里还在不在。</p>
+    </article>
+    <article data-page-node-id="Yturtrwp0lOTIpJiSBYQyW" class="task">
+      <div data-page-node-id="4I9ArUkQYQasvJCwzZbTIi" class="th"><span data-page-node-id="GMB921pTbqjRIRAV51g5ZQ" class="no"><!--pnid:kKIlIFGrBDTtTQhCU3daRm-->03</span><h3 data-page-node-id="jkDsYY9sgA0TlAzgY2Tyc4" class="ttl"><!--pnid:XXrlM46UjHhV7lV8zIVo0t-->换上位依据口径</h3><button data-page-node-id="cvDb1htjAM3koVLWa3bC6p" class="cp" type="button"><!--pnid:KvBbTHrD95v5N34S43ttHM-->复制</button></div>
+      <p data-page-node-id="gTKEqPOiERoGe5W7O632EW" class="tp"><!--pnid:jIaZrAse9jogjYzBOpK0yJ-->这次换个口径重跑：以公司章程作上位依据，把下位制度里与章程表述不一致的地方单独列出来，每条写清章程第几条 对 制度第几条。</p>
+    </article>
+    <article data-page-node-id="l1g6SganfEj66NTjjq2EGo" class="task">
+      <div data-page-node-id="eGqZJvZiXAo4xKxDfwTwH9" class="th"><span data-page-node-id="jnC93uTurI1vbofws4Ad1E" class="no"><!--pnid:8CkMsLvkMKKack5f4phtpD-->04</span><h3 data-page-node-id="UPmUi1DzSIq1J3HgJtAVs8" class="ttl"><!--pnid:7lPeSODOgs9uiChV7c3nHk-->全套制度一次过</h3><button data-page-node-id="mHqFsVCsgBc1nNwilHDtPM" class="cp" type="button"><!--pnid:db2jcQB4ECLUHO9zoxueqt-->复制</button></div>
+      <p data-page-node-id="tkDrZAbG7WZ7xI8RjzGRAX" class="tp"><!--pnid:AiYvfFdBT4udFoAABWGVVJ-->把全部现行制度一次性过一遍，给我一张横向对照表：每份制度的编号、版本、生效日、被引用次数、自身失效引用数、参与冲突数、是否落入僵尸清单。</p>
+    </article>
+    <article data-page-node-id="VeymXn0VlpJrjpiwIEtsRq" class="task">
+      <div data-page-node-id="8wJUQ94kBO9CGnkGZ9cqY6" class="th"><span data-page-node-id="94PxC87Gth0ixTGgWIYP4l" class="no"><!--pnid:061xHNekuijTN5T5hFSZdI-->05</span><h3 data-page-node-id="2BJbRSjrw9lAyerOKcjol3" class="ttl"><!--pnid:sXrBgU1DL5bAvIou8kkcde-->给归口责任人派活</h3><button data-page-node-id="pd7EDDATH7djhKEIWtk8HX" class="cp" type="button"><!--pnid:atoTDLcCe84Tudf8eQCYQx-->复制</button></div>
+      <p data-page-node-id="sHglQMTmxFHGzw2tQvUSbS" class="tp"><!--pnid:XWIkcRTcla3AtjsxSQjkln-->把结论压成给各制度归口人派活的一页：每份制度改哪一条、改成什么、谁负责、什么时候交、拿什么验收。冲突未定的三条单独标出来等分管领导定口径。</p>
+    </article>
+    <article data-page-node-id="mf7G2k3NNozakFEnBHNurc" class="task">
+      <div data-page-node-id="jjbXhItS5gCVOQ3hhbGYAq" class="th"><span data-page-node-id="YZV2NwgTZd1Vgx7PtlgHDV" class="no"><!--pnid:G2qJSI6Lz72hRMmQjBkkFJ-->06</span><h3 data-page-node-id="0vgYTqEBl95A9oCc1fOjre" class="ttl"><!--pnid:KFeUBQe6dn1SI8zoGgk3K0-->让它反驳自己</h3><button data-page-node-id="sfgheaZLVogzx2nuL1d8gM" class="cp" type="button"><!--pnid:3fZzORaAeKzU1FTY8u4Ggk-->复制</button></div>
+      <p data-page-node-id="OdKG66PPSPpadkLFopqfdG" class="tp"><!--pnid:k65yBtKzt2ozYnQO3aOrfK-->你判定《办公用品管理办法》第 5.1 条与《采购管理制度》第 4.3 条审批权限冲突，依据够不够？把两条原文和各自生效日列出来，说不清的就改回「需人工比对原文」。</p>
+    </article>
+    <article data-page-node-id="9gry2zCoFjh08v11AHEiwi" class="task">
+      <div data-page-node-id="YaLNx7lROh0odnkosSD5wB" class="th"><span data-page-node-id="4XE6t41aJuO5edc6hrvZHA" class="no"><!--pnid:NricMGEOa8iffChKTEu2J2-->07</span><h3 data-page-node-id="CygPcTl5oVSL8Z1zOsmfsl" class="ttl"><!--pnid:OiJBKq7Q2kYBjXDWuob0Iq-->比对历史版本</h3><button data-page-node-id="cbVrOix6l6YKiAhVTvNrFe" class="cp" type="button"><!--pnid:rBGgxERrPtX8PX1PCxtlO4-->复制</button></div>
+      <p data-page-node-id="fkXPSiYgOdrgUr7D136ksB" class="tp"><!--pnid:7vmel2XoZXzzv5jCU6pa47-->专门比历史版本：把《费用报销制度》V3.0 与旧版制度台账里记录的历史版本逐条比，哪些条号在新版里被删了、哪些挪了位置导致现在的引用失效，列出来。</p>
+    </article>
+    <article data-page-node-id="ZvEqcNOqGcPbb0QDxwTE8E" class="task">
+      <div data-page-node-id="lkbGSpebz1IhP8nk4MOnx8" class="th"><span data-page-node-id="wdiiSa8ZUU1BSXWsAnAz0R" class="no"><!--pnid:GzDENdE4Iwx2Dc7XA9nidl-->08</span><h3 data-page-node-id="IR8f1PJQWNupoStNBxZhrJ" class="ttl"><!--pnid:UrticqRud4Yk0a82uompqT-->对照台账自查</h3><button data-page-node-id="6lWFIDPPTRTd2ikpZ6iORr" class="cp" type="button"><!--pnid:pu16NYczw6hcs5g14519MO-->复制</button></div>
+      <p data-page-node-id="P5enP9cETocmmJAm4gI2Va" class="tp"><!--pnid:W9FbuPkSY1xzrsRDLQFnd2-->对照重建后的制度台账把这次排查自查一遍：有没有同名多版本没排序的、有没有生效日缺失的、有没有废止日已过仍标「生效」的，逐条标出文件名。</p>
+    </article>
+    <article data-page-node-id="Y3KTnQe0qHKiETOygU7MZs" class="task">
+      <div data-page-node-id="nk8Wz0GR5Xjqk7jwojlH9p" class="th"><span data-page-node-id="ZgU38jyXqqC3EdmhjScGAb" class="no"><!--pnid:i3RrDREvm8TU10Fl1SQcfd-->09</span><h3 data-page-node-id="9cjgMpnq8THw5US5aOiGxk" class="ttl"><!--pnid:x1kaCFzreUHLYBWS5zr716-->折算成金额影响面</h3><button data-page-node-id="6RiLC3hsMvKoom7vPbSMn8" class="cp" type="button"><!--pnid:rodw6UFIwokMHL83GQ9Zsd-->复制</button></div>
+      <p data-page-node-id="6U2WMFaxNuKPpJEfGA5fJB" class="tp"><!--pnid:Vh9VOJCtARi5oEG7eGeRSl-->把审批权限冲突折算成影响面：500–2000 元这段区间的采购，近 12 个月一共多少笔、合计多少钱，这些单据在内审时可能被要求补充说明的是哪几笔。</p>
+    </article>
+    <article data-page-node-id="VTIZPcRforEho9Z8ARe5fk" class="task">
+      <div data-page-node-id="Z06Mxr55gDk6M4U9T7QDbA" class="th"><span data-page-node-id="HBfQRcfHmpbfBoiBMC3wAy" class="no"><!--pnid:CEKxkLku6lp0SRGJijOCrV-->10</span><h3 data-page-node-id="1D38L76ecT6ePybZeqfVBn" class="ttl"><!--pnid:hrybv4fZJymvQvwn0ipTX0-->沉淀成排查清单</h3><button data-page-node-id="iTPrZ71YLXfNOQG1evKX7b" class="cp" type="button"><!--pnid:2k437FgKWG1WSXLAu2wdJf-->复制</button></div>
+      <p data-page-node-id="W6CEFGIFK3DFokkuFBZp61" class="tp"><!--pnid:DaC9QHqqZTVjn3FyHEtTD4-->把这次的排查口径整理成一份《制度一致性排查清单》：查哪几类可量化项、引用怎么回查、僵尸制度按什么标准判、修订建议写到什么颗粒度。下次汇编照着跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="xSwMRTlXSSeaHHUbREFUWV" class="cta">
+  <div data-page-node-id="raenPrJRsoLXqryqW86Qyu"><h3 data-page-node-id="b6YbOiOg7VomNATc8PqWBR"><!--pnid:0Jm6Cljphsik7PjbLREDKO-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="wA1EHvi16yctnde7CYZbNy"><!--pnid:Lk1W7QRjFTso5YWa4kgaZw-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="PWd7UgkaCDX9IFttxuHVfQ" class="btns"><a data-page-node-id="HeM7TIrsIfOXKxSEQEtNou" class="btn" href="#" id="ctaContact"><!--pnid:arcuCnmI6mqJ3G1xA33UHE-->联系我们</a></div>
+</div>
+<footer data-page-node-id="IsATGl5bGt4mKjoxrV7fTM"><!--pnid:gAv25y52GXIluJ999go0qe-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="yEKg88p6G1xbHN7FFKrhP9" data-pnid-children="8tEMIDqIabx4a4HW4QNWTj">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="4lkde0PhfyJC9HJEJciZeD" data-pnid-children="b833hPThPxzqform05ayRn">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="lvAFRcGS5Z8kfCXZrMF0Fy" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="dxNtxnHr1fnuVGTrzE2DmO" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="swZRfCeEIx0quiad1ZLLfW" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="yxJg3vztgVO3v3BlIPbpXX" data-pnid-children="Xtlxar6PAPZVWlojuocseX">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="Dr4KcIvjxaObdNam1Ios1B" data-pnid-children="latVqq30kP35V3f3XtqAFk" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

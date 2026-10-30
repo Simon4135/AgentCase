@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html data-page-node-id="ejxauqD7A5SpmqYcTCB52R" lang="zh-CN">
+<head data-page-node-id="7PbY4iKOLltZ2mePATh0pH">
+<script data-page-node-id="29dp5EpBnNtdHvz7JRJmMN" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="urZd2jqpXYvcKimXBwq0om" charset="UTF-8">
+<meta data-page-node-id="esmjSdTvH8IabO7BawA3SR" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="iBj4HYANm8cQkw936a6ZRA" data-pnid-children="jjKgROi1DnP8ez3h98XfiD">行政月报与量化口径生成</title>
+<link data-page-node-id="pB8KilFnwrGR8YfyBoSuo9" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="k7WUIAzjmC8zKm8Ctcq350" data-pnid-children="4ALpdPDkK9klvpTCQ0uVZZ">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="MkM7xOyD4D1BR7CqwPRiXW" data-pnid-children="zotQW4oUvlY1Gkm3gg9aQI" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="zCAUnJ44pj8m0JdoqPJ1Oq" data-pnid-children="8AAUXkBHGRa73HJLWPxxWB" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="C9V95YvnkS0VneY9pct2b1">
+
+<div data-page-node-id="okzNWRCxKwjcxcRu7XLrxW" class="wrap">
+<section data-page-node-id="7Xzw81qUJdaJ9qDuPT1xVz" class="page-hero">
+<h1 data-page-node-id="o8SR5dlea4mXUmoPDOJxmw"><!--pnid:Z9c78If8bx4bc7swLR2flm-->行政月报与量化口径生成</h1>
+<p data-page-node-id="E9lbejVpMO7skwAIHLavDU" class="lead"><!--pnid:TQELp8hbd5gnaBru8UK832-->做好了没人夸 · 出事了全是锅 —— 月报是行政唯一能让工作被看见的东西</p>
+</section><nav data-page-node-id="yxleQyDzZVqbcDcQ2n2q95" class="subnav"><a data-page-node-id="5qjJ76h5TWyCNOcXTfZsya" href="场景引入.html"><!--pnid:aSZJ5mYVPyaLAdabTFXLWi-->场景引入</a><a data-page-node-id="f2Nmn224GjSSYcSJFyVJQa" href="LiveDemo.html"><!--pnid:JyDgYptYJTwUxp6Hou114b-->Live Demo</a><a data-page-node-id="nBKfJBFfWPX02XyBscH16I" class="on" href="#"><!--pnid:1gDF8o0yppOkiEmMspTZjP-->推荐任务</a></nav>
+
+<section data-page-node-id="rFx6d2unoUhLsEtdCkyXMG" class="blk">
+  <h2 data-page-node-id="m1ehHwkVXT6D1M0CP6UUme" class="h"><span data-page-node-id="9oZt0HybbbpSF82gdTh0LD" class="num"><!--pnid:LC8s2BNgyOGtkhtRLh0G55-->一</span><!--pnid:C8soaDFN7MagHvQ6RSisRj-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="VqW6036wbaTF1QbI3Lo3iG" class="subline"><!--pnid:XIudBOtQmbs3VCZWdEgImO-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="hkQ64CjFnJkfApbGmwtn4j" class="card"><p data-page-node-id="ERMmsfxi7qwnU9SrMxLBVv"><!--pnid:gt54HIdYIa0ap7aviUCJlY-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="bjl7YMMMWb2DLafzYANRwh" style="margin-top:10px"><!--pnid:ny48CwIP5rVpdYS89VL4JP-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:5Wp8UuDYdFBVJiI0b464ut--><!--wb-skill-start-->
+<div data-page-node-id="2PFH5MQWRbLNZy0Nt4nt7N" class="wb-skill">
+<p data-page-node-id="PeXi0ZrRqnfP66jfdwxEv1" class="wb-skill-lead"><!--pnid:g44vNW8KDqkbwkyx0NVYIj-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="Y5VvP4RFkPyfekN4EFkD9f" class="prompt" id="wbSkillPrompt"><!--pnid:RSpMubIhqNIbM2yF43xAQ2-->【准备】这个场景的规则都在「行政月报与量化口径生成」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/21r1x9dawlpXFVHAdGLyZw/SuWnEy0sNdPj/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="rgz9fUSbVhDEGk9nPGQ7VF" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:fU4N3vxgFyichN60t50OvP-->复制</button></div>
+</div>
+<!--pnid:IwobRnv7CG7t2sYv1ubIoZ--><!--wb-skill-end-->
+<section data-page-node-id="YwjZ9yhqi58sqyIBlll6sS" class="blk">
+  <h2 data-page-node-id="UiagKJAqE6VvPwoOeB1Mdb" class="h"><span data-page-node-id="pfFyLonI3rKmzWScbQQBya" class="num"><!--pnid:51VkBJfbfnPlH526p2x0UF-->二</span><!--pnid:uCUVNG5ujjYO8fob6rIDIK-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="Hr3mnWZqMX8prX6PTGnkyf" class="subline"><!--pnid:xgOw53PEPsDl9jho3oljmK-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="jBJI3rVPNelAVcZAZuGe8v" class="tlist">
+    <article data-page-node-id="up53iCmTAAlt3VBB4YvquP" class="task">
+      <div data-page-node-id="9sKL3sm80xGXo0ZdGpMsKg" class="th"><span data-page-node-id="mFbsVeRHric7T1BEfqnBs9" class="no"><!--pnid:IHpWLQYp4YTJs5tJLHDVQ2-->01</span><h3 data-page-node-id="yaNzlH6m2VrcLCVuWLU17u" class="ttl"><!--pnid:90NZwOBbLh7KZCBitFFFIo-->首推默认</h3><span data-page-node-id="ovAMc3KOulnTQwuNoOanPT" class="star"><!--pnid:6oXkXkuM4uputszNpbCWtx-->与一键体验入口一致</span><button data-page-node-id="gn9MOQEop6r2DOOiVu2slj" class="cp" type="button"><!--pnid:zg9zkez4aeRD858vkDKLh3-->复制</button></div>
+      <p data-page-node-id="vpfdkeo0lmH1TJ0QzN2EYf" class="tp"><!--pnid:aI1p7j9srEi12Go9GhUp2D-->这是本月的审批流导出数据、各类台账、费用结算单和会议记录，还有上月月报。
+帮我出一份行政月报。 成果要量化 —— 别写「完成了会议保障」，写清多少场、多少人次、故障几次、及时率多少， 每个数字标清是从哪份数据算出来的。
+指标算不出来的，直接写没记录，别留空也别编。 问题与改进那一栏要写根本原因，不要写「已加强沟通」。
+完成质量那一栏留空，我自己评。</p>
+    </article>
+    <article data-page-node-id="6Dxj8cjgqqnbrdExs2MVll" class="task">
+      <div data-page-node-id="tbbEJDYHBammlTZ0c7HPUq" class="th"><span data-page-node-id="mEHPJyG6TZDNeapdYNig8x" class="no"><!--pnid:AYZ7pLW7ve6pnv5LWrNN9r-->02</span><h3 data-page-node-id="ZZ1BbBTDabYonQ6q40LCxF" class="ttl"><!--pnid:WqK9X9Chb3uFIrdLTTDwK4-->只盘指标缺口</h3><button data-page-node-id="BxVmqenFLrt89Hw73ImCsC" class="cp" type="button"><!--pnid:bwiQSNZnLSRxQCKhxybuog-->复制</button></div>
+      <p data-page-node-id="ZJdAhAEi23R3z880Avj7qy" class="tp"><!--pnid:2epAIJbwvNvinqOsuFPwPY-->先别写月报，只做一件事：把月报该有的指标逐项过一遍，哪些本月有原始记录能算、哪些没有记录算不出来，算不出来的写清建议自哪个月起建立什么记录。</p>
+    </article>
+    <article data-page-node-id="W2IXY5R4quYYKV8PegDlEF" class="task">
+      <div data-page-node-id="kjRsr7DAWDtodRMljoSAu4" class="th"><span data-page-node-id="acTRmH0WUBMXbPiYCInAxS" class="no"><!--pnid:y0ZwYnB4YaTh8y7I5X4Xnj-->03</span><h3 data-page-node-id="o5AQSd2wskyMOxkdFkXP2k" class="ttl"><!--pnid:DTD2WbdJ10uTotbmZY0RQe-->换成季度汇总口径</h3><button data-page-node-id="xh8oFv60lfpzgzxkHv78Zd" class="cp" type="button"><!--pnid:br1RCS4n3NalLwSLBcXst4-->复制</button></div>
+      <p data-page-node-id="WbQTjfcXoxoxqF3Yj8BxOm" class="tp"><!--pnid:qI5W18zudKujJcLL0quqlw-->这次换个口径：不写月度，改成季度汇总。把三个月数据合起来算，事故率、及时率这类指标的分母按季度重算，并标出哪几个月数据缺失导致季度数不可比。</p>
+    </article>
+    <article data-page-node-id="fNzx7TAdHGrZuT224h2yw6" class="task">
+      <div data-page-node-id="jRXezzlMbMQW0XcwNtuftm" class="th"><span data-page-node-id="dltypoFj5ajMZmgNDx2OOq" class="no"><!--pnid:RVzMx6lt47lywNxaW1zuWt-->04</span><h3 data-page-node-id="ipa8PFTeTHCVc7XeIQTC5g" class="ttl"><!--pnid:riH5Ze8VbehSUTnKHIGz95-->三个月横向比</h3><button data-page-node-id="CIpUinNbLmi1ZMhjZZCv7q" class="cp" type="button"><!--pnid:zsWytyHQjSo1rT4OkD7kab-->复制</button></div>
+      <p data-page-node-id="upfCg3YJUiesRufYtcbwDe" class="tp"><!--pnid:IDadcP2a38uTlTLuso27zI-->把本月和上两个月的数据一起过，各自出月报要点，给我一张三个月横向对照表：会议场次、参会人次、报修次数、工单及时率、采购按时到货率、费用总额的环比。</p>
+    </article>
+    <article data-page-node-id="zo1nMntwJCZaDpscJIXbTz" class="task">
+      <div data-page-node-id="IYGbdZ53uZci7kdMCQOPns" class="th"><span data-page-node-id="V6JU9uYqCXWG3oMoBIxXIM" class="no"><!--pnid:CUu5l0RP0vJCkaKeFQx2yc-->05</span><h3 data-page-node-id="qkyq33JdJj7QvFEfEMzl8v" class="ttl"><!--pnid:onr8FfyicIsKrOLYKhiFJX-->给主管看的一页</h3><button data-page-node-id="6iGHZtlIK31CJocGGnAdu9" class="cp" type="button"><!--pnid:S1vPoA9GVcxYb9Ei8YxC6i-->复制</button></div>
+      <p data-page-node-id="mZ131XSOeXzbOEpAzZLnIE" class="tp"><!--pnid:eZlsOjonliHMzgZo8P4BNe-->把月报压成主管看的一页：本月最值得说的三件事（带数字）、最该改的一个问题（带根因和长期方案）、下月要花的钱和要做的三件事。五表整表不用给。</p>
+    </article>
+    <article data-page-node-id="j7bKZ5w2AyZ9JnsqDaGeRx" class="task">
+      <div data-page-node-id="0LqebIEjUXyeNZ8frrDG7z" class="th"><span data-page-node-id="0NW40VWVRW5YicOZ1dAQSE" class="no"><!--pnid:hFZpCm4ayEow2FCtUJsVIh-->06</span><h3 data-page-node-id="pKP7mRJqgI9QCQZUZIYUEf" class="ttl"><!--pnid:7jEn6EbGxNQZ9TqssDagy6-->让它反驳自己</h3><button data-page-node-id="v9Fc3l2NNv8J8wWvhkUvAG" class="cp" type="button"><!--pnid:2hxLniKJShUIk7pemfzvws-->复制</button></div>
+      <p data-page-node-id="GpsSR13kfkVxoWvHjDyBst" class="tp"><!--pnid:zyQG55OHQiUfO3cc1Tdy1q-->你说「3 号会议室投影仪故障率过高建议换新」，依据够不够？把本月按设备分组的报修次数、去年同期记录列出来；样本不支撑的就改回「建议继续观察一个季度」。</p>
+    </article>
+    <article data-page-node-id="8YwVFg6xCTnNGgbckeN7Eh" class="task">
+      <div data-page-node-id="xu4rfukbbsaVjwFPQm7aqD" class="th"><span data-page-node-id="XrNk2DPGgLOkOrURRhjIGr" class="no"><!--pnid:m01m7NTC6Fcj471PTXHbto-->07</span><h3 data-page-node-id="p4OW6z7yjdiwBw9Lzgfv5m" class="ttl"><!--pnid:08Fy9dtRe2WSqMwI02VvrK-->比对上月问题的改进情况</h3><button data-page-node-id="pP7IsiFz9ScZJaWDp6ufnn" class="cp" type="button"><!--pnid:BzlrtqDFDSDIb1d8XoUytr-->复制</button></div>
+      <p data-page-node-id="1cODbvHUShp0sFuYBHK3ta" class="tp"><!--pnid:enT85eA3K9xhQ01EUP9dvv-->专门比历史：把本月的问题与改进栏跟上月月报逐条对一遍，上月提的问题哪些真改了、哪些只是换个说法又写了一遍，把重复出现的问题标出来。</p>
+    </article>
+    <article data-page-node-id="GVdC1xcaCyNkWbTbo2KMlA" class="task">
+      <div data-page-node-id="Bj1UTnWnWmqqXFVf8w7kWg" class="th"><span data-page-node-id="gMTIERUPHpC5wWoxlKdp3c" class="no"><!--pnid:KdIQz1uthkv2Au7YSGdkSx-->08</span><h3 data-page-node-id="i5er5n36AYqn44Tx2SV3bI" class="ttl"><!--pnid:pwpUfIMIl01LT47MbhgTto-->对照指标口径自查</h3><button data-page-node-id="JOvE7qNlaEOnZmfXDzvJoi" class="cp" type="button"><!--pnid:c4H4AMU8bFNwKz5G9p8sKc-->复制</button></div>
+      <p data-page-node-id="x85TgJuwsDwTSiqDcFzaJS" class="tp"><!--pnid:9NGocwdljWFcGv8KGnMfkN-->对照月报的指标口径自查一遍：每个指标的分母是什么写清了没有、有没有把不同来源的同类数据混算、有没有列了已经过时的数据（比如三个月前的满意度调查）。</p>
+    </article>
+    <article data-page-node-id="vulTOUvbB31IGsZR8gLadn" class="task">
+      <div data-page-node-id="QzPAbQaazK2uk5ZO5J2Cna" class="th"><span data-page-node-id="SlJLmbRq6lRBy3qlnaoQb7" class="no"><!--pnid:Qa8nGj8DhBdUXiyPzFWA6m-->09</span><h3 data-page-node-id="Ta1rVM0Nf2swiM82wCFYDO" class="ttl"><!--pnid:xZIOcoXANSAnjbCRLuLxhD-->折算成维修与换新账</h3><button data-page-node-id="haS75YuqXMtWZlCCXeYdp3" class="cp" type="button"><!--pnid:89SOe9iZN2z3d80LGVUvEk-->复制</button></div>
+      <p data-page-node-id="a3npfTFqTNW2nRWELwv8FK" class="tp"><!--pnid:ZGrdVpRaXI6vCIwZBaQqup-->把报修数据折算成钱：那台投影仪本年度维修支出多少、影响了几次会议、换新多少钱、按剩余使用年限算哪个更划算；再算本月行政费用总额的同比差额。</p>
+    </article>
+    <article data-page-node-id="dXmNcygDkP5x5ewS9h5lSG" class="task">
+      <div data-page-node-id="D5u0UqmWW45lYhGdLSuF0g" class="th"><span data-page-node-id="AK76dmzh5Km7nrJkwHM1NJ" class="no"><!--pnid:WDfKNTjaHU2TvLShumKdCx-->10</span><h3 data-page-node-id="0coZ074QHattd1Sg2hR5Hm" class="ttl"><!--pnid:ZRlqt3Nh7oR7EjCXfvhne6-->沉淀成取数口径表</h3><button data-page-node-id="3XTMhix87uVXIgfXJWK9rS" class="cp" type="button"><!--pnid:PakUWiamEVWMMgUvyCs49E-->复制</button></div>
+      <p data-page-node-id="djRIkfSflwOKYNj8d58DJl" class="tp"><!--pnid:ESnDw0EDvWvfbA6uW5Z6KA-->把这次的量化口径整理成一份《行政月报取数口径表》：每个指标取哪张表的哪一列、分母是什么、没有记录时怎么写、哪些数据必须标明是过时的。下月照抄。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="qur5GE9WDrtas1eRmuJUTR" class="cta">
+  <div data-page-node-id="SMSqj0BNvQgVm8oGR39HRn"><h3 data-page-node-id="53LmfSa1uJRRICfur7zA0a"><!--pnid:AaKlzIlapX2KG1AAfcwtuE-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="SlaPVv0KHm3l7InoEYglAT"><!--pnid:V3EjxqXpVQkBW7amQ1B3KR-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="wi3JDL4crHGss18n7pqun1" class="btns"><a data-page-node-id="YiKEZgPGZbL4wQDKYVOqK2" class="btn" href="#" id="ctaContact"><!--pnid:WCol0gEtcNzAunsF2YxKcq-->联系我们</a></div>
+</div>
+<footer data-page-node-id="kwnQMZyQPH8n6g07mzHlGo"><!--pnid:kGiJ6x0bZDtKbTdowFZXT1-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="5fAmzVBd6vGP8n4apZD1LY" data-pnid-children="UC7seyshl68Z2fhzVjEf9p">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="Vk5sUqUlOfjKAjXcar4Kq5" data-pnid-children="5qs2nLvZ1PuIAzZtkFdTnZ">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="QjknP7z4vkxClFqoA9TqXU" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="ZCqkATMs5Jfrwcja0xajKa" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="MdWD3r9vHQ0qYcjeWBeREB" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="86BJ8uUwfPfhCCXjnpdl8c" data-pnid-children="rlfkFKNtUeCpqXLLUvb0xz">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="GPhkZNfyR2TBw6E9xcQ62N" data-pnid-children="fTMb4UWY75zfaVuR3fWlSK" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

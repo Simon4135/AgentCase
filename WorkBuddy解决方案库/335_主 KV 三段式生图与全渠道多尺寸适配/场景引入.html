@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="he0VLIQsnKzzynBjecFRhT" lang="zh-CN">
+<head data-page-node-id="S3IJrFFDLNYNxuEQEHmPg7">
+<script data-page-node-id="RpZ0ALkNkGCpaKBjI37Mmu" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="uQNw521OcFAlQd1AjVAsML" charset="UTF-8">
+<meta data-page-node-id="MkCWZq2UUOp1HMSUPwifgr" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="NIfQpqrxWmmqOJgIe0hYvZ" data-pnid-children="v7jNtlK4Nd2rYIEj6gXUqi">主 KV 三段式生图与全渠道多尺寸适配</title>
+<link data-page-node-id="6WNuVW0rV3N2Srviky422R" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="s66XFzx4a23yBiLGFNSZjp" data-pnid-children="dSpTZczbIcl7whbv8dAxQG" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="sFn3KrKZgNan0fJoxXcovI">
+
+<div data-page-node-id="YmpRSWPrHt6zR2mW37kmbm" class="wrap">
+<section data-page-node-id="hfnbQ480VE7p8XUiKqSQ7R" class="page-hero">
+
+
+<h1 data-page-node-id="DmX8gJYJTfefI9o5EBWLdg"><!--pnid:sAmphjZUrw7BNeWXZ2rPAd-->主 KV 三段式生图与全渠道多尺寸适配</h1>
+<p data-page-node-id="8ofGs84cBF84hSryUlkPOf" class="lead"><!--pnid:j6xL6qmyooMvvjL2qqQp9L-->AI 直接出带字的成品图会当场翻车 · 行业标准流程是三段式：无字底图 → 真字体叠字 → OCR 校验</p>
+</section><nav data-page-node-id="MtS9ekPlc4mpmS42spD32J" class="subnav"><a data-page-node-id="to2R1kZSsWexV3ZVKylgbM" class="on" href="#"><!--pnid:09yr0ZXLVQMvae3Tptn5Cx-->场景引入</a><a data-page-node-id="56oMRh1e6FF3UHiPaRoJ5b" class href="LiveDemo.html"><!--pnid:taHuJHyTPpqP7V3GbQRpJL-->Live Demo</a></nav>
+<section data-page-node-id="DPH1WiKMcFmSaq7jR7LE5c" class="blk">
+  <h2 data-page-node-id="b8N3HaNXzA6NpjFYtGcKsp" class="h"><span data-page-node-id="peuO4pKAYUX2g3xSE9Ykiw" class="num"><!--pnid:3VIm5i3DAu08JFIecz9atx-->一</span><!--pnid:BawOT4a2iIaXa4iKt6xTkX-->这件事现在是什么样</h2>
+  <p data-page-node-id="o0Ld3j8YTHHjjUBgYHjnUT" class="subline"><!--pnid:qa2hiWhnFXGk9OQEPjapXN-->视觉制作 · 真实业务触发</p>
+  <div data-page-node-id="XwykfHw4tIZbFvTyUT2AMT" class="card"><p data-page-node-id="mS9CGWk3giLfMwlm2PNmNG"><!--pnid:BfvkHMoRlbX73a77BPpqDA-->方向定了、模板库建了，现在要出主 KV：小男孩拿着伊利牛奶。这一步是最容易当场翻车的地方 —— 直接让模型生成带中文标题的成品图，「画 4 个大字可能没问题，画 20 个小字几乎必错」，上海地铁六指海报让品牌好感度 3 天跌 21%。所以这张图必须走三段式管线，生图工具用的是 WorkBuddy 自带的 ImageGen。</p></div>
+  <h2 data-page-node-id="yk6PUHaAHZOARBV5oxI6nV" class="h" style="margin-top:22px"><span data-page-node-id="k4zVH1K3vv0KLhI2CCym8f" class="num"><!--pnid:rPfwGskxuKRGYAFB8zEWRh-->二</span><!--pnid:DsMO8nutYjBbMrtqT706yH-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="SgT0s9ZMZuGfOpkWzyfuLo" class="subline"><!--pnid:0FpnAy0wnq4McFBcdE2Cfm-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="ILU9d8EnRdZVuXNpxwH4dp" class="pains"><div data-page-node-id="YC6GLhU2tV67sbBVtPg1ZK" class="pain"><span data-page-node-id="SsdoNpjZivqHmBy6vhTEJO" class="i"><!--pnid:aO61vznA4eiwYzyM0q5jta-->1</span><div data-page-node-id="jU0MaZ870HEb7aTD88Hr59" class="t"><!--pnid:nnyscN6UnqhCm5QA0mDjij-->中文乱码是模型内生缺陷，不是提示词问题：模型「把文字当图像纹理去画，并没有真正认字」，画 20 个小字几乎必错 —— 商用规范明确「不可直接使用模型原生内嵌文字」<span data-page-node-id="F12b2AeJzSIebfEVRua45Q" class="src"><!--pnid:eCjJjcIFiQO44SZBgAnODh-->依据 · <a data-page-node-id="MquFpuPO6giPFTfBX0sRgM" href="https://cloud.tencent.com/developer/article/2690615" rel="noopener" target="_blank"><!--pnid:6Z6f7Of8QiBXTCGyOvnGzn-->腾讯云技术文章：AI 生图「把文字当图像纹理去画，并没有真正认字」，中文字符集庞大笔画复杂，「同一模型画 4 个大字可能没问题，画 20 个小字几乎必错」—— 中文乱码是模型内生缺陷，不是提示词问题</a></span></div></div><div data-page-node-id="yyVdxaoFgElJaeQfgKaGWN" class="pain"><span data-page-node-id="O1pDQDmpO8NKDkZCrzkROd" class="i"><!--pnid:CXBACuYEjg1nt6wj1uxxfg-->2</span><div data-page-node-id="XwlbNdAC9DvIPA6SFb6mja" class="t"><!--pnid:FZWaZsBPDpZRO7D2L5ewqQ-->AI 直出成品不经审核的代价有公开案例：上海地铁六指海报品牌好感度 3 天跌 21%、连夜全城下架；淘宝已累计拦截AI 失真图近 10 万张 —— 平台已经在用机器拦，人眼时代结束了<span data-page-node-id="za6ZtmbcXtLOK5r5tFOAm7" class="src"><!--pnid:pRM7sPHJTBK2z46XR9NtjN-->依据 · <a data-page-node-id="ja6J6orFpNAYW1U0ePbElD" href="https://www.czhb999.com/?list_8/90.html" rel="noopener" target="_blank"><!--pnid:23xmhvkDzc1KYwfb5U9vTw-->上海地铁六指 AI 海报（2026.1）—— 美妆品牌地铁灯箱模特六指、关节扭曲，登上本地热搜，品牌好感度 3 天下跌 21%，连夜下架全城海报重新设计；上海地铁合作广告方随后撤下全部 AI 生成广告</a></span></div></div><div data-page-node-id="tTxQQ3A05lPDJwvXFhrpmZ" class="pain"><span data-page-node-id="vJJLSwj0cUwid29X2C6dxR" class="i"><!--pnid:Nu6sQCHd2yApiGLygEGPGb-->3</span><div data-page-node-id="7BObLtAyLoyMwRPh74WTO9" class="t"><!--pnid:2hkMgW3TlyvQU0hgGPgV71-->多渠道规格各有硬约束：京东主图严格纯白底无文字、拼多多文字覆盖 >10% 判牛皮癣限流、小红书整篇只能一种比例 —— 一张 KV 裁 18 个渠道，纯缩放必踩规则，必须按渠道重排安全区<span data-page-node-id="Tvc7zKQZ9zeJourBxRx34W" class="src"><!--pnid:EXHwF5XgvWd1rYZvnqrZXn-->依据 · <a data-page-node-id="HIwOdxyAUvnp0XoQpqFZPR" href="https://www.secaiyun.com/docs/ecommerce-banner-ad-size-guide-2026-05-28.html" rel="noopener" target="_blank"><!--pnid:vjwSkCAiAR2Mv615SLXqLJ-->多渠道尺寸规格速查（2026）—— 淘宝主图 800×800（第 5 张白底、文字区域 ≤1/3）；京东 800×800 严格纯白底无文字水印 LOGO、单张 ≤1MB；拼多多 750×750 文字覆盖 &gt;10% 判「牛皮癣」限流；抖音信息流 1080×1440；小红书封面 1080×1440 整篇只能一种比例；详情页宽 750px 前 3 屏定生死</a></span></div></div><div data-page-node-id="65xMqamFNLPKN0y4EpJdRN" class="pain"><span data-page-node-id="PArWdJnHV5B4BcIdVxJRCn" class="i"><!--pnid:8lyRJKpywIZYNPDdm5vZvR-->4</span><div data-page-node-id="m0pK7bnU6ODP8whdOoa0Qd" class="t"><!--pnid:Ifim1iBAls7F7xVKwUjKhf-->「手多一根指头、招牌上的字是乱码、品牌主色被改成另一个色号」—— 甲方看不见的『几分钟』背后全是这些；而品牌安全边距 8–12%、平台 UI 遮挡区域这些约束，现在只存在于设计师的收藏夹里<span data-page-node-id="5jug3TeIGZkizL2W2GSl5V" class="src"><!--pnid:Gno1fkogZXqfgPpajrnSUq-->依据 · <a data-page-node-id="QBldxDMjWekpvV36BbfM9D" href="https://www.yeyulingfeng.com/a/803399.html" rel="noopener" target="_blank"><!--pnid:3FvPcTs9t62s6rPNgiCwH6-->从业者原话：「我跟客户说，这套设计我需要三天。微信那头顿了一下，回了句：啊？用 AI 不是几分钟就出图了吗？……你连『我需要时间』这五个字，都越来越说不出口」—— 甲方看不见的『几分钟』背后是手多一根指头、招牌上的字是乱码、品牌主色被改成另一个色号</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="oAHhloh66GVolmWBBFPt0P" class="blk">
+  <h2 data-page-node-id="MgWhWGnhIsqY5pAnvqSbOx" class="h"><span data-page-node-id="bacUb0ffy92wMtpoAPnuD6" class="num"><!--pnid:IFieTrRnOezRileDqqZyRw-->三</span><!--pnid:ym8bTZmrP1m6vLrV1Oydpy-->换个做法之后</h2>
+  <p data-page-node-id="PN8n46SCL5RFjQRp3EPNzN" class="subline"><!--pnid:7EwkKU63PSXhiHNbyc1d96-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="m4aZmlsgt8pgJxzEBAbQa1" class="cmp">
+    <div data-page-node-id="5TfpRLosjV8kgcQurUJdII" class="old"><h4 data-page-node-id="mvEflV1FaUTT5rqAqlagoo"><!--pnid:fZ8FAwQo2Tj9M4mohfb7LD-->✕ 现在的做法</h4><ul data-page-node-id="Geg1mkkZBfDf6CphlIOpW5" class="list"><li data-page-node-id="ZtZippWHFCmFe18iCGH89D"><!--pnid:87oxdErDugHueOzUHV5wV2-->中文乱码是模型内生缺陷，不是提示词问题：模型「把文字当图像纹理去画，并没有真正认字」，画 20 个小字几乎必错 —— 商用规范明确「不可直接使用模型原生内嵌文字」</li><li data-page-node-id="2QcV0fwYwknBA1yLlvkLvG"><!--pnid:H8JH0tmlkApDFFY0AfhY4R-->AI 直出成品不经审核的代价有公开案例：上海地铁六指海报品牌好感度 3 天跌 21%、连夜全城下架；淘宝已累计拦截AI 失真图近 10 万张 —— 平台已经在用机器拦，人眼时代结束了</li><li data-page-node-id="TCG811tQu2GRKD6EBbh9D4"><!--pnid:gfKKfKfO410dLOP4DbsBH0-->多渠道规格各有硬约束：京东主图严格纯白底无文字、拼多多文字覆盖 &gt;10% 判牛皮癣限流、小红书整篇只能一种比例 —— 一张 KV 裁 18 个渠道，纯缩放必踩规则，必须按渠道重排安全区</li><li data-page-node-id="npB3t0r6SOPCn6GW29d8vu"><!--pnid:Z48Bt2NVOZxKU6wH9dm5p7-->「手多一根指头、招牌上的字是乱码、品牌主色被改成另一个色号」—— 甲方看不见的『几分钟』背后全是这些；而品牌安全边距 8–12%、平台 UI 遮挡区域这些约束，现在只存在于设计师的收藏夹里</li></ul></div>
+    <div data-page-node-id="r7dFwhRWvY2qs8P6URoDrv" class="new"><h4 data-page-node-id="nmd4i1rkybvzQiJDwRDk5o"><!--pnid:A71jYCc9qdCUVWvNiY5kwt-->✓ 交给 Agent 之后</h4><ul data-page-node-id="TBgDcVByI2dwOczICAKo6W" class="list"><li data-page-node-id="GlNGstZidQvWijWMb7dJq6"><!--pnid:KlStiGePOZ645VAf4ZSn1F-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="g7YG0WvCDxZczQdfkfs1p2"><!--pnid:6624aagtV2BAZGxRgcEXf9-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="z0vrHRrMuJWpHx87Bg7b3j"><!--pnid:OsQJft3QJXFcNsayeCK09m-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="J1g9x3nFRQYL2a2sbNARRM"><!--pnid:kCr18OpAHlupdh2oUPYeFh-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="k6ran5Q1Y8lhqiASfKPaD1" class="blk">
+  <h2 data-page-node-id="BczDujZeVUk2vpWuSRoxyv" class="h"><span data-page-node-id="GnENQtQG2ZbSSkrf4NxeOI" class="num"><!--pnid:ywV688bVlq3xXKnUU1NRDq-->四</span><!--pnid:XQ8zcT7BSRk2gofCaeLE0l-->场景闭环</h2>
+  <p data-page-node-id="MuGqaAWXzsLFxFbZygnToK" class="subline"><!--pnid:ie30UD2Age6lbT7HxFDBI4-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="aY5Oudypi2QSthmhS5fwgd" class="flow"><div data-page-node-id="cSJ7OSOLAL0kvxDrmurlpH" class="step"><div data-page-node-id="AD8Yv9NsXcc9aTdI9RTlEZ" class="n"><!--pnid:i3rARJspENf79Ugr2HU7da-->第 1 步</div><b data-page-node-id="zxa24s4htS5zCbo8vHa0eL"><!--pnid:Z13qLxUZx4x7dIX365HM7u-->触发 · 主 KV 制作启动</b><span data-page-node-id="4axdUz2K15C4hXWdHIRMra"><!--pnid:9jbH4XxhRHoR1HHeMFMSJp-->方向 B 校门口成长 —— 主 KV 是后面 18 项交付物的母版，这张图的质量决定整套物料的上限</span></div><div data-page-node-id="lVVsLJIaXm9Wjd7q2nZZ0z" class="step"><div data-page-node-id="KFhpI6edio9kn1lOI5ox0W" class="n"><!--pnid:fnsCdfZWBEWvJx7BLDSsxj-->第 2 步</div><b data-page-node-id="yOEZT0ZAw7bfbmz3aFC9bv"><!--pnid:VrC0KeAnRyxrpRPiLvI9Gn-->第一段 · ImageGen 生成无字底图</b><span data-page-node-id="RIPnduNecnDk8mD10J42II"><!--pnid:HTUrLROgtXIIhlTbaTsjUl-->用 WorkBuddy 自带的 ImageGen 工具，按模板提示词生成「小男孩拿着伊利牛奶的广告图」画面：校园清晨、暖色调、顶部留白 —— 负面清单带上不含文字、不渲染 LOGO、规避手部特写</span></div><div data-page-node-id="7fNpBRh1rrqDzt1rJuT7oU" class="step"><div data-page-node-id="ocgcbvnr8bCPv9ejoCWySO" class="n"><!--pnid:swg6iazfeNw1cVADRxGdyr-->第 3 步</div><b data-page-node-id="C86nHKAjJhp68hfYwqDyNO"><!--pnid:N7jIEbwagHPCNjVZxeXSOv-->抽卡与质检 · 四轮 16 张，硬伤拦截</b><span data-page-node-id="TpFIiG2a0BhzX3cuEmybRl"><!--pnid:7CIqCDqI6hSRnrXEa0Xoqx-->每轮 4 张，质检两道：六指/肢体畸变（第 2 轮拦下 3 张）、色板偏移（与 VI 主色比对）；不合格整轮重跑，第 4 轮 01 号底图通过全部质检</span></div><div data-page-node-id="hTkdzvHrpMF6WcjQUmr5rL" class="step"><div data-page-node-id="wMQit85xybVkMymnpQSRiP" class="n"><!--pnid:8VkgLtlksoH6lxZ4aUvSz3-->第 4 步</div><b data-page-node-id="j8iVewy8a2rodW7oXaU4OQ"><!--pnid:UJaMo5Lv4ggrNd3Iwlu3dp-->第二段 · 程序化叠字（真字体渲染）</b><span data-page-node-id="pZXIe4dFp7j5JjkSjEMi3s"><!--pnid:oJqYHWQ4P7vhFZD5KUpdH7-->思源黑体，主标题落顶部 12% 留白区，字号与行距按版式规范执行 —— 文字是排版排出来的，不是模型画出来的，所以不会乱码</span></div><div data-page-node-id="c3IKHQ5c6V328svjYT5k5m" class="step"><div data-page-node-id="bhRhBuH7nr01lZrydu2ncr" class="n"><!--pnid:JMcE2oz5qYkFhNXH8LqeVo-->第 5 步</div><b data-page-node-id="KpUBAFmy7Fn0e8ssyrOAYI"><!--pnid:fYqGCy5uCpzgrkpkv1eBmE-->第三段 · OCR 全文校验</b><span data-page-node-id="arffMikAt6ia0xAaDW7kmA"><!--pnid:ckdDpvyl7RKdUGe5hZEIlo-->对叠字后的成图做 OCR，识别结果与文案定稿逐字比对 —— 主标题 8 字全部一致才放行；任何一字不符，定位是叠字层还是底图干扰，修对应段</span></div><div data-page-node-id="kALnzjCJ1t0hVJ8Bz3kv0S" class="step"><div data-page-node-id="3OcslVPPxT8Gg2idI49ccL" class="n"><!--pnid:zwocnoFzWlVSbzy9ptRNLb-->第 6 步</div><b data-page-node-id="Ifmzd5tqiA7QnzLpYD7zVR"><!--pnid:hhVc8WvUWQbSMKW7WtwIfU-->尺寸适配 · 1 张主 KV 输出 18 个渠道</b><span data-page-node-id="3QdblAMENaXjsyEXwk4eLT"><!--pnid:aBSUFDrV6sB6VZjyIm5H15-->按规格台账逐渠道适配：安全区标记、京东纯白底单独出、拼多多文字面积自检、小红书比例锁定 —— 每张输出附 AI 生成标识（新规要求）</span></div></div>
+</section>
+
+<section data-page-node-id="Z0jW3yUpoNmfx9CkM7eNsF" class="blk">
+  <div data-page-node-id="9nIUTv3nJS23ooyKaAvmKs" class="g2">
+    <div data-page-node-id="tg2bSK9C2eKXxWjoQg6pBQ" class="card"><h3 data-page-node-id="cjpQRv5u6fFPEnNmqyJYyl"><!--pnid:IHtLeLN36mapLuH6tb4vqM-->要准备什么</h3><div data-page-node-id="cxBpdm4AXmOhW9NmA4gPRf" class="src"><div data-page-node-id="qiIBFO8KaFJOb9tfAcIcPK" class="fn"><!--pnid:ZRHhcEV3tFPSsnUHBNfrjF-->品牌提示词工程库 品牌提示词模板库（主 KV 型）</div><div data-page-node-id="TymbxdkOB8xQEuK1qsFTxK" class="fd"><!--pnid:PYKTIFyujGrebxX12epoyc-->正向描述框架 + 负面清单（不含文字/不渲染 LOGO/规避手部特写）+ 顶部 12% 留白构图指令</div></div><div data-page-node-id="nDyAmE9hbR72WBxfw8yrnt" class="src"><div data-page-node-id="ddTwpEbB7vPvU03EKrXyT2" class="fn"><!--pnid:0dbrCdh9TcR05GHo4SH5tu-->创意方向与概念板（数据驱动版） 方向 B 概念板（校门口成长）</div><div data-page-node-id="boMMx78xLkx01M1QKwlV2s" class="fd"><!--pnid:l1UwV7t543CPBtIKXpa6kR-->场景元素与情绪关键词的出处</div></div><div data-page-node-id="OBMXkEccbLNqfVRWCkwaoP" class="src"><div data-page-node-id="GgZ5OKndhmlWkpcT37Mb96" class="fn"><!--pnid:O0qYIfSml8eu9LF0aw6zwB-->各渠道规格速查表（18 个渠道）</div><div data-page-node-id="IOl0FwQHvJPHlzxzDzyF97" class="fd"><!--pnid:7xhfKpxvIWVfp2mHMmc4hP-->从设计师收藏夹里的帖子整理成台账</div></div><div data-page-node-id="vTa18gaWNZVurvSuKyURSZ" class="src"><div data-page-node-id="j9RI7wBZ5Dr0Gvu64De4IZ" class="fn"><!--pnid:ntoo52reTAODewVawxaEAW-->思源黑体字库（免费商用白名单）</div><div data-page-node-id="99c4NOHxCqKK0s9e0MAw04" class="fd"><!--pnid:zpiksGsYyKQ9WqOULYPjH4-->叠字层的字体来源，授权状态已核</div></div></div>
+    <div data-page-node-id="8rYX8c11jyOdskjVdJlZss" class="card ev"><h3 data-page-node-id="ony9fXPnaRZ74hFTRIVC3f"><!--pnid:9JMtQk77eeyFkRuW1w7GMP-->为什么这个场景值得做</h3>
+      <p data-page-node-id="0pmUuUkXy4T4f6llKp3jO0"><!--pnid:9dJDmmW1SLmDMqFhJPoLWg-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="3ykohtdiWGD7sDfKas3nrd"><!--pnid:WiUGFRfEdGlIg0BrhToSJq-->10.0</b></p>
+      <p data-page-node-id="WyvtdPOdwpYrrkjGOj0i4p"><b data-page-node-id="LUWGXLojs769wFyRo7VpTb"><!--pnid:UB2YvTFwf56Skh9ZnWYGjZ-->最大差异点 ·</b><!--pnid:qQlXMcfso8gTG5mYatlCxA--> 三段式管线的每一段都有留痕：底图带提示词版本与负面清单、叠字层带字体与字号记录、OCR 校验逐字比对 —— 出问题时能定位到段，而不是整张图重来。生图段用的是 WorkBuddy 自带的 ImageGen，提示词直接写「用 ImageGen 工具生成小男孩拿着伊利牛奶的广告图」—— 这一段可以现场演示，从提示词到底图全程可见。</p>
+      <p data-page-node-id="IpUaB9ADicVSzpC7dysiHa" style="color:var(--ink3); font-size:12.5px"><!--pnid:wYNu4NpA9ZTR4GvVv53L71-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="Xfryo2fHVGFdAiFhGD8FE6" class="blk">
+  <h2 data-page-node-id="ROD6IGbe5lUs46sNm4nmWO" class="h"><span data-page-node-id="rBCMweg3JyoJ1hYWxIeKks" class="num"><!--pnid:VLfaqjAzFVOAmRdHeLpI9V-->五</span><!--pnid:Orv2A0ri3I18bNJkDReUF6-->会产出什么</h2>
+  <p data-page-node-id="B5zG3VKQoUUwPPxdIYVPTr" class="subline"><!--pnid:1b7juOZCDrBa02evOSL4EV-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="41Dn44fZJw1icd2UXsgo8M" class="outs"><div data-page-node-id="CmnIsJmkE2YsIvS2fMje2e" class="out"><div data-page-node-id="cLZ2yrBqrTf1OihimluaPK" class="on"><!--pnid:z7CNXU9A2VHlG09Dia2ZJk-->正式件本体</div><div data-page-node-id="kPHCwpt59ZhQA2Dq5tfV5n" class="ot"><!--pnid:UGdPDCNNwZpi1n90h0eDqC-->主KV三段式制作记录.xlsx</div><div data-page-node-id="LQ4DjXxAaOXxEwnPggBMom" class="od"><!--pnid:EpO8rAsfFMKqVM0D5wmmtI-->正式件 · 4 sheet（抽卡与质检记录 / 叠字参数 / OCR 校验逐字比对 / 18 渠道适配台账）· 含美术指导审定签批栏</div></div><div data-page-node-id="OizGv4bU4B1K4IWeRS8P3v" class="out"><div data-page-node-id="eLlzOWRjsPTtEJgh8XmnL2" class="on"><!--pnid:sewUn8VqdYDZ5ITyfjIkYi-->可派发清单</div><div data-page-node-id="WoXkwXak2gAUZbiTccskPX" class="ot"><!--pnid:fpLSpjPY5lTP52gmNR3xMo-->全渠道物料包（18 张）</div><div data-page-node-id="7ZwswozAmJvOT8MCruoLz9" class="od"><!--pnid:W6O0e8YPlBCCpNB94dQtCu-->交付件 · 每张带渠道规格、安全区标记、AI 生成标识 —— 按渠道命名规范归档</div></div><div data-page-node-id="kFpeNQrgH0VWtDdF3uqq5k" class="out"><div data-page-node-id="cdPGZ2uYpabvZ8zJ9vSiW1" class="on"><!--pnid:10LBEbZoVPheX53AdPHChf-->可派发清单</div><div data-page-node-id="9UFq33G42IiB7X4ZtesDe4" class="ot"><!--pnid:9TnLgMacvoquY0lWRq3LeG-->废卡与拦截记录.xlsx</div><div data-page-node-id="gnboJq9d0i3Tlu0tvWdxFw" class="od"><!--pnid:dU2z5E6Fq0LUdAwjGDJkAn-->可派发 · 每张被拦底图的原因归类（六指/色偏/构图），模板库迭代的输入</div></div></div>
+</section>
+
+<section data-page-node-id="v7UNxnyfx520KPyVARSegO" class="blk">
+  <div data-page-node-id="0U1JMnAcgedhXuBhYk0C43" class="card warn"><h3 data-page-node-id="Fi0Dame54mO0oPKiNTDqmg"><!--pnid:ySOcAR9cnhpLrNcBmKtKA4-->这套东西不承诺什么</h3><p data-page-node-id="ft8TmUSkyuwVYkuNh2v2V7"><!--pnid:Z1dlmIkaiU9pLxVBa4TmBG-->不生成带长句文字的成品图 —— 画面文字一律走程序化叠字，这是工程红线不是偏好。不替设计师选图 —— 16 张底图哪张代表这个 campaign，是美术指导的判断，质检只拦硬伤。不承诺出图质量 —— 模板保证约束被带上，不保证审美。AI 生成标识按 2025 年 9 月新规打上，不删。</p></div>
+</section>
+
+<div data-page-node-id="RMW6zHXS02PU6kXaWzgXvo" class="cta">
+  <div data-page-node-id="S3mmuVd2M1LXvlGNtW0f2v"><h3 data-page-node-id="T6S7D2AjauG0Nxfpij1Ba5"><!--pnid:kZrCYgOyOrDnQFXEAJwU2I-->想看具体怎么跑？</h3><p data-page-node-id="p8EnH5K9u4pEdGo5G8JAXl"><!--pnid:Pbu3vk42DWOsQG2p1KCxzF-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="S210Eq7jFqFwHF6wwRO4kn" class="btns">
+    <a data-page-node-id="RjzuGtVS7yjD7WrPunMYmJ" class="btn" href="LiveDemo.html"><!--pnid:sVnupGCR4MCZV2hsgrr0OL-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="bFDflWZAzxuqJuRsFg31FH"><!--pnid:ORicpy8dKKRp8gLrYvffO4-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 对外交付物一律人工审批</footer>
+</div>
+
+<button data-page-node-id="QlSGbJFvsmWSqWvTJbGnlq" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="RLFNC77nkPJdEDr3Z3P5ca" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="aeWlnuLUziOzwBAZWAjbaT" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="orKDqwuzn1bJxXRZTJ0LzF" data-pnid-children="RPC8kXr8jfRlyWDbNGIA1Q">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="QRyFPli43S2Cbf24xicF7a" data-pnid-children="9I14YdWJdhlJ2q3AML4k6r">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

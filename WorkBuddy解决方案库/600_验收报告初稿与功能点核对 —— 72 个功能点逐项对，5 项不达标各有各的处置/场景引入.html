@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="7ljGkO0v5HxnmxVrM0tnIb" lang="zh-CN">
+<head data-page-node-id="7AChCjx1a9Y1iNWNTAOIHj">
+<script data-page-node-id="uIwwuf3S7VICgzYvH1xy7R" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="u32E3NeMD3XyDsteUWOVbs" charset="UTF-8">
+<meta data-page-node-id="qWPRYSZfENjDXrn9HjNHKP" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="vS6M1Eegxj2orIcHgm0Bnt" data-pnid-children="68WPN60iHgbIdxXsHgz2vQ">验收报告初稿与功能点核对 —— 72 个功能点逐项对，5 项不达标各有各的处置</title>
+<link data-page-node-id="s6qvfzgMiUnlpsjdGlaz2W" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="fzljdXYBQJhjJglxpM1bdj" data-pnid-children="ZN7lDuWga6HXnHWO26Yb5b" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="TRmiiQiM9FqCAB80G4ZEqE">
+
+<div data-page-node-id="k4McwG7EDC3tic3WtGejIG" class="wrap">
+<section data-page-node-id="nRgVfA5Cl3Hgl8aFzkbise" class="page-hero">
+
+
+<h1 data-page-node-id="kuHS65cB5hZmo0zu51q3RC"><!--pnid:9OB2aYpjK5sDFgGC8vPdMB-->验收报告初稿与功能点核对 —— 72 个功能点逐项对，5 项不达标各有各的处置</h1>
+<p data-page-node-id="O43uqXNRS4iaHuH3Cykzwk" class="lead"><!--pnid:4JyXFonTDDjGBDKsqL2iJD-->法院的验收判定框架就一句话：需求书功能点逐项是否实现 · 而多数团队的核对表在验收前夜才拼出来</p>
+</section><nav data-page-node-id="lGcP8TyEkKmeRisM9uMuSr" class="subnav"><a data-page-node-id="O0tokYFU6G11ZgrmOB0FtU" class="on" href="#"><!--pnid:Dlig44k3sMoYp5AVhFgIAY-->场景引入</a><a data-page-node-id="x5nXNZYOMiDEJcuxRbvNEa" class href="LiveDemo.html"><!--pnid:DBA1aYrQS3iupmtMgAHyor-->Live Demo</a></nav>
+<section data-page-node-id="Wd72N0WmMBYE2nRk0fcFMN" class="blk">
+  <h2 data-page-node-id="tAfEGCo84A7fAKpwo72erX" class="h"><span data-page-node-id="Ztg1ZXUrpmMIKvLNMmNrl9" class="num"><!--pnid:4L8auIP8g18IalXO19LeQI-->一</span><!--pnid:je6Ua3MjZVckMQP0SR6ix1-->这件事现在是什么样</h2>
+  <p data-page-node-id="8cMW1Z0cLNLwsnz3oN50fR" class="subline"><!--pnid:jEmF4JekAO872BTfeA7ND9-->交付实施 · 真实业务触发</p>
+  <div data-page-node-id="IOtQ67KD1yhKy02h1HEXi8" class="card"><p data-page-node-id="LXun1FGE7MOW9AgwWaK1D7"><!--pnid:PbC6ZCQoSCm4chlgtZ5MK5-->优选百货项目到验收节点：合同需求确认书列了 72 个功能点，UAT 演示当天 5 项不达标——其中 1 项（供应商对账单导出格式）是当初销售口头承诺、合同里没有写的；客户方验收委员会要求三日内提交逐项核对报告，付款节点（合同额 30%）卡在验收签字上。</p></div>
+  <h2 data-page-node-id="HQjkoR36kgtZAbwRS6j3fV" class="h" style="margin-top:22px"><span data-page-node-id="jtGzo6RRj81BZFdakbsAGG" class="num"><!--pnid:Yc9sAkZQPRVVJlZtJWlmBO-->二</span><!--pnid:Cdkz5xlYbawEeWO346ZzNn-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="QXBtxJj74WmxEWSwcgN0PD" class="subline"><!--pnid:a6Qz3gBF4Xm6NaHFkz3E0O-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="VwSvrkqRKv4yFn90MDBIWC" class="pains"><div data-page-node-id="kVjz1MqTYPuNlXiSwYo75B" class="pain"><span data-page-node-id="UmiCTgW6V6qPnj6vksD8Oi" class="i"><!--pnid:3uMLXA4gIgmS45JRDTDEpt-->1</span><div data-page-node-id="4LUqwcMmSEwB6BPH2PdQ8d" class="t"><!--pnid:IqjJs8Adv1kr8lu29KjyER-->司法实践以「需求书功能点逐项是否实现」为验收判定框架，演示时功能不能实现即可能构成根本违约、返还首期款<span data-page-node-id="Mx6BNZK4NbhTPLuNXIzYrk" class="src"><!--pnid:HWvCWOFwVb52rbn1kyZQYr-->依据 · <a data-page-node-id="IvgqR9Ir41aUZ7tjsXuE2w" href="https://ipc.court.gov.cn/zh-cn/news/view-1723.html" rel="noopener" target="_blank"><!--pnid:arBa0ZV3jzYrX2XTS6evz0-->(2020) 最高法知民终 1545 号（武汉中新蓝案）：定制开发合同约定 4 端 26 模块 72 个功能点，验收标准明确为「需求书功能点是否实现」；交付 UI 图被发现是其他项目改名，演示时功能不能实现，被认定未实质开发构成根本违约，返还已收 11 万元首期款</a></span></div></div><div data-page-node-id="ONRSLQDhTsN6WwWiW0eYQV" class="pain"><span data-page-node-id="IFqbEwXC08LljdX7fjUhQ3" class="i"><!--pnid:E4C8wBk2sUTGMwhgk9NthW-->2</span><div data-page-node-id="vyJTA5ALHHvCIQu1Y8asmJ" class="t"><!--pnid:aUjkpTAKTQjXU6PNIaWYr8-->验收条款是争议高发地：缺乏双方认可的缺陷优先级定义，会导致「验收不完整、带病上线」——客户应有自建测试用例权<span data-page-node-id="gw17MsOZgS60Rj6bgpbRNq" class="src"><!--pnid:fV9RsgDaxTgJXFSMnzH1Rz-->依据 · <a data-page-node-id="oYqSpHK8AQUEY9ZgFsMtJ3" href="https://www.techtarget.com/it-infrastructure/tip/Challenges-of-implementing-SaaS-successfully" rel="noopener" target="_blank"><!--pnid:9TIdBTUD6QH1wUrAkA2fS8-->验收条款争议分析：SOW 若强制用厂商测试计划、缺乏双方认可的缺陷优先级定义，会导致「验收不完整、带病上线」——客户应有自建测试用例权和缺陷升级通道</a></span></div></div><div data-page-node-id="o6wlv3ZbHLVm6j5Nnd2Sl0" class="pain"><span data-page-node-id="n2hhmfGzMLl3FtmbLqIRAb" class="i"><!--pnid:VB2eviyraBZ4rcC7fP7qe4-->3</span><div data-page-node-id="iUa6JIkTJMdMHsGdtiBO9s" class="t"><!--pnid:d14XH36pQrIj4mSvV3OmjA-->《验收补充说明（承诺函）》和系统故障赔付记录在司法案例中成为关键证据——验收阶段的每一个字都有证据属性<span data-page-node-id="s5O9Kph68JrZ3dqYmKn70i" class="src"><!--pnid:VTXbdeVRvu562MDGCIglYu-->依据 · <a data-page-node-id="WFxQKTShSIlR8bYx1dgd03" href="https://cdzy.hebeicourt.gov.cn/article/detail/2026/04/id/9289425.shtml" rel="noopener" target="_blank"><!--pnid:wp3jsmCEhA68SOlGX7tOGK-->承德中院 2026 年度典型案例：乙方出具的《验收补充说明（承诺函）》和系统故障赔付记录成为「未达到合同约定的连续稳定运行六个月付款条件」的关键证据，合同解除、反诉全部被驳回</a></span></div></div><div data-page-node-id="LPkRRvAZJckNnva0oYokxa" class="pain"><span data-page-node-id="5CTm3mMq1DSaVEV546u5ZC" class="i"><!--pnid:r82J6gie0C7QGrYcTpGUYY-->4</span><div data-page-node-id="85tZ5es2qGUkd2zTjHps2r" class="t"><!--pnid:9rHAqJo4KsLxxt52pV2V71-->合同额 30% 的付款节点通常卡在验收签字上——核对表拖一天，回款就晚一天<span data-page-node-id="7HOUChRkMAnELh45ch9mhB" class="src"><!--pnid:i6O2zT6NxFSprhEEjg3Fes-->依据 · <a data-page-node-id="n3NG7GcA3zTH8WiB9LRusB" href="https://certyneo.com/en/blog/sow-saas-implementation-contract-livrables-onboarding-2026" rel="noopener" target="_blank"><!--pnid:hdFTkpU0TVVFP4VWtBNBBT-->SaaS 实施 SOW 标准结构：4-6 个里程碑（kickoff→设计评审→测试环境→验收签字→生产上线→hypercare）；典型付款 30%（签约）/30%（验收）/40%（上线）；延期罚金惯例每周 0.5%-1%、上限合同额 10%</a></span></div></div><div data-page-node-id="xfZ6pUCqEVGy8ONJmRwTTm" class="pain"><span data-page-node-id="0oZODmW96cLsu7UALqDR26" class="i"><!--pnid:xuq7kw7oqtPDj2Ecn3V1dq-->5</span><div data-page-node-id="JSOCy4UzXIjli3ZXEV9yno" class="t"><!--pnid:KEIqvJ4MOYnkhQ3cJXQWGD-->云软件实施纠纷六大高频争点里「功能不达标」排第二，日志与测试记录是仲裁的关键证据链<span data-page-node-id="q3B3aa8pjRRsul4lsZBwLo" class="src"><!--pnid:oirkAzcKpljeABg7ZU5Xsq-->依据 · <a data-page-node-id="LVMtfFnma1Sruo0eDEREUZ" href="https://www.lawgratis.com/blog-detail/conflicts-involving-cloud-software-implementation-failures" rel="noopener" target="_blank"><!--pnid:1EmCQdlfRrUQR2wXjzoZbO-->云软件实施纠纷的六大高频争点：实施延期（触发违约金）、功能不达标、培训支持不足、数据迁移出错、SLA 违约、提前终止与退款；法律界明确提示「日志、测试报告、沟通记录是仲裁的关键证据链」</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="bVZuzFDdskDK8c0sbWM0YJ" class="blk">
+  <h2 data-page-node-id="34O1iryCVrIMYg0sR0InS1" class="h"><span data-page-node-id="MXE46aruBxTBaJlLZ6OcCZ" class="num"><!--pnid:Jn8ouGtV4ZFL7t0SSNVjLU-->三</span><!--pnid:4o0TDNRXOkdgJSCNvdNAQ9-->换个做法之后</h2>
+  <p data-page-node-id="Lf87BYREDq4541gwzq1th5" class="subline"><!--pnid:x1EJICgT3L1zEzb0liyXQZ-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="TjGNYrDCFdDYqHFfbF7foo" class="cmp">
+    <div data-page-node-id="yAoJdX8mxBBlmILiZwLEv1" class="old"><h4 data-page-node-id="qKDqmatn8ghAqC8EBqsfi1"><!--pnid:lJ4sAyo1CNNyEV7axnR2yO-->✕ 现在的做法</h4><ul data-page-node-id="maXZBH5Kh31RS1yAalqZkF" class="list"><li data-page-node-id="vI6SxyHV2TpzHwxg3e533m"><!--pnid:9nnezWFIxw2l0VtGFXqq71-->司法实践以「需求书功能点逐项是否实现」为验收判定框架，演示时功能不能实现即可能构成根本违约、返还首期款</li><li data-page-node-id="wzDLuIn0Xnf2jsgxBcgvnT"><!--pnid:pgWOiT2YM7a7SLOOsltHOZ-->验收条款是争议高发地：缺乏双方认可的缺陷优先级定义，会导致「验收不完整、带病上线」——客户应有自建测试用例权</li><li data-page-node-id="gxe6LjPyB8uFuKTFOmbPAh"><!--pnid:aXQcnFP6lYndy36FfBJoTs-->《验收补充说明（承诺函）》和系统故障赔付记录在司法案例中成为关键证据——验收阶段的每一个字都有证据属性</li><li data-page-node-id="ZPLZ74uPoWAhDDGdFg8PCZ"><!--pnid:a3AQH7tHJAR6ipa8xePjUx-->合同额 30% 的付款节点通常卡在验收签字上——核对表拖一天，回款就晚一天</li></ul></div>
+    <div data-page-node-id="pVhlYLYBM9XQfPhbKPKPad" class="new"><h4 data-page-node-id="rm9sKNqA4jndnN1KSo3qco"><!--pnid:sFFAr5kao9AlGxYpUobYJo-->✓ 交给 Agent 之后</h4><ul data-page-node-id="0exNzJYR7v0LeDGJe9lOQJ" class="list"><li data-page-node-id="aFEbyknnhjOLBDO4N7p8eZ"><!--pnid:v4VLOoa4WarAOk1GToxrl7-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="O7ZwWWhENT1GnJzJFcu8CD"><!--pnid:c0wZ0a7sqQWPAeEEqOuxQ9-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="moik0LUiD6B9jt41eKIEhH"><!--pnid:eMI5VTm0jRgmKz7CYsXY8k-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="IfIzlN1IdF7ci6RC6gZY7p"><!--pnid:8TOQCUvgSsmcOGWCfOySm9-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="gaTcq05Ej69ngZTq5uNaVz" class="blk">
+  <h2 data-page-node-id="fuZGr5Zgz3npDw0EkPPhHU" class="h"><span data-page-node-id="1cqstAkpdPXpCkoPVpFNmD" class="num"><!--pnid:ROOeQs6BaPb0Lmi6fai52U-->四</span><!--pnid:kr7SJapyzRiQsJ7R2OdUdV-->场景闭环</h2>
+  <p data-page-node-id="imzoaeld496aWOpO1QwNum" class="subline"><!--pnid:Oj0DLZHhhWFmhRF2rYk33E-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="NigdCbIkQf15BVyxsUi4i4" class="flow"><div data-page-node-id="zu1sEXKyW4LmhaXGpkwX1n" class="step"><div data-page-node-id="GTLVX1oKcUHmfYECEbrbQn" class="n"><!--pnid:IorbYJiIewyQj1JGUuuE7d-->第 1 步</div><b data-page-node-id="OvoXxlti6fsrI2J9lBmCsb"><!--pnid:PVnl83tqIxL6e0xnExTvxm-->功能点清单结构化</b><span data-page-node-id="drJrmhYSe6GyRnesLMxM2l"><!--pnid:QXqgidLfpiSxyObBLH334Y-->72 项逐条编号对齐需求书原文，验收标准逐项落地</span></div><div data-page-node-id="nd8rJPkqJh44qPZqGlAnfw" class="step"><div data-page-node-id="0tbuIVFJwLmM6twvJh9fOZ" class="n"><!--pnid:7oT5VecCU8Mz0wYQtQybHP-->第 2 步</div><b data-page-node-id="HpBsIVhLr1XOHT17ZPA9kv"><!--pnid:8Ry6v9rgEmFim0a7hkicwS-->证据链逐项挂接</b><span data-page-node-id="Nmtrq5rgOWJF4maxSAsiAF"><!--pnid:VMubpm73A6HWBKupgxrEu7-->每个功能点挂测试记录/演示日期/函件编号——没证据的实现状态标「待补证」</span></div><div data-page-node-id="2thQwxTEe1hSrDn8K2hFXN" class="step"><div data-page-node-id="xewQIxSgqUD22lyS0BkbSd" class="n"><!--pnid:NBIIJIsu6poUrpWAdc5d25-->第 3 步</div><b data-page-node-id="gIAElRIQ8ssdip2Dg7StHK"><!--pnid:zxmukAiYJxxm7PHLWtMX3k-->不达标项分类</b><span data-page-node-id="ayMiUf7g3SmfXCKVkjY872"><!--pnid:IzkxhuWunnrRvNQRQiYyPh-->5 项逐项定性：可实现缺陷 / 需求理解偏差 / 合同外事项（口头承诺）</span></div><div data-page-node-id="Jc2NB4OURMiXoxAJgdE1qq" class="step"><div data-page-node-id="dKfbNx8wfnbzoijcBk6XSe" class="n"><!--pnid:yEYwbj0Xaxpp1ZlwdMgI7C-->第 4 步</div><b data-page-node-id="erhEUJlfKMxncbKGHF9st5"><!--pnid:QoLLFsYsoCbn8NFN1k0kOW-->处置建议起草</b><span data-page-node-id="NqvQjVzpevsL9tHC9ZF77i"><!--pnid:IajeuUH9UmQnvL764fwzA4-->返修期限 / 降级上线条件 / 合同外协商口径——每条给依据，决策留给人</span></div><div data-page-node-id="bG3EOQJEvXCbtJaMSxh7Ct" class="step"><div data-page-node-id="E2VYW5Y6ixJnw8PNvlPhme" class="n"><!--pnid:i4AyfOgjjjhWU2W2nS4jvE-->第 5 步</div><b data-page-node-id="l8uzsiYUNbYj97lFZyuipC"><!--pnid:YqB0gcXxZwLavhMTmV7Jpm-->核对报告成稿与签批流转</b><span data-page-node-id="5R99TZYpdZCbyVGGY8eNwH"><!--pnid:n4xjV3j21mS7EFQ1H2WI8S-->双方验收委员会逐项签字栏留空，附证据附件索引</span></div></div>
+</section>
+
+<section data-page-node-id="IDJZAmFyeFYXz28arjl9qK" class="blk">
+  <div data-page-node-id="81qca7ORONwsvUdtHUkjzp" class="g2">
+    <div data-page-node-id="kgrDEVhzt3H1w5azdGrG10" class="card"><h3 data-page-node-id="HLnDj4pjxN13F9zPGSLU96"><!--pnid:nxeWAk2lYP2TQJdr6hVFLc-->要准备什么</h3><div data-page-node-id="SptiOGZtnbKFsfk8hscb83" class="src"><div data-page-node-id="Q1a2daavwOstXkDVnCtqUz" class="fn"><!--pnid:6lbfY6HXJNF2oVWtr956dJ-->合同/SOW 与需求确认书</div><div data-page-node-id="pjsOxIAX7bcjhZsqKwI6c5" class="fd"><!--pnid:erqwd7MLzkC0J1TRndITI0-->72 个功能点的编号、原文与验收标准——核对表的唯一合法基准</div></div><div data-page-node-id="4h3yUInSl9rB6k7Drq7CJN" class="src"><div data-page-node-id="IYF66mx419IRZ6dn5uMTdo" class="fn"><!--pnid:Fr9JJyqWSrD4dDIHwK2kSW-->UAT 测试记录与演示勘验记录</div><div data-page-node-id="X4cVRAUoRcNaVLXqbidw7a" class="fd"><!--pnid:aDvYICPv4ZgpuIXJ950WAV-->5 项不达标的第一现场证据，含日期与在场人</div></div><div data-page-node-id="Iqb2iR574CPQ39ogh9pR1G" class="src"><div data-page-node-id="YoZLOfa8Af4fe1YluHsECb" class="fn"><!--pnid:B1iraXZYxmJd4AT5YAPIe5-->双方往来函件（变更确认/暂停通知/催办）</div><div data-page-node-id="9iXf1WfY9ZTJU7wRbvPiuR" class="fd"><!--pnid:12AqMCmvhP16rB8OUnCfhr-->口头承诺有没有被书面追认，全看这里</div></div><div data-page-node-id="HlmV3lGQd6PfEG9HEBKA3H" class="src"><div data-page-node-id="NauZ1964aemfZX4YlLitwz" class="fn"><!--pnid:iiV1F5fvIUnEEPp98S9JQ3-->缺陷清单（当前未关闭项）</div><div data-page-node-id="YSNgXwJMkB9Bzys9XNHBoF" class="fd"><!--pnid:pR47ONeasgVvHkPI9QqVWf-->带优先级与责任人——处置建议的事实基础</div></div></div>
+    <div data-page-node-id="U8Fw7YKUmS4E1h4Wou1lYb" class="card ev"><h3 data-page-node-id="3UtkteEGPUqYF1wEhH9OFU"><!--pnid:LeeH092NuBSyN8AHzxRedJ-->为什么这个场景值得做</h3>
+      <p data-page-node-id="LAny3TcndJyDcWAyGFK1MH"><!--pnid:VkfCR06oeRB2iK1s5yYqkO-->痛感 5 × AI 适配 3 ÷ 落地难度 2 = <b data-page-node-id="llrXbWwJOZkjRuYgQww6LU"><!--pnid:5N9a98F2VoPoueil6WqbRJ-->7.5</b></p>
+      <p data-page-node-id="hUpg6EQaiZswddcvuxxG9D"><b data-page-node-id="ZAiUp60S1Z7FVg0ce9FyG5"><!--pnid:fUOWkpiRNcLhKK0L2U3q8H-->最大差异点 ·</b><!--pnid:DzUIJydx904ol7S0ekTSZ6--> 核对表不是验收前夜赶出来的表格，而是从实施第一周就开始滚动的证据链：每个功能点的实现状态对应「哪次测试记录/哪天演示/哪份往来函件」——72 个功能点逐项有证据，5 项不达标各有处置路径（返修/降级上线/合同外协商），而不是笼统一句「基本完成，建议通过」。</p>
+      <p data-page-node-id="DnwkBMTs5PnE8X5ybBBYCq" style="color:var(--ink3); font-size:12.5px"><!--pnid:kxKxVwOWPKo6if9aH8qwAl-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="IYB34TUTtukQw8u9MJCxH2" class="blk">
+  <h2 data-page-node-id="QfAGW8nH85M5eAW3Ek7nAX" class="h"><span data-page-node-id="dlTV5X2C1QpsA1Y7LeMqbD" class="num"><!--pnid:U2GtXzUFiQ9zzqRCwfgqVu-->五</span><!--pnid:mMBDvCqCts0BXzMjJh0LoU-->会产出什么</h2>
+  <p data-page-node-id="u9iim0NCJmZaeA9jqrcd5r" class="subline"><!--pnid:8it1cCJgPfnOg9XoPhL15M-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="Fw9Uv4SHz9Njdl4oZm3squ" class="outs"><div data-page-node-id="KeaPwPeis1Ocy6193O3DM8" class="out"><div data-page-node-id="0My1nQVAtRWVz7ZHPMYDX4" class="on"><!--pnid:IgWAeIFBtEd5djvJZ8i0mu-->正式件本体</div><div data-page-node-id="leMk6TcSZeziMxzUoNe7Hz" class="ot"><!--pnid:28jVyEV2PUZhHE9wVPZyl4-->验收核对报告初稿.docx</div><div data-page-node-id="ElGjMuQ39Ljl1ZpHaUFVhs" class="od"><!--pnid:BQr8nFhmlqPisstHwbM7vD-->正式件 · 72 项逐项核对 + 证据索引 + 处置建议 · 双方签批栏留空</div></div><div data-page-node-id="bzDohb4PoODQtHykRCC8gN" class="out"><div data-page-node-id="CXyQcuiJuDaPPVEJLNScWL" class="on"><!--pnid:8cC3jdT2ptm9XfEqQdDyGQ-->可派发清单</div><div data-page-node-id="sWFGzE3be2X4H9RiaZZ37G" class="ot"><!--pnid:toYNF0rpkApfeGTBtL5k89-->不达标项处置跟踪表.xlsx</div><div data-page-node-id="rEhp7LRO0VNCzp2bV6qBan" class="od"><!--pnid:byCtqZcFa9QKSvsO1rdIoA-->5 项 · 定性/处置路径/期限/责任人 · 每天可跟</div></div><div data-page-node-id="fvtgN0DPxrYNMVOZQkPfe8" class="out"><div data-page-node-id="0Crz6hrCYdIwodbEJ7bJ03" class="on"><!--pnid:X9HvZ9oOs2dEAeWBS6lphD-->可派发清单</div><div data-page-node-id="x7itmO4U2rpcAgFu4XuaOe" class="ot"><!--pnid:7FysM21G9Vn56BNo4tt7vN-->合同外事项与待补证清单.xlsx</div><div data-page-node-id="UBONivbK0tZpv9gIkDUMvH" class="od"><!--pnid:afuT5CDtnKoNAoGPf7BWfD-->口头承诺事项 / 待补证据项 · 供双方协商与补证</div></div></div>
+</section>
+
+<section data-page-node-id="bzHfJJRhu36EMlpZOfQI6k" class="blk">
+  <div data-page-node-id="0WpsB9Fu1zkz9t2hscSZAG" class="card warn"><h3 data-page-node-id="N9ojoln38xgHtApJ2JXNrx"><!--pnid:QhKXJjHY14SD9hMzukud4P-->这套东西不承诺什么</h3><p data-page-node-id="qawJ0kZFghEvNNWKSFulzz"><!--pnid:LbOnLqSYRZqO1XkAbDUtLE-->验收结论与签字栏必须由双方验收委员会填写，本场景只出核对初稿与证据汇编；口头承诺未进合同的功能点如实标注「合同外事项」，不美化、不隐匿；缺陷优先级按双方 SOW 约定分级，没有约定的按行业惯例分级并标注「待双方确认」。</p></div>
+</section>
+
+<div data-page-node-id="8ITnXwzU91dFnGNJkg5lc7" class="cta">
+  <div data-page-node-id="ikJkyKRgn0C9RFrD0Gu2fr"><h3 data-page-node-id="nIZaM104ueSp2GhelEmp84"><!--pnid:ZF8pThxGbNbL4SRgkToHzf-->想看具体怎么跑？</h3><p data-page-node-id="1RQgB99VJVr8SJBv2YEe6R"><!--pnid:CIbkmJSt2g9sdHKU69d2zU-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="O7p915wwawdw7LIKZpo8hx" class="btns">
+    <a data-page-node-id="4OvXpWStdtfYcbQZntdrDb" class="btn" href="LiveDemo.html"><!--pnid:zjbfPcnWodyJtHgMH76gF1-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="roEEqikvszUSVKZCTYqz4Q"><!--pnid:vbN6WK8Hvu4WhIMIPI5mnF-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="54CvSfR3w1v2V8it1kg2j2" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="AOhVLWFXmgoZjlEaBSYF1Z" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="2zg4ffJxBPz7asUpnTLNLw" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="Q3LSCOR2MUkMv8cUlDbATP" data-pnid-children="u79fYpOebDZmjvw8Qidsl4">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="Ff3VVTgQrm0L6hcyEKh9xz" data-pnid-children="cGP6sVP2Uvk5J71rIaCKFZ">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

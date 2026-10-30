@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="wKO9XtBWe7uQiYGmcOmAgi" lang="zh-CN">
+<head data-page-node-id="cOn55KdVjyYYM380qOcpEr">
+<script data-page-node-id="GyWaYo2IMQooM9YX34dOlh" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="YvZF3fQ2PsrlED3yScdp5X" charset="UTF-8">
+<meta data-page-node-id="TKoK0QZmHcixUjT1cnywNL" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="M2GMDBPLazgj0RAEkIUYyA" data-pnid-children="sqzAYZxCcT4Rg2H72bJZCw">GPU 故障换卡台账 —— 换了 14 张卡，哪些真坏哪些误换，不该没有人说得清</title>
+<link data-page-node-id="7NlDqo6lyAsoLevbyrAKzp" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="dAkEj7NABVLyZxpoV2k84e" data-pnid-children="NLHfZ346cYs537wbRLXh59" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="P8O4ed6uKXjhHAsgPSOM52">
+
+<div data-page-node-id="bVt6nEyqWLpoQA20bJgIKh" class="wrap">
+<section data-page-node-id="fRBO8t8QtHYtr9kF2KDbhg" class="page-hero">
+
+
+<h1 data-page-node-id="VsZFmEawVopWSKfeUNwbNS"><!--pnid:iEOsF4yVYOVa0fXoSli46e-->GPU 故障换卡台账 —— 换了 14 张卡，哪些真坏哪些误换，不该没有人说得清</h1>
+<p data-page-node-id="Sfh6JpEOv1ffa48R8nu1Bj" class="lead"><!--pnid:yoq8S6G7MbV53QyNVAH65o-->GPU 故障率是 CPU 的 120 倍 · 换卡记录却散在工程师个人电脑的 Excel 里</p>
+</section><nav data-page-node-id="Od31PKPTN9BhQJnV7A2qo8" class="subnav"><a data-page-node-id="Z8PD4YzWHjDL7eaxvsRH2e" class="on" href="#"><!--pnid:YqXCaPntUHMJIMDNsKF2lU-->场景引入</a><a data-page-node-id="EW5HRuCOD3lRpU7TER1yWC" class href="LiveDemo.html"><!--pnid:nex5bb15nPEjQqDitjgml2-->Live Demo</a></nav>
+<section data-page-node-id="dIFUh1k3v5jzMtbLmylB8p" class="blk">
+  <h2 data-page-node-id="AkSXfOHe4ttMlnMjUNJXyi" class="h"><span data-page-node-id="okLedtpqf2FqQJdI7qVprD" class="num"><!--pnid:ibQOYgtmwutdP65t65jFbE-->一</span><!--pnid:3AM7UBxYfJgOeiHQgOXS0v-->这件事现在是什么样</h2>
+  <p data-page-node-id="Fsjc9yTQeqgTpQysJVXDTG" class="subline"><!--pnid:1aUqSapMbPzsTw8lJjqvus-->智算集群运维（GPU 与高速网络） · 真实业务触发</p>
+  <div data-page-node-id="FpZ6qd4GlFKuFIvbllyAfE" class="card"><p data-page-node-id="9jhEryMELhbXS6l8x3N0a4"><!--pnid:2gUGyg5PavPDTcYfUpcizW-->月度备件盘点：本月换了 14 张 H800 备件卡，组长被主任问「这 14 张哪些是真坏、哪些是误换、送修检测结果出来没有」—— 台账在三个工程师各自的电脑里，格式都不一样。</p></div>
+  <h2 data-page-node-id="EkbCLW7kxWqnX5rJLr3q66" class="h" style="margin-top:22px"><span data-page-node-id="X93Fl2XERyLJsJdYvmET5u" class="num"><!--pnid:qj2ca0kwzZ334l5rgKZ1UI-->二</span><!--pnid:Us20qiLOAfpnFDJCDZtVfK-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="dU6YaCwLhNigkSvVtYpbGD" class="subline"><!--pnid:u9vWtsnQY9BJEkN4MwN5e0-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="VqYfd0SEu3FBwWIDELBBZE" class="pains"><div data-page-node-id="yMCfGc7labootPrfgIqMhL" class="pain"><span data-page-node-id="QdRMnpszGj8Y7gGkPSWDTN" class="i"><!--pnid:UEErygix8v9mvrT2jk1wAa-->1</span><div data-page-node-id="iwyWOcyZOXPDeejv4QcctU" class="t"><!--pnid:opRWnzjyGkvFxJGEAxOkdx-->商用 GPU 服务器年均故障率约 18.7%、单次故障平均处置超 90 分钟 —— 换卡是高频事件，值得一本正经台账<span data-page-node-id="V7ScXhiEtHBEMTFIj8Wqgs" class="src"><!--pnid:svEtu1qNttLqjf4ouh5xzg-->依据 · <a data-page-node-id="9RRA1t2IhoaewwRb23MYyf" href="https://cloud.tencent.com/developer/article/2673855" rel="noopener" target="_blank"><!--pnid:miHx809W9Ew1VyP5GXA30m-->商用 GPU 服务器年均故障率约 18.7%、单次故障平均处置超 90 分钟 —— 换卡是高频事件，台账值得单独建</a></span></div></div><div data-page-node-id="Hz05Cj4ZDjYBI3OWGesSmq" class="pain"><span data-page-node-id="9XOuMdLVOFxVMoMKyLoPbn" class="i"><!--pnid:i8n0H5MonWu8DFSWYzdiMd-->2</span><div data-page-node-id="c10aTxDYc5Ua9dg7fgzswC" class="t"><!--pnid:X3j4YIr6ATW9KBJSTPAG2w-->Xid 79 掉卡 / 48/63/94 ECC / 31 客户代码的判读口径靠工程师个人经验，「隐性降速不中断任务最难查」—— 误判换卡的事每个老手都干过<span data-page-node-id="cWYXidSJbOoQZWWoAHVMy1" class="src"><!--pnid:XBbJI1mDQymiXbsU2IXvwM-->依据 · <a data-page-node-id="zbZBH6cfpjf9SYysGC3oM7" href="https://zhuanlan.zhihu.com/p/1917807480097997704" rel="noopener" target="_blank"><!--pnid:kHRughldHphppLuqyBUsSB-->大规模 GPU 集群运维实践：Xid 79 掉卡（需换卡）、Xid 48/63/94 不可纠正 ECC、Xid 31 多为客户代码问题；隐性降速（PCIe 降速、GPU 降频）不中断任务最难查 —— 实测 PSU 问题导致 SM Clock 从 2GHz 掉到 500MHz、性能降至 1/4 而监控无感</a></span></div></div><div data-page-node-id="IqwNhUwkSvV6gDmVbe7kF5" class="pain"><span data-page-node-id="G0yPrSzWdvS2VFe6xPO9p2" class="i"><!--pnid:ETWpabTdlK2XLuqu28vXcJ-->3</span><div data-page-node-id="fwvf7Q69gLC2VRbFFiZLzV" class="t"><!--pnid:3G55cWuVWiYRxa5cwbNcls-->A100/A800 停产后第三方芯片级维修成本仅为换新的 1/3 —— 换新还是送修的比价，从来没人按台账算过<span data-page-node-id="tPNPM3CNHlujy73oLDJMEs" class="src"><!--pnid:s07x93vhhzeVdAWHNWBuDF-->依据 · <a data-page-node-id="8WQ7vUHsfHqpf08KLidSzE" href="https://blog.csdn.net/gdwhkj/article/details/162670398" rel="noopener" target="_blank"><!--pnid:CYa4pq6VllYgnzzuSKf56S-->A100/A800 停产后第三方芯片级维修成本仅为换新的 1/3 —— 换卡与维修的比价台账直接是维保决策依据</a></span></div></div><div data-page-node-id="FzcTkcfkt6MVvhAnB4xIWW" class="pain"><span data-page-node-id="3uK9n28BpBfVaElDEVq6tS" class="i"><!--pnid:kePJovo5Lv7J4GuOhNatzQ-->4</span><div data-page-node-id="nA2270pM2BKVeFmMW7clAo" class="t"><!--pnid:RH4HydfW4j7dzPYqmRmHQV-->台账在个人电脑里、格式不统一、离职即失传 —— 「人员一动，整个数据中心运维的技能和经验就难以传承」<span data-page-node-id="BxQVNwkBli2GE89i6m2V9l" class="src"><!--pnid:hBuQDpx2eizm1L9Bh2dk4y-->依据 · <a data-page-node-id="R0fsZYt09dgcCJXZkqjv7x" href="https://blog.csdn.net/u014516208/article/details/137652633" rel="noopener" target="_blank"><!--pnid:hOXmovUNS7RGlIOd0Viq2R-->11 年 IDC 运维人自述：离职率高、薪酬倒挂、晋升通道窄，「人员一动，整个数据中心运维的技能和经验就难以传承」</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="6IuHzDGBOOjFBwjYHgeYJ4" class="blk">
+  <h2 data-page-node-id="1qDtoE0OoKlO4qbmcnBTbY" class="h"><span data-page-node-id="5ndhAxnpgj2GgC89l6dqFa" class="num"><!--pnid:9lod3VNe5vFUlAEw4whWdJ-->三</span><!--pnid:SzljmCLRD59m5miuiPL2Pp-->换个做法之后</h2>
+  <p data-page-node-id="A2Vo9zXV5VOYdOlEP20uBc" class="subline"><!--pnid:iH3RkRjB3nMnwcIR7tM28D-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="mj9mY2Um9hQRITvJZxJjUH" class="cmp">
+    <div data-page-node-id="nC5EFQkJTDxbg5SaQW1Rmb" class="old"><h4 data-page-node-id="iB08UnHilVN1sXkXz2I3vq"><!--pnid:mQDgtharTcscWUOFGPPco9-->✕ 现在的做法</h4><ul data-page-node-id="eYAvAGZjdDLex8iEhxS2WQ" class="list"><li data-page-node-id="cuWvCKCQMiFrgFgiyIQXKl"><!--pnid:470Z9hX23Ibiik5whcrtHd-->商用 GPU 服务器年均故障率约 18.7%、单次故障平均处置超 90 分钟 —— 换卡是高频事件，值得一本正经台账</li><li data-page-node-id="H70B6H7pED8SxWo2IZuTFQ"><!--pnid:gFJwo1nELVNeQZIgFvQH6Z-->Xid 79 掉卡 / 48/63/94 ECC / 31 客户代码的判读口径靠工程师个人经验，「隐性降速不中断任务最难查」—— 误判换卡的事每个老手都干过</li><li data-page-node-id="zDuVworIXlasPz8BTW0AcV"><!--pnid:RQ99u0mpqzwZNBDbv7YWub-->A100/A800 停产后第三方芯片级维修成本仅为换新的 1/3 —— 换新还是送修的比价，从来没人按台账算过</li><li data-page-node-id="tICQlBSJ2SxPSzSXR2GQQA"><!--pnid:5x9Q68lvfPpq95nwiqXeAZ-->台账在个人电脑里、格式不统一、离职即失传 —— 「人员一动，整个数据中心运维的技能和经验就难以传承」</li></ul></div>
+    <div data-page-node-id="ikEkGKP0iZpYA12Eix61NO" class="new"><h4 data-page-node-id="KoHiXnDhBz1BUitEzCUN8i"><!--pnid:Wi6f3EY043D5pZjuztfkgu-->✓ 交给 Agent 之后</h4><ul data-page-node-id="2YslRzRPIqVuhsBUzux3jH" class="list"><li data-page-node-id="cO9mqRnx1B843SNyZXRKM6"><!--pnid:bZrUO4OY1lKr0iTYYEbziU-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="7DUDJyx2bvSgM6D3FXw2p1"><!--pnid:cp9HRv5IQnP6UABFrNpjXj-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="CMDdUQiNiJ5vTXvmr9lmHc"><!--pnid:aEVVKBMvNzN2acmqsLEpye-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="9Qk6vjhy3CTWFZMEZ150s3"><!--pnid:VXzVl2NV2582uqNO2H6tsl-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="0d19xsXLgk3Y1exqfrO136" class="blk">
+  <h2 data-page-node-id="XvJtrmK0qF2xRWaTxH3qlv" class="h"><span data-page-node-id="cIKsN7gx5vhaPo4LiUGqJD" class="num"><!--pnid:TpdGTBjXobziqiiVoM05OC-->四</span><!--pnid:n1RDpyqDVcojBToeRH2t1O-->场景闭环</h2>
+  <p data-page-node-id="BIfldIJrVe5hBrU0OP6QTy" class="subline"><!--pnid:XndJ1MgYlfSIjnOcFWK3Rb-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="S6xEA9rHBjiNDs9LWBDBVs" class="flow"><div data-page-node-id="PtKuiDORFbO6sU2YOACTgo" class="step"><div data-page-node-id="e1d0YFh0Z9USHgBni2wzCq" class="n"><!--pnid:xYX7myLzt6V4rdO7gZ9rsM-->第 1 步</div><b data-page-node-id="MzeSm4ziKbdAHkjpisWE7U"><!--pnid:YFS1VRcb6yki4TA4kuF9aa-->记录归一 · 三份 Excel 拼成一本台账</b><span data-page-node-id="TsAlahWbcDh2qtqiK3lJnj"><!--pnid:idIls65icqucy2DN1Up9HJ-->设备 SN、Xid 码、故障时间、处理人、换卡结果逐行归一；三份记录打架的地方逐条标出</span></div><div data-page-node-id="UnpstD4e140hzVjaCUUyUc" class="step"><div data-page-node-id="9Sl9jdT1YWjxFgXJp5s9bp" class="n"><!--pnid:IhLY3VjMD8Uy9AqEg1QsHk-->第 2 步</div><b data-page-node-id="ZCAU5wEDqb9n1hTzw1DfWZ"><!--pnid:CfbaEj1tydehRcxU7S0EWM-->交叉验证 · 人工记录 × DCGM 告警</b><span data-page-node-id="qRZtOWLXqxNInqHXbjXqaH"><!--pnid:IJgjP43tlu1wJAIbYdWAI1-->人工记的每次故障在 DCGM 里有没有对应 XID；有 XID 没换卡的、换了卡查无 XID 的，双向点名</span></div><div data-page-node-id="Oya5meGXeGbheELrxQp7zD" class="step"><div data-page-node-id="k4nTHle0TNgcvbH45sVbJs" class="n"><!--pnid:vioEy7PGw8ZaA6UPRpBBmH-->第 3 步</div><b data-page-node-id="FTLRYRaDagCdhmoTIjdMzb"><!--pnid:hLyOqs2ehJAdbXWLbyF9ju-->误换识别 · 疑似「环境问题背了硬件的锅」</b><span data-page-node-id="7oug30kSccUYanLTM2rIZe"><!--pnid:MoBuTR784EP02RWeVPomiC-->同一机柜/同一供电回路的换卡聚集性分析 —— 同位置反复换卡往往不是卡的问题</span></div><div data-page-node-id="ReCS5hCg6ObiKo69qwmzAS" class="step"><div data-page-node-id="Gw2LuGFGlcVZ6YrBMLY7T5" class="n"><!--pnid:lacrVJa2FUSvhn538okmru-->第 4 步</div><b data-page-node-id="kOktglpk0dHZa8wAXRkxNF"><!--pnid:cYaKUqt3B25wApt8X4dItu-->送修裁决 · 检测报告回填台账</b><span data-page-node-id="rcvKubiYh8S7F1i8Rk8ne3"><!--pnid:L7B9BZ7o0AR2d9lPYWkO1E-->检测报告的「损坏/无损坏」结论回填每一张换下的卡，误换率水落石出</span></div><div data-page-node-id="MSqJNczyvAh0u1BcMroabr" class="step"><div data-page-node-id="vOuweQjMGpyB6FHHNBKgUg" class="n"><!--pnid:tpSE4EHfOCNn0GWPsZtEU1-->第 5 步</div><b data-page-node-id="SGm00ETlm2sGdo25wqFFMt"><!--pnid:83LMpxmAsqTQ6oyyeW7Viw-->成稿 · 换卡台账分析报告</b><span data-page-node-id="teWYq6KAUpCU48uu6UGmZS"><!--pnid:0hl370uqhhLm9i0Jjy6ODF-->真坏/误换/待检三分类 + 机型与机柜分布 + 送修比价，签批栏齐备</span></div></div>
+</section>
+
+<section data-page-node-id="jKLviIRGc9YaDz72te6HXY" class="blk">
+  <div data-page-node-id="6QJ9Aly6WwpWJrkYEgh1uh" class="g2">
+    <div data-page-node-id="JsZGTfz0NLPuYYs04yKAFE" class="card"><h3 data-page-node-id="2IyXJyCg2ERzGM6iSOZEJP"><!--pnid:28fZBYlFhRo2wEdQ9JtD8W-->要准备什么</h3><div data-page-node-id="NSVkaHHrnQKXIDrlqlN2UD" class="src"><div data-page-node-id="DLKEiLLfCShOHo4YZlnYZy" class="fn"><!--pnid:JRTwL0qIcwp3a499p7igtC-->三份工程师各自的换卡记录 Excel（半年）</div><div data-page-node-id="4XDikjsreGxQ66q32KVvSZ" class="fd"><!--pnid:EhnavEvjqxAv9RiGuByNnX-->格式不一：有的记 Xid 码，有的只记现象</div></div><div data-page-node-id="Yq7O2cks8drqO0emMfWS9S" class="src"><div data-page-node-id="WNZXyXEXEt4hpm0VHQQp1o" class="fn"><!--pnid:HRasZKv5uDhxyqubisoBaf-->DCGM 的 XID 告警导出（同期）</div><div data-page-node-id="3UwHjG8FaCLlVXvVlcGdEU" class="fd"><!--pnid:5Yn51FuffXqSj1csKkZ7QI-->和人工记录交叉验证的权威口径</div></div><div data-page-node-id="olcqYCEYQ52CieuP9Vr1R9" class="src"><div data-page-node-id="BxL2f7VLmesvbVderZcFXc" class="fn"><!--pnid:OzGmQfVLY9UEnq37oyhfRm-->备件出入库记录（仓库管理员）</div><div data-page-node-id="2U6tGbdEwHvQCw4gllhbQn" class="fd"><!--pnid:cfPZIjeWlDuxRBPHNBOPlH-->备件卡的真实流向</div></div><div data-page-node-id="oKlwv7Tfj4sx1wMAE0alC7" class="src"><div data-page-node-id="ZeeatLE9bYxEhArie4POl5" class="fn"><!--pnid:xtheuwXhsic5eeJegG0Ehd-->第三方检测机构的返修检测报告（PDF）</div><div data-page-node-id="mk9a937WDFynBlxNEVX0dn" class="fd"><!--pnid:QSHkUbUc2DdnvTHSh4vCsY-->换下卡的最终裁决 —— 星标素材</div></div></div>
+    <div data-page-node-id="Js7aejw89EpGB6kCO9UIuM" class="card ev"><h3 data-page-node-id="Fz69jkFOrb9I3ASzDYaykZ"><!--pnid:vazzfwigWyWaIvhCelkDxe-->为什么这个场景值得做</h3>
+      <p data-page-node-id="sWibbnu3GJQQNw6c8kfLfu"><!--pnid:FMm55f7TrfqinjEmL0boTa-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="yMUEOmHQeAqXjY8jXvf1GR"><!--pnid:9pSSjNUsJ7haeZSnnAz01q-->8.0</b></p>
+      <p data-page-node-id="AM7Sy5dS8OGMYuG8e2MQwz"><b data-page-node-id="ErXVJSXv1NGt3190pF7S75"><!--pnid:weup7Z999lO1DLvMmZW1dq-->最大差异点 ·</b><!--pnid:9IsWESOKmjYm23j6GmUj7V--> 不需要客户先建台账系统。三份格式不一的 Excel、微信里的换卡沟通记录、备件库的出入库单，原件直接进来 —— 台账是拼出来的，不是要求客户先补出来的。</p>
+      <p data-page-node-id="LAHIYH7cZkukTUkDhXjqHx" style="color:var(--ink3); font-size:12.5px"><!--pnid:YCstf0AznMXGFIFWoTeVjU-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="o25bsJC7RfFRWMitPf6ndI" class="blk">
+  <h2 data-page-node-id="YQbQUpySkmi5rj83JBPTm6" class="h"><span data-page-node-id="20yzbWNrCRRJRHim8WayvK" class="num"><!--pnid:eZODhe5YRoh274OxGjPEMk-->五</span><!--pnid:KhrK0VdOaTJNXKoZev3wRy-->会产出什么</h2>
+  <p data-page-node-id="gJIDjWnFYsNPBRlR6g8GXb" class="subline"><!--pnid:BvyZX95LuhjvgmPNswwCen-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="AQxaN3NPx4WevttCsU8VGN" class="outs"><div data-page-node-id="kRKhEbbsERUthG7fQyf4T1" class="out"><div data-page-node-id="jliAIY3Qd2psqMakvUjWXU" class="on"><!--pnid:uaWhDr5KMP8pDBvNbmoDJb-->正式件本体</div><div data-page-node-id="xBavn00MCHYw3LIgiyUxsD" class="ot"><!--pnid:qnguGuNnTe2MzgKdzlJMvo-->换卡台账分析报告.xlsx</div><div data-page-node-id="9BSeXhZ5UVocautPOVa0kS" class="od"><!--pnid:X0CQx6p9Tf4bEMDTmN7Zub-->正式件 · 三分类/分布/比价 · 签批栏</div></div><div data-page-node-id="rMTAeWHBlX3gHxQtwk2YJn" class="out"><div data-page-node-id="dFxUPmhufSuyYPkvbRJrFJ" class="on"><!--pnid:ti7859z3HiNTJXZJF6hHlt-->可派发清单</div><div data-page-node-id="4RcPFqHfTSk0fZOhvdR3MA" class="ot"><!--pnid:rTEW1xwACvUgdC06lVESTE-->疑似误换复核清单.xlsx</div><div data-page-node-id="xKcRBXLBRjs7h777OzpbY3" class="od"><!--pnid:EpjA4eiiZHsTjMbuWDkJq1-->可派发 · 每条带证据链与建议动作</div></div></div>
+</section>
+
+<section data-page-node-id="bVcw3YNXN6g8hgXJHaOESD" class="blk">
+  <div data-page-node-id="27LHJ5w6L6Qi0atP0SaFJ8" class="card warn"><h3 data-page-node-id="lDnH8I9DsV8FbIKAGZZBpv"><!--pnid:MjwxG7sW2i6NeyX3lArwRE-->这套东西不承诺什么</h3><p data-page-node-id="nU0IHEaonhV52fNcP6x1Bc"><!--pnid:yHPoJe6B9PzB4YSb6O1CNj-->不自动换卡、不下「硬件故障」的最终判定（复检与备件领用是人签字的动作）。「疑似误换」只是复核建议，换下的卡以第三方检测报告为准。送修比价只列选项与金额，供应商选择是采购流程的事。</p></div>
+</section>
+
+<div data-page-node-id="zM2DU7ZQGVrkrLFntfkU78" class="cta">
+  <div data-page-node-id="5eExxIisavxCzNrTBotwNW"><h3 data-page-node-id="pSMQs7K2DxPLnNbGxQDqKy"><!--pnid:6hE1b4Cnkfl1u6gznJd8Kt-->想看具体怎么跑？</h3><p data-page-node-id="MWLGB5j6iud54BedbHUGJE"><!--pnid:wYaEXyQxJsd6rldXOUh6yz-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="EWhZ4xw5vGKsIbykKwRCPZ" class="btns">
+    <a data-page-node-id="tBxtSams6EE21BtZORyURO" class="btn" href="LiveDemo.html"><!--pnid:OrOeNH2kCw3vFxNuvjdXBq-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="kqYyqN37iFF1SfELuuz5nm"><!--pnid:JK8Fb5L437QMpcOgqUvYbv-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 判定与承诺一律人工签核</footer>
+</div>
+
+<button data-page-node-id="AvybjjKaMyqh0rYweqrFAX" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="2JkjjN91xyJfVePH1XRPVM" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="TWIFZ1jbcAnFazhpNlqOpy" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="Xo3mgUDk9hruAw6GmiiuMq" data-pnid-children="cmMAWpWmGIpvtujWQbS5JM">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="O0eC9r0rcCAUpE1Hnvq3kU" data-pnid-children="K9TTJzQtso3fNbXp0fH4Lb">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

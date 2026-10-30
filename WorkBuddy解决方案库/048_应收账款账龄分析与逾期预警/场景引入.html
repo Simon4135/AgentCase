@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="eViKvz6KFGaUVt8pBTdJYC" lang="zh-CN">
+<head data-page-node-id="Ecqbb4HaxCmaf0WCqTQZbm">
+<script data-page-node-id="IvLthQsivHdWgcP3BsKhmj" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="09pB9i1nM1ZnbUl36eDIoh" charset="UTF-8">
+<meta data-page-node-id="SvruLltNWtmiGtm2U2gGpL" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="JLEtdI1TawpFv8CKge6YK1" data-pnid-children="fLqI1Wmo0ItoJK6FrqFYke">应收账款账龄分析与逾期预警</title>
+<link data-page-node-id="BlyxwM3HNLe6Sd3bmyWZm0" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="vOzed8k4HbgC62W19LgVKz" data-pnid-children="6qcDEvHcavPFZtoBd6HCI8" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="OF0SfoX7blDcSzCDLhShq5">
+
+<div data-page-node-id="U9milwsmK3jmdOSTPCIJby" class="wrap">
+<section data-page-node-id="7DH6Q1sya05HUV6fqdIqql" class="page-hero">
+
+
+<h1 data-page-node-id="KKPAlyftwba6PpdqGJlqul"><!--pnid:obFF5QrEdAcxJ7K1sn3pHQ-->应收账款账龄分析与逾期预警</h1>
+<p data-page-node-id="H5ODQXgt6oXR8XdZVt3NlF" class="lead"><!--pnid:HsWoiTZrPkjshlilLt5p5G-->账上躺着 300 万应收、老板以为都是钱 · 逾期超过 1 年的，核销概率高达 80%</p>
+</section><nav data-page-node-id="zCmMJlR5qfyNQZdKWvyZi8" class="subnav"><a data-page-node-id="fbdaGPYouW1Gw10flsrmPs" class="on" href="#"><!--pnid:ESFJFL5pe7EBbfbHlkehlN-->场景引入</a><a data-page-node-id="i3EnAlKbmxShsPBIRiO6KF" class href="LiveDemo.html"><!--pnid:0ggLG2fJBzcpuWCvgcBrFI-->Live Demo</a><a data-page-node-id="D0HHFZqe7UQimOWEN1gZOO" href="推荐任务.html"><!--pnid:IEx53Lx1GsFVR8NXCy1lEU-->推荐任务</a></nav>
+<section data-page-node-id="qKq4qhy9SxB8x6gROnCkeQ" class="blk">
+  <h2 data-page-node-id="rTg5HiOgFtbFZxEJiOKqHd" class="h"><span data-page-node-id="pn5LPWmZXDzi4zl1T0mDEF" class="num"><!--pnid:nPKQpOx632qqBBvsikPtMI-->一</span><!--pnid:1d6rtBEvD0kABPMfAfxdSt-->这件事现在是什么样</h2>
+  <p data-page-node-id="DDhs8FGy4LkMyw9Pbnve6n" class="subline"><!--pnid:zGx9vHtUr60OebtDpyuDza-->往来与核算 · 真实业务触发</p>
+  <div data-page-node-id="yf9lzSjNZWS5dQawITHJgR" class="card"><p data-page-node-id="l0rRkF1h9XVl8uWUP4KEmL"><!--pnid:DinjDGmNav6faRvkx75rdx-->月末结账后，老板问「到底谁欠我们钱、欠了多久」。财务要从销售开票、银行回款、发票三处数据里手工拼账龄，逾期客户要单独列催收清单。但销售台账和财务口径对不上，拼出来的数每次都不一样。</p></div>
+  <h2 data-page-node-id="k8NHZ5U6qFQRQ46N2JSqpP" class="h" style="margin-top:22px"><span data-page-node-id="MTRyVxfVlYCywAcifyLmqh" class="num"><!--pnid:yAhRfqoWmZvvNu2ZwFmCzu-->二</span><!--pnid:SfhU2LwRH6dE4Dao1QkkBF-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="1gMR84kkYnZEXpKjWZckKw" class="subline"><!--pnid:jAchdVFHGl0C442Qg6HGJq-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="CXPIRt8aaZekbVUzurDM0U" class="pains"><div data-page-node-id="sTXwBxDnincI2p8Ob4Jtc1" class="pain"><span data-page-node-id="BmlA3rewyhSicfyXJH3vJw" class="i"><!--pnid:LqjkC6Nfxts0BFfPeOxA7c-->1</span><div data-page-node-id="g8Y65Fn0wWaLv80utLwHAt" class="t"><!--pnid:3zM0WZaDz6WyWwuE3CAbpD-->应收账龄超60天大概率变坏账，逾期1个月回收率93%、6个月57%、1年25%、2年13%，超1年核销概率80%<span data-page-node-id="ZcsBlhVIcsuYtzd4O2JnWc" class="src"><!--pnid:FfjwVGwanYhNLMC0ywvjPI-->依据 · <a data-page-node-id="tRZ3GIvyjp1TiyZt40RS8C" href="https://www.hefeilaws.com/hf/265406.html" rel="noopener" target="_blank"><!--pnid:K34ghVLWXiwwnr86OP4RuF-->应收账款账龄分析：逾期1个月回收率93%、6个月57%、1年25%、2年13%；超1年核销概率80%</a></span></div></div><div data-page-node-id="kdIrQCFvt9PsmTVQRvdzF9" class="pain"><span data-page-node-id="9vK501mfs0OYknBd5fVQXe" class="i"><!--pnid:aZsTvMGy8WRfZWKw5LWaOP-->2</span><div data-page-node-id="xMFxgGWkUaGSH8BHJYrQzm" class="t"><!--pnid:ldj8GwvxCvnXYsH8G6Obce-->多数中小企业老板根本不看那栏应收账龄报表——不是不想看，是从来没人把账龄做成一张能看的表<span data-page-node-id="k5fhquHdiiGjwgHGn9j87a" class="src"><!--pnid:bq0fuBR7lwT0uuCedbjYtl-->依据 · <a data-page-node-id="D88eruhiyJcEyw2pPzO9Jy" href="https://www.hefeilaws.com/hf/265406.html" rel="noopener" target="_blank"><!--pnid:W42nKuvDXjHYF9FI4TXznz-->应收账款账龄分析：逾期1个月回收率93%、6个月57%、1年25%、2年13%；超1年核销概率80%</a></span></div></div><div data-page-node-id="cjMN3uFGRFX4SgPbMZTezq" class="pain"><span data-page-node-id="2ZoIlNDQEzmVV8VLT3n1QU" class="i"><!--pnid:nDRWiJ2AjGLArOVJhVA9U0-->3</span><div data-page-node-id="HsWyQZF1tpb3nva4R4Gk28" class="t"><!--pnid:OGLdyiCNB9UmKEr2BAHTOa-->坏账损失约占营收3%-5%，应收平均回收周期94天超健康线近一倍，这些钱是「没被看见的亏损」<span data-page-node-id="gXhPQSP8lqAfJWXKIDklIl" class="src"><!--pnid:0E8vRwXMXLjHHe5x6BrXX9-->依据 · <a data-page-node-id="l42LN07xnAiUv8nPp8Tlte" href="https://www.hefeilaws.com/hf/265406.html" rel="noopener" target="_blank"><!--pnid:P1dkA7nebqr3I6fOBbsA8d-->坏账损失量化：中小企业坏账约占营收3%-5%；应收平均回收周期94天超健康线近一倍</a></span></div></div><div data-page-node-id="31Flr1Z6zreBHzKbjzNCuu" class="pain"><span data-page-node-id="IC8qIyiapmA75XNZiI66yp" class="i"><!--pnid:0tEYHYVSnP5a9pC8AEjvP1-->4</span><div data-page-node-id="VEVcSYBkuyAoEabG5iti0h" class="t"><!--pnid:m2CRnmBcZS4ELT4I5MvBYW-->账龄分析需要先把散在销售台账、银行回款、发票里的数据拼起来，中小企业没人定期做<span data-page-node-id="zEsPmpMbfQKi0XnXkylui1" class="src"><!--pnid:6LHodxNVTSegMlStQEMG4A-->依据 · <a data-page-node-id="JA6K9TNyxogNY4V0nCwyAE" href="https://www.hefeilaws.com/hf/265406.html" rel="noopener" target="_blank"><!--pnid:1kuwAjthBi597dcv04tnU6-->应收账款账龄分析：逾期1个月回收率93%、6个月57%、1年25%、2年13%；超1年核销概率80%</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="LYS16P9yLxtXMunbWyyRl0" class="blk">
+  <h2 data-page-node-id="kPTjafrp4uOf61krGae6Rj" class="h"><span data-page-node-id="2IDntKrqmTb8ZzG5ocqF48" class="num"><!--pnid:orfgzkUUzrzyoixWtAzi8X-->三</span><!--pnid:jKurrEkjZLNRNVBYXK9dlz-->换个做法之后</h2>
+  <p data-page-node-id="8cO2lOzBnPnUNWjO7F3UZU" class="subline"><!--pnid:7JWzeITbf3b51Qz3gudUir-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="UqlUgsSSYdmgyAFIcdcbfp" class="cmp">
+    <div data-page-node-id="opix4qfDUcSA1UYHydUb54" class="old"><h4 data-page-node-id="QwX97m2upGSHpxuFlhvKr2"><!--pnid:Jx62BltXm2ob9ZvG7UTt8b-->✕ 现在的做法</h4><ul data-page-node-id="MKQL6Xf6g2rb2a1ycYCy0X" class="list"><li data-page-node-id="U4TD2wKtIdTK4KfFhOBWuM"><!--pnid:1U0GRoLvM91Urp3YP3g1ek-->应收账龄超60天大概率变坏账，逾期1个月回收率93%、6个月57%、1年25%、2年13%，超1年核销概率80%</li><li data-page-node-id="BNMT1HPt3CyrtRaFo6AjFg"><!--pnid:mywsNP6jxQmZ73C5NdsAkg-->多数中小企业老板根本不看那栏应收账龄报表——不是不想看，是从来没人把账龄做成一张能看的表</li><li data-page-node-id="1qgk9FUGTcDQewUILhXI6b"><!--pnid:dRK5WBNoiJLtIf2hv6hzxm-->坏账损失约占营收3%-5%，应收平均回收周期94天超健康线近一倍，这些钱是「没被看见的亏损」</li><li data-page-node-id="0OSBqulTKnLAxJIdxNMydE"><!--pnid:7az40PDVUvkoteCYqL9itx-->账龄分析需要先把散在销售台账、银行回款、发票里的数据拼起来，中小企业没人定期做</li></ul></div>
+    <div data-page-node-id="GherZ72q8JnItev0qdyj1u" class="new"><h4 data-page-node-id="EQzDdEJDtkWtAbH69zn9W3"><!--pnid:gf2eebCA50B83Bpi4KYiQS-->✓ 交给 Agent 之后</h4><ul data-page-node-id="0naHNQk1adgp1Xv45ZERDu" class="list"><li data-page-node-id="GxxC6qFhARlG2Kf1Ud404f"><!--pnid:LOO9iIWCoGpOys1BIANN6g-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="CVFWt1fknHApo2Z9mSI8YB"><!--pnid:jopiAXs8LTEJNodK9uAPvx-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="cPBUBP2YRLgGjUZsi7y4xv"><!--pnid:jWuqdH4YdspqZzlRQpIkBB-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="c7LkXUZPX61708f68rJQRx"><!--pnid:WSFjPllNgLuvtC8Cyjg3GL-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="ZmtK7ziEQcPnyXGVb9WoeM" class="blk">
+  <h2 data-page-node-id="8hQ5gEwUVER8ZVQctw0cCW" class="h"><span data-page-node-id="jQqigrQ0px3UGF0AnbEQdU" class="num"><!--pnid:M3QucMAsUc7fdeAw6IVVQT-->四</span><!--pnid:6LuQhOynsM6LdHE8yzl34e-->场景闭环</h2>
+  <p data-page-node-id="gWQUodQQjq0SrfYf12vNTY" class="subline"><!--pnid:BXkUdLonLccoEV5yjVqd2A-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="oV3XIklRVft0QBuMIoROKk" class="flow"><div data-page-node-id="GNtOoEc3QrXGoyrJ7vAK9n" class="step"><div data-page-node-id="rjxdpehQFUR2xMDpfhPgTK" class="n"><!--pnid:ALzIK88Va38JvUKHhb7uTN-->第 1 步</div><b data-page-node-id="AC3zfsD2fGb4zUjiSXXCQ9"><!--pnid:kFXIMNl8S7RYAsOajf4yyg-->口径对齐 · 销售 vs 财务</b><span data-page-node-id="5QMmUviW1AzdUAjv2YPrr2"><!--pnid:NNW9ijB1Gm0XvktZ4nVPBZ-->订单量口径与收入确认口径的差异逐笔标注</span></div><div data-page-node-id="WaVSBp18zsCiDCBLNGSHm5" class="step"><div data-page-node-id="rEDAkc7FwWBUuTWme0zbfU" class="n"><!--pnid:2Z0lw2jDzXXYvI1eVVIygR-->第 2 步</div><b data-page-node-id="U9HXHMESAJoBp6PoUHPuKy"><!--pnid:dF84hR8KlsJoY3PQSr5Xy4-->回款核销 · 自动匹配</b><span data-page-node-id="mbRNqGIsnPzspWqI1295W0"><!--pnid:3uNySFy7jrc4EpmVfUEbbz-->回款流水逐笔匹配到发票，算出未收金额</span></div><div data-page-node-id="qbsSiDUV2x1OUPAvddkpEm" class="step"><div data-page-node-id="tCZzfXYTgPTZmK6RKnco24" class="n"><!--pnid:BlFS9abJsD8TGn2MSE53xh-->第 3 步</div><b data-page-node-id="XTgH35PEehPXuFPHPL3jKG"><!--pnid:anVutFMCdnXqBSjeO91fsH-->账龄分级 · 四档</b><span data-page-node-id="ZY6Tr4DIva0u5JCegXGhSR"><!--pnid:qN2aB9sUmWbPjBCo8EUAec-->A正常/B 1-30天/C 31-90天/D 91天以上</span></div><div data-page-node-id="BfUr79pAdcLKKIAl8t1ZIn" class="step"><div data-page-node-id="pqcgM7R6q0Nq2hOSD3ZBjp" class="n"><!--pnid:j3kXtKaBIFCmJmRwYy0xCN-->第 4 步</div><b data-page-node-id="1grsX2jqUjo9AFLeTPqqYJ"><!--pnid:KFxuJCMuEvdAEiu5oXTsA7-->坏账计提测算</b><span data-page-node-id="kNw1IkrsHN2lrf7MzVjB98"><!--pnid:jTm2KCZdoUhOI2SrFbXcsZ-->按账龄计提比例测算坏账准备</span></div><div data-page-node-id="gqYz8g69QGYkuDwnp3AYZW" class="step"><div data-page-node-id="rGPsr3kAQuAqUx9QUVzszn" class="n"><!--pnid:IfNTwdabWEcfGc1m5aF6lx-->第 5 步</div><b data-page-node-id="J0SNYz0F5QxXl754GobLQQ"><!--pnid:ayaKvc1lbaPXlNgznS7aCw-->逾期清单 · 催收排序</b><span data-page-node-id="UxOZFXodzRsg928MWiZOEE"><!--pnid:ZLi1gvoF7FnSpeNB1aWo29-->逾期客户按金额×天数排序，生成催收清单</span></div></div>
+</section>
+
+<section data-page-node-id="KA69kvYk76TipHcTnT9kTY" class="blk">
+  <div data-page-node-id="HYk5Yck2ESweRXbiOsmQ8Q" class="g2">
+    <div data-page-node-id="pAP2tGzox2kUAzIOOWu2mQ" class="card"><h3 data-page-node-id="VbJENXEbGgcmJgFLXQv1HW"><!--pnid:xze8scY4dLTQSiSy0lBPCM-->要准备什么</h3><div data-page-node-id="fc4pAdGrvwCUSFZluyfKpp" class="src"><div data-page-node-id="kbkgjCivZQ00eQKWXwFTjV" class="fn"><!--pnid:KGYtDnADw1yIEXqrbkoW7h-->应收账款明细账（Excel）</div><div data-page-node-id="gdYmNpp2yw7AgotEPERv3E" class="fd"><!--pnid:ixScV2hHNj7oHTnVzXCAhR-->客户/发票/未收金额，滞后</div></div><div data-page-node-id="r9zcNyGtmI7Eb17jjGSzI4" class="src"><div data-page-node-id="mItlINfuDjjS0mKKxglAIH" class="fn"><!--pnid:n5P07Gza6Ll31xh0zb4XKt-->销售开票记录（销售部维护）</div><div data-page-node-id="OhXUhdhaaD0PScUTOtNYp0" class="fd"><!--pnid:i8OUch2UWPFgsGMVVWaL5A-->按订单量口径，与财务对不上</div></div><div data-page-node-id="LBndpkkIMAQNqGQUr1d1vF" class="src"><div data-page-node-id="kxyx5cXA7dwWKpn8xBjsow" class="fn"><!--pnid:wmLZuQ5Gn4coCE7TolRBna-->银行回款流水</div><div data-page-node-id="mft4vNDCOFksCaNOkITBH6" class="fd"><!--pnid:rTT3FD2wVWW1cBvWWV9Aii-->收款记录，需与发票核销匹配</div></div></div>
+    <div data-page-node-id="3xYOUDyYUwnBmBsFfHdhRu" class="card ev"><h3 data-page-node-id="Lr7BbHbhb48BlvSoxSN0SS"><!--pnid:iKkUzbJ10Sr6e3okORhErt-->为什么这个场景值得做</h3>
+      <p data-page-node-id="SQw5TApnX5etkHJSOg0PB8"><!--pnid:EIcf7BbVkEy8hmBuQaLTUh-->痛感 5 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="nrHR5aiMZXUMAMVrxmktOx"><!--pnid:s2PmZd2mvZzwT7cl0j1W3J-->10.0</b></p>
+      <p data-page-node-id="qe1NECOp3lPdu00EvnS8jx"><b data-page-node-id="ru5n9PhkaeFUroVWIlo0Zu"><!--pnid:qKgyNDKxNXvpAhFmPDcqKu-->最大差异点 ·</b><!--pnid:lqBR5iCYiQBjhYD8VsF7BR--> 不要求销售先按财务口径记台账。销售开票+银行回款+发票三处原始数据直接拼，账龄和逾期由 Agent 算，口径差异逐笔标注。</p>
+      <p data-page-node-id="yUXUVzfB4yMTuViQQPSQpj" style="color:var(--ink3); font-size:12.5px"><!--pnid:vunii9TYcLrwpY8bPRYOAH-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="JFpJL1C6Ccza21uhx7V6aw" class="blk">
+  <h2 data-page-node-id="3b5XhNtLG9AxShy7c4VHNp" class="h"><span data-page-node-id="wB1SfvYdjldLwGrKN6jnNl" class="num"><!--pnid:kYhUxtyLmPuaPlWsUoXHFq-->五</span><!--pnid:WDW6TPK5Y1Ubco6zjHDsUq-->会产出什么</h2>
+  <p data-page-node-id="KZqH3pL9xK3i2QNi8lbeDx" class="subline"><!--pnid:WzpZuT8FfByOy5otIfVVbp-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="tcJFXn659XCIKmVZ88r9Ar" class="outs"><div data-page-node-id="OLQqZgp7P2amJyopbO9AaN" class="out"><div data-page-node-id="nkxil9yCh7bPYZo7VLNDdH" class="on"><!--pnid:8cdRuO8uLfotSi8yg0FEIg-->正式件本体</div><div data-page-node-id="dZz5wwkH5zjcZ6fynTyfdU" class="ot"><!--pnid:h8EweBlPEflGmYLVTeIuvY-->应收账款账龄分析表.xlsx</div><div data-page-node-id="0b0D6Ie4eVOeQEiAUGxiNc" class="od"><!--pnid:iRHloozthm1pZZNa6xhYhT-->正式件本体 · 四档账龄 · 坏账计提测算</div></div><div data-page-node-id="0apKCe0JBIL2nnoIEuhz5G" class="out"><div data-page-node-id="JLaHTyXxXvtRWo9qJf8MRq" class="on"><!--pnid:lTtuypLyiBB3yvlOvL50Oq-->可派发清单</div><div data-page-node-id="Vd7LObsCHkPJfASDzh3HaP" class="ot"><!--pnid:Km58O0hoQI3DAfC44DSJaQ-->逾期催收清单.xlsx</div><div data-page-node-id="TkeEgut70HJJp3qJtFZfgy" class="od"><!--pnid:IPaUIo2rxu251Jb7KyPs2H-->可派发 · 按金额×天数排序 · 附历史核销提示</div></div><div data-page-node-id="vR3DvF1TahnhPQdBsrWIFe" class="out"><div data-page-node-id="Ha5ESOhQZ0IxOqqg8EESjX" class="on"><!--pnid:SZGpwmSGRBMm9rT1lynvvx-->可派发清单</div><div data-page-node-id="eIns3Xm7Ej6BkbEROHqsZ0" class="ot"><!--pnid:x0NdxC1r378irt1VaXCqfM-->回款核销差异清单.xlsx</div><div data-page-node-id="DSozzMUahpQxxjHMSX3YLd" class="od"><!--pnid:EL3XBSKIO4wlSbIaHxS18A-->可派发 · 已到账未核销的差异 · 逐笔标注</div></div></div>
+</section>
+
+<section data-page-node-id="fl4pprjUTscT27TK7AXZDQ" class="blk">
+  <div data-page-node-id="hJNrx1VEAPrQ89PpflcgMQ" class="card warn"><h3 data-page-node-id="FBb54Nc9cKpAcKx4Cv8Mfd"><!--pnid:GSCPspz1L0sqiBrjYpUj2p-->这套东西不承诺什么</h3><p data-page-node-id="7nwUrfjAX3HPL3zwP82l1O"><!--pnid:di5qjHc6SxIgVtRc8AIjak-->不做客户信用评级和授信建议（需持续历史数据，早期容易误导）。不做催收函的自动发送（对外催收要人拍板）。只出账龄分级和逾期清单。</p></div>
+</section>
+
+<div data-page-node-id="qDfoSTTxvoLc0IdG0fWj5G" class="cta">
+  <div data-page-node-id="dTu8oZM7JWW5SLyQTLRudW"><h3 data-page-node-id="ZqcpuV07qzGaug4EqP5EgM"><!--pnid:ARsAWNg4cATniJypwopCvZ-->想看具体怎么跑？</h3><p data-page-node-id="RJh5q6desGmhGC9703TP51"><!--pnid:RnFA4jt2Zi8DtOKhPuIJ4a-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="mEfiL62bwyw5bzUuXMrQCQ" class="btns">
+    <a data-page-node-id="lsfVwfJGNwFRawCrP06neB" class="btn" href="LiveDemo.html"><!--pnid:CG36szUF5aPqBz0iKVDerU-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="8EvufBbMfCud8OFVYURXwE"><!--pnid:37Yb6IzduMMtbebPxZvmMl-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="tCDjxtLz5Phe0AHnmBXJJp" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="l9rJgDIqWxDwLQv5Wsl03K" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="wXki93lN6swx8oGpVFOP4Q" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="P9FPxLVItIcoGmfhoZb9G6" data-pnid-children="VS9PEAss0rcBj1J3j3ZyZo">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="7HlHxaEcfe96Y20dJRdLKc" data-pnid-children="om92N525OIkBrWwTxH08Fb">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="pQO67cMLRnNfNjrENX977Z" lang="zh-CN">
+<head data-page-node-id="zT3XVdFIG6cBEeuZKdpg71">
+<script data-page-node-id="pNTNWuYMFERvGvlfn820I9" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="t2oQCOcTAXmZFMP3aauUEH" charset="UTF-8">
+<meta data-page-node-id="mmlKLs7egkyUZ2j2msHGTE" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="Cv08F57rAkQCKOtOHhzzqy" data-pnid-children="rqNezJ4IxyTyCyiWfWO3k5">展会名片分级与跟进清单</title>
+<link data-page-node-id="b7gmcvNUIKMOJM4WDVdCvE" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="j7rxsz0xnZLhhfGk3yVGcn" data-pnid-children="2IgGFO5XVevfhENXlecnaK">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="b9OYUxO0CFAmydyBCYzD6N" data-pnid-children="OucvoQOT8rosiryPabDwaB" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="Xf2zhiZD5VCJsleawbVpgu" data-pnid-children="EtGdyarvS68QF7JqVOfCPe" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="OGCRDG22LudXgs7aifg0Ha">
+
+<div data-page-node-id="Sj6EbLLF0VFmIuPZRyuxvG" class="wrap">
+<section data-page-node-id="tYEBHLQh1qFy1UxBYatB99" class="page-hero">
+<h1 data-page-node-id="eztJZRBz7UtdoLLZ0uNUs6"><!--pnid:ULwkOnzbS2FB0jWZjmLVv1-->展会名片分级与跟进清单</h1>
+<p data-page-node-id="yFLwuLMmi7tEyhO0HUIcJs" class="lead"><!--pnid:ldNhAhhQgGy6vOZL9vZ10K-->展会上收了 86 张名片 · 三周后还在抽屉里，A 级客户已经被对手跟了两轮</p>
+</section><nav data-page-node-id="peyIOSYLuIPcGbhynvLbXa" class="subnav"><a data-page-node-id="o23jKqXtC7QmjrV3w9YEot" href="场景引入.html"><!--pnid:MLJuAehslaugnfrQ5o8ie6-->场景引入</a><a data-page-node-id="56wTXhVDwuOKdMG9YvkcuM" href="LiveDemo.html"><!--pnid:UffX5sIJ3ovdmKg6NO4mkD-->Live Demo</a><a data-page-node-id="mu0X9f3ktLDZ3QK0SCVd9x" class="on" href="#"><!--pnid:cn0HcM38A2ofUXGpCi413K-->推荐任务</a></nav>
+
+<section data-page-node-id="LwuLU1TUdvCJjHWUoVTWwT" class="blk">
+  <h2 data-page-node-id="GO4duTlYPSWigoYd86y0yT" class="h"><span data-page-node-id="SRvjxu9xySlhhodeYjYf2m" class="num"><!--pnid:7oC5j7zxDi8efG8o3WC6dk-->一</span><!--pnid:fy8sjTSM5PWeyX60B4aw8A-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="lPUzaxrDoXD8vsfflTmpIq" class="subline"><!--pnid:YbK0ygBZDHtXU8WE7jjMMJ-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="TYYMUvEPVgdwQMiX7qgHXV" class="card"><p data-page-node-id="gdaigAO2tmNRVKhuHEIKtb"><!--pnid:KThUeaqpw4fkZvN5hWmAAO-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="qx7moozNwTYFlYrV1IUIJn" style="margin-top:10px"><!--pnid:g87erCmquXrtDOMusn62uo-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:ZmOLyxSR9YoDAdm9PfjryB--><!--wb-skill-start-->
+<div data-page-node-id="KWUvzWAuLB4pn3x6Am45Ck" class="wb-skill">
+<p data-page-node-id="CBLFVSfhK7yDSCAxtyGfs3" class="wb-skill-lead"><!--pnid:zJgMDPFkG7Mfh9LyXi5tZt-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="DZPgfFtTYWihxRE5nKg9hz" class="prompt" id="wbSkillPrompt"><!--pnid:kpQpsrJD2qt432hJZ1E2Qb-->【准备】这个场景的规则都在「展会名片分级与跟进清单」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/xaViZYPkywzZlTRATQ2LZ9/V8O42QEZanzs/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="5ngpKwjPPuDIfisvKLQIj7" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:RxtVqgB6DLMuU6f9P2ib7n-->复制</button></div>
+</div>
+<!--pnid:G8ovdL0yVxHoh5NsJXEUlv--><!--wb-skill-end-->
+<section data-page-node-id="IfsP14jEaNqFc3gqI1o3DD" class="blk">
+  <h2 data-page-node-id="QwRL6xUuIpiIbb9MFaUk7b" class="h"><span data-page-node-id="AMMrNcxtPQhEUayWoCU0hm" class="num"><!--pnid:TGCcRKhgWGJwT0hY6Q57J6-->二</span><!--pnid:w4W8j58As3hwJh9lvsDaJb-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="EGabv0kKusdTMFM8lry35t" class="subline"><!--pnid:CEB05FLxnIueeOdGHkjEra-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="zqBsuinq9ri74Gts2DdtOk" class="tlist">
+    <article data-page-node-id="JF54c608rebBeUV7DqiwCK" class="task">
+      <div data-page-node-id="onhn4Bu8bitpDHO3ceZzls" class="th"><span data-page-node-id="FLecygmKXysqw3lrBopNV8" class="no"><!--pnid:MJ6Yy5wF4yb6HEf0Jf4cYW-->01</span><h3 data-page-node-id="9aCyORDnjvD45iOrag7RHK" class="ttl"><!--pnid:hmHi78z401WTT3tNMcMsJS-->首推默认</h3><span data-page-node-id="D9wPRlCQijOkTJ5i3rEWSr" class="star"><!--pnid:y0w0HrFGxU87AbRkkWTh7B-->与一键体验入口一致</span><button data-page-node-id="3lyiKqbiJJfAVNtBFeaKAX" class="cp" type="button"><!--pnid:r7MwU4GLPifuqO9BBSXt7P-->复制</button></div>
+      <p data-page-node-id="4qVQDdJcyIa7eWLpuG2iTr" class="tp"><!--pnid:FVZ917KJrkFVVkrid27RpT-->上个月华南自动化展收了 86 张名片，散在三个抽屉里没人跟。四份材料发你：名片照片包清单（三人拍的，有几张背面我手写了 ABC）、展会现场记录、我们的目标客户画像、现有客户名单。
+帮我全部分级：哪些值得马上跟、哪些放一放、哪些不用当新线索跟；每张 A 级给我一句开场的切入点，基于名片上的公司和职位，别给通用话术。同一家公司好几张名片的帮我合一下，别让我们仨撞车。 陈昊那袋 17 张里有一张背面写了「line2 扩产 Q3」，他下周离职，这种要先捞出来；月底复盘我还要个数，这趟展会的钱花得值不值。
+交三份：展会名片分级与跟进清单.xlsx（按客户线程，含分级、切入点、时限）、A级客户跟进话术草稿.xlsx、无效与重复名片记录.xlsx。话术我自己改完再发。</p>
+    </article>
+    <article data-page-node-id="EV2h4eowa5wN7Hk46zeUlW" class="task">
+      <div data-page-node-id="2B6xLprWCklIy280uxnTzF" class="th"><span data-page-node-id="t1cOaTO3jekYkEfVpvX9l7" class="no"><!--pnid:7NM64O4RO3NGA2qdSb20j7-->02</span><h3 data-page-node-id="d5W9qKtyhUX7yyCOvPDBOT" class="ttl"><!--pnid:wU4IOXNWUU7rkKO7QexdsF-->只做排除与合并</h3><button data-page-node-id="ASUfLImvOGvkrBYH6B76yT" class="cp" type="button"><!--pnid:PczA0IwwZdfIenPNJFu71V-->复制</button></div>
+      <p data-page-node-id="6Zf84CGFcdd2MHxzc0Zr8s" class="tp"><!--pnid:kX4tcXEADO1sCmxsSo3lAp-->先只做排除和合并这一步：86 张里挑出已经是客户的（转维护动作）、同行或供应商（无效）、重复的（合并），剩下的再数一遍有效线索数。产出用 Excel 两张表：排除表（名片、排除类型、依据）、合并表（同公司多卡合成一个线程、负责人、几张卡各是谁拍的）。</p>
+    </article>
+    <article data-page-node-id="7VUNCvsEqrPuBPUt08TZsN" class="task">
+      <div data-page-node-id="GqNtp5EEcU4sxDCkzoKm6J" class="th"><span data-page-node-id="JdH43ezTs6FU589eVRYK9L" class="no"><!--pnid:mA63Jwqcn8yFdQz911r4RD-->03</span><h3 data-page-node-id="OIOeW9i96YkiqVSSmCMZzc" class="ttl"><!--pnid:VPHHWNB88XBkiw5RludxfJ-->换成按目标画像重排</h3><button data-page-node-id="cuyUWPn6zjpriqhG9BNQyV" class="cp" type="button"><!--pnid:jxL4JkTsob3btpaW2fNkDt-->复制</button></div>
+      <p data-page-node-id="RqTOqrW8TSPfd6NTc3JpDc" class="tp"><!--pnid:RvO9QlU1AEYI5MXDIOEhx1-->换个口径再跑一遍：这次不按名片背面手写的 ABC，纯按目标客户画像（汽车零部件优先、3C 次之、家电第三；设备科长或设备部经理高于采购高于老板；社保 50 人以上）重排。产出用 Excel 一张表：名片、画像匹配度评分、画像分级、手写分级、是否不一致、以哪个为准的建议。</p>
+    </article>
+    <article data-page-node-id="bc6wfs1m9uNkgSaCJLd7dP" class="task">
+      <div data-page-node-id="fBeF2u8tjWxoZVRDvccHol" class="th"><span data-page-node-id="eu5IBSIVwPqlVI0EJi2vN2" class="no"><!--pnid:8jCxu0oJ3IhyI1GIrhRns0-->04</span><h3 data-page-node-id="RtWUs9R3KOVa3Ad8BuwjhM" class="ttl"><!--pnid:cfY4nsmLCfqAdrHU6ljWsU-->三人各自的名片分开跑再合并</h3><button data-page-node-id="2d7e4fcdU4Uvb5gB3fyLkc" class="cp" type="button"><!--pnid:jd2ZWUCz2lkYIHMhnLjE31-->复制</button></div>
+      <p data-page-node-id="Yb6AmDT6j1zrMqEfgoOGPB" class="tp"><!--pnid:Og9sF9k4zgqNX9jfiAqUBm-->拿名片照片包清单按人分开跑再合并：梁总 31 张、我 38 张、陈昊 17 张各自先分级，合并时处理跨人的重复。产出用 Excel 一张总表，加一列「原持有人」，同公司跨人的单独标；末尾给一张按人的分级分布小表，看谁那袋里 A 级最多。</p>
+    </article>
+    <article data-page-node-id="Qux5tgEhRCRNvJ84TYcNrz" class="task">
+      <div data-page-node-id="KmqmVcMZ6UcC5Mypv5RnLa" class="th"><span data-page-node-id="8zNgFWIdIfB1k9VH5WeOMh" class="no"><!--pnid:htGm5bQszcIuxpsgHcElEi-->05</span><h3 data-page-node-id="DXvu3aKd5t6ZZsmM7DhrYo" class="ttl"><!--pnid:Qo8hZoqQiU5NF1IvDwO61L-->给销售自己的 72 小时动作清单</h3><button data-page-node-id="vHQ0X4F8ezITy5PxIOpUmC" class="cp" type="button"><!--pnid:Kficy7khXzUmUFMWyT3VTj-->复制</button></div>
+      <p data-page-node-id="zn3sNVxgGRoMPeROyCE9de" class="tp"><!--pnid:qsW1RGq0cki6n7uLeQIO2J-->改成三个人各自能照着做的 72 小时动作清单：A 级今天联系、B 级本周内、C 级进月度邮件池，每条写清联系谁、开场切入点什么、用哪个渠道。产出用 Excel 按人分块，一人一段，末尾附一段给陈昊离职前的移交提示。</p>
+    </article>
+    <article data-page-node-id="HvcMmqdEHL4TMovQmym6jF" class="task">
+      <div data-page-node-id="1uaRbHvJp4Cu8ZwPF7a2bF" class="th"><span data-page-node-id="M17YpOSJYsgnMfUyPRCzio" class="no"><!--pnid:4bjrvPK3HB0L8kODOJDqSe-->06</span><h3 data-page-node-id="0zql7druviIroTHCMdEMxx" class="ttl"><!--pnid:ISyIxs7VqQYg6rXX3irwtH-->让它反驳自己</h3><button data-page-node-id="mpoaAMaMaqV2pq7dQXLqah" class="cp" type="button"><!--pnid:ghvYhcBHer0Butwmzoy8Ew-->复制</button></div>
+      <p data-page-node-id="V7R3IyPnKWtMo2rsmnGRZD" class="tp"><!--pnid:qGym8aFSJfgwslbuU6nLNx-->你判定的 9 张 A 级，反过来挑：哪几张其实够不上 A？比如名片信息与展位登记行业不符的那几张你怎么排除的、背面写了 A 但公司规模可能不够的有没有、已经是我们客户却被算进来的有没有。产出用 Excel 复核表：名片、原分级、质疑理由、证据、是否维持、调整后分级。</p>
+    </article>
+    <article data-page-node-id="RarsymP2cPtZJnvQ6ZAKqc" class="task">
+      <div data-page-node-id="BkPLuMZkidcrYiJcNRcI6z" class="th"><span data-page-node-id="k0xYCQMhIr25ELInk5YCnv" class="no"><!--pnid:hNPAdEuoWq4a3OG87K2CIW-->07</span><h3 data-page-node-id="AmKm6b7ck1xYWGgJRypJhl" class="ttl"><!--pnid:9cMFK4WaFZJDpaBaUcNoSq-->专门挖陈昊那袋名片</h3><button data-page-node-id="7trVTRGVdSps5oTFANOKMf" class="cp" type="button"><!--pnid:W6o7Etca7DqcEbGaBPCwmB-->复制</button></div>
+      <p data-page-node-id="KojZPDpZlP1FBuiaNbusOG" class="tp"><!--pnid:VqJbkTfy4DlSXqP7S0ZZNG-->专门挖陈昊那袋 17 张：他的现场记录没留、只有背面手写，把所有有手写标记的逐张列出来，逐张推断当时的上下文，跟展会现场记录里别人记的对一遍。产出用 Excel 一张表：名片、手写内容、可推断的上下文、与现场记录的印证或冲突、哪些必须在他离职面谈里问清。</p>
+    </article>
+    <article data-page-node-id="W2SEOWLAv4nLXsijU6wVLA" class="task">
+      <div data-page-node-id="tBFmQBUfmoSMvjBqFEaX8b" class="th"><span data-page-node-id="PA0o1YTr6EMqN0eoLnHxNn" class="no"><!--pnid:ig7jYhf3SaI9BJHWr9RfiN-->08</span><h3 data-page-node-id="kuO3agCyqipoUxRwgCTTvj" class="ttl"><!--pnid:XeVDsRgCqsv5MbejixmlxS-->对照目标画像自查分级</h3><button data-page-node-id="nzIxOGIKUDvu5nDF4K93nR" class="cp" type="button"><!--pnid:AsMFj2kGGep7FptPzKC9pL-->复制</button></div>
+      <p data-page-node-id="7rsPhu41Fzvj4Ww5GlJUx6" class="tp"><!--pnid:Eu58EXbicx8bogAWfSlo9N-->对照目标客户画像把这次分级自查一遍：每条分级的依据是不是都能落到画像的三个维度（行业/角色/规模）、有没有哪张是因为「感觉不错」给的 A、名片信息不全的有没有标「待核」。产出用 Excel 自查表：名片、分级、依据维度、依据来自名片事实还是销售印象、是否需标待核。</p>
+    </article>
+    <article data-page-node-id="EEFGZIWakSRqozZQxjHpmn" class="task">
+      <div data-page-node-id="DUN7H9t69ukwY70h7cwwsn" class="th"><span data-page-node-id="GRvv664DY7bXKMTnovZ0A1" class="no"><!--pnid:43MBaGUrYTkbKwsRy2GSwR-->09</span><h3 data-page-node-id="jnSuxwCIE56vg3M8NAJGol" class="ttl"><!--pnid:hGydS3z4oV5lJYL4c8nfL6-->折算成展会投入产出</h3><button data-page-node-id="BeOFHRUOPi57RTgytdEreW" class="cp" type="button"><!--pnid:ogfWeAB2rdBeBNIOO2oidc-->复制</button></div>
+      <p data-page-node-id="bXdOzqOvk2urKbSAyX4WJq" class="tp"><!--pnid:Lk6ITktnm5fcIZ4CVEDdZD-->折算一下这趟展会值不值：摊位费 4.2 万加差旅 1.1 万，A 级 9 张按行业转化基准（A 级后续成单率约 10-15%）估算，按客单 60 万算是多少漏斗入口。产出用 Excel 测算表：投入、线索分级分布、按转化率区间的预期单数与金额、算法与假设写在表头。别下结论，数摆出来我自己看。</p>
+    </article>
+    <article data-page-node-id="PlDoIBtLAl3t0rQ95A9BT9" class="task">
+      <div data-page-node-id="ENThFES4eywo1aJqQLjDQH" class="th"><span data-page-node-id="i3hwtxBUuURUvwKNBCrqB0" class="no"><!--pnid:QyZNKEMtK1p6jt21KjES6G-->10</span><h3 data-page-node-id="oFY0B0otSN1CxMuo82gJWv" class="ttl"><!--pnid:7fqYj5zS1bSfe6GQOmjHaH-->沉淀成名片处理模板</h3><button data-page-node-id="2X2CqnTK7XJhaIY5zHFMDJ" class="cp" type="button"><!--pnid:s7B9OajWEDmlVw1dXa7YEu-->复制</button></div>
+      <p data-page-node-id="Axj1utQZWuwj0WOt81Mr3x" class="tp"><!--pnid:qNsnhqC2ugOp1WbFYFxC9r-->把这套动作沉淀成模板：名片抽取要哪几栏、双轨分级的两轨怎么打分、排除与合并的判定条件、切入点话术的写法、72 小时时限怎么定。产出用 Excel 一份模板加口径说明，下届展会回来直接跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="R3oGiWESkv6J6z4GNnNzCP" class="cta">
+  <div data-page-node-id="kwxlX7SROwqxsFRSRMX2t5"><h3 data-page-node-id="3Q8sjNQ2OMl0lk6SgkHMUC"><!--pnid:ocWqAZSQmzh8Fe3il72kA2-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="RrIHSnHB2yJl4UN2udWXRq"><!--pnid:7E9QaC9gfGC6Rjt0a0iDnj-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="uWSlguanFkJqMlRz4T3y58" class="btns"><a data-page-node-id="jGzaJ11fZicpcROsElAORF" class="btn" href="#" id="ctaContact"><!--pnid:S7ag9oW1EnDvsVZGwtvZYN-->联系我们</a></div>
+</div>
+<footer data-page-node-id="Ptprkgiz0we3pt4tRlAQv7"><!--pnid:Jz5ePGn5pfmhA8jAwwVdhD-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 对外动作一律人工确认后发送</footer>
+</div>
+
+<script data-page-node-id="qCS3frRnthkh5rlZZEy763" data-pnid-children="RiiNeH0PuwqnoUfwsD1XIJ">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="MnZftezQQErp5Ubo1PjzoN" data-pnid-children="vXGqvFjz1GNUSDy9yP2a19">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="k4yc97Bga7XlElepT9ZFAf" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="EsNN2haFs0hk1zfoq7sRD7" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="I0ijtpa0p3h9T3VB8xKYwh" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="ZjLD8JT5QelIzrkm97MRHm" data-pnid-children="P8khYYpvnkbOU2yeNENNK5">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="uKRl8R8OorQeoZxHMxpCZ4" data-pnid-children="Kn1yErbSCAyhR3VVP4ZxiA" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="r3UYeBlXp1KByBGbgKaccy" lang="zh-CN">
+<head data-page-node-id="vrhwyPrfkE9zG7QkFE7jpf">
+<script data-page-node-id="442tes3sWzZaDq3hOcbKSy" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="tBVjZb1SzO4Lj5dQrmvCCn" charset="UTF-8">
+<meta data-page-node-id="5i2p3h3q5ZDtOF0brfpgu4" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="QKmTsRQB7fHfGT1wO04Bpv" data-pnid-children="PG66FFn9ItwQ4zkY3biaRb">差评与退款原因聚类分析</title>
+<link data-page-node-id="pKX2XwK835dOrXb2Hgsc3M" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="iUOr8J4VxdO6ceXlN8iZwa" data-pnid-children="UjjHvHbHiKSS0aY9aXUnKC" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="bsDxy7M4fQg42S6JKSDCfq">
+
+<div data-page-node-id="uqAzmhcVu5qCnfKnwpWvbh" class="wrap">
+<section data-page-node-id="MoBTHUCVqu54s8r0owcMOc" class="page-hero">
+
+
+<h1 data-page-node-id="sZNKS23IrXykv2tKYY7yah"><!--pnid:Wz5E4XhkGH4JeF4nZi87vZ-->差评与退款原因聚类分析</h1>
+<p data-page-node-id="O3rcnrkZY30b20GlFJZVnP" class="lead"><!--pnid:PJ8pE825WrBhOD9eI1qdkZ-->退款率冲到 63% 的那个商家 · 症状看了三个月，病因没人查过一次</p>
+</section><nav data-page-node-id="01oWf74Dz7FpE42sjyqvo5" class="subnav"><a data-page-node-id="0mYpD6FU2EevDcs1BtB2GN" class="on" href="#"><!--pnid:0gkagrxBlGqeoyGc05KrdH-->场景引入</a><a data-page-node-id="7oXl5toPFY9Ek1U6nYb3iP" class href="LiveDemo.html"><!--pnid:9Zi5QhweacRSsokzTLGrs8-->Live Demo</a><a data-page-node-id="oywx6jUrfpb7WlAYprW2fg" href="推荐任务.html"><!--pnid:E3yvNJGmRCeZwIB7huzJrA-->推荐任务</a></nav>
+<section data-page-node-id="YTi6Zbx73ykYFYdpzpzRNj" class="blk">
+  <h2 data-page-node-id="xR6AmerjnsxeKvP1RQEkqr" class="h"><span data-page-node-id="MfW6lzp5o5l4yD1wz7i6Gy" class="num"><!--pnid:HlNzvPPuVYNXLS2oAfM1Ls-->一</span><!--pnid:FO3eYtjj4IiXYXnjBjQD8e-->这件事现在是什么样</h2>
+  <p data-page-node-id="zZFwjVBw3TASIaW60dqIak" class="subline"><!--pnid:iD0PYVXCKaObGycsRWRheX-->商品与投放诊断 · 真实业务触发</p>
+  <div data-page-node-id="MgQ1lJZK3hfT3DSr383DsV" class="card"><p data-page-node-id="O0P1dnTerXRvYW144F6u9g"><!--pnid:56x1Ff9zQ4He9S1P83T9Mm-->近期差评突然变多：油污净的差评里反复出现「瓶子漏液」，差评率从 2.1% 爬到 4.8%。客服每条都回复了（「亲，给您补发」），但没人把 30 天的差评和退款原因放在一起看过 —— 老板娘问：到底是产品问题还是物流问题？没人答得上来。</p></div>
+  <h2 data-page-node-id="bebZ1tmDkmZyLESb02WPh4" class="h" style="margin-top:22px"><span data-page-node-id="hfMpLfHkYt0YQ9RYBTuqnE" class="num"><!--pnid:V74bJcDWPQ9HRJZzxhIdpo-->二</span><!--pnid:9DMFVEw8FFThBrMNLfpjLe-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="dPSsPBNz9iA2TtjhF3OuGO" class="subline"><!--pnid:sArQdOlxO0bclnz8kqrDKt-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="IXG1LqalJjAnEFwFeJhpJF" class="pains"><div data-page-node-id="g5Xszu5jtcqhZZTpWMKQOB" class="pain"><span data-page-node-id="OphzB8bA7zEXWQKqy4wAWQ" class="i"><!--pnid:WdbXY3s08dhGL8yIkSuzVX-->1</span><div data-page-node-id="zhxKUd0umM3bmPs5PNQdXb" class="t"><!--pnid:beNhpCmua5Zyw3HUAjJ0mE-->退款率冲到 63% 的案例：症状都看得见、病因没人查 —— 六步排查法（单品→时段→物流→客服记录→画像→品控）是现成 SOP，但运营从没时间跑完<span data-page-node-id="psC9Of3cjdp2WWajH24jru" class="src"><!--pnid:WFe4TlSzjJXmOHdsAs8Sr1-->依据 · <a data-page-node-id="EiEhQCLP1mzlWZ5O03kQMx" href="https://www.hwds868.com/article/refund-rate-surge-24hour-pinpoint.html" rel="noopener" target="_blank"><!--pnid:thfWmvkpNUcXz3dv8oYAX9-->某商家退款率冲到 63% 的案例：症状都看得见、病因没人查 —— 六步排查法（单品→时段→物流→客服记录→画像→品控）是现成 SOP，但运营从没时间跑完</a></span></div></div><div data-page-node-id="mEeF3PMQrK4qOfrKz03JyS" class="pain"><span data-page-node-id="U033PcpcAN9e4z5Jkgtkmj" class="i"><!--pnid:9rqHpRlaTSQhVKwhMOIEBw-->2</span><div data-page-node-id="TOXRPPigpF19gX3jOo1pow" class="t"><!--pnid:SGKTq5DN5jahVteaBxgMTQ-->差评与退款原因是客服记录里「最有信息量却最没人做」的一步 —— 每条都单独回复了，但从没被放在一起看过：聚类能给出 TOP5 原因与整改方向<span data-page-node-id="zRja31kyeytk7oTRTJCEnC" class="src"><!--pnid:tPXMnI8Nf3MdREPuBcTReR-->依据 · <a data-page-node-id="huVSLu7sRm4ylWkw5z6HuQ" href="https://www.10100.com/article/128646230" rel="noopener" target="_blank"><!--pnid:HUDovqiDNH21um36CnIfeB-->差评与退款原因是客服记录里「最有信息量却最没人做」的一步：文本聚类能给出 TOP5 原因与整改建议，但多数商家从没做过</a></span></div></div><div data-page-node-id="Ts39woSBPCsWl1GEe7ZkqC" class="pain"><span data-page-node-id="aAVQDD5blWMXtXfgoDf0Zw" class="i"><!--pnid:ypzSG05Qq1j84RErzOwYzd-->3</span><div data-page-node-id="hkCgRF39BNW4wh43GNUpUm" class="t"><!--pnid:xjwzssHIPJAngcUeNs3Tug-->单条补偿在掩盖系统性问题：每单补发 5 元运费的「大方」，可能是每年几万元的品控窟窿 —— 聚类是把个案补偿翻译成系统整改的第一步<span data-page-node-id="U2VgxRw3H2hsgeT8XEKLn2" class="src"><!--pnid:rR4OAlMosHSbjcC0ahLw8x-->依据 · <a data-page-node-id="13USIFVzyq4rkmAo2Ti8HQ" href="https://www.hwds868.com/article/refund-rate-surge-24hour-pinpoint.html" rel="noopener" target="_blank"><!--pnid:kf5BVTxVr92uJtJFhwo9dp-->某商家退款率冲到 63% 的案例：症状都看得见、病因没人查 —— 六步排查法（单品→时段→物流→客服记录→画像→品控）是现成 SOP，但运营从没时间跑完</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="nso2XpYw5wLenTBe8OqM6o" class="blk">
+  <h2 data-page-node-id="wN541MHgG2DwJIEMnTHUvr" class="h"><span data-page-node-id="0y34fBSIpHVWECou5HvVAV" class="num"><!--pnid:ntttti6ihmYmhSUUaFu2ms-->三</span><!--pnid:ke3wVJVoqwmJVShvHBPeOY-->换个做法之后</h2>
+  <p data-page-node-id="Lpg4PgzQstcgc57leoQYyB" class="subline"><!--pnid:ESgtvZr5RNmUQxoNFMgLhQ-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="f9TYKYZF29dIQ3JuxmVoOG" class="cmp">
+    <div data-page-node-id="43K2eOwU9hdhzXhMqHbVTz" class="old"><h4 data-page-node-id="9Un58gzFuGTnKNUcnMe2ko"><!--pnid:xEv2nf2QRynIeV7NkRsWd5-->✕ 现在的做法</h4><ul data-page-node-id="5b5wiSayEoBKfgYM7dalAZ" class="list"><li data-page-node-id="ICNVdKWcXeFvE1n3uKfNti"><!--pnid:8BVsvtsAAxdH4T46YMq74B-->退款率冲到 63% 的案例：症状都看得见、病因没人查 —— 六步排查法（单品→时段→物流→客服记录→画像→品控）是现成 SOP，但运营从没时间跑完</li><li data-page-node-id="SIZHxx5N24l5XhtO0pfPAz"><!--pnid:kHqtN5xZNMuwLQRxI3hHY2-->差评与退款原因是客服记录里「最有信息量却最没人做」的一步 —— 每条都单独回复了，但从没被放在一起看过：聚类能给出 TOP5 原因与整改方向</li><li data-page-node-id="7UtRT2DxAVgPhFPr1eQih3"><!--pnid:MKoK2vhEg4tojU348lzKSm-->单条补偿在掩盖系统性问题：每单补发 5 元运费的「大方」，可能是每年几万元的品控窟窿 —— 聚类是把个案补偿翻译成系统整改的第一步</li></ul></div>
+    <div data-page-node-id="wUxl1H5lVn22IMGuYErfmc" class="new"><h4 data-page-node-id="bDE8FKUeuIBQnQkFVDqEQQ"><!--pnid:lrOymiDakmky7AFmcYRA9Q-->✓ 交给 Agent 之后</h4><ul data-page-node-id="vf8H4zNsZqVKzPCbOWWfko" class="list"><li data-page-node-id="YWx87POEqXECcehsWrtfZr"><!--pnid:6W70Sv7dFBg8Z615R8jfrN-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="qoXF7rdwlOqw1J5rZ3M7Fo"><!--pnid:nYRGlH2WgT87RRtqSSVPAn-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="69BSsIlcO3aYDmockRGQ5D"><!--pnid:D0RhsUTrtq0ySyaidtnrsO-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="kyY13qJ5aqF1GwbOyI5pxF"><!--pnid:juPkU5FSaP8n3ZulppiyH4-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="yKB734yDRGsYpJKRAH74bz" class="blk">
+  <h2 data-page-node-id="SG8Zt8wBterNNLsmiWylZS" class="h"><span data-page-node-id="qsfeCb0WMao79mq0k9XifG" class="num"><!--pnid:tPi2rhs3MSfoLeLzd8RK2t-->四</span><!--pnid:bYm7XLBCbe5jIkrtYQH0Gf-->场景闭环</h2>
+  <p data-page-node-id="KJbhIoKB34bDQzHjYq8tT0" class="subline"><!--pnid:Gq1Q7zbabJL0IhCPC8NpsA-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="QSaXBBGYyy9v741I6LSJC5" class="flow"><div data-page-node-id="QwcH9umdXkciPxZszZM4Sm" class="step"><div data-page-node-id="pGp9y8wB6m6uoM06de63Y2" class="n"><!--pnid:VQ1ouXW1Wa9vojw4GtZlLE-->第 1 步</div><b data-page-node-id="nGg5T8LVpdRS65zbNUqVNb"><!--pnid:pJQt7pvQzNLQauAe4QVGhS-->文本聚类 · 差评先分堆</b><span data-page-node-id="PE8WsCSd8cg6a4dO6AAPcU"><!--pnid:5UdJKKASK3upQJkWu9PZU2-->「漏液」「刷毛硬」「物流慢」「客服态度」「效果不符」—— 每堆的条数、占比、涉及 SKU</span></div><div data-page-node-id="gsVL79cAdmVPVr7MVPOhwO" class="step"><div data-page-node-id="ubRaL4dckb0S5hxtr93t5i" class="n"><!--pnid:jL63Wh9vk0iLbMi2PD3vWb-->第 2 步</div><b data-page-node-id="PmIQZvDEbxLA0u7E7eOjVq"><!--pnid:GTimGenLcPQbxJhHVqAIuZ-->差评与退款对照 · 不说话的大多数</b><span data-page-node-id="RaRQAGIv8yHsbXGI6j6mno"><!--pnid:Cj7DLbPojDjyXR1iOX0zam-->退款原因分布与差评聚类对照 —— 「静默退款」（不留差评直接退）的规模通常是差评的 3-5 倍</span></div><div data-page-node-id="OWumZfSNNXiePsmbdu4Aef" class="step"><div data-page-node-id="vgLyaHZRvP2CDOhyVJJEKw" class="n"><!--pnid:MgBpa1jIYFS1HuYM3TeqCE-->第 3 步</div><b data-page-node-id="oMxU257xq8NN0NpLIRC6iR"><!--pnid:ngBfDDJj2ZmCnS8CVTaTRo-->归因下钻 · 每类追到源头</b><span data-page-node-id="HOYnoU5RDMqr9xAg4L5uYv"><!--pnid:iZHuZ0JvvHVRYonj8AEzzo-->「漏液」→ 是瓶型设计还是运输破损（分物流公司看）；「慢」→ 分地区看时效 —— 类不追到源头就没有整改方向</span></div><div data-page-node-id="fGsIlzKoiqau0y6F6eClmS" class="step"><div data-page-node-id="b4f9DbHhmS4PzUpokTlWoz" class="n"><!--pnid:400g7PJwYfz1GbNWiU5suR-->第 4 步</div><b data-page-node-id="6WwvCBbb8Lxz9kD3gVAqqK"><!--pnid:RKufr83Z37vuJxsMxuz3gY-->TOP5 报告 · 给老板娘看的版本</b><span data-page-node-id="QKmfMMZXwuTeNuNznjpoYN"><!--pnid:4I10ArqaIo2v4dTSCW7cmP-->每类一条：占比、涉及 SKU、预估月损失、整改建议 —— 五行说完</span></div><div data-page-node-id="ad0FiA9V0WdRJubfTp378w" class="step"><div data-page-node-id="JQCCT9HDK65XAGiCYiyx8b" class="n"><!--pnid:rTlO61RxnrGK6Bg3HvmhY9-->第 5 步</div><b data-page-node-id="gpjNMVyBbREuFXtA6B41Tl"><!--pnid:ofJv2ykE3Ec25cDaP6iOMT-->整改清单 · 谁改、何时改完</b><span data-page-node-id="4WpF1CfcWJZqlVeeIGZN7o"><!--pnid:T1F68ujlldJ8fc8fqGoKD4-->品控改瓶型/详情页改描述/物流换承运商 —— 每条带验收标准（下月该类占比降到多少）</span></div></div>
+</section>
+
+<section data-page-node-id="XNpxLHFPfP9HYRcnDJcTvo" class="blk">
+  <div data-page-node-id="TGrK7IbEdMs8OYDenf2quQ" class="g2">
+    <div data-page-node-id="cuCo2AQsAracxh9clUkoHV" class="card"><h3 data-page-node-id="Ozmwr9Z93VQwhT1NpXixjH"><!--pnid:VMeOtcgnLpNgksouvZvXnf-->要准备什么</h3><div data-page-node-id="ILNRRL9ro4MKat7zebGqj0" class="src"><div data-page-node-id="ofpnK506sJQa8AIUJYRgYo" class="fn"><!--pnid:OfNVPU7F73jwdCmotNwZv1-->近 30 天差评文本（全平台）</div><div data-page-node-id="0aK31DzW1g23iv9kfUbhcW" class="fd"><!--pnid:vrn9hTye8hzVivcwvPD4rB-->聚类的原材料 —— 越原汁原味越好</div></div><div data-page-node-id="A8AXJv7SBVRDNZ7TRLL80A" class="src"><div data-page-node-id="7ypKWovASo9HbwQfedUH3l" class="fn"><!--pnid:gNpxoIEz86PvpN0d6DYJUB-->退款原因记录（买家选择+补充说明）</div><div data-page-node-id="ovfKpl9oBbAzrsxrMMWSSG" class="fd"><!--pnid:Np2ViUaXTh4SnjSbCEz2rI-->差评的对照组 —— 不留差评就退款的人更多</div></div><div data-page-node-id="JQTGmUDyZwyPYvSxX9BSXB" class="src"><div data-page-node-id="ZEQtf7SeRBpFpGL3PMm8KM" class="fn"><!--pnid:QnCOEi4tYIsCreKhzD6792-->订单与物流时效数据</div><div data-page-node-id="e6TRID1lwrIMTLCKRydsPy" class="fd"><!--pnid:sEp5eAh5thCXvddXaRWeJy-->归因的第三源 —— 「慢」到底是物流还是发货</div></div><div data-page-node-id="JZxqVekNyVMoWMFLv55N8Y" class="src"><div data-page-node-id="vXkcKcCc3Ir3alM0iVTRcK" class="fn"><!--pnid:cXqZyvv4kOIB9wQakrj7xQ-->客服会话记录（涉及投诉的部分）</div><div data-page-node-id="74RlFJD2Nw3iYcB1njVy7o" class="fd"><!--pnid:BO0LRcpojf9Qps3B6MAtT4-->第四源 —— 客服怎么安抚的、承诺了什么</div></div></div>
+    <div data-page-node-id="CK7zu4fcRVMNLmharpjl9K" class="card ev"><h3 data-page-node-id="hJqBraLIHGq4MBIUTgqbL4"><!--pnid:0hVlCPnFQqpLnEe6D3OeCL-->为什么这个场景值得做</h3>
+      <p data-page-node-id="3LwoDi5lPwdz7ZuppOJhsU"><!--pnid:gzBzeOaqT3jGAsr318rbpy-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="j1l8A0a51HVYSwkMcZhmlz"><!--pnid:6puMeHnLnSAfDw8WBG8amw-->10.0</b></p>
+      <p data-page-node-id="iqrDaTrvlGFNG9Dgm1hSp9"><b data-page-node-id="lqqabgxcC8x4OqUTsQHNYe"><!--pnid:iygYCp5SAi4r1QJSGBDkhm-->最大差异点 ·</b><!--pnid:d2nLzOdw2K2dKhwHBYb46F--> 不要求客户先懂文本分析。差评导出、退款原因记录（平台后台都能导）扔进来 —— 聚类结果配 TOP5 表 + 整改建议，客服记录里的金矿第一次被挖出来。</p>
+      <p data-page-node-id="E0bF2ViGiC9ZzUCWzfpdsM" style="color:var(--ink3); font-size:12.5px"><!--pnid:SkRJh55pUwitOv8F6rNBmr-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="vMcnG0osrvB8P34NWnnR2R" class="blk">
+  <h2 data-page-node-id="n2mLyC1xjrkUv48EeYBZvE" class="h"><span data-page-node-id="bySudOlSnCuWzQJSGKPbfm" class="num"><!--pnid:F7tR72SxNMAko7rHDM9lDB-->五</span><!--pnid:6Ld99ySLvT99JTQolfNZ98-->会产出什么</h2>
+  <p data-page-node-id="jnnuh2ZNH4MdNwDFHipGIb" class="subline"><!--pnid:SZhAs8z2Gv0QNN3vFdLs6B-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="g1WNo9PpLmig4DTugMMVu5" class="outs"><div data-page-node-id="FBe9gVRHRvP6cR3C6Hx94u" class="out"><div data-page-node-id="6PNsg0v41n15XxTzZXVhAp" class="on"><!--pnid:5fpfLAcIcGk7M09zYQ7v2i-->正式件本体</div><div data-page-node-id="S0rvVvxbBRp1OGmzde0DPe" class="ot"><!--pnid:Ohh9wso2lB8OwWudiMFZW3-->差评与退款聚类分析报告.xlsx</div><div data-page-node-id="bjfhM4MbeZ9AEnMDibIikv" class="od"><!--pnid:9E3WssLK8gmUZPlGzAnlsj-->正式件本体 · TOP5 聚类 + 归因下钻 + 整改建议</div></div><div data-page-node-id="JeNaeFMMo4vG5PagNwLhwc" class="out"><div data-page-node-id="r7XvGGbsaKkuyLDcAqBqp4" class="on"><!--pnid:2YCrW54WldFVQEf31jecB8-->可派发清单</div><div data-page-node-id="fU8FDu8dQiCybk4RfZQygR" class="ot"><!--pnid:KszqjX3P720WMtRtOngWZ5-->整改清单与验收标准.xlsx</div><div data-page-node-id="nAuQzBMsNJB31bi4HBag2M" class="od"><!--pnid:mKsV4FvIfGDcWI3Rt8uMqD-->每条整改 · 责任人 + 完成时间 + 下月占比目标</div></div><div data-page-node-id="6tuN6h4cTHltEQwpySKyG8" class="out"><div data-page-node-id="0saP1L2sy9B95TRsgSeUMy" class="on"><!--pnid:RvGVFbD8OyJqhJPWmBakpR-->可派发清单</div><div data-page-node-id="GQ003geAiEutIpadve7Von" class="ot"><!--pnid:Ni7aVIGofgCH343DNj5wm1-->静默退款估算.xlsx</div><div data-page-node-id="rpwvnjoyHTBvC50BobSxAR" class="od"><!--pnid:yDaqxB91NysmHaQqBBcz9C-->不留差评直接退的规模测算 · 隐性损失的账</div></div></div>
+</section>
+
+<section data-page-node-id="rMNA4MurviNOyuRATxLMGu" class="blk">
+  <div data-page-node-id="33jvQdCmuypZRSGytT92vZ" class="card warn"><h3 data-page-node-id="JzpNC7ZMQQ9WQZSJpnDlMl"><!--pnid:qi8rl3E9qsv86lzero0XlE-->这套东西不承诺什么</h3><p data-page-node-id="N7evYGuA96DQyZNB3VrcGm"><!--pnid:PJ1JXdnWsKY8shfn8Yo0aR-->不做「自动回复差评」—— 对外发声担责，回复由人写。本场景做的是把 30 天的差评与退款原因聚成类、给出整改清单 —— 内部分析，不碰对外。</p></div>
+</section>
+
+<div data-page-node-id="OihC0dG4mEPrGBdsOPy2PN" class="cta">
+  <div data-page-node-id="Vg7C7Hr8UmzQQwY133mLs1"><h3 data-page-node-id="S6ga39lmMjVAZLsgZTS8uK"><!--pnid:34ByDAWbycuLolR2lyDN6v-->想看具体怎么跑？</h3><p data-page-node-id="C1xHVsxIj5KmXSiygKnP6A"><!--pnid:n6mfWGlFgQJLRb7S4GnSQB-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="ovFWNcWmBpykmk0b6YW2zu" class="btns">
+    <a data-page-node-id="SPRte1ZD0lvqhwMeEURdrp" class="btn" href="LiveDemo.html"><!--pnid:YY1Ja4ZKCAynF2FTQdNva8-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="QHyLAdWY29LuRHK8jkVIGp"><!--pnid:aigeXYRu71IZcuXvDGT2Sk-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 不碰钱不对外发声 · 执行按钮永远在人手上</footer>
+</div>
+
+<button data-page-node-id="Gne5ifgBJsJ28oqE3yf1Ef" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="clhpk4gt3KAJqN1gwWhprA" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="CwjaNDwjF1QSAWCEcFfDTO" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="3aCchmwUgAmkZQjlDhhUpx" data-pnid-children="XcjlPGGPDQbHoFLhXC1E9l">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="WgOMfe42sAgZGLBi63sUHw" data-pnid-children="YRiSkuW26CZsABoY0viTwA">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

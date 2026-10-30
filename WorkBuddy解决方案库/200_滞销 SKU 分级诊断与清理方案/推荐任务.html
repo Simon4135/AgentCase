@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="wOluUjuQrmujidktP2eKZT" lang="zh-CN">
+<head data-page-node-id="SQDVk6Z6FmdDzUMUVIwFHC">
+<script data-page-node-id="WLeF6rC36szsRSMVe43rBG" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="dAQOchpMYN4kWPstG6kdU4" charset="UTF-8">
+<meta data-page-node-id="TXFpp3iLwf5BaR4p79IXPZ" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="XINrivko5rHuXnqDRTrFsu" data-pnid-children="znMbOa4jmhzU8qWFTP4ukY">滞销 SKU 分级诊断与清理方案</title>
+<link data-page-node-id="drTLk3HF2KbbJE3liYEIft" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="uQCe85sKpUFYBEikIrfM6g" data-pnid-children="rHkOrs5Q4f7iZq12tvw1ur">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="VIiJZLMiacQC7D8WFPqhUa" data-pnid-children="bqyqGT5UQ9XW7wt9ZLyNQZ" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="2pS6wKzOZ427drY134Zliw" data-pnid-children="9udNSFcfukq27QPfkU0sKi" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="DewRUFtyMX2IgEQh2aP4SM">
+
+<div data-page-node-id="aIEG8oKe11oU8XYEMbpSkK" class="wrap">
+<section data-page-node-id="62mX91CLTyHrgYgfooAFRZ" class="page-hero">
+<h1 data-page-node-id="F86eKOFFe6mvPW6H77afDD"><!--pnid:ona7QKbQh25TqKwYvLdQZX-->滞销 SKU 分级诊断与清理方案</h1>
+<p data-page-node-id="c16rxkVBZIukV8AVJOJ1Ac" class="lead"><!--pnid:bNJLXyukgaQpnMkZjbgNqC-->仓库角落的滞销货按传统清仓只能回 4 万 · 分级处理能回 10.9 万，但没人做过分级</p>
+</section><nav data-page-node-id="pmvMCxxsFcHOmx9T6xYcxh" class="subnav"><a data-page-node-id="uoKo65brLXhLL8Ith7mnkH" href="场景引入.html"><!--pnid:DZUcxSwt3F9k7RwGpwh0aJ-->场景引入</a><a data-page-node-id="P6svt3FSNCoBCSqnqWnNwZ" href="LiveDemo.html"><!--pnid:Q4XC9zWC9stgxdp9wjAYD3-->Live Demo</a><a data-page-node-id="jsUyKvCZWlnQ6nCxBWElsv" class="on" href="#"><!--pnid:jblFJAcMz0SxppNx6Sb2Z2-->推荐任务</a></nav>
+
+<section data-page-node-id="sqfqJ2yBNTpR8djuOgspHH" class="blk">
+  <h2 data-page-node-id="ogUJzS4YL9uFT0wGtMJ2Yb" class="h"><span data-page-node-id="i9fXmwX62C49YW3dX9fSSh" class="num"><!--pnid:7AAz112NMvUTZkLpVe10Xp-->一</span><!--pnid:kzYtnX2RKabInedYGctbCP-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="S9XiVPdRixuoDslLs9HXup" class="subline"><!--pnid:XEVQJwTBoVs3yPuEj7UY11-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="Yko8xFfLNlljDX7sVFJcyY" class="card"><p data-page-node-id="aDl38gEsQYfp4lFWwLbHbx"><!--pnid:etC7mNGJysL8VmmRoyas6y-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="i2RBeMo8gQkMk6iPeG82wE" style="margin-top:10px"><!--pnid:N12Eztq6PGVIPauGxdHBZu-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:MyIqYzJtN9QquQIc0nUKZu--><!--wb-skill-start-->
+<div data-page-node-id="x8NB1PquuGG3SoASqYbNth" class="wb-skill">
+<p data-page-node-id="Kl5suAmWT9nbZRGJYNrXWR" class="wb-skill-lead"><!--pnid:yZx7AEeyEOf5Ow1JHVlJbL-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="7mQmFY3BCIzSPZaJSa5aUu" class="prompt" id="wbSkillPrompt"><!--pnid:KXWGI5pieRLVdEAVKHntCp-->【准备】这个场景的规则都在「滞销 SKU 分级诊断与清理方案」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/ue7nC2Zpo3AVQifcQdU6ub/YGs-RjgyfDTu/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="Jhwgc59kniqoY831Rj3Lzo" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:Ze9iE9qWJgEogStKMNkdZm-->复制</button></div>
+</div>
+<!--pnid:YB5yhoRdYLaRan7mPOgJfi--><!--wb-skill-end-->
+<section data-page-node-id="9Di1p8zPeJBfft7SaCw6KG" class="blk">
+  <h2 data-page-node-id="4F176Pk73teYIP9tyaY0w9" class="h"><span data-page-node-id="7sDuiVZ3zyPfXmBE8eP8GW" class="num"><!--pnid:ohJSnYYfniIfS6svGevPUQ-->二</span><!--pnid:xRMbIETnd0Leh1zMXgAa3h-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="McU0b8L0oNZRgypg2iVsiQ" class="subline"><!--pnid:CH3Xs0sbHT4zsrUQwkLhFS-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="KBFc3btVZFh2Y9n4msahS2" class="tlist">
+    <article data-page-node-id="sVZPTWo730dryh07LFbKBB" class="task">
+      <div data-page-node-id="VE5ITizlgBQCXumUYGfkXq" class="th"><span data-page-node-id="tRFY687AHtd3XTabyMLll0" class="no"><!--pnid:76j3ReQVw6YVpAjXTNp3y2-->01</span><h3 data-page-node-id="kwwXb3knJvGGJBj0DfrBsL" class="ttl"><!--pnid:aDR9zv1KnRH3uRZydTghRU-->首推默认</h3><span data-page-node-id="yz4zQQ8AA3VNGu891klnKU" class="star"><!--pnid:ND39URstb3aE4pUik4V39y-->与一键体验入口一致</span><button data-page-node-id="BrBkT4WqJnzYXsKk3XNR60" class="cp" type="button"><!--pnid:Vq0fatI8g6bqVLCRRk4J1y-->复制</button></div>
+      <p data-page-node-id="ps4D6X7HrVxo23M3i0XxN2" class="tp"><!--pnid:0UbvV4mQKyCqj4jNUA2ccc-->我来试一次这个技能。三份材料都读：「01_商品90天数据_销量加购转化.xlsx」「02_库存与成本明细.xlsx」「03_去年清仓记录.xlsx」。淡季盘点报上来 18 个滞销 SKU、库存原值 12.6 万，老板娘第一反应是一锅端清仓，我得先把分级做出来。先分「90 天零动销的死库存」和「滞销」两类，再按三级分：问题款（有加购没转化）、瘦狗款（加购转化双低）、季节款（淡季误判），每级带数据依据。产出三份：「滞销 SKU 分级诊断报告.xlsx」——SKU 一行，列近 90 天销量、加购率、转化率、与店铺均值的差、库存原值、分级、数据依据；「分级清理执行计划.xlsx」——每级一条动作，列改哪份文件、谁负责、什么时候完成、回收率目标、拿什么验收；「回笼测算对比.xlsx」——分级方案和一锅端三折甩卖两版账并排，逐项给算式。季节款的判定要有去年同期的销量证据，不能凭名字猜；去年那个加购率排全店前 20% 却被三折甩掉的 SKU 翻出来当反例对一下。定价我不让技能定，清理方案给建议我自己拍；推荐意见、完成质量评定、责任认定三栏留空。</p>
+    </article>
+    <article data-page-node-id="RUps6eaCPd7OcdLTqOW2Y9" class="task">
+      <div data-page-node-id="YVXGT6kzkpcVuggk1QqXbs" class="th"><span data-page-node-id="CZ2ER9pwPvRJtHTAuyX5mn" class="no"><!--pnid:6VEeTRRyadvHxmRx71PX5x-->02</span><h3 data-page-node-id="KxkYngfyDgDPqENWhr5K05" class="ttl"><!--pnid:Qifr0nL3VUlkXxwUixhB3J-->只挑问题款</h3><button data-page-node-id="cS1jyxeKAExSt2Qpv8pxRL" class="cp" type="button"><!--pnid:c0sVDhxVIxFEN1XxfctovB-->复制</button></div>
+      <p data-page-node-id="mQgaAAv8uW6ecTguRWc1Gl" class="tp"><!--pnid:Apl18QSR50FRbsIAGNd5S3-->先别做三级分级，只挑「有加购没转化」的那几个 SKU 出来。读「01_商品90天数据_销量加购转化.xlsx」和「02_库存与成本明细.xlsx」，产出 Excel 一张：SKU 一行，列加购率、转化率、加购率跟店铺均值的差、转化率跟店铺均值的差、库存原值、是否疑似图和详情页的问题。判定用的阈值写出来。</p>
+    </article>
+    <article data-page-node-id="leiYtChEKooowS1RGR6kfH" class="task">
+      <div data-page-node-id="7TSpRaIeJjhlGnXVcqmvfN" class="th"><span data-page-node-id="9CXqooEtAslZw47SKENNib" class="no"><!--pnid:9yxbdRgeEuELjFSrZGOhSw-->03</span><h3 data-page-node-id="8MOH7NhqwQelkU2iLtdiGr" class="ttl"><!--pnid:nGvR2kIhOooA6IjeSnYXsn-->换成只看死库存</h3><button data-page-node-id="CYT73hyklLI8QVXvr6B3PJ" class="cp" type="button"><!--pnid:nil0gnH6bvtnI3LYBoJd7m-->复制</button></div>
+      <p data-page-node-id="oGljGIMqqcEo74F5hdlG74" class="tp"><!--pnid:yx4Hqa3AQPwUT4i32RlojS-->这次改口径：90 天零动销的先单独分出来，不管卖得慢的那些，只论死库存怎么处置、能回多少钱。读「02_库存与成本明细.xlsx」和「03_去年清仓记录.xlsx」，产出 Excel 一张：SKU 一行，列库存件数、库存原值、成本、可选的处置方式（捐赠抵税/组合套餐/私域闪购/报废）、各方式预计回收金额、各方式的依据。回收率取的是去年清仓记录里的实测值还是行业口径要标清楚。</p>
+    </article>
+    <article data-page-node-id="Xk6iUYaUzPpOWofSH9lCv6" class="task">
+      <div data-page-node-id="7aWAHvw36FVv7Cy2kDABmN" class="th"><span data-page-node-id="F9M75ShkUavkGWjS7XTT9X" class="no"><!--pnid:wldLTqyMGQLrSGfgYTzbmc-->04</span><h3 data-page-node-id="NuWwXaiLoDQwaLqpOfFBNx" class="ttl"><!--pnid:BWHsRDpzjAM0JNyntv0qED-->一次过三档库存</h3><button data-page-node-id="AXdAkTpisflStqYhg2nJ1Y" class="cp" type="button"><!--pnid:KmjhbX2wpeE53lrVk8dgVv-->复制</button></div>
+      <p data-page-node-id="ZVwvuRJpl3gxuhBJUwvpJZ" class="tp"><!--pnid:rkq3Bc057rbt8MFvIgEJ2m-->把这 18 个 SKU 按库存原值分三档各跑一遍。读三份材料，产出「滞销 SKU 分级诊断报告.xlsx」里加一张横向对照表：档位一行，列 SKU 数、库存原值合计、平均加购率、平均转化率、三级分级的分布、预期回笼率、建议处置方式。哪一档的分级最集中、为什么，写一句。</p>
+    </article>
+    <article data-page-node-id="EwjAx6QKWTU3FFmDJw7Og8" class="task">
+      <div data-page-node-id="Ln55h9PGYizp6YY3zLJlAz" class="th"><span data-page-node-id="EtvkC9BJ0kB9N73g7Wylj1" class="no"><!--pnid:z8vMXpS7JAD22NRSWPtqti-->05</span><h3 data-page-node-id="FQm7ezP4VgRSIrq3HrBomN" class="ttl"><!--pnid:YL49u808nnzpLGEXHDcqVD-->给仓储看的执行版</h3><button data-page-node-id="R9Yimg6Mfy3t3GIZhBCVLM" class="cp" type="button"><!--pnid:1FXFUQnc9QSPK4sn8DVXYJ-->复制</button></div>
+      <p data-page-node-id="ce4Oyy6BM3QlDk4iMADTt7" class="tp"><!--pnid:bMVKtjgZKVQTHYJFbT0dWh-->把分级结果压成仓储能直接执行的清单，输出「分级清理执行计划.xlsx」一张表。一档一行：哪些 SKU 封仓不动、哪些下周上私域闪购、哪些等美工排期改图、哪些走捐赠。列 SKU 清单、动作、时间窗口、责任人（留空）、验收标准。定价的活不要写进来。</p>
+    </article>
+    <article data-page-node-id="tjTrnmhgRunvbEKyk0TsuP" class="task">
+      <div data-page-node-id="PpzY6VfwnikIu9nI673fEa" class="th"><span data-page-node-id="Ak7qtEXo5owSCm8iFMtXjY" class="no"><!--pnid:FQzTcNlRJJi8QqamMNGpge-->06</span><h3 data-page-node-id="FFepjs4C4eES2gYAErSHqD" class="ttl"><!--pnid:IUgENvUQLP8wTFYoqDv9Er-->让它反驳自己</h3><button data-page-node-id="4M7ZVIyAVV70vz3eMCRs55" class="cp" type="button"><!--pnid:51VuIoMTBxWqyo1ejJzc0L-->复制</button></div>
+      <p data-page-node-id="hxMk5MYFnocaSRlkA5vUDF" class="tp"><!--pnid:kt5liU9QSNwYzlvaR4ZfuS-->你把 3 个季节款排除出清理名单，依据够吗？读「01_商品90天数据_销量加购转化.xlsx」，把它们去年同期的销量数据摆出来跟今年对比。如果只是今年卖得慢、去年同期也没有旺季表现，就该留在名单里。产出 Excel 一个对照段：SKU 一行，列去年旺季销量、今年同期销量、占全店比例、判定（季节款/真滞销/数据不足）。</p>
+    </article>
+    <article data-page-node-id="TNngFpVcyN3MT2aiKQiH0y" class="task">
+      <div data-page-node-id="QMF0Iv91dvi35kvCX2mFh6" class="th"><span data-page-node-id="yx67Aq68ZsqrI85YCIkyzc" class="no"><!--pnid:Jzisk5epfCJ8uhLu5VqeFN-->07</span><h3 data-page-node-id="WHhXTEF0iYWOETK1zM13Sl" class="ttl"><!--pnid:TLCO94oaOU47RfECHgUiWW-->专门查去年错杀的那款</h3><button data-page-node-id="VkIl5xOdUMlxoQLf7sd3AW" class="cp" type="button"><!--pnid:7TlCn0JctAmildBPEpMLE1-->复制</button></div>
+      <p data-page-node-id="fHPMTlQLe6jCQQn5tKQNMR" class="tp"><!--pnid:Mep6iAQ5LE2T3i8OQtohZ4-->读「03_去年清仓记录.xlsx」，把去年三折甩掉的那几个 SKU 翻出来。产出 Excel 一张：SKU 一行，列去年清仓前加购率排名、转化率、当时判定档位、甩卖价、回收金额、按现在的三级口径应该归哪档、差多少。详情页挂错链这类可修复的原因也标出来 —— 当时看它清仓前的加购率排在全店什么位置，有没有被错杀的。</p>
+    </article>
+    <article data-page-node-id="aRxV2KUMeSAh5XYa0xvcEY" class="task">
+      <div data-page-node-id="WxsmFNXzo9rVwkLOgN9rfi" class="th"><span data-page-node-id="nSknu7EQ47lzdLFDHrctl7" class="no"><!--pnid:GxdaG2Rb5PdWkr5yGKNR9e-->08</span><h3 data-page-node-id="gt35WKQPvzyg3dpd1RvQKN" class="ttl"><!--pnid:mzMc6IbkVuIffJyPkvdBgk-->对照分级规则自查</h3><button data-page-node-id="1YjwWu6f2fP3yadJZPdUk7" class="cp" type="button"><!--pnid:w413EqmRUD6dJH35bOw1Fa-->复制</button></div>
+      <p data-page-node-id="3o8KjMPdP4OCbEFSDhmf5w" class="tp"><!--pnid:VFnc1MjPZOLVoHaXaJz0is-->对照三级分级的判定口径把这 18 个 SKU 逐条自查：有没有分错档的、有没有数据不足以判定的、有没有同时符合两档特征的、季节款的去年同期数据有没有。产出「滞销 SKU 分级诊断报告.xlsx」里加一张自查表：SKU 一行，列当前分级、判定所用数据、数据是否充分、疑点、建议复核。数据不足的列出来我复核，别硬判。</p>
+    </article>
+    <article data-page-node-id="TuwGTDjtOb9s3hbx10UbPh" class="task">
+      <div data-page-node-id="0uUo3uHFJhzuwDacvvROf2" class="th"><span data-page-node-id="Mu4GZSw4MdIDqTWsZ98pNA" class="no"><!--pnid:kqU3ChZVpW0Hn04hOOg29Z-->09</span><h3 data-page-node-id="XAetG691VLodZhb3Wr44yU" class="ttl"><!--pnid:eOwFryGWHOZOrWgafPkT6T-->折算成两版账的差</h3><button data-page-node-id="JbhmnJIisGWGYZWR2A6PK6" class="cp" type="button"><!--pnid:I2X6WuqekbXV5cfpn7DHle-->复制</button></div>
+      <p data-page-node-id="dk8H2ZaY10yBPFtw1numdN" class="tp"><!--pnid:1iGUpKU5cTkHEQKryB02KR-->分级方案回笼预估和一锅端三折甩卖各能回多少？读「02_库存与成本明细.xlsx」「03_去年清仓记录.xlsx」，产出「回笼测算对比.xlsx」：科目一行（各档 SKU 分别一行加合计），列分级方案回收、一锅端回收、差额、回收率；差额落在 12.6 万库存原值上是多少个百分点也写出来。一锅端的回收率用去年实测还是行业口径要标清楚。</p>
+    </article>
+    <article data-page-node-id="KdRo6Scwoc9yjo77UdBNqZ" class="task">
+      <div data-page-node-id="l6qqPFe0Gxjd34OgpllEMk" class="th"><span data-page-node-id="UlumHsvdB3pB5jnLVQRFSk" class="no"><!--pnid:0kQSQoLRbAz1iDvf6HQ6OD-->10</span><h3 data-page-node-id="hd3ijEe3yivdWSRyNxpUWn" class="ttl"><!--pnid:HXgRsPWUbunXrstGgcG68A-->沉淀成清理决策表</h3><button data-page-node-id="h9sUfTsX30THXG018I2xwi" class="cp" type="button"><!--pnid:VuNZmf9skRBiNcGR7YGrzd-->复制</button></div>
+      <p data-page-node-id="BBp2W0iJrsiwNn5OW0FBFv" class="tp"><!--pnid:pkfru1pCWSEKJHmPvcN1sp-->读「01_商品90天数据_销量加购转化.xlsx」「02_库存与成本明细.xlsx」「03_去年清仓记录.xlsx」，把这次的三级判定口径（问题款/瘦狗款/季节款的加购率、转化率阈值和判断依据）、每级的处理动作和回收率目标整理成一张清理决策表，Excel 一张：规则一行，列分级、判定条件（写具体阈值）、数据来源、对应处理动作、回收率目标，责任人栏留空。下次盘点直接套用。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="mR8Yvhc8Z9Ve2wufuMeMbH" class="cta">
+  <div data-page-node-id="2r8NEZrZOfEcIzsgbFOw32"><h3 data-page-node-id="Ykn21XaASzQjJkN3hyeXqg"><!--pnid:8tUoPaKkfCvoiL97b8TVE7-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="MFIUoboGIIWpyEA0QvJpfz"><!--pnid:nPTT9i89QIak8O674lDJIm-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="YYRfayzBluxZOehu3A0P6L" class="btns"><a data-page-node-id="tq1MNOV1m20yHwSSfnIskB" class="btn" href="#" id="ctaContact"><!--pnid:ODemIeSJv5rZ54I4zipg4u-->联系我们</a></div>
+</div>
+<footer data-page-node-id="W9FE1w37yo6icQrs3O40Mv"><!--pnid:qgmmxV2r6Kgduem01DJDAb-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 不碰钱不对外发声 · 执行按钮永远在人手上</footer>
+</div>
+
+<script data-page-node-id="qhlyqE9QSgCG1puPx6w4xd" data-pnid-children="qeW5LUEbcaB0M5PckELcV1">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="HtinE4M4nUoKawp32SGdwm" data-pnid-children="koFD6P8la9Ybdx0CtOWIFj">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="qhyEwQ6bwGGfnweSxmLzPR" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="ktcbdaFekS2AUYHSFf63NF" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="CuVig1b3f3LIJswJ3Pt6SJ" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="SchQO3t3Etdys2draZztAd" data-pnid-children="PSE2w7iUtmgZFFEGl0RjgL">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="i1VQYE17DZW6cM6l9BJsS7" data-pnid-children="6zz2OZYUwKYgpYCyDrGoxx" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

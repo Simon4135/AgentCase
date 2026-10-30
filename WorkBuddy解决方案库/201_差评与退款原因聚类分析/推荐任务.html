@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="R7kxPSmfLFxO968ibNWL4q" lang="zh-CN">
+<head data-page-node-id="cXQKeqiZzt3jfRrlmqfc3O">
+<script data-page-node-id="TSHL1vPKOsu0ICvIBtsZJk" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="eiS2DyhYBWDIk5rxT7LUSx" charset="UTF-8">
+<meta data-page-node-id="qnxQDIhtQJ7oyi4xDRURV0" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="0lbkafRlSphvAciFH7wJRI" data-pnid-children="SqhbS337oSMugwigdsATie">差评与退款原因聚类分析</title>
+<link data-page-node-id="pmRTVWTNMsTxo7fFluJapj" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="yVmMzJ0jYKKlrr54Tg1M2P" data-pnid-children="I1yQOmnUd4brBPj2Z93y42">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="4bsgX2inZkoGCCMbR56P86" data-pnid-children="m3HJ00dGnIqnJLwvTLS9T7" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="YKe71shaH4FI7n6O3FBNGJ" data-pnid-children="VhXZrjCM7LGQQUpYFqLssu" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="papH3ZDWxguASPKY0CHfzn">
+
+<div data-page-node-id="0JxXuvRytDPXRwoF184iwE" class="wrap">
+<section data-page-node-id="WAy4SyddglODQDQZ65bG0S" class="page-hero">
+<h1 data-page-node-id="CLoOG2NBZ8EJvxrGVfGzqU"><!--pnid:ZdtP9XBc6vanORr3d7LDRS-->差评与退款原因聚类分析</h1>
+<p data-page-node-id="WiE6pG8FCMILwZUHxr3FJ2" class="lead"><!--pnid:PnqwhVJDszMvj81tHNhj2c-->退款率冲到 63% 的那个商家 · 症状看了三个月，病因没人查过一次</p>
+</section><nav data-page-node-id="PPARtTGyRHpsJV9ZVlM263" class="subnav"><a data-page-node-id="ytBXvNhsRLxQN4Spx2yyEL" href="场景引入.html"><!--pnid:vmIefPGvx1oliNSkkYqiBl-->场景引入</a><a data-page-node-id="J3Mf61jCWC6cQhuWxNDFEi" href="LiveDemo.html"><!--pnid:vwGFfR1HOSwxd5KKG60oFN-->Live Demo</a><a data-page-node-id="lb98mYXjGcW2XdFpepaa5f" class="on" href="#"><!--pnid:PlsqNhVikt9FcaGjtKArxa-->推荐任务</a></nav>
+
+<section data-page-node-id="nDXxbdpIBg6oZpXtCQXvlP" class="blk">
+  <h2 data-page-node-id="wCaTaaObFk2Ua2y2sqi4Rn" class="h"><span data-page-node-id="QSbZCC4Q4hJTm5cDZeB9XD" class="num"><!--pnid:KliH87tmRt2LYyHKFx07p0-->一</span><!--pnid:2QQBOTJ2eQFj3SSQ6FpYmW-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="0k2clSYr9NChbcEVq9T34l" class="subline"><!--pnid:NG6m9EtD4dpUlrcFGlZUaW-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="QrW66wiqVEl9BA053CrMkM" class="card"><p data-page-node-id="22wScglXj4NamCQVrUX6Fb"><!--pnid:6eVmZKMmz6UlrwnB8UrxQY-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="W3DzwthzoLvFd3qYXtAGhg" style="margin-top:10px"><!--pnid:xIqHkbNUd15wgzKlOYVsTk-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:bsAUBjC1Te4TUdaDB0ivps--><!--wb-skill-start-->
+<div data-page-node-id="9DW8iFDYoVFHngCMrDrp0Y" class="wb-skill">
+<p data-page-node-id="t1nMngwoHVZzNmlFKDS57K" class="wb-skill-lead"><!--pnid:ldBKIUoo4z6ETixIxcKCif-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="9DR7csmzrptfvyElsTFHaP" class="prompt" id="wbSkillPrompt"><!--pnid:S0pQ2ObgXszrkyo9QL94h5-->【准备】这个场景的规则都在「差评与退款原因聚类分析」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/MxRO3gYt2Vl89B4iAwEEco/nH6A3nYpKl1C/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="FaApSVSge77JBFw1oeojAS" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:JKGfEGK5FP786wviFoB8vF-->复制</button></div>
+</div>
+<!--pnid:vUrg9Fo9EektZpwg5h5PUA--><!--wb-skill-end-->
+<section data-page-node-id="NbY65B1YbXFIdv1oJDMoDP" class="blk">
+  <h2 data-page-node-id="aAOmC1khmGHjtUboVJ5Z5h" class="h"><span data-page-node-id="YoupGefWJ0tEZOxy3KVVDC" class="num"><!--pnid:pV41R536RdKYTBKpkdaPbx-->二</span><!--pnid:jjVCCTSvjVx3peX17lo3te-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="bn8eCiV3Ke8zxevGRVrrkd" class="subline"><!--pnid:zYWE61K6k113kNEejfjez2-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="vC42pKteolz9qkxeuVVNJH" class="tlist">
+    <article data-page-node-id="pDexuLDMr1lyz0EImFVAXw" class="task">
+      <div data-page-node-id="7yBaoQJiMLFBmDKdZoog4f" class="th"><span data-page-node-id="3xJRIs3eBJBCrLgD6TzDW4" class="no"><!--pnid:SFDM3CnYLrZFzsl90ei1rD-->01</span><h3 data-page-node-id="61iZ6C7AF745tyNjXuXyxV" class="ttl"><!--pnid:V0E2D3BqyHodxAc6I3DRXG-->首推默认</h3><span data-page-node-id="pragEpLwoVZ9nVh3ywe0tS" class="star"><!--pnid:rQz3cuqrZj8pjRHGdMSE3v-->与一键体验入口一致</span><button data-page-node-id="PQotMQRHeeC5bF7PJrmJ3t" class="cp" type="button"><!--pnid:4YH5nREjKk8lH4KeRAgxPx-->复制</button></div>
+      <p data-page-node-id="esFUOeMgstIHYKnpOut68Z" class="tp"><!--pnid:bA0OFXdwtSAMZTuQHPJeWp-->我来试一次这个技能。三份材料都读：「01_近30天差评文本.xlsx」「02_退款原因记录_近30天.xlsx」「03_物流时效与承运商数据.xlsx」。油污净的差评里反复出现「瓶子漏液」，差评率从 2.1% 爬到 4.8%，老板娘问到底是产品问题还是物流问题。差评和退款原因两条线对照着聚，归因要往下钻到源头（分物流公司、分地区、分 SKU），钻不到源头的类不给整改方向。产出三份：「差评与退款聚类分析报告.xlsx」——TOP5 类目各一段，每段给条数、占比、涉及 SKU、在退款原因里的对应分布、下钻结果、整改建议；「整改清单与验收标准.xlsx」——一条整改一行，列改什么、谁改、什么时候改完、下月该类占比降到多少、怎么验收；「静默退款估算.xlsx」——不留差评直接退款的规模测算，列条数、系数、受影响单量、客单价、月损失，系数取值和依据写清楚。漏液那一类和「物流慢」那一类重点看，承运商和线路的集中度要摆出来。对外回复我不让技能写，回复我自己来；推荐意见、完成质量评定、责任认定三栏留空。</p>
+    </article>
+    <article data-page-node-id="QGfluv7W58z5dvfrkSkk7x" class="task">
+      <div data-page-node-id="kCwtd1QZoQtwUXqY3wnWYH" class="th"><span data-page-node-id="iztWUEN1SXoQzUHil2d9Cv" class="no"><!--pnid:qWUquSuPdzKNisFiTFo3aK-->02</span><h3 data-page-node-id="4WJcP2yfvbTr3ycaWJFUTh" class="ttl"><!--pnid:c5UQX6lI4MIhqMSxPkpTpu-->只查漏液这一类</h3><button data-page-node-id="y9tHDQ2xnexdGCHvGci5YU" class="cp" type="button"><!--pnid:E95It4WNmap6ulzkdg2Dyd-->复制</button></div>
+      <p data-page-node-id="ovbEOFr8oYxWtzqk5vpA02" class="tp"><!--pnid:1U9PAEHJdEqy6lUB49APm9-->先别做 TOP5，只查「瓶子漏液」这一类。读「01_近30天差评文本.xlsx」「03_物流时效与承运商数据.xlsx」，产出 Excel 一张：一条差评一行，列差评原文、涉及 SKU、下单时间、承运商、线路、签收时长、破损描述；末尾给一段小结，按物流公司分开看是产品问题还是运输破损，依据是哪几列数据的集中度。</p>
+    </article>
+    <article data-page-node-id="mGfTTSno2fVCNdumZyw8sF" class="task">
+      <div data-page-node-id="JuiRbaAdYQdOJPMsU3Grr5" class="th"><span data-page-node-id="GQUhwJ2GtJfWaWYd3s13aR" class="no"><!--pnid:iDcXg4IY85SOzMgtwjoFSW-->03</span><h3 data-page-node-id="XFev6utn8HckIGPx2suIqC" class="ttl"><!--pnid:GhBFoWXVnN0uleKdGYPMTn-->换成退款原因口径</h3><button data-page-node-id="58ar7VOh9jieoW2EiPoX6B" class="cp" type="button"><!--pnid:kuiZaXdMYmBHL1JVorEd6w-->复制</button></div>
+      <p data-page-node-id="7bMfAhH0YLreTdcvjdeNMm" class="tp"><!--pnid:GQcwrJOE2tbdqxvCugRRoi-->这次不用差评，只拿「02_退款原因记录_近30天.xlsx」聚类：买家退的时候都选了什么原因、补充说明里写了什么。跟差评的结论对不对得上也要说。产出 Excel 一张：原因一行，列退款单数、占比、选择的官方原因、补充说明高频表述、涉及 SKU、跟差评聚类是否印证。对不上的单独列出来说明可能原因。</p>
+    </article>
+    <article data-page-node-id="Bbj0NXHLcN6GPeF613Ph32" class="task">
+      <div data-page-node-id="eUwopMUHvGG9pq8N5lFN59" class="th"><span data-page-node-id="y58lQBckZO4e83Ho8PZfyg" class="no"><!--pnid:YeY05bRH9HKmDBSlVtGpaV-->04</span><h3 data-page-node-id="fZgEsc4ZZkL3MoAz2hcAzZ" class="ttl"><!--pnid:5YLv1sAm3Z5XBpL7PzMo8r-->一次过四个来源</h3><button data-page-node-id="LRqim6hbHG6jK15sng38wh" class="cp" type="button"><!--pnid:H8xjigszoWOc9mfhfwXJE8-->复制</button></div>
+      <p data-page-node-id="L2tnRgIjsjnCPufntUWet3" class="tp"><!--pnid:u2iJHKQj19yx2HP2SAQQEd-->演示数据里补上客服会话记录，把差评、退款原因、物流时效、客服会话四份数据一起过。产出「差评与退款聚类分析报告.xlsx」里加一张横向对照表：问题类目一行、来源一列，填每类在四个来源里各有多少条、能不能互相印证、哪个来源指向性最强。互相印证不上的标出来。</p>
+    </article>
+    <article data-page-node-id="dH78k6KZJ1SjnXlvkuxRJO" class="task">
+      <div data-page-node-id="J1fRV3mY3ZwfOY1CkeSdEC" class="th"><span data-page-node-id="6HSs4ZbiBwbA8TNCoUTMAP" class="no"><!--pnid:J5C3r5cipVtj0U5j6ecmVb-->05</span><h3 data-page-node-id="tkG4s4MsJjW9Ln28QKwDev" class="ttl"><!--pnid:RNhSkTM8NNYkbPaqlKcbN7-->给客服主管看的版本</h3><button data-page-node-id="Vv5aNVc2qWgelrRpn41DSv" class="cp" type="button"><!--pnid:rRyNwHpLDl7dFUiyUtklXb-->复制</button></div>
+      <p data-page-node-id="6Ueg3eCRqvvRkqXohOV1ex" class="tp"><!--pnid:WlCTars6C4Y1bNeXIBhYIw-->读「01_近30天差评文本.xlsx」「02_退款原因记录_近30天.xlsx」，把结论压成客服主管能用的版本，输出 Markdown：TOP5 各一段，每段三行 —— 是什么问题、原因一句话、我要不要再补发和补发前先确认什么。整改责任人和外发口径不用给，数据源和口径简单标一行就够。</p>
+    </article>
+    <article data-page-node-id="ASJnJs3af3GYR9E8Y3TSMl" class="task">
+      <div data-page-node-id="hLT7c3WTUcbQ1FbpbkU2iu" class="th"><span data-page-node-id="an3Zrgd2MvgqcYaagASXQI" class="no"><!--pnid:Xm7eWF2n8aeVLEqKNxqJkX-->06</span><h3 data-page-node-id="4JmlUHUqmWBgvq1JIZTqAq" class="ttl"><!--pnid:vlOp3PwSzZKDTnnJUkgXiB-->让它反驳自己</h3><button data-page-node-id="9JsCxOaR5Ydgiia4EGW7pR" class="cp" type="button"><!--pnid:UIJPYr28quReK9xHTs6ciH-->复制</button></div>
+      <p data-page-node-id="A3uhLhEx8DPMykeN9vdhGM" class="tp"><!--pnid:DdtMXpVbIKByzZogfNQMFJ-->「物流慢可以排除出品控问题」这个判断依据够吗？读「03_物流时效与承运商数据.xlsx」，把承运商集中度、线路集中度、以及对应的静默退款数据摆出来，一行一条。站不住就改回产品侧排查。产出 Excel 一个对照段：假设一行，列结论、支撑数据、数据强度、是否需要重查。</p>
+    </article>
+    <article data-page-node-id="yE52qrQxbCL27h6QgS1z5O" class="task">
+      <div data-page-node-id="IoKPjcjeHk8u9g8cGQwo9Y" class="th"><span data-page-node-id="p1OqFsfi8lgsFmeKV2yKgc" class="no"><!--pnid:7wcz3R0qOHMldsGbMWk4QW-->07</span><h3 data-page-node-id="Q2sxL339x2BYqrP5gjQ3WA" class="ttl"><!--pnid:u7ahEIBzlXQhSzRJ3C4Y8H-->专门拉长到 12 个月看</h3><button data-page-node-id="gbWkxkHd5eyDswWAEiDXAq" class="cp" type="button"><!--pnid:fRtCD8lryhE172mgAb9AOF-->复制</button></div>
+      <p data-page-node-id="JsE1r8RwAAOtkf9oKoAKTy" class="tp"><!--pnid:ixdIK6ctdnqGuceALJt2aS-->读「01_近30天差评文本.xlsx」和可查的历史差评记录，把「漏液」这类差评拉长到 12 个月看：去年同期有没有出现过一波、两波分别落在什么时段、跟高温期有没有相关性。产出 Excel 一张：月份一行，列漏液类差评条数、占当月差评比例、是否落在高温期、判定（季节性/持续/偶发）。如果两波都落在高温期就标成季节性风险，并写清这个结论的证据强度。</p>
+    </article>
+    <article data-page-node-id="FQH4BXRc0Fo2etZ40OPNlm" class="task">
+      <div data-page-node-id="pXyNFod6RfR0ad5BsovWit" class="th"><span data-page-node-id="I1GtxONQ7wxyPqCG9amWFK" class="no"><!--pnid:APH3W1LswSxYamPyUaYy3S-->08</span><h3 data-page-node-id="JqOYRZlIyiaSSNaFW3lyr6" class="ttl"><!--pnid:mfVS0AeUQ6zSCwBo5Pf4fP-->对照整改清单自查</h3><button data-page-node-id="axaaztMTnh3mUQT6TbcCiy" class="cp" type="button"><!--pnid:xR8De5XELtajW3HUZZDbma-->复制</button></div>
+      <p data-page-node-id="WzvWpukF5uWxCngd7nwEJk" class="tp"><!--pnid:uunwjctxdkHIiDLpk4i57e-->对照整改清单逐条自查：每条有没有写清改哪份文件、谁负责、什么时候完成、下月这类占比降到多少、验收怎么取数。产出「整改清单与验收标准.xlsx」里加一张自查表：整改项一行，列承诺内容、缺哪一项要素、补齐后应该长什么样。缺的列出来我补。</p>
+    </article>
+    <article data-page-node-id="qzjTaATNunq3xs8UHFvUhQ" class="task">
+      <div data-page-node-id="0zI1shCUjclXR4epdsfWs8" class="th"><span data-page-node-id="0Sk4d9hs3VQoVrhaSptBsU" class="no"><!--pnid:Ro7gC0VE14NsOZsdykFsdp-->09</span><h3 data-page-node-id="eWl34HvEXvZfKtSseLFNq8" class="ttl"><!--pnid:RLDFiGLVo0SXiu8xkHI5eb-->折算成隐性损失</h3><button data-page-node-id="mN5NO0N0B6xApPePbjZJj4" class="cp" type="button"><!--pnid:v5zYYAYgfjUT2F8cNBrUqV-->复制</button></div>
+      <p data-page-node-id="zTrsR77xWdcKIiKh9rqyKH" class="tp"><!--pnid:vaKN7oI113iCdRJWL9UgRN-->把「不留差评直接退款」的规模估出来：按差评条数乘系数算受影响单量，再乘客单价。产出「静默退款估算.xlsx」：一项一行，列差评条数、系数及取值依据、受影响单量、客单价、月隐性损失、算式；再跟客服补发的安抚成本（补发加运费）并排摆，各写清是哪个月的口径、数据出自哪份材料。</p>
+    </article>
+    <article data-page-node-id="4cREAZlAIPoggCr2BJCf2m" class="task">
+      <div data-page-node-id="eKrrL1fGBe6nJUySADAXdh" class="th"><span data-page-node-id="dD6Xty9s1uRQYytZfBDZ4u" class="no"><!--pnid:0SzYmr6gbioedPEhdKpENw-->10</span><h3 data-page-node-id="by2akkAomveEykLCbtASuz" class="ttl"><!--pnid:sLocQSi5BgJ7rfLGOQSq89-->沉淀成聚类口径表</h3><button data-page-node-id="yREfJu8Pm9CJKjpqhjZT5f" class="cp" type="button"><!--pnid:kIjNVIRPYkZ8B2WufWGtw6-->复制</button></div>
+      <p data-page-node-id="QByG2mTSEHctYhhf28KyoP" class="tp"><!--pnid:7dhd4s7ty97smtrKOYtRTN-->读「01_近30天差评文本.xlsx」「02_退款原因记录_近30天.xlsx」，把这次的聚类类目、静默退款系数、整改验收口径整理成一张表，Excel 一张：类目一行，列类目定义、判定关键词、对应的退款原因、静默退款系数及依据、验收指标（这类占比降到多少）。系数和指标要写具体数，下个月再跑直接对比占比变化。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="6DmVio8FwtT39qppbYMJva" class="cta">
+  <div data-page-node-id="1snCDIE1JGT6kSEw5I877R"><h3 data-page-node-id="XTZC54lD7r3qrjlse07OcE"><!--pnid:3cVbLiPslFSSIKTlUL0YYn-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="PG3BjqySmxeOHquJuLIv6B"><!--pnid:ebTAwhU7uPTbsnuxumHZ6l-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="WqPY7Rsy79N3ZJ8auWN08T" class="btns"><a data-page-node-id="fcuN9FHFsiSQjq2rnaDrzd" class="btn" href="#" id="ctaContact"><!--pnid:YNrpMVRoGD7Tqu3PsiRpcR-->联系我们</a></div>
+</div>
+<footer data-page-node-id="H12xCwErhMPN90qBqYMV4x"><!--pnid:srXfOfyDzJeLbFkXu3oE07-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 不碰钱不对外发声 · 执行按钮永远在人手上</footer>
+</div>
+
+<script data-page-node-id="enVdEOemcBofAO5OlnDN7P" data-pnid-children="r6X8cm3MudqLXkep9RZRu4">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="eGtXkbeyi0At9Vd4GXA16W" data-pnid-children="jxcylVY9S7g4BmSpEq7qZw">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="F2xbwsEYQEwnNQpLRLQBui" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="as9ISXSyr5nxUVrE85z8sb" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="G2Xj5mXUxWTvYeXNsH64sd" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="xvVoVXh3LSEzW2BqgqU0cj" data-pnid-children="9OvJBVx0F4hN89qxGQAkM4">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="ZqdpS3egd250ISNBYvkk9B" data-pnid-children="QBpegy5VqYkMyQNHAUF8Bs" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

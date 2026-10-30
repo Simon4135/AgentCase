@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="YrQa16VoTrXW6u5FSwgUII" lang="zh-CN">
+<head data-page-node-id="odvAz2EnfDGIgQ7qB2b9ti">
+<script data-page-node-id="N6Z1s0ttuzMHSbpwJxiUi9" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="XcA4nv6Spis3beDcH9m5RK" charset="UTF-8">
+<meta data-page-node-id="PXEqvu5GZ2ofy4kMAe95ZZ" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="USBqHzEl0iBwrakokVfCzo" data-pnid-children="c00o0JzbT0qAXyhB8jjSJw">竞品拆解 BOM 初稿 —— 照片与丝印对着自家 BOM，拆出成本差异清单</title>
+<link data-page-node-id="JHa7MdPecgkVy4tom4MS5y" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="iwipOqss9Fuqh31IxBFBa4" data-pnid-children="in9sLZLeRdYJ9wZr5VFElw" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="xd8sfr7l9dphGS4eHN9tuu">
+
+<div data-page-node-id="oWi53y5hUdxgReMFjGFXHQ" class="wrap">
+<section data-page-node-id="3xv2pt9L4knapfTB617qFd" class="page-hero">
+
+
+<h1 data-page-node-id="uvkRusKz84Sa8CZmdX90AZ"><!--pnid:7mCnd9reDImFI0yXzQxIVE-->竞品拆解 BOM 初稿 —— 照片与丝印对着自家 BOM，拆出成本差异清单</h1>
+<p data-page-node-id="HvKVFog0SQqP8NUX2Q2kdT" class="lead"><!--pnid:Zej6eGfFj7ovGVaxAQZYou-->拆解人人都在做 · 但拆完的照片堆在个人目录里，成本差异永远停留在「感觉」</p>
+</section><nav data-page-node-id="V4a0iPmCMbgOfrAOEGj6w4" class="subnav"><a data-page-node-id="XQDFjTrlv0EApgNoCSJ3Tj" class="on" href="#"><!--pnid:0FTtGxpPMuKc5uimPRv1wy-->场景引入</a><a data-page-node-id="5iLDOJpcdTvk8127sUhjeK" class href="LiveDemo.html"><!--pnid:xbmmJBZdrAuG7SgSVgiM9E-->Live Demo</a><a data-page-node-id="Hp8OmbkKFBnesFdLiuNIh3" href="推荐任务.html"><!--pnid:K88VJZ4VPFNhwTXwwx9Hwa-->推荐任务</a></nav>
+<section data-page-node-id="OgirArhxbV8R4HUOQgWbwB" class="blk">
+  <h2 data-page-node-id="9gEpcpQvfNzltoeqmcjTqc" class="h"><span data-page-node-id="KEcOh5R3wNF1pG46XeFaEE" class="num"><!--pnid:3pq8NPRfcSQiuX6tvJVdW4-->一</span><!--pnid:DsTKNxNfXGETUvDsiRmPBe-->这件事现在是什么样</h2>
+  <p data-page-node-id="g4MbQbhWRbc0Tt8wavrLmw" class="subline"><!--pnid:Q6SSaHxwCN7ziboxUtP9Xx-->硬件研发与物料工程 · 真实业务触发</p>
+  <div data-page-node-id="4oetPYAdPqlBkDcIWWHiMS" class="card"><p data-page-node-id="Ial2UXU5EFwlnK7FylzH5i"><!--pnid:F49yZyFkk227ID68JnCG2R-->竞品整机购入并完成物理拆解后，需要产出拆解 BOM 与成本对标初稿，供降本评审会用。会被追问：「跟我们的 SW3 比，主板上到底是哪几颗料拉开了成本差？」</p></div>
+  <h2 data-page-node-id="RhR4sEg7d8NHjo0tCgXEeV" class="h" style="margin-top:22px"><span data-page-node-id="SjrLcbiyETMykWPVsX8fy7" class="num"><!--pnid:0lReWk5WRo0Tsg0iUFyMpK-->二</span><!--pnid:CsxIPKHtOr3aOGTSFkQtoT-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="NMl04bGTYEnJquiyebKmee" class="subline"><!--pnid:Jks3yzN25yiGG1ABqC7OLK-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="45GxyBfmsGvVpsubzPkmgd" class="pains"><div data-page-node-id="EX6z53HNUZWRtFkqgt2ZVT" class="pain"><span data-page-node-id="qQP9XnXsFVJA7flTL3ruOW" class="i"><!--pnid:PNOPmSs6F4UT1vkTd15jtM-->1</span><div data-page-node-id="QRlyKLiDf2AhGUA7C1yEoq" class="t"><!--pnid:pPQvicnXlqVhr6ttEydVrr-->智能成本优化是竞争优势——拆解对标是整机厂降本的标准动作<span data-page-node-id="ram6JYoXc6ZlETsm4O3asR" class="src"><!--pnid:VPMI7K45FOb4T2iodGoj4V-->依据 · <a data-page-node-id="0zDyWkVaxe875zqm6xmQAS" href="https://www.eetimes.com/intelligent-cost-optimization-is-a-competitive-advantage" rel="noopener" target="_blank"><!--pnid:f7SxNgeAbiSF74fbl0GB2J-->EE Times：智能成本优化是竞争优势——拆解对标是整机厂降本的标准动作</a></span></div></div><div data-page-node-id="c2elAF1V3dTlhl1ijF1SM8" class="pain"><span data-page-node-id="BxpDUmUnNXCd2ozRbAMfTP" class="i"><!--pnid:hVuhgVSy33AmSLi5RIYhNm-->2</span><div data-page-node-id="hb712RNsHEfuEDd1iooXUS" class="t"><!--pnid:91q0VZDXz4eOrEnoTMRoEZ-->拆解对标支撑 15-40% 的降本空间，但前提是拆解结果变成可比对的 BOM 模型，而不是一堆照片<span data-page-node-id="FCt8z7LDJ3nKcXZrzElvaZ" class="src"><!--pnid:DNFCbk2gtpMnPrkhsauDHK-->依据 · <a data-page-node-id="tWrLKpTWHu481n7tmRFy94" href="https://www.goken-global.com/insights/teardown-benchmarking-cost-weight-reduction/" rel="noopener" target="_blank"><!--pnid:qV3cDllCf532r4ZvNyh1vh-->Goken 拆解对标案例：teardown benchmarking 支撑 15-40% 的降本空间</a></span></div></div><div data-page-node-id="k5s47pPyn3SHiQxCW8dIGH" class="pain"><span data-page-node-id="U16UKAGydX5JMXnzyy5k6e" class="i"><!--pnid:xuf32dMtXWBHV8aToChcZL-->3</span><div data-page-node-id="DRQHwhXPehq7U3PBvvGOb9" class="t"><!--pnid:LbPl7KfDOB3GtflVASAJV8-->拆解式成本对标方法论：基于 spreadsheet 的 BOM 成本模型建立步骤——从丝印到型号到参数到估价，每一步都是手工活<span data-page-node-id="VF1s2Vi3Q8OHczWDdTCoQG" class="src"><!--pnid:KqiTPjmD2L2hYnCLd5d6XY-->依据 · <a data-page-node-id="X97hmFvJIpdknFo2tsBduT" href="https://www.emuski.com/blog/teardown-based-cost-benchmarking-a-step-by-step-guide-for-design-teams" rel="noopener" target="_blank"><!--pnid:GBfvEhlKeHUe9mGh2k3TiH-->拆解式成本对标方法论：基于 spreadsheet 的 BOM 成本模型建立步骤</a></span></div></div><div data-page-node-id="oP6DaLAhFH6V02wXDm1e6h" class="pain"><span data-page-node-id="fP4sejKE5EoiuKU7732Qwl" class="i"><!--pnid:8sfEH5czViS6hi9ldstz2v-->4</span><div data-page-node-id="SlIo1NjakhanBEsq2z4CtI" class="t"><!--pnid:hKeht0gQlHc4Do2vnxyp3K-->逆向成本分析（reverse costing）是行业方法，但中小厂没人专职做，拆解结果利用率极低<span data-page-node-id="c8Vj0KIjkh0UIh3xXPDdjF" class="src"><!--pnid:FIq3Q3mxiVGk5bZUAnI74N-->依据 · <a data-page-node-id="zfEEDWZrmbsQdk8eT6VOaj" href="https://www.marketopia.org/blog/reverse-costing" rel="noopener" target="_blank"><!--pnid:In3WA8pajgx5la5zW5DhRE-->逆向成本分析（reverse costing）行业方法</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="IWPrAoPPGg0Qgk0Tfb3Tdj" class="blk">
+  <h2 data-page-node-id="0ScYoQzdkOHkNriXixiZJC" class="h"><span data-page-node-id="Z98yofOr9oqZzgrNyZPT5t" class="num"><!--pnid:TUlqTSLVXdVzJQmO1FHSuN-->三</span><!--pnid:Er7ZUVGpiXTNClXMWnapVL-->换个做法之后</h2>
+  <p data-page-node-id="5YiRgBQ0opKbXq1tyJ4xDD" class="subline"><!--pnid:xZR57cngDL05fqAPnwgNcs-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="eAE27VvxoomLOJHJUpBlJ8" class="cmp">
+    <div data-page-node-id="IrXwnsOcol7ltARLeGJh44" class="old"><h4 data-page-node-id="0CBijQ3DNhqyvZdF7M4c6x"><!--pnid:a4u8OXvQJ21ohNkADlGAKr-->✕ 现在的做法</h4><ul data-page-node-id="87PParb7XBFL9pyCsxzSyt" class="list"><li data-page-node-id="thg6sRkMfleBMbDWZVRLG1"><!--pnid:ABg2dO2IRK50bFUzuiFqgO-->智能成本优化是竞争优势——拆解对标是整机厂降本的标准动作</li><li data-page-node-id="sURGV0FYyJNnKjAhTiZE3C"><!--pnid:jgEoR4wi9x9x0OZoRTGgfw-->拆解对标支撑 15-40% 的降本空间，但前提是拆解结果变成可比对的 BOM 模型，而不是一堆照片</li><li data-page-node-id="l3atRonajBjttewcOFNOlC"><!--pnid:1uO5BJUxkVSOKy87ZU0J9L-->拆解式成本对标方法论：基于 spreadsheet 的 BOM 成本模型建立步骤——从丝印到型号到参数到估价，每一步都是手工活</li><li data-page-node-id="77lCRwVwPwQbuHNc04wQg8"><!--pnid:CEnIeDjgl8bMmzqsRBLKHE-->逆向成本分析（reverse costing）是行业方法，但中小厂没人专职做，拆解结果利用率极低</li></ul></div>
+    <div data-page-node-id="kMwVZvAiOR1THHgfE3H4wP" class="new"><h4 data-page-node-id="Mg7J8WPztXYmi6R7s1aUwF"><!--pnid:7jf4GG9HmMH3kXUgOLA3fg-->✓ 交给 Agent 之后</h4><ul data-page-node-id="YnFqUrff7zPlVioOuc8lDO" class="list"><li data-page-node-id="ZqUOjqZNbEjLvwc4CU7eWc"><!--pnid:K0j52McJaIm36ReJcX2xrm-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="bxi6zFr22rNvBzZeN9pI8D"><!--pnid:xYEIR3ThQE4oHE2q6SZ10f-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="KGrG6zMGpCyoHZZ85G6q0y"><!--pnid:lLNKO2z37vqPDR5T1xL2L9-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="B6jMm20ELdfHmxICv8aoYQ"><!--pnid:JIT3JSdiVrntXREpsA3Y40-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="uDFJgbMrV7lmU2DLYVDMie" class="blk">
+  <h2 data-page-node-id="ZlCUYFG9tIZ86N0LJZs9Dr" class="h"><span data-page-node-id="3duqu14rkKyN1WtVNkeDrb" class="num"><!--pnid:dvvZwGnV1bUq58pRZLo8Ku-->四</span><!--pnid:8DS6FPlNkZvR5xQd1THC0S-->场景闭环</h2>
+  <p data-page-node-id="dbAGepcU6H8u0zejh5pisb" class="subline"><!--pnid:VQjcmiBeRaqday2F8OPq1G-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="dABMI5MElzWdwRxjmktbpS" class="flow"><div data-page-node-id="ieyORCKE3DzdnWSxvlLQyl" class="step"><div data-page-node-id="OyMkoepOHdvVndNUWV5TyN" class="n"><!--pnid:qUqVLvJziiVACW2SvjdEUa-->第 1 步</div><b data-page-node-id="jiLXLOjTDBHoModWhAb8aS"><!--pnid:THGiVybC6tPzGKRJi2x54k-->要素校验 · 照片与丝印能不能对上</b><span data-page-node-id="Hibty9O4i0oEBPG4RCeuMG"><!--pnid:Ph4axIFivHGdFgdFS8OJub-->位置编号缺失的照片标「无法定位」，不阻塞整体</span></div><div data-page-node-id="itI8XjZKPMJ3VeSdjyffhe" class="step"><div data-page-node-id="F1K2y7v1APMsOPvItj1Dh3" class="n"><!--pnid:2tGjkEiJpKZbOEwwFdur68-->第 2 步</div><b data-page-node-id="2h5tUpcXIumUEATfMeV3ge"><!--pnid:oHCnykPHy1L4CPr4v43K20-->识别与登记 · 丝印到型号</b><span data-page-node-id="cGgSpfHP6CgCNufwFN9ke8"><!--pnid:PAgPBNbY6yQbuzcVUNqmNK-->丝印逐条登记，识别置信度标注；认不出的标「待查」，不猜型号</span></div><div data-page-node-id="ZKZhLdD5cdB1rXfBsmtSIl" class="step"><div data-page-node-id="blK2VWTzK384qSj2J95ajO" class="n"><!--pnid:OpT5GK9jJEikkGu0M8LDXK-->第 3 步</div><b data-page-node-id="XjalVy5LuyjQKyCo1WPxOx"><!--pnid:enb4AZgMrFAQVJtpj8z01x-->对标对齐 · 与自家 BOM 同位置比对</b><span data-page-node-id="ZJNJdX4kTUt1npIawtaM3A"><!--pnid:yyAiaaLS1FNp3seFrN4LMB-->按电路功能位置对齐，同位置器件参数与估价并排</span></div><div data-page-node-id="sjVs1GpGz2HPfz1bJ63Ueh" class="step"><div data-page-node-id="Q0i2OlU0F28JOp7bG3PpXg" class="n"><!--pnid:WHE37P5mymextyMCb2uc1r-->第 4 步</div><b data-page-node-id="1HPeqwFBZliMC9qxlaJePP"><!--pnid:67q1Xl4yG6L4tzELaU0GX1-->差异提炼 · 哪几颗拉开成本</b><span data-page-node-id="2jvgjWvY3aSpFf3P8XOEPL"><!--pnid:uUbIux2l2h2bJunlKYxcmx-->成本差异按颗排序，Top 差异项单独成表</span></div><div data-page-node-id="GspXWqO7xOz3y9TbV1c1PM" class="step"><div data-page-node-id="cUeEguP177HsF2Rqn92Rvz" class="n"><!--pnid:NxjKPljt6G5aiBVWGcnBeR-->第 5 步</div><b data-page-node-id="DJgesFkz3yLfqrTYy37PaM"><!--pnid:JldAym1YsiiTaozk7fLEQX-->成文 · 拆解 BOM 初稿与差异清单</b><span data-page-node-id="XhjjmYMJeE9TIjjXXivln4"><!--pnid:pYJ9B0do8MicWYBitVGBXa-->估价列全标「估计值」，降本评审用</span></div></div>
+</section>
+
+<section data-page-node-id="LZM2U3I1cRGd36x03wziax" class="blk">
+  <div data-page-node-id="uLXh03ewMk2MXCoEOaPLhV" class="g2">
+    <div data-page-node-id="iseuf5lPh5jKWtpHyJOSnZ" class="card"><h3 data-page-node-id="8IJeZpyR1Uq9Pw4eLtp19v"><!--pnid:wnwxbU3YeZan4DgzylHZTA-->要准备什么</h3><div data-page-node-id="8qwl45ivyX6fNCrwqkSFD4" class="src"><div data-page-node-id="a0bULruiaVOoY4h7xoUrAF" class="fn"><!--pnid:bmR7tXlvJ0X190HVdALgfM-->竞品拆解照片（主板正反面、局部特写）</div><div data-page-node-id="RJIB2mCBzBgRQbLYi9X6Bz" class="fd"><!--pnid:T4gycQrGonCirkiZURXTPV-->研发个人手机/相机拍的，角度不一</div></div><div data-page-node-id="ZENa8ZkBbfvxQbyGKyHbpw" class="src"><div data-page-node-id="h5tzUD5lia1AexAZC7zwgf" class="fn"><!--pnid:Ess6BDhPBcUxLZce2Ef4IM-->丝印清单（现场手记或语音转文字）</div><div data-page-node-id="0YzDi6vsWuMDRPeZfls4DR" class="fd"><!--pnid:uZF7kZm9DducINClXuLTny-->识别出的器件丝印与位置编号</div></div><div data-page-node-id="lgpe9cSXEo2GyRg6yKnD2L" class="src"><div data-page-node-id="yC4Ql8yXRW4PA01c4gshOV" class="fn"><!--pnid:WrsTXlrAlWzSJojfMqD8ew-->自家 SW3 主板 BOM 与成本表</div><div data-page-node-id="hpjuy673VKLpHGB5EbNwOg" class="fd"><!--pnid:ELjdA0Hs3gGtNuVCptct90-->对标的基准</div></div><div data-page-node-id="EP7YYiPGawfsfqs0BCzArM" class="src"><div data-page-node-id="fIz35JgOV3nMkoVwWuXEva" class="fn"><!--pnid:LlMCGu29Id9P4nFlNI2mXz-->公开渠道价参考（授权分销商报价截图）</div><div data-page-node-id="n2zK5NLdxP3HKLebO9ZpCA" class="fd"><!--pnid:ZaeOgi1SEsSvX4wLQu40Bf-->估价的地板</div></div></div>
+    <div data-page-node-id="zQnu8F0NMqX7QW3PgvEelw" class="card ev"><h3 data-page-node-id="yLt9kGE6pC1G8pSa4oDJXD"><!--pnid:zkew5mJKsRBNHdjEbJcXHg-->为什么这个场景值得做</h3>
+      <p data-page-node-id="JKO7en9WuYqX8kKMD5dskl"><!--pnid:UTbFOXHY05k3D0x1DzXsaq-->痛感 3 × AI 适配 4 ÷ 落地难度 3 = <b data-page-node-id="a70fEAK1cDeOlPo4jo3xeK"><!--pnid:IAQ4PWvD7KMfAO12vIs1HY-->4.0</b></p>
+      <p data-page-node-id="6lnlO7Nw3Q1cljOGnUXzxM"><b data-page-node-id="DEmh64V6BxozLHF7D5B2Z1"><!--pnid:rmRaG8zZ94N0fqHOtpyzWi-->最大差异点 ·</b><!--pnid:2Ye4hO8PzhNyGijC4dtt2m--> 与「买专业拆解报告」的区别：专业报告按机型卖、颗粒度固定；这里拆的是自家关心的维度——每颗丝印对的是自家 BOM 同位置器件，差异清单直接长在自家成本结构上。拆解照片库越攒越厚。</p>
+      <p data-page-node-id="6mdgvAndhEolea2a3A7H0j" style="color:var(--ink3); font-size:12.5px"><!--pnid:FpiShe1TSSCKoMjFbJd3tm-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="lX9VSQHbsigrYjLhN6Isz8" class="blk">
+  <h2 data-page-node-id="2nsNRawvsSF4kwmF8iOwf3" class="h"><span data-page-node-id="ixtOb3JflKqSl0kGgQUTwM" class="num"><!--pnid:ZevainBd4RI0XrLOh7VVlE-->五</span><!--pnid:P1QSzgfXMQapesSNAKi1BM-->会产出什么</h2>
+  <p data-page-node-id="cN8ayKgAD04yfVGF9v93NZ" class="subline"><!--pnid:GJps5MB6MZTcXdON7XUDaq-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="fXIaeHZaMC2ww4dbFYliXS" class="outs"><div data-page-node-id="k4DfSDUEadTo93w7w22zGf" class="out"><div data-page-node-id="sHDPApM88My5XSkR22HkTv" class="on"><!--pnid:nsjWbHalVnE4JK3JKRVFlh-->正式件本体</div><div data-page-node-id="6EWdj9GN3QzLGttEIEndQX" class="ot"><!--pnid:be8jMtiCSwp3MK7u4wi20c-->拆解BOM初稿.xlsx</div><div data-page-node-id="FFQJD0GL7KMY2jIHqXEEaY" class="od"><!--pnid:SCsFuRuhIjnIZ9DHirvJI0-->正式件 · 丝印到型号到估价 · 全标注估计值</div></div><div data-page-node-id="7aV7178wBxXVwgEN0MYYx2" class="out"><div data-page-node-id="E3K9cBhBJhhgIoqVLBbUeJ" class="on"><!--pnid:cb5vyANTRPUZ7Lq7EKRhLd-->可派发清单</div><div data-page-node-id="VnKCq16AfIEvNgBcSJ70RI" class="ot"><!--pnid:tFkF4DjyIYSvWhbKp7P2yF-->成本差异清单.xlsx</div><div data-page-node-id="wXBO7Da2EgiMOQCOpluhff" class="od"><!--pnid:8QeGmoqd5mbpFmJZEkXMr2-->可比/不可比分列 · Top 差异项排序</div></div><div data-page-node-id="mRKJeiuYKxrNwlSmavZG5i" class="out"><div data-page-node-id="oxtC2FGlGubqYQpo89f5mW" class="on"><!--pnid:nNUbNf0lsgZNR2wetv0gFO-->可派发清单</div><div data-page-node-id="maLFUN5RS0OlK6oMas8m2h" class="ot"><!--pnid:YjtjciUAI3cYLJOjRkeH36-->待查丝印清单.xlsx</div><div data-page-node-id="kwaSeGD8LgyYA9rZYp8LUS" class="od"><!--pnid:eRxstWFzA8Q9ENNdSOt4SJ-->认不出的丝印 · 留给研发补查</div></div></div>
+</section>
+
+<section data-page-node-id="HH5K1NW06o608wlRRbFyEF" class="blk">
+  <div data-page-node-id="6R90jpMnPt0pBuIVFvtYya" class="card warn"><h3 data-page-node-id="J7HBUkbY8DVdeMdXQSaVf5"><!--pnid:iN3yykW5hTZjl8aHmyQylF-->这套东西不承诺什么</h3><p data-page-node-id="UgoH3LUd65qWnmxU5czvTj"><!--pnid:5jHRQ9f29N3wHEdOBUPmaN-->不做竞品采购决策与成本承诺——估价基于公开渠道价与经验系数，仅用于方向性对标。估价列标注「估计值」，采购份额决策另走正式流程。</p></div>
+</section>
+
+<div data-page-node-id="P0PB4ANz22mQ2njYkMYU8Z" class="cta">
+  <div data-page-node-id="hp8vyzkT1jkJnYNM1awYQi"><h3 data-page-node-id="kRe8J4x2oIt2DusI7dWoI4"><!--pnid:Z39tZQxAlqwIZsrGYUM9cN-->想看具体怎么跑？</h3><p data-page-node-id="BztISE87zron6vT1D8uGuW"><!--pnid:RNku95odkZR49g5KxRm3o5-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="jD3CgnD8KkMO5UBnV9QMIl" class="btns">
+    <a data-page-node-id="KsrB6AfYiyCZV0nMKjDLLc" class="btn" href="LiveDemo.html"><!--pnid:wrAbHFg2vdZKg1ZnfMDr5S-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="R83S8h9nZELkryqmB9giyE"><!--pnid:AoM9P0YgmLN8zMUNoH083s-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 判定与放行一律人工签核</footer>
+</div>
+
+<button data-page-node-id="WlFfnNF2eNJDvGWkZirJO9" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="VfLVywkKkv4ngpNZ9pTOrp" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="BFK1IzVOuw1ZTskZGCRMA1" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="mTVP3u0f7hg3vmPVbHekG6" data-pnid-children="GGNez9PzBpdmkbJSiucTqf">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="EEQpAExTL3KLZwc8kHh6rW" data-pnid-children="GfgCudorMYLfyxTcLyJTAs">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="KCAxYM9xXxbisutKpb2TjL" lang="zh-CN">
+<head data-page-node-id="ZqahFvTr6OYhsTxSBCWnJC">
+<script data-page-node-id="ATiT15Vhkwj5cGZIzBjIcA" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="EUkzfWcbpwQflznDaJyyi0" charset="UTF-8">
+<meta data-page-node-id="F1i7PH80UIRg7CPEPGWqyq" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="T2KM01ZRbAKCtrkCDgTPO4" data-pnid-children="gFAjA2Ma8YssWLmioGMYf3">临期预警与分时段出清方案</title>
+<link data-page-node-id="V9DnvGZs5MFVvSYmLMgJ70" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="yjghvIIZjYJt9wXyEYIDtl" data-pnid-children="smetImW42S6wQJdk1QH4Zh">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="dxSF8B6tMZrrx3dmxQlBFX" data-pnid-children="2weg6t4pKH6kapbgGODPlJ" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="A1K9ZfLtzGlklMmVmK2tIi" data-pnid-children="XW2JoLdMu0boiMclOSB45i" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="qMcDPiycKpjFLhEIWjjuLh">
+
+<div data-page-node-id="HvWPZMhu4FLO9RkMQQ4UvP" class="wrap">
+<section data-page-node-id="zcE4jX6i7mLw8ybSu60k3V" class="page-hero">
+<h1 data-page-node-id="i20OotsNEuLKMWzBrO5IEb"><!--pnid:zBVUW0AXLvEi1wAhJgbGAF-->临期预警与分时段出清方案</h1>
+<p data-page-node-id="tYKwExl5z1j4ao9jra64wo" class="lead"><!--pnid:AXuLmmHRpBm9feaYw4hlOy-->过期食品处罚的起点是五万 · 而折价打早了白丢毛利、打晚了直接报损</p>
+</section><nav data-page-node-id="JvQafG9Xz8V0UCQFxcFSgW" class="subnav"><a data-page-node-id="olLidyFWDxPZNMdMamvkDT" href="场景引入.html"><!--pnid:TqR0XwW2RqN0zCiYARR2UX-->场景引入</a><a data-page-node-id="K3hAsa05jONmN4qynqUKYU" href="LiveDemo.html"><!--pnid:H9vQJqNSNCYxG7LBJ5FIg3-->Live Demo</a><a data-page-node-id="gZXH3RHpEpL2CMnTvWfxQm" class="on" href="#"><!--pnid:SrLkLAkqwor3CzRHDdtr5J-->推荐任务</a></nav>
+
+<section data-page-node-id="bgS2LFdJagxvKax7OoMdjk" class="blk">
+  <h2 data-page-node-id="8VmjeajYwwbjVLbJtbYWGN" class="h"><span data-page-node-id="BTZxlYOHmZmClZVMiUXugu" class="num"><!--pnid:7qCxiYytqFkjbUVhelfvhw-->一</span><!--pnid:yL4OGlHPHWONFnTZ7EP7OG-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="waJWpSV47G7ePGsUUk5LKa" class="subline"><!--pnid:qzFRUEs9Bh8Jfefc4PbhwZ-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="x5fdRS8Xeyz6QHLl86HmP7" class="card"><p data-page-node-id="rHFsGTNB1zBatDH0O0df5F"><!--pnid:zCB6to2PmYc6jUV0nR26fz-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="fdkGMqxl8jXD1BmfQHRkBv" style="margin-top:10px"><!--pnid:g2Y10TVmiZ3iFl8kjwTzKN-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:Pe2EVcCT6IzJ0yoGtMeIQr--><!--wb-skill-start-->
+<div data-page-node-id="gRjBEkH1PuiCAT1ZFHKGV1" class="wb-skill">
+<p data-page-node-id="0THwOL43gr50SgsZbr0uIX" class="wb-skill-lead"><!--pnid:owrdHEVBWBL8qhUJ2v0nrr-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="KYg9JrCiiYpRo3zlkmRauB" class="prompt" id="wbSkillPrompt"><!--pnid:uhp1n2iRVMGMIS3MxD76Sh-->【准备】这个场景的规则都在「临期预警与分时段出清方案」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/FxVUB0cixt06utj63216DU/BAZQD9jedjXI/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="O1u2gs59QMbkLjRcElHtKr" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:smOsxhkeZhWxzEr4giuqmY-->复制</button></div>
+</div>
+<!--pnid:Ovd59bSwiYCpcZfLUzbQKL--><!--wb-skill-end-->
+<section data-page-node-id="JbzZpgFmqpqrlQML4aJNyB" class="blk">
+  <h2 data-page-node-id="O98pKwYPvBQIGNYVNV490h" class="h"><span data-page-node-id="mTmApZqynaeta8H7rtRDcg" class="num"><!--pnid:UTdbQWD40rQDVmPc5hHBy6-->二</span><!--pnid:LcqP1doNgN58kaApH57V8N-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="xT6CxOjV5cp45Zz2w4zdFS" class="subline"><!--pnid:0TJhD94JOOFgtRPcL7Lopn-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="kUFQv2mcj5pmHkXZGBMGhp" class="tlist">
+    <article data-page-node-id="Hv30Xvz0svawLd2a0e9K9F" class="task">
+      <div data-page-node-id="RW31o5eLjk7TmZmASn4N9v" class="th"><span data-page-node-id="1Q2xdmUvMpDbqgPZ2FVY8T" class="no"><!--pnid:kD6nvsOwwuU2gcorONOC96-->01</span><h3 data-page-node-id="wGpDmXQx6ulsPXbaGQ5XMr" class="ttl"><!--pnid:05Uhe4fUoSK1NxtZTSCbXg-->首推默认</h3><button data-page-node-id="wGtrxNFAUOLlTyxyTmyXQa" class="cp" type="button"><!--pnid:dOkp0VZi0FI4bzSuco1Xps-->复制</button></div>
+      <p data-page-node-id="nJofAOZAylfLstZqPEWp0m" class="tp"><!--pnid:Ac9BZscXAA9sfmijLkOXvd-->这是今天的效期检查台账照片、最近两周的分时段销售流水、我们店的变价权限表， 还有上个月的出清和报损记录。
+帮我出今天短保商品的临期出清方案，分时段给建议，每个建议说清楚依据。
+已经过保质期的东西不用给方案，直接列出来让我下架。 台账上有一页字迹太潦草你看不清的，单独列出来我人工核对，别猜。</p>
+    </article>
+    <article data-page-node-id="PcCW9mDmsm7j45jcxjLcnS" class="task">
+      <div data-page-node-id="bv4hawYW6WHqCHOkj8kPv1" class="th"><span data-page-node-id="b2i4YeZCR3m8aivm3r0OW4" class="no"><!--pnid:zF6bH102V6SnqtZwuzby0X-->02</span><h3 data-page-node-id="m59VPnMkjChtFIyg21eHtz" class="ttl"><!--pnid:S3PnelIy2EogxQ6MJnnToP-->只排今天的处理优先级</h3><button data-page-node-id="qYgc9BeMiLuWfsSwyz6vWh" class="cp" type="button"><!--pnid:wfi1ErlbYW6JyapGUN8ZqY-->复制</button></div>
+      <p data-page-node-id="zQfwH0UW3srXMsOR65Cy6N" class="tp"><!--pnid:rdRKQNUjp8m3YWWd1Ot6Vz-->先别出折价方案，只回答一个问题：今天这些短保品项里先处理哪几个？按剩余效期、库存金额、历史售速给我一个 TOP 清单，其余先不动。</p>
+    </article>
+    <article data-page-node-id="UGVQXe1QYp3ZPWJYlMhJ8z" class="task">
+      <div data-page-node-id="l4rl5jxKejRzsUUlxFyXru" class="th"><span data-page-node-id="KDnvMCwsQWmVzb6spjtKI3" class="no"><!--pnid:OdvGs2iRZIsOSNNh1Ndpzs-->03</span><h3 data-page-node-id="sBAIvRMh174udaqHAmXM5d" class="ttl"><!--pnid:VRGVc14ELqQ6V0MRHNaVGl-->换成四个品类分开看</h3><button data-page-node-id="etZvDJzBZEvk17I3GJlyE1" class="cp" type="button"><!--pnid:QnxaSr4lhg1B8epa7IBv57-->复制</button></div>
+      <p data-page-node-id="pAPjvL8b2Ipnnhu0g3Y2kw" class="tp"><!--pnid:qi5Z6Vh3a5JmD0e4YtT0dU-->这次不按全品类跑，把烘焙、乳品、卤味、鲜食四类分开各出一份：同一批台账、同一套流水，看看分品类出来的折价时段和力度差在哪。</p>
+    </article>
+    <article data-page-node-id="cKDQjGuAe1953gK6MGqqJP" class="task">
+      <div data-page-node-id="k606PcYJecUgqpVKXlaWjP" class="th"><span data-page-node-id="vkY3crGBFozI6h39RI4OKU" class="no"><!--pnid:RCzuCKemZWvKsrRhcwafz8-->04</span><h3 data-page-node-id="7KNt1P5ynX8Bc9qNQr40Ry" class="ttl"><!--pnid:JIz9BHkwMq69pvu7dEwI0e-->一次跑三家店</h3><button data-page-node-id="wHM4rSbzcDBzwz2NXyGdp2" class="cp" type="button"><!--pnid:83VN7FgphqG5LQ43juQUPF-->复制</button></div>
+      <p data-page-node-id="zfLEMdf1HYyXb61N2LA1f6" class="tp"><!--pnid:JKxRDMaDcRhsMrd8GfVNba-->演示数据里还有另外两家店今天的效期台账和近两周流水，三家一起跑、各出方案，最后给我一张横向对照表：临期品项数、过期品项数、折价可回收金额、直接报损金额。</p>
+    </article>
+    <article data-page-node-id="iVbRA4QCL5lgjF1dGUPT06" class="task">
+      <div data-page-node-id="EwAVREtmdKnV4cJ1woOyFl" class="th"><span data-page-node-id="arWmqfJquyJ4wkposBHdCj" class="no"><!--pnid:wM2yn7Zv4XG8Awa3MmZLe7-->05</span><h3 data-page-node-id="boqLj0UxSv7YxhJSfmkpbF" class="ttl"><!--pnid:ykAcnUzAlYApJ1aiwS8IpR-->给店员执行用的版本</h3><button data-page-node-id="0aNTCGxsS2lI4ymW66jnSb" class="cp" type="button"><!--pnid:qQdW4DuzxgfeB5fNcrLWOr-->复制</button></div>
+      <p data-page-node-id="zhw69faS7a1N3nUhF72Dji" class="tp"><!--pnid:TBvNpBmQU81wt1FofH0K20-->把方案改成店员照着做的一页：几点去哪个柜、把哪几个单品打到几折、卖不完怎么处理，每行一句话，算法和依据都别放。</p>
+    </article>
+    <article data-page-node-id="HqNNg1avANdZcFT25JFEZi" class="task">
+      <div data-page-node-id="1xh9wsv9WLAadzQC2UTImR" class="th"><span data-page-node-id="lnXejHhBb9GSxTFBgki9Ke" class="no"><!--pnid:x1GXoi693u5rZtVDCc8olV-->06</span><h3 data-page-node-id="Q628npqLGWYx3Qjku8vHvq" class="ttl"><!--pnid:hHYSMIOkZEuuvjU8OX76fU-->让它反驳自己</h3><button data-page-node-id="6vsqds79tjavUd2DcT2mUW" class="cp" type="button"><!--pnid:dvG1e2KjpIyM5j3fMSd0HN-->复制</button></div>
+      <p data-page-node-id="Yx7IgYE9BTAmH83yyfJVH6" class="tp"><!--pnid:PeuZNRhDFGwsWr7D4h7YYs-->你说「这个品早市就走得动，不用等到傍晚」，依据是哪几天？把本店近两周的分时段成交摆出来；站不住的时段建议改回「需人工判断」，别硬给档位。</p>
+    </article>
+    <article data-page-node-id="9gGpjvcwivnNaL1MsZNGig" class="task">
+      <div data-page-node-id="IBjNPbxXGvu8WAPR8ZtGPy" class="th"><span data-page-node-id="C0DjWjnCaRvb22gkCuiga0" class="no"><!--pnid:zOmuDTJiaiuG5xaouVjXHG-->07</span><h3 data-page-node-id="jiF9yWar42ym3ubbLpozUw" class="ttl"><!--pnid:9ymqyKsdybmNKZoFPqGhcb-->比对七月卤味那次</h3><button data-page-node-id="GBG0qOuLPaVIzLyOV3mEqd" class="cp" type="button"><!--pnid:t2dA2ct3SDDuB9M80oFjuV-->复制</button></div>
+      <p data-page-node-id="E216YxVKKR4wOVDwPqUt76" class="tp"><!--pnid:fBM4xlSkXOa10aGIPA3rdr-->把这次临期品项跟七月的出清与报损记录对一遍：上次卤味柜台傍晚一刀五折清空、结果早市客人买不到货投诉，这次同样的品再临期该怎么排时段，一条条列出来。</p>
+    </article>
+    <article data-page-node-id="kH8XotLPSBGzjR4B91YEDZ" class="task">
+      <div data-page-node-id="bLE9nFGCrAIp1eYbyEtcBp" class="th"><span data-page-node-id="dxCwI4TVw53Xsyk03cj531" class="no"><!--pnid:3RnbkkYaRlhggVtJhoRJuw-->08</span><h3 data-page-node-id="kSqeVNN79tSCM8NhfJBqYW" class="ttl"><!--pnid:Aovnuw7BpHBApHGrp360ry-->对照留痕要求做自检</h3><button data-page-node-id="8Syg1M8KfMoOtrJl7hA4Ay" class="cp" type="button"><!--pnid:D4NcIP7bO4brbPu3NHMFKd-->复制</button></div>
+      <p data-page-node-id="RFXCE0xejirqoxXDSbPrCA" class="tp"><!--pnid:XK8zJe2lg6qKcVdzb33XKU-->对照临期处置留痕的要求自查一遍：过期品项有没有全部进下架隔离、处置记录栏位对不对得上法定台账、还有哪些记录必须由门店真实处置后逐条登记，列出来。</p>
+    </article>
+    <article data-page-node-id="HqJ8jLLEyrcWdUI3iGUQz2" class="task">
+      <div data-page-node-id="2aigRKf7QGUehh8g1XGK52" class="th"><span data-page-node-id="WRASxw3hWKSijBPIjqQB5W" class="no"><!--pnid:T3Irrtngj0rBKa4X0XWOZQ-->09</span><h3 data-page-node-id="b9Ki5ynItq2MX6ye5phLJD" class="ttl"><!--pnid:X0cbe09DGwvETSanMnuN1v-->两个金额并排算给我看</h3><button data-page-node-id="2DG1Ywn2vQSZW6CwOQadxV" class="cp" type="button"><!--pnid:bGlTVZjypGHiEHZVwBQ29b-->复制</button></div>
+      <p data-page-node-id="aQmOZQwEpmaraORlxGdWZX" class="tp"><!--pnid:SERlCjaaKrThGVZrtqdOu8-->每个品项给两个数：按建议时段折价出清的预估毛利，和不处理直接报损的损失。今天全部品项各自加起来差多少，最后给我一个合计。</p>
+    </article>
+    <article data-page-node-id="3VwP2S3pE3T4v8aRJgPfKz" class="task">
+      <div data-page-node-id="w0Oid3vOTwFWCvjXSMaep9" class="th"><span data-page-node-id="rFlk2QsC45oCLUja8DxkJX" class="no"><!--pnid:Kfa7y3UefWcE0gpvAgHePR-->10</span><h3 data-page-node-id="ESI140gMT3cdZfhhhhZs5s" class="ttl"><!--pnid:BIBGAXOPG6tBTiUTaWhiRR-->沉淀成本店出清节奏表</h3><button data-page-node-id="XbVifhFYpOJDuqwbUvn4W5" class="cp" type="button"><!--pnid:ccPKYDuHU02knkZQtF18ze-->复制</button></div>
+      <p data-page-node-id="IV1ZWUQL1EFVGIvHH4sopX" class="tp"><!--pnid:k0OJiwsqQouqLX1ySCkbz9-->把这次跑出来的规律整理成本店的出清节奏表：哪些品早市正常价就走得动、哪些必须晚市砍价、各打几折，下次换一批货直接套。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="ZyfgiYEebo4GgEWRI3eAtD" class="cta">
+  <div data-page-node-id="I32IOokBeduebQUdpkwBmg"><h3 data-page-node-id="pj067fGcO6L91SH1Jk9aWc"><!--pnid:9E6UYXueCS9uqsG81RmLML-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="GnX3PsIf11Xbz2RXnHnfLo"><!--pnid:EBoE4xif4z6acO2jAJxWOq-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="cq5lXeVW9x94exTuZeDIIg" class="btns"><a data-page-node-id="5DtYFvzEYRzHloddAWVMcn" class="btn" href="#" id="ctaContact"><!--pnid:HZUdUbyzqSNz5PU9VpFvW5-->联系我们</a></div>
+</div>
+<footer data-page-node-id="PIvP0vUvcJ49LQgrgHuZIa"><!--pnid:eMuFez7Y7Tb9itjN1izEfg-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="RTA9jkf98MEou9OtQjsYvk" data-pnid-children="P15hPnKPY34G2CaFxgMfj1">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="B7bsbBYC3XjJLDcrZ9SWZ4" data-pnid-children="ODB8J348BKLtguuIWSarQC">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="9I0AfsdBy1DHXICank6hSn" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="kXjziHBOU3gqKPfKerhf26" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="bKmbdEs1G3cu32zyMGhfkt" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="6q23hzMyiWj20dfS7EeDiQ" data-pnid-children="jOP4DNz4OoDTNDrQoCvSZN">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="wVlLCPYTOMQ3p9Qi0Vn9Rh" data-pnid-children="lXLuMnK7GJjUDoWRcEwdgj" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

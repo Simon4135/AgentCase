@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="NJc9euwHjD4jgZVGG1K6D9" lang="zh-CN">
+<head data-page-node-id="kx823LTilnndzk2ejbu1DZ">
+<script data-page-node-id="9sU7jwqdRASrvgsB4W9juO" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="KtuHB9a2vJBNao8PHUT87q" charset="UTF-8">
+<meta data-page-node-id="6r4Q4jM8WBEEB4eZGRTTY1" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="ULa9dAz68KThjZmXYeB73e" data-pnid-children="QozyF6k2ZEvZnr0t2OgZ2y">定制工时与毛利台账</title>
+<link data-page-node-id="hsN4JfWrRsZIL1Gmi83Dnv" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="32Gf7GTBB03m4M8OIWxrxn" data-pnid-children="aoHuNuE1PeMoXpizwl4wbY" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="8JLvYULMEEpPhDwvXmS08P">
+
+<div data-page-node-id="b6nBFq9OwPkow4t81SBWV0" class="wrap">
+<section data-page-node-id="mUspRLLFg8cIH7ukDpnnDL" class="page-hero">
+
+
+<h1 data-page-node-id="0AfrwYe2TpqSL0P3jbiH7p"><!--pnid:pHTIR9ar0fwg8NonJ5eG22-->定制工时与毛利台账</h1>
+<p data-page-node-id="iEdPHkPUFK6faXnbZyTjvr" class="lead"><!--pnid:IFCVBBQF6JUwGmEZZiMtPL-->定制工时占研发 39%、毛利掉到 58% —— 投资人的警戒线是 65% · 这笔账绝大多数中小 SaaS 从来没算过</p>
+</section><nav data-page-node-id="KeTqC3YPZ3mUclNsCKDxzT" class="subnav"><a data-page-node-id="ywZzfQp3Wkcm5jbv0PkhXp" class="on" href="#"><!--pnid:ixDNC0lUZJSkHttwafvXPu-->场景引入</a><a data-page-node-id="g7JbuYhfTMKPYcMpL4xiCT" class href="LiveDemo.html"><!--pnid:eaUt614QQsjzRjpYByBlue-->Live Demo</a><a data-page-node-id="b16o0AwkM5JpYiRwpkp9ot" href="推荐任务.html"><!--pnid:Ed6IXRnPxJeSQTLlcCl9vN-->推荐任务</a></nav>
+<section data-page-node-id="zUNGNxQQwl0fMjoSc2nbxz" class="blk">
+  <h2 data-page-node-id="ab04kYqMdbJn81PhNkswRP" class="h"><span data-page-node-id="SEYnCP3NAE9ao1Mb2Syrtp" class="num"><!--pnid:qM0ISxQhCr5J6xtQHdluMn-->一</span><!--pnid:ObmdP08xdAbjCTMwYy0OGq-->这件事现在是什么样</h2>
+  <p data-page-node-id="R4U6lCWovM3vOwa7M7yNQK" class="subline"><!--pnid:ef1zeCehm6VKDgCQkjGocB-->客户之声 · 真实业务触发</p>
+  <div data-page-node-id="8DDprL09Ey4gi4dpgx1WkS" class="card"><p data-page-node-id="wIVa4TN7yzvCPxRkpOnhxo"><!--pnid:PHnvUKiLkgYi3OTVq6zut6-->季度经营会前，陈默随口问了一句：「华正他们的定制，到底花了我们多少研发？」江晓答不上来。44 家私有化客户的定制需求散在需求池、变更台账和研发的工时记录里 —— 没人合并过。沈知行在行业群里看到过投资人的标准：大客户毛利率不足 65%说明定制过重。他怀疑自己早就越线了，但怀疑没有数字 —— 「定制拖垮标准版」是共识，「拖垮了多少」从来是一笔糊涂账。</p></div>
+  <h2 data-page-node-id="AWV7GGXVPOdFVYZuJgVVtn" class="h" style="margin-top:22px"><span data-page-node-id="4zrPxGWz14xCtZH8CJq2m1" class="num"><!--pnid:atIrEZVa1B8lZiPyBYHvG1-->二</span><!--pnid:cm7oDth3CXTDUl0sn4ZYL1-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="XxqKaNFJm0wOyEiOIJRoGW" class="subline"><!--pnid:YEVydC5PWiEdwA9D2OeLrP-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="1qbrokU9C0B4cUWco0wAkZ" class="pains"><div data-page-node-id="FfGIFRr1H06wH6jXNqKuW0" class="pain"><span data-page-node-id="OxKDhYHfaSEjZFZuNTA5cq" class="i"><!--pnid:VYUg2llSRMO9aAFyjfOueI-->1</span><div data-page-node-id="mthIaHNI4QeF9Y2Mw1Ymsp" class="t"><!--pnid:AU0CVpL4oISlxWMf6FDK0J-->定制侵蚀有投资人标准：纯 SaaS 企业大客户毛利率在 70%-75%，不足 65% 则说明定制化程度过重 —— 而国内 SaaS 毛利率普遍不足 60%<span data-page-node-id="yyLBswhaT6vpYWJKZ7BMno" class="src"><!--pnid:2w8aAttnmFkyhny6M4b2Jc-->依据 · <a data-page-node-id="Fws1GWVFuYWUBTV3QDCJ0L" href="https://www.tmtpost.com/6400847.html" rel="noopener" target="_blank"><!--pnid:1ReZ4SNQy45UE96Y0lwSzo-->定制侵蚀的收入结构判例：国内 SaaS 毛利率普遍不足 60%（国际代表公司超 70%）；投资人判断标准 ——「纯 SaaS 企业大客户毛利率在 70%-75%，不足 65% 则说明定制化程度过重」</a></span></div></div><div data-page-node-id="gsd6frnUkkImLk6VVARyqt" class="pain"><span data-page-node-id="mZGNJDliiGUCOQR5fUObzA" class="i"><!--pnid:pjif4ojLsQLTz67wKVdk86-->2</span><div data-page-node-id="ya4OqnGPOrFUIlQBqI0BPp" class="t"><!--pnid:Cka1HnSVncIPcUGS8HS8Hu-->「SaaS 怕的不是私有化是定制化」：定制的真实代价不只是工时 —— 是标准版需求的排期被挤压、是版本分裂的维护税 —— 但这些都从没被算进同一本账<span data-page-node-id="EUhwd3O3VsQ5fLDHdo6ln2" class="src"><!--pnid:xJufdW8WP49laX7YW6C3Ug-->依据 · <a data-page-node-id="KYyosgj7M827sLS8x5KIua" href="https://www.tmtpost.com/6400847.html" rel="noopener" target="_blank"><!--pnid:PPdFGWcxrgQ6tMGEsaC8Hi-->定制侵蚀的收入结构判例：国内 SaaS 毛利率普遍不足 60%（国际代表公司超 70%）；投资人判断标准 ——「纯 SaaS 企业大客户毛利率在 70%-75%，不足 65% 则说明定制化程度过重」</a></span></div></div><div data-page-node-id="ADTt8FyAgk33u4PMbMqFfp" class="pain"><span data-page-node-id="Sv6ccfLhE8vNb9KL6qnzhj" class="i"><!--pnid:wHWYlHafOUsqRJ5dFyqCRh-->3</span><div data-page-node-id="LzBmJHk8bGDaDkQh7o7rsd" class="t"><!--pnid:gGrJb9RdVREc4ITvWb1Sy2-->重流程工具的数据没人填：工时记录在研发侧天然残缺 —— 台账的原料不是新录入，是把已有的需求池与变更台账重新打标聚合<span data-page-node-id="J0ZBDpvxMGkr8049sTe15I" class="src"><!--pnid:UGQ7GnYOQfDvlSb8TTDmTO-->依据 · <a data-page-node-id="NlBS9l1KvbAQcyleaqvCfJ" href="https://docs.pingcode.com/insights/kkvfkijm" rel="noopener" target="_blank"><!--pnid:dNKj5LrIOseORjCljlKSLE-->项目管理工具的空置现状：「大家都在填，但没人受益」是中小企业常态 —— 工具是镜子不是解药</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="XRNy9HLySJUO2J9lrfsHDi" class="blk">
+  <h2 data-page-node-id="0ihk2tmGEJ17PvRRVmJR2q" class="h"><span data-page-node-id="buK3yre5Z3Ye5lfyPkTPaY" class="num"><!--pnid:MjQzA7qi7qbtGJk5Sm6EGk-->三</span><!--pnid:SEJ7E7AuH2npEYOydxjYFl-->换个做法之后</h2>
+  <p data-page-node-id="XmIteEev2i1S9AKw2pHLqd" class="subline"><!--pnid:XFthYCQo1bUzTXfWEkOakR-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="EGZeE7RbSDaTfGqZnDaIZU" class="cmp">
+    <div data-page-node-id="ZMK7NkepQATYFv6ogMeY6F" class="old"><h4 data-page-node-id="y6yiTYVfUPKAS3h5bkgltn"><!--pnid:BtzBVdXhJ68vTQkNMFNXaB-->✕ 现在的做法</h4><ul data-page-node-id="LFMmIFmqeQLltRRETgue3z" class="list"><li data-page-node-id="2EHOy1K6Y3nzWsAzeZzELv"><!--pnid:xI34q4jSBKkosJQ4NGmaGU-->定制侵蚀有投资人标准：纯 SaaS 企业大客户毛利率在 70%-75%，不足 65% 则说明定制化程度过重 —— 而国内 SaaS 毛利率普遍不足 60%</li><li data-page-node-id="MGOQHrNW6MLkuKPhC0LVed"><!--pnid:tMJCZ5VGjIqWERvEtToyKu-->「SaaS 怕的不是私有化是定制化」：定制的真实代价不只是工时 —— 是标准版需求的排期被挤压、是版本分裂的维护税 —— 但这些都从没被算进同一本账</li><li data-page-node-id="HQFnaJAlelRScCoMhfPKrR"><!--pnid:sMSVQH03ZLr6L6PrxaWlvo-->重流程工具的数据没人填：工时记录在研发侧天然残缺 —— 台账的原料不是新录入，是把已有的需求池与变更台账重新打标聚合</li></ul></div>
+    <div data-page-node-id="1yWlS9n0TStgUZCkvQpq94" class="new"><h4 data-page-node-id="7g1sWfINL8t128pHoLeIRX"><!--pnid:czss1ypPVsl3lUIjJ3BfVP-->✓ 交给 Agent 之后</h4><ul data-page-node-id="bfwTH9b0iH4YmeLniSFSdg" class="list"><li data-page-node-id="rKFxG1oW7bhyid23ALDnBP"><!--pnid:tXy9wz9rdqRZe81U1NLqNM-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="OyY3JBpmBSevHpK4ZjgQ9l"><!--pnid:q62sgmgk0attxt3BIAXAbs-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="QfzrUYUH3EfejD8IwBcrEV"><!--pnid:kOIXvRbhEOhca67qaq7gXo-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="0aIKZ4bCCIee0a2B09ZUej"><!--pnid:DhG04C4elthnnYqiGPx02H-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="MyjXyzOXuIPNLVYezfzdwt" class="blk">
+  <h2 data-page-node-id="IqF3KNAGm8laZ7GziRd33u" class="h"><span data-page-node-id="f7JvCBd3RaQ6mViEXQ1b3c" class="num"><!--pnid:FUoC6MoyHIUMoxCcngbAkm-->四</span><!--pnid:L8344Sv92Ff6ApbZEe9Bqd-->场景闭环</h2>
+  <p data-page-node-id="fA4OuKSKLSu999Nu32HwL5" class="subline"><!--pnid:a1LJ9s7F9fEW3c4NeMDOIK-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="LOxofiPHquvVutpwUgh3Ft" class="flow"><div data-page-node-id="TSb8CMzVXrjSNFocEsZzm0" class="step"><div data-page-node-id="Yz67aSt4ffgQpu2qCrceo1" class="n"><!--pnid:yudQE8q9wO7nOGhTSgVdzW-->第 1 步</div><b data-page-node-id="ZcwCGMhEWkMDeQRap3Or22"><!--pnid:yXRaYlAwngr4OBPlh1MgRl-->定制识别 · 三类定制分开数</b><span data-page-node-id="apbgqy9YHhLZNd6Z43NQ0m"><!--pnid:w8kr0JqyAZDTvyKlxkNTFG-->客户专属需求/客户引发的变更/私有化环境适配 —— 三类的成本结构不同，混在一起算不出真账</span></div><div data-page-node-id="DkU2CDxJ4FOHOapclte21l" class="step"><div data-page-node-id="YIDt6HOoGimlNrXhnra0mn" class="n"><!--pnid:QUSGDrz04g1fn3CwL0W8YR-->第 2 步</div><b data-page-node-id="Hn1JGFcIyx3PaufirFrd5l"><!--pnid:Sk6snIxDW9OOLKFbAKZfhE-->工时打标聚合 · 不新增录入</b><span data-page-node-id="AEnMtQ61GnaTxOfHhImDoS"><!--pnid:bsL3CALs7iItagDm0MgDsT-->现有工时记录按「服务对象」重打标 —— 定制工时占比从需求与变更台账反推，不要求研发多填一个字段</span></div><div data-page-node-id="pL37Kx1hbFxt6nww07jeSs" class="step"><div data-page-node-id="wfBzITL7JdSPG09DCcKgqk" class="n"><!--pnid:qhUMKUZ7sRrYPzzP7SLufT-->第 3 步</div><b data-page-node-id="ANTCirOUQxkHR5bc4Ib0Cz"><!--pnid:VDAVyzLJtTcAdWSc4WEefA-->毛利测算 · 投资人口径</b><span data-page-node-id="Ou0j9yvYbGu9eo4jyMy4aE"><!--pnid:SfGkTLGT1UguUu4xQAp6iV-->定制工时成本摊入客户年费 —— 大客户毛利逐家测算，对照 65% 警戒线</span></div><div data-page-node-id="lhaW5HaNljMF1lAPZ3PCkE" class="step"><div data-page-node-id="klSFulhwdnr2k14FlDTxDd" class="n"><!--pnid:8kapIyaiz2gIzW9wgUr67z-->第 4 步</div><b data-page-node-id="z0HBEXwdU8ZMrd8kcwhgBN"><!--pnid:AbU102uLco5k7NjdE26n6h-->侵蚀趋势 · 季度对比</b><span data-page-node-id="GbZ39023ZJ1fYbUVG9Sn3N"><!--pnid:POKNMBsXczudrQb7zVKwkN-->定制占比的时间序列 —— 「越来越重」还是「结构性如此」，两种结论两种药方</span></div><div data-page-node-id="QRGbuAmbCPlyGfjGNY6cE1" class="step"><div data-page-node-id="TopNAzjJZnYdNKGycOKjup" class="n"><!--pnid:Fs6EXnBWYoLOEWEZY4UWIH-->第 5 步</div><b data-page-node-id="WNL6ZOXd8qjf3ztBoqMT65"><!--pnid:65pn67Stj3kBQG10pjOM84-->老板一页纸 · 钱的故事</b><span data-page-node-id="hs5peItnobTpkdUT6q3j7T"><!--pnid:SjXkfOY5O5zzyWYmWdSVup-->定制占比 39%/毛利 58%/趋势箭头/TOP3 定制大户 —— 经营会上的议程从「感觉」变成「数字」</span></div></div>
+</section>
+
+<section data-page-node-id="RcXZpPlEgyNeEJaYVsJmtd" class="blk">
+  <div data-page-node-id="Tlwg6VkLhyjfqvdWqZRMfo" class="g2">
+    <div data-page-node-id="QHTBKUk8hb3tt9gjm9bAVa" class="card"><h3 data-page-node-id="s9hAOhlq3i5B45RBUaau0x"><!--pnid:wKmXjar2zOJynE9XyxR7iL-->要准备什么</h3><div data-page-node-id="weFCnLQMOEOgZsIOKMTBNl" class="src"><div data-page-node-id="glQXMYL62wzaxGnF6lDJhT" class="fn"><!--pnid:VjVzyEEsVIcZ0ZyIRne8JY-->需求池导出（含来源客户）</div><div data-page-node-id="97halj4Vca5RHqrg3cKPm9" class="fd"><!--pnid:52ShJKQxJOKld6Otk0D5zC-->定制需求的识别基线 —— 来源是特定客户的需求即定制候选</div></div><div data-page-node-id="shKhTP2nS8y2ZKrTfJEwtn" class="src"><div data-page-node-id="B7vZQHUXRqYpistNCN1afc" class="fn"><!--pnid:99BryV3eJSoKbzYYgJoTnM-->变更台账（需求变更留档登记 产出）</div><div data-page-node-id="qwaTtdfZci1v26OQEFsvFt" class="fd"><!--pnid:Ydd5JKI4AJ01h0wq0bcGHy-->客户群里的变更也是定制 —— 台账联动的另一半</div></div><div data-page-node-id="Vz5LAXVg7aojBUt7aUjK2X" class="src"><div data-page-node-id="5HmACcitfQZalqRgbXc5J9" class="fn"><!--pnid:tcRPQ51Q5IM6O5HqLjPEmI-->研发工时记录（现有）</div><div data-page-node-id="567xm44Zm4vkFlxkPk03hp" class="fd"><!--pnid:q2w25D9ptbbVrBQPVxIzSe-->按迭代/模块的工时 —— 打标聚合的原料，不要求新增字段</div></div><div data-page-node-id="W2JJtDqwaJ0JjLeYMAVEnX" class="src"><div data-page-node-id="SdBywsVeZK9tm04sjRNSAC" class="fn"><!--pnid:uLXDBaroIfY6qCX9E1GQFU-->客户与收入对照表</div><div data-page-node-id="ZWlfH6WD2mMAAgC1gQsQJ8" class="fd"><!--pnid:xmbskeslRGsh5f4O7h8G6H-->客户年费与版本 —— 毛利计算的基数</div></div></div>
+    <div data-page-node-id="6BUMmnC2xEPJPfD0Wb2BGB" class="card ev"><h3 data-page-node-id="evt01WaqTZz0z9bjnq8Ifx"><!--pnid:O525SSSCSjrqAaglZcFJ57-->为什么这个场景值得做</h3>
+      <p data-page-node-id="PcQdQD9wSL7D2p1Q1n1U6R"><!--pnid:GlxIUPCWNA9V6SQqanDPfP-->痛感 4 × AI 适配 4 ÷ 落地难度 3 = <b data-page-node-id="xzsWMEKtyXbRovOrAJ05qz"><!--pnid:zjUY4uXrFPqizaICvQj6hF-->5.3</b></p>
+      <p data-page-node-id="7k7KsEutKgxTERa2Niu8p4"><b data-page-node-id="AhFBBOrVfwlyGBOzFRxgu1"><!--pnid:pU1ArobYOSfstokfJWSx1Y-->最大差异点 ·</b><!--pnid:NLgw63nNCZIzTvD0JpkmmQ--> 不要求研发重新填工时。需求池（定制来源标注）+ 变更台账（需求变更留档登记 产出）+ 现有工时记录扔进来 —— 打标聚合出定制占比与侵蚀趋势。</p>
+      <p data-page-node-id="HJcLmMYY4RorrZNrfLcPDX" style="color:var(--ink3); font-size:12.5px"><!--pnid:nfsSkyYmaZSquXO7bTvJnZ-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="vryVSkyV4Kh8AOiSi5VDS3" class="blk">
+  <h2 data-page-node-id="bfCBaP4Vf7FbwpyCxt2rn0" class="h"><span data-page-node-id="2tVARd1F3ZE8ugpllTmaMu" class="num"><!--pnid:NPDBgq2aZaeuEdGsqjdWLb-->五</span><!--pnid:adokt5STQQTKjRcdsQJN44-->会产出什么</h2>
+  <p data-page-node-id="CzjT2xLh0zwKbmYKoh1gre" class="subline"><!--pnid:o3ggR0HE3oXmGaBNyQ8eyp-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="QoKfd3RQmFgR4USgJuXRQA" class="outs"><div data-page-node-id="vQdxaecSU419bFMuCtdCYu" class="out"><div data-page-node-id="PTSpH7UO2BTAtHF17wojpn" class="on"><!--pnid:bMYTTInfI9vZEJYY7y1NGH-->正式件本体</div><div data-page-node-id="jfzy7o4SnUq8uIF6zicOSe" class="ot"><!--pnid:lIxjuuT1bzem4azRJ9wXyN-->定制工时与毛利台账.xlsx</div><div data-page-node-id="zMrvIstyrNCP4sVkJVndk3" class="od"><!--pnid:S8RxfpGvoc9R9B7i8vDMss-->正式件本体 · 三类定制 + 逐家毛利 + 双口径</div></div><div data-page-node-id="SfyntQEYsTQqbSj7RSUtsy" class="out"><div data-page-node-id="aXiLSCQkGywaQcFhFBi03q" class="on"><!--pnid:bqvZZAAT5SQPh7PREbBByr-->可派发清单</div><div data-page-node-id="GZ5zWRYhkcHTCs3YuXqiu6" class="ot"><!--pnid:8nWwHwTo0SswfhzzXtJoyA-->定制侵蚀趋势表.xlsx</div><div data-page-node-id="1pGF5VsI4A2BWA4ZQNDNNl" class="od"><!--pnid:A1o6XkgWsOjRuNqPGrG4tS-->季度时间序列 · 占比与毛利的走势</div></div><div data-page-node-id="jUYznSdJ2ZLynIHpVCwUqc" class="out"><div data-page-node-id="kXDtOMSAeDVIVCjMd06Dne" class="on"><!--pnid:RQzqQ00FddhgHGVh0UzE6i-->可派发清单</div><div data-page-node-id="pJ0fkiMWTWlTGQmUSGrbWm" class="ot"><!--pnid:SGPa9BkcdxIOr1UWYpAsTT-->经营会一页纸.xlsx</div><div data-page-node-id="DLUS2sjBPUug1VL0o2wIDD" class="od"><!--pnid:itoZtcL5qNy9WBfLuX1FXB-->定制占比/毛利/TOP3 大户 —— 十分钟讲完</div></div></div>
+</section>
+
+<section data-page-node-id="w5ndenCxRPpeyZRIv4kyf7" class="blk">
+  <div data-page-node-id="dHxH0SrY5S11mHKFEvloqU" class="card warn"><h3 data-page-node-id="BD7ehvdCUpblkCDfkDIitN"><!--pnid:tadjBx3s1nzbd4sAdLejHD-->这套东西不承诺什么</h3><p data-page-node-id="40kcYUhIpXkulpJc1I29WW"><!--pnid:KyjFUfKVYMqvm8JaXhiGI5-->不做「自动拒绝定制需求」—— 接不接是商业决策，台账只把账摆出来。也不做「工时自动统计」—— 工时数据来自研发现有记录的打标聚合，不增加录入负担。</p></div>
+</section>
+
+<div data-page-node-id="2edAH8U9bpuhQbj1lkjKjm" class="cta">
+  <div data-page-node-id="9lwhJTZUcKUUorynBGbsCx"><h3 data-page-node-id="gpYNndc0SfDXC9ue6stLw8"><!--pnid:ofm1iK0GoAlBdNYmDfvRBo-->想看具体怎么跑？</h3><p data-page-node-id="GRySnCVZ7RoOBMHKjkAAhT"><!--pnid:eI27XmmiI1Zx3eCxfkq4fo-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="Ip68clEMeLrBYF2dS854AT" class="btns">
+    <a data-page-node-id="R1eS786AxzXyZQFV1QNuvF" class="btn" href="LiveDemo.html"><!--pnid:yKeHjqFaSuKN4GqZyo7oQh-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="7pT2D91qY9J8DdT1u3XceK"><!--pnid:zeVB2yvLfDhWqjOt9OQ6Cz-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="DsSZGvfqwK43YumX2hx5d5" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="OEkl9Qe9UwamqWhlJV8oKL" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="MG0Ub7R3FKktJnhOSrhn3K" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="SFfuqC876rJYSP5a4gcRlm" data-pnid-children="pnETqo6uaf5qVaYlIXBfxe">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="0BsovDd2x0fACNP4aa21AR" data-pnid-children="jWABMpVBYnB9aGe29T1WQh">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html data-page-node-id="pTY1F4T1SqqzmYLQsBJT9R" lang="zh-CN">
+<head data-page-node-id="0EyUECr9Gb5IEU2SU1TFaI">
+<script data-page-node-id="eQSVL4QEJ9POKOUu4rfnC8" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="4WRR94oTLur0oFlqAJrROD" charset="UTF-8">
+<meta data-page-node-id="Dlz96DdLo1bV4jPDRhwxBQ" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="GnWfVrfNKKznBSzI1D6K5u" data-pnid-children="R3H8s13TQ0My7lX2htFJi4">作废码与物料平衡逐条对账</title>
+<link data-page-node-id="QsswXTIHUAnoC3rRWfYMDh" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="KFVo8mWZVlJQHuCFtuApAM" data-pnid-children="qEAobOhv6lH0JmoePhQ47s">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="3K0SEYSdkKYtVy2ER85nZp" data-pnid-children="0giu7ncztHV3tNP3Rgmp8j" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="YV74MGMFS4O9vS3eFXi98v" data-pnid-children="5XJOZ5DXDWKjSHPeeUZbSg" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="DMKDl2nKzUvQU3FXwqIfkf">
+
+<div data-page-node-id="jAcRDm2nzPWeDc637cfvQ7" class="wrap">
+<section data-page-node-id="9S6SCECZLD8qi5jmV8VpKl" class="page-hero">
+<h1 data-page-node-id="tRmK0P92okmEQboBqLlcBv"><!--pnid:7bSsw1BbcsfPRnySoP4Tq6-->作废码与物料平衡逐条对账</h1>
+<p data-page-node-id="WpFOyqVrWQzs7BZ3dIBuhT" class="lead"><!--pnid:wSXcmW0usfstmoCkffcsSN-->物料平衡 100.00% 闭合，纸面上完美无缺 · 但有 3 个该作废的码，此刻仍是「已关联」状态</p>
+</section><nav data-page-node-id="idbHxuK4BG39k8TifiCyhj" class="subnav"><a data-page-node-id="NB8K07tQ2lXsnlV3JRWc0N" href="场景引入.html"><!--pnid:4vNFactRPkEwuK8zQfLETe-->场景引入</a><a data-page-node-id="wZkxJOfMgitlTnpZu88GPr" href="LiveDemo.html"><!--pnid:zb3lMprxUmwrHZjvf1Aoxh-->Live Demo</a><a data-page-node-id="avHleN07OPuODqa0GVMjei" class="on" href="#"><!--pnid:9YglJwHiOsFXIkRkx3pW4i-->推荐任务</a></nav>
+
+<section data-page-node-id="Dm9mwKNz133cflW4oXco3G" class="blk">
+  <h2 data-page-node-id="OLZwTwN82x7nyCs9XjfuEy" class="h"><span data-page-node-id="kmYXRdTBTmjIVeFzMuQ07F" class="num"><!--pnid:CITz3Iec4PteWxSMcC67BF-->一</span><!--pnid:FEMQhibTp4pMBmNCvl7prr-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="vRw30AsaaYY8Z2CXpIg4zo" class="subline"><!--pnid:vcAwctGWszzt1jWiRfWhPf-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="al2d6Rb85aGZJpO4YMfFmL" class="card"><p data-page-node-id="Q1Vg5LmgAU4LoU1WcgLGRR"><!--pnid:mY5WzDYw4Ab8aKahD5G6x8-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="7PfiVdDbCSXfWehH6e8DtT" style="margin-top:10px"><!--pnid:ugI93GhhkWDXqvZrXdiGte-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:yeRwxGCzTENls8L1RFZpLe--><!--wb-skill-start-->
+<div data-page-node-id="r5IsYGsW99cFhs5T8fBuIc" class="wb-skill">
+<p data-page-node-id="GhIFZQMcZuKyaAo1N5VX3A" class="wb-skill-lead"><!--pnid:ERS7TSLAuG1aHTt8eFxVOq-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="a311mNKTOW7PVxr9LbwXA6" class="prompt" id="wbSkillPrompt"><!--pnid:acu4JJFevedx2nC7xZvQbp-->【准备】这个场景的规则都在「作废码与物料平衡逐条对账」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/DKZoTroDwTol3IMjYhwNNw/qg349PIuHnPz/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="ueSJj5R9Mg3e6VZq6iK78Y" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:7BfBfbogEsXUR8slrsGFEf-->复制</button></div>
+</div>
+<!--pnid:6oTGtGTV4FDI4hNDYJv9TA--><!--wb-skill-end-->
+<section data-page-node-id="P4Pj1f8z1M8W8P9utmBShG" class="blk">
+  <h2 data-page-node-id="ZcatTKXuaT7GOPqsqe39IU" class="h"><span data-page-node-id="zc9ya014RkfHtwiqpHhkh8" class="num"><!--pnid:eDGQLOf6r21D8ldU4dPbAW-->二</span><!--pnid:lLEdTxsxbukS5yJ6EdC79G-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="hnZEHdTvR11BYXebSfzNpV" class="subline"><!--pnid:vEmGWcyiIpy6h1tm63SGWT-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="Pqh0fS0sgEDRVZAcZcFLiN" class="tlist">
+    <article data-page-node-id="GpeZTdGkoZMdjmJKKNKhVD" class="task">
+      <div data-page-node-id="5uaeoaX9WUxhRTlPV225lO" class="th"><span data-page-node-id="r5Sxv17JwsAdNNJPbet1tJ" class="no"><!--pnid:vQ0dXRRYGSHpdHRkicUpGq-->01</span><h3 data-page-node-id="LhUHHpdppGtYFf96kCl2DL" class="ttl"><!--pnid:NuAO2DPVqojHoGs1CAFNsd-->首推默认</h3><button data-page-node-id="LwwgmEmU4JP0QH4wqxZO1U" class="cp" type="button"><!--pnid:uyr14wFpvYX4fCJ0GivHrn-->复制</button></div>
+      <p data-page-node-id="Glw3bxVkEA0KcNkjSWN5UE" class="tp"><!--pnid:HNQshwhUiEcr7qTgr2iolF-->这是 KT26-0815 这一批的四份材料：01_批包装记录_印刷包材物料平衡页.xlsx、02_赋码系统作废码清单_导出.xlsx、03_号段台账.xlsx、04_在线采集日志_导出.xlsx。
+物料平衡算下来是 100.00%，小盒领用 12000＝使用 11742＋残损 168＋退库 78＋销毁 12，数量对得上。我要你比的不是数量，是码值——把作废码清单里的 168 条逐个查当前关联状态，看有没有该作废的还在线上、或者该在线的被误作废了。
+口径如果不一致，比如残损数含不含已打批号未用数，先说清楚再比。
+产出三份 Excel：作废码物料平衡对账单.xlsx 是正式件，含对账主表、数量层、码值层差异、口径说明四个 sheet，带编制、复核、质量部审核三级签批栏；码值差异清单.xlsx 一条一行，带码值、应有状态、实际状态、影响说明、建议核实动作；归档索引.xlsx 按 GMP 批记录归档要求做附件编号与页码索引。
+这批能不能放行，这个结论留空，质量部和受权人来定。</p>
+    </article>
+    <article data-page-node-id="WI0wZxRNOedwyNz3SVSOx5" class="task">
+      <div data-page-node-id="4NvqxIzZUM1azGBJkSLCcB" class="th"><span data-page-node-id="uAYnulsfqVPZv1TlLlV7nS" class="no"><!--pnid:wsrDg3nXfMOBKERpdfEe3M-->02</span><h3 data-page-node-id="vtXtK1bcKHnnR6pGOyPyqT" class="ttl"><!--pnid:fr4nw3cteFYyRU8Ai364En-->只做码值层比对</h3><button data-page-node-id="1BnnXlSYhpX8KVtNb3Q9T9" class="cp" type="button"><!--pnid:gFkV4ad4zaWV6mQzWMUqjW-->复制</button></div>
+      <p data-page-node-id="Hy5iRHkLFJj9EIhB0HK5Td" class="tp"><!--pnid:1MRhSHNe0f3wxJljp6ayBe-->只跑码值层这一步，数量层不用管。读 02_赋码系统作废码清单_导出.xlsx 与 04_在线采集日志_导出.xlsx，把 168 条作废码的作废类型与当前关联状态逐个对一遍。产出 Excel 一张码值差异表：码值后 8 位、层级、作废类型、应有状态、实际状态、异常类型，两栏对不上的逐条列出。</p>
+    </article>
+    <article data-page-node-id="IRai4arwZU0LYX2qeWindE" class="task">
+      <div data-page-node-id="qVA0oFpRn82tIrFS7NF0zb" class="th"><span data-page-node-id="lAFLh9VLI6qyLw99hIRv4s" class="no"><!--pnid:RqHvlCZzjxHD95Tl0jjz2M-->03</span><h3 data-page-node-id="v8Btb1SCUWjOAVLkOcbX9I" class="ttl"><!--pnid:2hQNwtYlJTZLKyOPQ6Xoa4-->残损口径改一次</h3><button data-page-node-id="pLOYh9EDOtigLJtyt6YPu9" class="cp" type="button"><!--pnid:EHLdzNa6vMH1itIqSrbKlW-->复制</button></div>
+      <p data-page-node-id="PKLjRdrYZurcXvPdB3YXc6" class="tp"><!--pnid:rSNxPu1ht5bnJhoGPDg6gC-->这次把残损口径换成「不含已打批号未用数」再比一遍。读 01_批包装记录_印刷包材物料平衡页.xlsx 与 02_赋码系统作废码清单_导出.xlsx。产出 Excel 一张两口径对照表：口径、残损数、作废码条数、差额、数量层结论是否变化，口径差异标出处。</p>
+    </article>
+    <article data-page-node-id="ioil5nnVM6QreyncLjxove" class="task">
+      <div data-page-node-id="UReq6lnvWz9TTXxt6lhx1m" class="th"><span data-page-node-id="MmGuPRh9HpQPXFuXQJVxJR" class="no"><!--pnid:3riImoS4owyooSRzYFSMPX-->04</span><h3 data-page-node-id="Lz21lk5ZdbOW5NFIQnx5w7" class="ttl"><!--pnid:ObFS7Y4jvK8q8oYVx32B0I-->四个层级分开过</h3><button data-page-node-id="zc3McBgN1kq9DCC3H9SsRt" class="cp" type="button"><!--pnid:MJs9Se4LfUxtfj5faDefBy-->复制</button></div>
+      <p data-page-node-id="HedH8kBMfoEntN4HL6amtP" class="tp"><!--pnid:wD3Ex7nb9dMm3Ln57JJjuI-->把小盒、中盒、大箱、说明书四个层级分别对一遍。读 01_批包装记录_印刷包材物料平衡页.xlsx 与 02_赋码系统作废码清单_导出.xlsx。产出 Excel 一张四层横向对照表：层级、领用数、残损数、作废码条数、差额、码值异常条数，按异常条数排序。</p>
+    </article>
+    <article data-page-node-id="puCUsGM3yF1s0sSZeCkMKB" class="task">
+      <div data-page-node-id="teJqNd0M3EvBFgeduZOfBl" class="th"><span data-page-node-id="SSdJ5IDoEMdDfLlCwyRVSk" class="no"><!--pnid:rJIsxTgh1xgLEiUWbPeodS-->05</span><h3 data-page-node-id="pD1udVqbWItacNKx0FKDMX" class="ttl"><!--pnid:6VZlsYx9c5GXVVYFkDqiLu-->给赋码岗的核实清单</h3><button data-page-node-id="fw2lAiEucINpRtKRNik3Vw" class="cp" type="button"><!--pnid:8W3HWfWMehTv9UW7yRDwhG-->复制</button></div>
+      <p data-page-node-id="u5fGAApC0VGV95vidKpj7z" class="tp"><!--pnid:mMKX3Y1vVmjDB1QkfLerBJ-->把差异压成给赋码岗直接照着查的一张清单：每个异常码要调哪一段系统操作日志、查什么（谁、什么时候、做了哪个动作）、查完填在哪。产出 Excel 一张可派发的核实清单，一条一行，带码值后 8 位、作废类型、操作时间。</p>
+    </article>
+    <article data-page-node-id="mKUby0oUN9Euf7pJwqnPHA" class="task">
+      <div data-page-node-id="YQF3UTArEmR2XlpxBwkXjX" class="th"><span data-page-node-id="83OnSgj9ne3NQjyUgmp2IR" class="no"><!--pnid:grSrbp7wPqUdIYeQaGUpdu-->06</span><h3 data-page-node-id="0bxmUHd5KONd1OF6hHHAXT" class="ttl"><!--pnid:Bnhu2xGgehtaUnrDXgOVQV-->让它反驳自己</h3><button data-page-node-id="c03Vr9cnJmeLCfUGCQnkha" class="cp" type="button"><!--pnid:yezUeLv0qgdobmdm7zKD2r-->复制</button></div>
+      <p data-page-node-id="holNP9dIdX4wWcVm6KvrrB" class="tp"><!--pnid:NhrAoal3XuGFpGcQADmNhG-->读 02_赋码系统作废码清单_导出.xlsx 与 04_在线采集日志_导出.xlsx，给那 6 条差异挑毛病：哪几条其实有合理解释、比如替换动作的正常过程，哪几条证据不足。产出 Excel 一张复核表：差异项、支撑证据、留还是撤、理由与出处，说不清的就改成待核。</p>
+    </article>
+    <article data-page-node-id="MTpia0c39KaEm59SDa6pvs" class="task">
+      <div data-page-node-id="qvtCwfxaITHU2xAVMQmXUA" class="th"><span data-page-node-id="PLTCabCSvNPeq5PB4zDGDd" class="no"><!--pnid:lfYlfPivK6Dz9oOh4DSdAB-->07</span><h3 data-page-node-id="twDBCqRoUpgCzYuH9mnFXn" class="ttl"><!--pnid:91qfnRLNLwMdDqhgaRdUAN-->比对2026年3月那批</h3><button data-page-node-id="wWu5uW1bNlsfREF0GBo3Vb" class="cp" type="button"><!--pnid:C7BDbto34H14D6jTCW4Z7U-->复制</button></div>
+      <p data-page-node-id="qWhRobAoZhFMq9iU02Puim" class="tp"><!--pnid:SMIQlD6xqvHvLv8HgzMKpC-->演示数据里再加一份 2026 年 3 月那批的药店反馈与放行记录。把这次的码值差异跟那次的处理过程逐步对一遍：症状是什么、当时怎么处理的、有没有做原因分析。产出 Excel 一张两次对照表：项目、2026 年 3 月那次、本次、差异、含义，标出那次「重新上传」到底掩盖了什么。</p>
+    </article>
+    <article data-page-node-id="WigJ7GRqgjZ7W7jRjtf5gN" class="task">
+      <div data-page-node-id="CBidFFgq5nramVOmqHvEMT" class="th"><span data-page-node-id="YFgtBhH531Cv89z6bl285B" class="no"><!--pnid:IcUB32c8E69oDT8iMesLIG-->08</span><h3 data-page-node-id="819MRjSVGdA83vGM3t1S3p" class="ttl"><!--pnid:6rNkt3t52tode1ibvxAkCO-->对照第二百一十五条自查</h3><button data-page-node-id="VbeVbqMoXgOxiW44PGd6GF" class="cp" type="button"><!--pnid:hgv8bV7FACdR6tAQZCRHrG-->复制</button></div>
+      <p data-page-node-id="HiX4RtB31KE67tyNq7TIyl" class="tp"><!--pnid:25oQIA0rZvzoecLlepINTD-->读 01_批包装记录_印刷包材物料平衡页.xlsx 与 02_赋码系统作废码清单_导出.xlsx，对照 GMP 第二百一十五条「数量有显著差异时应当调查、未得出结论前不得放行」自查：数量层怎么算的、码值层差异有没有落成可调查的事实、归档索引齐不齐。产出 Excel 一张自查表：条款要求、本次情况、依据、缺什么。</p>
+    </article>
+    <article data-page-node-id="dpvoax8QLWDUn5RgDeAZSa" class="task">
+      <div data-page-node-id="RheQWMrVxz2opF6vd2DlbJ" class="th"><span data-page-node-id="al1G8AMBIr3cndUegZh8ey" class="no"><!--pnid:qDNLsGDNCKZAvRnSgq9tpK-->09</span><h3 data-page-node-id="JCqXmLTGX5hXQzMwDX1xNJ" class="ttl"><!--pnid:fgKoJYzWYMvHPx93AESHOk-->折算成码值层的影响面</h3><button data-page-node-id="RerM1OsQ4Ot8dB6lk3pHs6" class="cp" type="button"><!--pnid:nyudL80BPivLC9vDnzSsLS-->复制</button></div>
+      <p data-page-node-id="nUWzMcs27qmGsaom0SI7fm" class="tp"><!--pnid:bhXCgZTPa2u5wfkDDyCNVo-->按 3 条「应作废却已关联」的码评估影响面：如果对应小盒已随货流出并被扫码，触碰的是重复码记录与医保结算。产出 Excel 一张影响表：影响路径、涉及码数、涉及盒数、依据出处、处置方向，算法写清楚。</p>
+    </article>
+    <article data-page-node-id="NHZc79gJOwhu4HLDBTSaQz" class="task">
+      <div data-page-node-id="lylHbPgSmKoDTLj9mdOdyW" class="th"><span data-page-node-id="EWJEimxqtJMO8icm3lNEhH" class="no"><!--pnid:qAOMlUjKf7ZKAsY9vJnSrF-->10</span><h3 data-page-node-id="oaiV1dszF9ImX9jqj9hhbZ" class="ttl"><!--pnid:KEC8mYbfi79ULCO55jiljR-->沉淀成对账清单</h3><button data-page-node-id="GtM3NdI9fe9mTLCk0XJHKv" class="cp" type="button"><!--pnid:JxZcFzTJGGH0NV1A3lGL9f-->复制</button></div>
+      <p data-page-node-id="HMOtSKmysY6UnLY57X05tg" class="tp"><!--pnid:l3lAVrAMNTRApyPiY4yaf7-->把这次的比对口径整理成一张可复用的作废码与物料平衡对账清单：要导哪几份、残损口径怎么统一、码值层怎么比、差异怎么列、三级签批谁签。产出 Markdown 一份，下一批直接照抄。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="TDsXF7HV77AmiX8tn24JFV" class="cta">
+  <div data-page-node-id="2OtFfRkHC6oIFXfme7vlXN"><h3 data-page-node-id="UmwC48NakrYyx1OveO8zpI"><!--pnid:QhxplK3jdKNXj5M5C0AVWD-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="SQ0Gt6hrx8wHtn9QeovPuC"><!--pnid:GgVrD5FPqb0xarMY7sDv6U-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="gHTKLqqD7fEjwdgnF1lT5p" class="btns"><a data-page-node-id="NMc8GIeYKK5vwZRiGcosE4" class="btn" href="#" id="ctaContact"><!--pnid:WDTR2s1mNDWB9p2A5VEkgc-->联系我们</a></div>
+</div>
+<footer data-page-node-id="9JB6QL6bPovlEvcnKNVatK"><!--pnid:CRpxa28PDa7tuTmyRb4zwj-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="KxitAj0kyGbf4gf7VImlyq" data-pnid-children="oEzKdimDPNhjbN7oOJtBDJ">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="bZBSa7JccH8gpKsFeRfl7u" data-pnid-children="hOcFTt0ciuH9EY088bin4H">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="hJyOHJgQzhGCKblissfgND" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="AXDHJJpCuPDyLaEEaBDfKr" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="fOfmXgWLgqi0EQoSksZUut" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="akJye7eVasuEj3Bgj93qmX" data-pnid-children="HvRQ0xfADuQP7RzvtXrkPH">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="NZGBXAAiMvdU5mOsZIjkV3" data-pnid-children="hZHC18rPs2DSXmCVZrGmWy" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

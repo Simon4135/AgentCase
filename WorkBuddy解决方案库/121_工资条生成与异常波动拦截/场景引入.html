@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="P8JWgawwnGdjZwJ1FoVfJD" lang="zh-CN">
+<head data-page-node-id="3fxpA5A90nhl61CEJ1Vzvi">
+<script data-page-node-id="sJjJy2CzdBWrOXWvkmirgE" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="kR02yn3tDZuvHSJvZN5C3G" charset="UTF-8">
+<meta data-page-node-id="sS0ndlYusrm4fFqj7ekI86" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="iX4QVTNaABmgIBmAta7BAY" data-pnid-children="As9cfXngsSXXhegiGYtW41">工资条生成与异常波动拦截</title>
+<link data-page-node-id="wF9VISwgfazKtT4wEcjUYB" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="vs1VdZpGCVW0CNPpr30bWP" data-pnid-children="iFpehuWoNk53UatmTERFJR" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="CskumWtec1frdsKNCllzAp">
+
+<div data-page-node-id="N21PgLyXv6ih8CHtBuMUbq" class="wrap">
+<section data-page-node-id="nRSQss2gzqrMHMXkxxyWnm" class="page-hero">
+
+
+<h1 data-page-node-id="9fdultGgt8reZX9XPq3f4F"><!--pnid:PV8xI7VnjLJXyk1cSx6cZS-->工资条生成与异常波动拦截</h1>
+<p data-page-node-id="iTaI9XCfH48mPFcqCW7fHl" class="lead"><!--pnid:BBerXHlho3K3azCjef9fpK-->多发的人从不说 · 少发 200 块的员工拿着银行短信冲进了老板办公室</p>
+</section><nav data-page-node-id="1QBN1LrkJGbjE0LGmNAZm1" class="subnav"><a data-page-node-id="PXIeJteZvlgMmXOm1IH0XH" class="on" href="#"><!--pnid:0FFMR8DY4CjqzNq0I5wAtA-->场景引入</a><a data-page-node-id="dEqWF19nWhLdO6dRqiIxzU" class href="LiveDemo.html"><!--pnid:TdZCh2Fcfn9KuulyYO31Va-->Live Demo</a><a data-page-node-id="mlBDqETRs0uLeAPv5uoaEq" href="推荐任务.html"><!--pnid:toaRsaipa1UpUKs7QXN6Xz-->推荐任务</a></nav>
+<section data-page-node-id="9tsLdp8Ysgcvaxo9Bs3R8B" class="blk">
+  <h2 data-page-node-id="OAwBCwb3mIADcJ5JjA6mBm" class="h"><span data-page-node-id="IXyUx9r7Lr3qRQE0kxOyNF" class="num"><!--pnid:tWVMKbKLkMJbmArDWdy7xB-->一</span><!--pnid:iuzkqM3U6Myev92ZaP93St-->这件事现在是什么样</h2>
+  <p data-page-node-id="EedUOaFj4MWmmyy3GNBCr3" class="subline"><!--pnid:sYTSvsC9POz4CPuOCGnCiD-->薪酬与社保数据拼图 · 真实业务触发</p>
+  <div data-page-node-id="mmeLZo9F2OJSK0E2ZPFnvO" class="card"><p data-page-node-id="uilmx8G5mfMCllyNdklkCu"><!--pnid:fzgnbRNbfhmnVPLDLwSKbj-->工资表拼完了（算薪跨部门数据拼图 产出），银行代发前还有最后一道关。HR 要生成 156 人的工资条，并且想在发出去之前把「这个月和上个月差得离谱」的人先拦下来 —— 上次那个 200 元全勤奖的事故，就是没这道关。</p></div>
+  <h2 data-page-node-id="QXMY3hQfKuXJEJWCbH0XkN" class="h" style="margin-top:22px"><span data-page-node-id="ubB6Xhevp9GeacNveiLjq4" class="num"><!--pnid:OGIlyXMxkiN5EnqcxYWFgC-->二</span><!--pnid:usZewdNhfXjSM4Pi19q0zJ-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="wibVIoez1S6NDRevzeAO65" class="subline"><!--pnid:e3noIEMjcJhh30gcwz9ozM-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="yRnzO9Rq30r0ZHZtF65UPE" class="pains"><div data-page-node-id="hSSHUS8bkk6WL7RHRPGE2z" class="pain"><span data-page-node-id="H5wcjxHKEgkwOOD7dZyLPn" class="i"><!--pnid:qsA8UAkV525pHqs0Hwll7G-->1</span><div data-page-node-id="QtOAU7y0JOXlvKOCBdj0KW" class="t"><!--pnid:7imkaXvlkuAHHCn141yv9p-->50 人公司漏算核心员工 200 元全勤奖 + 1,200 元项目奖金，员工拿银行到账提醒冲进老板办公室，半年后核心骨干跳槽 —— 「不是为了钱，是觉得公司没把付出当回事」<span data-page-node-id="zNi3ZJl1nLlQqGNjA98ynC" class="src"><!--pnid:KHZROeTghh5hqkm9RoHLuy-->依据 · <a data-page-node-id="2mMXvHSKEm9PnherXK7Yet" href="https://www.gzzjcj.cn/y/58463.html" rel="noopener" target="_blank"><!--pnid:68GoTFkax2FnIPGNxj1vxI-->「98 年人事小姑娘 12 个 Sheet、为找一条外勤打卡翻企微后台半小时」；50 人公司漏算核心员工 200 元全勤奖 + 1200 元项目奖金，员工拿银行到账提醒冲进老板办公室，半年后核心骨干跳槽</a></span></div></div><div data-page-node-id="7Nvk6NxTq8cVPPpFKtNvSd" class="pain"><span data-page-node-id="Zfrc2SB14P8wTyXIDAkewn" class="i"><!--pnid:sEnHI8IfnqlO8J7DyJfLbq-->2</span><div data-page-node-id="2eysBJyCNLPeT6Ez5phiGX" class="t"><!--pnid:dNQHLjoNSvTabvuYFTuXQJ-->员工少算的会来投诉，多算的从不说 —— 异常是单向暴露的，靠员工反馈兜底等于只修一半<span data-page-node-id="gJrpMI1yYdip3h62Ykzgzw" class="src"><!--pnid:C26ItAb0eFYQo6jRVGIjbu-->依据 · <a data-page-node-id="OTuiwZWETH5heABJ1hXuaf" href="https://www.toutiao.com/article/7647723264780829235" rel="noopener" target="_blank"><!--pnid:JrqCZQgr8IT0z84k6Nz0X2-->算薪根因不是 Excel 不好，而是「数据链路断了——数据分散多处，每月汇总靠人拼图，人拼图必然出错」「数字算对了，只是规则用错了——错得天衣无缝」</a></span></div></div><div data-page-node-id="mR20td7W1KTyzPRKcq9zP8" class="pain"><span data-page-node-id="NtuvqtoZi3cyrCJhWK73rC" class="i"><!--pnid:dgYAZKyQ942jAKZKXOkxyJ-->3</span><div data-page-node-id="xyznElJN76IadRTvNRvIKK" class="t"><!--pnid:5waHi84TP4bwSLXt54pr7Y-->错一分钱全公司都知道：发出去的工资条收回重发，损伤的是全员对 HR 与公司的信任<span data-page-node-id="Frard5NVYL1JuE8QbqwoPK" class="src"><!--pnid:LcyHEjZf8QAJ1vj3iR35Qb-->依据 · <a data-page-node-id="td5XMJoEWQdWwXX9GGXlxq" href="https://www.gzzjcj.cn/y/58463.html" rel="noopener" target="_blank"><!--pnid:cstZhdLDqQM9bfnPdD9JK4-->「98 年人事小姑娘 12 个 Sheet、为找一条外勤打卡翻企微后台半小时」；50 人公司漏算核心员工 200 元全勤奖 + 1200 元项目奖金，员工拿银行到账提醒冲进老板办公室，半年后核心骨干跳槽</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="PLRkXoxorA4rgHiawWTllh" class="blk">
+  <h2 data-page-node-id="XpwpGtpFQfNqF8UEOmWR93" class="h"><span data-page-node-id="Rk2FCiPkOzfFcniOCGoDMS" class="num"><!--pnid:gNmAQrTFUSkbfXXh9fRlwS-->三</span><!--pnid:y4zBai6fcb4NtssdjqxuS0-->换个做法之后</h2>
+  <p data-page-node-id="1pTLNsg1tbac6hROjqxHSS" class="subline"><!--pnid:MpGIeQVnaTaYf7Qu6xn6uV-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="ASGAsYI3h3FSQhvNr7WqBK" class="cmp">
+    <div data-page-node-id="Lg91HnGljJQSoZBPjc8L6b" class="old"><h4 data-page-node-id="wYoGjS1CVEyE7P00exorEx"><!--pnid:3EpO64b3gWEoVqyg1XUS2x-->✕ 现在的做法</h4><ul data-page-node-id="VmiTedckVmOl5tcPIEn1Lq" class="list"><li data-page-node-id="VIJu4VgKhd3dple63jei7C"><!--pnid:K8pHiowAmFbu8lnyhoJLzO-->50 人公司漏算核心员工 200 元全勤奖 + 1,200 元项目奖金，员工拿银行到账提醒冲进老板办公室，半年后核心骨干跳槽 —— 「不是为了钱，是觉得公司没把付出当回事」</li><li data-page-node-id="zO36Jkly3Bl2ZLh29rmj8p"><!--pnid:GchNtC9gTr0UHUfwMXlUCp-->员工少算的会来投诉，多算的从不说 —— 异常是单向暴露的，靠员工反馈兜底等于只修一半</li><li data-page-node-id="RLZq6RfIcSKVKJtfwC1To1"><!--pnid:Pa2iGqqYE4pJOVRtm4iUvD-->错一分钱全公司都知道：发出去的工资条收回重发，损伤的是全员对 HR 与公司的信任</li></ul></div>
+    <div data-page-node-id="DjlzBYArhxwtRzBOr2cRse" class="new"><h4 data-page-node-id="L0O0ZcgGdHNEd0AqWn2vpK"><!--pnid:RZMo7QuWeqayvFziXirI4f-->✓ 交给 Agent 之后</h4><ul data-page-node-id="fMF6TBAcEBPHtr91QQXXlX" class="list"><li data-page-node-id="MG2lGc1iR2VxNx4UjhnBNH"><!--pnid:JeiVziHEGw3rYjY7SSmiCh-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="h7X8GMEpyK9ihEISXyZpFZ"><!--pnid:XIZWhTceZAFFl67ZnbqajG-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="piS5wLQNNsSwMxYRcpjsgW"><!--pnid:7B2I7zeCm8YeQaVJZ2LeG9-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="F006wm8SmktQ05yMLxSGot"><!--pnid:oaQPQx22S0Bkp1THgPPMDe-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="dI1Hq2tsgGrvhKrKbHywWR" class="blk">
+  <h2 data-page-node-id="c3HsR6GDB7vYhTxRibiTKX" class="h"><span data-page-node-id="oN4lBsTuNXzT2HJJpO1njY" class="num"><!--pnid:rOMe6cFVMSr6ZH2LB8894n-->四</span><!--pnid:Fong7kv4BWjJhjvygDVTtm-->场景闭环</h2>
+  <p data-page-node-id="jjx3nE3pRtKEYK7b2JRGBV" class="subline"><!--pnid:aO0x3SwNN4doP2nfkeaYy8-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="il7cM6rqC8B4u6nJy2OiOP" class="flow"><div data-page-node-id="tQhCU4YA9kL3t4zTxjooVK" class="step"><div data-page-node-id="9ivlBEYhvE2obhKBj8oPFu" class="n"><!--pnid:MgTlZVJcpS58LMuYkjIRR3-->第 1 步</div><b data-page-node-id="yj2prRgarDsaV3ObabdEkL"><!--pnid:mOZCrliSb1gAqCVf0y1G6q-->工资条生成 · 法定栏位齐全</b><span data-page-node-id="AoqIG4LVttQVl6vTALILzK"><!--pnid:oikf1b9rJBrLWaVl4bxDfz-->应发各项、代扣各项、实发 —— 员工能看懂每一行怎么来的</span></div><div data-page-node-id="InnY47rkHVuwS26OffXfTQ" class="step"><div data-page-node-id="Z918ZJKJzuyiCL3UwRKrqz" class="n"><!--pnid:tT9k1ijwIBYg5amC5SYXh0-->第 2 步</div><b data-page-node-id="9nldQ2bINCp6Nn0ccxyBHF"><!--pnid:9dIk4PiBUd0XX8FyJ27pZx-->环比比对 · ±20% 双向标红</b><span data-page-node-id="8eYsoLAPQn9vCksERmNtO1"><!--pnid:6vKbfzF7XAoXop39X632Xj-->比上月多 20% 少 20% 都标 —— 多算的比少算的更隐蔽</span></div><div data-page-node-id="12faAH7YFjcO54QUDJHNJ7" class="step"><div data-page-node-id="h5ZoUzgF4Zd9xPaHyTP7Ix" class="n"><!--pnid:RUXqM9NFkU0asK1PRHHO8S-->第 3 步</div><b data-page-node-id="2EWti7Lpw8Y8oHIxiW8PNQ"><!--pnid:SLL4ljwNkHKdKPSEvRceoV-->合理差异排除 · 先减掉预期内的</b><span data-page-node-id="knFPz2bhWKwj2SVvpwG8HP"><!--pnid:zX2pYEpTT0RSxCqDWG9pRS-->新进离职按日折算、已知调薪、请假扣款 —— 排除后剩下的才是真异常</span></div><div data-page-node-id="OIyYRyWah9LJqU1HDLnywy" class="step"><div data-page-node-id="qv3858slrA6fxAUYi7HLvG" class="n"><!--pnid:q7OgsNFfrrDEaotjamg5tz-->第 4 步</div><b data-page-node-id="wdYF21EYxkYvHD61ycrp0H"><!--pnid:QlOMpFA9Yr3S8qPAiE6Zfh-->异常分类 · 每条给出怀疑方向</b><span data-page-node-id="GS0YX63g5SIXj8Ynpixlhn"><!--pnid:Z6V4rH0T5BNCqh9o8LQsow-->「全勤奖没了 → 查考勤异常记录」「加班费翻倍 → 查加班审批」—— 不只标红，给排查方向</span></div><div data-page-node-id="d2r3MQk4T7e9RpVJ0oDNEr" class="step"><div data-page-node-id="dpfNhMoBrBV1I12W9I40xA" class="n"><!--pnid:92rIa8fq4DsfJiLAxeEZRA-->第 5 步</div><b data-page-node-id="Vh9RSdKODCHIQSyJ13lHv0"><!--pnid:H3HhpsAhbZwe3RZ0ikBb0N-->拦截放行 · 确认留痕</b><span data-page-node-id="x89zkZCymP3iFjZaBtIMDZ"><!--pnid:W0uabXa9kpCFNWMnYQpvTR-->确认无误的打开放行；存疑的拦下 —— 拦截名单与确认记录归档</span></div></div>
+</section>
+
+<section data-page-node-id="Gt9jMEhPmg3BKiRh9dp6yb" class="blk">
+  <div data-page-node-id="ea1XT5qWExW9j7K7HZN2pQ" class="g2">
+    <div data-page-node-id="ZJtUOHQXat0hU4utsG25yE" class="card"><h3 data-page-node-id="KbbIvS1XyvrE0Tlw1AdM40"><!--pnid:TnXAeK6G8D9FyqlrwAq179-->要准备什么</h3><div data-page-node-id="2pWom9nPOfEJb8SuCzelRf" class="src"><div data-page-node-id="0RoTATkJycR86xl4w6FVDh" class="fn"><!--pnid:LWUH86JcwhsY6FTaCxui3a-->本月工资核算表（算薪跨部门数据拼图 产出）</div><div data-page-node-id="TuzZYypRK4UN8QIIlFCnrr" class="fd"><!--pnid:hYejeMDYK2TL1EiihTh5Tj-->与算薪场景同源 —— 数据不二次录入</div></div><div data-page-node-id="w0LYB5C5QIgt7e3Yxz8anP" class="src"><div data-page-node-id="07AgYwGOunRPXLYmC85aOR" class="fn"><!--pnid:aOBa9d3U78SVdnHLLw1ztP-->上月工资表</div><div data-page-node-id="AOi4zXU19i2XEIIBbZEmjc" class="fd"><!--pnid:tarnb3ZcXfQ9qf1yafG7uu-->环比基准</div></div><div data-page-node-id="NgEWP554VpVyxHRVXvKdPj" class="src"><div data-page-node-id="ORRRnnJAsVGmMwF03cw67q" class="fn"><!--pnid:Afw9G4X37L9knd9TXDcj2H-->本月入离职名单</div><div data-page-node-id="hHuoOvcnCcwe9BXdMc7tQT" class="fd"><!--pnid:BFbc57toMGk1CIgMsu6wBx-->新进/离职人员的按日折算预期差异 —— 先把合理差异排除</div></div></div>
+    <div data-page-node-id="x0XBuK7ktXWiSRMRqRg7Rt" class="card ev"><h3 data-page-node-id="6DbG7Pay0h83gqyHbjwXch"><!--pnid:nicxDBk92jRAvgqrTK2JB3-->为什么这个场景值得做</h3>
+      <p data-page-node-id="GhWKeaMAelQbXdxI8IlWuW"><!--pnid:rvideX6kMIh3GkL6yZgtF9-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="v4LDQL3gmJvhHcHvoJmcYZ"><!--pnid:xu28cRb9Skgg2Y5IE2Uxpt-->8.0</b></p>
+      <p data-page-node-id="qdLMRoVMTOS0XYNhcEoOw5"><b data-page-node-id="64tNYeJVtF9y0QklmhnJ7J"><!--pnid:FcovfOq0yK7Z1EHuiKvnUB-->最大差异点 ·</b><!--pnid:blRP1UrcDvtm47HFI0tC5s--> 不要求先有 eHR 系统。工资表（算薪跨部门数据拼图 产出）+ 上月表扔进来，工资条与异常拦截一次出 —— 发放前的最后一道关自动化。</p>
+      <p data-page-node-id="RE98uxCdYCBhEnBoFH5ScR" style="color:var(--ink3); font-size:12.5px"><!--pnid:iSSjEev6tp4nLwbXP7Xfd9-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="gvogslropveTbiL8D31SKv" class="blk">
+  <h2 data-page-node-id="ilJDZaEDa07NTTVwS7UN54" class="h"><span data-page-node-id="njkLEJ9oTGjPW9x7ejSRBN" class="num"><!--pnid:7i3kiW0Lq24eRrf2EaXRTt-->五</span><!--pnid:Wjc78hvEqMwELLfgSp9UrQ-->会产出什么</h2>
+  <p data-page-node-id="6v1L24kEwrUw9T775vcSf3" class="subline"><!--pnid:xZSMiASqfJfeQ1NJma5lkj-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="4MEknQyYNeoeZAD67nMrLU" class="outs"><div data-page-node-id="evGttvcxLKbLCuInJyQuzx" class="out"><div data-page-node-id="d3bH4W1eSTRho4oD7GxY45" class="on"><!--pnid:xbRPID0eFZYM6k5NTSJVt8-->正式件本体</div><div data-page-node-id="QBGAMX6l68hGpYgRqlS0Mf" class="ot"><!--pnid:8BwN1NtsWSKkS5dwQDx8Px-->xx月工资条（分人）.xlsx</div><div data-page-node-id="pWwTcsP71o1TemuBdRrX62" class="od"><!--pnid:23d3hsdUOVfrKm0EwCe4Lr-->正式件本体 · 法定栏位 · 员工可读</div></div><div data-page-node-id="cx4gvKkyx9DvsruHwDLXHB" class="out"><div data-page-node-id="U7toJunoMzgnMLp7XxwAMr" class="on"><!--pnid:VRcXZMtSQGNqYUu6Atuljx-->可派发清单</div><div data-page-node-id="5fXdj9aw1dKi9JoRPFKdHx" class="ot"><!--pnid:ws5TmoLWXYuhpjbiSM1qiS-->发放前异常拦截清单.xlsx</div><div data-page-node-id="tN4pvbK0FkuGjuWMRPdiHR" class="od"><!--pnid:TJMvtuLOBLJSHqpCfdtwAH-->标红明细 + 排查方向 + 处理结果留痕</div></div><div data-page-node-id="rmJI1erBvbO53yXQgrCnUo" class="out"><div data-page-node-id="4DS8JpfcMcKuqXe5YPCG2t" class="on"><!--pnid:3fmNLN2fVF1V2o26zYtf0b-->可派发清单</div><div data-page-node-id="HK2mx7y0c04UelNlp4JeLl" class="ot"><!--pnid:jduabPPsAonHRNZFUkqW7B-->环比波动分析.xlsx</div><div data-page-node-id="eG9hZZh3bw0KduC223cige" class="od"><!--pnid:XSq8esPUQcywRtKcc5wsnZ-->全量环比 + 合理差异排除依据 · 供复盘</div></div></div>
+</section>
+
+<section data-page-node-id="BuwntuS9AENObfiiCzhCgd" class="blk">
+  <div data-page-node-id="rpUWRiLB2e8mWqRhOEHlNp" class="card warn"><h3 data-page-node-id="bKt3EalkrGva4o3Y783Pdx"><!--pnid:7qSo1VpiaEhYqaPy0XqSBM-->这套东西不承诺什么</h3><p data-page-node-id="q4YXdANKGJh5DWDtf33pB6"><!--pnid:zAzUvZ0VoHo4WoxLKLLtwj-->不做「该不该发这笔钱」的判断。本场景做的是生成、比对与拦截 —— 被标出的异常由 HR 确认，确认记录留痕。</p></div>
+</section>
+
+<div data-page-node-id="1g1Du6Veneok3TJaifP4nh" class="cta">
+  <div data-page-node-id="ih2egzgStBYJz8vmwl3Mtm"><h3 data-page-node-id="FJ5loncr4LY4Lj1PO3T7E2"><!--pnid:k2yGj5jSf34oo9jydOs7b9-->想看具体怎么跑？</h3><p data-page-node-id="Qh6Z77hpgsMZ7UxjWZSiyd"><!--pnid:Flvj3wsVsyl2UzpU0YhRRT-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="HBpDnUOqg8DR2vjFvLVgpE" class="btns">
+    <a data-page-node-id="njHug865QVuZDfLuCihdzH" class="btn" href="LiveDemo.html"><!--pnid:7iRQ3AqZIeL0GVjPKEhyZD-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="CHXSp0U0LitpgMv8Lc1JMB"><!--pnid:711xAuGy2YmW14fcjxKeLx-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 涉对人的决定一律人工终审留痕</footer>
+</div>
+
+<button data-page-node-id="UWdpGeaRTzKHa5iqZI01Fi" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="pJVOG6lW4Ejw8AJzs37sCb" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="fgEKPpvFZiU4a0QUj8OOSf" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="KagfERjUYoq5unAunBC2Ja" data-pnid-children="V0TcJG0ZJPfLGwoz5iskaD">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="oPzVXpIKQqRERjiIi4hNpg" data-pnid-children="e9tBdtCp5SjR7UbkJdUF3o">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="lQ5CVLqM7MuWxQVzeZ1duu" lang="zh-CN">
+<head data-page-node-id="9unK8nZJOvjEWsgcA08n34">
+<script data-page-node-id="4su93Qt0YTFbQxm5Vzny5K" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="NKkplU9Teh15Ym4arOC86f" charset="UTF-8">
+<meta data-page-node-id="BjJrJNvjBxKhcrkMt1bIzE" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="dS90adLBC59kiHPMkW8skt" data-pnid-children="yt86jdEgW12XNn7GidAh8j">竞品拆解 BOM 初稿</title>
+<link data-page-node-id="cg0dP3UxZnXNnYvvwSvD3B" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="CqetxLbaUtwtE5sjNOFvvW" data-pnid-children="AIYRwAnn5mGDlO7sQGBRUg">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="eb4lsZLNmwGPtAQJ2qho67" data-pnid-children="W9yaOw4gjCCsRvg95MRLi9" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="6RLPtvit7hotvU84katPBc" data-pnid-children="8ZekpTPmWmlAIXASEcRYsN" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="6FeU3LqTCbpWQDB9oiUOq1">
+
+<div data-page-node-id="x77Ja5Cg1xBZWk3mxFfnwB" class="wrap">
+<section data-page-node-id="pIAHizwqNvAiHlGLQuArv3" class="page-hero">
+<h1 data-page-node-id="ZJhltJ0qkOgzeT0tZnFVFK"><!--pnid:0qobldmPPXENWn2L8LuHVk-->竞品拆解 BOM 初稿</h1>
+<p data-page-node-id="3i2yt1iVzhCGcLoyNKLMb4" class="lead"><!--pnid:rlU0q3hUebjmfaem5OzZz3-->拆解人人都在做 · 但拆完的照片堆在个人目录里，成本差异永远停留在「感觉」</p>
+</section><nav data-page-node-id="IOCZZfg1RWgmqNUjjbYOcn" class="subnav"><a data-page-node-id="BjP7vMaaSmA6yH1avBq8t6" href="场景引入.html"><!--pnid:n5oRc6Ezkjp4ly9t5fbdbx-->场景引入</a><a data-page-node-id="lykJtWrYKiPT7EcaP0DzwQ" href="LiveDemo.html"><!--pnid:wH1OXnJfQXF3dwZ63FJwgf-->Live Demo</a><a data-page-node-id="4AhwA5cH46aP5t4bALTYNL" class="on" href="#"><!--pnid:8pXSlMnVg3AMawmdvKrZME-->推荐任务</a></nav>
+
+<section data-page-node-id="ZtG2vQvksTgmpq5oMLLwlE" class="blk">
+  <h2 data-page-node-id="WATe3nrFgq7OflZu0h5U8u" class="h"><span data-page-node-id="JLIFUvxWjIiwjroKOgjL8W" class="num"><!--pnid:yTcLctYK21RSPaiSnpIRpA-->一</span><!--pnid:4CSNOuAnKLb4D4hGDgHe76-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="jMF10VaDABlq0h4ulgMmTf" class="subline"><!--pnid:6zpsoIYKqJatwAXNTQ3qyr-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="vRBNwNZnR7EuCny2NAtOK2" class="card"><p data-page-node-id="lEas3jJ4wm9TqoYcDKqh51"><!--pnid:IvZKe7LQfm4ubsDGljCtgh-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="jducgfcHgD1s2oSBHluyFf" style="margin-top:10px"><!--pnid:UbAQqIeV2TEe2UKKChdFxJ-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:x8X9qOPss3ocOnKQFkDvKh--><!--wb-skill-start-->
+<div data-page-node-id="bH6YxMwHzKbFVGnezxhb4P" class="wb-skill">
+<p data-page-node-id="7Qh5zSoeHEF7FLGFGljipZ" class="wb-skill-lead"><!--pnid:ceYV4BAfmRFViXiGBMTQXi-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="0xEuE6vuDcaIjcydwQr9oS" class="prompt" id="wbSkillPrompt"><!--pnid:1FYfFaWXUo0Jr7KYQVbEat-->【准备】这个场景的规则都在「竞品拆解 BOM 初稿」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/CZeCotPERoS0163ImpF6gk/Fj9axFnDDy5v/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="QX5wyJYCt4QA6JLmh9L1In" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:0Z2nOQ7FqQ8fTQkEYisbpX-->复制</button></div>
+</div>
+<!--pnid:rvItG4pMYRC61fvL2ULVg0--><!--wb-skill-end-->
+<section data-page-node-id="3NZqcmqU7u1gE7m0GvCXek" class="blk">
+  <h2 data-page-node-id="W8sDVwGsANIHglGxynhZvN" class="h"><span data-page-node-id="smccEgcVHON46fHSHwbgZL" class="num"><!--pnid:4QgQ8CpB2TSMDVdp8Ongte-->二</span><!--pnid:Te5a0OzlLAmYdkASHaF9aA-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="5zyVVVeahgidKdoIEobETE" class="subline"><!--pnid:V16fmMt1ohuXXcvdX6aOli-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="uSyqdiwCspk8m0XGh2VduS" class="tlist">
+    <article data-page-node-id="BV1HpGr7rD9XKDKYtkzXn9" class="task">
+      <div data-page-node-id="RR56WCHxqlWCxKaW2G04Xi" class="th"><span data-page-node-id="0ExyBNxU2JCQnbOE7eJYp7" class="no"><!--pnid:9iAImptaYvnPvADnHf0Sdg-->01</span><h3 data-page-node-id="tWSlcX4MD24sQNwHetsZSK" class="ttl"><!--pnid:FA0X4ojyCDcUvvlmI83wLT-->首推默认</h3><button data-page-node-id="00aeRc3ortclEupSTILNuQ" class="cp" type="button"><!--pnid:l5GJOqiJG8iEhxuPRdKBRn-->复制</button></div>
+      <p data-page-node-id="z1ci7o0wgUJ2iqJB4PPk2Q" class="tp"><!--pnid:tVUGSSJx4ghxf8vbptKtg4-->竞品拆解的照片和丝印手记在这，对着我们 SW3 的 BOM 出一份拆解对标初稿。
+丝印认不出的就标待查，别猜型号。 差异按可比/不可比分列，别把接口配置差异算成我们的冗余。
+估价全标估计值。</p>
+    </article>
+    <article data-page-node-id="NFS4Zofc3LHoQkXDLG5bvE" class="task">
+      <div data-page-node-id="c0UrHCBtqDEhgmQ66seB8e" class="th"><span data-page-node-id="g66q19CXlhgIcerKZT7pLO" class="no"><!--pnid:uLB1TY3wym3pkd7rlvaJpR-->02</span><h3 data-page-node-id="vtwPMOJcyYViKOCUerVJa4" class="ttl"><!--pnid:fJkE9e0M05TaY8TbdfyUha-->只做丝印登记</h3><button data-page-node-id="LlQJMZKKSYs5T8FuWpz7H8" class="cp" type="button"><!--pnid:asoOaZB4pdw5exicA5JT9D-->复制</button></div>
+      <p data-page-node-id="yJTlDtpIsmlQKflMW4cZya" class="tp"><!--pnid:w5xPEyURmneO1erpqPjYoD-->先别做成本对标，只做丝印登记：把照片里的丝印逐条认出来，带位置编号和置信度，认不出的进待查清单。</p>
+    </article>
+    <article data-page-node-id="9nEZnPC3lKl0UKe5LH6yN6" class="task">
+      <div data-page-node-id="AVbu9TXpm8h87GbxCu4ggx" class="th"><span data-page-node-id="Frf3Sa6XIxLr350d3JJDJg" class="no"><!--pnid:mITo1GxS9QdBFbTFPUYgvC-->03</span><h3 data-page-node-id="8wlacLIiAsOqjtZabSzRpl" class="ttl"><!--pnid:0EiZzvx7wF4ZVrTw1fPGCy-->按功能区再拆一遍</h3><button data-page-node-id="vx4C3JI5on6WRnC55FgioQ" class="cp" type="button"><!--pnid:srzU9dCUPiBkiIyIZ57SCF-->复制</button></div>
+      <p data-page-node-id="Vo5t2j2geFVb1GwpIfLduB" class="tp"><!--pnid:9ctpvA45MsOl96AAZOGwUH-->这次按主控、电源、接口三个功能区分类再拆一遍，看成本差异会不会集中在某一类器件上。</p>
+    </article>
+    <article data-page-node-id="W7XLIy4xwmzNLsAxfSExQd" class="task">
+      <div data-page-node-id="2mXumhZUR1v6vfd3s3wjYn" class="th"><span data-page-node-id="DiyPz6zIrnBbPYpTWShtU9" class="no"><!--pnid:cTjcbtX3eiOhMfRzDFcxoh-->04</span><h3 data-page-node-id="hy87fQqZZpBl00306x8PwU" class="ttl"><!--pnid:KkUEdeMD9ZPzsre9Yg6NgE-->两代竞品一起过</h3><button data-page-node-id="PfMuUO6soNwjUliBNhowPY" class="cp" type="button"><!--pnid:DofboLeGAdrJu22tSEkZWv-->复制</button></div>
+      <p data-page-node-id="W5sswEumH6HPVOkLPVSIOW" class="tp"><!--pnid:23h82hD8FUGFSn2VF3wnOo-->演示数据里还有上一代竞品的拆解照片，两代一起过，给我一张横向对照表：料数、可比差异颗数、Top 差异项、估价差额。</p>
+    </article>
+    <article data-page-node-id="K89lzsvjwTUPfzZu3azBuy" class="task">
+      <div data-page-node-id="GyblPD3UGFuEf3l0Iw8JF8" class="th"><span data-page-node-id="AlITnHIuhe0deiwvgPcMTI" class="no"><!--pnid:t3lpPaawdRZuslq1Lef5bp-->05</span><h3 data-page-node-id="6eKGzEE9tnP42sIFWy63Yt" class="ttl"><!--pnid:tW1ojBzWR12chVm2Miqg8I-->给降本评审的一页</h3><button data-page-node-id="1kWizjwTZG3bdlu5Xi5atz" class="cp" type="button"><!--pnid:mjpsC6lJjkD9wEzLIJH0ju-->复制</button></div>
+      <p data-page-node-id="rGZIHbEdLzSXvvkeY27m1V" class="tp"><!--pnid:CRa61GaQjhWK3uffBruE3o-->改成降本评审会用的一页：可比的 5 颗候选、每颗估价、合计每台多少元、折算年化多少，各标注估计值。</p>
+    </article>
+    <article data-page-node-id="jzqpC59ikKhbHixCgGDo6k" class="task">
+      <div data-page-node-id="O7BL2jZaytvfiOFuBMlBOd" class="th"><span data-page-node-id="WwklUzro1bkZHpgmuVihyF" class="no"><!--pnid:3pE3MJeHEyWSp5F7A0c9z9-->06</span><h3 data-page-node-id="Mv0aEvXXIzKxfFqghhpeV3" class="ttl"><!--pnid:rA37LeNH3BNlXIN3QBIuDK-->让它反驳自己</h3><button data-page-node-id="9HzyHoaz42eyVDFSYB4NqF" class="cp" type="button"><!--pnid:9ewIeUFsYPkqfdalWDkwTi-->复制</button></div>
+      <p data-page-node-id="gJVHzD1TUEpdvWfhKvnuMp" class="tp"><!--pnid:ggYb0f06GhsTfPtT4iZyRJ-->你说可比的降本候选是 5 颗，另外 6 颗真的不可比吗？把接口配置差异的每一颗列出来，能归到可比的就改回来。</p>
+    </article>
+    <article data-page-node-id="CZ5OgxJvBp1hWqH5IlUReQ" class="task">
+      <div data-page-node-id="osaUZWYkfRelSaU7K7cuoB" class="th"><span data-page-node-id="qIuQOSpaZiHNMgv4Tg3w29" class="no"><!--pnid:E8YxniJlpmTYDsjn8Tbggn-->07</span><h3 data-page-node-id="SG7DEZK21fNGDwOobBA47z" class="ttl"><!--pnid:KlahGht8R4fgDvK5yIfkBE-->翻上一代拆解旧账</h3><button data-page-node-id="yYQVPDp8ZoxO6Kw1mqgnUU" class="cp" type="button"><!--pnid:hU728MTBQvI0DSrDXOCfW9-->复制</button></div>
+      <p data-page-node-id="BzW8rYgbiEBWsDHJXJd53z" class="tp"><!--pnid:DeDJT8SCxZeOYJl22mVDG1-->把 2024 年上一代竞品拆解的照片翻出来：当时发现竞品电源方案省了一颗背光驱动，看这个差异是不是保留了两代。</p>
+    </article>
+    <article data-page-node-id="CIqcWhjzVMh51mwE0CvWvk" class="task">
+      <div data-page-node-id="2Ej4E6Qz4QhwopDTu7QmGL" class="th"><span data-page-node-id="1Hezlmo8qIVSlGFLokdQZO" class="no"><!--pnid:eyWmQ0R0QEpLpPCOnnUaDe-->08</span><h3 data-page-node-id="tt88rc27o26JNy2ScqgXib" class="ttl"><!--pnid:umTVSF6q9YnkdkZyhAZrJi-->对照硬规则自查</h3><button data-page-node-id="LBg9L8Xr5bAVr0BHwjqYpx" class="cp" type="button"><!--pnid:dLmLxCAmsJYa6Sng65NVtt-->复制</button></div>
+      <p data-page-node-id="dJK4F971xFfwv6ZaL1lUUT" class="tp"><!--pnid:5qfFAvCW39nJqojPBAJ8SQ-->对照能力包自查这份初稿：估价列是不是全标了估计值、差异有没有按可比不可比分列、待查丝印有没有单独成清单。</p>
+    </article>
+    <article data-page-node-id="x9lnxS9NEtlK1r9z1rUQ6C" class="task">
+      <div data-page-node-id="GtQSV5jlMgrYxha7lhlVDi" class="th"><span data-page-node-id="vKiIuSvWz74YoBda9fP8z2" class="no"><!--pnid:d1hag0ZqonghVJXQD6yiNU-->09</span><h3 data-page-node-id="MA0BQXoVAR2phxJO8n65ly" class="ttl"><!--pnid:Q3IrQnq8wTSJchEI6D7sGP-->折算成年化节约</h3><button data-page-node-id="dxkwJdu2pR8Me7IlsQFMoC" class="cp" type="button"><!--pnid:sDO9XgruCP3YdhaEFdm99o-->复制</button></div>
+      <p data-page-node-id="FQXUco7757zs2oOkbKmWRx" class="tp"><!--pnid:f6Wse5tuHHnJ9pTWsBYAE5-->可比的 5 颗按公开渠道价估价约 2.2 元每台，按 SW3 年产 12 万台折算年化约 26.4 万元，把折算假设逐条写出来。</p>
+    </article>
+    <article data-page-node-id="A4vNpavzbteTd4Ftn7ph2i" class="task">
+      <div data-page-node-id="uPVSMlftEpSJiNO8aJwedB" class="th"><span data-page-node-id="rIN1ohS075oHJJuRefVH6B" class="no"><!--pnid:pvNEnoc5K69s8NLpIfRK3b-->10</span><h3 data-page-node-id="KNJZeKCqCga2vcMQrkbItB" class="ttl"><!--pnid:x9K08cRgD1rEX1zTMvJDGt-->沉淀成拆解模板</h3><button data-page-node-id="p0Hbq3IXaUpxWkRRaIJTxx" class="cp" type="button"><!--pnid:HxlP2C8DLO7stCAcGb5Bin-->复制</button></div>
+      <p data-page-node-id="0WkhGayShKcBk9wEPOEYiW" class="tp"><!--pnid:l8jegA3Zih6DmQRMAJ1iiS-->把这次的丝印登记字段加可比不可比判定口径整理成一份拆解对标模板，下次拆机直接填。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="cf9AiyvUh5I90tTz22Pv2G" class="cta">
+  <div data-page-node-id="Okun6f419dHMhm3Fp59ppc"><h3 data-page-node-id="h6UnQmPGG4oWRGGhUnpuKF"><!--pnid:8UapqrVVgaEUbbrINEmelJ-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="Vp03LkMEXjL0osOB7OWOXf"><!--pnid:y8xOiP0ZR8M0qvQL2i1BPr-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="3oKTQwdfMeqEaiAjl0w9FJ" class="btns"><a data-page-node-id="6VupHmxaRJugQROyPwYXQ9" class="btn" href="#" id="ctaContact"><!--pnid:KFLOUG4NvC6VOabi0f5cN1-->联系我们</a></div>
+</div>
+<footer data-page-node-id="JLzca0U8crwlQfmh8L6yHn"><!--pnid:xlJV8BJAVUMnvGGwKX12QW-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="jPIUne00cLM6d8dQ98kmrc" data-pnid-children="9hhlBtiuMz73yhYajDKqge">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="gpBII0tvHm13nyVfZW8mOq" data-pnid-children="LPNSY2yNY8D1a7LIg1sNEF">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="6i8CPY4q2At3VOQvcPsMLv" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="eSA0H2YEYMEHjZ9RkpqxKn" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="OajL6OVAHyeGKfokCX8PIC" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="KI62hUmRZknNnZUOmNyEV9" data-pnid-children="aN1xVZZA8jXq5b0fBgrR9K">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="epbrkDLGgiHZLA2I3rqlFy" data-pnid-children="g6ptkmwsy40vadcZPWhGrL" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

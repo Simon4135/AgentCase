@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html data-page-node-id="oN70wrS0Gxwklq5mEnDcyE" lang="zh-CN">
+<head data-page-node-id="3xsdMLNSeHQf6bv0vOcQfV">
+<script data-page-node-id="C4f2pXsEDgqFGFlHPt4dDP" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="Tg9waJrgcTbWrZ65eg0sZ8" charset="UTF-8">
+<meta data-page-node-id="tm1qNp3S7fmGzREcgkGXH1" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="zwZCK9qTC4WaNA1UfzZPSw" data-pnid-children="EuevozAQJKDG1SKsIOXXqq">用工合规排查</title>
+<link data-page-node-id="cn7T3txYCGkIds6Ts8q8gZ" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="uoRoLKzMmtIunslZqaknXc" href="_assets/shared/hr-extra.css" rel="stylesheet">
+
+<style data-page-node-id="BZE4toGy0AbzLiQj17Xk2y" data-pnid-children="p0y4n5XvgOuhCQ7s08qccE" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="EKD200kPuqVfPhwcgZ2wS7">
+<div data-page-node-id="Uv6mCsUBhHhhul5NH7S32A" class="wrap">
+
+  <section data-page-node-id="Kf4syJvA7GAWeo62LDELKS" class="page-hero">
+    
+    <h1 data-page-node-id="G72Y8I57Sqo5tXC1qNBX9e"><!--pnid:PXvLEfpIej73DzgjRyJjYM-->用工合规排查</h1>
+    <p data-page-node-id="FJcEwz2i0zpvmg2dTikMs6" class="lead"><!--pnid:o5xlPhiGf4q78uppbUkIjc-->合同台账 + 考勤 + 加班 → 规则引擎全量扫描 → 风险点清单 + 三色分级 + 整改台账</p>
+
+  </section><nav data-page-node-id="cIntwbDofL4JgkioyzwhSO" class="subnav"><a data-page-node-id="4VfCRIzMSs9o1pya7PEHxx" class href="场景引入.html"><!--pnid:qXbXMKpYslqV8dbdVYY8GM-->场景引入</a><a data-page-node-id="rFIp6E5qxcbH6dSJzaI8gC" class="on" href="#"><!--pnid:e4wdNP6zuuCxDJWdCX7Haq-->Live Demo</a></nav>
+<section data-page-node-id="pke4hpHxMLUU7ikky1c3vN" class="notice warn"><div data-page-node-id="G2WcJkEcUSXlG8Khf02FBz" class="icon"><!--pnid:zz4JRRmu8eeTvcCCFMAwVh-->!</div><div data-page-node-id="CLFXLbiB06gllmIWT1IUmM">
+<b data-page-node-id="4GUdG9gpA34UIklRFNZVPG"><!--pnid:GFgwAJymxGyROhePJk8QCl-->演示模式 · 可视化预演</b>
+<p data-page-node-id="0UBcjRxJ1GR9UiF8fuObNi"><!--pnid:Pmzi1sJC4FNMPUhNidniLo-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="f4kdPXTxrgNsinwHfZBG6I" class="kpi-row" style="grid-template-columns:repeat(5,1fr)">
+      <div data-page-node-id="UgcuabEAUKvMzOpNnC7EQV" class="kpi"><div data-page-node-id="1bTi4P0axR1P85LC67ByQP" class="k"><!--pnid:mQPaooESftsfJQCQl3LZ6W-->排查对象</div><div data-page-node-id="6Wg1uxWq4rpjoKSF1vDEch" class="v"><!--pnid:QtVdSKV1gn8LbDTjB5Idlr-->12</div></div>
+      <div data-page-node-id="vNvudx5YfS3TGJHO0Yhu8w" class="kpi"><div data-page-node-id="s48kY4bjh0JfDSxHMSDYG2" class="k"><!--pnid:OeAW2KmIkH6QhGliiXZP88-->风险点</div><div data-page-node-id="iax1ZWqZFHsMMn4BqHflcG" class="v"><!--pnid:ZOWRKzpHRy583OHFhEtz7u-->5</div></div>
+      <div data-page-node-id="CzrjS4MLkVMq9qFgRPHPCE" class="kpi"><div data-page-node-id="Ze1Jv8rFBTwPgPnM1PM6Cs" class="k"><!--pnid:AfN0eagjOvVmyNmsV92Vsy-->风险分布</div><div data-page-node-id="PRrfLxDkSxU1dSWfrfJRLA" class="v"><!--pnid:EX8JpMGd73cVmcyMsgd41i-->🔴2 🟡3</div></div>
+      <div data-page-node-id="roDfNW3aYe8v6qgSOAlmh5" class="kpi"><div data-page-node-id="jVN2z0yp1qqRW80sqIv9rG" class="k"><!--pnid:s8ZJyPDFOpfFvxzsTJObgy-->排查耗时</div><div data-page-node-id="EJ4NfzryOT1rbqTXNrau2u" class="v"><!--pnid:sBfaKht2iSlTtG85DU7n23-->20min</div></div>
+      <div data-page-node-id="cNElD9JsFGPwdz0PPsy7Se" class="kpi"><div data-page-node-id="6zFUebsrKFeocXOCHmHZjy" class="k"><!--pnid:kB0OUpyblxTutUJFyKi7m9-->节省人工</div><div data-page-node-id="TecE71cQwiq64Uu8gBJoiB" class="v"><!--pnid:h7hRYBvUurGEclVQmIqInW-->1天<small data-page-node-id="Yql0DLxPgYHxndqoz2FMW8" style="font-size:14px"><!--pnid:6FywApoFffx4i3HSSQNa94-->→20min</small></div></div>
+    </div>
+
+  <div data-page-node-id="GfNhNZfj4NZlUoYuUzITNc" class="dstep">
+    <div data-page-node-id="UKEhANcxWHcgCKpRQ2UsQl" class="dstep-h">
+      <div data-page-node-id="Eqfo5cFAFToFnnVbYaMwo8" class="dstep-n"><!--pnid:otC5UnHXix50MZB1NrMvKT-->1</div>
+      <div data-page-node-id="9g5IDEoMRxLvRx16OfQJKW"><h3 data-page-node-id="RhH2204NKVxB2OLmszIR0A">
+        <span data-page-node-id="lYZ8Cl9EPPcNygm2bzhGfo" class="st"><!--pnid:7hwuZt4RAqsWyH8UDgrbmT-->Step 1 · 三类台账导入（碎片化输入）</span></h3></div>
+        <div data-page-node-id="oksE6NRW4jjMRA5aKZFhVR" class="sd"><!--pnid:0NUL2R2KN78MLXOA9ssXyU-->合同台账 / 考勤记录 / 加班记录 · 12 人 · 覆盖制造/研发/销售/职能</div>
+      </div><div data-page-node-id="xM6UNE1TL9sRBTuTxmfvg4" class="dstep-b">
+    <table data-page-node-id="piEdXrOWePxQBHGKYX6Mjt">
+      <thead data-page-node-id="A9gpLwkUCkvGRKcpltYWDz"><tr data-page-node-id="Zdfkut85exUWqobQOzZpNK"><th data-page-node-id="vxAYJi0WxSgPIqQ2jOpo0B"><!--pnid:6xMXADfBoip2b0pVvGJsuM-->台账</th><th data-page-node-id="MlWifw9snIQuIZvJPqXHGT"><!--pnid:6XWThh2E7UoLkBtSlxqUkb-->来源系统</th><th data-page-node-id="v8cnNhVfu6ALEDiWEcPCHX"><!--pnid:BfUjjvjV7KDGZk1LDVU69N-->关键字段</th><th data-page-node-id="MUUfxk5XdGm3bW8zKvNJ2X"><!--pnid:oS7i5C5GnROwuOBYTWZgfM-->重点信号</th></tr></thead>
+      <tbody data-page-node-id="I6BLwfd0I0qx59N7f57xfd">
+        <tr data-page-node-id="lb5voKNmxfeOfKL23ChjsI"><td data-page-node-id="f8WePTwRenEWmIupIW0kZ7"><b data-page-node-id="eRuICyLWc4qFsF8q4O4Bcy"><!--pnid:zJdtb3fxLn4baW7Jgf5tlC-->① 合同台账</b></td><td data-page-node-id="qknVfC7UwjbZer6jWerW0x"><!--pnid:ZUYdCShVownWNtnpBSgkwC-->合同管理系统</td><td data-page-node-id="4wI1B2NLHciuUebsebUn2k"><!--pnid:qRCvJk3PXbcrM2JBEP2tRp-->入职日期 / 合同到期日 / 状态</td><td data-page-node-id="tXTVfjHJCY5iu51UvzncKq" class="hi-row"><b data-page-node-id="hIkhx7yKp8ta4t9jEoskCN"><!--pnid:BhM673dazMUacaopTjEs2c-->2 人合同到期未续签</b></td></tr>
+        <tr data-page-node-id="2X67VAFNWqY9SV2SN05Twl"><td data-page-node-id="u1rZBNHkUHyrr5YrMugTyK"><b data-page-node-id="S5Mhp1Q4ZgQTRyfOjvBux5"><!--pnid:EuOcJ9Khto2J0peO0qeGtX-->② 考勤记录</b></td><td data-page-node-id="hHpMSqIGlFke4908rneIIP"><!--pnid:V5JXcTVkAXbZ6wp2ktGkwl-->考勤系统</td><td data-page-node-id="Tkg5avF6Z7UHV9l3591uEo"><!--pnid:SgnW1Zt3vtBCNNe4uAolf9-->迟到次数 / 缺勤天数</td><td data-page-node-id="Fb21miM6y31CtimyVanxAO"><!--pnid:FCMmEsWEPTiM47GdmGRPRH-->1 人异常（王大力迟到 9 次）</td></tr>
+        <tr data-page-node-id="yxFzwrpu2eNvINMSsFBgDm" class="hi-row"><td data-page-node-id="E8E18mUmngRymkeJuooAWr"><b data-page-node-id="wekQ4ZKtviy8BPff9uzGpU"><!--pnid:DI1ZIEzZUhBuMiWHUbCU2C-->③ 加班记录</b></td><td data-page-node-id="OfKyLwVnabFQAFXFjma75a"><!--pnid:0TYADOFgk1V0Bqs0r5uBr8-->加班申请系统</td><td data-page-node-id="o3bWRTFlZPe54cqsvkpG9R"><!--pnid:UwsBkw64V6RdN28GyUn4pG-->月加班时长 / 核算状态 / 调休</td><td data-page-node-id="XK2eRx3NsLMuMg4oCuxO7Q"><b data-page-node-id="bHVOVEaBmwYnBvfJVIpxPF"><!--pnid:9QgQAYfX7w9VNgqtyB1qWc-->1 人超 36h 红线（刘思远 42h）</b></td></tr>
+      </tbody>
+    </table>
+  </div></div>
+
+  <div data-page-node-id="mCpfCHLPo6uUjiVDXG4bnZ" class="dstep">
+    <div data-page-node-id="6a7vntgZCCODUOiCObYDay" class="dstep-h">
+      <div data-page-node-id="vaYwnw8r3YjiflBadE2XSB" class="dstep-n"><!--pnid:Sp6ztJMGpFba3b99UeEC3Q-->2</div>
+      <div data-page-node-id="vkDYlLkvC225pftPlpelhs"><h3 data-page-node-id="KhQt0V9DjZGTkoEMqG75IH">
+        <span data-page-node-id="1I1gAHFJ6vSFU56ZXeLtk7" class="st"><!--pnid:bw0tR3GvZCIjlcGsjW3TwL-->Step 2 · 一句话调用用工合规 Skill</span></h3></div>
+        <div data-page-node-id="RfE6b4dQd3Q6UzaEay9nsU" class="sd"><!--pnid:xzp4xJiWdafQhRcGLkMcai-->不需要逐条翻 3 个表核对 1 天</div>
+      </div><div data-page-node-id="L2cIWfuLgFoekUgQwD0Te6" class="dstep-b">
+    <div data-page-node-id="ISiZkA5f5UCZM0A0piEZOi" class="prompt-box">
+      <p data-page-node-id="lOIyDDvTT7FQCIUT5tlaLA"><!--pnid:V3PuDjbYhayzcQN7eg8c7y-->帮我做季度用工合规排查，<span data-page-node-id="ADdh3un1ER1XstekEJ4Dzn" class="hl"><!--pnid:DfWoXvVKbOvHBCXeFnC8Yj-->三类台账已上传</span><!--pnid:aTeerFo4SbOnOs02MVXNh3-->（合同 / 考勤 / 加班）。<br data-page-node-id="P5jnRsAM0b1Is8Edx5AAVE"><!--pnid:cuT69qhzBYVAcZKe8vVc8N-->帮我：<span data-page-node-id="dvursE0YgGTokUL9JEk56d" class="hl"><!--pnid:tbQbTiZ4yrtn3j72UEdCmk-->① 全量扫描合规风险（合同到期/加班超时/考勤异常/调休未结）② 三色分级（🔴高危/🟡关注/🟢正常）③ 每个风险点给法律依据+整改动作 ④ 输出整改台账（责任人/期限/状态）</span></p>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="7V6q20Iokm7yTkt4NNNRhi" class="dstep">
+    <div data-page-node-id="q33Nu4M2Ge5xS5yZE1ZWa4" class="dstep-h">
+      <div data-page-node-id="PdRGrToR5PU4MXXAoRtO8V" class="dstep-n"><!--pnid:9MUJ70GUJR5IBP6jgl2bjq-->3</div>
+      <div data-page-node-id="V9WXmqRbYE4Yu6WxsMkp6g"><h3 data-page-node-id="tFoR3fAIT9vNy1S2nzCc1X">
+        <span data-page-node-id="tUIWjCtGs19USPZtUaN5Gh" class="st"><!--pnid:7TPozVdJ0brAjA4NKQs4pd-->Step 3 · 规则引擎全量扫描 → 风险点清单（5 条）</span></h3></div>
+        <div data-page-node-id="PapNDzvJA32PN8iDxQEVqQ" class="sd"><!--pnid:8BLvStbQJeWcm1ELKjTgtT-->合规规则写死在 Skill 里 · 全量扫描一条不漏</div>
+      </div><div data-page-node-id="KRY20j7FsZzYRL729XBfst" class="dstep-b">
+    <div data-page-node-id="2pi3Fn55Cz42m6LrQXUiUv" class="stat-row">
+      <div data-page-node-id="YqIMbzn6WWfjE72meCW9Dy" class="stat red"><div data-page-node-id="QNwOFGoqdTWXPyPdUnTjly" class="n"><!--pnid:fbDpBS2XNEN1iAfNnP6VWY-->2</div><div data-page-node-id="nqY5rDvATSrrQ4hPKf9KQR" class="l"><!--pnid:CFdiQRKPRtMcaiR1BJqsAN-->🔴 高危</div></div>
+      <div data-page-node-id="0FVg6q97phgoASUJRblbw4" class="stat yellow"><div data-page-node-id="yVjemc8ngSoFnFoenuit2R" class="n"><!--pnid:JR6GL32brAUU01WyMzIsNE-->3</div><div data-page-node-id="6M303rEYDJx2RtSv2ohHK0" class="l"><!--pnid:vtnJjR6YUPMv9AuGVCLR8D-->🟡 关注</div></div>
+      <div data-page-node-id="8vDIQxSBbegjDj6BnDjOxK" class="stat green"><div data-page-node-id="6yZ6w8cJMHG6FsTzFfK9a1" class="n"><!--pnid:X4YpViv2GxBbxSEtg0z4zF-->7</div><div data-page-node-id="pz8BgKaPp4zEdi16f0wmBx" class="l"><!--pnid:ZhyHfWfn01fg549dnRdIGQ-->🟢 正常</div></div>
+      <div data-page-node-id="jxrf956vOrXXtCkxF8iBre" class="stat total"><div data-page-node-id="ldpuy6TMtvuT5xgVcTJLqW" class="n"><!--pnid:CFJ6kW8MNQElSaVnOXjDYn-->5</div><div data-page-node-id="MGuyUKSHoooy0dvEZvWekw" class="l"><!--pnid:ch5uEuzVbLTgTTKZ1ndMII-->整改项</div></div>
+    </div>
+    <table data-page-node-id="zL0FsL1OLQaum3ZnTqWIyE">
+      <thead data-page-node-id="0HoUjK12sRuwi0vzh0kRaZ"><tr data-page-node-id="EOgxj8fnWphmaRnPpZz1Xl"><th data-page-node-id="DEfGdwdnPXt9zxqQFFdjQJ"><!--pnid:xnKaQ9zb1F7ZuXa6Sg9GQg-->风险点</th><th data-page-node-id="z0oUSFBO4T1nq8Pp4vegKh"><!--pnid:gj9h88JOt4J5Rd3QESf6Mh-->涉及人员</th><th data-page-node-id="Mw6Uq8QPPKImonq0nyKlbr"><!--pnid:kUWNuyhc4St5l4d93ImRIB-->等级</th><th data-page-node-id="2L61mGdVVw3f6TRZkkgIhW"><!--pnid:s8xWLE5tx9yo8b4qfNyF9V-->法律/制度依据</th></tr></thead>
+      <tbody data-page-node-id="jTnFThblCuj6I0IMcGliw3">
+        <tr data-page-node-id="noLbHX6jZhD9qtNkhhw0Wg" style="background:#fef2f2"><td data-page-node-id="6n3FnhAl0KaZ9taVWSm2HO"><b data-page-node-id="DbiY8qmHglJBcOKeCaCjSU"><!--pnid:xUrY77bt1eIsONs6iDaTrl-->劳动合同到期未续签（已超 15 天）</b></td><td data-page-node-id="vHAbn4xYbyq1RcSWwWDxhO"><!--pnid:W9dWu9uIWOPObKUAKovuMb-->王大力（制造部）</td><td data-page-node-id="HjQuhLeytmR0jrSMBZlsSf"><span data-page-node-id="1wtqqnDESrRsvqrvMnRuxw" class="tier r"><!--pnid:C3ApbOVxJp9A1rYaHrIDzb-->🔴 高危</span></td><td data-page-node-id="3acJ1gMLTa52PqjI8sFaMP"><!--pnid:4Nz2h3cWGZyNVU7fuMRvPd-->《劳动合同法》第 82 条：超期未签付双倍工资</td></tr>
+        <tr data-page-node-id="aSTxgUfIt1uJqYBHrjzORM" style="background:#fef2f2"><td data-page-node-id="zReuoFY6slNYKPFWkQD96R"><b data-page-node-id="fGTFclpYj3ZhL3KChhWrNS"><!--pnid:xDjHTjZVLwD0EkD8j6qW7V-->劳动合同到期未续签（7 天内到期）</b></td><td data-page-node-id="flvgjcwfEsX3hPpiPukQD4"><!--pnid:2gm6SzDZs3ZshGCV2xDrnh-->陈芳（销售部）</td><td data-page-node-id="ydcXMte42n8QP2jvrBnX5M"><span data-page-node-id="hYzu9SLTeCmoihkaQeEFez" class="tier r"><!--pnid:sf5YoeyK6XchtIubROwSCM-->🔴 高危</span></td><td data-page-node-id="SfO3GQDoonfANlGdZVrcIl"><!--pnid:Aad0DkWdueEivV3LJQfUda-->《劳动合同法》第 82 条</td></tr>
+        <tr data-page-node-id="P0RPkSbPU0EM0FBALgE2gB" style="background:#fffbeb"><td data-page-node-id="ljo67WPB9vIul6IryX04lV"><b data-page-node-id="33cTsXsXlAIz4XtqGGsTno"><!--pnid:yMoD9cv1an0pDijIegHhOi-->月度加班超 36 小时红线（42h）</b></td><td data-page-node-id="GysqBr4zDQ90wWzZDgOAoc"><!--pnid:3TyKpsYWoDgTM4Oo5c6w5h-->刘思远（研发部）</td><td data-page-node-id="yhOVK6XNkPyqQ9oH9OPm2P"><span data-page-node-id="EFYj1vo3A5xQOFj5QATiO1" class="tier y"><!--pnid:kzvhSbAQBYvspggM3huIsK-->🟡 关注</span></td><td data-page-node-id="a9SqBZ1HkDW9pY2Smf3qJZ"><!--pnid:Zhm6jyNAAFAhtuPf0diIoi-->《劳动法》第 41 条：月加班 ≤36 小时</td></tr>
+        <tr data-page-node-id="qQq0jXkOKUr8lROajygj4q" style="background:#fffbeb"><td data-page-node-id="miG3LC1Vms918SQe2qhMya"><b data-page-node-id="RkS0DfR4QU095vI4ouzByE"><!--pnid:hkhFVAye8UjYra6Y7MzjVu-->考勤异常（月迟到 9 次+缺勤 2 天）</b></td><td data-page-node-id="F2ao9ekZo4LzOXpoMRFxqF"><!--pnid:dcroBaRYIPcugah7eeJsAw-->王大力（制造部）</td><td data-page-node-id="ySO7IbMljAxGYUmIO2oP72"><span data-page-node-id="8C1mCio9xq13PNO1AyFDWI" class="tier y"><!--pnid:XoqyRS8VbtZ1GqguH5KsAY-->🟡 关注</span></td><td data-page-node-id="Xm4YteseSat3nTcszDwWAa"><!--pnid:mHgDMvD3biMtDfTrRenpbO-->《员工手册》考勤条款</td></tr>
+        <tr data-page-node-id="Oui74WoNuOgJwY88vvEREq" style="background:#fffbeb"><td data-page-node-id="WOhegLhBVOyW3DfAdnXxb2"><b data-page-node-id="dIzco8yDc1ssXGV01sG5Tg"><!--pnid:7bXvMEO6WZvIJALeSpSt4u-->调休结余长期未清零（12h）</b></td><td data-page-node-id="j7b7FgOfhAOLXESo6Ww0Rf"><!--pnid:Iy6HI4vDBEsrRNpOxRPcZu-->李娜（职能部）</td><td data-page-node-id="HpGvzvVqnOVCRiQmma3t4V"><span data-page-node-id="tPoUgjVozcMPb9BANA0ez6" class="tier y"><!--pnid:K276lr6gjoaJem9L0giPF6-->🟡 关注</span></td><td data-page-node-id="zk8CKNwJiI9V8h7fIDJKIr"><!--pnid:tQGdmoLsmrnf2t1IrLlvLw-->公司调休管理制度</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+
+  <div data-page-node-id="u9RB2FCKc6Cl9gZwFDJgPc" class="dstep">
+    <div data-page-node-id="SA6kFXsUDCtcvstEEZedwl" class="dstep-h">
+      <div data-page-node-id="ZcAglFEuMasAZ6UNiOt5h8" class="dstep-n"><!--pnid:05I3TRwfVqh0jPL02ccRk3-->4</div>
+      <div data-page-node-id="9OxfHS8JMliLH6Cby9ht0x"><h3 data-page-node-id="944QIAMWUBrxmsH4wEfFen">
+        <span data-page-node-id="8JBkyr8yQALzKboKcI9TfA" class="st"><!--pnid:56yUSC1hvlq3N7vhXz98Jk-->Step 4 · 高危项整改方案（🔴 重点）</span></h3></div>
+        <div data-page-node-id="otPxvGYLhcfsnyjkpCsnqF" class="sd"><!--pnid:ZU4lFFi1Gv9kwJ5wtT0sjC-->合同到期未续签 = 双倍工资风险 · 补签+倒签+敞口评估</div>
+      </div><div data-page-node-id="wG0Cxvja4lNOiNUP8FVtpE" class="dstep-b">
+    <div data-page-node-id="lj8rUeRQ0U0vcaEOif4sBp" class="riskbox">
+      <div data-page-node-id="umnVWc4VhPb5oFxPU0azc9" class="h"><!--pnid:XZYhhOhqzWNtgaQVV5sZtq-->🔴 王大力 · 合同已超期 15 天未续签</div>
+      <div data-page-node-id="pLfdDBNTOVpJK1zk9m4w3p" class="row"><b data-page-node-id="e2l2KZ643aBXVz95rv9JeY"><!--pnid:OzSS6ft79LizSjcU3Q2qx1-->整改动作：</b><!--pnid:U1r0W6pxqmNUhBt5hyuCBe-->立即补签，倒签至到期日（2026-06-30）；评估双倍工资风险敞口（15 天起算）</div>
+      <div data-page-node-id="cXdAMLWwkY0DEDwELSou7i" class="row"><b data-page-node-id="Mpk18imvMVjbBIn9UZdghR"><!--pnid:ZLoVf6YQbGPyetzFooN1xp-->责任人：</b><!--pnid:x6Dsi9kjaIbftdGyKZIMVN-->HRBP + 行政部 · <b data-page-node-id="YQM7Xnh0ePk6pOAogdQK9b"><!--pnid:FYWSGFTEYMk7kHNIlPmZgP-->期限：</b><!--pnid:Aybdtsfk3pSRmtzuEh55BO-->本周内 · <b data-page-node-id="cIWqJr31Fnlk3ODBsRxXI7"><!--pnid:mZyDetAaEK8HO2tV1s2mdw-->状态：</b><!--pnid:01picf913BpnjChV7GjTJT-->待办</div>
+      <div data-page-node-id="leJULttU7qLiv2lFy59Io8" class="law"><!--pnid:pw0EPwvP4qvZDFmD3anKkn-->⚖️ 《劳动合同法》第 82 条：用人单位自用工之日起超过一个月不满一年未与劳动者订立书面劳动合同的，应当向劳动者每月支付二倍的工资。超期已 15 天，敞口在累积。</div>
+    </div>
+    <div data-page-node-id="2HpZGLiuTVqcRygoCTVYES" class="riskbox">
+      <div data-page-node-id="Y7l8So1dHkzvm6Bvor7OlC" class="h"><!--pnid:CXW3DBMxhaJ9hFqfn8Wkkd-->🔴 陈芳 · 合同 7 天内到期</div>
+      <div data-page-node-id="9XyYDcaVfNdjyZoZBTYkS5" class="row"><b data-page-node-id="5dkhgxgBRygTwqmQm46pLj"><!--pnid:0nb5dWGIvusHRpRgps3hgo-->整改动作：</b><!--pnid:vfnCUOwAt0wjwCrYbaL3ys-->本周内完成续签手续，避免进入双倍工资期</div>
+      <div data-page-node-id="89ji74tKiUxadb9kyHbu8p" class="row"><b data-page-node-id="fNZqHyfx9gX08I63sYupaD"><!--pnid:vEeC6vHrglpotftQiEIOkp-->责任人：</b><!--pnid:DVPijDNYp1GjYTERFBjwRu-->HRBP + 行政部 · <b data-page-node-id="escolE3B6nMwHBmkaAbjt4"><!--pnid:RxXkzIvqR6dnuzk2kVKXvU-->期限：</b><!--pnid:bCccJNZE1PLsBNfDS8M237-->本周内 · <b data-page-node-id="7PKmpENiSoehCocZdg6CXb"><!--pnid:0fz3cLxJUMhLG05C9my42t-->状态：</b><!--pnid:KPPVi3bV3IkO6Xzy335KXD-->待办</div>
+      <div data-page-node-id="LhhCkfxuNdVcbcNlesO1kW" class="law"><!--pnid:WFZn6Asly6BQRuYLOVU1gA-->⚖️ 同上《劳动合同法》第 82 条——到期未续签次日即进入双倍工资风险期。</div>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="4awB1IGg6GbDfs3tYfas8T" class="dstep">
+    <div data-page-node-id="rSqPfyIevNPEVcBBavde5j" class="dstep-h">
+      <div data-page-node-id="lmj89azQn9NFp1AHCRFqI7" class="dstep-n"><!--pnid:J4JDSuEaojVIFzR9oJdlxE-->5</div>
+      <div data-page-node-id="pRf6rgflGXwdPg92LncYXV"><h3 data-page-node-id="WE69Scf9uvRmb5ZVa2U4Ub">
+        <span data-page-node-id="rFdnw1i1gMdBBa3ucZWTf3" class="st"><!--pnid:ZKs4ic6Z6POjrI1xFRxDDK-->Step 5 · 整改台账（闭环跟踪）</span></h3></div>
+        <div data-page-node-id="vWEcgDgKMqUOF3CxQpevLk" class="sd"><!--pnid:fzoQfMe2annMveTsSs3s7I-->5 条整改项全带责任人/期限/状态 · 下季度复查直接对表</div>
+      </div><div data-page-node-id="kpkj6eAt0ti2uT40jZXhf4" class="dstep-b">
+    <table data-page-node-id="g3rmAryrVG8pYztgITfVOm">
+      <thead data-page-node-id="2Uos7jAbVHUk0Uti7rLYwA"><tr data-page-node-id="NpLGF23k1ZaidxhVBldkaG"><th data-page-node-id="urAsDzRs20rrskkzOfBCMi"><!--pnid:xqtcGX6uNuVEp8e3xbEnCa-->风险点</th><th data-page-node-id="SRAFJmZJgF6UOIsqLiRk5u"><!--pnid:mOVQhddtmI7WRrC2DeVgeJ-->责任人</th><th data-page-node-id="GMdPKNpSouVLHLvPAn8oAG"><!--pnid:Y4sJxikkBeL05DLilx6BqI-->期限</th><th data-page-node-id="C4N3K78uo4QIbs1aZXncpn"><!--pnid:k4WmpwoA7VP9BhpnoE2nY1-->状态</th></tr></thead>
+      <tbody data-page-node-id="q6SZexFMleUqGfulHDOG5q">
+        <tr data-page-node-id="abAhg8Jo5mFTwphK12cokV" style="background:#fef2f2"><td data-page-node-id="VbegxvEsnLCxfxlnOhytIB"><b data-page-node-id="2rhEArxEPK4rxVkMXSzZrJ"><!--pnid:yp1UQnZf2EFxz6PuVicnFy-->合同到期未续签-王大力（超15天）</b></td><td data-page-node-id="UMXo8hoT4ZQBWEfsebtHE8"><!--pnid:AZxCG5nWVhNa3SNIaKQ9vP-->HRBP + 行政部</td><td data-page-node-id="jz56dgb3Y43riyN0xMUXxz"><!--pnid:UtITvcpub8okJVsVibPBFK-->本周内</td><td data-page-node-id="bVzVjADVWn0WfJ5F617gFv"><!--pnid:IoUNf0uYtmR9Wu4OsWicY4-->⏳ 待办</td></tr>
+        <tr data-page-node-id="Oz3HY9Oh5SpzsgEx0qkvp7" style="background:#fef2f2"><td data-page-node-id="3AUyiB0ksRMm2SPbUUHEov"><b data-page-node-id="DnZkzsut32MUAjYmau5s3P"><!--pnid:X3Y1CCXfBJwi7Teialbuha-->合同到期未续签-陈芳（7天内到期）</b></td><td data-page-node-id="U0MFZ0mfkYl5Jl3WL23bFF"><!--pnid:Diw0fjdaAm8lX9Mwt4Hjnq-->HRBP + 行政部</td><td data-page-node-id="0bhv7JDeqqaQdCpfReINOe"><!--pnid:OV3KLHzuICVpKlcqoC9WvP-->本周内</td><td data-page-node-id="Pl29ECwNRR2iADwpDkUsVM"><!--pnid:cipfJt9XIol18O9NGIBIbd-->⏳ 待办</td></tr>
+        <tr data-page-node-id="HFimwWWs3t989pk3PygjE7" style="background:#fffbeb"><td data-page-node-id="iqfrZ79fEeTTnaTn0Yerue"><b data-page-node-id="77VdB85hqGMhcxfiMJGYek"><!--pnid:XfE1bO9wVTSDtv0I4ulDEW-->月度加班超红线-刘思远（42h）</b></td><td data-page-node-id="AjpvxzvWWuJ6TGM6rpMJIo"><!--pnid:FX02ssCFNZ4rMFTeaoZNAz-->HRBP + 研发部</td><td data-page-node-id="XVaKb0Iu9Rt0yqexjwxaE7"><!--pnid:FFKLXWTTMkH5Z0wQi1fhXr-->下月排班前</td><td data-page-node-id="Jewhgv6M6AlYwybVyy7uOa"><!--pnid:TVqDfQ61iIMJtEaWXw6tFG-->🔄 进行中</td></tr>
+        <tr data-page-node-id="LUhWpfOPRmbtT7dCrhf4LV" style="background:#fffbeb"><td data-page-node-id="S1gZ9mavxVyjn26OIwhDZJ"><b data-page-node-id="Y0rXV1o2yL5DLdaYEeMlcQ"><!--pnid:CX9wSU33w87cjTQytNqSPM-->考勤异常-王大力（迟到9次）</b></td><td data-page-node-id="Wa3vmoUpb0bGp0aiTwURHS"><!--pnid:B6mzVclGAPOYKLQjmFSaYt-->制造部主管</td><td data-page-node-id="GVm1ElgWSLxvY9PhcjjtKQ"><!--pnid:uzEUcMoVYBv4xXNqm6ysEJ-->本月内</td><td data-page-node-id="VBCbLYAT2PKethtDMAsHWK"><!--pnid:Z2WIdBlC1FzG5x2LZx9Sa4-->⏳ 待办</td></tr>
+        <tr data-page-node-id="WAniH8LoS8JYokVRh4Bqcb" style="background:#fffbeb"><td data-page-node-id="tjlUxFfKQrrNX5EsYK7OFA"><b data-page-node-id="JejtIUX1DtZqO7qOPF44Dk"><!--pnid:m46qBnTc6N4Yn7pCOtvwxZ-->调休未结-李娜（12h）</b></td><td data-page-node-id="caO3P8wogvvKdDhvDAT3Vy"><!--pnid:VSCkRNE2mO02VbqwFn7jZV-->职能部主管</td><td data-page-node-id="8y6sIsIcn6O9gs981A9gwC"><!--pnid:5QWapIIBSck3sH03zmCaNr-->本月底前</td><td data-page-node-id="F8WuaN0hVKLVP526Q6Zim0"><!--pnid:aTyGpmZx3KilbCE7iUTEVm-->⏳ 待办</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+
+  <div data-page-node-id="6pmi4Bd0XJzEtFsXQ6386c" class="dstep">
+    <div data-page-node-id="PEFwHrdMD50ioz5eZoaRUo" class="dstep-h">
+      <div data-page-node-id="JjyGW9CO5KCiyHPDJBqMCY" class="dstep-n"><!--pnid:RTxTJ2Qo3Xpkrep0twmAbu-->6</div>
+      <div data-page-node-id="s73DtOyE9irNYDOQbTL7js"><h3 data-page-node-id="YweT6gT94w59s4zQvtkG68">
+        <span data-page-node-id="6GPULbTyh9BXgFi13Q6nxZ" class="st"><!--pnid:UTan5i5TtgyjyPVIxKlGuJ-->Step 6 · Skill 给结论</span></h3></div>
+      </div><div data-page-node-id="1TbrSgrBY1ILbyZXl6trhi" class="dstep-b">
+    <div data-page-node-id="SHj3yAmXp4RIG0x3wUJb44" class="verdict">
+      <div data-page-node-id="21t6uS3vSh1Q4cvWizum8a" class="t"><!--pnid:E1VT8UYmu4YWiCF9tvFUoA-->5 个风险点：🔴 2 合同到期未续签 · 🟡 3 加班超时/考勤异常/调休未结</div>
+      <div data-page-node-id="9KNLvDSnMuM8VupqXQLmX2" class="d"><b data-page-node-id="B4pmW0bRpKbqMHPylOCWhP"><!--pnid:hoX0oMtqLFi0WOwCitjWud-->可信度：高</b><!--pnid:uMGzfzFNapHHbFDAGwbTNk--> · 规则引擎全量扫描，无人工漏检<br data-page-node-id="JtKnrtOFpaRPGgRqmuJZJK"><!--pnid:FxpKzZD8VZMBG3in8fL0Kh-->最要紧：王大力合同超期 15 天，双倍工资敞口已开始累积，本周内必须补签</div>
+    </div>
+    <div data-page-node-id="5Hl3OYZ3TLOEepSJTF513M" style="background:#f0f9ff; border:1px solid #b9e8db; border-radius:10px; padding:16px 20px; margin-top:14px">
+      <div data-page-node-id="DNg3wdM1PEYhfa9g6liJhT" style="font-size:12px; font-weight:800; color:#00755f; letter-spacing:.05em; margin-bottom:8px"><!--pnid:WGWJmr7B5dgtHmak1Hhzs9-->🎯 Skill 的一句话解读</div>
+      <p data-page-node-id="YKzpuEgxpm2Zd9uAPKLU2x" style="font-size:13.5px; color:var(--ink); line-height:1.8; margin:0"><!--pnid:uON3PtmrpZWgfnAZ8yo9vU-->"这 12 人里最贵的是<b data-page-node-id="qBfbhkoLTDlDvVtZPQiYjv"><!--pnid:tGwfXMvntiy3NttxzpRAfQ-->王大力</b><!--pnid:4UCMhexAlVWRBY2IH9fkP9-->——合同超期 15 天没续签，按《劳动合同法》第 82 条双倍工资已经从到期日那天开始累积，多拖一天多一天钱。其次是<b data-page-node-id="xmSbB57E6VfKZQGk8dMfGS"><!--pnid:1Y7CIkNXwNnBvVCC3kbnz5-->刘思远研发岗加班 42 小时</b><!--pnid:P2NrKlnzmP45KYtgQOiq9U-->，超红线 6 小时，看着是 🟡，但'研发岗默认加班'是群体风险，得上层治理。上季度就是漏了合同没续签这条，这季度规则引擎全量扫，一条不落。整改台账 5 条全带责任人和期限，下季度复查直接对表，排查不再是走过场。"</p>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="JYF8KqFJYsl4ZQymWY1yJP" class="dstep">
+    <div data-page-node-id="ALDTNgSBYQByExqZDjoqph" class="dstep-h">
+      <div data-page-node-id="i0CjF9ngp4fZMwFXaMMQPJ" class="dstep-n"><!--pnid:gbq6Fsc7ILYMpT1Q25TSIZ-->7</div>
+      <div data-page-node-id="6sKZWSt99SQx4jMLqFqvHB"><h3 data-page-node-id="CZyLzvBfYe4DEyIncdnQo7">
+        <span data-page-node-id="0gWM4yUlioles3Hht3Zzna" class="st"><!--pnid:ASpWba3N3U17irWjnNe4qf-->Step 7 · 典型追问 · Skill 怎么应对</span></h3></div>
+      </div><div data-page-node-id="kUUcQJ7LoQFMMh3f7x8BL7" class="dstep-b">
+    <div data-page-node-id="joSqs5SdCP4aep3VyymSlU" class="followup">
+      <div data-page-node-id="u3KPpNsiTIw0EcXODeiDis" class="h"><!--pnid:lNZJdBkUvGfqBImtLDQd2r-->追问 A · 合同超期未续签到底有多严重？</div>
+      <div data-page-node-id="2Ps5To2flPNV3cgx5Mlx1v" class="q"><!--pnid:GvPxR8erSN9ceANmvIv3fb-->王大力合同超了 15 天，晚几天补签会怎样？</div>
+      <div data-page-node-id="2eZjAAPyyimvV9PQHaYW1u" class="a"><b data-page-node-id="rpPeygxQmNTygfsul1Penv"><!--pnid:IJUKwmRvU6ImSx4StzXBZM-->Skill 应答：</b><!--pnid:xsosYqgSVX96zQ1hM1jxU1-->按《劳动合同法》第 82 条，<b data-page-node-id="6SDxd9vexr1h2QX2b60X1W"><!--pnid:S6TzZY4hqrQjb5ANeYgtgF-->超期未签劳动合同，从用工之日起超过一个月起算双倍工资</b><!--pnid:VMG0tOGJyzVs0qHV19NsEX-->。王大力是 6 月 30 日到期，如果 7 月 31 日（满一个月）前还没签，双倍工资期就正式起算——以他月薪 15K 算，每多一个月就多 15K 的敞口。所以 Skill 的建议是<b data-page-node-id="xVh3mLeZKQWhNwerD7Dnvg"><!--pnid:gwVBBrqu8k48YzboMTPcJ5-->立即补签+倒签至到期日</b><!--pnid:afPKMwxPrZeK2ej3U1AEcq-->，把合同接续上，同时书面评估已经产生的敞口。这是 🔴 高危里最优先的一条。</div>
+    </div>
+    <div data-page-node-id="7AdKHlmCRT3h2CCSTWU9cE" class="followup">
+      <div data-page-node-id="D9HWibPVzy64na0ZNzO4FU" class="h"><!--pnid:6CFIoMOoGaOwKLqLI0UzYy-->追问 B · 研发加班 42 小时算不算"行业常态"？</div>
+      <div data-page-node-id="mPv93EkNv3khhOPD9FOyCo" class="q"><!--pnid:TzS3PobF5Uioyjcywz7IE6-->研发赶项目加班很正常，42 小时是不是小题大做了？</div>
+      <div data-page-node-id="zJUeuADgaPZS4krjGpqH1W" class="a"><b data-page-node-id="m8WwacX8Uv6sqLALkOp8tY"><!--pnid:STF7pNFqMEyDIN9XRs3hPE-->Skill 应答：</b><!--pnid:CJykRfZf7q2WnXdTDwTOPh-->劳动法规定月加班不超过 36 小时是<b data-page-node-id="IZca5uJhClT8JiKWbL565T"><!--pnid:EtTHX8TNKf2bpQ0aiW4SgX-->强制性红线，不是行业惯例能突破的</b><!--pnid:eiXlibE3mYbDhfuuSgsOSI-->。42 小时确实超了，但 Skill 标 🟡 而不是 🔴 的原因是：<b data-page-node-id="Dh2LILN5jv4Cz7YrSysnYd"><!--pnid:2IDtoJ2rYfYOsv3yWCGA22-->这属于可整改项</b><!--pnid:U8qqcwp6QtFOSVDfS69lVW-->（补调休/核算加班费+控制后续排班），不像合同未签那样不可逆。真正的风险点是<b data-page-node-id="rpToUXVGmmSSevtMzt11ow"><!--pnid:oVPa1FXjWd5teGmv268pis-->"研发岗默认加班"的群体性问题</b><!--pnid:VvaTVU83z2aELCDM1dhNtg-->——如果整个研发部都 40+ 小时，员工集体主张加班费就是大风险，建议从排班和项目工期管理上治理。</div>
+    </div>
+    <div data-page-node-id="BpV9ppHPPlXi8OfnQImW2F" class="followup">
+      <div data-page-node-id="XWW9yBeuuT83HPljaq97Ne" class="h"><!--pnid:YFDORbSgOpKUaszrpfjXs6-->追问 C · 排查完就结束了吗？</div>
+      <div data-page-node-id="ffqETTkn0sl09A5q9O1cHk" class="q"><!--pnid:ta9nSIhx0MrU27yXOxaiBE-->这季度排完了，下季度还要重新翻一遍？</div>
+      <div data-page-node-id="7GArGIUT27lYUTzsTUwMOt" class="a"><b data-page-node-id="ePSHWOtkSOXCoT7hjYZMze"><!--pnid:lqwJNAHtq3fxxXDOq5wePQ-->Skill 应答：</b><!--pnid:HTsdt1xdIMWNj57KJGCVvI-->不用。Skill 输出的是<b data-page-node-id="psLQthezEOHEiEgVLMNeo3"><!--pnid:l5Ria92HvXlGp6HqMEzgJm-->整改台账</b><!--pnid:DYXBQGGKFS4RVIgWGHVS0p-->——5 条风险全带责任人、期限、状态，下季度复查时<b data-page-node-id="bUDpSyefSslrD9Fd8JgRbW"><!--pnid:k799Gj57L2ugJ1QoAZZP0v-->直接导入上季度台账对表</b><!--pnid:9ncw4g6THyE4Gngdbe2gpZ-->：已关闭的销项，未关闭的高亮追问。这就是闭环：问题从"发现"到"整改"到"复查关闭"全程可追，排查不再是一锤子买卖，而是每个季度滚动推进的合规治理。</div>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="oIbYBrnsAYLfXxE7YynEl0" class="cta"><div data-page-node-id="3QjPhGVTNqppUjvQY6Dfs3"><h3 data-page-node-id="muHGPNaTMcRiw9Z2dZaKVv"><!--pnid:KnCFeHEH91wxjK83COmz6n-->想了解来龙去脉？</h3><p data-page-node-id="ilBPZZDzsaWVUMbnCrznyd"><!--pnid:bWJport4tYQZIMQVCyTvFz-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+    <div data-page-node-id="X4xHlpJTbHJyIalMcWQ3yV" class="btn-row">
+      <a data-page-node-id="82znRN8LcOFTqBbZS3gfSw" class="btn ghost" href="场景引入.html"><!--pnid:KzplH5nfwwaXEC3976o5UX-->返回场景引入</a>
+    </div>
+  </div>
+
+<footer data-page-node-id="5cuMGwastI1FcM6M3zTCDd"><!--pnid:kRSe6rDZd2GXRD43og987U-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+<script data-page-node-id="ofiZGJ7fGHanS9a4SSkfWY" data-pnid-children="P736jFLDwogL8ZpNqa8KPY">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="NNQbnJHH5ZjmbdSAqn5Acd" data-pnid-children="MtWDhaCjJkZf3LChWxzX0K">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="tjQFC2hh2mxVNRVlnhykUQ" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="fjosCb7hip5Lh8REb1Lh9K" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="WhPMTvRoHL7mZIFc9v2eEH" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="qZFaTX4w96iLJmKIVrQ4si" data-pnid-children="mTDDsMXSARyT5HQquWXyld">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

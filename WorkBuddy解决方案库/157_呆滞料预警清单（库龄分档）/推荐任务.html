@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="0rovQyUu0OwWSJ4khs4EQ6" lang="zh-CN">
+<head data-page-node-id="By1UxMql7vgSZBLkr2d3j0">
+<script data-page-node-id="bVnTIVqGHPUJyLO8fZyjGr" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="nstaJo7zJ84kx6x34zLBoY" charset="UTF-8">
+<meta data-page-node-id="IavmvYuMRnj8SIGnBKRgR9" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="gmtT4MR2sC6ZhIDPk03tdr" data-pnid-children="F1ehjr59GxofK3LJaDhYsy">呆滞料预警清单（库龄分档）</title>
+<link data-page-node-id="yn8d3SlPt7qtthoBsJR5UC" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="abKIGWVcUWi8fzqaWk7hcj" data-pnid-children="URCPvIPuNlYBuqkNlhfe6l">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="0ID0pEng7LvILjJpDN4g3O" data-pnid-children="kHrNLCK43cb5XJwaBTUGzP" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="ZEnNWxRFF7KgLR8TqRWcOY" data-pnid-children="9wWl5yPrfiejJCH91pXYDi" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="POWFsOeW5pBU7JFxPtwZl2">
+
+<div data-page-node-id="b5u6ScFT13UYVsGjdKDon8" class="wrap">
+<section data-page-node-id="JsdANV3ksOndPvFMRFL40W" class="page-hero">
+<h1 data-page-node-id="QRlJ0MAqM9D4UPiNqXKdTQ"><!--pnid:jld1xFKBGGrQWImXhx13Sv-->呆滞料预警清单（库龄分档）</h1>
+<p data-page-node-id="7ZCElvpToRWnqvyTSRfFdu" class="lead"><!--pnid:61dKSPU4m0p1eY3mBTlKRr-->860 万的库存里躺着 96 万没人动的料 · 财务月报里它只是个「周转率」数字</p>
+</section><nav data-page-node-id="CxTza4bKThiuNtKd8GaZSl" class="subnav"><a data-page-node-id="Hwv5rEEXbEt9FZXe92Z23g" href="场景引入.html"><!--pnid:FAZuWGP6xl75pvXoUdSN7v-->场景引入</a><a data-page-node-id="OWEsZbspRSQgy4cSwfVZiQ" href="LiveDemo.html"><!--pnid:QRI0YozjAUclZU7N8f3UO7-->Live Demo</a><a data-page-node-id="srHcWoJAwjUCwFWsqvdt38" class="on" href="#"><!--pnid:JVVOjfFIUjWykleiZDvZl0-->推荐任务</a></nav>
+
+<section data-page-node-id="xxMZo7N9XU8jLPTm7YdBFK" class="blk">
+  <h2 data-page-node-id="26GIOgIykcHFCpbKOBOGUu" class="h"><span data-page-node-id="X9jCCjupYKGavBVKQge9AL" class="num"><!--pnid:WNmsjHg51Q1OBzlEJRUaZ5-->一</span><!--pnid:2fjbYwwatWPj8DZqoNWzbZ-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="LjjcCCuaZ8Z8Ea8BSakVla" class="subline"><!--pnid:32WfOzjLJNrj2bszDY079V-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="24Gf5udk2zxQ7wumo3QAPK" class="card"><p data-page-node-id="Y5duvn1Y7hvr0bm75we5iS"><!--pnid:tgdIyo5SXpR4jTiQrwTke8-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="Nnu4qM2IpjHRkYnkcplo6f" style="margin-top:10px"><!--pnid:xchQ1jmEv7rD1ZOmW57o3O-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:bWUHuRG9uJIXzccIAIJRgq--><!--wb-skill-start-->
+<div data-page-node-id="WDSDoI4rb1ojrEII0QSZZx" class="wb-skill">
+<p data-page-node-id="XU9AcJHy43nL8OqbsuZE7r" class="wb-skill-lead"><!--pnid:QcnQsYzk6Dluh552lRj4PE-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="xueV5GQi8WAXsiZvAHStoK" class="prompt" id="wbSkillPrompt"><!--pnid:h0puKU4xD30chbRjmSlB5m-->【准备】这个场景的规则都在「呆滞料预警清单（库龄分档）」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/DveyVUaQpnyb04Cko6lHWA/QVGKpPVKVi34/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="XmpHrWgT1nGAkZRK9TSKgN" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:NjwZ6t2Q0F8p9Grhpxe8Kk-->复制</button></div>
+</div>
+<!--pnid:jzwWcYjzt0sHReXhpZysvj--><!--wb-skill-end-->
+<section data-page-node-id="dbkd4qfTAWGkTcXe7fOJiu" class="blk">
+  <h2 data-page-node-id="gsfO7z4u6bgutTDahjKHLD" class="h"><span data-page-node-id="6xSJADLsKw7RJPlHlytoDe" class="num"><!--pnid:bEuLarG69RLUqZtMaFRGZx-->二</span><!--pnid:eqYtcdkHk2T5LYyr8Eks2X-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="aOo9OWMh4naSibHRH2WntD" class="subline"><!--pnid:LUEQ2U1GjFvdM9wAH30Tjv-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="ggQnuLR3O3rqd4KXdohstB" class="tlist">
+    <article data-page-node-id="7jGSHD3hFnKWVIqOmupFLS" class="task">
+      <div data-page-node-id="MhyHf8O9JzLMRsF87h4PDz" class="th"><span data-page-node-id="ADK054CH4bzlaTO9eU3dJh" class="no"><!--pnid:ocGWog4GXpkitW7E6LuSAM-->01</span><h3 data-page-node-id="IfbNT7do634xeQ3AqJAzNx" class="ttl"><!--pnid:m15BCkw1znUn6TBjYQqfjH-->首推默认</h3><span data-page-node-id="vQUygt6aNvoKHfjh2CxIo6" class="star"><!--pnid:2VVwW6TcM9fFXwLQA0D8a1-->与一键体验入口一致</span><button data-page-node-id="FlyhZln6lyooJHZDegt7ql" class="cp" type="button"><!--pnid:nAUCcFvgoHCNWfPJiAxKbX-->复制</button></div>
+      <p data-page-node-id="OijEBf690g1scKaMgiGLPx" class="tp"><!--pnid:et17MfsDBVtupSSe9rccwM-->库存表、在产 BOM、生产计划、这两年的设计变更记录都在这，帮我盘一份呆滞料清单。
+库龄只是第一刀 —— 未来 90 天生产还要用的、A 客户 Q4 备产的那些，别算成呆滞给我误杀。 每笔呆滞是怎么形成的（设计变更？订单取消？买多了？），给我归类。
+能救多少、怎么救，带金额给我 —— 经营会上老板娘要的是行动不是周转率。</p>
+    </article>
+    <article data-page-node-id="raBUlcoSZ1z8xoJzYeTAXG" class="task">
+      <div data-page-node-id="aH90GjZntyBGOnBFpfcMel" class="th"><span data-page-node-id="ICncjLCYA00dCeFlzyNH3G" class="no"><!--pnid:aGuK4WBUDrdoXQIlrHFw1J-->02</span><h3 data-page-node-id="NNHch7oaPSbd9LbXBNDq7m" class="ttl"><!--pnid:fZNUMB8P6NPO9tMHp8Mt4D-->只做库龄分档</h3><button data-page-node-id="1KRsvKa7Q4HrQ0n9AJBz58" class="cp" type="button"><!--pnid:xLnd3WNiJ79RMZF6pDoxc8-->复制</button></div>
+      <p data-page-node-id="iPH2ZmJcaBLhqjQxlaacJG" class="tp"><!--pnid:dhdo3m6Z6DRohgtsN15enG-->只跑库龄分档这一步：按入库日期把库存切成四档，把 180 天以上那部分的总金额和明细先给我。</p>
+    </article>
+    <article data-page-node-id="JVKjjq2lqKZ9dAZUC5WjMI" class="task">
+      <div data-page-node-id="CdzXfN3kSr68bHhZo1A2x0" class="th"><span data-page-node-id="OBZLNLb11qZ5xebwaek9C5" class="no"><!--pnid:CRHDiuUd4Cuayjm4SttnAT-->03</span><h3 data-page-node-id="GN30XC8syHbsGXlFhaskO9" class="ttl"><!--pnid:iq5FH6wtOhy7Fv0FI9o2yK-->换成 91 天起算</h3><button data-page-node-id="Zqrzd8G5oWlCPTDinQVTm8" class="cp" type="button"><!--pnid:Xw0FKh5yrfP9m5yHXUDKlK-->复制</button></div>
+      <p data-page-node-id="FfRCNW6mfBzAEIpiCT2Ayv" class="tp"><!--pnid:pSCa7170JfaRjfxryBuqDv-->把呆滞线从 180 天改成 91 天重新跑一遍，看看半呆滞那一档有多少、都是些什么料。</p>
+    </article>
+    <article data-page-node-id="rZTatEOy2zKccC6C4ZcwpD" class="task">
+      <div data-page-node-id="4gnDdl3dfCeoCL2HMAQJhy" class="th"><span data-page-node-id="62mmBRg61X6Jq1lCt05uPJ" class="no"><!--pnid:3dynoWFZGAn8DkPIRNT4Rb-->04</span><h3 data-page-node-id="ejnY4ht7BuFOmlI6HSSHoY" class="ttl"><!--pnid:9Y1m39yN5pd5zPEz180YuR-->一次盘两个仓</h3><button data-page-node-id="r0BQnjElQZL5M4h9QDrhTy" class="cp" type="button"><!--pnid:7cd410CYSQewX0OcjIonnC-->复制</button></div>
+      <p data-page-node-id="ZIh7cKYwc4DGGEBBGVBzDG" class="tp"><!--pnid:7YLiu7WC0ZXeRKgwQ3OGoa-->演示数据里再加另一个仓库的库存表，两个仓一起过，给我一张横向对照表：各仓呆滞金额、主要成因、可救比例。</p>
+    </article>
+    <article data-page-node-id="MTJpprpHtpHBUToUe2HUua" class="task">
+      <div data-page-node-id="6nVO1o6JapNl3J7RyTO1x8" class="th"><span data-page-node-id="3ebjszUvj6yGDCQnbnbNBv" class="no"><!--pnid:coCQIByzpMTGg2UorottNr-->05</span><h3 data-page-node-id="ND03dJfscbeCdNbL5T0hPB" class="ttl"><!--pnid:H5Evc0gDgUCFbqWtfsUggR-->给经营会用的版本</h3><button data-page-node-id="SsNYG7XheC2u8FuqnRYRZt" class="cp" type="button"><!--pnid:eerOnnncs5llehWsb1qhZX-->复制</button></div>
+      <p data-page-node-id="F6EVrd4NrQXZiyLbMDxcYg" class="tp"><!--pnid:E5zFoXRfbtvPjcKt6Mmemz-->把清单压成经营会的一页：真呆滞多少、战略备料多少、能救回多少、谁在什么时限做什么，明细不用给。</p>
+    </article>
+    <article data-page-node-id="Cz5Cyh1rTQ5nNBw0QxVqtt" class="task">
+      <div data-page-node-id="dvUp7swhyCHnCGZjz8vURV" class="th"><span data-page-node-id="CQkzDLyahnZ41nWVhZIq7b" class="no"><!--pnid:VWvNKbPeKNVH6Ym0DZXGv6-->06</span><h3 data-page-node-id="5BMkWfnBFem6G4epd4d8f2" class="ttl"><!--pnid:NLuQAR4Ferqw6sqPxzh6p8-->让它挑自己结论的毛病</h3><button data-page-node-id="Zg0M5SgU06GpBkRuHDS7Mx" class="cp" type="button"><!--pnid:mk0agx4GXyTXgrRltS1wdp-->复制</button></div>
+      <p data-page-node-id="K0EkwpPTPwU07IWh4IZ9Sq" class="tp"><!--pnid:G4ub7UqZU1NOMxrAISwOac-->你说那批旧规格不锈钢带是呆滞，把它的入库日期、领用记录和需求校验结果列出来，判不准的移回战略备料。</p>
+    </article>
+    <article data-page-node-id="rsxBtDoqxoWLUu5SmSJldP" class="task">
+      <div data-page-node-id="ow6OWtGpJCy46eguwSl92B" class="th"><span data-page-node-id="uj3VpZCRPYpxw8yh8FRM4b" class="no"><!--pnid:4qKIqR6cndQlHoyPEuU4uT-->07</span><h3 data-page-node-id="2sFuJBX8Guw1n7sz89HmtS" class="ttl"><!--pnid:tnynCGBGtttcKSNP5iVcuE-->专门查 ECN 旧账</h3><button data-page-node-id="chlMjx8qKhR5FEQ03zyyGS" class="cp" type="button"><!--pnid:aKn82YxDMG7RWnbHmZIsL2-->复制</button></div>
+      <p data-page-node-id="Y72w6GRmGslOyAImhGr4VP" class="tp"><!--pnid:WjhZyN4wY6Nv4mS1BmKRNo-->专门查设计变更这一类：近两年哪几次 ECN 生效后采购没收到通知、又补了什么料，把时间和金额列出来。</p>
+    </article>
+    <article data-page-node-id="RnPjMYhdEZdb2xP647VohP" class="task">
+      <div data-page-node-id="hiDnXtVQvBzeiM81U04bmB" class="th"><span data-page-node-id="JT3VHD62dWafYRodhwhRRW" class="no"><!--pnid:XNCXPfDoIBdKFYtX2PR6v6-->08</span><h3 data-page-node-id="M52Xn844VWQp1bbZzAVq52" class="ttl"><!--pnid:a4aY0J2cy6NJdGPxqDtLjw-->对照口径自查</h3><button data-page-node-id="3dB51VyYlyhZHGrC2Pr8hN" class="cp" type="button"><!--pnid:RAOLColVylfV8krrq2NjVp-->复制</button></div>
+      <p data-page-node-id="ZWTE4iSMV2td2MdA7Oovq5" class="tp"><!--pnid:3Ze90qb5lGvk9idnYYzOox-->对照技能包的判定口径自查这份清单：需求校验做了没有、四类成因有没有漏、处置建议是不是都带了金额和时限。</p>
+    </article>
+    <article data-page-node-id="5JDpOD5j1eOKOdrnO3GYBG" class="task">
+      <div data-page-node-id="4DysduAeTYkZN6eN6pp5SJ" class="th"><span data-page-node-id="TfNOTHgGK82YG9o8lU0BGX" class="no"><!--pnid:6jUeplUCVkJGFWrRWxbskG-->09</span><h3 data-page-node-id="dlxncHfu0eL6Wwlhq7dSZ4" class="ttl"><!--pnid:zS67DqLUNdBWZ8FkTWtlTD-->折算成可回收金额</h3><button data-page-node-id="2x5V2ajpniANs6DZTZd0jI" class="cp" type="button"><!--pnid:ISzDCUxQDMsgb2cj1OeEyM-->复制</button></div>
+      <p data-page-node-id="dUOcFbf4gL85586JIRJJZ1" class="tp"><!--pnid:xKUWi53qRuMxUdng02UFI5-->按可救性三档分别算：可替代使用、可退供应商、只能折价，各能回收多少？合计和呆滞总额的比例给我。</p>
+    </article>
+    <article data-page-node-id="GMg86sFd7tgU8GAYJCZj0H" class="task">
+      <div data-page-node-id="7dcHS7OIYWzo7ROPpuKQTr" class="th"><span data-page-node-id="mNZfgiAAfv2yb2v07FnGMN" class="no"><!--pnid:GkoTT7FAd6jAKIiy1651Ha-->10</span><h3 data-page-node-id="XQQjCAMHIxRCpIctTP5PAh" class="ttl"><!--pnid:LPYfTSfBGR9mtDHPKXqYiV-->沉淀成季度盘点模板</h3><button data-page-node-id="bCbcVZ1w71WSySIjsGM5Lh" class="cp" type="button"><!--pnid:ZsBqgDGpxJMlwH5uSZ5p2w-->复制</button></div>
+      <p data-page-node-id="hOtoPG3K4iglkELLKbqdxL" class="tp"><!--pnid:27HuBwaw0H149q6tpOxTmn-->把库龄分档、需求校验、成因归类这三步整理成一张季度盘点模板：每步填什么数、什么时候该介入，下次照这个跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="d80GjA3MFDSeRhBTiS0xCX" class="cta">
+  <div data-page-node-id="b0wwBjGn2UbaqRNvTJ9KpK"><h3 data-page-node-id="GdVgK3V2lHYEmBJaUvuhbc"><!--pnid:nEMHN8kjdoqPf3vv3Xwyd8-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="Zsoq15dWDWZGi4XQRN4mbn"><!--pnid:OXiHveyzcJOtliE9Ev6NSq-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="GOhJEYUqtCUVnrDt0A87xO" class="btns"><a data-page-node-id="4lKjxjbC0Y7tsofOPe838O" class="btn" href="#" id="ctaContact"><!--pnid:Xe5cBofoDyidPrXToIleDo-->联系我们</a></div>
+</div>
+<footer data-page-node-id="zxLBunDWuElhNxRVWRebow"><!--pnid:TvfbeFA09wXAqRwzViX0f2-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="rWVRBRP2FfOJK6dZTSQJ7k" data-pnid-children="i3UYf27j0IqtjkK8cNktnf">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="8iInMAFI1FZn8ZNmBQ6ojR" data-pnid-children="Dv7gTqF9J3xZrxVuCf8Bwk">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="aHXMQlY4beugQUad9YtBeG" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="lEpIyplrp38MXwehceeoDa" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="yscHClyAyM7QuHTaaZdTk6" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="9lm3rf3xCBAqUacdD11Y8A" data-pnid-children="TkM2dwqL3luziGvxbV9jx7">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="FKExRVuibEgSM1nbt95KcK" data-pnid-children="vJIrlypPs3Pg8oANnqilci" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

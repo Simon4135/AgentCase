@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="UsAOVcPG4Z76UDbYEmCSsp" lang="zh-CN">
+<head data-page-node-id="dJeMj6qh6KkRhyOrPifHxs">
+<script data-page-node-id="xo6avwqFNFDaSI9ZZIlUhg" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="hQ4TwwWPYbf8yUWEXAxe3i" charset="UTF-8">
+<meta data-page-node-id="ZLpCWfCuMtYyNHJ7B3ZCU2" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="egDDwOGZh3VxzKWiCQCMID" data-pnid-children="bWgU8IJiiaZ5snW5TFjJOb">个例报告接收分诊与 Day 0 判定</title>
+<link data-page-node-id="qBrbPzP8Kx2QF7BzXRKyRs" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="cHCoKU7lKTs4HVnxtpgzwo" data-pnid-children="rjt6ZiFfj26DvWySmUW2KX">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="FiCsEBTSV7ouWSn5mFAWKA" data-pnid-children="niOQqwXOIDohF8EcXEB9Bx" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="tyS0feR7LlWaZyHssbJnMr" data-pnid-children="XCMkZ1IGqSrh9sAbSYCmmp" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="IPa8oDnJzeUGqVNh8R95rw">
+
+<div data-page-node-id="Ep1X113Izdf8FYikQqdvDn" class="wrap">
+<section data-page-node-id="oPuYmYUHOwhEHtFjc1N4Ih" class="page-hero">
+<h1 data-page-node-id="vhPjRCuNsUxTs06O2gb40S"><!--pnid:oI45tCZhyjUhCDi1kUQ2f5-->个例报告接收分诊与 Day 0 判定</h1>
+<p data-page-node-id="nKaHnsLe9ARIVmOwjgzDWw" class="lead"><!--pnid:1l6JToQx3CUlfRIB2b8ZlU-->记录都在、时限也都知道 · 就是没人说得清哪一例的时钟到底从哪天起算</p>
+</section><nav data-page-node-id="pVUVJVzBCyMpSG3QN9SIJf" class="subnav"><a data-page-node-id="qVzIhlwHVwFY0N3rGElNyj" href="场景引入.html"><!--pnid:DUXcCa6TlS81OK1yYHYi29-->场景引入</a><a data-page-node-id="a1CVuoQduWCZbDtbdrxJFY" href="LiveDemo.html"><!--pnid:r3UTwjTR58Yr0wp3u098GC-->Live Demo</a><a data-page-node-id="wHaCcUqxAAaNVAjb4He45t" class="on" href="#"><!--pnid:X71SaUq9qzBbKhlNKNUzOd-->推荐任务</a></nav>
+
+<section data-page-node-id="owQJQNch4bqSey0trUrzSU" class="blk">
+  <h2 data-page-node-id="ONSz0kmzqDj4ssalDVJVgV" class="h"><span data-page-node-id="1ZYpntfv0D2bqgvJ40yqqo" class="num"><!--pnid:RjqZzGjJ8E8Kga6YnHN0N6-->一</span><!--pnid:srR58kldHZJokDHIRTnT8K-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="SxscwuZ7zYZDAyo1Yb1EX7" class="subline"><!--pnid:ytJTiJUwftn5f4JFRrfhDG-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="yiOs8VRZT0EG4BmkTo1wUw" class="card"><p data-page-node-id="3Z0zggea3IztWyWlLGi4kb"><!--pnid:jCBcW4S45E3bkPPpxSSSey-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="B6yNusZKF0wB7QsYHtUn7f" style="margin-top:10px"><!--pnid:Z2Cr4WS6XNG3ZSLIJix8tQ-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:WSmvUraqvLqzFBmmHYbtpX--><!--wb-skill-start-->
+<div data-page-node-id="JFbtFAiQzCHhwLpyrI06U2" class="wb-skill">
+<p data-page-node-id="guZGeQ4p27HBNGyNb2mtjs" class="wb-skill-lead"><!--pnid:ZnebTwIt5uRJc0BqGGEAvS-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="n0KFGVbdl1GVUeFdGFABC0" class="prompt" id="wbSkillPrompt"><!--pnid:fpLzjRiLA7zNeu2zuRNo6H-->【准备】这个场景的规则都在「个例报告接收分诊与 Day 0 判定」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/3UmUcv9MYjfPqwTS9ihloN/7j9GQglpTm-i/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="PmccASIrFjuJPrySD4zmNp" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:Ccx4Os49C7N9oLFlw7V4lO-->复制</button></div>
+</div>
+<!--pnid:TdOyj3vpPbVaCfqxigAkME--><!--wb-skill-end-->
+<section data-page-node-id="WDIC9ytfVKiV5nU0x9ka0K" class="blk">
+  <h2 data-page-node-id="gpwB0xXQqd1HCREkrpO8K1" class="h"><span data-page-node-id="GJFKpDLLIoRFeNd5bHb12p" class="num"><!--pnid:dhAXMZiPk9VrCIUqeorKnF-->二</span><!--pnid:ncBlbcb7YWRa6DvQMmU0W7-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="Umgh7ePhvV9xzaKdMXUOkx" class="subline"><!--pnid:0jrKmmMrLhBOEmeqGmAI9B-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="WscPNCyM27iiQkuCZnxJ9U" class="tlist">
+    <article data-page-node-id="tR7NeBQRerYQOpC1r6sYGW" class="task">
+      <div data-page-node-id="i3FnkwLk7De6leN1x2rpbx" class="th"><span data-page-node-id="wZNCkQKzZZsrpInR8pfRVy" class="no"><!--pnid:FTkDE0EQipEoqdfk9fapBO-->01</span><h3 data-page-node-id="zfVgnFmL3WAoCg8h2DshHw" class="ttl"><!--pnid:sr4fomU6MCbwt7tzZTtD7i-->首推默认</h3><span data-page-node-id="TmdrMwloL5lqJuiN8nqZpT" class="star"><!--pnid:kL553Fw7Qp8ZIVpc78U4Dk-->与一键体验入口一致</span><button data-page-node-id="Gaj6MitUqaECwvx7mp2ozQ" class="cp" type="button"><!--pnid:4Q5VoAQmYnGRFXLqEBI5Pv-->复制</button></div>
+      <p data-page-node-id="M1mMNd1gzftApxTr5A84qk" class="tp"><!--pnid:LUW5bF8ivN2beaCRl5CQ3B-->这是本周热线、医学部转发和省局反馈三路混在一起的个例材料。
+先去标识化，再做别的。四要素逐项核，缺什么列什么，别硬填。严重性只出初筛结论，最终判定栏留空给医学复核。
+跟既往台账比一比有没有重报。缺口清单按「谁去补、补什么、什么时候要」列出来。</p>
+    </article>
+    <article data-page-node-id="pe3Ac0f2i1QVV0okmF4n4C" class="task">
+      <div data-page-node-id="oe9YWWyXNrE6znkcclfQXD" class="th"><span data-page-node-id="wcvsZWHdytMb88KDhMnbcD" class="no"><!--pnid:OeL6EKq6Doj5zuDUb2xjww-->02</span><h3 data-page-node-id="r2xyF8cTXNH7mrqpX3HpMZ" class="ttl"><!--pnid:yG8mVNfJRzTj6jIM11dlWc-->只做四要素校验</h3><button data-page-node-id="wEe9KOdhDMpolDgqpebwhs" class="cp" type="button"><!--pnid:AMM9gSSCi30qfV6jsDl9GV-->复制</button></div>
+      <p data-page-node-id="VpemKhQ8F6hLsECspHr1Ua" class="tp"><!--pnid:o5WLadpZ0cHjP9wjRjknYu-->先只做四要素校验这一步：把这三路材料逐条打勾，可识别患者、可识别报告者、怀疑药品、不良反应，缺什么列什么，分诊底稿和缺口清单先都别出。</p>
+    </article>
+    <article data-page-node-id="pBjCbAlFe0oxk45MdF1G9e" class="task">
+      <div data-page-node-id="G00ZYOah60iNiYcRCoOOqH" class="th"><span data-page-node-id="2IhudVXQcfkEFAJjKthWfh" class="no"><!--pnid:QOH2oYziytDL3G8E7cfw4d-->03</span><h3 data-page-node-id="8SJoeNfoA8GhzH2FZZJTXV" class="ttl"><!--pnid:lqj0yp7F5d0cdR6Rv1DnK2-->按预留 15 日位再跑一遍</h3><button data-page-node-id="2I9YHofB5xjGuzErGbYzj6" class="cp" type="button"><!--pnid:1nWFAft3EMDjvfPpH0OBqR-->复制</button></div>
+      <p data-page-node-id="mhcRbjAh1Kh9rA4i6I9zps" class="tp"><!--pnid:niEQjevotdNjt77A74z6Uk-->这次换个前提：所有缺发生日期的病例一律先按疑似严重预留 15 日位起算，随访补齐后再重算。用同一批材料跑一遍，看分诊底稿和随访清单会变成什么样。</p>
+    </article>
+    <article data-page-node-id="auXV9PzYjEs5zmzJ5PBTkQ" class="task">
+      <div data-page-node-id="ifR1hVwk5Wz7e9NM4qbQom" class="th"><span data-page-node-id="m2P1fSSsWCwz73Ql46BON8" class="no"><!--pnid:EfB7ZXIKTTD9bIPBj2E2gs-->04</span><h3 data-page-node-id="YqGiApBw0gMUZF9LR0KLvk" class="ttl"><!--pnid:xiDfnsyCkaDxRjy4OionBz-->三路材料并排横向对照</h3><button data-page-node-id="lELR32raCDJ3JdGy29SqyG" class="cp" type="button"><!--pnid:1dqvy43Sn5To7zqM4Owa7j-->复制</button></div>
+      <p data-page-node-id="GcLnEVpfzZ0hxQeZlpbwpl" class="tp"><!--pnid:iFZ6TtGElwBZPZSCNHiOlr-->演示数据里再加两周的热线记录和省局反馈表，把三周的分诊结果并排放，最后给我一张横向对照表：每例的 Day 0、严重性初筛、缺项数、是否与既往台账重报。</p>
+    </article>
+    <article data-page-node-id="98Fg1qKgin3VYHH8B1Qhh7" class="task">
+      <div data-page-node-id="aI2aoPLLxuIZSXKEDguSWM" class="th"><span data-page-node-id="JvfA9arQJeNeazM8HypRli" class="no"><!--pnid:v8SJNKpOsoyo6JdQRoi34u-->05</span><h3 data-page-node-id="WbV8hIitlbp8sXVWJzMIe2" class="ttl"><!--pnid:vsXWxq3Zb8v5qCpHCX1oEE-->给安全委员会例会看的版本</h3><button data-page-node-id="9kWmSDzocqTSukTk9ljR3v" class="cp" type="button"><!--pnid:l35CqlFlsPHIAcndg5xXCP-->复制</button></div>
+      <p data-page-node-id="EaS7Lri8lGoMpdfupPyGw9" class="tp"><!--pnid:Wj9E2oAqJitd6L5tzY9qp0-->把这份底稿压成一页安全委员会例会用的版本：本周新增几例、几例 Day 0 立不住、几例与台账重报、各自卡在谁手上，逐单明细不用给。</p>
+    </article>
+    <article data-page-node-id="Ql0o4uXNNgg4MnoCfZrlmk" class="task">
+      <div data-page-node-id="Zcfv10UlKbbOGpXfMuYjT1" class="th"><span data-page-node-id="M70WgqHHnP9vfuSMWKre8z" class="no"><!--pnid:yM9yjWHzjKWdHDfoS8dIl6-->06</span><h3 data-page-node-id="VjOugqgnT2mQ2obNDA1xTe" class="ttl"><!--pnid:ZBfXa7Tl6hdTwwqpjGO7t7-->让它挑站不住的 Day 0</h3><button data-page-node-id="FRAAaFW7D6xWWg34hQlvBq" class="cp" type="button"><!--pnid:zVSpjau5BIwwlJJ1P4A8rI-->复制</button></div>
+      <p data-page-node-id="k0HzaDXlNNgwB4Vzaspssb" class="tp"><!--pnid:HkhpoY6t2NW2knbNcKP6R5-->这几例的 Day 0 你自己挑三个最站不住的：说明是哪条依据薄、缺哪份凭证，站不住的直接改回「Day 0 未成立」，并写清要补什么才能立住。</p>
+    </article>
+    <article data-page-node-id="Y0u0lwFLpxsO9Q9Ask19Tj" class="task">
+      <div data-page-node-id="b3wEhXjGbgnuFmirvthS08" class="th"><span data-page-node-id="obfiSaCis4z4wrYnNWsJN6" class="no"><!--pnid:22cWbJHanCGEAKC0zHgXaA-->07</span><h3 data-page-node-id="yBHff7DsoeTCZZQbiORXNt" class="ttl"><!--pnid:pYM4NvbpSfnqfcYoznESnJ-->专门比对既往台账的重报坑</h3><button data-page-node-id="D6dhKfD8qAEJn3yOzZeJyM" class="cp" type="button"><!--pnid:yxzThoXUHjyxTP7B6poej6-->复制</button></div>
+      <p data-page-node-id="jyNQpHM4So0Y4EJiFsQQud" class="tp"><!--pnid:gJK27KLACxYgUm8PLwhg5H-->专门做重复病例排查：把三路材料跟既往 ICSR 台账逐条比，同患者缩写加同一可疑药品加同一事件词的拎出来，给出首报号与跟踪关系，别再靠记性。</p>
+    </article>
+    <article data-page-node-id="aoMUflv1xo0E2IyzT0Z3tw" class="task">
+      <div data-page-node-id="XvbFvLb7PFcVMXvZem1uw0" class="th"><span data-page-node-id="rPqqyiephkhDAICCtijEpr" class="no"><!--pnid:M1GM7KJt8c6flrErb5SUgh-->08</span><h3 data-page-node-id="Uok1Wyhoy73oLLE63UYipQ" class="ttl"><!--pnid:PlNF5rZU0tO9NFv6QNokjz-->对照六种严重情形做自检</h3><button data-page-node-id="ct1403WYslurMW6FBhYP1h" class="cp" type="button"><!--pnid:Vm5TsXewu18iFXp0MDUAM3-->复制</button></div>
+      <p data-page-node-id="LrFrVUldP8DuQEZgxdxo9y" class="tp"><!--pnid:gamBSyVO7qz3BF6uEs4RM7-->对照六种严重情形把这份底稿自查一遍：哪几例的证据只够写到初筛、哪几例的严重性判定栏本该留空、哪几例的 MedDRA 对照缺原始叙述，缺的列出来。</p>
+    </article>
+    <article data-page-node-id="VpCTS5cKAaGgtV2K2fMWgC" class="task">
+      <div data-page-node-id="9PbfS9Vhin9kgkYHnfVBaL" class="th"><span data-page-node-id="7LnWHFOC1GFHof7FFQKmCo" class="no"><!--pnid:21LmvMoLEwguHGp0nT9lcw-->09</span><h3 data-page-node-id="85tbAZySRSl5HoFTUxYI4y" class="ttl"><!--pnid:yGgFmdgO8xAFOykrObKUo4-->把重报折算成工时与费用</h3><button data-page-node-id="uXh4YCnaGA7Y51eSpX9j43" class="cp" type="button"><!--pnid:cxDZBqnbFJAV2JiUCRdY70-->复制</button></div>
+      <p data-page-node-id="WHO0rtXL0aSBpBYtZBBzPB" class="tp"><!--pnid:Rxu6I3BNosFtRFsJEvyi6N-->算一笔账：这几例按重开病例双倍录入走、和按首报合并跟踪走，两条路各多花多少工时与外委费？漏报一例按加急随访 3,200 元计，算给安全委员会看。</p>
+    </article>
+    <article data-page-node-id="e2YJmQbnJQlrMTaOSj9xUJ" class="task">
+      <div data-page-node-id="ThrouRmu9ZkuA1s70mRTel" class="th"><span data-page-node-id="tmtGl0oWjQ09H8JxA2GbWP" class="no"><!--pnid:Bb52lWDA5MJu8TuunLdWHO-->10</span><h3 data-page-node-id="bHg0DzQvofVsTH9RlOKG6U" class="ttl"><!--pnid:2de6tC1rJObGJ97g3fH6JH-->沉淀成分诊口径表</h3><button data-page-node-id="7YZaIygSah58OwZumJroks" class="cp" type="button"><!--pnid:GadzVooTQA8TN2TXOAJmeh-->复制</button></div>
+      <p data-page-node-id="YDC2l19WA7ns6IgB6Hl7EW" class="tp"><!--pnid:AP7ZRc0MZktr90kUcZgzH8-->把这次用到的口径整理成一份可复用的分诊口径表：四要素缺项的三种补法、Day 0 的起算规则、六种严重情形的对照要点，下次同类材料直接对照。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="DHeQDAggDtQiUAW2YqDXe7" class="cta">
+  <div data-page-node-id="SlQ9hbhwHkiJHLjQCHXiYN"><h3 data-page-node-id="OQPhLPrhB412SJLtQetkHY"><!--pnid:Juutg6IiJL1OtEcseNlGep-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="Ny0ovT0s1o7jxrBRukw0MF"><!--pnid:1mO0UxCkIC7ClH9w9wjbw0-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="PKHiWjNFQBqHkuICmceDGL" class="btns"><a data-page-node-id="ef4VdtEX44vLbnGZnIhLkL" class="btn" href="#" id="ctaContact"><!--pnid:dVLwU7Zdd60lgvqO7AAPXi-->联系我们</a></div>
+</div>
+<footer data-page-node-id="K9nPS5L2zVMSQpPy15qL0f"><!--pnid:mMSxpG8MXT2R6LAoIh5yQq-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="eQQutBNFCXxTFHMmaBMiQQ" data-pnid-children="NqOildVIxzNneLrVQBNZ9v">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="qR1hvxYAYoOAv367fa8ud1" data-pnid-children="hg8em5eRRP3zt6tfhVLL5H">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="fvLU0ir3kZJifbujLMhotM" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="TS5J3Nuh6iebO14co35kFI" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="Jm1H00mC4QbSKJxbU5nj4c" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="QOnImGWQLenjtvhQFDq6d8" data-pnid-children="X4Rozk1zlpMMe4hcfKS2PT">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="CtAuEHpHMUpeGHkCBLts3p" data-pnid-children="zk4KCUtu5X62FC82QInZEy" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

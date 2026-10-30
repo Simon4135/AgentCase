@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="GAwIas8SwHuMaufadgrlT0" lang="zh-CN">
+<head data-page-node-id="h7hODhwzZacNVV6391aD7p">
+<script data-page-node-id="nS9rY1V3x1U1StFWF24Z4m" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="iyuU1BuoL9X6fn4cUIRUiE" charset="UTF-8">
+<meta data-page-node-id="96bdtYKCXDt5jeT1QihsJB" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="yA5mCnES80uNNZ2OukKpCK" data-pnid-children="LCpOqUj80uWLPwIqwGyV99">制度冲突与失效引用排查</title>
+<link data-page-node-id="QIHZEp7hR0CI9bipsnuCRF" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="36EeEQRapl8d5JTEyXBhad" data-pnid-children="mdNoPQkV62FK0gD3xjlHee" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="LEMVTlXNLr75nlFGX3byJY">
+
+<div data-page-node-id="oV6qAsox2xL7gG4cdDJ7mK" class="wrap">
+<section data-page-node-id="LB6oThEQ1ANRRGO0QBi0Pc" class="page-hero">
+
+
+<h1 data-page-node-id="QWja1jjvKXue46dGn7zbOy"><!--pnid:F2EhKx5MI9OkJY2JXSuU4w-->制度冲突与失效引用排查</h1>
+<p data-page-node-id="eWEhpgU40jtn5GEPu7MdCK" class="lead"><!--pnid:3TjjLw8NjUdFhJ6TbhJf1F-->考勤制度去年改了 · 用车制度里引用的还是那条已经作废的条款</p>
+</section><nav data-page-node-id="LjbYC5QMXrxKg1A645qDdV" class="subnav"><a data-page-node-id="uJbB7BdZN9HNqAfdztVAXN" class="on" href="#"><!--pnid:sYuSV7eazTyMCj3fh4YsUG-->场景引入</a><a data-page-node-id="Jlz8Q2p4Po3vykaKUdbpGM" class href="LiveDemo.html"><!--pnid:y9N86YRDO6nN3s0rDWxGbX-->Live Demo</a><a data-page-node-id="CRBjHI00IeOiIcgD5aUvQ4" href="推荐任务.html"><!--pnid:eJJO7bqaYJMV6PpN3atMSO-->推荐任务</a></nav>
+<section data-page-node-id="v6jfFQbJnupqORGszlAfSU" class="blk">
+  <h2 data-page-node-id="NVfCb1Go33zDsoF7zK4OlU" class="h"><span data-page-node-id="rjIsNtendanfYvkVEyMiIX" class="num"><!--pnid:S5XdAwXwk7eaFCpwduBHD1-->一</span><!--pnid:BuJ3JTZzA66LDIZ7A8rtM3-->这件事现在是什么样</h2>
+  <p data-page-node-id="SjAI3Z7dg2qlCOrxmLFJtS" class="subline"><!--pnid:GKbx1lwSeHFyvGchlIqbgj-->证照合规与制度治理 · 真实业务触发</p>
+  <div data-page-node-id="YSkOadLq8gjp9WcIOT1SFI" class="card"><p data-page-node-id="hL5JFErLLYJgFxVGd0gvU2"><!--pnid:r3vWIhPXQhkSminewQO7eC-->老板说要做制度汇编，或者要过一次内审/体系审核。把这些年攒下来的制度文件翻出来，才发现有些制度已经互相打架，有些引用的条款早就废止了。</p></div>
+  <h2 data-page-node-id="UfkG2TAQDKmFn7hWDG8Igv" class="h" style="margin-top:22px"><span data-page-node-id="cvAyFda51DNGnfmz6XfUnG" class="num"><!--pnid:KWSzjfR61gbegjhpRo4FoB-->二</span><!--pnid:1unnT9MpnQcPR2BXertQrY-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="mYZrpsrsKsOb0FYqnpXzdv" class="subline"><!--pnid:8jBE9NHjAX5TQHypG1l0K6-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="xxYvVybkuN8UVFNzTNciHw" class="pains"><div data-page-node-id="beww5xH9iXV30EdEDap3xu" class="pain"><span data-page-node-id="wuLNiFQqmHD0MlE3YXVu7F" class="i"><!--pnid:xl39KMvgxznlUMFm3UWvcY-->1</span><div data-page-node-id="5l7GL2RDQA99UVgOfhA4Bq" class="t"><!--pnid:rIsTw1ZMotN7n5OCuNqLas-->已有上市公司案例：议事规则为 2002 年制定，公司章程此后经多次修订，两项规则在会议召开条件、频率、决议程序多方面与章程冲突，被证监局采取责令改正措施<span data-page-node-id="V3imqapaqY9H5S5cDqP4Bw" class="src"><!--pnid:V47zECP0MqsaRVdFB0IRSC-->依据 · <a data-page-node-id="xSe7SuXfhf1IzHgHs4FkY4" href="https://finance.sina.com.cn/roll/2025-10-14/doc-inftwafe7349632.shtml" rel="noopener" target="_blank"><!--pnid:07t6r143gpGdc3Y7EcmV4r-->证监局对 G 上市公司采取责令改正：议事规则与公司章程存在冲突且多年未修订</a></span></div></div><div data-page-node-id="7tW3d9ikq0o26eZ6aU1Ur6" class="pain"><span data-page-node-id="WI1mqijGotyJ6LqCjwZvst" class="i"><!--pnid:sMINd34u0XErZtyl2DZLzK-->2</span><div data-page-node-id="Ww66uAhgx86wtsB0nJiZzS" class="t"><!--pnid:tvezcoW4TceSQ6UqyLmiyZ-->行政对自己的自评是「重制度建设、轻制度落实」—— 制度建了没人查<span data-page-node-id="jLTB5pIiHLofsD7Iu11uF2" class="src"><!--pnid:GOJ9UcG2cGZcSyAfVWxwkb-->依据 · <a data-page-node-id="AorOgNdTiFtCJ2Hwue14y1" href="https://cloud.tencent.com/developer/news/4231573" rel="noopener" target="_blank"><!--pnid:g7bNyQSZFLnjmSJPsjnn6I-->企业制度治理实务：制度只建不清，旧制度引用已废止条款形成僵尸条文</a></span></div></div><div data-page-node-id="9Cok76uH1f4RGDlmMGqZiB" class="pain"><span data-page-node-id="Jvv2NGHi42yqlqV70U27Wd" class="i"><!--pnid:yblLj4NmanAT0WTZl7gR5U-->3</span><div data-page-node-id="PaSsPYF4fD7TW6JM7EH7HB" class="t"><!--pnid:vs3pFDamD0tjoGqgpZRhF7-->制度改了以后，引用它的其他制度没人同步改；改的那个人往往已经离职<span data-page-node-id="UMzX9XZGpDqgIwGiKkRPl2" class="src"><!--pnid:hcRjV2j3j3Cp463EM2Y2kW-->依据 · <a data-page-node-id="F3z6P6JPWJorHNKOuI0BhD" href="https://landian.cc/content.aspx?p=826" rel="noopener" target="_blank"><!--pnid:0pMdolTefUOU3VL8J6nQuH-->行政台账现状：文件名后加最终版、最终版2、终极最终版，没人知道哪个是真的最终版</a></span></div></div><div data-page-node-id="X3skfpisKq25Y69NQhjhFe" class="pain"><span data-page-node-id="knWZ3tNsgB09OeaCfu9xbh" class="i"><!--pnid:ozuvp4LaAvqUV1t6kxVAnT-->4</span><div data-page-node-id="vVrGhhCWf9NrVAARXA8hXA" class="t"><!--pnid:yyOWyxBPDweTOhXpJQTipn-->同一件事在两份制度里写了不同的标准（比如报销限额、审批权限），执行时按哪个都能被质疑<span data-page-node-id="1TAzMnot5Sae34Pehny7Ym" class="src"><!--pnid:yb6GSiAsLwiVh93HM9o6IU-->依据 · <a data-page-node-id="yjDFvyhZtuRbIbnOa0V5fH" href="https://finance.sina.com.cn/roll/2025-10-14/doc-inftwafe7349632.shtml" rel="noopener" target="_blank"><!--pnid:iXEW9Gi4V0yBTu1uQd19PT-->证监局对 G 上市公司采取责令改正：议事规则与公司章程存在冲突且多年未修订</a></span></div></div><div data-page-node-id="JcbKZ2GegSC5kQMC3MEgib" class="pain"><span data-page-node-id="ozJ66PVeUl4NXohgKdRQEJ" class="i"><!--pnid:LujwC62mUVNSIDj6QvT8HF-->5</span><div data-page-node-id="cO8VKMBHydNqz8u0fAOKNR" class="t"><!--pnid:vinYzuQbbgdGVmMxwM2wps-->僵尸制度堆在共享盘里，文件名叫「最终版」「终极最终版」，没人知道哪个在生效<span data-page-node-id="jMABnCK8mAkP0bViVimx7M" class="src"><!--pnid:DF84jfNSAqAVn6QW7qdHAL-->依据 · <a data-page-node-id="MRyablZvCe7ubDUERsLaZr" href="https://landian.cc/content.aspx?p=826" rel="noopener" target="_blank"><!--pnid:mzBhj9CJMZV1auY5CJokhB-->行政台账现状：文件名后加最终版、最终版2、终极最终版，没人知道哪个是真的最终版</a></span></div></div><div data-page-node-id="Hlj7Y334bxrwwcBsWpkGPD" class="pain"><span data-page-node-id="Qwqs9xp8kUHvLe5VuBl7Kz" class="i"><!--pnid:ZzAgCDtpRnXtgtMD44g2oo-->6</span><div data-page-node-id="aDvl5QiyKGmV7eBcsMEi0D" class="t"><!--pnid:wRGlYoeMYRNxP6Sohkl08f-->这件事完全不需要任何系统对接 —— 但也完全排不进日程<span data-page-node-id="rdr7g6GubYcTjk6HzB56iL" class="src"><!--pnid:Rjmdyohrnkc8meHJYYaWEC-->依据 · <a data-page-node-id="aV7s7nV1yCh5NvsvRvikCb" href="https://ask.zol.com.cn/x/31536822.html" rel="noopener" target="_blank"><!--pnid:vWE8JC27oiulVDnaRE6HB6-->行政从业者自述：经常工作干了一半就被打断，直到下午四点才有机会起身喝口水</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="xRTUZq8hTIHIEW9eoSJf6z" class="blk">
+  <h2 data-page-node-id="WKBeJ1cOAFo8yY2wzqKD4O" class="h"><span data-page-node-id="pzQqrY4rDqoUC6Fi6GPiKm" class="num"><!--pnid:oRZedJZgsEeia450E2y988-->三</span><!--pnid:4ZLdQ70i99MoFfFHEatUQA-->换个做法之后</h2>
+  <p data-page-node-id="rFRAPXUzTgP50LZN4PCYdM" class="subline"><!--pnid:u49h9DoealAJBcO3bavPHq-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="VbvOeW1VWvNrJaWuNJaJaX" class="cmp">
+    <div data-page-node-id="3UlpFS4PhXRjWMtvkGEkSU" class="old"><h4 data-page-node-id="RBpdBzqvMUnTdtKI7W1aPo"><!--pnid:uCrUdT0OipeROxmqqOsXLJ-->✕ 现在的做法</h4><ul data-page-node-id="t0SjMyYGuf9meFZhHd7EUP" class="list"><li data-page-node-id="B0jSyJKKV7a5mpw460sNhO"><!--pnid:0GtzElpunuQdU8rBJ4lvg3-->已有上市公司案例：议事规则为 2002 年制定，公司章程此后经多次修订，两项规则在会议召开条件、频率、决议程序多方面与章程冲突，被证监局采取责令改正措施</li><li data-page-node-id="x9b36Ho8j7zC9WxxIMfje2"><!--pnid:F1e31Oyb0kugzRQScOytLo-->行政对自己的自评是「重制度建设、轻制度落实」—— 制度建了没人查</li><li data-page-node-id="ijp8BN09RI7ExGqBozlUTZ"><!--pnid:lgS1DTyAoeAT4giZB8kO6H-->制度改了以后，引用它的其他制度没人同步改；改的那个人往往已经离职</li><li data-page-node-id="ZtWGb2gATAOCFau5bWtmn9"><!--pnid:YSsMdHFqiOvdAKZMPWDjgb-->同一件事在两份制度里写了不同的标准（比如报销限额、审批权限），执行时按哪个都能被质疑</li></ul></div>
+    <div data-page-node-id="b57vIfkoKxnMn17coJV1Ez" class="new"><h4 data-page-node-id="h5FcMHeXxfI59VAHa5ePlf"><!--pnid:CpGhedvFjwNCq4Fgaz4IGa-->✓ 交给 Agent 之后</h4><ul data-page-node-id="cvZuYvN8SLEOsMbImZMgKm" class="list"><li data-page-node-id="bCfooWwrjhLYQQvzTXV4fA"><!--pnid:xM8jKytisCTKRn2KhVZhHj-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="FrfuTpDKcTvF5ZrwTO8g8P"><!--pnid:2xlcREeIf4jXmfot7vYJUt-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="RKPelmc7p4icBTwzUxcsEi"><!--pnid:8GdK3slcPZ7vo1qBa2tWso-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="S19eBb0pQectYB5UvLCZ1e"><!--pnid:nWKklVgobFMzgtiIdNFgu0-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="W7ro0JQuHBjSjgQiLZQhoI" class="blk">
+  <h2 data-page-node-id="AMpHeDNFFrGqe9fvHqJAb5" class="h"><span data-page-node-id="zm8DsyBgA64AhMG98EPUYB" class="num"><!--pnid:llNletrismo9ro8iysN6UZ-->四</span><!--pnid:Y81m4U8XT9V2BFC9OJ2FLQ-->场景闭环</h2>
+  <p data-page-node-id="PqAsQh6cspSaNdrhhdqGGa" class="subline"><!--pnid:l6THZBK16WemwwlcbmTPjm-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="g5trxo1rEr6Gba2I9tOGSg" class="flow"><div data-page-node-id="qFNQV996RMcSoD6KeHE5VS" class="step"><div data-page-node-id="P9NjMJJI8FDzxLxhGeShJ3" class="n"><!--pnid:LmeN11rsE34YFP6FDNh1jl-->第 1 步</div><b data-page-node-id="OW9xUzzpBTVoQ8lk1H3Ss1"><!--pnid:tqwOk6ehkKvZ4Gxho0IsHE-->清单重建 · 先搞清到底有多少份在生效</b><span data-page-node-id="0AJGsE7CmyNII9bJwJECZY"><!--pnid:GbBVeooJM3rXtNbRKCZ16e-->从文件里抽制度编号、版本、生效日、废止日；同名多版本按生效日排序</span></div><div data-page-node-id="2kdxqZQlaBuxtnfx25d28D" class="step"><div data-page-node-id="EHCj4YpRckjvThCFyBGG7J" class="n"><!--pnid:w3l3cqFoCjTjxD3EKAOL2h-->第 2 步</div><b data-page-node-id="JHyEEpf5VjOmbBqIsSkSHf"><!--pnid:lpcHn0S2IeY8cCe86UN71K-->引用图谱 · 谁引用了谁</b><span data-page-node-id="nwMZFgEf1GcaJdAt6Su9kA"><!--pnid:V9uKrFEduH9jAwDwVPmwO6-->抽出所有「依据……第X条」「按照《XX办法》」的交叉引用，建立引用关系</span></div><div data-page-node-id="oJHAKi0h4GSJgPiGYYChwH" class="step"><div data-page-node-id="BOpHyiPn3Kd23I22bu5a6L" class="n"><!--pnid:jncR14QHpHyGf94n30IKYE-->第 3 步</div><b data-page-node-id="DRL0AERhc1GudxF7cU5Q0L"><!--pnid:1SfMew6h4QrY6v0fiqBFj9-->失效引用检测 · 引用的那一条还在不在</b><span data-page-node-id="K1ROQNRLMQ6zLxJVtlw3n9"><!--pnid:P6Sv3Uxe8HIaXqZd2JR9Ev-->被引用文件已废止、或被引用条号在新版里已不存在的，逐条列出</span></div><div data-page-node-id="89vTLAyHGBsVrUMS85yiF7" class="step"><div data-page-node-id="41tjnWOS0znUeNAKFHc1te" class="n"><!--pnid:ihb2f2RWWlcof5ccAdWKNQ-->第 4 步</div><b data-page-node-id="kVLGKdcFNHSmz09p1H2X6B"><!--pnid:dm7rsIRcw7G6vaNYYAph0c-->冲突检测 · 同一事项不同标准</b><span data-page-node-id="Jsn5mCvqYuJFjq0v6sIS39"><!--pnid:MYMaGUKHgWnEwS2BgpyoyV-->对报销限额、审批权限、时限要求、罚则金额等可量化项做交叉比对</span></div><div data-page-node-id="vMSqUWntsff4uz1Xh7FVK7" class="step"><div data-page-node-id="YvhDBMSvRAVLQ9MedDZZ2j" class="n"><!--pnid:v5nlUvoqlHBqdUc9pWwDWe-->第 5 步</div><b data-page-node-id="MYAQvVATTquX1l4m0zmUSf"><!--pnid:Ed9XuuEDTg4tx0H2tpL0zP-->僵尸识别 · 哪些已经没人用了</b><span data-page-node-id="afAO3RSYjs7dCRDQnLlYbH"><!--pnid:b02C6QtBYDsSJ0MSQqCBkK-->长期未修订且无任何其他文件引用的，标为待确认废止</span></div><div data-page-node-id="mjy9SKq7S59hw71GTtwVvH" class="step"><div data-page-node-id="rLaP3ZBTOVDMrimaloi1vJ" class="n"><!--pnid:vFPZNdvTANVjM6aiBE9lhk-->第 6 步</div><b data-page-node-id="WipYUYQXmTiESLkNSXqZfF"><!--pnid:h4GYwUdoXD5sjmt34To5D8-->修订建议 · 每条写清改哪份、改成什么</b><span data-page-node-id="rMAxLXSQRleDf63jzSCcNc"><!--pnid:zw5wxwC4e7ersLkyua6xaW-->不写「加强制度管理」，写「《用车管理办法》第 3.2 条引用的《费用报销制度》第 8 条已在 V3.0 中删除，建议改引 V3.0 第 6.4 条」</span></div></div>
+</section>
+
+<section data-page-node-id="LpFCcdcLFwaZHN2tLUouhm" class="blk">
+  <div data-page-node-id="5wuQayCKfB6hfAXGdwDrf4" class="g2">
+    <div data-page-node-id="oYW2TNggQyUulKJVMKNtas" class="card"><h3 data-page-node-id="3oJxcSdkoCCSvQameFV3Fd"><!--pnid:EMwS5hTdgviNXPdCiTB4Ph-->要准备什么</h3><div data-page-node-id="1FOd1tl1GnTfzCUDc9L4RC" class="src"><div data-page-node-id="CjYR8rdkJVY0Wy9SM22CDy" class="fn"><!--pnid:VLq4fFcn534VmY4a70yQpY-->全套现行制度文件</div><div data-page-node-id="8tZ1rCDgSODO7Bpa1JEwlk" class="fd"><!--pnid:49lf07njoTbLAfWlpcTHLU-->Word/PDF 混存，含管理办法、实施细则、通知、附件</div></div><div data-page-node-id="01dvKU6UuVVB9YtdO6KJUX" class="src"><div data-page-node-id="muOyvLFjYSp4y030K6ZamW" class="fn"><!--pnid:mijPnA6PZFxcr9dKtEj9JZ-->公司章程或上级制度（如有）</div><div data-page-node-id="t1H4kBqBe480eIlyzjuTnD" class="fd"><!--pnid:riLfHh0rGCWQNGqYSn610p-->作为上位依据判断下位制度是否冲突</div></div><div data-page-node-id="J0v7HulI9otMwN0zWXLn31" class="src"><div data-page-node-id="xe2ps1aFpMtmYpxod9Zots" class="fn"><!--pnid:Sw6zQjDY2reNHD7DipxmIw-->制度清单/目录（如有）</div><div data-page-node-id="P8CGRDEHZCpwmVIoqln6Wb" class="fd"><!--pnid:XSRHaB2lm43QPrVmbnSaHb-->常常没有，或者已经过期</div></div></div>
+    <div data-page-node-id="72RfHgJBdys3Pi9FC3VLyt" class="card ev"><h3 data-page-node-id="toKgAaaG18mk4j7YGEg6Bd"><!--pnid:P6ST9D7ROQnnwm0CuxGx1a-->为什么这个场景值得做</h3>
+      <p data-page-node-id="1QdFnnEkdqP266GPMerYtP"><!--pnid:QnNLsl4PIZsbalX2pJbyn8-->痛感 4 × AI 适配 5 ÷ 落地难度 1 = <b data-page-node-id="Bpx7XRF7LAYXuONkMlob3W"><!--pnid:jjrby8Y8LPzzvEGTk23yzX-->20.0</b></p>
+      <p data-page-node-id="Qrt5Qw0mrsQE93sgaGZSkc"><b data-page-node-id="BlZyoz21b1NMZJrUhUd5Ss"><!--pnid:MPqBJKqbIYkxc04fHjA8ir-->最大差异点 ·</b><!--pnid:mJkmUNZhQ9rEM4IZ9E4rgy--> 零集成 —— 不需要连任何系统，把制度文件夹整个扔进来就能跑。这也是全场景库里最容易在客户现场当场跑通的一个。</p>
+      <p data-page-node-id="Q5N4HUfsGNL5n6ZLh29G2V" style="color:var(--ink3); font-size:12.5px"><!--pnid:tzMJhGzo3ncnkgsykSheVg-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="ty5qp0QUOOuuCgQguw08p5" class="blk">
+  <h2 data-page-node-id="eMyLFbPFGZUzl1YCi93aUJ" class="h"><span data-page-node-id="TH7pU0QDVgNXuO9oUDWGhR" class="num"><!--pnid:skk1det1uND0uyqSXSURS2-->五</span><!--pnid:64T4kUqNGvzxuhZisawbUM-->会产出什么</h2>
+  <p data-page-node-id="vzvUg7qBDVdexdcJQMVKhP" class="subline"><!--pnid:K0Q0wDGFKFlS0gsT1OuJkH-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="xhu1KhcfXsr4ZhUcEIgV2Z" class="outs"><div data-page-node-id="SfVBKBgTY7vyNd01whXnnY" class="out"><div data-page-node-id="dqfeTcqr3eEdOcY9RXluAp" class="on"><!--pnid:2UAsu5jW9fs4tbEeL9omRr-->正式件本体</div><div data-page-node-id="CogEdKu1f40KPUJ5iCOlTg" class="ot"><!--pnid:PwRvqwyI5tCWuasLBv74Cw-->制度冲突与失效引用排查报告.xlsx</div><div data-page-node-id="fhePOyRbH1XSliD22QuiOO" class="od"><!--pnid:wLiXNnOlIh4sKoPBh6nejX-->正式件本体 · 6 sheet · 逐条带文件名与条号</div></div><div data-page-node-id="5JzTjmrMqfVA4tDypzQpIo" class="out"><div data-page-node-id="zYozTiZWpw5cIwgYQXDZHJ" class="on"><!--pnid:V96jds4IxLiBVLcYTG2FbT-->可派发清单</div><div data-page-node-id="kAwxwmiQjyVe3GS7TWdJhB" class="ot"><!--pnid:HZ6iEcpIlLN7TzhqzM9pqW-->修订任务清单.xlsx</div><div data-page-node-id="99mr9vQT4rclpgCQ8A6HZT" class="od"><!--pnid:dR8tAwNCYqFcnRf2fNULSr-->可派发给各制度归口人 · 含责任人、期限、验收标准</div></div><div data-page-node-id="kSRFDXBC4uI4JZzRDctJa3" class="out"><div data-page-node-id="8MnBiLK6ZYsg3tJiVIWP1o" class="on"><!--pnid:6PmAWYvonHehjbrgGeaZ7A-->可派发清单</div><div data-page-node-id="6VRBozDQ0bCAnxLYbtaosM" class="ot"><!--pnid:FoVOr2WJdhiD6KzGd5UImo-->制度台账（重建版）.xlsx</div><div data-page-node-id="KcqLuvyTtOLS5cJmJAtg3R" class="od"><!--pnid:cexGC3dhivDQ1cbm1lCAeD-->编号/版本/生效日/引用关系/状态 —— 这份台账本身就是交付物</div></div></div>
+</section>
+
+<section data-page-node-id="1sf2kOGxqrIJUC8mvVciyo" class="blk">
+  <div data-page-node-id="X6P4cZ3obzctU1FQ76L9ZB" class="card warn"><h3 data-page-node-id="mpSXq7KCm5BoiuPRLT1fPv"><!--pnid:erMLOzVwChtElIGLrCloMP-->这套东西不承诺什么</h3><p data-page-node-id="Pg1RuF7gTdBqeGlxgVyrKe"><!--pnid:w2dzELtw1I18y3qGrSbgL1-->不做「制度是否合法合规」的判定 —— 那需要法务和外部律师。我们做的是内部一致性排查：条款之间是否冲突、引用是否失效、口径是否统一。判断哪一条该改成什么，是人的工作。</p></div>
+</section>
+
+<div data-page-node-id="YMAtKCoV22JOFcoXYuCeew" class="cta">
+  <div data-page-node-id="jETmVoddR0bBYhGRgwxYkp"><h3 data-page-node-id="kIcmTCzboETENTlzs7m7xI"><!--pnid:Dv76egGOLcvhLks0tZtgRZ-->想看具体怎么跑？</h3><p data-page-node-id="l6LtRRu2BDw44fKRT952z6"><!--pnid:p1zngTbOF0d399c5MLMLPE-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="TfIWVJxmEOOvmqCM7HpiB1" class="btns">
+    <a data-page-node-id="iBX2paSdviyYuHdHgOcQat" class="btn" href="LiveDemo.html"><!--pnid:qOSMmOIyN7EjHBGLq75Ghb-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="xetGPsqia4e4SeFxHQLHfw"><!--pnid:WcAxHmB4ZwlJP88BrNIL0g-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="rddCD8AgGzKGLqIbdauhil" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="O65scQuAK7AcTtwOf6bzxC" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="G9VMPCHjHe6o5jYsm5nt7q" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="XvBRYnos0S3Dl1SkAfCbMz" data-pnid-children="YXkPBqGszwi67rxCd8pDaP">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="i652vgFpWsUHzeKFgxI8VP" data-pnid-children="pOs7AsMbX0FpjW1Pe2iilM">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html data-page-node-id="N3oYJjMI0jdqGK7MNrwTYH" lang="zh-CN">
+<head data-page-node-id="f4hS80lG5T3SqWzwP1t7EE">
+<script data-page-node-id="WZkFhW9snMJKvtBiQhfKBL" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="VsvHv8xz50h2pZZ4OrfVoQ" charset="UTF-8">
+<meta data-page-node-id="ezoEOrIigfzziYx0fHlLE1" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="louQUxgLm362oJ5mWEEJIy" data-pnid-children="k1MgdI80og6By5BjSufXte">客户额度占用与超限发货预警</title>
+<link data-page-node-id="T2LulXbYQBxcGCxifShvg8" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="xsYP4iKXuoOxSEyxPBfQD9" data-pnid-children="eilD7adZoNs2SC0qblFZzn">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="daX8ZYFAAYwvHMYrNA6FVo" data-pnid-children="EE3cW4LyWVDpZJzOfbViVT" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="O6Qj0VjyHz5fzWidifSVHF" data-pnid-children="BYM01Al8qEF05cdplpJfxd" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="w6gYAJSjoBy3QJrTHFkMR7">
+
+<div data-page-node-id="IW4heP9eGFR7NBaI18c5wE" class="wrap">
+<section data-page-node-id="bii6M6vWXMcAFCxqQyBXwX" class="page-hero">
+<h1 data-page-node-id="IBv8fqvxX8clecFvLObyWj"><!--pnid:uc9wiNQBUn8unuepGtVoZW-->客户额度占用与超限发货预警</h1>
+<p data-page-node-id="3lnt1XjWTeYRn31BsTNTnz" class="lead"><!--pnid:32Ikvg6luA6e9SHiXmExnq-->系统里能录信用额度 · 销售开单照样超限</p>
+</section><nav data-page-node-id="ElCje13R0agNTuEnPeNPUb" class="subnav"><a data-page-node-id="aAI6GPjHBxCLJks3ltD9pn" href="场景引入.html"><!--pnid:2zx7d2Atc6xQFbDoEeIidp-->场景引入</a><a data-page-node-id="9M2YgPjFRAMhiEF37FYXDa" href="LiveDemo.html"><!--pnid:zFX2z7m51uKtqaSxuKn8yE-->Live Demo</a><a data-page-node-id="lbfQMLWzEqlMzC0KTgY8PL" class="on" href="#"><!--pnid:eZOcV2Eo8RV7OOgEcVhmWx-->推荐任务</a></nav>
+
+<section data-page-node-id="kdOi3sGrMEMjdflCXd0sYH" class="blk">
+  <h2 data-page-node-id="oTwrcZlfK4lPC3nmrVyYJl" class="h"><span data-page-node-id="RNYGEEQ3UbPjiYcgkNMYTr" class="num"><!--pnid:At4TDdr5YgNyZYIooPsQ5X-->一</span><!--pnid:lQrDDpmyok2Pz0SIgKM3h2-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="5je5mPi9yty8k8pOL7FyJk" class="subline"><!--pnid:8cA2O9kL1ynvTrkvXUnLpK-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="yutdUK3Qw75J5kHswJ88dW" class="card"><p data-page-node-id="gg11YnTskbCyZ2qfEENhm5"><!--pnid:0IwWuXyK5u1J2JMG0wHmKr-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="9g0iN4J3VRNWjzUEcfXuLi" style="margin-top:10px"><!--pnid:UUo0ADy25Ao2lZNyDhsdgR-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:XU4R64SCi63FQtuksoYKHA--><!--wb-skill-start-->
+<div data-page-node-id="2TVzUxiz4Zf6CbkqfDqOTO" class="wb-skill">
+<p data-page-node-id="VWeXYjyMhjBY89OBMvhi9R" class="wb-skill-lead"><!--pnid:3Mszed83PQrBfIkOfYIRcz-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="3FVmfiDkSXnovh5ip84hbo" class="prompt" id="wbSkillPrompt"><!--pnid:jwt2wttsDL1B8AkAmKrPUL-->【准备】这个场景的规则都在「客户额度占用与超限发货预警」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/Ui6LPSV9qZtUDGEPY3f5nc/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="CdnTylDE2nlmsS34SFkTg5" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:DDFVB0o7nQ4bAlpPrGuMe2-->复制</button></div>
+</div>
+<!--pnid:9mS1OWBxSfjXsW5R8BvXzv--><!--wb-skill-end-->
+<section data-page-node-id="vnzxrJsVaqfMZ2EfREyNEP" class="blk">
+  <h2 data-page-node-id="GDCZx8guGbk0P2nkBCDn5B" class="h"><span data-page-node-id="F7tfncf1dOWGtsBhKOSdSa" class="num"><!--pnid:QkcplvktJWZdFCT4kROZta-->二</span><!--pnid:NTueHKUc2Xq7eqCdZGWy4G-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="2HmYeR6rUOb8t3mrsfbOPR" class="subline"><!--pnid:NeBWQJWWbUYu7zHO3pyn5A-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="jc0Mxku22Df7iKY4FKt86O" class="tlist">
+    <article data-page-node-id="4LPZeGfAZ5VWlfb7K7PB9s" class="task">
+      <div data-page-node-id="b9XU8kc3S5762SPi8II6NA" class="th"><span data-page-node-id="iOFZFdf2VSyPHR6YEMZkjd" class="no"><!--pnid:tiPTDJkVjEpGF3UePNve6e-->01</span><h3 data-page-node-id="OluCUKCH46qFVIiL6uCdlE" class="ttl"><!--pnid:aMjJuaTcoJGLBPhVqgLN7B-->首推默认</h3><span data-page-node-id="5qxYLyriT9ZgmMpaFpBPNu" class="star"><!--pnid:MYTReI1x53R9MUyXxf70OV-->与一键体验入口一致</span><button data-page-node-id="q7tqxb2VqDz2dpuij1IpeV" class="cp" type="button"><!--pnid:VVpqxUgqjGwyb1dB80VABd-->复制</button></div>
+      <p data-page-node-id="8e2FSDiCstLdfYrjEAa4fU" class="tp"><!--pnid:RQmmZt03eQJsG6mUWieZdS-->恒晟精工有个 186 万元的订单要下单发货，销售说他们额度够，我不放心。材料在这儿：他们的应收账款台账、已批未执行订单清单、财务的客户信用额度核定表、三系统客户主数据导出、客户工商与司法公开信息，还有客户信用与发货管理办法摘录。
+
+三份表里客户名称不一样，先按统一社会信用代码确认是不是同一家，对不上的单列出来别硬拼。然后算他们现在总共占用了多少额度——在途没收回的、已经批了还没发货的、加上这一单，三项分开列再合计。跟核定额度比，超没超、超多少、由哪几笔构成。逾期的一起看，工商司法的公开异动也并列上。按管理办法给分级建议动作，每档写清依据。
+
+交三份：额度占用核查单.xlsx（正式件本体，带签批栏）、超限证据链清单.xlsx（逐笔带单据号与出处）、客户风险异动摘要.xlsx（公开信息异动与应收逾期并列）。发不发货我拿去给财务和总监定，你别替我决定，也别自动拦单。</p>
+    </article>
+    <article data-page-node-id="o85Cz8Y5aXuIYxmVdU6YAv" class="task">
+      <div data-page-node-id="4wkWlFiJ3iSqOXlEt3WDyZ" class="th"><span data-page-node-id="nj29xrCf0n8N24YHuY3SZv" class="no"><!--pnid:y0t1QejK3FrtEIXq79Szqh-->02</span><h3 data-page-node-id="R3K1ikQplKcR6rrWMEbtYQ" class="ttl"><!--pnid:DT1wEq8nsZCyOu43ej9fiw-->只算占用三构成</h3><button data-page-node-id="bUrY72XMQwWQzSWfLQnIb4" class="cp" type="button"><!--pnid:ieNNw8e9ZILc7vwbGhpO8i-->复制</button></div>
+      <p data-page-node-id="0bYbuRNUupTqJX1WDCkjhq" class="tp"><!--pnid:5mYiqKTyNi9jTRemqUILMj-->先只算占用这一步，风险和建议动作都先不写：把在途未清应收、已批未执行订单、本次订单 186 万元三项拉出来相加，逐项列构成。产出用 Excel 一张表：占用构成、数据来源、笔数、金额、口径依据，末行是合计与核定额度的对比。</p>
+    </article>
+    <article data-page-node-id="CnCUy1z6D3iz5YU8VgjYJw" class="task">
+      <div data-page-node-id="776rqn4OIDphIbInlWiuHe" class="th"><span data-page-node-id="jTo2iGjwfGKDCAQsPuagsS" class="no"><!--pnid:w7Op9Ioki4vbaw8KNOMJ1f-->03</span><h3 data-page-node-id="IAGzWMLkqmwFm5kCvWjMHS" class="ttl"><!--pnid:fIxfhsXmCJkoQwpDMVfKqQ-->换成按逾期优先排</h3><button data-page-node-id="t6kwsHEwilBGWXeHE1Ogkl" class="cp" type="button"><!--pnid:4LW9W3gj6dyE8ySCMgZU0x-->复制</button></div>
+      <p data-page-node-id="4d3eJOOtP0votnfhXsiTJo" class="tp"><!--pnid:Djxla7Prcjfor5ep455W3O-->换个口径再跑一遍：这次不按超限金额排，改按逾期严重度排——先列最可能拖垮这笔 486 万元占用的那几笔。产出用 Excel 一张表：发票号、到期日、逾期天数、未收金额、状态、该笔对占用的贡献，逾期最久的排最前面。</p>
+    </article>
+    <article data-page-node-id="JnKsxmfjG2RKwzg2b4ZTC7" class="task">
+      <div data-page-node-id="oXBssXX8Bmn39zz7SFJnzc" class="th"><span data-page-node-id="idiekB5vqy3hF7neTkZWN5" class="no"><!--pnid:TMQbzGyttltZlciGIy5fcZ-->04</span><h3 data-page-node-id="yRtPHKYrqhhRkGGMCB4K4e" class="ttl"><!--pnid:7D80xDfcsShIs6BaSo8gcg-->一次算三个客户</h3><button data-page-node-id="kgJEqjQY2i4bUdqIpowY1H" class="cp" type="button"><!--pnid:AZgf87qUTnOinayjhclUIB-->复制</button></div>
+      <p data-page-node-id="jepYZV2w9lREuwWigQMNBX" class="tp"><!--pnid:xFe0FGOmqBNyRySdqXWYzE-->演示数据里再加另外两个客户的应收台账和额度核定表，三个客户一起算、各自出结论，最后给我一张横向对照表：客户、核定额度、累计占用、超限金额、逾期笔数与金额。产出用 Excel，对照表单独一张 sheet。</p>
+    </article>
+    <article data-page-node-id="f8F1h61JVmli78CgsaK3QH" class="task">
+      <div data-page-node-id="X2DVvInCSgCKdAf7BHYPK7" class="th"><span data-page-node-id="CMDhq92x4s7XIJf2mYSN9U" class="no"><!--pnid:3cX9rUr6h1QBbTDROrqKNT-->05</span><h3 data-page-node-id="u8v1lK7p8j96s0P9lGOF1C" class="ttl"><!--pnid:VIda7iLMoRr61iJRMu2ssd-->给财务和总监看的一页</h3><button data-page-node-id="sVTMxuuEd19Ixg4E6H0wkF" class="cp" type="button"><!--pnid:cWyRfCIp0RjPKOswxK8aHm-->复制</button></div>
+      <p data-page-node-id="NMcLGQAuu85FAdioASPVfy" class="tp"><!--pnid:Wh0Cfpt8QcAEULOsayUnKH-->把核查单压成财务和销售总监签批时看的一页纸：占用构成三个数、核定额度、超限多少、逾期的哪几笔、可选动作各能让占用降到多少。产出用一份 Markdown 一页纸，算式保留，明细表不要。</p>
+    </article>
+    <article data-page-node-id="keyPwQSgnSL6YFNCYX320S" class="task">
+      <div data-page-node-id="Z2TPNNMLWsfJjABvvCMmqh" class="th"><span data-page-node-id="bzLxqThHxnIGIkGxFL29gr" class="no"><!--pnid:OsAZeoDR5s9JrMv03n80QN-->06</span><h3 data-page-node-id="2nLylXmiNtITFweFJ8zm9B" class="ttl"><!--pnid:R5mjtkLgdRhsDVSvuBEmgq-->让它反驳自己</h3><button data-page-node-id="nxnpdTLKoFoL6A2ahe3KOY" class="cp" type="button"><!--pnid:Kk1HxrFmk9BAm0Xm7seqV2-->复制</button></div>
+      <p data-page-node-id="xwZVgXonG0g50PlSDeX8rk" class="tp"><!--pnid:cZDwaLXaEGJvR2xVjiw5jg-->你算出来的超限金额，自己挑一下最可能被质疑的地方：对着应收账款台账、已批未执行订单清单和三系统客户主数据导出，看那两笔已批未执行订单是不是真的还没发货、客户名称对齐有没有误判。逐条说明依据出处、你的疑问、要核实什么。产出用 Excel 一张表：判断项、支撑依据、你的疑问、建议复核动作。</p>
+    </article>
+    <article data-page-node-id="nzjPM3M2JIyRKmQkZDGTJT" class="task">
+      <div data-page-node-id="aa7mMJ984pGrGH29HZz1Jc" class="th"><span data-page-node-id="gKAgqQ5VaCecjITTme7k0G" class="no"><!--pnid:fM8x5a6BmcBpxnBDugu3iG-->07</span><h3 data-page-node-id="mddjBGdO2mskXrjxSSIJdN" class="ttl"><!--pnid:lC47y5LTZx6tqO46kWfEP3-->比对瑞成液压那次</h3><button data-page-node-id="UhqpmXKTrpvytlf8K9Cuxo" class="cp" type="button"><!--pnid:MMJ9nVrbPc3rsxunz7s5ME-->复制</button></div>
+      <p data-page-node-id="sL0OBjkFsPXbHfk5AnVHeg" class="tp"><!--pnid:G2eGuBk0V2DY0VxJs0vG8c-->专门比 2023 年瑞成液压发货那次：当时漏算了已批未执行的两笔共 112 万元，最后核销 68.4 万元。拿这次的已批未执行订单清单和当时的结构逐笔对起来。产出用 Excel 一张表：对比项、瑞成液压那次、本次恒晟、差异，漏算风险单列一栏。</p>
+    </article>
+    <article data-page-node-id="zQ4S6OgL76yi31e2PCdcMp" class="task">
+      <div data-page-node-id="t3z7tDMFdTl5CY0wxfhRd3" class="th"><span data-page-node-id="xIxikIdqp2YCYUh6DgV6DT" class="no"><!--pnid:QbMDsOGTaarx81Qzhtj1U2-->08</span><h3 data-page-node-id="XSVkrCeb0pXK0v3L0Woejv" class="ttl"><!--pnid:k6FlaeV7ZCmhqmjYg1bsXj-->对照管理办法自查</h3><button data-page-node-id="xfprjxoj1ogR0q6iOcVJjt" class="cp" type="button"><!--pnid:p6y6hEF6KbrXkOoZHbtuuS-->复制</button></div>
+      <p data-page-node-id="QYmvhrZfyx1xtRS0by2GgB" class="tp"><!--pnid:qxN7dth5oP63x6HN5uohPP-->对照客户信用与发货管理办法摘录，把这次核查自查一遍：占用口径对不对、超限分级跟办法里的档位对得上吗、建议动作有没有越权、额度核定日期距今多久要不要提请重核。产出用 Excel 一张清单：办法条目、要求、本次现状、结论、越界或遗漏项。</p>
+    </article>
+    <article data-page-node-id="4fPpH8bKuUCYAidOaODV9m" class="task">
+      <div data-page-node-id="R6rLeVrXYYyuTSyRQDrmv8" class="th"><span data-page-node-id="lu5qGjAS5UvQuba6ayZZWk" class="no"><!--pnid:rsa7CFt32odovqziJFHSpS-->09</span><h3 data-page-node-id="RcKcF8H1tzw40GQTA20sLn" class="ttl"><!--pnid:zXiTjLixUFnXOVa4MpE9tq-->折算成预期损失</h3><button data-page-node-id="VNDoIjHkpyOy17qyT8UDd1" class="cp" type="button"><!--pnid:eoTpSd8oR3eWXnjbcv0MaQ-->复制</button></div>
+      <p data-page-node-id="XtliuOvrVVe8Vwfn5QxYHp" class="tp"><!--pnid:rhLHmd1krWDpVdopNG986d-->拿客户信用与发货管理办法摘录和应收账款台账，把超限部分折算成钱：按公司近三年坏账率 1.8% 算预期损失，再参照瑞成液压 486 万元占用最后核销 68.4 万元的先例算一个对照数；同时算改为预付 30% 后占用能降到多少、还剩多少超限。产出用 Excel 一张表，算式与参数都写清。</p>
+    </article>
+    <article data-page-node-id="ZQhDNZF2HRpj2r2VNnMz8I" class="task">
+      <div data-page-node-id="Oe65t8hhGPHR7ZBpMlRBpt" class="th"><span data-page-node-id="nfMURwwtEWeWdUIZ8ZdVx0" class="no"><!--pnid:kFwETFLprNBvAc5nKylAyU-->10</span><h3 data-page-node-id="iReiwzXOQPEPlifR5wUMFp" class="ttl"><!--pnid:QOnK6WS6LqcK3LNiLhkK7K-->沉淀成测算口径表</h3><button data-page-node-id="KbxhHV1fukBJnSZmJHvjtM" class="cp" type="button"><!--pnid:P6uzvxpEku8fRxEXsIB3Ug-->复制</button></div>
+      <p data-page-node-id="oB00TBS020xjRGRTWTHVn1" class="tp"><!--pnid:cIfNwMkZTiOkI7c0iPuZUU-->把这次的测算口径整理成下次直接能用的清单：占用三构成从哪份材料取、客户名称按什么对齐、超限分级怎么定、建议动作分别对应什么条件。产出用 Markdown 一份《客户额度占用测算与分级动作口径表》。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="aRzrAVqGwIddJo9L8xBG2m" class="cta">
+  <div data-page-node-id="GbQP6p5W3TCcrfNTK4DysJ"><h3 data-page-node-id="ye3IieAKVViFqUHNTeuZRM"><!--pnid:ZqnvXRDdnBk2VIREPm7WCr-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="9uRU9saomfglx5lxYM39CR"><!--pnid:hzaVcsqVNLquFUtN5wmCQV-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="L4JoZSezcb1QwoIqFtifKm" class="btns"><a data-page-node-id="kVnyYou8Wz1z4CNM75daOC" class="btn" href="#" id="ctaContact"><!--pnid:g3V39V3hseT633JRjptScv-->联系我们</a></div>
+</div>
+<footer data-page-node-id="qFAYfuJJsy2dT0r8A0br3e"><!--pnid:1AL7afdTnR5z9cIiOY9V37-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="r5bTtpFOvfne947Kxw5HNX" data-pnid-children="Z8DyhhcnptlodswtIHvw2T">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="ufPOVBF5PiDOvH5AKfeasn" data-pnid-children="tAu4Arbof6SQdKGwh9YVh4">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="IHvScjyASNivgmkMaIa0NM" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="ZmLtcSE6rTTlCzYnAsymqR" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="63lGzNImhzCpgJYbqUchXV" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="wCnBaEC6zYLMG4m5LT2VPX" data-pnid-children="oJOQ2rtaSMOkCgl27ORsFV">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="SlsFqsuIK1RsaE3q6lPH6B" data-pnid-children="sY55O1BePcy3Ee38A0TdGC" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

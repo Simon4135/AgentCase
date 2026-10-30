@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html data-page-node-id="0JrliKnfILLgNyx1nePSor" lang="zh-CN">
+<head data-page-node-id="0glvoROiSLkbwaMxNYiseq">
+<script data-page-node-id="8DCr2sAQcH8mLZOVTlqWJN" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="HwbiZUsi3lsnAwhessbPBI" charset="UTF-8">
+<meta data-page-node-id="h7Nrv9e9AHP26XZMergfyX" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="cBMfWfbwM02gjb3qvuAbzZ" data-pnid-children="A3LgLSjZVGRHM6mdd76mXy">采购需求与计划生成</title>
+<link data-page-node-id="kpBTqe6RLhaY4PkkhIIVKF" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Gf9u2NPyo127MAaC9njAFj" data-pnid-children="uvTun4gOppDcIwu2IsBzMB" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="3bR18OcaJIODRcOfaU1e1E">
+<div data-page-node-id="CVBVMSB5B8cF71KGhrKO8x" class="wrap">
+<section data-page-node-id="jNQ1JZqDZLR1bFrpvCRYez" class="page-hero">
+<h1 data-page-node-id="nBOgKUy3QW1AZfRw2k4yYH"><!--pnid:TbegD0OlLVeARR6S86b6nL-->采购需求与计划生成</h1>
+<p data-page-node-id="dEj6TMwWFEq3Mr5Nsf4euh" class="lead"><!--pnid:tAanFclLftLk4D9sU3MTRb-->多门店需求手工汇总耗时易错，异常需求难识别，采购计划准确率低，汇总一次耗掉一整天</p>
+</section><nav data-page-node-id="fIiMZxOkJn3EAdyfGbfaDr" class="subnav"><a data-page-node-id="CelvDLpUywyjR4aPaao806" class="on" href="#"><!--pnid:ftuMPP54XfCdooD5g4HVUB-->场景引入</a><a data-page-node-id="G9g2F6MdyLgez2Lv53Z2Xm" class href="LiveDemo.html"><!--pnid:13J3xQZGpOmjB7JwPh0fWp-->Live Demo</a></nav>
+<section data-page-node-id="Eg347COgtgzR9KzmSJy2uS" class="blk">
+  <h2 data-page-node-id="4TiYwaP4e4f9bRyE1L3QVT" class="h"><span data-page-node-id="mZswQ0KQCS7von54swupYG" class="num"><!--pnid:CPDj71sAH04eceQcbL4LBD-->一</span><!--pnid:6xdykJt2pM55BAIrrcAYGD-->这件事现在是什么样</h2>
+  <p data-page-node-id="lP6rc9QW2U5qROk1hverfp" class="subline"><!--pnid:61wr7qVk9IL9hpjpoiYwUp-->采购专员 · 每周汇总日的「Excel 地狱」</p>
+  <div data-page-node-id="1V9Dt2eMOrPCQPQzQQ7jtY" class="card"><p data-page-node-id="l4J2xfGQjI82ZKLKOWJw2s"><!--pnid:1edjsFJ3BjCb0YkoCfcph0-->某连锁餐饮品牌，周一上午采购汇总日。五家门店的需求分别躺在五个文件里：南山店发的是 Excel、福田店是企微表格导出、长安店直接拍了张手写单的照片。采购专员逐个打开、逐行誊进汇总表 —— 同一个冻品鸡腿肉，三家店各报各的，去重合并靠肉眼；哪家报的数量是不是异常，全靠自己记「这家店平时大概用多少」。下午四点，汇总表终于拼完，南山店报的 500 箱鸡腿肉是平时三倍多这件事，还是采购经理复核时才发现的 —— 如果那天他恰好没细看，这批货就按原价订出去了。</p></div>
+  <h2 data-page-node-id="pRKejARZHgxCECDyefLcPe" class="h" style="margin-top:22px"><span data-page-node-id="ydJmbrVs8KZmyWvX90F7xQ" class="num"><!--pnid:XqufBH11BnkrYgukODkyyJ-->二</span><!--pnid:eEwHw8fhQ2jPFUDOwI818C-->痛点 · 每条都发生在昨天</h2>
+  <p data-page-node-id="4LKJvzfsMi7CSdEFDt7OKy" class="subline"><!--pnid:x09pqrPUrF4PWaVN87Cmbr-->不是流程描述，是采购团队每周真实上演的日常 —— 以下案例均取自场景调研与演示素材</p>
+  <div data-page-node-id="bJdfCV3WaDJG1JdUEIXQCw" class="pains"><div data-page-node-id="6OTFVs9rvXf0Gv0PMXzsp4" class="pain"><span data-page-node-id="pQi5phcMspg7Yy3buyGGS5" class="i"><!--pnid:mtvJFhXuXnKjG4jx2ABx1j-->1</span><div data-page-node-id="pTZzbNoSmTD9rXDtdLcXIE" class="t"><!--pnid:J8D32TWedlV4IGYtRhfGQs-->多门店需求手工汇总耗时易错：Excel、企微表格、手写照片各来各的，逐行誊录一整天，错行漏行在所难免</div></div><div data-page-node-id="P2XxFAG1qInUoi7SpEGwnW" class="pain"><span data-page-node-id="fAAmffLGdYNdoqJrN6ZhaP" class="i"><!--pnid:hTdTTiqcbMu37BgLZzZMp8-->2</span><div data-page-node-id="eUb4UBxZGiBwO5qBlpih43" class="t"><!--pnid:ljg46oZM635boqTg3mGOYK-->同 SKU 去重合并靠肉眼：三家店各报各的鸡腿肉，编码稍有不统一就当成两个品项，合并统计全乱</div></div><div data-page-node-id="GvED9B5XHtqcd18OakYz2l" class="pain"><span data-page-node-id="zj1KvFcWftnYlOY7zxkBxX" class="i"><!--pnid:27mXSROuSQhDfEwQUzv3cV-->3</span><div data-page-node-id="mZzak54GrGdwkqN4YKuad5" class="t"><!--pnid:hDqfgFi9C6MMObdVSXalot-->异常需求难识别：哪家报量是不是突增、哪个品项是新增，全凭采购员记忆 —— 漏掉一条异常就是一笔冤枉钱</div></div><div data-page-node-id="gqYBHFGKqI5GNQw1Hkpktu" class="pain"><span data-page-node-id="lQ6Ba9oG9YnBihTWVa5Mmf" class="i"><!--pnid:NG3Q98T3MwfkgaJpvXpRar-->4</span><div data-page-node-id="VAVg73vWCUXJAbvWYtvb6h" class="t"><!--pnid:fNUuIRTruik9PhAnrVN0aj-->采购计划准确率低：建议采购量没有统一口径，安全库存、交货周期各凭经验，多订压库存、少订断货</div></div></div>
+</section>
+
+<section data-page-node-id="qMuK8Qw49zrvaHEXVjNkjd" class="blk">
+  <h2 data-page-node-id="s1iHp6r2ra7Fj45oZ8Ta1w" class="h"><span data-page-node-id="SsXkhIFDbGXx7O95GTjCm5" class="num"><!--pnid:EPUM0HE8hphJsapIUQv5dI-->三</span><!--pnid:vhgDvNMarRq6xWNuD7pbgK-->换个做法之后</h2>
+  <p data-page-node-id="L74vHjvNDjE6z1AiSUrP3w" class="subline"><!--pnid:UpkJw9f0l36rLk9HYqExln-->变化不在「快」，在「不漏」和「敢报警」</p>
+  <div data-page-node-id="40ttEwCTPmuo0BLVPZOtXK" class="cmp">
+    <div data-page-node-id="tKcKD3qCcLyb1SB2qCW5X2" class="old"><h4 data-page-node-id="No7qV20ruFeTmwYr69eRib"><!--pnid:pbM0obRnrtOyyT4AZB2BFU-->✕ 现在的做法</h4><ul data-page-node-id="3LFGbGmo3eo9OI3090ZjhY" class="list"><li data-page-node-id="5Von1AWA3Yv4KsvoZhKxOf"><!--pnid:ioogbpx4C1ktBDe8r6WUcp-->五种格式的需求逐行誊进汇总表，一整天耗在搬运数字上</li><li data-page-node-id="qRqpWTcs9Cs2B57JC9F0rH"><!--pnid:XlGsl61W0blkueH5kMhIE7-->同 SKU 去重靠肉眼，编码不统一就合并遗漏</li><li data-page-node-id="CI6ecTmOf5pneaH8TT10OJ"><!--pnid:GYbnWIWetssuQhX2sIm5t9-->异常识别靠记忆，数量突增三倍也可能没人发现</li><li data-page-node-id="jCZZAb5iCQrADrjDxwVGC2"><!--pnid:cf7OaiYGdijuteQre0Ms99-->建议采购量各凭经验，安全库存系数没人统一</li></ul></div>
+    <div data-page-node-id="8M3kH1aTUbKiDp1G0sFSka" class="new"><h4 data-page-node-id="DioCVK74RKW2HHr6l2mxRc"><!--pnid:u2tNj2pVqMAQdD8tbJYhEu-->✓ 交给 Agent 之后</h4><ul data-page-node-id="4Z8AYMaUhq4Mqr0Qp9gRwN" class="list"><li data-page-node-id="toiVlW5obseiIz119jptG6"><!--pnid:fisgOsWd0cfSbwwdOIjG6w-->各门店需求文件直接扔进来，字段自动校验，缺失当场提示</li><li data-page-node-id="hqAbyIr4zFJfvBdht3p3Ut"><!--pnid:YRaKDV2lcfaGsjTl5M3kvw-->同 SKU 自动去重合并，按食材/包材/清洁/配件四类聚合统计</li><li data-page-node-id="kuzIRiaj8KWMnaxGyNkQPN"><!--pnid:9HOImXKAsa5VhpdSh5RINB-->数量突增（≥历史均值 1.5 倍）、新增品项、超常规模格自动分级预警</li><li data-page-node-id="Xx3PDBQbMagyk91Ako2nSF"><!--pnid:eSYZcQDs48NJUeoHy9aOy2-->建议采购量 = 14 天日均消耗 × 交货周期 × 安全库存系数，口径统一可复算</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="8p1wlSfX4KYnJYq6ZVEbJl" class="blk">
+  <h2 data-page-node-id="YN0ik177MCNcWLWP58bsxB" class="h"><span data-page-node-id="7wyw9hbXpao2pALgBFYdIx" class="num"><!--pnid:luuFULycTdAZRiTr3YZkod-->四</span><!--pnid:c8V3aUJrth6RStQU1VhdbQ-->场景闭环</h2>
+  <p data-page-node-id="cOQDobYkaod4nYsydTqxhh" class="subline"><!--pnid:pXdlyuArDHv9bpnvQef0mf-->6 步 · 解析 → 去重 → 识别 → 建议量 → 交付</p>
+  <div data-page-node-id="E1L09LymRuE2ms3YKr2lFO" class="flow"><div data-page-node-id="OA8jrWw4jtOD9dlhtGJiFy" class="step"><div data-page-node-id="qdmirNHTt2DUqF2CyoLFtL" class="n"><!--pnid:xyCwoMR1xna7SBdYknTgOZ-->第 1 步</div><b data-page-node-id="mft8tJgzy2G6vc4oXI1uZp"><!--pnid:pD1sbhm4iW7enFec2lUzTe-->解析需求数据 · 字段不齐当场说</b><span data-page-node-id="IfE269pfUDNfm0rQ9qBoaz"><!--pnid:XxCTCGcd1b4hmFdN39cgGv-->接收各门店采购需求文件（Excel/CSV/文本），校验门店名称/SKU/品名/需求数量等必填字段完整性</span></div><div data-page-node-id="V1SRG5KfiCjtPxXCHHsQc8" class="step"><div data-page-node-id="mSgubQxHzvxjMcGBjceX6L" class="n"><!--pnid:TRPrOoSOeVzJaWomUKtE4Q-->第 2 步</div><b data-page-node-id="O9jYm1fcixjnM32bTBfriW"><!--pnid:2bDmNxq0tIdQ7VISLO6oty-->去重合并与品类聚合</b><span data-page-node-id="F2rVT2NaFNDYtip5em8aDV"><!--pnid:kK4TYHUEu9UpSfxicQlHMs-->按 SKU 合并各门店需求，按食材/包材/清洁用品/设备配件四类聚合统计</span></div><div data-page-node-id="vVTb15rNgwAxCqcxU2wLfO" class="step"><div data-page-node-id="kJUySqxmoAbcArN82YjQnl" class="n"><!--pnid:tGevrbAV9pID6lMu981AhM-->第 3 步</div><b data-page-node-id="Ylgp4ycYj2Q2tsNlzcED5s"><!--pnid:uu0n7fOTUXr8qb4zHNCGWr-->异常需求识别 · 三级预警</b><span data-page-node-id="bHRfTPOnZsqPJlWMkKxvE1"><!--pnid:ydOJPKjAmPYMoiqQbaCG1U-->检测数量突增（≥历史均值 1.5 倍）、新增品项、超常规模格，标注高/中/低三级</span></div><div data-page-node-id="IOihewNUGmUDuLGebb1h29" class="step"><div data-page-node-id="ANG9XDZhnn00E75IoyPBMy" class="n"><!--pnid:L3hg4FLIgAWheh2zJRuhmS-->第 4 步</div><b data-page-node-id="ZHbatxNePIY8RQgonDWL3f"><!--pnid:z54yrkJ7OehYhbDNe278wW-->建议采购量计算 · 口径统一</b><span data-page-node-id="YfDwYJwNeemDHtBTa8H3fw"><!--pnid:3sL60TtJsd9qC13cG0mQAx-->基于历史 14 天日均消耗 × 交货周期 × 安全库存系数，给出加量/减量/维持建议</span></div><div data-page-node-id="vV4M44WbSbkxE83FIVDTb5" class="step"><div data-page-node-id="HlU6qh7S7Rb2OWhj1URD8q" class="n"><!--pnid:2mL2EZjacc87uCwlxb7LGM-->第 5 步</div><b data-page-node-id="RP1KB8wCSTkkoZUKpoeKIV"><!--pnid:lePCiyzG5gEonByvonJJ4I-->生成采购计划表 · 可导入 ERP</b><span data-page-node-id="R9GiIzLp1I7GalazxrCqik"><!--pnid:zxzLwjuOmQEaBJfuJhQ3Hw-->输出门店/SKU/品名/需求数量/建议采购量/预计金额/优先级/异常预警的结构化 CSV</span></div><div data-page-node-id="LH3IILfPmxsW1t3NYTGQVP" class="step"><div data-page-node-id="WJZCFyVffJIj7n1MchdH8F" class="n"><!--pnid:3TvbdJlA6TlXOoJKRrrKLR-->第 6 步</div><b data-page-node-id="qujSGUkM1nfmxLDsgjLMDH"><!--pnid:KPHyQd82itStle3kJEhina-->异常预警清单 · 复核项单独成册</b><span data-page-node-id="vH1WgR6zolfSZyUYJMFBg8"><!--pnid:lUNu48WrrBQi8C512LJQdf-->同步输出异常类型/偏差率/预警等级/建议处理清单，高危项标注人工复核后方可采购</span></div></div>
+</section>
+
+<section data-page-node-id="LOvRCH2pHRgU3Xts1OyoaA" class="blk">
+  <div data-page-node-id="B1bjTnhfMBk07gEiBjyvwx" class="g2">
+    <div data-page-node-id="O66iUTy7vw6Q3Gcm0MoRWl" class="card"><h3 data-page-node-id="qCbBTJcyilJGmGjDm9iVJH"><!--pnid:E2n5DxtUMvrxj07wt5bJvG-->要准备什么</h3><div data-page-node-id="ATMkUO7Ec4MxEv8uXngKiQ" class="src"><div data-page-node-id="DqLKVN5CwTswQ2AAwDzlVm" class="fn"><!--pnid:eYJvpw3sAq4V01923Sz7JC-->各门店采购需求（Excel/CSV/文本）</div><div data-page-node-id="rimlCuliakVQpH7YHROCxm" class="fd"><!--pnid:qrhtEnK5z0d46mC3yxOoFi-->含门店/SKU/品名/规格/数量/品类 · UTF-8 编码，格式不统一也能解析</div></div><div data-page-node-id="m0DrGizFPfUsT2SfhLHkjr" class="src"><div data-page-node-id="WVSlmoBuNGzyk8ZtNXuX15" class="fn"><!--pnid:7Hwv0Qby2svFrIzP0tLKtV-->SKU 编码统一映射</div><div data-page-node-id="BLOOKjp4W1JemyZEIpyThI" class="fd"><!--pnid:2Vzv9t4Mg7GPdqf64HMe8z-->各门店 SKU 编码需已统一，避免同一物料不同编码导致去重遗漏</div></div><div data-page-node-id="kYNPrfyJa7EwTG31M0HRNd" class="src"><div data-page-node-id="2xicR6LshDz9tcubhgVZnH" class="fn"><!--pnid:utlfOEg4POza0ysGEoNfBJ-->历史消耗数据</div><div data-page-node-id="OuktuM7sQGo8RfDYA6xMQG" class="fd"><!--pnid:4OXWRz3thkh3KthrtnSmPg-->覆盖 ≥7 天，14 天为佳 —— 确保建议采购量计算准确</div></div><div data-page-node-id="xUpXSeF05PJat2hK918RH2" class="src"><div data-page-node-id="XU4slqtyt7UaoBYqXlfNHC" class="fn"><!--pnid:ELIdjUBKkgTRg7CFxrdng8-->参数配置（可选）</div><div data-page-node-id="5vmmYrUIbUXSRXDDTotF7E" class="fd"><!--pnid:G7UID4ZAkBVYXHkyqHGc4y-->安全库存系数（默认 1.2）、交货周期、突增阈值（默认 1.5 倍）</div></div></div>
+    <div data-page-node-id="cydfsJsH7b9pCympzrnefI" class="card ev"><h3 data-page-node-id="WgBWALDi4PV4okphtFZw0O"><!--pnid:1LefwDgFWatBsl8qqTs71e-->为什么这个场景值得做</h3>
+      <p data-page-node-id="lwat4tuzCfZgrl30ZnSZYY"><!--pnid:EuYM7fT518VTj1wF0dbSSi-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="zGbGEc4dBvH8vl0Jutsww4"><!--pnid:msHU8tBb47aBofeBuWw1Px-->8.0</b></p>
+      <p data-page-node-id="KN9AfriY2vXfxT4H7VjDSX"><b data-page-node-id="zAwV4J1XdN4B7GBUO1FCjo"><!--pnid:6xxhIN8Sz8V9CeEVWQW8h9-->最大差异点 ·</b><!--pnid:75l4MAFb3KklP1FKBCQrm1--> 异常不再是「复核时恰好发现」：数量突增、新增品项、超常规模格自动分级标红，高危项人工复核后方可采购 —— 每条建议附来源门店与原始行号，可逐条对账。</p>
+      <p data-page-node-id="CKUvNy2KxwyvBDWW3hil7w" style="color:var(--ink3); font-size:12.5px"><!--pnid:Aw1Bdzj21OvtpeQp7cAQdX-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="xGKwNGJO7RaRX3RG6TbWaB" class="blk">
+  <h2 data-page-node-id="8DerHNgIBahkNygP7DAk7K" class="h"><span data-page-node-id="AQ7rWSpQ1zAmfq0Wj7WmUw" class="num"><!--pnid:85U0zK396CW9WCaVPufEYe-->五</span><!--pnid:bVMN5IVaaiyOmLgK2Vleye-->会产出什么</h2>
+  <p data-page-node-id="ZjvztvPQe6VrlSFSo8gLdU" class="subline"><!--pnid:4a9f1qZapvT7c3C3Oiqtbe-->判断标准只有一个：这份东西能不能直接导入 ERP、直接拿去复核</p>
+  <div data-page-node-id="iwnZzfa41iVgdpxDor59o0" class="outs"><div data-page-node-id="GiusPeAq5dswIJiHd38TC1" class="out"><div data-page-node-id="tn5UvdakGw9uXJf6B03Z8T" class="on"><!--pnid:ffBBxb0gyP3Q5bCVmfIy0A-->正式件本体</div><div data-page-node-id="tqUGwfOcuDI1LmHRXtvTXs" class="ot"><!--pnid:oekRPCi0NYgRp0CjNAQ17T-->采购计划表.csv</div><div data-page-node-id="mZoTOmctxqT7o83GPzz34y" class="od"><!--pnid:Hd0EWEo914aNgPRe8uq6Ll-->门店/SKU/品名/需求数量/建议采购量/预计金额/优先级/异常预警 · 32 行结构化输出，可直接导入 ERP</div></div><div data-page-node-id="QtwpKSbs1za4Jxp7N91U4t" class="out"><div data-page-node-id="wFzeO65uKgTVp0foiS7b87" class="on"><!--pnid:1G1XT40V2dc2FxQEFRGTqk-->复核清单</div><div data-page-node-id="t0TppEDp7fMm7owYk3uGW2" class="ot"><!--pnid:x7ZOnk9Fy5Hn31qylwwd0H-->异常预警清单.csv</div><div data-page-node-id="HWSrzq4Mg6wVQHCzoWmOu9" class="od"><!--pnid:O87ufHtlVDiT5xxDdstjlv-->异常类型/偏差率/预警等级/建议处理 · 高危项人工复核后方可采购</div></div><div data-page-node-id="5vWcsSp0eFPMp7uIDAp3io" class="out"><div data-page-node-id="0NSHByMMCq58ZEFghCDBVP" class="on"><!--pnid:bnSSo0emkWwVsyiNXUKoFe-->演示报告</div><div data-page-node-id="HfFHuBkmB4zJQogcCr0YLQ" class="ot"><!--pnid:JhAnij6hek6s3XkNhna6fi-->采购汇总可视化报告.html</div><div data-page-node-id="IKq8fr951uaqItjrMjzsWK" class="od"><!--pnid:n7lhJo2q08BFpA1umOQMYy-->品类聚合与预警分布一屏看全 · 附 CSV 下载入口</div></div></div>
+</section>
+
+<section data-page-node-id="ThvXcgCzxT9f0ZgZFwkusU" class="blk">
+  <div data-page-node-id="ycZO5sMXLNPOdjJK9ysrs3" class="card warn"><h3 data-page-node-id="a2RcXpFwJWcT7GJyPMG7nw"><!--pnid:Jfi79T2UreyalPY5Ljl4ef-->这套东西不承诺什么</h3><p data-page-node-id="tHzUWiRvdnxAUAuo8wJdGA"><!--pnid:HytVcawetCiA488ak0gUq5-->不替代采购经理最终审批决策 —— 建议采购量基于历史数据推算，非最终采购指令；不对接真实 ERP/WMS 系统；不保证供应商库存可用性；不处理非标定制类采购；数量突增判定在旺季/促销期间可能误报，采购主管须确认是否存在合理业务原因；安全库存系数为通用配置，不同品类应差异化调整后重新计算；实际采购须结合库存与供应商情况确认。</p></div>
+</section>
+
+<div data-page-node-id="JngexSdj0mKOqUtJMQgLy6" class="cta">
+  <div data-page-node-id="P78dBLc6AwRrrFV1cIfMIY"><h3 data-page-node-id="rIsEadcsNnR0kA8y0ClMW7"><!--pnid:lbwLLI2u7TeJYFmdlJalHP-->想看具体怎么跑？</h3><p data-page-node-id="IlOSs4BtMRTIaqaRJHczVk"><!--pnid:dJc2OnL9sA7Y4xqsmze1zg-->Live Demo 里有一份 5 门店 35 行需求的完整案例，包括哪几条预警必须先人工核实</p></div>
+  <div data-page-node-id="RQKNkfhxbJ67YC9R4MPVCk" class="btns">
+    <a data-page-node-id="xhYL1Zku8ZEGYYymdMBl2J" class="btn" href="LiveDemo.html"><!--pnid:5G0Yf6H74UjvtlvP0kq6nx-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="Ni95TDCnPa3stTF7oLqaZo"><!--pnid:tGhonNKQ1A05N4KgJyKQjh-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="AmWg3g1vcgduWs1qW5bmmL" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="q0MRzxpgYouNWU04UfwGC1" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="CAOkKXB39vb0K9yEZyGHnm" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="z1v30DekWwOqsz5492j7oe" data-pnid-children="YPLVl8oar72INjWHZ315XZ">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

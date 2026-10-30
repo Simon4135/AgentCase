@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="XT3zeNXVbQfFj8Q1ZwsEB7" lang="zh-CN">
+<head data-page-node-id="AmHVZBeRNlSn4J5pnY0TFm">
+<script data-page-node-id="9NQQsvucZAwPuAnnrH5HaV" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="xOWpXEk97VXfuLQ8MFz6HW" charset="UTF-8">
+<meta data-page-node-id="2G8FwB0YQfgypKPbbGWLKq" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="Ys9KtCCMNfbboLc7dmssxz" data-pnid-children="urhGtFLitbwUuhFn36p8qt">采购订单跟踪表自动更新</title>
+<link data-page-node-id="fWVBbQSNcalVRuizRymYGF" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="0IjiCw7wtaqAIMV9reYp2i" data-pnid-children="y3kIktUQZT57zctEUViySP" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="OJJviPGn4D0qbeC2XGshzp">
+
+<div data-page-node-id="q8R7spSje21U5OzTnKYzBC" class="wrap">
+<section data-page-node-id="M1lmIUy1BrJtdIypHZf19N" class="page-hero">
+
+
+<h1 data-page-node-id="Ebp8iX1Zk7wyclZ6tPNoGZ"><!--pnid:mmoIwq18lwlhSe9eojkfzp-->采购订单跟踪表自动更新</h1>
+<p data-page-node-id="VnbpVqPMviT0Vo1S8HIsbp" class="lead"><!--pnid:7kWb7dNLU9xiGEHQeNJQGo-->ERP 里改一条订单要十分钟 · Excel 加微信批量处理五十条只要二十分钟 —— 然后状态列三个月没更新过</p>
+</section><nav data-page-node-id="I3weoJTYSyuzeN3svasA1d" class="subnav"><a data-page-node-id="u25L10LTNxILwBwYf0PhH4" class="on" href="#"><!--pnid:3oFMSfPskT6mvn868GhWMn-->场景引入</a><a data-page-node-id="sC09KJQUOdbtnma7G1MDXD" class href="LiveDemo.html"><!--pnid:a5hV3e0J1WZWf517rloWq2-->Live Demo</a><a data-page-node-id="LUJvLu4jvVXiVXGQoSohDN" href="推荐任务.html"><!--pnid:RrOxHZ4dR6L5vj0mv5Q74X-->推荐任务</a></nav>
+<section data-page-node-id="8JOnm8315kAjw9L8QAPFyz" class="blk">
+  <h2 data-page-node-id="7SOaY5KzjoqgonHivLcZoe" class="h"><span data-page-node-id="c4CSBFk2S6ckdN38dIVjvG" class="num"><!--pnid:NXDkuchS4MTpfUixH88zxf-->一</span><!--pnid:yowBldUTiKampBdkatDL6d-->这件事现在是什么样</h2>
+  <p data-page-node-id="LBoyOBmFgQxloGhNi2BH6S" class="subline"><!--pnid:H1csqSLf0dT9fkmVfEyRNO-->订单执行与跟单 · 真实业务触发</p>
+  <div data-page-node-id="o2wK5vHCvlrcz2aCYWOJbz" class="card"><p data-page-node-id="hfFP1FUtSmBJFerWIzthQP"><!--pnid:diTvWwW5K4LAgtEQv1DbT5-->月底盘数据，周建国发现跟踪表的状态列有 11 张单停留在「已下单」—— 其中 7 张其实早就到货入库了，3 张在途、1 张已退货。状态列成了摆设，因为「去 ERP 改一条 10 分钟，微信里问一句 10 秒」—— 谁都会选后者。</p></div>
+  <h2 data-page-node-id="0J1GFTgDLWkqYvhZkJf0XB" class="h" style="margin-top:22px"><span data-page-node-id="0p2u83g7ieXD14VSWb4vQx" class="num"><!--pnid:AacypeNEje65xQVfwNy6IX-->二</span><!--pnid:Q495HMs6IwF3JGhZIadMPs-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="Fa8kMJmxMxukcdDJhWkqye" class="subline"><!--pnid:XbxyGJ2XppfH2ityEmyTCv-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="OlH5lLRnMIgMS8JWY8L2Q9" class="pains"><div data-page-node-id="Ddp2mqa47N61PpLivJV4Uw" class="pain"><span data-page-node-id="in1JbAPmWSuHu6SQkleLDo" class="i"><!--pnid:P8P5qD48WXXTgUb631XxLx-->1</span><div data-page-node-id="WNnKqUYISWan36UvQWQg8i" class="t"><!--pnid:rKEHgFH4xH6vF8WQHvUHCp-->ERP 交互成本高于 Excel+微信：改一条订单要走查询→编辑→保存→审批→截图→电话确认六步 10 分钟，Excel 批量 50 条只要 20 分钟 —— 系统死因不是功能是交互成本<span data-page-node-id="sdQ4fLmRDywSB3FlH6vTc9" class="src"><!--pnid:ugKboTJcqzZl38fQX8K9VK-->依据 · <a data-page-node-id="oEG3VbbEoBeyXhl4Q1QnaU" href="https://www.sohu.com/a/1049286408_122720311" rel="noopener" target="_blank"><!--pnid:Zih7K9GA61CdivT6qY0n9f-->ERP 交互成本高于 Excel+微信：改一条订单要走六步 10 分钟，Excel 批量 50 条只要 20 分钟；「只记结果不记过程」—— 供应商承诺、谈判轮次系统里完全没有</a></span></div></div><div data-page-node-id="jRt3vQx1kAocOgWZRquunB" class="pain"><span data-page-node-id="YQ9qs4ZEOw8oyXz1YQ6u3j" class="i"><!--pnid:3ZObYbUOtwudBNrmcAvR7b-->2</span><div data-page-node-id="XHalgcldkOJ21J0S5FfdUA" class="t"><!--pnid:KIOUC9pTXhuoxiFNXBMbie-->状态滞后不是懒，是理性选择 —— 但代价是跟踪表变成「下单记录表」：在途/逾期/到货全都靠问<span data-page-node-id="1tlFf1fywYBBKcrNvnmcch" class="src"><!--pnid:tBav2jICV5uNyY6idsCycm-->依据 · <a data-page-node-id="gZnHyWJyTMCpbiadLRvJNw" href="https://www.sohu.com/a/1049286408_122720311" rel="noopener" target="_blank"><!--pnid:sMY1aiX0vC5AmTrL9ZUTD3-->ERP 交互成本高于 Excel+微信：改一条订单要走六步 10 分钟，Excel 批量 50 条只要 20 分钟；「只记结果不记过程」—— 供应商承诺、谈判轮次系统里完全没有</a></span></div></div><div data-page-node-id="47U3HnYG300ed9rsW2lmBc" class="pain"><span data-page-node-id="MhkliDkf8ql5EWxkInBzou" class="i"><!--pnid:xy8VM39rmf9GIZsRbp4dr6-->3</span><div data-page-node-id="deFY7YT9Xa3F20mtpBpm3z" class="t"><!--pnid:XO4ry2P3CcF0YACpUsiU9k-->「只记结果不记过程」：ERP 记录 PO 下没下、入没入库，但供应商怎么承诺的、交期怎么改的，系统里完全没有 —— 而这恰恰是跟踪的核心<span data-page-node-id="p93nVBB2icpQlGuIRslpcV" class="src"><!--pnid:SvTqCY7i22GBok1Mj95XtV-->依据 · <a data-page-node-id="aRQMvGwB5TcTO2wrzuLv4A" href="https://www.sohu.com/a/1049286408_122720311" rel="noopener" target="_blank"><!--pnid:4oZBdL98JLFKBtnutNVvB3-->ERP 交互成本高于 Excel+微信：改一条订单要走六步 10 分钟，Excel 批量 50 条只要 20 分钟；「只记结果不记过程」—— 供应商承诺、谈判轮次系统里完全没有</a></span></div></div><div data-page-node-id="sazCtPPqe8CFL0DYI5HTdm" class="pain"><span data-page-node-id="KJE3w7WEDyXfSGDNzFTOjZ" class="i"><!--pnid:zOBlmlQeJhTZg1qJctnVjB-->4</span><div data-page-node-id="WXAp2hDhTgDJujHAWXanxq" class="t"><!--pnid:hUWMgegupJtdRs9DxSg1D5-->推系统死、降门槛活：SRM 供应商门户首月登录率不足 15%，改成短信+H5 轻应用后 3 个月升到 89% —— 解法是寄生在现有习惯上，不是要求任何人改变习惯<span data-page-node-id="0f4iRS9suoLysVUxe5KGXx" class="src"><!--pnid:iR2LD1y2LyTvtolgwZYSfJ-->依据 · <a data-page-node-id="EtAqOHCT5RsJRAnOQQR1U6" href="https://www.zbintel.com/erpclub/qichelingbujian/article-310133.shtml" rel="noopener" target="_blank"><!--pnid:gtuZzfNGxP6sE2urR6cZIP-->二级供应商协同实录：SRM 门户首月登录率不足 15%；改为短信+H5 轻应用后 3 个月升至 89% —— 破解协同难的关键是降门槛不是推系统</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="0go3703WGUqZyJWnIRYvSY" class="blk">
+  <h2 data-page-node-id="3IBkR29x4ZRsuHL2aJoqsl" class="h"><span data-page-node-id="d4R2PJ8z3tyLnvdZknrX5L" class="num"><!--pnid:9rlrLSAXw2cFwJbgWpubNM-->三</span><!--pnid:xxQw3Rd7h5Xq2P1RmldsL1-->换个做法之后</h2>
+  <p data-page-node-id="cF2ZNObe3xuU4lqpRXLnD2" class="subline"><!--pnid:CMFle15X1PDTF66a2poGFP-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="tGParYrOZKgGuoclvjd6RU" class="cmp">
+    <div data-page-node-id="8b0MfJMjngMIkWIkGRePch" class="old"><h4 data-page-node-id="sPQFaljdXKgbFcW02NdXwS"><!--pnid:Eaf7p4yvnEbmixi8wrwQdv-->✕ 现在的做法</h4><ul data-page-node-id="jOeRpZYEn4gjOSzpaSMplH" class="list"><li data-page-node-id="ToKld0jp9yJSnopgB3zSrt"><!--pnid:QXJswlp6lmit18fRU6eIQ3-->ERP 交互成本高于 Excel+微信：改一条订单要走查询→编辑→保存→审批→截图→电话确认六步 10 分钟，Excel 批量 50 条只要 20 分钟 —— 系统死因不是功能是交互成本</li><li data-page-node-id="tv3NFtUenStYRy0iazy7aX"><!--pnid:KjYc9YDpOGcIHSaKV8DCOM-->状态滞后不是懒，是理性选择 —— 但代价是跟踪表变成「下单记录表」：在途/逾期/到货全都靠问</li><li data-page-node-id="KV8SHTyAKKYHHqzKkahLrp"><!--pnid:bX2VAVskC3BPh15rnNrk8W-->「只记结果不记过程」：ERP 记录 PO 下没下、入没入库，但供应商怎么承诺的、交期怎么改的，系统里完全没有 —— 而这恰恰是跟踪的核心</li><li data-page-node-id="e2lN64PQmvZprX5XJEHKwS"><!--pnid:8WoPj6K2C8NqLzt8em9Gpn-->推系统死、降门槛活：SRM 供应商门户首月登录率不足 15%，改成短信+H5 轻应用后 3 个月升到 89% —— 解法是寄生在现有习惯上，不是要求任何人改变习惯</li></ul></div>
+    <div data-page-node-id="3u3v3nUFGl2Uu8lDLmUSnI" class="new"><h4 data-page-node-id="7OIE8zV6qTNMKNYRpD3u2i"><!--pnid:gYnIyqWoC4KCJePkilJTV0-->✓ 交给 Agent 之后</h4><ul data-page-node-id="hXzRx8nLU8P6vDg6GvdvlI" class="list"><li data-page-node-id="zs6oLdORbGCxEnTmg6soli"><!--pnid:erXVBRJZqHW7xLpBoFP8pg-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="fZQC3l0HXCZJbT1ACzfQnS"><!--pnid:h0BuVoE4RKwSnsBA6ROSjO-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="ExIZuxLksIN1RyXUd8z2Q9"><!--pnid:u6sMhWRcmADs6mad89KzPk-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="HFfZMtHAE2pHalUqdNQSJY"><!--pnid:CUkl2ekH7VWK1rsFrUKlmg-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="LHs1if15UeuOeNMF3CkMl7" class="blk">
+  <h2 data-page-node-id="Jx6Ir5cl4qBICPQRkQg7gg" class="h"><span data-page-node-id="qFFsjbhry6GmPzE1OYRKY5" class="num"><!--pnid:0XZvtqouUgswEvoMD9lCxf-->四</span><!--pnid:Uir9Pi8U041QOL7P4s3EX6-->场景闭环</h2>
+  <p data-page-node-id="KvwzMZmPfHKEU03U50kzWX" class="subline"><!--pnid:B21Nj8utEVciMTRDZVyopZ-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="xkWNEN8SrTwHrKEfhq3ic8" class="flow"><div data-page-node-id="LOGyjtTyngkdaQ4apjwKPH" class="step"><div data-page-node-id="B1EQqZyYzLZGpbiUMlDzr2" class="n"><!--pnid:9u1AH2HngDt8UonTcUkwPm-->第 1 步</div><b data-page-node-id="DgIg6xI6xM6p89XJSWuBB9"><!--pnid:u2uKX1C2YeOVcBDlMoDqiG-->结构识别 · 先读懂这张表</b><span data-page-node-id="9Whw6teyzUeXh4hh2U439q"><!--pnid:FAPSZoglyaA8N95FP9xmo8-->列名、行序、合并单元格 —— 原样保留，只在状态列和相关列里动</span></div><div data-page-node-id="WogDyu34ks58wa4FfdyBOf" class="step"><div data-page-node-id="AZHQr2x9YuVHeglGT51WZX" class="n"><!--pnid:ExGTjThz7J69DpvcOFfdO6-->第 2 步</div><b data-page-node-id="TB9EkAW4KAaX80D5Y4ik2i"><!--pnid:AEZOjQhrCOOMv6OdQV65gU-->状态提取 · 从对话里挖事实</b><span data-page-node-id="N3vWI1cP8ilg8FBmv1uwEJ"><!--pnid:c3H4aQEBPZApMnyPdco2n8-->「已发货，单号 SF1385」→ 状态「在途」+ 物流单号；「明天安排」→ 不动（承诺不是事实）；仓库登记 → 「已到货」</span></div><div data-page-node-id="3XXbOi4havR8SIivtn6SU3" class="step"><div data-page-node-id="DEB5IGBi7YJBQ8C4Q87rwc" class="n"><!--pnid:S5FcWq9YU1qQ9QOgIWtrOu-->第 3 步</div><b data-page-node-id="fJGiRHJB4GXBmsnNeJjJZ5"><!--pnid:0oCVVEnqS7fnYd2hlNSasD-->三方对齐 · 微信说发货了、仓库说没到</b><span data-page-node-id="S7jvNMsVeR4IraS22DXqoX"><!--pnid:fiUwsZRxFjgQfnbALvwEkV-->「已发货但 5 天未到」单独标 —— 物流异常的在途单，比「已下单」危险得多</span></div><div data-page-node-id="07fObuZFoMN1OGWjC5DV8F" class="step"><div data-page-node-id="9blAjm0b0rTORyBebRrrvc" class="n"><!--pnid:9v3G8e1BoqBAkyR0xhUD5t-->第 4 步</div><b data-page-node-id="R9AyjiwcVFkd5pPC8Z6brz"><!--pnid:FmlVhbmfi394kKsBAtWuFS-->批量更新 · 状态列一次刷新</b><span data-page-node-id="2zkGV1GWHPSef5Da6EtDHA"><!--pnid:vxB6XyigRaZz1DvFMstUnD-->11 张滞后状态全部修正 —— 每条修正带出处（哪句微信/哪页登记本），可回溯</span></div><div data-page-node-id="aVo9DCsRNFxsD2rVLq79Ub" class="step"><div data-page-node-id="3yCQMHLvIvbDo42PwbEiiU" class="n"><!--pnid:2uAi9HtVYuEzoDJHVOFOh9-->第 5 步</div><b data-page-node-id="g2ueMxjwzQWUFnYgSNTu5W"><!--pnid:nuUg5QRzKJThvBgdDJaVjm-->差异留档 · 改了什么一张纸</b><span data-page-node-id="XWhCPyVfjnNEWQeJzz0MD8"><!--pnid:KI1Qsn3V4lygWXlGnx8H0V-->更新对照表存档 —— 月底盘数据时，「为什么状态变了」有答案</span></div></div>
+</section>
+
+<section data-page-node-id="qqKhgL86cjFzLZVHrn9GtZ" class="blk">
+  <div data-page-node-id="DoQqkXWHLHpbEAwg4ade1h" class="g2">
+    <div data-page-node-id="aOC2oFqbLJDu2dqc6xVMtD" class="card"><h3 data-page-node-id="cZpJMRNMagn42fd9D0Jomo"><!--pnid:1sriYnOuXrue9viEB1rvKD-->要准备什么</h3><div data-page-node-id="wVFpGVkB3x89T4a8UujLvZ" class="src"><div data-page-node-id="Tne7JMTEa8lity56iOHYOA" class="fn"><!--pnid:xL17zwO4iTiM7uCal59mDD-->采购订单跟踪表.xlsx（现状版）</div><div data-page-node-id="pf06YH2iNYtRJftJ64kFOq" class="fd"><!--pnid:tpKM97FF3N6SP5WxuWf0HS-->23 张在途 · 状态列滞后 —— 这是要更新的那张表</div></div><div data-page-node-id="f0NrqScl1c3b50YHLekCu3" class="src"><div data-page-node-id="8vQcpyHcxynkZEJVIWGhzk" class="fn"><!--pnid:ms31XQbQ2QpZN3PGbEAZhs-->供应商群微信记录（近 2 周导出）</div><div data-page-node-id="2gJqoAlZNtInyKbL7ilkXU" class="fd"><!--pnid:65nbg0Bx1rFKp7RULfc5U7-->状态变化的原始信息源</div></div><div data-page-node-id="4aOUGv6Q79EdpxetqzoTqM" class="src"><div data-page-node-id="edO4pVJAvshsbTpWvc5MiD" class="fn"><!--pnid:ghnD8scsnRKCvwNFKrTkWZ-->仓库到货登记本（近 2 周）</div><div data-page-node-id="tRxkKVD8d01MQAvPXMqfE3" class="fd"><!--pnid:TXTQBCx7cFerjKs5jen3GX-->已到货的权威事实 —— 与微信「已发货」交叉</div></div><div data-page-node-id="ZXeqMeJKvM7lXiBpuw2Qow" class="src"><div data-page-node-id="s2xtIpIRkjxALkURvcgQjN" class="fn"><!--pnid:9mCI3zOmHcrYj4fEwyunV6-->物流单号短信/邮件（如有）</div><div data-page-node-id="AxO40ryOLpQKMcONvUtya1" class="fd"><!--pnid:9ZFuKsUzGrcjWkYydZppHo-->在途状态的补充源</div></div></div>
+    <div data-page-node-id="3lnF5kr9NB30WH0iheRjxO" class="card ev"><h3 data-page-node-id="iD9yX3VWp6IdsR8OrSjQ98"><!--pnid:G3d3tptw34Kb4p38LSCU8P-->为什么这个场景值得做</h3>
+      <p data-page-node-id="60DDoj3oYzb5rOMOOo6vbt"><!--pnid:1jVpzYAYeCopegp8IiW9NX-->痛感 5 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="xpGNIRmUzQeTPysGtHpDe9"><!--pnid:tSHCAOD9IoTwSVXMeMq44r-->10.0</b></p>
+      <p data-page-node-id="HA3ipDwH3Obp2g7H4h8fJg"><b data-page-node-id="7BpxM9VXYgDkKL84aG7m0J"><!--pnid:7yjEmu5AcHN6sp5YjT5WeN-->最大差异点 ·</b><!--pnid:KsSPfLvz3ePcXh7YnTKWY9--> 不要求任何人改变工作方式。供应商在微信里说「已发货，单号 SF123」—— 这句话自动变成跟踪表状态列的「已发货 8-17 + 物流单号」。采购照旧用微信，表自己长。</p>
+      <p data-page-node-id="xfnZTFn8GvUviwQvJLJFhI" style="color:var(--ink3); font-size:12.5px"><!--pnid:R7kiivQ1QxdCKUlHpcAPF0-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="jjgIb4dsq5FVgjW0bP7SGD" class="blk">
+  <h2 data-page-node-id="600gqtdw3qc6YGfNCKjzTj" class="h"><span data-page-node-id="NOznABdRVTi6HOasLaCcPR" class="num"><!--pnid:qDCT3uEXZC4FlzvyqXwcAN-->五</span><!--pnid:p0tjYBndkMtGP7Dr8CZ9GC-->会产出什么</h2>
+  <p data-page-node-id="lLdpZFjsjrkz8qqaDma4wr" class="subline"><!--pnid:NxwPzJiq3aTRXKRijHfbRI-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="heEd0KuBIhd5vBhNPTPE2o" class="outs"><div data-page-node-id="1CyqjsyIvbn9Ac6l5jCRTd" class="out"><div data-page-node-id="4teBTXHhUQQntizBRYErfc" class="on"><!--pnid:Ycgp4vYoeqzuL3PeBrb912-->正式件本体</div><div data-page-node-id="7KJOW3TH0f1Cru8iABIX1Z" class="ot"><!--pnid:bBGvbCmN80BrnHlmKrRhIT-->采购订单跟踪表（更新版）.xlsx</div><div data-page-node-id="1893gVKvpwClo7qVED8uk4" class="od"><!--pnid:7BLvb0qYG6Kpp9WC4IS5Bd-->正式件本体 · 原结构原文件名 · 状态列已刷新</div></div><div data-page-node-id="0aatDN7j09zbLYYq0XGxxB" class="out"><div data-page-node-id="zoKtb9VG8MClpg4RaN0BKA" class="on"><!--pnid:f9ZZYQOGv9Z5Ifk5f9oRE9-->可派发清单</div><div data-page-node-id="p9v4hjL1ZOfr9BOEcE7Xyy" class="ot"><!--pnid:O6f4yQKycS04QgQby8VPso-->状态更新对照表.xlsx</div><div data-page-node-id="HgnamX0B0HPWtkbWyGvoOt" class="od"><!--pnid:eAHnRNpWcXFEO3h7p5jlcD-->11 处修正的原文出处 · 可回溯</div></div><div data-page-node-id="lEtkcbRgFn7mViba1KWKB8" class="out"><div data-page-node-id="yHiArlzFsgNVS2Qku22xop" class="on"><!--pnid:TsWi9IXfYFkbLk5FjqFT98-->可派发清单</div><div data-page-node-id="1hM2os9bWcgOnLS6zkyFUl" class="ot"><!--pnid:hgzhmMfq5EvTbjTjsV2Qa9-->异常在途清单.xlsx</div><div data-page-node-id="z6GJKQQa9PdjmOvzYssbG6" class="od"><!--pnid:I0CKkwZZ6BrOf64z7CuqjK-->已发货未到/谎报在途 · 逐单核查动作</div></div></div>
+</section>
+
+<section data-page-node-id="B9sVhLIaUKTawcSa9rtPIC" class="blk">
+  <div data-page-node-id="Ki6Tu6LsHvtktojMG7gxG7" class="card warn"><h3 data-page-node-id="b1JothwdEQI3o8ahn8aIGk"><!--pnid:LHnUoPZZqBUxXpe8b4vw6N-->这套东西不承诺什么</h3><p data-page-node-id="HuA1EPznJIJogiLuy7wReV"><!--pnid:eeAjUrUQkRRB6szH6hoGs8-->不改 ERP 主数据（那是老板娘的账本红线）—— 更新发生在采购自己的跟踪表 Excel 里，文件名、列结构与现在完全一致，只是状态列变得是真的。</p></div>
+</section>
+
+<div data-page-node-id="HaT3KvFNAmq78DmgWRriHG" class="cta">
+  <div data-page-node-id="O0yvLr7kMRfz9bNyxciuZh"><h3 data-page-node-id="w0A6LluGZat3iBFybRquX8"><!--pnid:KHMqW0rRiAGH1oLQo0wZqO-->想看具体怎么跑？</h3><p data-page-node-id="jD1QCNe5MJBMrjtKZz0CQT"><!--pnid:F293JbluzWOLWW87jsMXL9-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="82AhWCK7r4rXkdUmhPIPex" class="btns">
+    <a data-page-node-id="RNgbuWup32Sy579JFmHNdI" class="btn" href="LiveDemo.html"><!--pnid:G4XRfEFzHDAdFLZavjM1bo-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="uXVrRpxFqXFyF0N5qY8fjc"><!--pnid:p7gVngMctKVbFmjew70Rkm-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="HkUNXTJrbwDdOfexjyaghk" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="SkhUbAT70BniDL7NczGqOq" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="jrvm9D3S9YBpn5NkldcE0D" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="lu2GBUmK11W4GkwaPRs1xa" data-pnid-children="EhFWGAEhP3GD4OtObAdiUM">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="MCZpPzUVL7e85OqwoFPxCW" data-pnid-children="WbiXCiUQXtEFeXF0V5dwLJ">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

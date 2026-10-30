@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="Xdv6F6l5qWQMTuS6z8vgf5" lang="zh-CN">
+<head data-page-node-id="VNbY83vFbHAO5k8nAP2NuW">
+<script data-page-node-id="98AaTSV6rtCFGU573IAcK2" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="vm44EujhQw1IeS6sek16Xv" charset="UTF-8">
+<meta data-page-node-id="Z6GopdnWGktEqYBeloVPO8" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="LdfxpfRrh5NyhgWK3STTZi" data-pnid-children="FtYefBnAfGEUgYiBi4GCiK">AI生成疑似风险信号预警 —— 给检测工具的矛盾结果一个交叉验证的落点</title>
+<link data-page-node-id="yaClZrc4UYpjuwiwUCLyDz" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="ajfwUViqDIpBzNAGEM1Pkd" data-pnid-children="arVjuXmInqGKihLPgvbllZ" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="zwNiGjOBv4SwIHNhc0c6iC">
+
+<div data-page-node-id="csBfQAOk3B2t4ShCHRvpvW" class="wrap">
+<section data-page-node-id="Bf4NGr08aB7y4DV5lfupQO" class="page-hero">
+
+
+<h1 data-page-node-id="QnVNJBhcE8D5OW4ivT9iWu"><!--pnid:BBUd4lezaQyu3rcDUgbzMq-->AI生成疑似风险信号预警 —— 给检测工具的矛盾结果一个交叉验证的落点</h1>
+<p data-page-node-id="24U6HyMco9X2bRjJNNPVHu" class="lead"><!--pnid:qU7ltATqtTinxPskfJCqQh-->表面看是需要一款更准的AI检测工具 · 实际上没有任何工具能做到百分之百准确区分人类写作与AI，问题从来不是工具不够准，是缺一个留痕的交叉验证流程</p>
+</section><nav data-page-node-id="jHIdEGM8WLrjuCAl6dfyzX" class="subnav"><a data-page-node-id="4YbMaWs2ESalre8odPYyCS" class="on" href="#"><!--pnid:iEOAYrFesRePyNErNonke6-->场景引入</a><a data-page-node-id="0M49Al8vg87J2NSWbJlqiG" class href="LiveDemo.html"><!--pnid:udEjmhr1FoEA1pKbU8OOt8-->Live Demo</a></nav>
+<section data-page-node-id="UawxRYC92fUP19bnEUKkAc" class="blk">
+  <h2 data-page-node-id="w3mmhyApTUGi9NsXIkkVuI" class="h"><span data-page-node-id="BHecndbNuALxHthg0p6udj" class="num"><!--pnid:Lyjbzeoa3hd088iKW8zPjT-->一</span><!--pnid:KeF9em0GvsRgxphhfFtADR-->这件事现在是什么样</h2>
+  <p data-page-node-id="QFJRdBR8ycEq4uZDQywZ9s" class="subline"><!--pnid:8zwuKcDYqiTmtIy2jZXlje-->来稿初审编辑 · 真实业务触发</p>
+  <div data-page-node-id="3iUcAAGEmITV9qxItXCKQD" class="card"><p data-page-node-id="ZRU9tpccItLrJHSZcZGmzK"><!--pnid:lhBWiLjIDxcX3ybPSOyHth-->每周固定的AI稿件排查日，闻小柚要面对检测工具对同一稿件给出0%、44%、87%三个矛盾结果，还要应对可能被误判的手写作者情绪激烈的申诉邮件。</p></div>
+  <h2 data-page-node-id="iGRS1YtTKmfDFcHs5B8v2i" class="h" style="margin-top:22px"><span data-page-node-id="Z4Vs0A5BGOS5kwadDRKE2j" class="num"><!--pnid:m9kMWKxX23zVQmFY1twWXR-->二</span><!--pnid:J9WNpOSu6x8KutkZKVBUDP-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="f6WHkx4EgGAmpHvgcBpiyU" class="subline"><!--pnid:9kdR21ASQ5V2Fc8Zg3grHT-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="0rmSl8ZHtWOYiT2FpVUs5h" class="pains"><div data-page-node-id="d7qoY9GRgFaRrjRnunBYY9" class="pain"><span data-page-node-id="NympSPwQml5qshlw2hBryP" class="i"><!--pnid:gEV5e21F2tE9zHPhIHPJVv-->1</span><div data-page-node-id="APXkLaZki7ermbeWRWkAlm" class="t"><!--pnid:Dwz0EYqK82NAdUGhQqcdfG-->编辑吐槽平均每天被20个AI稿子追杀，检测工具对同一篇稿件不同章节给出矛盾结果，最有效的还是人工，但人工判断标准同样模糊<span data-page-node-id="7Wi59VxQmMbyPARZy35hoN" class="src"><!--pnid:WNkVKY7bPu6N5OOgpNYw2K-->依据 · <a data-page-node-id="2SMyqSVQO6LT0C2exblTwq" href="https://news.qq.com/rain/a/20250307A04RYC00" rel="noopener" target="_blank"><!--pnid:AHJSYCOjdMAuvT8tsKufd8-->编辑吐槽&#x27;平均每天被20个AI稿子追杀&#x27;，检测工具对同一篇稿件不同章节给出0%、44%、87%的矛盾结果，&#x27;最有效的还是人工&#x27;，但人工判断标准同样模糊</a></span></div></div><div data-page-node-id="BHGfxwRWM996PdiLaVsNN0" class="pain"><span data-page-node-id="DQBOI7yJ0tPUXVy2whTMoT" class="i"><!--pnid:Nug1qPS52RqxWPhpepLs9K-->2</span><div data-page-node-id="rIc6C6ol7bPwC7yMAkzgkI" class="t"><!--pnid:Lxv4CNebFwPnDlMQr3YnHb-->2026年8月网文圈集中爆发'空口鉴AI'争议，三江榜单热门小说随机截取章节丢进检测工具，多本经典作品被判定为100%AI生成，多名手写作者被冤枉甚至退圈<span data-page-node-id="4NuCqVJUg5SQYzshwq9APJ" class="src"><!--pnid:SZCQoddTnV3DGuOFvuURXQ-->依据 · <a data-page-node-id="tuwsoIKXP7EkT8nOwawicR" href="https://www.toutiao.com/article/7678315410365628967/" rel="noopener" target="_blank"><!--pnid:ofLizcfj3P4YTwZXdyulB4-->2026年8月网文圈集中爆发&#x27;空口鉴AI&#x27;争议：三江榜单热门小说随机截取章节丢进检测工具，多本经典老牌作品片段被判定为100%AI生成，多名手写作者被冤枉，有写手因被误判无奈退圈</a></span></div></div><div data-page-node-id="Y7Qli7kJf4mdlKWGYaaR4r" class="pain"><span data-page-node-id="j6i4h2CLbmHy90GneYhTF5" class="i"><!--pnid:MiV6dyHq7Wztk5R0VdSxOL-->3</span><div data-page-node-id="l7lh0IYjq6ikWBZBrRoGkP" class="t"><!--pnid:5R4u9sImFHaZ77MaBaOMew-->《人工智能生成合成内容标识办法》2025年9月起施行，要求AI生成内容显式标识，漏标即违规，这是新增的强制合规义务<span data-page-node-id="zWg8HdpHLxM7SAvWJrsygv" class="src"><!--pnid:hQOCO7RZyViR5ZAO20qJUk-->依据 · <a data-page-node-id="lUxL4Agr6ElP0H8kQzvBcd" href="https://www.toutiao.com/article/7678315410365628967/" rel="noopener" target="_blank"><!--pnid:9ZLsODLdRMuuxXkgj5yOtj-->《人工智能生成合成内容标识办法》2025年9月起正式施行，要求生成合成内容进行显式标识，漏标即违规</a></span></div></div><div data-page-node-id="3213gJY1H7vMPHUn6njZIK" class="pain"><span data-page-node-id="maeZUQgKqpLjvZbKUkhwva" class="i"><!--pnid:iid9D1bd7NMfuU22K7AZm7-->4</span><div data-page-node-id="hKLY91X7oE3VFPMBCEEJZM" class="t"><!--pnid:Qznxbgi4qxX2c0ERJMuG2E-->番茄小说2026年7-8月单月拒绝签约AI生成低质书籍16万本，8月单月治理超7.5万部作品，说明这不是个别事件是行业级治理压力<span data-page-node-id="LLk7c7zZ9Pb0df85V98p6c" class="src"><!--pnid:y7STdGjBF2BO2TTE2vXH7l-->依据 · <a data-page-node-id="HapHOvqHS4q3eNfWAd9q0Y" href="https://cnews.chinadaily.com.cn/a/202608/19/WS6a8551f3a3105d3d7a27bbec.html" rel="noopener" target="_blank"><!--pnid:6YwJrOxns8BTYwD3GvrtPC-->番茄小说2026年7月单月拒绝签约AI生成/水文类低质书籍16万本，处置违规账号5621个；8月单月治理超7.5万部作品，下架1万余部</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="gF1FtB7yPiDVlwZPl7EmY8" class="blk">
+  <h2 data-page-node-id="BvqfTuNlmdN3kn0n2ukSEW" class="h"><span data-page-node-id="K30OKgEDMcrIkJLXFC26nu" class="num"><!--pnid:slqU2UiE50fnffJmfLLgmu-->三</span><!--pnid:pr3uWp3Qq6DFt6pQgLYHX9-->换个做法之后</h2>
+  <p data-page-node-id="6NjJm4i9dxQSrXPTx0wLa9" class="subline"><!--pnid:AhKTXxKDSwHCfoLTAe9RCS-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="LwLxKPtrW72VnbRXSWesUz" class="cmp">
+    <div data-page-node-id="GSlJRspQgrdEKLqq0ZNlAM" class="old"><h4 data-page-node-id="pjF3cO0IvkLD4T6UOVS7C3"><!--pnid:9F7Wxz9RRwc0kcFkEqGLd9-->✕ 现在的做法</h4><ul data-page-node-id="hDyuWiddZXV2Z4QT0h5R4A" class="list"><li data-page-node-id="YzqpPD4D1CLxMV1QaEi3zd"><!--pnid:5TKHBIhh2MTAetf7Tlw8fS-->编辑吐槽平均每天被20个AI稿子追杀，检测工具对同一篇稿件不同章节给出矛盾结果，最有效的还是人工，但人工判断标准同样模糊</li><li data-page-node-id="G2vpI9wNOU8x6jZPOYLg1F"><!--pnid:fb9HumldMEn5uEgt47nB5c-->2026年8月网文圈集中爆发&#x27;空口鉴AI&#x27;争议，三江榜单热门小说随机截取章节丢进检测工具，多本经典作品被判定为100%AI生成，多名手写作者被冤枉甚至退圈</li><li data-page-node-id="9mm5h5AUsRV74OE1yuzIdA"><!--pnid:wFIrQRSdh16LimlZ4JPkc5-->《人工智能生成合成内容标识办法》2025年9月起施行，要求AI生成内容显式标识，漏标即违规，这是新增的强制合规义务</li><li data-page-node-id="S7bMIPdKvf3hDDvQohUDpM"><!--pnid:ffLLWv6loDiB6yCj0VWH4D-->番茄小说2026年7-8月单月拒绝签约AI生成低质书籍16万本，8月单月治理超7.5万部作品，说明这不是个别事件是行业级治理压力</li></ul></div>
+    <div data-page-node-id="UvO5WkNd65pkvLv8syVIqW" class="new"><h4 data-page-node-id="rUDqsWlwbt2buE57lRNI94"><!--pnid:csZitmGOJzwaH3QonB61jg-->✓ 交给 Agent 之后</h4><ul data-page-node-id="AGS0LKyn9XhumBoGgGtcN4" class="list"><li data-page-node-id="yn4y6qkSg4QeA6n3iL7FYI"><!--pnid:vQbvcN4SMpv1JACZYA3wqy-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="S1sReH8z9FrIVN0mc6dtkx"><!--pnid:GFxYgBSowRIfzDwK3uOR7y-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="uSLSBQdUym3158nS8nk6UX"><!--pnid:N1zoCOdpelfF3k8zocQeXW-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="TeeQqf15HESK18i6BHNioS"><!--pnid:quUETynjjLO002jDa3jx0K-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="nawpGXolJ6u2BysPmVWBKV" class="blk">
+  <h2 data-page-node-id="Bc9ksQITrzcRUGafPNqnzS" class="h"><span data-page-node-id="63fLtZHKlqRzXgoQVMqRpl" class="num"><!--pnid:yq8jdUX6RyvmKfzhLYs5tG-->四</span><!--pnid:N1A8Rps94pDIfa0p2zNgV3-->场景闭环</h2>
+  <p data-page-node-id="GLlRyP2ji8ZAGCeYQEh5Z3" class="subline"><!--pnid:pbE3A5G3vn9ymy9UKqeUfl-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="qRkAAPjWEUvdQSMgcQ7Bgj" class="flow"><div data-page-node-id="R4f1U4YJooQc0dGavO0D1l" class="step"><div data-page-node-id="C76JGsfsCs5WuO2uGOcTME" class="n"><!--pnid:jqupHOVc7lZlN3iFPZy9ck-->第 1 步</div><b data-page-node-id="br1sqWr2naCAFk4BbgoJEY"><!--pnid:ynpA3HYlx0dJuVW5oW8S3J-->本周疑似AI稿件批次校验</b><span data-page-node-id="PT1ypBht3zgKvTsMWwuZtc"><!--pnid:cb8U6CXWrKiSzJvafJGHfl-->核对哪些稿件触发了检测工具警报，缺检测记录的先标出不阻塞</span></div><div data-page-node-id="ZkgQSQLEMvB8R9f3TQMiUV" class="step"><div data-page-node-id="ZoQetYgAkHeMQxYY3t5DIE" class="n"><!--pnid:VNk6ft5TWkDZRbw6JlYSCS-->第 2 步</div><b data-page-node-id="KGNRF8RbZD0JgMB8oF4o3A"><!--pnid:W9bTMkvrA14kQAUFR9op17-->多信号并排比对 · 不折叠成单一分数</b><span data-page-node-id="PSa2eGWLJVwy4aLhjaGqx9"><!--pnid:kn41eCSZm89M5RHam9itfp-->把检测工具历史判定、句式特征、投稿历史三类信号并排列出，矛盾的地方明确标注&#x27;矛盾&#x27;而非取平均值掩盖</span></div><div data-page-node-id="qKliZKPbwXU1gHCnPTTVpn" class="step"><div data-page-node-id="JK92PoCKzg15kjvLHvFAAB" class="n"><!--pnid:ygElZJgZDVz6qEWHIKvU6p-->第 3 步</div><b data-page-node-id="Ab3BYHsVZHB6IXXwsPuDlP"><!--pnid:uKenntkpv0Yk9kb2BivxNo-->风险分级 · 高度疑似/需人工复核/低风险三档</b><span data-page-node-id="uUxsmYwcDuNDuSVbOgSfw9"><!--pnid:IM90ZsJxguFj7ShymKhObN-->分级依据逐条列出，附上判定这一档的具体理由</span></div><div data-page-node-id="RC4qFiIf0MhuzHrE5AvZlO" class="step"><div data-page-node-id="onbu7fxM73Hw0LUKIWHNXL" class="n"><!--pnid:NpjV0i2q7xRsQZs101AkgM-->第 4 步</div><b data-page-node-id="1A0LHLjWiHVdRI6y5aYdaP"><!--pnid:NAEMuXOwgJImgOBR9RtiGs-->历史投稿账号交叉核查 · 是否有反复出现的模式</b><span data-page-node-id="PJosFCDLGL5IdzQ2bnBKHy"><!--pnid:TmCiwMUdgPskdtzeKoooZ7-->同一账号历史投稿是否反复触发类似信号，单独标注</span></div><div data-page-node-id="mmtushaYg0KpXWrAo9I8Pa" class="step"><div data-page-node-id="rM7Wtjx5kcXnip3p6F6jKF" class="n"><!--pnid:QcqalwunpxU8ADGjPwhlwz-->第 5 步</div><b data-page-node-id="omTFEJ3proPwXS7bdpF8Ks"><!--pnid:kgjfOaLcoVhQHAaXpfcxDO-->申诉邮件归集 · 与本批次判定关联</b><span data-page-node-id="7Iwt7NiYuVyrKIATq2ssml"><!--pnid:bJiFOYporgpFP7WkDAicLg-->本周收到的申诉邮件按投稿账号关联到对应批次，供编辑核实时参考</span></div><div data-page-node-id="Kjkwx9SEqdNSjB8fC0dw9y" class="step"><div data-page-node-id="DJSjQwViKyGBt3X980TutX" class="n"><!--pnid:1CYwFBVh94nwgFbBhc8JWf-->第 6 步</div><b data-page-node-id="djBwEhPQvSYxFRGZ8YKgYR"><!--pnid:2gIoflYZC8QLI33WEUpHps-->风险预警清单生成 · 留痕不下判</b><span data-page-node-id="LHjOW4eFriJYCw9olAMWCH"><!--pnid:S6th4c1SqqS1KgzzDG0tjF-->清单交编辑复核，&#x27;终审结论&#x27;栏留空，编辑签字后才生效</span></div></div>
+</section>
+
+<section data-page-node-id="v5ZT9ZNr6VW0y6hi1YzQi6" class="blk">
+  <div data-page-node-id="4J4AnjCebDnzcwux1RyNhR" class="g2">
+    <div data-page-node-id="WNlzWiNky8k1a8YCyK5pTt" class="card"><h3 data-page-node-id="YxMKwqb0ElxB7P76Q8d7wv"><!--pnid:nD9RFEJpQbNOVAyHJElgYB-->要准备什么</h3><div data-page-node-id="7FHFpEqNxUjMy7iZlSymrm" class="src"><div data-page-node-id="LRiZecnquG4ZNT7o7QAzXl" class="fn"><!--pnid:vspzQff8NfQiCtecepqWGT-->本周AI检测工具输出记录.xlsx</div><div data-page-node-id="zUNjs7e8nLxDsow8wu6HlC" class="fd"><!--pnid:Sr2LX9h6Jn3oEm5BDefSRD-->同一稿件不同章节检测结果差异巨大，格式为工具原始导出，未做归一化</div></div><div data-page-node-id="qY4yunVmaVKztUxhUVv3xU" class="src"><div data-page-node-id="DyMhr5FjBAjeq0Yflw6n37" class="fn"><!--pnid:3uDOjwx5w6N3LeSJL5Zvsc-->投稿历史台账.xlsx</div><div data-page-node-id="FIzpF4Ydudsn2JmNf2IHVD" class="fd"><!--pnid:6S7GQ9MD3VLIOlMyc39Viq-->同一投稿账号历史投稿记录，字段不完整，部分历史记录仅有标题无正文存档</div></div><div data-page-node-id="GKFQA7rFBc00Z6n5EUvAbB" class="src"><div data-page-node-id="V8mJRqqscEGqHjK3sNVLIM" class="fn"><!--pnid:heDzn30Si6ZRfcWPDIPJDV-->作者申诉邮件汇总.txt</div><div data-page-node-id="F45igBm4pNuh2fb4mnzI3q" class="fd"><!--pnid:ySMmch0ZT5zneogh9bthf7-->散落在闻小柚个人邮箱，未做结构化整理</div></div></div>
+    <div data-page-node-id="D4i97tl6f5nxAbcaS8fIH8" class="card ev"><h3 data-page-node-id="VqnsNh2QsyGNBh7qHxoDhC"><!--pnid:RkcIKqfQxr8Yio6HJro61a-->为什么这个场景值得做</h3>
+      <p data-page-node-id="QJ4ITlJ3vK8DA9CIRqzaxK"><!--pnid:gTRiLWZi47jSg60nmBMcFH-->痛感 4 × AI 适配 4 ÷ 落地难度 3 = <b data-page-node-id="hN44VN5ZVJXQIzffxjk8EU"><!--pnid:KmYkmAbTaEnoa7KNMetyO8-->5.9</b></p>
+      <p data-page-node-id="mNImIJ1x4gdGa2xI528GCV"><b data-page-node-id="VoYbHz07EINhU1HLi37KsQ"><!--pnid:pgaO1Mq3IOENX06nxrQbIN-->最大差异点 ·</b><!--pnid:C4KMwyQRz8yBZj4un1RiCu--> 不依赖单一检测工具的单次判定，而是把多个信号（句式特征、写作痕迹、投稿历史、检测工具历史判定的一致性）并排列出，让矛盾本身可见，而不是折叠成一个虚假的确定性分数。</p>
+      <p data-page-node-id="uKuQwnOv8II6J74N4OpY9F" style="color:var(--ink3); font-size:12.5px"><!--pnid:NBcIoasGXlfstBZiUny8hF-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="ZOKuGEjtRBx3aDK1prvdEb" class="blk">
+  <h2 data-page-node-id="sCipPl2Yz9RloiOcAsuezd" class="h"><span data-page-node-id="kSj1o8qpUfGcdzrW4w9fur" class="num"><!--pnid:Y85KtyoBgLtlAePZZy68U6-->五</span><!--pnid:xhiGJaw7KOBji9bc7vhSJy-->会产出什么</h2>
+  <p data-page-node-id="47AvZX6ieTHq9y71L50HOd" class="subline"><!--pnid:OJ6B8sCxvTsyoee80XQyoM-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="5V1ITWChauBoeBiKLRbMRY" class="outs"><div data-page-node-id="8BORLTHpCQmm93JijFX9XU" class="out"><div data-page-node-id="QdFRtKm2rZkcZra6CxaPUm" class="on"><!--pnid:PaaIS0k9NO8aJj0iynjA6x-->正式件本体</div><div data-page-node-id="T8hBquQgbvC9cfo255yiI5" class="ot"><!--pnid:AvR8B0wwZ9xlhdbW0ySs3I-->AI风险信号预警清单.xlsx</div><div data-page-node-id="AM7NCbMxUADziCQ4vvtqCr" class="od"><!--pnid:aJEoIatDGjceGoojZErnVP-->正式件本体 · 三档分级 · 含签批栏</div></div><div data-page-node-id="d46JJ9iNQ4kfQRf2UxjFXv" class="out"><div data-page-node-id="V7yScpnuZFpKTpuLxRZrlR" class="on"><!--pnid:gTjQNNUlD0eARiDBp6OHlg-->可派发清单</div><div data-page-node-id="3KJ7qEsC8EcyI5gJoHH7UP" class="ot"><!--pnid:VNlCDGvpHfbB6RYjcRet8S-->矛盾信号明细.xlsx</div><div data-page-node-id="xfIpX0tRZgAizp52q89mW0" class="od"><!--pnid:iR1gAZMRnynhfVpW0ZEd6w-->可派发 · 检测工具历史判定不一致的稿件</div></div></div>
+</section>
+
+<section data-page-node-id="a2W7Bi6I7raIOh28zIPYUg" class="blk">
+  <div data-page-node-id="pycRLnOOMj1xh4p2uO6B25" class="card warn"><h3 data-page-node-id="MAn44LqFOPAha8goqkwgd1"><!--pnid:8ABGNyEJu7t4Q8XInliThD-->这套东西不承诺什么</h3><p data-page-node-id="n1A1rgrxFKulHBi8my0ADv"><!--pnid:IemH37B0ZkpRyEwbtz1Fv0-->不做什么：不把检测工具的判定结果当作判决书直接拒稿，不自动执行任何下架/限流/拒稿动作；对&#x27;高度疑似&#x27;的稿件只标注&#x27;建议重点人工核实&#x27;，具体核实方式（联系作者要写作过程证明等）由编辑决定；心理疏导与作者申诉沟通一律人工处理。</p></div>
+</section>
+
+<div data-page-node-id="YIJcvHYnx2Z4VyhuxEs7rU" class="cta">
+  <div data-page-node-id="89nxvzQ1ZD4o3Z83y9M31U"><h3 data-page-node-id="oaCFtOHUZum1nnbXoNLvTb"><!--pnid:z9QMSKMAunH3lYSZBhMCAB-->想看具体怎么跑？</h3><p data-page-node-id="m5Nv07Gax74xDmMimbvxIc"><!--pnid:T2uREWoYx1ZIPtatHuaYHL-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="kaQUf7shqR4YLoZJghdp6x" class="btns">
+    <a data-page-node-id="BuSEJyqICfvBcROgtPFBUu" class="btn" href="LiveDemo.html"><!--pnid:cPbbbwprz3yx730qx03QWo-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="awo3exUEmiSfD3QmEHoHB4"><!--pnid:qsHQoX2cR23jjIMHfXZtq2-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="uMldFw1d2qV3dK1gGkYb0L" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="Ou9W0noFFDLJ217TwxwDXZ" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="GWvZdoEfTH1N4yHHJl2IlQ" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="RpB8CRLunTe4CcdRzz5Bx6" data-pnid-children="lWcXgf6zNiCLxlZXhERw90">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="mS8vD6suaYPrIcg54U2Rl6" data-pnid-children="7xU0WBLM6dmE1hkhS260RJ">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

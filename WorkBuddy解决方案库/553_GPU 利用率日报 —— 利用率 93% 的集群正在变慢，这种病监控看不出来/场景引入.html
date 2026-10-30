@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="EmhxMHpz0l0TVKOS57TsPY" lang="zh-CN">
+<head data-page-node-id="GLaQQFHYRUfUoySaDuqvnG">
+<script data-page-node-id="0lMkggMR2x8ldH0MBoJQtI" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="4LrHbkkYFriOVwDhEnlbuL" charset="UTF-8">
+<meta data-page-node-id="JgXP45LKAO5m3JrQELh1Zg" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="ChFvXuqWEP3lhvRbTsoitG" data-pnid-children="S29WMIy84SVPFcrfN2aBEL">GPU 利用率日报 —— 利用率 93% 的集群正在变慢，这种病监控看不出来</title>
+<link data-page-node-id="SXsfYkdxu099ozBU0bFYkO" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="fJomRZm8bbqKSjWRRjIf34" data-pnid-children="j9jq9Tp0tMqQ1EEAtNJaTi" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="zAjaVYlsRQq9xakqD00HiH">
+
+<div data-page-node-id="150zFst9Utsdbofn43vO8r" class="wrap">
+<section data-page-node-id="KRlppNKnLdI6jHRyIbtUWv" class="page-hero">
+
+
+<h1 data-page-node-id="lNNm8cSKclc97GsGSoMSEA"><!--pnid:Mi5fPaP9csLeBk4LNlF3go-->GPU 利用率日报 —— 利用率 93% 的集群正在变慢，这种病监控看不出来</h1>
+<p data-page-node-id="1bixgtWrFF6e1BwJqlJG0a" class="lead"><!--pnid:rjYVmk0AnRWEVStjMU9lOu-->监控里利用率一片绿 · 客户的训练任务正在以 1.6 倍的时间烧钱</p>
+</section><nav data-page-node-id="xlCNNkCQoCgETMmVavPX5D" class="subnav"><a data-page-node-id="MMRAOIaBdTUVsTTFjqKp7J" class="on" href="#"><!--pnid:nF16bqARjFQShwtF1OKtkt-->场景引入</a><a data-page-node-id="erQfN0JA5ncKEDlILzidVu" class href="LiveDemo.html"><!--pnid:UPi2LA7JzEGxBVZqpUcbjY-->Live Demo</a></nav>
+<section data-page-node-id="Mr6MGLasWKZjdcyhU554Ad" class="blk">
+  <h2 data-page-node-id="OJb7cT0D3zROpefsc3F3QF" class="h"><span data-page-node-id="mLgNXwK1W6ZinwJ2io2bgv" class="num"><!--pnid:u0V0J47eEvgymBmuUpLiv8-->一</span><!--pnid:EtmTNFtMK56mjc5lFBmKVt-->这件事现在是什么样</h2>
+  <p data-page-node-id="aWcs1Lr0BJ60ih85DknCgJ" class="subline"><!--pnid:f0EtQKk5g0XwJWWuc3fK1o-->智算集群运维（GPU 与高速网络） · 真实业务触发</p>
+  <div data-page-node-id="PboyrTH7CMMuGYhDg8FNoH" class="card"><p data-page-node-id="VunRKc9YhigFSO9D4gsb1f"><!--pnid:7apqK6b5k0TWevNnXWoFFk-->每天早上客户经理要一份利用率概况发给重点客户；8 月 21 日星澜科技反馈「训练变慢」，但调度平台和 DCGM 的利用率曲线一切正常 —— 利用率正常的集群和健康的集群是两回事。</p></div>
+  <h2 data-page-node-id="qto3gVpemTaqGM0HUGxdpx" class="h" style="margin-top:22px"><span data-page-node-id="Mphcff2cY5io7kvjniWqSg" class="num"><!--pnid:y43kEPtT6bFupRwYajghQQ-->二</span><!--pnid:BtlUncVy7NG0N9NTqyudPC-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="u7pKAu9RvXoqx85CGtBFXG" class="subline"><!--pnid:cYWHHxIaQtPzsEkUVRXGrZ-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="sU3kqEljDhFhnuSSUGx1GF" class="pains"><div data-page-node-id="djdvWjsvQvtzWPgh5X00HL" class="pain"><span data-page-node-id="GtdeRP4bzF44Hfgz8Vx4DY" class="i"><!--pnid:wWqRoAm4OPE9b3oxIiixHD-->1</span><div data-page-node-id="zdkNQHStARYJkHxneyP5eK" class="t"><!--pnid:VvMTkhxj71HYg14GQQjAqk-->利用率 ≠ 健康：显存碎片、PCIe 带宽瓶颈会拖垮性能而利用率假高；实测 PSU 问题导致 SM Clock 从 2GHz 掉到 500MHz、性能降至 1/4 而监控无感<span data-page-node-id="A4iEjOWCHq2BbXKHeBY2dd" class="src"><!--pnid:Y3303k9RnWfThpAiKUaulW-->依据 · <a data-page-node-id="oaznVdH37SeM1eQTSMf4IK" href="https://zhuanlan.zhihu.com/p/1917807480097997704" rel="noopener" target="_blank"><!--pnid:b7EvjiWIGfQR23YFecyDze-->大规模 GPU 集群运维实践：Xid 79 掉卡（需换卡）、Xid 48/63/94 不可纠正 ECC、Xid 31 多为客户代码问题；隐性降速（PCIe 降速、GPU 降频）不中断任务最难查 —— 实测 PSU 问题导致 SM Clock 从 2GHz 掉到 500MHz、性能降至 1/4 而监控无感</a></span></div></div><div data-page-node-id="qHjPGoc39XhozuvAJ0JzFV" class="pain"><span data-page-node-id="xYiWKUSQF178hN0e0CdK1U" class="i"><!--pnid:euwBHoefy23EjDPwpwxHue-->2</span><div data-page-node-id="D9jWZfx41z3BrxHt6xUtds" class="t"><!--pnid:RyGw2vkvsp0aXycQcxDGYp-->客户只认自己的训练速度与成本，不认你的利用率报表 —— 千卡训练曾中断在65% 进度，「任务白跑」的愤怒点不在机器坏了<span data-page-node-id="EIF63y99DrxElItVfXG3OF" class="src"><!--pnid:FBJuUvVaWdQMlldtCpQsjH-->依据 · <a data-page-node-id="4Kgkzd52Ftp8nao0CHuL74" href="https://cloud.baidu.com/article/5550741" rel="noopener" target="_blank"><!--pnid:tIXUbRpiWNLmXVj7zBD6Ts-->千卡集群训练任务曾因故障中断在 65% 进度处 —— 客户对故障的愤怒点在「任务白跑」，不在「机器坏了」</a></span></div></div><div data-page-node-id="4ZwhXAan8SwrawbyTsFKLj" class="pain"><span data-page-node-id="T0iKilhSYGtg1nVVRopIBm" class="i"><!--pnid:aHl7ue69ivg5l8oQUJMSsl-->3</span><div data-page-node-id="OrrDQmPHdVcClkhv0Wcf0P" class="t"><!--pnid:KyMsex0grr7irxUb50gE2E-->行业 GPU 平均利用率不足 30% 的背景下，运营侧把「利用率数字」当 KPI 汇报，而集群侧知道这个数字口径混乱 —— 两边的口径差距迟早要在客户面前穿帮<span data-page-node-id="uaKhTxQPEcCFVM3Cuc3AOl" class="src"><!--pnid:63Z6D3jHsiAtAwDQexOLJI-->依据 · <a data-page-node-id="81UVnCitfuIc4S1wobQ8UW" href="https://aiinking.com/article/60281" rel="noopener" target="_blank"><!--pnid:MSlsfjPGz69lEaqTo2SWBv-->腾讯云解决方案总经理在 MWC26 上海披露：国内智算中心 GPU 平均利用率不足 30%；信通院 2025 年统计国内智算用算占比仅 36.8% —— 利用率是行业级痛点</a></span></div></div><div data-page-node-id="ORFYPpMRX7pq9skPFMRoBj" class="pain"><span data-page-node-id="L2KzaFodSfeWStPAEW8p9g" class="i"><!--pnid:vkyVu42vIxc2ZP1XPF9v6m-->4</span><div data-page-node-id="WzRJnOUqR5K0CUmGEvRLlN" class="t"><!--pnid:leood6AdCilXyD8O1jtXFT-->SM Clock 降频、NVLink 降速这类隐性劣化不中断任务、不触发告警 —— 等客户发现变慢再排查，证据已经没了<span data-page-node-id="1xSsokLpkJ0kDpmD71GbZv" class="src"><!--pnid:5hGh4KPEgOsyXveJl1qZy3-->依据 · <a data-page-node-id="ingr2Co56nmbnZpvQAFp4n" href="https://blog.csdn.net/m0_50889382/article/details/162781637" rel="noopener" target="_blank"><!--pnid:axr133rjM5WUqtCfrLlFhz-->利用率 ≠ 健康：显存碎片、PCIe 带宽瓶颈会拖垮性能而利用率假高 —— 只看利用率的日报会漏掉真正的问题</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="ULWFuBBsgWkrzhj0vllLrb" class="blk">
+  <h2 data-page-node-id="F3cCEl6UdyPtlbPaXVCxOO" class="h"><span data-page-node-id="dlOARrc8gOQC87AO0qCiK4" class="num"><!--pnid:O3zIx8mDkkSgwSgifRmsdY-->三</span><!--pnid:s1Nd752i2FzrJxkA808b9b-->换个做法之后</h2>
+  <p data-page-node-id="NzTxT5oqMDzIslFcyntfGf" class="subline"><!--pnid:eyYaRl1zcdXzLF1f138z64-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="dedDAmpAHW3YFiDc9yhDH6" class="cmp">
+    <div data-page-node-id="yJiaHy0sNvs97BqRADz4jr" class="old"><h4 data-page-node-id="vuOTGigpXuOWcjzR5Qw394"><!--pnid:OrHk5NpE0DoTuIrsRDVtzy-->✕ 现在的做法</h4><ul data-page-node-id="KM549Un1fLKijI0Qqr5gpi" class="list"><li data-page-node-id="VDuT8rQBrqQYp8qIhVszHZ"><!--pnid:w2TRQdmBgtUC8UpaB7mAKy-->利用率 ≠ 健康：显存碎片、PCIe 带宽瓶颈会拖垮性能而利用率假高；实测 PSU 问题导致 SM Clock 从 2GHz 掉到 500MHz、性能降至 1/4 而监控无感</li><li data-page-node-id="Y1ZnCmL0SgQVlyDGQtHTEG"><!--pnid:NhrU0Az4CQ8XjFcNzbrx98-->客户只认自己的训练速度与成本，不认你的利用率报表 —— 千卡训练曾中断在65% 进度，「任务白跑」的愤怒点不在机器坏了</li><li data-page-node-id="lKwttAJtr3oyCe781P9g72"><!--pnid:dapcUIVzNEvNNbDW8w4SXF-->行业 GPU 平均利用率不足 30% 的背景下，运营侧把「利用率数字」当 KPI 汇报，而集群侧知道这个数字口径混乱 —— 两边的口径差距迟早要在客户面前穿帮</li><li data-page-node-id="w2D3dSEC6A26fntUaLDNju"><!--pnid:tXJvyZeYFbMxG9NP8kPPfj-->SM Clock 降频、NVLink 降速这类隐性劣化不中断任务、不触发告警 —— 等客户发现变慢再排查，证据已经没了</li></ul></div>
+    <div data-page-node-id="xXUOjmNh5vNibRkJ6vLumD" class="new"><h4 data-page-node-id="NZcF49ShJ6Y10BbL1IeFkF"><!--pnid:Zed2A1ddqtCLHj3mzEcnYg-->✓ 交给 Agent 之后</h4><ul data-page-node-id="Ky6E9FYAdQm8Fc21wbvPJF" class="list"><li data-page-node-id="DkVT6qFcRB3HoNqQoJFzkz"><!--pnid:wftkL2CkeWIhHpkgmsONff-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="GI4Exn5v0A8aWqu2qnMGcA"><!--pnid:cD7TVv9hCat7nRKPLHs51x-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="SykZGCQVB1YV8xeSYkaqUV"><!--pnid:wcYdVRE3NSVTC9pGXuwf14-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="J6We70tUEEJwEnnsPRbzEg"><!--pnid:gpQQHrpKsLv8LK0UH9KuIi-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="nKE7umO3JYFBuZ1fF1vzux" class="blk">
+  <h2 data-page-node-id="b84reFKVJhLuBgM0klacG3" class="h"><span data-page-node-id="Bv8D3tM0t5LK5Vv2uj8S5S" class="num"><!--pnid:yWuiSDswKkrmHDUGEcPIyK-->四</span><!--pnid:RjjlNC6QfLBheuqqfZPQlr-->场景闭环</h2>
+  <p data-page-node-id="SrMhusClKhvTmbctWyD8GM" class="subline"><!--pnid:zJNa5JPQWKQqyoNFcRc4oc-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="Ml4DIEpbiKsz0ZkE7IOUvw" class="flow"><div data-page-node-id="44KpZXig6jM1pLHfjUojiX" class="step"><div data-page-node-id="ssA7ipSIKqHmx51TaHRaBU" class="n"><!--pnid:eZfPhgEHLATK0scnHneZcn-->第 1 步</div><b data-page-node-id="1tt55l2lLpKsZ7eJxFua3q"><!--pnid:b08ThROjO3LcBSjAyyd17A-->口径核算 · 当日卡时利用率</b><span data-page-node-id="05C6mca8dcXjWf8bRTWW6G"><!--pnid:NwXhZNohXXRE0sgtGLLDuh-->自营 3,680 卡口径：实际消耗卡时 ÷（在册卡×自然小时）；与调度平台口径并列展示，差异注明原因</span></div><div data-page-node-id="aJ1nxsoZh08D9E6yxAVhY7" class="step"><div data-page-node-id="9YLML5VfIwXJr3jPcdmh4C" class="n"><!--pnid:nlfnBa1cthaUK0PFX6iagG-->第 2 步</div><b data-page-node-id="WXPW9oD7PMa3p3JAyzLJ86"><!--pnid:ODW1km5Xcjp0jMjZVFsyyZ-->三线交叉 · 利用率 × SM Clock × 温度</b><span data-page-node-id="OLCBpZghR8wZl8733BYlJd"><!--pnid:mDoYfS7KhOQ77emcRpCu0k-->逐节点交叉扫描：利用率高且 Clock 正常（真健康）、利用率高但 Clock 受限（假高）、利用率低（闲置）三分类</span></div><div data-page-node-id="Npkii2hZJkniczQ82UVxPs" class="step"><div data-page-node-id="B8Q9UpHgH4tPk4iFI6yB2K" class="n"><!--pnid:iVNganyRbxBbIISbfkToq9-->第 3 步</div><b data-page-node-id="OUmGSjYt4oUuwSDkW6fcQw"><!--pnid:eFL2QblFuk3fJGVuUoxBFn-->异常任务定位 · 谁在降速跑</b><span data-page-node-id="rFWglAJMrm5VlhA2D7pHFs"><!--pnid:9rULyMQMbg5rhrky5vv5Yp-->假高节点上的任务逐个点名：任务名、客户、卡时消耗、估算性能损失 —— 给客户经理一份能直接解释的清单</span></div><div data-page-node-id="RHREw5uIBoaSm54Y3McV8B" class="step"><div data-page-node-id="wkqiLAPoMP1mkxVZs52Sht" class="n"><!--pnid:Gu2SKs3PZL0Nv1BB97zch4-->第 4 步</div><b data-page-node-id="svAC3Xlv86Ecx0XDhS6B2C"><!--pnid:jBeWWlk0JmrnKDiwkLEJGu-->根因初判 · 降速从哪来</b><span data-page-node-id="S0KijxzVUzkxhmjXrqGc2o"><!--pnid:KwKsWawhnt9R1x3roWT6bv-->温度墙（环境）/功耗墙（供电）/驱动（软件）三类初步归因，指向环境侧的直接关联动环数据（与 机房巡检记录结构化与巡检日报 的空调记录交叉）</span></div><div data-page-node-id="82WQlJl8lh9MtcTv4VrQ3z" class="step"><div data-page-node-id="GeilnT3KvHPlbz8KMEqCW5" class="n"><!--pnid:aZNXjNeViVsyxMHBTUTPt1-->第 5 步</div><b data-page-node-id="wnlZRcOuxLUagvX9pWeBuh"><!--pnid:CdV7lBbyU341LktF9A3vWb-->成稿 · 利用率日报与异常清单</b><span data-page-node-id="7nYnRq1EOikSmaK1mtS5Dh"><!--pnid:V8rhjV91UJLqNj7r74L8p8-->客户版（口径+异常说明）与运营版（闲置与假高分布）双版，签批栏齐备</span></div></div>
+</section>
+
+<section data-page-node-id="PQgbzWoER9lk3Kp6uGCRyH" class="blk">
+  <div data-page-node-id="uspziwkYgrJLHkfe6f1heL" class="g2">
+    <div data-page-node-id="D3dt1rWqYvqVLiCg1BZdvY" class="card"><h3 data-page-node-id="P8gnm7toD5mwpKaafphFnA"><!--pnid:hyi1WDF11xKIq91NIBAhiA-->要准备什么</h3><div data-page-node-id="fl4ggTU6A4FG4zJOQVbnWF" class="src"><div data-page-node-id="x1oDJ1mdE8CN83zvZ7eat4" class="fn"><!--pnid:KmhgEl5xiFP3mYaNjNHmaX-->DCGM 指标导出（GR_ENGINE_ACTIVE / SM Clock / clock throttle / 温度）</div><div data-page-node-id="65WcpBMTLh0ScUP1uiMa7S" class="fd"><!--pnid:ukZ3a3KrqA7tujtffg11qY-->利用率与降频的交叉口径</div></div><div data-page-node-id="pT7N0CRKCJ9NJh5VLufz4F" class="src"><div data-page-node-id="khAvlA4sGgSdcz3DeH78h3" class="fn"><!--pnid:kqKAP3hVadGo70PbFGtOsH-->调度平台任务级卡时消耗（当日）</div><div data-page-node-id="OsmetyI2WxtSqWasyl7Tki" class="fd"><!--pnid:1dAWBCfxRqPN4iWEDPowcE-->哪些任务在哪些节点上烧卡时</div></div><div data-page-node-id="dVfI1JabdDcnrtFpWx6k9e" class="src"><div data-page-node-id="BiwbCKQGmBVFYReXpLLOMY" class="fn"><!--pnid:aMIQIRIJAd2mRsxxirwdhX-->客户反馈记录（群消息/工单）</div><div data-page-node-id="cYzxTXOJCTes2bSTDFZcNg" class="fd"><!--pnid:ONMQ4A8AReTKh6ekFqDbnf-->客户感知的「变慢」时间点</div></div><div data-page-node-id="JuxgXMDsddw4WPe9urbbXG" class="src"><div data-page-node-id="d4vdMlqyCVyW8mM2tNcNTZ" class="fn"><!--pnid:CKGMwVius2YcSFYfZe0NrG-->历史正常基线（上月同期）</div><div data-page-node-id="I4gG48iGUWVVduVBde4R41" class="fd"><!--pnid:bcZkBaTBJ6iWsSReREoM4S-->判断异常的参照系</div></div></div>
+    <div data-page-node-id="cGvNF5tAzyT05UzrfdPk7z" class="card ev"><h3 data-page-node-id="UQ4eTmORM0I8YpAPkv5uZQ"><!--pnid:BBQJGBpqOrnaziRe8ReKla-->为什么这个场景值得做</h3>
+      <p data-page-node-id="gibiR3GKPRnpLhnLmInfcY"><!--pnid:oyJMhdzYp4z1Odh07fPIId-->痛感 4 × AI 适配 4 ÷ 落地难度 3 = <b data-page-node-id="AgCV7QTg2fcdwaXRLLDh7v"><!--pnid:ywRKt7qj1RADPSZrAlyWFm-->6.4</b></p>
+      <p data-page-node-id="4pWYC6LhzY5SE9Mx27qLFR"><b data-page-node-id="0kfUotwNPb20a05Zz3r6qO"><!--pnid:FSqT0UUs1pXSVdumsPrBLr-->最大差异点 ·</b><!--pnid:WSSboqxbfZbDdetJykkA8L--> 与调度平台自带报表的区别：平台报表看的是「资源被占用了多少」，本场景多看一层「占用了却在降速跑」—— 利用率与 SM Clock、温度墙、NVLink 宽度三线交叉，假高一眼现形。</p>
+      <p data-page-node-id="XcybXiX8ghAUZdLMHt6JxS" style="color:var(--ink3); font-size:12.5px"><!--pnid:AavQQCVpyFlfab996b3xNG-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="63qGDyf6ijqJnnn2Lg3qEe" class="blk">
+  <h2 data-page-node-id="CuyVziRMkDcPJJzMIlEh3x" class="h"><span data-page-node-id="MOY1Ei8sEp9o05Z3rs3GAd" class="num"><!--pnid:N1KtwGgVsbrz4RR8C6ijCc-->五</span><!--pnid:T5OSlrYVs6LSgcqvbsO88d-->会产出什么</h2>
+  <p data-page-node-id="Z511AdlwBpkRttSZyXk16P" class="subline"><!--pnid:iRjghv5xDPfIjD3eF5gqT0-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="pbNlYjIZPGpcIdVFFHvhsV" class="outs"><div data-page-node-id="HWOOHD5ItVbIw39sVjnoXB" class="out"><div data-page-node-id="AHkFqMGRZ1Vzd3y48rr70a" class="on"><!--pnid:XJT69ayVjTSK5KNkPUvaQR-->正式件本体</div><div data-page-node-id="tZ9FWYgANfGjxq529CliqN" class="ot"><!--pnid:SRSSWsrv53ZN3Y48e2fzro-->GPU利用率日报.xlsx</div><div data-page-node-id="1kyeC8CI8yUfshKq3sZO3x" class="od"><!--pnid:AajiypcIlwZrU6tRYD7JKi-->正式件 · 客户版与运营版 · 签批栏</div></div><div data-page-node-id="FFEzI0XMyv01CoL6KRwVhp" class="out"><div data-page-node-id="yUnQ59MV2vPAmymcj3NdAQ" class="on"><!--pnid:JsoEDhHUzVh5agfu4SRkEN-->可派发清单</div><div data-page-node-id="6yjxTVWCJbI3usMXtm47sB" class="ot"><!--pnid:dJmUxkFj7Ciihiglxvg3q2-->异常任务清单.xlsx</div><div data-page-node-id="OeWkf9DrdYvdvLfzO2Gr7m" class="od"><!--pnid:EM7AxSGnX4c1oScqxx2wCF-->可派发 · 每条带节点/客户/性能损失估算</div></div></div>
+</section>
+
+<section data-page-node-id="58t1r2xF9JfGD8LIi3VuBX" class="blk">
+  <div data-page-node-id="D87Z1ZLMNs27CqOjUv9itX" class="card warn"><h3 data-page-node-id="qKihD5CohMWaUm4DwcF6dG"><!--pnid:PQ2hVLLt6ehVWCgRxdV6lQ-->这套东西不承诺什么</h3><p data-page-node-id="X9DU4pZEgQOQrm0GLqc2HK"><!--pnid:BLY6oHTsIsoElgy1eS32jT-->不替客户调整任务、不做调度决策。日报只点名异常与证据，处置是集群工程师的判断。利用率口径（卡时/在册卡×自然小时）与调度平台口径的差异如实标注，不硬凑对齐。不承诺「利用率提升」。</p></div>
+</section>
+
+<div data-page-node-id="jhpN89nA1nEpatlRjuHaYo" class="cta">
+  <div data-page-node-id="WEG7pYJrNGXsO39N6gAs7j"><h3 data-page-node-id="AmQzmZLdNpdbEvM9vdjpK5"><!--pnid:dJJQE2Vjf9VVEYdmSojRky-->想看具体怎么跑？</h3><p data-page-node-id="0lRjphwel05liCUlkInyVM"><!--pnid:M7HtS7bZwZvUKAAiawZEdW-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="tvoiPWeFOu1t985rXZGsDL" class="btns">
+    <a data-page-node-id="b9N0pXZIGjGg2Jd6ggDYYK" class="btn" href="LiveDemo.html"><!--pnid:Y0ozc0y0CsVc7I0bXN6SxR-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="tgmQ9imN2A2xeheSYJ8HWg"><!--pnid:3m4p5AmWcoYfevPfcfCVbc-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 判定与承诺一律人工签核</footer>
+</div>
+
+<button data-page-node-id="pD43uhOH9PDNKA1cC2ryUQ" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="y2KcbLSyIxUgevEXlPEDQw" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="LQsXs6dO5mIY8PPcR8EMaR" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="yMk34FYRY1o3b7w0Rma8SY" data-pnid-children="6yRaRfERTBNKZerRyTD6Xr">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="bA7Uh0mgujhn3wDOzcODXa" data-pnid-children="IKPrAF9HBU2Ej9s7ESnjKh">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

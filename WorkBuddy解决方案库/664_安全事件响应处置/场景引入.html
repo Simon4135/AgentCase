@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html data-page-node-id="oxIjnEOfS2Tyj3w8I8sR5u" lang="zh-CN">
+<head data-page-node-id="Rx7ZlY6IwDCUb9hp3KrmP2">
+<script data-page-node-id="P5L7fIMpr62cgRaZaVwWb8" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="EGaF65O5ZlydiAC2TBKTlW" charset="UTF-8">
+<meta data-page-node-id="O5TTAz64icgiOIzZbOUaIJ" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="1gI0Rxo0EiK7xB36OgQoBS" data-pnid-children="4IcUxJDQ3CTEyxdv6cMb3G">安全事件响应处置</title>
+<link data-page-node-id="WkLvzJR2KZHMYjXUQp0WSv" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="G3cODr3or7WFxpgsI5cPAQ" data-pnid-children="X3YcmLs1TuvMiibynrQaFh" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="zUNAG5MaC87JEuXPkMWlvc">
+<div data-page-node-id="aeqjG44fol3pKYgMGWh25R" class="wrap">
+<section data-page-node-id="oa8CJhNlJPUPxFlGNqvpN6" class="page-hero">
+<h1 data-page-node-id="PQ7UniXbjUwuFdpew4IfQX"><!--pnid:UvXrV9CKJkSovzf3vjmNnU-->安全事件响应处置</h1>
+<p data-page-node-id="E3zUWfNNJRF4d7u3PXAcnf" class="lead"><!--pnid:hCw8Zi1gzNWM9I7e5n8KTd-->门店分散终端多告警量大，响应流程不标准，处置依赖经验复盘缺失</p>
+</section><nav data-page-node-id="3OabuFh8jE72D73ImijGph" class="subnav"><a data-page-node-id="XYmPBhNluDiWsx3zMWGP5J" class="on" href="#"><!--pnid:8k0zEcDnznOQBFo9M2geAY-->场景引入</a><a data-page-node-id="x8hrRzGbY2htHzIC75JTA6" class href="LiveDemo.html"><!--pnid:zYAXoMIsYOjOj1QDFDSV7d-->Live Demo</a></nav>
+<section data-page-node-id="q3wyqd8gax2KkUMUvIoz9J" class="blk">
+  <h2 data-page-node-id="AN9uc8HCg8vvVosje7NMyQ" class="h"><span data-page-node-id="MYLsDpnnKM40ivNzr3g741" class="num"><!--pnid:ZSltenXoyBk0LXPkN4i2NH-->一</span><!--pnid:UFNoryRIjbcQbGGrYEFU7Z-->这件事现在是什么样</h2>
+  <p data-page-node-id="EUwJBlmbHEXgmgdVPdV80m" class="subline"><!--pnid:LNjphgGxC6yVHvnMMfLNuy-->连锁餐饮安全工程师 · 告警进来先拉群问「这算几级」</p>
+  <div data-page-node-id="hviOwnDC9HK30DTLBT7ElM" class="card"><p data-page-node-id="fi3H3PBLf9XhOrKRBIii03"><!--pnid:jh4Qhm1eVusXtL5qFsa1sw-->某连锁餐饮品牌，周一上午 10:20。WAF 开始连续告警：多家门店的线上点餐入口检测到 SQL 注入攻击特征，源 IP 单一、载荷在变 —— 从试探到拖库的架势。安全工程师第一反应是拉群：「这算 P1 还是 P2？」翻共享文档找分级规则，再找处置 SOP，隔离要不要先动、先通知谁，全靠值班那位的经验。平均一次安全事件响应要 4 小时，处置合规率只有 60% —— 处置过程记在工作聊天记录里，事后想复盘，根因和改进全靠回忆。而攻击载荷还在持续进来，波及门店已经数到 12 家。</p></div>
+  <h2 data-page-node-id="0XQ2gvguwPhNcGhXDCe5Tv" class="h" style="margin-top:22px"><span data-page-node-id="wOeuoNzoQKl2djl1dmt8Kg" class="num"><!--pnid:CqaRUIm1ffEV4vYZxvtd5y-->二</span><!--pnid:uUlERMnl55mdxu0Xxz4t5T-->痛点 · 每条都发生在昨天</h2>
+  <p data-page-node-id="uyfqztl5fwhjBqjJMf83oZ" class="subline"><!--pnid:ikBIpYK1VaFq5q7mcA5127-->不是流程描述，是安全团队每次告警真实上演的日常 —— 以下案例均取自场景调研与演示素材</p>
+  <div data-page-node-id="2KYz7HlieZ5r5Q9Ru1n5KF" class="pains"><div data-page-node-id="XS45rRtv5TnNQ3ErsBP1cU" class="pain"><span data-page-node-id="amXRLYedq0bGv6W7JIxme3" class="i"><!--pnid:MyXEMHya49a4QuIkVZp3i5-->1</span><div data-page-node-id="XrKKzIUXIHDSwl8EqNIj2v" class="t"><!--pnid:vOjwxmcN5bkZ4UcPr9ZO1x-->门店分散终端多：门店网络与终端环境各异，告警来源杂，统一响应难</div></div><div data-page-node-id="EM0eGBpveo4xhhFHSeUlMi" class="pain"><span data-page-node-id="wOBMKe9DMdWeXPfwSstsOW" class="i"><!--pnid:e4hw5HPJf6zgF7YQ0WZFOj-->2</span><div data-page-node-id="wXn7k5ax5oC8ee0q7UATcd" class="t"><!--pnid:IPVbfGxlDcam1iQoZfew43-->告警量大但响应流程不标准：一次事件平均响应 4 小时，先做什么全靠值班人经验</div></div><div data-page-node-id="5tI3lsrHSiiRj2Gwrq6WD4" class="pain"><span data-page-node-id="6ggM2xgJWZTgnpKB0TsyhH" class="i"><!--pnid:crZ3LzoYMBe7K013LN37rB-->3</span><div data-page-node-id="Uegtn5MkiXKTM6mG2MhnWH" class="t"><!--pnid:07GKDtrZCZqmf3iYDHG473-->处置依赖经验：分级靠感觉、SOP 靠翻文档 —— 老安全在就稳，不在就乱</div></div><div data-page-node-id="sJMq3yJWdfMss8qiXRgTQS" class="pain"><span data-page-node-id="1KSWhBS4M0aHN2lT8km3qD" class="i"><!--pnid:NDNb1YcVnKJBK96xpcQtIz-->4</span><div data-page-node-id="qEw7tfi0k7Pw0V6kDH1hk5" class="t"><!--pnid:p1RLP2g1yjWUNziAGESEWG-->复盘缺失：处置完就翻篇，根因与改进没沉淀 —— 同类事件换个门店又来一次</div></div></div>
+  <p data-page-node-id="CGLQFxFGjJ7ordCt4wUBel" style="margin-top:14px; color:var(--ink3); font-size:12.5px"><!--pnid:uWyfSzFijYKnnca83Tvho1-->说明：本场景与现有方案「故障处置报告初稿」的差异 —— 同为处置复盘类文档生成，本场景偏安全域的事件分级、SOP 匹配与 IOC 脱敏合规，对方偏 IT 故障的处置报告初稿。</p>
+</section>
+
+<section data-page-node-id="P9TP7ScEuuADdJdTrbdpgb" class="blk">
+  <h2 data-page-node-id="OhGvQY3ty7COtc5zvW4EU6" class="h"><span data-page-node-id="S8ZQuqTl9YSFJQR8BfEwPe" class="num"><!--pnid:v0QsDPNMe9kpVTSVUy29ft-->三</span><!--pnid:rpe172E848KfZCO8WrUQus-->换个做法之后</h2>
+  <p data-page-node-id="W93Q1Iw5dYCjvNeD5rmYQc" class="subline"><!--pnid:knqdXSifuv2QW1IfMeQHAW-->变化不在「快」，在「分级有据、动作有 SOP、过程有记录」</p>
+  <div data-page-node-id="p2e551UlR94LK6K1WPIM0M" class="cmp">
+    <div data-page-node-id="24ODgGCasM5DXNc37RguDM" class="old"><h4 data-page-node-id="9vOuMBBc4Q1r0LMjfQVDoD"><!--pnid:73H2XJfJ7iJ7yMURbuphJJ-->✕ 现在的做法</h4><ul data-page-node-id="szGRt6biL0UlORqtqdeokq" class="list"><li data-page-node-id="tOuNZOyFpLEuhc7swO0y3W"><!--pnid:gg0xe1eKzJoIt4YiHnckIB-->告警来了先拉群问「这算几级」，分级规则翻半天</li><li data-page-node-id="JFIEtPHS7DFZA096SZhpFL"><!--pnid:y0D7K9B7MMZXpbFVOifZ8W-->SOP 在共享文档里，隔离先动哪个凭经验</li><li data-page-node-id="JF7vyQJsslCsMwQ4UsgdYP"><!--pnid:rHxD1xPmWnL7xOxgoRKOPE-->处置动作做一步记一步，散落在聊天记录里</li><li data-page-node-id="oRV6DwEzNUsqfPeJBmKir3"><!--pnid:BRjT5ZNRY8tZg8UtHWxx5L-->复盘会靠回忆，「下次注意」式收尾</li></ul></div>
+    <div data-page-node-id="DCBcrQiy3rPXQcrEX8XKqM" class="new"><h4 data-page-node-id="HoawgD1iuhauJYlx3d4S9r"><!--pnid:jGb8XWFKhji9KCmntnZzQN-->✓ 交给 Agent 之后</h4><ul data-page-node-id="bmbrXhgryHdNdNkaJzTwK3" class="list"><li data-page-node-id="MzGK823Z9cJfVSDisryTy3"><!--pnid:KjtS6qwSvks7G8beaMxLlu-->事件解析：自动提取事件类型、IOC、受影响资产、时间线</li><li data-page-node-id="xhxi80QS4RprgWfxvqnObs"><!--pnid:QYcw2ebVmTYEcfVmaw5WvY-->自动分级：P1~P4 先规则匹配再 AI 补充，分级依据引用标准条款号</li><li data-page-node-id="8XUqi1ADLuTlaIFjGXkXNY"><!--pnid:kSBV3WgJmC4quXlc91l0Km-->SOP 匹配：隔离→取证→通知→修复→验证 5 阶段，步骤/负责人/时限一次出齐</li><li data-page-node-id="tMSzjgnjj0b4WndhB1meDF"><!--pnid:Mpvmp1esff8DCZZXx8v0gx-->处置记录 + 复盘报告双份落盘，IOC 与日志自动脱敏</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="6xBGejngRaSceWcOSqLKMs" class="blk">
+  <h2 data-page-node-id="naFFoZ1M0zvaCKuPRifjwG" class="h"><span data-page-node-id="uAFWu1ebFk1IF30XSgkKuq" class="num"><!--pnid:4mCODNXJinUceRziFibZjv-->四</span><!--pnid:4JvEd5jzcJvyO6YAmt8dfK-->场景闭环</h2>
+  <p data-page-node-id="9BWgcRWuxRT2FAQtD6MYvj" class="subline"><!--pnid:Bd7SJ9ovlqa3qlzwX1Y6b1-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="Nuadc1c4hvYvwWh6HCp3qO" class="flow"><div data-page-node-id="kiu6viyrDsfrx1Ym3OV69k" class="step"><div data-page-node-id="qG7YtSJPLAfyrtZCOhlYjw" class="n"><!--pnid:qSMyhlPetSnYmf18lc295n-->第 1 步</div><b data-page-node-id="u0FLjfzQYvBkNKPOhJlp6X"><!--pnid:YhFO1sIX28pHC85cidYIze-->事件输入解析 · 要素提取</b><span data-page-node-id="Tj4LkaJh5j6zQrysVlKBRJ"><!--pnid:4MJUFU7w4HgEKwXkGySXGo-->接收告警文本/事件描述/日志片段，提取事件类型、IOC、受影响资产、时间线</span></div><div data-page-node-id="XeAmkURxT0RhUgKAk52zfp" class="step"><div data-page-node-id="PCJyGVVJKNDyk1xdm5oQqo" class="n"><!--pnid:0JERIFZgz7YH28RNG8f4sI-->第 2 步</div><b data-page-node-id="hggQLzk9Z6tE0tbI8tmt7S"><!--pnid:LR7bKlzc15D4JNrtgns7WP-->事件分级引擎 · P1~P4</b><span data-page-node-id="kFKVDFrjdqs7GfI9g2w1XL"><!--pnid:0ii1KARIOiY0voCoju3zUt-->按餐饮行业分级规则表先规则匹配再 AI 补充判断，P1/P2 强制人工复核标记</span></div><div data-page-node-id="9lr2ppxQLntXhYLC31TEg5" class="step"><div data-page-node-id="9J2ljTgeVDQkG03rwdDefV" class="n"><!--pnid:jwLxbvoTr5WYRdt5QNHFsz-->第 3 步</div><b data-page-node-id="5lEygO42IGYQnMzTvbzczv"><!--pnid:nrlfLEnQSARJTdaJi9Fsar-->SOP 匹配 · 5 阶段清单</b><span data-page-node-id="NMK1UkIYERqbi8fYaiUKzP"><!--pnid:kmaFSWjzAVfN5o4r32z38c-->按事件类型+级别匹配处置 SOP（隔离→取证→通知→修复→验证），填充具体参数</span></div><div data-page-node-id="dU9JRJXEfQgpHXLYIPv4b2" class="step"><div data-page-node-id="oZ6ihRAeqF8BJ7TTl22j6x" class="n"><!--pnid:iIWx4uEUtXMkDXnfRlxbf6-->第 4 步</div><b data-page-node-id="brqn5tNtuYZn1VvE1ZCYdI"><!--pnid:KJHXoL2zU9DmJ24KricMK7-->处置记录生成 · 固定结构</b><span data-page-node-id="QQYgBuO7TPmHQkXwqZt6uj"><!--pnid:8j0H9bJ4INEzuOGxLY824D-->Markdown 处置记录：事件概要/分级/处置时间线/关联 IOC/遗留风险</span></div><div data-page-node-id="RicoUEhN7xdzekoCnOV4Ok" class="step"><div data-page-node-id="7k20eGmPDHGh7rIWpXTwqN" class="n"><!--pnid:1KFP9aCIQa0pe39TZR3GDs-->第 5 步</div><b data-page-node-id="aSeqlcJqNFmF5UlctFTOKp"><!--pnid:nIT0k7tzQSm4oo2Imha5gn-->复盘报告生成 · 模板化</b><span data-page-node-id="2hdYZIEzCbMTvEBNsKEl7L"><!--pnid:PPNuyKzVcOlpGpYNPENUV8-->根因分析/改进措施/责任追踪/SLA 达标判定，可直接用于安全复盘会议</span></div><div data-page-node-id="4roNWe7triUDuR9LERbYIU" class="step"><div data-page-node-id="d2qfaSHd2R58QmizZ7pJDG" class="n"><!--pnid:R3yuc0Bq8Jm3hwcZEZckFK-->第 6 步</div><b data-page-node-id="dxGECQZjHZbS9uQq2SIl2L"><!--pnid:auXHwtR4flbnRXK3p738zJ-->脱敏落盘 · 合规归档</b><span data-page-node-id="lqxNiv13hipoIbYeACDyMs"><!--pnid:nemfITKVMysXrBIWllFAlO-->日志/IOC 中真实 IP、域名、用户名自动替换为占位符，处置记录与复盘报告落盘</span></div></div>
+</section>
+
+<section data-page-node-id="mBKNHExn3zuYnuhcFSvcRc" class="blk">
+  <div data-page-node-id="QPjIztIo83PlmuKzXNmBnH" class="g2">
+    <div data-page-node-id="aqoPr17MoouF33orh4bPnJ" class="card"><h3 data-page-node-id="AA1pR6tKqarzV9kK7C1uXX"><!--pnid:3cEDNwFMHmx2ZkR4dOKFCJ-->要准备什么</h3><div data-page-node-id="Knud2OUcLLvbOfiDjp0ACK" class="src"><div data-page-node-id="L5XxKWFQTaBBhUfr6KEHJB" class="fn"><!--pnid:yCBoyeLAizSJ9ud3ZQc74m-->安全告警文本（SIEM / IDS / WAF 告警信息）</div><div data-page-node-id="kB0wUALRkSCD5vW8uOtNH3" class="fd"><!--pnid:XohWNU9GCuSiX1Fi5o8dP7-->脱敏后原样粘贴或拖入 —— 字段越齐分级越准</div></div><div data-page-node-id="gRQ8Rr8fmx2BwzIXxwQzrk" class="src"><div data-page-node-id="zLfoJiqqe8W2IPatNlbdUN" class="fn"><!--pnid:A5SlGUQRiYxqK8rITnKscX-->事件描述与日志片段（可选）</div><div data-page-node-id="xG4Bz9relBhjlGnxLXuPXS" class="fd"><!--pnid:tqRwPUaASQAKkd76dMSdiv-->人工发现的异常现象描述 + 系统/访问/操作日志</div></div><div data-page-node-id="fM7HYeOP4ey7VeQbxrVX9R" class="src"><div data-page-node-id="VQMcnjC05pat6SSlATPTib" class="fn"><!--pnid:E8JM3qbndhwxaj2WAUrLZ1-->企业 SLA 与分级规则表（可选）</div><div data-page-node-id="3o82lIk341a9tUr0x34PtI" class="fd"><!--pnid:AzVbGc8oOTa1azAfXt2wsk-->有什么给什么 —— 缺项按行业通用标准（P1~P4）处理并标注</div></div></div>
+    <div data-page-node-id="vyeawenD3JNzujMufUvyUs" class="card ev"><h3 data-page-node-id="0a5xwd57oxsQNeLKcY7VJY"><!--pnid:oA4nq8QrY1oI1RKogfheCD-->为什么这个场景值得做</h3>
+      <p data-page-node-id="NZvHVj7j2aMTeCbS32ZPn3"><!--pnid:v9RIzY1HgTTkf6h48cJ2RZ-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="W2fKPBafOKAnTDWt50tsNZ"><!--pnid:h5i79nZbYhxmxUHCrBLNFm-->8.0</b></p>
+      <p data-page-node-id="mMaNquUiuGObADINaj88yt"><b data-page-node-id="SukOQf6s93SgPlnCa5hfzu"><!--pnid:6wZ13YuxcUYxVbghRu69m2-->最大差异点 ·</b><!--pnid:9mowjSfveNC8C0iHa30uko--> 不接安全设备也能用：告警与日志脱敏后原样扔进来 —— Agent 负责分级、SOP、记录、复盘，隔离阻断由人工确认执行。</p>
+      <p data-page-node-id="twrAm4PCdIRmETS1ie06SU" style="color:var(--ink3); font-size:12.5px"><!--pnid:4xtUBLQcW850MwXWnJEjSZ-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="HDlE3KpA43mc0p582I8WRH" class="blk">
+  <h2 data-page-node-id="5FOP9HfMbo5jgwIYQ6L9TP" class="h"><span data-page-node-id="xg6hNOOrevqg4xUhQNZYRS" class="num"><!--pnid:MIWo0dHlb9hBRbAq8XYFCc-->五</span><!--pnid:Ubdb23rq38EHaXyjZgzZNY-->会产出什么</h2>
+  <p data-page-node-id="HDkeIl5rUaiWcvU7uyD2LL" class="subline"><!--pnid:BHtshIYD6G2OzNtwyT7s1H-->判断标准只有一个：这份东西安全复盘会上能不能直接用</p>
+  <div data-page-node-id="GyfubWvFcoLVwXpuwSg3ZQ" class="outs"><div data-page-node-id="vH0bcAHtoWePKZjvNSpxl5" class="out"><div data-page-node-id="fC5ityXxJK8xUke5UtO0pq" class="on"><!--pnid:GtKsl0kccVgkrKkTEHCRBt-->正式件本体</div><div data-page-node-id="0WFplEbexyxMZXc7iTslwS" class="ot"><!--pnid:9MNyVmcso2LRYl2Ev8QnOh-->安全事件处置记录.md</div><div data-page-node-id="HtQ3xSITQRyfjkuRiiClMp" class="od"><!--pnid:DYgqxa23M3yxgB6ajuPepd-->事件概要 / 分级结论 / SOP 清单 / 时间线 / 关联 IOC / 遗留风险 · 可直接归档</div></div><div data-page-node-id="8QFU4yS5D7bz2X2XVRtQfX" class="out"><div data-page-node-id="gs0ioMpLx8DJ6WoUKtJscH" class="on"><!--pnid:W8DdlJGfitMhbCHsLJkNmH-->复盘件</div><div data-page-node-id="4HD5c70vVS7WGdaSO54Qsa" class="ot"><!--pnid:pDBMBawwh3Jk0hlfQ6r091-->复盘报告.md</div><div data-page-node-id="ZRRMFW2FCVrVWXzIfeCwHx" class="od"><!--pnid:3EEG7pwXqtI5uoIzmAWaEx-->根因分析 / 改进措施 / 责任追踪 / SLA 达标判定 · 可直接用于安全复盘会议</div></div></div>
+</section>
+
+<section data-page-node-id="dV4clOfB2qhy7305O3tafH" class="blk">
+  <div data-page-node-id="EmGcZpeJu0kYHy6saUkhWZ" class="card warn"><h3 data-page-node-id="y7xVTi2Bk4OT47pLGL6fPq"><!--pnid:xDpNKn86FJ05M7pI5ug7xe-->这套东西不承诺什么</h3><p data-page-node-id="MfIdtFZGa9oz9j9yaKLVHA"><!--pnid:R7XM1zxxRbrvJD1Odm1gpR-->不替代真实安全设备操作（隔离/阻断需人工确认执行），不直接对接 SIEM/SOAR，不做实时告警监听，不保证分级 100% 准确；P1/P2 级事件分级结论与涉及业务系统隔离的处置步骤，须安全主管复核确认后方可执行；SOP 时限为行业通用标准，不同企业 SLA 有差异，须安全主管按实际调整；IOC 与日志自动脱敏可能遗漏非标准格式敏感信息，处置记录归档前须安全工程师复核脱敏完整性。</p></div>
+</section>
+
+<div data-page-node-id="4qnsYHCMhC0uW7YdE4EabV" class="cta">
+  <div data-page-node-id="8JAUnh21X9M9oMPqwpXZG6"><h3 data-page-node-id="s81cyGZZCzDr9tJxb6rAS9"><!--pnid:5EYGeBj4JBg7eQq71f0LNK-->想看具体怎么跑？</h3><p data-page-node-id="apz5H61m4DMCM3R6u2g10n"><!--pnid:lkKjmPE058BB7OBuRCAH9E-->Live Demo 里有一个完整案例的每一步，包括哪些结论必须先经安全主管复核</p></div>
+  <div data-page-node-id="dADs4iL3Y90udqck98KkkB" class="btns">
+    <a data-page-node-id="GPtDb9yjPfi0Tv2wGzxvFV" class="btn" href="LiveDemo.html"><!--pnid:Qyq816itBCW1fZomOcNvaV-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="nya8ilT3v2DRF2VdvdELX9"><!--pnid:K0zOjeLuJTpReJ78Clbku7-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="KjQca0zgFHiZ2kfVn95SMw" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="gh1PfMJQXv6qMtbgJ1jsxo" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="2Ct6gpif0F6tqG664LQ5ox" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="jmfBTLJZI5a8P2sc8M1QTT" data-pnid-children="6VRYltOH7QwHN4bGFb0QeP">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

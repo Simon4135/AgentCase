@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html data-page-node-id="idd6SKvNxKDF6JYcaQsF8W" lang="zh-CN">
+<head data-page-node-id="W8oF1bAMgzbihVYWlJOjCi">
+<script data-page-node-id="zSMejwh8IwVfG57jSlS1tZ" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="YssJnqt9codDHHKtMcWO7x" charset="UTF-8">
+<meta data-page-node-id="sBrpgPIuvW7lj4GtR0C515" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="ye7n9NukHpKic8KG8SC8sf" data-pnid-children="LBJm8KTu3yUF3CVfdJXuwG">工程变更管理ECN</title>
+<link data-page-node-id="mzq6iZIB57SjCaRomp226Z" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="BaTqCc5CfH41u1TBCt3hQR" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+<style data-page-node-id="1sCrb6YoTYo8mUXzwkEjJ5" data-pnid-children="f6ljfQS7YJeZODP6QYRfS0">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="7qhPEb9vHOon6g0CQbdDCt" data-pnid-children="r1ulV72NEu467oYDfkiTms" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="eotbV1kb8cjwbt1R0NXXXW" data-pnid-children="SR6dGAFz6LKXNh22Y2OykK" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="VJZ6qfvp8cK2C4vdgBvtTI">
+
+<div data-page-node-id="nmfM8PgioeWeREJgvFsvro" class="wrap">
+<section data-page-node-id="8j6zaurspkznmZB0g2UqYI" class="page-hero">
+<h1 data-page-node-id="DdeUMDqmlhDYQ6vgZDtIDZ"><!--pnid:iGl4jboyJuP0sH0tAkZQCt-->工程变更管理ECN</h1>
+<p data-page-node-id="MJOrqT5uIgalrPrvAqeX5o" class="lead"><!--pnid:xzcpz5iMtpYM7zFptCNGiL-->覆盖变更发起→分级判定→影响评估→验证计划→审批→实施→效果确认 <b data-page-node-id="Q6ruMS3rXhbakrAH6UtRB1"><!--pnid:lH4gdwxWKQVokkM9F9UfPp-->6 步闭环</b><!--pnid:Wd6T7NHfXwIVQu91UlsogG-->。把&quot;拍脑袋分级、靠人记 FMEA&quot;变成规则化、可追溯的标准生产线。</p>
+</section><nav data-page-node-id="jGwyq9ukfZaTVkCIhLBR0H" class="subnav"><a data-page-node-id="IQt1uNxXZ6MwghW7eQ50EC" href="场景引入.html"><!--pnid:YJwiXPqidVySzyczPyTqC3-->场景引入</a><a data-page-node-id="lIQjQOc9fQASUUKXZFaP2P" href="LiveDemo.html"><!--pnid:M2IqYTSpKOmQPDtijwhuZy-->Live Demo</a><a data-page-node-id="PMkqJdXHelpoofkpDTt7kY" class="on" href="#"><!--pnid:ZDfWiwis5khOGmbJb5OCbn-->推荐任务</a></nav>
+
+<section data-page-node-id="dYMOzC0zf7GNZR5AbuKh0d" class="blk">
+  <h2 data-page-node-id="XmJuh3Xa2tyuDubplywaDd" class="h"><span data-page-node-id="ZCW98AZM0XfmV8NeU62VLA" class="num"><!--pnid:8r7BCbV0ZNUlSVQYpw8LIt-->一</span><!--pnid:ZOvF39NQzc2iUu0aLdFQcM-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="ujo2Pcy82zT8ISF2daypLJ" class="subline"><!--pnid:nF0mrnOV48iEaFIj4kk5xW-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="cG5NwBHYmcEMZedZUPdFh6" class="card"><p data-page-node-id="FW7d6ek13wQVbR654tXpwz"><!--pnid:GNYoxTFaa4AkFZNYv3FqwU-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="7cxunTR555MSHfnbs1ADgF" style="margin-top:10px"><!--pnid:buIqBGVX97Mo9dXWY5fLyT-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:NZ5oq2RvvlFJqJRsGu3zFg--><!--wb-skill-start-->
+<div data-page-node-id="sA3g0IDNW7j9wfwHFc7wAi" class="wb-skill">
+<p data-page-node-id="TyQJ8lB5H1KWrdY6NqPZSI" class="wb-skill-lead"><!--pnid:zFeTg8oicsB6xWLi7ypUXz-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="3g7atN4uvTQx4KhAmqCKR8" class="prompt" id="wbSkillPrompt"><!--pnid:CxOVQKVXRqgfcQGLTTd9IK-->【准备】这个场景的规则都在「工程变更管理ECN」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/cXM5uzWzjZPIA8pF7cPieo/0/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="Mq2yBw0sn87KGlaDoJXSsJ" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:Kwvd6oNH17tuMK9sxzYEjR-->复制</button></div>
+</div>
+<!--pnid:4VJ4E1Jp2TwKemP6qhe6L5--><!--wb-skill-end-->
+<section data-page-node-id="wkZi2AtxLdb0wqPjR6fwG0" class="blk">
+  <h2 data-page-node-id="11ylmr6zUhAkk8GQDDr0Ft" class="h"><span data-page-node-id="K7ZttPpPAzZNOc5kmsBS0l" class="num"><!--pnid:AtgkXHcyrTsBPTJ4klNun0-->二</span><!--pnid:rGcSfFZXv5l3pwo19yyNQK-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="kz33qFGM2F0GuFGLEXSReG" class="subline"><!--pnid:JqsVGf1thaHvbQxebvS0wx-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="rxKQyyxPuOoWrvHxHwWUh1" class="tlist">
+    <article data-page-node-id="XdSLMnRqH9iVTJlQKaVsnK" class="task">
+      <div data-page-node-id="l8jLUXjX43weqdSYpW7XaM" class="th"><span data-page-node-id="74fCANBscyXLr61dmLW7jh" class="no"><!--pnid:Uk0lScghQc0BLRUxkL37p8-->01</span><h3 data-page-node-id="nufxOR26tKkpUdoSAaGkOe" class="ttl"><!--pnid:unvFO0gFp4XnOVqdnZmY9Q-->首推默认</h3><span data-page-node-id="TXwcQXAUUz3gonECZjFDQR" class="star"><!--pnid:AOtr8bSjme0bsyvhp21cHM-->与一键体验入口一致</span><button data-page-node-id="itwqZRvWbsBFBZt8Kf0BVv" class="cp" type="button"><!--pnid:h8jfhIiVKVqTbWsYzb3QMO-->复制</button></div>
+      <p data-page-node-id="MPgWFSrlQykl0ylsS4TRR1" class="tp"><!--pnid:yHmhQ5qANpKiDnj7pPynsc-->研发决定把智能控制柜 P-IPC-01 的主控板 M-PCB-001 从原供应商华芯微（S-001）切换到汇川（S-008），原因是原供应商来料虚焊，批次 PCB-260708-A 有 140 件在冻结。三份数据都放一起了：BOM基线_全产品、未完成订单清单、在制工单清单。帮我评估这次变更的影响面：沿 BOM 反查这颗料在哪些产品、订单、工单上被用到，这笔库存和在途该怎么处理。产出三份：一份 ECN 变更单（变更前后对比、分级判定、验证计划与审批链，PE 拿去走审批）、一份变更影响评估表（产品、订单、工单的反查结果，含在制数量、在途采购与旧料库存影响）、一份分部门待办通知稿（采购、计划、品质、仓库各一段，能一键推到企微群）。</p>
+    </article>
+    <article data-page-node-id="saAYuNPOd6AmY6sphF8y3G" class="task">
+      <div data-page-node-id="V0P0qvinyhG8rxcA2BxQFk" class="th"><span data-page-node-id="6U6xl33AFcphwt1WCwA9qB" class="no"><!--pnid:PiCLEuGDUNGYb239tHDh2a-->02</span><h3 data-page-node-id="rwxhWWWn0u1lgR9oZcMQhn" class="ttl"><!--pnid:YH9t16qvDkWvklyPeP1dyO-->只做 BOM 反查</h3><button data-page-node-id="YzAK1Dn1SoQhIa2uNXsej6" class="cp" type="button"><!--pnid:zMzULo0Z9slZ55VuTTGOyF-->复制</button></div>
+      <p data-page-node-id="WJL02OD7NO6yNqeKmIcSrN" class="tp"><!--pnid:Uvn43jRBg1hfAKwdZdZAQj-->先别出 ECN 单，只做影响面反查这一步：沿 BOM 全产品反查主控板 M-PCB-001 在哪些产品、哪些未完成订单、哪些在制工单上被用到，含在制数量和在途采购。产出用 Excel：产品、订单号、工单号、数量、状态。</p>
+    </article>
+    <article data-page-node-id="MsP87triLjOcYy0LxfmQqG" class="task">
+      <div data-page-node-id="nU2wMoqVHXdH08ZY74ZuLt" class="th"><span data-page-node-id="HWOGSptrZFddlTdO7Q2t0X" class="no"><!--pnid:jOuQjG4FdmYqPhGG057xLb-->03</span><h3 data-page-node-id="g784BuLyHoWSjvHBc8A466" class="ttl"><!--pnid:fhjiG2Bju1mqkgpzJXRSWz-->换成工艺变更再评一次</h3><button data-page-node-id="yh2vpNHpTxdP0LRUXn3VoD" class="cp" type="button"><!--pnid:y8AatdpVVSVcHGO5U8WPDT-->复制</button></div>
+      <p data-page-node-id="Cicd5eQZt7oOd3jILlzfjI" class="tp"><!--pnid:ePLwS8BI6E0CUjLfYHpovR-->同一个产品，把这次改成工艺变更（焊接从手工焊改为机器人焊接、参数不变）重跑一遍：变更级别会不会变、验证项目与审批链跟着怎么变。产出用 Excel：变更前后对照、分级、验证项目清单、审批节点。</p>
+    </article>
+    <article data-page-node-id="oP2sIFgCV79pKK3BrWG2ta" class="task">
+      <div data-page-node-id="A2UA9RE1jYHpYpTSEXeZKR" class="th"><span data-page-node-id="Bj85c8NSHIctLO90wNCxGn" class="no"><!--pnid:j8GXXIRIkK97pqh0Uany23-->04</span><h3 data-page-node-id="WuDBct4POtLpKLGUZd5RD6" class="ttl"><!--pnid:ZsoAqlTCkEhEWvj91sq2vJ-->一次评估三个变更</h3><button data-page-node-id="1yxHTaZ1pKlGIV57n3J2WT" class="cp" type="button"><!--pnid:7Q2XDwbhl48JSpKZFObkyR-->复制</button></div>
+      <p data-page-node-id="wF4VUzGOYThlBKIjgXIEVE" class="tp"><!--pnid:jBRFNCCk4m4ZkfhCL4LT8k-->演示数据里再加上另外两个变更申请（一个工艺、一个材料），三个一起评估，各自出评估结论，最后给我一张三件横向对照表：变更级别、FMEA 是否联动、验证周期、审批节点数、成本影响。产出用 Excel。</p>
+    </article>
+    <article data-page-node-id="ZU3vAQ1rAvtJbnovewaTDw" class="task">
+      <div data-page-node-id="K6yNZgdCk11cO5BMzzCAjw" class="th"><span data-page-node-id="XMVOLDI6lcCESoPW8IGX6s" class="no"><!--pnid:yRfljkUVEml3slR1VVz6Fh-->05</span><h3 data-page-node-id="OQryT5nQTwS18INOn8qQxY" class="ttl"><!--pnid:3fGJ0JvMT4YmuRyTe2m2e0-->给采购和仓库的待办通知</h3><button data-page-node-id="V8YE0zoBsRqQFnKDTCJkJ1" class="cp" type="button"><!--pnid:ZWevu9MoyyUdqjwkq0ELWi-->复制</button></div>
+      <p data-page-node-id="qXvcxfJs9pDyJ6ROLzqFsP" class="tp"><!--pnid:IM132Yv73QX4IslDTVpohT-->把分部门通知稿里采购和仓库那两段单独抽出来写细：采购要做什么、仓库旧料怎么标识隔离、什么时点前回话，其余部门先不出。产出一段可推群的纯文本。</p>
+    </article>
+    <article data-page-node-id="q0HSr9ibqcgHj1gFKgYYNM" class="task">
+      <div data-page-node-id="19af1mPfCm4ri5KhZlApI7" class="th"><span data-page-node-id="qBtZk2cFhe6A42iYNxft8z" class="no"><!--pnid:w7MrUPnRO3qTeItSjacohb-->06</span><h3 data-page-node-id="0L5zmEOIb5pP4602jHZ1t9" class="ttl"><!--pnid:ellQ8TqxhLy4XMTIXESpZg-->让它反驳自己</h3><button data-page-node-id="LsjX8rkuLDP0OyLITzhrsh" class="cp" type="button"><!--pnid:pO5TgelLgtxLTOqBgK1E3m-->复制</button></div>
+      <p data-page-node-id="8bKnS7j4Xi4CTfxVhX14u7" class="tp"><!--pnid:SinavY0qVXiYkEJomeTHvx-->对照 BOM基线_全产品、未完成订单清单与在制工单清单：你判的变更级别和验证项目，站得住吗？把可能被质量经理打回的地方挑出来（安全特性有没有涉及、FMEA 是不是必须新建、客户批准漏没漏）。产出用 Excel：判定项、依据、疑点、建议。</p>
+    </article>
+    <article data-page-node-id="E4Xwiio0xzpU7UKkSLdcYe" class="task">
+      <div data-page-node-id="yQBq8bhUrmgzA8fsM09VF7" class="th"><span data-page-node-id="Xng1g5CWP6tNGHwPKoVbBv" class="no"><!--pnid:VUyTpw0fqA1jt7FEApdXF6-->07</span><h3 data-page-node-id="B8pcun48uI7XuW9idwncSi" class="ttl"><!--pnid:3elaToX3rziDfFcrkRVYvf-->专门比历史变更案例</h3><button data-page-node-id="b8lsFdZ84JVleIUfegL7vn" class="cp" type="button"><!--pnid:gj1m4s4aNkzEUlRwCj3x1h-->复制</button></div>
+      <p data-page-node-id="B1lFkjnjRDEQaQM7C6uLAV" class="tp"><!--pnid:YGhp2UP83u3pBon3HdaAsq-->把这次供应商切换跟变更案例库里同类案例逐条比：当时漏评了什么、后来出了什么问题、这次的验证计划有没有盖上同一个坑。产出用 Excel：历史案例、当时漏项、后果、本次是否已覆盖。</p>
+    </article>
+    <article data-page-node-id="ueKvKL49HsJKuxj8MgfEVV" class="task">
+      <div data-page-node-id="cajW2uwBFZj2UD5gUPlW7B" class="th"><span data-page-node-id="6cbFXBIFBuxsoFXPFZ7gaw" class="no"><!--pnid:uLD0iNbi0bQgfAThjN5Zdk-->08</span><h3 data-page-node-id="L6FHnHWnzuWzgaFuX5vmEt" class="ttl"><!--pnid:e27iV1VlrXz7EbcNgNWXdt-->对照规范条款自查</h3><button data-page-node-id="gRQt3bLImlUWgFSLfev1Fx" class="cp" type="button"><!--pnid:qvKhvtIfukkhN169wjQ3WS-->复制</button></div>
+      <p data-page-node-id="8MuzJ4yzID2GI5rQSXnsXT" class="tp"><!--pnid:a6NSjbBMSy8qJB2dlxMbRn-->对照变更管理的规范要求把这份 ECN 自查一遍：分级判定、FMEA 联动、验证项目、文件更新时限、客户批准节点，哪项缺或不到位。产出用 Excel：要求项、本次是否满足、缺口、补齐动作。</p>
+    </article>
+    <article data-page-node-id="KnxRFiw8PfHCwIIS9zeVG9" class="task">
+      <div data-page-node-id="6ymWD95yoWoG4tVtDhkayn" class="th"><span data-page-node-id="i59mtjoY1Vpl8z4WUR5pMh" class="no"><!--pnid:bYzmkkOrofwachLZilfw9x-->09</span><h3 data-page-node-id="SxYmIvtuxyv9GfYaWSz9dV" class="ttl"><!--pnid:DKdPmQx1qgLbWNDhhCubWD-->折算成停线与库存金额</h3><button data-page-node-id="gfAtAK2wu1mICwwqKjGvh0" class="cp" type="button"><!--pnid:vZ8MRQzpa4LhzdaSapIr1J-->复制</button></div>
+      <p data-page-node-id="ixT8ib8SUWEKQmzW97qkNm" class="tp"><!--pnid:UttnCX3A1LJEOwe6Yai2nJ-->把这次切换折算成钱和天：冻结的 140 件值多少、在制工单要停几天换料、在途采购能不能退改、旧料库存敞口多少。产出用 Excel，每项带算式。</p>
+    </article>
+    <article data-page-node-id="fJ60hpiHmx8E42FoX60b4j" class="task">
+      <div data-page-node-id="biihHtWYGjSH3V2t6l1SzY" class="th"><span data-page-node-id="jOuwcwLQbmOzKgVEQttXKI" class="no"><!--pnid:9stlh8PbTQtfNF0q3i0yuH-->10</span><h3 data-page-node-id="BRWtoCoFU2QkrE62QfbRFT" class="ttl"><!--pnid:Ea9OETOWWGxjQK5G69VqMh-->沉淀成变更评估模板</h3><button data-page-node-id="OgekutIHlstR1eLyxAs3mv" class="cp" type="button"><!--pnid:Uc7gz3nlBgHmuvPkHzrlDD-->复制</button></div>
+      <p data-page-node-id="ZphmJAyi3jhM0yNulTKoaY" class="tp"><!--pnid:CWpzJoGYYyCDGitQtEZyGg-->把这次的六维度评估项、分级判定标准、验证项目清单和审批链整理成一份可复用的工程变更评估模板。产出用 Excel。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="iS4K9o2bF5WzQpWLk5PCOl" class="cta">
+  <div data-page-node-id="QloROp0xP4CBRnUgjud92H"><h3 data-page-node-id="PW38JpkjHm9HcxSUwwQE71"><!--pnid:DUxmJc6yOVSgp0ZNXy9EU9-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="BYqY5WlzcOBiFw9M0wIzb4"><!--pnid:kavVd9bYXzj7A9LkIitaD5-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="rYLQZ0TzBwUObSKslmp4yp" class="btns"><a data-page-node-id="UhXoTfuvVa3wLzl9Enk6n5" class="btn" href="#" id="ctaContact"><!--pnid:ZQE1dkeG79cKQUE8odJsDh-->联系我们</a></div>
+</div>
+<footer data-page-node-id="RDmUMEK1jLZCfPPIDyQyqz"><!--pnid:JZFlf7EgNOYYdzEbzUVaXK-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="N5zm6Kq4jhcXOxAbbLbh9L" data-pnid-children="pj8nKyunZPuwy5pxj8SwhO">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="ZO4BHaM714pUlS2162MaJS" data-pnid-children="XE8VBI8sApVUR0H1k0uf76">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="Klf42BhigvuTaiDGJutkwv" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="MYw0Ze1NTz6ZhDAqZwJj3i" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="K201ZThAKHGThd8BEUAAbB" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="vosSNTTYJT5hsGmjvasRab" data-pnid-children="ufc7b22l8xIXJT4ZcezJd5">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="Vwi6TVQKxNl17MyQqchCkG" data-pnid-children="KXI66GnlIESiiLTucbqiQF" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

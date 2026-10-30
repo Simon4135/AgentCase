@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html data-page-node-id="KOrdINpzf2765YC5WZZOGc" lang="zh-CN">
+<head data-page-node-id="QKah6M05CMNNMTyH7afIMC">
+<script data-page-node-id="7BkbiLGMEh0dUwNWZFUz7C" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="fBn6MjmdYi8ddfNkY5T4ix" charset="UTF-8">
+<meta data-page-node-id="fyHX6Bovbr8PpujN8XVxUC" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="LSzEra6av3yVXmve2hBPEs" data-pnid-children="i1RKyjwgic3CdpwFz06KXj">排产与插单调整</title>
+<link data-page-node-id="9gqCWCYutM02qr2RkhR3yH" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="OzVrmU3UYjvBkkEe1gvKlb" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+<style data-page-node-id="fyKssKkdTcLc0J6m6q21F1" data-pnid-children="nr3Ot2uEIOQg5Z1geh5jH2">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="sLLhr3YKNVVKmb7foJNewZ" data-pnid-children="Oz2VM1gd7sheD5Pk2vtDgw" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="Ebbmu2ngraiBl0lY72DMOW" data-pnid-children="kcHM000wBKwbttnGvQpghG" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="122KvIdy55mY1pKGcOpAty">
+
+<div data-page-node-id="AqbLxmaaV6AuN4bDpyEMuz" class="wrap">
+<section data-page-node-id="XEFViFXarFfpDuzvnTNoA9" class="page-hero">
+<h1 data-page-node-id="eipqfEiiQNn8JApnGGc1p4"><!--pnid:1wFZPXy5lsjaFhDYjVvLIP-->排产与插单调整</h1>
+<p data-page-node-id="GK8RsCKsnloxWAKtCqIvJ5" class="lead"><!--pnid:gOFmIXiAwOhNGxJJLbBBE9-->拿到接单评审+ 交期平衡的建议后，一句话触发<b data-page-node-id="AFpUSYNdIQqWI944eBUbDt"><!--pnid:yAi96ydOUhvnaMCfqEp8hV-->工单真改+ 甘特图重排 + 分部门通知</b><!--pnid:DjlVMS3pP8Jwnu0XGKEUBV-->全套动作 · 从&quot;PMC 拍板&quot;到&quot;现场执行&quot;最后一公里。</p>
+</section><nav data-page-node-id="EpuYXdEioiKlW8TPn5BuDp" class="subnav"><a data-page-node-id="GMoqq2O9wFomjwksF1aRvE" href="场景引入.html"><!--pnid:lEOb69306fkJuHYbzaWztM-->场景引入</a><a data-page-node-id="4f5h8iEjNHrjy6ZCczOXn8" href="LiveDemo.html"><!--pnid:yeOaLD6PjIDzGgbOHVXyBb-->Live Demo</a><a data-page-node-id="zNj7JesJE9Dq8D6ablVhbo" class="on" href="#"><!--pnid:qWh34mcPymt2D8fWy1CFSE-->推荐任务</a></nav>
+
+<section data-page-node-id="EhDrorcUVvG1W6LrbCebOG" class="blk">
+  <h2 data-page-node-id="3mtHqCYBoSrx7uzkDvgKkV" class="h"><span data-page-node-id="xhZXcSTO9EJxV41C93QKlE" class="num"><!--pnid:r1OI5VmhMdsJMxNileVpmN-->一</span><!--pnid:1fzKOmGXK2smEcQrmfH7Kd-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="YVmWoW38FbQYM9udm2MXpQ" class="subline"><!--pnid:z1YnQxs1qk43tXn986Kw3a-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="jhqEuNOrKPcC0ayXhMzW6N" class="card"><p data-page-node-id="txKjhKLAUKQ8OIoSe9dnzh"><!--pnid:Y5PWTiiRdWSUKTRSuRdCWD-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="1Wb1wKqEWzcz1pnDMr45fN" style="margin-top:10px"><!--pnid:0Z6fIIy4ByTUrlkN1Ic9nZ-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:KWiG65oJBbVNmbOS11vgvz--><!--wb-skill-start-->
+<div data-page-node-id="rhDzWNzX76KnjrZ2RZXpth" class="wb-skill">
+<p data-page-node-id="wExJw6DNcfvjh4V7HVe7gD" class="wb-skill-lead"><!--pnid:78op6rpLhxxPuVVC4zqJmz-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="bXLd0v34bAkkmnCwYK5497" class="prompt" id="wbSkillPrompt"><!--pnid:TcZSO7UxeZofUj6k5kb5uy-->【准备】这个场景的规则都在「排产与插单调整」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/Rr6aj20aomDUbpJ0MAhdix/0/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="l5ROYVf0L7OIXIBNZwanhb" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:xnWa28jWOi9ZxQOzjg9n4d-->复制</button></div>
+</div>
+<!--pnid:L10YDvp7oVbT2JQ0Hpe9Ib--><!--wb-skill-end-->
+<section data-page-node-id="6zr1i8B3mDyOp1X4HvvEO7" class="blk">
+  <h2 data-page-node-id="lKyYAx8fs2EArttEmup8FR" class="h"><span data-page-node-id="7CQki00uLPr8Mkr60vvePu" class="num"><!--pnid:ygLNoxu5R6czMaLGiQGhyG-->二</span><!--pnid:7cQu95O6QRoGvdB9Uc9EGQ-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="TPqzB5Y3sJhnLJ3DGzFPFs" class="subline"><!--pnid:3yvmstiDaOlCvn2LMI9Ok5-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="kJCeaqT2f8YF3IdIYDs9qh" class="tlist">
+    <article data-page-node-id="xqn20K5wt400A8BNgfMa1f" class="task">
+      <div data-page-node-id="SED7DWeswk3vrhLMU70Pup" class="th"><span data-page-node-id="0uCBTVCH9EvONOgOrtqFTg" class="no"><!--pnid:dZzPxth2WyXIMo9Eb6p0qI-->01</span><h3 data-page-node-id="b8vY5yYIGrNcv3rdGPWgi1" class="ttl"><!--pnid:HmpZ1R7eUbt4SN3GcIolv1-->首推默认</h3><span data-page-node-id="jxUnGhyHAN06u76f0k7OU2" class="star"><!--pnid:iHpLkVgIxL7XMTTa9NNKBr-->与一键体验入口一致</span><button data-page-node-id="9FPpEW99dH73dH91OntYZL" class="cp" type="button"><!--pnid:w9qbR62VR3qjb5VlV61Mq7-->复制</button></div>
+      <p data-page-node-id="qKWMd50ZuznzY855JenR23" class="tp"><!--pnid:35u2JPgGRB6PqWaSIKK9jv-->按 5.1 的分析结论，把华东能源 SO-20260708-001 对应的工单 WO-20260712-085 优先级从「普通」调整为「紧急」，原因：华东能源战略急单保交期。数据都放一起了：订单清单、工单清单、齐套报表、产能负荷表。调整后请记录调整时间、调整人、调整原因，并提示相关工序的调整节奏。产出两份：一份排产调整通知 Excel（工单号、原优先级到新优先级、原因、调整时间、调整人，可回退）、一份 IM 推送通知稿 txt（同步装配一线、喷涂、包装工序，各自写清要调什么）。</p>
+    </article>
+    <article data-page-node-id="1G9IkBPK1A1uUI4W5JIh0L" class="task">
+      <div data-page-node-id="YfUbrbkXjuHTeWzeZFPZSC" class="th"><span data-page-node-id="Xdj8AfFpkoS2JhdrJjmeGj" class="no"><!--pnid:4rJ6HNl0iA7Rej36shfPmZ-->02</span><h3 data-page-node-id="FKnGkyM2AmL3TWfbRxFdCQ" class="ttl"><!--pnid:lZUTtCArzia0NZKUm0rYJJ-->只改优先级不通知</h3><button data-page-node-id="EPyF3FF9LICZOMdYwTt3pP" class="cp" type="button"><!--pnid:pr6SFjo32FaUH1PIyPsESE-->复制</button></div>
+      <p data-page-node-id="z8VYHKtaMEkAYqQsSCDXZn" class="tp"><!--pnid:7IXD5dSVgt7K4YteKQpupK-->先只改这一张工单：WO-20260712-085 从普通调紧急，记录调整时间、调整人、调整原因，先不要出通知稿。产出用 Excel：工单号、原优先级、新优先级、原因、时间、调整人。</p>
+    </article>
+    <article data-page-node-id="7M756JZbMm5Zq1p3J8egZ0" class="task">
+      <div data-page-node-id="oWK0ZwWKiifUInoJZQ7VJK" class="th"><span data-page-node-id="JH4zbZ5rydAHpeWuHfw3Pe" class="no"><!--pnid:DAdTyj5rKKcBWTTCKSMWC1-->03</span><h3 data-page-node-id="2RhuHUwWcOJx7thiDoxcia" class="ttl"><!--pnid:MvmRnTCjLxVF81pWSA3QNK-->换成反向调整再记录</h3><button data-page-node-id="L9XN3X4nuxhSNRb1YLOdP7" class="cp" type="button"><!--pnid:uDjp8sqsamFYjeAx2BvALS-->复制</button></div>
+      <p data-page-node-id="EHvXIk42ENDDUccWnKfVgu" class="tp"><!--pnid:aMDzOKnrc3Amq5I6KFQfw2-->假设华东能源答应顺延三天，把这张工单从紧急调回普通，走一遍同样的留痕流程，看看回退记录能不能追溯到上一次调整。产出用 Excel：本次调整记录，加上上一次调整的可追溯记录。</p>
+    </article>
+    <article data-page-node-id="WCG7OKNDrAqEFO641GCoke" class="task">
+      <div data-page-node-id="HaI4IwU7m052hAgQTwfkOA" class="th"><span data-page-node-id="9z2kkwv8jqUbSEp2tFljgO" class="no"><!--pnid:Z6ZU9tI5SJZzgfFyd5P45x-->04</span><h3 data-page-node-id="4zUn19guzPdNB7inTJqKji" class="ttl"><!--pnid:kmfuxeq12uUeRgETHGaSPO-->一次调三张工单</h3><button data-page-node-id="v7CVBEdMYO7wP949GERzf8" class="cp" type="button"><!--pnid:TPCNlGuZTHoN3kHidrPITz-->复制</button></div>
+      <p data-page-node-id="mewQWIDdVryEegEdEVFusW" class="tp"><!--pnid:nCy6NXO7OsDviJY45GWhdB-->演示数据里再加上两张同样要调优先级的工单（分属不同客户与产线），三张一起调，最后给我一张三张横向对照表：工单号、关联订单、原到新优先级、原因、受影响工序。产出用 Excel。</p>
+    </article>
+    <article data-page-node-id="TbklD59gCV3Y0vmyAOekbY" class="task">
+      <div data-page-node-id="G4vqwaBwUqyewgpwRF5zB7" class="th"><span data-page-node-id="ZcgGzMbzgEPOwZTG8m2Vj2" class="no"><!--pnid:kRuZCodIpjebpSccJomvL9-->05</span><h3 data-page-node-id="RowuVzYcntkHzShJmBJuHu" class="ttl"><!--pnid:sIzAVDgzg4g5xiHUGf4mhM-->给生产主管的现场通知</h3><button data-page-node-id="7BXKr408ZlWkaXEE8AZ7uI" class="cp" type="button"><!--pnid:qPNOSnJHTsUZbPLrnzhFmT-->复制</button></div>
+      <p data-page-node-id="zLqnuzOndntuw6104Mk9aQ" class="tp"><!--pnid:sPYF9BlIDU8mkovM9TD5bk-->基于订单清单与工单清单里的受影响工序，把通知稿改成给生产主管与班组长看的一版：只讲本工序要提前还是压后、几号开始、要注意什么，不写管理层的判断过程。产出一段纯文本。</p>
+    </article>
+    <article data-page-node-id="DrFjxGHjvI3wNZRglvVuQU" class="task">
+      <div data-page-node-id="LVCCxpgRmKVEL0LyfIWwMh" class="th"><span data-page-node-id="xEY7f3nemKyYX4WT2vGFT2" class="no"><!--pnid:xraEMULa2jVG77J1F3Fyws-->06</span><h3 data-page-node-id="yJovgO9UduNq846mXxRhDE" class="ttl"><!--pnid:FsAjYPeLDs7GUtzUcnZfmz-->让它反驳自己</h3><button data-page-node-id="2TOp89BqGXZgwaBEqCmkgz" class="cp" type="button"><!--pnid:7gSJ3IAZ1UoVWbV7HE30Wo-->复制</button></div>
+      <p data-page-node-id="WxbRsT5Y8Fa0nUS1ILU83X" class="tp"><!--pnid:gvrX2j1jRtSDWkZKvLKY0m-->这次调紧急，会不会把别的单挤掉？把可能被挤出交期的工单挑出来，说明挤了几天、要不要同步给销售。产出用 Excel：被挤工单、挤占天数、新预计完工、是否需通知客户。</p>
+    </article>
+    <article data-page-node-id="o1t1NsIFY4A8nkyqKJdEKj" class="task">
+      <div data-page-node-id="asp9jstbBcuczUvF8mz18K" class="th"><span data-page-node-id="NbpZmxQvG3p0a1yL3pZ3Qu" class="no"><!--pnid:48yvXfU8posNrR2jSLGIkr-->07</span><h3 data-page-node-id="UxGi0Y5kAoZgNrIMowqOBo" class="ttl"><!--pnid:IkSbxwJ9iV42nhn04oo9pn-->比历史插单的连锁反应</h3><button data-page-node-id="PV6N5aripm871x8SDIiIgU" class="cp" type="button"><!--pnid:UDStrftpAs8FGa2W6SMTMD-->复制</button></div>
+      <p data-page-node-id="fx6FIOFDx4LXFRROrlsokX" class="tp"><!--pnid:MU0ryLET3s7HjirLn1CK6K-->翻订单清单与工单清单里以往的插单记录，比插单调优先级之后发生的连锁情况：当时挤了哪几张、有没有客户投诉、后来怎么补的。把这次的调整跟历史对上。产出用 Excel：历史插单、被挤工单、后果、当时补法。</p>
+    </article>
+    <article data-page-node-id="h3QakbtKwyXWbUB8DJgZA5" class="task">
+      <div data-page-node-id="7YN8ITftRLHuhLJFfPczQf" class="th"><span data-page-node-id="DzYlbaRYvdbsHsR2nXMgn7" class="no"><!--pnid:iFMKQQ8M8dkSZiQpu0l01J-->08</span><h3 data-page-node-id="qS4Fu82K2UCrqS9wdOML0j" class="ttl"><!--pnid:cHF21jRQRTBw1cxZhwVsJo-->对照调整规则自查</h3><button data-page-node-id="7uiLI1vLecb9NKVACQnj5n" class="cp" type="button"><!--pnid:obdTznIU6VE9GbbjaRy88j-->复制</button></div>
+      <p data-page-node-id="4vj6aEXoqm7lbkROfBX9Pu" class="tp"><!--pnid:Akat96UWmADp2d98rLU8CI-->对照优先级调整规则（普通调紧急、紧急调加急的触发条件）和留痕要求，把这次调整自查一遍：触发条件对不对、记录字段齐不齐、同步范围有没有漏工序。产出用 Excel：检查项、是否满足、缺口。</p>
+    </article>
+    <article data-page-node-id="zaAIArZ5sNZXXYRairaWiQ" class="task">
+      <div data-page-node-id="HkHoYnxZqXglaqeFDBesgP" class="th"><span data-page-node-id="A74kBnDN0cyQEgZYDCwVJy" class="no"><!--pnid:lH6tV7Kt9LFzzcYW6IgNq2-->09</span><h3 data-page-node-id="g4UyfYETDJgKzONl3R8kca" class="ttl"><!--pnid:zCSClVxXgbi5pFjSSBoaRb-->折算成交期与成本影响</h3><button data-page-node-id="mLfzuXZyOpuElAy8zMJKAd" class="cp" type="button"><!--pnid:aj2kPfR4WICqLYjIqXTKJz-->复制</button></div>
+      <p data-page-node-id="KWwo5NPlGNLRHnswEzRozL" class="tp"><!--pnid:VTD8qbarWSFYWOmYdgzlun-->读产能负荷表与订单清单，把这次调整折算成影响：这张单预计能提前几天完工、被挤的工单各推后几天、加班或插单要多花多少钱。产出用 Excel，带算式。</p>
+    </article>
+    <article data-page-node-id="zdAGsKdmDG4DWXCZLPPu69" class="task">
+      <div data-page-node-id="1trPKt5EYBTfSheD2mMzJT" class="th"><span data-page-node-id="kF2pZ9Cr3gFFpAfZHf5xL0" class="no"><!--pnid:vbczzkZuudfBoJ7qJQ4R3Q-->10</span><h3 data-page-node-id="b9NUmUW9u95p8ozO8MsIBr" class="ttl"><!--pnid:HYCngeGMwaXzm6XhzV1KQL-->沉淀成调整通知模板</h3><button data-page-node-id="c5KRIR0fRzdOglOZ8LGvPn" class="cp" type="button"><!--pnid:sXV4RbJ5uP33vmgwkF2cB2-->复制</button></div>
+      <p data-page-node-id="3bf7E550SFHB8DSYHhZ0BW" class="tp"><!--pnid:MWYI27HLWbo2H54PDGA0tw-->把留痕字段（时间、调整人、原因、原到新优先级）、受影响工序的同步模板、回退记录方式整理成一份可复用的排产调整模板。产出用 Excel。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="LYhxpq0vL3nfUMC80cY6f9" class="cta">
+  <div data-page-node-id="8MGxOYkSyUFkJ94vIEjXVm"><h3 data-page-node-id="WANIcZIw1W5WePv1Pqxiw8"><!--pnid:zJQMdLMd2AiHHaUdHBlJFF-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="TL5WDd6PwkFkJib7o2MM8f"><!--pnid:4RofYaGxqbFtATJ9S08QE1-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="0m8jvOHEVzGtfojZeK6Dig" class="btns"><a data-page-node-id="GpUjhNi0x3MT7DVzENcq2M" class="btn" href="#" id="ctaContact"><!--pnid:ERhNJXcDvBVcXlvHuzdBm4-->联系我们</a></div>
+</div>
+<footer data-page-node-id="VbiHzfeSZRbRuvbUHWfJKb"><!--pnid:Vd3q4D6K371zhYGU4GLfof-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="vzatguz9CpLz81mJTF9hpd" data-pnid-children="lKTfWaiRopFEjIao13mn8L">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="ZcUr8Ta59v9hEdtVxeCkoy" data-pnid-children="6Nu7Uy1fEUUYA39PYGwAYr">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="eXhr6cUR7xQ8YPQ7XLDt3m" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="SpKWFYxBz8u6BSnLB9tMNB" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="ZpaqxqoVtejjRGFFJh6quQ" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="51M4wxjzuPcgCddAYeyDq0" data-pnid-children="2h6RAgXIdRv6XG2dPKXODo">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="TDu80zTt5Uu6wILgvKaCek" data-pnid-children="2BDhGHk9r5im0bHoGhP3bS" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html data-page-node-id="sVvxisN4YISV75Qw1ZVYNr" lang="zh-CN">
+<head data-page-node-id="dW1Ds7tQ5ppjiQZcLRh9Hk">
+<script data-page-node-id="mYCe2co00FScPT0zmnCdoU" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="UxSkJpeIgwPiOfYyQbiu3j" charset="UTF-8">
+<meta data-page-node-id="rtPyJAKee3qvoPDQbNYQt3" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="j9IKTnR9yszjVMLBM3O4tB" data-pnid-children="JwvgopshLO41fnULFOiZ6h">异常分级与升级归口</title>
+<link data-page-node-id="eOcYqKt0UrAHVtu7Vea5lh" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="8dqQTMi5gqq2CSzALe1Blg" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+<style data-page-node-id="A6a2eMQPy1pSvxpHlbwTrL" data-pnid-children="yzu5rXa05jyIs30uhdaMQW">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="a2mnyHFjDhb3zPvwHJtnqU" data-pnid-children="eP8dn6a9TaCExEwKd549uj" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="dLYAd7TLqCBEl79tCu2lV8" data-pnid-children="d7PztpqjyftFHSSLcdu9oz" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="vC2DVptmTXEdeIE1mUWOPr">
+
+<div data-page-node-id="MvqyF8WAtUXIxtyJB5QCXp" class="wrap">
+<section data-page-node-id="fGo8yH2QyX5BVsamJTe7CN" class="page-hero">
+<h1 data-page-node-id="sk0UoTTcJAc2sXZo87Th8X"><!--pnid:0pWjNaODvFJW0Ux4IXOJhA-->异常分级与升级归口</h1>
+<p data-page-node-id="kzlXLqmFsuBwgLKsxLgxs6" class="lead"><b data-page-node-id="qB7SUAEgfOen7FIQF0NnD2"><!--pnid:yRS1kGtQ5OkRBDCjnn0YMk-->一套引擎吃三种入口</b><!--pnid:mYuIlxxlGzgDOmrPjVsbsA-->：客户投诉、现场停线、跨部门久拖。走同一套三级分级 → <b data-page-node-id="3Q0IfdwM2kJPiafYEbazaz"><!--pnid:SOyLys2kZ80NlLybFkB71D-->建议归口哪个部门并说明为什么不是别的部门</b><!--pnid:Bo5zzDr9GbwsOMuE69hjEG--> → 输出可直接贴群的协调稿 + 对外话术 + 带SLA 的台账。<b data-page-node-id="OyovknbVCG82zCqNPpbUst"><!--pnid:q2FohW0ijn2TpFBYxuCcCX-->这个场景的价值是&quot;降级&quot;和&quot;归口&quot;，不是&quot;报警&quot;。</b></p>
+</section><nav data-page-node-id="sEPb7XszQyky4OdZziGJXX" class="subnav"><a data-page-node-id="9LbTYBaolK5a8QdapPfwx0" href="场景引入.html"><!--pnid:kfY8pWqHEHOQdjJFwfHj1K-->场景引入</a><a data-page-node-id="Eg8AGm0u1XOvnWcIgrF3dP" href="LiveDemo.html"><!--pnid:dvMb51Yx99YKPzgEDeXtRW-->Live Demo</a><a data-page-node-id="pUeVv1tx6Thsy3PJzOggif" class="on" href="#"><!--pnid:AHotEDoJVuktw7cOheBEvw-->推荐任务</a></nav>
+
+<section data-page-node-id="l18ZCWtYArmUJ3svHHDoiO" class="blk">
+  <h2 data-page-node-id="pTdpMVeuAwI31Kp2TWqPYX" class="h"><span data-page-node-id="vtIZhM563EQEqWEOeN9Zre" class="num"><!--pnid:OrY9Y1oh8sqKCrZbYBKdtA-->一</span><!--pnid:xIK3z1dT9pnCMCKnhscLi5-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="w9PaOQNbe6ANc8yeitsYY3" class="subline"><!--pnid:lUpZXVtYJLOmCIAt7b8oR8-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="OSEbeKbwkUDLMHuEFKLcSY" class="card"><p data-page-node-id="BXkg4kVa5esK6hOAY3cPV1"><!--pnid:7DvxSUhjDN3gSbw1xbjDIP-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="OnAl6KyMoboop8ioVGz8j9" style="margin-top:10px"><!--pnid:1FDsCaUbZ3rCxLjOWTS4js-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:7PJh9GHaW8OoaC8CPcguZ1--><!--wb-skill-start-->
+<div data-page-node-id="5PrZJC60wE8qxPOmsXDRma" class="wb-skill">
+<p data-page-node-id="B1M716FxHBBIJSDZYfqjCo" class="wb-skill-lead"><!--pnid:1L2s0MK1XlsPn9VusueluE-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="wBHYcfjgWO7Vqp9FqMryrK" class="prompt" id="wbSkillPrompt"><!--pnid:FF9CDkzzfbPcQPyrFOeslu-->【准备】这个场景的规则都在「异常分级与升级归口」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/4xFuasYCcJuRva1fV4mYgI/0/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="sKdYxtpltQ208NPLMnTUxF" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:gWXYEneoyLnIYi79pGBK4g-->复制</button></div>
+</div>
+<!--pnid:vGPUfp0rjV8xibaWa9jVRH--><!--wb-skill-end-->
+<section data-page-node-id="LxGBV6QY6ARPkHDxXpPG5D" class="blk">
+  <h2 data-page-node-id="TFCgr3RVc2MYjELsM2MkPS" class="h"><span data-page-node-id="MUYVrl0w27fbjGqQz8yiL7" class="num"><!--pnid:sbRZHvHFu6p0bsoyBGfbB9-->二</span><!--pnid:gug2PIsOZnYI1yN8a91Gnw-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="2xRugIbxvbUL1IZcxfDcfF" class="subline"><!--pnid:O7OGst9LV8MnT6Kk1GtWHR-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="ingk4D5vShsRlh94kZKQq7" class="tlist">
+    <article data-page-node-id="GEBFDOiILkZGTOHLGP8uUB" class="task">
+      <div data-page-node-id="6Gts9ZssWWrSk7ZvaKQcfw" class="th"><span data-page-node-id="rwmnKhzcl1oopywOjDrv1w" class="no"><!--pnid:lS5VwAfP7f9GLY3G1kLdf0-->01</span><h3 data-page-node-id="d3VcvDK69nPd9cC4RuYEMt" class="ttl"><!--pnid:QQ3jevvrYbqsKdrTpsCpt4-->首推默认</h3><span data-page-node-id="KRYlAJZmxN7ibpa0ZuahbM" class="star"><!--pnid:jP1dRK7IRZ1QJOiP7rkMRB-->与一键体验入口一致</span><button data-page-node-id="FFzMfBUO5DlPygAL2e0UTu" class="cp" type="button"><!--pnid:0kbDHI2xS3yaZMxe4beit5-->复制</button></div>
+      <p data-page-node-id="Wj8JiFfg8fWqiM1lbIAaRO" class="tp"><!--pnid:lzGmqnoUMfo7vJbvCEQpxi-->上周五到今天群里的异常我让行政摘出来了（异常事件原始记录），客户投诉、车间停线、周会上拖着的都在里面；历史异常处置记录、客户与订单背景、我们自己的分级与归口规则也一起放进来了。帮我理一下：哪几件今天必须我管，哪几件让他们自己处理就行；重复发生过的重点标出来，我要知道哪些是老问题又犯了。每件给个建议归口，但别直接派活，理由写清楚我自己判断。跨部门那种谁都不认的，别硬塞给某个部门。产出三份：一份异常升级通知单 PDF（决策包五要素加签署栏）、一份异常台账 Excel（含归口、责任人、SLA 到期、是否重复发生）、一份对内协调稿 txt（不超过 300 字可直接贴群，末尾单列 P3 项）。</p>
+    </article>
+    <article data-page-node-id="7ZtMI9fjFlQurIZOyHI5iy" class="task">
+      <div data-page-node-id="pt8tiKzugjysasMZX4wGiz" class="th"><span data-page-node-id="6MmYTgPDCZGdnwtqXouYvo" class="no"><!--pnid:zVyMcGyRluGQGCwRmzuP3t-->02</span><h3 data-page-node-id="QLeCDWw2InkLwBv41XViRB" class="ttl"><!--pnid:TT1y36AhcbU0tplXcbAMMr-->只做合并与重复性检索</h3><button data-page-node-id="2gtIk3MV6Im4gpgP8yrlTN" class="cp" type="button"><!--pnid:Sb9zywny4irbOUBMeRAj1A-->复制</button></div>
+      <p data-page-node-id="B9BEnsfjLaT4oiWyYLMJoh" class="tp"><!--pnid:VAaHlWB9jzQaVJxyTtkGWo-->先别分级，只做两件事：把重复上报和升级信号合并成事件（写明原始 N 条合并为 M 件），再按设备号、产品加部位、客户加问题类型、工序加现象反向检索历史处置记录，判每件是第几次发生。产出用 Excel：事件、合并了哪几条、第几次、前几次的日期与当时处置。</p>
+    </article>
+    <article data-page-node-id="hHOeTylPiUc37VhpXsiKMO" class="task">
+      <div data-page-node-id="dRNvYLvmlQN2K38kr50bLR" class="th"><span data-page-node-id="nsZQfbh1ZmBslKT4SViB1J" class="no"><!--pnid:j5VeD0iFptolWXHBq3qJbl-->03</span><h3 data-page-node-id="QkLkDoHFvaAsD7M4ND9nnx" class="ttl"><!--pnid:wjXai1RTP13Da2jqVBTjWv-->换成更严的分级规则</h3><button data-page-node-id="VSszFpvz0vxzq1S7KLtfLw" class="cp" type="button"><!--pnid:QWJwnvkiOZojCx6SguEHPk-->复制</button></div>
+      <p data-page-node-id="3owjz3uWc894a7zw6DHN3s" class="tp"><!--pnid:e1pvpP73myyrjEWthO3Q1C-->这次改按更严的口径跑：把「同一问题第 2 次」也算进 P1，其余规则不变，看哪几件会从 P2 升到 P1、升级后各要谁管。产出用 Excel：事件、原分级、新分级、谁管、差异原因。</p>
+    </article>
+    <article data-page-node-id="qeqSOyPzrGdwlhkkRB6XSb" class="task">
+      <div data-page-node-id="kvGpRoWSVkCl9j065Axu17" class="th"><span data-page-node-id="FEuwxXc72GbnmsnPxI1cTu" class="no"><!--pnid:34Vv0t6ovDYnPpMQOyX2cA-->04</span><h3 data-page-node-id="tw4W9imb1W9uyyA174nL3Q" class="ttl"><!--pnid:6UeyleiXTssiCX5kex00es-->一次处理两批上报</h3><button data-page-node-id="GEzuM4FjWYnLYWicVG1rcU" class="cp" type="button"><!--pnid:0hJRzMFBCsaWIvmC6nCR6r-->复制</button></div>
+      <p data-page-node-id="iGn4qTWIJ5owj04abokfrS" class="tp"><!--pnid:0pMBSr4xpxOLWPgOukvROr-->演示数据里再加上下半周的另一批群里异常记录，两批一起过，最后给我一张两批横向对照表：件数、P1/P2/P3 分布、降级件数、跨部门需指定件数。产出用 Excel。</p>
+    </article>
+    <article data-page-node-id="AGxBMgw1PqMYRbeqqV4AW4" class="task">
+      <div data-page-node-id="AmSjRQyeQhpDF37VRKmTym" class="th"><span data-page-node-id="yveNsfvkQ0KvXO4RFzHqZL" class="no"><!--pnid:o0pRwj3mhr87W7ATA0fxuL-->05</span><h3 data-page-node-id="QvO1et3bEWerBPhdexWKsB" class="ttl"><!--pnid:Vm8ZlEJ4qaqQSgrjz2K8Qe-->给车间主管的版本</h3><button data-page-node-id="0bYnpoUsv8JnCDMNMf1PhM" class="cp" type="button"><!--pnid:biKC6B8rzZ21VwqirYC3sK-->复制</button></div>
+      <p data-page-node-id="VoBkNGNyDnnclZcNzUrAbF" class="tp"><!--pnid:5GvrdAvsqXroeB1g7EUtRI-->基于异常事件原始记录与历史异常处置记录，把结果压成给车间主管看的一页：只留 P2 和 P3 项，写清哪几件由他归口、今天要做什么、什么时点回话，P1 那些不放进这页。产出一页纸。</p>
+    </article>
+    <article data-page-node-id="92eny12OqiDiFNmuZD4KBo" class="task">
+      <div data-page-node-id="U2tjpPxOFlD8f4gcm5RC4g" class="th"><span data-page-node-id="s1K12wS3I13zqfW1UNQ6cP" class="no"><!--pnid:dQzvjvh9asxKqXRyYwiAd4-->06</span><h3 data-page-node-id="Xfw3t31sgJucKXiYNPQcZ2" class="ttl"><!--pnid:4zJ35qQibvdyFApvDTpIVt-->让它反驳自己</h3><button data-page-node-id="zapTvCJHq1ITQp7DW5hlzN" class="cp" type="button"><!--pnid:3eAfvljw1nXkJEQHa16HeD-->复制</button></div>
+      <p data-page-node-id="YOpnmDs1JkLtanPTz542S2" class="tp"><!--pnid:r3cFhndN2AJBiYGf9fFIAW-->回看历史异常处置记录里前几次的处置：你判降级的那几件，理由站得住吗？把最可能被质疑的两件挑出来，列清依据的原文，说不够就改回上一级。产出用 Excel：事件、降级理由、依据原文、是否维持降级。</p>
+    </article>
+    <article data-page-node-id="SrmFOnW9Ici1v0UQWtHf5W" class="task">
+      <div data-page-node-id="LfeXVfYDYIvbUicZiQ7Tjm" class="th"><span data-page-node-id="hzHWBvSxAJUzm8f348NdDr" class="no"><!--pnid:bExaYAtBfSOpclW7YdwqXC-->07</span><h3 data-page-node-id="sTfSFm75IzbuLg0L2wUrTh" class="ttl"><!--pnid:ELn6g6V3Akj6lSZcp0CyL1-->专门比历史同类处置</h3><button data-page-node-id="RcjHqiqYpmQ19QL9eRTfjb" class="cp" type="button"><!--pnid:WSx4PBgTYxjvDhflx6OLs5-->复制</button></div>
+      <p data-page-node-id="G9Wm2Veon7QKlwKO3IFCpq" class="tp"><!--pnid:C00RDzQeG5AORcBnkZa910-->专门翻历史处置记录里跟本次同源的几次：当时归口给谁、处置措施是不是「临时」「现场修配」「口头提醒」这类、有没有闭环。把这几次排出来指出因果链。产出用 Excel：同源事件、日期、当时归口、当时处置、是否闭环、与本次的关系。</p>
+    </article>
+    <article data-page-node-id="dT17b8gSWmjfFtszsdo1F1" class="task">
+      <div data-page-node-id="KuE74pmjjSYeTMezAns8eT" class="th"><span data-page-node-id="v6mMlzLqjfc0ngh2wV29yl" class="no"><!--pnid:qiqQUYt5BXoYhU88prrN8x-->08</span><h3 data-page-node-id="M1R5il6RAciJKsAZwmpM8p" class="ttl"><!--pnid:GPJtj5Espquq2JGzys1xPw-->对照企业自己的分级规则自查</h3><button data-page-node-id="pq2vLwUbWl4OS1qecHX3Cv" class="cp" type="button"><!--pnid:QRQDeZI20l0Rc0Ii17FmAm-->复制</button></div>
+      <p data-page-node-id="ydq1YdSw4acAz1GR3tIDPr" class="tp"><!--pnid:wIyIUvNrInD41HxirK3Pci-->对照演示数据里我们自己的分级与归口规则，把这次的分级逐件自查：有没有偏离企业阈值、有没有企业规则里没覆盖到的情形要提出来。产出用 Excel：事件、企业规则判定、本次判定、是否一致、建议。</p>
+    </article>
+    <article data-page-node-id="5w2Ay4jeKUkKt4l3tjjElt" class="task">
+      <div data-page-node-id="PNuJ45gmSoNFH1UcB2h00X" class="th"><span data-page-node-id="RjlGnoK5UcsWmOwDCkbz84" class="no"><!--pnid:YpvhwG4ed1MQZRSGeZpLlu-->09</span><h3 data-page-node-id="lbmE7QS62351LyMq1qwjOa" class="ttl"><!--pnid:A7bUs89NMa7L3XDXYLkURY-->折算成停线影响</h3><button data-page-node-id="ruyaN7tqcXrk6oST4VACfn" class="cp" type="button"><!--pnid:6EAQbT3DQN7zefd1ZdusAw-->复制</button></div>
+      <p data-page-node-id="Vd6Ts0zgE3PvJJM6WjEiLB" class="tp"><!--pnid:M8bxYMrb9nkLCOKaiKFiex-->结合客户与订单背景里的客户等级、工单金额与交期，把 P1 那几件折算成影响面：涉及几张在制工单、多少台、对应多少金额、若今天不处理客户上线日会受多大影响。产出用 Excel，每件一行带算式。</p>
+    </article>
+    <article data-page-node-id="XE0yTtKRAQYlfLKxqsSI8B" class="task">
+      <div data-page-node-id="cN4itoEfNcxtehkLG5nFeu" class="th"><span data-page-node-id="HbsfRTZaSGk1NgWS1tDQbz" class="no"><!--pnid:Ht5vTcrUY74Uty4n9NFe1i-->10</span><h3 data-page-node-id="PJYDpfY8IBInP94xPZJAnJ" class="ttl"><!--pnid:52i29e4O73PPQHa6ibjVo8-->沉淀成台账与分级口径表</h3><button data-page-node-id="E3akYtfJP3Nq2wMyRzg2Oe" class="cp" type="button"><!--pnid:4Fxj7YPFwXQvgTTZwvGVYG-->复制</button></div>
+      <p data-page-node-id="2f3EPidbKi6l7HlVuODd08" class="tp"><!--pnid:xwZGCn8oECwUXqypsdo7jb-->把本次用到的三级判据、归口排除逻辑和台账字段整理成一份可复用的口径表：什么情形判 P1/P2/P3、什么情形该降级、跨部门谁都不认的怎么转成待拍板问题。产出用 Excel。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="l1aMo1Ua0AWOfxie5DdJoi" class="cta">
+  <div data-page-node-id="FuFRFms6vtnxRsh8dyTRsS"><h3 data-page-node-id="70fkgZQB1uudGGEeGaZSWB"><!--pnid:D51sFlaF4RpbiYfnCBRsqF-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="JpGeAXrUhXEkBSGU2cvE8b"><!--pnid:UvGJPfFQDbAKYaJJ7avRMl-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="tAH30hSGl1dRNimk4CohtG" class="btns"><a data-page-node-id="qZvzArz2HrCKZpeS8JsrTi" class="btn" href="#" id="ctaContact"><!--pnid:wUu0RgXxrChq42XY5OrvGJ-->联系我们</a></div>
+</div>
+<footer data-page-node-id="l5i2gIFAizdCMVMly5G7oh"><!--pnid:gWNq0fwVzyu5zBNKnMGzSg-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="dSHtsTq7tqeGEemhHAdxSp" data-pnid-children="thZpfOYoHUbry7rlXnqk3f">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="6DUc6Ts0PreGanjPXmalWl" data-pnid-children="s7WF4yME2jCka070S4qLEH">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="h7ZEsFvlMM9mJL22cyOPUY" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="Zk18Tijs1Jfudjf3RGBoDk" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="Wv2PCOa1AsKmbCipxPENGY" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="teP0OYKgcOOxSB7Cnr50tf" data-pnid-children="jAeUXAc27peBqjU7SmjlTj">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="GdAaTDE7XXJ2XsO26sefS7" data-pnid-children="qYvwrTVQIjyRLIlqsGiSjd" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

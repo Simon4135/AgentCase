@@ -1,0 +1,65 @@
+<!DOCTYPE html><html data-page-node-id="7GEuQ04UVARceF5V5sYN3f" lang="zh-CN"><head data-page-node-id="HwKyNgogSyGWZzF8cnhn98">
+<script data-page-node-id="2vg1SSGhy41xK57Zh0e64S" src="data:," data-removed-inject="1"></script><meta data-page-node-id="8Qc8Wrg1Ry5nMB2iMevXJa" charset="UTF-8"><title data-page-node-id="iBg7SmNjuFJRkOOv6uS69T" data-pnid-children="6XrALKKqTPL4EmFvCKKlyN">JD 需求拆解</title>
+<link data-page-node-id="dEvSFUGdV7L85Y8bqkCI4i" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="SHgPTEV8wsgjTzS3EqIm5Y" href="_assets/shared/hr-extra.css" rel="stylesheet"><style data-page-node-id="5SDJmtXHisLAfJp1sL1KKU" data-pnid-children="XJ4fUgOoNlBq7qGKSH3MUW" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head><body data-page-node-id="gOLGpzmigbvilCNuiuJXBm"><div data-page-node-id="45m6K7XAnWb13vBnL98xuP" class="wrap">
+
+<section data-page-node-id="V1tI152lhLKGvk2NaObuYJ" class="page-hero">
+<h1 data-page-node-id="TwlW597hpCAr5NsUxtKt4y"><!--pnid:WkUUpXZ35OEuBrpQXKfzGk-->JD 需求拆解</h1>
+<p data-page-node-id="0nxkOSDDB9TzXeFAcreJGb" class="lead"><!--pnid:AjU8LmtGO4kmoVeeo09gbG-->招聘 TA · 1句话需求 → 7 模块结构化拆解 · 全场景复用</p>
+</section><nav data-page-node-id="u1dXi1pCi7cC3LHKPv2NZy" class="subnav"><a data-page-node-id="3k1de0Rz7tf0IeTeh8nvxx" class="on" href="#"><!--pnid:PkiGSzXlCCOHkDnLJG6ynr-->场景引入</a><a data-page-node-id="CKg6ZfpSga0yDNCmWGrpJX" class href="LiveDemo.html"><!--pnid:v4NWaVB87IljINFlU1cdWd-->Live Demo</a></nav>
+
+<section data-page-node-id="vynvYAWYQUvVbOKVLREJvJ" class="blk"><h2 data-page-node-id="HeYLrYl6vt4gMV4hR9tXWh" class="h"><span data-page-node-id="J4jDq4oF2PltN1OFXm09V1" class="num"><!--pnid:S1WJnJS6anGjigFINVwwSS-->一</span><!--pnid:YQ9FFN1kGfimcGsVtzACJ5-->现状与痛点</h2><div data-page-node-id="SN7FHIibdsTE8AISc6yzRS" class="pains"><div data-page-node-id="p0Tqqc0gcOrDcEhSW5vDFo" class="pain"><span data-page-node-id="aVC4LdoJgr64MSDS9UDyDi" class="i"><!--pnid:oUq7smc6FN9PEWvIAehtnF-->1</span><div data-page-node-id="EJqFBDZL5qJbAGxR2Bbyoe" class="t"><b data-page-node-id="Kn4g8IjeZoEtPv8e3NInOY"><!--pnid:5PcS4uGp2AZcwTdD9RM9zC-->业务提需求只有一两句话</b><!--pnid:0QZYm6BUjiPz6N76Kunngi--> -- 例如"要个做板子的""找个能带项目的前端"。HR 要靠经验和反复追问才能把一句话翻译成可执行的招聘标准。</div></div><div data-page-node-id="j0dPfJThi7IUTxrpWV7nmx" class="pain"><span data-page-node-id="jsnXjiR7jDbh9erz3ba5ue" class="i"><!--pnid:aqteXa1zeoyCkYBGM41gzB-->2</span><div data-page-node-id="kpV7fOX0YdqOTThUSg7d47" class="t"><b data-page-node-id="Ho1MHe6hiqbojPP7Z4jyzA"><!--pnid:Yzn3XHcviCJCGUQHZOotkZ-->来回确认 1-2 小时起步</b><!--pnid:fo47kJtk4aqJiTc1UPnPtm--> -- 学历卡不卡？经验要几年？每次都要跟业务确认一轮，一个 JD 改 3 版</div></div><div data-page-node-id="5RlJLCzfs6YEZ3r7LWlcCz" class="pain"><span data-page-node-id="cUku2x9quVgYEPFqByr3hW" class="i"><!--pnid:90wjJszxtvaB3KCZLJRMPV-->3</span><div data-page-node-id="2w9v33aeXgf0JcLboOwx1J" class="t"><b data-page-node-id="PloQPQ5Y1OItvCGrq78F6O"><!--pnid:ouO8fmeXlJzvKkOQxy4ImS-->岗位画像靠经验感觉</b><!--pnid:2oEJIT9MfuTQhUUoWZpm9V--> -- 硬性条件/软性加分/红线没有固定模板，不同 HR 写的画像口径不一</div></div><div data-page-node-id="Lldw97rDwIinuU5B4Xecsn" class="pain"><span data-page-node-id="vpCwSxQ3fzIF2kBLBnZrqR" class="i"><!--pnid:6ok4z7kHcVypdXDe9twsJO-->4</span><div data-page-node-id="Cw7mibRMachQUt1n2E439v" class="t"><b data-page-node-id="795fMIHjD6NJFVJyxTjERc"><!--pnid:Tzk1pNuFNz4xSSYPoUmznA-->渠道选错白花钱</b><!--pnid:1NsxXekT1aj7F4r1rBWcjA--> -- 紧急岗位发猎头还是 BOSS？预算报多少？没有结构化建议</div></div></div>
+</section><section data-page-node-id="IrVYgiiKJKtxHDJNXuQt3H" class="blk"><h2 data-page-node-id="VM6KWjkvyDqFERRjvFc17x" class="h"><span data-page-node-id="WUov6sxl5duSMw96c0pI8F" class="num"><!--pnid:SPXYvgYMrw8WLxdBwbygy8-->二</span><!--pnid:1snVrogJlpdrhzBRbfalvt-->换个做法之后</h2>
+<div data-page-node-id="W0OJ78bQ4Cb9VCIK9jcgC3" class="pv-grid"><div data-page-node-id="YdV3wP5XLtQK29jmOawug4" class="pv pain"><div data-page-node-id="kSjvs2pFuQd4JqWbrQ1cjr" class="h"><!--pnid:zQIBfbdCjUGiNWGWt8NgqW-->传统做法</div><p data-page-node-id="ajRP4TuiHQlPiY7VXao726" style="margin:0"><!--pnid:aqLU6ABIjELj00HWt85L1r-->HR 收到业务一句模糊需求 -- 逐条追问确认 -- 靠经验拼岗位画像 -- 手写 JD -- 返工修改 -- <b data-page-node-id="Ap5lyaJGvOtUCWeIGkcNPg"><!--pnid:iHLM6WoB4c308koMZOLVfN-->1-2 小时</b></p></div><div data-page-node-id="1cMr4838QHVRY6CYFtzhdj" class="pv val"><div data-page-node-id="6p9pKnUS8JNMzADrNBVr6o" class="h"><!--pnid:ExGBUEcPTDFkqDqiGctFlc-->WorkBuddy</div><p data-page-node-id="4YOggeDpL2w4H8jggvBw2F" style="margin:0"><!--pnid:7xgjgtggOS6ThTVTuBQTjb-->扔一段模糊描述 -- AI <b data-page-node-id="OY6dxvPDDTna7pewIJlO3R"><!--pnid:a5bbSM3LkKOi9RtrQBuj7E-->5 分钟</b><!--pnid:z3Ser8JLOBUS8kq7BmYg5Z-->出结构化岗位画像 + 完整 JD + 渠道建议 + 待确认风险清单 -- 画像直接喂给简历筛选 Skill。</p></div></div>
+</section><section data-page-node-id="egqtJ1wPTMkBpCWYgMuZNu" class="blk"><h2 data-page-node-id="b6Ihqmku338vvJEfROr653" class="h"><span data-page-node-id="ra2XCDNRNVTwCH66te17Lu" class="num"><!--pnid:zHUlGZbwpCgA2KKkU0hp7j-->三</span><!--pnid:PEraUdBgl4t4j8oBAyfmD9-->工作流程</h2><div data-page-node-id="1SieMvuS6TU5X2WnM8ZAZa" class="flow"><div data-page-node-id="Dk9ybEmHMh00UJrDoU8vgn" class="step"><div data-page-node-id="aSOg112rzWBRJPI2cRONd2" class="n"><!--pnid:ENoyC2mODjDRgyzqSQkCEJ-->第 Step1 步</div><b data-page-node-id="kX9VxvZu3I2bKFot8hIKhT"><!--pnid:tHF9RY18Nwzsz9HpFIhY8H-->解析需求</b><span data-page-node-id="W5Uc2IhIiYyq6OHOFl283z"><!--pnid:XscWn6UX4klXwR5QVWlx3c-->提取岗位方向/经验/技能/预算/紧急度</span></div><div data-page-node-id="bfikaCwsCdAnvSkoljQ1N4" class="step"><div data-page-node-id="mmb9QcD5p3tCNNQqAU22Mn" class="n"><!--pnid:TXdPs7hP0hbM1eGuUNpIYT-->第 Step2 步</div><b data-page-node-id="AGvLWq6kDBhHvEFTGLBcc5"><!--pnid:jK71O3KWmQ4As01qtXsisG-->补全常识</b><span data-page-node-id="spHyDdYxrblJ9VmiDBTRMt"><!--pnid:Cz3MqK8QH8gKG6nnt6mI78-->根据行业补全通用条件</span></div><div data-page-node-id="SHpN0Qo075FwHxwNjESS1y" class="step"><div data-page-node-id="BFSg3gZse5i7Iy2ImjN8qI" class="n"><!--pnid:O6X92cSTNwBnRmwrg9B6dl-->第 Step3 步</div><b data-page-node-id="vTRtSwAQlJlXIIBf1UHrba"><!--pnid:sSPS7N2XO1sG0GK4dhx5LK-->画像定义</b><span data-page-node-id="ssFwvASEdD8LdQDxYC4KPy"><!--pnid:BaxyCQ3C6rOziQyunQLDub-->硬性三关 + 软性加分 + 红线</span></div><div data-page-node-id="MSuA5T466MR8YX7vAoO2ph" class="step"><div data-page-node-id="8XrckDyWjBp3ETaEpktG5D" class="n"><!--pnid:aLMNPbxcDrPFS1r3eFrMFo-->第 Step4 步</div><b data-page-node-id="1ytCSlUoIwWPyaJcqJ18GJ"><!--pnid:Ci6omudBBl4g3ATfOLBJoy-->生成 JD</b><span data-page-node-id="LfQAFFVFYqRZgKCRCpJaJb"><!--pnid:vk2qgzqgQWOcnGLBw2stdR-->可发布 JD + 渠道建议 + 风险标注</span></div><div data-page-node-id="ChAyQB35QJoOigtLwZ3Ir0" class="step"><div data-page-node-id="hW3gYCyIMzlp4OmFOR98Mu" class="n"><!--pnid:0KjHrzSRUmpRszpEvnqzrz-->第 Step5 步</div><b data-page-node-id="OcOQYsMESPLlM3QWGPmUQp"><!--pnid:rmjS9dsrN5bHlaWl38ON0K-->喂给下游</b><span data-page-node-id="W5CQzU1rEReN7uGOe3vqjh"><!--pnid:rAm6nZSxqEfVv4BpNX3rZO-->画像直接衔接简历筛选 Skill</span></div></div>
+</section><section data-page-node-id="6xKIe55ROFw9I4Rj5Wz1vb" class="blk"><h2 data-page-node-id="mn9xO81PBdtM9xEjtwotMK" class="h"><span data-page-node-id="xEAQkDImJ58DkOf9UqvCNF" class="num"><!--pnid:pf4AePl26AiwQgybFVqPNZ-->四</span><!--pnid:Gxln5pq1bxn2LBUvFxgKW5-->案例介绍</h2><div data-page-node-id="sw34nd6vR8oupFkOGTZJQ0" class="case"><div data-page-node-id="DJw47ZWAoIb048IRCDuvk0" style="display:flex; align-items:center; gap:10px; margin-bottom:12px"><span data-page-node-id="WTTX6o2xmIKZIiAkzNPRYy" style="font-size:11px; font-weight:800; padding:3px 10px; border-radius:5px; background:var(--blue); color:#fff"><!--pnid:Jj5gti6FQnbmVKGsiFFyL6-->CASE</span><h3 data-page-node-id="7RdlInosMJ5zenAfqHOoae" style="margin:0"><!--pnid:bncPQjGL0HqbjpuCbA10qH-->某制造企业 · 硬件部紧急招聘需求</h3></div>
+<p data-page-node-id="WOLHUqg652cy1UIXcvBGsP" style="margin:0; font-size:13.5px"><!--pnid:fFHkB9kLWFQMoFHoxPuWAJ-->脱敏案例。业务部门只说了一句话:张总说硬件部要加个人,主要做板子设计的,最好懂工控那套。9 月前要到岗。仅凭这一句,AI 拆出完整画像+JD+渠道建议,并标注了 2 个需要二次确认的风险点。</p>
+<div data-page-node-id="aMo55Psw6XWwo3L5eiCcy2" class="case-info"><div data-page-node-id="RJznSoeCCbozpJSJ8SbxsV"><div data-page-node-id="UUAEhdBjczRYklq2rOpFZx" class="lbl"><!--pnid:GS6b8zuZsiB9aCzD7d6jYF-->输入</div><b data-page-node-id="tGbkSgt1JMv3XPujBGgbgt"><!--pnid:jXtEcnSU7B5XIcrVPoTGDJ-->1 句话</b></div><div data-page-node-id="IJL1DRyDrUymPJCfsEqw63"><div data-page-node-id="PdTnFsmerWKEzOfcFlaxvG" class="lbl"><!--pnid:W4MJMQqnGp76epepF8p5vf-->耗时</div><b data-page-node-id="vcTzDm1rUCbAlJdLQtfe3Y"><!--pnid:Q0nFJ8QtkTdE2b2yiKDRN2-->1-2h → 5min</b></div><div data-page-node-id="TiYkF5wMIjGERfjSupelxT"><div data-page-node-id="gaIea1hkYNH2iS9ktItN3V" class="lbl"><!--pnid:NcJT56U5GM0M3wnW0rxj8T-->产出</div><b data-page-node-id="R6lGWtE9BrwTR26Id4up5U"><!--pnid:d5JpNvyYAc0ausSrsGC1W9-->画像+JD+渠道+风险</b></div></div>
+<p data-page-node-id="nH2YXcih6hiitQfaTEs0Al" style="font-size:13px; color:var(--ink2); margin-top:12px; line-height:1.7"><b data-page-node-id="rwZXPRQ3ODZsEKDplpEgbs"><!--pnid:RXlyk64uN8SXvzY2DKHJgv-->关键洞察:</b><!--pnid:9zEwJ0HOFKjPkozjugRUy6-->AI 不仅拆出了高级硬件工程师(工控方向)、硬性三关(本科+5年+会画板)、红线(9月到岗/35K上限),还<b data-page-node-id="zYibXUdVrk8uAHNjTal3XK"><!--pnid:1EHt8bRkIAuZnUesgwypjC-->标注了 2 个业务没说清的待确认项</b><!--pnid:nKVt10zFxHHpB2EqNWGmIL-->:帮我把关是仅 HR 初筛还是需深入技术面?薪资是否含签字费弹性?这些传统 HR 要来回至少 2 轮才能确认的点,AI 一次性列清。</p></div>
+</section><div data-page-node-id="ZSObjwCROUMgupKmV4HUSv" class="cta"><div data-page-node-id="Csfb40ikQ21k2EdYX6dQtG" class="cta-l"><h3 data-page-node-id="e6EE75aZIYjhFbCy2rSn0d"><!--pnid:9WT7PoDUf5i6W47Np3D803-->打开 Live Demo · 亲眼看一遍</h3><p data-page-node-id="UzjgGvBm4aSJB11im5G0YP"><!--pnid:4JXjphZld9nxm0Vr580tpF-->看 现场拆解模糊业务需求为结构化岗位画像 · 体验 AI 真实输出</p></div><div data-page-node-id="YnF8DI67QStSMrjRgHluug" class="btns"><a data-page-node-id="TKEBGtjz61TDQEoNrPE0bK" class="btn" href="LiveDemo.html"><!--pnid:J62Wkym4k7YO8wU3aVK1Vj-->查看 Live Demo →</a></div></div>
+<footer data-page-node-id="kOl6QjDRfNANnIqzLoogtm"><!--pnid:6MEIDCqjZIHhghm9DA9CuM-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+<script data-page-node-id="GlH4ujb7rMFOtmxyJ9VdIY" data-pnid-children="UtXbEDecwdv6y8YRfAtOt7">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="vJxBrRyNCdgWPaInpADAc0" data-pnid-children="oRa7ZSCPCHNIkICsl6XEWC">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="GcRY6VSkJOKkFVFaMa4IZA" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="lkzR1eVnUO3h6hmIM5PeAA" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="NMQvu19IYB8MCxxPu0Ij10" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="5OBFKs5qMqccbM5FRL9v6h" data-pnid-children="sX29AlBfChMUrvvzPPbEHT">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body></html>

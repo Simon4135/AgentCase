@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html data-page-node-id="yfOPbYLtyIfGtdcip4Qk10" lang="zh-CN">
+<head data-page-node-id="I6wrJhkNjfZ3kINa0kGnDN">
+<script data-page-node-id="YkXnJnq0QW0LBRXfWIFzVy" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="t0ArNCLtVcDlhQ78oKJxNr" charset="UTF-8">
+<meta data-page-node-id="oQ7O7j4c8S21dWTPY4czeW" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="XuAUNYKYaEa4NbTh75C6mo" data-pnid-children="BLTAGxXifGV7CQwtiVCUpy">执行偏差追踪与补产</title>
+<link data-page-node-id="bkw5Qv2FdUEKw29DMUSjPt" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="5CQMjkG4x6g96X9c2LDjRV" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+
+<style data-page-node-id="zklZ84uQiWFM4gaioBv6nX" data-pnid-children="eAQjhGJW4gMiLiLKICScrj" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="nshsQ7inOHmWH7CZCwDiIM">
+
+
+
+<div data-page-node-id="oetY1UNCMDw8G2rOcWqelp" class="wrap">
+
+  <section data-page-node-id="0USnlv7Kf4XNistmz3LalK" class="page-hero">
+    
+    <h1 data-page-node-id="kxFUhLOpNYZmHLBEkdOzzZ"><!--pnid:NOkYtQLb73wjR6d6htIAX5-->执行偏差追踪与补产</h1>
+    <p data-page-node-id="glLcv5JCYo1jNlXeKB8ckl" class="lead"><!--pnid:DEREsHjnu84EjOQEHi3UQh-->案例：<b data-page-node-id="X9BbCmNoBtpHzJyUiTHxmE"><!--pnid:ZSeIbHT01kGv6NzSKIg81h-->兴宇机械 · 2026-08-10 08:30 PMC 早会前</b><!--pnid:Ssywp4KlJplY9PUJweYJWj--> · 8 张在制工单 2,780 件 · 6 张存在偏差 · <b data-page-node-id="QHwzHXZESi5Qpyoc6sOVat"><!--pnid:GGawyAZww08qBAkMcXcROB-->1 张数据已3 天未更新、1 张进度 98% 但明天交货</b><!--pnid:24lmTCTi6z6qoQMY9muHke--> · 四类根因两类查得到两类查不到 · 数据脱敏</p>
+
+    
+  </section><nav data-page-node-id="Oej7Gqt0LCkPhrbt5GH5Wu" class="subnav"><a data-page-node-id="pKEdp6nCQqJwBXe0kmwZsi" class href="场景引入.html"><!--pnid:c8vcJUtgDZqAAmX56dh5sm-->场景引入</a><a data-page-node-id="3zBwh6PbFmlvbb4NKbUWiq" class="on" href="#"><!--pnid:7vWyoCtktuRQQI9YmK9qtX-->Live Demo</a><a data-page-node-id="SVisK75BFOYZhTp5n7Mi4O" href="推荐任务.html"><!--pnid:Ko6KPzBVw7CX2oJp2akDmw-->推荐任务</a></nav>
+<section data-page-node-id="xVYhkoy9DZBz3oNFfpXLMX" class="notice warn"><div data-page-node-id="inAeKyXFtxgPQAmnuePIL8" class="icon"><!--pnid:1FOUIqERnPTYQGp1IJD3rb-->!</div><div data-page-node-id="5Ff4H5Q4yczJKeR7tF9GJz">
+<b data-page-node-id="sBz0QT1UWjXwcM5PRTpZBQ"><!--pnid:31DAiLuQontHSMQ6SgLrwh-->演示模式 · 可视化预演</b>
+<p data-page-node-id="wOeGIqZ8nK3mbu0vDeI5hV"><!--pnid:1NV9DSEfH0jwSZyutmcc6k-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="CwuKvvO7T4viHJW65snnX5" class="kpi-row" style="grid-template-columns:repeat(5,1fr)">
+      <div data-page-node-id="vP5Exutfb8JhWDGq2OJBkF" class="kpi"><div data-page-node-id="axQ8CC7MDI3Q5VXmiSicRn" class="k"><!--pnid:kwCAJoNUlQEEMkvgcUG6Co-->在制工单</div><div data-page-node-id="iUI5pX7V7FakSGqF16U6Z9" class="v"><!--pnid:3oZw3HD0LMQjBqE520WG6Y-->8 张 / 2,780 件</div></div>
+      <div data-page-node-id="c8evM8cz1AH9wjvxd3YR0Y" class="kpi"><div data-page-node-id="3daeT4Onb1PtNPJJTUhvTZ" class="k"><!--pnid:fqBEr5MpiCI2miLxnSnnZA-->存在偏差</div><div data-page-node-id="xO998HSGOuoGP5WPxQzzRr" class="v" style="color:var(--orange)"><!--pnid:ADixNbTTOEWNPr9zCAmV1q-->6 张</div></div>
+      <div data-page-node-id="zuNK92FTzxpmsN2XeUYoun" class="kpi"><div data-page-node-id="HVCQuG4syR2JdtAdDIvhYQ" class="k"><!--pnid:fRzcprAPOiVYy2iWsAJhl7-->数据不可信</div><div data-page-node-id="dZB5tolmPuVJUrC7Zj4xtf" class="v" style="color:var(--red)"><!--pnid:ZhBICxqHGLKl0sLX6LAn4O-->1 张</div></div>
+      <div data-page-node-id="KAThSIHGUSA8zS4yv8zLuf" class="kpi"><div data-page-node-id="4gXTh8dHA8SJkNWrny8tAc" class="k"><!--pnid:XCoJQLnTz2GXgCPo6CNFOC-->98% 陷阱</div><div data-page-node-id="7it72LzvhhVRhdysWxsXqx" class="v" style="color:var(--red)"><!--pnid:YgCEcB4Tm2Zf5rcePahe26-->1 张</div></div>
+      <div data-page-node-id="GPScZWfx5T7vFKPpwvdJWD" class="kpi"><div data-page-node-id="r4pHav6TQNHgHQV8DfkghU" class="k"><!--pnid:ra37qo6mqVlImmnp09ZgQs-->根因可定量</div><div data-page-node-id="LBYIFpmPA1H4pSlyqZ4I2n" class="v"><!--pnid:GYynIbzfI5rxau3lGrQaR6-->2 类 / 4 类</div></div>
+    </div>
+
+
+  <!--pnid:Dsz66hwts8da9NMWVsYFSp--><!-- Step 1 -->
+  <div data-page-node-id="MJisaOmu54W0oMWJ0uJyuR" class="dstep">
+    <div data-page-node-id="IWVX6lb3jks0jmEexMvATd" class="dstep-h">
+      <div data-page-node-id="C3mW3z4jfEAAUEQyGp9Qfq" class="dstep-n"><!--pnid:PoIUtZx4NrlCVFOUp7I5wZ-->1</div>
+      <div data-page-node-id="w4SKlKnQv9S5eMciRaPq7J">
+        <h2 data-page-node-id="GOhftAwO3BWpcLfxzR4PWF"><!--pnid:Kiq059rjxj1Ki4PCLZRuup-->五份数据 · 其中三份不在 PMC 手上</h2>
+        <div data-page-node-id="xQebBrqlgki4xvrcWXbry2" class="sd"><!--pnid:pUDWKPSEEjU27avrqen8bp-->2026-08-10 08:30 · PMC 小周</div>
+      </div>
+    </div>
+    <div data-page-node-id="EWlbECpJXo67jSO0I53XDR" class="dstep-b">
+      <p data-page-node-id="xECqVZeFUWK5PQ1juIx4CK"><!--pnid:U8iubba9Kr8CBSNIuoBfg1-->PMC 平时只看第一份（工单进度）。但<b data-page-node-id="5eXMKBcC2Ox9vYx8GCCM1e"><!--pnid:RV6qB6Y3Uq2iXf6sKUY4Qz-->四类根因里有三类的证据分散在别的部门</b><!--pnid:Ox3wS3vO6C4ScXna4oH6VS-->，而且其中两份是残缺的——这不是素材没做好，这就是绝大多数厂的真实状态。</p>
+
+      <div data-page-node-id="oO4YnSbla8VTtNWyN3LPRc" class="tbl">
+        <table data-page-node-id="pMCILdO9jwNKOfx3zRHlcZ">
+          <thead data-page-node-id="INk8n79GtkAtMLLHoBh0R6"><tr data-page-node-id="NLGyiplvvcGzDlpKm6YAsD"><th data-page-node-id="VYrVmemQCznKQT0Ec7U7ID" style="width:19%"><!--pnid:dokfkMTR5fePoCp0wrEt00-->文件</th><th data-page-node-id="J0JXl9i9sTBen6DMmae3JE" style="width:15%"><!--pnid:qLCuV6Q8NNHHSjx6RCDJF8-->来源</th><th data-page-node-id="ikRafFVFz7KCNrwDL0eICu"><!--pnid:JEd30QdajkkVfNhLolfnd8-->关键内容</th></tr></thead>
+          <tbody data-page-node-id="XIkPeXTLt5wpOVMpVDyewi">
+            <tr data-page-node-id="a3eEasfwSXXqxLFfx3ZA2h"><td data-page-node-id="44xEdwvmtY5SvbXDpz7Bjn"><b data-page-node-id="284tyiP5jn2ksz3O4HjvHf"><!--pnid:XgpfZk6TU37p3ZzDqC1EoI-->工单进度日报</b></td><td data-page-node-id="peAGleDiILk64lX8aOGYjY"><!--pnid:zXCMUdYReIfSvkpLRByRYA-->ERP 生产</td><td data-page-node-id="pHJXKNfxrbOoaTiVMN1aEx"><!--pnid:mt9RzeZzs4XJdazFUkJo1B-->8 张工单 · 计划/完工/欠数/滞后天数 · <b data-page-node-id="BVBlTi3WFVnipGGOFcBkKQ"><!--pnid:KjbRsqkhzq89tZ8VgmT5m6-->含「报工数据时点」列</b><!--pnid:ecLB5q2SDyELUsV9fwPPvz-->（这一列决定滞后天数可不可信）· 附工序报工明细 sheet，暴露"投入−完工"差额未说明的问题</td></tr>
+            <tr data-page-node-id="nmFkH4uU55PyYBkIc4QpgH"><td data-page-node-id="r7QsKwFcOjUVdH3B8cQLJ8"><b data-page-node-id="gBKDDd9OCKjz3rhOC5Fmub"><!--pnid:V5ZqEcnnoM7cbawKIOOPaN-->齐套与缺料状态</b></td><td data-page-node-id="PHjxfx4Q9fpeS3N4SeuM6l"><!--pnid:CCvwiDjFKwv1Jr9zmzDbxq-->ERP 库存</td><td data-page-node-id="ZbYSgDygEukHTIsCbWxlOC"><!--pnid:vHQf2dzO2aZUb4mJER4Sy2-->关键物料需求/已领/库存/缺口/在途到货日 · <b data-page-node-id="fja14unIKjyT6bO0rb59jA"><!--pnid:lkHJ85kO7aY5dfIyHhhHJz-->唯一能完整定量的根因来源</b></td></tr>
+            <tr data-page-node-id="Fa2gYlxRT9wTsy6heMNFPu" class="warn-row"><td data-page-node-id="YZLaFZ1uSHCVaNINouhfuh"><b data-page-node-id="eIam1zZUNBC2YFAZmSpPL2"><!--pnid:Eli52lpkKrCKIESqmvFQ76-->设备维修工单</b><!--pnid:7jCiDp6u6nkSpzQhM0uq72--> ⚠</td><td data-page-node-id="JQ1AQbkWsgBeskTQyyqbPP"><b data-page-node-id="MP0xX251nqtIN35bncBCrG"><!--pnid:JslAmG8lCrpSGuuZ09JnPP-->设备科</b></td><td data-page-node-id="wJ69KwxPipecQRkQlcMf0R"><!--pnid:Ialcq8hkiihwC95uhK7Rbn-->3 张维修单 · 停机时长/故障现象/影响工单 · 可定量，<b data-page-node-id="Tiys0zpNScfsv8MoFPYp0U"><!--pnid:GiNcExH0gtro3IpAhl1Nme-->但PMC 日常不查阅</b></td></tr>
+            <tr data-page-node-id="a1hR4MJNHLvXUpTbXsZgmq" class="bad"><td data-page-node-id="LckZyghTLqN69RmHzCvCsN"><b data-page-node-id="2v8k4Zb8hAC3BjAVxixsGV"><!--pnid:96KjrYPa2llTTWP1puoyXv-->品质返工与报废单</b><!--pnid:iMk3jSxrxl97TLn6BPn0Xa--> ⚠</td><td data-page-node-id="wQue4cODrL6xjdNONPRo6E"><b data-page-node-id="H14Bn8hYNxIU6ndixGyVbf"><!--pnid:JJ7rWfm36MwekQOhCBQmOi-->品保部纸质台账</b></td><td data-page-node-id="LMFsTs7vu12ssL6AcdlWhY"><!--pnid:Qw2J9kUlVNSNkGqjqSdcph-->4 张单 · <b data-page-node-id="3JbiAGeodnYoqypp0x2FbY"><!--pnid:ABGoiSvCWEFPieTsI3wBnk-->两张的数量栏写着"少量""几件"</b><!--pnid:NCMEPeVf63eRPiwdRTQiSP-->；<b data-page-node-id="xHh7JSnDGrgCeDagzznPOZ"><!--pnid:SN2oC5VYSKPLitTqdsQg0F-->"返工是否已补回"全部为「未记录」</b><!--pnid:ODjJUPAfbGajIB6A05DMtV--> —— 这两个缺陷导致品质类根因无法定量</td></tr>
+            <tr data-page-node-id="wtSjHVYG2DTVHFn4r6udnn" class="bad"><td data-page-node-id="Wya1v8iyIrY3rEhUgTkd1m"><b data-page-node-id="2qq9sjev2gOwWfd3tNQrRC"><!--pnid:tmG2Q7lOWauLpr58VlGDhY-->出勤与人员安排</b><!--pnid:JsPIRJFSkpOLs2uk6hqCOB--> ⚠</td><td data-page-node-id="XqWkz5ax0s4eI7hmlyOopJ"><b data-page-node-id="q3N3kAiuFkS6hFh8u7Djd5"><!--pnid:KfFo17aPl1jEL17vr7GsBM-->人事部</b></td><td data-page-node-id="g9kwhAJHtTREhNnPwRTBl4"><!--pnid:3rKsDVjkDNtrRCozB4NOKA-->只有应到/实到/缺勤人数与原因 · <b data-page-node-id="BK8WxcwkHFHlUGbBw2Wruh"><!--pnid:zlcKdZZkycjSZkTsAysVQK-->没有"当天这个人被安排在哪个工位"</b><!--pnid:WjTuL4gttqXyDzHhRoNqLj-->，工位调动只在班长口头掌握</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div data-page-node-id="SmX5FOXgJhdLNXhjo0Ky98" class="think"><b data-page-node-id="p8Tlr2B6UJk3TwgPPW2fNH"><!--pnid:RcfiDdAUAKymExr0lSsU4K-->这一步的看点：</b><!--pnid:Vx3Ym2SyoTgapov7tJQSSt-->Agent 读完先说了一句<b data-page-node-id="L7ukSMAm5dQTzeQbgEJIfT"><!--pnid:8SdKdJCizbUoHSavdId0w6-->"这五份数据里，只有前两份可以直接支撑定量结论。返工单的数量栏有两处是文字描述、出勤表缺少工位维度，因此品质与人手这两类根因我只能给候选项，不能给结论。"</b><br data-page-node-id="XFkT65utzqQcn7bPJNh4Rg"><br data-page-node-id="kT7G4idtpDrfwP3pRVvQRH"><!--pnid:vmnm9HO78h0I9OFp0i623K-->它没有先算，<b data-page-node-id="DVTZCWZCzIJhmQblG0ohb1"><!--pnid:Fb5ccsKDMaJuhYvQjcRy3m-->先声明了自己的能力边界。</b></div>
+    </div>
+  </div>
+
+
+  <!--pnid:BGxkYqoWb5SCzefd8GFaGI--><!-- Step 2 -->
+  <div data-page-node-id="qev3wkOrRUem4byzgRaxFR" class="dstep">
+    <div data-page-node-id="V1cLXOKKsAFsTDrijsw4HX" class="dstep-h">
+      <div data-page-node-id="RKWMp2a3wBfaKXVwf6SA4W" class="dstep-n io"><!--pnid:BIzjq3IBn1nv94iYGYdSnR-->▶</div>
+      <div data-page-node-id="36s72x5FGyP9Dwx7htE2ME">
+        <h2 data-page-node-id="sHB24c5LaltsO3CoQLEjy4"><!--pnid:iVdcPf2dDVQ9TiQb7AsfNc-->先校验数据时点 · 这一步在所有分析之前</h2>
+        <div data-page-node-id="TlHz3UqfJTL9w7VH8ic0R0" class="sd"><!--pnid:0bCBqCTEDH3sh47wsVnVWq-->报工是事后批量补录的，不能把录入延迟当成生产滞后</div>
+      </div>
+    </div>
+    <div data-page-node-id="FDOeuEZ4IgwSDERvHiKAlL" class="dstep-b">
+      <p data-page-node-id="fRah8nyTq1ZG9eZaZxJHfv"><!--pnid:QPIAexdvMqSFRCdRVzJxJ6-->这个场景最容易翻车的地方：<b data-page-node-id="3Kh80f1zsQZDAGe68vbVMO"><!--pnid:Z1yugkircpUEKwGA4dbvW3-->系统里的"滞后 4 天"，可能有 3 天是没录。</b><!--pnid:61ot1rry8saGsAvIs2Q88b-->所以第一个动作是给每张工单的数据打可信度标记。</p>
+
+      <div data-page-node-id="uooFx7qM4VHrSs5mMjk7OW" class="tbl">
+        <table data-page-node-id="nqqLixC9j4aRhi74LeU50u">
+          <thead data-page-node-id="n4nDSiNuCGViF3aUs0QAzh"><tr data-page-node-id="OtmdYPhooF2Q0rRwxNr5bx">
+            <th data-page-node-id="yD61nHwJ9eR9Dxl1xLgYEQ" style="width:16%"><!--pnid:gAtJaAudS9KanT87lxCU4X-->工单号</th><th data-page-node-id="CdWyXBxelXrDP6LvQueCBD" style="width:13%"><!--pnid:KajG2B2Oto8qn7S3hcFlvS-->当前工序</th>
+            <th data-page-node-id="ASMQm3KUYUqGWb0aAbzHIm" style="width:19%"><!--pnid:NtUFLjTocJj3omTCzOLyH7-->报工数据时点</th><th data-page-node-id="zeZyEo350kx8eCJ0Og1YJZ" class="c" style="width:12%"><!--pnid:qImwJKWa2b5MNZ9zUYmJoi-->距今</th>
+            <th data-page-node-id="hDKua1JjPeucUHt5Z6uBep" class="c" style="width:11%"><!--pnid:VUlyvOM3Iy2qAHAMSxJuiw-->滞后天数</th><th data-page-node-id="HAUeBuFE5jUbgiaGmtVuPz"><!--pnid:TzJbPJMp85ND1MsGyISTPl-->可信度判定</th>
+          </tr></thead>
+          <tbody data-page-node-id="dKQixQE2WFyWjY60OdDPzi">
+            <tr data-page-node-id="CRtkO5oAT4xZPoZ0qR0dRB" class="bad">
+              <td data-page-node-id="eNGS1vI9pic00Jw48Hk6uI" class="mono"><b data-page-node-id="YabYh3aOLktAdLoKh7NW97"><!--pnid:T1yw6PsK1oUOliahmY8NiO-->WO-2026-0804</b></td><td data-page-node-id="yzu1DqSWXfqvWC30tXLaxH"><!--pnid:dWVR5UXGHjogUleN5IeRZs-->焊接</td>
+              <td data-page-node-id="E3FpY33TAX0qdnAvVaoz6y" class="mono"><!--pnid:8ajXcDmL9OPwjtJrnL27Q8-->2026-08-07 16:30</td><td data-page-node-id="yLfxB0OxdOrBu15ObzDrrD" class="c"><span data-page-node-id="WYcufCH2wx6HmOmdEBoA8n" class="rd"><!--pnid:JvtehkaOGDBsltN1tZgLRO-->64 小时</span></td>
+              <td data-page-node-id="4jWCyko6NHt9PumgQRwni7" class="c"><span data-page-node-id="RmRGWo02OtSw5MgD6fzzCk" class="rd"><!--pnid:m1D2yokkJe87vvufJ83c7f-->4 天</span></td>
+              <td data-page-node-id="iMCzkvpAcN45LLu9dfl31D"><span data-page-node-id="kxYknVjGIaJ9ivpGtPkqgy" class="rd"><!--pnid:QjTGfhU3GZvpt5TlREUaO4-->⚠ 不可信</span><!--pnid:3KcgDxVKsgQSTJYJbuCAq1--> —— 已超24h 未报工，这 4 天里多少是真滞后、多少是未录入无法区分。<b data-page-node-id="IU5ZZ0uLH00o07hhCGTF2G"><!--pnid:nB4YfFetknRjee0FqYY5Z6-->班组备注为"（三天没报工）"</b></td>
+            </tr>
+            <tr data-page-node-id="ElMVHj1TsDNDqzdH5ZKOYk" class="ok-row">
+              <td data-page-node-id="uAidvPeo4kT6NSB35XXWbN" class="mono"><!--pnid:yDTaiaRCLVj8T1O4ij16CQ-->WO-2026-0801</td><td data-page-node-id="dcQlyLhf0H9c1kar4ykzwA"><!--pnid:DRImBMRvHP32vMquFt0jYh-->精加工</td>
+              <td data-page-node-id="NMnFSTQaJI2gYzkgQwzwzE" class="mono"><!--pnid:aQz7Q7Lnt7MPGpZMphGNRF-->2026-08-09 18:20</td><td data-page-node-id="df6p94MSTEIsy3Gsx1e36H" class="c"><!--pnid:sBsXMLwrlYaN1uVrrSj0Ol-->14 小时</td>
+              <td data-page-node-id="3ZjXfqU1fPTKMC98QiYsZO" class="c"><span data-page-node-id="Xgu0oh57Wz1FKebpVfHXUA" class="am"><!--pnid:rkBRyGniaHbI5xNU4Ucghg-->2 天</span></td>
+              <td data-page-node-id="TOSDoaHyDKf0uNyC4QzYWc"><span data-page-node-id="Fvx61UAPByeOewxB2dlkIr" class="gn"><!--pnid:iHJgGCr5o9hEupkF8Mosv7-->可信</span><!--pnid:gCDfMzoqA8l2UH1r8KF0Qw--> —— 昨晚班次结束后已报工</td>
+            </tr>
+            <tr data-page-node-id="aJkdxiIrGrd38n9q6HGSp1" class="ok-row">
+              <td data-page-node-id="QRPVc4wy0dNycdnWRUgTsu" class="mono"><!--pnid:Iy49ejR0mRtXX9lK2xMZfK-->WO-2026-0806</td><td data-page-node-id="QPp5lvfEimytEMzBIO5wzq"><!--pnid:ZzmL5XsIauS0hcO4KgoReB-->装配</td>
+              <td data-page-node-id="E9gzkO1y7UYG3rhmTqhM0x" class="mono"><!--pnid:TipBWCwEExwnn90qZrD6X8-->2026-08-09 18:55</td><td data-page-node-id="Tl2PwKXehJMKpw1KiqlfGg" class="c"><!--pnid:ic5yax8wasL471dkrIPUgt-->13.5 小时</td>
+              <td data-page-node-id="F7lPxNRQ9ZCBpwEIxRbLRJ" class="c"><span data-page-node-id="R85dKePZubqafOkjlCoXlm" class="am"><!--pnid:TnPEX3CROs2R3uJExbWomn-->2 天</span></td>
+              <td data-page-node-id="ONlUyrXshknAGfaPlASPLC"><span data-page-node-id="GRSzsjFE3Fwa6vDSAzSctY" class="gn"><!--pnid:OxpxBx45BYdeXYsmS8n16m-->可信</span></td>
+            </tr>
+            <tr data-page-node-id="TN6yPS8YNLJOQdgoiPhf1f" class="ok-row">
+              <td data-page-node-id="Kchla7DFFzt3eCB0IyR4Yr" class="mono"><!--pnid:7nlsHsSjIwHXt9qwqYYOVZ-->WO-2026-0805</td><td data-page-node-id="prHO5MElp3WY8UHR1464GV"><!--pnid:9WHWtaz8qs4XW1sXbSvzJb-->热处理</td>
+              <td data-page-node-id="7zgYDA1dgZdok4TreW1tT9" class="mono"><!--pnid:2T0aWcJHEY2JsIP8qcWBqq-->2026-08-09 20:05</td><td data-page-node-id="02LuXHwLUALEkQj9Dia7FO" class="c"><!--pnid:o4SuzvuCUij5LqLaOwriW9-->12.5 小时</td>
+              <td data-page-node-id="XFuNud3bg716CUd0n5pGR0" class="c"><!--pnid:TTuYK8HBu12sFpbChSof3n-->0 天</td>
+              <td data-page-node-id="j92ddZKctQp2QyCJ4J9cix"><span data-page-node-id="n8csECM643oauTshnFLCNk" class="gn"><!--pnid:9fjLuiAAGrGUFXLRpL4AFP-->可信</span></td>
+            </tr>
+            <tr data-page-node-id="Tmdb46B00Zs4TuSsP9DY8f">
+              <td data-page-node-id="KmpFdoIrPDL2MxpnZ939IO" class="mono"><!--pnid:i4PwNkhmIiP3oy5fBNhGxV-->WO-2026-0807</td><td data-page-node-id="rs7dTOxrg911dbtkHo18jW"><!--pnid:Y5umKMHEFVp9ie9WEiiJw8-->待开工</td>
+              <td data-page-node-id="HgO9z5BGhSKQh14Jg6wrai" class="mono muted"><!--pnid:IcLyOif10NrMObLRkatW2i-->—</td><td data-page-node-id="jIRdrTtkRExWlTL0bfro9o" class="c muted"><!--pnid:7wfdDEK917w2Zg0nYraddz-->未开工</td>
+              <td data-page-node-id="1TlvSJEWPV03BwgMUlDmoM" class="c"><!--pnid:fXChAr973WMirSS3a4Y7zb-->0 天</td>
+              <td data-page-node-id="lOCXh4aUAdWI4O5BUcTnNb" class="muted"><!--pnid:ceFrykFYfuFJtt56RqlhZB-->不适用 —— 未开工，等 0804 让出焊接工位</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div data-page-node-id="1SREC7dfbFhBhITFGGIakA" class="think"><b data-page-node-id="suBCjTwN4DWvqAECnlgThj"><!--pnid:SObls54Ack8KlhXigZZWnu-->这一步的看点 —— 该停的地方停下来了：</b><!--pnid:wD9Dzm7KxIzdwPjNr2Sabd-->WO-0804 是这8 张单里"看起来"最严重的一张：滞后 4 天、欠 95 件、下游还有一张 WO-0807 在等它让出焊接工位。<b data-page-node-id="hnUrOLBQ8sVk9xzpLg6jLw"><!--pnid:MBXxVgD2WGz5BMlmgtfvPP-->早会上它一定是第一个被拿出来问责的。</b><br data-page-node-id="6XZRde1CntgKpo8oZb72KD"><br data-page-node-id="yzfVRJxL4wqwuaggXShqP0"><!--pnid:fkOjzUv9u2zibl9RaHxz8u-->但 Agent 的第一句话是"<b data-page-node-id="4NctolxD7UWWfmcT6Rmp8o"><!--pnid:zFtkcyMTv5NcPrOJchGNO1-->这张单的滞后天数不可信</b><!--pnid:0JYDmw3eeApyQcdbQUnMMn-->"——报工时点是 08-07 16:30，距今 64 小时，班组备注里明明白白写着"（三天没报工）"。<br data-page-node-id="lHcPgh9tTnRUcKwgogay0F"><br data-page-node-id="nlpQDn6me6HN1TgiG5VyPX"><!--pnid:2qY4ck8msJCvC1UwL4F7oE-->所以它给的今日第一动作不是追责，是<b data-page-node-id="wWzLFWsCSSSDJTPUxxJVhd"><!--pnid:LYLo8HohehBberMQMigr6Z-->"让焊接组先把08-08、08-09 两天的报工补齐，再判断真实滞后"</b><!--pnid:oV3omTY9JtTibaUNS6FXc5-->。<br data-page-node-id="iXFiKb3siqr8YTKBAjzqQf"><br data-page-node-id="D4oZgZkAH0wplwR9cxcb82"><b data-page-node-id="yU8Vr5qPcA4jYp98kilKEk"><!--pnid:Y0fNyjqys9VwrdH109QBCs-->在数据补齐之前，任何归因都是在替车间编故事。</b><!--pnid:8rjsddHc4H0XhUe0jfzTeK-->而一次错误的问责，会让车间下次更不愿意报工——这是个会自我强化的恶性循环。</div>
+    </div>
+  </div>
+
+
+  <!--pnid:y1MGxpqb5vl73Lwx4NGGUm--><!-- Step 3 -->
+  <div data-page-node-id="XA7JPyKFnIgmr51Q7o2ENU" class="dstep">
+    <div data-page-node-id="IP5Mqeymi4iiTqDXuNarQw" class="dstep-h">
+      <div data-page-node-id="FBVpkmjbWudG7lOYyU57dk" class="dstep-n"><!--pnid:C6F1LIKq8GU45cykUAjWS3-->3</div>
+      <div data-page-node-id="eP0ZZH7rVPFRfanD8pcjOH">
+        <h2 data-page-node-id="4hCAFrw6h5adBJiFP2whjr"><!--pnid:KsVfsKCXhvWwp0upj3mkYX-->识别三类偏差 · 其中一类专治"进度条陷阱"</h2>
+        <div data-page-node-id="ursMQSVveSOW77IKl6WaY0" class="sd"><!--pnid:al92QmYlRSt2aJI5HKSCzd-->欠数 · 滞后 · 返工未补回</div>
+      </div>
+    </div>
+    <div data-page-node-id="nGTF0Gp0E2QATxmZXuk6J9" class="dstep-b">
+
+      <div data-page-node-id="PA6rJ1zUsTI9ECJFK8biZV" class="tbl">
+        <table data-page-node-id="IWPK5t1SHUcWJZgUJ5s0r2">
+          <thead data-page-node-id="wJWdRXC7j61FK5UMCwWP6V"><tr data-page-node-id="PUjEbnRnmzRR4K2B2fHRso">
+            <th data-page-node-id="Ag2RfieiUZjLVS3IixgxTh" style="width:15%"><!--pnid:1E8wdhGgL46KXeFARqAHbU-->工单号</th><th data-page-node-id="Q8bUCGfCcJG1ItDlNvBQmK" style="width:14%"><!--pnid:xrLji9r809kd7TwReqv41p-->产品 / 客户</th>
+            <th data-page-node-id="cqKUwuCbPdDUFpVvjyyyBX" class="c" style="width:7%"><!--pnid:rYDr2bZLPli8zLpIVRfoqp-->计划</th><th data-page-node-id="bxtlOb3Ajcik1yMsdBe8Hr" class="c" style="width:7%"><!--pnid:KzmXvxkF7cqZyRzaLkMJgm-->完工</th>
+            <th data-page-node-id="E3eGMOse5uJHsYwdcvQnZ7" class="c" style="width:7%"><!--pnid:x6SdgB3nrPy6nx4QQxncP6-->欠数</th><th data-page-node-id="ODdSPWN5aWL3CX46TK8obH" class="c" style="width:8%"><!--pnid:c2uwzyHSUFDB0tXqWk8X6x-->完成率</th>
+            <th data-page-node-id="cW2DlhVCE9Y8deyYvjwh7F" class="c" style="width:11%"><!--pnid:2djBPoUvWP5TTDUce9vHeV-->交货日</th><th data-page-node-id="bshT9UqJ2XnyrlZM26xJRI"><!--pnid:WB39H9Ci8RExCkCcbRwCr6-->偏差判定</th>
+          </tr></thead>
+          <tbody data-page-node-id="kkNgWO2YVGJ3z2FCtgaP1z">
+            <tr data-page-node-id="ZpBVKQBFnXtRtu6DpQtZvX" class="bad">
+              <td data-page-node-id="qYi5tTptf1Cq9LO1mKG5WL" class="mono"><b data-page-node-id="Xan9vaEQpehl9AcOvfc3Ox"><!--pnid:FmqtpFcZCkBS9Mskaipe0p-->WO-2026-0806</b></td><td data-page-node-id="fZf7Wp8Lyel0lomeRC8cyx"><!--pnid:QODyOZ7E9ROXlYIUhl46oY-->端盖 / 恒通</td>
+              <td data-page-node-id="hbv0tlPH72bHj8pqcFdQXG" class="c"><!--pnid:tDE7fb8htlML44K5NMj0GY-->600</td><td data-page-node-id="lXbDz1l0oGZ5NjoS98F1Jy" class="c"><!--pnid:ylzrptC8jNtWTKtxCYuHND-->588</td><td data-page-node-id="QnuZMmVKd40B5xmFoyn53E" class="c"><span data-page-node-id="5VW4MitWWFZr6zZN1xCUtg" class="rd"><!--pnid:dnfXfUMBPAySEGejs8YtK1-->12</span></td>
+              <td data-page-node-id="KVccN0p1rjv8nCdwuGgOXs" class="c"><b data-page-node-id="PLDfLglM48klycpXTFCDJO"><!--pnid:j2dXI7uJROB0WeBD4IMuyE-->98.0%</b></td><td data-page-node-id="meufurOc5jNCkVPk2rVYPI" class="c"><span data-page-node-id="RE1PZV2OkBnJ2i1pFRCwpC" class="rd"><!--pnid:44eCvSLKsDcqCufbzx8XBG-->08-11</span></td>
+              <td data-page-node-id="kWMTKl0CPL5p9c3fuXk3uo"><span data-page-node-id="FolEb8BfjNavPLNUjIuPmQ" class="rd"><!--pnid:f2073uf9A475ss5gozbtjQ-->🔴 返工未补回 + 滞后 2天</span><br data-page-node-id="bgx91OGIin5QlCmNmxbA8e"><span data-page-node-id="x9fhbeBlWGXN5sU4DnwMk2" style="font-size:11.5px"><!--pnid:Dtp3i3sQN61xitACisUtiL-->欠的 12 件 = 返工单 RW-20260808-11（密封垫压装偏移 12 件），<b data-page-node-id="h1opuIr5xoFhblLgyBctCv"><!--pnid:BiRRXPZ0geWRv6GAZZ9gz0-->"是否已补回"= 未记录</b><!--pnid:NFAVlMtAuw4eNwCTjMqEvp-->。<b data-page-node-id="ZAxnihkCoqRA5HEaRa5Xc7"><!--pnid:wJtFuikiSs2rG7tDIFxHZB-->明天交货，只剩 1 天</b></span></td>
+            </tr>
+            <tr data-page-node-id="LTymp4oIVRjwSoc4obJE37" class="bad">
+              <td data-page-node-id="ttfkjdjwKzay417EJ7VTp8" class="mono"><b data-page-node-id="LfJe8niQX9sBbJ2QcNToUo"><!--pnid:izEN7rz9UU71Ar5CuJyUbk-->WO-2026-0804</b></td><td data-page-node-id="VOKd7cyPgrSFJlRGSVnKfi"><!--pnid:WCGfqAz1vMRg8BbQscUkTN-->底座 / 中远</td>
+              <td data-page-node-id="RjDhSnmgBJ6tjVZONeQBpE" class="c"><!--pnid:edKKUSWhLfDzWPATCbLlcP-->250</td><td data-page-node-id="CGHk2n2XJzxR1v0gUOTtID" class="c"><!--pnid:n4GImixESI4aBZrMdQy8Z7-->155</td><td data-page-node-id="X2A4FnghMG52wNETQcZ33M" class="c"><span data-page-node-id="Um7c5wWnzF14IpCcY6p5AG" class="rd"><!--pnid:9csdkgst9UUiqcmpTZmPj6-->95</span></td>
+              <td data-page-node-id="UkGvC5QUuFZ9JwGSr1IVIq" class="c"><!--pnid:LbBL9l8Nq8jXM6tNwoJlyd-->62.0%</td><td data-page-node-id="ca0OGxfHCZxOReEWFdrV5y" class="c"><span data-page-node-id="0UuBwcutk754X58pzqZGhm" class="rd"><!--pnid:LkoWduZjLxuZNR2WYtaUz3-->08-12</span></td>
+              <td data-page-node-id="T3oLA2AreXOaNjNMRloQZ3"><span data-page-node-id="6Q4oImAtASIV3T0ku0JlVp" class="rd"><!--pnid:axAA0wCeT8LhTM6v73ZfDk-->🔴 欠数 + 滞后（不可信）</span><br data-page-node-id="OLRv8vgx9ROknaMWYvPmft"><span data-page-node-id="Vnekf8yCs0ib7ASuRdUE1T" style="font-size:11.5px"><!--pnid:GLAMSmp8U471qtpMHAfPXL-->数据时点异常，须先补报工。<b data-page-node-id="GwwWHApaWsZAqbJdMFwoM9"><!--pnid:qa7qo60VVqQRLOkXgPwLjL-->下游 WO-0807 在等这个工位</b></span></td>
+            </tr>
+            <tr data-page-node-id="ubcOjL1O0dPaOxWCRdw2sv" class="warn-row">
+              <td data-page-node-id="BU7NdOdc9CLJotyPYK5XCN" class="mono"><!--pnid:EXS9tE9b2f43eGJ9kjkh9d-->WO-2026-0801</td><td data-page-node-id="PkdTCczApnhauJSwTXJW3M"><!--pnid:7wEJVEb6lAm0fbRANJChQX-->齿轮箱体 / 中远</td>
+              <td data-page-node-id="8U5GEggm7f6AZRph6to9Na" class="c"><!--pnid:2XtBGvMQvcdtsdUzu4w01a-->400</td><td data-page-node-id="yPlc4RrmuNGVzrQmTt9iCo" class="c"><!--pnid:N2JKmouOdL7UVpY6NCnisE-->268</td><td data-page-node-id="jkSBhqdw3YcVShaGpmV2I6" class="c"><span data-page-node-id="PDxjeVV7YC0MTBUUhqaQJs" class="am"><!--pnid:Wl4TaQUAj760hNRIfmMaoq-->132</span></td>
+              <td data-page-node-id="4CJokWq9P6YoXcrZAYzMXZ" class="c"><!--pnid:5WwokQeF48eHmclI0AuGqm-->67.0%</td><td data-page-node-id="e0cuPZ1neGL5R3OGVrf96S" class="c"><!--pnid:xJz0izsoly7jWCktwcx68m-->08-15</td>
+              <td data-page-node-id="sdOTF07LZYBfA4hbVOB3Pp"><span data-page-node-id="YiXphvOMNsT386hZ9tQtdX" class="am"><!--pnid:P4ZKa74psxqDrAIAcpL88M-->🟡 欠数 + 滞后 2 天</span><br data-page-node-id="jpB9lC63ERHDizb44zwgmr"><span data-page-node-id="Socq5JGq4tUGIrtymKrD9I" style="font-size:11.5px"><!--pnid:f7wHqmPKKSxBhgDzGw4yoD-->粗加工工序另有 4 件报废（SC-20260807-04 内孔超差不可修复）</span></td>
+            </tr>
+            <tr data-page-node-id="NmOYfZniVyt1zCfnlgtEVK" class="warn-row">
+              <td data-page-node-id="VKN4gS9i6jBbRXbzz59LHK" class="mono"><!--pnid:p9l2qzvpSX3ovzRnDFiuAP-->WO-2026-0805</td><td data-page-node-id="PiZWkVjOUvHnwhZl9pnGjR"><!--pnid:Rds0fXQYBRIKxM2sFNFpoA-->传动轴 / 华泰</td>
+              <td data-page-node-id="bIlD0mEUjwx2Dnx08aisGy" class="c"><!--pnid:HOMGO7WWxKevxZF8yHMFcU-->350</td><td data-page-node-id="hw9xugT2U598OYdpsUA27O" class="c"><!--pnid:TlbTRbvAJ8VSOzu50uGisw-->210</td><td data-page-node-id="Mds5kKpRN13kamffGnLTUc" class="c"><span data-page-node-id="alRblZruBn9rQmkLhtQHYO" class="am"><!--pnid:GrHm7vcV9MxT247olo3f5A-->140</span></td>
+              <td data-page-node-id="RspiBena549d3NwCwWWqlj" class="c"><!--pnid:tOqFXsSEdu0TbxVZo1EKmV-->60.0%</td><td data-page-node-id="xK3dSY6CiScwznOTpGHZgE" class="c"><!--pnid:EZavdN9CNSzl90j6MmiKGd-->08-18</td>
+              <td data-page-node-id="nIrU32Yj9lZICTal1gftHm"><span data-page-node-id="UlARjxoO3dAx2rOo8U3GZV" class="am"><!--pnid:7eI7XtsRWKodLEUrRy4gef-->🟡 欠数 · 即将卡料</span><br data-page-node-id="or4zumialanvZXl0OSoKzA"><span data-page-node-id="ZOwt1zzFetgQRkaNmqCXWx" style="font-size:11.5px"><!--pnid:x3e8zqsgDJmfyrEyuyGciN-->热处理后需M-STL-42，<b data-page-node-id="mTm6WAoLIzx4No4UeOPOzy"><!--pnid:yw5s4ybM05qlyP4qMp1Wi9-->缺 140 且在途 08-12 才到</b></span></td>
+            </tr>
+            <tr data-page-node-id="4VyBQOcmbAHhTV5JCCLVTO">
+              <td data-page-node-id="cGRWG9yxi5DB9XL8BESuBd" class="mono"><!--pnid:XnF7r8jwn48qMmkMvwPbnH-->WO-2026-0808</td><td data-page-node-id="bpHYMcmaHhO1EaUK5jfZVr"><!--pnid:KoZ7g5VpJPaA93yvmLNXuu-->齿轮箱体 / 恒通</td>
+              <td data-page-node-id="xrUlIEZVguJ5Wnx0654OED" class="c"><!--pnid:toKiuy18VCsIBcAUiYuPLp-->180</td><td data-page-node-id="ESauvtjDdBvGwcWgUP1cYr" class="c"><!--pnid:QTTGhJnqOFjGoq04juKU55-->176</td><td data-page-node-id="OvOUrCxk9JHbGZHWwUbl2v" class="c"><!--pnid:VqnjKzpRZo04BuCwH5xKkM-->4</td>
+              <td data-page-node-id="BA4jmSSwZJWVyUyaIs3aYZ" class="c"><!--pnid:kAYPcTpQWz59eQLDKEMnMG-->97.8%</td><td data-page-node-id="lsnUckBjSOjk4B32gOeKnA" class="c"><!--pnid:OSVWnw8YN4ZhlCbJ2Vdl31-->08-14</td>
+              <td data-page-node-id="xeNmzshR9fttktG53c1EQY" class="muted"><!--pnid:anqFdAr2xsJtmTnGUk4TL5-->⚪ 轻微欠数 · 交期充裕，本工序内可消化</td>
+            </tr>
+            <tr data-page-node-id="PToHKZVJecV2iIJHCE1AFp">
+              <td data-page-node-id="t4M0oJ4BVe3JWgSPcbGGuY" class="mono"><!--pnid:q4I6YFaXqcg1C0MBDk23KD-->WO-2026-0803</td><td data-page-node-id="cWOP6gIeWXurd24FboTzqQ"><!--pnid:QIhqxv7MjHmQa8aFxooxRS-->齿轮箱体 / 中远</td>
+              <td data-page-node-id="n6sRzYEsSrI1oyP8mMog6l" class="c"><!--pnid:S2SPpbSgkAeVaWvjr9AnyR-->500</td><td data-page-node-id="b2ABF811CxVTPjFnPGSCW5" class="c"><!--pnid:7w8wCaKmPdua2CbKIKd6Hv-->120</td><td data-page-node-id="GM43n4NuFKKbeenz0h5hb0" class="c"><!--pnid:vDLIrS7ZphFd6JbDXQhjm2-->380</td>
+              <td data-page-node-id="eP3tqoGy4UX2q7rwDkpp01" class="c"><!--pnid:y9jzufGcHe91u58AWHJIBe-->24.0%</td><td data-page-node-id="KIR9jA77vE1PqiJkMpjUpF" class="c"><!--pnid:rUbo7oSJxKUfmjvKOwmHDa-->08-20</td>
+              <td data-page-node-id="olUPuyWHLTcehQDNhmiTdL" class="muted"><!--pnid:q1uGZbvFzWbXXm4erISt9V-->⚪ 进度正常 · 粗加工阶段，计划完工 08-17</td>
+            </tr>
+            <tr data-page-node-id="QzpkYRRmC21mt9J864SV1g" class="ok-row">
+              <td data-page-node-id="Bnx5RMP8IqjVrczBPd1584" class="mono"><!--pnid:g4M7HU7JIBskPThDHnMDjd-->WO-2026-0802</td><td data-page-node-id="dhZygRxzPAIN0ZJgpOS3u3"><!--pnid:TOw16NHl7tgrM5CLxjRLnW-->传动轴 / 恒通</td>
+              <td data-page-node-id="94l6qVgQDiJJ82QFdYkRgJ" class="c"><!--pnid:zjMtMQzUDro9X8Vo7ZsNlL-->300</td><td data-page-node-id="o647Wuv6E8UCKf89rTSDwx" class="c"><!--pnid:LRYpc5wptp1OMoKzBJl2tO-->300</td><td data-page-node-id="kJw4iUqBoacWJfpHeXEp9t" class="c"><!--pnid:nlKjkpqxQrQpqpNtKdn1pU-->0</td>
+              <td data-page-node-id="oKvJDpA7MAYWH7q44tylND" class="c"><!--pnid:9DBvdwdugfS5Gq9FIhoVCp-->100%</td><td data-page-node-id="6FwKpI7ABMrPCA1BKHAfgg" class="c"><!--pnid:BgRWdgCMk2ILRS6qqBzisP-->08-13</td>
+              <td data-page-node-id="aLLrdLE8Xsl46eDtoGao7V"><span data-page-node-id="SPB7Jaj31NHht9gQQKTs0J" class="gn"><!--pnid:1UwYYvh0JbA7OYwZDZEvwU-->✓ 已完工待质检入库</span></td>
+            </tr>
+            <tr data-page-node-id="eD8aF66QX0SY2ZspAjSXHU">
+              <td data-page-node-id="FXiSPfBpnm7kCChAP9aFBa" class="mono"><!--pnid:8MzENfnNLxklvQwnlAy4m2-->WO-2026-0807</td><td data-page-node-id="VF69hkR7tnNAMHRYcuGB2w"><!--pnid:nX2YoT6KQU0jnNWMYYHTpq-->底座 / 华泰</td>
+              <td data-page-node-id="tSiYHO5n7yIQqkw9SppHwV" class="c"><!--pnid:BK5QZKXtbzqt3t5uQrA13n-->200</td><td data-page-node-id="fCyAfktDtAA4ARRPCkr2VH" class="c"><!--pnid:Z1ymCvh9rFtch0ZJyZXj06-->0</td><td data-page-node-id="kHAymdJV4HMOcTzhGJa4GC" class="c"><!--pnid:mnD1TFNCaQq4JENrXaoZFY-->200</td>
+              <td data-page-node-id="1lKt24sshM0A5mbMqnKnjy" class="c"><!--pnid:k0M4p6v0IgQDBfHw5WsKCW-->0%</td><td data-page-node-id="6H4nduQAmL6zbGGlqE3xon" class="c"><!--pnid:pIKm7AzsiweMbdfuY6Iptg-->08-22</td>
+              <td data-page-node-id="KX6RJ2cnxoTsU2gYY5YMi0" class="muted"><!--pnid:ZbwqAAfL11XYXJueyiKDsK-->⚪ 未开工 · <b data-page-node-id="B360K6J3mCUMZWKlWzUcgh"><!--pnid:Z2DMwhjIQnxxbsCQsNHOxT-->但等 0804 让出焊接工位</b><!--pnid:uVIzmBnGFvHtgu8fXYhPko-->，受 0804 连带影响</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div data-page-node-id="IQ5F1QxW7CTgE2zniiQVIU" class="think"><b data-page-node-id="yYjwRnOrhyMuVFuUtM67YQ"><!--pnid:eH93ZoDj1VgANCngghk4Kf-->这一步的看点 —— 进度条陷阱：</b><!--pnid:VVhudqL63V6PdOpwztJT3x-->把这张表按"完成率"排序，WO-0806 的 <b data-page-node-id="FzKMY74faNSGbqf8XfCRsW"><!--pnid:eb0ivdiG2Qbz2xqMwfrVsh-->98.0%</b><!--pnid:RDSHEVpAYr6tJuz4DqXPnX--> 会排在最前面，紧跟着 WO-0808 的 97.8%。<b data-page-node-id="sOAeQiMt4ykRuAOflv3Mfa"><!--pnid:LQeXZ6grnZ2wbf01k7bpdg-->早会上扫一眼进度条，这两张都会被跳过。</b><br data-page-node-id="7m0sSAQNVaYk1oiDyWMcII"><br data-page-node-id="MxzqT0i6uNtPek8Um7U8Zb"><!--pnid:l3Y2rPxODJXWMC9lzydpnE-->但它们的处境完全不同：<br data-page-node-id="LI5hD06ZJ8wbmu6Dj2gXkz"><!--pnid:GiVXn6g0GbcUjOg7bBeOhu-->·<b data-page-node-id="SOFLXRu9d8HNKPbYU2Ph2t"><!--pnid:7LSFJDTI46Oo7ZqXqrR1Gp-->WO-0808</b><!--pnid:ExMd3MgiPqhfXlKDSmlM4p-->：欠 4 件，交货日 08-14 还有 4 天，本工序内可消化 → 真的不用管<br data-page-node-id="4P9muOXLulmXoZeJUIRyHg"><!--pnid:ounARVg0IdmuquWqkJoEOt-->· <b data-page-node-id="VjKDvfT7EH8zaVvBmbRNdO"><!--pnid:C5UFZUctBZS1HGv2X8WoyA-->WO-0806</b><!--pnid:VIfDUz6K98eTGDYKuS7sLP-->：欠 12 件，<b data-page-node-id="ZSXVeCwCCeegsIl7OTpsqC"><!--pnid:1xdOsqMysfryMoLo1kaHBl-->交货日 08-11 只剩 1 天</b><!--pnid:rn1N0KI1rRc4BqbTGQzIh8-->，而且这 12 件不是"还没做"，是<b data-page-node-id="bJxraPAs79IrVlLF4VWBfg"><!--pnid:WgrSXejAPT30Fm8YUMtNSn-->返工件——返工完成后有没有补回产量，返工单上写着"未记录"</b><br data-page-node-id="Rg8eo9lLPrIRv8na2sHwZL"><br data-page-node-id="o1m1tPTOzl4taCCqiysQLh"><!--pnid:09CC7y2LSvslVUDFsgjaJt-->差别不在完成率，在<b data-page-node-id="qVJi5k41JGylv5VC8k7tHR"><!--pnid:8aVu018texltLYa4yd4msc-->欠的那一点点是什么性质、还剩多少时间</b><!--pnid:8tOBtmSCvS0sqG0KlaRGyY-->。这就是为什么"返工未补回"必须作为独立的一类偏差来识别——<b data-page-node-id="8ePB65XIBop0ATpP1P2GS2"><!--pnid:8oJHKsoMXeH4lEOT8WyVnT-->它是唯一一类会伪装成"接近完工"的偏差。</b></div>
+    </div>
+  </div>
+
+
+  <!--pnid:52oUH66iBHZayDjyGrLP0W--><!-- Step 4 -->
+  <div data-page-node-id="MN7vaSYeAk0TGxdM8ubly4" class="dstep">
+    <div data-page-node-id="FKLh6buEnNpVpObTONhWOi" class="dstep-h">
+      <div data-page-node-id="GCDPM9N6y0hmwX7nzJ8Mh6" class="dstep-n"><!--pnid:PA0nujWRAxzqUfQ2VM90dY-->4</div>
+      <div data-page-node-id="wlqUOWMKdU8ax7mDEgP1H9">
+        <h2 data-page-node-id="g8FpqLN2Z0SFh4VKzQN7mW"><!--pnid:LgiS1nEGw6cycYNVLcTYSX-->四类根因 · 两类给算式，两类给候选</h2>
+        <div data-page-node-id="TTHH5hJCGtqBRuFI5sWbGe" class="sd"><!--pnid:vY0G0e04padoZ4HNWayNYk-->以 WO-2026-0804 为例：四类全部命中嫌疑，但无一可定量</div>
+      </div>
+    </div>
+    <div data-page-node-id="6aJHrhPgsWlDilvMvwk9Mu" class="dstep-b">
+      <p data-page-node-id="38gMdtVzbA5X2QF2R5kO1q"><!--pnid:smgwVT6dftPumARyx1cqIi-->这是整个场景最诚实的一步。<b data-page-node-id="iPNDKWB7qy1FHNvM7xvnwx"><!--pnid:dgg97Ue7tPqyY5Zjf0Bivl-->WO-0804 滞后了，四类根因同期全都发生了事情</b><!--pnid:HIhRAMd57ErnqMMe96bUVN-->——但没有任何一类能算出"它贡献了几天滞后"。</p>
+
+      <div data-page-node-id="MIGdWVR7gG6FX3BtYkLXcx" class="cand">
+        <div data-page-node-id="zD2GvdC809GPIArd5BW3fX" class="cand-h"><!--pnid:OS0latpflJ0W9K1A0XauWn-->WO-2026-0804 底座 · 焊接工序 · 根因候选4 项（请PMC 勾选确认）</div>
+        <div data-page-node-id="tDX7waD22DgA6toJo8KPVD" class="cand-b">
+          <div data-page-node-id="iSYyHFgSi5SUsN5DM8JEcY" class="cd-row">
+            <div data-page-node-id="MjPo6Y4zKjTQTO1ufqS6bR" class="cd-chk"></div>
+            <div data-page-node-id="6ONnUy6eLeZrGzU27tegzy" class="cd-body"><b data-page-node-id="2w97AiNxD70AkBV6zu0Osz"><!--pnid:nm5vMFDlOtvydGTm61jeLl-->① 设备</b><span data-page-node-id="zqMkahDCh9sw4E1aWOZioU" class="cd-tag calc"><!--pnid:4PdWH727wEMcBYDKDlDJS8-->可定量</span><br data-page-node-id="1kqzILub4Zfhupdxns97r5"><!--pnid:IGYFO5IjzPrUnCq0WLBnwI-->
+              维修单 MR-20260806-02：焊接机器人 1 号送丝机构卡滞，<b data-page-node-id="76tyxYN98e0Px5oprb3z8c"><!--pnid:Ul8N02ZZ8mtSFChucz8jq9-->2026-08-06 13:40 报修，停机 3.0 小时</b><!--pnid:PVmmZlVul2AVfoFp4cFFC1-->，16:40 修复。<br data-page-node-id="bKLDMXj6mikBLzfjPuwUk0">
+              <span data-page-node-id="C91SND6gA0r9DJQLd8Lqbx" class="muted"><!--pnid:ztbBcUmoIbz1uG0BJDT9NO-->→ 可确认的影响：约 0.4 个工作日。<b data-page-node-id="2GoZGZqK7mp5I29Jdz3EMn"><!--pnid:A6hzOAXWg1avqLnLLgblgj-->但这解释不了 4 天滞后。</b></span></div>
+          </div>
+          <div data-page-node-id="qMAPdSYwqqcl0iuLEXuA8w" class="cd-row">
+            <div data-page-node-id="KPIzCXJoOTAjrF1vB5hHgR" class="cd-chk"></div>
+            <div data-page-node-id="7c9J1MAc9P1qFWksf2DuSw" class="cd-body"><b data-page-node-id="nZm2zQAR1Z8Q6M5i1xU41I"><!--pnid:F3MqjOn4J7akJ6UaAMGtS3-->② 品质</b><span data-page-node-id="ky0t6ZvRIcm9qv20KW1CIl" class="cd-tag nodata"><!--pnid:s2QjSph2OsQD5QeuTysXDP-->数据不足</span><br data-page-node-id="Q6wvVHipDQiEWEJ7F1mxvD"><!--pnid:4JaMXMwQ0T85r4ySchjN11-->
+              返工单 RW-20260807-09（焊缝气孔，数量写<b data-page-node-id="eElUH3UAmKbOs7Tv1Z9HrD"><!--pnid:E8gWduDBUuGEfgqgrqR55z-->"少量"</b><!--pnid:cp3sXVjRCbF15tSebhwheV-->）+ RW-20260809-12（焊缝气孔同类问题，数量写<b data-page-node-id="r3zyUDZ1pZyOcx4qFFuhpC"><!--pnid:hplXLGjTZKTUKiepJVO5S7-->"几件"</b><!--pnid:BvvrbRRbjDZreRTDKu2OxJ-->）。<br data-page-node-id="pxAbp8MUO2gvSV63zff7HU">
+              <span data-page-node-id="oYXFzauP2yUK0WrUvT61sE" class="muted"><!--pnid:07iMzv63RvRgTCWKIpHMjo-->→ <b data-page-node-id="jE2qjCpwXkr2sMi1ABDA0x"><!--pnid:2H7KkPtj8YJQDUxmcwSvyD-->两张单的数量栏都是文字描述，无法计算返工工时占用。</b><!--pnid:SnAOIi9as39TCtj9qw9Ndi-->另注意：同类焊缝气孔两天内出现两次，可能是工艺或设备问题的连带表现，建议同步品保。</span></div>
+          </div>
+          <div data-page-node-id="qIs41P7DRClzamjcUZ4wW8" class="cd-row">
+            <div data-page-node-id="E0L6q8TIybWoFmfQSua3un" class="cd-chk"></div>
+            <div data-page-node-id="ydh3KQ8Q08Zf8jh2ii00jq" class="cd-body"><b data-page-node-id="aqkJRdajwTZS0B9vyBtAio"><!--pnid:DrZKIquEuA9AjrDeh0Rpn0-->③ 人手</b><span data-page-node-id="QXZd2ekyXVjf1pym8nGbMm" class="cd-tag nodata"><!--pnid:ENWiPLFj8xEv0M2EGoSTah-->数据不足</span><br data-page-node-id="JfmGtCYGFTJPDkBNJukzLd"><!--pnid:CLlagQJdnrxD9ND0FL2O9r-->
+              出勤表：焊接组应到 6 人，<b data-page-node-id="LZ14QDQPuXaAXtvhx6jDHf"><!--pnid:2ZJod1IOisK6IsgTN29aeZ-->08-07 实到 4（缺 2）、08-08 实到 4（缺 2）、08-09 实到 5（缺 1）</b><!--pnid:ZtihaqLlvAiyqONEVp1cNV-->，连续三天减员。<br data-page-node-id="ZjaXu7hoPJpCEK9Z6m4Y6h">
+              <span data-page-node-id="IaEmwUmsQbHexaN9BGZ9aX" class="muted"><!--pnid:czkAH5KF056jsAYzIN6ps4-->→ <b data-page-node-id="kuktCgkStHldnZfWuKpLGi"><!--pnid:rJViwNAytj6abrPOHiE2Wc-->但出勤表没有"当天这几个人被安排在哪张工单上"</b><!--pnid:uvxjKGqJteIV6gixwfyL9r-->，无法确认缺勤是否直接影响本工单。工位调动只在班长口头掌握。</span></div>
+          </div>
+          <div data-page-node-id="TR0Rxfwc9d5FdzUyOvVymB" class="cd-row">
+            <div data-page-node-id="CJMlwjAfFQgrTpbQt0vOLS" class="cd-chk"></div>
+            <div data-page-node-id="YeMMfRsqD0OsSTh53CWKff" class="cd-body"><b data-page-node-id="qy6Nfkgj3G6nPVuq5p1shI"><!--pnid:BydsLzCuhawGvlJgynZzOw-->④ 报工延迟本身</b><span data-page-node-id="g4k0d4Sb3iIa549CwkWL3h" class="cd-tag calc"><!--pnid:RzwytKrycDTZUyj9KR9uRA-->可定量</span><br data-page-node-id="afbqWYD0AX3gyKCLcbZtOY"><!--pnid:9m9W8jNi468lHoc02Ped7l-->
+              最后报工时点 2026-08-07 16:30，<b data-page-node-id="bC3zR4aMkFkrXX8VYpiUQP"><!--pnid:Nl0fs6fGmMwJaZyZXk9xJR-->距今 64 小时</b><!--pnid:JSBVC3KU6gqM6boySYAiyu-->。班组备注"（三天没报工）"。<br data-page-node-id="MPYZsxNuTjCfJBaKTkX2qU">
+              <span data-page-node-id="utMvlM3PfWbBCtvTBZh97K" class="muted"><!--pnid:6d8FCeWaeJQ9JbGecR3X44-->→ <b data-page-node-id="3cXTKejiCRMb42dzoXTMvV"><!--pnid:zwyPeHbVsMIOjFKIBU8jcT-->这4 天滞后中包含多少纯粹的录入延迟，须补齐报工后才能确定。</b></span></div>
+          </div>
+          <div data-page-node-id="w3MbdlVERiN14d79NWjYWb" class="cd-row" style="background:var(--panel)">
+            <div data-page-node-id="7RtWGpRH6B6p9nMQPOU6QG" style="width:18px; flex-shrink:0"></div>
+            <div data-page-node-id="D7pgoHducIICfD0BjAg2g6" class="cd-body"><b data-page-node-id="4qT9Bk1qwTABWaqqG23ct8"><!--pnid:lUWSd70qCHIyDF3hIJZPZp-->缺料这一类已排除</b><span data-page-node-id="mlSigNKUzlasDr6SHG3foL" class="cd-tag calc"><!--pnid:9qEuudDDp0Fl6zqrGpXo9B-->可定量</span><br data-page-node-id="F670CGpMS6ukg0rKFgiy0j"><!--pnid:cOLupjsUjqMiSnvt4EWd7d-->
+              齐套表：WO-0804 所需 M-WLD-02 焊丝需求 60、已领 40、库存可用 20、<b data-page-node-id="t8jU1fmIzx7ntvJL10vtnY"><!--pnid:1BRc5kMH1sf38mEqWfcLO6-->缺口 0</b><!--pnid:TEjnqLWOiOdWCvdg0dpqU9-->。
+              <span data-page-node-id="dZeFN9gl8hmu7Xp0PLCItS" class="muted"><!--pnid:0yIUldiGSSHkOKJhnJ1RR5-->→ <b data-page-node-id="wlLRPXAxzHyqwBVCHxTKs3"><!--pnid:fO7w5S0nwlRpQSW9QzPBPI-->本工单不存在缺料问题，可明确排除。</b></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div data-page-node-id="qFkgjale3GmsOpiUjVmJHh" class="think"><b data-page-node-id="9YW7yd6E38feEiTqR21ecK"><!--pnid:TDbH9oUEk8e9r84PJ9SjOW-->这一步的看点 —— 一个排除性结论 + 一句"我判不了"：</b><!--pnid:N7OipfwMqmlPjba6hROBQr-->四类根因里，Agent <b data-page-node-id="ZSNG382eIbzWWAoHUeievs"><!--pnid:g7DX174U0YjRSYPsproHY7-->明确排除了缺料</b><!--pnid:dmTBnEzzMfHLCb8p4H8KmF-->（缺口 0，算得出来），<b data-page-node-id="YquVNX1WW0XjRb4pkCHF1I"><!--pnid:sw5l3fkiXWyQOLzNUV2RNe-->量化了设备</b><!--pnid:RMC8PQNgXT8FWsCYcYWyw8-->（停机 3.0 小时≈ 0.4 个工作日），然后对品质和人手<b data-page-node-id="xfRPETdhuXHeNS4ybGjthd"><!--pnid:D6ybhAmQtvwVdswmYtDDts-->明说了数据不足</b><!--pnid:iDJNwFczbX4Vzu32PNLLJs-->——返工单数量写着"少量""几件"，出勤表没有工位维度。<br data-page-node-id="u6wk7GNstTehm9fPlukkDc"><br data-page-node-id="KN3ntUvDdtBSBp8xAJAg7T"><!--pnid:piQ9Vw9XzRg9E3THCBYYS6-->它给出的今日动作是分层的：<br data-page-node-id="ZWaxlsHpW5C3De9XpS02ho"><!--pnid:yVnckk0i8vM0xqKIlUhzso-->1. <b data-page-node-id="mdSOJPVclB3ERIqsAFqiOa"><!--pnid:nBxW3hbt6mnoNQwOrXZKTa-->先让焊接组补齐 08-08、08-09 报工</b><!--pnid:YN2htvdFqXxNR1mDvJ27IC-->（否则后面全是空转）<br data-page-node-id="WqBSHp42dfwsVkg1gQseLC"><!--pnid:jnUv3qFIDk38PvYLaovmeK-->2. 向品保确认两张返工单的实际件数<br data-page-node-id="otADW2hoqWDC6iyUaIFTvv"><!--pnid:DHI0zHqv3wmi1uwb53evcX-->3. 向班长确认焊接组这三天的实际工位安排<br data-page-node-id="4YXZlYYUS7lHfpBdeIbrbN"><!--pnid:qcIpmzV4RHv3cKGlHON3qt-->4.<b data-page-node-id="rh9X1KtIxmErTNitLSy8pR"><!--pnid:8bxQFhXueWfG5dneyiwTN4-->顺带提示：焊缝气孔两天内出现两次同类问题，建议同步品保查是不是工艺或设备的连带表现</b><br data-page-node-id="E6jTakPYuB5hLtoizL0Pkm"><br data-page-node-id="RvniXcsOQae14WnH02NLLd"><!--pnid:wDtZX5qVSlBzrTFojBJrWy-->第 4 条不是这次追踪要回答的问题，是它顺手发现的。<b data-page-node-id="obqvTYyoFb5KUneLWNVdAq"><!--pnid:tCl72ATqSzaHb7bUjuMdaF-->而如果没人把两张返工单放在一起看，"两天内同一个缺陷出现两次"这件事就不会被注意到</b><!--pnid:kfqqtklpbru2LQKFWLx4mr-->——因为它们是两张独立的纸质单据。</div>
+    </div>
+  </div>
+
+
+  <!--pnid:owR24ZcZ656wmwkqz8goou--><!-- Step 5 -->
+  <div data-page-node-id="itCCS7jB6eSwNSz9vrlW98" class="dstep">
+    <div data-page-node-id="WGXek7ypsjwZAvCvo4OM12" class="dstep-h">
+      <div data-page-node-id="WVGEDZuH6MzZBbgM8Wg3Li" class="dstep-n"><!--pnid:2KGUo7ljpOo8KKAiBt1qAn-->5</div>
+      <div data-page-node-id="rN0ZSvGeAVpDWlYw7RCJeK">
+        <h2 data-page-node-id="x5Z7ymIQnzqiVdOHhgHXYh"><!--pnid:1bwGreTCjnChgpu75niL8L-->补产建议 · 以及一条明确的"不建议"</h2>
+        <div data-page-node-id="LgUsoMa62iqpSqMZUZgeIx" class="sd"><!--pnid:P4WMycMjoB0QJXYztlNuQa-->要改工单转 5.4，本场景只出建议</div>
+      </div>
+    </div>
+    <div data-page-node-id="uPdZ1vyhazx3fNDHCHnBtX" class="dstep-b">
+
+      <div data-page-node-id="5oe0LpAM0FLdCPwtBMTaQa" class="tbl">
+        <table data-page-node-id="jJWNNujCxxZOOFEB0AXFlQ">
+          <thead data-page-node-id="g42uocZ8DgVvdvb95iWCMh"><tr data-page-node-id="M0XIypPWnxPHun3f8dlf5P"><th data-page-node-id="tVSAnpva2fxl17vaxHho88" style="width:15%"><!--pnid:ejAY9neU9NyFW5RFwVXfc5-->工单号</th><th data-page-node-id="COt3BADg2mkOJHs3AvbwQh" class="c" style="width:12%"><!--pnid:SoATHxqkZMBcHtgC8PFf3M-->是否需补产</th><th data-page-node-id="lpaxzVy2f9dYcppKe5xpwD"><!--pnid:BHFPmBdToDofcg2JMaRqHh-->建议动作 · 责任人 · 时点</th></tr></thead>
+          <tbody data-page-node-id="UtsfOmsJ0AMDcj2UjlqMdq">
+            <tr data-page-node-id="rKLrb4eoRntlK8eunc0ef2" class="bad">
+              <td data-page-node-id="zT7FLKCavtJWRhl4SFjgvN" class="mono"><b data-page-node-id="0xJzHhQMlno7YfirS2QNxn"><!--pnid:ADrPRmVJfn1IhM9bqRuwk3-->WO-2026-0806</b><br data-page-node-id="FGaYfnZGOVy4DePCRniYsF"><!--pnid:S2uHzHSCstgnHUqn89LuQ9-->端盖 · 明天交货</td>
+              <td data-page-node-id="KiYqLddW8F9ovObfikjEdP" class="c"><span data-page-node-id="XyExRj1s7uKtoCSkS0NSGn" class="rd"><b data-page-node-id="DH1nR1CizUmwLr1v07P0r8"><!--pnid:yz1S1FqKz2TzIAC5S84DzC-->是· 最急</b></span></td>
+              <td data-page-node-id="2wefZtVvMsXwwFvDwFYKPl"><b data-page-node-id="3bUrQoBzykpBhAh6ZJPKMC"><!--pnid:skHRZ3ri19vcsWVY1Oi7n8-->今日上午必须确认那 12 件返工件的状态</b><!--pnid:LQ6fiIjo9PddffJomNhMCP--> —— 已返工完成未入账？还是尚未返工？<br data-page-node-id="nRxnzqnTqNwU2lGqpMBlFT"><!--pnid:q6vSVso9d8LfeR3w4Gkrro-->· 若已完成→ 补报工即可交付，<b data-page-node-id="HMRhbtj9le8gcYi4UsUf5R"><!--pnid:Nldg1WGjoeWiqXnxIoDpVM-->责任人：装配组长，今日 10:00 前</b><br data-page-node-id="GvhlrkkYYv0ddOM18A3hFk"><!--pnid:jf7q8N6gNw9YEqA1me9A4x-->· 若未完成 → 12 件密封垫压装返工，<b data-page-node-id="HG9XFFaaKbTCpJvI7hRELY"><!--pnid:x5gDRoRLsCC7jBO10LHvwe-->需评估今日内能否完成</b><!--pnid:l9QkPwbjRNKV00Oz6vjfFH-->；不能则今日就要通知销售与客户协商（<b data-page-node-id="AOkFjJzpuRjuSFVUgZAXIW"><!--pnid:nclhGf7zvAGDWdhTwWsu6O-->责任人：PMC，今日 14:00 前</b><!--pnid:0r4KYQvuHko3xDhAHPxtWF-->）<br data-page-node-id="RMwBcYezhFxvyceL8B967m"><span data-page-node-id="dwtHWYJZeClb85ju9KdvVc" class="am"><!--pnid:IkzSOb74SFrgMVpKLWk6Il-->⚠ 这张单不能等到明天早会再看</span></td>
+            </tr>
+            <tr data-page-node-id="jQqW1ZPYUwviXJeME8W131" class="bad">
+              <td data-page-node-id="J9GD2ebEPHjnssJKx1LSFX" class="mono"><b data-page-node-id="G59cP9NEEHxsckh3KbNQWm"><!--pnid:tFX7QN4Sk4L2uBHwN1v2pT-->WO-2026-0804</b><br data-page-node-id="unFfvrA9EpCZjw1LBqVLZC"><!--pnid:zic7ACxEi0HNMl0t4pAPhj-->底座 · 数据不可信</td>
+              <td data-page-node-id="vZzXNLavEHkLlZjY1mIPBT" class="c"><span data-page-node-id="VUWRl5iZDVj0uVtCABBftR" class="am"><!--pnid:Pyo7WT6qeELVAtpDVkJMWt-->待定</span></td>
+              <td data-page-node-id="vXura9WxpMH0u06A82WByr"><b data-page-node-id="WDsgvYkdPpQkN7mp3GbsO2"><!--pnid:tUY2BfdELEkuo7mgSG3Wzf-->今日第一动作是补齐报工，不是补产</b><br data-page-node-id="gJ9TCJAWlIX4bLESVXmgyj"><!--pnid:OKgzpmgDML5S7ITDrqLXW5-->· 焊接组补录 08-08、08-09 报工，<b data-page-node-id="9NyJ5syzLFYqq9zCyGSwTq"><!--pnid:CD3vTkvgTBkLMdosN0UTZ3-->责任人：焊接班长，今日 09:30 前</b><br data-page-node-id="8QhGf4XY4UzSrcH0zGBFWt"><!--pnid:Xt5XmtNJB3QzCjXnQzDurW-->· 补齐后重算真实滞后，再判是否需补产<br data-page-node-id="eOGYeOtmkmUyz97ZlyQXyd"><!--pnid:6VMjJ1jdR57eORLIt4d2eU-->· 同步向品保确认两张返工单实际件数、向班长确认三天工位安排<br data-page-node-id="xPVYclJcWShd5KyxVMr1Vx"><span data-page-node-id="OpFcEEHUIZNdPxFxkOECDk" class="muted"><!--pnid:ErPPEsCiJoLW10ZAWfzMT6-->· 下游 WO-0807 在等焊接工位，若确需补产则一并评估是否转 5.4 重排</span></td>
+            </tr>
+            <tr data-page-node-id="S70YQoxL0Gn4o4kTU0aVru" class="warn-row">
+              <td data-page-node-id="sMgXStzWOsAomwMmwItSlH" class="mono"><!--pnid:15mNJ82DLXN1Mckx421oHW-->WO-2026-0805<br data-page-node-id="iYxdLCFd9gUvQIK02aegYp"><!--pnid:hKaYjMk1ZiLk8XMZ48VToB-->传动轴 · 即将卡料</td>
+              <td data-page-node-id="Qgn4Hb7klx4bKAQ5ysDA8W" class="c"><span data-page-node-id="DyG8YQLIASqAiHudaaf3O6" class="am"><!--pnid:dqiHWb7ZJCn17OwLAh4Wme-->否 · 但要防</span></td>
+              <td data-page-node-id="5bLkQVXxtFukrYNjRSozE2"><b data-page-node-id="IeJxf4eKRPLZBFaKKY4Kr8"><!--pnid:wxnp4w6QsNBxLc5TWGp393-->不是补产问题，是即将断料</b><br data-page-node-id="92copsBHCDl9ykiBN0zOpV"><!--pnid:3suTW3LH9LerqykqNrGzx8-->· M-STL-42 缺 140，在途 08-12 到货；热处理预计 08-11 完成<br data-page-node-id="rymPmSlx3G3JbKRWLX7w6Q"><!--pnid:ETSFmIFvRnQ7JcNcXGi205-->· <b data-page-node-id="a8bIZDH04Zs4ZVeklYe0ly"><!--pnid:xchr5np33MgAyYUlZr1Ljv-->存在约 1 天的等料窗口</b><!--pnid:qzZ3F5l9s9F2vpqTOyjVhl-->，建议今日与采购确认能否提前到货，或调整后道工序顺序<br data-page-node-id="kYiXf8hXvP4UFhMmDuxGSk"><!--pnid:ZxJWCAIbolPYlZKv209CaQ-->· <b data-page-node-id="NLKl3kUAqDYxzFihOHkSw3"><!--pnid:BbDYUSUnybQ7njgjg9cw5N-->责任人：PMC + 采购，今日内确认</b></td>
+            </tr>
+            <tr data-page-node-id="bpD4fRKFwX8K8gjcoeExNT" class="warn-row">
+              <td data-page-node-id="eG11lr26JR8h0U90v5srV4" class="mono"><!--pnid:jA0st641Phh5maxg3F5AfO-->WO-2026-0801<br data-page-node-id="Pewi2OVfdhtsqkRh9eTTL2"><!--pnid:3HPRcWscxwaHPjaFWra7o9-->齿轮箱体</td>
+              <td data-page-node-id="gjguxf0Z4Oi3GnUzW6jKvH" class="c"><span data-page-node-id="1C2La4CWCFRiTb3WU3J41v" class="am"><!--pnid:d5Pjbr3SCybyyqQz2SwalH-->是 · 4 件</span></td>
+              <td data-page-node-id="niMcBQWURRAhykWjfsMJZN"><!--pnid:6G2TGMxW6H6FRKUQGByKLu-->粗加工报废 4 件（SC-20260807-04 内孔超差不可修复），<b data-page-node-id="PCO1lkz6aC7u8LCqdUSjks"><!--pnid:stSHotrTGodEF0HR8gAt3Y-->需补投 4 件</b><br data-page-node-id="htHwvw9NJkJZ8CgTgEIumq"><!--pnid:8MOwmolCvO9zjNfXoWPw1Z-->· 交货日 08-15，尚有余量<br data-page-node-id="gcKQhHA1wVUBSHfm5ot3l0"><!--pnid:gLFiQnqTo8qmAlWmWo9Cll-->· <b data-page-node-id="KFxjLfh0TYXXMGdj7x7vSC"><!--pnid:bvuPs63EBS9iG80cYULnZ9-->责任人：PMC 下补投单，本周内</b><br data-page-node-id="D2AsRp7xKClhdWdZgy2GHX"><span data-page-node-id="EoQcjqZyainvI7dcNcsAXl" class="muted"><!--pnid:Eyz6xCN1ri6mPTSh1tHLXS-->· 另：精加工设备 EQ-CNC-02 曾停机 5.5h（刀塔定位异常导致尺寸波动），建议关注是否与本次报废相关</span></td>
+            </tr>
+            <tr data-page-node-id="sfxfcYMLP5S0lqVA5Xxzhp">
+              <td data-page-node-id="L23oZQ1x6QsWKLR88gyttJ" class="mono"><!--pnid:qNVwypkhP2KNIZc1uI4HR2-->WO-2026-0808<br data-page-node-id="6tm6Y5inWc4H6GWn5IObQR"><!--pnid:3RlgzG61KAIekt3fBsBbmB-->齿轮箱体</td>
+              <td data-page-node-id="L2jYfvFFgqWS8RVnTKoj9e" class="c muted"><!--pnid:wKC9Tlc344TxlewyR8Qs2x-->否</td>
+              <td data-page-node-id="H5HWhD3qHBjWuuLsryfQU8" class="muted"><!--pnid:T9FSvi8XZLkD5pqXgwzLQ5-->欠 4 件，交货日 08-14 尚有 4 天，<b data-page-node-id="mKGBCZua2Q3o8Z1Pu55IwZ"><!--pnid:IJHHwheopwugS3CySRXT8A-->本工序内可消化，不需补产也不需列入早会</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div data-page-node-id="hItULeFfp23ltuA5wuYjdy" class="think"><b data-page-node-id="wCCUxJZY4sSAf5ZLcMJmvJ"><!--pnid:oPMf80LdsVphaZEhQcbpAE-->这一步的看点 —— 把"最急"和"最红"分开：</b><!--pnid:yfMSowyd9QJKlREF6kiT11-->如果按滞后天数排序，早会的第一个议题一定是 WO-0804（滞后 4 天）。<b data-page-node-id="uWMzDQcSa9ZhBDeCKS8pql"><!--pnid:pXVqazkVB23sibPzi2hMoZ-->但真正等不了的是 WO-0806</b><!--pnid:L5z2dLNNmY4BYWigeaoTSG-->——它明天交货，而卡住它的 12 件返工件状态在数据里是个空白。<br data-page-node-id="0NIjd0FrOAhluZJ00nFJ6A"><br data-page-node-id="n87D7vH9CMUvWP6K7JtiAe"><!--pnid:W6Np6zvv9mWiBoiZm5acmJ-->Agent 给 WO-0806 写的是"<b data-page-node-id="RCSiL62nIcaNrPYB9mxiA7"><!--pnid:amdMbwyegsxNeCOTn1jmUj-->这张单不能等到明天早会再看</b><!--pnid:aaiMzhEll3dQEGU2u7h4cv-->"，给 WO-0804 写的是"<b data-page-node-id="1VNW9gYMNAIWLwMxn5LDUX"><!--pnid:DEq8qjGwwHoS0Dvfk1m5kD-->今日第一动作是补齐报工，不是补产</b><!--pnid:yScZ4hjBwV4rY77NFP9K2K-->"。<br data-page-node-id="hX369twIsxRi07bTXKRRUf"><br data-page-node-id="Z6YfJKO7O2rDxFKfarIuY7"><!--pnid:4ek9Hmn79DYvsPhftUPeGQ-->还有一条明确的"不用管"：WO-0808 欠 4 件但交期充裕，<b data-page-node-id="AbwbXtjNQx6vtl1uilrVKn"><!--pnid:cxKtm698inGN5Nkuk2o5Cr-->明确写了"不需补产也不需列入早会"</b><!--pnid:f9uDnPzmuiWishyJ2BRDHC-->。每天早会时间有限，<b data-page-node-id="1J28dhOyRl9tDzmzwMnnM3"><!--pnid:AWsuofubQ9aSAfayouqMdK-->把不用讨论的摘出去和把该讨论的排上来，是同一件事的两面。</b></div>
+    </div>
+  </div>
+
+
+  <!--pnid:O0L4SmT5ZCoJXTefGbKQVZ--><!-- Step 6 -->
+  <div data-page-node-id="aFVGPSx1yRGU9rA18JXB3r" class="dstep">
+    <div data-page-node-id="HFTR8cpFY5YTAxL3RP6qml" class="dstep-h">
+      <div data-page-node-id="Fp3r7GlqhwyFMxpF8dNYFn" class="dstep-n io"><!--pnid:PnnhRrHXCk3VgJW4uMxgry-->▶</div>
+      <div data-page-node-id="SLR17g3VLy9DSIK7guDwzn">
+        <h2 data-page-node-id="r9BzdHUnByHatBD1hGg6g0"><!--pnid:3IgVS0e19KKxBUFSzadJae-->交付物 · 早会要打印签字的那份</h2>
+        <div data-page-node-id="qlE0Zl5a51ZSHwdWSYUzM9" class="sd"><!--pnid:xjwIiNypVk7tsKCcHOhN0u-->Excel 3 sheet + PDF 1 页</div>
+      </div>
+    </div>
+    <div data-page-node-id="5X7Q5NhmSGtWomXFuukWyu" class="dstep-b">
+      <div data-page-node-id="C9equR8hh8QO0xIRBhzI6T" class="deliv-grid">
+        <div data-page-node-id="jdtiuq3j7f6VOWPTPh4OqJ" class="dv"><div data-page-node-id="4nKjAbPsGKMiZcD1aSdMRO" class="dt"><!--pnid:R32yObSCAhDxh2p4JW8ACp-->📊 偏差清单 · sheet 1</div><div data-page-node-id="TtEoWPeUGHtdB33c7u8oJl" class="dd"><!--pnid:ydcRcTpb87ARGAgOVelIQz-->8 张工单全量 · 含<b data-page-node-id="55HlkylOtPud8EakiPNaXV"><!--pnid:tFEakuJYyG06HHVUWraGtq-->「报工数据时点」与「数据可信度」两列</b><!--pnid:9Uh6vYIHAktFObWpZmqOVF--> · 欠数 / 滞后 / 返工未补回三类偏差标记 · 按紧急度而非滞后天数排序</div></div>
+        <div data-page-node-id="3i8ZPtwxstujTTTMXISfeX" class="dv"><div data-page-node-id="e3pZIKOZLGs1FFsNPbyyTp" class="dt"><!--pnid:2b8IzxHp3nQAiqFGSgribk-->📊 根因待确认 · sheet 2</div><div data-page-node-id="PBgOeZYbP4TXmnA2yKPBE2" class="dd"><!--pnid:xAncHT2jnKFt1FMqycKUeX-->逐条列候选根因 + <b data-page-node-id="EuubRmxJskurpZw0lXFJfq"><!--pnid:Sh9Lj32rTYri06zwbPUZYN-->数据可得性标记（可定量 / 数据不足）</b><!--pnid:48A1YCtZQpO8kcrPj9PUEh--> + 证据出处 + <b data-page-node-id="D5bIWUlYV9FBJLWeRzp7Io"><!--pnid:y8ivT0e8I04MkxIIZIqz1b-->留空的勾选列与确认人列</b><!--pnid:kvVkQbKL8LGUL6B8Ue0V7Z--> —— 这一页是给 PMC 在早会上边问边填的</div></div>
+        <div data-page-node-id="OzUbHSpPB21GwUkki8wgZy" class="dv"><div data-page-node-id="WoDszDZSucidDKPAUYe9ya" class="dt"><!--pnid:GGRvN9TlHWdCYfgKaYcLQj-->📊 补产建议 · sheet 3</div><div data-page-node-id="bKoNpaWPzpdjdOXRduUoWx" class="dd"><!--pnid:E7s4RQ8rJvgq1dVjtobWGD-->是否需补产 / 建议动作 / 责任人 / 时点 · <b data-page-node-id="4hql44niY9o8L62SlPac9J"><!--pnid:KzUXd6CvgkGuJTUWk6XKPt-->含明确标注"不需补产"的行</b></div></div>
+      </div>
+      <div data-page-node-id="gF0CobWxNgXYnyLD4Jq50g" class="deliv-grid" style="margin-top:12px">
+        <div data-page-node-id="mkycdN12fmlDY8I9Ses66o" class="dv" style="grid-column:1 / -1"><div data-page-node-id="yGxLxNRrtvdlTMDpCgKMXo" class="dt"><!--pnid:Fz2m2EYnXdUvt3jVlURPUC-->📄 执行偏差日报 · PDF 1 页（早会打印用）</div><div data-page-node-id="R3D5GGbtl84iwYwYo81fgm" class="dd"><!--pnid:H6XRo8JIOseVHn95P7TOK4-->只放<b data-page-node-id="oN3DHCIeMMJadfZMayfPft"><!--pnid:d29RWfDRNo1YliGSwvcquI-->今日必须处置的 3 张工单</b><!--pnid:SYTw5ZzXRJtAyjsDAWMSrC--> + 数据时点异常提示 + 待确认事项 + <b data-page-node-id="iQ7sUFE3f21ng6LToDgMzI"><!--pnid:q8L8EB1mf2LCfei5M2jj7r-->签收栏（PMC / 生产经理 / 车间主管）</b><!--pnid:0ekNCVpTrd7fHW5HjthMRl-->。按调研结论：这类日报在中小企业是要<b data-page-node-id="eazjTBmPILpHuNbc8j9IgS"><!--pnid:gIHgxyPbn9LyCHnIEhz7sG-->打印成纸质件留档</b><!--pnid:SVQtizGG56A8ehS1j6SEku-->的，不是电子看板</div></div>
+      </div>
+
+      <div data-page-node-id="yLhyvKGTuyd9m6PMWbBs9t" class="think"><b data-page-node-id="N5QI5Z1Ak3uI1H0Hgxo2iK"><!--pnid:IvzB8GBon3dsz2fhtCIHWI-->这一次跑完，公司多了什么：</b><!--pnid:fW7uMTInwMGfjtgxQvk69h-->不是"早会开得快了"。是① <b data-page-node-id="7ntKwwn76I1G9ICRrS69pn"><!--pnid:l97FZ6AAfdp4C414F08qG1-->一张明天交货、进度98% 的工单被从"看起来正常"里捞了出来</b><!--pnid:fqWD4yxCuQQVlsjVwNfbZi-->；② <b data-page-node-id="lbES5XQzx588Sg9g3KlCkg"><!--pnid:lgenY5FylfXZkMIj0aIvGD-->一张三天没报工的工单被明确标为"数据不可信"</b><!--pnid:vTPHyKkTsB4R5P9DwtVoJH-->，避免了一次基于错误数据的问责；③ <b data-page-node-id="qYyYPogTaaVgcwJoTY4Cka"><!--pnid:4njZ0SBGtrtg5607x0oBrF-->两天内出现两次的同类焊缝气孔被注意到了</b><!--pnid:kDuQzQULH35NcMVRALJapd-->——它们本来是品保部两张独立的纸质单；④ <b data-page-node-id="gR9Ft3DNo4yEbvVIM5pCkw"><!--pnid:taSXMyCi6V9GpH1NBKFFUV-->"返工是否已补回"这个字段的缺失第一次被摆到桌面上</b><!--pnid:g4Ij61CWOHTE965l149fG6-->——这是个可以补的流程缺口。</div>
+    </div>
+  </div>
+
+
+  <!--pnid:A1HI2C93NNRwOsfs6gW9fR--><!-- 提示词 -->
+  <div data-page-node-id="5mDErwCGs3mrWPRMt0kPUO" class="dstep">
+    <div data-page-node-id="nb0rFjE66tLq0FeQfdUkr0" class="dstep-h">
+      <div data-page-node-id="SHjH4VyARbjARd13whJ2Kc" class="dstep-n io"><!--pnid:aOBJo3OqBHmUON28jPuHsj-->▶</div>
+      <div data-page-node-id="UOx2W0iAMGkH93eACg0f3q">
+        <h2 data-page-node-id="VVm0l0ynViUP81DC9cuVJo"><!--pnid:82l5PieQAqlQGHV3mv4SbF-->这一次用的提示词</h2>
+        <div data-page-node-id="H5ae5VQEdCCnF7C3wpHh33" class="sd"><!--pnid:Qnee6uB9nDQecwRQmbmXz4-->每天早上跑一次，这段话可以固定下来</div>
+      </div>
+    </div>
+    <div data-page-node-id="ls6tANxGDc95Nt3lJiCGPZ" class="dstep-b">
+      <div data-page-node-id="oDPnJmuj1wcTiSZsKyyHmC" class="prompt"><!--pnid:Tkac6BHke6gqMyBQM7ISuG-->在制工单我导出来了，另外我把设备科的维修单、品保的返工单、人事的出勤表也一起放进来了。
+
+帮我看下今天早会要讲哪几张单 —— 欠数的、滞后的、返工没补回来的。
+每张给个根因方向，缺料/品质/设备/人手这四类。
+
+<span data-page-node-id="CeX4aDwhc0Uk8x4u1lgPwg" class="cmt"><!--pnid:Ak6gr6L4YuNiwoAXsv1dNZ-->哪一类的数据不全就直接说不全，别硬凑一个原因给我，
+我拿着错的结论去问车间会很尴尬。</span><!--pnid:dmcCPCIU3HM4gO7ExRm98Z-->
+
+要补产的标出来，别改工单，我自己排。</div>
+
+      <div data-page-node-id="IbZxwtZC8IFq4ihTRToZBR" class="think"><b data-page-node-id="YrJ8DHr4srbYulXhIeachy"><!--pnid:66U0hW1k7x3p0njStyJlvo-->为什么这么短就够了：</b><!--pnid:HRtMAKXnFJLJjNEx0e6LOx-->数据时点的校验规则（超24h 判不可信）、三类偏差的判定逻辑、四类根因各自的取数来源与可得性、日报的必备栏位与签收栏，全都写在 Skill 里。<br data-page-node-id="DBfelLAdyVHBAQfU5SJn97"><br data-page-node-id="PBNbggKjfDtdjcOype0QEz"><b data-page-node-id="FiCsCObFSUXTIAeWBHZSHO"><!--pnid:W1uUfh9oSr97jbWPFrAkCI-->中间那句是这个场景的灵魂：</b><!--pnid:kicK4EHANG9gRzlF8VBn8p-->"哪一类的数据不全就直接说不全，别硬凑一个原因给我，我拿着错的结论去问车间会很尴尬。"——<b data-page-node-id="AcdLfeSDyuBMepLJAmNtK0"><!--pnid:F27u3vPcnU0zO8l05LnRmu-->它直接决定了输出形态是"候选根因 + 勾选列"而不是"归因结论"</b><!--pnid:HxrHnECAuC9mS1OUt8ikcp-->。<br data-page-node-id="3TIudOgjSHJ560XfIBkFmS"><br data-page-node-id="0fJvR3JvuEQMf0Si1UI0t6"><!--pnid:qsf8VIvorbF0kS1gZeGyOT-->最后那句"别改工单，我自己排"划清了与 5.4 排产调整的边界。<b data-page-node-id="toeO2tvnREflglEEpVNkrZ"><!--pnid:7LsVhYUwJUkHclGHcO3F96-->改排产的权限在人手上，Agent 只负责把该看见的摆出来。</b></div>
+    </div>
+  </div>
+
+
+  <!--pnid:87JJMfTVNRQF8QAP132Adu--><!-- ROI -->
+  <div data-page-node-id="bmErClVe4jCYxio75tRfWX" class="dstep">
+    <div data-page-node-id="OhAhDFt0Yvx8kHTGaKDTEx" class="dstep-h"><div data-page-node-id="94nMWlFUO0RM4vAdRkjVKh" class="dstep-n io"><!--pnid:XVKuReBvkVrlMyEuZ9f55k-->ROI</div><div data-page-node-id="5PFIY1qgGRnHr1KoUleA58"><h2 data-page-node-id="FfgDhlhZHLgirrWhrf5sIu"><!--pnid:zz9X9ePZeNGhZFdTrEM0aK-->用 Agent 前后，这次进度排查的账</h2><div data-page-node-id="9FQ0SKC9ChmeohQ1CMVZXF" class="sd"><!--pnid:wrkRBxLmCkQ1hObTJciehb-->传统耗时来自公开行业调研 · Agent 耗时按本页流程推算 · 均为估算口径，见页底说明</div></div></div>
+    <div data-page-node-id="StsLk6x7IR8cy9R9Lr8bvT" class="dstep-b">
+      <div data-page-node-id="Tb6Z4dFnLvtQsesvW1lVLM" class="kpi-row" style="grid-template-columns:repeat(4,1fr); margin-top:0">
+        <div data-page-node-id="yjAzv7fWL2kC2ycjYJ64pv" class="kpi"><div data-page-node-id="FcHjXrtBW5Ix9O4llJ0XbR" class="k"><!--pnid:lA8K7WaTxYJwZ42UeQoN7h-->人工投入（这次排查）</div><div data-page-node-id="XbaT3IjFZhLltRxTXrVh6g" class="v"><span data-page-node-id="Z7luwB31uSY081QX9u0pyy" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:UQu2WeYIlEeO1JBCD1RHPs-->3-5 h</span><!--pnid:nzKAH3w8RJEgHqIFtxO30A--> → <span data-page-node-id="sWIChTuOFNVWVGV1vM4LSE" class="green" style="color:var(--green)"><!--pnid:oPs87MRL0EuC4kjJEWODdf-->≈ 45 min</span></div></div>
+        <div data-page-node-id="0MG8S20SFL434Qdt8IzdJ3" class="kpi"><div data-page-node-id="2aBjy5xvu5wCfM10peNFiJ" class="k"><!--pnid:hzlEHbZ94QHpxRhBE95zYI-->偏差发现时效</div><div data-page-node-id="81YoC3lEGOWcfObLbSd2Dr" class="v"><span data-page-node-id="sRKspu8EdwW87icONIVlXx" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:gKTIenwyOh7H4mWEYxsYhD-->滞后 1-3 天</span><!--pnid:U6lW8hfXFm3n8RNhjBlPeB--> → <span data-page-node-id="CXKnc0WMLGVeoCwqo5Rmj1" class="green" style="color:var(--green)"><!--pnid:tGC8sVYQbPv1H3Q4XCLycG-->早会前出结果</span></div></div>
+        <div data-page-node-id="xEaQTnaFPsnvRPkgjra11z" class="kpi"><div data-page-node-id="8FqBioTtkUo7I2s1v5wZND" class="k"><!--pnid:D8lgi0BfrLoA1x2pslhrfY-->参与方式</div><div data-page-node-id="CdmSzHY1xRv6GQlfDJg6gC" class="v" style="font-size:13px; line-height:1.5"><!--pnid:I2iYVcGsKaPjBJbUPlIEDu-->PMC 跑 4 个部门凑数据 → PMC 1 人主理<br data-page-node-id="cLttFjf2wSb9IEbDLxvUXp"><!--pnid:7dV9C0AOwLPpXwPVY6aDyg-->只确认被标出的候选根因</div></div>
+        <div data-page-node-id="nAdHsDtiG2bHv2nCZiY8QD" class="kpi"><div data-page-node-id="n2PJQRWxc83udXShd2IXtn" class="k"><!--pnid:3LUqYEauXyTmuzdv4CYuRv-->进度 98% 的那张单</div><div data-page-node-id="FWrPNdcrbsvkr75uEs33Q4" class="v"><span data-page-node-id="72jznqAbMSLO4YYqsA6rPY" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:rI2SAJXDZPNgRd7o6uTUil-->早会上被跳过</span><!--pnid:uGR8EhvSZa8ooVzC3StznQ--> → <span data-page-node-id="YCJTaRG3aOFTzGyunQeqiF" class="green" style="color:var(--green)"><!--pnid:SxtzwfzmGyeNa1QtyVOV1a-->提前 1 天捞出</span></div></div>
+      </div>
+
+      <div data-page-node-id="q9mXvPTpf8gEbrASSSGy7i" class="think" style="margin-top:14px; margin-bottom:0"><span data-page-node-id="35xblmmU5DiJJpVAngNP9V" class="lbl"><!--pnid:Vp2BF8t49TXgOWOkHsXbxd-->数字口径与来源 · 都是估算，建议落地前用自家数据校准</span>
+        <b data-page-node-id="048o2wA87Njg8RhI1LdhZ2"><!--pnid:QI6cVtGmfxNQ4cRbVRp4tb-->传统耗时</b><!--pnid:L4poOIgJCUVtTNtlq4DVrI-->：来自公开行业案例与调研 —— 计划员每天第一件事是打电话催车间报工、跑现场追问产量，纸质报工经统计员人工录入后进度普遍滞后数小时到一天（欧软 MES 行业观察）；某汽配厂实测 <b data-page-node-id="v37UQJh0TUtffJ2CoSbQNE"><!--pnid:bQLL6SBvQjje5nEqT1J5Bs-->92% 的报工集中在下班前 15 分钟补填</b><!--pnid:pAgSbstq86ZUIV6NWOyJCt-->，工单滞后三天才被发现（搭贝云机械厂案例）；手工进度表通常每天甚至每周更新一次，管理层看到的永远是"昨天的进度"（黑湖小工单）。跨 4 个部门凑齐五份数据再逐张比对 8 张工单，按此口径约 <b data-page-node-id="30iD5IKcDziiRKnnTTu3Zx"><!--pnid:iEZFl96Y8HEasxIKAKPp2B-->3-5 小时</b><!--pnid:hUxAxfYhntZVH62XffBScI-->。
+        <br data-page-node-id="vWdqenME4ebZjBIM7jX3lN"><b data-page-node-id="5HHQ8bMTxLjnjr6XD50yIw"><!--pnid:eONl3iKKAIVDHgd8DTjk23-->Agent 耗时</b><!--pnid:OSsloutmcEU2fzX7Xd5T4m-->：按本页 Demo 的工作流程推算 —— 发起与导出数据几分钟，5 份文件解析 + 数据时点校验 + 三类偏差识别 + 四类根因比对约 10-15 分钟，人工只处置被标出的 3 张急单与待确认项约 20-30 分钟。
+        <br data-page-node-id="UeT3kGbuJBxTIcdDiTKgG6"><b data-page-node-id="14eRdXu5CeoHhOzikEej67"><!--pnid:zPP7hRa245r7ogz6eReT3I-->测算为演示用途</b><!--pnid:pTGN3JlRj35TY10DAvHjig-->，未含系统部署与 Skill 维护成本；落地时建议取 2-4 周自家真实工单跑一遍，用实测值替换本页口径。
+      </div>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="J0qM2i0M17pc5LtBMujIEj" class="cta">
+    <div data-page-node-id="7ool9jRtSrQPT3qk5it1yz">
+      <h3 data-page-node-id="4CDmVKRytIk8mC90oxiX16"><!--pnid:hyWUntnnScMXtK65WpXXh2-->拿走这个场景的完整素材与 Skill</h3>
+      <p data-page-node-id="kwp8Cnrn3uxQNIAIar6tCQ"><!--pnid:jrMDXOJCMTKOukbUaZD5dY-->5 份真实 Excel 素材（含两份刻意残缺的）· 提示词卡片 · 偏差判定与根因取数规则</p>
+    </div>
+    <div data-page-node-id="cUQsSqoVtoZRk5NTMt7U30" style="display:flex; gap:10px; flex-wrap:wrap">
+      <a data-page-node-id="frYVpIK2P5yrzsPsUr6QMZ" class="btn ghost" href="场景引入.html"><!--pnid:Dx69qfk1mbl07j62xYkO01-->返回场景引入</a>
+    </div>
+  </div>
+
+  
+</div>
+
+
+<footer data-page-node-id="4SxKXK8HkYvcNCefkVLwwN"><!--pnid:AGyHDjnTQotQLiTG49vmDc-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="zdhQUZRlwyLXfK0Pq9vEt6" data-pnid-children="2L2nvQcQmzmehhh8UD1TP8">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="na9K3nVFLfqdyv5J6ti45S" data-pnid-children="jBINxulrs3bMfLqvnzRQOH">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="mA3LLNnbrltVKyEcy6fFtG" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="Ji0azdNlHCfE0dXRmuiway" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="WAuTC8jbqPOUFgxn5cuJlB" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="OO2vjjAMgpQgOreM7sdyzT" data-pnid-children="S7dKZgLoB1W2fLpAk0qZAj">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

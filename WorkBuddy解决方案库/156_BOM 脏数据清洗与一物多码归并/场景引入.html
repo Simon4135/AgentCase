@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="vKADcSYxIhHaXaoMVmiwyQ" lang="zh-CN">
+<head data-page-node-id="Y9uIjqwGpRxrWFnPEPazhR">
+<script data-page-node-id="rs74ZqCyIn1UTeakQYjZqx" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="gaS2WDA2rDYI2HZPY9xkAW" charset="UTF-8">
+<meta data-page-node-id="Jw99tMz3Ci7GWnJsuvxvT0" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="l8RnWMOoS8HP0K9Q4tUCev" data-pnid-children="iICJtaP3gwKiqMdoFaL9Fw">BOM 脏数据清洗与一物多码归并</title>
+<link data-page-node-id="OF1UKP7CYdvQDBRKAOz8Dk" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="ugM0PVUcjBfR2sLKAuN1Z7" data-pnid-children="O7ENrD67Q9lohUtQLF6tKH" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="Re1cVuQ44uKi50QOLtqG1A">
+
+<div data-page-node-id="3AA6i1bHrbyuzOUONmO8LM" class="wrap">
+<section data-page-node-id="SksdesSHgF1w1ikTbnaOP2" class="page-hero">
+
+
+<h1 data-page-node-id="lJlKWp5llP3UN5WKUR8302"><!--pnid:HlDyzaofXOS3flxAFUSNcf-->BOM 脏数据清洗与一物多码归并</h1>
+<p data-page-node-id="AWxZ5QQaHgS2veV6UnmW56" class="lead"><!--pnid:ykFMggNXIdTTEy6JasTqiX-->同一颗气缸在系统里有两个名字 · 下单下了两次、库房放了两处、盘点对不上</p>
+</section><nav data-page-node-id="Iyi2MrB98NE9r6v35r4CnP" class="subnav"><a data-page-node-id="3n6kEzoMhiBgCVgsHd05UD" class="on" href="#"><!--pnid:li6Vf8TpP8j2XlqUA9zLlO-->场景引入</a><a data-page-node-id="o4pIS6R5j7cyUzrStwp9C8" class href="LiveDemo.html"><!--pnid:8sfPU0CTHC6tJuzyCHwxqk-->Live Demo</a><a data-page-node-id="FnZL9urUeeWBYF9pjWwvSX" href="推荐任务.html"><!--pnid:gWJxUXOnV3rJLaTcneCXJr-->推荐任务</a></nav>
+<section data-page-node-id="euCgL0WPmUk73BfTvqVLLQ" class="blk">
+  <h2 data-page-node-id="Gz5yTTPH3YUoLihJlT21Yv" class="h"><span data-page-node-id="IOnehtbm8ZqPxmkbtFOKDM" class="num"><!--pnid:nAQkqWc5UCBU5ArmQ0QhNE-->一</span><!--pnid:sgoPinRhEatQYqqzrDBYwe-->这件事现在是什么样</h2>
+  <p data-page-node-id="HOUd1XAYBljKXePHBVRIiT" class="subline"><!--pnid:QA1I0envhvVIwxg4oqJXJ3-->库存与对账 · 真实业务触发</p>
+  <div data-page-node-id="R2NBj8sYjp9nYfkrBX2sCf" class="card"><p data-page-node-id="6UxlC1XBkKJXBH0PGs6Dso"><!--pnid:XjLFLjSD8skG6Y5N7lYYWw-->苏州那家非标厂的新闻（BOM 变更不同步、12 万呆滞、8 万延期罚款）让老板娘问了句「我们的 BOM 干净吗」。周建国不敢答 —— 他知道「气缸CJ2B10-50Z」和「SMC笔型缸50行程」大概率是同一颗料，但 1,847 行 BOM 里还有多少这种事，没人知道。</p></div>
+  <h2 data-page-node-id="bPvEnUBrKVLnyhcKFGFxhQ" class="h" style="margin-top:22px"><span data-page-node-id="dhisdxrAjCcfPo2WthoCdy" class="num"><!--pnid:XbXuYqtpjCdigYz9BuHEDf-->二</span><!--pnid:UkYApm5JUEFTLm6YRZLPpt-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="OITICVjmbsbzUW4nQrIpUi" class="subline"><!--pnid:0jFjw7VIwcyLm9BDnxILAs-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="cA6L7Outk8pIymUH4ZafH0" class="pains"><div data-page-node-id="UuW2RV7vxXM20UPW6vVOLo" class="pain"><span data-page-node-id="O7lvqGhId7SkCF2XlfhNC6" class="i"><!--pnid:EzqURvKrGjB1TB5yKtWT0a-->1</span><div data-page-node-id="TsOZZWt4OkOL7UTXwyZCCe" class="t"><!--pnid:WG92GeUbBB3JvURFAn2YYX-->苏州非标厂实录：BOM 变更不同步，买错 12 万物料全部变呆滞；另一项目被罚 8 万延期款、预计 15% 的利润最后亏了 8 个点<span data-page-node-id="qKCC0lH20aGZdFpTAOuKlm" class="src"><!--pnid:ZC9ujr79IVpuAtUyzBKZAL-->依据 · <a data-page-node-id="DL0xl6VbnQwQgxqyi3Qy0V" href="https://moges.cn/mobile.asp?id=996&amp;pg=news_view.asp" rel="noopener" target="_blank"><!--pnid:kSEa8CjLO2AgBpWHfBQQtO-->苏州 30 人非标厂实录：BOM 变更不同步，买错 12 万物料全部变呆滞；另一项目被罚 8 万延期款、预计 15% 的利润最后亏了 8 个点</a></span></div></div><div data-page-node-id="ZZvW5xBIkQhuiblyrPmK7d" class="pain"><span data-page-node-id="y1YkDqZLYiF7bRQ7FdMqN3" class="i"><!--pnid:eY2BlG6pYNr5VnQLdPvTB5-->2</span><div data-page-node-id="5P0h7F8eCqFRvmDRv1IMTi" class="t"><!--pnid:ov4Fl3gdTY9IhommhRmiYD-->一物多码是中小企业的标准病：同一颗料多种写法分开下单分开放 —— 「气缸CJ2B10-50Z」vs「SMC笔型缸50行程」—— 直接后果是重复采购和库存虚高<span data-page-node-id="W6ssvV3bGGtNnxXgIOMY60" class="src"><!--pnid:MBB5TZtVQCtXPwNdVGyBbs-->依据 · <a data-page-node-id="hjjHYrO241368pUdKKJIez" href="https://m.aitntnews.com/newDetail.html?newId=26661" rel="noopener" target="_blank"><!--pnid:6wuSl1HuHJijWxsKcvRaum-->一物多码实例：「气缸CJ2B10-50Z」与「SMC笔型缸50行程」分开下单分开放；AI 实测 BOM 脏数据清洗独立完成度 85%</a></span></div></div><div data-page-node-id="5GnqGgePoPdHk58JTEOd12" class="pain"><span data-page-node-id="o6ln2dc5l8twRcq5COS5Do" class="i"><!--pnid:u5KFTsqxBYSjxZrrbfsAyy-->3</span><div data-page-node-id="Xk9JbsoAdpB51zgBxqf8JY" class="t"><!--pnid:Kk69IzcSpmgyTWeOqEHjVc-->BOM 数据质量是所有计划类功能的地基：MRP 80% 的失效源于账实不符与 BOM 版本混乱 —— 地基不干净，任何智能补货预测都是空中楼阁<span data-page-node-id="AVa53THjL40iLUGjOVV6JA" class="src"><!--pnid:tW9RY2j5uoF8i3FfsBQAYc-->依据 · <a data-page-node-id="TtRQcEhUlueJC44mqMypCN" href="https://www.toutiao.com/article/7592863500893028883" rel="noopener" target="_blank"><!--pnid:dhhw8ogGpUOjosRy5ZSYWA-->MRP 失效归因：80% 源于账实不符与 BOM 版本混乱 —— 数据地基不干净，任何计划类智能功能都是空中楼阁</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="fRQWRV7fXHITbVRDyJ5Fwz" class="blk">
+  <h2 data-page-node-id="XFLYmuzGqPsTUzaLvZVFZs" class="h"><span data-page-node-id="ds5wgZHmrEQDf6bg0XY04D" class="num"><!--pnid:1OfAqzZlYc86khFqFxpi80-->三</span><!--pnid:TVwHTMdaQWQltacfdK3iPC-->换个做法之后</h2>
+  <p data-page-node-id="xOf82sZITC2d8OouXDio87" class="subline"><!--pnid:FkCblx6LGrN7mYPaog20f9-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="tl6nb04se5tojGbQZpfcH6" class="cmp">
+    <div data-page-node-id="kBFv8LrhH4lAB4YaL9LXa9" class="old"><h4 data-page-node-id="tpvhPyDVOjwiEusfO1Ktbs"><!--pnid:7SJAtWw46Nu44sP34crSGV-->✕ 现在的做法</h4><ul data-page-node-id="2G4w14NYZYtnPDR6w7YJe0" class="list"><li data-page-node-id="ophW6sHll0mR2AKlTu5oUI"><!--pnid:F53Xm2XLhQ0c02SUSVLRDo-->苏州非标厂实录：BOM 变更不同步，买错 12 万物料全部变呆滞；另一项目被罚 8 万延期款、预计 15% 的利润最后亏了 8 个点</li><li data-page-node-id="Eo4nadMXwRUNCmJQvzZLtL"><!--pnid:cQxePjN5v3weokdgiYZBoX-->一物多码是中小企业的标准病：同一颗料多种写法分开下单分开放 —— 「气缸CJ2B10-50Z」vs「SMC笔型缸50行程」—— 直接后果是重复采购和库存虚高</li><li data-page-node-id="Uv2EQaDJ5hcHhlqs9F5X3T"><!--pnid:hVvMb65bcXi8BFgmQVgcVE-->BOM 数据质量是所有计划类功能的地基：MRP 80% 的失效源于账实不符与 BOM 版本混乱 —— 地基不干净，任何智能补货预测都是空中楼阁</li></ul></div>
+    <div data-page-node-id="5xrHCA54d5x0KTyKKT4Jvw" class="new"><h4 data-page-node-id="B1ZvLci1frbMpK1JIWSJeM"><!--pnid:z5NJYl6v7cFFfsJzfJCvlp-->✓ 交给 Agent 之后</h4><ul data-page-node-id="aC9o1odimXIi3ahvJiRmWf" class="list"><li data-page-node-id="R9HR1YqHjAisLdwJAXKOHa"><!--pnid:jAJ2eyWrYd5OaxkAzTndiY-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="ROvZDj6furc7ddQHqj79uY"><!--pnid:LAwJL4YLzLHytVWqJnJb8J-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="qRgZbAPS9hSFB3ourTaSrC"><!--pnid:PGyU6x70pAyjPgZlpAlbp9-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="tpmr6ACfNGaMfYboFByREW"><!--pnid:ZtVhTUxwg1nnDsLUf0I507-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="OPY38vA1xNpzpBShSiavj2" class="blk">
+  <h2 data-page-node-id="zuktxgRMlT7yueNhl1HfxF" class="h"><span data-page-node-id="EgpLZuR6fBTAgkCHkWRHnZ" class="num"><!--pnid:98qV6KrYVIaoaEqvnLx9BY-->四</span><!--pnid:BDNTYZZtLLFohAdL5fL3lV-->场景闭环</h2>
+  <p data-page-node-id="qVRGIP9FHlx5IZfJpgIL08" class="subline"><!--pnid:q1FRZiu4UsGXRMt4RRSiWp-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="ChVQYqXlHPIBGDIUp18VrQ" class="flow"><div data-page-node-id="Gopd55kkRjrMUarCHZGnKV" class="step"><div data-page-node-id="7vYwwW2DOWYRgEfg7JKaQV" class="n"><!--pnid:tUcYYeTmzCjGnQNrxqYQxr-->第 1 步</div><b data-page-node-id="VeUgzR1y1b8tPigkk9ATlE"><!--pnid:UvW3CtVfPL9Bmk9ZFnfAs6-->同物识别 · 三重信号扫描</b><span data-page-node-id="OzdrV6mxSDYWfeiSlvjy5E"><!--pnid:MbpElFNv3TR3rFvDhz2BaC-->型号相似度（规格参数拆解）+ 采购记录交叉（同物异码各自下单）+ 库存位置关联 —— 三信号同时命中才标「疑似同物」</span></div><div data-page-node-id="vTPwJOWTKnIEiBOmeiIbzn" class="step"><div data-page-node-id="gi2xeaGQ2iM3n0xLTKEvoS" class="n"><!--pnid:N6BGhnhYEQ09rrlwE40YJl-->第 2 步</div><b data-page-node-id="4o5KQFBm2vHtWAlI7atsXn"><!--pnid:dfpResYi2bY9xJVHVXtLH1-->归并建议 · 87 组疑似清单</b><span data-page-node-id="C4PloqoEbVuuRfHcWOIYjt"><!--pnid:vSe0UxV4fihcsMnK9TkJrO-->每组给出：两个编码、判定依据、建议主码（用哪个、废哪个）、需人工确认的原因</span></div><div data-page-node-id="Z7RuK6ztWsB92Kgp9o5i5G" class="step"><div data-page-node-id="BvbaSN38d9ihJGgqXNh0aW" class="n"><!--pnid:AINlubHHoOJ7f7QEAywtbM-->第 3 步</div><b data-page-node-id="qgguY01Yhr4RbIu8bRrcbM"><!--pnid:LsJwBEP2SC1p7rmB7pZ0uq-->单位换算 · 公斤/吨、个/套、米/卷</b><span data-page-node-id="8NbUjESBJtedxq9hlq9BQ6"><!--pnid:oX9BgUsfChOvN2IbcbwbL3-->同物不同单位的采购记录换算到统一口径 —— 历史价可比性同时修复</span></div><div data-page-node-id="KbgENVDQcOIhY24eosnedv" class="step"><div data-page-node-id="dQtfaVxiXKpGxBUDqkUdXm" class="n"><!--pnid:oCDff44ezNUTe8NEGz91Ge-->第 4 步</div><b data-page-node-id="aXLB2EkaMWTW9Q40EU4YOZ"><!--pnid:BkkHGoNyKhrf5VyFJZ3Dvd-->空值体检 · 空交期/空规格标「待确认」</b><span data-page-node-id="7WzZYSeqIXiCwFZx5PC5s9"><!--pnid:08lrBUZ3lXmv8NWV0aaTxR-->1,847 行里 214 行关键字段为空 —— 标注但不瞎编，待确认清单给到技术部</span></div><div data-page-node-id="NsxoCOtqV9w20aqrhGHe4e" class="step"><div data-page-node-id="zHot5YX6pzJ8qO07bkMxhF" class="n"><!--pnid:HtpguoY3evzc5IdydKr9LY-->第 5 步</div><b data-page-node-id="AuD1mMR8gCEJ54J6wt7XgH"><!--pnid:q04KsJSEvRp0nxMIY69SSl-->重复采购实锤 · 已发生的多花钱</b><span data-page-node-id="4jhodaVitGY7p0bZi4pKJl"><!--pnid:KO9GezjPSNKObAuzsymEHd-->87 组里 23 组确认重复下单过 —— 每组的重复金额合计（这部分是真金白银的账）</span></div><div data-page-node-id="4Ynt5STT9ONKimLki6bT4G" class="step"><div data-page-node-id="eiaLLgay1RKO27QQ34g7b0" class="n"><!--pnid:kFACY9q7NrfcNaSHRW7Eop-->第 6 步</div><b data-page-node-id="ax2ar7PQmWKjm6niSflwSb"><!--pnid:jryYqLYB6MBu6cAXgNbeKb-->映射方案 · 不动主数据的过渡</b><span data-page-node-id="aNqlip3fuwdpNTStTFkf0Z"><!--pnid:tscw66X8dPem3LAkcQ2mhl-->归并映射表 + 主码切换建议 —— ERP 改造前用「映射对照」过渡，采购下单先查映射</span></div></div>
+</section>
+
+<section data-page-node-id="nYgETIiDEcquc7EBkNYEC1" class="blk">
+  <div data-page-node-id="3f8eytO9wHkAmlQUIhvDgz" class="g2">
+    <div data-page-node-id="LeOXDnmoFZz8DRz2lEIBs0" class="card"><h3 data-page-node-id="I2f1Uow9F84hDJ6L8rSnEW"><!--pnid:H5QV6SUzkaMKc4HC7Dukum-->要准备什么</h3><div data-page-node-id="tRHv4MHFkQ8hdk5hiuhSqf" class="src"><div data-page-node-id="1GhWAjFhvc2k4AFXRsdkUo" class="fn"><!--pnid:7e2zGUE9oTOBJvbBGXynjk-->BOM 清单（1,847 行 · 现状）</div><div data-page-node-id="XgJNYuzL3a5zaINQBr3Gta" class="fd"><!--pnid:8RHXidRAeAIjCt6gtXp6y4-->脏数据原样 —— 各种写法并存正是价值所在</div></div><div data-page-node-id="78Fhr7B41RbJYHtFWrB7zI" class="src"><div data-page-node-id="3oBeP5Zkq5stOL88C9Do1k" class="fn"><!--pnid:4kxvSgYUi3Ze6t2pifx34B-->近 12 个月采购订单记录</div><div data-page-node-id="Nnh370gwHxZuiBqhMiQqV8" class="fd"><!--pnid:pOKKqDbb8od0vfbI7MSxjz-->一物多码的「重复采购」实锤 —— 同物异码各自下单的证据</div></div><div data-page-node-id="plZ6OqifV2wPsRbkYlcTJt" class="src"><div data-page-node-id="LmYkDuOzdxlh8ltS9MH52W" class="fn"><!--pnid:mNagoit8ZWVGpSIbxJQWEH-->库存表（分仓位）</div><div data-page-node-id="9R0uCz1nQBXMwleKqb5igi" class="fd"><!--pnid:iYGGNv2Xl7VxZ4EbLre2xs-->同物异码分放两处的实锤 —— 合并后的真实库存</div></div><div data-page-node-id="aiHFc6hVl5xi0JZpwUpRJs" class="src"><div data-page-node-id="9S9HIJldTSZkN1b2m4FxFF" class="fn"><!--pnid:Dfm5BJfD8MFH35i6nC0Cab-->历史供应商送货描述（如有）</div><div data-page-node-id="ieG89CUFFCVMzdHmpbhhfE" class="fd"><!--pnid:fkPwQUWx6q9eXrQ4Z59guz-->型号规范写法的对照来源之一</div></div></div>
+    <div data-page-node-id="FvTXWRJjiiOHvNmrpUopYf" class="card ev"><h3 data-page-node-id="EYaDNpUaOZIkPjkpeytdoS"><!--pnid:Yjef1UJf5mtssSOMRMrRPw-->为什么这个场景值得做</h3>
+      <p data-page-node-id="77XezaTzqPk5kNJgoaOl6I"><!--pnid:lC4WahEfJTEyCetWR4kZWZ-->痛感 4 × AI 适配 5 ÷ 落地难度 1 = <b data-page-node-id="KLFKcHxzUlkdYkH2y5CACE"><!--pnid:wiVFjgBXvoN0gyYnqsje0q-->20.0</b></p>
+      <p data-page-node-id="oZTcuBSJgPApncgUKwKbnk"><b data-page-node-id="Dr4zbtLx3noNyQiOvoFQlS"><!--pnid:YFPicvuvpj9J3Lla8X36CP-->最大差异点 ·</b><!--pnid:pLs2YwJl4lrHqfq8jbh0qZ--> 不要求先规范 BOM 标准。现状 BOM 直接扔进来 —— 同物异码识别、单位换算、空值标注；疑似重复的标出但不删除，判定权留人。</p>
+      <p data-page-node-id="qAeORHOQxMZCN0hlewjpF1" style="color:var(--ink3); font-size:12.5px"><!--pnid:TAcaJG2kRFws3kWomU95Yj-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="FsCpCjMwlvMnZOfb1Lc5JI" class="blk">
+  <h2 data-page-node-id="THLO0pvcqieT1gj6sypaqO" class="h"><span data-page-node-id="mvXCC3J6Wyb7ntHssBB3JP" class="num"><!--pnid:ALWcdt6B21bBKpyppgN4OW-->五</span><!--pnid:L0999gDqPWLLAPiVLJM3lk-->会产出什么</h2>
+  <p data-page-node-id="9Rs3c5W3g5TtF5GCOJjLCu" class="subline"><!--pnid:K3zTeBgfd1iWSChHgLxEVI-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="XPnwmPThgtlIC5Y3iwltDa" class="outs"><div data-page-node-id="ekQOr3Cm85uPMuriLQsPkv" class="out"><div data-page-node-id="mkDNZagVyJH4ncB1e0pYSU" class="on"><!--pnid:oBKAF68JFZsHZap5FaCRUd-->正式件本体</div><div data-page-node-id="VnxDHoTLIqX5oSJ9Wxp9by" class="ot"><!--pnid:Mcngp8o2XWVJjupnWGaWpp-->BOM同物异码归并建议表.xlsx</div><div data-page-node-id="aGTikEFjGc6fOCnQsbD08Q" class="od"><!--pnid:fxQtRs5ishmmpupuR5Gqlc-->正式件本体 · 87 组 × 三重信号判定 × 主码建议 + 确认栏</div></div><div data-page-node-id="kXc76FuDMOipfiBCzhJSHe" class="out"><div data-page-node-id="sLKIrxDWWmn0uwZJgzM0ml" class="on"><!--pnid:tPatveoiNc97yWZ6zZpL74-->可派发清单</div><div data-page-node-id="ufydRn3uul6lpCRIjpR4SL" class="ot"><!--pnid:P8RlweeTw14zrkT1fR1r8x-->重复采购损失清单.xlsx</div><div data-page-node-id="dwX3EKf1BX8QW8APMXtOkh" class="od"><!--pnid:soDvsGVsbXDYOz2ccVLgTP-->23 组实锤的重复金额合计 · 已沉睡的现金账</div></div><div data-page-node-id="suFDgMB0xuHFXBa4fDp9YZ" class="out"><div data-page-node-id="UUk00et5bqmqWTLGoyDDZz" class="on"><!--pnid:8Nk65MjPEfa1cSxEBiPnMI-->可派发清单</div><div data-page-node-id="XH8XZuXwkKcLN5LnhYXV3E" class="ot"><!--pnid:lInNADZDBjIIqHtAKxSLfK-->空值与待判定清单.xlsx</div><div data-page-node-id="WqaLIPZoOuGcw29FnpIl80" class="od"><!--pnid:8BWLl1IRLAmVUvnDlDsP1b-->214 行空值 + 11 组单信号 · 分送技术部的核对任务</div></div></div>
+</section>
+
+<section data-page-node-id="3tG3kuS78EgjW9hWzGXnRY" class="blk">
+  <div data-page-node-id="1EpnTEIJOQ9FbmcuurItxY" class="card warn"><h3 data-page-node-id="ie7dZzgxFB8WVgOCTP3XLg"><!--pnid:uFRYg2CdJ4M7FM54Ms19Lg-->这套东西不承诺什么</h3><p data-page-node-id="R5UjBVyerLgDRV5wUIb83N"><!--pnid:R8xhDKMjDDETojxxQWhrQa-->不直接改 ERP 主数据（那是账本红线）—— 本场景产出「归并建议表 + 映射方案」，改不改、怎么改，采购与老板确认后由人执行。</p></div>
+</section>
+
+<div data-page-node-id="XKWGRY3vkbAuNL26E1uo8C" class="cta">
+  <div data-page-node-id="gfbDka2jzqDiNILvv7ix7m"><h3 data-page-node-id="GMic7YctZiWn9JVuqlRs18"><!--pnid:OHkZRBv1sHozAsyazzejWN-->想看具体怎么跑？</h3><p data-page-node-id="FRNga5jIGYWVaMwGtMLtAM"><!--pnid:CNfLQ9fSSrwy6bRmkJELIY-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="5AuMF9v6VCrISItHu8HXtX" class="btns">
+    <a data-page-node-id="av6LywmLzY5zA0ZBWSxBU6" class="btn" href="LiveDemo.html"><!--pnid:Roc3cIUxvucCNbQMwX8oFf-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="hTDgGFWJlXMAyuURnaQJsq"><!--pnid:V9g63OownC4tKOAIoPtMPM-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="9x1XkhwWb184qHTdxUD55K" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="NLmqFnckeaLyM98BHSxxE5" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="j1tKlyZvN3g0XEm28nSEL5" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="odi2B6X97LssgUNJF1Pi6Y" data-pnid-children="F16VpXt53O2U1NwOoRYzDg">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="bDMH6YNvcLBRFAy20Uvf7T" data-pnid-children="FGmTFqDwL0bP1Uzp2c8awn">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

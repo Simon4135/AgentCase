@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html data-page-node-id="6YEkzleSjDujEDBWOCsIVk" lang="zh-CN">
+<head data-page-node-id="NUU9ZhleEavyuEwMKUrYdY">
+<script data-page-node-id="NEJ3EDSwVqBTMQbv9M4jbK" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="mayvgeZzOvb2a1nrp38RjJ" charset="UTF-8">
+<meta data-page-node-id="LqXcMfXxIIWIRCmhckzHh4" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="eV24GDMg5zauQhsmhAD9ZT" data-pnid-children="8fVEbREElUP9En3tKuXkN8">排产与插单调整</title>
+<link data-page-node-id="VPqsRNwIvq3zPq7dknqNsd" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="hwMBmqcoihRj3ejvXZdyZD" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+
+<style data-page-node-id="uQv1SJkrO8kAX6cy3PisLX" data-pnid-children="41qwW6BgrdMnib7h3OnCCA" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="BJkbVZEQuONuIw7vObbtZf">
+
+
+
+<div data-page-node-id="PA393VPM9pZmOUG1zt24uk" class="wrap">
+
+  <section data-page-node-id="d8o3uIQGPisPadgaQ8heVw" class="page-hero">
+    
+    <h1 data-page-node-id="GLEZiIL7ohpfkWxDPnDxmE"><!--pnid:Qmwiminq6Ale8afejzGuLx-->排产与插单调整</h1>
+    <p data-page-node-id="tTzsliBFzpwlRlhTF6aIyz" class="lead"><!--pnid:ZJmvZmLpL4NDhJi0lPvd7M-->拿到接单评审+ 交期平衡的建议后，一句话触发<b data-page-node-id="xzdgeH0dvsCtLD2BnCTICs"><!--pnid:LbxOFzcjqeeP3MpZcbFubc-->工单真改+ 甘特图重排 + 分部门通知</b><!--pnid:IQWHCzqzIjC8PJZkmZr3L0-->全套动作 · 从"PMC 拍板"到"现场执行"最后一公里。</p>
+    
+  </section><nav data-page-node-id="KzEILRDOM7rkZtgmrpVh01" class="subnav"><a data-page-node-id="AB9XwjKb82i506AYVh3Qee" class="on" href="#"><!--pnid:guMbhfIeRPq2kYXe8ZubfV-->场景引入</a><a data-page-node-id="RjqLqTKgx1QK6Ds1FLt5MX" class href="LiveDemo.html"><!--pnid:WbrxKuSLqk6KtEMaTNMQ15-->Live Demo</a><a data-page-node-id="tmSpy6DRutTgPFoWLA2Meg" href="推荐任务.html"><!--pnid:cwG1LkzEl8j5Wd72To7Azy-->推荐任务</a></nav>
+
+
+  <section data-page-node-id="qfbnFNrFPx39k0DXq9UMGt" class="blk">
+    <h2 data-page-node-id="NNKRYpaxyXiSKf6f6W2Giz" class="h"><span data-page-node-id="JABQf5Q2MRLazq9ZM00nyN" class="num"><!--pnid:Z9yD8yc0e9vMjVcwRmFQwF-->一</span><!--pnid:dyPeuHYOUKid6tA4uZiIQq-->这件事现在是什么样</h2>
+  <p data-page-node-id="l8cR5lufBZM274TMBthxw0" class="subline"><!--pnid:3H6seYl25ch8dBDHhIE6yT-->拿到接单评审+ 交期平衡的建议后，最痛的其实是"最后一公里"——把方案落到工单和现场。</p>
+  <div data-page-node-id="tLsJCH0rTW37liZY8jvnrq" class="card"><p data-page-node-id="dNGfT1KY74Hh1uka4D5XRa"><!--pnid:wQD9bFpV2uqozGCJWwjeO5-->拿到接单评审+ 交期平衡的建议后，最痛的其实是"最后一公里"——把方案落到工单和现场。</p></div>
+<h2 data-page-node-id="tT471qGUyvbo42uCunbcXo" class="h" style="margin-top:22px"><span data-page-node-id="HPtggcVsbH2sAcVLMWPCIH" class="num"><!--pnid:Z8aA3XvDJWqnSYoy3HgBYv-->二</span><!--pnid:NUOzxB2t5oNyzHX7UC4fHm-->痛点</h2>
+<div data-page-node-id="KU7RHa0t4hthMpV58DzIg9" class="pains">
+      <div data-page-node-id="ekcffvpeltrueddHWWfIlh" class="pain"><span data-page-node-id="rsp4jz07XLGutv481nqoae" class="i"><!--pnid:FLcYtC2ClRrWUJX0RNlCX3-->1</span><div data-page-node-id="sLRvylWNah3AdD13hj3LuW" class="t"><b data-page-node-id="ej3xWYzgoV1SnlU1xN2iIa"><!--pnid:A359ZojDzQNRr9fuakd3Tf-->分部门通知逐个部门发</b><!--pnid:rr6SIXlpmada81aSGC0arw--> — 装配主管、喷涂主管、包装主管、采购、仓库——<b data-page-node-id="F7POssfQMjMmUv5wFbWjeb"><!--pnid:XV3soHPyQ6BAPF6x4nuNie-->5 个部门 5 条微信不同口径</b><!--pnid:dv1yaAb6MYLjeAvPR1oYTX-->、不同侧重。发漏一个部门就是现场事故。</div></div>
+      <div data-page-node-id="4tTGiNE9a80dqPKe1a08k7" class="pain"><span data-page-node-id="LfZ0BEVNn0tbyAYXqMzuiZ" class="i"><!--pnid:dWIPaLCe1pVLvc5ZVxbxDw-->2</span><div data-page-node-id="gQksXzPNDJIDUznBA4qRya" class="t"><b data-page-node-id="PzzC8ibQFViGpR9cZTOKoN"><!--pnid:mba24PMz7rgzy8UqimoJtF-->通知只说不改工单</b><!--pnid:zPFkjWYFtzATjdEsr5Xr6R--> — PMC 发完通知没时间去改工单，<b data-page-node-id="94FWWcc4ERXio9eKHyxD2K"><!--pnid:bfca2BPZS3UtWXKXQjKQ0p-->第二天现场按老工单干活，通知是白发的</b><!--pnid:CxlGdUI1hps5x0XCbPcgZZ-->。</div></div>
+    </div>
+  </section>
+
+
+  <section data-page-node-id="hPCOWtBbLBr6q16PyH9s6H" class="blk">
+    <h2 data-page-node-id="dht1FigSYy18rg4GtMRICG" class="h"><span data-page-node-id="hxDnMB57rzOfHXoYLgLr6C" class="num"><!--pnid:m2XhsVnBByXned0WiF7ONL-->三</span><!--pnid:X5SbtQSvyt29ctZPxQJz33-->换个做法之后</h2>
+    <p data-page-node-id="imRd9S30lQ5IicaGvyD7Lo" class="subline"><!--pnid:6wlGKQI3QnFfSVbEWjMPSi-->本场景是 <b data-page-node-id="ldYoUbZmx4VFgq97U2TcNN"><!--pnid:aTdHopAFVeWsHYKsF1Znxz-->Skill 的执行模式</b><!--pnid:Xi9KmDHQh3kwYZquUb1LFy--> — PMC 拿到评审/平衡建议后，一句"按你建议来"，AI 完成工单真改 + 分部门 IM 通知 + audit trail 全套动作。</p>
+
+    <div data-page-node-id="aVVtiSG0Rm2QspfFWTwOwR" class="cmp">
+      <div data-page-node-id="wqSZ4tLIKNE4dW3OnSaNDk" class="old"><h4 data-page-node-id="pNBPGArzMpFcIH5XLltStZ"><!--pnid:br5WLDRwiPHZB1XIxiCRCD-->传统做法</h4><ul data-page-node-id="co6CPhpzWtjG9gCmT2TFzj" class="list"><li data-page-node-id="bgWLUgFRCNVAf8Xuak5brN"><!--pnid:Yekvn0eABlQ8RFjf0skhdU-->PMC 拿到方案 → 进 ERP 逐张改工单 → 手写通知发 5 个群 · <b data-page-node-id="7pxYptI1gPqPVuYDbqCd31"><!--pnid:da8Z4jNIHEGevHf3s39nLu-->3-4 小时的机械活</b><!--pnid:P3iUUBBQkiAN3dUeL6RTa6-->，中间还容易漏项、改错、通知不到位。</li><li data-page-node-id="6DnUSr1G2h7OEooauIjB8c"><!--pnid:AIXX1Nl0yh8s3LPCVbhM68-->调完不闭环、现场照旧干。</li></ul>
+      </div>
+      <div data-page-node-id="XiYeoacUYnWqjiP3qqmID0" class="new"><h4 data-page-node-id="yj1Ra5xLrGKITjuu8eVGSK"><!--pnid:WkW6W2UKa2NWlwKLN6G7NG-->WorkBuddy</h4><ul data-page-node-id="QDKKatPvdOARNipqTg1w9r" class="list"><li data-page-node-id="NYNnV2YIZObWzeylOIHsCG"><!--pnid:DV8W4xBmTULZfIcVF073Nn-->一句"按你建议来"→ AI 真写工单优先级 · 分部门通知稿一键推· <b data-page-node-id="jrJwWwyZklVgD8M0LkCvqF"><!--pnid:amzYn6cX2rCMNswJTKIhOZ-->3 分钟做完</b><!--pnid:QcCV4hlqhxp8tmTkPDWdNZ-->。</li><li data-page-node-id="GGVFBKzF8sXTotcsQZD7c8"><!--pnid:IarrnrLxt2PkQb0KFNuaSW-->每一步都留audit trail · 可 revert · 现场执行有反馈。</li></ul>
+      </div>
+    </div>
+
+    <h3 data-page-node-id="FTMkwZX1g6s2Uofpjsd3ul"><!--pnid:mo20r1pATzZlCTkcRF928C-->核心价值</h3>
+    <div data-page-node-id="v81IPZUaTmVkO7e6kiecQy" class="g3">
+      <div data-page-node-id="i0Wb97HIq6zQvFSnKncAxO" class="card">
+        <h3 data-page-node-id="ujWlAij2EjibAPBg9DEQl0"><!--pnid:vDluzet8itap3Op1KZLFgF-->真读真写</h3>
+        <p data-page-node-id="qWCwSujJVmZc8MhcqS6Uto"><!--pnid:afikn4Ez6R18mXBOxcAFNW-->AI 真的往数据库/ERP 写。执行前后查一遍工单优先级 ·从"普通"变成"紧急"—— <b data-page-node-id="UVdT03tZqUilZXSKaiPF42"><!--pnid:jAqgKLjdCvohn74exOyBE6-->字段前后不一样就是最强证据</b><!--pnid:ar5IHpfdcNkZZaZbqDb6jJ-->。</p>
+      </div>
+      <div data-page-node-id="E1Wp3YlhHbapkvWTN03gI6" class="card">
+        <h3 data-page-node-id="8pYbF2HUs2KwGNwHnrzwpY"><!--pnid:JUKqwwhS0QBOaUlUSdQJhj-->分部门IM 一键推</h3>
+        <p data-page-node-id="cR6mSbXqtSSxJcewseEvIN"><!--pnid:vKyL4JHFGwLeIXqCF0Wj7a-->装配 / 喷涂 / 包装 / 采购 / 仓库 <b data-page-node-id="vnacHCEy1NFFRkG28raUr0"><!--pnid:kDSRZc2ad0ILE2RKsugAcE-->5 个部门不同口径分段推送</b><!--pnid:0Zd0kSRNd1oHXnDA41UZir--> · @责任人 · 附执行清单 · 支持企微等 IM 平台markdown。</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section data-page-node-id="sWXi0Lr8wnYbe6jalPdsm4" class="blk">
+    <h2 data-page-node-id="OL7hsS0FLVjWM7lj6hf3dz" class="h"><!--pnid:kV7Vfb6BfLQ9wM9pdhD78S-->PMC 三场景无缝衔接</h2>
+    <p data-page-node-id="iZmLWQFsQx3kD7RjDe65e1" class="subline"><!--pnid:d0Ht4rhjRm1KaNLADY1kwA-->5.1 / 5.2 / 5.4 三个场景共用同一套沙箱+ 同一个 Skill，只是模式不同。</p>
+
+    <div data-page-node-id="r9ZfB5qWOztGJCBDS0XWoY" class="compare-t">
+      <table data-page-node-id="ZFzXTBjREAWPPo59nnj35z">
+        <thead data-page-node-id="VSUmdFzS16Oid4loBErBYq">
+          <tr data-page-node-id="bnMJcR1kWOH0tNymSdUmFE">
+            <th data-page-node-id="aOXZS90hY1TTcQ5NZIkvsF"><!--pnid:dX2MmgzwHYytvqyvzb7kOa-->维度</th>
+            <th data-page-node-id="2ED0ezp54Hxn0Jxp2RhJJW"><!--pnid:A1u255vg10wz5IRWFhLLNB-->5.1 · 接单评审</th>
+            <th data-page-node-id="d63cMMUfsOjEwejgCDbIhI"><!--pnid:nBLBDUXhSh5sBJXhBrtudm-->5.2 · 交期平衡</th>
+            <th data-page-node-id="3zis7oeULbRu6bTl5MTm7q" class="col-current"><!--pnid:LcMCOPMENu0v0ghUgPk53E-->5.4 · 排产调整（本场景）</th>
+          </tr>
+        </thead>
+        <tbody data-page-node-id="fjnX2HbhkziFXW9HtkeS3I">
+          <tr data-page-node-id="7UjeAcksNDVsw3mcCLhIRz"><td data-page-node-id="il8YIf2O2UVBsgQtoixzKW"><b data-page-node-id="m6zYvTbP4h2KV7tXNcytYg"><!--pnid:0XyLsQ7MxrDEIU7jge4EuO-->输入</b></td><td data-page-node-id="EERxplqjgbq69X1TBnwrzb"><!--pnid:ZBrP59fNDkGF2v7vmLcZjH-->1 张急单</td><td data-page-node-id="irHiG97LsVtqJP7yzOQNvw"><!--pnid:W18KXCCfAk6KWc8lOofiKw-->多单资源冲突</td><td data-page-node-id="y2nkDQHaQT1cFkO00ZVkO1" class="col-current"><!--pnid:JJThpSRA6nVztXvKZFQrTy-->评审/平衡结论 + 一句"按建议来"</td></tr>
+          <tr data-page-node-id="XcyM0PTgT1QCeWDmgWkXqc"><td data-page-node-id="SMBeykHxZgNKq6kAhK29WX"><b data-page-node-id="z3JNp7dWOOvFYkbBJ6ME9D"><!--pnid:oQZgUoBhZ16qQ8K1cKcmJ9-->典型问句</b></td><td data-page-node-id="QKKTLbKxq3e7772SU6cnbF"><!--pnid:SDIRWD5cwbEvZ7F3uiRAe3-->"能不能按期交"</td><td data-page-node-id="bCd6MXOW04xtzOtv5Po2dS"><!--pnid:2jBKKhYCUN1F0GT5aZpU9X-->"哪张守/拆/延"</td><td data-page-node-id="J7r4mFqH5BwUcKRn41pksA" class="col-current"><!--pnid:E4Y4JBv1IyOFNhDV6PItpr-->"按你建议来，把 XX 调紧急"</td></tr>
+          <tr data-page-node-id="2o3vnUrBKmBtd3IlrjhnjT"><td data-page-node-id="OROT1E9NSPwnc87roZMFWR"><b data-page-node-id="Ek9JsrtvmGl9gtCarQXVue"><!--pnid:0GmzgGt6JT9f8ymaTtsQGb-->产物</b></td><td data-page-node-id="eDwSE8kCCHfbZinWF9xyc4"><!--pnid:shHl69tgT5VasrADI1cE0L-->三色结论 + 建议</td><td data-page-node-id="aeG0UIYcklU9vyH30RWdbp"><!--pnid:EW99yzgPVcmoGZQUhUoocu-->三色决策 + 对外话术</td><td data-page-node-id="WyuZobB5WU4sXyrQlHImQ7" class="col-current"><!--pnid:PcFzeeEzU50W35szJvVFWn-->真改工单 + 分部门通知稿</td></tr>
+          <tr data-page-node-id="IUiFSMLp3K7gFpNKzrgICG"><td data-page-node-id="pnE1ZIL14nN3AgCsKUfeC2"><b data-page-node-id="BcUW2sHRdtmchk5WO8YEao"><!--pnid:mRTN5nJxOr6HjtWeUVXUO3-->时长</b></td><td data-page-node-id="6KJcuCLorP0FDLJvMk5ycR"><!--pnid:EziGvLCSBVtBEV4JeG6XxB-->30 秒</td><td data-page-node-id="rPFB1sa4yvemgkSxjT0FIa"><!--pnid:3T5cS5vKdsZNhlzBaoNn9j-->2 分钟</td><td data-page-node-id="TSaI8lY6jOVHWxoch1gFOC" class="col-current"><!--pnid:itmGcFXMAX9fSv6ASMb2Lb-->3 分钟</td></tr>
+          <tr data-page-node-id="H4eqs37ibOFfDxR95JyeAX"><td data-page-node-id="N9bMmnx4jgDXAWu8xwsJEk"><b data-page-node-id="InTBf1WIAxhnS8oDPLhGWL"><!--pnid:JtKdDnZ39D03rhhtBQAIJG-->核心动作</b></td><td data-page-node-id="Aqvf63OrQnaQcpIeT7ppTH"><!--pnid:RqfogRyRVaHilABhwOTmp9-->读</td><td data-page-node-id="ookK0uUYL2WRknjIjqjjBR"><!--pnid:IeB5TiT7YdGqF6VC7Jl1tf-->读+算</td><td data-page-node-id="d4sYebUEUudqXaMOXWBjM8" class="col-current"><b data-page-node-id="sduLsBASRSGtkOENhMoo4Q"><!--pnid:qyXCGnOjz7TmKVsL5b51Lr-->写 · 真员工</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div data-page-node-id="ONGd1zPMniHOyceQ8m22DF" class="callout"><b data-page-node-id="3PrBaO9xrrEctTvXF6KllB"><!--pnid:T7CSKd1ZIAO5rBM80gx3VZ-->关键设计：三个场景无缝衔接</b><!--pnid:PFABdSHIZYXoSQpeOL7g4t-->—— PMC 早上跑 5.1 评估华东急单 → 中午跑 5.2 拿到守/拆/延三色决策 → 下午拍板"按建议来"触发 5.4 真改 + 5 个部门 IM 通知。<b data-page-node-id="83mQfFCgatRyzscEuxp5Wt"><!--pnid:odB0z2MWuukiNGqHt92d1O-->整条链上都是同一份沙箱数据 + 同一个 Skill</b><!--pnid:feMmVPnVbCzdR7flyDUfas-->，只是模式不同。</div>
+  </section>
+
+
+  <section data-page-node-id="HfJvG8OD1QYo4akNrcB22I" class="blk">
+    <h2 data-page-node-id="T48u5YCCrgPvEpDo4E1QKe" class="h"><span data-page-node-id="xfCbJngddA0i6xZ74Ae0VG" class="num"><!--pnid:X9scCFPh8BIeDc1qtyNXPR-->四</span><!--pnid:cgP3K9VYuq80mPg2kjG7ND-->场景闭环</h2>
+    <p data-page-node-id="gKNRpZbUIWKZsDnFq1PBQT" class="subline"><!--pnid:PcL4OGghcXuAgvgYK4OT5a-->从"按建议来"到"现场执行"· 5 步走完 · 3 分钟。</p>
+
+    <div data-page-node-id="aW6oHZjuSKs44Bz0mLpNoc" class="flow">
+      
+        <div data-page-node-id="xkgYkwewEEhi2oezWr4wJh" class="step"><div data-page-node-id="wNxtSJ2fm0sWA7enkrNRDm" class="n"><!--pnid:UqmXsqVukcHegPGSBD9LYw-->STEP 1</div><b data-page-node-id="eiHMEC0yVMkiKhoV8Wmb3m"><!--pnid:1hy2bun613nvc3ojNP54NF-->拿到方案</b><span data-page-node-id="iUwG37hbqH4eLT5p55khYW"><!--pnid:RaFvoT9Mfax3RgCKICOst9-->评审/平衡结论 · PMC 认可</span></div>
+        <div data-page-node-id="iXpNPPylxJZO8Y05WqIgdS" class="step"><div data-page-node-id="TcjRsD3iQls2Fw2NXGVDK1" class="n"><!--pnid:c4quc0HJQg9NBbKNQPpCTt-->STEP 2</div><b data-page-node-id="Jm2fxGzRgq93CoRbTlJ623"><!--pnid:iSBddg677AniaeRTySFyRq-->一句触发</b><span data-page-node-id="DC6Doc74JqwTBQQgou9nTZ"><!--pnid:Ns1IJVyh28WTRYEjYHXexS-->"按你建议来"·启动执行流</span></div>
+        <div data-page-node-id="URQts7pTfe0NzDCdOIWFWa" class="step"><div data-page-node-id="kNnCinI8OQ4QoSI7dRCqvi" class="n"><!--pnid:WilOJkh8xJA9BThgYQnKZ3-->STEP 3</div><b data-page-node-id="pcHPVIRunPKZsByYqB616m"><!--pnid:wks6C2v1cSHxGJdvdI369a-->真改工单</b><span data-page-node-id="Yo7M3HuiJsMBidTag41h5W"><!--pnid:DIy0KHRJnGx53U1TUHaaC5-->调整优先级 · 记录 audit trail</span></div>
+        <div data-page-node-id="Dy2fNrDbpgsuuGntSAQI6k" class="step"><div data-page-node-id="XmPr7R79JONiOX3iCdQOds" class="n"><!--pnid:K5qmNZmuwhGnYs8u0HtfB7-->STEP 4</div><b data-page-node-id="Kao52OCEGC8pEx49SYT65v"><!--pnid:07lbcgwbNXfk7blEGOsWLZ-->生成通知稿</b><span data-page-node-id="7UO4wn1HBXyFebEH41TiLB"><!--pnid:Gwv9mjAwpnBhwU70GVXc4n-->分5 部门不同口径</span></div>
+        <div data-page-node-id="gUHqxa97glWHdYnb8CznyY" class="step"><div data-page-node-id="WXs2bCXqes95VZ2zZK8VPn" class="n"><!--pnid:ZOvZbCLzWvb1mam6npMFEP-->STEP 5</div><b data-page-node-id="1IJQ1tZBZB33kEbcIeb3Zt"><!--pnid:4g3KUXTkEIgM5xg9NoXLuK-->分部门推</b><span data-page-node-id="NR0spV2fGLmPgf4YxzS5rz"><!--pnid:cV2L2UIhiYIGThbKQ5RJC1-->企微等 IM 平台 5 群 · @责任人 · 追确认</span></div>
+    </div>
+  </section>
+
+
+  
+
+
+  <section data-page-node-id="iApCh1i7JYBiSdUdtYhIfx" class="blk">
+  <h2 data-page-node-id="b4fY3mYBR1n5MxQdIlTdWf" class="h"><span data-page-node-id="LOxUCfdNSIfcg8Ib6sKzp9" class="num"><!--pnid:r3vZe9htqDpJv5pu1qEbkg-->五</span><!--pnid:NyDXjsS9MWpfgmLvgUVToL-->会产出什么</h2>
+  <p data-page-node-id="jITtVVrBSEOhZO68KjAkpX" class="subline"><!--pnid:F7700J84bWR7oBmRbBlPty-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="DEbaWlog6ZY9Rdizxnxvvk" class="outs"><div data-page-node-id="kGg9bq3zREj6EHWW5xPBp9" class="out"><div data-page-node-id="D4gBau1DXHIAkbDpVvyDvP" class="on"><!--pnid:S2WihoXZobqAPFSIkAyNaK-->正式件</div><div data-page-node-id="34Ey1Zg2FiKlTKLIFVWvUI" class="ot"><!--pnid:QsYekVXGOqyhF2o7jRhWIx-->5.4_排产调整.xlsx</div><div data-page-node-id="8lAuG5cYQrHEz86Y9vxSw0" class="od"><!--pnid:oLuvAELxAtIanYRRCpkLxu-->优先级调整记录 · 企微等 IM 推送通知稿 · 5 个工序的通知覆盖与确认状态</div></div><div data-page-node-id="6zc0RqSKghefIXT15kmhg3" class="out"><div data-page-node-id="PfceorNFUtoknHAYADo1bK" class="on"><!--pnid:PnHdwIQ4TvT38265686M2s-->问题清单</div><div data-page-node-id="Nib1NQ2m7wKODGMrG9mCwI" class="ot"><!--pnid:sTqoGVc7WMcGoX3kcOXHwM-->待确认与差异清单.xlsx</div><div data-page-node-id="0tPgwUBUeirLuwq3a8Z9Wb" class="od"><!--pnid:ZtZEKfC6vGDsrjxndT1efT-->每条带原因、影响、责任岗位与时限</div></div><div data-page-node-id="TRinyAbgeXCTM2UtuhPQJv" class="out"><div data-page-node-id="hPoUCyQMMgcScnoNczeXui" class="on"><!--pnid:AM6rNbkrPDGwzurmnJBiDM-->归档记录</div><div data-page-node-id="EECQUgL7NCO00mmi7zQnlC" class="ot"><!--pnid:eNmtiPnGAy9bAr4ajfjAPw-->处理台账.xlsx</div><div data-page-node-id="Wgp4yrLPI9GmlaEv6c18BO" class="od"><!--pnid:vDAORwp9JDMPVqonfMNJMf-->本次结果入库 · 下次同类任务多一个真基准</div></div></div>
+</section>
+
+<section data-page-node-id="kS7rXvB7SUq0BFDeQu9jmv" class="blk">
+  <div data-page-node-id="3ujMH3AwPRkkXBXW0RnbeL" class="card warn"><h3 data-page-node-id="T7gvt8EDtmCq6hKM58h0qP"><!--pnid:W0wtajo4EIO0BwevZR8TKi-->这套东西不承诺什么</h3><p data-page-node-id="WQvjNdrTJPLbD3IVyje2Ft"><!--pnid:WxdE9afDNw68ZebZP3GUNk-->不做「AI 替你定最终结论」—— 关键判断必须由人确认。本场景产出的是初稿和建议，影响大的项一定会被拦下来要求人工确认，而不是自动放行。</p></div>
+</section>
+
+<div data-page-node-id="LjEzdB98KjHWCSmcmBVeVz" class="cta">
+    <div data-page-node-id="nXfnQSnxxqQinr69LLDqES">
+      <h3 data-page-node-id="nUtrPhqJuDMrzSK2VjPw5Y"><!--pnid:Ml3MKwhNIODOqZSWrtaEzs-->打开 Live Demo · 亲眼看真改工单</h3>
+      <p data-page-node-id="4GvoPsGNlWmBjyl57xScfN"><!--pnid:zf6JvAv1gRMDHLR0gOoke9-->一句"按你建议来" → 真写工单 + 分部门通知 + IM 5 群推送</p>
+    </div>
+    <div data-page-node-id="HM84PBp9mrSpe3YNn98WZS" class="btns">
+      <a data-page-node-id="tso7TQXVFbQ777PHAdiPpW" class="btn" href="LiveDemo.html"><!--pnid:Aeqi6bHXjxm9g8vtsPoPvR-->查看 Live Demo →</a>
+    </div>
+  </div>
+
+  
+</div>
+
+
+<footer data-page-node-id="kZMZt2X843e49B1GsH5JjR"><!--pnid:U3p1fAVCerFLxPWuqorpyq-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="S07Dxv2iPyo1s4voRpag3c" data-pnid-children="qA32e02lLkoTZkidU2xvhX">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="pav3abJmaAgXjduuThHsFD" data-pnid-children="RMHAxHbrn4eBBe0p6wKP2f">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="odczVTy6OASKlJa1WHmW6p" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="ybt3TVEeLUiOEPswCtcyUT" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="6NQmJb9lcgvHtGiBtFu3oV" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="pw1cQEUFyxvsW8iLCRtCDa" data-pnid-children="EVVNCjLGv170WowWuged6E">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

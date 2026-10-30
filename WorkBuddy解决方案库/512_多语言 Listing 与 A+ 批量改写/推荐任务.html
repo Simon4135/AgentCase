@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="csoURvCllzE6XdMOUeEMQW" lang="zh-CN">
+<head data-page-node-id="XzW08UskcekxtuRb63wxLg">
+<script data-page-node-id="gtnEkQKbj61veFTV6caomb" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="VoYEoJrPgJcRrDOq7K8LXs" charset="UTF-8">
+<meta data-page-node-id="yIbLlDRiEgJ3wzjbngqADX" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="DKq7Jio0G1goWIipTdzr0t" data-pnid-children="ZVEy8XOvNqLOXcqrxKgVKH">多语言 Listing 与 A+ 批量改写</title>
+<link data-page-node-id="XEdyo8ygTDummNwvEkvQ7W" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="msV0BKPMAJkbxVe33Jy9vi" data-pnid-children="Bu5adBbljFu6q02c4vpJyq">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="nJ4Q4OdOYj9tNIyKyYDDDs" data-pnid-children="XR8W3M2FgVk2hIAeiyzdT9" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="MOBKoyoQlcNrttEgY8XGsE" data-pnid-children="SGBv3mbDrUzEkMF6ykCXXa" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="PsfcQi4tbz5Ey8X7jSKuwi">
+
+<div data-page-node-id="3fv6xAVzAorabGE7iNqL7h" class="wrap">
+<section data-page-node-id="Ej2IzQlxtRW6q4hw8CRjZX" class="page-hero">
+<h1 data-page-node-id="z8A51FGTUbNePEWDZZjMDf"><!--pnid:cfMJ5oQpF8M5Cu0yKjitls-->多语言 Listing 与 A+ 批量改写</h1>
+<p data-page-node-id="SvLntrgz2Z9ov0QyImB236" class="lead"><!--pnid:L4VWEnEs8uDgQGMT4b8DEm-->通用工具十分钟给你六国文案 · 但它不知道你家榨汁杯真正被退货的原因是漏水</p>
+</section><nav data-page-node-id="lyy4uaftDLNK0QuRXhq029" class="subnav"><a data-page-node-id="L6kNECcRHaNaVRm7dukBRQ" href="场景引入.html"><!--pnid:m8XSkcS3KqAzp4iHUmIE33-->场景引入</a><a data-page-node-id="VZj9fOGG1w4uf4iZPLHcxS" href="LiveDemo.html"><!--pnid:52OHLeV5fNlkZ1AtkZgeHE-->Live Demo</a><a data-page-node-id="lbMrRJYZOYYqEryBwfL0Qh" class="on" href="#"><!--pnid:HZzWVE8E2l6Mg4cowKdFR7-->推荐任务</a></nav>
+
+<section data-page-node-id="dmAQXZkyiSjtbgMjawuxNd" class="blk">
+  <h2 data-page-node-id="A9Ww4jUSUWjZMaWoPYCqEC" class="h"><span data-page-node-id="6lseGmiseqSppHksFhBvR9" class="num"><!--pnid:W5CqfVJhZFODjgKA5CNLBC-->一</span><!--pnid:5QeABKu2K4xx6B32t41F1l-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="C3XYM9FqRvgsY5YwIPhKiG" class="subline"><!--pnid:TXHlBaloOQGeTLCmfmt2hx-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="mCyoj9IAq04fLZOpHql8G1" class="card"><p data-page-node-id="TM5yWp2HtZQiQ1oI3yCRG1"><!--pnid:V9wWsqyWvii71p7NScmFR7-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="qtE6WOqAdYuZWRZXxOVKim" style="margin-top:10px"><!--pnid:cm95GpyiGuWtO0pNkiILnu-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:ozym0KSKTmIAY1MWRxb3bj--><!--wb-skill-start-->
+<div data-page-node-id="D9wb4TOC5oe9iYUw5tFb4p" class="wb-skill">
+<p data-page-node-id="DGDwav1xWg6lzSvnBc5qdA" class="wb-skill-lead"><!--pnid:qnzpfTMwcmo3uQIb2b0iR7-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="z5EsTfd2bSuUlHA56MXfHe" class="prompt" id="wbSkillPrompt"><!--pnid:cn8vsw9BA6CxGe16oqL183-->【准备】这个场景的规则都在「多语言 Listing 与 A+ 批量改写」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/BkotXYKT2Q1NM37YcXafIg/reBHd1QaCCiv/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="avXOCbFamG36OsP8syYJHq" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:ncEJvU3sIN3OpZaz5lVoL5-->复制</button></div>
+</div>
+<!--pnid:4c5tlxaDkYcJWR72E7y3CW--><!--wb-skill-end-->
+<section data-page-node-id="Ry1Qv9yJckHSbmCJ4Ol57X" class="blk">
+  <h2 data-page-node-id="HlzOk1yB72Iqcy3M0Jk3La" class="h"><span data-page-node-id="bPOrE73yM8jW5cIv7q1RTh" class="num"><!--pnid:niqEBp4i6wvouLGgLzJvyE-->二</span><!--pnid:AX6Nmw7pcWkn9lOG6YSIxL-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="Tcr14XEhWBw4FTEskCU6Kt" class="subline"><!--pnid:9oRjISg7wU8p6AZBSDzNv1-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="qPvpIVf8DLGRPUX5jrq7Xk" class="tlist">
+    <article data-page-node-id="InjAcb475cc2qjqGNi41w1" class="task">
+      <div data-page-node-id="RZvQzpvax9zAsVGEmbQLDz" class="th"><span data-page-node-id="VGbMZXhuL1po2nlD2W3JXB" class="no"><!--pnid:UwEEOtPtRhqTcywXIXaK3L-->01</span><h3 data-page-node-id="ARkaa8O9Iq9p6z0HxoWNr7" class="ttl"><!--pnid:RzYbPZZMR4t7xnvLlKgp0R-->首推默认</h3><button data-page-node-id="WKRCeLBdcAFZOfBMu0T9Sn" class="cp" type="button"><!--pnid:4eTBye6mFKuhVzg73tdvtk-->复制</button></div>
+      <p data-page-node-id="sawNoGlDEkIK8UUbAZOlLi" class="tp"><!--pnid:MJk3PUTM3lfU37l4IzWPhA-->这是我们家便携榨汁杯 BX-500 要上六个站点的一批材料：「01_BX-500现有Listing文案总表.xlsx」，德国站还缺德语版；「02_美国站差评与退货原因导出.csv」，半年三百多条；「03_德国站违禁词与GPSR责任人清单.docx」；「04_六站关键词库.xlsx」。帮我出一版可用的多语言 Listing 与 A+ 初稿。产出三份：多语言Listing改写台账.xlsx，六站的标题、五点、Search Term、A+ 文案一处一行，旧新对照并写清改写依据，含编制审核栏；违禁词与合规风险清单.xlsx，逐条列出命中的违禁措辞、所在站点和合规替代表述；差评卖点映射表.xlsx，把美国站高频退货原因对应到卖点与 FAQ，每条附来源差评编号。德国站和日本站按母语表达习惯改写，别直译；拿不准算不算违禁词的别硬删，标出来我去确认；GPSR 责任人信息合不合规单独给我一个结论。定价和主图我自己定，违禁词也别替我自动替换。</p>
+    </article>
+    <article data-page-node-id="STIUPVY6jLGUlIz9O8eV1A" class="task">
+      <div data-page-node-id="rrj7NVw8qzUsAT53aTshNB" class="th"><span data-page-node-id="G9i3Jqrk8rnXUf5ClbzCF3" class="no"><!--pnid:IWrNSgO8cVfjJIN3Nq9ZbX-->02</span><h3 data-page-node-id="LCn96CfkDg60Xb3M0Fvpl0" class="ttl"><!--pnid:kWLm1FWBELXEGo3klTBCbK-->只做差评归类</h3><button data-page-node-id="CP9bm7VeWhit2wjvIHt9oJ" class="cp" type="button"><!--pnid:MKLYf1mKneCzel3ONXxw4q-->复制</button></div>
+      <p data-page-node-id="Ec9gIwt8cOxTHaQGh1YQUF" class="tp"><!--pnid:Ni7qVfq6xHEehPuHxj87xM-->只跑差评归类这一步，不出六站文案。读「02_美国站差评与退货原因导出.csv」和「04_六站关键词库.xlsx」，把半年三百多条差评按高频退货原因聚类。产出用 Excel 一张表，一行一类退货原因，写清出现条数、占比、代表差评编号、建议对应的卖点与关键词；分不下去的归到「其他」并注明条数，别硬塞进已有类别。</p>
+    </article>
+    <article data-page-node-id="o5tTSZlmYUKvFb9ZZ6YUBr" class="task">
+      <div data-page-node-id="IGpPx5xLWNQaAqm4l4g9H7" class="th"><span data-page-node-id="0XcIs4TikXakHoUaEHgwL1" class="no"><!--pnid:6BX3mcsumCdfDPFLcQo9LP-->03</span><h3 data-page-node-id="Hjsj8gcYq8IkCrWaE6WnOt" class="ttl"><!--pnid:yEpBumRuyMq2VgdzYqBINi-->换成德国站一站深做</h3><button data-page-node-id="aXKppXcj79aFnT5t6oCS32" class="cp" type="button"><!--pnid:SMPOwqmTYtvQGnsi6YILVu-->复制</button></div>
+      <p data-page-node-id="0pMfFG76rXEQtPNYGVQcfV" class="tp"><!--pnid:srf3hqrYLzt9f7UVd01IJ9-->这次只做德国站，换一个口径：五点按「痛点、结构、给出证据」重写，不再按功能罗列。仍读现有 Listing 文案总表、美国站差评与退货原因导出、德国站违禁词与 GPSR 责任人清单这三份。产出 Excel 一张表，一行一个五点位置，旧文案、新文案、改写依据三列并排，命中的违禁词在同行标出站点与取代表述；德语按母语表达走。</p>
+    </article>
+    <article data-page-node-id="2kCIf3EClBYMNpXj78em6Z" class="task">
+      <div data-page-node-id="bIgz8Ko8mxkZOINqJKKxXJ" class="th"><span data-page-node-id="rGBSXFqzXt137Zpg1DhVhE" class="no"><!--pnid:2A12tAhtlAnVx00h7Rj4VP-->04</span><h3 data-page-node-id="unwbuJGCJGiRUqftZaV565" class="ttl"><!--pnid:nLTkEa0xj9GGk22mTVNX42-->一次跑三款产品</h3><button data-page-node-id="1FFzpwsdHsGL6CBouD1l8Y" class="cp" type="button"><!--pnid:vje4FaeTDQREZKuGT4CA1i-->复制</button></div>
+      <p data-page-node-id="LXEqo8jSvlgpVM0Yh1H0yt" class="tp"><!--pnid:7mMZ9jSAJNZO8GNuvSHAZ7-->演示数据里再加 BX-300、BX-800 的文案总表、差评导出和关键词库，三款一起跑。每款出一份 Excel 改写台账，另加一张横向对照表（Excel 一张表）：各款命中违禁词数、可复用卖点数、需要新写文案的站点数。缺差评导出的那款在表里标出来，不要拿别款的差评代替。</p>
+    </article>
+    <article data-page-node-id="nKRu5pvVo0SBnK9FwrhfZi" class="task">
+      <div data-page-node-id="Zj0K4lZPLDeGQ5s0DKucu5" class="th"><span data-page-node-id="XFKlvaPqoYNT2n7Sqz92vk" class="no"><!--pnid:LR5NZgYhstcb0TspEvkyAa-->05</span><h3 data-page-node-id="lP5U89GzhytshY43Fexjbw" class="ttl"><!--pnid:J1QqjQlw9AtaWwmPUn3ksF-->给德语母语终审人的版本</h3><button data-page-node-id="6DShSNQbQDCvCAeNqUpFj3" class="cp" type="button"><!--pnid:oQ7fDYdhAnzUSQ8bL4UG9o-->复制</button></div>
+      <p data-page-node-id="ZkCOESYBt65sWXHs8CX6Dq" class="tp"><!--pnid:nE9xUDZvYWvagoBKjl4tC4-->从这次的改写台账里把待终审的部分抽出来，做成给德语母语审校用的一页纸（Word）：一行一句待定文案，写清原英文、改写理由、要她确认的是措辞地道还是合规，两类分开列。其余五站和差评映射都不要给。</p>
+    </article>
+    <article data-page-node-id="NxeXvnoE0XqdISerXivRIV" class="task">
+      <div data-page-node-id="Hn36WBau7laG1D8dmLMflb" class="th"><span data-page-node-id="ebuB9v5VTXdhrOekKQxpwT" class="no"><!--pnid:yruFZs25bU1iLPdbDHGI3B-->06</span><h3 data-page-node-id="vul4aKxMoG5rlrGpoItGID" class="ttl"><!--pnid:RxFMDFTeFyiRys7Pd0rdUk-->挑最像直译的三处</h3><button data-page-node-id="EEblgQMZNfEmqCsH72xEkd" class="cp" type="button"><!--pnid:ont8MSGQDLVL7e3PqYrSyP-->复制</button></div>
+      <p data-page-node-id="DKbhkxDOgi2TRZ6iytonED" class="tp"><!--pnid:O5Af6cGU7fZIMwhIfPlNNC-->你出的德语和日语五点里，挑三处最像直译、或卖点撑不住的，说明依据并给替换写法，措辞照「03_德国站违禁词与GPSR责任人清单.docx」核一遍。产出用 Excel 一张表，一行一处，写清原文、问题、替换写法、出自哪条差评或关键词；说服不了自己的直接删掉不要留。</p>
+    </article>
+    <article data-page-node-id="45xb90TJmCdWrWUXB5zp28" class="task">
+      <div data-page-node-id="Z7XglmZj2j7r9YFECDhr4B" class="th"><span data-page-node-id="DOoakK7kPdiIJzFIsajMDx" class="no"><!--pnid:qKSMWwch42D3emTPP4xMlg-->07</span><h3 data-page-node-id="IRbJOMTo8eDfIX2ZeO2jO5" class="ttl"><!--pnid:S4TaZJ5Zz37oYO8dku8AZj-->比对 2024 年 11 月密封圈那批</h3><button data-page-node-id="KmJUt7bdNGHIdVX5DuJQtE" class="cp" type="button"><!--pnid:7qGDd6xgmACDBshOL5Eu0w-->复制</button></div>
+      <p data-page-node-id="16h22Eg2Mdnr0m0tuPcUoG" class="tp"><!--pnid:4AryxXSlUth5WERksfg9vF-->读「02_美国站差评与退货原因导出.csv」，把这次提炼的漏水卖点，跟 2024 年 11 月那批密封圈问题的处理记录对一遍。产出用 Markdown 一页：写清那次涉及的差评编号、客服当时的处理方式、有没有写进 Listing，再逐条列本次该写进五点与 FAQ 的位置。记录里没有的字段写「无记录」，别补。</p>
+    </article>
+    <article data-page-node-id="jTcCYcBZMxN84EuEAah4fB" class="task">
+      <div data-page-node-id="BEZ4XCGHpWfe4jZWVtYAPA" class="th"><span data-page-node-id="LhkrHUKqfUctxogNb9hsO4" class="no"><!--pnid:9LebCCJq1AhwcAJVfYfa9t-->08</span><h3 data-page-node-id="57NYPNd27KxLytniGTWt05" class="ttl"><!--pnid:4mdqKw9RCgl2LNvTXxIA6e-->对照违禁词与 GPSR 清单自检</h3><button data-page-node-id="b7AXimfgA25NmEL3Z2AWRS" class="cp" type="button"><!--pnid:gCLYyKqiCiQ2c2rPn9dwFg-->复制</button></div>
+      <p data-page-node-id="G9ZmdnAKOYEUmPAFYK8PKh" class="tp"><!--pnid:e3vCGJ5cgOddQW1T31pM9J-->读「03_德国站违禁词与GPSR责任人清单.docx」和这次的改写台账，逐条自查：有没有残留违禁措辞、责任人是不是可通信邮箱、有没有出现医疗功效类表述、有没有无法验证的绝对化词。产出用 Excel 一张表，一行一条，写清检查项、站点、现状、该怎么改；只列出来，不要自己改完算数。</p>
+    </article>
+    <article data-page-node-id="Y4AE3ZvT52JRAKNUpDCPFK" class="task">
+      <div data-page-node-id="3foZO0D4pWa9hRc4BWFPim" class="th"><span data-page-node-id="4Hh97sxdXEM6SEXRPYhNI0" class="no"><!--pnid:CKliU23V7xucTDXxjVKPP6-->09</span><h3 data-page-node-id="Luxl2if8owbkDYyqCuKv3Z" class="ttl"><!--pnid:tLzWNvlp8TXUvw8ybGNmlA-->折算成外包成本和上架时限</h3><button data-page-node-id="lEyojpo7rjIX9fY4W7ycdA" class="cp" type="button"><!--pnid:t5EZcfSzS8OGhZd7E8h2ZA-->复制</button></div>
+      <p data-page-node-id="WzAucnAjk0LwUQ24uIrzMe" class="tp"><!--pnid:IIbejtrXH6RL9aP2C6g9hb-->按这次的改写台账算两笔：六站文案加 A+ 若全部外包母语文案与设计，按 A+ 每页 150 至 400 美元估一轮要多少钱；再按责任人电子地址这个卡点，算「先用合规邮箱上架」和「等代理机构补欧盟责任人」两条路各要几天。产出用 Excel 一张表，一行一项，写清算式与假设出处。</p>
+    </article>
+    <article data-page-node-id="iXBzNjkvbM3NnGGUBlcGBP" class="task">
+      <div data-page-node-id="LUFTuZeJrCmUTDFEGBj2MA" class="th"><span data-page-node-id="GeASCn6p3R7M1Lqi2iSFh8" class="no"><!--pnid:bEkVbFf9Rd7a8gpVSK81RL-->10</span><h3 data-page-node-id="pF4Y6aUd8p4vspdJv2k7Cs" class="ttl"><!--pnid:H4tqbGhcOIOmkybPZPL4Sa-->沉淀成上架检查口径表</h3><button data-page-node-id="pId4Tie1psBMJSMU8Tjn9f" class="cp" type="button"><!--pnid:FRClfOu6CKpPISx1tK5jpM-->复制</button></div>
+      <p data-page-node-id="7UNfPuzCiIe3DAYuN4inU8" class="tp"><!--pnid:KPr6klodesRp5CLTIV9iRm-->把这次的口径整理成一张可复用的表（Excel 一张表）：站点、禁语类别与合规替代表述、责任人字段要求、差评到卖点的映射规则、五点改写结构各一行。写成下一款新品上架直接套的样子，口径有两种读法的都留着。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="P89rFmMWCoyn4qE9mqmgFT" class="cta">
+  <div data-page-node-id="JS1Wy28aiBl8xA2ZrhXxY1"><h3 data-page-node-id="ZI2uXomdqHuat2rL4M2b3B"><!--pnid:XOvFYnBx45cmxt7xgmWXd6-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="dCNZH684CQkkagW0366oDq"><!--pnid:7hKOyRXhuyuLPHlJDrB5kA-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="v2RG3f2rVjqbPgKPM7kp8V" class="btns"><a data-page-node-id="H34j8m0jNisiNUqNdlFX28" class="btn" href="#" id="ctaContact"><!--pnid:bHpEQkdplldVDhdZMqVFwZ-->联系我们</a></div>
+</div>
+<footer data-page-node-id="aMFgzDF9kXdn4olC3ZmMb5"><!--pnid:ML4e0LGheT54ZGTvHjmBZn-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="Q70Nd0ZV74RdFYSvOXwxbc" data-pnid-children="11JrFflzpYjaSNJsHP5OUV">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="NXpyBmZ9zb0DiCfzTcYieI" data-pnid-children="kxUwGdvDueYqZ3N05UkQfe">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="3vSgyhAQuppPWDVj1IxL8r" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="s3e5VganBczmfvbpFC2pJM" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="dT2lr074lrh5lFPs4Scxvm" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="AEGkl55pWXLjmIeslX593Q" data-pnid-children="VVZHqtPiPuoPsJOoXSU8pX">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="Ds2d7iu3PdNqBp783SQJpn" data-pnid-children="2lj61VN7B4A38wKKfzm6t1" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

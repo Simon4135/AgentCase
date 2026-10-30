@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="q9I2qUps3ea138jnUsiIp8" lang="zh-CN">
+<head data-page-node-id="ZzwIrFn2pMyeKC835JMNlm">
+<script data-page-node-id="lTExRysaajgAUpmVVf0SgE" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="zdFGRi1hgHDKSFL7MdzAot" charset="UTF-8">
+<meta data-page-node-id="6SdkJveBSCb8hQOmru7V4Y" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="69OtUfSrAZcpVzED9uxLIf" data-pnid-children="drqBJtQX13fyg7x7Kmh7Z3">经营周报自动拼表</title>
+<link data-page-node-id="rwzVG0gGwda60tlWykt1j1" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="10wfQNs5wFa2xVmSKYGTLX" data-pnid-children="DPIuWVdzcoeK7Lrg9Orxfd">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="5UIM2GXriFfuMHIbWeoPNt" data-pnid-children="bf6S8T8kjso2nzUokD4i9Q" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="D7BGz6lBQ25zTPvo2LKVPp" data-pnid-children="GRbytp2MsZ7jL4RqT1PxWs" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="TvaqREvaPKrb5Rkg0PfuKG">
+
+<div data-page-node-id="xaV9tgOJHDN4DrfY0GCnZ6" class="wrap">
+<section data-page-node-id="ZrS8zY2K5sQOjnRNMI3e6K" class="page-hero">
+<h1 data-page-node-id="1LvbouAyCpUcJLtcu8bTYf"><!--pnid:1Roz4km71ZRbKLJneXaLUJ-->经营周报自动拼表</h1>
+<p data-page-node-id="wQh4rsbkfGaA0Hu0LQk9gj" class="lead"><!--pnid:TkjUVWgZb59d7ZjX2xeGjO-->老板要的那张周报，散在三个模块里 · 财务每周手工导出粘 Excel，花两小时</p>
+</section><nav data-page-node-id="tzee08H0kQzE8aSDurQMG3" class="subnav"><a data-page-node-id="ri9zACG8TShuWMDRSuDra6" href="场景引入.html"><!--pnid:0QvLIEFoObYY4qrAOk7ee8-->场景引入</a><a data-page-node-id="4TF0z93Je9kCEvkW3sgSXk" href="LiveDemo.html"><!--pnid:NDxyDY98UmKMvaK0mTFKGZ-->Live Demo</a><a data-page-node-id="x2CbjPDnU8TktF8e6feGut" class="on" href="#"><!--pnid:KqK5XhQG99E0MypfzHEDeg-->推荐任务</a></nav>
+
+<section data-page-node-id="8KbDXaqxop9pUwbHV55Wsp" class="blk">
+  <h2 data-page-node-id="LEkoNbYICElvX8TMqBAyLD" class="h"><span data-page-node-id="skpAD9DS6GLUNpAIa4F7Sb" class="num"><!--pnid:nwCuWVDZvirE0k2PIi9Jhr-->一</span><!--pnid:2MQilUrYraB2ZUgeviIIHa-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="K4111KkLpCpL5Y1xGd1OGe" class="subline"><!--pnid:tURprqVMdsV7ob6r8lhrzO-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="x5t4xT75dR1bJP06FEyZx5" class="card"><p data-page-node-id="vL9BfYB7fLlPLhlaP7jga5"><!--pnid:NBiniNHmInF1K8JnpGXAa1-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="S2iJzN2FHuceFS7J9z3Aoo" style="margin-top:10px"><!--pnid:x4e0H99ifOQjymECPuWbeV-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:9sf5ZkfjSLwOD3X2ujlAEQ--><!--wb-skill-start-->
+<div data-page-node-id="L7rDWp0iO1AT3obq4Wh69D" class="wb-skill">
+<p data-page-node-id="bxdSuAw1JA4DSun0kcFBQT" class="wb-skill-lead"><!--pnid:TYjM0F26BkLAjVDpwGnVgl-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="AQRSYcnErHIYJVHGDm2lpK" class="prompt" id="wbSkillPrompt"><!--pnid:Bo2okID3TRKeCDAVPOHzts-->【准备】这个场景的规则都在「经营周报自动拼表」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/Tg2azA0Xat7RWv3tLi5iGk/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="s1SxgLKxDBy4C5nTeWjLy2" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:vrc9lim3LRkKxvcivzCgyu-->复制</button></div>
+</div>
+<!--pnid:eDriQKRqsnU5TTcQwrJnLs--><!--wb-skill-end-->
+<section data-page-node-id="9SiJqhxT7OB6X5ztnWwGtP" class="blk">
+  <h2 data-page-node-id="W47p2B3lUU3wlMTx4I2V8l" class="h"><span data-page-node-id="oP0kQjcS3kuOAHb12gZXH3" class="num"><!--pnid:UIdE75hyYBLda5hgzIjIP8-->二</span><!--pnid:WSlCJiha2mUNSkbTbuIlYB-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="gYamno3Cd3wHLHIdwXF1ad" class="subline"><!--pnid:C1X8LgQ3rX1HajVfvM9yDz-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="m32y56cqCRwiWqDRiTWXfo" class="tlist">
+    <article data-page-node-id="Kv7lYvk5lc3kfQRNDLwLh3" class="task">
+      <div data-page-node-id="91jDwfIdJd1I5vXiwCAjEl" class="th"><span data-page-node-id="3Q6k805CfYoQ4Yq2JgKoge" class="no"><!--pnid:WqxLxfSLOCG2kXMKBtMBaB-->01</span><h3 data-page-node-id="MYdGedKhHdQ0mwakv4H7bY" class="ttl"><!--pnid:FHOXnyMsoLm9n3hSOVIJ8q-->首推默认</h3><span data-page-node-id="eEfYNRi6py54qRU0TsX1ak" class="star"><!--pnid:3dYLqiiw3uxnUF3WmGCWCC-->与一键体验入口一致</span><button data-page-node-id="s4MEjYJ8Sh5eMHbly8Onbq" class="cp" type="button"><!--pnid:9Xso8n4kX7vI73AXPZP3ql-->复制</button></div>
+      <p data-page-node-id="5QrCRmrcoIFuBeov1fiClS" class="tp"><!--pnid:9OyPxTNvqWaQMIcb4GwvuN-->把本周经营数据拼成一张周报。技能内置三份材料：销售台账（订单量口径）、财务收入确认数据（开票口径）、仓储库存与发货数据。走完整流程：三处分别取数、把销售和财务两边口径的差异对齐标出、拼出老板要的 12 个指标（发货量、回款率、应收前五名、库存周转、现金流这些都要有）、异常项标注。
+产出两份：「经营周报.xlsx」，12 个指标一行一个，列写本周值、口径说明、取自哪份材料的哪一栏；「口径差异清单.xlsx」，订单量口径和收入确认口径的差异逐笔标注、写明是哪笔订单或发票。
+数据缺了的标出来别硬凑，也不要用相邻周的数顶上；口径差异只标注不改数；不要做经营决策建议，也不要替我连三个系统。</p>
+    </article>
+    <article data-page-node-id="DmgezellLvsJtLW6ZV6Pd3" class="task">
+      <div data-page-node-id="Zd9hlBddnAcr4TnFfjjDBR" class="th"><span data-page-node-id="siM9OcXhDyaWxN8jEODvvy" class="no"><!--pnid:k4Qst4tYWIRTEjhjFM4Qkn-->02</span><h3 data-page-node-id="q5DaiRqwIBMHUWfhfhF8YM" class="ttl"><!--pnid:4XtIWtyy5KLctVJSoonI8F-->只做口径对齐</h3><button data-page-node-id="twgx8mdHquY6uRPNCzVUZ1" class="cp" type="button"><!--pnid:DzEmwmzS9P0X0jq6gNd4Ly-->复制</button></div>
+      <p data-page-node-id="Z2uanaaSl3US5fvkaKldkk" class="tp"><!--pnid:FBhaS4mdeH2QC4FtzwyG8g-->先只做口径对齐这一步，12 个指标先不拼。读销售台账（订单量口径）和财务收入确认数据（开票口径），把两边的数并排摆出来，逐笔标出差在哪。产出「口径差异清单.xlsx」：一条差异一行，列写差异类型（月末发货未开票／上月订单本月开票等）、客户或订单号、金额、销售口径怎么记、财务口径怎么记、净差异合计。别把这些差异当错账去调。</p>
+    </article>
+    <article data-page-node-id="Kz4hC1stFV6XNTFcPrwKrk" class="task">
+      <div data-page-node-id="EMoBjRWMfuCfD1trrGJoXJ" class="th"><span data-page-node-id="WJ6OJ73dDySmTRyj6B7NhK" class="no"><!--pnid:dzK1AuAQiIqSQhxjxMN2kd-->03</span><h3 data-page-node-id="RZHsTlVWQkDxo2czS1AASZ" class="ttl"><!--pnid:UkPnUgCucnwgAl1LoAv5h8-->换成截止 27 日口径</h3><button data-page-node-id="OvtUDVymWUeUkfIwqWYllk" class="cp" type="button"><!--pnid:dFrYmH8vPL9f2Y2rUJbFzq-->复制</button></div>
+      <p data-page-node-id="7EeYt2eZg9qg1C9BvylMCw" class="tp"><!--pnid:V1k6LZhTfJSFBkbnrTIDbg-->按「截至 6 月 27 日」的口径重出一版：销售台账缺的最后三天不算进来。材料用销售台账、财务收入确认数据、仓储库存与发货数据。产出 Excel 一栏对照：哪些指标会变、各变多少（发货量、订单量口径和开票口径的发货金额、回款率这几个必须点出来）、这版和完整周口径的差额合计。注明这版缺了哪几天的数据。</p>
+    </article>
+    <article data-page-node-id="xkdZDJEFoydrebDnenD5R8" class="task">
+      <div data-page-node-id="pzMT42fZ6X6lzgyddKCzjh" class="th"><span data-page-node-id="v3CcPNcCVTW4uNpEdctldh" class="no"><!--pnid:Ux3vQ8ycwbhb2XY2CGSbcx-->04</span><h3 data-page-node-id="1bSFUlMXIa8arTzTYpZBmq" class="ttl"><!--pnid:gqUeMl4WOPbl3Pk87lcp0h-->一次拼三周周报</h3><button data-page-node-id="H4b2foq23zoKUgGmd34kNR" class="cp" type="button"><!--pnid:tLTQkOkWk72VQsHDInFTh8-->复制</button></div>
+      <p data-page-node-id="x0aDbDRaS4nO0cwXYHRnLZ" class="tp"><!--pnid:3tk9kCzsxtDgfNJEb0dEno-->演示数据里再加上周和上上周的销售台账、财务收入确认数据、仓储库存与发货数据，三周一起拼，12 个指标口径保持一致。产出三份「经营周报.xlsx」；另加一张三周横向对照表，一周一行，列写 12 个指标逐项的值、环比变化、哪些指标的差异幅度要单独看。三周里同一件事重复出现的（比如同一家客户反复逾期）单独列一段。</p>
+    </article>
+    <article data-page-node-id="X00QX3nhyYCnfLQC2DUKj7" class="task">
+      <div data-page-node-id="W7l71ZNM1pe1A2WWu3CzBR" class="th"><span data-page-node-id="N7M8jASLGpYm7ogiKwFAZT" class="no"><!--pnid:Z7gZ2zosJ0kc0AXSkhZvTb-->05</span><h3 data-page-node-id="GMWMBfZf6MA4cVvpp4U16l" class="ttl"><!--pnid:cTdhftZuxRSlbw373qSTtx-->给老板看的版本</h3><button data-page-node-id="5SbfXbmoHUnQA18F97oYHU" class="cp" type="button"><!--pnid:Tx15eVuFWxKMlx7cDFVRKf-->复制</button></div>
+      <p data-page-node-id="R6vf9tM7I6Ri6vt6qQNPBx" class="tp"><!--pnid:yDXNkfCZkAGRVxi041z2pb-->把周报压成给老板看的几行，Markdown 一页以内：本周回款多少、逾期 90 天以上的应收多少、其中最大的那家欠多少天、库存周转比上周慢几天、本周净现金流多少。每行一句话，数字从「经营周报.xlsx」里取并注明取的是哪个指标。不下经营判断，也不给「该怎么处理」的建议。</p>
+    </article>
+    <article data-page-node-id="UN48muqy0UtL5LYt0lqOgy" class="task">
+      <div data-page-node-id="z3vb3wXENtBFW83f23AvuQ" class="th"><span data-page-node-id="VZs4P6D5mKMSCxWZeRLpkD" class="no"><!--pnid:VBkCmtEQsrD3svdKGYqj2Q-->06</span><h3 data-page-node-id="TweAsAI8QpkzjQgHfdItK1" class="ttl"><!--pnid:G8gZjbHhzHFl3v9hb4wo6p-->让它反驳自己</h3><button data-page-node-id="ExU3HeAg7zL2NFrKPe1k9N" class="cp" type="button"><!--pnid:6hT3UlAzEKrtTYfoIHiKOh-->复制</button></div>
+      <p data-page-node-id="iuPHzycVysHSFTzAqdXDCb" class="tp"><!--pnid:uU8HO1WKD2UHjnpAMfJESi-->你说回款率低是月末发货还没到回款期造成的正常时间差——这个解释站得住吗？逐条回查销售台账里的订单账期、发货日期和回款流水，把分子分母各是哪几笔写清。产出 Markdown 一份《判断复核》：解释不通的指标挑出来，说明是数据缺项还是真异常；哪些属于口径差、要留在「口径差异清单.xlsx」里，也说清。</p>
+    </article>
+    <article data-page-node-id="QH6wE5oazAktGh2Snff1J9" class="task">
+      <div data-page-node-id="zjlJjqzIPnYDjcYyJudJxy" class="th"><span data-page-node-id="7kmQEO00wrAU6aKquUYLvf" class="no"><!--pnid:yyAKGEjjLbmaqUGrNaK3Ub-->07</span><h3 data-page-node-id="XC6aTxjEXKk8Sa9Klqonsr" class="ttl"><!--pnid:nhAk6B1CuDZGayDwgiMpEM-->比对上次漏掉的那家</h3><button data-page-node-id="i5VflOJRAcP09sxrOW2Mcq" class="cp" type="button"><!--pnid:xFoPXsMapK3TULNvQgLtlP-->复制</button></div>
+      <p data-page-node-id="EsBccuafhy0WUZla6C3Kjp" class="tp"><!--pnid:aP3iV351ZtYrHRKFwN4PDq-->上上周那份周报漏掉了恒通汽车零部件那笔 328000 的逾期款，老板以为他回款了——跟这周的应收前五逐家对一遍。材料用销售台账、财务收入确认数据、仓储库存与发货数据。产出 Excel 一张对照表，一行一家客户：本周应收金额、逾期天数、账龄档、上上周有没有出现在榜上、这次该排第几。逾期超 90 天的要能一眼看出来，别和正常账期的混在一栏。</p>
+    </article>
+    <article data-page-node-id="OGc5Hj1lBvz49oQNSOwllM" class="task">
+      <div data-page-node-id="0enJWCTm5xFTfTKiOcRpkD" class="th"><span data-page-node-id="5FfnSo8cr5EcSETxckl3iR" class="no"><!--pnid:JPFDwL6Z5cm8MZSjjt2TfD-->08</span><h3 data-page-node-id="ZMDp7ntGQ6082dS9wLLkyA" class="ttl"><!--pnid:mOvq1KEDhm9tb3vJpo0xbw-->按数据源自查取数</h3><button data-page-node-id="axLnoV4UJ6AHoPNm3Mod3w" class="cp" type="button"><!--pnid:KAighTrkTJaiAf8ndAVzr0-->复制</button></div>
+      <p data-page-node-id="XJSqWy2YQpDGoYNySUG6Ze" class="tp"><!--pnid:rq4Sg2KJMT0ZxKoYtIRTzq-->对照三处数据源自查这张周报。产出 Markdown 一份取数自查表，12 个指标一行一个，列写取自哪份材料的哪一栏、本周这个值算不算得出来、源数据缺项导致算不了的写「本项无法计算」并说明缺什么。另外核两件事：销售口径和财务口径的数有没有混进同一栏；仓储那边的周转天数是不是用同一口径算的。列出来别动手改数。</p>
+    </article>
+    <article data-page-node-id="Ex0ML7Ghgn3GOfwo9fgD63" class="task">
+      <div data-page-node-id="Ndw5zwaNppyAlz7gfazNxn" class="th"><span data-page-node-id="t1u8HoHusxCWwXr8bN2v91" class="no"><!--pnid:2MCJuPkHsyuIUG0hIYkJs9-->09</span><h3 data-page-node-id="IFGSNJYyRy0HU8ok2KpE3O" class="ttl"><!--pnid:UuPVCJb33hgm1frFGWtIPD-->折算成三件事的钱</h3><button data-page-node-id="ICJXYWbfOBK54LUdV30GG5" class="cp" type="button"><!--pnid:Y5ZUcUY98eTQm9qvVvlD3m-->复制</button></div>
+      <p data-page-node-id="zLrBKCmJuJl3QookjxRVH9" class="tp"><!--pnid:JwdnQkWpjtVPaydWF1dVVp-->读「经营周报.xlsx」里这三个数。本周回款、逾期 90 天以上的应收、库存周转比上周慢的天数——这三件事各自占用多少钱、影响多长时间？产出 Excel 一张测算表，一件事一行，列写涉及金额、时间口径、算式与假设，给区间不给单一数字。慢周转那块写清按什么库存金额折算；取不到的数就写「无法折算」并说明原因。这是测算，不是替我决定先管哪件。</p>
+    </article>
+    <article data-page-node-id="pXBTSwJCZX3eQX15MjwITh" class="task">
+      <div data-page-node-id="gngS6Tjeur69FVRyGtiniC" class="th"><span data-page-node-id="EiDuUHNM95gZpykXsft9yL" class="no"><!--pnid:vAQBZlWhBmRf8UIze2dBCR-->10</span><h3 data-page-node-id="awdxUuc5EEz1fCc9vENUJ0" class="ttl"><!--pnid:1UMseyB8zB86n2rrf46Onc-->沉淀成取数对照表</h3><button data-page-node-id="9Wzpa5O5gOkADJ4fwadzh2" class="cp" type="button"><!--pnid:yUEXsTmfHdXQ1zpyn2T8fc-->复制</button></div>
+      <p data-page-node-id="Bd3x5Q4WtG30VCtsodsBiS" class="tp"><!--pnid:KoL0jhElIDizDQ25PD5BvJ-->把这次从销售台账、财务收入确认数据、仓储库存与发货数据三处真取过的数，按 12 个指标各自的取数口径整理成一张「取数对照表.xlsx」：一行一个指标，列写取自哪份材料的哪个 sheet 或哪一栏、口径说明（订单量口径还是开票口径）、计算式、本周取值。另外单列一段口径差异的标准写法（月末发货未开票、上月订单本月开票各怎么标）。下周直接照抄。只写这次真取过的数。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="Hn3h25QK6Lk4NzC6S5BXur" class="cta">
+  <div data-page-node-id="eihz1h1Hz6OxrSyRxpXMex"><h3 data-page-node-id="q45Ej9jYUPUyRjJbqCDPEm"><!--pnid:UnkuDPvGfkXFN0hZRh1Wuq-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="0c8cZQGmRD1r7ULnXIvLye"><!--pnid:6CPYOQwtTVhpg5dxeO9F8F-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="4oyJOTaelo2NB8Ux5H8Jqj" class="btns"><a data-page-node-id="2rZwqLQWZvUqXiWjiZvuhj" class="btn" href="#" id="ctaContact"><!--pnid:60r74Nv5OZJmu043jqBwax-->联系我们</a></div>
+</div>
+<footer data-page-node-id="9irsdj76SEoLgjFzY5yACQ"><!--pnid:pt9bPpaJw9hmGnT8EPSUtd-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="KX0d1Xmg4iE5pA5OGl3eFG" data-pnid-children="RepOx1rEdhingof845bk34">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="8YFF5WQ2voDHpKTLxvtV8m" data-pnid-children="3MtsClm4usuQ3jjlTniAui">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="TVl5PJ9ijLG8mjR9LGxygD" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="uE5YM2UgT2GKj1ucG5nOZA" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="FwTmryNEnxN2pHRNALC2mv" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="tn4SXEKShdIaJaEx2FzqTs" data-pnid-children="0c7gSCWJObugBJZvCHPFor">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="jwrI3hwQ7yqa1HveFbVDZW" data-pnid-children="U73rkOc69wCpdkLpytaWSS" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

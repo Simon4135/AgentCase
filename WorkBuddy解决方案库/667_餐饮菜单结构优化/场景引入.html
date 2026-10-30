@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html data-page-node-id="P6YGwbco4GJTz6iODkH087" lang="zh-CN">
+<head data-page-node-id="YXhwijR3BihF7xPWZrSUJd">
+<script data-page-node-id="KmXCaAZMc0WYA4AbrU2V4i" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="zg40uJ6lmC7xnRPWAG1i4l" charset="UTF-8">
+<meta data-page-node-id="ZM9VaDh3SGcWQ1leQdtaDs" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="Z9X8xyKsJrvlXkGJKc5lnq" data-pnid-children="UTVUm5CJ5VwyKeamIO90Lt">餐饮菜单结构优化</title>
+<link data-page-node-id="F7301ZkerIbh7dEhd2JWfm" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Sj5SufjYs98D7bMxxNql5m" data-pnid-children="6td6qcy7WhC9h9mB6QpKwT" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="vNamiITn6mDDKFYCaYUaUr">
+<div data-page-node-id="9252RNGBdCjaOwM8NvOj1B" class="wrap">
+<section data-page-node-id="LyMKCt7KI4VebXLAOTmuQ2" class="page-hero">
+<h1 data-page-node-id="MqFEztDPCE0pbiFMajl7z7"><!--pnid:33KEVAdseXpKvuVVTMG4ot-->餐饮菜单结构优化</h1>
+<p data-page-node-id="4baJjvx1dllVCuwebdgMFI" class="lead"><!--pnid:r4nEXD7Z9iMCcykMqIqUjb-->销售数据散落多源，品项评估缺乏系统方法，定删减凭直觉，一次菜单评审拖上两周</p>
+</section><nav data-page-node-id="jM7od84zcviKQbvIXYxlrx" class="subnav"><a data-page-node-id="0etxqj5dxvwcFYFHQv9Dl6" class="on" href="#"><!--pnid:b5lLFV03R8Cu9XtUmg6NIM-->场景引入</a><a data-page-node-id="jj0KwY06kLmRQbSdX8EGnt" class href="LiveDemo.html"><!--pnid:V4DurcJyLmFQ2OwUnuUiVf-->Live Demo</a></nav>
+<section data-page-node-id="PUoYx7uSgFaVxuZJ1l7zRV" class="blk">
+  <h2 data-page-node-id="prwaN99COlNfqhXlvRDgpq" class="h"><span data-page-node-id="T03ermjRgUJG6Nh9KwmmHt" class="num"><!--pnid:7AToBEmBvH0xN4WDE975cm-->一</span><!--pnid:BTIxxVhqafqVRKJpuvhrZf-->这件事现在是什么样</h2>
+  <p data-page-node-id="Jgu43ggE78mh8Zsnpbgcqq" class="subline"><!--pnid:daSnsM10lQK0vbZwzRXABw-->产品专员 · 季度菜单评审前的「拍脑袋」时刻</p>
+  <div data-page-node-id="jYzM4CcnIsKFIPHms2OlCU" class="card"><p data-page-node-id="cbqmp7P9r8y29o1IURuELL"><!--pnid:8x393j5ReivuMGzzUQS1OK-->某中式快餐连锁品牌，季度菜单评审前两周五下午。产品专员把 23 个品项的销售数据从报表系统导出来 —— 然后呢？哪些品项是明星、哪些是瘦狗，没人系统算过：销量高的炸鸡翅毛利只有 30%，该提价还是降本，会上吵了半小时没结论；主食占比是不是太高了，谁也说不出具体数字；黑椒牛柳销量垫底，但它是某区域经理的「情怀菜」，淘汰提议每次都不了了之。两周过去，评审会开了三轮，菜单还是那张菜单 —— 唯一的变化是又上了两个凭直觉加的新品。</p></div>
+  <h2 data-page-node-id="TCdC4ThzBTaklTxzW30Bmk" class="h" style="margin-top:22px"><span data-page-node-id="5Yo6Y1fnM2zq9e5xVWn6mh" class="num"><!--pnid:JcfGvGWeyTuNUhMG80243L-->二</span><!--pnid:HWruF40hffOKHm3Wg7y3gA-->痛点 · 每条都发生在昨天</h2>
+  <p data-page-node-id="tNYNf3EI6YmJeCcfWIf315" class="subline"><!--pnid:CfkPWAQM21k6gP4u3sYm1o-->不是流程描述，是产品团队每次评审前真实上演的日常 —— 以下案例均取自场景调研与演示素材</p>
+  <div data-page-node-id="T6XnCYHtIItYKKce5sUiOE" class="pains"><div data-page-node-id="32rhMr7aJlcZFBLmX0Utkm" class="pain"><span data-page-node-id="2JPMXY5Ovx7JSlCDwo9V2d" class="i"><!--pnid:71RZZrrEHhi0SeOhcGvqyN-->1</span><div data-page-node-id="41g66sqj763zNedFvQD0vZ" class="t"><!--pnid:JLHpZvkSQeP4xGRBvU8071-->销售数据散落多源：销量在报表系统、成本在采购表、售价在菜单册 —— 拼齐一张可分析的表就要好几天</div></div><div data-page-node-id="OYM6n4Kx6WUuJjbAmO5aB1" class="pain"><span data-page-node-id="vA2UCdTyMvHlNqYKs62XjO" class="i"><!--pnid:CpKoNE1Vb5q6aBifTQPFPJ-->2</span><div data-page-node-id="ML1xwBdowZK7ZjeDg2fzDB" class="t"><!--pnid:FsXdLTdBX87U4Wg7j8OR5p-->缺乏系统化品项评估：没有 ABC 分类、没有四象限，「这个菜还行吧」是唯一的评估口径，明星和瘦狗躺在同一张菜单上</div></div><div data-page-node-id="VRyw5AVNseHVSO06twpxu3" class="pain"><span data-page-node-id="mcB2T9Rqexq5ajiDzguOjh" class="i"><!--pnid:Efue7acu6MOJVJINRjNIyN-->3</span><div data-page-node-id="LIwR6vkr2IdWH9A7EGC48g" class="t"><!--pnid:2kmDgTVGlz1BuBrajeMz1n-->定删减凭直觉易误判：销量高的品项毛利可能只有 30%，凭感觉保留「卖得多的」，利润被悄悄吃掉</div></div><div data-page-node-id="vaJ60oW3CCyI4M4HB8Hwqq" class="pain"><span data-page-node-id="6espJUYOY22YwGrare4Zw7" class="i"><!--pnid:xE9VzR2BJsx8yclpZjH60d-->4</span><div data-page-node-id="j4KdoYYVKJ9qmN1mbSPgJe" class="t"><!--pnid:xiPggYm9PnP9dA0IckFaLS-->结构失衡看不见：品类过度集中、价格带断层、毛利洼地 —— 没人算过占比，失衡点要等到业绩下滑才暴露</div></div></div>
+</section>
+
+<section data-page-node-id="Oe6bJ1t9am3vgPLz4eZRxa" class="blk">
+  <h2 data-page-node-id="9NgqdrBeZysmbJhEeMxeOv" class="h"><span data-page-node-id="lTaM5UgUZfIszf7NtXiUDi" class="num"><!--pnid:LiEcUqBo7KmxXfPLiZRLFC-->三</span><!--pnid:FJgnpGsv67KL8Kxme5QYU6-->换个做法之后</h2>
+  <p data-page-node-id="yzmEkHNSMKwFaD3M7H5wK1" class="subline"><!--pnid:DK4FhmVCZoKKBLbiHbRBIb-->变化不在「快」，在「有口径」和「能对账」</p>
+  <div data-page-node-id="FuzzBeS3Bfhsbz43FIHGHw" class="cmp">
+    <div data-page-node-id="1lD6FDCWqWiS8IiC8OWZX0" class="old"><h4 data-page-node-id="5oY4NGguHyGRELEjLiJt5P"><!--pnid:g8rQX0S0vjQEtmz6mwkvUt-->✕ 现在的做法</h4><ul data-page-node-id="6wMrNTCszBkYCnbKWwSBur" class="list"><li data-page-node-id="V7ZB2TLxkX3jvYy01Sx2Ng"><!--pnid:qcOSvLz9qdaEGhVYXRuP6f-->数据散在报表、采购表、菜单册三处，拼齐一张表要好几天</li><li data-page-node-id="W8WS3UjKxFYMwZfSvrQkvC"><!--pnid:ecWstM3gPpvvLghQlkPzT2-->品项评估靠印象，明星、现金牛、问题、瘦狗分不出来</li><li data-page-node-id="9RxCKKIIoPHQEpWdMcySPt"><!--pnid:nP8Wl4RpAVSoKIgj3vnxN2-->「卖得多」等于「该保留」，销量高毛利低的问题品项长期漏网</li><li data-page-node-id="9zS7VUXHY4nWIHxHBtTAju"><!--pnid:76JXqQhlBbRRluQiqjQ9IB-->评审周期两周起，淘汰决策靠嗓门，每条建议拿不出数据依据</li></ul></div>
+    <div data-page-node-id="T9WNyhfx0Ghm4o8LsYnksO" class="new"><h4 data-page-node-id="B5xcl5rBaivsP3wCUqKxqN"><!--pnid:CmTXKFFTfPhgyUhOxMKxyK-->✓ 交给 Agent 之后</h4><ul data-page-node-id="z5US8w4yWsWx7il8vQz29T" class="list"><li data-page-node-id="HfPK2yJvzSAA8xvlANpZ9j"><!--pnid:3X5lDygkjACkZENHWXntHv-->数据解析与字段校验一次完成，缺失字段当场提示补充</li><li data-page-node-id="LwHA11yfCc7fCaeLPU0mGA"><!--pnid:XyPMEyYiYFjwV3NH5svJdr-->ABC 分类 + 四象限双维交叉，23 个品项各归其位</li><li data-page-node-id="B6phMkNflA1GJ9TpPqj2Mq"><!--pnid:AfiJ4gCzolBgvIog6Mdwaa-->结构失衡自动检测：品类集中度、价格带断层、毛利洼地逐一标出</li><li data-page-node-id="qcQChwcjXLN1LT8r837xad"><!--pnid:Iz6FCE7diOuUU2IdDCE7nI-->每条优化建议附数据依据与行号，高影响淘汰项标注「建议人工复核」</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="cIomkFik5XlcShJOwTm7gm" class="blk">
+  <h2 data-page-node-id="46BInjkqR2RkmAXydIXZZB" class="h"><span data-page-node-id="a598HFz8PncjpmiGEx6T1m" class="num"><!--pnid:8DQ3r0GYqmlf5418DyrH3Q-->四</span><!--pnid:Xxsj9uaGnYGgTKzsEF9Kjx-->场景闭环</h2>
+  <p data-page-node-id="07odTncLDWbbOrO7VjcK55" class="subline"><!--pnid:Wx9Qkxc28Eix3pxIdCM1sk-->5 步 · 解析 → 分类 → 检测 → 建议 → 交付</p>
+  <div data-page-node-id="MvsnBznxlLc7LiYYWmkkzV" class="flow"><div data-page-node-id="BDJdiPQBRpBJR9Fbzc3JAw" class="step"><div data-page-node-id="i1ZrDMLTLGyYdUlSueQJOU" class="n"><!--pnid:1nTZTFwcT22AM1GEtHMFkI-->第 1 步</div><b data-page-node-id="2D6jFcfpAgN82wpfsfLZsb"><!--pnid:BfQC0SYOYJRHutwYeL3Lj6-->数据解析与校验 · 字段不齐当场说</b><span data-page-node-id="BvlvtccQJuKsdZaciSm3bE"><!--pnid:6sw8WI7VJGmJet1FFyUkP7-->接收 Excel/CSV 菜单销售数据，识别并校验 SKU/品类/销量/销售额/成本/售价字段，缺失字段提示补充</span></div><div data-page-node-id="W1mRS21NF76AC8GpdivrFg" class="step"><div data-page-node-id="QP5WlqoLpGFVPakhTfZMPD" class="n"><!--pnid:OIFvBTByvG5cqGTsGcQoiF-->第 2 步</div><b data-page-node-id="IK8GbUn9o79AUJHHcUcGV6"><!--pnid:39A7dWOJ2n82O0ARaFjZZK-->ABC 分类与四象限定位</b><span data-page-node-id="Q7NYHD36WuH1OxUso9NZe5"><!--pnid:GA1g3MSn517AbIQfDfyj1P-->销量维度 + 毛利维度双维交叉，标注明星/现金牛/问题/瘦狗四象限</span></div><div data-page-node-id="hQSTKK1YECh1HmBBZKarhd" class="step"><div data-page-node-id="YIwE6PHt7RSmpNjWog8n2B" class="n"><!--pnid:d5P79GytHMc13c4uIKR0PS-->第 3 步</div><b data-page-node-id="o0k7GR2gdeyydDGntlOUHh"><!--pnid:MAEypr64pmCJOQNfuCEVdP-->结构失衡检测 · 三类问题自动标出</b><span data-page-node-id="miITPYRgN1pvPKYssxOwDM"><!--pnid:XstiIbHQ6krjv4gt0ZyHxE-->计算品类结构占比、价格带分布、毛利率分布，识别品类过度集中、价格断层、毛利洼地</span></div><div data-page-node-id="g1ohlRSpyRoYEhveDziA8o" class="step"><div data-page-node-id="r2c3cyFkzx953vXp6KWlBU" class="n"><!--pnid:W9LMVL1bUjl17wkRazMRT1-->第 4 步</div><b data-page-node-id="3K2HlTeH0UsF0PaBEmwiTm"><!--pnid:Hm7zifHFo56eNOg1YHbdAc-->优化建议生成 · 每条附依据</b><span data-page-node-id="TTpkwxvhN7or1aZU8LMoj1"><!--pnid:YoIc047r0BMRskoLUYXWIu-->按四象限输出保留/调整/观察/淘汰建议，附数据依据与行号，高影响淘汰项标注「建议人工复核」</span></div><div data-page-node-id="ndmt7MNPOgSBTsZqPol3cD" class="step"><div data-page-node-id="hhpOjALis7Q0uyzfAJHDGb" class="n"><!--pnid:Dc1Bhu5dcnVpyJz6nJIXDI-->第 5 步</div><b data-page-node-id="FIJ7SQ6mykrk69yyzElz2j"><!--pnid:fbP6OmrGWm8lc10FghCKBZ-->输出交付 · 报告与评估表落盘</b><span data-page-node-id="HmLAlt2qFk4NOMFvHPUeNs"><!--pnid:9FwX5fotDsHqfuwv2uujGS-->HTML 可视化报告（四象限散点图 + 品类占比饼图 + 优化建议清单）+ CSV 品项评估表</span></div></div>
+</section>
+
+<section data-page-node-id="lk3IhkUmm5GHUcK2XcaShu" class="blk">
+  <div data-page-node-id="qD6hh9Y301Sjbvf4IXI9Rn" class="g2">
+    <div data-page-node-id="CnXb8XPslVDfAf2ldZJhQg" class="card"><h3 data-page-node-id="PucHc1GzEWCjyqTVysN4Pu"><!--pnid:ry2u9Yvvsmuq9chKQC7KCb-->要准备什么</h3><div data-page-node-id="dtNTHfVeHuu5rqdDdQtqdU" class="src"><div data-page-node-id="IwRT64CB3iEqMrkLNy75l1" class="fn"><!--pnid:3wAse6Ztip0v8aiZDXy0dq-->菜单销售数据（Excel/CSV）</div><div data-page-node-id="0aqQrLiX6ZIuygs2TtendX" class="fd"><!--pnid:BQp7MaFrKHxGr7Od31BBXx-->含 SKU/菜品名/品类/销量/销售额 · 成本与售价为推荐项，缺失时分析维度受限但可继续</div></div><div data-page-node-id="vVDyk6BZ2EDY0dyzcYE8NP" class="src"><div data-page-node-id="9hcKKWP1qsndlaq9n4KPc0" class="fn"><!--pnid:UfHbQDqXFz7mUyFxS3oyTf-->数据脱敏前置</div><div data-page-node-id="K4fFp8A2nwhbvpanlRijYb" class="fd"><!--pnid:VIhqpP3UbxCu7sooMl6SIq-->不含门店 ID 与经营敏感信息 —— 先脱敏再上传</div></div><div data-page-node-id="uJqMU95YGRpNZrVmnX5462" class="src"><div data-page-node-id="gCka30uBT5BLmtmjSu18r9" class="fn"><!--pnid:DYn2Q23uqbHMwc1YtlFtdH-->评审关注点（可选）</div><div data-page-node-id="3iustrxpFi28b7CYNOz47T" class="fd"><!--pnid:BIpaCvpaRzNTrHl5PCIJBC-->如「重点看小食品类」「20-25 元价格带是否断层」—— 自然语言说明即可</div></div><div data-page-node-id="3K3A1c8i5hxY4Fnq1JkGB4" class="src"><div data-page-node-id="ubXPAzN6NHQcNgMvFDB4fu" class="fn"><!--pnid:D2Y0coYyUs1TMlqIApgXM5-->品牌定位背景（可选）</div><div data-page-node-id="k5AbVJ319f0M1nGna9uTnr" class="fd"><!--pnid:2lFAZTz7M2OcuXS6SEi9EH-->供判断品类集中度是否真失衡 —— 单一品类 >40% 不一定需调整</div></div></div>
+    <div data-page-node-id="ka4dNYQLmHSOzPQbWZGc6e" class="card ev"><h3 data-page-node-id="KThXGGIEkSt1gb4GTxe7wM"><!--pnid:Ywmj35TWtWGZDxZ2VVfOyt-->为什么这个场景值得做</h3>
+      <p data-page-node-id="oK2bwW4SWrjqgkWCfY4ow8"><!--pnid:yUIHiAHC7o3XxBGsCCzooN-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="Oj9U8VX9a4dnJ7hMVkfx1P"><!--pnid:nqMFmx3DkqVvplMLnHOYgR-->10.0</b></p>
+      <p data-page-node-id="sXOOWnGt05TtHTMhGg58OY"><b data-page-node-id="5Pw8y0WDVFgYCJ6DNuFsNA"><!--pnid:r7kBK8teI3WpygIrIJ05D3-->最大差异点 ·</b><!--pnid:EPrLkW36XwfAols40reZUi--> 评估口径第一次统一：ABC 分类与四象限是显式规则不是个人感觉，每条建议附数据行号 —— 评审从「比谁嗓门大」变成「对着同一张表对账」。</p>
+      <p data-page-node-id="X5G5lY9YuDPvdsbMRURGzS" style="color:var(--ink3); font-size:12.5px"><!--pnid:qdk4ogiDW67enzm89xuGki-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="ALN3CXMlausLsJwPrFYhpI" class="blk">
+  <h2 data-page-node-id="fXwureTB5KJFJ9T0E1Pzt7" class="h"><span data-page-node-id="9x9JXDIZF34f2fSdElGCCg" class="num"><!--pnid:FMym9aKkoKQLSqzOdkdbym-->五</span><!--pnid:DgFkWZPoNxwfhY1aZdYs4R-->会产出什么</h2>
+  <p data-page-node-id="dZzPOUFixbe41UfEg63RAR" class="subline"><!--pnid:uLCu4GzIa5WI92TnHtFpj8-->判断标准只有一个：这份东西能不能直接拿去季度评审会对账</p>
+  <div data-page-node-id="6tI9ugcQ5Uz9JY32pVE4O6" class="outs"><div data-page-node-id="J5DMc5RfaWuqMkjJ4klWdC" class="out"><div data-page-node-id="jyNF8xBHtXYCxqVm97QCB5" class="on"><!--pnid:h5zrwUL0uipANWb7Z2qvP3-->正式件本体</div><div data-page-node-id="c3D9wwHR2MesKV8LdmNSNV" class="ot"><!--pnid:sAXeLOziILv1PE6lZqvsS2-->菜单结构优化报告.html</div><div data-page-node-id="RGr1tZj2L5QZoQcMBeB4zk" class="od"><!--pnid:tgP78sluRmY9gofoZO66t8-->四象限散点图 + 品类占比饼图 + 优化建议清单 · 浏览器直接预览，评审现场直接投屏</div></div><div data-page-node-id="4Qd3UK9MImbp6yvAs8KOq6" class="out"><div data-page-node-id="montqOBnXzmrxYWWn2sNFa" class="on"><!--pnid:ki2qiYrRDU04CcFbABCBM2-->可派发底稿</div><div data-page-node-id="jegJ19UMu5w0Lx8AEidwKW" class="ot"><!--pnid:6gZa6tHB2elSY65VhG03hn-->品项评估表.csv</div><div data-page-node-id="S76Vm17XHd5aDf7dEndTO6" class="od"><!--pnid:7ZjUHapPMwROb6zREDO6o2-->SKU/品类/ABC 分类/四象限/销量/毛利/建议动作/数据依据 8 列 · 每条建议附行号可溯</div></div><div data-page-node-id="FERZ0CXLq26V8efH2H0V6v" class="out"><div data-page-node-id="3o10LdpYRMoHtd1kHOxLSa" class="on"><!--pnid:53pVRQwzjbLtns5zGcDjt3-->复核清单</div><div data-page-node-id="IiZXwR5dX9TdmhCxNtJIVP" class="ot"><!--pnid:8ptoC3UcgGiylyey3TPMnH-->高影响淘汰项标注</div><div data-page-node-id="BtwBlmAg7iksk2BOYpbEp4" class="od"><!--pnid:7U0oSqsXQxgqpX9a9Phpwt-->贡献度前 30% 但毛利低的品项单独标注 · 产品主管 + 采购双重复核后执行</div></div></div>
+</section>
+
+<section data-page-node-id="3ib9WVELyoPzBS9hEkVA7J" class="blk">
+  <div data-page-node-id="mK1GXsKKjiCj0kkH7w7Y0x" class="card warn"><h3 data-page-node-id="YGRWEQAJNrNaJuOUNK4J7I"><!--pnid:iW90GU2ThKpsuHd58TonzI-->这套东西不承诺什么</h3><p data-page-node-id="WhrIQuUaNOS5cSHlfKbO81"><!--pnid:DuYdrL8dhagzAcisMhxT0I-->不替代最终菜单决策 —— 输出为辅助参考，淘汰建议涉及经营决策须产品主管复核定稿；不保证 100% 准确，缺失成本字段时毛利维度分析受限，标注「数据缺失」的品项须人工复核；不对接真实 POS/ERP 系统；瘦狗品项淘汰可能忽视季节性波动与战略定位，淘汰决策须产品主管 + 采购双重复核；单一品类占比 >40% 不一定需调整，须结合品牌定位与顾客画像判断。</p></div>
+</section>
+
+<div data-page-node-id="H8OwgOwc156vklTLqQvSmn" class="cta">
+  <div data-page-node-id="yIdHVi2OUJ4YnPomBhmDM7"><h3 data-page-node-id="1K2A9ZTyUAZ2nMExiyQEVQ"><!--pnid:W2SVkL6Boynwvwbhf0mSKW-->想看具体怎么跑？</h3><p data-page-node-id="5IdyZ3sfpshw0m77TRZGxB"><!--pnid:w7EgG9JbAr3TB3oxJwLtH6-->Live Demo 里有一份 23 个品项完整案例的每一步，包括哪些淘汰建议必须先经双重复核</p></div>
+  <div data-page-node-id="kJT4DiBVv38VfcD6JqrCy1" class="btns">
+    <a data-page-node-id="0iJkvHzGORIYh8iHFevPaO" class="btn" href="LiveDemo.html"><!--pnid:wKyalFAAo9JNpZTJjUhaEK-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="MQzXtPtJzQAGuHevpeQUXo"><!--pnid:JZIzKVD8RNxe1DkqmgaUjB-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="mV6PlvYslHalVOVUNvHGH6" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="4J5aZmxuhtrppwjz2uFb1D" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="FiE57WF8fHJwjGivQJrE1y" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="Cn66w5UZp7t9EWurWiYHaT" data-pnid-children="IJxNHutBMI1elhd6P1rYto">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

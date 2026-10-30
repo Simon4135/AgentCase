@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="2BqYbCj8I64mVk0OfFPbVl" lang="zh-CN">
+<head data-page-node-id="441gmMoOMriudbIqj0Ooyn">
+<script data-page-node-id="8TOMrsgNJAUIcikN0q7Afu" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="sXAi8VyHDJZCjZlCAiDS2B" charset="UTF-8">
+<meta data-page-node-id="iyqz3DjwcCEYZLZDUUK0tW" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="brp5476Qm0hD3yJFuxejUl" data-pnid-children="Xei8l7yv4cwlhSfVUVeMsy">银行余额调节表自动编制</title>
+<link data-page-node-id="RX5fxpup06e6lseLFHsuyG" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="xpEqAprRmZV5BXhT6TO1PG" data-pnid-children="rtTB3Hadqo6SYZJa1VvOgu" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="nHlAfcKKipHba6SpUgAOMh">
+
+<div data-page-node-id="6NrdBSUZY8QFyA9O9M8Qcd" class="wrap">
+<section data-page-node-id="j0L71TYMQ0hx3gUMiEFX4r" class="page-hero">
+
+
+<h1 data-page-node-id="ELGErXRmNEVXddyMbWCf0f"><!--pnid:mUL8hiPLxqf9UJW8EKdzKo-->银行余额调节表自动编制</h1>
+<p data-page-node-id="mTyxI8NreTpg3hRNqkr9Tq" class="lead"><!--pnid:n7o4Pt2HYqxIb3itb0wtHS-->制度要求每月做、实际从没做过 · 长期不做等于把 50 万的窟窿藏在未达账项里</p>
+</section><nav data-page-node-id="bReQKOMRnV5tnRvxUMQvYl" class="subnav"><a data-page-node-id="bsPmIcqJ65TRfcswzJgoGE" class="on" href="#"><!--pnid:6ti2yKez7zBfc6gag2H6M6-->场景引入</a><a data-page-node-id="q49qTtyupqvqGaAv8STpu3" class href="LiveDemo.html"><!--pnid:9b767RVF2yJfsNzTUlHrFb-->Live Demo</a><a data-page-node-id="19OrKHWRlROtu7XrwbRMOd" href="推荐任务.html"><!--pnid:EBiuyq3AHFZRNBD4PpjZ2s-->推荐任务</a></nav>
+<section data-page-node-id="8pd303wVwpoEfTHzCBQnlv" class="blk">
+  <h2 data-page-node-id="aYiks8JF4C1B3OdG9oEB2m" class="h"><span data-page-node-id="cNvibrSSmS0t6qFyUYETcf" class="num"><!--pnid:YngVlre8uPzN1sFh5YAwqG-->一</span><!--pnid:IKRemmnssKxRjszDScGA6Q-->这件事现在是什么样</h2>
+  <p data-page-node-id="QJ0KMYvDpl9vRXhNGc30Nx" class="subline"><!--pnid:qFg5szQ3VfrZB32nNSpkKe-->资金与收付 · 真实业务触发</p>
+  <div data-page-node-id="julsX3InsVEAEs8J6szQtT" class="card"><p data-page-node-id="lk8AbRHUP78Teij5S0RvDS"><!--pnid:TVB2IEMcJAqdGNMMVkkNVG-->月初 1-3 号，出纳要打印所有对公账户上月对账单，和日记账逐笔勾对，编余额调节表。三张对公账户（工行/招行/建行）格式各不相同，逐笔比对日期金额摘要，摘要模糊（银行显示「转账」、台账记「货款」）还要翻凭证问同事。</p></div>
+  <h2 data-page-node-id="7S7cSIHDajhb7PUVwZIa5A" class="h" style="margin-top:22px"><span data-page-node-id="2eMbgzfReuMu6IaYmPQTC9" class="num"><!--pnid:FFtZeksOzQQXkcXmlrWfqP-->二</span><!--pnid:XxbyQ3cu15R3MYjF9ryPH5-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="jnR9Ipjd09M9Lv4kRGikyw" class="subline"><!--pnid:WFmac2wTlpI5mIzyfYzwsg-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="6KYM05cDXU8BTPagpH7duS" class="pains"><div data-page-node-id="fZuVmZJIj005uY4ma6iEY6" class="pain"><span data-page-node-id="PpNJZTtUSWwKwRjUoG3wMs" class="i"><!--pnid:op4dWG9GOX7Ajcj8qjFy2e-->1</span><div data-page-node-id="zlbfgTJNyfr8spQ8H9hvy4" class="t"><!--pnid:gJ2NovP1yCtqqdfe3hEpRc-->银行余额调节表是「该做、但真没做」的典型——有公司从成立起原会计一直没做，新会计接手才问要不要补<span data-page-node-id="nGArM27AkOsQKCOFZuVdDy" class="src"><!--pnid:02y9SKFY6Kt3poitN7yEZe-->依据 · <a data-page-node-id="sUpaJgHO8m9o1ode7eSHKi" href="https://m.acc5.com/news-chuna/detail_247867.html" rel="noopener" target="_blank"><!--pnid:X8cZVXGDuimpltdnGEYDGf-->银行余额调节表长期不做案例：公司成立起原会计一直没做；长期不做导致银行账户少50万，查出内部挪用</a></span></div></div><div data-page-node-id="qoEdwsNLpUVeotEKYGZcSo" class="pain"><span data-page-node-id="xEMuazkXGwUkIlQB5TCeIm" class="i"><!--pnid:dsSDXyZ4iMvAIqgkpIii99-->2</span><div data-page-node-id="sbq7Yi3C2JPbLL3RoG9TOB" class="t"><!--pnid:aNVwx9J7bLp7J62B5Xu6QB-->长期不做的代价是实打实的：有公司年底发现银行账户少 50 万，查出来是内部人员利用未达账项时间差挪用资金<span data-page-node-id="nNWVmbo50LSQ1TueRM5RCs" class="src"><!--pnid:sxBnuWQMxq8xVrHoNLCZFV-->依据 · <a data-page-node-id="08Fp053CS59gZ7QuiiaEze" href="https://m.acc5.com/news-chuna/detail_247867.html" rel="noopener" target="_blank"><!--pnid:FjssZhlIiCx5hOQSOrtb2u-->银行余额调节表长期不做案例：公司成立起原会计一直没做；长期不做导致银行账户少50万，查出内部挪用</a></span></div></div><div data-page-node-id="m6ModXBwBYbnUYGkiAWk9m" class="pain"><span data-page-node-id="15S14h6qd1BFDADL7rQ9rc" class="i"><!--pnid:pX0aPosEyLRfVTaQjDif8V-->3</span><div data-page-node-id="yWNFroOGl6h4Au0j5SKaAU" class="t"><!--pnid:gk5Nw8piKDwUjTYVcNLn61-->调节表本质是「两个 Excel 逐笔勾对 + 找出未达账项」，规则极其确定，但动作又脏又耗时，正好被月底结账的硬 deadline 挤到永远没空做<span data-page-node-id="X5FC1DQ1eMunbf4TbeEOer" class="src"><!--pnid:FgUoJ67bEGfoU8HqXkg7r4-->依据 · <a data-page-node-id="jBDwgtDtKWXv4ND0fUwa4c" href="https://m.acc5.com/news-chuna/detail_247867.html" rel="noopener" target="_blank"><!--pnid:cq49mWUOK4IJ4ipEFc1wOo-->银行余额调节表长期不做案例：公司成立起原会计一直没做；长期不做导致银行账户少50万，查出内部挪用</a></span></div></div><div data-page-node-id="5Uq5bHZjtBmQ1JxuUoctz5" class="pain"><span data-page-node-id="sgi3H28xXQHr58nX16jde6" class="i"><!--pnid:QbLOR1J7JSzU7OqHwW6t4N-->4</span><div data-page-node-id="N8zMX4CDG2degNIeYksnkf" class="t"><!--pnid:5CVtizeiY69JpVJY1aFF96-->三张银行流水格式各不相同，RPA 每月都要重新调试，靠脚本搞不定格式差异<span data-page-node-id="PO1eozOvYtNPpZ7GXv9xCh" class="src"><!--pnid:oPsKTblOF3HFoxaVckm7Ws-->依据 · <a data-page-node-id="RUwFjEGH7C2RJHy4dg9svW" href="http://www.jdy.com/article/1976976893286625282.html" rel="noopener" target="_blank"><!--pnid:1K9SAyNuj8W4fJIG8ZTsA5-->RPA遇冷：真实使用率不足30%，近半数试点后搁置；银行U盾/验证码/ERP补丁升级即让脚本瘫痪</a></span></div></div><div data-page-node-id="DRt816JOoO4ge7LSDJhf0w" class="pain"><span data-page-node-id="DTz3g1l1OhmxUziuGLntbe" class="i"><!--pnid:BjzN0ckDNompcdE0sEmDlo-->5</span><div data-page-node-id="3pBsGTLADpx1v2n1WtYwnN" class="t"><!--pnid:dwB8F0hOdPoOynU7Opg5Xy-->调节表编制人和审核人要分开，但中小企业出纳兼会计，这条内控要求形同虚设<span data-page-node-id="tBdssNjlBr4Eo1x29ttxWN" class="src"><!--pnid:Zp6pfnLRmZuCeMibb7Ktk0-->依据 · <a data-page-node-id="1O7iyz2ECrczIGEmRIGiq9" href="http://kjz.cc/zc/3269178" rel="noopener" target="_blank"><!--pnid:ECllumNzMqwhUfxz464Ffp-->会计岗位设置与分工：出纳不得兼管稽核、档案保管、收入费用债权债务登记</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="jXanBuqbFFY7ku0lkz9kMN" class="blk">
+  <h2 data-page-node-id="ewfQzGGnpvLI4oVnxCajou" class="h"><span data-page-node-id="TBZEt9Dpdli3lw4cALHskI" class="num"><!--pnid:Ji97kfMjfs39Hxzzu8dvyQ-->三</span><!--pnid:PCl3mepd9xQxBhRyvGatFI-->换个做法之后</h2>
+  <p data-page-node-id="H6VgyfsYnrht7xtii3amx4" class="subline"><!--pnid:NH7d51ijFQPM8Ja8am3cuf-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="FBOXWG80fHiRSwc13Lmwid" class="cmp">
+    <div data-page-node-id="TVMoQdzFfDXn42yeKhBnDD" class="old"><h4 data-page-node-id="i8EVI0OUdxmRmHON24Gczi"><!--pnid:HaoCW1zbNVfQ7SjmA2n5j1-->✕ 现在的做法</h4><ul data-page-node-id="ByYJUyqo8QWI7Y2syWfEIR" class="list"><li data-page-node-id="aW3uJ7R08XlyWCJHvpt6HB"><!--pnid:AFQowrO287SWWcwwejaaUM-->银行余额调节表是「该做、但真没做」的典型——有公司从成立起原会计一直没做，新会计接手才问要不要补</li><li data-page-node-id="NYy6n4pkDDA8QsakcobgUV"><!--pnid:L5fRfwJMBCba56372W8q3g-->长期不做的代价是实打实的：有公司年底发现银行账户少 50 万，查出来是内部人员利用未达账项时间差挪用资金</li><li data-page-node-id="osgeEnbBnL9WLPuSR3nUOm"><!--pnid:Ht5LTBLi3ur0l289V6Wzob-->调节表本质是「两个 Excel 逐笔勾对 + 找出未达账项」，规则极其确定，但动作又脏又耗时，正好被月底结账的硬 deadline 挤到永远没空做</li><li data-page-node-id="FeB2SOwyzHRX91mP7muv06"><!--pnid:86gWSYstNVRdvPktF5x0f0-->三张银行流水格式各不相同，RPA 每月都要重新调试，靠脚本搞不定格式差异</li></ul></div>
+    <div data-page-node-id="dLEBn9yuh2LRXjzSVzTFtb" class="new"><h4 data-page-node-id="AbzkuVbOa6EZCQuPZmDT1u"><!--pnid:sR3ePgQluaWQonbokx8afV-->✓ 交给 Agent 之后</h4><ul data-page-node-id="aNkf87HQlw9I6OfSkkL4jU" class="list"><li data-page-node-id="7dfDbxw8eWHljHHoSj8705"><!--pnid:IPV3jySU3RvBpSXIXh1w9N-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="01TE6up08qhC0R930Kd3yC"><!--pnid:BSkz6iRltG75bdWQclxGav-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="Dk7oamlByHMTAh94JAyuYq"><!--pnid:818zU3QlbIwE8FP8i5d3f2-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="kZd9wjALV5EQNXMzjpxaOU"><!--pnid:3IUGppDZ6LUChp83J6cKjJ-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="rukPsbVSyBSdmw8Iu3lREB" class="blk">
+  <h2 data-page-node-id="RbGTtYKpcuWX1earwcQHr3" class="h"><span data-page-node-id="WSe6P5xdiyjnE2GFFQlMD4" class="num"><!--pnid:jXIZDAIFKgQEIYcJ2pOBKx-->四</span><!--pnid:OfX3FhNUau0Qx3yGr0Rceu-->场景闭环</h2>
+  <p data-page-node-id="CTb2NrFkx56JrnuUs9RDSd" class="subline"><!--pnid:g19y3w1RSNASF5GU1BTTTS-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="chS62l3xqSE1Juo8VgBlHh" class="flow"><div data-page-node-id="QenIne3Z0NrNmbBrURZmdQ" class="step"><div data-page-node-id="hkkuVDXt4i0gZdmK47YohL" class="n"><!--pnid:FRwk8jlnNKAQ8JaJUTsXFL-->第 1 步</div><b data-page-node-id="xmHnLQLMP1XuA8Eatk3ZKm"><!--pnid:PGP3orfBTkbj9EIJUgGhSP-->要素校验 · 判断能不能勾</b><span data-page-node-id="3AP3MjYzczGvNdbhN0U4Bs"><!--pnid:al2jYEhNBYCdG6RnkXSfQc-->对账单与日记账的日期区间、币种、账户是否对得上；缺期先标出来</span></div><div data-page-node-id="6ugwlPx83kTlm1ipEcB2O0" class="step"><div data-page-node-id="R1QPURLyRE4jbu9khxr4FF" class="n"><!--pnid:4WafXmYOwfIjTcIaIQqAvL-->第 2 步</div><b data-page-node-id="M7vG6jgXUIjemPCO1zYcRS"><!--pnid:VKLwW0ANEgQO63vleQ4qbc-->逐笔勾对 · 三要素匹配</b><span data-page-node-id="Pi5Dy1WqGGDJFLDT6cTziT"><!--pnid:mWJT7d5IDXhTPUZ71xbEyi-->日期+金额+对方三要素匹配，容忍±1元；摘要模糊的做二次语义对齐</span></div><div data-page-node-id="kCmwu2qUq1GMt6zKP5sUSf" class="step"><div data-page-node-id="4gpzp7ayMySz57AYm5QZsn" class="n"><!--pnid:M5xLaZLAbmVkZVX6cj4qTR-->第 3 步</div><b data-page-node-id="TtGfkVXLmRkfyShFCJ6oFy"><!--pnid:6DXdzC0wNkukGhdTlK0QPy-->未达账项分类 · 四类清单</b><span data-page-node-id="VuE2HMCxUwsXf4vVlmspSU"><!--pnid:CsgLn1QkNiTrYuSfJIo052-->企业已收银行未收/企业已付银行未付/银行已收企业未收/银行已付企业未付</span></div><div data-page-node-id="S8XcWD76QwqrRwAzJXvNRS" class="step"><div data-page-node-id="lwQFbDCJppsTdMWwm5jGSs" class="n"><!--pnid:wOqBlAZOYzkY5pjjUI89gc-->第 4 步</div><b data-page-node-id="LCmIUfSb0xn1Gcg8PwyQ2g"><!--pnid:CnLVHXlabP9g9544dR3rTv-->历史未达追踪 · 哪些该清账</b><span data-page-node-id="4gEW2Y0nbqSgNjOE0g3MF4"><!--pnid:c7DXifOWTU1P61gtJf2vWs-->上月遗留未达项逐条核对，超3个月未清的标红提示</span></div><div data-page-node-id="I2l2TbaPjj3Bc9FNGKW5dv" class="step"><div data-page-node-id="ia1vJikbNUGvb8rFAjb72W" class="n"><!--pnid:xWC4JMvHcZGWr5Y9y6Xx7R-->第 5 步</div><b data-page-node-id="pB2TZZczTUhZXw1zsc42zL"><!--pnid:IAAFzZyZoMdtEJA90jUYIq-->左右闭合 · 生成调节表</b><span data-page-node-id="FJgBnT3ELPePigTT8HUAxw"><!--pnid:njh2z8L7U1YwloD1E8lrOy-->调节后余额左右必须相等，不相等就是还有漏勾，回退重扫</span></div></div>
+</section>
+
+<section data-page-node-id="8P0TiX8pVfNWU66XWXEzfx" class="blk">
+  <div data-page-node-id="BuhRmeSJAq7OOA25UKRzYj" class="g2">
+    <div data-page-node-id="rRz4naATH21YjKopSwjcn2" class="card"><h3 data-page-node-id="lmD6Qh0NGF8htZmpvAOKRQ"><!--pnid:wDT7Fq7hfRqDMj81ffDLLM-->要准备什么</h3><div data-page-node-id="wVkK8ZBvMOTXFvdjyFjiRw" class="src"><div data-page-node-id="H6jLJ54MWefyGqWfjnfbLe" class="fn"><!--pnid:jNsWO8PFDcmRKFmbT14C3O-->银行对账单.xlsx（三家银行格式各异）</div><div data-page-node-id="wDOJhrP8Oe230DT3KUDaAC" class="fd"><!--pnid:3Sdzy46RNbUznnERa7F5ir-->日期/金额/对方户名/摘要/流水号，摘要模糊</div></div><div data-page-node-id="5mKN57bWtBOUUuS9ybasm7" class="src"><div data-page-node-id="cjNY5ZLMoEIoAqzmuqI1yf" class="fn"><!--pnid:NupxfhBwnsY4PeDdHmQfk8-->现金/银行日记账.xlsx</div><div data-page-node-id="JvyyfOsrCo7iMnWyXA7Kka" class="fd"><!--pnid:Z3L9EDOeugqkPRdUFTy3Qj-->日期/金额/对方/备注/凭证号，月底补录滞后</div></div><div data-page-node-id="Q5pr0t3rEvMttyP3KADNg9" class="src"><div data-page-node-id="YsnfpTD7Aix2bEf1liuhhi" class="fn"><!--pnid:3f0wqfby8P2ky9Udblsi8x-->历史未达账项台账</div><div data-page-node-id="FM6zgKLVDhKSc8NTvyXZar" class="fd"><!--pnid:sR5fBggOTw2Nilzmi0evfH-->上次调节遗留的未达项，判断是否已入账</div></div></div>
+    <div data-page-node-id="YCO1AT7aZKOMtnUBeY6ys7" class="card ev"><h3 data-page-node-id="OqzgL8eyeXuqob31YKypEL"><!--pnid:0IWdFCkOM1O9O9ZK8MMoAX-->为什么这个场景值得做</h3>
+      <p data-page-node-id="LdiarpZpc1g5J5IrKxbJGU"><!--pnid:I4DXf2LQg5eaKPnic7kJuI-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="0SCemavPCNxAeaNDM0Kold"><!--pnid:5i60oaHsCXn7Pc5GzPSMYU-->10.0</b></p>
+      <p data-page-node-id="qFlFp1P9QekCHkPnZB4l85"><b data-page-node-id="ivvmoJ1VN168EMM74JRbZp"><!--pnid:vt6TZuoDlMWMuqpQ5mKxk9-->最大差异点 ·</b><!--pnid:iDt5jHjDcwleubUMpebexr--> 不要求银行流水先导成统一格式。三家银行的原始对账单直接扔进来，逐笔勾对和未达账项分类由 Agent 完成，勾对依据逐笔写清。</p>
+      <p data-page-node-id="Gp2OlFFW3Rs3FStGWJtmVz" style="color:var(--ink3); font-size:12.5px"><!--pnid:V91320u28yTukRTrdIi3Q0-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="SUCj8T1CCmBSZ4R7ytCY2S" class="blk">
+  <h2 data-page-node-id="K3J3E4lwd7plj9XAfUck70" class="h"><span data-page-node-id="fDjknWHE2oiV052tBEQlw3" class="num"><!--pnid:BkWlEhyhHi2qzofjjXxj2d-->五</span><!--pnid:iEVQKfOG7BaCg4BkoGe52P-->会产出什么</h2>
+  <p data-page-node-id="xlWxU9e7ZpNTguHEQUuW2K" class="subline"><!--pnid:90aNHPGsKoUQkXASOJZF2p-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="AC9uzcPcgKNK1UwVKyVsrF" class="outs"><div data-page-node-id="EEiVsRNCseH65nY9cvvcR5" class="out"><div data-page-node-id="B8gU6aUU7grTCFiup1AuTN" class="on"><!--pnid:iioykTu38124cHFmKKQFcL-->正式件本体</div><div data-page-node-id="HpT11QnrORbl0g4ENzBRI5" class="ot"><!--pnid:hGn5pD7SoGFGWhpBiwKyJx-->银行余额调节表.xlsx</div><div data-page-node-id="kDWYxHE4tUdruJu7ra8y7j" class="od"><!--pnid:ykN5fj4uu6LlptVRifpfya-->正式件本体 · 左右两栏 · 编制人/审核人签章栏</div></div><div data-page-node-id="uL16MAHGzMAATi9lgNEX6m" class="out"><div data-page-node-id="zkmFxoGMpOXNfNeXKVCOE9" class="on"><!--pnid:lvuZrrpIJBWjv5C6xMBiRF-->可派发清单</div><div data-page-node-id="i1V0EOFZaTPT955V3cbaTF" class="ot"><!--pnid:RwP6fWU9e5AdNNA69fXW9O-->未达账项清单.xlsx</div><div data-page-node-id="XodNEWdSuD0BsA2AtFR0tL" class="od"><!--pnid:ixlW5C9buPXZQ6UFgk7uu4-->可派发 · 四类未达项 · 每条带出处与超期天数</div></div><div data-page-node-id="X1m2ISlU8t8WCtcuoi0hoa" class="out"><div data-page-node-id="pAVfmCbR4kONjlgCAHUkB1" class="on"><!--pnid:AjlRYlIa23TDMcaTetucFh-->可派发清单</div><div data-page-node-id="RkGik5AvGA4298ttUi2084" class="ot"><!--pnid:gKnZdzjSOMtQ7RUsU15p0e-->历史未达清账跟踪.xlsx</div><div data-page-node-id="0sm9yWtuUcq6kg7kSctRrD" class="od"><!--pnid:XHMsyqO93ViOoZm9fw6Kgd-->上月遗留未达项的核销状态 · 超3个月标红</div></div></div>
+</section>
+
+<section data-page-node-id="sddYGL6Ak5b5qKmPDzPfme" class="blk">
+  <div data-page-node-id="oBlXoT0PX0GcyIokuUlQrt" class="card warn"><h3 data-page-node-id="8G3l8eV6wo26kWx5LE3J7G"><!--pnid:Qe413liat5pwxBYw5K9wuQ-->这套东西不承诺什么</h3><p data-page-node-id="yCJozGbNTDM9GLjsIGuy8L"><!--pnid:pOWvAHXQ1aq5MkHXq7Pf5n-->不做「自动生成凭证」——勾对出的差异只出清单和建议，不直接写进日记账。也不做资金挪用定性判断，只把可疑的未达账项列出来，最终结论由人下。</p></div>
+</section>
+
+<div data-page-node-id="n7x2nSURCeQyRxodMIZLmT" class="cta">
+  <div data-page-node-id="dbG2vVXYBuMCCJ4kAhycIg"><h3 data-page-node-id="wFF6qx82N9sohDKvYLo9mW"><!--pnid:DoTd9h3D2nlAasTn1fLjqx-->想看具体怎么跑？</h3><p data-page-node-id="AC7LEYiujwLGTAHsO65dHr"><!--pnid:syXB4yoaMhFjRDyJkoHTBq-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="99n8CLKouGKNpwUOk1hCSA" class="btns">
+    <a data-page-node-id="AyyrafHdeQXEosVzNjc6lH" class="btn" href="LiveDemo.html"><!--pnid:DGip4onqXdtRFW7dNs9sdJ-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="J1g2rCV0ABuYhGGCtnstPf"><!--pnid:G97tpMTeAOLsDPjGAjqBAW-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="IcqIRSqNtHWwOrNqd6bcxs" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="TUwwolkO4OZzDRsvpS3IoT" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="bBGeNxwJxU0vOCisA2UpZR" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="zsL7yc3rCzt4ML5mrrozD7" data-pnid-children="vMEe0CKwF2KYNd79vvJYgm">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="X50jN2f8snCA0usdpJBSPW" data-pnid-children="gRb2rksvRzVFfSCnCeXlvP">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

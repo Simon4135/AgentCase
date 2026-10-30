@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="HpJlJoQ4KudJ0baZv9JkvL" lang="zh-CN">
+<head data-page-node-id="P5UabBsk8137SxNPwgE7Xr">
+<script data-page-node-id="eo9rF5kF2v1G2LXYg5aC24" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="3PqPWE0GYYybNfd7jHF70u" charset="UTF-8">
+<meta data-page-node-id="d3lcbQIJviTHiGkVx72bQ2" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="V8Tl6bNJwAQKvYRST0INKl" data-pnid-children="MgRIfL3XAJNiGbO09wD2xz">外送检验月度对账 —— 两边系统各拉一份明细，差异自己浮出来</title>
+<link data-page-node-id="7ESrjVrADf5aJQ1Petxwk5" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="5mybZA5e2gNyN3ZhAG8CK7" data-pnid-children="OtR5kaHEATRk8yRO5gLgPi" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="14rcs5JJJ4Gx4eRAFMQffM">
+
+<div data-page-node-id="t1bIp734XbxAEcC9IPDuXi" class="wrap">
+<section data-page-node-id="lE44lJxbJQINHon2gBwHYW" class="page-hero">
+
+
+<h1 data-page-node-id="e47GDZKI2rpj7HshW1zCKI"><!--pnid:9ACI8qVuCf8bPO4CfIqOLc-->外送检验月度对账 —— 两边系统各拉一份明细，差异自己浮出来</h1>
+<p data-page-node-id="7r7Oepfl4HpxyDb3QVcxQr" class="lead"><!--pnid:jxrCfcSMaljVyfHq7Jh8ps-->政策要求「系统留痕、自动对账」 · 现实是两边各拉一份 Excel 人肉比</p>
+</section><nav data-page-node-id="fz90M1ihspoloIU1CrAyUe" class="subnav"><a data-page-node-id="n9181J9xUMct00mklIiiLx" class="on" href="#"><!--pnid:4T4Tojin1Z4hcgfgpTSZhk-->场景引入</a><a data-page-node-id="lPgg4bYsHxoL4fE2QNBsBX" class href="LiveDemo.html"><!--pnid:wEzPvdkUPwbZ1ItI5x807W-->Live Demo</a></nav>
+<section data-page-node-id="y3NBwTnIbbf2Lsc1ffjynP" class="blk">
+  <h2 data-page-node-id="0iUzvo89YrlDeP3VyxcJ6p" class="h"><span data-page-node-id="k6nYVk4qj8kWHEQuqHcMxY" class="num"><!--pnid:Tf9hevr5iE5ljvrtjs0i31-->一</span><!--pnid:uUvNk0QLvmA8IUasroysF2-->这件事现在是什么样</h2>
+  <p data-page-node-id="C31oh6vbcILgZbznt9AyV5" class="subline"><!--pnid:4CxwEqjxupvHRITWd9lbxN-->检验外送与体检协同 · 真实业务触发</p>
+  <div data-page-node-id="pwGmPgjoFIpJy87m6xhB23" class="card"><p data-page-node-id="rhNAqjxKYHQGb4XDc2gGJI"><!--pnid:asIZTqtdo4nUYxnlg5JaIp-->每月月初，华康检验所的对账单到了：上月外送标本的项目、数量、单价、金额。检验科要把它和本院 HIS 收费明细逐条核对——医院多收的、漏收的、第三方多计的，月结时才暴露。一张对账单两千多行，人眼比对一次要两三天。</p></div>
+  <h2 data-page-node-id="EbkiBzVNfllVoOkoV5HmZS" class="h" style="margin-top:22px"><span data-page-node-id="IjvJlu9qOUb3gyECndkgA6" class="num"><!--pnid:PHDpWqBv4wAzMDWydxsUnt-->二</span><!--pnid:D3o8jULHcFLTriCfzo43Xs-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="4uTAxK90RSy2NuVsFrfHEr" class="subline"><!--pnid:EMzAq24EtIaiDHpZ3yRfRU-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="Wz6GGtOqhQEtDKNS9tRhvA" class="pains"><div data-page-node-id="IYc29ddDLOC9dDmGr5P1Xb" class="pain"><span data-page-node-id="27ysYyuqrxuhO2oN2rT37f" class="i"><!--pnid:ixTKWfOafzOd8BVYB7W7KL-->1</span><div data-page-node-id="PJWHalL3MZSgHwfeOmLjQK" class="t"><!--pnid:AtEoqFDziKxZSu5ShpMevH-->监管明确要求外送全流程「系统留痕、自动对账与异常预警，减少人工干预空间」——倡导自动，恰恰说明现状全是手工<span data-page-node-id="gQY9zi2pmUNGDwWD557iU5" class="src"><!--pnid:sZPzPcszGNBwZTamzw0P4H-->依据 · <a data-page-node-id="qjUNE4wKNe3eUKJXPDaWvd" href="https://ykxb.scu.edu.cn/article/doi/10.12182/20260760506" rel="noopener" target="_blank"><!--pnid:GV2TJRGpzGpsbBl0bDDx8X-->外送检验的费用全流程应纳入信息系统「实现系统留痕、自动对账与异常预警，减少人工干预空间」——监管倡导恰恰说明现状靠手工</a></span></div></div><div data-page-node-id="w4umfLrFOe0SH6CYjbmJ4Q" class="pain"><span data-page-node-id="yKrYiUq8NAPTBWAn1m4nZ0" class="i"><!--pnid:uJFT9GYhnzcoBtlQISSVll-->2</span><div data-page-node-id="FXi3VonBlyymD0W28yRec1" class="t"><!--pnid:OOUuCWht9tYlfzwi8E1eFE-->审计实证：某医院外送 50 个项目年涉及金额超 200 万元，留存文件只有公司资质，缺合同、缺合作申请报告；收入按营业外、支出按成本入账导致双虚高<span data-page-node-id="pI7rMoLwzMKMn87DQ2eB1p" class="src"><!--pnid:u6yluKxHC0Bf1gFB46wrG1-->依据 · <a data-page-node-id="pHMD2PYapHylmfi4CD3HdP" href="https://wenku.baidu.com/view/f4ec9271f6335a8102d276a20029bd64783e628b.html" rel="noopener" target="_blank"><!--pnid:RCs2nzw3AId1qGNwvn6LHA-->某医院外送 50 个项目年涉及金额超 200 万元，审计发现留存文件只有公司资质，缺合同、缺合作申请报告；收入成本双虚高</a></span></div></div><div data-page-node-id="DYszYMNH840CPWrMn0I66N" class="pain"><span data-page-node-id="heQXdoUyZCTgtmpRV5UHeQ" class="i"><!--pnid:1FrnFI7GWfTff0Jqii4bBM-->3</span><div data-page-node-id="SwFTUacjDdvQseCcUQHM64" class="t"><!--pnid:SNwV2trLD7iLcdfByocZgZ-->核账规则有明文（金额以医院为准、标本量以双方签收为准），但两边系统项目编码不一致，人肉映射天天出错<span data-page-node-id="jC4fr4ZgUfZe6kekxJHQrT" class="src"><!--pnid:AmYCPV85saj5g6KK0r82BO-->依据 · <a data-page-node-id="owlM9wSWUy3uyAxoF43Auu" href="https://cz.wuxi.gov.cn/doc/2024/02/27/4185375.shtml" rel="noopener" target="_blank"><!--pnid:hu18HhQPZrD4GclrBJNB8K-->无锡外送检验规范：所有外送项目纳入 HIS 统一收费、财务定期与第三方核对标本量和结算金额，「核账金额以医院提供金额为准」</a></span></div></div><div data-page-node-id="k9vcWC52MEGzflY4Xi8CqD" class="pain"><span data-page-node-id="zEJioWo1SEB7Z2ruldosCf" class="i"><!--pnid:qWTsEw63qCn9UHDKcKbQYX-->4</span><div data-page-node-id="8xRU91ZRr4yMI8XBCw5uqK" class="t"><!--pnid:NmjjoSWkQVgyiBTWAaYbqo-->ICL 侧同样痛：迪安应收 74.51 亿、52.64% 账龄超半年；金域周转天数 268 天——对账不清直接拖垮回款<span data-page-node-id="MQDoPZPRAVKTH9nHpgdBA7" class="src"><!--pnid:rl0FrrZAziATIu6VSOAt6N-->依据 · <a data-page-node-id="h2Xpo1QEQs7rrWqBFlg2NQ" href="https://www.mycaijing.com/article/detail/553992" rel="noopener" target="_blank"><!--pnid:gxlhSTnnKxAjOFFq0hHeTY-->迪安诊断应收账款 74.51 亿元、账龄超 6 个月的占 52.64%；金域应收账款周转天数从 93 天恶化到 268 天</a></span></div></div><div data-page-node-id="t5wm1PpSzUR5XQFZPvqObH" class="pain"><span data-page-node-id="1hvvNH5iQFoorKjMQ8uYXM" class="i"><!--pnid:T1ED9nkMIs5Izv7zwA0W0r-->5</span><div data-page-node-id="RONSwc30PPFWr5p1uL4g7F" class="t"><!--pnid:mXGsjqBppoZ5otU88bPTkp-->外送环节存在「飞单」廉洁风险（标本私送外部、费用截留），必须建立对账机制——手工对账恰恰留了空间<span data-page-node-id="3Kr8EtwwbFa7Yx1WLXak9K" class="src"><!--pnid:DutcZLzKCUsjlleYKkIEQq-->依据 · <a data-page-node-id="MOteYCRdEoj2IvsfUzPsxh" href="https://wenku.baidu.com/view/f4ec9271f6335a8102d276a20029bd64783e628b.html" rel="noopener" target="_blank"><!--pnid:M4meaU03d3Mop0qmI0s6Kw-->某医院外送 50 个项目年涉及金额超 200 万元，审计发现留存文件只有公司资质，缺合同、缺合作申请报告；收入成本双虚高</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="q36LtHYuBJ60eIQuOf82WS" class="blk">
+  <h2 data-page-node-id="ewe2atkDrp3yAyoGsB235X" class="h"><span data-page-node-id="8K76nzmLhmxWyoGNF3OaUn" class="num"><!--pnid:6b88FU9LakW95z2ygy1VXd-->三</span><!--pnid:ejjLgtWyWuU55nhW60O4ie-->换个做法之后</h2>
+  <p data-page-node-id="QWGvSYjZK31qWZdpXZD4oI" class="subline"><!--pnid:U6WHo7bthgPIxpyESFy3Zz-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="ZBSJFZJiXEAXZvV3FWKpBy" class="cmp">
+    <div data-page-node-id="gwgEipccFKft4kPAgHglwY" class="old"><h4 data-page-node-id="ZbEvMWTmQSs6T3eHVYDAd3"><!--pnid:N6sb60kIpHGcTwSmKkCsGl-->✕ 现在的做法</h4><ul data-page-node-id="XqJIH5kNfOucDUntPygKHN" class="list"><li data-page-node-id="4VJvbDDug1NyOXeI4dMEly"><!--pnid:YG9VVYIrhftHhrnRFBETtC-->监管明确要求外送全流程「系统留痕、自动对账与异常预警，减少人工干预空间」——倡导自动，恰恰说明现状全是手工</li><li data-page-node-id="8uRubnf2AvknZ0GsZRP4ZO"><!--pnid:til17E0R9n2TH84QYxDEpN-->审计实证：某医院外送 50 个项目年涉及金额超 200 万元，留存文件只有公司资质，缺合同、缺合作申请报告；收入按营业外、支出按成本入账导致双虚高</li><li data-page-node-id="xC7gVRdOTZTMHETkNgQV8k"><!--pnid:QwhwMP46F0AuJn8hJd51QT-->核账规则有明文（金额以医院为准、标本量以双方签收为准），但两边系统项目编码不一致，人肉映射天天出错</li><li data-page-node-id="EjTDbejkqjh9vNwJMDptBN"><!--pnid:Km5DvNOO1jxptL1CTn1rKw-->ICL 侧同样痛：迪安应收 74.51 亿、52.64% 账龄超半年；金域周转天数 268 天——对账不清直接拖垮回款</li></ul></div>
+    <div data-page-node-id="3ywtajSwiprtAMmNuyXqWU" class="new"><h4 data-page-node-id="1azsi0YetlvGkuorYVjHDr"><!--pnid:8UC5x6n3LDmFM8wUlSrxrj-->✓ 交给 Agent 之后</h4><ul data-page-node-id="betGChRb4jux5PjZTKkdqH" class="list"><li data-page-node-id="q99rpRk3QCmPUe8T4yAxdC"><!--pnid:HcNtPSo2yykpZLtwEPaIQT-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="U7kGjQusCXDMvQbvr1pfY6"><!--pnid:8Wd1OBL6AG9AHD2OIwCdzW-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="4hatnjYVfdKnMOAY8AISNr"><!--pnid:FIVUyqE9lZERxGRRBSBImF-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="NLFrr0ivcGML3F5myEwp8E"><!--pnid:MSoAJszxL3l4Ob25S4wzXl-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="npcpsYDUs5WYGYp7tV7MD2" class="blk">
+  <h2 data-page-node-id="bMiBjebWnIYz4fMc3pKxLX" class="h"><span data-page-node-id="fl3dxMocTkm3MjUZMqUnmP" class="num"><!--pnid:Yc6EbpLRsZT3WZNCyOWR1T-->四</span><!--pnid:NbXJ52MNQlcJWgToDH5EDE-->场景闭环</h2>
+  <p data-page-node-id="AmsbogUyue0Mz2TP6WyDzJ" class="subline"><!--pnid:nzpA5UwvRs6eLxBaoHLHJB-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="Y96wW21LaRRbL0EAWgivE1" class="flow"><div data-page-node-id="8nHsZLPlPY6sG9uALkcdXJ" class="step"><div data-page-node-id="GtygEl8DuRiAc0GPL4ieOQ" class="n"><!--pnid:7iBTQV3auTsnndAO1uzrSa-->第 1 步</div><b data-page-node-id="LwAmtBu15Pfk5IiCd2I2IJ"><!--pnid:Btp3x3tuJPRYXFHBbYffbt-->归一 · 两边项目编码映射到同一口径</b><span data-page-node-id="G945TiWMZzxAhh8QpOJdrW"><!--pnid:vuGiBdBcqR5rst46BqDi5F-->映射规则可积累，对不上的单列等人工确认</span></div><div data-page-node-id="oJe33Ye5E5S3QSuTaPSqHf" class="step"><div data-page-node-id="nZz3UlkG2zzQeRAU5SBfzU" class="n"><!--pnid:Y8YbxJQM74MsbSuvA3fR2C-->第 2 步</div><b data-page-node-id="v7PrBbE9BKCRO8Yjien765"><!--pnid:NB7n4hWY6d9tXFxmfYpjPT-->对量 · 标本数量三方核对</b><span data-page-node-id="675x3sr4JIYQyCkvNl42Ho"><!--pnid:32Lo112OCkLKPVLPobrkjg-->ICL 计数 vs HIS 计数 vs 签收登记，以签收为仲裁</span></div><div data-page-node-id="gE2khOij0qCaKej9XvtBzJ" class="step"><div data-page-node-id="GxfZqFbvQSucVU33guJ2AB" class="n"><!--pnid:eU15SN9sOU4uxMd6pmNPGf-->第 3 步</div><b data-page-node-id="lwNaDbZCn7pVbGH1cBMupS"><!--pnid:zQn2Ndny20cs8hzteCLQ7Q-->对钱 · 金额与单价逐条核对</b><span data-page-node-id="GjErJM6l8mTVpiMFvsnBaK"><!--pnid:QiOBWbkeq8uqNDbjlvBP9v-->多收/漏收/多计三类差异分列，每条带两边出处与差异金额</span></div><div data-page-node-id="ojFXhfqyufkr9cbUaUubkP" class="step"><div data-page-node-id="0uRNwWg6VljBhyVQFUUqgS" class="n"><!--pnid:SF0WyYjkkY1PdgRwgc9K8W-->第 4 步</div><b data-page-node-id="2MWE3ZeauEgQP99q11Fmvp"><!--pnid:KEJgxZmZTMkoUF4qoPewhm-->溯源 · 差异原因定位</b><span data-page-node-id="Nvg1JakSCzYBd6cQfj7kLl"><!--pnid:eJhYiCGNHcRaA4uxrXa2R9-->报告未回传导致的漏计费、编码映射错误、标本丢失、合同单价变更未同步——四类原因分桶</span></div><div data-page-node-id="nUNwAAw1bwyJGJCwFcxSru" class="step"><div data-page-node-id="SocFNBK6hzrNJyPcG0BN6U" class="n"><!--pnid:DZqGrChFxcEHSPngNd4hwK-->第 5 步</div><b data-page-node-id="ShZruHOkSB8cmcoekA8Q9q"><!--pnid:GbUT9wwgt9VdgQ5y86VJ5d-->出单 · 对账确认单与差异处理清单</b><span data-page-node-id="lFtbfpHFDN8L9hUvRO22aq"><!--pnid:BY76xTXkwgljQ531TjbJ2N-->双方确认签章栏一次生成，差异处理建议逐条给到责任部门</span></div></div>
+</section>
+
+<section data-page-node-id="U5n9Ma75qEX0nnPaEk1lcH" class="blk">
+  <div data-page-node-id="T0MNctZZFEKsQQ55S6WIp1" class="g2">
+    <div data-page-node-id="cR2P0zpnKtZ8zOhoEQmDF4" class="card"><h3 data-page-node-id="9E0x8e8DMFRfimCIl0Pt4z"><!--pnid:KSctyg9F5rrZHk2TBcWHt4-->要准备什么</h3><div data-page-node-id="KlsE5s5B8Oydyp3E15U9O2" class="src"><div data-page-node-id="Bjc67TnnSe3dYvBVR7Up5o" class="fn"><!--pnid:gnvewXZMFZhdu4JH8ff6TY-->ICL 月度对账单（Excel 或纸质拍照）</div><div data-page-node-id="tSs2js9JvoYUvjAx1rHAMK" class="fd"><!--pnid:NLtD54hUsXokaHjlYUVEfg-->项目名称/代码、标本数量、单价、金额——第三方侧数字</div></div><div data-page-node-id="nMILuMrfY9urp7ZcbsvvB3" class="src"><div data-page-node-id="NwBTF6k1ZtbL45LxTljhtA" class="fn"><!--pnid:UWD8FKPVexOdy9UAqZ8sBE-->本院 HIS 外送项目收费明细（导出）</div><div data-page-node-id="jJEjcw4mgMhXEtEgrNwgAM" class="fd"><!--pnid:HtaEGC2t8m2XNLvgQzTjgA-->医院侧计费记录——与对账单逐条核对的对象</div></div><div data-page-node-id="jzCK6uEfm5pIhMLuN4Pp1p" class="src"><div data-page-node-id="sbL6OSGrkhlBrq94CXWkKx" class="fn"><!--pnid:5vGANrHewGdr19Hr93jIEo-->标本签收登记（检验科纸质本拍照）</div><div data-page-node-id="6tggXYEdDVLoT4X91ssK1m" class="fd"><!--pnid:wxhIJCHkxNgnnIH4xl7Ge2-->标本量争议的仲裁依据——「数量以签收为准」</div></div><div data-page-node-id="7tPw7XwQe9Fb5aoxJjNI8Q" class="src"><div data-page-node-id="vJcOTb1Y8RJZmwr3IIXhOn" class="fn"><!--pnid:kztNIvgnb8gBYq3hJK78le-->外送合同结算条款页（拍照）</div><div data-page-node-id="cjCupecskhGgWDAkqxQKkO" class="fd"><!--pnid:uBQKcXLAsVwm6s7BBnZKfA-->单价、账期、差异处理规则的合同依据</div></div></div>
+    <div data-page-node-id="g5jds1YzrMtC2Oqy30KAG0" class="card ev"><h3 data-page-node-id="crqbpMZBrrh5oMqHnXjDTL"><!--pnid:OMJu4CpdpKPg1uXss4NGuN-->为什么这个场景值得做</h3>
+      <p data-page-node-id="ya26ofsxMWJ7HWNiUj3Gkn"><!--pnid:YwJq2SRhoG50Sw83RVRAL5-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="vL5phvHwiRHotLIWz8NVKI"><!--pnid:quuFsJd20KQP90izFmo0LH-->10.0</b></p>
+      <p data-page-node-id="qciUF4GCvsIy7JxT8835o7"><b data-page-node-id="1nGlp2sIZX21KHe1fwxsnn"><!--pnid:6ZyYioRCfUP8NfCq8Njg5H-->最大差异点 ·</b><!--pnid:DVj5CGrXJYpf0oksGoGueQ--> 不要求两边系统对接。ICL 对账单（Excel/纸质拍照）与 HIS 收费明细（导出）直接扔进来，项目编码映射规则内置且可积累——每月对一次，映射表越用越准。</p>
+      <p data-page-node-id="dASoQ1aHgVXpkki0JWvNpM" style="color:var(--ink3); font-size:12.5px"><!--pnid:8D9Gr0Ldp8ryDzP1BewHNk-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="gNAbiUBtnQZYK37zxClnP6" class="blk">
+  <h2 data-page-node-id="B6vSVrrdtRQ4KCPG1vBTRK" class="h"><span data-page-node-id="Nq7r8zbQnFhR16gRyUnzhj" class="num"><!--pnid:CLeoWiSSbsrrzf0JFjH29J-->五</span><!--pnid:lAP8BauFH8n16MYy4d2QwD-->会产出什么</h2>
+  <p data-page-node-id="4F9e8ItalfLv1fOZHRpuyU" class="subline"><!--pnid:pq6oS1q41XorBAVKAOs9oX-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="Gm7BnxZtK98VUvYf9aLVYF" class="outs"><div data-page-node-id="z6Rpf5stxu1paqtTOD555N" class="out"><div data-page-node-id="QZbr28p8rXqpJvXzbz7Ihw" class="on"><!--pnid:VEjxNTjqoK0TUN9Cn4kmXb-->正式件本体</div><div data-page-node-id="8KIFCXIHjr3wXREuCinV3z" class="ot"><!--pnid:9C0isemz3DcwUVsXxXZFXM-->外送检验对账确认单.xlsx</div><div data-page-node-id="seZ1uXBAqSmb4ovynuBeSk" class="od"><!--pnid:GMcSWe339NUldFXkywNGGl-->正式件 · 差异明细+处理建议 · 含双方签章栏</div></div><div data-page-node-id="GMb59io0J3MmjvJwCLsgrA" class="out"><div data-page-node-id="g4xyDgJ5nVFubPj3pVcA9P" class="on"><!--pnid:PGUxhnZtpMFsbkzFxtTum0-->可派发清单</div><div data-page-node-id="Ipjf9orbvNIpS8Ploi4cKJ" class="ot"><!--pnid:DcbiXKtxRrJTeSxLF7DfuF-->差异处理责任清单.xlsx</div><div data-page-node-id="LT2V5Jg6IoCYt04nhVRaJw" class="od"><!--pnid:ZeIGklvetABsJmRCOWghJ1-->可派发 · 逐条带责任部门与金额</div></div><div data-page-node-id="C9PLomLBx0O1AcCqwKWwji" class="out"><div data-page-node-id="QQ5e4hIviZBlrLi6KFdS0Z" class="on"><!--pnid:VYkIHqBR29eL3h4i5M03fx-->可派发清单</div><div data-page-node-id="XYBRbYtpix4YSnDAV0OtN6" class="ot"><!--pnid:dqPHpOSPwwdvbqAbbmEa5J-->编码映射待确认表.xlsx</div><div data-page-node-id="uSh3JCA8zthyofu4LPVZO8" class="od"><!--pnid:DhvMFfCPH65qdZuS5NpGml-->对应长期维护 · 新增映射与历史修正</div></div></div>
+</section>
+
+<section data-page-node-id="riKz83EtkY1o5sZP2Q3rnF" class="blk">
+  <div data-page-node-id="ckd6JqbzZqUpsfzEpbUNXk" class="card warn"><h3 data-page-node-id="kGjFm7GrxgD6Blsfn9XNgh"><!--pnid:1vuTtUnsce7Tv3TCZ7u9Fu-->这套东西不承诺什么</h3><p data-page-node-id="STDpkBWioFkxCRhx8jMZUb"><!--pnid:Oeq5XHMqjkThShZu2vGJtF-->不代替双方确认签章——对账单是双方财务确认的凭据；不判断「该不该外送」（那是临床与检验科能力评估的事）；差异归类给依据，金额追偿动作由财务发起；廉洁风险线索只做标记上报，核查是纪检的事。</p></div>
+</section>
+
+<div data-page-node-id="kyfnTH9pcrxIAhhiUUqfnU" class="cta">
+  <div data-page-node-id="m40epoAMNmw0yEqxS6HkfB"><h3 data-page-node-id="IYmAQnN5mZbRzOgUupQ54Y"><!--pnid:HbOpFebV2HDslxKsCMZTKY-->想看具体怎么跑？</h3><p data-page-node-id="AeqSMgyQQd2eyNhQA16Tq0"><!--pnid:EG4cgXMjQ93h6JsOElpUP4-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="luXqTfREX6g1E3iXppRAvK" class="btns">
+    <a data-page-node-id="TGqKavSNXHf8TQ2uAZTpeX" class="btn" href="LiveDemo.html"><!--pnid:iHS6rSFnmPmOSjNJeBeai3-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="1CWs6zwuvjpvBPxlcdCPfM"><!--pnid:aic7UlUdlbKhtRnhYYwS3G-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="B0YFMjon7QTGBfeH2TYPBS" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="qCC9ooyuQmyylRmyMnemHF" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="clgrkG9ulIyhEoImMAb1mh" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="sXzaB88fGnompgiAUObUXl" data-pnid-children="tayHubRLLS7wKAUk6UTPgV">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="Qm8iVOyoUNTIga6s2zi0eK" data-pnid-children="2w5kSiXmHeKkl5HpxVuBV1">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

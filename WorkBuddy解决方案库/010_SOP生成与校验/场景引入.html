@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html data-page-node-id="dMHjJ0xI2bwyfpOjnwoRTX" lang="zh-CN">
+<head data-page-node-id="o41NiCeQIDCIU60QKZqEVV">
+<script data-page-node-id="9TxQM4SS9AGEf51Qes5AR0" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="xYPg6JXQpKw49cwxG7cm9e" charset="UTF-8">
+<meta data-page-node-id="Xkca9QCdwnhE4fytzxI2i6" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="9LQZX5zos9SQgmKljSINv6" data-pnid-children="vilnEhCHc1vipT0Mw6pLwP">SOP 生成与校验</title>
+<link data-page-node-id="16h2f6IJS9CzbCdZSMtgCD" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="E1uiJ3zszU6wTuFv1CLH1a" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+
+<style data-page-node-id="zLQ0D5B7OZCgohkCT5WNNn" data-pnid-children="dclkzNs22MuHPPpKbUwAVD" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="lLporJOUbkNCWHaNKef88H">
+
+
+<div data-page-node-id="gXgm7WDOZEhR6mdcvA9EX0" class="wrap">
+
+  <section data-page-node-id="kE4yXMXjBVGLR30cp1SaXh" class="page-hero">
+    
+    <h1 data-page-node-id="TLzvh7BKxOcJfHMGr4Lc7k"><!--pnid:s95U6EiJeHcMFSdOXotpmt-->SOP生成与校验</h1>
+    <p data-page-node-id="EzA0v69ai0t57PqMf0tiqL" class="lead"><!--pnid:2aEOlCRhx5Wd8YyhYr0ida-->离散制造 · 工艺工程师 / 质量岗 · 把现行作业指导书跟图纸、工艺卡、历史异常摆在一起逐条比—— <b data-page-node-id="efnogSRHd1HgtJtqGP34iE"><!--pnid:Tgsb9bJIXoFeCgaqmdt4td-->找出所有对不上的地方，标出哪几处已经出过事，给出可以直接送审的升版包</b><!--pnid:6ussGFl7k4KgfCkj1nzA0O-->。</p>
+    
+  </section><nav data-page-node-id="1UDMIePv1sxFUZ2FlxnZcj" class="subnav"><a data-page-node-id="BfFrAKlHkwh7a8hwTcmUwc" class="on" href="#"><!--pnid:pRF6LzrATcNDP5UdNWtvFP-->场景引入</a><a data-page-node-id="iz3XyejENFsodWsL6NN3Fp" class href="LiveDemo.html"><!--pnid:T6bilBg3Tpw8L7owzkjZBX-->Live Demo</a><a data-page-node-id="QPXzwndcAymDjHuZuLher0" href="推荐任务.html"><!--pnid:PKoFjvCjrSXMbhbRatNfyO-->推荐任务</a></nav>
+
+
+  <section data-page-node-id="gmMMJ0vpihX69P6H41Az62" class="blk">
+    <h2 data-page-node-id="vo0AxHMJC8eBfZoEw5lTMm" class="h"><span data-page-node-id="PuUQI0r5GeJn3LoQMSXgnP" class="num"><!--pnid:X3VCBFxby1ofdBej9bKDkS-->一</span><!--pnid:jOKtGsEqcB20LaeEsbnals-->这件事现在是什么样</h2>
+  <p data-page-node-id="Qne0HpBsPo9yvkQnlKK20s" class="subline"><!--pnid:J3Cvop4YAoTxQggz7uQtsO-->作业指导书不是写完就完了 —— 它挂在工位上，工人照着做。<b data-page-node-id="hBO2aGuAmPz184VBIDkKYW"><!--pnid:Gxbl04PFn7dX9zTTCwTKni-->它一旦落后于图纸，落后的每一天都在生产不良品。</b></p>
+  <div data-page-node-id="ooh0wuI8yTzepje0ubzWjb" class="card"><p data-page-node-id="HAIMIXw2woAgDWyLcXJppX"><!--pnid:DB7jWbhRDBLZp1QhpLYb2p-->作业指导书不是写完就完了 —— 它挂在工位上，工人照着做。它一旦落后于图纸，落后的每一天都在生产不良品。</p></div>
+<h2 data-page-node-id="GUziSSL4MJbPzwEu3VycHh" class="h" style="margin-top:22px"><span data-page-node-id="y2kpuAM4ipTIoCQCaz3jm8" class="num"><!--pnid:ltiSd3aU9MMeuzlsqWUD7I-->二</span><!--pnid:lvFkv1XsKSRcyyu00fRuPP-->痛点</h2>
+<div data-page-node-id="NDDq0tY0zajBQCqQRfLjjr" class="pains">
+      <div data-page-node-id="jtDKk93SYY425qP4Csf6rc" class="pain"><span data-page-node-id="f597NdUGP7yCn0Qzjmf9oe" class="i"><!--pnid:0muD7QXUqdoYixKOMMn8Xn-->1</span><div data-page-node-id="M85O0LX1FbYcALwLHBLGc5" class="t"><b data-page-node-id="7AnlRj8WO0D0E6fJkIJY4X"><!--pnid:0Wnh1pgsAvW5nH18llHLH2-->图纸改了，工艺卡改了，作业指导书忘了改</b><!--pnid:NhqsNKW8Hz10CP8YOHhz0g--> — 这是最常见的一条。变更走审批、改主数据、刷指令，一套流程下来要好几天；<b data-page-node-id="hBSkdwxKT1d3cHS3pGhpaj"><!--pnid:4rLonjrzFs9X6SP65iNGR9-->而车间换个模具可能只要半小时</b><!--pnid:8GkFJAxn3UT6XtJ9lWXGrI-->。节奏根本对不上，漏更新几乎是必然。</div></div>
+      <div data-page-node-id="nyUEG3GfoCFrLdczB46TWc" class="pain"><span data-page-node-id="RXSChZ9GMsZ9S59WZsfkje" class="i"><!--pnid:Ji5sEpqUAaayFrklOOkEbl-->2</span><div data-page-node-id="s8GZcGurbxR7L1x1jvLlM7" class="t"><b data-page-node-id="tqWOnhQ4JL6EAGkQ5YRD8h"><!--pnid:5LphsSVY9yHRM7ZL5gaBCP-->"扭矩适当""少量涂抹""按经验"</b><!--pnid:0TkLH2g6Jn467SFtloN3kT--> — 这类写法等于没写。不同的人做出来完全不一样，全靠师傅带徒弟传。<b data-page-node-id="x1BLi1MEVAoPvn9ZhL9RkO"><!--pnid:3DBmauBJ6BPb7hLqDjhpxn-->师傅一走，这道工序的能力就跟着走了</b><!--pnid:8zOLwVoZTyOCl5x4LLkcLi-->。</div></div>
+      <div data-page-node-id="7ZgFwq5D3KSG2p0Izk0c4q" class="pain"><span data-page-node-id="JKz4y8isenT4Ln61blF78I" class="i"><!--pnid:IRmqKB30HOfEnr9orHgVI5-->3</span><div data-page-node-id="oaR98UToNb2j1uZRc2TrGG" class="t"><b data-page-node-id="euGnErkxa9O4E5CaAstx52"><!--pnid:iEanyoceMw3pv3xcu1PnXm-->同一个问题反复出，但没人把它们串起来</b><!--pnid:UoEWaUetc4Ld5JhC6h7gAc--> — 四月虚焊、五月又虚焊、六月客户投诉，三次异常指向同一个参数。<b data-page-node-id="IIMXQ9Ik2q7OlGiyEr2HCK"><!--pnid:bSkzNTFlU7LuXFNNg5ZTMy-->但改的时候只改了当次，没有回写到作业指导书里</b><!--pnid:qY2yyUwgeQzOuVUhSWFwQo-->，所以下次还犯。</div></div>
+      <div data-page-node-id="muxYzrHF3x7sDLh4zctgyv" class="pain"><span data-page-node-id="CDtrQSNs0ypV7X0xchyHU4" class="i"><!--pnid:So3JdFr9YZRVwhLKJeO6hM-->4</span><div data-page-node-id="jXh5b7XeT3TCmgayN5tsLA" class="t"><b data-page-node-id="Eco6C229tGz1XzbmTbDSfe"><!--pnid:Jn7PWOREXXalF4z3Mrv8rE-->体系审核最容易在这里被开不符合项</b><!--pnid:q1SQJjAdptxEst1OkqZh3Q--> — 审核员的必查动作就是拿着图纸和控制计划去对现场挂的那份指导书。<b data-page-node-id="vBEayRv2N7WbJrWwXKddVq"><!--pnid:vTeWiRA5YPLIYESrEKPm2z-->参数对不上、缺检验频次、缺异常处理、没写操作安全要求，都是高频问题</b><!--pnid:2pjfialjfgyqQinPZYzvwy-->。有企业因此被客户暂停供货资格。</div></div>
+    </div>
+  </section>
+
+
+  <section data-page-node-id="tyUa8gCRRHAJX7QQFobXmG" class="blk">
+    <h2 data-page-node-id="hpWu1L4b9pl3Uh7xetn0on" class="h"><span data-page-node-id="dQiUIRiWmS0B4tgJlkOtyK" class="num"><!--pnid:KCoW2vV2rKDwpdIv2tFHQu-->三</span><!--pnid:DfOfRYptKioyPn0Li2otiD-->换个做法之后</h2>
+    <p data-page-node-id="HV2QzhAvzN8jgsIoVPUjul" class="subline"><!--pnid:3W0H9ucSdHagt27GMVwkC1-->重点不在"帮你把SOP 写出来"，而在<b data-page-node-id="J3o3jNpk984tGHogy5UxOq"><!--pnid:OhB8sT9m5Bi6yTldnsIYsQ-->"把几份文件摆在一起挑出对不上的地方，并且指出哪几处已经出过事"</b><!--pnid:aRbLI7JlUAc7CzZ3ygocWS-->。</p>
+    <div data-page-node-id="h2f4KUTbPLrjp8QSv3Y9g3" class="cmp">
+      <div data-page-node-id="XlDRPMQdjx0IpKbmz4iagm" class="old"><h4 data-page-node-id="WfJbQSrVgfE65r5dnNmjG4"><!--pnid:odrcYTXAjrvUIU6yP9m0uI-->❌ 传统做法</h4><ul data-page-node-id="ojwjRb1sNc0Tor5KaMGVJv" class="list"><li data-page-node-id="NSw0FUhb9oTwULYnRjBPRQ"><!--pnid:ek8nGDa4oKmMsdvQOStgiN-->老工程师把指导书摊开，一手翻工艺卡、一手翻图纸，逐条对参数；对完还要回想"这个参数是不是出过问题"。</li><li data-page-node-id="AXnSXK1fIwYRUbWFY5bWMG"><b data-page-node-id="DgCwkILKJjGeD0ZJOEvzIe"><!--pnid:WxEmtcJZT8tiMEwEoVSJbt-->一份小半天，几百份根本排不进日程</b><!--pnid:c3NGazHIfANmVvQxM23FdO-->。</li><li data-page-node-id="61yuFqaV0LCEhnO88jGKEZ"><!--pnid:r0PKywALZ3zNstxAmizPQY-->所以实际做法是：等出了不良、或者等审核前一周，再临时抱佛脚翻一遍。</li></ul>
+      </div>
+      <div data-page-node-id="iVfILZHyqqxjhO0l0fBwSC" class="new"><h4 data-page-node-id="1tWJU9rTGfFYrRKGhv0vIA"><!--pnid:1xrfq6SbHR2Yj63SVEi3A7-->✅ WorkBuddy</h4><ul data-page-node-id="Bt2e7zyKhcSU5QxlPkKV4A" class="list"><li data-page-node-id="37QBVOg2CdKjnz7InAbUpx"><!--pnid:OMSigeaYcbTQ4nAh9Cs6VV-->把手上的几份文件一起丢进去 —— 现行指导书、工艺卡、图纸技术要求、历史异常记录。</li><li data-page-node-id="J3OBgFEiOLJoJyLKXpPEQF"><!--pnid:RyfaBFl9QZ1MLxGqh1POVF-->拿回来的是：<b data-page-node-id="sjTCP7YQWwyLs9chMug9KE"><!--pnid:IOPHlh2o5V6M5dmXAafyFy-->每条对不上的地方都标了在哪份文件第几条、差多少、按谁的为准；哪几处已经引发过返工或客诉；以及一份可以直接送审的升版包</b><!--pnid:S48hkqEfWjTgwGQButrQ69-->。</li><li data-page-node-id="7e92cSWRJFR1hHsqLEMzU2"><!--pnid:MikwIywabKlg7QxJDWW0bv-->判断和签字还是人的事，但该查的一条不会漏。</li></ul>
+      </div>
+    </div>
+
+    <h3 data-page-node-id="fuWXngXKYqVDs19mvWV52e"><!--pnid:Sm7GhJiOQDNi8033LB16Ix-->核心价值</h3>
+    <div data-page-node-id="7HiK5MZb9x2X2raJEPTA7E" class="g3">
+      <div data-page-node-id="2oWXgNPEGMEUVNjPDExWSz" class="card">
+        <h3 data-page-node-id="eDg8LNU6IZL3VaW3wzZBVt"><!--pnid:EnEfbycn3dZrAamFJayNgj-->几份文件摆一起对，不是单看一份</h3>
+        <p data-page-node-id="yPveCCA8FdwNlGZgqNQ9mE"><!--pnid:RRJfUDAfUjIw7xTMaSVCo7-->图纸怎么写、工艺卡怎么定、指导书怎么执行 —— <b data-page-node-id="TZTaIKMUqd840EK0CnF9eu"><!--pnid:n8lHxbCifFEipbC6CeJfQW-->同一个参数在几份文件里各是什么值，并排列出来</b><!--pnid:axcd2q3ULkt4o33WcanMKZ-->。这正是审核员的动作。</p>
+      </div>
+      <div data-page-node-id="tfxUoaTSelJrQLb0xHi7RS" class="card">
+        <h3 data-page-node-id="NKYeZlwTv77QLvk139bfzr"><!--pnid:NizRAiS4Pt16m5ookRBrtA-->模糊表述一次扫干净</h3>
+        <p data-page-node-id="9KeeOyPh7FosYCvQutcucx"><!--pnid:Z7bLsto13UhANCgkLiPfYa-->"适当""合适""少许""按经验"这类词，还有<b data-page-node-id="EXPowqxBM0Mue7lQzMBISu"><!--pnid:Ii7gQgFpzUg6TqgED0PrJx-->没写公差的参数、没写检验频次的检查项、空着的异常处理</b><!--pnid:WdCHRISsd5iehNBj6buPl5-->，一次全捞出来。</p>
+      </div>
+      <div data-page-node-id="HpaNUV2yW9U5LKv8nUejxA" class="card">
+        <h3 data-page-node-id="b0JYQ23b2jxENyDjDSQdqp"><!--pnid:IJ6lRbCQOb96lthGOLHoFg-->把历史异常接回指导书</h3>
+        <p data-page-node-id="VyemYzbRVO5lXHxNrGV9Mf"><!--pnid:M2d5WAQoTZO8NAgtQIU4N1-->每条参数偏差都去比对历史异常记录 —— <b data-page-node-id="oMKbF7N2589Vg8VQvJMtku"><!--pnid:9pu717N4RTWmNkajKRykTJ-->"这个参数已经引发过两次返修"直接标在旁边</b><!--pnid:RKQGOi2NkMHs6xIccbuDjF-->。改指导书的同时就闭环了真实问题。</p>
+      </div>
+    </div>
+    <div data-page-node-id="jHqEMUNkUyrf4HB0rlvago" class="g3">
+      <div data-page-node-id="Uviia3crcS09OWYOmzXN8W" class="card">
+        <h3 data-page-node-id="WgPld9o0bTXRPJee3FqJuO"><!--pnid:6uZhOGDHamuIvVehFbn9AD-->审核前先自己演一遍</h3>
+        <p data-page-node-id="STIituxP8ebeiko5vPkddP"><!--pnid:Zxrv01ag9bJn5yUoFvzeSE-->模拟审核员会问什么、哪几条答不上来。<b data-page-node-id="82fjqImSXNn3fIJ3WzoTfv"><!--pnid:px2XqDlilACbWrvLFHmi68-->把"出了问题再补"变成"审核前先自查"</b><!--pnid:OHATKQnYoSpVbIh78szm7V-->。</p>
+      </div>
+    </div>
+    <div data-page-node-id="svYCy0w4KbnSW94nUufkVa" class="callout"><b data-page-node-id="qYAfGf0S3WKYSjr0qvJEsY"><!--pnid:SlfoUnlBJOhGPyO7m5PZjT-->要说清楚的一点：</b><!--pnid:tYnpt2pGwvIZraWXoVDvSS-->这套东西<b data-page-node-id="3FASeIZi6iUnL8Js3EizBQ"><!--pnid:5k50qPCWgb6CseCpVaS7Pd-->不承诺"从图纸自动生成一份能直接发布的指导书"</b><!--pnid:wZMdfH4Fi6viZLZqv5Lt2l--> —— 参数取值牵涉安全和责任，没人敢让机器直接定。它的定位是：<b data-page-node-id="o58ozdP0EIT6C41rGibnHn"><!--pnid:ClCKS25DfJ2OgjTYypdYPb-->把该核的地方全核一遍、把拿不准的标出来、把改动理由和证据备齐，让工程师签字签得下去</b><!--pnid:PVMD9Ih7lI3Ds3lgTExJke-->。真实落地的做法都是人机各干一半，这一点不必藏着。</div>
+  </section>
+
+
+  <section data-page-node-id="1rq60vd4bDghQ0vS3VJ3Cm" class="blk">
+    <h2 data-page-node-id="A85E8I0TUyMp6UeK3DfsJA" class="h"><span data-page-node-id="KeEvEIrqwzRev1EPrDDlvA" class="num"><!--pnid:DTZmDdNAFo41mkpOUiKFqQ-->四</span><!--pnid:jhDvGsJdLTMqVAAicFRUh4-->场景闭环</h2>
+    <p data-page-node-id="Haudo8yGDOOQECY9IiiX6A" class="subline"><!--pnid:w3mRmeaJNfCnmXEtPV73hH-->一次对话走完 · 每条结论都能追问"这是按哪份文件判的"。</p>
+    <div data-page-node-id="KPRU6PLDOXKCiBp5I4bJ5V" class="flow">
+      
+        <div data-page-node-id="ImNFEaZ3bBumwrcxu9rRHl" class="step"><div data-page-node-id="1y7meWDW2xMlnIbp5AUK59" class="n"><!--pnid:APHGsXRxmGZsYfLrVp1UNo-->STEP 1</div><b data-page-node-id="Fla8AUE8OnIFK6243q2JSi"><!--pnid:EdKYjU6PN83mRvX6QQWo9K-->读几份文件</b><span data-page-node-id="V4yrMMDL53scSOTKUyaRnU"><!--pnid:Veh1r7U3oPKCrGgyRCMbeB-->指导书 + 工艺卡 + 图纸 + 异常记录</span></div>
+        <div data-page-node-id="KAW3qBEclkQcDOr1uFL4Ct" class="step"><div data-page-node-id="DXiveYxwjToUexWGMWFFDH" class="n"><!--pnid:hMF1xKQPEC6mDbFaWEeYNJ-->STEP 2</div><b data-page-node-id="XfekuP4mBuknSSKzhWT8d1"><!--pnid:g194Ug7fgEssVPjNfOLquV-->依据版本核对</b><span data-page-node-id="x680oEfl0IfkNZZusUHs9z"><!--pnid:xVYmdNJIoqKZkKqr3iqoAT-->指导书引用的是哪一版图纸</span></div>
+        <div data-page-node-id="tyWFgJa4OS1RsYnxpKJYx6" class="step"><div data-page-node-id="H3TKFQSnMLdUGGJFnVkF5m" class="n"><!--pnid:fr1P8AqQgiDP5ptIHjOKdt-->STEP 3</div><b data-page-node-id="NWd7sgBAup4Wzxz1EtAf4k"><!--pnid:qSaDzeHqlXr31zE9ksqc0F-->参数逐条并排比</b><span data-page-node-id="ied7WNSX8TvibiSPBYF1m8"><!--pnid:n8MPcfOKOl1Qcz74VvgDjp-->同一参数在各文件里的值</span></div>
+        <div data-page-node-id="xlrtmSM714rKpfKQZ8DpaG" class="step"><div data-page-node-id="jdUJC0MyqsbCUDdVdNiCwq" class="n"><!--pnid:WuNoMFE0Goo9BXsJD90hC3-->STEP 4</div><b data-page-node-id="TesjFXwbJC77Ht8M8XS4ZT"><!--pnid:Z6NFDghkjdhBRBRL3cPuX1-->完整性扫描</b><span data-page-node-id="s4IiM5KkfNUCuVtvgUGrnA"><!--pnid:AASySxLEsuUZS6s5r8hWoY-->模糊表述 /缺公差 / 缺频次 / 缺异常处理</span></div>
+        <div data-page-node-id="D98AIoztxn6Cvf8nYrb80X" class="step"><div data-page-node-id="M7ECzEQUE4JhyUFbL5tDgG" class="n"><!--pnid:2SwO6WsWPZh0TCs3Wc02I1-->STEP 5</div><b data-page-node-id="uawxMO149R9Byvzcz5Vbu2"><!--pnid:QDieKOU4TUPNpLS8PHVUdW-->历史异常闭环</b><span data-page-node-id="iho2qdwtfUjY1VgRmwJ7iD"><!--pnid:1R2oKOBZKVzKw8G7KjMj4Q-->哪几处已经出过事</span></div>
+        <div data-page-node-id="Quu05H0azkOPqXPIjXuKno" class="step"><div data-page-node-id="vNMwErkAHWKWRVCKpeEftl" class="n"><!--pnid:tDcgWBgIoIDGN65frJhmI7-->STEP 6</div><b data-page-node-id="VmUTHHJsRekEGodbRhiNBI"><!--pnid:UmXyulbIBdQ0d92PMsCKZH-->出升版包</b><span data-page-node-id="Thnx5wYjVnZPN5mkbtAg06"><!--pnid:0LL2tg2sEFRlX223XXBqMq-->改动 + 依据 + 责任 + 变更说明</span></div>
+    </div>
+    <div data-page-node-id="RKbP5t7aODlTlkwUdt9FOC" class="callout"><b data-page-node-id="ZmlpW5qGFYuii11QJnqXU8"><!--pnid:UdzWqDzOrwL8TWa8LvGNgJ-->关键设计：</b><!--pnid:pLhwK45wK0eSaXMya0lMef-->升版判几级<b data-page-node-id="CZjQWVAQ6ahrzQQ3S9BuIA"><!--pnid:cHDsO2FV0tqQAksoH4TaYZ-->不靠感觉</b><!--pnid:CDrnqtunSCfWKh5Ud3yubz--> —— 引用的依据文件跨了大版本，或者关键参数对不上超过三处，就判为重大升版，必须走完整文控流程加车间培训。<b data-page-node-id="Oi5FkjDA06IbRK65SHKQ3C"><!--pnid:lcQ2bs54Pv3QLHFaLhQfWO-->避免"每次都升个小版本"，越攒越乱，最后没人知道现场那份到底该不该信</b><!--pnid:DIkQEUT3TAv7sDC1AsEf5Y-->。</div>
+  </section>
+
+
+  
+
+
+  <section data-page-node-id="apjaIcOZLC7cjvjTylrIUr" class="blk">
+  <h2 data-page-node-id="9ojRspKCWkyUfGWgLJjfmD" class="h"><span data-page-node-id="PHWAnBDMmt9swsCgHcAsz3" class="num"><!--pnid:LNUs8kfJWo7mmz3oTenyK1-->五</span><!--pnid:CD1eTUuSug7hPIzz9PKC0L-->会产出什么</h2>
+  <p data-page-node-id="TC6gGiHSRHyXHP4bEmADia" class="subline"><!--pnid:TUmWnsdVUL2A9QEu8OCLVE-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="fy7K19wcI6ZfjjdbsvN3Fn" class="outs"><div data-page-node-id="MDopUMNeLF5Gs6uFalnHhu" class="out"><div data-page-node-id="2DfERkM6gtcr0b4sN4kIx0" class="on"><!--pnid:bKiJ8sWvESgrxhvj24AUCh-->正式件</div><div data-page-node-id="JLwQMcuG9x7RTXAxlUtq0n" class="ot"><!--pnid:KITH9MCVIqy8FF87AxeI5d-->工作产物.xlsx</div><div data-page-node-id="UrRGDH4jL0OwO8q04koHoZ" class="od"><!--pnid:mei8JcDw0HvfoiBOv3ltRL-->可直接进企业流程的正式文件 · 带出处与判定依据</div></div><div data-page-node-id="ekpnSJhBvsJ2ip7DRrF41f" class="out"><div data-page-node-id="MXOI5F3s1u6zeKhI4olhON" class="on"><!--pnid:cQeHkDIw4BGWjK31BYwsCL-->问题清单</div><div data-page-node-id="PzGHqvIypCOfz3rq35hAB9" class="ot"><!--pnid:d8lXyjuZNrzyiCxPxWzlau-->待确认与差异清单.xlsx</div><div data-page-node-id="YCfmhb64KaO1cpGLRS2dX9" class="od"><!--pnid:5VB4AuschoOyJqZB0XPycJ-->每条带原因、影响、责任岗位与时限</div></div><div data-page-node-id="RJwz4CHc2jFBznRvcDo9vE" class="out"><div data-page-node-id="svqE1gtYF91rUvaZoMYwYv" class="on"><!--pnid:CrGoehhGI38PwxyBvp5Jpp-->归档记录</div><div data-page-node-id="zzUzBToHpwfuWie2XorxTv" class="ot"><!--pnid:WpDVHKOXL7xVSPROyOORZ8-->处理台账.xlsx</div><div data-page-node-id="8R0jcyOjOk60tWGzVPkHfw" class="od"><!--pnid:P6XnATwuJLjCiRc9oYIWLm-->本次结果入库 · 下次同类任务多一个真基准</div></div></div>
+</section>
+
+<section data-page-node-id="vXnWUW1xIzelYQJswfoQor" class="blk">
+  <div data-page-node-id="qeJOKzWjUt5OgE87oMPIKP" class="card warn"><h3 data-page-node-id="9EbIPmlYrSCXnYGmWPHQwP"><!--pnid:ZtQS9tVJ1GljlylfETzW1h-->这套东西不承诺什么</h3><p data-page-node-id="ihrsNxCSoILyihORGGKVfU"><!--pnid:nNcuNzzMES4kYckwpo9cGl-->不做「AI 替你定最终结论」—— 关键判断必须由人确认。本场景产出的是初稿和建议，影响大的项一定会被拦下来要求人工确认，而不是自动放行。</p></div>
+</section>
+
+<div data-page-node-id="pLj6mB21ua5HfckPGcb2fj" class="cta">
+    <div data-page-node-id="jENO1MOhdskwEMJvSQlbqx">
+      <h3 data-page-node-id="bpc29MgQCzPorWwhf6Euhq"><!--pnid:h3tWJSQDFWZ5rw3xvxBoPh-->打开 Live Demo · 看完整一遍怎么跑</h3>
+      <p data-page-node-id="HfBXarsRvN9dKXy3RQ9IPL"><!--pnid:dhSD50w8Bg9QHBng3EzrvT-->用一份真实的焊接作业指导书，把校验到出升版包的每一步跑给你看</p>
+    </div>
+    <div data-page-node-id="rL7wICeqAYtUsvqbZNmOgE" class="btns">
+      <a data-page-node-id="CHF8yARmxn9Te6a6D5JFnJ" class="btn" href="LiveDemo.html"><!--pnid:D2yCw6vyDvozXN9RyK3pmC-->查看 Live Demo →</a>
+    </div>
+  </div>
+
+  
+</div>
+
+<footer data-page-node-id="HVYsMlxNUCT3JGv82ATi3Y"><!--pnid:l22XJiExCnof271Jpfqq0W-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="JBDtFwwjCwde1IAPbh1AJw" data-pnid-children="EDsOvq0gXeEXPFmzFWVt4a">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="pLSAtI1IYPkwjvaM9lKrJm" data-pnid-children="qSTICIKnrAjxNkjdty2LSq">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="K3AGfnhzU1MDF0jNTjPcS7" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="TNg0n1PKfBbY6IB4yAI3YA" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="m80IYALKNUW3vmXTxz98uw" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="3gw1jTuPU38QhYFkmG0mmZ" data-pnid-children="dx2QkyZnIcX7dqfddXB4oV">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body></html>

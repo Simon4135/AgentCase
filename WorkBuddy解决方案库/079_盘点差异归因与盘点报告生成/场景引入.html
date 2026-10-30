@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="pB0EwQYv7TpvKE9yS2L15Z" lang="zh-CN">
+<head data-page-node-id="eA8v8PR3gN7QygGOFJDoPY">
+<script data-page-node-id="ocW0nwBVZMRjbX1e1giAXN" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="owKEmbUxRY1n3omgqtRX8y" charset="UTF-8">
+<meta data-page-node-id="rufqhKUvuL1VmfM5nS34Y2" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="xrZlCxTwL7ZoeoDXaS8V53" data-pnid-children="ETOcQxw7poqy7TvwJIPHjU">盘点差异归因与盘点报告生成</title>
+<link data-page-node-id="i4fU5tvyfji6igpFLSIMYM" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Mnyxmb2SMtKWjKEHEFhSk6" data-pnid-children="RpS4Ky1Jh1RpWzy9gQS0wO" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="jEGI5nMWtKPiOFX42P1w9I">
+
+<div data-page-node-id="LhJOncWj6rkIxbNpIfbjyJ" class="wrap">
+<section data-page-node-id="pkhGfFeIPMElYC5bHxjQPk" class="page-hero">
+
+
+<h1 data-page-node-id="EtY3LA1Buktm5e2oy2CoJz"><!--pnid:t2QX4cisQcfb9RXXl99nMz-->盘点差异归因与盘点报告生成</h1>
+<p data-page-node-id="kTzZVTPR0bAN7XjnID1YDP" class="lead"><!--pnid:djXWI2YLXI1IraPwLLA4m1-->盘完了，差了 27 台 · 报告里那一栏「差异原因」，最后往往是随便解释</p>
+</section><nav data-page-node-id="cvKSwgEbFJgFBcnQjmWrTs" class="subnav"><a data-page-node-id="V8HmH6lSLKyWhIQPPYSYIj" class="on" href="#"><!--pnid:dBXUEgVKNAfPMrel4OH605-->场景引入</a><a data-page-node-id="kiMY9JlUuXTO1vhhMafS3p" class href="LiveDemo.html"><!--pnid:NyvLKLvbTH7eMrJsMc7LMc-->Live Demo</a><a data-page-node-id="72UxrROQdjys01GTaKSbhT" href="推荐任务.html"><!--pnid:f5ajCwIw3OUkBph9fUIl7V-->推荐任务</a></nav>
+<section data-page-node-id="mBecBe1lQlkoUgeUuv1B6t" class="blk">
+  <h2 data-page-node-id="aGAUxUclvGmDsB9P2wfdkJ" class="h"><span data-page-node-id="aCtzaK1HaoLaa2P9Yh2OAI" class="num"><!--pnid:3JGwHHhJVqNVGe0PgXE4WA-->一</span><!--pnid:2RrMsiZqmMxGzg6RVQobiF-->这件事现在是什么样</h2>
+  <p data-page-node-id="MXMn8SVEC8iQ9IPsyozjg4" class="subline"><!--pnid:ZbHZ1s5MSwHjM3aUUJNS5U-->资产与空间管理 · 真实业务触发</p>
+  <div data-page-node-id="rSbGwkGvorTzwybBogMBrY" class="card"><p data-page-node-id="DgmIWEbRve5Tefu5suAuo9"><!--pnid:TPmV5fzZC6vN1YDRmqpdp9-->盘点表交上来了，账实对不上。要在三天内出一份盘点报告，报告里必须写清差异原因、责任部门和处理意见 —— 而这些恰恰是最说不清的。</p></div>
+  <h2 data-page-node-id="gQ72lVLA9xWTkJbu4KhuuZ" class="h" style="margin-top:22px"><span data-page-node-id="4NBSVGAL2xDVdoK7oWbvm3" class="num"><!--pnid:9K5exdEuXt98ROuX5R6JRP-->二</span><!--pnid:B9MAvvb1Tx7jmeRdxH9Bmr-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="n8RIdzI0alg9f9rfTo0lsj" class="subline"><!--pnid:l2mlLqDlXx24sUXYrdYc9R-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="Z5IdCyy2fti1aGpDYBnl4N" class="pains"><div data-page-node-id="5nxS5MA7RDh782ewpTchwU" class="pain"><span data-page-node-id="1ha8GsciioFHDAmZNaq933" class="i"><!--pnid:qB8cYSPpAyj650oriwLGEb-->1</span><div data-page-node-id="yN6HnXch6nGdsEfvNSQhxT" class="t"><!--pnid:XzGEPIulQMJyDFVRkRF5p1-->行业原话是「最后随便解释」—— 差异原因栏被填成「管理不善」「历史遗留」这种没法追的表述<span data-page-node-id="a94CsZ6v20tVZO9EdBKjzQ" class="src"><!--pnid:cpmYqYHWwbMCAg8kiHrL8Z-->依据 · <a data-page-node-id="t3GS15rBJezodNDl2TvP5K" href="http://lib.landian.cc/arts.aspx?p=39490" rel="noopener" target="_blank"><!--pnid:VLJKz1U3RVb1ShMD19NIrQ-->行政从业者自述：账上 15 台实际 12 台，无调拨记录无报废审批，最后自己贴钱赔</a></span></div></div><div data-page-node-id="Xhf0zphOlNpiuSbo5sS4nw" class="pain"><span data-page-node-id="AWEb2L1D3mQjpVMyrfXub1" class="i"><!--pnid:fpT4q9cW638kC7f5Slfa3u-->2</span><div data-page-node-id="NdL0mXpvcewNwiJXl715Zk" class="t"><!--pnid:5ql6kaNolx0ISpye9M3fPZ-->盘点报告模板明确要求差异原因必须归类并给占比（如「入库流程不规范占 X%、调拨未及时备案占 X%、报废销账滞后占 X%」），但没人能算出这个占比<span data-page-node-id="T7f8XnEe8f5Cu9l6y76XsQ" class="src"><!--pnid:QhyRUR8yvc7vOvbDG27vZ0-->依据 · <a data-page-node-id="ZKag9bTlIVYzKioZWSTZDD" href="https://renrendoc.com/paper/503711421.html" rel="noopener" target="_blank"><!--pnid:XX8yhU1G1UP0GgCELWi0S0-->固定资产盘点报告模板：盘点表/差异分析表/报告正文三件套，账实相符率与差异归因占比必填，归档不少于五年</a></span></div></div><div data-page-node-id="ImvtWPX2wuEQtkWF3a49Zt" class="pain"><span data-page-node-id="Qt45DENqCyKwX2pSbY1qd6" class="i"><!--pnid:M4yYwKQrcPF91YF1YBCPcd-->3</span><div data-page-node-id="DHo6ecLztZr0jflqW8RCN9" class="t"><!--pnid:GZd1M5E73t8DfUHPGsEINS-->投入 3 个人、2 周时间，换来的依然是高达 15% 的盘亏盘盈差异<span data-page-node-id="VrS4s4247qcpyxG1nUpV6t" class="src"><!--pnid:YQv0bcQ6ABytUhCoww26DR-->依据 · <a data-page-node-id="GAJ5p0l9F3BGnTYOT8hHpY" href="https://cloud.tencent.com/developer/news/4231573" rel="noopener" target="_blank"><!--pnid:z7ElmUHyewIayupV5XwT5f-->腾讯云开发者社区：几百元工具塞进固定资产计提折旧，台账越来越长形成幽灵资产</a></span></div></div><div data-page-node-id="XbK3qgbc8SJoBPXVojaeyO" class="pain"><span data-page-node-id="WglKxZiVjf8cZJcCvjagZP" class="i"><!--pnid:AF7PbgxqaQQ1roVM4RDOpk-->4</span><div data-page-node-id="uIwGFultKGKWrOUX3wyzUZ" class="t"><!--pnid:cFsBeuB91Mz8OxS1V1CDyG-->要归因就得跨部门查采购、报废、调拨、离职记录 —— 行政没有职权，催不动<span data-page-node-id="JpOj939wEMhQlmwGG0nIiS" class="src"><!--pnid:K759kVZqyCRKIOE54LUXlM-->依据 · <a data-page-node-id="ug9Owq9exBgXAkW857EYA3" href="https://www.chinanews.com/sh/2011/08-02/3227105.shtml" rel="noopener" target="_blank"><!--pnid:JRYuNlRYOv1YGcDetymmcC-->行政工作还是协调性的，业务单位不愿配合是家常便饭，总要夹在中间受夹板气</a></span></div></div><div data-page-node-id="qqzn3X1UdLbaOJ9joCmpAN" class="pain"><span data-page-node-id="sIOPjAlXjzdalSk8daZr4z" class="i"><!--pnid:Pw9Og1EOhB2toreUXWdXlK-->5</span><div data-page-node-id="Q3NIMN0pjjkdFtHegKV5MO" class="t"><!--pnid:EU04A9uVjvidFTKt77Azs3-->盘点报告要经财务负责人复核、总经理审批，归档不少于五年 —— 写得含糊过不了<span data-page-node-id="IdFIWca0D4UBxneXjKN0LF" class="src"><!--pnid:y3ThE2TX9q2jDU33aMqPN1-->依据 · <a data-page-node-id="1z2Qtf13jaLJPtyu59AAZg" href="https://renrendoc.com/paper/503711421.html" rel="noopener" target="_blank"><!--pnid:SQs1JwVevc3X1HsH2Z5fMZ-->固定资产盘点报告模板：盘点表/差异分析表/报告正文三件套，账实相符率与差异归因占比必填，归档不少于五年</a></span></div></div><div data-page-node-id="VlL9pujQejqC4Mum4cIXqY" class="pain"><span data-page-node-id="CVruUnINWti2fKevPLyEXB" class="i"><!--pnid:YmF4SEA8xRbQ4mYtZmMQqt-->6</span><div data-page-node-id="zhZAzXvFatnbTbCE6J8na1" class="t"><!--pnid:4wuv3vNfgKb535iXpaPyWw-->最后只能自己贴钱赔 —— 因为解释不清就要担责<span data-page-node-id="8S0fOMKOk8N15rx15Y2Gl8" class="src"><!--pnid:zZQSBirGLykNDkRxbsHRBF-->依据 · <a data-page-node-id="vigGb3l2eApX4Z6KA9U0KW" href="http://lib.landian.cc/arts.aspx?p=39490" rel="noopener" target="_blank"><!--pnid:dIBKXGK7Q4zLIqdgdwODGc-->行政从业者自述：账上 15 台实际 12 台，无调拨记录无报废审批，最后自己贴钱赔</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="fC8Er15HPbUxzaTaVGm9ZX" class="blk">
+  <h2 data-page-node-id="2Ux0bsl4Mze6872A8y9SGt" class="h"><span data-page-node-id="Vt4Ch84zuXT3HPLHmxLeuT" class="num"><!--pnid:Z9UB06x7HOS1G8zkezYFZF-->三</span><!--pnid:kUBkuTyAMwEhToImuN2RjY-->换个做法之后</h2>
+  <p data-page-node-id="c7YOSPYkFWkrcNOnfjF3KZ" class="subline"><!--pnid:bRqMAKiuVZw0SQ0cbaUyyR-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="RUv7mnCEWlkm5swGHdVbCG" class="cmp">
+    <div data-page-node-id="vt7CByygZdI99BzLd9q2Fk" class="old"><h4 data-page-node-id="qyPoX5LXlyhIb25TdskL8A"><!--pnid:GjhbEXtI6TZkVYh1izL76n-->✕ 现在的做法</h4><ul data-page-node-id="D1miAFTG3td1K8BFYz1m3E" class="list"><li data-page-node-id="y9jFsoeoAJEjHj7FECepUt"><!--pnid:EFSMqic0UvL7gOE09TmknK-->行业原话是「最后随便解释」—— 差异原因栏被填成「管理不善」「历史遗留」这种没法追的表述</li><li data-page-node-id="8ozqesMHUZDyNPCZxv2FBQ"><!--pnid:aVxDvSmwPBQ1QeDHLGAQKC-->盘点报告模板明确要求差异原因必须归类并给占比（如「入库流程不规范占 X%、调拨未及时备案占 X%、报废销账滞后占 X%」），但没人能算出这个占比</li><li data-page-node-id="ZCOkFGx8GFkRXa593Qslov"><!--pnid:qdOxl4NaOWjd8EGzGZD7mL-->投入 3 个人、2 周时间，换来的依然是高达 15% 的盘亏盘盈差异</li><li data-page-node-id="VHIlIbyRWH2vQZhzpOWkYQ"><!--pnid:AlxyahhFAXvBR8oz66d83q-->要归因就得跨部门查采购、报废、调拨、离职记录 —— 行政没有职权，催不动</li></ul></div>
+    <div data-page-node-id="cLTMkRpW3sX6KgvtyQ3O28" class="new"><h4 data-page-node-id="DQ49cFuAxyDjFZhtUGXHfU"><!--pnid:EN0PNSV1S0F9gL2FY5JotX-->✓ 交给 Agent 之后</h4><ul data-page-node-id="hMvFxnmcRlrr7OBMlb2kag" class="list"><li data-page-node-id="iUnHJCj7OTE3FBtF5P3cI5"><!--pnid:U0s4IUOE5hD5cUioahEHcz-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="ib19fdnzstd4QqLInKfE01"><!--pnid:uVwRcALWtqlCK73MgWdHZn-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="O4iWsHWGPNiulRwmAm0BE8"><!--pnid:eKPibmQq6cMjqyl4B7buTp-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="3E8D4InQo5pl9rd1q2W1dQ"><!--pnid:oZlSZ5OqFuyoUxD7t5ycUW-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="m56aWbgvjHWZWN3FHOcFqd" class="blk">
+  <h2 data-page-node-id="nc68ebYz9wRU66Lmifafb4" class="h"><span data-page-node-id="Nv0b9bG4HeOgawVbCCo31X" class="num"><!--pnid:9x9uWrJQYmGHbnPOvLLQye-->四</span><!--pnid:XJkTOrWETrty6a4Z3a1PKn-->场景闭环</h2>
+  <p data-page-node-id="qNiED9HJtbAhM3zzkgmDcv" class="subline"><!--pnid:9HLC69wBElK3Sgxi37pjCH-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="1IzRUDnLdFF2v9idfvSCRm" class="flow"><div data-page-node-id="qIB4BZzeQLDTFduGUWkmq2" class="step"><div data-page-node-id="YVSbRHtCfyaxNhIBnUlN5v" class="n"><!--pnid:nX0SDtF5kIvTD7Zrfc0KfH-->第 1 步</div><b data-page-node-id="NcVe914nNKCXRWu0qhxczJ"><!--pnid:N5fAJNXXszB4xI6HmXEiZw-->差异计算 · 先算清差多少</b><span data-page-node-id="RaveAAppZDgxJFe40J0jAB"><!--pnid:G3VkvbqrzVYgs1hU0FaLBX-->逐条算账面 vs 实盘、数量差与金额差；分盘盈/盘亏/账实不符三类</span></div><div data-page-node-id="8Qbo1v1AzW8EoRj5Pz0T8I" class="step"><div data-page-node-id="wfhOaxOPdY3xG7E7fCrkZo" class="n"><!--pnid:DKAKL3VOPGcgAhCWuIeJOx-->第 2 步</div><b data-page-node-id="EVxLyilsCRGVThNe95Ry9W"><!--pnid:7Cud9M1WrABKZy8FdokrtP-->跨源回查 · 一条差异查四处</b><span data-page-node-id="Fx3t9Eq1beeweBRsmXivrU"><!--pnid:5XmifZNYLLIcglGOvTQ2MB-->对每条差异分别去采购、报废、调拨、离职记录里找对应线索</span></div><div data-page-node-id="XQuJem3EGOuIZIFAZchyWf" class="step"><div data-page-node-id="REWqGDrFBvFpJ9V3O1NY0a" class="n"><!--pnid:hCOaI5P7cQ6HfSI1fRRuFX-->第 3 步</div><b data-page-node-id="0YMWlqe97o1KZTnj3aCsPV"><!--pnid:vtPOQFsTNT58Zrkv5vvzwW-->原因归类 · 归到可追的类目</b><span data-page-node-id="7pMjEQtPIe9P7CQswjB6Ef"><!--pnid:Fx6pdeUHyCKQz5uYkFYsFU-->入库流程不规范 / 调拨未备案 / 报废销账滞后 / 实物已灭失 / 台账错误 五类，各算占比</span></div><div data-page-node-id="KhljNCW197NMiZNGYhYPhj" class="step"><div data-page-node-id="pIEiSos2qCSUYrUCm6aTdi" class="n"><!--pnid:ULEyMtdbLThGeiN1j2EuXl-->第 4 步</div><b data-page-node-id="V2Ds6JwUMFx2fvCpNWcV0p"><!--pnid:a1xy1UmqFAQV0ydY2IBAq4-->佐证标注 · 每条写清依据哪张单</b><span data-page-node-id="1c3IkTNze7qbwDYTDxHmRS"><!--pnid:HjjoIWTfzh4G6F7ZadBHOi-->「调拨单 DB-2026-017 显示该资产已于 3 月调至市场部，台账未更新」</span></div><div data-page-node-id="sVdUUD29KYtadoj7grn2Wb" class="step"><div data-page-node-id="qkLTplD72VrhVj1vIy6Ice" class="n"><!--pnid:dRqEQ9NhoTeQAKtkueCK0I-->第 5 步</div><b data-page-node-id="Q8vVWtmpbTnEpfz7CfqGw1"><!--pnid:famhD7Hnl89NcSS6juHzrR-->无线索项单列 · 敢说这个查不到</b><span data-page-node-id="nWYVsmex43KjzLivIu9pPC"><!--pnid:f2FGoHlHUGsonEHwXW7x0n-->四处都查不到线索的单独列出，明确写「需现场复盘或责任部门书面说明」</span></div><div data-page-node-id="THMOXuuehhufyl37aI8Elt" class="step"><div data-page-node-id="Ds1JpNKbtwg7dp02xWNe0G" class="n"><!--pnid:at2XS5MvEwEWusHLpluKrs-->第 6 步</div><b data-page-node-id="fZKUbQsgWGRgWwERBTVwKy"><!--pnid:Ih64Gysx8Nr4roDQq6I9tr-->报告成型 · 三件套一次出</b><span data-page-node-id="oqDrESw9kpEKeiY6drBmWs"><!--pnid:1EPMbgc84oKTX97iCBk8Jo-->盘点表 + 差异分析表 + 报告正文（含账实相符率、差异率、归因占比、整改建议、签批栏）</span></div></div>
+</section>
+
+<section data-page-node-id="irI9hAtWbIvwa8r9dcyUBd" class="blk">
+  <div data-page-node-id="aU3ijOMjYEkHnkAu906peU" class="g2">
+    <div data-page-node-id="ZrAGFzM0og5ctgMnVj1YrS" class="card"><h3 data-page-node-id="czfmCx5KhFWaRpIvG81lQA"><!--pnid:8ejsjnTSU1NFtavjbrnHMw-->要准备什么</h3><div data-page-node-id="0gNmbAqU7sww0om4Y3gJSC" class="src"><div data-page-node-id="8okFi8COaTbfere37MekIH" class="fn"><!--pnid:8Q9DyoUFyIemsMCybXPNQ7-->固定资产台账（账面数）</div><div data-page-node-id="TpittBCAHC2TnH1ghNYXFh" class="fd"><!--pnid:IK5N0EYueMMb0udKBIBkL1-->建议先跑 AM-01 清洗，脏台账会让差异虚高</div></div><div data-page-node-id="2Rl7oO89slXXeVjg75NgO7" class="src"><div data-page-node-id="A1y7yzGlUYSWnQWEbRHr7h" class="fn"><!--pnid:P5eTO9swmswPPYFo0BV4FE-->盘点结果表（实盘数）</div><div data-page-node-id="55FGDbWBWxRfgGeqbdi15T" class="fd"><!--pnid:mTe4XfCy2trQ0K5SWAIP3l-->现场清点后录入，含实盘存放地点与状态</div></div><div data-page-node-id="eD1wbaBmjQr7LfVJgMdUEt" class="src"><div data-page-node-id="yOmAYh2xaHMPXBmZcEjsGi" class="fn"><!--pnid:T8b9H6YUlvJijcgkYbDlfX-->采购入库单（近 24 个月）</div><div data-page-node-id="49BxxvYFV49hxXoiDJCLB7" class="fd"><!--pnid:K6SGMKpABhfd5oi7Bn44SJ-->用于解释盘盈</div></div><div data-page-node-id="aF5UL4KSHsmGjY0LOjqmo1" class="src"><div data-page-node-id="g07bG5pP6M7pCw5XNnA1Ps" class="fn"><!--pnid:2WXXv7gy6fEEe8o37InYh0-->报废申请单与处置记录</div><div data-page-node-id="C0fYvnKHgmwrqD7Dbk9Yak" class="fd"><!--pnid:f2xxpAbKkem46HNKFdaqqp-->用于解释盘亏</div></div><div data-page-node-id="yvN7ytktbKOE2QWOYQMEG1" class="src"><div data-page-node-id="bmzMFarj7RB8IRdhYg4BuD" class="fn"><!--pnid:iAdWjxbs9gn0uaEWkeKZ3E-->调拨单与借用记录</div><div data-page-node-id="caLGv9w4pZjvx64hOiNg6r" class="fd"><!--pnid:zQGackJglK2TAL5LEbftGW-->用于解释「存放地点不符」</div></div><div data-page-node-id="0jViX2ZmClGcjtt5WsEiZ9" class="src"><div data-page-node-id="tGObqBJDC0MXniFO3LKY06" class="fn"><!--pnid:zixbFx5vGj4VDTgE3giSZc-->离职员工名单与交接单</div><div data-page-node-id="cjGAul4Vz3KeiVnGR3cTVY" class="fd"><!--pnid:lm9BqGyGDOin0VTIFWs8pt-->用于解释责任人相关差异</div></div></div>
+    <div data-page-node-id="zdjpG4Hgj4gFFCcFeM1BAb" class="card ev"><h3 data-page-node-id="q7KCFcUP9uRYaDYGNn5m6G"><!--pnid:AlVuCEtWDnLgykZJH4uO7u-->为什么这个场景值得做</h3>
+      <p data-page-node-id="W8aM1ERCGmUAchTwvjt6Gh"><!--pnid:Sb969g3TftntoPb1p74f1h-->痛感 5 × AI 适配 5 ÷ 落地难度 3 = <b data-page-node-id="BTSGS7luBeFoIHEWbOR6Id"><!--pnid:qVeBiqcM8gutVFpVf317ZC-->8.3</b></p>
+      <p data-page-node-id="y1SQDK6rIKJSUFgMDzoHqx"><b data-page-node-id="7R61kzMjHd7HmGHDbzaIVg"><!--pnid:NR3ljBwbIJZfgzDnFjp09n-->最大差异点 ·</b><!--pnid:VyTr2A10ATa7ZonDfjvYZr--> Agent 的价值不是算得快，是取数快 —— 一条差异要跨采购单、报废单、调拨单、离职名单四处查，人工不会去翻，翻了也看不出关联。</p>
+      <p data-page-node-id="bdH14iZecrmlmX0xq3peqb" style="color:var(--ink3); font-size:12.5px"><!--pnid:84UPyhidiJwqQEmRK7wuUv-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="hGuYlpXu56CM9PgM78XP1V" class="blk">
+  <h2 data-page-node-id="PtFyiRA4dq8oqWAiEHfJPr" class="h"><span data-page-node-id="S55AmCjIHZMrRV7yjnmCz3" class="num"><!--pnid:wzFfJ18Iw370sJZv0raBRR-->五</span><!--pnid:esGdQhzjGNNdEMKwhRNPBt-->会产出什么</h2>
+  <p data-page-node-id="0M4MGAbd4r9FPFNFeXbUp2" class="subline"><!--pnid:7Rb2BhLQ134bfzrA5I5Max-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="cW1SG7CO23v8x7L1fUe780" class="outs"><div data-page-node-id="S6hEE1UR0OWljNF0WRHjGY" class="out"><div data-page-node-id="ofVDQewfYgCyT9p8SmsKI2" class="on"><!--pnid:ClB6oNjtCXMgV4y1U62rms-->正式件本体</div><div data-page-node-id="1fHAzCfzxXCB76LsSdBKrJ" class="ot"><!--pnid:SJbCg0X1FJdEFU5AVTCM1z-->固定资产盘点报告.xlsx</div><div data-page-node-id="C9H1thniR9lo6iqNwSol43" class="od"><!--pnid:pErSDtkWjHQVeLumyj06Q5-->正式件本体 · 三件套 5 sheet · 含账实相符率、归因占比、四级签批栏</div></div><div data-page-node-id="oZaf1Z6UdkmO8tRxaTksxB" class="out"><div data-page-node-id="a4yNAg2dyqwLHaSEQ9KvPz" class="on"><!--pnid:26efglAKhPSV0Nfdm5YfZZ-->可派发清单</div><div data-page-node-id="RTbonCDBBTXXFncW1vOZpj" class="ot"><!--pnid:yxhQezb2VZv1TqDGKtpiI3-->差异佐证与待办清单.xlsx</div><div data-page-node-id="WWixwktCgTNdLATifHl5e9" class="od"><!--pnid:PHAiv1yqQv6pv4gvgbayVS-->可派发给责任部门 · 每条带单号与建议动作</div></div><div data-page-node-id="2uDs64aTXWHGZfNUNMlrZi" class="out"><div data-page-node-id="I7l7RrSmEdnV0JI684Bcx0" class="on"><!--pnid:5Rj4R64jZJq7L9pBcduVKP-->可派发清单</div><div data-page-node-id="RjjclNuzYimVuKtRToacWu" class="ot"><!--pnid:lRhozhWp0Y9dq3IDuTALnP-->无线索差异清单.xlsx</div><div data-page-node-id="EnXzu3q5TxG3QTHipg18EZ" class="od"><!--pnid:3xcNR2enLOA0wWVcxETCXA-->需现场复盘或书面说明 · 明确写出「这个我查不到」</div></div></div>
+</section>
+
+<section data-page-node-id="bBNuJ12HHTdz2drHw8BugP" class="blk">
+  <div data-page-node-id="BjCwSd2WkQuyn6GrtEQbjr" class="card warn"><h3 data-page-node-id="9C8gyHMuE6KgkX0RYq6fnK"><!--pnid:oiHtoNR3wmOKyuV17AXRPl-->这套东西不承诺什么</h3><p data-page-node-id="PhiI1dx64uOFaf5cP8lXGL"><!--pnid:AoiGK7S0jTrxdUbomwKNoB-->不做「差异是谁的责任」的最终认定 —— 责任认定要经复盘会确认。我们做的是：为每一条差异给出原因假设 + 佐证线索 + 建议下一步动作，把「随便解释」变成「有依据的推断」。实物是否真的存在，需要现场复盘。</p></div>
+</section>
+
+<div data-page-node-id="k6KPbFLvtcqCISmyEjYt01" class="cta">
+  <div data-page-node-id="3nK09XPnp1DSWq3T7rPcBY"><h3 data-page-node-id="kASAJgpOqr8SSX5C48CbHt"><!--pnid:yHIjvDWRTo4MvXWnsBb0yf-->想看具体怎么跑？</h3><p data-page-node-id="a99uEPgY99KUmoxSoXkwvG"><!--pnid:QY9dYkX1aoQ8gEIoIPEylI-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="HEcLwjsMdHUyWsaoDsChqy" class="btns">
+    <a data-page-node-id="Amor0BT4oC8GMcpXbWPKJZ" class="btn" href="LiveDemo.html"><!--pnid:hzkqhdl7Tu4hYGV96Ba0zH-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="vDqdW9ehUCJtZQ5D2oI5qN"><!--pnid:j6wBrckPI90NEPHYaraA7p-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="TmfMwmk1w8iEXJtn8RXYI1" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="vJ3r2UltDoM0nuXyOubrQ7" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="Kk6msf1zyETcTv7bxfjR8c" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="KmQEPx4zkoG3zx6LvgDwV1" data-pnid-children="PI6il9Drg3jhnOhiNcyJ73">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="4XmDy2XP7qNC4RJ1GkPQ8l" data-pnid-children="ezpWTbi4KI4fSZPTLhU3wV">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

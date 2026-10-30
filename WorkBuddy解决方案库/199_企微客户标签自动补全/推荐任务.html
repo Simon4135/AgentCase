@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="e5j18sa6VlVqmapoOJXSr6" lang="zh-CN">
+<head data-page-node-id="AZXfOn0UYv74aXJzugziia">
+<script data-page-node-id="yH0YNUBujBnsrAlfm2Q1LS" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="UcYZKtxUXbJ5k10eRacbSg" charset="UTF-8">
+<meta data-page-node-id="jdhFet3b8A4p5xFmcjlxiD" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="yJnrUxvdtCk1ddZaREgFxe" data-pnid-children="gUzejHVu68NxunfmlNWm0z">企微客户标签自动补全</title>
+<link data-page-node-id="kjn2kNaU7jy4bJKmtHIGDZ" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="RdXpNxxczeNMeBEA5mffYO" data-pnid-children="xPP8AVRFGss8RNHWLOfQmS">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="gzPx8ZWcW3gKqTlEdmyWWY" data-pnid-children="wQGLHDb6coObIebokt0dzv" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="HrgIFpV42kLq4ejpNG4id4" data-pnid-children="K1bVxUBsnE57tTu71jgz0e" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="gPbDA4EuE3nooNbP3IyfIn">
+
+<div data-page-node-id="iZaU0PSJeHXlhRmE9tl28j" class="wrap">
+<section data-page-node-id="7po4zCmHyepLsTqzan8PT8" class="page-hero">
+<h1 data-page-node-id="09SenB4sLCmcUWSYNscvUq"><!--pnid:bVu9nt998THLNpMqsfAQYD-->企微客户标签自动补全</h1>
+<p data-page-node-id="1yeORqT5mRIBNqsORkekAH" class="lead"><!--pnid:LKrWwfeUvgKWap6A9oA87n-->客户在群里说了句「家里宝宝刚满月」· 没人记得把她标成「母婴敏感人群」</p>
+</section><nav data-page-node-id="qR0c0cvYyGK41eIVZUWwo4" class="subnav"><a data-page-node-id="vrSE8irmb5xhR4sIxevERZ" href="场景引入.html"><!--pnid:I9Yn4XX8HYCLbLTtLyJeio-->场景引入</a><a data-page-node-id="L9syprVRzGVUWWkNOlMGM5" href="LiveDemo.html"><!--pnid:aiTe4PmbPgmj7gCNsWFzdE-->Live Demo</a><a data-page-node-id="P75xqY9HQ0x1OvrY1jU13M" class="on" href="#"><!--pnid:bQqj8x7fhGc78oXKlqE05m-->推荐任务</a></nav>
+
+<section data-page-node-id="4OJEWMCEJO9kq8uCjoi2Wf" class="blk">
+  <h2 data-page-node-id="nfiM9JwWezoEdcpMD0Y6ML" class="h"><span data-page-node-id="AFpx80tTgk5Du7GpsziLKL" class="num"><!--pnid:NvJkKFTbPGdne6yXKSh11n-->一</span><!--pnid:NxetAxse7kfpBxFi6WSUYw-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="eebTxlWgeZ4MgFpvhL36Ng" class="subline"><!--pnid:5EwzcAeutbZHDn1eDxiTLz-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="7KJUHqAITB2MBzM0ftE0tS" class="card"><p data-page-node-id="cyvPZetwAPrkEZst2IDOgV"><!--pnid:ph263aZUXZUQ02kQM6c8Fk-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="X4Lg8FHNvXFIV8sufeUpUY" style="margin-top:10px"><!--pnid:y1qErrRMEF9C0ac2tB0p8P-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:7CwAD4yZX2MFATw5dKpN7i--><!--wb-skill-start-->
+<div data-page-node-id="U4FKzNs8vhQV9ELIAHEoKL" class="wb-skill">
+<p data-page-node-id="9TZUAQdjtrXZH9mX0bFz4F" class="wb-skill-lead"><!--pnid:NlKX7dWVMzp0Xvd1pZUblc-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="rNS3n0sSzDnYI1iVc2EOxM" class="prompt" id="wbSkillPrompt"><!--pnid:HNBBK7niXI42p1qBVZm5Pd-->【准备】这个场景的规则都在「企微客户标签自动补全」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/sqnjmrRmcxEaDiPTuTVFPL/W9ofDIPEK-Tc/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="LvYrMfXPoq8toKoVed2jgZ" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:fZnNZfhQYa0dHARg1EeiIx-->复制</button></div>
+</div>
+<!--pnid:zjp0dbqXEJ3K4U1MB7Y4Bq--><!--wb-skill-end-->
+<section data-page-node-id="QsaEI4XAXyKBunagpvMJv1" class="blk">
+  <h2 data-page-node-id="mz57pTn9XG4lUvAKKZIhtE" class="h"><span data-page-node-id="1ob4OwDd1vZV3O5iA6euq1" class="num"><!--pnid:j4PSxjFF1apPVvN5TYkeYF-->二</span><!--pnid:ZudPhglpJvveBeEy1h2IVz-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="i1n9C03doRF9AnZEWp0tvF" class="subline"><!--pnid:bZTCKf4LhQIED1NIODhfuI-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="bBCu3Zr2BndzTHYSPjbRTc" class="tlist">
+    <article data-page-node-id="5OTkfBUMCFnhe5GdmMwHvy" class="task">
+      <div data-page-node-id="28eFvgNyOI7UqBzLCR71mo" class="th"><span data-page-node-id="VDn3c4ILvylq4AGBP5vmgn" class="no"><!--pnid:KiIB1Bm4PWw2EBQPgIWA91-->01</span><h3 data-page-node-id="zzkoln4hcm3xBsKLy4qBXM" class="ttl"><!--pnid:pf3iGZzD2kc8herVD81Rw7-->首推默认</h3><span data-page-node-id="jky7nY3qnoAragBwmutaOO" class="star"><!--pnid:60TETxwc8EvBSxQ2Z0B5rO-->与一键体验入口一致</span><button data-page-node-id="ZBBxoY8kxARDsHdeR9z2Cy" class="cp" type="button"><!--pnid:IqT7mj6D434yXgwsHWnPXs-->复制</button></div>
+      <p data-page-node-id="WWEePweBJ44J6gjoZQOALg" class="tp"><!--pnid:JCxug4r2tUwGWths76Whvt-->我来试一次这个技能。三份材料都读：「01_企微现有标签与打标现状.xlsx」「02_会话存档记录_近30天.xlsx」「03_订单数据_与UC01同源.xlsx」。名单跑出来一半客户标签是空的，我每天要花 3 小时手动打标签。标签来源只认两类：会话里的明确自我披露、订单里的购买行为。产出三份：「客户标签建议清单.xlsx」——客户一行，列建议标签、来源类型（会话原话/订单）、来源原文片段、是否与现有标签冲突，无冲突的那部分排前面等确认；「冲突标签人工判断清单.xlsx」——说的与买的不一致的逐条列出，带会话原话和订单记录双方证据，留一栏人工判断结论给我填；「标签体系归并方案.xlsx」——现有标签归并成一套新体系，附打标规则（什么情况打哪个标签、出处怎么记、谁维护）。现有标签里「宝妈」「有娃」「母婴」这类同义重复的归并掉，建了从没打过的单独标出。点赞这类语义模糊的行为不要当标签来源。会话数据只在授权存档范围内读；标签只是建议，写入企微我自己确认，不要自动改客户资料；推荐意见、完成质量评定、责任认定三栏留空。</p>
+    </article>
+    <article data-page-node-id="UMkNyKVGbiS2OZ7jZb5aWQ" class="task">
+      <div data-page-node-id="gKnTwsp8UOeIbrOgLag2K3" class="th"><span data-page-node-id="9tAgZLciGS3FIgt3tRuD2h" class="no"><!--pnid:vyGJ0ycKlI1MvkhVyNgED3-->02</span><h3 data-page-node-id="LaIbxHqhvB1gwRqXpX4qfB" class="ttl"><!--pnid:J1BdQZ34yQfvFRrqnh0Jfc-->只挖会话里的家庭信息</h3><button data-page-node-id="CC3SSMsYxDJy4qIG5Vg375" class="cp" type="button"><!--pnid:sdTGZWUuvOZQYKBvrYOjyz-->复制</button></div>
+      <p data-page-node-id="gE9hezPyDWCPauXeLr1681" class="tp"><!--pnid:zZEQtEeaR0Xrrylz61uy0X-->先别出全量清单，只挖会话里关于家里有什么人的信息：宝宝多大、给爸妈买的、几口人用。读「02_会话存档记录_近30天.xlsx」，逐条定位到客户。产出 Excel 一张：一条一行，列客户、会话原话片段、发生在哪次会话什么时间、可推断的标签、置信程度（明确说了/需要再确认）。只采信明确说出口的，推断出来的标「需确认」。</p>
+    </article>
+    <article data-page-node-id="RnU0Uat2H4te4zUPoVL1bw" class="task">
+      <div data-page-node-id="STF6B0rbZJAKr7lmrengIh" class="th"><span data-page-node-id="vi2RkbH9NCjqpsrwXHiYSX" class="no"><!--pnid:xh3Wf11zA4MHSnjAcMMPe4-->03</span><h3 data-page-node-id="fSId7q5gPWx7epH44UcC3z" class="ttl"><!--pnid:MgCOOtCeXKt4r2hatfOgSd-->换成只做行为标签</h3><button data-page-node-id="6C54a1rHQAPiiY0Yy5GW6C" class="cp" type="button"><!--pnid:1ury15xuvkTyKNKaz7In27-->复制</button></div>
+      <p data-page-node-id="Bp6AQLAxFYUAuYpgY5o1Kn" class="tp"><!--pnid:VPXuWoKfeSXE7I6GgsncW4-->这次不挖会话，只用「03_订单数据_与UC01同源.xlsx」打行为标签：买过什么、买过几次、最近一次什么时候。打完再跟会话标签交叉看差异。产出「客户标签建议清单.xlsx」一张表：客户一行，列行为标签、会话标签（有的话）、两者是否一致、差异类型（说买不一致/只有行为/只有会话）。差异的单独排一段。</p>
+    </article>
+    <article data-page-node-id="hFxvyI3AcToJHEGNv6Ggmc" class="task">
+      <div data-page-node-id="9jonXntsACgzIUk1bQWgGy" class="th"><span data-page-node-id="TLFlOuMvLzD3pSkNwv5tX7" class="no"><!--pnid:J4hf6nW0Dx2GEme1WvW1MU-->04</span><h3 data-page-node-id="AOHGRstrtVG0QDI6uJtJWG" class="ttl"><!--pnid:zoyhNck2qGDt52ptsBXKCB-->一次过三段会话</h3><button data-page-node-id="kTdCPQPpiD6nlYRjFGlxmt" class="cp" type="button"><!--pnid:hXvlIhYyzGxWOpkXVXzWKM-->复制</button></div>
+      <p data-page-node-id="UBmS5JDtEU0cVxAUwXOusk" class="tp"><!--pnid:X0WQVdN1Y6fBcYbSXrZz5d-->把这三段样本期的会话记录一次全过。读「02_会话存档记录_近30天.xlsx」和「01_企微现有标签与打标现状.xlsx」，产出 Excel 一张横向对照表：样本期一行，列新增标签数、冲突条数、涉及客户数、出现频次最高的需求、跟现有标签的重合度。重复出现的需求单独列出来。</p>
+    </article>
+    <article data-page-node-id="lcmQ8VjD1KMjZCewSUng0A" class="task">
+      <div data-page-node-id="GL5nnnMXUoDC3VbpioJrju" class="th"><span data-page-node-id="BlC5JEU5QYPkJ3u25cweDh" class="no"><!--pnid:kqMAP14LSl1jh7mJaoYxEu-->05</span><h3 data-page-node-id="5ih4MP05Mi6MdJVE8Q9dn5" class="ttl"><!--pnid:NVVxF72F3nKUq0KKfhRX3y-->给运营确认用的一页</h3><button data-page-node-id="f1qUPfc8DAUwJv3M7cto24" class="cp" type="button"><!--pnid:kfUqBSbxy5OihKDkJCiIVC-->复制</button></div>
+      <p data-page-node-id="l278gBksz5Vn3XSb9UbLfi" class="tp"><!--pnid:xXCpuZaw6WMcBRPjRDREts-->把建议清单压成运营十分钟能确认完的一页，输出「客户标签建议清单.xlsx」一张表。客户一行，列建议标签、一句话出处、确认栏留空。只留无冲突的那部分，冲突的另起一张表。按客户价值排序，沉睡高价值排前面。其他分析都不要。</p>
+    </article>
+    <article data-page-node-id="fohJhq3M71XaOeOIXADRoX" class="task">
+      <div data-page-node-id="Wze9TX0pXP47K18zuvDq46" class="th"><span data-page-node-id="M6lokrJHbUgx7yECdWzdU5" class="no"><!--pnid:yoeRxnS2OiWeA28SXcTbz8-->06</span><h3 data-page-node-id="QyxxrKvnKaXiVUyviWQsin" class="ttl"><!--pnid:g4cAYdKbtIA5UwjoTtyksD-->让它反驳自己</h3><button data-page-node-id="t9m3biurh9J0LxuMonRUZd" class="cp" type="button"><!--pnid:bHvL9qya18SbKYMZ4HiPLh-->复制</button></div>
+      <p data-page-node-id="Odqoq344DJPFxWiDF0ZbyH" class="tp"><!--pnid:mhuSd02zgnwZEGmXwhi6al-->「朋友圈点赞可以排除出标签来源」这个判断依据够吗？读「02_会话存档记录_近30天.xlsx」，把可能误标的例子举出来（赞一条宝宝早教视频不等于家有宝宝这类）。如果点赞确实能反映需求就把规则改回来，并说明采信之后怎么校验、怎么避免误标。产出 Excel 一个对照段：行为一行，列是否采信、理由、误标风险。</p>
+    </article>
+    <article data-page-node-id="q52r64DvQIaECfcHeosCuU" class="task">
+      <div data-page-node-id="hlS8kwZlWdpGtlZOQKzoPA" class="th"><span data-page-node-id="CkTmmc6ZOs0XiEWpDQPilj" class="no"><!--pnid:BMUGkUlqYwzNHJmThDqKn2-->07</span><h3 data-page-node-id="bDHTcs0aG5sSsj7WbdMt3R" class="ttl"><!--pnid:3aIlYWhqwd3Oawak47vylT-->专门找重复出现的需求</h3><button data-page-node-id="yrT6EptmduDbEaH60i92rF" class="cp" type="button"><!--pnid:prJcmhM4njdvn0uCicCnpm-->复制</button></div>
+      <p data-page-node-id="UcIpWeWKpJX4vtunueTVWX" class="tp"><!--pnid:sW66028waPsqNDChdqGx6B-->把会话里反复被问到但店里没有的东西挑出来，比如补充装、大容量装。读「02_会话存档记录_近30天.xlsx」和「03_订单数据_与UC01同源.xlsx」，产出 Excel 一张：需求一行，列问过的客户数、涉及会话条数、客户分层（含多少沉睡高价值）、现有 SKU 里最接近的是什么、建议动作。这算需求清单不算标签，单独一张表。</p>
+    </article>
+    <article data-page-node-id="kvblp2O2di0r3swHIRtyVU" class="task">
+      <div data-page-node-id="08gSzYwi9kPxQ6YqFryrO4" class="th"><span data-page-node-id="0L127opY9eaLBQun5nCVhc" class="no"><!--pnid:swDHw8O9pWnJZmrLLSDFZ3-->08</span><h3 data-page-node-id="KodX2wo1d71HCRt6uvi0GJ" class="ttl"><!--pnid:9EyFKPLjymAAFIT6RTcMjM-->对照现有标签自查</h3><button data-page-node-id="s0uUqpokOmd5FhirqybTbk" class="cp" type="button"><!--pnid:SGwqhj6wFXyGhRDj1Iz0Zr-->复制</button></div>
+      <p data-page-node-id="C8fE7qKui92jXKXnr7kofR" class="tp"><!--pnid:YEWXauvGL92GNlZMZJiwbQ-->把「01_企微现有标签与打标现状.xlsx」逐条自查一遍：哪些标签是同一个意思重复建的、哪些建了从来没打过、哪些标签名含糊到没人知道怎么用、哪些客户身上标了互相矛盾的标签。产出「标签体系归并方案.xlsx」里加一张自查表：标签一行，列现有名称、使用人数、同义标签、问题类型、处理建议（归并/删除/改名/保留）。</p>
+    </article>
+    <article data-page-node-id="wvBqvtWSgPtObQHKxKRNek" class="task">
+      <div data-page-node-id="BCHrPQbRESUQxmqiuMgtiZ" class="th"><span data-page-node-id="ampUVIVPA7w7L91MM11WxI" class="no"><!--pnid:n2fmgdjEoWYN0tChf8YEfi-->09</span><h3 data-page-node-id="5hIlctbu9Rj4Xzto3ieNRc" class="ttl"><!--pnid:pvCfStSaWQ6GbMyZAxJynq-->折算成省下的人力</h3><button data-page-node-id="rg0OxCVzF31L5AMf2vBiN5" class="cp" type="button"><!--pnid:MJU06NX6yPx0NCBw7SlmrA-->复制</button></div>
+      <p data-page-node-id="QAlwk3Xk8jRtwEc7EnsKgY" class="tp"><!--pnid:Nb5cLmXILxj5F1uwD28HpT-->读「01_企微现有标签与打标现状.xlsx」和这次出的「客户标签建议清单.xlsx」。每天 3 小时手动打标签，按运营月薪折算一个月是多少钱？标签补齐之后这笔人力能省多少？产出 Excel 一个测算段：一项一行，列每天耗时、每月工时、人力成本、补齐后预计耗时、节省金额，算式和取值来源（月薪怎么来、按多少工作日）都写出来。补齐后仍要人工确认的时间也算进去，别把人工确认算成零。</p>
+    </article>
+    <article data-page-node-id="2nhqCDgeFMYgfO8P5CN3oJ" class="task">
+      <div data-page-node-id="yu1viZk9Nyjkw6UaxEIg12" class="th"><span data-page-node-id="OCL5CjxFMyBvZWPaain6Ig" class="no"><!--pnid:UqHyLByPP5BTar5mfz5ibu-->10</span><h3 data-page-node-id="TEoJNrkTrarFX8FplekcsC" class="ttl"><!--pnid:F7mgl5zyviNgyeyUFHFObh-->沉淀成打标规则文档</h3><button data-page-node-id="ky78AezwDF8gHjaBpJRc6h" class="cp" type="button"><!--pnid:E64X3p6VtKpVyjpGWPY7CT-->复制</button></div>
+      <p data-page-node-id="WtY30MftKmwGMk7CRMmfJL" class="tp"><!--pnid:rhWj9cB8kaDcHNHQHiHymk-->读「01_企微现有标签与打标现状.xlsx」「02_会话存档记录_近30天.xlsx」「03_订单数据_与UC01同源.xlsx」，把归并后的标签体系和这次用到的打标规则整理成一份文档，Excel 一张：标签一行，列标签名、定义、什么情况打、采信什么证据（哪类会话表述或哪类订单行为）、出处怎么记、谁维护、复核周期。「只采信明确自我披露和购买行为」这条规则写在开头。以后新人照着打。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="T8njRZ9i7y9eTzqDMlgCXi" class="cta">
+  <div data-page-node-id="vOIHs3c6Yv5LaeeWoHaZ6D"><h3 data-page-node-id="xXuoFM3fStHUcmOtGazdd3"><!--pnid:SQtRg7FAuhrtli0BfNAGcE-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="7eWQn0yIrLriNBAi51XxAO"><!--pnid:6S0TyVA31PfdABpJ1TV7Sv-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="5G5O3f5PTuuHujTHGergrP" class="btns"><a data-page-node-id="LaB1WBoP2Fgrfcan3boh4S" class="btn" href="#" id="ctaContact"><!--pnid:VZ4B49DESwPsOzxvbFo1yU-->联系我们</a></div>
+</div>
+<footer data-page-node-id="kZwCc6912q2CfKj4WguzEj"><!--pnid:LJnvB8C12t8p7K7pqEPnzI-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 不碰钱不对外发声 · 执行按钮永远在人手上</footer>
+</div>
+
+<script data-page-node-id="EV8zwxRTa1myrzSoCDbR0T" data-pnid-children="xNLuDwJIasMtipbT6oDZgx">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="2yuJsavoOoXB9jsOlZ5Szg" data-pnid-children="QWg05xEpm5YtAms47WMwGE">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="QDu4OKoLJ0hISFsF4elHhr" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="1ZGs38rOdDvRS8E0aNrHwp" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="7jFOw1iAsLLjStFPQt5B4l" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="dWRp7UGbrTTYX5RKFfK5uA" data-pnid-children="FqnyPJ7ntomquvbSPcEjNf">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="V0Gd6ypSL4z9TganxlPXLk" data-pnid-children="QXmOYKKgh8p4zxQp72AH11" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

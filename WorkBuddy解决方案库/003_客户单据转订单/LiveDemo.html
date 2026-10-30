@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html data-page-node-id="rvSEcqI5n0uIgiqEaEt0WV" lang="zh-CN"><head data-page-node-id="sWkBtgN73ELYeHZjkoByzM">
+<script data-page-node-id="9XApAjYb4CBd7kNOLIvkw3" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="L1qpNUhrEEbOO2PP4iV8ch" charset="UTF-8"><meta data-page-node-id="LMutuIYxIKvOyPVwWkCn9J" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="Ma2TfXgMY4Zj6VNaNiWYZ2" data-pnid-children="0GN4QqFfTOYSOdkVsKaBIe">客户单据转订单</title>
+<link data-page-node-id="4P4Xj35dVR8oKTEGlMUnKo" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="sPbcgIP6Q2394Te3SPwUEK" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+
+<style data-page-node-id="VeDQxbhzExMhiSaGEDYeHo" data-pnid-children="C5WIRlFQ7v9NurnQkijuuT" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head><body data-page-node-id="0hN1wqGOlx6RtMqQRnSw2B">
+
+
+<div data-page-node-id="H6YzUC68h6oadZKSLDGVvc" class="wrap">
+  <section data-page-node-id="f34KHrhERvOPjcSx4MEL8M" class="page-hero">
+    
+    <h1 data-page-node-id="iEdB8ftH82wrqyXV6EueGy"><!--pnid:nlZz43uhIh7IlZrLpsFI3q-->客户单据转订单</h1>
+    <p data-page-node-id="rG78OeiQTtmACebCDV0c6g" class="lead"><!--pnid:RrW0A6RlBPiDNt15jwj0TW-->案例：<b data-page-node-id="X8pAfhQgXetAdvamNync6O"><!--pnid:D70cl3dwdlXcjn1S9pkr2d-->某主机厂 8 月滚动叫料计划 · 18 行 · 涵盖 9 类典型问题</b><!--pnid:R44Z7hgiq4gqohELdImUwM-->· 数据脱敏</p>
+    
+  </section><nav data-page-node-id="vElydfcaLotadL7m4eg3yY" class="subnav"><a data-page-node-id="pxIALJqXwDXQg4RrgGLIkk" class href="场景引入.html"><!--pnid:wvugDz3Az9h1h2MeFrCrSd-->场景引入</a><a data-page-node-id="AEvh6C1oDachhJofqcXbxo" class="on" href="#"><!--pnid:48FQSvTwyIUIRXodO7b052-->Live Demo</a><a data-page-node-id="cyQES31GUODhSOhXpEXvkO" href="推荐任务.html"><!--pnid:pbDxx295lCnxqCAqfw4iR2-->推荐任务</a></nav>
+<section data-page-node-id="sXnka9nKt0rhjBesr9Hmaq" class="notice warn"><div data-page-node-id="fP3hLOjtKV7w4X1ROEaHaN" class="icon"><!--pnid:mtDGPcKawzBu8QoH6zVWh0-->!</div><div data-page-node-id="9rFrQpBBuZU32VcI2YI5i2">
+<b data-page-node-id="YmBaviFrQiaWqa289mzfNl"><!--pnid:SXOo2Vw7efZNan68KPU6Pn-->演示模式 · 可视化预演</b>
+<p data-page-node-id="R3Ofrb4nChNrbN0OsmKyTW"><!--pnid:Z87Z7VBHFa6WOiXAS3LPCa-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="KXrtyNuajFeAMjJakEniSG" class="kpi-row">
+      <div data-page-node-id="lcnM4uasJTZ0dAfNRPNyiA" class="kpi"><div data-page-node-id="MWpndq35C0R9D7RJMHomWj" class="k"><!--pnid:RWQ51kxVhbzw83d7nTp1JT-->输入</div><div data-page-node-id="juPXSDTI2L1HnGgCs9Ckq6" class="v"><!--pnid:BbbRGGLeDH2wC9JraZkvTt-->18 行</div></div>
+      <div data-page-node-id="McRpWzrkhiWUAkeIhnwecm" class="kpi"><div data-page-node-id="gPNPGDraJpinYjpzYhshIC" class="k"><!--pnid:NdOL2tJzImkP3QjDEbVRZG-->✅ 可建单</div><div data-page-node-id="X6kLVGuizyLZmzWNsBEX8y" class="v" style="color:var(--green)"><!--pnid:6xK7mDlstMOXAkjRQhPVTM-->10 行</div></div>
+      <div data-page-node-id="RlPURIHbHtpTWhGvW9wF9i" class="kpi"><div data-page-node-id="Lg6rmDx55SX2IfktMDB4B4" class="k"><!--pnid:eP9LCjSmjgdCT8wcoCZixF-->🟡 需澄清</div><div data-page-node-id="dxKk9sFvaMkM3sB85tutRB" class="v" style="color:var(--orange)"><!--pnid:I41vJbY5SV42HwipKHETb6-->5 行</div></div>
+      <div data-page-node-id="DjLYCtJkiNXHloSMBPXSco" class="kpi"><div data-page-node-id="M1rv5dOf9KSCZYynOWGuvh" class="k"><!--pnid:hUvbog8PEd7xAY01JZ7Ri9-->⚪ 需挂起</div><div data-page-node-id="s5waCq2QxLIetLDvGHTCuw" class="v"><!--pnid:WE4eTD9AeikIACAmtjDg7X-->3 行</div></div>
+    </div>
+
+  <div data-page-node-id="9txqUgdAPTt1wlbMMQ8Ew3" class="dstep">
+    <div data-page-node-id="QdTV3hlBis5vmBzEbxxzmL" class="dstep-h"><div data-page-node-id="0nkFkm7nas5UGKRlgk28Mv" class="dstep-n"><!--pnid:euiRtNfFTyTnlRTtQDfWgm-->1</div><div data-page-node-id="NatUMemWkX3F1Dz4BeyD1I"><h2 data-page-node-id="rN9ZTrLC1WFFE4eNU0vIOI"><!--pnid:eHrAsOxDnwe3jrWP9kSXhq-->Step 1 · 原始数据 · 5 份文件</h2><div data-page-node-id="BgqJqChy3OvCRFiMg4vnob" class="sd"><!--pnid:VBjiWTH089ZBR0q20wHTKR-->客户来单 + 内部参考数据</div></div></div>
+    <div data-page-node-id="EHVIu45VO318z8vJW7CnXy" class="dstep-b"><div data-page-node-id="f4fWSEtdxescjRldWyyjI2" class="source-grid" style="grid-template-columns:repeat(5,1fr)">
+      <div data-page-node-id="vjltzOqLDDAluILYwDquNm" class="src"><div data-page-node-id="WZwavsl4EpF9FSvcaGIAFO" class="fn"><!--pnid:X1Bg3h45BVHGnErCb2aJxp-->客户来单邮件.docx</div><div data-page-node-id="5uJTDSpM146IRHpEvDOFQD" class="fd"><!--pnid:aIfvL8qOTuERrMuxn3JrO4-->邮件 + 6 项客户备注 +图片附件</div></div>
+      <div data-page-node-id="Vu5KLZtEoZOHSJ8B9H99PY" class="src"><div data-page-node-id="2VdahMMOmYMK1hGjjJwtXh" class="fn"><!--pnid:JuU6zVSmUlbYnEfp0ZmQRf-->客户叫料计划.xlsx</div><div data-page-node-id="9ZVJTxz7MKpf4AmNw6erof" class="fd"><!--pnid:b04xavMx8soIKpLNEmOVq9-->18 行原始 · 客户口径</div></div>
+      <div data-page-node-id="Vudh3aAqYZWWOgi7hykN1o" class="src"><div data-page-node-id="C0slewjQOhAkTh9tL8x0FG" class="fn"><!--pnid:2Mwyl5PluwsKgH0G39UREL-->客户料号对照表.xlsx</div><div data-page-node-id="2EP4Asp1LnBTbPjOIwUeOn" class="fd"><!--pnid:6difQeyxo6JxtkyttYKjTa-->现行 8 + 别名 4 + 单位陷阱</div></div>
+      <div data-page-node-id="e8CD0TpNWqYu9WHEV6ekD4" class="src"><div data-page-node-id="qh0P0UDmJiYdHrimcCPoaf" class="fn"><!--pnid:z6svwllfKwOwDauvch5eNQ-->销售价格表.xlsx</div><div data-page-node-id="vK6PrQ6RepIzsNkZ6Mfehw" class="fd"><!--pnid:6qv3SIpUjxERUVSrtqZgoG-->A 级客户价目表 + 调价史</div></div>
+      <div data-page-node-id="RpGJw0QiXqqksEaVPaBi2Y" class="src"><div data-page-node-id="jPhsdiWRLmNvqsZL1mSdWt" class="fn"><!--pnid:ERBjicZlclhett3xxcUr4U-->产品主数据.xlsx</div><div data-page-node-id="hoeTjMJ2Ny2ro7zFu72jpJ" class="fd"><!--pnid:moxbUVj4WDtzJ9reEsGYQF-->8 现役产品 · 交期 + MOQ</div></div>
+    </div></div>
+  </div>
+
+  <div data-page-node-id="AjroywjuX1nfO1vJ1ue3Id" class="dstep">
+    <div data-page-node-id="I93uk1RmPxC0GR0bppTiiE" class="dstep-h"><div data-page-node-id="w4RmiTXdlRm9YRbsofZ1Tr" class="dstep-n"><!--pnid:G7lC8kzemOfvP9ofXaNnGM-->2</div><div data-page-node-id="4fv3AvXvDqw7KdjYtLIMB4"><h2 data-page-node-id="Xr4l49fWUZkh3V47acvG92"><!--pnid:jQ2atQ6KGMpl0dzuihDNeo-->Step 2 · 客服一句话触发</h2><div data-page-node-id="rrBaPgteBt8hiNW5c8MXml" class="sd"><!--pnid:cxzEpvlwQWXOECEyl37KxR-->拖入文件+ 一段话搞定</div></div></div>
+    <div data-page-node-id="qDXJLOGp7nwOd8UM2eqNck" class="dstep-b"><div data-page-node-id="aGQSxbZ6ZzzDHLsgc2CBUd" class="prompt">
+<span data-page-node-id="bpV5CDqHqV5GtONNnbrdCv" class="cmt"><!--pnid:kNDrZQY3W8zRR10oAYs1uN--># 客服输入</span><!--pnid:Sr8W1WM4fdkwlvq8n1ylKC-->
+某主机厂发来 <span data-page-node-id="hNkwFFwxVjPRAHlsGOGT8u" class="v"><!--pnid:WohtkS8J5zPvg15uuwiCbX-->8月滚动叫料计划</span><!--pnid:cSgRZ7JlbTQaUUPkb1iemL--> · 18行 · 客户口径混乱。
+帮我做一次客户单据转订单: 料号翻译 + 单位换算 + 日期归一 +
+单价核对 + 交期评估+ 三色归口。</div></div>
+  </div>
+
+  <div data-page-node-id="MngFssnKtfESj9QwqmivmT" class="dstep">
+    <div data-page-node-id="UhMquhcVxfhkpS6YXx1Lpg" class="dstep-h"><div data-page-node-id="yguuIJCQ9q8XzZgPFis1XZ" class="dstep-n"><!--pnid:RtekfWmlV6dt8GxTYl9rxW-->3</div><div data-page-node-id="E2MoOySSi36sKYZIZrP8TR"><h2 data-page-node-id="rBuz8aWSXQzrBwQ947nOzg"><!--pnid:B5WkxX3IKwqEXbfiw4gX7z-->Step 3 · ✅ 10 行可直接建单</h2><div data-page-node-id="yxNXszE1fTacrzEW6QK08y" class="sd"><!--pnid:9PDLjwzsvNavkNi9ptxudh-->料号 + 单位 + 日期 + 单价 全通过</div></div></div>
+    <div data-page-node-id="sLfFfCkXPK07TRFQtIXoaO" class="dstep-b"><div data-page-node-id="camcyIdD1WJ38xOGaV0I4b" class="tbl"><table data-page-node-id="RS79vVPol9fwoByG3vPwRw">
+      <thead data-page-node-id="JPVxFaZ4CaoF4Ir0vSeVwi"><tr data-page-node-id="sqbXlzFt3ddfQFqjeroxne"><th data-page-node-id="lqHKhRqpVsOfx9qVFlUlVE"><!--pnid:ZYYmFkA2zjrXa5VVRkAgkU-->客户料号</th><th data-page-node-id="eGmH7Aw4xY3HPyv6Fhwa42"><!--pnid:VHn1GbT4disQuLR2fp3i23-->本厂料号</th><th data-page-node-id="4KtGoAbuiconoZ3PwoERlI"><!--pnid:b5xrSHDhucZCUnOYjj1eOh-->品名</th><th data-page-node-id="C5MGvpUIwTXtaEY2cR1uU9"><!--pnid:YGz6Ta2vtBLABusb3BZDZX-->数量</th><th data-page-node-id="JO0LfaOqxVIXlDAJUEjhvi"><!--pnid:wTtR5jRXCz6W5tmJTE8jMx-->单位</th><th data-page-node-id="WCsxDSYIohuNumOKylTcTr"><!--pnid:ojbYUhtpXNzUKHqwXs4WX6-->单价</th><th data-page-node-id="PSpgW2Q1dYqH8SojAWsbDC"><!--pnid:8Yf6JkdQi0h2d13W6U6820-->交期</th><th data-page-node-id="ixpQGrdUrtGgaNXGs5x3ej"><!--pnid:c9b8msBfMmxKGHIBnCazCZ-->备注</th></tr></thead>
+      <tbody data-page-node-id="wArQYKXIdYS45gUfOnwLsu">
+        <tr data-page-node-id="3jZZlwlSgLejkd9rRtDRII"><td data-page-node-id="OJmwUxHxJRtezihcPCX65A"><!--pnid:Z3vNVqPx33OcYdrEjh3uUZ-->HQ-4471023</td><td data-page-node-id="6xF4jZg7O7s7SP8b5WMVnE"><!--pnid:CTHd4Y7CpWH8lNj2jT46ej-->P-IPC-01</td><td data-page-node-id="dZaimFCGQIB4P3hWagRyNx"><!--pnid:Fe6AVsW38abWH00S0aLzH1-->智能控制柜</td><td data-page-node-id="o8mtrDily83VnMaGte3O0L"><!--pnid:GFWz4hpdbrmn8A9IdjSbrP-->40</td><td data-page-node-id="XNVFjv3VdogglRseyJRBdC"><!--pnid:kCdh2AVtJSmOoso4TBV2io-->台</td><td data-page-node-id="IFRtIsr1lEQnIzoZmZvxww"><!--pnid:C9PgvqE0WTtw8BrWoojiUi-->2,280</td><td data-page-node-id="cQlPuP44MWkSAcbNVCSAWS"><!--pnid:evl71Rp8cz7RvtTbXJfeG5-->2026-08-22</td><td data-page-node-id="5rJWDaEjongJ2Yq23QsMkT"><!--pnid:B4JtTCUmoWYuB7z3qLHlta-->第 1 批</td></tr>
+        <tr data-page-node-id="AcGQ1cL66RbaYZtr8rdQG2"><td data-page-node-id="7b2tRRzQMfA3jblRpCGNgP"><!--pnid:xnukgFahRoIc57C69cvENh-->HQ-4471023</td><td data-page-node-id="XErdhvYoISrXNAUP0tXX8m"><!--pnid:wLbN6E0SYnelU0c72ourdS-->P-IPC-01</td><td data-page-node-id="xkc7vvCvUoaOhkUDhuNTHi"><!--pnid:vYvqFH5JxIP8IdNE9bjwR1-->智能控制柜</td><td data-page-node-id="sOnCrc1RxyniZE4x1VpMXC"><!--pnid:yfdiTX9GsQDOhHHRnRDvWa-->40</td><td data-page-node-id="FjPD0RV1408S7NsbRxejf0"><!--pnid:MOZ6vtlmrYAi5bqjG8xmKR-->台</td><td data-page-node-id="oc4Jiwm2I3FJRvgund5Knt"><!--pnid:3xhJVeaszwLSPgAUFfOuGR-->2,280</td><td data-page-node-id="iOFmLR5EAvhVXa82j7KWeu"><!--pnid:i0VEUNa1dyWEOLKW7U0oDD-->2026-08-28</td><td data-page-node-id="J4nK2Zk3BGm5MAg0PcFSov"><!--pnid:csyRpbcNZjpU6LuShLKHBo-->第 2 批 · 拆单</td></tr>
+        <tr data-page-node-id="iukLbweQq0sYarBV1NXZBD"><td data-page-node-id="xKWoXdGxPkyfeN7Q7HIzZX"><!--pnid:XTF3tFniaZV1AeSDX2wom4-->HQ-4471024</td><td data-page-node-id="NwQGmvlpioc2TKpf3MtVls"><!--pnid:n8KBVJ8oQT6IoPeMsoSAKQ-->P-IPC-01W</td><td data-page-node-id="a2iIjfc7Fka5fiL0OkfRQK"><!--pnid:ggw8uWOPY6nws0QhK8NAVB-->智能控制柜宽体</td><td data-page-node-id="gUUbTac4HfKk2MnXSPbMzZ"><!--pnid:uXstmPzOwjEc6kE7gssC6j-->25</td><td data-page-node-id="p75VgxSaEmVM7CKDeZxSvV"><!--pnid:6k7JUWE8SI2vef0Akig6Mo-->台</td><td data-page-node-id="tTk3xwQIPdFuIqOQGUkBPJ"><!--pnid:I2OYE2r5EN5utgRV7WeHGN-->2,650</td><td data-page-node-id="bUmVp0OyuADAJK7S2ZG2MI"><!--pnid:PQlGqeU1dRwt2Y6QMl92GK-->2026-08-26</td><td data-page-node-id="IRLgoaiMrPWgcJq1LtLJoj"><!--pnid:4VFBtY7eWBEtgGGrHK0xZD-->—</td></tr>
+        <tr data-page-node-id="PdEXkxXuIH2j6rArq8bPJ7"><td data-page-node-id="IZ0YDRcrOZbTlOqJsCAzQc"><!--pnid:sO5La5o4QYrw47sHI2ABNG-->HQ-4471037</td><td data-page-node-id="qdaduBtUM1VERYJzhERdEN"><!--pnid:S4bBrkaPy1wpjhtLq31gLd-->P-CAB-02</td><td data-page-node-id="Tzcv0ea48Ky9YmfXurXb7D"><!--pnid:vg1UEN8d7GlGJ0WgRZH3pP-->户外机柜</td><td data-page-node-id="IkckcICeFMBubJpP56MuKT"><!--pnid:D4LgZMozs3n7oaS9O9hJN7-->45</td><td data-page-node-id="hkR3YgDr5kwuAuA8TalUHB"><!--pnid:KYXl87ij3qY6wkzVvEEikI-->台</td><td data-page-node-id="a4yGfpPtNSRdZrwabrb1qZ"><!--pnid:O16C8iFxsoeiSDZslh4Y1y-->1,480</td><td data-page-node-id="xLVZCM5d69cqoGVM21C9I4"><!--pnid:YIoUbw14LRSZBIwGoydpi8-->2026-08-20</td><td data-page-node-id="tY0vcdO4bRcf5RWJnEGT8r"><!--pnid:U6MGLOCHo1WUVH7Q3kIOU5-->客户改过量 · 已合并</td></tr>
+        <tr data-page-node-id="t6867ylvIBCav0JovPZd3F"><td data-page-node-id="j62yQeAjWrrbjXTugMqVnH"><!--pnid:gBSz2QYgwe6RzmmC5BhMaW-->HQ-4471038</td><td data-page-node-id="P3EjUdWmrA0IknrBfOdJ73"><!--pnid:Qok5AcX8PJPnV2iM0QXSlo-->P-CAB-02H</td><td data-page-node-id="koiXC45LSfiCR3ryD0dgCd"><!--pnid:h5BzAFcrEKKmEyjNjhIcFi-->户外机柜加高</td><td data-page-node-id="PIzk8PNxfj2nWqsTl5bL4P"><!--pnid:sGLd5M9cvmKAMdoNiuYXUS-->30</td><td data-page-node-id="0LHD7ZRvZ9s8YthI2KHM3o"><!--pnid:0IHBMSu6NmNgAgDfR7VI4N-->台</td><td data-page-node-id="lC5xL0CPXtSe3QYBWyu0VM"><!--pnid:UMwFM6Ea2xOy8mHdGYBuLT-->1,760</td><td data-page-node-id="1jfJO0IpP9hf4B72ODJ6Iz"><!--pnid:P8BwscPugcuFCjq7ldKclp-->2026-08-24</td><td data-page-node-id="FfGtRZctkKH0ezKDaKx2rk"><!--pnid:LNwBqQ9XGXnXQeMMWkFxIO-->—</td></tr>
+        <tr data-page-node-id="cnEckokJ7iLSs5Rf56lJuX"><td data-page-node-id="WA8FjWVS9hr9AXGKuHctu2"><!--pnid:k0OE5fSSKdhMOL4XM4b4GQ-->HQ-4471055</td><td data-page-node-id="ps3pLtpe604SzmiuNA3Llm"><!--pnid:HrZOYPPMKkLWBU6oKcr4L3-->P-BRK-03</td><td data-page-node-id="S4Cstym1cwGw5OZ74mMsXh"><!--pnid:NeKX3BTQ3mdeOTOlJAu8qj-->精密支架</td><td data-page-node-id="RrEIwfHZE78Ap7F5Eg2p99"><b data-page-node-id="RzUCxCOqFH9lrTquzs4JI0"><!--pnid:ngdeIEqOVk4JNwvwHMlnWp-->1,200</b></td><td data-page-node-id="BvNFEwhvCgJI3fCMvlKNkw"><b data-page-node-id="bP2MgMsE9j9E9ECPllr2p0"><!--pnid:GahCpKh6PCEah0VMfVRPGe-->件</b></td><td data-page-node-id="5P1qWOOyADfo2tfcoNZxvi"><!--pnid:423eQASc8n2isqfXxFpGPC-->46.50</td><td data-page-node-id="2T2pQ2oZejpax7WWi51amW"><!--pnid:WnDQfUDFUww35m2JBdB6Hq-->2026-08-18</td><td data-page-node-id="5ltPAA6DNG1WCHpm3CDpCI"><b data-page-node-id="hxNREyYCqC6mQPO6DoVoqI"><!--pnid:EQRBKSfQ8EU9hovH02fpGU-->客户 300 套 · 换算×4 · 单价 ÷4</b></td></tr>
+        <tr data-page-node-id="K5uIjG16pbWsQwWoogpvtz"><td data-page-node-id="QCwNOe4uA8O83CzZvjZ4Yg"><!--pnid:2QuiHxPF2RN5z4p0eLoVUF-->HQ-4471056</td><td data-page-node-id="t3bJuyyfX8NBq6RgXnCp8J"><!--pnid:TuzLJUaXuvtucHbnmfjUKr-->P-BRK-03L</td><td data-page-node-id="bh1qcwzm0CfEvVRGJ5tXTe"><!--pnid:nanGakjf70yL3P50c6Hwz5-->精密支架长款</td><td data-page-node-id="N1E2QMMHQV4DMa8pTKaXND"><!--pnid:GSHyhevSBCLCSzUAwpZ1d0-->240</td><td data-page-node-id="7TTuMgU0H2UJeUSUhDoQrU"><!--pnid:1NXR8Kwjs3RNnEyCPyjrJS-->件</td><td data-page-node-id="zhDkn5LYqOo8MMhjSKktCg"><!--pnid:znWcAe5NlJKG2OTUrrPZ4B-->235.00</td><td data-page-node-id="FZPMTcPNW4py5pt7GsdpJq"><!--pnid:D11OPnSsyqTjkRkxnqg36G-->2026-08-19</td><td data-page-node-id="Dc3pWO9h4ualpHrJveM441"><!--pnid:4HelFYaMOdvl9YC7qRxhq3-->—</td></tr>
+        <tr data-page-node-id="DeHRiiMtAjwqPJmlGIbC48"><td data-page-node-id="sBRBnXsiGB3VxU1ajqWTyh"><!--pnid:htKaBzADNllSVp7Ww9qYeM-->HQ-4471096</td><td data-page-node-id="fWQygVlcAwlvS9Hp9Lc2Gd"><!--pnid:NZHcMPWqokuNJ6yGdkMFS1-->P-TRY-05</td><td data-page-node-id="q5VSQovvQTwPuuQVtiq18T"><!--pnid:pbIs5WavKVenk0ExjRiCiO-->走线托盘</td><td data-page-node-id="eDzcskbf8bjG423a47nBwd"><!--pnid:AWy4UP7m1dNtxGwrgKy87Y-->120</td><td data-page-node-id="5DKfrRkYYcuaz9cWEdnAgi"><!--pnid:HOdCYI60Cfd6wUefGrwN4p-->件</td><td data-page-node-id="i1lC7voKwQJ5fVlbS2kEsD"><!--pnid:RsIMQ9ezl9SS6BfWmjahgk-->92.00</td><td data-page-node-id="gSKsPR1E10CDyY4Ov87ZX9"><!--pnid:av13mfmhWOGzkzd64IPort-->2026-08-25</td><td data-page-node-id="Lisfy0cuoPURxIzXI4DJxm"><!--pnid:zBVofPsuh9NQLZvmyy6kEC-->—</td></tr>
+        <tr data-page-node-id="12m1VPM8StY36kcojMDzuh"><td data-page-node-id="wpnd6yvtJ6wM4bkZhEPvd1"><!--pnid:X7VNhCyBnqEvaMWFYiHMeD-->HQ-4471023-01→HQ-4471023</td><td data-page-node-id="h7y8VcSXkAy0oyL9vx8oY0"><!--pnid:oK4UQwQnSx3JS28Duc0EmM-->P-IPC-01</td><td data-page-node-id="2tX56lridaPOTl4vwR80Or"><!--pnid:YQLSoE6BuweQC6ty6cxhRj-->智能控制柜</td><td data-page-node-id="9Omqbh3ChRfdhOpzTTNiKc"><!--pnid:XBm23hy9a5ELl75sTIypeE-->15</td><td data-page-node-id="qMRLsWhhzsTjdSXSvp1hLC"><!--pnid:MHXr3a7vjRzPUCh8I1A17q-->台</td><td data-page-node-id="MT1URDEFySfMFuEGsYYSY3"><!--pnid:nC8llkjiwwOKwnmBLX02HD-->2,280</td><td data-page-node-id="6zfpPV0YlD4qSXddej5zg4"><!--pnid:ziWSdg0optGOQFh7pMtnAH-->2026-08-29</td><td data-page-node-id="vPz5PY3fscPWxwOiRoON8K"><b data-page-node-id="FPdUhMEl3vbMerQdfRtv8L"><!--pnid:NaX7m12FKeiqUzQ7JxF2Me-->历史别名归一</b></td></tr>
+        <tr data-page-node-id="qxhCYr9W5Ir3KpFWGm7ro7"><td data-page-node-id="YmLGVXoJY5ZrNRizx0PSrq"><!--pnid:rvCDDTqVezpeKE0zo6zXyi-->HQ-C4471037→HQ-4471037</td><td data-page-node-id="uSA4vao1Nxk0cZbjVbxW2W"><!--pnid:ZrB2HHLnLYnCtI871SDPcb-->P-CAB-02</td><td data-page-node-id="MqqItsrPIvJkkJ5rzWZ6tW"><!--pnid:aEXjzIgNKmxj0zOxn4FgnJ-->户外机柜</td><td data-page-node-id="mSAaHrKG12iTJAn12DCeRN"><!--pnid:RKwlPIg3AGO5A8GwtFsI0t-->20</td><td data-page-node-id="P5xDEQwrrBKdVzQTHguZk8"><!--pnid:ALnFRReqTtDA07BnmkmhIA-->台</td><td data-page-node-id="MWd7opWuN30AMzp7LXibyu"><!--pnid:Iy0LhBZT66mZhB0AWaKPvN-->1,480</td><td data-page-node-id="1vWsGs1nM3rO0DnRdHzT8a"><!--pnid:O1gNewoWhsk1buCA0Mr8xS-->2026-08-27</td><td data-page-node-id="rhtrH77mHHLe3BEGiNVnWU"><b data-page-node-id="4Rm4JJWEGiOBhQhZ8SZSUw"><!--pnid:lq8ZJ3UhiLG4vIBGHM8SEG-->历史别名归一</b></td></tr>
+      </tbody>
+    </table></div>
+    <p data-page-node-id="O1ipQhwEidtin6AHemSEBX"><!--pnid:a0FD8kvVajQh2P7SUaqLsK-->💡 <b data-page-node-id="pLVFODUTq7p1pL4HV8Vchb"><!--pnid:J5O0TjxPC3Wh5MOetWtQWz-->第 6 行关键：</b><!--pnid:PeHF7CnU6KbshyQmNCdLdH-->客户按"套"报 300 套单价 186 元 · <b data-page-node-id="ZHdTEJm8rT5ygybQf3j9F3"><!--pnid:VZhwuZfJsMLpuLsP3Bs0Jf-->WorkBuddy 识别单位陷阱 → 1200 件 × 46.50 元 = 55,800 元</b><!--pnid:lkbZHkAV16Z9IujHRzBeQn-->· 如果按客户口径算是 55,800 元 · 但传统做法容易算成 300 × 186 = 55,800 元（数学巧合但料号错）· 数量错则实际收货是错的。</p></div>
+  </div>
+
+  <div data-page-node-id="FDQ9qTTpcKCH52Sda8OJ7m" class="dstep">
+    <div data-page-node-id="XJIHWIsC1EkjFMQRkucloU" class="dstep-h"><div data-page-node-id="j2THK4STR6LNdAP9kkN8cG" class="dstep-n"><!--pnid:U8uOnVMWxWyJruHYBomV0T-->4</div><div data-page-node-id="vOHzmMf5RyjChRQjpRHJQA"><h2 data-page-node-id="BLxdkqUv5Lgvh0oDBxki5g"><!--pnid:fttIfFw7nIcgpnRnLc60Gn-->Step 4 · 🟡 5 行需客户澄清</h2><div data-page-node-id="JM1iIYg7GkZzBzehGRkRZJ" class="sd"><!--pnid:yHxzJBM1fBtiihSNVIUVIW-->生成一份"客户确认清单"给销售一次问清楚</div></div></div>
+    <div data-page-node-id="bi7cqHqtAgy7mclxAk8PnQ" class="dstep-b"><div data-page-node-id="BTiZeh6hgIvrlGC4spZO4m" class="tbl"><table data-page-node-id="YHBrm1gCxcHrGoygG9EUYx">
+      <thead data-page-node-id="quLfdzPWFH3RF6fqyUUYJp"><tr data-page-node-id="xuBFn5DIPNvbPniaHtyfQq"><th data-page-node-id="NLZjSoXof6ZfFAYf2Sr1nG"><!--pnid:zysqvefiUbWsU0oG6ayBgt-->原始行</th><th data-page-node-id="jNlXfLtWnQHx3ix6Dcc9a1"><!--pnid:iOkLLMJQFxOK6JA9LFrtOX-->问题类型</th><th data-page-node-id="8GtTyouxXZUcNDvbQ1KqVK"><!--pnid:hrSl0HFEr9CFBj4rPGnFsK-->建议处置</th><th data-page-node-id="QIZtCmPtRJkas8bII06Bsm"><!--pnid:9PNY0I8d8qXYgt0g2OVw6E-->责任</th></tr></thead>
+      <tbody data-page-node-id="eFJVmcC9uLMNd7TtKgckpK">
+        <tr data-page-node-id="OnkJHK8bKcAQ0ZD3GManGk"><td data-page-node-id="pOfPvKda4ieNzggASCFvoc"><!--pnid:sCXtJeuNZOuFmMOaufWY6Q-->第 8 行 HQ-4471088 操作面板 50 件</td><td data-page-node-id="adb1s8Mn4DtEWGUEafRHA1"><span data-page-node-id="7oVPfGXLAQj2Oy16BEmXRr" class="tag r"><!--pnid:eUdI7uhVrMakIoQSb9TUWx-->🔴 急件</span></td><td data-page-node-id="HNKvFISOJZX9YbA4YL9nT5"><!--pnid:OB6JkSnlZ65ZjVL3V9fRCR-->要求 8/12· 标准 12 天 · 协调加急or 与客户沟通延期</td><td data-page-node-id="GVT0ghDAEHtPHn8P9BuJO1"><!--pnid:fTiTzXp6BACL1ZozQzq2iO-->客服+ PMC</td></tr>
+        <tr data-page-node-id="O43WUZ3MxDDTt8BPUXF1ek"><td data-page-node-id="WIGGQ3qozmDcZUBll3mqou"><!--pnid:Nb5vAkDxur4Yhy81GXiu7q-->第 12 行 · 客户料号空 · 只写规格</td><td data-page-node-id="Ro2kd8MdDXXbUwyEGc4Vtj"><span data-page-node-id="PpfW0nMxtxHvJVtsduPsHV" class="tag a"><!--pnid:m1WIZ3LpDmnRFk2UynmoST-->🟡 规格反查</span></td><td data-page-node-id="6UwPMF2jcxAKksAuwePKWH"><!--pnid:JqgWstSQSO6Yg9DW28aZtq-->高置信度匹配 P-IPC-01W · 需客户确认</td><td data-page-node-id="hlXeHfcIap9Poq1r7iX2SD"><!--pnid:HHGH3Bh8Yz7uQfOg5zydzQ-->客服</td></tr>
+        <tr data-page-node-id="uMx6MMSQL9Es6yBdId4NFq"><td data-page-node-id="o3csYUClft3bISHep1GgIx"><!--pnid:w0S7eXTEEGnzY7VTv7AqOH-->第 16 行 HQ-4471088 单价 590</td><td data-page-node-id="pH2yjHOaEBinEXB6VZmLRC"><span data-page-node-id="vJiE2jD2qpPokwFjOrp9v2" class="tag a"><!--pnid:IpY98m167EqtIomDPciFKa-->🟡 单价差</span></td><td data-page-node-id="8Za60ibIh6T2nUddI7VhTC"><!--pnid:UK95Y2zPjw7aSWJyrvz3KR-->客户填 590 · 现行价 640 · 按现行价报· 客户确认</td><td data-page-node-id="igE7VCQ0xpA66EbV3VVP19"><!--pnid:0LZUYWlGnxQIRPXVz2VdFl-->客服 + 销售</td></tr>
+        <tr data-page-node-id="ZeYzf8ZVBIJ0L4nAJAVvyv"><td data-page-node-id="npBml4Lo5hT5vQtHggioXJ"><!--pnid:I9br0td9JxzyfjkmqxQoFS-->第 18 行 · 一行两规格</td><td data-page-node-id="Z5E1jyvzUBqKMyYySOpuT7"><span data-page-node-id="ilq3hSwUKXGmZKausKK4GU" class="tag a"><!--pnid:ukASnxHenIUQkPAYspP61w-->🟡 拆行</span></td><td data-page-node-id="BI2XN0vtHSQca4kIL5vgnU"><!--pnid:Fm1nLE2qziRU8fmlzDq8KY-->拆成 2 行 · 未填单价按价格表补</td><td data-page-node-id="t2jlDBGYhCx9ZMI1BGZVvX"><!--pnid:anocrx0DeinbRLFJyuZk3E-->客服</td></tr>
+        <tr data-page-node-id="NYR2BS82nhp7d0FA5MEXcI"><td data-page-node-id="I3kX8BlXM3vWykDuysHjXP"><!--pnid:n7AgsrVCbkqfa9YDxQ3vCE-->柜体加高件（附件截图无图号）</td><td data-page-node-id="VToeZDCW9AlZPQkgHfkRE9"><span data-page-node-id="5zT9TLiUHLEsva2S3thbSx" class="tag a"><!--pnid:3MHLnOQOIPVpNGeTzKxB4x-->🟡 图片识别</span></td><td data-page-node-id="YVQprqntDjP4b5fIxSN06x"><!--pnid:XnZzqgNisV2hX0w2j9MPd7-->识别为P-CAB-02H · 需客户确认</td><td data-page-node-id="lh5AgyrRNncQW5Rwmisc7e"><!--pnid:ObwcWJkeeKkthYxQBRYbQb-->客服 + 技术</td></tr>
+      </tbody>
+    </table></div></div>
+  </div>
+
+  <div data-page-node-id="doSLOLfbRjtBJnic8lmwwS" class="dstep">
+    <div data-page-node-id="oOgjUBs2YanFu86EDjkHmW" class="dstep-h"><div data-page-node-id="nscwgOSJ738aV2mNQS0NbW" class="dstep-n"><!--pnid:0IRHzevTTEHRrMdN56eF4t-->5</div><div data-page-node-id="yiC5E6aM7Ul0FJgo4nwonl"><h2 data-page-node-id="PHLUyrdzpwdku8RrQjEE1I"><!--pnid:A4BN9kSaLLNstK1vlI7mw3-->Step 5 · ⚪ 3 行需挂起（新品建档）</h2><div data-page-node-id="jFxx49PUODCyi6slQi63Mz" class="sd"><!--pnid:4GDFB6lqop8XuNUt0nodlW-->走研发建档 + 报价评审后接单</div></div></div>
+    <div data-page-node-id="TqfuJ61yG0ler3vAbg90Hi" class="dstep-b"><div data-page-node-id="iuqEXcZ3w39QyjhTuh51fP" class="tbl"><table data-page-node-id="jQePexFTIOIBAnLWvVU6ws">
+      <thead data-page-node-id="LpbSeLMlyCOEtFnGhmxdJ9"><tr data-page-node-id="RdP6YC4Yv4IshVB8KILEtO"><th data-page-node-id="Jxn2vK9I53KhE57NXXWqsD"><!--pnid:z7cniyk0x9jBadr2w25SJC-->客户料号</th><th data-page-node-id="JccBgLd7RKL2P6a36w9Gfi"><!--pnid:f11FRIQL6tbELhMmr6QqxK-->客户品名</th><th data-page-node-id="G74TB3ipPJod0A7aMl2RkW"><!--pnid:uZ7XThipwDgUxY7MmmIKnZ-->数量</th><th data-page-node-id="hJbWr9XBBSy2quz7mFFNLt"><!--pnid:AZMm3yp9Woqy5HbcCJ8tMF-->原因</th><th data-page-node-id="A4DyE45BJhoJJoYycKkINz"><!--pnid:GuanuvFQzDSH2FM7Ad6R1h-->处置</th></tr></thead>
+      <tbody data-page-node-id="M8Sp909ESadaBVPz8pdUl3">
+        <tr data-page-node-id="yKvUtbl7IAl4o8YBe7waB0"><td data-page-node-id="7pKMpatnhYWZF2qARRaTpP"><!--pnid:GeW3cbewhVGpVqzieRiHul-->HQ-4471099</td><td data-page-node-id="Fe609OnUVX73cRlmqiXqnI"><!--pnid:cmvn2AJYns9lJlQRjDYzrd-->精密支架 BRK-120L 长款 320mm</td><td data-page-node-id="Inp5kHsoeYQS9pu8rJnszR"><!--pnid:g3YpTrLWjTywyVKUWQTHwE-->240 件</td><td data-page-node-id="ddEfBmmtFbwsHHzYqXIfBM"><!--pnid:wNTEWWgUotHlwGOM7U3X4y-->规格 4/4 命中 P-BRK-03L</td><td data-page-node-id="8ol4d2jpHezNmGlXEVVmhh"><!--pnid:UwRP0KPg6kYIT2jCCIGLrh-->走规格反查确认后建单 · 补录对照表</td></tr>
+        <tr data-page-node-id="CuXgynSrw9glhYztTqjwUg"><td data-page-node-id="dPgObKedZI2iJrJvjiR3cf"><!--pnid:DYjr69DtGBjBknfCVmdeVJ-->HQ-8830412</td><td data-page-node-id="Jl6TDTBkDlhNjFkOl8Qdd5"><!--pnid:ymA98lVpLWFwWWUmqsNsGE-->线束支架 WH-05</td><td data-page-node-id="lqjE9Qrc0JTTgFxAa2UWvD"><!--pnid:RA13vPIOVBwzZnhXsB41TB-->100 件</td><td data-page-node-id="2BKZTeK9aa5FyEo3VR4oYM"><!--pnid:wqtwOA1FRF5r4M2J23ZC0c-->本厂无对应产品 · 新项目</td><td data-page-node-id="XmyxjKUamQMlVZxM85kFrJ"><!--pnid:dTMynNGcWcso1KsBEvS9Eg-->研发建档 + 报价评审后接单</td></tr>
+        <tr data-page-node-id="6dvr13jKGDxu5gag9LBEZN"><td data-page-node-id="tKsPkSrDcN5sd7HGCoKASb"><!--pnid:kw7JJo9mIWPytrIlLcnuo4-->HQ-9012788</td><td data-page-node-id="3jdIMFQjpn4k4QlV46fAGn"><!--pnid:2BIAAc32Sl3rNOw51yP0ST-->密封条 SL-2000</td><td data-page-node-id="TL7TafFU7Cia7Dv3XcFxok"><!--pnid:G3GDKEfScT4BYyr2tNqipO-->500 米</td><td data-page-node-id="37ene5wJbFoRboskJtwvhW"><!--pnid:uZi1lDAIju5bWEKrV2IEzS-->本厂无对应产品</td><td data-page-node-id="S2uZfLFiIkFZjVUmRLuOaa"><!--pnid:ye2zLRX6snxcue2zj32xeM-->研发建档 + 确定生产方式</td></tr>
+      </tbody>
+    </table></div>
+    <div data-page-node-id="Fk0EJptDYw3Vc8IjU2lQeB" class="verdict"><div data-page-node-id="ihe6agmikbt68iB8Y5qWaW" class="t"><!--pnid:X8yqyTUDSUNV8G8JYHmrho-->✅ 结果：18 行客户口径 · 10 建单 + 5 澄清 + 3 挂起</div><div data-page-node-id="nhLITS9dTugeXy8XWLfXyv" class="d"><!--pnid:R9htYwg6ZF5q55OMEvA7dM-->客服拿着这份结果 · <b data-page-node-id="5vH7wC9Mpu4n0zvuto4WRB"><!--pnid:0xGnFUm43APvj3kg4ZR2iL-->直接建 10 张单 · 发一封客户确认邮件（5 项澄清）· 3 项新品流转到研发</b><!--pnid:f2C8Fj1LyQeZRJHJ4ZUDed-->· 5 分钟完成。</div></div></div>
+  </div>
+
+  <div data-page-node-id="wlbnjzCXAuXw9SK8QkSI7j" class="dstep">
+    <div data-page-node-id="G5x9ukOyUvySP45e23z3pR" class="dstep-h"><div data-page-node-id="XXyGzeIt6rW1auBxrMq9Ey" class="dstep-n io"><!--pnid:mjcBE7ZLfAVaah8ONhK0MF-->ROI</div><div data-page-node-id="1bOfTAt13O9HBtngQxXfWj"><h2 data-page-node-id="aATccKGa2JGgMu9QRtSJOT"><!--pnid:P39l5fZEFNQObrqxDCbDkY-->用 Agent 前后，这张订单的账</h2><div data-page-node-id="JKfVH4CVKDt4X6xnALl18D" class="sd"><!--pnid:99C7y7csEeFwWWgkoROljM-->传统耗时来自公开行业调研 · Agent 耗时按本页流程推算 · 均为估算口径，见页底说明</div></div></div>
+    <div data-page-node-id="gtYR5pF2gvw4UdqpblitGI" class="dstep-b">
+      <div data-page-node-id="9jjsVnPMGteEiKpJOuVYgw" class="kpi-row" style="grid-template-columns:repeat(4,1fr); margin-top:0">
+        <div data-page-node-id="eMZ2Jfnl5SlOL3cfq62Pgw" class="kpi"><div data-page-node-id="JzaTtJraZ9FppRqv2Ndd74" class="k"><!--pnid:GtIxC9SbJY3C8QO8nUJ0oi-->人工投入（这一单）</div><div data-page-node-id="p01LfOhebpADMdNXGdrjFa" class="v"><span data-page-node-id="rE22aYpQkNfU7zG95ykZLJ" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:pW4rAAvU1sXpKm4c4VdBcC-->2-3 h</span><!--pnid:oeYlXhirn7LCKbs5lcRyHa--> → <span data-page-node-id="BGN7SlTiNh4tdfCnDcwJa0" style="color:var(--green)"><!--pnid:rtOIScXa8rjY50z6yGyDj4-->≈ 0.5 h</span></div></div>
+        <div data-page-node-id="7AZzpKu2vLORVHTXS5amu1" class="kpi"><div data-page-node-id="1OLUvQDDcTfuzLQCOezpPC" class="k"><!--pnid:1H7GKrA2oxLHZ5xESIOblp-->端到端周期</div><div data-page-node-id="PhiesmAVlNOLZa7NqdopOH" class="v"><span data-page-node-id="5HyFyt3ZpVdYTcjoLpFNR7" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:Ib4IHJ4Bbp0sTTzc72FbiR-->隔天才能建单</span><!--pnid:jKM85gIZVBzWEpHU5mlCgS--> → <span data-page-node-id="bSq5evEXZJjaThImEwW0DM" style="color:var(--green)"><!--pnid:aiWJL7Ue8NKPlFH1Yc09dD-->当天完成</span></div></div>
+        <div data-page-node-id="GFhau631qwskBvZpIJk2iB" class="kpi"><div data-page-node-id="vf6BOxSXyJkHXdZaEXbQVR" class="k"><!--pnid:J4oIytPvnTWVaWJQ3tkU3g-->参与方式</div><div data-page-node-id="ayBVKY9aY5m8bOz522bxqp" class="v" style="font-size:13px; line-height:1.5"><!--pnid:flFvLj1svxarcYLdcLqrPx-->客服+销售+PMC 来回核对 → 客服 1 人主理<br data-page-node-id="rtXZP3gFmdOjOHSxEziKUN"><!--pnid:5fvRGXU9QeGpabyz9m1LJU-->只兜底被标出的 8 项</div></div>
+        <div data-page-node-id="DWAtbURWVMSOnzdXmh8fTE" class="kpi"><div data-page-node-id="2CHrANSvkbOsTIHf0PLgyG" class="k"><!--pnid:RgRgDjD8pK7vGh10tQdaeO-->录入差错率</div><div data-page-node-id="ZWvqtWBGlmhT8K7zctIOJN" class="v"><span data-page-node-id="QAAAmof047rtLDD7u1QA4Q" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:yH17LpV6Aasv144idinyTB-->2-3%（每单约 1 处错）</span><!--pnid:1cFy1MIMf6yHnOHQEX2pXA--> → <span data-page-node-id="TP3XdRDI7ajcfEwySTLqmL" style="color:var(--green)"><!--pnid:CuP20cbyNM7go50uPZijl3-->异常逐行拦截</span></div></div>
+      </div>
+
+      <div data-page-node-id="XGdyU27HTertQenUEhNFCV" class="think" style="margin-top:14px; margin-bottom:0"><span data-page-node-id="tW2t1s4m45xPi49cRvBXMb" class="lbl"><!--pnid:gMVyIVZwOXktMVkB3WdsHB-->数字口径与来源 · 都是估算，建议落地前用自家数据校准</span>
+        <b data-page-node-id="8LH6LVGST7NJreVWZPgA0a"><!--pnid:IY6mq2imzDEdCia1COXuUl-->传统耗时</b><!--pnid:6fwqfkwpSNA3kHgpaJinSf-->：来自公开行业调研 —— 艾瑞咨询案例库收录的物流企业订单录入人工 <b data-page-node-id="SCWmPJt42InTEqCdjOYley"><!--pnid:MYpTYMc0jElhr4AYHQemv9-->5 分钟/单</b><!--pnid:lJuqjHSH1Lm93sQEoyxrOt-->；百度云 RPA 技术白皮书实测 <b data-page-node-id="VOxcfoH2nb6JfCajS2r8UB"><!--pnid:vX8thNc5CfKjk1rMVX12s0-->100 份订单人工录入 4 小时、准确率 92%</b><!--pnid:KUozuzywTJ8sZPfEj7Q6fh-->；制造业订单处理自动化公开案例人工平均每单 <b data-page-node-id="I8LMXLX4lOnu9jzRjHVGfS"><!--pnid:a6gPwcnc8IARIyHyh5clHB-->8 分钟、错误率 3%</b><!--pnid:GvEyYgBcJn2S5gKccPVMaZ-->。按本单 18 行、且需对照 4 份内部表做料号翻译/单位换算/单价核对，人工 2-3 小时属保守口径。
+        <br data-page-node-id="sW2O5wnINa28EbwMvX9HB3"><b data-page-node-id="dtRqU02nvgVxctqv6uQjCh"><!--pnid:CiuleAG0Rxc3fmMKUbjTIa-->Agent 耗时</b><!--pnid:bd3lj2ub4lFdy5NQDy7ZED-->：按本页 Demo 流程推算 —— 客服拖入 5 份文件 + 一句话发起约 2 分钟，Agent 跑完翻译/换算/核对/三色归口约 10-15 分钟（受模型速度与文件量影响），人工只处理被标出的 5 项澄清 + 3 项挂起约 15-20 分钟。
+        <br data-page-node-id="z32kxpiJzgHBXYU3WjHQA3"><b data-page-node-id="PmzEYeoxCOvgXdQVRXNXSc"><!--pnid:aO3II5MHCblUGb999Wl4p7-->测算为演示用途</b><!--pnid:5yZOdym3fOfZQEiIwBSGAP-->，未含系统部署与 Skill 维护成本；落地时建议取 10-20 张自家真实订单跑一遍，用实测值替换本页口径。
+      </div>
+    </div>
+  </div>
+
+  <div data-page-node-id="ijpVD5ZQw7NIqU4Kq1aOfR" class="cta">
+    <div data-page-node-id="favClRzJKM2mgYvSEAgakB"><h3 data-page-node-id="4tmJFOIpReeoT9pW4wOmqv"><!--pnid:sIoqmIOUe9IV5usAhmv9bq-->想了解来龙去脉？</h3><p data-page-node-id="yzRcdUlpU11uU8pvXPz7nR"><!--pnid:LRT2vlANq4yBniUroDDAcC-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+    <div data-page-node-id="oqWWXhJ0YmipxykdpoNAHU" style="display:flex; gap:10px; flex-wrap:wrap">
+      <a data-page-node-id="T3xYnVGdCr7dczobNBnVrl" class="btn ghost" href="场景引入.html"><!--pnid:qMkwh15rqrkUudkAN4jKa0-->返回场景引入</a>
+    </div>
+  </div>
+  
+</div>
+
+<footer data-page-node-id="X9Xx0JhEco3AFdtAXk1kgZ"><!--pnid:SpsNG4xvzBNE2w2L9PXA2D-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="TnigepGzJF7epAnLLNQLof" data-pnid-children="eNslLk1Wopw3QgF8U5MrWG">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="tpRFkyb2Y551llDrHidFTw" data-pnid-children="N8aB28bUT03ujdihiymY3B">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="bcHOUw5Vzmrcj0vArL8nNS" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="ggR1TjCjrqKNZPGJzDCBKG" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="eLRllIecKIIj1CSImIATWS" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="QkQNaYvY44qoaWD4nWUHPQ" data-pnid-children="EcVJluf9CxIUGr9sdCMH4l">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body></html>

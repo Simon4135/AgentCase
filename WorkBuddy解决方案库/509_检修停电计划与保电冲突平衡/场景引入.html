@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="hIvO0FvUtfUPPHsGitVBVb" lang="zh-CN">
+<head data-page-node-id="hAwjqvifyPvq0ogAFu58VM">
+<script data-page-node-id="K3OfO6MgE12qQtKVn0En6Y" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="RlAk8nXlN8h2wCGiLh3iaK" charset="UTF-8">
+<meta data-page-node-id="kqzpf786qpiCnTAnGvyy3n" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="3xMONlb3nC65t874WhdTxU" data-pnid-children="WJJeOfYK700bHq3OxuKayB">检修停电计划与保电冲突平衡</title>
+<link data-page-node-id="FtebXioSF876GF1sVhvtsY" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="hB1X7xXWQ4Jefg5ncEPtB7" data-pnid-children="4lOzTQe2Uh42UNbxM0iyd5" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="kYbDTYYOWq8Mc5QcP0SMyJ">
+
+<div data-page-node-id="boeF6RBgv3lLHVoyxJioLl" class="wrap">
+<section data-page-node-id="NjjElUR4QnbpZlE2OLtcL8" class="page-hero">
+
+
+<h1 data-page-node-id="lbPJfoS41UUYCP9siwy57Z"><!--pnid:eIyyvfNIcX4jxHhW9AmFFe-->检修停电计划与保电冲突平衡</h1>
+<p data-page-node-id="qUhgy1TYgNS9xFtg0m5EX3" class="lead"><!--pnid:Hr6b97hm34nbDKyXU8mBTG-->停电计划 23 项批了 22 项 · 元旦保电时段和主变消缺撞了个满怀，还是调度在日历上肉眼发现的</p>
+</section><nav data-page-node-id="kSqq7ElAMwTsoT9NeYJ0Nt" class="subnav"><a data-page-node-id="b94KMyqe5mI3VEbVSZMYr4" class="on" href="#"><!--pnid:iE2cLOh86gH46lQLXdj8IE-->场景引入</a><a data-page-node-id="sFFPFbjw6vvFzUfeqe6Xod" class href="LiveDemo.html"><!--pnid:DYIaXUtvESttfyUNHqgNju-->Live Demo</a></nav>
+<section data-page-node-id="XY5iDjFdeogHsXi6sjKZHT" class="blk">
+  <h2 data-page-node-id="h0QnKRt2mY1axPk9d6tyFn" class="h"><span data-page-node-id="rRLjka6yK8geC8e9thXRiE" class="num"><!--pnid:IFZlV1C0Co3CLh1Xn3jBXz-->一</span><!--pnid:2ZiNAc3ARPFSR00UfBW0TA-->这件事现在是什么样</h2>
+  <p data-page-node-id="AsM8p1n2dkmXktOXAY3xya" class="subline"><!--pnid:N4G02IlwqCESXPuXMhJ182-->调度与运行方式 · 真实业务触发</p>
+  <div data-page-node-id="cL5oeBn6gdd4w9FcshSlK7" class="card"><p data-page-node-id="Xk6fmYBzVGegTOPXkPL7Qm"><!--pnid:5qj1p9ojCt0vUiJTl6LpGT-->12 月停电计划 23 项已批 22 项。运行方式专工在排 1 月份预令时发现：芯园变 2 号主变消缺（12 月 30 日-1 月 2 日）与元旦保电时段（12 月 28 日-1 月 3 日）正面冲突，且消缺期间 N-1 方式下剩余主变负载率将达 92%。调度中心要求：对全部已批计划做一轮冲突重排，12 月 10 日停电平衡会前交方案。</p></div>
+  <h2 data-page-node-id="t0moskL6AdIJEVjKcDMwHy" class="h" style="margin-top:22px"><span data-page-node-id="m4qC0AoNjn9lcUI2pXFzc6" class="num"><!--pnid:lO12hVCTmtsLFHt9yyHat4-->二</span><!--pnid:Rsg1XmpgSYcj8DcK91SRYO-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="VPVg84rNKcG0Zulnt95S40" class="subline"><!--pnid:xcaTbA7yi8R0RvN36uBpWL-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="8bChhT84qQ9o5gXZqpThFG" class="pains"><div data-page-node-id="4W7fyzWZQrUzEuXWKWGpDM" class="pain"><span data-page-node-id="f3eogdmq3n4Y9X1XCTw7eG" class="i"><!--pnid:gNTrtsv55gcXGBDVMuxDUX-->1</span><div data-page-node-id="StXMVjzRmN0eOLDCUTVgF8" class="t"><!--pnid:4xJNThM1g0l5XsKRXR7FcO-->检修单操作前要「五查」，其中就包括查停电范围与检修运行方式——但月度层面的「计划 vs 保电时段」冲突，靠专工在日历上肉眼扫<span data-page-node-id="eqAx5rWkLxBFXCNXxmHAf1" class="src"><!--pnid:hpVbCcH0pJBS3pPmEjcqb2-->依据 · <a data-page-node-id="BjGWUhnsXBXTzHQ3S1Dm0g" href="https://www.safehoo.com/Item/39717_2.aspx" rel="noopener" target="_blank"><!--pnid:H1cjro1UtvbEQ7SzOFdqfO-->电网运行操作注意事项（行业通行）：操作前对检修单做到「五查」，填写操作票做到「四对照」；按操作票执行的操作必须逐项进行，不允许跳项、漏项、并项、添项操作；操作过程中有另一名有监护权的调度员负责监护，监护人还应审查操作票避免遗漏</a></span></div></div><div data-page-node-id="8mF1kG7EiuKav2uShGOrFb" class="pain"><span data-page-node-id="xJ5TPweG9h4T2lemQafhMV" class="i"><!--pnid:LxTRmqYDTfwQIFD65iSDXU-->2</span><div data-page-node-id="a43fS2Vyx3sWdJrghGpeVz" class="t"><!--pnid:9hCB2Zw7PP8kDyhOJg9Ft9-->预令要提前两小时、重大操作提前二十四小时——计划排定的质量决定了预令能不能从容发到位<span data-page-node-id="RywwEo4RnidcYEeo3Jic6O" class="src"><!--pnid:W1bky15VQeDTrC8Oy9gQCu-->依据 · <a data-page-node-id="X0AorSDebMD7BHOAiR3XYA" href="https://www.jdzj.com/diangong/article/2010-1-15/16702-1.htm" rel="noopener" target="_blank"><!--pnid:ZS85k16ttoDmxf2gkDf0Mf-->某省电力网调度规程：正常操作调度员应最迟比计划操作时间提前两小时将操作预令发到操作单位，现场受预令人应复诵无误并记录；下一个操作项目必须在接到上一项已执行完的汇报并记录汇报人和时间后才能下达；正式操作命令应发指令号、操作任务、项号内容及下令时间，现场复诵无误后方可执行</a></span></div></div><div data-page-node-id="Vekvhr5g47tHAymMJuglsX" class="pain"><span data-page-node-id="YIzyP7g4iOI4ri6sVHC17h" class="i"><!--pnid:JIuf9bcKSPbyw5Kc1gNB4d-->3</span><div data-page-node-id="c5c1P4E6wPIpwLG8tKxNtE" class="t"><!--pnid:nBbktyKXGgZq84KvHYWTIg-->保电时段的要求是刚性的：重要用户与景区、部队等敏感用户名单在营销侧，方式专工拿不到完整名单，冲突检查就漏<span data-page-node-id="myZjoc6Cy7JDeozDnIPVLD" class="src"><!--pnid:VRiue96k9nUz076H0LJqSh-->依据 · <a data-page-node-id="3jzCCKLwKnwnE3NvFhyvVG" href="https://www.huizhou.gov.cn/hznyxmj/gkmlpt/content/5/5022/post_5022550.html" rel="noopener" target="_blank"><!--pnid:wARVC6RcJMBKStEpl74Vz3-->惠州市电力设施外力破坏情况通报（惠州市政府）：半年 4 起典型案例——吊车触碰 110kV 线路导线致变电站失压、2.6 万用户停电（含景区与部队等重要用户），单起电力设备损失 15 万至 50 万元；车辆线行下修车升翻斗、保护区内吊装树木均致跳闸</a></span></div></div><div data-page-node-id="zaCNIzeoGW3gcrViJ4lu14" class="pain"><span data-page-node-id="7aTUcyLsVrPkQQND1ytxs5" class="i"><!--pnid:KuYw37rxb5a1w2ek4aC7u5-->4</span><div data-page-node-id="crwqqGyCPYARy3jqYNxhDp" class="t"><!--pnid:utlfCyE6c8oLj4Zebphlfq-->停电平衡会每周开一次，冲突重排靠经验与妥协——「谁让路」的判断缺一张统一的账<span data-page-node-id="x2ghbHOGjVIkY7sjoIcQil" class="src"><!--pnid:yM0SqxWNNA7UriVAgZTw78-->依据 · <a data-page-node-id="gVZhxVDZmjXPz5TJhrMrLJ" href="https://www.toutiao.com/a1870776176825356" rel="noopener" target="_blank"><!--pnid:3mZ8kpkG4ALyTKclkopmtS-->电厂运行岗位实况拆解：日常监盘、调整负荷、监视参数、抄表、巡检；一个误操作就是跳机停机、经济损失、安全问责，容错率极低</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="7ftTRjnkcGvLMK5XsUItLk" class="blk">
+  <h2 data-page-node-id="Th9qzsZa0tDxHx5ak6RvSy" class="h"><span data-page-node-id="xuARjqVMDW4AsUBDYtmnFM" class="num"><!--pnid:TrYTcjpoeGV62UoYtvPGqr-->三</span><!--pnid:bjfeKITV4Tj2WqRNMr9IKe-->换个做法之后</h2>
+  <p data-page-node-id="Lf0LlPuK29AR5L5Cq70Ql1" class="subline"><!--pnid:i2OeBkOpsgoyUNSojeZvJo-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="L8VA3OWvlRaAcKYGlrc8tL" class="cmp">
+    <div data-page-node-id="SSqmBDamdqFE38O4PiaHTJ" class="old"><h4 data-page-node-id="D7dxXt3eYAs4kxrAKlivRa"><!--pnid:I3DRv1h1Pf5MY0cXgRMKZS-->✕ 现在的做法</h4><ul data-page-node-id="xJU1YbyXSKTsE4Pixksf5Y" class="list"><li data-page-node-id="PkTCvPEYN1aSpJVWSXuw6G"><!--pnid:AlZIAqPpmsln6ANTW68vY6-->检修单操作前要「五查」，其中就包括查停电范围与检修运行方式——但月度层面的「计划 vs 保电时段」冲突，靠专工在日历上肉眼扫</li><li data-page-node-id="ffvGwWMcrsh4HMPoXSwmkO"><!--pnid:u5XzslhbGftrXAf2TULnce-->预令要提前两小时、重大操作提前二十四小时——计划排定的质量决定了预令能不能从容发到位</li><li data-page-node-id="SFtSLvVg3U8XZBUUbqSJNH"><!--pnid:wwd1Pu4jGS3mZHQmvAPytN-->保电时段的要求是刚性的：重要用户与景区、部队等敏感用户名单在营销侧，方式专工拿不到完整名单，冲突检查就漏</li><li data-page-node-id="vLP4h4sFdnmPSJjy7BExq8"><!--pnid:gbjeUPi81nM9IwVrClVNiJ-->停电平衡会每周开一次，冲突重排靠经验与妥协——「谁让路」的判断缺一张统一的账</li></ul></div>
+    <div data-page-node-id="0S5OJYDU7VGSxlxHIbIj1E" class="new"><h4 data-page-node-id="FLFSOP57Cg9VUxtm0q5CXH"><!--pnid:goxedz2TbrtitrcGcvG8KH-->✓ 交给 Agent 之后</h4><ul data-page-node-id="k0g71BEOBaOgnIsio5otWt" class="list"><li data-page-node-id="yphIfngsJ3SzkxdaOx8FHX"><!--pnid:9HvzXjOyNtLovGoctERKg7-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="FN19rCzAlVwjCu6KoRpJcM"><!--pnid:I0okSxa13tdDZuk0vVp9GS-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="u9iO0mP5yXuAvFez4myfzP"><!--pnid:G4yZXtAKtRX8PhrJFCu2Bf-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="ZFdj7k0KesEi1gMqzr8I0K"><!--pnid:PzmqxUpzKRJwtlZiiA0omk-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="Jsgzo2d03OLm0Ze1WvOtXn" class="blk">
+  <h2 data-page-node-id="zugx9h6yB6DG6nqTX0WkVt" class="h"><span data-page-node-id="7UxHKyuBa71fw3BZeB4DXF" class="num"><!--pnid:nLLzf2RLWCTdrWMCjrWhth-->四</span><!--pnid:nkOYYtI1PHG2DexYu6NBBr-->场景闭环</h2>
+  <p data-page-node-id="VXyAI3rKJHb4fN5Bj0kzOB" class="subline"><!--pnid:IiYu319fdR8LYriaTtTMkJ-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="dwuwMALlkaNzEnAh5gnG5x" class="flow"><div data-page-node-id="gQTING6ZUvgM7nFAZWxRcM" class="step"><div data-page-node-id="wv50HySTsmdTP6JRE0AOzD" class="n"><!--pnid:g7epLY3VJfGw6KcXuqQFBP-->第 1 步</div><b data-page-node-id="MlpuyylzULAAT3B9RKFES7"><!--pnid:L96d1o4tNvdFn5s1GduJlB-->时段扫描 · 计划窗口 vs 保电时段逐项对</b><span data-page-node-id="KenrRBDne9hyFWBt3oPck0"><!--pnid:4KfgNQ94MPhawGJwAzPU34-->正面冲突、部分重叠、擦边三类分列</span></div><div data-page-node-id="B8acVXJSOp0exKfawm0SGL" class="step"><div data-page-node-id="u7e3JDjDheWWyEJoNYXTbb" class="n"><!--pnid:AkvMHdCiCTESvhGj01wMC1-->第 2 步</div><b data-page-node-id="cmbx32XCLdkvMymy1URBd0"><!--pnid:CRQsubuBd2tWgl6mkbzx2D-->方式校核 · 冲突项的 N-1 负载率</b><span data-page-node-id="N9Mqn4r3zQjfHqdXELbT88"><!--pnid:IxdqZfhBqf3Jq4PECnad8M-->消缺期间剩余主变负载率——假设口径写明</span></div><div data-page-node-id="IQo6ZBQI7fLsthceo70XFu" class="step"><div data-page-node-id="BXUBKdf1Pu8OqxK0LRdqPz" class="n"><!--pnid:mPRPRDN2ciI1y4D08tvJ6m-->第 3 步</div><b data-page-node-id="C3Q1LpqqtJxCeJTJ1F6C7G"><!--pnid:jFt4hpmb46ZJCoOe4ank5r-->用户映射 · 影响面落到具体用户</b><span data-page-node-id="uKFz8iJMCVdtwI0GP1tlLH"><!--pnid:501KBw4Ryu8yZftSfgyg4I-->冲突时段会停到哪些重要用户——营销清单交叉</span></div><div data-page-node-id="lihzj8MpejxNa8k2KPvQj2" class="step"><div data-page-node-id="jJpvogqn9QBQrSg0wamcm3" class="n"><!--pnid:76PoknJ6tGNDKKEUUzgFEM-->第 4 步</div><b data-page-node-id="bkgv9g3hHVmB7egRxGli5P"><!--pnid:lXpFLyFQzEJ50pUL6a4hdC-->窗口重排 · 每个冲突项的可选时间窗</b><span data-page-node-id="Ak3FEqN41t0qWMOKgcwjtY"><!--pnid:ymUMNMr8DoRYvwieREBOth-->向后顺延、分阶段、改带电作业三种路径并给窗口</span></div><div data-page-node-id="O82NUDDW7kTuWv82izcY5y" class="step"><div data-page-node-id="tnvPEpGY8c2EyAqM6YtEtb" class="n"><!--pnid:X8QXthUXvw2xRye6SGx7JL-->第 5 步</div><b data-page-node-id="HpZwbnPaPduIjtwbIucg2Q"><!--pnid:GuAhPJYQ0eINVB8mDlHTY6-->方案成文 · 冲突清单与重排建议</b><span data-page-node-id="hEMzzbb0bChk0RjfJdXCz5"><!--pnid:9dnU0675hbKTP8mS4O8XV8-->每项带影响面与可选窗口——签批栏留空</span></div></div>
+</section>
+
+<section data-page-node-id="S4KJLys23VX6BO3HxXa9o1" class="blk">
+  <div data-page-node-id="c4bemX4iqOXnLf1JxsZY6a" class="g2">
+    <div data-page-node-id="UX7KyIuvsqFIRjhbGTXgXE" class="card"><h3 data-page-node-id="30y28xPcaCfznlMqcrFMsT"><!--pnid:TIxYRBXorY3IUf6TN2O4uv-->要准备什么</h3><div data-page-node-id="cf5EzqzIHCzgKfd26hIzZS" class="src"><div data-page-node-id="lK4IAGno6oh2d6zLQHaX6W" class="fn"><!--pnid:znF2WM7LqrGlHBFkusDAlv-->12 月停电计划表.xlsx（23 项）</div><div data-page-node-id="uL53xZJsOlKv4Q9es5Vfy6" class="fd"><!--pnid:s6j7TrJRX5lSIBKas7YlWu-->申请单号、设备、工作内容、计划时间窗</div></div><div data-page-node-id="VfPDcSubZqB8ryF9fVVbq1" class="src"><div data-page-node-id="PwmCWc1kYF4dDdZmUIK8MS" class="fn"><!--pnid:jJdX2RUXPWzTeYwSE5taBk-->保电时段表.xlsx（元旦/春节）</div><div data-page-node-id="kwcU3PbWJsA56plw1g4WOy" class="fd"><!--pnid:dpiVEto9fsIweiFiEQFpGj-->保电范围、时段、要求</div></div><div data-page-node-id="0g2JC0H7eRHU3vHWvXOtoF" class="src"><div data-page-node-id="dNi3n5YwVrwW7iFHVzvMVG" class="fn"><!--pnid:6AfJaCH3R72LSta1aqiVHl-->重要用户清单.xlsx</div><div data-page-node-id="9vWPUV7jLo6wFJsdWEJbIo" class="fd"><!--pnid:WlFmiazLpnOu3Nb7xpsCFY-->营销侧维护的双电源与敏感用户名单</div></div></div>
+    <div data-page-node-id="HXpIBuNH4rEn5uWgywD9qB" class="card ev"><h3 data-page-node-id="Sb3ZxLD9iCp19VR8QwiqlR"><!--pnid:5fCUc5n5W6AzkO1mnlkOST-->为什么这个场景值得做</h3>
+      <p data-page-node-id="Z52vmyvmd3axbhVET5R5V0"><!--pnid:RJeeE5UUryauV8KpUOH7OV-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="Ff6etTqWpIzwuJSgbrWQ8l"><!--pnid:yo3lQMxElUl4aiY3hdO1zy-->8.8</b></p>
+      <p data-page-node-id="KRkkDK8WFQ55Ln4pfMCevr"><b data-page-node-id="IdtVngtxPuunU6LallpZgz"><!--pnid:ptwVcpXmu4h9EGuDyEvYB1-->最大差异点 ·</b><!--pnid:OGwQZQ8xUHRbwP89ozbbkq--> 不要求先上停电计划智能系统。停电计划表、保电时段表、重要用户清单三样东西做冲突扫描——负载率与 N-1 校核的口径写明假设，不黑箱。</p>
+      <p data-page-node-id="Qsy3kVBuAXz1SeF3pUQyt5" style="color:var(--ink3); font-size:12.5px"><!--pnid:VLUJaTKGuzkofysaC37avt-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="hsARV6n74dNa3zVSt0WY9k" class="blk">
+  <h2 data-page-node-id="1vqRXffoNSYhnwA0Lcvyg8" class="h"><span data-page-node-id="3XZiVfDl7A2ru4YE7e51cZ" class="num"><!--pnid:jiPN3r7gwxYVGxI95pQSsG-->五</span><!--pnid:PXvkHJDbhkGqnft8n0T0KW-->会产出什么</h2>
+  <p data-page-node-id="XtjLaX6pFcNymwiEYPdElI" class="subline"><!--pnid:YoyUKTgh628FMcSwqwVnsQ-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="EtdwGNIIy6j4Ad3ls16WAL" class="outs"><div data-page-node-id="y958HBDxskVjyhF3yaNftD" class="out"><div data-page-node-id="OWaGKkS1Z2I2I5XdsqAS3d" class="on"><!--pnid:EiLeezgHoQIx9lsZh4QpIn-->正式件本体</div><div data-page-node-id="mtOe4DGlfBW5itqKCQEif3" class="ot"><!--pnid:E6lr0N8NKQfWUM1hQD4fw2-->停电计划冲突重排方案.xlsx</div><div data-page-node-id="NXSgrUEh5n2ngiw9C930xW" class="od"><!--pnid:vSkPClv8jaOAsDYRb6Dtt6-->正式件本体 · 冲突清单+窗口重排 · 含签批栏</div></div><div data-page-node-id="LGm9DDEhmrFZJwJ7yNlPAC" class="out"><div data-page-node-id="mo0MuLxvSmhJalReqfkpEJ" class="on"><!--pnid:vdiYjsbsHHWycgJ95elGau-->可派发清单</div><div data-page-node-id="SfM0Py04tbjvCZnZzNimN1" class="ot"><!--pnid:cSLyl9EawVWExVkRi1w3K5-->保电冲突影响用户清单.xlsx</div><div data-page-node-id="u8XHCBHFSAlM4bTJgpmXKT" class="od"><!--pnid:zIz364L0bv4hA67o9FUe0W-->可派发 · 冲突时段受影响的双电源与敏感用户</div></div></div>
+</section>
+
+<section data-page-node-id="82vb9iRhMeK2CdprNod2Qg" class="blk">
+  <div data-page-node-id="n6B2HWJT26d9dDPm2hJCJA" class="card warn"><h3 data-page-node-id="kKhiWiRljOg1R23tECU8VX"><!--pnid:XmCohEFtwRYZiVXgPvNY1d-->这套东西不承诺什么</h3><p data-page-node-id="6Zj95XdeJ7Y6BWnicYp8w1"><!--pnid:HkJzUWdjV4tLq40UFHoA1M-->不替平衡会拍板——冲突重排只给「冲突项+影响面+可选窗口」三个要素，定序与取舍由调度中心与设备部门会商。不修改已批计划——调整建议走计划变更流程。推荐意见栏留空。</p></div>
+</section>
+
+<div data-page-node-id="yvFVf5KBcYfNutNtnXNXhP" class="cta">
+  <div data-page-node-id="vuA8eaRp2DX3obl7aiqB2P"><h3 data-page-node-id="va4uH5YZae4BFtoljfYKtl"><!--pnid:N5Yxkf6m3PiF025OG48x8D-->想看具体怎么跑？</h3><p data-page-node-id="pBl2ist6WEImVRwPDuAPY3"><!--pnid:9NTjMZop4DzTx0BLAWKUxD-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="zSyaIdAR4AFiZQy6w87mTg" class="btns">
+    <a data-page-node-id="N9VIQtHB9tZnJANdVivs6h" class="btn" href="LiveDemo.html"><!--pnid:hzPNrypMjUasZBpp27wudX-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="FWNjVoiQrnI2elEws1FXGD"><!--pnid:L1vBlOcKx8xlJL5AEa8uI7-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="02diH54uZT6GUaU3zmhv5M" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="dIv4eRCaZ3t7isAh0KJGaN" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="VsuQfoEI49Pwxeo9lgdYME" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="1osDQnwVpD8qxExc7VwxPW" data-pnid-children="f8W2I85rcoYidUfCtMhWwO">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="qT45Hq6md9VEwO4dpqZfxZ" data-pnid-children="0UjHIpVAtxtxVuxj8kl9Hs">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

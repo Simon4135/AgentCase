@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="nwWqJmlyL97xSPnuzXMUki" lang="zh-CN">
+<head data-page-node-id="vZIxBW1vhjcRyBh90jH4PI">
+<script data-page-node-id="fj9ATXkUi1Pt6ZbaTCCnqw" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="7MzHoBz88nZatBTUNaY89G" charset="UTF-8">
+<meta data-page-node-id="Zl2PvnGZvriPq2XIbRyVUd" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="uZXdQ8IevUPDI4vLqm248B" data-pnid-children="NyC8ethdJHzIQmm17xjOxO">纳税日历与逾期预警</title>
+<link data-page-node-id="L0HOjYN5r8ZNCKtp2NhYlo" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Rtq1xC78jOHe1pNoGiMiEL" data-pnid-children="p6ZBQtldg32sI6cYoiTnLE">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="C77IEJlxW6r49dGev6VtH1" data-pnid-children="KxIqpSuUbkGxRWpapdtgel" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="FUymdBj7Cl4WP0t0IzkpPA" data-pnid-children="kAIEMP9HgNw7xv3yVWmzEq" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="LG65mMwIQm6lUhs7vPlp8D">
+
+<div data-page-node-id="tb97U2oDshVcPf1uo0DUa6" class="wrap">
+<section data-page-node-id="LilWd6tUr9XMnAkWt78Ykx" class="page-hero">
+<h1 data-page-node-id="IgDSNi9Y3Gzi3YSSbjk0bI"><!--pnid:sX3zHiFzBGI3FOSUK1TLll-->纳税日历与逾期预警</h1>
+<p data-page-node-id="1Bhph9I8xIOppcfb5dl5eX" class="lead"><!--pnid:FNBrZBcgWH6UjTYcxYU0VF-->每个月都有申报截止日、一错过就是钱 · 逾期一天万分之五，从来没人提前算好「该哪天启动」</p>
+</section><nav data-page-node-id="Vx0znie917NBnRvL0bxX62" class="subnav"><a data-page-node-id="Tf80NZ2Tc3jEsRU203U3Uv" href="场景引入.html"><!--pnid:PPwn1z8bcm8AigL7nSlFic-->场景引入</a><a data-page-node-id="dsSFW8wb0Iv32OWT2JLmH2" href="LiveDemo.html"><!--pnid:pur0Uog6csNLHRpXo7njky-->Live Demo</a><a data-page-node-id="ajSDLWil5wTKQKES4Bx7jC" class="on" href="#"><!--pnid:xoBDpVdOH7hsSx9cehYKH2-->推荐任务</a></nav>
+
+<section data-page-node-id="419agNYbnDh3hOhKSgzMDe" class="blk">
+  <h2 data-page-node-id="6CKVQP5ZhCRciDK8P8rHdb" class="h"><span data-page-node-id="20zdlGd44RNH8esnfoF8Zc" class="num"><!--pnid:H4iIvxasMUryfYTBto2did-->一</span><!--pnid:s1dzNssBle8LOvXYfDrM4k-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="LZHG79XrhRqg7hNNdj0dbZ" class="subline"><!--pnid:oM32Qy0xlFNXxrQmzN1q8V-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="1jxayxjWrHKSlwCGeybM1c" class="card"><p data-page-node-id="wtajuHpDM6obJvfgyn1wAQ"><!--pnid:bZl7leEXUGh5CSt6WWKsOw-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="gvhO2u6kOVbCkUdvdb8OXs" style="margin-top:10px"><!--pnid:DZBZIReZzCALwSOxUwZJ3n-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:6zGaJN86t36FBlf8pZ6kYV--><!--wb-skill-start-->
+<div data-page-node-id="1hmp2ExNL2tEeNrRI5AuTL" class="wb-skill">
+<p data-page-node-id="hrjbDLVCnMxaqUIS5u6bzI" class="wb-skill-lead"><!--pnid:CxqrtJxEACQPWifIsXCxeV-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="wp2OzPKirLPmium0h1a6yd" class="prompt" id="wbSkillPrompt"><!--pnid:xfNtC7BRA5ucH4K3RDFrBh-->【准备】这个场景的规则都在「纳税日历与逾期预警」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/VRQ13eYiAS6QC2oKMF9p4J/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="KjSGGuStxPx7SkjNoeKq4P" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:7pas6tnuSlMiO4AxAOv0Zk-->复制</button></div>
+</div>
+<!--pnid:OEwpXLVjuQwamtyLHunuJ4--><!--wb-skill-end-->
+<section data-page-node-id="kmbFQEceCAIwYYs0uVAS8B" class="blk">
+  <h2 data-page-node-id="ypqns41B5fvAWh8JVobmdl" class="h"><span data-page-node-id="nJIWTLz5AyDSFBtFIgTUBW" class="num"><!--pnid:Gexu7o4nffEHsLdCMNUXRs-->二</span><!--pnid:MrbSfiq3OrL1VZdPNA05jf-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="V1W8AWOHxI8Lyv961V5Glh" class="subline"><!--pnid:goR25zdVuGiEko3ruokbDD-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="uRWRA0AvwKQ69bRgCDS43K" class="tlist">
+    <article data-page-node-id="hEZ0HTe5XIq2tWZKjHNuj8" class="task">
+      <div data-page-node-id="n4hKVSOmD2P49iQ6WDeW6v" class="th"><span data-page-node-id="Ro1oNUxFU0Kjs2Nz6I2SrD" class="no"><!--pnid:HroFjHYWb88aTeJ88LBZ9X-->01</span><h3 data-page-node-id="NGuzfinVbQL9CQ472e38I2" class="ttl"><!--pnid:kuPedsk4ez6JBqjYTKMYAV-->首推默认</h3><span data-page-node-id="vhyUQqW1jvPWb7Iq6L2Fzf" class="star"><!--pnid:5oBlZ1KTTITrWPMoP2R3zh-->与一键体验入口一致</span><button data-page-node-id="OBX6MUO8cfuvWx0wSwWKQe" class="cp" type="button"><!--pnid:Sr2kGZuwSUp74mgwAxxwO0-->复制</button></div>
+      <p data-page-node-id="rNFFiHPF2i2yhQzMYKBd7G" class="tp"><!--pnid:Kkbj0kMLhXxZxJ6LqOGnxz-->年初把全年的申报节点排出来。附件两份材料：公司税种清单与申报周期、去年的历史申报记录。走完整流程：先生成全年各税种的申报节点，再给每个节点定准备周期、从截止日倒推出「该哪天启动」，最后按参考应缴税额试算逾期滞纳金。
+产出两份：「年度纳税日历.xlsx」，一行一个节点，列写税种、申报周期、截止日、准备周期、应启动日、风险等级；「逾期滞纳金试算表.xlsx」，逐节点算晚 7 天、晚 15 天各滚多少。
+本地口径拿不准的（比如残保金的申报期限）标「待确认本地口径」，别硬填一个日子；不要替我提交任何申报；政策变化以官方为准。</p>
+    </article>
+    <article data-page-node-id="53L1Poyv6Q6KI83IwXuzJR" class="task">
+      <div data-page-node-id="aoXulxFBtc4eIy0gprC4OS" class="th"><span data-page-node-id="XWLiL8sY0fN5PD2eiRN1TJ" class="no"><!--pnid:a8OwDs8cYDREMlpBlqIo7S-->02</span><h3 data-page-node-id="NgWWq7WesnQUlCnmTAaY4d" class="ttl"><!--pnid:5Y6xVlTUfHdSxkfBdPUw6Q-->只倒推应启动日</h3><button data-page-node-id="2bDGvYAbbncjNSTtbUmtRj" class="cp" type="button"><!--pnid:qtwIspXe8YVzQfCczQzzMn-->复制</button></div>
+      <p data-page-node-id="Wnv1dIG7gQMVQNg4UqhKws" class="tp"><!--pnid:DAPFPJBQsp2sYwtvlZiikh-->先只做应启动日倒推这一步，日历本身先不排。读公司税种清单与申报周期，给每个节点定一个准备周期天数并说明依据，从截止日往前推出该哪天启动。产出 Excel 一张表，一行一个节点，列写税种、申报周期、截止日、准备周期（写清这个天数怎么定的）、应启动日。同一个截止日挤了两个节点的（比如 4 月 15 日）要标出来。</p>
+    </article>
+    <article data-page-node-id="mMXChNIC24vupIoRVmoVcl" class="task">
+      <div data-page-node-id="qtn2eD9fegduLp91U5Egcy" class="th"><span data-page-node-id="yPhnZsOzUD5NlvtpA3kNuu" class="no"><!--pnid:ZgMVoowtbdRV0kJmuWFmZ0-->03</span><h3 data-page-node-id="P8AEUsSB3A8LvGa4G8fdqr" class="ttl"><!--pnid:eIl0yfMS2CUTOMi72j767U-->换本地口径重排</h3><button data-page-node-id="nqdwJEOBEh6xZP6PwfhE4v" class="cp" type="button"><!--pnid:jR6HRMUm5KLLpg3QwuP9XN-->复制</button></div>
+      <p data-page-node-id="0YCnJ5YpKcSyU5FJlEYDx2" class="tp"><!--pnid:DCH2jMmGO5Q7U0qnLrkIpH-->按「本地口径已确认」重出一版：残保金那格按本地确认的申报期限重新填。材料用公司税种清单与申报周期、历史申报记录。产出 Excel 一栏对照：哪些节点的截止日变了、应启动日跟着往前或往后挪了几天、各自受影响的前置动作是什么（要提前找谁要数据）。本地口径还没确认的项继续标「待确认」，不要拿别处的期限顶上。</p>
+    </article>
+    <article data-page-node-id="bJggJ2hUeUcG2Rfr162ywj" class="task">
+      <div data-page-node-id="nV0tj5l6tCm4cyJwbk5pb8" class="th"><span data-page-node-id="2smgiHr1oE2V4LqzphrHai" class="no"><!--pnid:ndlkuLjTTpU1nrZ33EpAP1-->04</span><h3 data-page-node-id="Fx6uqwq5RVFj8Ov1g3Cqvw" class="ttl"><!--pnid:LlFR1qO9c5csQJ0V4uEopU-->一次排三家公司</h3><button data-page-node-id="2PUh2FEohK1LY9M56AkJo1" class="cp" type="button"><!--pnid:oOtmC6hAnwp5TxWrgVR8f5-->复制</button></div>
+      <p data-page-node-id="kJ0p5xP324kO6XyaGxg23A" class="tp"><!--pnid:ZPisVeUgCZRXOhNN7FiZ1M-->演示数据里再加两家关联公司的税种清单与申报周期，三家一起排日历。产出三份「年度纳税日历.xlsx」；另加一张节点冲突对照表，一行一个日期，列写这天有哪些税种、分别属于哪几家公司、几家要一起报。冲突最密集的那几天单独标出来，说明每家公司各要提前几天启动才排得开。</p>
+    </article>
+    <article data-page-node-id="NCUObEifLBWLjR9ikPm883" class="task">
+      <div data-page-node-id="xh5EDGWcekWa0hlv4obuGi" class="th"><span data-page-node-id="YY0WdY1ArO3AUUwvZlPtiW" class="no"><!--pnid:Pr0fLsCjlIZonFREGXSX0S-->05</span><h3 data-page-node-id="2WJPhZDpumZPOjB1Gq3rXr" class="ttl"><!--pnid:O32DfthASfKhRAJSjlkTx7-->给老板看的一页</h3><button data-page-node-id="b6lMb2l4W3BOgyblkT9yT5" class="cp" type="button"><!--pnid:wmojPNUcCQeTWjimpEjV2k-->复制</button></div>
+      <p data-page-node-id="WLlF2qMRn2FXrOH7NmnO8c" class="tp"><!--pnid:iitUfvHCSastQcq3iU8xSq-->把日历压成给老板看的一页，Markdown 半页以内：全年最该盯的 6 个节点、各自的截止日与启动日、错过一天的代价（按参考应缴税额算出来）。明细不放进这一页，但每个代价要注明出自「逾期滞纳金试算表.xlsx」的哪一行。这一页不写政策解读，也不替我提交任何申报。</p>
+    </article>
+    <article data-page-node-id="161UWGb4MTbFGw0NgaWI8c" class="task">
+      <div data-page-node-id="ebPqXZXtGOw0QtGTT2HS6e" class="th"><span data-page-node-id="vg9FJYkN9qVH4hVuE9kJHB" class="no"><!--pnid:dpWJeTtbZwxGfkDrkObClz-->06</span><h3 data-page-node-id="EHKufS19PVmADdpdxnRGPs" class="ttl"><!--pnid:BxUYGD5E2BdVRIlQd5Gyh1-->让它反驳自己</h3><button data-page-node-id="KQzBN4GJtVts7MvaDqDY4A" class="cp" type="button"><!--pnid:kz0QSwwXDKzaXkb9FxkXOG-->复制</button></div>
+      <p data-page-node-id="tvFRkYzYFatwtHsa4fhmR6" class="tp"><!--pnid:c4E3Oy0HACB4nBauMZJeEB-->你说印花税那个节点不适用按月的截止日、依据是购销合同按次申报——这个判断站得住吗？逐条回查公司税种清单里印花税的登记口径和历史申报记录里的实际申报时间。产出 Markdown 一份《判断复核》：站不住的改回「待确认」；另外把日历里其他「觉得不用排提醒」的节点也过一遍，说明凭什么不排。</p>
+    </article>
+    <article data-page-node-id="lO0FJVapoDXjuqLxYPPUws" class="task">
+      <div data-page-node-id="BaFXmk39IYorIJAX4RMHhg" class="th"><span data-page-node-id="NXGTJYSj0Gr2FxgXMl62re" class="no"><!--pnid:hYxHUmUrIZt8bl9Ay2WBIQ-->07</span><h3 data-page-node-id="Bgn9gGC9p8DtyoFFTHaFPe" class="ttl"><!--pnid:LDubgyBBNw8sOdmMvQ5BRP-->比对去年增值税逾期</h3><button data-page-node-id="u9A1Iv4gIZywZAwfr4OkHF" class="cp" type="button"><!--pnid:TEb8VgeoWclLfXliKv6PH1-->复制</button></div>
+      <p data-page-node-id="Q57bBjmlWm3BUqbCLXscg6" class="tp"><!--pnid:cBcBrKD8Homwc5ZWrliojF-->去年 4 月增值税晚报 6 天、交了 1380 元滞纳金那件事，跟今年的日历比一比。材料用公司税种清单与申报周期、历史申报记录。产出 Excel 一张对照：去年那个节点和今年同一个节点各占一行，列写截止日、应启动日、实际／计划的启动日、准备周期、如果同样晚 6 天的滞纳金。末尾写清今年这个节点是不是还和别的申报挤在一起、要提前几天启动才躲得开。</p>
+    </article>
+    <article data-page-node-id="PrPyRcVfcOWQCDHZdtKjU0" class="task">
+      <div data-page-node-id="fsbXEY7umSfpbUHZuweWoy" class="th"><span data-page-node-id="urjmakdX00Bw2GX13Jdd30" class="no"><!--pnid:GKXZR0VVnzpYgpFQBWBlTl-->08</span><h3 data-page-node-id="NB2JkQLzQETzsGniKCcjTL" class="ttl"><!--pnid:iDJ0EjHnV76SGdBluaFyLr-->按税种清单自查</h3><button data-page-node-id="p6mIqq0sI7vQvATJZE7VgH" class="cp" type="button"><!--pnid:SLEn3yO9WWGHO60StWxlcN-->复制</button></div>
+      <p data-page-node-id="twPTMtVETTLbVZK4RrXcyR" class="tp"><!--pnid:azjYihCYhNBlbuUBdMvlcX-->对照公司税种清单与申报周期自查这份日历。产出 Markdown 一份自查表：有没有哪个税种漏了节点；有没有哪个节点没写应启动日；本地口径有没有漏标待确认；准备周期是拍的还是按历史工作量估的；同一截止日冲突有没有标出来。另核一件事：表里是不是只有节点、启动日和滞纳金试算，没有混进申报提交的动作。</p>
+    </article>
+    <article data-page-node-id="yRjdqCeArTsWaaZtoUbu5x" class="task">
+      <div data-page-node-id="kYrkED3lXCXsP2ZnNIpWxM" class="th"><span data-page-node-id="TWuh8BZzoAOAa2jYUJ9CSJ" class="no"><!--pnid:PDEwfHoAQlgsqDw0L8fOCg-->09</span><h3 data-page-node-id="B7jWK6Nq8XTRLVy2TOvSMA" class="ttl"><!--pnid:2coDMd6EekdtfAH8U8ses2-->折算成滞纳金影响</h3><button data-page-node-id="tCUl560yTi0nFPadkgLhxF" class="cp" type="button"><!--pnid:Wp3FNBQEW0IJpmJcjTvSuk-->复制</button></div>
+      <p data-page-node-id="oE9Y0EO67vdN8y9VL9ckPa" class="tp"><!--pnid:z94I5tYfl5I84iUAfxvVJp-->全年这几个高风险节点，产出 Excel 一张测算表：一行一个节点，列写参考应缴税额、晚 7 天／15 天／30 天的滞纳金、按历史准备周期该提前几天启动才躲得开。滞纳金按每天万分之五，算式写出来；参考应缴税额取自历史申报记录，取不到就写「参考值缺失」并说明影响。这是把代价算给老板看，不是替我决定怎么报。</p>
+    </article>
+    <article data-page-node-id="mEYNWiyTO96GT1Hxoeo556" class="task">
+      <div data-page-node-id="J70eiJWebpL0lDiKItlptQ" class="th"><span data-page-node-id="JlV5k11EsZK57WZTu3RhBW" class="no"><!--pnid:BLDXpnulYIAd61gEOD9So9-->10</span><h3 data-page-node-id="79MthCSTBLNqnrwlIN4EF9" class="ttl"><!--pnid:zmwp1GqFMgW6e7NOa3pmbT-->沉淀成纳税日历模板</h3><button data-page-node-id="ymjCQP30vgqFUx1ag3EvXY" class="cp" type="button"><!--pnid:K3gqxCrgSmnxGl6KnyM8it-->复制</button></div>
+      <p data-page-node-id="8cthOMTO1MymcVC48Tl3uA" class="tp"><!--pnid:rj5ZH3gftrSLYrr5k3cx0S-->把这次的倒推规则和滞纳金试算算法整理成一份「年度纳税日历模板.xlsx」：一行一个税种，列写申报周期、截止日规则、准备周期天数与依据、应启动日算法、风险等级、本地口径是否需要确认。明年把新的税种清单和参考税额填进去就能直接生成日历。只写这次真用过的规则。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="1amlvQ7n0oquLNv8kpuEWx" class="cta">
+  <div data-page-node-id="3C1lbE1eb42zMthaohtOvi"><h3 data-page-node-id="lB4V05YC8bEvXEo1QtFRdO"><!--pnid:DqH0YsALGpPIftzboQeQbc-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="N9HykMe43CoBvCfWZSSexu"><!--pnid:PHO4zYZ1nYBR6Kjye2strQ-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="OXSVFrIm8JWcaDq85NPaBe" class="btns"><a data-page-node-id="2EYspm3OcdLwpuQn2b3ILv" class="btn" href="#" id="ctaContact"><!--pnid:cbxO2ujET2Qiq47Qdnv8VR-->联系我们</a></div>
+</div>
+<footer data-page-node-id="WDGyWtNaAN1DNzqbtrVmFL"><!--pnid:HrWYju9fIDyfqJky6L2cTg-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="iwUVE3jDnsfQyCbwkJ97OM" data-pnid-children="CjfkstIBXGG8SJmuvUSQjN">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="un0IOUzqMgCs7N6XpwBcNq" data-pnid-children="tUpQBhNJr3OgN3wAge6LOK">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="bveeJtO8lt8xsEKOolCY2Y" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="Oy0bigeeQUadpC2Q30IdIt" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="NYTpUXgldTHd7KokxWekyK" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="Vn38NPn7F61ZKiHHxlKG5o" data-pnid-children="Nqr3z47yhe3kPgaUnpxMPV">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="JkVwPfNYen2W2SfkTHjPwT" data-pnid-children="kGpghSpa4jNNX1dwrxPiHf" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

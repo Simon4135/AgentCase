@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="kLOkYU5Gg4kDNiwzAHg1xi" lang="zh-CN">
+<head data-page-node-id="aivMkhbuyePlVNUOmxMNYH">
+<script data-page-node-id="bkD3FAke3vfDr8wFafsWQa" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="HQt9qCSY6qAmXnuIhnxxMD" charset="UTF-8">
+<meta data-page-node-id="CqWy4fd9JudqYD7UaWsUZX" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="mOxAKMAuW4pMyugqYN63mR" data-pnid-children="LGneXOh3MEAH2a1kIJOPDX">直播脚本与话术按品类生成</title>
+<link data-page-node-id="dFbt9WYBGuDmeBZsKBsMjS" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="W7kzaIysCxB66TrFM1tHHr" data-pnid-children="AmfjoM5lcIKOKXaDrHBEpY">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="EbTD7UF1vwVKRCA8RIPFpl" data-pnid-children="hlPgUcGpPDIacMFG3303KH" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="SAwvFsqRAV9br3XnFDcYRE" data-pnid-children="T6iTRpimU4Y1RpvP5uTFcE" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="idaVEXQcHJ2HDSBwPDv8GM">
+
+<div data-page-node-id="ZL5Rux3uYRydjilX9pKciR" class="wrap">
+<section data-page-node-id="Uceqom2XwJqtSKZhVCZYkX" class="page-hero">
+<h1 data-page-node-id="8cqC3jSmscB0WgHEv3z9Uw"><!--pnid:yFM6ISokNPIds5COZ9aCHO-->直播脚本与话术按品类生成</h1>
+<p data-page-node-id="8jLu7xndc1tLxFYdKSTRmS" class="lead"><!--pnid:dt1gOe0XCOmvwNiKoii2xb-->通用 AI 话术生成器三秒出全文 · 拿到直播间念不出嘴——不含你的货、你的主播风格、平台不让说的词</p>
+</section><nav data-page-node-id="Ve865GoUkQt5m1zuppXPpH" class="subnav"><a data-page-node-id="tMrEhEdJJDqVCchLc9Xb6o" href="场景引入.html"><!--pnid:apMwakFVTrCm19LLYxzNO6-->场景引入</a><a data-page-node-id="e99Oe4CvgooiW6qS2wXrpS" href="LiveDemo.html"><!--pnid:ShGH6J6yXPxsASYYW0t39S-->Live Demo</a><a data-page-node-id="X6Y4reuf6TXJLpD3Ao2KBv" class="on" href="#"><!--pnid:3TcBbYMyweV2TzNdmDcFYf-->推荐任务</a></nav>
+
+<section data-page-node-id="RKXjJ0qoio38CO9tsKmfjr" class="blk">
+  <h2 data-page-node-id="LTh8wKxacEejtOAi9xFvFh" class="h"><span data-page-node-id="nh2MAyw0Zh9B0Lkg4Z7tt6" class="num"><!--pnid:jtdXJnVrTWGuXjvgSxfaMs-->一</span><!--pnid:LTQgLt1xK9dnGXdlg2kwTm-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="IJHp4q4jeUY0bP0SOLL6EP" class="subline"><!--pnid:slI4D1KqQK8qFk5cPz1qBV-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="cFHDLDyiM89BvHyfU8HjDP" class="card"><p data-page-node-id="AJEJkTmbVy1dsPPFB61fif"><!--pnid:m82klJlyqXzjcxU8hgShw6-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="3hLWoaFEeil71uDPxWlb5z" style="margin-top:10px"><!--pnid:6j2SpYBleB8URHrddT4z1M-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:6HyNdGmnTmtgRKELzkfQJq--><!--wb-skill-start-->
+<div data-page-node-id="SyCmIKrFkvkgz3F3zrb6yY" class="wb-skill">
+<p data-page-node-id="Qtiv4qoDFHViTSO2hAxjhi" class="wb-skill-lead"><!--pnid:2tlKP8IoRRIz9OFTJMv4gU-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="GmY1XUhzsgHhVAY7TmTOnG" class="prompt" id="wbSkillPrompt"><!--pnid:zo5O62cC9GllxSeeGKg3Ro-->【准备】这个场景的规则都在「直播脚本与话术按品类生成」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/33MaczRD71plgDotH1AzCt/xg7g3jTikVJt/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="nPMc0xHcsNnAAouXpQoeXF" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:4RKyYKygWXBVquPpQnDPOG-->复制</button></div>
+</div>
+<!--pnid:luBlu3Gwr7s7w9JYZkyBZg--><!--wb-skill-end-->
+<section data-page-node-id="OvntahXpMQ8KJvoSQBKvg2" class="blk">
+  <h2 data-page-node-id="fFSwo1Cie4E5ZfkIcA29Nw" class="h"><span data-page-node-id="fWVVZYhsJHD5X460IT7VY6" class="num"><!--pnid:kLeMRNZ46EpyAx6oKP526I-->二</span><!--pnid:S13iRuXr1zEM8uMM1c6j93-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="X3xbtgumgSxsjnNOpCjrV8" class="subline"><!--pnid:5D3F6pJYXaIO8TFJjGIF7j-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="T617ycBr1F3vJj6hzwXtvv" class="tlist">
+    <article data-page-node-id="69Zz904QklMkSZ5PgqEbfd" class="task">
+      <div data-page-node-id="KvL2YwlyeD8T9hoOEvb8I9" class="th"><span data-page-node-id="Qcxeo23keeMCmlIAP5CeXy" class="no"><!--pnid:lKpUlterirWjrYfmgJ050E-->01</span><h3 data-page-node-id="LRqPADHuTbGERXX3gAtfGM" class="ttl"><!--pnid:en7HQwtE6LJR8HoRxoRKX0-->首推默认</h3><button data-page-node-id="SdjDmdEoxecjn0zBte9HHd" class="cp" type="button"><!--pnid:LKkohMlRx3vdqWI8lAYMrx-->复制</button></div>
+      <p data-page-node-id="e16aKYVn07bSFAPr6FaNEc" class="tp"><!--pnid:uzKU4fx3hgYYXl84GaIQiL-->下一场是 11-14 雪绒首发场，材料给全了：01_悦研货盘清单_雪绒首发.xlsx 是这 11 款货的价格与机制，02_主播风格档案_苏梨.xlsx 是苏梨的口头禅、节奏偏好和擅长不擅长的品类，03_历史爆款话术片段库.xlsx 是自家整理的话术片段，04_本机构违禁踩坑记录.xlsx 是三次弹窗的原话与损失，05_近90天开场留存数据.xlsx 是开场段的留存对照。帮我出一份能直接提交商家审核的逐分钟脚本：直播脚本（逐分钟+讲解卡）.docx，按场次时间轴排，含合规标注列，能打印成手卡；互动节点表.xlsx，每 15 分钟一个节点，含玩法与道具；话术来源索引.xlsx，每段话术标清来自哪一场、哪个片段 ID。苏梨逼单段容易带「全网最低」那类口头禅，这次提前换掉。</p>
+    </article>
+    <article data-page-node-id="KVUyOKE6CZ3fsGxkGlCico" class="task">
+      <div data-page-node-id="VXl9oxEyc3lhtjICYhGNTx" class="th"><span data-page-node-id="g9EqB8uHtZ6UjYSRTE67Os" class="no"><!--pnid:hXzL9I7LKwx5RKHPlS0MpJ-->02</span><h3 data-page-node-id="2M0zXyEgr2XHI61qFoPRZa" class="ttl"><!--pnid:teN7ALRZMAxFX0QOyXI76x-->只做开场留人段</h3><button data-page-node-id="BhSHpO5wCB05FKzyJhbs89" class="cp" type="button"><!--pnid:8PfL1AnWuSMC8Q89rQauJC-->复制</button></div>
+      <p data-page-node-id="nHhlGDtHhcG3tJJOzRLNNF" class="tp"><!--pnid:dqm9MepZQ1pKUPISRCyPBC-->只做开场留人这一段，不用出全场脚本：对照 05_近90天开场留存数据 里 top3 的三场，把 19:30 开场的三层福利预告加悬念机制写出来，控制在 15 分钟内，骨架取 03_历史爆款话术片段库 的 HS-21。产出开场段脚本 Word，逐句写并标注来自哪个片段。</p>
+    </article>
+    <article data-page-node-id="7wjkYw921UtIIBvvaIkEsk" class="task">
+      <div data-page-node-id="TN194walfZD5ME5U6ScjfF" class="th"><span data-page-node-id="yWX6dQmqzZw91liCg1HJHc" class="no"><!--pnid:sRjX7AzYEuoKumdP35UlJx-->03</span><h3 data-page-node-id="Gs2LEuvlbLAAxKHBMHgX2a" class="ttl"><!--pnid:sS5H3yGVkHOJ56a7b0j7kM-->换成参数式讲法试试</h3><button data-page-node-id="c1qd70BEJhXDwPZpTImGOz" class="cp" type="button"><!--pnid:4ESID06GU7RoBPkmZrV4eE-->复制</button></div>
+      <p data-page-node-id="kC582FzL35qkObcyhdGwhS" class="tp"><!--pnid:58Fdh6rg1LNW9f1FAg1MmK-->同一批货（01_悦研货盘清单_雪绒首发.xlsx）换成 3C 式参数讲法再写一遍，看苏梨念不念得出口——02_主播风格档案 里 2026-04 数码混场她的参数罗列明显生硬。产出对照版脚本片段，能念与念不出的分开列，各附一句判断依据。</p>
+    </article>
+    <article data-page-node-id="Iwyd5IHtgYI2CUTDx5vybz" class="task">
+      <div data-page-node-id="oY6YZXJmemD6tpLPTqlyFF" class="th"><span data-page-node-id="D6KO4J3uwVKhfLj8n5Q78J" class="no"><!--pnid:uVBDjftgVr0jYfBeqXXnSr-->04</span><h3 data-page-node-id="pwobaOv11dwptTBFPG5Gkx" class="ttl"><!--pnid:8PeEjVuJRhlINlB117D2xo-->一次把 11 款全过</h3><button data-page-node-id="niUxa85czR7XNaor37gTIB" class="cp" type="button"><!--pnid:BlEMofYrCwTN7joi22i1CT-->复制</button></div>
+      <p data-page-node-id="1K7O9TkRd8NPlg2izLp2Qr" class="tp"><!--pnid:1BHvFzRy3iSz7bOSMdb0Wq-->把货盘 11 款一次全过，每款出一张讲解卡，最后给我一张总表：款号、定位、价格、讲法骨架、话术来源、合规标注、建议时长（分钟）。产出讲解卡总表.xlsx，一款一行，合计时长要对得上。</p>
+    </article>
+    <article data-page-node-id="xkh5eMSde8o8V3h1kcj5Z6" class="task">
+      <div data-page-node-id="6qYdcTQpT6ZthJCJQx7p5T" class="th"><span data-page-node-id="z7TtRH2BTczXxpcKZv74Jb" class="no"><!--pnid:1LBqOGHAbuu5RdIkT52LYK-->05</span><h3 data-page-node-id="TZtgfVzxxjSDxJEfpMq2y5" class="ttl"><!--pnid:qW4YdTPjyL0AeJbqPNmlC1-->压成主播手卡</h3><button data-page-node-id="8b85zRYyLKY5Hpv8z3yePG" class="cp" type="button"><!--pnid:gZlvbFVGuuPNG8K1Fmn4d7-->复制</button></div>
+      <p data-page-node-id="zojKmC9ZRozm3RW4vn5IY9" class="tp"><!--pnid:Wk6T1UM30lDvEfucAIatTI-->把刚出的 6 段脚本压成苏梨开播前过一遍的手卡：每段只留三句核心话术、互动切换点，加上逼单段那句禁用的「全网最低」。产出主播手卡.docx，一页双面，口语化，不带表格。</p>
+    </article>
+    <article data-page-node-id="im5rULVRMdfZivyqjLUVUS" class="task">
+      <div data-page-node-id="LxJLT8jbmTIH4E1psccZ4U" class="th"><span data-page-node-id="vK8Nnpq9h63qkB15eGmoZ7" class="no"><!--pnid:aK9GQWBp9eVOkuDK878dme-->06</span><h3 data-page-node-id="gk3JfJa7h7qm2QEXnvqQzl" class="ttl"><!--pnid:A80dpl9M3d2MexAhVCRbJR-->让它反驳自己</h3><button data-page-node-id="ZR1OsOgSEjGSA6fQvSpUWZ" class="cp" type="button"><!--pnid:OrTcRYVSt1I9oiWICUoiSt-->复制</button></div>
+      <p data-page-node-id="64Y7qVuq0FgiXzFUbqUKY5" class="tp"><!--pnid:lOvOxstSxpySaydVGMivUv-->你自己看看这份脚本哪里会翻车：哪段话术念出来有合规问题、哪段跟 02_主播风格档案 对不上、哪段时长排不下 15 分钟。产出风险自评清单.xlsx，逐条说理由与依据，站不住的就当场撤掉。</p>
+    </article>
+    <article data-page-node-id="yabDy7R7Q1VBtnHOqudKJL" class="task">
+      <div data-page-node-id="2EMhxMshBClldpcIC6QdH7" class="th"><span data-page-node-id="Bx4Z6l3o7vIx3DgxOsqV8S" class="no"><!--pnid:AejTPfJYyEXQ2G9DZu5LR9-->07</span><h3 data-page-node-id="jNZR4yXOLXZ13dioWnmLHi" class="ttl"><!--pnid:30pEZko5FabUUMsqmoJ0rl-->专门比对弹窗先例</h3><button data-page-node-id="8kALn4E4AbZUAMxY2VWNwU" class="cp" type="button"><!--pnid:luWkED4K45Jfmj9PaUhUOR-->复制</button></div>
+      <p data-page-node-id="yY5gAZyfxjwzybaWKLoDxI" class="tp"><!--pnid:NBKUG4ozGtkxAH68B7YLL4-->专门翻 04_本机构违禁踩坑记录：2026-10-28 苏梨场「全网最低」那条跟这次脚本哪里可能撞上，逐段标出来。产出先例对照表.xlsx，标清段落、原表述、替换写法与当年的损失金额。</p>
+    </article>
+    <article data-page-node-id="ZyOIluAVq4tmHPRzgy82CB" class="task">
+      <div data-page-node-id="OMuUjdSz7PgafeBE4lbt0y" class="th"><span data-page-node-id="m1ke6Z1dzpdRTrawTuaax6" class="no"><!--pnid:4RLj2WZa94c8iEntIKplrg-->08</span><h3 data-page-node-id="Ys5erbEPiffTqf8U7WM4ky" class="ttl"><!--pnid:RV7PFNuCHND2RvOdduyGhc-->对照踩坑记录做合规自排</h3><button data-page-node-id="OAllZSv1w3HEX58qQ1nDyj" class="cp" type="button"><!--pnid:2aksoM8o9HEZTOF3Fngr4c-->复制</button></div>
+      <p data-page-node-id="MUp89fvgqn6YJX9zeHP8bH" class="tp"><!--pnid:PgCbmnAnhTaTmy4gHZSIXc-->对照 04_本机构违禁踩坑记录与货盘清单的资质列，把整份脚本自查一遍：极限词、功效词、价格承诺三类逐段过，命中项标红但不删。产出合规预排表.xlsx，一段一行带处理建议与风险等级。</p>
+    </article>
+    <article data-page-node-id="V5n2mI9Ox7jIp69DYcIVcv" class="task">
+      <div data-page-node-id="gEHRLTJmZHdDMSYkfGwaRT" class="th"><span data-page-node-id="AUwjMzF2WUNE3rxmKBr3XK" class="no"><!--pnid:aGHeP27rTCd2g61lTu76uR-->09</span><h3 data-page-node-id="9isHIgOhuCxHF6WNvhWm93" class="ttl"><!--pnid:Mx1pAOzfalEObAOkkp4asV-->折算成话术产出</h3><button data-page-node-id="rqAMs1MFXxrAx6bC6j6RkL" class="cp" type="button"><!--pnid:XkwnKDQgS3fS146ltDxDCp-->复制</button></div>
+      <p data-page-node-id="GrE0M8BBw1AHE2nIgc1kRG" class="tp"><!--pnid:NjMce6UXnhvG47PwK2bViU-->把每段话术折成钱：开场留人段、机制讲解段、主推段、逼单段各挂上 03_历史爆款话术片段库里来源场次的结算 GMV，标出哪段最值钱、赶时间该砍哪段。产出话术产出对照表.xlsx，一段一行写明数据来源。</p>
+    </article>
+    <article data-page-node-id="UowQsBljoK4kEh7u97ggae" class="task">
+      <div data-page-node-id="MbWJtnw425mMXVyKBUNzpy" class="th"><span data-page-node-id="zCKNzKmMEDRK4RUIRI2xdg" class="no"><!--pnid:fZJRSX3nJAXxnYvTSvUv8j-->10</span><h3 data-page-node-id="oKHvI0Xkf95BT1rfY4UATF" class="ttl"><!--pnid:vbRJFE2id13OSEwt2ufVJc-->沉淀成品类骨架模板</h3><button data-page-node-id="Nigykse9WGRhJsiJSgUVzl" class="cp" type="button"><!--pnid:YHMO5TdQcKwLFsi8aURAVT-->复制</button></div>
+      <p data-page-node-id="3A2mUaY4Hcortn1bbaQvZt" class="tp"><!--pnid:Mfp3LwQOxxSKGXlnEuTrAA-->把这次脚本（对照 02_主播风格档案 与 05_近90天开场留存数据）里美妆这一套骨架整理成可复用的品类模板：五段式时间轴、每段必讲要素、讲解卡的四块结构、互动节点间隔。产出品类骨架模板.xlsx 加一页使用说明，换品类时直接改。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="NF3GGvB6uvtE7gYZ6bNWMl" class="cta">
+  <div data-page-node-id="os9lEZXOtuaNIYcscba2Av"><h3 data-page-node-id="FTpRVNrVnaWvJspN6fiTfn"><!--pnid:zLXRV1XaFrvmmszl7MMS43-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="u1SZbT3eb0Regi42KXyA2e"><!--pnid:Q3EwaqFHNZVvBNh7OOfRTU-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="6FKRekaTFZlr7kFQQvWRK2" class="btns"><a data-page-node-id="eltRgDaAyynxoHBmnAPQme" class="btn" href="#" id="ctaContact"><!--pnid:pOXUDkEFUAS2emsRKYkrO6-->联系我们</a></div>
+</div>
+<footer data-page-node-id="UtluCIe0QOFfCCEZcNa8yi"><!--pnid:n9y52dErzNoMEkP7Ao9u40-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="4VfES26rNr0NFGVqQnyiaG" data-pnid-children="HcZr34UbGJ08Hs15uCG4WK">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="deg8e4K8F54TUX5Vh5mYcY" data-pnid-children="yctbO8Z1AbUs6Kg35uPgaE">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="ynlYr1g4PLjqnwrDtY2R1e" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="cWrhJclMYcSfxnEaLt68du" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="qHW6CFwOxFHx4qP0ZVFinZ" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="inyix6ybjPsTUu711Hs8M1" data-pnid-children="3vEld1LyfHf4beiQli2vE3">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="cZayLrNVZ64SAfRAWKgB5J" data-pnid-children="qmvKIiOuUMPY7IZrYMXRDI" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

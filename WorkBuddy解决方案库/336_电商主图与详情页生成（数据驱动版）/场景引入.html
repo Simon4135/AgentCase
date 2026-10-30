@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="2IeDBc8VpV6BiIfpkPbmDu" lang="zh-CN">
+<head data-page-node-id="L2GGRZBQT8q2awxD8mgp89">
+<script data-page-node-id="6ZvZrMx04kRDp4Vbwn8sPD" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="MLDBgsyI2OE1zXGjvT9Vqg" charset="UTF-8">
+<meta data-page-node-id="RKpfwYlm5IK6FChhOlVXQ5" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="i6FlXyoGsbxJkVsTKTy60T" data-pnid-children="OhIQAikdNIJtzbusXSLmO8">电商主图与详情页生成（数据驱动版）</title>
+<link data-page-node-id="ckXByVbIpRWrfmkr0j8OhZ" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="oJhy3AIWjCgItDQOKOOkDo" data-pnid-children="vUDOHf7z3lThaGbTTsJWVZ" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="CgigB5YAMpmbSZoWqV4RZo">
+
+<div data-page-node-id="Dfv4qUDiilPc8cg2jM05eY" class="wrap">
+<section data-page-node-id="dG5JJY2BgdZWxSjaMZwqr1" class="page-hero">
+
+
+<h1 data-page-node-id="Mm8Qxelcqa1zVreNPherPx"><!--pnid:BOzaJfYfxSfOMyZYEzH8uB-->电商主图与详情页生成（数据驱动版）</h1>
+<p data-page-node-id="zOBYMWigbDMQaQmebTHu1n" class="lead"><!--pnid:MpLmxicDjyRre8OOLuvETE-->客户第一问「AI 能做电商主图吗」· 答案取决于出图吃不吃得进你店铺的历史数据</p>
+</section><nav data-page-node-id="l6ALVcR8hg8uwfFlilBmW9" class="subnav"><a data-page-node-id="IAyHnCFtzGWwiGI3k9rG2M" class="on" href="#"><!--pnid:EkOYHKUeFWh4JO6m6ZQWVi-->场景引入</a><a data-page-node-id="ml5DQhV3W5X75Ih8Fh4Igt" class href="LiveDemo.html"><!--pnid:MTEmr1RmCzv5w2mydlLAs2-->Live Demo</a></nav>
+<section data-page-node-id="L5eigGRydCM4gxGdbQ6Ebu" class="blk">
+  <h2 data-page-node-id="AHjKZsRf5YGadi8oFFz7eO" class="h"><span data-page-node-id="oue3Bie1MAnmf5pCs1No0i" class="num"><!--pnid:nyFdUSDi4KS4HUEK47BUY5-->一</span><!--pnid:XSrx5urAHCcN3BBu8aR7bS-->这件事现在是什么样</h2>
+  <p data-page-node-id="kt7sWTwi8GKBEBmi3f1RF5" class="subline"><!--pnid:osL38IysparPSqxVNOYe9j-->视觉制作 · 真实业务触发</p>
+  <div data-page-node-id="mZ26b1b5VemmPRsapf3sEn" class="card"><p data-page-node-id="xyE3aQNFHfJh1EGPwk8UJ3"><!--pnid:g0Y2dxjXVrMLHpkfH3kGCK-->campaign 的电商侧要出 4 个店铺的主图与详情页。客户问的第一句永远是「AI 能做电商主图吗」—— 通用工具的回答是能，但出图不认识你的店铺：哪类构图在你的客群点击率高、你的品牌白底图什么规格、你的详情页前 3 屏怎么排，只有你自己的数据知道。这个场景的价值就在那部分数据。</p></div>
+  <h2 data-page-node-id="PCeltTh01NnNfZxWAYa3wk" class="h" style="margin-top:22px"><span data-page-node-id="LY3LUh2Ql5Fgha7lPRXXir" class="num"><!--pnid:iHcg9lPJh1aZkky3B7B2Sr-->二</span><!--pnid:gSWgvVlxHCbtndqQDwMf1F-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="HTBrBQuGlBpXltzhImsOKR" class="subline"><!--pnid:41MjBz9CPUH7u0u0bz4oXf-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="PU82GEjxKm4F6DrmfYhubj" class="pains"><div data-page-node-id="LVyWAvEgRe99BRZiZ3AzA1" class="pain"><span data-page-node-id="drd0mflgZ8i9gLHmff9jP9" class="i"><!--pnid:HZNLmcY80U3Yfd8nuCwDCX-->1</span><div data-page-node-id="Qnb2p5f26fajSPHeBEQIj9" class="t"><!--pnid:WcfhbJlqmfRtCgNWYgOpS8-->通用工具的空白是结构性的：通用生图工具「快、批量、中文好」但「广告级画质不够」；模板化设计工具是「模板+素材填充」逻辑，模板感重容易撞图 —— 通用出图不认识这个店铺，私有数据驱动是差异化所在<span data-page-node-id="G4t0XxH5z7PIE3OFsuGEsB" class="src"><!--pnid:JIPPP0Ty4jNjoGVRYomnht-->依据 · <a data-page-node-id="XfxwB1WOsD8oi7AAqlgzjY" href="https://news.iqinghu.com/5889.html" rel="noopener" target="_blank"><!--pnid:N15gSjptlg8S6C4C8PWk5R-->从业者对厂商工具的实测评价：通用生图工具「快、批量、中文好」但「广告级画质不够」；模板化设计工具是「模板+素材填充」逻辑，原创能力弱、模板感重容易撞图 —— 通用工具的空白正是私有数据驱动生成的位置</a></span></div></div><div data-page-node-id="dsz1X31R5GZBq4N61ZpT9S" class="pain"><span data-page-node-id="S0Z2bJJlbJscIMbjMVCsuK" class="i"><!--pnid:CNTN6aT44nDSPA7sjrkA3X-->2</span><div data-page-node-id="z5hgQV2DpdEN6pYITuDXOc" class="t"><!--pnid:e6eZVQUTRYLU8G5G7FlIhM-->「凌晨两点还在改主图；一天被催 8 次首页什么时候能上；运营临时改活动机制，所有设计重做」—— 电商物料的量与急都是结构性的，大促期间尤甚<span data-page-node-id="4s7jmMvPDKnQ5lvdgnXwbK" class="src"><!--pnid:P4Sk78qUQUk8LOabo7LGId-->依据 · <a data-page-node-id="ciPqrZzsQ1R2K28Inlwf26" href="https://www.meigong8.com/1435.html" rel="noopener" target="_blank"><!--pnid:YElgYP8pyynvmGKwlTXj6j-->电商设计师一手描述：大促期间「凌晨两点还在改主图；一天被催 8 次『首页什么时候能上』；运营临时改活动机制，所有设计重做」；以及那条著名的教训：运营口头说「先改一下」未留记录，上线后把「满 299 减 30」写成「满 199 减 30」，公司赔付差价超 50 万元</a></span></div></div><div data-page-node-id="8vFw8x6LR6E22q3iYU5gpB" class="pain"><span data-page-node-id="iGckB0CoYHmPznrBpcROof" class="i"><!--pnid:3iFTyTcGYqGHqum8vbQ98V-->3</span><div data-page-node-id="XA0jBBcmhOXBmqOKb8ql7M" class="t"><!--pnid:eqj0NovC5dHlYvwlexZRNE-->详情页的生死线在前 3 屏、宽 750px（京东 PC 990px）、单张高 ≤1500px —— 规格是硬的，而多数品牌「没有素材系统只有素材任务，每次活动都从零开始」<span data-page-node-id="1N9hkvfoauzv8bG13iNmEX" class="src"><!--pnid:hPJjQczGrMJztazbxtUa61-->依据 · <a data-page-node-id="Z9kxpi01CAyJ7OpJLo0pDj" href="https://www.secaiyun.com/docs/ecommerce-banner-ad-size-guide-2026-05-28.html" rel="noopener" target="_blank"><!--pnid:w4ovX4T7aZFk7P6YXxvGyJ-->多渠道尺寸规格速查（2026）—— 淘宝主图 800×800（第 5 张白底、文字区域 ≤1/3）；京东 800×800 严格纯白底无文字水印 LOGO、单张 ≤1MB；拼多多 750×750 文字覆盖 &gt;10% 判「牛皮癣」限流；抖音信息流 1080×1440；小红书封面 1080×1440 整篇只能一种比例；详情页宽 750px 前 3 屏定生死</a></span></div></div><div data-page-node-id="1CyEKNsNoT4YPoCvF1b5E4" class="pain"><span data-page-node-id="KRxtn35obI2bUJixfMlniJ" class="i"><!--pnid:uIGvDZzWIYyLngtBlMVWGN-->4</span><div data-page-node-id="J0g76yCNNpghqoIOJ8al34" class="t"><!--pnid:L958jtkjzO81QBoI0dzN3Y-->「大多数电商品牌没有素材系统，只有素材任务」—— 历史高点击主图是最值钱的私有资产，却散在三层存储里从未被用作生成输入<span data-page-node-id="fYrIymKKEUUg8JazmDgyt3" class="src"><!--pnid:haNY0bQrylCaK0LDtO8UAy-->依据 · <a data-page-node-id="YlrfBif7gOM9IeTToLjlhR" href="https://blog.withmuse.ai/zh-tw/ecommerce-campaign-assets-preparation-workflow-80-percent-faster" rel="noopener" target="_blank"><!--pnid:Xq0TaBMpo9ZJydOkb2FNBO-->「最终版、最终版_2、真正最终版_确认」被称为每个电商设计团队都经历过的版本地狱；多数电商品牌没有「素材系统」，只有「素材任务」，每次活动都从零开始设计，没有可复用的模板和品牌标准化设计规格</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="14e1fpkNxrrj0j6xJgvYL3" class="blk">
+  <h2 data-page-node-id="zvvTjocDgWHK3DhEn7qBy5" class="h"><span data-page-node-id="ED5jBKDY56FAdlZUsr4jKo" class="num"><!--pnid:jMje8xA2MRjzxZfDpOVoyW-->三</span><!--pnid:XTM9yDdPewO6vND717SqEc-->换个做法之后</h2>
+  <p data-page-node-id="RZKbwARnuQ6qYDGrwgn3Lq" class="subline"><!--pnid:MTHJjm4jqobvsiqk7xiNgy-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="jN6NPKSp1SDXcMvXdwsmNu" class="cmp">
+    <div data-page-node-id="WFbpEWidBe52jjncEte0Sn" class="old"><h4 data-page-node-id="WHHRXxMrYYciQBt6O167xf"><!--pnid:uKKj65pcxu5RF1zDgZYI36-->✕ 现在的做法</h4><ul data-page-node-id="Cntvg0ISqOeG0bSzss3fS6" class="list"><li data-page-node-id="Z8EdNmKH7xGhfvzF3hKtOP"><!--pnid:bf3sdzCmPimX5nuTv8hGCa-->通用工具的空白是结构性的：通用生图工具「快、批量、中文好」但「广告级画质不够」；模板化设计工具是「模板+素材填充」逻辑，模板感重容易撞图 —— 通用出图不认识这个店铺，私有数据驱动是差异化所在</li><li data-page-node-id="f4Gg8ymSzNOz0lIDMphg2x"><!--pnid:lpTODa0fmpQmzrO85LkO0H-->「凌晨两点还在改主图；一天被催 8 次首页什么时候能上；运营临时改活动机制，所有设计重做」—— 电商物料的量与急都是结构性的，大促期间尤甚</li><li data-page-node-id="eCVsKLiktlZWXX2hyRDWlz"><!--pnid:z6mgLxiezdpKbeoiFbLyKG-->详情页的生死线在前 3 屏、宽 750px（京东 PC 990px）、单张高 ≤1500px —— 规格是硬的，而多数品牌「没有素材系统只有素材任务，每次活动都从零开始」</li><li data-page-node-id="NO62mBAvv2nW5jW6RtLCGk"><!--pnid:tuJNFLAngCgP45CjZNUx5W-->「大多数电商品牌没有素材系统，只有素材任务」—— 历史高点击主图是最值钱的私有资产，却散在三层存储里从未被用作生成输入</li></ul></div>
+    <div data-page-node-id="Dx25VNVQOrr0glgiEhXYOx" class="new"><h4 data-page-node-id="cgR5qPIqV1tPGmBCs41F03"><!--pnid:LpeVox9pjx4W0lqWLqilSJ-->✓ 交给 Agent 之后</h4><ul data-page-node-id="bPzfK2XcnBw0RM22AzMexb" class="list"><li data-page-node-id="EMlNWLQdD6ghDUl8LDOwJR"><!--pnid:pSnonbRKNQ1eOLSGjjfn0m-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="eMKCt359aSW5mWyXfjpcdU"><!--pnid:MhwxPAJRVUWutItsE61jxk-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="g0ixj1M6zJHT0ZqLRvo3WN"><!--pnid:TbnA3zfdvgnR1n9MCyIszt-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="lPyfXRAvO10c6jPdTUS1tl"><!--pnid:TV4xEbXvoxVr2VqPthtPTF-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="SiMUMth3lCtYb7kFtD7pfq" class="blk">
+  <h2 data-page-node-id="Z9XUNZ6iwS6d0nQY5HJXtb" class="h"><span data-page-node-id="iim7UBVtlWX7BTST97QeAl" class="num"><!--pnid:T3vL89umoMiW7r23x6adyn-->四</span><!--pnid:wQOFqfE3crSzaFErcr6TKY-->场景闭环</h2>
+  <p data-page-node-id="2NEUVTKzKvibaTJRpO9qaa" class="subline"><!--pnid:kOVIO0DWd8NKRNfBlvZ9vf-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="JZuArtFbGPZi3ae012ZYzh" class="flow"><div data-page-node-id="4VlPpESzdUMpTV2mGZGtBG" class="step"><div data-page-node-id="hsn7208DNdCXCDraSgmJvg" class="n"><!--pnid:xlWC9CvQvgMO7R0m0L1GKt-->第 1 步</div><b data-page-node-id="3KQge2uNeQ7K5GhIHGLs6b"><!--pnid:cxbbwExr9hg6LAONqFg5E3-->触发 · 4 店铺主图与详情页制作启动</b><span data-page-node-id="TxsJwcGzh4WavGI3VgL2Hu"><!--pnid:XFrL2YS56za1fiYOSba1mR-->campaign 电商侧 —— 主图决定点击，详情页前 3 屏决定转化</span></div><div data-page-node-id="cwRpHtkfnOYn9uBn8jK9lE" class="step"><div data-page-node-id="dJ0BdSPOUMQkpiOJLL2ysr" class="n"><!--pnid:yhbTXHR6dGIQTAu9dsiOnq-->第 2 步</div><b data-page-node-id="j3oWKPOHfMb3ks4qtD6flA"><!--pnid:sycHtfmEUxYJR1kyvKDlOm-->胜出模式提取 · 历史高点击主图的结构化分析</b><span data-page-node-id="YfXQ32n21iQNm0nsFDoyll"><!--pnid:uH2S38qbvQjnZVqtcMUEGo-->对近 6 个月高 CTR 主图做构图/配色/光线/产品角度的模式归纳：「产品居左 45° 俯拍 + 暖底 + 大字利益点贴右」这类可执行模式，而非「调性高级」这类空话</span></div><div data-page-node-id="9cgdJdNqIxR9KjuiBVGHcU" class="step"><div data-page-node-id="ophBIW91ek2wy6pGNsf2NX" class="n"><!--pnid:0QZBfs0dWSjYOW6Au0Nmx5-->第 3 步</div><b data-page-node-id="n0CUDoV3uSxQiHLJfyO3uW"><!--pnid:PjY0aLD2yDB5zk7vWjVxpe-->数据驱动生成 · 按胜出模式出主图候选</b><span data-page-node-id="82wTLrNvLc21iecFdcOnjE"><!--pnid:UaNkQfj9WdE7pZboeir1cJ-->以历史模式为参考图约束生成，品牌约束从模板带上 —— 出图同时给出「本模式历史 CTR 区间」的参考标注</span></div><div data-page-node-id="LwIODpZVGWA5cZuDtXwQ9F" class="step"><div data-page-node-id="4OxbdteLo1SqCXYWj44ael" class="n"><!--pnid:MkhY2Fyrq1pX6bsCJ6bQdp-->第 4 步</div><b data-page-node-id="BKtpBASnR0nqlgsMuTMXft"><!--pnid:JhZlBhW5jHoanA5JoQZdsK-->平台规则适配 · 四店铺逐项过规则</b><span data-page-node-id="gyeRjCaNlAmq5uQlsozOSG"><!--pnid:NrqU6dIZmiG6pIoMWhIj5s-->京东出纯白底无文字版（产品占比 60–90%）、拼多多文字面积自检 ≤10%、淘宝第 5 张白底、抖音白底图规范 —— 逐项在台账上打勾</span></div><div data-page-node-id="yLbJdjvMfgqSeirVYZBOOP" class="step"><div data-page-node-id="o5AyafqcasibIDTHXH1cu3" class="n"><!--pnid:qRUOV77KjsVEYp85s5hPp6-->第 5 步</div><b data-page-node-id="3mj1wG9aXP6nJBuHm4FjQq"><!--pnid:XKf5IyaqXX7fL3XqDNffui-->详情页叙事 · 卖点矩阵转 12 屏</b><span data-page-node-id="UMYRAMkocnmz8fsJHPoSmq"><!--pnid:WL4IEirIlexKLq6eizt78D-->读 SKU 表与卖点矩阵，按「痛点引入 → 场景展示 → 成分背书 → 利益点 → 规格参数 → FAQ」排 12 屏，每屏宣称词过 上刊前合规全量扫描 词库</span></div><div data-page-node-id="tnRON1Xij8PoLQzWZeFo1o" class="step"><div data-page-node-id="vXP0rVXVbqhSfym3XXO8LL" class="n"><!--pnid:aVIbMPTSNxwbFY7HHSSlhW-->第 6 步</div><b data-page-node-id="tNooTjE3YeI9Es0R7PT3Hm"><!--pnid:O9OffIHV8svi3MyWb2ZsYB-->留证 · 生成制作台账与参考依据记录</b><span data-page-node-id="aaybhaThg0Z9xBx1j4U4Gf"><!--pnid:lurBZ5SIHhG4dxbflODxsx-->每张主图标注参考的历史模式与 CTR 区间；12 屏详情页逐屏标注宣称词检查状态 —— 交付时客户问「为什么这么排」，答的是数据不是感觉</span></div></div>
+</section>
+
+<section data-page-node-id="WCnHfkl9FBcRF8KA4rceFI" class="blk">
+  <div data-page-node-id="mB5oeFb4EuOKwTuCDUQaRg" class="g2">
+    <div data-page-node-id="HPJlBqdPocJbO97S3Grm02" class="card"><h3 data-page-node-id="FjSIdiWL4uSlHgFpwGN4Yj"><!--pnid:udnU38uECaq9GdR5KNozCc-->要准备什么</h3><div data-page-node-id="ZtUodqAd3VNqa9L4dZrQ4M" class="src"><div data-page-node-id="ZjAslTXFQGTUa05EYdCiSZ" class="fn"><!--pnid:6HPJykCJ2714XzhYXw0zCX-->店铺历史高点击主图包（近 6 个月，含投放表现标注）</div><div data-page-node-id="ZT3eAdET33FLHtwWfsg0Tg" class="fd"><!--pnid:pSvfdNSKjftNogW4jCYK7U-->从素材三层存储里翻出来，按 CTR 排序</div></div><div data-page-node-id="tf3cqmO1HtNK6VVtCxEqM6" class="src"><div data-page-node-id="wyXSDeocqPooFzimY2GSKy" class="fn"><!--pnid:iQPGnFRpJzEnD7qBmcMAz6-->品牌提示词工程库 品牌提示词模板库（主图型 / 详情页型）</div><div data-page-node-id="cBLlcssQfI77lG3AlY1i9o" class="fd"><!--pnid:Ews4Zqd53NN5Qqthstrk2e-->品牌约束与安全负面清单已固化</div></div><div data-page-node-id="Ys6hP2le1OVUxkE4DNVwn6" class="src"><div data-page-node-id="b0Psac7hVqIPEAm9AMpmji" class="fn"><!--pnid:FJLvBtxiAHyJ1Q0az1J0GX-->本次 SKU 表与卖点矩阵</div><div data-page-node-id="rxRKCOQSde4XLHRO7EHJ3P" class="fd"><!--pnid:HYrLr8aeEpZKcapLrrgUze-->产品规格、利益点、目标客群 —— 详情页叙事的原料</div></div><div data-page-node-id="nr9AaYmZx9Scexu0mf3Pfq" class="src"><div data-page-node-id="FcM00CqeAHTxyklZ8jE8hn" class="fn"><!--pnid:ukGRHmMxey0j3R9jUbeviH-->各店铺规格速查（淘/京/拼/抖）</div><div data-page-node-id="pgxzFdJ4XKDoFOsQjLTIDN" class="fd"><!--pnid:DxdxZ0xvDpkgVMEBB5ZpCu-->京东纯白底无文字、拼多多文字面积、抖音白底图规则</div></div></div>
+    <div data-page-node-id="6cWNL4yuONiy3MzWOIhLgI" class="card ev"><h3 data-page-node-id="a0jVIwoj8jbozJNjWVZnzp"><!--pnid:uWv3ZmkpRwwBu5VBktZ7ze-->为什么这个场景值得做</h3>
+      <p data-page-node-id="XLz9PCBhcuDTDp6P911XEJ"><!--pnid:EpiaqPfMQprIcp9LQjzKtR-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="zC8a2A0Q4Xi2lbynvBjgnP"><!--pnid:9CRZDxI0yWRmOFyZhIXxEc-->10.0</b></p>
+      <p data-page-node-id="5RyWq9clMQ76BrQa2dZTLV"><b data-page-node-id="7vfTvQgDhxrU25WaqvRhqS"><!--pnid:6f3kJCTuVjWcHT4Xy0JPp2-->最大差异点 ·</b><!--pnid:MGtRRMTOObv6PSQ0dwhERX--> 生成输入是三样私有资产：本店铺历史高点击主图（构图/配色/光线的胜出模式）、客户 VI 约束（品牌提示词工程库 模板）、本次 SKU 表与卖点矩阵。出的不是「一张漂亮的图」，是「按这个店铺被验证过的胜出模式生成的图」—— 通用工具够不着的就是这一层。</p>
+      <p data-page-node-id="hrnVsdJW4WcWtcmU6EuWeS" style="color:var(--ink3); font-size:12.5px"><!--pnid:nAUohHIbtqRf11lvxH7yHk-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="nzedoGnl7ck7tx4AEMt398" class="blk">
+  <h2 data-page-node-id="0gOkVStUuI6IX5g2dLCZbh" class="h"><span data-page-node-id="p1sSDlVXhWqiiTlAdPsGTE" class="num"><!--pnid:K2ITGvLImWBeBSc8xWRhLq-->五</span><!--pnid:NLjJ6kTBlD21vOmVEGtOGK-->会产出什么</h2>
+  <p data-page-node-id="5hhQqLhv55zq0Cgu3ZgIE2" class="subline"><!--pnid:KktUXqExSzBxfSUcN1nNUD-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="B3qXAx6d8ZttnSekHzvDTm" class="outs"><div data-page-node-id="KTBMA0DQVXgXRRVTJyQqdM" class="out"><div data-page-node-id="ylIpfBIWqpnDMECcEmFdqO" class="on"><!--pnid:Nhf0MfibGMexP2x4n6eWsR-->正式件本体</div><div data-page-node-id="3ux8apfuuBBpIEagZAiMqR" class="ot"><!--pnid:rxrkfHTK2TdBoTmr1kATyi-->主图制作台账.xlsx</div><div data-page-node-id="vee4p4r5Bp6LkpGqsQif7V" class="od"><!--pnid:j1mBTPaoC7tDmRvJeqKbLI-->正式件 · 3 sheet（胜出模式提取 / 候选与参考依据 / 四店铺规则核对）· 含审定签批栏</div></div><div data-page-node-id="mGK75O7Sg0TDzmo0E033iF" class="out"><div data-page-node-id="UZLuIYQidQyot3T0xuz5zS" class="on"><!--pnid:EgXi386U6pPjk1tAVjshhj-->正式件本体</div><div data-page-node-id="HFxjxGq8KtiZsNlNmYO39U" class="ot"><!--pnid:GMCSF8OuXRgQGV9ZonCSim-->详情页 12 屏制作记录.xlsx</div><div data-page-node-id="cwA8MPgTD2ZDV3tDaWJQo4" class="od"><!--pnid:PdLIdPVvxujeMFoynMbs8T-->正式件 · 逐屏的叙事模块、宣称词检查状态、规格自检 —— 含审定签批栏</div></div><div data-page-node-id="wDFLBoMu35QRhfV17prZlP" class="out"><div data-page-node-id="1ZFIGHQHdppOzVyb85SRWS" class="on"><!--pnid:gxwZTVwjq2Ds3gU1XqQIs8-->可派发清单</div><div data-page-node-id="ukBaZIT7m8wJbXdcujPZFH" class="ot"><!--pnid:EXFBBjnVw6vyCVOG2Ksdad-->胜出模式库.xlsx</div><div data-page-node-id="k3l1FqnVm3fiDwj4MkNHWW" class="od"><!--pnid:4EazTooQa5tB38Y1RAItGf-->可派发 · 本店铺历史胜出模式的结构化沉淀，下次 campaign 的起跑资产</div></div></div>
+</section>
+
+<section data-page-node-id="jMteCgjuH5mGVkWJnpQy34" class="blk">
+  <div data-page-node-id="ladDeAvjRqInlCmuG4PSGz" class="card warn"><h3 data-page-node-id="BecGVjtZaMl9ocYm107BFj"><!--pnid:BssncLWmyQohjAAJvlBrYU-->这套东西不承诺什么</h3><p data-page-node-id="xipTqP1X7F1ReyQaGRBRcA"><!--pnid:U3gbSR89lGJn874xRcHhwQ-->不冒充投放效果 —— 生成的预估 CTR 仅作构图参考依据标注，不写成承诺。不跳过平台规则 —— 白底、文字面积、牛皮癣判定逐项过 上刊前合规全量扫描 的关卡。主图上的文字仍走程序化叠字，不给模型画。历史素材只用作风格参考，不直接搬运元素。</p></div>
+</section>
+
+<div data-page-node-id="q4snDz2QLfqc0Y4IaJAv9v" class="cta">
+  <div data-page-node-id="auy830TMSMg2PtyVgx4rps"><h3 data-page-node-id="9iAVlkeyl8Z7Pws5E6H6Ir"><!--pnid:EvSYK9IrdOym0VE0WicZXO-->想看具体怎么跑？</h3><p data-page-node-id="NagisxDd0hLTa4I0WAMKfB"><!--pnid:QLLXlldshO24MsR0WtOC0o-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="QiOiudkXmmfFbShec3BbBH" class="btns">
+    <a data-page-node-id="XGAfdqledlUTKxhxc13gJF" class="btn" href="LiveDemo.html"><!--pnid:a2i7Z75Iqn8gY1BVwFxZx8-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="b9AiaF5cjo34MqC6WQsELn"><!--pnid:2UVg3EzcSbazJR5bTFuEwI-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 对外交付物一律人工审批</footer>
+</div>
+
+<button data-page-node-id="5S48K0T9ZTfKfA1ivTXhKE" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="tIhBokizSkJ0dIJKlJqjZS" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="MkQaR0BGJnIAljuKthEwxn" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="b7nWz9O8WTLvHs7zoeNQ0u" data-pnid-children="m2aCMnruhkrBlGtjUhrmdm">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="2MntFy4TiXNyjxwTBlOEFE" data-pnid-children="Mvm0FYN3rrcgH8ZNlsrjYk">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html data-page-node-id="3y8FA0ofQ5nVY3ADZkqAaT" lang="zh-CN">
+<head data-page-node-id="2fuuCBVWSPq5OvDUGf4Xp8">
+<script data-page-node-id="rq8bBv9U2Xpoa4RfiCDS6Y" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="TPF2ZZ4WIwkidLxjfCSKna" charset="UTF-8">
+<meta data-page-node-id="fRh9cyZx4lOkjY1OSCGlCD" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="yWGAiYMZ2cM1wv46l8epLZ" data-pnid-children="trnmR0bdlpmba6PDvs7RtU">执行偏差追踪与补产</title>
+<link data-page-node-id="LtkhDli2Uvzpsfa4J2fIBR" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="CIFIFREr4ZW4craP6h1ZtH" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+<style data-page-node-id="d6xwzM9liVVExvJIFL3BRm" data-pnid-children="5qTeFkiNDW20ggnktNx8go">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="C2ZmwU14QU62zr3BijkucQ" data-pnid-children="ORWmmbGjj1dZNYwiEbG6c5" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="1kiijQMjpOeY5FJW0Z4z6b" data-pnid-children="QE79HEnwr2Zg1ygx8GY86f" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="lsOG7GGlTYskKC2LA2Zv45">
+
+<div data-page-node-id="Wk0IbZ6tXDzwddo46p0ZOA" class="wrap">
+<section data-page-node-id="eHSnv3rh4tGC5QLNjkqPbd" class="page-hero">
+<h1 data-page-node-id="DHdwhyvkbrhZxfKpwxp2kI"><!--pnid:Emhq0cao3HLeZXXE3QOHHx-->执行偏差追踪与补产</h1>
+<p data-page-node-id="GRrM8dJqXVwmtjvGzY5C3y" class="lead"><b data-page-node-id="Vr2W5OSjGz5SyWUfbKxKtL"><!--pnid:iRro3pcQD4USMPXjXNN03T-->唯一按天循环的场景</b><!--pnid:Qg0tYiIDSgiWWGfGfRYaYE--> · 每天早会前把在制工单过一遍：识别欠数/滞后/返工 → 归到缺料/品质/设备/人手四类根因 → 判断要不要补产。<b data-page-node-id="ku5ZIKeaLJulUI1RB8A2P2"><!--pnid:ile006PD7EvTXACOa7rY16-->但这个场景最诚实的地方是：它明确告诉你哪两类根因数据里压根查不到</b><!--pnid:K9sMmPPjZazM6OSwYnx9By-->，只给候选项让 PMC 勾选，而不是编一个归因出来。</p>
+</section><nav data-page-node-id="nUUzdhiHrO7unQd7Sauisk" class="subnav"><a data-page-node-id="cvCZ0yUOUg88dITPyMhVGL" href="场景引入.html"><!--pnid:BixG4qZhqKSu0NmWgkGEyR-->场景引入</a><a data-page-node-id="J0V0cquq1hl7wMEeSMxBVm" href="LiveDemo.html"><!--pnid:bflZUZDGob75jLRfW1DYNg-->Live Demo</a><a data-page-node-id="hkYHYg8j710JTk7zlk4ngr" class="on" href="#"><!--pnid:rQUzXgZWXqA5arJ41YY5x7-->推荐任务</a></nav>
+
+<section data-page-node-id="qd9mcrEKiAvwbkrCNBx7ro" class="blk">
+  <h2 data-page-node-id="hOwq2cmvNXXSe7BGnbxYla" class="h"><span data-page-node-id="pxDvPVCv249HkXjG8AgIF8" class="num"><!--pnid:Cl2zP6VBI0EyszmJibVhyr-->一</span><!--pnid:xkS2qVSxd2KDI25al39B1Q-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="zMTa4No4y44cHhAElvHvSz" class="subline"><!--pnid:RWPmpaTpCYVkluJNJCoXFd-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="pKe9rvvSE4WeJaefb1wxm1" class="card"><p data-page-node-id="KADIwWP6K3NiLQRiriC1Qj"><!--pnid:LKN9QK1C0qhUy43zJAL2nc-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="9ijCA8J0BNb3TvtTNEDvKu" style="margin-top:10px"><!--pnid:Kcr6iw50CkwSL5Ynvci0Hr-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:P4vLrjPoP9Bz4qtV8Itcs2--><!--wb-skill-start-->
+<div data-page-node-id="Ph7aBJbH9gvIVQ7G3FWun4" class="wb-skill">
+<p data-page-node-id="b5b2JpHXVP6KdfPpwy0D9X" class="wb-skill-lead"><!--pnid:qKlUzM0NzRezFuSI5LKhVX-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="kdX0cdfbpRDe2gYCuCEz1a" class="prompt" id="wbSkillPrompt"><!--pnid:ZD7CpE9An6C2WvQPgi788B-->【准备】这个场景的规则都在「执行偏差追踪与补产」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/FcxerdKIhzsCNTYXecmrm0/0/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="2Fs9jUgsOzfuBk9qc57jCp" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:XKUOWj3E3FHQpymQ4BGNVT-->复制</button></div>
+</div>
+<!--pnid:CXLf91A3u6Jrx5oEfGRKMt--><!--wb-skill-end-->
+<section data-page-node-id="5TopCvwJ86l1mxkfFqWnxY" class="blk">
+  <h2 data-page-node-id="NmAkiA01rLtQAMe0jle2fr" class="h"><span data-page-node-id="z8xIYxMjaQaw2D1IADq5Ll" class="num"><!--pnid:1aPwmXGStaOj7Cd9MdxGG1-->二</span><!--pnid:Ttjxmz3U0wgx9b0VYcesLF-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="1L761BxHxkZDs8MhedBSrE" class="subline"><!--pnid:kXSkATPno4tTmZxLNV4skP-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="SL4sPgsZOtZBko65Hbjjn2" class="tlist">
+    <article data-page-node-id="SzWEpLmWuXovuZUAndzxxq" class="task">
+      <div data-page-node-id="PhcTMipvW7oD1v9vRA8vji" class="th"><span data-page-node-id="1OBfJ1QpadBEh76L5GsLtf" class="no"><!--pnid:GHE5cKT8ZlV6ljxLNIJUsc-->01</span><h3 data-page-node-id="VZojZ7BiNZyv0zOn4wvVDf" class="ttl"><!--pnid:dLvGtGjCwLtceNTMYgDruO-->首推默认</h3><span data-page-node-id="ygsPie5PY6K7FiLBYegVPi" class="star"><!--pnid:cMt0Eeajq8iJeujhG6AoUh-->与一键体验入口一致</span><button data-page-node-id="GvkewlV0diQqNUZyYnzrKk" class="cp" type="button"><!--pnid:qRKIzGsaxUAptEv1rsKiz2-->复制</button></div>
+      <p data-page-node-id="yIE1t9jzLWDrLQeYOpuG6L" class="tp"><!--pnid:2mOqQjvPx4MfVeCieLcjl5-->在制工单我导出来了（工单进度日报），另外把齐套与缺料状态、设备科的维修工单、品保的返工与报废单、人事的出勤表也一起放进来了。帮我看下今天早会要讲哪几张单——欠数的、滞后的、返工没补回来的。每张给个根因方向，缺料、品质、设备、人手这四类。哪一类数据不全就直接说不全，别硬凑一个原因给我，我拿着错的结论去问车间会很尴尬；要补产的标出来，别改工单，我自己排。产出两份：一份执行偏差清单 Excel（偏差清单、根因待确认、补产建议三张表）、一份执行偏差日报 PDF（一页可打印签字，只放今日必须处置的几张，含数据时点异常提示、待确认事项与签收栏）。</p>
+    </article>
+    <article data-page-node-id="c6cZ5Z5lSVMDb8vyukuAJX" class="task">
+      <div data-page-node-id="pRZrYSSc9HE7L98NJG2p0b" class="th"><span data-page-node-id="YVHzctdZmcCcQNVhlqs2iY" class="no"><!--pnid:J7oABk5jl99wi4nfgIsIs2-->02</span><h3 data-page-node-id="jhXy8nUDMGPRXImupgb6rv" class="ttl"><!--pnid:QUoxGiJB25sbDxLE3AZOtq-->只做数据时点校验</h3><button data-page-node-id="AVzIFiysI5MUMxtu80MfUv" class="cp" type="button"><!--pnid:c7jomrFB8XHDa0rmBmOLAQ-->复制</button></div>
+      <p data-page-node-id="C1zo8KbCllgEQLCbmNWEww" class="tp"><!--pnid:rwBNLgXVTCRgCAD6BTXaFR-->读工单进度日报的报工时点列——先别分析偏差，只做数据时点校验：算每张工单最后报工距现在多少小时，按 24 小时以内可信、24 到 48 小时可疑、超过 48 小时不可信三档标出来，不可信的那几张今天第一动作就是补齐报工。产出用 Excel：工单号、最后报工时间、距今小时数、可信度、第一动作。</p>
+    </article>
+    <article data-page-node-id="5niaIcCcvbi3WdaTcOaZVp" class="task">
+      <div data-page-node-id="tIhqxCK8VV6MSYxsfIgycg" class="th"><span data-page-node-id="B3HVLV1RcKtVAPIenV1Lx6" class="no"><!--pnid:keM0VNhelGwdDloa1zpYed-->03</span><h3 data-page-node-id="hAGJdzDIwPb2D5fnAKD87N" class="ttl"><!--pnid:jIAVMwyq7GH9XOgscgJXAV-->换成按完成率排序再看</h3><button data-page-node-id="t5wxNlm9oLlzoX8oIvqNan" class="cp" type="button"><!--pnid:gWIuYOQvw5Zuw01s387ca9-->复制</button></div>
+      <p data-page-node-id="9KabvITDiFrkDIwjmaDRul" class="tp"><!--pnid:0U0TffynC476pWxfGSieLg-->读工单进度日报与品质返工与报废单：这次改成按完成率从高到低排一遍，看看哪些高完成率工单会被「返工未补回」这一类捞出来、跟按紧急度排的结果差多少。产出用 Excel：工单、完成率、偏差类型、是否会被漏掉、紧急度排序位次。</p>
+    </article>
+    <article data-page-node-id="7qlSsriXUswenGPF6sR4yS" class="task">
+      <div data-page-node-id="XlevfdqXb7ibesuGa3WZjG" class="th"><span data-page-node-id="EHXcVduTdvUzuY42NsDPI0" class="no"><!--pnid:YKPA96uNKcnINWmN3xalOA-->04</span><h3 data-page-node-id="JWEtQSLZCMFJ6lSnWPjFoa" class="ttl"><!--pnid:jCp0OGHaea6QumT1Kwwl3O-->一次处理两天的日报</h3><button data-page-node-id="X2hQGrYctXtUhooJUOzfAU" class="cp" type="button"><!--pnid:faQ6jnVug1K1nXkokvkOdh-->复制</button></div>
+      <p data-page-node-id="ukRAcGwmuoJTNt0bEcTZq3" class="tp"><!--pnid:ROGlYW3R0WkJQubTZ7jLw7-->演示数据里再加上前一天的工单进度日报，两天一起过，最后给我一张两天横向对照表：偏差新增了哪几张、补齐报工后哪几张恢复了、哪几张连续两天都在。产出用 Excel。</p>
+    </article>
+    <article data-page-node-id="OWlyR8Q4yTi5hE46xoJosb" class="task">
+      <div data-page-node-id="EUo3RsHpCXGW4ypyS6rPTz" class="th"><span data-page-node-id="PRhiPoXoBpT0EmjOuqTTrC" class="no"><!--pnid:ffcSchLB7JQvIGRpDPfPcC-->05</span><h3 data-page-node-id="zz2nT2NiwccDEBOgsHYuSC" class="ttl"><!--pnid:d7loIeAdmQZrRRRrexlAGI-->给生产经理的早会版</h3><button data-page-node-id="ShmtT5vIScNiahL7LlZJXC" class="cp" type="button"><!--pnid:e0VYbStXGT5uD2gxWlzWvm-->复制</button></div>
+      <p data-page-node-id="1S5DMt2IAwy5P5GivMQKwX" class="tp"><!--pnid:QZWfsXmY91jTBY88qxabUG-->把日报改成生产经理早会上念的版本：只留今日必须处置的那几张，每张一句偏差事实、一句建议动作、一个责任人，全量清单不带上会。产出一页纸。</p>
+    </article>
+    <article data-page-node-id="ePGeMu6f73pqfAmRvM7m1F" class="task">
+      <div data-page-node-id="oZavKhF4NmYZvNDDuOditO" class="th"><span data-page-node-id="JKCVVeHqxdbwCrlgAVal7V" class="no"><!--pnid:xTrpGtyfXG8JOS8QZkmGeL-->06</span><h3 data-page-node-id="PObN5RXHELpIdnkOu8n1oP" class="ttl"><!--pnid:LEg228XWOtzzKOc0FGADTT-->让它反驳自己</h3><button data-page-node-id="Rzift62Qvvg7h1kzRrdUIG" class="cp" type="button"><!--pnid:0Yl62YYu26oIne07g9OeUh-->复制</button></div>
+      <p data-page-node-id="YApoc6jxtT1MGtZHvi5ktN" class="tp"><!--pnid:PDSl4uDI1y4TjGT0noi4Wm-->你归到「设备」类根因的那几张，能解释全部滞后吗？把解释不了的部分挑出来，说明还差哪份数据。产出用 Excel：工单、设备停机时长折算、剩余滞后天数、待补数据。</p>
+    </article>
+    <article data-page-node-id="Zm4VTnNm8osY3ksAKgXENW" class="task">
+      <div data-page-node-id="6gc6Uh1d0AnbLysOucJD8W" class="th"><span data-page-node-id="w41cjWPPWFfopZNnfHDkKB" class="no"><!--pnid:B8u4DW4oYsKt6e0cQw8wrT-->07</span><h3 data-page-node-id="lEQhHam7T53cAUADwRzDaw" class="ttl"><!--pnid:W2oUihOIME9IPvFdi4Jjd7-->专门比返工未补回的老问题</h3><button data-page-node-id="g5jijW8QopAFy4LWVssJVa" class="cp" type="button"><!--pnid:rCjeUk97CogKL46GeIjq8g-->复制</button></div>
+      <p data-page-node-id="eykSk00oHgY4XIvJiHhp0k" class="tp"><!--pnid:5WlXUKxwd2n4fkkRO3su04-->读品质返工与报废单，专门查这批返工单：同一缺陷（比如焊缝气孔）最近有没有短期内反复出现、以前同类返工有没有把产量补回过。把有重复迹象的挑出来并提示同步品保。产出用 Excel：缺陷、出现次数与日期、返工单号、是否已补回、提示。</p>
+    </article>
+    <article data-page-node-id="0WEBy1NgNDJMxaDNGFbAsg" class="task">
+      <div data-page-node-id="I4tUq4wOIfHGdRdWdpguDs" class="th"><span data-page-node-id="xNmKkNoJrUpsUgKzSMzWVZ" class="no"><!--pnid:FCxCkjAIkjEo3B185bIiuO-->08</span><h3 data-page-node-id="rZK0OaDz5hcQ5wBe6XKSwa" class="ttl"><!--pnid:RXX5DzjHpGRVl8fT0BJvs6-->对照可得性口径自查</h3><button data-page-node-id="CaHhcWbXkbYEqe4NXCQCce" class="cp" type="button"><!--pnid:WIAsitm8sRUwgXVHCu2bhr-->复制</button></div>
+      <p data-page-node-id="2cXK6nXkq9iibts1dIVkVo" class="tp"><!--pnid:RzMJQlcjmGmNpgG2OFURv2-->对照四类根因的数据可得性，把这份归因逐条自查：哪几类标了「可定量」但数据其实不全、哪几类该给算式却只给了描述、有没有给数据不足的项编了百分比。产出用 Excel：根因类、当前输出形态、是否符合口径、修正建议。</p>
+    </article>
+    <article data-page-node-id="B1xvSnoQLTEOEg08OOrG1U" class="task">
+      <div data-page-node-id="bpSUM6jUHkPOP9DlZujs2m" class="th"><span data-page-node-id="viIGkOtt4Pf6GqFXRYZPIm" class="no"><!--pnid:WbynZEEMCW4lrfeBVSmRK3-->09</span><h3 data-page-node-id="ZeDN0u4XJ9zKjQMyCtX7GP" class="ttl"><!--pnid:nMscNggESNeLlb3Y6RFgJ1-->折算成交货日影响</h3><button data-page-node-id="UmiyDB1JtiF3Dn7yTVlQbi" class="cp" type="button"><!--pnid:uRaxnbuMec9ohJntgC8tCB-->复制</button></div>
+      <p data-page-node-id="l0XUmaWlDUMH6jgbtOqSyx" class="tp"><!--pnid:yD07fbpgNieEvw86u8eEiv-->读工单进度日报与齐套与缺料状态，把偏差折算成时间：每张欠数与滞后的工单预计哪天完工、跟承诺交货日差几天、补产要几天、哪几张会真的拖到客户。产出用 Excel，每张一行带算式。</p>
+    </article>
+    <article data-page-node-id="MJV7o9T7lOXxy1u0iK1E5K" class="task">
+      <div data-page-node-id="j7b96yIMxrN98xgVjvSZ9O" class="th"><span data-page-node-id="8USXmMOyyHvLjKVE2Qovtq" class="no"><!--pnid:RYg0qPfVhafTsfRyQFEUjL-->10</span><h3 data-page-node-id="Hwr5RdsfKjDlt9HNue4ecG" class="ttl"><!--pnid:Ovlo6cZGYfnHteFtHl2Ftn-->沉淀成日报模板</h3><button data-page-node-id="g83eWwFmqC1ob9pCKFIxiE" class="cp" type="button"><!--pnid:B89vH8JYt8YSt20S0vWgqA-->复制</button></div>
+      <p data-page-node-id="jpfbK9AE3TpBFGagMCbhM3" class="tp"><!--pnid:SZXtocdXaLnqRpS8qVKZRP-->把数据时点校验阈值、三类偏差判定算法、四类根因取数口径与早会日报的 A4 版式整理成一份可复用的日报模板。产出用 Excel 模板。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="fmJ3Ts9tsOsetnDrtsZJXN" class="cta">
+  <div data-page-node-id="rj38U9QQQxf3TXObuyyfeP"><h3 data-page-node-id="96NHNbMPj9aIz3EmEM08pe"><!--pnid:DHZxxXjHTXijKADUu7otdk-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="P3HPzwDRRalecQMS4kfzAo"><!--pnid:4u4wZr27pRtmpStCFZNGHq-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="Umb2gipNYobDOVOWWA1RqP" class="btns"><a data-page-node-id="wJPTvkqxUvHZN8dQLQyWOv" class="btn" href="#" id="ctaContact"><!--pnid:YiWtd4TMCeEhpltWRAK4Gc-->联系我们</a></div>
+</div>
+<footer data-page-node-id="lnPOVWTCtD4152iaLMh7jV"><!--pnid:rg2WSwDkRHkGsYB1JecCJK-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="dCpFZRqCZ6ZvWCEASGWXpG" data-pnid-children="zbIcWSrgv74OXPGtnMZQbt">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="xyfohHOxgOGKHTTaRIXgw0" data-pnid-children="5ocWxgUP732Rmz2haHcNjs">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="I0CsCMDwl1ICox6MimhEbf" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="oYyO2VMKfQNubpH0inI4va" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="Mm1db2gR7BKMYMiPPQ7nGh" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="PaMuxvpBoGD0NGJHSDuCYS" data-pnid-children="LgqFxR5x1ycHtf38a3Gu0I">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="jgdGSvgbpoaHRqENDcHwOe" data-pnid-children="OVvbDzPSxy6Yi7Su3TTaVi" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

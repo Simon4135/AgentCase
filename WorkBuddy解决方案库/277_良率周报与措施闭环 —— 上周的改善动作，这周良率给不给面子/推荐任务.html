@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="yJLQ3e5bX1M49SwGunYAqI" lang="zh-CN">
+<head data-page-node-id="xbkGcA6GRErtaDYFQwwD0G">
+<script data-page-node-id="a96UbELfNznEr4GBcYtQSA" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="mX23cDJ98Tk8qViFXom7em" charset="UTF-8">
+<meta data-page-node-id="2ITVjSc2JbGd2Q8pJLslJu" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="J9lMJE8hX60GqualhHHxrf" data-pnid-children="J9u8FMp0c1ereKML0uurDa">良率周报与措施闭环</title>
+<link data-page-node-id="styCTjNea78pJolouQMqH7" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="PeB2W7TjFCJWiw8Xb5r5im" data-pnid-children="opq8WBR4ueThZzgCRR1yuT">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="84werekUeAREAZzIVi7jb6" data-pnid-children="KA5Vu4f6LJgZi3tLHi21Kv" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="QpvU8cRLE9eE7n2eAnBnJ0" data-pnid-children="LFp6k2YLCDTxFKr1y00KyA" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="DAroqwIYDqJ48vzjTTuyeT">
+
+<div data-page-node-id="c1UyL4mB8QAMjkwiSIOxgN" class="wrap">
+<section data-page-node-id="aK65EGfgQ3vxi3MhIIXEqb" class="page-hero">
+<h1 data-page-node-id="isqKUzhdBrHw2dinnqB9JE"><!--pnid:CK5GpPyEF69nwaLavm2mUm-->良率周报与措施闭环</h1>
+<p data-page-node-id="Gj0Aepa0yLiPTA0XcwvrkK" class="lead"><!--pnid:xKwIdHNZgX5jDGpHnZQd3T-->周报里措施列得整整齐齐 · 但没有一份周报回答过「上上周那条措施到底有没有用」</p>
+</section><nav data-page-node-id="bTGpP1ntoJIkZxOGnEdkpL" class="subnav"><a data-page-node-id="4t70VtQSD00wtsMyQMaeIy" href="场景引入.html"><!--pnid:Tu7RfKmrtJ7tUQyKy9TMdQ-->场景引入</a><a data-page-node-id="VqDylicYFIjUU8XFUCN9iB" href="LiveDemo.html"><!--pnid:g33Zs3BAC5CzRJKApmoI0X-->Live Demo</a><a data-page-node-id="VK8k0jbVC4yCRRCyJE7c7E" class="on" href="#"><!--pnid:mFv9TSViZWymMOJ7N3ZoBi-->推荐任务</a></nav>
+
+<section data-page-node-id="PPYfmck41rsttYL5zumSfG" class="blk">
+  <h2 data-page-node-id="1vQVCMKCma1eqHe9L92L2t" class="h"><span data-page-node-id="kVkPEQtJb9kvI4e3vH47YR" class="num"><!--pnid:DIR90ez1Z6o7BPUCwuZnPY-->一</span><!--pnid:27CeDdLeXyP6U11ZfETUmD-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="vdd5WmicPSzFxeI2pG3t8C" class="subline"><!--pnid:72AbnYPMewfbw8oPII7c8n-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="0kPL4e7h3icGiV5F5NpZTn" class="card"><p data-page-node-id="wBQBXPTInrlzFy3cz1Wx1R"><!--pnid:pBmsYw2aiNsThHI1vPHZa3-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="4z8zJQud89XdYevn4zOGSX" style="margin-top:10px"><!--pnid:KJ3Z27zMuPqeGKMcblZ8ut-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:qu6zSPTHJpQllpjsjqcZ4F--><!--wb-skill-start-->
+<div data-page-node-id="mQoDwbglOqjXd4j1lWtf7z" class="wb-skill">
+<p data-page-node-id="Z0IlNng5ZGtAalbTQUkvjx" class="wb-skill-lead"><!--pnid:KMKxx310ExAsLN4htwIPhL-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="oWSJCQnYiROFSWdTn67S07" class="prompt" id="wbSkillPrompt"><!--pnid:15lcezyQdaiGOYpK1GlEsk-->【准备】这个场景的规则都在「良率周报与措施闭环」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/6PpDYKOnQH8m3U1SWMz4BI/Upx1K0Qjw5xV/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="e5fOAneqxD3EjPCizlo5Y9" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:6etyPnTrzT8T2rQ1ai7oET-->复制</button></div>
+</div>
+<!--pnid:UKPEJDzdUEr7Rel3QJO3Ki--><!--wb-skill-end-->
+<section data-page-node-id="kbdjlfl5ZpAdDpqJVDrAJX" class="blk">
+  <h2 data-page-node-id="RwXhY3BLwsceVvgwPHQsKJ" class="h"><span data-page-node-id="VIMC11hP0ZfhTOFnOxchxf" class="num"><!--pnid:P2I2HcjvypgqTYKrp7FkW8-->二</span><!--pnid:BpBxCgoBDVivpJdT9DTaJ7-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="H3xZbuhkF9QSXXJDSeiAci" class="subline"><!--pnid:ubhcIZeGZrlWokIvMPGZtF-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="96kxHlQNss4tG8aoHnpPvc" class="tlist">
+    <article data-page-node-id="oBJy1sjL8PA1tMM8se1XWm" class="task">
+      <div data-page-node-id="YCQp1ZPoT4wjPI42SV7ruP" class="th"><span data-page-node-id="DvLPUYDEX8w3KVQuJGUYSy" class="no"><!--pnid:Jb2QI0BhB8K5y5rhEqSCkm-->01</span><h3 data-page-node-id="tgEmN8wsihPTwTpJ1d9Xmb" class="ttl"><!--pnid:uKDtqmgm6LzRmY4lFqaU7R-->首推默认</h3><button data-page-node-id="Jcpy1c3A5nBQ2A0BqChbnk" class="cp" type="button"><!--pnid:8ccyFW0SOAmDKQTXluuU37-->复制</button></div>
+      <p data-page-node-id="80M70s2G34gwX8XtJTyb5d" class="tp"><!--pnid:RmWzUhT5SPUNdV08G6q4FJ-->把本周良率数据和措施跟踪表对起来出周报，每条措施要看到生效前后的良率对照。
+只回升到一半的，写「缓解」，别写「解决」。观察窗口不够的就明说不够。 三版格式都要：例会的、给客户稽核的、我自己深挖用的。
+效果认定栏留空，质量经理自己填。</p>
+    </article>
+    <article data-page-node-id="SDRXRfP8W96Ejs1fpoooPv" class="task">
+      <div data-page-node-id="H9rvidPpehYCqnruUhCnV6" class="th"><span data-page-node-id="eFNYz5Zpvii9cYgdd82LEi" class="no"><!--pnid:AqbRkfajvi8Dulntvn8QRM-->02</span><h3 data-page-node-id="aO6jLGDdV6R6PnKUfuIkID" class="ttl"><!--pnid:iSaYzZvyqY0Dg3w9IQh35U-->只做措施对照</h3><button data-page-node-id="cxhaNKMILHqLINGvV0CSjm" class="cp" type="button"><!--pnid:iJV4QuCVEBB0LyDiKraukP-->复制</button></div>
+      <p data-page-node-id="z6tlp5rZuNBlz00f45EiqS" class="tp"><!--pnid:aOpzqjAj8O89Tg8ID2rmik-->先别出周报，只做措施对照这一层：三项措施各自截生效日前后两周同产品良率并排，观察窗口够不够也一并标出来。</p>
+    </article>
+    <article data-page-node-id="SiPTLE1EfHmt6Mg3uByK0A" class="task">
+      <div data-page-node-id="R6o7czUchEl5gUcDKo3o0g" class="th"><span data-page-node-id="2uyqUQW1fX2bFKSmuBV3P0" class="no"><!--pnid:UoKWAqb3GwFjKM6RkPtCp1-->03</span><h3 data-page-node-id="rhLhhtXnamAdTpDRdoQsu9" class="ttl"><!--pnid:ZljaXpvtTVDJAEVSdkmBEl-->换成按机台口径</h3><button data-page-node-id="HQx95uDjqh4kE0BgbAnhJk" class="cp" type="button"><!--pnid:Qo7ApDAe4LBwH54XaRp2S8-->复制</button></div>
+      <p data-page-node-id="HRyI4j238pKLryDTr9vLFs" class="tp"><!--pnid:QdrTDsYtBQLjgwzAu4MTxa-->把统计口径从按产品改成按机台再跑一遍，看措施对照的结论会不会变、哪一项措施的判定被口径改掉了。</p>
+    </article>
+    <article data-page-node-id="ITsKZbPxX4L3XlqPn6RY5v" class="task">
+      <div data-page-node-id="4USIBy4qde8ta2Kdois9Oj" class="th"><span data-page-node-id="JExWhdpprLOObto97BZ6Eo" class="no"><!--pnid:8QEKOkuzNY0qw1A6Z5rtL3-->04</span><h3 data-page-node-id="cQOWxrqqq7zoY6aV2R2roR" class="ttl"><!--pnid:M77OPfT0gdF6YJh5aWREnV-->四周一起对照</h3><button data-page-node-id="fgOV1Pazc6c35rThJI0XmG" class="cp" type="button"><!--pnid:9JyYSQCmXkd1CeqRKFWq5X-->复制</button></div>
+      <p data-page-node-id="4BeYjopUxvwZI3xXGY9oy3" class="tp"><!--pnid:0jIspa73sxgTcHXdJ6clbo-->把最近四周的良率台账和措施表一起过，给我一张四周横向对照表：每周良率、当期生效措施、回升幅度、是否回到基线。</p>
+    </article>
+    <article data-page-node-id="C8EQE9zj1xLmh6z3UdnMNB" class="task">
+      <div data-page-node-id="Wx4HeaWgy5YIrVAatuWdFM" class="th"><span data-page-node-id="x5utRcM1e2eXEg7uRULCm3" class="no"><!--pnid:f32bQ6WUmq9wtt1Jl3PaEK-->05</span><h3 data-page-node-id="sP6buFgsUS2CU6XSAtPKvS" class="ttl"><!--pnid:kAY6rDwNydohIQl1RL5Bcd-->给总经理汇报的附录</h3><button data-page-node-id="LeGGNSTNsFvdTpnLHBTr7T" class="cp" type="button"><!--pnid:2Rp5rKmH7tyd0Kd0PcvmTX-->复制</button></div>
+      <p data-page-node-id="6R96ND0vK7hdMykdE7LO7u" class="tp"><!--pnid:fgT5YnOFjj77Op5ZzebV9B-->出一版总经理汇报用的附录：只留 bin7 与基线的差距、未实现收益的推算值和假设条件，正式周报口径不动。</p>
+    </article>
+    <article data-page-node-id="x9a4OmNkTQgAkHA8r1tbke" class="task">
+      <div data-page-node-id="RNHrttNZJO2SZqXDRNgzF0" class="th"><span data-page-node-id="bix3r7dPkTRJTBefNGpLem" class="no"><!--pnid:rBJUxlmWNcR3qLaho6no3J-->06</span><h3 data-page-node-id="fSQ5L1iDxUWqv6WrArWoiq" class="ttl"><!--pnid:XJcKDkYnjPOke2DJg22ayE-->让它反驳自己</h3><button data-page-node-id="HszOzJkDW5EZXUPDEqLaw8" class="cp" type="button"><!--pnid:Ikj1DKlJD135GyKhDCgBov-->复制</button></div>
+      <p data-page-node-id="IzFVmdrnRp5Bv7zMebIuCS" class="tp"><!--pnid:IerBQvNaqBjHBLiHVPwpQk-->你写「换探针卡这项措施已见效」，依据够不够？观察窗口几周、bin7 现在离基线还差多少，站不住就改回「缓解中」。</p>
+    </article>
+    <article data-page-node-id="w37HnD5fwdkUCe989lQRKz" class="task">
+      <div data-page-node-id="IyfNeJ2Ebr6iQSOMhhwcuj" class="th"><span data-page-node-id="ghNLggGhZ8yJef3HGVxFEi" class="no"><!--pnid:q2KuftxoscKdbXXyKERhWH-->07</span><h3 data-page-node-id="24DRzqhHdhcCSfhpr1N366" class="ttl"><!--pnid:VxKYDqUvuaA0vkpKKpMHiR-->翻 clean 频率旧账</h3><button data-page-node-id="j3vqbKhejWYGxv2cYJdtRg" class="cp" type="button"><!--pnid:IYvletFWZx8s6OXorKMoLM-->复制</button></div>
+      <p data-page-node-id="yixy9djooP9M7S3BkMS2Hf" class="tp"><!--pnid:J9bpigC5Uq6QMT09AdiqDO-->把「加大 clean 频率」这条跟去年那次的旧账对：当时回升三周后怎么下探的、这次已经是第几周，曲线片段贴出来。</p>
+    </article>
+    <article data-page-node-id="x6tfmkbHvCs4S55Y3OBbJR" class="task">
+      <div data-page-node-id="yUZpgLXwL8upPahb5aBN15" class="th"><span data-page-node-id="Mw9IPgB5cskdP0ayrO7z7E" class="no"><!--pnid:l8VlqfUccNCzE4nblPVq0m-->08</span><h3 data-page-node-id="kntIPfXMGKyuEeedFwZ0vW" class="ttl"><!--pnid:G5Q4fB6mdgZWh08Y1Zeiy7-->对照硬规则自查</h3><button data-page-node-id="ZHYkA569f8pr8TgMx1qN9O" class="cp" type="button"><!--pnid:mPlWW5GTsTlcn3R6nPgAL8-->复制</button></div>
+      <p data-page-node-id="uwYIOKUp7gpYVKqrPTN5Yr" class="tp"><!--pnid:YfBmOA2CBZDWKFXlsXcfYd-->对照能力包自查这版周报：口径变更说明写了没有、三版格式齐不齐、效果认定栏是不是空的、有没有把推算值写进正文。</p>
+    </article>
+    <article data-page-node-id="hZVkjlOsY1RxBraxTWJmGF" class="task">
+      <div data-page-node-id="FguQwnT23uOBm9GljG32WO" class="th"><span data-page-node-id="jOrp3aq469M0IQGD1kgQEI" class="no"><!--pnid:7pE2XkOmP6bzez3MDZDGwS-->09</span><h3 data-page-node-id="zozusM1yOQ3LGcluVPSOX6" class="ttl"><!--pnid:QcbtbbtFYpBg3DJ6lBMvzj-->折算成年化损失</h3><button data-page-node-id="EqgCHkYtDTpjia7jome4Xm" class="cp" type="button"><!--pnid:UjD3j0LgvieAuc74RBnOT3-->复制</button></div>
+      <p data-page-node-id="FZvKlNisVC63l0A26pKibZ" class="tp"><!--pnid:eeexZTGkemwTpw72DczXfu-->bin7 若回落到近八周基线，按周均 0.87%、月投 15 万颗、单颗 16.4 元折算，年化减少损失是多少？算法与假设都写出来。</p>
+    </article>
+    <article data-page-node-id="OQC0qBjCMHLrfv6ZhvaPJA" class="task">
+      <div data-page-node-id="AaVlFWPmAT591wqwYGkPor" class="th"><span data-page-node-id="Q9noDyn6z8ECyhtI4RovFY" class="no"><!--pnid:Su5MqetADuFaIjGMoh8dLJ-->10</span><h3 data-page-node-id="gYt1SXVN4oHJc496EyurTh" class="ttl"><!--pnid:27hOLGLp4tIImOLqEq83FF-->沉淀成周报模板</h3><button data-page-node-id="TXNXEbGVDMcxCx9FrdA5lJ" class="cp" type="button"><!--pnid:KjLxfNzdrIJWe1TSIZBwuu-->复制</button></div>
+      <p data-page-node-id="SkBBJpuhrSHdmMyOWBk6SG" class="tp"><!--pnid:HUVzEsCv9W7196LltXfhYU-->把这次的三版格式（例会 PPT、客户稽核 PDF、工程师 Excel）和措施对照口径整理成一份周报模板，下周五直接填数。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="oJwmBS9t8ZXlbBiSgJxmbV" class="cta">
+  <div data-page-node-id="KZRiz6FoKowjK2gtwP0drM"><h3 data-page-node-id="cEWJLfdkNzkhNKG0LTwTgM"><!--pnid:Pzwc0vly319aurAMb0M4VJ-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="G9mJOfLKu4XSmNAm3kbyKL"><!--pnid:P7hwO2h8PSo2ZRLlVmRjti-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="HgDs2BScawzeAVj4ucDDhC" class="btns"><a data-page-node-id="vlcP2qatLnMImG4oQUVoLE" class="btn" href="#" id="ctaContact"><!--pnid:apukMWqKnapCuLvZE5wmKh-->联系我们</a></div>
+</div>
+<footer data-page-node-id="URwGURmzBgVgmGSDIxqviK"><!--pnid:1t4Emd2THLpZamJFrctxHL-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="VuROXoEekSF2MdaAPNpqNB" data-pnid-children="JkcCYsAqcrY885T83eLKCU">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="nXCY1KLaYMFfscAcSI7ycM" data-pnid-children="Onoa10P9N5vDwzx5K6GeMk">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="Lrjp5usShqkkyqidWH9Ez5" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="djqXpRdVrWiEpZoZ55U7Yb" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="yfOiZvPhpZm6isfs21WeXe" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="QlJxJOPX4NwHWqPXhNSRlX" data-pnid-children="7WigwgL7vddtJeJU4B2Cq6">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="GctMnlu5zR4sxQ0ZXwC80n" data-pnid-children="a4Zo3YJ1V5Gb85JBK6uhgi" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

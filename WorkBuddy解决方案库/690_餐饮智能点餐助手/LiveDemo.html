@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html data-page-node-id="Fb4GLUNsmWlqSIfgdy8h0q" lang="zh-CN">
+<head data-page-node-id="xFmUjPimYdQ7aqilkHGDna">
+<script data-page-node-id="cuLUaA0sAfZooPTAPig4GL" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="yvRPGU9LRAn7ElHbLO6njd" charset="UTF-8">
+<meta data-page-node-id="UVJIWv6k2ggCVoQ4v6NjWB" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="AZ5M0KvfeUNeXvAbKMaNKe" data-pnid-children="UBl5iPGNnqDhHaiid2sKMG">餐饮智能点餐助手</title>
+<link data-page-node-id="RMzBVWYTkIw6ggJHy2LOlT" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="JsrenjMdPmCOsqi2Ez1GFJ" data-pnid-children="F9IaswBHkMjrqt5OEop3U6" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="4dGf58kH9U6SH1eZg2IE3U">
+<div data-page-node-id="D51vf2fldaxBKi0ZYoIP7e" class="wrap">
+<section data-page-node-id="Cdaw4Ej0S1ejtlpIh8jaZ7" class="page-hero">
+<h1 data-page-node-id="8ZupX7Tdr7eRTVciOikX3x"><!--pnid:2eZSWPjihruPHr7bRRNpRY-->餐饮智能点餐助手</h1>
+<p data-page-node-id="5xRG92M5Aux5BqQZfAYeSU" class="lead"><!--pnid:MWz2WyKFP0CIflEioVZfED-->点餐翻菜单 5 分钟起步，优惠信息散落各渠道难比对，新品牌接入重复开发</p>
+</section><nav data-page-node-id="luJpcsfd9K7psuVpIUIIx3" class="subnav"><a data-page-node-id="o3rLZEdmPVYNRBBnYC5d3v" class href="场景引入.html"><!--pnid:FFapbs7xM4bvWp6cke5KRs-->场景引入</a><a data-page-node-id="qSh5AuhLlVG9M6iRTF3YwY" class="on" href="#"><!--pnid:eiCQJccxhxwxt0QPXr6PPV-->Live Demo</a></nav>
+<section data-page-node-id="5QuvHB3lvG1Lv9Uerwu68R" class="notice warn"><div data-page-node-id="4aJbMDTsAPLGo5hxBg0yCV" class="icon"><!--pnid:R73AFDHQItSqRNjayWCZiH-->!</div><div data-page-node-id="37XVuNDh31OwKSxoTaQjUU">
+<b data-page-node-id="amiAGhqPIxvuw92PnSjyCv"><!--pnid:Vb68Nm2myGEaup23LukXaF-->演示模式 · 可视化预演</b>
+<p data-page-node-id="fnWY26QQaNsty52IFVIGKC"><!--pnid:Lj5r3IHhmC7SqvmGb2k8gb-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，
+不宣称已接入客户生产系统，也不承诺任何效率提升百分比。
+案例设定：一位顾客周五中午的两个连续请求：先「帮我点一杯瑞幸拿铁」—— 品牌识别路由到 lk-order，定位瑞幸咖啡（南山科技园店）· 280m · 营业中，9 折券自动抵扣实付 ¥26.10；再问「麦当劳有什么优惠」—— 路由到 mcd-order，三张可领券 + 一套营养搭配（总热量 833kcal 超标，建议薯条换玉米杯降至 603kcal）。两次下单前均有二次确认。</p></div></section>
+
+<div data-page-node-id="hQmCFtw4IY1qYWswzLW9OO" class="kpi-row"><div data-page-node-id="JDGSSdVMTVa7icJdniiiDX" class="kpi"><div data-page-node-id="O655EeZBNsyBESbdG6w5V2" class="k"><!--pnid:NhQtOEXCOYJTqOw9ZN2ZIt-->接入品牌</div><div data-page-node-id="3UXX8i9PLHYPqsWNmDdrY5" class="v"><!--pnid:nFyaXiH6fVNEBOmfxjBuZf-->2 个 · 配置即接入</div></div><div data-page-node-id="cB2oBZVXx92txiuuIrMV5a" class="kpi"><div data-page-node-id="RUj2ARKd6T1hfk316IB9Ve" class="k"><!--pnid:cO2v0KPc0JqqckjXb9CPRA-->点餐决策</div><div data-page-node-id="sy1e55VCAEw6ZtJXjon37S" class="v"><!--pnid:AMCD3oA5eqQ770DUBYWeio-->一句话 → 30 秒</div></div><div data-page-node-id="PNOb6HlyGsv2WIViipAa6K" class="kpi"><div data-page-node-id="KKpmplqX1KhWHEJbxWPZNa" class="k"><!--pnid:wXH9bOeZ2LqQa5XWh3i08M-->瑞幸实付</div><div data-page-node-id="IzlztzZZ6Iw4f53KNLGuux" class="v"><!--pnid:Qj9HwbVw3ifLjI3NS28M2B-->¥26.10 · 9 折券抵扣</div></div><div data-page-node-id="l3D0rYuKwwAIQQqWsporx2" class="kpi"><div data-page-node-id="UHBwoygU3IgpNdZuiZBKUO" class="k"><!--pnid:IfTOX00CbV1k0CQ2872Hqe-->营养建议</div><div data-page-node-id="K0mpxRc4Oif7mYqnukcRGd" class="v"><!--pnid:aawHQCYjVP44lS05GnOK3r-->833kcal → 603kcal</div></div></div>
+
+<div data-page-node-id="exECaz8jLyDWsWPq1A0iCD" class="dstep" style="margin-top:22px">
+<div data-page-node-id="m7Jxw1yXxR56ldVwf9OIFK" class="dstep-h"><div data-page-node-id="87gQZdbhKAWLMwSjFyE9Ix" class="dstep-n io"><!--pnid:I0fgHTt3D52wsSM2n1T6js-->输入</div><div data-page-node-id="TADtfiayV4U768Fp4Cthni"><h2 data-page-node-id="6FHCC0LleI22MOtSdP6iDe"><!--pnid:YknBJ4UHedW7uRxw1qeC0k-->顾客手上能给出的东西</h2>
+<div data-page-node-id="GbMOOBPCbvsw4mRJJeT4zV" class="sd"><!--pnid:w9VvKq8ambvsmu8cqIxXzp-->一句话即可 · 前提为品牌 MCP 已配置并信任</div></div></div>
+<div data-page-node-id="Zdo1ywcMHc3Yg9NrgEcXCi" class="dstep-b"><div data-page-node-id="2Haorc0J5i3Qp7xQAryAZT" class="srcs"><div data-page-node-id="aposhwlPJlOLcFNewpd9Qd" class="src star"><div data-page-node-id="MLyOOvVmrXRjFzPeVxTOIc" class="fn"><!--pnid:C1RQGqwIVV5BDYsF1je9v2-->01_拟真输入_智能点餐.md</div><div data-page-node-id="yaUI2TwPC7z2yqx5qTm7ZO" class="fd"><!--pnid:3wrdggZACvKXFStGlohqoj-->两段自然语言点餐请求 + 偏好说明 + 品牌 MCP 配置前提</div><span data-page-node-id="PMPnhjG6oCf17QWdU0sQ9Q" class="fw"><!--pnid:v9LPEVOigxkQaqXNdffmyY-->无需上传业务文件 · MCP Token 由用户自行配置</span></div></div><p data-page-node-id="ZLdyVcBiiwj6BsqlNNvL0e" style="margin-top:12px"><b data-page-node-id="4gUBg7ko95r8W5si65Aon3"><!--pnid:wN9E10j4Uhmn7KWmmJC60t-->注意这个场景的输入形态 ——</b><!--pnid:KpZsc95gL4b5GgREigzbn5--> 不需要上传任何业务文件，一句自然语言就是全部输入；真正的前提在看不见的地方：<b data-page-node-id="qWGfLcaaWpjcJ2yWqevjMd"><!--pnid:5SA3rMPqY1qahglOV9qLuU-->品牌 MCP Server 已配置、连接器已信任、Token 由用户自行获取</b><!--pnid:prHaOqcy7tpdpGaZkQLNp0-->。点餐全链路的专业性由 Skill 和 MCP 兜底。</p></div></div>
+
+<div data-page-node-id="8MIMuXCmCzEznTjLrQrkIG" class="dstep">
+<div data-page-node-id="ISvnro8LA6oL7G0IupnXvy" class="dstep-h"><div data-page-node-id="8JvICnlzwAs47HDqThPBQ1" class="dstep-n io"><!--pnid:PpOmZlq31eMrynvED1LjAX-->提示词</div><div data-page-node-id="FSsisjxtIMJuEuN1ptzTRX"><h2 data-page-node-id="m1K58QK8P9OjRu9zUqjJrJ"><!--pnid:HK6OcV1tbQb87EOqDqaHZK-->就说这么几句</h2>
+<div data-page-node-id="oa5hUgEk44gZKd3GdHpCeG" class="sd"><!--pnid:SFZvFsEstUcPJDz7rqUIvZ-->没有模板、没有表单 · 专业规则由 Skill 兜底</div></div></div>
+<div data-page-node-id="kAPa6tkZZqErRCTWQ24xbH" class="dstep-b">
+<div data-page-node-id="8k1mEHdJie4xuomNztEA2N" class="prompt" id="lp"><!--pnid:Sr4ihAnhcDV6cimT60wmT7-->帮我点一杯瑞幸拿铁，大杯热饮，看看有没有券能省一点。
+
+门店选离我最近的，券用最划算的方案；
+下单前把门店、商品、优惠、金额、取餐方式列清楚让我确认；
+再帮我看看麦当劳现在有什么优惠，按一顿午餐搭配一份热量别超标的组合。<button data-page-node-id="Wrn73baDeJIIi8RAYPtTGD" class="copy" onclick="cp('lp',this)"><!--pnid:n6fJfhtXeb79H1ltwjJu0v-->复制</button></div>
+<p data-page-node-id="Fo5z0x3K1MhEpHvpCvUHIq"><!--pnid:0vK8yACPP7x1d6Cp3Qm8yy-->短是因为「品牌路由、券比价规则、二次确认清单、营养阈值」都在 Skill 规格里。顾客只要说清想吃什么。</p></div></div>
+
+<div data-page-node-id="8cdEPbgKHUiF3zmFe37lCU" class="dstep">
+<div data-page-node-id="GRBDg3Q6hFpv3iq4SWtZfo" class="dstep-h"><div data-page-node-id="kA7W4BiZVOcoC3Mg3CoUkl" class="dstep-n io"><!--pnid:me6cwVESimrgg7CRDiAs4H-->触发</div><div data-page-node-id="G36iWniXNENNLOHW1rBwM7"><h2 data-page-node-id="Ncj8L7ulMJfh3GiZ0qq4Wh"><!--pnid:w6AzJTGZt61ety4PqqsyYC-->翻菜单的 5 分钟，压缩成一句话</h2>
+<div data-page-node-id="VW3l9ndXJ163pbgRyjXx9s" class="sd"><!--pnid:kqoeipryomFvG2zVJlI8Rq-->点餐的第一价值不是快，是把「选什么、用哪张券、去哪取」一次说清</div></div></div>
+<div data-page-node-id="LAeIgMRNrOBfdRAX3EOkC4" class="dstep-b"><p data-page-node-id="0LAFuMo97hJg4k9ORsr8lv"><!--pnid:c9xT9M10YAsC4NW5AFZWJh-->顾客一句自然语言，Agent 自动路由到品牌 MCP —— 点餐助手的价值在「门店、商品、优惠、营养写在同一页上」，不在任何单一模块。</p></div></div><div data-page-node-id="B5RBqh0ZeGTGlCv1Fupe8C" class="dstep">
+<div data-page-node-id="KpnhIlnUpOmg30luLmnxcm" class="dstep-h"><div data-page-node-id="WieiV1nvslZebqoDIoL0Fm" class="dstep-n"><!--pnid:40ku2bAiVPGxEmkzpDeHIp-->1</div><div data-page-node-id="qeAH8moDfITQvT8nfFmsG6"><h2 data-page-node-id="1U27SrP1kxD30hSXihaKDl"><!--pnid:NXDKAufvFklht9o5Z26ow6-->品牌识别与门店定位 · 路由全自动</h2>
+<div data-page-node-id="rHZBe7su4zGzKbAsDOZnom" class="sd"><!--pnid:j34PXs8oPnKUyllBZyo31r-->瑞幸咖啡 → MCP: lk-order，附近门店一次摆全</div></div></div>
+<div data-page-node-id="Xz8780GkfZ0PNdGErjYRRS" class="dstep-b"><div data-page-node-id="8OwAyUPku1a5EOIXVB2Tin" class="tbl"><table data-page-node-id="u82nsJ6UYyaR0Xdqbccau1"><thead data-page-node-id="HXVHVfRDO4RA7YGrwwnrlu"><tr data-page-node-id="TEGKocpwuTGhjsYipLW4mJ"><th data-page-node-id="PSVYEiV0HPQvFvfzEroAfP"><!--pnid:yFdwGPNHcT4ZfcoUC2559X-->环节</th><th data-page-node-id="A5KKfl06sMW2FLfmOpMXny"><!--pnid:70wYijC3G1bRr7BczUE9ZY-->结果</th></tr></thead><tbody data-page-node-id="WjVEFUC0LlLkuLxjRF7WVu"><tr data-page-node-id="VMp8QJDvw521yw2CEK95Zh"><td data-page-node-id="GvvdBp7G1iw3sc2zl7ZIAO"><!--pnid:9xSFjeGhig479uupZWybb0-->品牌识别</td><td data-page-node-id="yeevp5HXOzCOayUigK6kYA"><!--pnid:Bzh23HMAabkApCFwMvgu7C-->瑞幸咖啡 → MCP: lk-order</td></tr><tr data-page-node-id="sxIfOyix478QUd9v2EvyVB"><td data-page-node-id="wfRnZ4TcgllmyoObMwB9QW"><!--pnid:OARWT9um9sxWOgAeSJZ5xY-->门店选择</td><td data-page-node-id="t9Gm5f4i1AS9REEKFxhLGQ"><!--pnid:UtHqQiBucO7ccbjPRmkP1B-->瑞幸咖啡（南山科技园店）· 280m · 营业中</td></tr></tbody></table></div><p data-page-node-id="vMQazcMmKmWO7EP49n11xh"><!--pnid:9QQ6WGs6BMkuUv1nf4drss-->品牌关键词命中 brands.json 即完成路由 —— <b data-page-node-id="AEwvlhwH3pCXbwKbcrpXP5"><!--pnid:xiVwQh7ySJV7Fo8uCx1AFh-->用户不需要知道 MCP 是什么，只需要说出品牌名</b><!--pnid:rHsQzLIzKWvIGdtz8JhMny-->。</p></div></div><div data-page-node-id="WGPUCQY35Muxz1iyXScFbZ" class="dstep">
+<div data-page-node-id="mniqgURIDHKQmGbnLW1UCd" class="dstep-h"><div data-page-node-id="pRwB0A4JDyi9yWj5baLjjy" class="dstep-n"><!--pnid:O4uiUmQGHyXEoVmlYz0z3q-->2</div><div data-page-node-id="ANyCs9swEJ9RX3ksz33MXB"><h2 data-page-node-id="I11PlIQ5PWVwAbOwDJf7oN"><!--pnid:0yxmHjtPLNWEi4MGKPeQ1i-->商品与优惠比价 · 最省方案自动算</h2>
+<div data-page-node-id="fw2hFEMH9AOdR7BKf0Qh5t" class="sd"><!--pnid:7txRAipWrjbQggWiZvGMjQ-->可领/已领/门店可用券一起查，有券无券价格对比</div></div></div>
+<div data-page-node-id="PbHnaTxaZRStAkWXsBMXgi" class="dstep-b"><div data-page-node-id="pfBLBMzqofKMo4mlx7TH3b" class="tbl"><table data-page-node-id="1RfMkggIJDPa53gi4xJSUN"><thead data-page-node-id="zSSmiduAHENEaBhcZOpX3E"><tr data-page-node-id="vxV7U1UNaGTAjRAs9oDzFe"><th data-page-node-id="TlHijfKYO2gENTj4Xpfaz3"><!--pnid:D7GZ3s17hmTPyONIIftG4G-->项</th><th data-page-node-id="30CZOali62fzG2ThOOqwLl"><!--pnid:rZiysc2Qwl2uYdpd21mH6P-->明细</th></tr></thead><tbody data-page-node-id="8ckCJOpxMRWVCJfEXB62YS"><tr data-page-node-id="LMLjXcU2P6epmytsLLhTMf"><td data-page-node-id="qhPEFV92EMIoM5qMT1cTPK"><!--pnid:FZIspwTbpFbQh3MtoYy9x1-->商品明细</td><td data-page-node-id="vG6FdREx5fIzG2sNexkHvF"><!--pnid:2yZDgq5SDPPKtjRo6kPsrZ-->拿铁 大杯/热 ×1 · ¥29.00</td></tr><tr data-page-node-id="x4KiJKDdCy1NHOkzmg73gT"><td data-page-node-id="Z2Lj6NW1vPsJdk2oBnMk1p"><!--pnid:ymX2K7qTp0q5jWMuMoVNKQ-->优惠明细</td><td data-page-node-id="DT4BTQUi4tq872AMvqOzeT"><!--pnid:GCbXWca3xV6U0Gc6FBWcnL-->瑞幸 9 折券 · -¥2.90</td></tr><tr data-page-node-id="SQmw9Cb3R9UQELSrN8139c"><td data-page-node-id="0qwjK5bEYvM6U2K4yeHW8b"><!--pnid:rifF8dR815E4xiELsOUKRP-->实付金额</td><td data-page-node-id="XBTvUzxL6vFF3sTPsT6oE4"><!--pnid:UqfHOzKzMfYK2vbTTpJDM5-->¥26.10</td></tr><tr data-page-node-id="iCvPuvJOtTUIsy7RQBXxZU"><td data-page-node-id="rYUsx9smXGNca9xLahxYpW"><!--pnid:s3BcbnD9sKn2xW5yTa3giu-->支付信息</td><td data-page-node-id="4qX95DbZB1AgFguoCNVdzP"><!--pnid:9yltOL5pZypr9DpaGfacVr-->[点击支付] 截止 20:55 · 取餐方式：到店自取</td></tr></tbody></table></div><p data-page-node-id="hUimVMFBBBqydgrtF9HXz3"><!--pnid:IfgyiLWySYNi1MSs8hrvpB-->所有价格/优惠/库存标注「以品牌 MCP 实时返回为准」—— <b data-page-node-id="ItniH6y2MZEnREnvFswnna"><!--pnid:2RrfsQrejgNlpnZQ6QSHVH-->比价的专业性不在找到券，在把可用券叠出最省方案还告诉你依据</b><!--pnid:KjEEYI9o0Mtvy32W0r7Pds-->。</p></div></div><div data-page-node-id="ZhoJtoqEwkLEKIeDNCFzXz" class="dstep">
+<div data-page-node-id="iVFakiaMADEbeCz8xgcsKf" class="dstep-h"><div data-page-node-id="w4fcNpCpesFTJjV34PFtfX" class="dstep-n"><!--pnid:TR7l7MssEfPfTyoHMdsxFR-->3</div><div data-page-node-id="KcqKb3iODhe07bvL2Fz0Pd"><h2 data-page-node-id="Ts0gA20W4HPyxkH9J72VF6"><!--pnid:hdNzLQefZBYI77wLP6ZktV-->麦当劳优惠与营养搭配 · 一顿午餐的整体最优</h2>
+<div data-page-node-id="nOhLcD4OxY3FMHqwRazeQk" class="sd"><!--pnid:YFnIpc7lOzCLHyEzm7NGil-->三张可领券 + 一套热量不超标的搭配</div></div></div>
+<div data-page-node-id="IjCzzLPV82x4oYu9tw13qP" class="dstep-b"><div data-page-node-id="UtxzKIck5GWL6Ft6sgKU2B" class="tbl"><table data-page-node-id="kJVLxUGP7ClFUmNI1yMHhr"><thead data-page-node-id="JwmyJ4XiCwdODNtFx76c8K"><tr data-page-node-id="jx1WjD88EU8vC1iVu2bf8w"><th data-page-node-id="EVBaWn5lc5ML9JXiFZqpMZ"><!--pnid:motZX4ZqD4HmtESlgAH1MY-->项</th><th data-page-node-id="nygJyY6aRXjQ6bsOS7iGId"><!--pnid:0FKSPZxDrbHIuAigF6Dfpe-->明细</th></tr></thead><tbody data-page-node-id="tITwyIavgIB2BQ6He0TjsX"><tr data-page-node-id="PPgPaLt5xM7KxvHDLnwDPo"><td data-page-node-id="EWxuM9ZaRItfd4jCXD9uyi"><!--pnid:Did3fB3ver0ACZqAQwyHXa-->品牌识别</td><td data-page-node-id="TwhfzxtnXDI29B0Iot0Hyu"><!--pnid:31Ps5kkKJsHXNBvHT3LhDl-->麦当劳 → MCP: mcd-order</td></tr><tr data-page-node-id="iuGdG6DO3z8mRUl5b0V15r"><td data-page-node-id="soaS8zMl73O3QOeFydE98U"><!--pnid:Z5CUDKNO9jPAeufIA58XW0-->可领优惠券</td><td data-page-node-id="ILYK4IKKhZuEfuO1CRmtHO"><!--pnid:VuoPn5ngB9SfPJwMSY40Rm-->麦辣鸡腿堡满减券（满30减5）· 薯条买一送一券 · 早餐套餐8折券</td></tr><tr data-page-node-id="8LzHoBlr51jxz5UjOakeCo"><td data-page-node-id="dQrev7FK9wQYjXB8J8zPth"><!--pnid:3qNpG5wsUVq55BsaamXuen-->推荐搭配</td><td data-page-node-id="YkAXkHxbBibRLMfsrVnTrG"><!--pnid:Dpze2qBkbIlTNZK6RZd3RV-->麦辣鸡腿堡（493kcal）+ 中薯条（340kcal）+ 无糖可乐（0kcal）</td></tr><tr data-page-node-id="2R7TjxbIhFfGQ9WpYtPkWH"><td data-page-node-id="45sBTejwE2eIOVaO0XZAcE"><!--pnid:bZDTLAZSe5NS0YDOW3WDFt-->用券价格</td><td data-page-node-id="nawTOB2vnU91g1Tlipu01B"><!--pnid:fJBVJHo1MPbIosfvKsQFXj-->¥40.50（原价 ¥45.50，节省 ¥14.50）</td></tr><tr data-page-node-id="aEd2sHrCucQks7PqCycnsr"><td data-page-node-id="pxoo1iphuTrH7FAUcn0xch"><!--pnid:2n1PBLvOmyrcZbVTPSNiVR-->营养分析</td><td data-page-node-id="XbXpmAnyKZP2sYeGwuftjG"><!--pnid:kVFcVFQUdNdsMI4A5tmT5B-->总热量 833kcal⚠️ · 蛋白质 26g✅ · 脂肪 38g⚠️</td></tr><tr data-page-node-id="ZbBj8WnUC29llZJHxpvrfH"><td data-page-node-id="OTWCYt8F8iNCS77qzyA0px"><!--pnid:OpOReN3M4tBkZLVEfly5Um-->调整建议</td><td data-page-node-id="MSjWndKGpXj6avDR1EaBB2"><!--pnid:IRaYV0bB4vzEvKUQboUw9f-->薯条→玉米杯（小）：热量降至 603kcal，脂肪减 12g</td></tr></tbody></table></div><p data-page-node-id="pWJhRvwOFaxmdNWlTzyk3f"><!--pnid:YvY54QjxPx6bdSYJEqbWNY-->营养分析不是摆设：总热量 833kcal 被标⚠️，调整建议具体到「薯条换玉米杯，热量降至 603kcal」—— <b data-page-node-id="3zgPBeX0Ftvah3U9osbeNt"><!--pnid:dALl8jDBm16U6DlM9M5BmD-->推荐的专业性在给出可执行的替代方案</b><!--pnid:ZFy2GVEZGt8EB2ofKo0Sbo-->。</p></div></div>
+
+<div data-page-node-id="eI9tKs2QriMgo7XKW972Gc" class="verdict hold"><div data-page-node-id="us0wm2YUWCc0fDs6IXZ7YC" class="t"><!--pnid:NlAYUS0UlQsw0ckuXnOcEj-->订单还不能直接支付 —— 两处必须由用户确认</div><div data-page-node-id="HtE1qZW4mePJLSbSsbIh5s" class="d"><!--pnid:odJXXZXozUOdVHfwmrvzbe-->Skill 的铁律写得很清楚：创建订单前必须二次确认，支付链接必须醒目展示。两处尤其不能省：<br data-page-node-id="rXsB2QjxfCMC3YhwqlaRTw"><br data-page-node-id="3UWcpjNoijRRqcNsvoPxyS"><b data-page-node-id="BAQBCpIBYuZ9vIArAtk0Cz"><!--pnid:oMV8sL9vLHGE1KMTMSWAQM-->确认点 1 · 下单前二次确认</b><!--pnid:A7ZXy90Z1HOZUFJtglrYph-->：门店、商品、优惠、金额、取餐方式五项列清，用户确认后才创建订单 —— 支付链接附截止时间，醒目展示。<br data-page-node-id="ZtCUbzDQ150YdqnoWaI1Pl"><b data-page-node-id="9DzTfKLIgYFkNAfepIA9av"><!--pnid:JGO7S6oJwZW40zedmcgmtV-->确认点 2 · 异常价格与优惠不匹配</b><!--pnid:6IRJEt55otnF5sxZMssnzW-->：出现异常价格或优惠不匹配时，Skill 停止下单并提示人工确认 —— 价格/优惠/库存以品牌 App 实际为准，涉及金额操作标注「请以实际支付金额为准」，大额订单建议二次核实。<br data-page-node-id="kPNmvrmgKBZgmrTE94H0Ru"><br data-page-node-id="xtwerKwpoNTNCNMvtJeseq"><!--pnid:lz9fq9dIVAUDfwEsfpHLgV-->给出的不是「跳过确认直接付」，而是：<b data-page-node-id="kiPOAAkLu3GB779VCLpsa2"><!--pnid:YVZ9PuVQqxX1m3T4d3ywHc-->推荐、比价、搭配直接信，支付与异常两处处方级确认</b><!--pnid:ou4GvmuphcptIYRUBPhDHh--> —— 30 秒决策，但不替你按下支付键。</div></div>
+
+<div data-page-node-id="9TucB2frwtQbVaeijyOzcR" class="dstep">
+<div data-page-node-id="oP63J8kDbTcU89uD1htcfC" class="dstep-h"><div data-page-node-id="2zX4V1gVIioNNBxAVUcRNy" class="dstep-n io"><!--pnid:WwksOVhi2myv4Js3FM6Lwq-->之后</div><div data-page-node-id="iuFOq1x6nXffv9DLrJfRgO"><h2 data-page-node-id="KVbSLjGNBIGnblj8VWFETS"><!--pnid:HP39IYwSUkatmCVaHPVfFn-->这一次跑完，顾客和品牌多了什么</h2>
+<div data-page-node-id="xEmUGwk6NLBRTRJK4J0o3h" class="sd"><!--pnid:WFq1z8daBroOO8pW6B67Ek-->不讲省了多久 · 讲少了几个隐患、沉淀了什么</div></div></div>
+<div data-page-node-id="mSy36xj6XsXMuoOtNkor8r" class="dstep-b"><div data-page-node-id="B8Ca6rcMQ90alqzNDbwKTx" class="act"><span data-page-node-id="xtMXEi3KWoX82VX6dU5Jql" class="ic"><!--pnid:ewhTlpzbOGXsQxynDoHtyt-->✓</span><div data-page-node-id="xK3BWVnCMWsCRe5JAG16md"><!--pnid:EEyYSJmZAdjwFmJKqZ5QXh-->点餐决策从翻菜单 5 分钟变成一句话 30 秒</div></div><div data-page-node-id="ibdIFzu4o4yvIPooSlWfhV" class="act"><span data-page-node-id="zLJ4c6JxNzwFpYKCswcQDt" class="ic"><!--pnid:kpH1z2Q9jqwoCHjiHLJIMd-->✓</span><div data-page-node-id="prnn13obzo9hQ0kFbm15VT"><!--pnid:8ZKyvN82wAHzgB797rFR0i-->优惠券第一次被叠出「最省方案」—— 节省 ¥14.50 写在明细里</div></div><div data-page-node-id="CYugZHfrjJNTCKK5fch2t4" class="act"><span data-page-node-id="uwIwewqDwazPVEh5YHzCeO" class="ic"><!--pnid:XapJf9gqWTbQEpuMk8BtJ5-->✓</span><div data-page-node-id="dLAt360iJs3nZoYWqM04rV"><!--pnid:v4in6VauLdSIsjUHfWfmNW-->营养搭配有了量化建议 —— 833kcal 超标，换玉米杯降到 603kcal</div></div><div data-page-node-id="l6UpIoumwX9Cl0IOzm9qqL" class="act"><span data-page-node-id="zEojS6nHdUWmyyCgaU4Vvk" class="ic"><!--pnid:vp5z3MAdC7Yv7NtUNt8vDO-->✓</span><div data-page-node-id="28XN1edrZZY6Un1YOj8OrH"><!--pnid:B1l7pMre85vZk2BF2ulSZF-->新品牌接入从季度排期变成一条 JSON 配置 —— IT 不再重复开发</div></div></div></div>
+
+<section data-page-node-id="qfU6SggH5PWSvJ7rrNKMWM" class="blk">
+  <h2 data-page-node-id="Ua9k2Gf915Qpuxddt9LmMW" class="h"><span data-page-node-id="UmCmNr1edN517UYnEInXAs" class="num"><!--pnid:aprAgHsAFEgxMRzDVTddhz-->追问</span><!--pnid:OGdL5oESdISXLFNz0QV3Qo-->现场可能被问到的</h2>
+  <p data-page-node-id="AqqdsvcUdTHntYXsH4mBDa" class="subline"><!--pnid:a8g4p0z0Hlmi38uOmnx5ei-->答不上来的问题，比答得漂亮的问题更能决定这场演示的结果</p>
+  <div data-page-node-id="6vaM4Kem7u0L8ZFZrIgLyj" class="fq"><div data-page-node-id="MjerGKgxCXhJEXcAMLR6lG" class="q"><!--pnid:xOY2eSxwsXUOGD7lo0xAhK-->能直接帮我付款吗？</div><div data-page-node-id="DISLCGWQC55F3AMiJWbikF" class="a"><!--pnid:IKPo8QFv2MZRxG4kfmM8EI-->不能 —— 不替代用户最终支付确认，下单前必须二次确认；支付链接醒目展示，最终交易以品牌 App 为准。</div></div><div data-page-node-id="H5SDeXdjClpf3U4LIgyce7" class="fq"><div data-page-node-id="fPo3YgKBcOFhUl1EsPZ0B6" class="q"><!--pnid:VRcd4lPvcYNohVo6eMvvLY-->新品牌接入要开发吗？</div><div data-page-node-id="U5V82Q301JoHAdo7R39Ilc" class="a"><!--pnid:v4G2M9iaKBkMPQODUHTqwq-->不要 —— 在 brands.json 追加一条品牌配置（品牌名/别名/MCP 前缀/价格单位/工具映射），配置对应 MCP Server 并信任即可，零代码。</div></div><div data-page-node-id="fAEByyTFTFPaydLLxGupi1" class="fq"><div data-page-node-id="xyN4sIuTnBeF0u2tRySSNF" class="q"><!--pnid:RO7pvi7PXiWux5WbxFhUnl-->退款、投诉能处理吗？</div><div data-page-node-id="T2PraLH5l7e0C0aY2CMJKW" class="a"><!--pnid:tClGCzFuLK9QUsIsGPyMZo-->不能 —— 品牌 MCP 未暴露的能力（退款/投诉）不处理；价格/优惠/库存以品牌 App 实际为准，非实时担保。</div></div>
+</section>
+
+<div data-page-node-id="fuXRQuHoBxadEZPdvWTHqL" class="cta">
+  <div data-page-node-id="FEGiw3WrbdmiBXpihvxVn7"><h3 data-page-node-id="4UTRjBm9Eg0scl8pejqV7K"><!--pnid:ITWpOoONhXpBWErdPzMXGa-->想了解来龙去脉？</h3><p data-page-node-id="0cR6xqQixuTpQWqIAQEB48"><!--pnid:tBDa79Vdu6n2JIV9g0tVXU-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+  <div data-page-node-id="3RtZqHMfvu4ZH7oDfILNfl" class="btns">
+    <a data-page-node-id="R1LWOJ0annP05WDDVNYqdJ" class="btn ghost" href="场景引入.html"><!--pnid:CdgaDt84w1seVtX5PPjdgS-->返回场景引入</a>
+  </div>
+</div>
+<footer data-page-node-id="91SjYkrvlBl8Qz3ZW21OaF"><!--pnid:MbMrJrlkjg6KfcXp10FnIL-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+<script data-page-node-id="58cDx10mvPG1DVmMUsxstt" data-pnid-children="BWRM3YAMXqoTLnb2oHcn4K">
+function cp(id,btn){var el=document.getElementById(id);var t=el.innerText.replace(/复制$/,'').trim();
+function ok(){btn.innerText='已复制';setTimeout(function(){btn.innerText='复制'},1400)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok).catch(function(){fb(t,ok)})}else{fb(t,ok)}}
+function fb(t,cb){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';
+document.body.appendChild(a);a.select();try{document.execCommand('copy');cb()}catch(e){}a.remove()}
+</script>
+<button data-page-node-id="wea4CEEYGhVo7s7vCWusm6" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="raoXSBbfNHD16vHq4Pogrt" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="jUcLLvbJX4U5YXln2EH517" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="kOgbcCvJ8YBMfMSKTQsP5g" data-pnid-children="gxI7QpJlBulLJHHPGfBv0g">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

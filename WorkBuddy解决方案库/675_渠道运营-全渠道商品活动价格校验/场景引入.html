@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html data-page-node-id="e1IPaZAxuadj9Sm9l8CeGc" lang="zh-CN">
+<head data-page-node-id="SAhsnNPLyqW081Xl3pOsTx">
+<script data-page-node-id="AQ8KOXuhB5ozknOnfvjMZW" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="Njy6SXZv83UgR0rLoAviIe" charset="UTF-8">
+<meta data-page-node-id="7y9JMDdDXLahX0RJffF4Gf" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="4IcoRavAvDLIxT0ftsbSBN" data-pnid-children="9FNuauWrT6kNNAQzwqAVzi">渠道运营-全渠道商品活动价格校验</title>
+<link data-page-node-id="T4WxFJ8qo4OKiLJ3EB76kP" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="PjR9NTdpHtq3rmL7qQDnYO" data-pnid-children="yM1iEDFfuo1fdztY3fAWr2" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="1TxcfkrMCl5keY984A4i6x">
+<div data-page-node-id="nQraxwJOqsKxC86LDUm87E" class="wrap">
+<section data-page-node-id="ICM5aCF7ymskdJgoMVvwdp" class="page-hero">
+<h1 data-page-node-id="BsAjNhMtP5GI0mEmiIGq3B"><!--pnid:qhZyW08uOcidZBUATSTqCi-->渠道运营-全渠道商品活动价格校验</h1>
+<p data-page-node-id="yc4tX0wsKUxaZvGe0Do7vV" class="lead"><!--pnid:NTcAqpuGQWUDwP5uJrSMB3-->五个平台各配各的、同品不同价被投诉，活动漏配错配、渠道串价利润流失</p>
+</section><nav data-page-node-id="ITvP0TUnemb2xDPRoQNtrD" class="subnav"><a data-page-node-id="rDDs683bUuyJLL5UsNjBK4" class="on" href="#"><!--pnid:L9S9SEHc3ODQkxJaomZ9nI-->场景引入</a><a data-page-node-id="oTwZiSkVVpPr5Fdbbb3g2I" class href="LiveDemo.html"><!--pnid:AuPQJqMcBPVVKra7YftjLn-->Live Demo</a></nav>
+<section data-page-node-id="vxOzkc2R5PR8awknKzQ8rC" class="blk">
+  <h2 data-page-node-id="f8T2dfIjG3kus5nD8MCj3p" class="h"><span data-page-node-id="tBVhailAQCVhRP7daIEEwK" class="num"><!--pnid:geAUkGTGZ5Oww60xkS3vDF-->一</span><!--pnid:4TqN7ypjpWoUsL7ACaPFAx-->这件事现在是什么样</h2>
+  <p data-page-node-id="AwTDqNY4SXvJabd0E3hgsS" class="subline"><!--pnid:xX0HCvpguWF1vWYziUCfAx-->商品运营 · 一次上新要在五个平台各配一遍</p>
+  <div data-page-node-id="vVtNaA4mxbyvsvYTeZJOt4" class="card"><p data-page-node-id="xya9w2SB9IYHBf3Q6K6qZM"><!--pnid:ueDOna7mlpf5jL2nIxukXf-->某餐饮连锁的商品运营，周三下午。招牌套餐 A 要调价，同时上两个新品 —— 听起来是一件事，实际要做五遍：美团后台改一遍、饿了么改一遍、抖音来客改一遍、点评改一遍、小程序再改一遍，五个后台字段结构各不相同。上周刚出过事故：抖音来客上一个单品定价 62 元，比自家会员价 60 还低 2 块，被顾客截图投诉「同品不同价」；再上周，新品在美团漏配，上架三天没人发现。改价靠人肉逐平台核对，25 个商品对下来，一致率只有 68%。</p></div>
+  <h2 data-page-node-id="d87Oexwe0E74GxQtlZ9dSL" class="h" style="margin-top:22px"><span data-page-node-id="wwgl0XxP36fs0SbwzNcvFN" class="num"><!--pnid:vFif3Wwudte8869hrnyVW6-->二</span><!--pnid:8l0Z6M5t8L33IM0ppsxmhM-->痛点 · 每条都发生在昨天</h2>
+  <p data-page-node-id="4L0elbdg0tx3cFe4PkF5EZ" class="subline"><!--pnid:85HcRxqe3psw5AAefVEGqK-->不是流程描述，是业务里每天真实上演的事故 —— 以下案例均取自场景调研与演示素材</p>
+  <div data-page-node-id="8V2Lx4F29G4vGa16AgocIj" class="pains"><div data-page-node-id="uKockKsNyeuZJPz52CGenO" class="pain"><span data-page-node-id="IoukE3aL4e7SE403KWbyAS" class="i"><!--pnid:Aoi58IJJmJdD494Z68xZXP-->1</span><div data-page-node-id="ZIxL1VyV8RMLOk2nCTlSur" class="t"><!--pnid:YDrkFps26d44ZKt7fbWA4F-->五个平台各配各的：同一次改价要在五个后台重复操作五遍，字段映射全靠人肉记 —— 工时耗在重复劳动上</div></div><div data-page-node-id="SX84CYovK8qfWk3TbLE2Kz" class="pain"><span data-page-node-id="lxiRqFS7mrk7FFQbH25X34" class="i"><!--pnid:UszxlQzZvGNpxaqEyBHUYa-->2</span><div data-page-node-id="nRN6yPUxSLsGZZjjNWztBX" class="t"><!--pnid:p0znJjjuGi8KZTPLZef1P0-->同品不同价被投诉：抖音来客 62 元、会员价 60 元，串价倒挂被顾客截图 —— 价格矩阵没人并排看过</div></div><div data-page-node-id="exCbmqDpWikuJH5YlcnBLu" class="pain"><span data-page-node-id="Min18TSvM75mAYS4R5csnz" class="i"><!--pnid:ME6fJfLqLT4MfhEEAtMuNH-->3</span><div data-page-node-id="FfKrZ02BYjzCJYH8iKBZoE" class="t"><!--pnid:j8lnldfVTUkqreEfAUZ4qQ-->活动漏配错配：新品在美团漏配三天没人发现，饿了么满 100 减 15 与其他平台减 20 力度不一 —— 错配漏配靠投诉发现</div></div><div data-page-node-id="gtc8vYLiHZYFbMJv9WoO0j" class="pain"><span data-page-node-id="wi40bvoXgEUc7zCriIL2Dy" class="i"><!--pnid:GZ5ToQGJ2ARVnOXAexpcg6-->4</span><div data-page-node-id="qiUXv5cLwPniRIppNw2mAU" class="t"><!--pnid:FzdBH2kixjDPBomwb7I7jq-->满减档位凭感觉定：满 60 减 10 还是满 80 减 15，毛利扛不扛得住、转化划不划算，没有仿真就上线</div></div></div>
+  <p data-page-node-id="tFqplTHh6QaRnKj68AAmiG" style="margin-top:12px; color:var(--ink3); font-size:12.5px"><!--pnid:ysZcVpsU7hsLOD2kYRiqUZ-->与现有方案「渠道价格体系一致性与窜货证据链」的差异：价格一致性相近范围不同 —— 该方案覆盖商品/活动/价格「维护→分发→仿真→校验→闭环」全链路，窜货证据链侧重渠道窜货取证 —— 两个方案并存，按切入点与覆盖范围各自选用。</p>
+</section>
+
+<section data-page-node-id="GncCHsLTLKyZYeMQsKr1Ev" class="blk">
+  <h2 data-page-node-id="7U9HUgeUg2fVOyH12mQRan" class="h"><span data-page-node-id="WrQxmAq0IMhj28AtExnwSn" class="num"><!--pnid:pAwnBUPBJ7G1hyt4UxKjox-->三</span><!--pnid:boOrn5MyAAOAG3oybyJIll-->换个做法之后</h2>
+  <p data-page-node-id="M68JCWnMFKX5T1JjQBEyGN" class="subline"><!--pnid:KvzPnqYwUnfmteqd1bt6eH-->变化不在「改得快」，在「一处改、处处同步」</p>
+  <div data-page-node-id="yIw6V3LucwPzNIv1oHhprP" class="cmp">
+    <div data-page-node-id="OcjusSzLedpPH5MRZrvij6" class="old"><h4 data-page-node-id="qigrw3KUfbdpFgISLXvc9Y"><!--pnid:3YV0UwA9NSsTqzmjitfNzW-->✕ 现在的做法</h4><ul data-page-node-id="gSweZ3XvOybdtQUMQb2er4" class="list"><li data-page-node-id="R0ZhOk6WS4fbqJ9jiRAC9n"><!--pnid:79tSA1v1XxfFNNg18xnlXl-->五个后台各配一遍，字段映射靠人肉，改一次价耗半天</li><li data-page-node-id="YQkwybK6tOlNZRQRYQCAHS"><!--pnid:W3hEPqDYMCFSHpRm345gS9-->价格矩阵不存在，串价倒挂靠顾客投诉才发现</li><li data-page-node-id="DqZxoGRcU8XAZgOqdajpOq"><!--pnid:LgWuk0izWCxEPY2xRDRIvK-->满减档位凭经验定，盈亏平衡点没算过就上线</li><li data-page-node-id="bO7qCFVjLwnjWgeFYT0u3W"><!--pnid:ASOmdRpN3tcBftWaH12hjX-->配完没有任何校验，主数据和各端实配是否一致没人说得清</li></ul></div>
+    <div data-page-node-id="kcJnfE4NH1p5BtcemuCqMH" class="new"><h4 data-page-node-id="S9fBJA5qKxY2BSc5ELz6zU"><!--pnid:ypaWmTwRk8xGBP4XDPmAPp-->✓ 交给 Agent 之后</h4><ul data-page-node-id="gbauKWbBeYKyhK7vRYHoa8" class="list"><li data-page-node-id="DoVs1wdJO1VlfwMqTs5hzw"><!--pnid:hq6Rc4SGCbLrwPmmQ037su-->一份主数据为唯一真源，内置 5 平台字段映射，一键适配为分平台配置稿 + 变更清单</li><li data-page-node-id="vy2cOfWuYUMlOu0aAd8icI"><!--pnid:ryInFZdgSB2h2HnpUCX3Pm-->同品跨平台价格矩阵并排呈现，价差/串价/穿底规则引擎自动告警，附行号来源</li><li data-page-node-id="ydbWaqYeLtSonjigP2TqG1"><!--pnid:Q377knMnfDK9Sr1ylFk9r6-->满减利润仿真：输入毛利率，各档位实收/盈亏平衡/加权毛利算清，推荐最优档位</li><li data-page-node-id="Pxd8N2cMgZF9tIHiS7BFsv"><!--pnid:bhCLxk8gpq3eKFJD8qMEft-->主数据↔各端实配一致性 diff，同步健康度 + Go/No-Go 放行报告，不一致不放行</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="QX6FMMeOV9SCGynBLaU0xY" class="blk">
+  <h2 data-page-node-id="lkV0DwvJQhVl7wZM2UwMQm" class="h"><span data-page-node-id="Z2hLhwoydEL6cexUwnTAxh" class="num"><!--pnid:zGs8dMfvIJYlQScKrx10Sg-->四</span><!--pnid:U6PgooIYB19vP7SdjIMqGJ-->场景闭环</h2>
+  <p data-page-node-id="Qqpgn2viq3g60qdZkMNYrs" class="subline"><!--pnid:j43lj4j3XiMV5kYrhLQTPm-->5 段闭环 · 主数据中枢，一处改处处同步</p>
+  <div data-page-node-id="Qn1DaJ7eIwbfUYzFqPdSeR" class="flow"><div data-page-node-id="WM0A0Lb7rQviG5p99w6Yop" class="step"><div data-page-node-id="6DElNQX8KxDv3yHNokk63z" class="n"><!--pnid:hIW3HAOILs5hF7PVWBWyPd-->第 1 步</div><b data-page-node-id="KALUJSLyz8CbsSi5HH8SFW"><!--pnid:mP96pIb65jwW6lnjXmP7Qb-->主数据维护 · 沉淀唯一真源</b><span data-page-node-id="2HBPqsV5JsLk7lWD1ntRJO"><!--pnid:fUu7XEpHwV7AQj4L6z1hx6-->对话式批量生成/更新商品资料，沉淀全渠道唯一真源 master 表；缺数据走主数据骨架模板</span></div><div data-page-node-id="aQj7FWJHXPyZnUvgVFz58E" class="step"><div data-page-node-id="1sQf4DNh0ggL17J6gmWuQ0" class="n"><!--pnid:IFVdL0e6nWm8iD7AQmm0sY-->第 2 步</div><b data-page-node-id="PYQnHdCOwnfSHgddj0gn1A"><!--pnid:AqkqmAvfrnAVGNHuG2UAmM-->多端适配分发 · 5 平台字段映射</b><span data-page-node-id="wINUeX6T0nCLJg3Uhrki2P"><!--pnid:T4yXxa7BfUUdpVf5JGl37c-->主数据一键适配为美团/饿了么/抖音来客/点评/小程序分平台配置稿 + 变更清单</span></div><div data-page-node-id="Vd9KXcSRIELRzJhOw6xRXm" class="step"><div data-page-node-id="fjPr7WIdMgmGQuHUNbeBKT" class="n"><!--pnid:JZ4gVzmkyPBV3Qxnbnl4Pa-->第 3 步</div><b data-page-node-id="WIIVEPGSjHZ8bsqhtzyl4A"><!--pnid:3mpzP6sNQMgwrvuvwCaTXM-->满减利润仿真 · 各档位算清再选</b><span data-page-node-id="FX3rKQ9bL0Xs7ExkrwSon7"><!--pnid:KV3Zx2SxGePVJtyqwcCEHx-->输入毛利率，仿真各满减档位实收/盈亏平衡/加权毛利，推荐最优档位</span></div><div data-page-node-id="R40i7Hw2aJLKXDfEc2jRHZ" class="step"><div data-page-node-id="l0YuEOfcaosIN4BRY95aEu" class="n"><!--pnid:U95460juGDDGz0CHbcMHhA-->第 4 步</div><b data-page-node-id="PiXJnNzMT7Fz9bMtfwKHto"><!--pnid:5XF23TJXu8izWfCW3Zhe2Y-->比价校验 · 串价穿底自动告警</b><span data-page-node-id="ys3vgD8MPwAGZaH6AEYbNB"><!--pnid:YBVj39duth8gO3KMLXrUlO-->同品跨平台价格矩阵 + 价差/串价/穿底规则引擎告警，附行号来源</span></div><div data-page-node-id="DmjdyOX6eeWNQauRbHkwE7" class="step"><div data-page-node-id="AvdFMU7L5PDBb2MKjbjiWD" class="n"><!--pnid:we3d67gpv1Ts8Y1SUjZys4-->第 5 步</div><b data-page-node-id="ZiNmQa0iqGKBmcqxkfGiAW"><!--pnid:09rr7XhQpWecTk3AZwgqp0-->闭环确认 · Go/No-Go 放行</b><span data-page-node-id="HAROjiCSZzQZ9bkLtcMQrl"><!--pnid:fBIIvD86VEyzpdrdFYlN9B-->主数据↔各端实配一致性 diff，同步健康度 + Go/No-Go 放行报告</span></div></div>
+</section>
+
+<section data-page-node-id="U2SU6Tp7ZsgaWgIVcF09y2" class="blk">
+  <div data-page-node-id="F6h5HwOtVqBQQRBQo5WBJP" class="g2">
+    <div data-page-node-id="n6cZr8CMNQBCXEDbs99sPN" class="card"><h3 data-page-node-id="MlgkJP8g8kfvY9ZCDzuyV6"><!--pnid:suqV5AS6uP6JRMB8ftuerT-->要准备什么</h3><div data-page-node-id="wSDAdsxsTsvQuLBvih4m5M" class="src"><div data-page-node-id="cOkTrJcLrTOv6Plyu9FZFC" class="fn"><!--pnid:Xyc65Z6UATrCodjtffF0DI-->全渠道商品主数据</div><div data-page-node-id="fxKHDRqtT7xBp9wQYmfX0X" class="fd"><!--pnid:wTfYrHnA0rJU06lzaGQL8K-->表格原样扔进来 —— 缺数据走主数据骨架模板</div></div><div data-page-node-id="pG69nxeanPoBXrN931Vtcf" class="src"><div data-page-node-id="FcXOknDQ6jRJjtsmivqXhj" class="fn"><!--pnid:PA2mgz2ZZ0SvjPCvczF9tR-->5 平台现有配置（美团/饿了么/抖音来客/点评/小程序）</div><div data-page-node-id="55ECbRZZSJtGwlb7kkFyly" class="fd"><!--pnid:BCbDMxe16hTGKxtlXxNMNj-->各平台后台导出表、POS 价格表、活动配置表均可</div></div><div data-page-node-id="VpNnJnwd1KNHZ9o18LC4wl" class="src"><div data-page-node-id="rjHkpl3ibski5PlapmqWqA" class="fn"><!--pnid:GbHYgpWhvGqBKxerfmUz3P-->毛利率与满减档位设想</div><div data-page-node-id="O4AePMZnisbGi1qFzWhgy6" class="fd"><!--pnid:0XnNn787gLm7eDBaaukfxO-->对话中直接说明即可 —— 用于利润仿真</div></div></div>
+    <div data-page-node-id="sjM67q6Sx7FuhZCMi9DQeD" class="card ev"><h3 data-page-node-id="F5SGX7ZwfBGJb5BxL9tHZU"><!--pnid:mEhHm7Ml52VvZz9v91Lbnb-->为什么这个场景值得做</h3>
+      <p data-page-node-id="WGBmroxUG1ZweITiZuF51s"><!--pnid:tJ94HZbAGMilslHdRykklD-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="8Umdle6f1CwT6LGJ3vKAab"><!--pnid:kCeUTOOEeKYwCcnTanNn0f-->10.0</b></p>
+      <p data-page-node-id="D6gGD7KUhBBoFKH5ccLvjn"><b data-page-node-id="d8nEKOmpGUY0MUx6E7ESkQ"><!--pnid:7qA50w8rxB9uXtlaNUzA5i-->最大差异点 ·</b><!--pnid:3TrP3f8Nolw34gFxJzKkbn--> 以一份主数据为唯一真源：五个平台的字段映射、比价规则、仿真口径全部固化在 Skill 里 —— 但 Skill 只做配置稿与校验，不替你在平台后台真实写入，放行判定必须人工拍板。</p>
+      <p data-page-node-id="RAj7CAJRcF97chmgzlM2v9" style="color:var(--ink3); font-size:12.5px"><!--pnid:pBjGxVUCviqj54LCQGPI6g-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="6VY2KABhiRaong86AATaj9" class="blk">
+  <h2 data-page-node-id="VvS5Wkrjwizh4iUYZDIIKU" class="h"><span data-page-node-id="okDB375lg5aBRqF4QFE2FS" class="num"><!--pnid:elAYE6S6i3i2if9itXRqrR-->五</span><!--pnid:ADDZIjW8w7dddmblXZZymj-->会产出什么</h2>
+  <p data-page-node-id="KrmwgtxwGMwJQ5LV3ATOf8" class="subline"><!--pnid:822J8YSWJtBi6o3aqt4Mja-->判断标准只有一个：这份东西明天能不能直接拿去用</p>
+  <div data-page-node-id="pEpkLXaOlCCPSXNeCQImnV" class="outs"><div data-page-node-id="WKTzMHaPQZhWpOEKNOv4RF" class="out"><div data-page-node-id="iB6BHa3IxOZMM7C2DLxoMC" class="on"><!--pnid:6xAnaoNb0RbRagv3seycOe-->正式件本体</div><div data-page-node-id="4cu1Y0izQXomsGoq0QxzDV" class="ot"><!--pnid:gqgYJHxJpeWxyOfrnN2ANv-->全渠道配置闭环报告</div><div data-page-node-id="WKmk41x6mniBzM2xOY251Y" class="od"><!--pnid:p3GYjTj7LvSPRliVBpH3Yf-->五段结构 · 维护/分发/仿真/校验/闭环，含 Go/No-Go 放行判定</div></div><div data-page-node-id="5DKjnnrFeX8JdrOfPDIkJd" class="out"><div data-page-node-id="qNu2r2SnlucV0NMhnTEmex" class="on"><!--pnid:bfQFWlWgwSRfN7tKpw4dAd-->数据交付</div><div data-page-node-id="chr76iKeu0Q4PFb5WakEpB" class="ot"><!--pnid:qipdMA7hZLAziaDPqirhYl-->主数据表 + 5 份配置稿 + 满减仿真表 + 比价矩阵 + 告警清单</div><div data-page-node-id="0YfISDhjQN9dSSemHV4vnu" class="od"><!--pnid:xWRzkRirzkGxO7zJXE93GQ-->跨平台并排 + 串价/穿底打标 + 各档位测算</div></div></div>
+</section>
+
+<section data-page-node-id="X64Yc7jIpkMpJO2RwQ3N8c" class="blk">
+  <div data-page-node-id="Oy3HLcTi6vbTndmqoZiiev" class="card warn"><h3 data-page-node-id="deoTS78RuD4MZidoUfF56G"><!--pnid:q8vVmxSFBBYfnRwI7NpTaM-->这套东西不承诺什么</h3><p data-page-node-id="c1NPyRDoH8sxbVFICs7MgS"><!--pnid:i99kBFifQh1UvBVmi7vHEN-->不替代各平台后台真实写入；不做平台开放 API 真实对接；产物为配置稿与校验报告，非生产代码，不可直接交付上线。串价/穿底由规则引擎按阈值打标，跨平台活动叠加场景可能误报漏报，建议价格管控逐项复核后再放行；满减利润仿真基于毛利率与预估转化率，实际转化受门店与时段影响，档位上线前须结合历史动销验证；Go/No-Go 为框架演示结论，对外发布与正式配置须经渠道负责人复核并做二次合规审查。</p></div>
+</section>
+
+<div data-page-node-id="HEONaRrQKPDgN0QxpJmLiD" class="cta">
+  <div data-page-node-id="aHcnGNKgst2JjNtPjseOx7"><h3 data-page-node-id="ukS8ekaXehgLuhBqKbEgs8"><!--pnid:YfRSHTsPNcHcf96v3aj5BV-->想看具体怎么跑？</h3><p data-page-node-id="5K5LrZP6RgwbfNR2lYmpzb"><!--pnid:fAvK8d9jHHATTQ9NiIOlAi-->Live Demo 里有一次 25 个商品的完整校验过程，包括为什么会判出 No-Go</p></div>
+  <div data-page-node-id="bXSuyKe98WNE8RnixCOUwa" class="btns">
+    <a data-page-node-id="4je8zBzp2SuTMWdbusAyH9" class="btn" href="LiveDemo.html"><!--pnid:gtfgjv8jjOYLE4SS86W84t-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="gY7tPLxvhivCsNYq1BhTx9"><!--pnid:iwLrWdClzOsAIWaAPkdCz9-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="anYRRxMJj8HXcM8dJ4TPtU" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="EHqIkFZSAP3CZ1ikfz9y7u" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="NFulzRDGsuPFcnSozHXyjP" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="hnsbuzCmjZE6AIx3GcLr6R" data-pnid-children="f1dy0iT0qtVd5m8uVEQbYi">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

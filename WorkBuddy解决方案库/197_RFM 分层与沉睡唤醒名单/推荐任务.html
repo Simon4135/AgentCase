@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="urPru4mIMgzq63a903bPD0" lang="zh-CN">
+<head data-page-node-id="I7UPhgTmhvYV8QjFpB7Qpt">
+<script data-page-node-id="nDfd9HHKNoxvPtYbGrpf2w" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="gURlQCUmzt3d6hMuxZH6RL" charset="UTF-8">
+<meta data-page-node-id="ygSQshNOMiwgVWeYw7dwGF" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="u7Goaa12Kvt7uWsju4Q6kw" data-pnid-children="lRAikjsWqd6HnEsRY7TWQQ">RFM 分层与沉睡唤醒名单</title>
+<link data-page-node-id="XQMmc7CQSf3uSWeleUXGGD" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="fvhhsVjJ4sS3ku98bkSGBI" data-pnid-children="iryzi0hYnJ6KYrtHsy8i9y">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="18x9p4lq8GXssIoZ4iX2qu" data-pnid-children="l5VVbiroypaF4WhUZ0kPib" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="d2JjczMYnAXoxow5UdRYqy" data-pnid-children="kZlnnZftZZjGcjhg11R9BE" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="ioyOdJ7KUgQxQNM9RtTYjg">
+
+<div data-page-node-id="N5FjTAuFcZoqVPb0wtKgRI" class="wrap">
+<section data-page-node-id="dyFsxK7QXyjyCxfyj8XzyE" class="page-hero">
+<h1 data-page-node-id="vHPv9r8guHI21qfQhxT6R1"><!--pnid:EaD7jvuoDntFqMiP23zVcT-->RFM 分层与沉睡唤醒名单</h1>
+<p data-page-node-id="g2MK0gECTDKIvGkczXYmaH" class="lead"><!--pnid:58Mg5Rs5y5V8TiWDJMwjEd-->微信里躺着八千个买过的人 · 两千四百个 90 天没动静，他们在通讯录里吃灰</p>
+</section><nav data-page-node-id="Nid6CsH3FzsWASI81spbX0" class="subnav"><a data-page-node-id="ZkgduvACPWo7fVR2oySg3R" href="场景引入.html"><!--pnid:tmIGfoykmnf0tanGa6mnnw-->场景引入</a><a data-page-node-id="ImdVmyeWxWdk6LFAFkEwAF" href="LiveDemo.html"><!--pnid:eqL8UcktwStTjvMzauawh0-->Live Demo</a><a data-page-node-id="m4OUvCrZ7rzzr8P34PkLdp" class="on" href="#"><!--pnid:2JVrWN9TyOrKirffVszfh9-->推荐任务</a></nav>
+
+<section data-page-node-id="noVl8bZ6Rbh6ufP046fhJC" class="blk">
+  <h2 data-page-node-id="01S9LguJhV20hTFK0bwqNs" class="h"><span data-page-node-id="rPC0qJIbwDE9IheFptnQj3" class="num"><!--pnid:1t7213RPd5aYvV2o7gHhGK-->一</span><!--pnid:gO9yVF51ySOulFVvCnGZqH-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="7bjO3oGpndAOUHDLCFrOJ8" class="subline"><!--pnid:EdxnHNkuZju2MWx7foZXhb-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="37QDWux9EJvi1TNdksiCer" class="card"><p data-page-node-id="rGSzkhTuQQevmpjujcOxcS"><!--pnid:ZSjrMSva9laj4k2Bvg0OsS-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="QQbUy1AB5pFAlJwjWU4yY7" style="margin-top:10px"><!--pnid:ve3VdEOdCUM1EqRWJ3xeEq-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:keIpsZWvhusswmU0nOZIct--><!--wb-skill-start-->
+<div data-page-node-id="1OhXSqCxl0wAA0UwWDnV0j" class="wb-skill">
+<p data-page-node-id="Z21ggRdhTyWzI1zKDMVl3A" class="wb-skill-lead"><!--pnid:Uhw1cmsWEnr35jAAYgPyrk-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="84c3Qoez814G8OjqNNRcGw" class="prompt" id="wbSkillPrompt"><!--pnid:pnNXpCkYcdeHoGQoZyxbcP-->【准备】这个场景的规则都在「RFM 分层与沉睡唤醒名单」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/4dMyZsgEd1nAKW1TpJMOhN/VAyL2LngDTet/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="j4liIDCRaoV0yoPpjLtudf" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:zHYINNaT1DYnqSIlEr0k6j-->复制</button></div>
+</div>
+<!--pnid:i5NsKvujHziWNhG4HpEnXh--><!--wb-skill-end-->
+<section data-page-node-id="JXrHW2LrYHxt81I6jTJNkV" class="blk">
+  <h2 data-page-node-id="12GdcMPSJQei6rJsCn36Ij" class="h"><span data-page-node-id="BMiHaiNdCn9g4Vou18OKRe" class="num"><!--pnid:RNb4y1M1rPgaD1njQYdKnP-->二</span><!--pnid:2ibpdZvFfALVRWTrH05dxf-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="RTsFZOctoTUaeGy3euVQ8U" class="subline"><!--pnid:Pb6fM3UJZnw382vUWmklAi-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="YHA5huIdHXqD99KWCpAbvB" class="tlist">
+    <article data-page-node-id="9vNbLwmFGYBqrxvf9zNf9P" class="task">
+      <div data-page-node-id="iUmF2yVvjMStJbjkn42LFV" class="th"><span data-page-node-id="HgI2d2WifPZSrf1Hq35YrF" class="no"><!--pnid:TYLGm5sL1Qygy6OFpNfGyN-->01</span><h3 data-page-node-id="QpSkbux9LPUJNyQ73CWFFc" class="ttl"><!--pnid:RrmMMycuCu1HJDnVBhuTls-->首推默认</h3><span data-page-node-id="OWOPYMeahwRgjxTcTjRMJi" class="star"><!--pnid:6UEXl7S98iwRifG4FHF1Qz-->与一键体验入口一致</span><button data-page-node-id="m1akukK15yPq3wmiYIm0Vq" class="cp" type="button"><!--pnid:oTYnjAB31JtERa9kbfhnc5-->复制</button></div>
+      <p data-page-node-id="5XOupMBSjLNhr8CdmNx3OD" class="tp"><!--pnid:Br48fY7sApsxu41635YgD1-->我来试一次这个技能。三份材料都读：「01_三平台订单导出_近24个月.xlsx」「02_企微好友列表.xlsx」「03_退款与投诉黑名单.xlsx」。老板娘问我们微信里到底有多少老客户、值多少钱，我得答上来。R、F、M 三个维度算完，分档线按本店数据分布定，分成重要价值、潜力、沉睡高价值、一般沉睡、流失预警五层，每层给人数和累计贡献金额，沉睡高价值排第一优先级。产出三份：「RFM 分层与唤醒名单.xlsx」——客户一行一条，列分层、R/F/M 值、历史消费额、最近一次购买时间、买过什么、优先级排序；「唤醒话术草稿（分层版）.xlsx」——每层一套草稿，带客户的具体购买上下文，不是「亲爱的老客户」这类群发模板；「黑名单与剔除记录.xlsx」——退款和投诉客户的剔除依据一条一行，避免误发。退款和投诉过的客户要从唤醒名单里剔干净；近 90 天新客还在首单复购窗口期的，别跟着一起唤。名单导回企微我自己手动打标签，不要群发；推荐意见、完成质量评定、责任认定三栏留空。</p>
+    </article>
+    <article data-page-node-id="EMB1ZIiVKw5YUTCuu6BkPc" class="task">
+      <div data-page-node-id="y44BgKJ2vnOxP3U0UzTYKU" class="th"><span data-page-node-id="YWWHXvFZk8l5q3YU2lDbw2" class="no"><!--pnid:BtbOHnSpDf5Naw3R4slon1-->02</span><h3 data-page-node-id="P5dsGRCXbUOQNMP1JFfYbn" class="ttl"><!--pnid:AL29AZr5TDXYfuFjzcdspA-->只算沉睡高价值这一层</h3><button data-page-node-id="dYLFo3UwbRycvOTQTOgaLh" class="cp" type="button"><!--pnid:PIUToJ7GfKMQBee6aGPAHU-->复制</button></div>
+      <p data-page-node-id="cJ8oiWxqO7gvrYokA0Ee9e" class="tp"><!--pnid:PMAtITLy9BHNEUINMZ7vTc-->先别出五层名单，只挑「以前买得多、最近 90 天没动静」的那批人。读「01_三平台订单导出_近24个月.xlsx」和「02_企微好友列表.xlsx」，按历史消费额排序。产出 Excel 一张：客户一行，列姓名或昵称、历史消费额、累计单数、最近一次购买日期、沉睡天数、买过什么、是否在企微好友列表里、当前标签。两年内买过 14 单累计 3800 元那类大户排在前面。</p>
+    </article>
+    <article data-page-node-id="Nm1Pk9Hsr5i5IJtAIeObet" class="task">
+      <div data-page-node-id="V2oVe4AmUvvZMoaL0GqvtW" class="th"><span data-page-node-id="MaaK7kZTEONBKaPAJ4Lge5" class="no"><!--pnid:kTeb8EB5xNbR3Jk1yMS7rP-->03</span><h3 data-page-node-id="CCYm0NdngAYpPIsNusMMEl" class="ttl"><!--pnid:JSq8vB7QHx6i30LgDKJpmZ-->换成只按金额分层</h3><button data-page-node-id="lHfYEk12a1juutyzlc7dlR" class="cp" type="button"><!--pnid:fBYJqeGyd2YZahd4evjRwT-->复制</button></div>
+      <p data-page-node-id="3SNQjZmuaLLEbmjGBFeNiL" class="tp"><!--pnid:hBoQ54E0QtzzRjFPDQm7DH-->这次改口径：不分五层，只按累计消费额分三档（高/中/低），跟五层版对比。读订单导出和企微好友列表，产出 Excel 一张：客户一行，列金额档、五层分层、两版是否一致、差异类型（被漏掉/被高估）。差异客户单独排一段，看看谁在名单里被漏掉或者被高估了。</p>
+    </article>
+    <article data-page-node-id="efYmAyq5OroeApZbroMLgN" class="task">
+      <div data-page-node-id="zWFCOVV8rKJ1c2FD4zPFwq" class="th"><span data-page-node-id="gnraK4N3XbcM9Tez9pflca" class="no"><!--pnid:B7aUtPg7oabzGkpTOAxRpJ-->04</span><h3 data-page-node-id="LMootRtfRrCVWxZyGaXdOZ" class="ttl"><!--pnid:UDKccZz0pvQkW0GEja8lJ7-->一次跑三个平台</h3><button data-page-node-id="kvXpE3dnHgBdxk4yLzowc7" class="cp" type="button"><!--pnid:Y1iNA6UDTu9mMdyu9lSYjw-->复制</button></div>
+      <p data-page-node-id="P12U8KUxw1WAY5l7dN95ZL" class="tp"><!--pnid:zoPNDNKEqtFa7yJRww8Dqx-->把淘宝、抖音、拼多多三个平台的订单分别算一遍 RFM。读「01_三平台订单导出_近24个月.xlsx」「02_企微好友列表.xlsx」，产出「RFM 分层与唤醒名单.xlsx」里加一张平台横向对照表：平台一行，列客户数、沉睡高价值人数、重复客户数（同时在两个以上平台买过的）、分档线取值。分档线各平台分开定的原因写一句。</p>
+    </article>
+    <article data-page-node-id="URxR1miiEZShd4YFRcK2WR" class="task">
+      <div data-page-node-id="FRz4RNQI5XMvqovnLCqmkq" class="th"><span data-page-node-id="rV9wqGdRemo2ZBODt8zkQb" class="no"><!--pnid:wDY5EgExRoShmlu3HTrtxQ-->05</span><h3 data-page-node-id="yBH1DoJEmzQAC2nHifDz89" class="ttl"><!--pnid:Ny5C55BLgI9olT2Aqo7mXd-->给老板娘看的一页</h3><button data-page-node-id="JYMUZsOmfcI7szgoCDfhVx" class="cp" type="button"><!--pnid:HBKQ1xTBA4nfhQId7YOtVG-->复制</button></div>
+      <p data-page-node-id="Xo3cebqTLcVSXhmUWVghox" class="tp"><!--pnid:F7nwMh5qHPL40f4dcBuoDU-->读「01_三平台订单导出_近24个月.xlsx」「02_企微好友列表.xlsx」，把分层结果压成一页，输出 Markdown：微信里到底有多少能联系上的老客户、其中多少是沉睡高价值、大概值多少钱、我打算先动哪一批，四段且每段带数字。名单和话术都不用给。预期回款怎么算的写一行，是参照唤醒率还是本店实测要标清楚。</p>
+    </article>
+    <article data-page-node-id="qHL2DpqrZUBUl3W5rIlyso" class="task">
+      <div data-page-node-id="QDF5zThl1GLFPJvhmNRodM" class="th"><span data-page-node-id="fV5EScCk7aRwFmocg9o9Lp" class="no"><!--pnid:GEoK0PLmYA6CIhJcn4pZrv-->06</span><h3 data-page-node-id="0LhrDYPJadAfn31iNIaRlf" class="ttl"><!--pnid:SV0F8hhqIacTlJHteGpKPk-->让它反驳自己</h3><button data-page-node-id="TOvG2HRkFH5gJmLLWjeI4L" class="cp" type="button"><!--pnid:Dv9zvSEbv5B599Ty9orP3s-->复制</button></div>
+      <p data-page-node-id="eYNvy8uCWvmqYHghXWUvtU" class="tp"><!--pnid:0kbFltMwItIy8NyEwKbXPJ-->「新客培育可以从本次动作里划掉」这个结论依据够吗？读「01_三平台订单导出_近24个月.xlsx」，把近 90 天新客还在复购窗口期的比例算出来，首单时间和窗口期判定写清楚。站不住就把这批人加回名单。产出 Excel 一个对照段：客群一行，列人数、在窗口期占比、是否进唤醒名单、理由。</p>
+    </article>
+    <article data-page-node-id="B7CDUnnAX1mLVwMALNL5So" class="task">
+      <div data-page-node-id="yuYdKZtbXc7ytInAEZbGIK" class="th"><span data-page-node-id="fYlCyR6qhQc3vmbbLcvUKc" class="no"><!--pnid:coUsRFUevcCzPPwY6AROYK-->07</span><h3 data-page-node-id="bfBW4Vq6GX2ICqqXF2aC4M" class="ttl"><!--pnid:4BGAfwrG6LqZ7tV61oZr2W-->专门捞被淹没的老客户</h3><button data-page-node-id="oczwbhzuyz2HajxyNaWdyb" class="cp" type="button"><!--pnid:2c7Oq0u3s1sWjNgD1D9ckM-->复制</button></div>
+      <p data-page-node-id="mgNKYJHWadnQEoXwiHmT5X" class="tp"><!--pnid:5FQ8PuXVq34Qm8Ei50D9uT-->读「01_三平台订单导出_近24个月.xlsx」和「02_企微好友列表.xlsx」，把两年内买过十单以上、最近半年以上没复购的那批人单独捞出来。产出 Excel 一张：客户一行，列累计单数、累计金额、最近购买日期、是否在企微好友列表里、当前标签是什么、历史上被单独维护过没有。标签空的单独标出来。</p>
+    </article>
+    <article data-page-node-id="gYFAsWNAi2S0FYeVbMjFqn" class="task">
+      <div data-page-node-id="H6625C83irQebB3n3vxQgD" class="th"><span data-page-node-id="H69tamtbc5vVqEx9c2yTGF" class="no"><!--pnid:Dh0ZgPZiWvzBQXQ9p5UEv5-->08</span><h3 data-page-node-id="euLVfQ3Xx45PmceKWUh0k0" class="ttl"><!--pnid:OAQCWd5v9O40lCE1YzZdao-->对照剔除规则自查</h3><button data-page-node-id="a5520GJ4aZQgoNDxNsJ87d" class="cp" type="button"><!--pnid:ALeCoqGUJ6394pOIihQXSV-->复制</button></div>
+      <p data-page-node-id="i4l9pc0vVkn2R4Bxip3m0P" class="tp"><!--pnid:1LCDRB5GJE4qHQglhNzeak-->对照「03_退款与投诉黑名单.xlsx」和订单里的退款记录，把这份唤醒名单自查一遍：有没有混进退款拉黑或投诉过的客户、有没有同一人跨平台重复、有没有已注销或联系不上的。产出「黑名单与剔除记录.xlsx」：客户一行，列剔除原因、证据出自哪份记录、排除依据，复核人栏留空。逐条给我剔除依据，别默默删掉。</p>
+    </article>
+    <article data-page-node-id="SlgwTp8cclTr2JvKoGjqRg" class="task">
+      <div data-page-node-id="xzPRcspkPoNNf1gtIt3PqL" class="th"><span data-page-node-id="QIlzIoRt84JQsqMid80vEt" class="no"><!--pnid:QTiDwxgq0H1yS5ezJ5Sih6-->09</span><h3 data-page-node-id="tMFQnhuLJLuwYLKpc7g2QP" class="ttl"><!--pnid:l6wGWDU4OHDbVUe6pYD2pd-->折算成唤醒的钱</h3><button data-page-node-id="o7TnusbCCD1a7l7zEegCc4" class="cp" type="button"><!--pnid:wgfTtxdhVtkT6iJ8iAKLHw-->复制</button></div>
+      <p data-page-node-id="oTZWJhFJXbPBZwMlBPbKtJ" class="tp"><!--pnid:ZEZBTghwNeGyyQcPmK4MfC-->读「01_三平台订单导出_近24个月.xlsx」和这次出的「RFM 分层与唤醒名单.xlsx」。沉睡高价值这批人按历史客单和参照唤醒率跑一遍，预期回款大概多少？同样这笔钱走拉新投放要花多少？产出 Excel 一个测算段：一批人一行，列人数、历史客单、参照唤醒率、预期回款、对比拉新成本，算式和取值来源都写出来。唤醒率是本店历史实测还是外部参照，必须标清楚。</p>
+    </article>
+    <article data-page-node-id="tNkJg6IKKe7Lw6vGWTldsl" class="task">
+      <div data-page-node-id="yOJKCFEWcgWFW3O1K6QHPW" class="th"><span data-page-node-id="vCYSAO9CUM4ix5XAyoRGDv" class="no"><!--pnid:6X8V6L4RZJaSawxauVGMaa-->10</span><h3 data-page-node-id="76yILZjOMCbplopJpGcKOM" class="ttl"><!--pnid:Cs8PtFExsthHWNfiU6GzoA-->沉淀成分层口径表</h3><button data-page-node-id="OAMM4ALstb36ZooBTKlNqQ" class="cp" type="button"><!--pnid:dk8wqhcUiH23NVwfotlzhs-->复制</button></div>
+      <p data-page-node-id="c3MAKGM2Rlcq6JAr0dkRrv" class="tp"><!--pnid:QmJEmKGT775CWLQeHZgYON-->读「01_三平台订单导出_近24个月.xlsx」「03_退款与投诉黑名单.xlsx」，把这次 RFM 的分档线（各维度的具体阈值和怎么定的）、五层定义、剔除规则整理成一张分层口径表，Excel 一张：规则一行，列维度、阈值、判定口径、数据来源。阈值要写具体数，别写「按分布定」。下次跑名单直接套用，保证每期口径一致。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="SWid1KaGAGY4o2oxoW2LDA" class="cta">
+  <div data-page-node-id="S6Adk9Z11hxXXPuF1nxVhd"><h3 data-page-node-id="FmOHsaM62zglHXF9k9wUmZ"><!--pnid:J8mr4iXrqA6PVJyYwEO4QG-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="XZvmi0l68laClUfhcrruWT"><!--pnid:aXgyEVwkWwN20kUChJe1Y7-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="IMkqDVMMoVHuxYSjKFdJ4Y" class="btns"><a data-page-node-id="ZmYbuQiuSqUzkQMWGgzHL8" class="btn" href="#" id="ctaContact"><!--pnid:Q6WYqcD3B49sjKBAHgSzwY-->联系我们</a></div>
+</div>
+<footer data-page-node-id="FvbVTIGbAgbRbKgl1CFjUN"><!--pnid:WNJcHFL4KV8Aa2JA9N0EWX-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 不碰钱不对外发声 · 执行按钮永远在人手上</footer>
+</div>
+
+<script data-page-node-id="GHfGEKqMUC4Wl7Ki4tSzlW" data-pnid-children="5h92xmbVyzNGJiLhlge1mR">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="HjvQwNsGA5W2XeTlM32sNk" data-pnid-children="4g36INtKlzEqnCeG0YnUss">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="aie3vqy6hYO47tfYVYzNmb" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="Pf9UqYJG917OValv1yjUHZ" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="6Z4AlvjNBZqu4bCPZVi1eI" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="SklIGZDJBVI8Jrpnor7D41" data-pnid-children="1tfett7WN45vVB1aEqG6pt">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="uu92cREljhpVfDd4IlaWCX" data-pnid-children="kRtNdnlSa26F5ztmQqcC1v" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

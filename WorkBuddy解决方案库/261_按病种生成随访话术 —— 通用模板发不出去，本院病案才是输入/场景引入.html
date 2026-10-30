@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="9WR82ii2RA2dA49Rvz4bav" lang="zh-CN">
+<head data-page-node-id="MMIrHlH5t4GdrRrmJjGxgB">
+<script data-page-node-id="HiEoQ5PlnKu6NFiq1Uu9zN" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="Vm6al8ki5XCbgI8BPJo1kI" charset="UTF-8">
+<meta data-page-node-id="KTHgXNILpt8SIRSfAkeCGs" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="Ddp5epJft9VCVkA8Pl2FtG" data-pnid-children="MFgqgaFrWKDEks3EqW3P18">按病种生成随访话术 —— 通用模板发不出去，本院病案才是输入</title>
+<link data-page-node-id="jNz934KChQAJxtFA2ZeSzq" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="BfRw1JvmmnD9wSe5wE2yu1" data-pnid-children="UUHrqvhOJqKlZmXgmKftHp" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="Ee1mCitajsMm7zg8S0dM01">
+
+<div data-page-node-id="PCur5QO7ihr7dtbcU7V2ZL" class="wrap">
+<section data-page-node-id="E8UJyUhFGuZH3PgBIkZ7jU" class="page-hero">
+
+
+<h1 data-page-node-id="J1pYLaIb2GkLQ4jmRUMcYk"><!--pnid:rg3zHWByyCKEtrukrpuDys-->按病种生成随访话术 —— 通用模板发不出去，本院病案才是输入</h1>
+<p data-page-node-id="69pnrMB3F6AeMAFMus4u8W" class="lead"><!--pnid:TPHooFNF7WN5Qvg1GgpmbI-->随访话术人人会写 · 但「照着本院上个月 87 个髋关节置换患者写」只有一份</p>
+</section><nav data-page-node-id="JQhbISIPIHlOpou7Ff1OTV" class="subnav"><a data-page-node-id="cBbAkdvISOM3wvq4AZ33Te" class="on" href="#"><!--pnid:VMJCXNCbAZ0BG4hSsd4haO-->场景引入</a><a data-page-node-id="MSVxoVXfWwFUyHKSQiCJXJ" class href="LiveDemo.html"><!--pnid:y6ftqGnhdsnpXogCk6nFHi-->Live Demo</a></nav>
+<section data-page-node-id="h3xKypgiePUEs31KMFL1zi" class="blk">
+  <h2 data-page-node-id="k0QydFTkLpZxbNm1FkWRZv" class="h"><span data-page-node-id="rEICKVLZPZaINuLNCEHCBc" class="num"><!--pnid:5h1osksI80RbNEo2e3Q06b-->一</span><!--pnid:bMnQ1ckz1U13cx2B8xG1OM-->这件事现在是什么样</h2>
+  <p data-page-node-id="1lxlkaoLMMqmdud5X57MA7" class="subline"><!--pnid:p7kN3tfPoYhCXzcYckH2p7-->随访与患者服务 · 真实业务触发</p>
+  <div data-page-node-id="lgrfklSQqt7fvYt95Wc1WM" class="card"><p data-page-node-id="2sQymw6nyknawoeDY0Fl2P"><!--pnid:X9ju1z96NpeXcVj6ENdNSO-->随访排期表出来后，护士对着高风险患者名单发愁：关节置换的问什么、放化疗的问什么、慢病的问什么——网上下载的通用话术模板和本院的出院医嘱对不上，患者一听就知道是念稿，本能抗拒。</p></div>
+  <h2 data-page-node-id="eoT1q3ujv93zNedSKzaVFc" class="h" style="margin-top:22px"><span data-page-node-id="abb60cYZEGkpMj4DHGrDhF" class="num"><!--pnid:3U7vqdLe8QfUKmDGb9iAfI-->二</span><!--pnid:vTI9HdUhmOT9yyhQGOa1y3-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="f3Tf8DpSrVR9VKgJRJb3kc" class="subline"><!--pnid:noAP2q9shAKMKz3crVc6jp-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="X7QhYTgkiQlcZPE0FZkYg4" class="pains"><div data-page-node-id="dehMfHua3iczlB1Iic5AeR" class="pain"><span data-page-node-id="rA20QFR20tauAcgzvMKIx5" class="i"><!--pnid:dR2kg0qmTPqXFeoV5ZkxZ1-->1</span><div data-page-node-id="DUdFcSifBK3VcBEC6ILzdM" class="t"><!--pnid:xM9zLHlTbWEa97aIuMjb5g-->通用模板和本院出院医嘱对不上——模板里问「伤口疼不疼」，本院医嘱用的是「切口渗液情况观察」，患者听不懂也答不上<span data-page-node-id="eZgB3MtzdSoshvGot43oYa" class="src"><!--pnid:NO1SwVANHnGSGSsc5IDaa3-->依据 · <a data-page-node-id="6OUp7GhdVCV0jatrDRD990" href="https://jt.hxyjw.com/arc_54126" rel="noopener" target="_blank"><!--pnid:Qwc5tvWPW8RAttILiQJxEu-->民营医院客服每天 80 个回访电话被挂 40+，患者一听回访本能抗拒觉得要推销</a></span></div></div><div data-page-node-id="duqfjhjavLfUelcmhzQs9Y" class="pain"><span data-page-node-id="LU64kZI4pOfi6ntNQGPgwr" class="i"><!--pnid:yoINbEDQCsgkZYtUWHoTM2-->2</span><div data-page-node-id="XfR6bBT8ryBwKGc9BYiBmr" class="t"><!--pnid:4bvZYC9SIBdopE0w8fQKQY-->患者一听回访本能抗拒，觉得要推销——每天 80 个电话被挂 40+，话术的前 15 秒决定了接通后的去留<span data-page-node-id="dpXTBYThKC2iNrs6LxBYik" class="src"><!--pnid:KHMSVZGNRZzeoXbVN6tGyq-->依据 · <a data-page-node-id="6naH6jxBfMi0ohdDLfvRbp" href="https://jt.hxyjw.com/arc_54126" rel="noopener" target="_blank"><!--pnid:OUSZIC5Mc3Y4zZkzhlqGXh-->民营医院客服每天 80 个回访电话被挂 40+，患者一听回访本能抗拒觉得要推销</a></span></div></div><div data-page-node-id="LwPUyo25aonC2LEivdkHuw" class="pain"><span data-page-node-id="PUQJDzqD1CKkzbjcmAoMR0" class="i"><!--pnid:gyUEk2PoEaNL37D3LG9djL-->3</span><div data-page-node-id="VIsYccK50TAItyepILDjCn" class="t"><!--pnid:5H9keEJco5Erl6IcFTafVc-->护士缺乏沟通技巧占随访失败原因的 14.9%——不是不会说话，是不知道这个病种该问什么、什么回答算异常<span data-page-node-id="OHOxIMH7oceY1gEIBiXqmi" class="src"><!--pnid:Ldxj1d9iQpthPHB1lBZ79h-->依据 · <a data-page-node-id="kUC8arXtu6HdrrzaF2PIIL" href="http://www.knowcat.cn/p/20241119/1844772.html" rel="noopener" target="_blank"><!--pnid:8K31hIaT0DOofD936r9mug-->产科 348 例随访失败回顾：随访时间不恰当 31.0%、电话号码失真 28.2%、患者不配合 25.9%、护士缺乏沟通技巧 14.9%</a></span></div></div><div data-page-node-id="J7nR6tkTWoRWFJV69Ojz6B" class="pain"><span data-page-node-id="ZDsGL4Rr0XS7G8fpceAfaI" class="i"><!--pnid:J7kQVy91qqp0AlTYKXVV1v-->4</span><div data-page-node-id="PHQ4ueOx1lnzUr2Qs0JtfD" class="t"><!--pnid:qcvv2IP1MavrfCyjBjzBjF-->AI 随访收不到医学信息（仅 10.7% 反馈为医学话题）——问题出在提问设计，通用话术问的全是非医学话题<span data-page-node-id="OlsGZrOY6PRuXr32PkRKcD" class="src"><!--pnid:8I2lPm0UIGFYJxLkBEwflf-->依据 · <a data-page-node-id="agMXO36V1V1iUmL0MiFT70" href="https://www.simbo.ai/blog/limitations-of-ai-assisted-follow-up-systems-challenges-and-future-directions-in-healthcare-communication-technologies-1330459" rel="noopener" target="_blank"><!--pnid:RehpCJ50Ptdn3x4Z74pYCe-->北京协和医院对比研究：AI 随访接通率 92.2% 与人工接近，但人工随访 87% 反馈是医学话题，AI 仅 10.7%；AI 通话平均仅 88 秒</a></span></div></div><div data-page-node-id="NQEvxM1ABHAVDhVL4t70ST" class="pain"><span data-page-node-id="GagRGQnV4wmOVbKv8T2tZa" class="i"><!--pnid:rTkyZGFZYnz9oEq9EhYVxa-->5</span><div data-page-node-id="J7CaHGZ0MAxnl6nfRpk9ox" class="t"><!--pnid:8AnWdlpubRNmTAAXGl87aC-->医美术后专员被要求「电话录音保留材料」——但没人给他们该说什么的脚本，全凭个人发挥，纠纷时录音里全是漏洞<span data-page-node-id="q6JFa0h49CpvCl5uapwGWX" class="src"><!--pnid:2AoytccU5kuBlIHaUpdUAI-->依据 · <a data-page-node-id="gX1kiXC7iIFzNXRyTizZC4" href="https://jobs.zhaopin.com/CC457589380J40050161305.htm" rel="noopener" target="_blank"><!--pnid:tKargRTio1sHOJEfQyKlYK-->医美术后专员（电话岗）JD：按节点电话回访、系统记录、「负责对电话进行录音，保留录音材料」</a></span></div></div><div data-page-node-id="HajqxOg9nXcijqxoVuyIgQ" class="pain"><span data-page-node-id="Di37jPd6DfRvFGBjp0mvjr" class="i"><!--pnid:m4ldGcrP8HRMJh32t6nKE7-->6</span><div data-page-node-id="w9iu967cuV7OSa3lUE5fui" class="t"><!--pnid:MsVz9a4Drw5vY7Sa62GUsg-->监管细则明文「人工智能软件不得冒用、替代医师本人提供诊疗服务」——随访话术的边界不是「问得专业」，是「不越过诊疗这条线」<span data-page-node-id="tRxIfWtQc8VzQmKcAqAzFn" class="src"><!--pnid:aNUcW42MOupLZOVRxkh9tz-->依据 · <a data-page-node-id="kG3riycLdgMeQK1DGbDJu3" href="https://baike.baidu.com/item/互联网诊疗监管细则（试行）/61373593" rel="noopener" target="_blank"><!--pnid:DvfLld6vuvYMSrEN85Hw8E-->《互联网诊疗监管细则（试行）》第二十一条：处方应由接诊医师本人开具，严禁使用人工智能等自动生成处方；第十三条：其他人员、人工智能软件等不得冒用、替代医师本人提供诊疗服务</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="qibmobgLy7BNRoFpIupMe2" class="blk">
+  <h2 data-page-node-id="gYUyEyuKsAtTZ2cqtDkgKt" class="h"><span data-page-node-id="EZDSD9lRkpmT4hMNRdn7SB" class="num"><!--pnid:5sj3COtiJElRy2rH8vzfh1-->三</span><!--pnid:AidGgo0WBdYll7Ghp8eNPG-->换个做法之后</h2>
+  <p data-page-node-id="SwdC9IltNbA5iQcjpHVPvO" class="subline"><!--pnid:UpRDoncZXUiUxl4rOx7ctg-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="hQzjrM20HKCbOmV9WOEob1" class="cmp">
+    <div data-page-node-id="zvnuc013vBsraWpmaRXyW1" class="old"><h4 data-page-node-id="ZO6hlj3nHh01cTPQN7mHcZ"><!--pnid:5jdxzPEuX4QnbJH038mb9Z-->✕ 现在的做法</h4><ul data-page-node-id="tqvRY38BhI9iNK4XsrWGsW" class="list"><li data-page-node-id="X6FTTFZwRKQljuLiqV0Ods"><!--pnid:1Yff1KKGgd9Hj3eGbLbnnR-->通用模板和本院出院医嘱对不上——模板里问「伤口疼不疼」，本院医嘱用的是「切口渗液情况观察」，患者听不懂也答不上</li><li data-page-node-id="VhUDTKGXtTNJdLyu17Fz5L"><!--pnid:gdoagFCb69URXwnAeRJTlz-->患者一听回访本能抗拒，觉得要推销——每天 80 个电话被挂 40+，话术的前 15 秒决定了接通后的去留</li><li data-page-node-id="fJAdpbTDcyIynEwheJ6ijO"><!--pnid:ZBO8WGsMfjWDQq1jmschJz-->护士缺乏沟通技巧占随访失败原因的 14.9%——不是不会说话，是不知道这个病种该问什么、什么回答算异常</li><li data-page-node-id="ycdViI26S2LMvZqgeK6bbv"><!--pnid:RKy3FqzT3Y1z1qh7bvyyDq-->AI 随访收不到医学信息（仅 10.7% 反馈为医学话题）——问题出在提问设计，通用话术问的全是非医学话题</li></ul></div>
+    <div data-page-node-id="AbOmMBNdpzRdGeFg8XHZnp" class="new"><h4 data-page-node-id="UQMkqChZgAurPcqqCF5Wd5"><!--pnid:mccwhapW6tcPcOFxfmUew9-->✓ 交给 Agent 之后</h4><ul data-page-node-id="ILhSWx1Q4EuXiOb55vJcxh" class="list"><li data-page-node-id="rympWIdsxnOhYBxX7gtBmN"><!--pnid:QCYPKdpH4C3NuOf2PPB4fT-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="6EwA2AGdMk3dJkrQA4SZh1"><!--pnid:Tyacn6haiPrIdPfj6pKZm9-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="9wPDVGlCLnvPH3fdE7Cch9"><!--pnid:wkF5zrZJY324pfU9yE5xPj-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="YNRDaP9mJ0zycpDtwqzqUJ"><!--pnid:uWMhqnREpT0WzYlevIGeYk-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="KdccmLEI2cwBMPN2iPlapJ" class="blk">
+  <h2 data-page-node-id="sUAOtY8hfc2rGCEOCGsouM" class="h"><span data-page-node-id="3KnLpBmLH7dbQfTT1951mY" class="num"><!--pnid:PjrmA1UpEo9Cb4oca01hB4-->四</span><!--pnid:mcW9WEeAXV3dLlacWjmMmL-->场景闭环</h2>
+  <p data-page-node-id="ExHAIPX3Pl6RVaNee1wMe0" class="subline"><!--pnid:dbuahDVHVrC3RbtkDlGaJs-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="YjV1DN2eZImNZowge9WMRU" class="flow"><div data-page-node-id="CyXgEB5jlaQrUxJwKpFO0h" class="step"><div data-page-node-id="U9Rw6V8ZvJ8jkVELd5wMyP" class="n"><!--pnid:hkNViRckV9KqrdYc9tw02T-->第 1 步</div><b data-page-node-id="wyPVzKtw3M7TTgyTPKxQu1"><!--pnid:hfZIQuGFVN3uUZJkQsuwze-->对齐 · 术语口径与出院医嘱逐条对表</b><span data-page-node-id="RsrqFLQwHK662sNZaM3tUs"><!--pnid:FmClkJiIyfT2FWCbArq4FZ-->话术用词与本院医嘱表述一致，患者听到的和出院时交代的是同一套话</span></div><div data-page-node-id="hH3RBKiZrj1yNI2OpXvRST" class="step"><div data-page-node-id="TzIS2obrUJ7ZdlxrzRibO8" class="n"><!--pnid:v6WiyLReHHWGJ2CDck8Ouq-->第 2 步</div><b data-page-node-id="O5DCkZsOhk3EBSxJZwgyBX"><!--pnid:SwZM1wOy8If7Lpqsk0svwz-->生成 · 按病种出话术初稿与开场 15 秒</b><span data-page-node-id="VylIHi879o8mj5rfUvkT6q"><!--pnid:MyRDlWThiK4qwrUSbKei4P-->每个病种：开场白（说明来意非推销）、3-5 个随访要点、结束语（下次随访时间）</span></div><div data-page-node-id="Wtwu2WSkpYyc9jyKvO7LzZ" class="step"><div data-page-node-id="MCchHbCao3mUCQn27UqqrH" class="n"><!--pnid:CQaoi1ooxmrH0GPAA04Uui-->第 3 步</div><b data-page-node-id="1y3Ls4lWpift3SPEcup0dz"><!--pnid:XT0ecr3M3HiFOOyaHIrIYP-->建树 · 异常应答树三档分支</b><span data-page-node-id="61X9M2kPzkkaxJzVnG46im"><!--pnid:m84DUNZZuNf5tyG15Z9Tjn-->患者答「是」往下问什么、答「疼」到什么程度转介医生——每个分支写明终点</span></div><div data-page-node-id="ssaFcDQfDdwy4BPn7DmsSr" class="step"><div data-page-node-id="5Az5Y02DQQaJoJGNTRMtr2" class="n"><!--pnid:XPfIgQM96BftNuEL9RSARb-->第 4 步</div><b data-page-node-id="Xyn8gUf2CdiwrqbAChmbkr"><!--pnid:nsTT6KhH2t3EgkSvcsppFm-->校准 · 与历史异常记录比对补分支</b><span data-page-node-id="yDm1ZlqeJh6FRfzSk8splH"><!--pnid:nd2eJu35c4JWgxkS6yIfw9-->本院患者报过、通用模板没有的问题，补进应答树</span></div><div data-page-node-id="mjGOPkLCx0fXw1zi0MKQAw" class="step"><div data-page-node-id="WTTzex7qnBJpzg9ecQnckf" class="n"><!--pnid:L2Uv8wJnlcduCAguTd3MPo-->第 5 步</div><b data-page-node-id="ZE2NAwUigztVE8fXz7xC5f"><!--pnid:svT4gpM2ddNrzQ0ucoBi9q-->定稿 · 护士长审定与版本归档</b><span data-page-node-id="7ZOcq4NgjW1RZK6i69HHto"><!--pnid:fvUhvL2CZneWaXkUX22hVT-->审定记录留痕，话术库版本化——下月增量更新而不是重写</span></div></div>
+</section>
+
+<section data-page-node-id="Xe3G09fV53OMtSBuwYcqhY" class="blk">
+  <div data-page-node-id="EliHu06Ltyi3PwFSL7ACsy" class="g2">
+    <div data-page-node-id="M8tchn9FACffb0pLgZeyD6" class="card"><h3 data-page-node-id="ilRZHl36DQIlemGt43bVZi"><!--pnid:oU4gwER7J1iCKK8hRu5Kod-->要准备什么</h3><div data-page-node-id="58mdHYcNZll3Qjaz03rZVO" class="src"><div data-page-node-id="MhaPfxY88IhN43e83SiZ4u" class="fn"><!--pnid:t5kXjZFUEBNf5JZrXlXyau-->本院病案库诊断分布（HIS 导出摘要）</div><div data-page-node-id="VTNJxj8k6PN9GudQ6DLR5C" class="fd"><!--pnid:iVZquJxA6bdzTpck6fHalc-->高频术式与诊断 TOP20——话术覆盖优先级的依据</div></div><div data-page-node-id="bSelpvF8vdFf0YrrewB1xq" class="src"><div data-page-node-id="AsftAB3pLgPOErUDmRdgry" class="fn"><!--pnid:qQOLA6SmmTBS0tf9uFVpha-->本院出院医嘱模板（各科现行版本）</div><div data-page-node-id="F1cdZ7wRKmTOg4lROnsruV" class="fd"><!--pnid:hOL0lv7z92reS2yhjFSIV8-->术语口径必须与医嘱一致——这是与通用模板的根本区别</div></div><div data-page-node-id="DIovfCdxH0RzP28fD6d26L" class="src"><div data-page-node-id="o8JUDqpNobAzccSfbZaM5B" class="fn"><!--pnid:ET600iv3JwOJRuZkSTPmN2-->历史随访异常记录（登记本拍照）</div><div data-page-node-id="ur52YPLGcxjaLgtkfERsht" class="fd"><!--pnid:PfyzzR04Kp78XDjsljyNJ4-->本院患者真实报过的问题——异常应答树的分支原料</div></div><div data-page-node-id="QSheE2cA3hVwEvaWQb38z9" class="src"><div data-page-node-id="oZnUKGbH0DiJGS053XdTyd" class="fn"><!--pnid:20bnbRVzkqOhaxv5XdWWpg-->随访排期表（出院随访分层排期表 输出）</div><div data-page-node-id="rac0Ocu6eefIa9IsByKLMI" class="fd"><!--pnid:ymuivCBwAV257zbu79kyfV-->本周各病种要打多少通——决定话术批次</div></div></div>
+    <div data-page-node-id="vPYY229SxKXkgq4Q3GKlOA" class="card ev"><h3 data-page-node-id="atAl04ewxaCC7gTRamzqRH"><!--pnid:WLCcukTCLqyCXftGe2FV6r-->为什么这个场景值得做</h3>
+      <p data-page-node-id="4qjloTM6XP8yKIEuCdCv79"><!--pnid:U6hDfEtwEeT9axLr3ZFYwT-->痛感 4 × AI 适配 5 ÷ 落地难度 1 = <b data-page-node-id="VJdMCskebxNMh85k0AqQzB"><!--pnid:2h5uQ7U6WSKbjeowjBQa2j-->24.0</b></p>
+      <p data-page-node-id="RxrPiA2Aojb0hDRoxo219j"><b data-page-node-id="7Rzvth5jjvAS7KGBXSWRhe"><!--pnid:GOyG3YevKq5l91Iv91xwsP-->最大差异点 ·</b><!--pnid:nxxulBjvwUAqmZt7bvZZUF--> 网上下载的话术模板是通用的；这里以本院出院医嘱、病案库高频诊断、历史随访异常记录为输入，每个病种的话术都能溯源到本院自己的材料。</p>
+      <p data-page-node-id="WykEgbuoOh9GJGPZEA3Lhz" style="color:var(--ink3); font-size:12.5px"><!--pnid:PIJpGHoV1WVmJWEmsgJ4mG-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="Rwv0L6cy055W1KjVsrPhsf" class="blk">
+  <h2 data-page-node-id="rTFm1rYxd7WsuUtAFFlcJz" class="h"><span data-page-node-id="oWixn3hYyhnCjQrAE0gUoB" class="num"><!--pnid:tVo8fUicGZoKfVTFJpOwMS-->五</span><!--pnid:N8prhBiQTY2l6k6dnjjaPa-->会产出什么</h2>
+  <p data-page-node-id="HDVb0vsXGgPpXbZ1qjwc6c" class="subline"><!--pnid:umSC9j5J2NRBPXUkTyTV9n-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="YIUAmqtM5eYpqItlfkruoB" class="outs"><div data-page-node-id="a0BxSbnBHl2EZjRIMaSf7u" class="out"><div data-page-node-id="NWpXOMYz9pkYOzRKOcojrP" class="on"><!--pnid:EH3yOPG3pZg5v27uQSMIAy-->正式件本体</div><div data-page-node-id="31xSuxspKyPxvaz89W2D2r" class="ot"><!--pnid:nT277VRbV9CMjmSa09GZhT-->病种随访话术库.xlsx</div><div data-page-node-id="M6tHu4D9kiTc4eFn4hqiq9" class="od"><!--pnid:bpoV5izaegZjsZWZt9h3xn-->正式件 · 分病种话术+应答树 · 含审定栏</div></div><div data-page-node-id="cOq4oeOSqdtuMXl8fC6mok" class="out"><div data-page-node-id="acxlvAmvKkpoo7NwOZy0UU" class="on"><!--pnid:YrCGVKDPXJo80x2KCfXlF7-->可派发清单</div><div data-page-node-id="1WnT0HkZjMR5niJbA0KYWu" class="ot"><!--pnid:QtXB0vJsMFXSvw4VAcu3Ft-->异常应答转介清单.xlsx</div><div data-page-node-id="YdTrutS5PP7pUuvQ3fWRCC" class="od"><!--pnid:YrcCwKwdKKT2KpO6qfJ6UU-->可派发 · 三档分支的转介对象与时限</div></div><div data-page-node-id="8eJZ6QUDs6JmFGflH1na2S" class="out"><div data-page-node-id="c5sizXGLbgVoW8JXAuALMp" class="on"><!--pnid:Bge0THlkddkCb2CiwR7Hvv-->可派发清单</div><div data-page-node-id="5VVa0uo4JiN10lEFFEpsPQ" class="ot"><!--pnid:itPcj1owIbgQJju8xAFxZS-->话术版本与审定记录.xlsx</div><div data-page-node-id="UulSA8JxGLcDUiVrpJ1wpY" class="od"><!--pnid:9OHYLZkpkyxUrgOGQJvWSo-->对应归档要求 · 版本号+修订记录+审定人</div></div></div>
+</section>
+
+<section data-page-node-id="YdaO1XWtHwDxW8cxRUEJv9" class="blk">
+  <div data-page-node-id="UWWJatuBxdmb55J3HGjKVd" class="card warn"><h3 data-page-node-id="DSMLLKDSMu2S0dfH1UXuFn"><!--pnid:kYDEPILnVUZaCfP4mUOxjS-->这套东西不承诺什么</h3><p data-page-node-id="8oLLOsx2wtrKOfhwx9qnXd"><!--pnid:BZK9sdZAUNyp9poyntFZ3d-->话术是初稿，本院术语与医嘱表述由护士长审定后使用；不做医学建议——异常应答树的终点是「转介医生」，不是「告诉患者怎么办」；不承诺话术能提升接通率——本院没有实测数据前，这种数字说出来砸口碑。</p></div>
+</section>
+
+<div data-page-node-id="IZFNAfUyRCw1hYl0y40n6w" class="cta">
+  <div data-page-node-id="RSJTOS4JDDBNk02wtMZrwx"><h3 data-page-node-id="zgH2rIOYayXFu24TfrmJtW"><!--pnid:6LZZCWKQtDhEkJsRDsWlfJ-->想看具体怎么跑？</h3><p data-page-node-id="HipBIqgMZooWtZf7JSvwp4"><!--pnid:djNTAIbMYFJU5uieoIG4lL-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="wxyvCr2ylgpZioYGbJt0Oo" class="btns">
+    <a data-page-node-id="UB54A30fL0bfYO9UnmP92W" class="btn" href="LiveDemo.html"><!--pnid:jYP5X0epvIB3JQiucDODnI-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="p4Y7jdWCV4egM7v4PFkGmA"><!--pnid:ChtdRMTyX1V4k2E9D9poQ1-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="51GBHfqwGRXrdhwBBbVZ1M" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="wPT5q6xrmURmMSrDHz7TYL" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="8KjGROSyCpZC6WTpOTxhby" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="PQVwZys9olOvaBBVGPwYqg" data-pnid-children="De81zNxMhC3mTRmldl8QrB">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="WzHuajVJgm3zVz8SbAehm9" data-pnid-children="TTWo0jMVvYdgGYWc7VYwkF">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="Lr77xeYsQhEmRFNyWD1142" lang="zh-CN">
+<head data-page-node-id="iv5PA37IXJEP2RV11jSuY0">
+<script data-page-node-id="1zGNrzhaNIoBg18oGoqiLS" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="jZEaVoLINxHdUoP6cSHwqe" charset="UTF-8">
+<meta data-page-node-id="VjgYthURvA5X3xkhG8ViEr" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="Lg61NPDgAxifa4XMLJzupt" data-pnid-children="T0AaRD6sBT9x7f4FraTKrc">包材开印前逐项比对</title>
+<link data-page-node-id="XU9ArYrdSfL34hhPd7t0tK" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="nxvYbRwgKOBnLvLXbBJdoy" data-pnid-children="GNEw2iceVcB1gIOiYgdpsr">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="1ZmIJDXyvaRoCkozaKGe8v" data-pnid-children="gRHYv7b8L2y28WjTJQnwMz" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="4dBOletlakMW7AzCfgbjt9" data-pnid-children="Rcki5Fg8SBIb983CrvSOYx" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="l4cyZUfOaahBhC9SNl4fff">
+
+<div data-page-node-id="w3qLcIJNxxz6JKN57mhQ98" class="wrap">
+<section data-page-node-id="MhIMsJHexE6oD4X8Vmr5si" class="page-hero">
+<h1 data-page-node-id="AaMJ7CJun3kbgwzLR1FUIo"><!--pnid:9bTy7PC3vQ9Rqdi2H1ZhQs-->包材开印前逐项比对</h1>
+<p data-page-node-id="chYRpaSq6p4lznF3pr2iYx" class="lead"><!--pnid:Jb4DalYwfZ2hIyi1l8O0PD-->标签出问题罚的常常只是几百块 · 真正贵的是召回、跨省协查和五个月被案件拖住</p>
+</section><nav data-page-node-id="eGAj9EdikZVPQ6jboReqIs" class="subnav"><a data-page-node-id="MbSjze0Xs5FixyvXolYY71" href="场景引入.html"><!--pnid:fsyRjexbaz83vkEV0HIb0L-->场景引入</a><a data-page-node-id="r0Qi5ygTO9aMyDaxdtnqD5" href="LiveDemo.html"><!--pnid:WrOxabl5lGqhNuxgHqasG9-->Live Demo</a><a data-page-node-id="qwwHOgH2gUFSeEoft8E0Pm" class="on" href="#"><!--pnid:IPVqVE1IlLMsIkIfez0NV6-->推荐任务</a></nav>
+
+<section data-page-node-id="7Czsf21FYXWTOkYoG1qL9f" class="blk">
+  <h2 data-page-node-id="K6AJerxQ9XKE24ityIIdbM" class="h"><span data-page-node-id="K88jFAr0uKilNa2VhBLzGO" class="num"><!--pnid:M9YYg5aO9NfIGblHNpP0Sp-->一</span><!--pnid:mKnBVZBr7ixhDQQJnt4rcr-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="H9hrBheVHdA5GOgv5GVeXf" class="subline"><!--pnid:xZ4ymEnaZlTv5ydypyhNBs-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="Lx65SJJ7CrWLYxlsBDF7Kq" class="card"><p data-page-node-id="TDN7qePxar3nj7biCaeIDJ"><!--pnid:4xIW7q3FPgRH60ANKH0BF2-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="EF2WnWNiJ9WRFDLW5k4DkK" style="margin-top:10px"><!--pnid:dCclA6HycPgQTza0nbfscC-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:qCNuwece3O8N4ENQLPIfhJ--><!--wb-skill-start-->
+<div data-page-node-id="s4PSeMwpvCxC8xvPhUyHIE" class="wb-skill">
+<p data-page-node-id="sDG4ZdXchCuBN9QQk9tX7g" class="wb-skill-lead"><!--pnid:HdP6NgPHf3AJRA0Knh9JTC-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="X3b8eNNQ1AfPFJl2EsXuE7" class="prompt" id="wbSkillPrompt"><!--pnid:NSI3Pv7s7vKfCQrU3DSRRr-->【准备】这个场景的规则都在「包材开印前逐项比对」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/igoQ5mz23KYOChMq50jm9d/e4myEXGXbtS0/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="0RBE9RCk4PhYPremCx0l5j" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:vVBLFAyUngWbCfjUEJgboR-->复制</button></div>
+</div>
+<!--pnid:ccCcNQKE7JvN6Vk1ofFBOv--><!--wb-skill-end-->
+<section data-page-node-id="EQqfGjy7ucxY4aFjmpHzNf" class="blk">
+  <h2 data-page-node-id="VO3uHFMo0tnkJvfJeUYh9o" class="h"><span data-page-node-id="HlioINmVDiBAkBEdfBXFvy" class="num"><!--pnid:33PoGK9gIg9Fs9MOCsNqMY-->二</span><!--pnid:bPceaJiNa2RXKHlfcGxJWH-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="4QsiLQnS8djKeZxuatMytl" class="subline"><!--pnid:RHKyjhWYRm33F6hrFHGb6z-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="pBGPlnGdFneUjbDlsljlEC" class="tlist">
+    <article data-page-node-id="Jp2fd9EFmWQS88EavLPihD" class="task">
+      <div data-page-node-id="bjoEz5nbmuXjaF175YAaqv" class="th"><span data-page-node-id="v84pea2vNaf2jmbpfFCe29" class="no"><!--pnid:aQRquUL6lvorCM3RjkNV3b-->01</span><h3 data-page-node-id="2i9OM2ZGxxfCVFf0xlS4cm" class="ttl"><!--pnid:p0mKtKTp4VuEoGBEh4ZbSv-->首推默认</h3><button data-page-node-id="vgwJuhi5JzKLJiYLhZoi1w" class="cp" type="button"><!--pnid:fZmWNZ3iAXxf7E3K9CtZNH-->复制</button></div>
+      <p data-page-node-id="G0wmKsUS9Us6COzxAlgQ93" class="tp"><!--pnid:D3iL7g7Wnde4RFeJFxVovT-->包材终稿发你了，把内外盒、瓶身、说明书上的字全提出来，对着备案信息和国标逐条过。
+缺的栏位、超出的宣称、排序不对的配料，都标在原文位置上。
+能不能印这个结论我留着自己写，你把依据给全就行。</p>
+    </article>
+    <article data-page-node-id="jLdsikSspt31UhGIuQlCCJ" class="task">
+      <div data-page-node-id="dCA6vEm7pi0xmwLZOzpYFw" class="th"><span data-page-node-id="paWEw4DGeZozEiuOHg53Ou" class="no"><!--pnid:2JISaI9wb3gvMHy8y7NVAl-->02</span><h3 data-page-node-id="sYxDxjloM8xN069YZCyNbD" class="ttl"><!--pnid:jHkIK9WYNMdes7pytx0l6x-->只核配料与成分排序</h3><button data-page-node-id="kJ2gVcKsSpwDLBHsODlA2h" class="cp" type="button"><!--pnid:5kPHbs36Vxt1ClQiGK9sKs-->复制</button></div>
+      <p data-page-node-id="j2tA7DIzSCpujbi0Vp1f5F" class="tp"><!--pnid:lwnmx3esz9O8s8aMLn2duB-->先别管其他栏位，只跑配料与成分排序这一步：把内外盒、瓶身、说明书上的配料表提出来，按加入量递减逐条核，该展开的有没有展开、防腐剂浓度有没有标。</p>
+    </article>
+    <article data-page-node-id="D8yQp9nTcarCHKFxj7tmio" class="task">
+      <div data-page-node-id="BbGfKHcjsVSY78eOBaAfYB" class="th"><span data-page-node-id="48ZewHuK0SjPgMIGib7wRh" class="no"><!--pnid:vMxvSa821eDsUcyH1NACj2-->03</span><h3 data-page-node-id="c4FkhJMsoV3KlXkmjtGeT5" class="ttl"><!--pnid:Zx8MPqmWb1ATTE9tVXuNa3-->换成先印内盒的口径</h3><button data-page-node-id="2WDOnb5k505WpyiKBK1QmX" class="cp" type="button"><!--pnid:IsOsusBfyMf832DbSZWwn8-->复制</button></div>
+      <p data-page-node-id="Mh6Pa9VybKzJIMXglITIRf" class="tp"><!--pnid:olyjsIPJkvdIE5uXkzIL26-->这次换个前提再核一遍：假设含视黄醇那款先只印不含警示语的内盒、外盒单独补印，按这个口径重新过，把能开印的和不能开印的分开列。</p>
+    </article>
+    <article data-page-node-id="vZUVzhs9aDx60EuaQl9gWJ" class="task">
+      <div data-page-node-id="glIhjiXXp1w0C3W09mmOWl" class="th"><span data-page-node-id="sA3kiHkRHvlLtl7rRN8GtA" class="no"><!--pnid:YRq9SxyQjmKIzc6Q7G5EwS-->04</span><h3 data-page-node-id="UoYGWz5PKy162bz1USnXbm" class="ttl"><!--pnid:yvNOpEz31pPxoqCi7WTHzz-->三份包材稿一起过</h3><button data-page-node-id="Qps0oBNnpqmKA7FJzofavV" class="cp" type="button"><!--pnid:jSCwnIrx0Q2ev9BozWNB1m-->复制</button></div>
+      <p data-page-node-id="PdoXsEVkWq44j3AybqF0oa" class="tp"><!--pnid:2FtrsO1RskhrZ2LBVov245-->演示数据里还有另外两个 SKU 的包材终稿，三份稿子一起过，最后给我一张横向对照表：必备栏位缺项数、宣称超出条数、过渡期库存差额、分别卡在哪一处。</p>
+    </article>
+    <article data-page-node-id="2J37QwMZSiVIej3Mc9EHF4" class="task">
+      <div data-page-node-id="h80biB6xWIByxclYN3wEIn" class="th"><span data-page-node-id="CchvsG0bhgel1tiyWe9p0k" class="no"><!--pnid:gFlhowySzoGrvlk0cqa1RS-->05</span><h3 data-page-node-id="yJu0WdOzT10AhGTeAmRpIZ" class="ttl"><!--pnid:8DVFMPDHHwD8cvPUAZHXQ8-->给设计外包和印厂的版本</h3><button data-page-node-id="sZgzfu3Atv3MempnL1BRMi" class="cp" type="button"><!--pnid:k1I57C7TnmBMBLbTnU2Z7E-->复制</button></div>
+      <p data-page-node-id="5Re76qGaBzAEC91WtlYaa4" class="tp"><!--pnid:inp8g5MZ54mVObFUKaRosa-->把审核意见压成设计外包和印厂能直接改的版本：哪一页、哪一行、改成什么字、几号前回稿，每条一行，条款出处和签批栏不用给他们。</p>
+    </article>
+    <article data-page-node-id="j1j8sy0Y5ZLBjIfrbxVo56" class="task">
+      <div data-page-node-id="8ufkSdgTO4WRvmJDWTXaux" class="th"><span data-page-node-id="tKmlGyZ1wbVPN6zyRsAoH1" class="no"><!--pnid:RUyrKmB9TehoJY01NXp2Ix-->06</span><h3 data-page-node-id="mi3CKaLJjhyacMBhSNuPY8" class="ttl"><!--pnid:GZ9BZkzBDf3JANxxqhSB1a-->让它反驳自己</h3><button data-page-node-id="kMt60C68veF9JoLYdlaLdL" class="cp" type="button"><!--pnid:WQsp7rwbixB65DqQZz5OQS-->复制</button></div>
+      <p data-page-node-id="EwCJaz8L8ltUcc7HHMC1TO" class="tp"><!--pnid:kiewWJdQT2SWqwpClNl96i-->这份审核意见里哪几条其实站不住？比如按旧口径印的「0 蔗糖」在新国标过渡期内本来就允许，把这类可能是我误判的标出来并说明依据。</p>
+    </article>
+    <article data-page-node-id="LRjpJ1b4nhyXcwcntcn72o" class="task">
+      <div data-page-node-id="NcvpbtpDEwda3lRFvfDemU" class="th"><span data-page-node-id="6Qftl9kXNZ2bfGClXVFxYR" class="no"><!--pnid:xvTuRfwzQTEexOt81K75LX-->07</span><h3 data-page-node-id="3qemOwGoIjDdCqMHrKixGQ" class="ttl"><!--pnid:uJoDOGUIOhjP3gUMZ94xnk-->比对旧口径库存那一笔</h3><button data-page-node-id="bdwWpAk0bsSOgnCYp2hG98" class="cp" type="button"><!--pnid:nhYzWDeuOlOS83iHPAEXA7-->复制</button></div>
+      <p data-page-node-id="MBrBc70OHPzRboCV63Yx6J" class="tp"><!--pnid:RyGm3GUNiXLAOS2xQf3Ilo-->专门跟去年那批「0 蔗糖」的账对一遍：当时库存包材还剩多少、月消耗速度多少、生效日期是哪天没人算过，这次把三个数重新摆在一起看差额。</p>
+    </article>
+    <article data-page-node-id="UEU87s3u6nOvtzq2RvFrFb" class="task">
+      <div data-page-node-id="tw1yfE61CnfKtSB9AcfZ8P" class="th"><span data-page-node-id="NuPBdfmLExRl2TQhOzSgHv" class="no"><!--pnid:L9U8c1FHwj5pYSBDZdWk1B-->08</span><h3 data-page-node-id="SoszxxWnFClNqY2Z4X8Yav" class="ttl"><!--pnid:CjIZfwCm77c7v2xRGyoEEg-->对照法规要点表自检</h3><button data-page-node-id="crWqWJRvMPoHfwOIDPL2js" class="cp" type="button"><!--pnid:cjy8vcDKa913AubqycMG12-->复制</button></div>
+      <p data-page-node-id="2pzM8t1fnon59DXMKwQkWb" class="tp"><!--pnid:xK6T6Dd546ZEE0sC3MPGoX-->对照现行标签法规要点表把这份意见书自查一遍：每条意见是不是都挂了具体条款号、有没有只写「不符合规定」不给条款的，列出来补上。</p>
+    </article>
+    <article data-page-node-id="jq3Qryt5z1phEbbvthWFul" class="task">
+      <div data-page-node-id="NWZLS3IUXguNhxuuUEqsNz" class="th"><span data-page-node-id="C0zURYAxZwu9fcXHBNOogC" class="no"><!--pnid:u0JQsT8dHR3ba4MW5zLW0U-->09</span><h3 data-page-node-id="dUWQJko9wBlBLO5ZMl7XGe" class="ttl"><!--pnid:L1r3MMqq2aLyWCIrApKZhL-->折算成召回敞口</h3><button data-page-node-id="nY60eD9mObRBsesSrBBBBc" class="cp" type="button"><!--pnid:mUKwnvrJb1d93JF7lxBWTE-->复制</button></div>
+      <p data-page-node-id="cy0xe8Sz2ZnLX3LUGA9Bds" class="tp"><!--pnid:4u0EYYojmcQjg8vs4zCTb0-->把带病开印的代价算出来：按标签案件口径从立案起算，召回加重印的保守估算约 18 万元起，整体改版重排约 1.1 万元，把两条路摆在同一页。</p>
+    </article>
+    <article data-page-node-id="gkwGXBNfeyxB9MY3rMxseI" class="task">
+      <div data-page-node-id="0GPuQHSwogvTXK8XqRXYRN" class="th"><span data-page-node-id="jEtChLjElkmc9DRFUOnaTX" class="no"><!--pnid:3dEn4trTDj6Sc826DDRLVD-->10</span><h3 data-page-node-id="GvlASCA2lrBx07g7Feeowk" class="ttl"><!--pnid:elMHbgxScpg9LaqNPqeUKk-->沉淀成包材审核检查表</h3><button data-page-node-id="3WWq7PH6yE5HBY9625ZFUY" class="cp" type="button"><!--pnid:VtKzYMIjJjmx8oRKxHX966-->复制</button></div>
+      <p data-page-node-id="ZsVazkkb8hS3JiST0WiSiG" class="tp"><!--pnid:zgPJOqrTV7eFfzizrX8AnC-->把这次的必备栏位清单与条款对照整理成一份可复用的包材审核检查表，写明每条问题对应哪份文件、谁负责、几号前完成、拿什么验收，下次设计稿一到就照跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="Ssl1FnUDF7Esf0FZFEy97r" class="cta">
+  <div data-page-node-id="aoPjWxpNfXh5edEHNE3a2j"><h3 data-page-node-id="bhnFzTmNSjmLgeoyNzTyOh"><!--pnid:EUOb2oBUjV4Sgh5x5kBwaU-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="FV5d1iO9ag4H45Df7d9qMo"><!--pnid:vRrVs2jQrQUJH97OrBbAwt-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="xLMsTSabw7zBBZW4fsOVPD" class="btns"><a data-page-node-id="4wNdqDr8yzZBZvqHFLr8ga" class="btn" href="#" id="ctaContact"><!--pnid:qz3QWRC9yQ3IUKBAiz9x45-->联系我们</a></div>
+</div>
+<footer data-page-node-id="jkYTIsLPbV3JaWaLLWJWqg"><!--pnid:uwfJdlyKzgXxinFcTx3hx3-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="ws148PqHJrLLq8aq3uFsVD" data-pnid-children="xFRxVa4y7s4ZuXgKQ0zmp9">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="Etkvq3PCxijctMhutTwgWb" data-pnid-children="sRaghkEI1i9hW4Jql7GcQ5">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="GycsnnF8UkKC2SjtPm45sq" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="6tBrOVQGD5UPDiMYAnPppV" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="4433v7ywjLYRD75Ogx6kjA" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="LdUYIQEF2O82rLQAyGhMhM" data-pnid-children="U4KaaBksrkiaponNQj9HA7">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="hLwxoVPwuHk4vr5gg9ZooN" data-pnid-children="FB8ojMfYKvM1a35jmmo4fO" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

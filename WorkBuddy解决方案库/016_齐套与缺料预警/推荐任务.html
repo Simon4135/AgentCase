@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html data-page-node-id="nOBtyVvqtvRB38wofgQsVK" lang="zh-CN">
+<head data-page-node-id="RLsVAWMVR9yvmRcPvxtULl">
+<script data-page-node-id="TnqQwlaaJ0rSEGQbmHtHfs" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="y76JNT40064FHode63bFIE" charset="UTF-8">
+<meta data-page-node-id="ZlFpv0egj6erniw7GbhhgD" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="KBJRSVbkkU4l74TaAntdEq" data-pnid-children="Vn2YIylIDYNKBBlmtgIg7a">齐套与缺料预警</title>
+<link data-page-node-id="Bhm90JhgoEWWdUzOYuChaG" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="KXcGVXLMG3GgXDpmVt1Yu0" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+<style data-page-node-id="z08FFTgRpYx8ZBYjwdBzbK" data-pnid-children="Hq7iNhlrJhESlUjetwOFVX">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="3EDCK2pwYlE7TF2USs4X5e" data-pnid-children="y6yVjzFh5zCxlJd1QLjBnx" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="KwA2mmUZ5jM8CVCWQgJWNG" data-pnid-children="7Tmwr3FVPZvXsWVNh0skfx" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="eV49fHFMxy2nI89Xmlk3PB">
+
+<div data-page-node-id="LfXAGIHn6IAK3GVgPUw0Dx" class="wrap">
+<section data-page-node-id="BCuoEf3LCNZYycrSIhQbQj" class="page-hero">
+<h1 data-page-node-id="1b6VNtuuYe1NYVjyBmj9oK"><!--pnid:2kQsBIVYPDh2wnaj7ELQWv-->齐套与缺料预警</h1>
+<p data-page-node-id="O5Srnh0bip4a2oOT4BTyqy" class="lead"><!--pnid:k37raxpAXmEViXZR47ZKKV-->MRP 只告诉你缺多少，这里回答<b data-page-node-id="xipoeX8f9kIok6B4QJD0kk"><!--pnid:A66NJ3ajiET3Tl8IN2MbGb-->缺口怎么化解</b><!--pnid:LSX7XXuQTkxe3ZFl9Mbzuj-->：替代料 → 呆滞料反查 → 分批投产 → 紧急采购 → 调整交期 → 拆单，六条路径逐条判定可行性、代价、风险、前置条件，最后给三色开工结论。</p>
+</section><nav data-page-node-id="ZNBccOZsNhmZVtljQyL6G2" class="subnav"><a data-page-node-id="msxmztyjRtcTFoBkLCJHVy" href="场景引入.html"><!--pnid:A3Uley58e0ZRyxAbFNakmX-->场景引入</a><a data-page-node-id="uDNlwzMMHAoHViZEeNNjsZ" href="LiveDemo.html"><!--pnid:aud4w9uez3vJZ4UbUoyZqF-->Live Demo</a><a data-page-node-id="NqSyjf6kohq47COvH98EKq" class="on" href="#"><!--pnid:ceKcQucj7iymKdt1e5hwiQ-->推荐任务</a></nav>
+
+<section data-page-node-id="uezIVaxr6vkj6h3nX5wkb5" class="blk">
+  <h2 data-page-node-id="97DslCSRMZceagYGZh4PRQ" class="h"><span data-page-node-id="gb1I0mjaiSLMHaxco16A20" class="num"><!--pnid:kiOtmhlx4iKu44d7gWWyvQ-->一</span><!--pnid:D0UTdY4QXhXe8UtegVrBHZ-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="m8Bweclb5hWKmwSlODcM3w" class="subline"><!--pnid:QRSMomT7JSPQZj2PqJtugU-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="8ayPPVB412fpyzEuGAgVxk" class="card"><p data-page-node-id="bVpL4bjVcvmSBMNPjtJeOu"><!--pnid:CmakZgOY5vrFUuDWYWnH1M-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="kgdfYnGuxBKR7l3guHx1at" style="margin-top:10px"><!--pnid:HpEF8JuPQ1gHlVtIUtDMs7-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:Z3L5T0G7xgYpXyCVIsWgnv--><!--wb-skill-start-->
+<div data-page-node-id="5MGkJvOSHJPdgxDTyuU2jm" class="wb-skill">
+<p data-page-node-id="scefwsc3pd1lGK7BrcpgmM" class="wb-skill-lead"><!--pnid:3OvADeBHwc50WXqbyWOZgp-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="7ESWal59Q1kLIIytqzPmrH" class="prompt" id="wbSkillPrompt"><!--pnid:RRtR9re2b8AzWLvTWeTAiC-->【准备】这个场景的规则都在「齐套与缺料预警」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/kYPlGl285Fh1hIao65JlgO/0/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="pORb0bvJsSxHGQ504MxjAP" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:WKUl3NJovKGq1d1qLpDRbm-->复制</button></div>
+</div>
+<!--pnid:WUy63fpIWpWv48g7wq9jJZ--><!--wb-skill-end-->
+<section data-page-node-id="fvAcqnASy22FBvzcostmCf" class="blk">
+  <h2 data-page-node-id="Q23CCgRVvFmq0BHoYmxc1y" class="h"><span data-page-node-id="riVkRK3cIjp32h4ndyf2ff" class="num"><!--pnid:M5F8iTxf873yZpeNeTDPzL-->二</span><!--pnid:eE0iWJ3RZEfeC5bXBN48Gy-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="6HUAUQ4nFAavIi9Cg74iEY" class="subline"><!--pnid:GImgUuCKqfvr53R5sWgRH3-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="El4YD5xeVzy8tye0hqgP7m" class="tlist">
+    <article data-page-node-id="iodA5CiqZl9trPLO67Syid" class="task">
+      <div data-page-node-id="0kH5jjZdTh1xnN9a2TfoE8" class="th"><span data-page-node-id="97J531hYCWddEv4LDXBWog" class="no"><!--pnid:xaZe9FG0fVVwHqJ5tpd7Qe-->01</span><h3 data-page-node-id="0MzGd48c5W46QP2ImMED3l" class="ttl"><!--pnid:Rmcs3aH3G65jLVNaK5v6zm-->首推默认</h3><span data-page-node-id="ZNQnyRzGRR5pwEN9djgpNj" class="star"><!--pnid:m1knFwWqn0Vt7F149Lo46f-->与一键体验入口一致</span><button data-page-node-id="er08DcofUC9hZdjifOQMBw" class="cp" type="button"><!--pnid:2SwEaZPY9pyo7zY3JaDjGh-->复制</button></div>
+      <p data-page-node-id="CGNRD3MlFwkX8oBQaTaDCp" class="tp"><!--pnid:AvDalTA8wX6yRZuXY3UCmb-->明天开始有一批工单要投产（工单需求），帮我判断能不能开工。资料都放一起了：BOM明细、库存快照、在途采购单、替代料关系表、呆滞料清单、工艺路线。先算清楚每个物料到底缺多少——可用库存要扣掉安全库存、已分配和待检，别拿总库存当能用的量。缺口算出来之后，逐条看有没有化解办法：能不能用替代料顶？库里的呆滞料有没有规格能凑上的？哪些工序其实可以先投产、不用等料齐？最后给我每张工单一个开工结论，红黄绿标清楚，再出一份动作清单，每条带责任人和时限。产出两份：一份缺料预警与化解路径 Excel（缺口计算按双口径逐项附算式、六条化解路径逐项判定、缺口收敛验算）、一份三色开工结论与动作清单 Excel（替代料四道校验按物料乘客户建行、三色结论、带责任人时限与验收标准的动作清单）。</p>
+    </article>
+    <article data-page-node-id="VUMtHbhj7rEijdWjmoZ1Cf" class="task">
+      <div data-page-node-id="lPZ9ZjntVQrwNbQsiffqHD" class="th"><span data-page-node-id="FgUNi2GpeSfH2siL2itHGK" class="no"><!--pnid:0AJHGKX3hume7NamlVmJrZ-->02</span><h3 data-page-node-id="rA7PdKK2NHppXy54Z57kVu" class="ttl"><!--pnid:Mu11zQ6VxM5eafVy8klCiX-->只算可用库存与净缺口</h3><button data-page-node-id="3WkSnCD3K4NvyRp14MUpjM" class="cp" type="button"><!--pnid:k7y3jsRSx9KzFJZnK4nBDP-->复制</button></div>
+      <p data-page-node-id="r1fYUEqNBgb317HUXGzX47" class="tp"><!--pnid:AgjX3ugStsHZVMq3ed3sXF-->先别判化解路径，只算缺口：可用库存按总库存减安全库存减已分配减待检算，再算净缺口；在途可及量分「按开工日」和「按工序需料日」两个口径并列。产出用 Excel：物料、总需求、总库存、可用库存、在途可及 A 与 B、净缺口 A 与 B、缺口成因，每行附算式。</p>
+    </article>
+    <article data-page-node-id="anb3SIELG4Yu3WjcZdUSRj" class="task">
+      <div data-page-node-id="8aYBwHcM0xSJX0g2z5aR49" class="th"><span data-page-node-id="COqrMYPnpgn53p1CWZyTWx" class="no"><!--pnid:WDYreQaLrhz0uGucs8HpZN-->03</span><h3 data-page-node-id="E6JdICFsdz9HgCJC9qKlZl" class="ttl"><!--pnid:jomMsr02joRxcjPSsctz3A-->换成只认原承诺日再算</h3><button data-page-node-id="3n6VKtS9jbJokyQjBV015e" class="cp" type="button"><!--pnid:OAMA8ddyg7RfzieFMEYzRY-->复制</button></div>
+      <p data-page-node-id="moW6EcawzJqI5hnHu5Bryn" class="tp"><!--pnid:vphCHdQs7GmJ8kJgzkntFC-->这次假设在途采购单里「最新承诺日」不可信，一律按原承诺日算，重跑净缺口，看哪些缺口会变大、哪几张工单结论会从黄变红。产出用 Excel：口径对照、变化的工单。</p>
+    </article>
+    <article data-page-node-id="sbkhYJq5nP3t91ly7KfsoJ" class="task">
+      <div data-page-node-id="X3RqxPm1gGbD6gGgEgrZHD" class="th"><span data-page-node-id="nxh7Mzxyj3XCXLtXh6FpfP" class="no"><!--pnid:58dTRrOR55AFSV7JaRjFRk-->04</span><h3 data-page-node-id="kf5PJUjO0ns0vxrIprAmvp" class="ttl"><!--pnid:HLTlCRnTkqmFDukK7hizWq-->一次核两批工单</h3><button data-page-node-id="4LS6p2qgCl60nEHhJ92QNw" class="cp" type="button"><!--pnid:QXLKxNX5ctsGp42CKURXRN-->复制</button></div>
+      <p data-page-node-id="nFDnTgVNAccP7eRDP8M9le" class="tp"><!--pnid:MlYSc0kIyfycuZHpo1ACZ2-->演示数据里再加上下周第二批待开工工单，两批一起核，最后给我一张两批横向对照表：物料缺口重合项、两张抢同一批替代料或呆滞料的工单、三色分布。产出用 Excel。</p>
+    </article>
+    <article data-page-node-id="g8Yd5UmN8nJvG5xla7vElG" class="task">
+      <div data-page-node-id="x4yhM8xHQ1J6Il0M7y1ken" class="th"><span data-page-node-id="l56YN1i3uxB5u14MH1Axp4" class="no"><!--pnid:qXhzKgO1O2WXbJogcsq0Mt-->05</span><h3 data-page-node-id="OQ6jBC9t6ONj0zlsaKzzL3" class="ttl"><!--pnid:FyB3bO3muqajAsUgNttF73-->给采购经理的升级单</h3><button data-page-node-id="HIQSJXqoqUyJhwYyatsKTO" class="cp" type="button"><!--pnid:k8ljyO9nLTISTKqcx6AyBp-->复制</button></div>
+      <p data-page-node-id="xHG3ddPC03kvpowDA4lZQm" class="tp"><!--pnid:RtXAxjPZhvy1kAeVl4mrqA-->基于缺口计算与六条化解路径的判定结果，把红色工单单独做成一页给采购经理：每张为什么前几条路径都不通（逐条写明）、要升级给谁、升级后的方案是什么、实际交付影响多少台。产出一页纸。</p>
+    </article>
+    <article data-page-node-id="XYtMwP3FWuoxbmxHGxG1nH" class="task">
+      <div data-page-node-id="fTIUzPgUS8YWCVC1nlRK0o" class="th"><span data-page-node-id="DjMLtOZTKgIp0zZUkocwkj" class="no"><!--pnid:Mx9tKV55YcTDO4ZoZDBuxC-->06</span><h3 data-page-node-id="ObRQnS5UApPNTINaYQuM8p" class="ttl"><!--pnid:OYbWv3Dkgl361JBdH0shJN-->让它反驳自己</h3><button data-page-node-id="gCG2Cfc4XojOn9JOdZhIxF" class="cp" type="button"><!--pnid:YQ17zAfWdkbNIPCVqrRQrw-->复制</button></div>
+      <p data-page-node-id="NK6xBNdJhksmGxdgGREqNd" class="tp"><!--pnid:GR6JJdobGgDml5BlwqeiRV-->你判「可替代」的那几个组合，客户认可这一道过了吗？把只满足技术等效、客户认可待确认的挑出来，说明为什么不能直接判可替。产出用 Excel：原物料、替代候选、目标工单、客户、四道校验结果、卡在第几道。</p>
+    </article>
+    <article data-page-node-id="ka3e9PCV4kFOwnCjVQLUMx" class="task">
+      <div data-page-node-id="3jnJxNMVhMGCos0FKJ2HIO" class="th"><span data-page-node-id="iEKBtnMM2Sc03YVsRtKKxC" class="no"><!--pnid:B2ttuC6YOb9NJEnSKtoSZs-->07</span><h3 data-page-node-id="X5JRxXu5mwM7EfcZ76QudQ" class="ttl"><!--pnid:98J7EUfFAmreOOXjjmNoUa-->专门比历史缺料的坑</h3><button data-page-node-id="tsHnCMVXh1O6N4g4ZTyzOO" class="cp" type="button"><!--pnid:7FIXO0cobM6w8CIErddYrH-->复制</button></div>
+      <p data-page-node-id="oKTADSwtyuJInnG0SPGyob" class="tp"><!--pnid:MQz6iVGzDuJDJdun3qdnU8-->专门查这几颗料以前的缺料记录：以前缺料时用了哪条化解路径、有没有因为替代被客户审核开过不合格项、有没有为伪缺口付过紧急采购溢价。产出用 Excel：物料、历史缺口、当时路径、后果、与本次对比。</p>
+    </article>
+    <article data-page-node-id="Io2jsqJz1MOdjeMNibZ7bp" class="task">
+      <div data-page-node-id="OkmCN2TrRzYqixZj7GWy8b" class="th"><span data-page-node-id="ZrSrNyLSbCTyjggbHJQ6fh" class="no"><!--pnid:tPmWPvzw8Xw7CuBLo7LPkh-->08</span><h3 data-page-node-id="2wyYfC3KtYuUQ9UBhCX16o" class="ttl"><!--pnid:9gzB6gYc16FlbgwPT302SC-->对照口径与规则自查</h3><button data-page-node-id="ykTG5C9fLMJi7QFj4G7HpH" class="cp" type="button"><!--pnid:UrW7n9BVFFZ3utswHUZxYC-->复制</button></div>
+      <p data-page-node-id="eEjaabhsQ8HYt7PfspBtfS" class="tp"><!--pnid:Hn3TdXUIH16B7fVvx7DWKU-->对照可用库存四项扣减、在途可及口径、替代料四道校验、三色判定这几套规则，把这次结论逐项自查：有没有拿总库存当可用、有没有把待检算进可用、三色加总对不对得上。产出用 Excel：规则项、是否符合、依据、修正建议。</p>
+    </article>
+    <article data-page-node-id="BBp49cZz7My0UTDFLEtErl" class="task">
+      <div data-page-node-id="E9dvEwQJHVIlHaeDFijmNJ" class="th"><span data-page-node-id="KUJNMgnB5RQOjINtbMQhqi" class="no"><!--pnid:sJjYfhXJhkEqvFf0th6nCk-->09</span><h3 data-page-node-id="A5RgWgK18FaHVWbIhpg415" class="ttl"><!--pnid:d7FZxgY1TQ5GPdn0SdJ1p3-->折算成紧急采购代价</h3><button data-page-node-id="ad9CSgWyDHUPjNMGoKilYm" class="cp" type="button"><!--pnid:jALeidS7zrkGZYXIcbS2tl-->复制</button></div>
+      <p data-page-node-id="7YUqxEyTDStKPJQV5qmB0h" class="tp"><!--pnid:uYELEi6Rui1Ee3LVBWsQt0-->把要花钱的那几条路径折算成钱：紧急采购的溢价与最小起订量余料、加急表处的插单费、拆单带来的额外换型成本、动安全库存要补库的金额。产出用 Excel，每条带算式。</p>
+    </article>
+    <article data-page-node-id="m99FzvbIRje2sJLC2sflq5" class="task">
+      <div data-page-node-id="IBSvB45dMxVq4LvWdejbMF" class="th"><span data-page-node-id="zVZ5BnfQamccicIS2rh4Xg" class="no"><!--pnid:xETCJpdjh28jV6v9HJmjD8-->10</span><h3 data-page-node-id="POcWOlHXZZQ2tPcQStkicx" class="ttl"><!--pnid:jumQUPex4u0umKNJBQh5AX-->沉淀成化解路径模板</h3><button data-page-node-id="B51WzJuGFOXcPB6u6EgNZQ" class="cp" type="button"><!--pnid:ArrKylw5KSF5ZvNbegdZ5a-->复制</button></div>
+      <p data-page-node-id="7U5d6xNdjKnEmBbOlZiMTF" class="tp"><!--pnid:A6Rfjpd2RGYq1sH7Pi2mKC-->把六条化解路径的判定顺序、替代料四道校验方法、三色判定标准与动作清单字段整理成一份可复用的齐套化解模板。产出用 Excel。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="C0Z27EWuiUsPqu0BrKfhuN" class="cta">
+  <div data-page-node-id="fNcNzoToO6rZIhf6diIWeu"><h3 data-page-node-id="hjMNTVhrqe5xMr9c08k7DW"><!--pnid:XTO6rzw8is5ZHle14yQAl4-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="KjB42LwJXVUwKxa3uJgnXs"><!--pnid:9zyhgkrAQn52j6Rh5quTU5-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="Z2SEz8lwQwbvKILAJ5s2AG" class="btns"><a data-page-node-id="RRBxRgMaSprGJ8SGERcnTh" class="btn" href="#" id="ctaContact"><!--pnid:7B0YglaMMlCfbjSdQul7LL-->联系我们</a></div>
+</div>
+<footer data-page-node-id="6WO5K2oQTSMx3AKPPMPcGD"><!--pnid:fHApDvQ0ylfHRdOEUheLqY-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="JgWDvfNJSyFT7AoiWSjRn6" data-pnid-children="rTE1jn2aWBZJev2cZGXfIB">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="HWcur04mVFMKswll7Smuh4" data-pnid-children="Yio2lqMug1DnAnZvIexJ9J">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="xh6ZSMWHDBBOM861ShOLEH" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="pp4UJfL33mxPneL4vxnioz" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="rnlBWvn2IavPovzQxoJo74" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="WnHhagALBgmbxkZPXdwgFs" data-pnid-children="oJLEGqGteLiInNrG8KHV7j">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="2T08ZmmGC0h1cJQuqhP9QK" data-pnid-children="RWVzaok8VhZSWNqoDiGYws" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

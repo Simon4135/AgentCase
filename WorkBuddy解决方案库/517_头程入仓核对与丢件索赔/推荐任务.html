@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="L8HWUMVybQQHqOcrdRcxPY" lang="zh-CN">
+<head data-page-node-id="8CO8VZQSeb5DjnFd5inAXQ">
+<script data-page-node-id="ySaABxqnTazNUbQcPUXPtM" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="kzrzCysaaZGCo7dREKyp5k" charset="UTF-8">
+<meta data-page-node-id="ixTGam4zWTYn0mo8M2KGz0" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="V0UfLrWgbpXtFF7stwXWlt" data-pnid-children="AYjotQWyB8mBCHN4jIKfN6">头程入仓核对与丢件索赔</title>
+<link data-page-node-id="e2vWTd095YjQmVAYPRFPX8" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="iuo8y7UWYSJT6y7HGcd4b1" data-pnid-children="uuNIDb7cvJ8pL5QMnjgWyp">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="UodTdJDZhG3pJYIsBndVZi" data-pnid-children="lheikdLAFTGDVPZ4zsIWc7" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="QNPIpBCDBIc68cCxQuSa0H" data-pnid-children="PC1KdXbCDZYZ7LNjYeE97t" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="SuV6Er01ZsS5HnqdSylqoJ">
+
+<div data-page-node-id="NLFeuy2qCLcyvLFZGCTQYk" class="wrap">
+<section data-page-node-id="Y3RxO6XHH7qRhvwGkBBVEC" class="page-hero">
+<h1 data-page-node-id="5l3zWTw0WFsW4cuDgmtUR2"><!--pnid:b51xJLh8woSWJyIry72nq7-->头程入仓核对与丢件索赔</h1>
+<p data-page-node-id="bQawdv58hlesUWvvfMc3Vf" class="lead"><!--pnid:etMj83VwTdcMvFTQCCFxC2-->装箱单写着 500 件 · 海外仓系统里只上架了 480 件，没人对过这 20 件去哪了</p>
+</section><nav data-page-node-id="C7LiTCG7pCitrbBPUnvVhB" class="subnav"><a data-page-node-id="jqmQOITzYxJMIMoeuN1896" href="场景引入.html"><!--pnid:ujuTJhYQGEswNHjU9EW0dC-->场景引入</a><a data-page-node-id="bmPznPHOGQcM2fMxgoZcEh" href="LiveDemo.html"><!--pnid:bzhRYCwAlnp1sxfNe5wDDQ-->Live Demo</a><a data-page-node-id="6PUZawuPIEdZp0dEhsaSnG" class="on" href="#"><!--pnid:dr1op5ZXZG2G0SbQ12QY57-->推荐任务</a></nav>
+
+<section data-page-node-id="lQobLyakiKH9GZ4CknJW9s" class="blk">
+  <h2 data-page-node-id="pF6WTp7NKFNdNOcrtyHqM9" class="h"><span data-page-node-id="kNAIdlZpkXoNGqdiM5ixxM" class="num"><!--pnid:alXsnFqtiKEsSzetu507Yj-->一</span><!--pnid:FsfP8utWTrqobTRcSIfrRH-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="l7c42egoHQxk8xkeorqcvI" class="subline"><!--pnid:Je3FDMOY0X7tm6KFTbs2Ss-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="g9JIvweSCd8woiXdG6DB00" class="card"><p data-page-node-id="ryKuIn87DayRUwEunjx0GS"><!--pnid:4wy3eiqaD74txsjdnz8paN-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="jefoHJr32qAGHPB1CJX4SL" style="margin-top:10px"><!--pnid:1MpGdnAJBZgdGw2daoqncj-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:av9OYF7vBqDSYvnHNrPdOo--><!--wb-skill-start-->
+<div data-page-node-id="aionpian9ZxXgQwJIjp7AL" class="wb-skill">
+<p data-page-node-id="0HUBR73GuAQ77Q3PKyZua6" class="wb-skill-lead"><!--pnid:mj9gDFQtOPsHPTjmwUdSX0-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="aKRtgDJRsGJD9QyRO25Yla" class="prompt" id="wbSkillPrompt"><!--pnid:ZtXHsDeOA2ISgxf7oBw5gz-->【准备】这个场景的规则都在「头程入仓核对与丢件索赔」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/ZS2z7DDOJTPV4F5JWF4gdE/NCrp7qzCbanN/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="kIBEL6dMIMZFMJvCSu97SP" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:aFW4ZrtqNHBfCCj7RlMApo-->复制</button></div>
+</div>
+<!--pnid:PxQf59nff4gsICENA87KwL--><!--wb-skill-end-->
+<section data-page-node-id="8HzRo0IaerHT7hsx0nOs7r" class="blk">
+  <h2 data-page-node-id="hc0rUmu7YVkTVO5VZyh2IZ" class="h"><span data-page-node-id="mcUnW77BF9SPjccqWrkJ7a" class="num"><!--pnid:6lP7MclTgRBEA7EGaoXoO4-->二</span><!--pnid:WCd9FsFtfKmClUCz2rEeLb-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="uIJfVmpyh8KAWyjofTzzqk" class="subline"><!--pnid:rlWG8l38kNLv2NeB4aXrRo-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="ZSRk55zPrsZ0DlzLJqoKJW" class="tlist">
+    <article data-page-node-id="6UqkYPEF0QoovnH9ksPVFs" class="task">
+      <div data-page-node-id="Ph8PH4i9Rti72wjMGNIJn8" class="th"><span data-page-node-id="h9jGWo8NDIx5yWfpmY70PL" class="no"><!--pnid:umvd9SYjWUYUkwoPNoG80k-->01</span><h3 data-page-node-id="ZpwwLHTCjTeiQ0aJKMEGor" class="ttl"><!--pnid:hrKECJdBtckAmIqocc5RK7-->首推默认</h3><button data-page-node-id="4xAaEXOZy94fZJM5VpfTmx" class="cp" type="button"><!--pnid:URqyWoAMV3mtKu1oTRj0v9-->复制</button></div>
+      <p data-page-node-id="iKTa79yEsmd3jyFY6OMeoY" class="tp"><!--pnid:O0qWMX0dU8k1Ke4Yjzp69W-->BX-500 有一批 500 件到了美西海外仓，我总觉得库存对不上。材料四份：「01_BX-500头程装箱单与提单BL.xlsx」、「02_海外仓入仓签收单与WMS上架明细.xlsx」、「03_海外仓月度对账单.xlsx」、「04_FBA库存与丢失补偿明细.csv」。帮我出头程入仓核对表、丢件破损索赔清单和 FBA 补偿待申请清单。产出三份：头程入仓核对表.xlsx，按 SKU 和箱号做装箱、签收、上架三方勾对，一行一票，差异写清出自哪张单哪一行，含编制审核栏；丢件破损索赔清单.xlsx，一行一条差异，写清分类、可索赔金额、索赔对象、时效还剩几天、证据出处；FBA补偿待申请清单.xlsx，列平台侧 lost/damaged 还没申请的项目和口径金额。重点看签收足额但上架少了的那种，钱最容易在这里丢；差的那些按单件成本算能索赔多少，别超过索赔时效。索赔我自己去提，你把清单和证据整理好。</p>
+    </article>
+    <article data-page-node-id="49Eb8pdxEIzLOgbl3Cqq5k" class="task">
+      <div data-page-node-id="B4H6KljIMANgnes0NRsuwf" class="th"><span data-page-node-id="xfYlycnkJOLBSZTwW9nlan" class="no"><!--pnid:uwG2wd5tcgCvCWZwVTqJ2c-->02</span><h3 data-page-node-id="fCcrHIvvzwpEmXggfxRNLp" class="ttl"><!--pnid:LMKJEG1rDRKp2JpdKx2nBL-->只做逐票勾对</h3><button data-page-node-id="IBQDDatajQ0Zuk7xKKZAXI" class="cp" type="button"><!--pnid:51S6JOu6cDYoufKmsJTyby-->复制</button></div>
+      <p data-page-node-id="qknqQjf7CQnKHDVQKDWq7A" class="tp"><!--pnid:3mjSjcrHvAbUevnnxqgdCN-->只做逐票勾对，先不算索赔金额。读「01_BX-500头程装箱单与提单BL.xlsx」「02_海外仓入仓签收单与WMS上架明细.xlsx」，按 SKU 和箱号把装箱、签收、上架三列摆平。产出用 Excel 一张表，一行一票或一个箱号，写清三个数、两段差异、差异出自哪张单哪一行；对不上的直接标「无法勾对」，别硬并到一票上。</p>
+    </article>
+    <article data-page-node-id="4ATkDfz5MfgE5nmMeCPysn" class="task">
+      <div data-page-node-id="PAW5cNC2Msw7c1aaMTXAbD" class="th"><span data-page-node-id="ptbVL0Ss9u3ba1joQKMqlV" class="no"><!--pnid:XjY9bToBKYqFFNm0zuERz2-->03</span><h3 data-page-node-id="D9KPSYdpGUYU2ziQ1ICVFX" class="ttl"><!--pnid:xA1K2e74AWTkKMx7jN57pe-->换成拆到箱号一级</h3><button data-page-node-id="SDDZt23QrzNBigmK6NhnCX" class="cp" type="button"><!--pnid:ovWB64JgvYf45z8ILEX0yc-->复制</button></div>
+      <p data-page-node-id="HbnC2YG2SfylTxNbr0lYnG" class="tp"><!--pnid:1TNCwr6d9QLyKeCLIrNhEZ-->拿头程装箱单与提单 BL、入仓签收单与 WMS 上架明细换一个口径再跑：不按 SKU 汇总，拆到箱号一级，一箱一行。产出用 Excel 一张表，写清每箱装箱件数、签收件数、上架件数、差异件数，并标出差异集中在哪几箱；能看出是整箱没上架还是零散少的写一句结论，看不出来的写「无法判断」。</p>
+    </article>
+    <article data-page-node-id="yhFae1BNGjuypFxorP3c1Y" class="task">
+      <div data-page-node-id="uHqf2pnqkTurixYqAZuJt0" class="th"><span data-page-node-id="2idPQ7612E85XJl7lhiV4s" class="no"><!--pnid:gVAHEMFiFLPXgK5Zy3OAhE-->04</span><h3 data-page-node-id="TPLj1gwgHkdYYBABliswSP" class="ttl"><!--pnid:vdwe3oeJFNN6g66oQ87syi-->一次跑三批头程</h3><button data-page-node-id="GxDyKpQZf5AfY8hJWOW3bI" class="cp" type="button"><!--pnid:Uy3LtarMK6G7b1u62Yg4rF-->复制</button></div>
+      <p data-page-node-id="q25ufeAbC6DdSfyIPrIYOF" class="tp"><!--pnid:2I8h4s4kAyw14iQbHphC2r-->演示数据里再加另外两批的「01_BX-500头程装箱单与提单BL.xlsx」「02_海外仓入仓签收单与WMS上架明细.xlsx」同类单据，三批一起跑。每批出一份 Excel 核对表，另加一张横向对照表（Excel 一张表）：各批装箱、签收、上架、差异件数、可索赔金额、时效剩余天数。缺签收单的那批标出来，别用装箱单代替。</p>
+    </article>
+    <article data-page-node-id="ZEGafCwW92EJY0PQ5T5ED9" class="task">
+      <div data-page-node-id="QPqvtOyCr3uFubtlURCq8p" class="th"><span data-page-node-id="1q9ZxxmN3fdWe2tzWZ55XF" class="no"><!--pnid:RQ540XaBZ9OXZ3yZeyLTMy-->05</span><h3 data-page-node-id="CmTjrWLVYXrYrFGdPXdWDo" class="ttl"><!--pnid:7rsKpcG7JF28hX4iQELVZH-->给海外仓对接人的一页纸</h3><button data-page-node-id="BCYTQDmr0Uqgb9qRZvxGNK" class="cp" type="button"><!--pnid:3U8a3k6xUseK4KwSzqxv8t-->复制</button></div>
+      <p data-page-node-id="PO0LeGwn8xKx5rneL6W7DP" class="tp"><!--pnid:th1rTqviYj2kGPLgSXIfHB-->基于这次的丢件破损索赔清单.xlsx，做成发给海外仓对接人用的一页纸（Word）：差异所在的箱号、件数、签收单号、要对方核的是哪几行、什么时间前回复，一行一条。索赔金额和我们的成本口径不要放进去，只提请对方核实。</p>
+    </article>
+    <article data-page-node-id="QzMjhPFcrizHZrcISBsP1e" class="task">
+      <div data-page-node-id="bmyk9X3uw9KOYXnLpJqglg" class="th"><span data-page-node-id="VCg4wZb1Ze3Xq6ufjJ5YaH" class="no"><!--pnid:tKIXYJ3Y2DKEHnsOW9LowL-->06</span><h3 data-page-node-id="VqGK5BGKMnLCk6Vsjf1aCe" class="ttl"><!--pnid:VFoXzADUfy8blUzPsvtoqW-->挑可能站不住的差异</h3><button data-page-node-id="8gKOg9wvzhz5JDyZoUU11A" class="cp" type="button"><!--pnid:jwrwI1DcHiDaX6NZXAYeqS-->复制</button></div>
+      <p data-page-node-id="CbnnoJxXq6GmJPffw5jp2G" class="tp"><!--pnid:hrKRvx6OYM2kdIu93bzDsi-->你列出的差异里，哪几条可能只是我们自己单据填错了、不是真丢件？把「01_BX-500头程装箱单与提单BL.xlsx」「02_海外仓入仓签收单与WMS上架明细.xlsx」里的原始行逐条摆出来验证。产出用 Excel 一张表，一行一条差异，写清原始单据三处数值、判定、该留还是该撤；撤掉的写明撤了哪几条，别让它进索赔清单。</p>
+    </article>
+    <article data-page-node-id="RS6XJKk934NtI5PbGimCSm" class="task">
+      <div data-page-node-id="NKVkh24XMoMziqjcMDGDE9" class="th"><span data-page-node-id="IccEFWTWDUxKqx3mSoLrIZ" class="no"><!--pnid:gyhU9mPnYaAaPi3YKeQoAW-->07</span><h3 data-page-node-id="3lRYNchUqTzvH69dgoFNqQ" class="ttl"><!--pnid:HUpBYjdqmgaRnA7JA0w7a9-->比对 2025 年 6 月超时效那批</h3><button data-page-node-id="ZUW7uPJo258vKcuIwvkGr7" class="cp" type="button"><!--pnid:0ElDumM3waD1e6L6iOjVTU-->复制</button></div>
+      <p data-page-node-id="a3VN192NcZjvSmr39cIyed" class="tp"><!--pnid:zQekvY755fWivDcNvaXV5F-->读「03_海外仓月度对账单.xlsx」和这次的核对结果，把 2025 年 6 月那批签收足额但上架少十几件、超 30 天时效后仓库不认的记录对出来。产出用 Markdown 一页：写清那批的时间、差异件数、超时多少天、最后怎么处理，再逐条列这次每笔差异距时效还剩几天、该先提哪几笔。对账单缺的字段写「无记录」，别补。</p>
+    </article>
+    <article data-page-node-id="y6nb32EFsXok6ipd6sdZkS" class="task">
+      <div data-page-node-id="aFlbL9RLCs4120CTJXRxWT" class="th"><span data-page-node-id="f4OvZDBZ6r0DxtalPPgDb0" class="no"><!--pnid:8WhyL4hVh8VJfmBSwo5ygP-->08</span><h3 data-page-node-id="b2qZyYpTZRoCvgOdHLHKr6" class="ttl"><!--pnid:Dl6Ee39RJdKUB6pUd8LLoA-->对照核对与留证要求自检</h3><button data-page-node-id="8aOngRh2kvdDgYogpZESZ9" class="cp" type="button"><!--pnid:yrD0Pqv6eciwinobn4X1WM-->复制</button></div>
+      <p data-page-node-id="HdfOs7VcSiEbm18YgzIeUV" class="tp"><!--pnid:PGKCoJB1gy0Ww35gagS9Od-->对照海外仓月度对账单和 FBA 库存与丢失补偿明细自查这一版：差异有没有分类、每条有没有证据出处、可索赔金额有没有写明用的是单件成本还是平台口径、索赔对象定没定、有没有替客户提交索赔或定责。产出用 Excel 一张表，一行一条，写清检查项、现状、该怎么改。</p>
+    </article>
+    <article data-page-node-id="1DeMN8cID6oscxfsfeq3yJ" class="task">
+      <div data-page-node-id="kdRz1ln8r9n3MgLq37vkyH" class="th"><span data-page-node-id="SccuIB6bdFIWBY7YKnzpir" class="no"><!--pnid:SuDzJjEz7wpw3gvPfd0ADT-->09</span><h3 data-page-node-id="vDwstv69shyaCqLMzsXrTs" class="ttl"><!--pnid:dxopBGll2rEu5CgFYHXuCg-->这批能追回多少、漏了多少</h3><button data-page-node-id="3D1nwnfSLdsIhC3IADG5Vs" class="cp" type="button"><!--pnid:yiP3RJUzDq0p6eIceWabUz-->复制</button></div>
+      <p data-page-node-id="lCeaOqesA2WcA7uOMQ000U" class="tp"><!--pnid:oLcJu8KyZCt5abUbbte3zy-->读「01_BX-500头程装箱单与提单BL.xlsx」「03_海外仓月度对账单.xlsx」「04_FBA库存与丢失补偿明细.csv」，把隐性丢件按单件成本算能追回多少，再算最近一年没申请过的 FBA 补偿有多少。产出用 Excel 一张表，一行一项，写清算式与出处，最后给两个合计；没有的数写「本项无法分析」，别估。</p>
+    </article>
+    <article data-page-node-id="AxwnGbf7G5s8sIfskXcaFV" class="task">
+      <div data-page-node-id="bDE6UtnOSg1ONgeriBRNjI" class="th"><span data-page-node-id="m64pC9VdTpeUujHm8X5CoQ" class="no"><!--pnid:JvSDZRvPH4bLEULP9LHAh2-->10</span><h3 data-page-node-id="e6VfSlhOnkW5GGC50BH98F" class="ttl"><!--pnid:5GCz2A1PIRMiMX02GmQzMh-->沉淀成三方勾对口径表</h3><button data-page-node-id="0OnYaqX7guI11S8FRrWq3P" class="cp" type="button"><!--pnid:5YVsMN1DUewnRP0yKh08bp-->复制</button></div>
+      <p data-page-node-id="zaBDmlgWFaj9jwFxtVgoGM" class="tp"><!--pnid:mOXRuM45oDHt7XcOR6oUyg-->把这次的口径整理成一张可复用的表（Excel 一张表）：装箱单、签收单、WMS 明细各取哪一栏、按什么键勾对、差异四类怎么分、各类的索赔对象与时效是多少、证据出处怎么标。写成下一批头程到仓直接套的样子。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="q7APxHqhckVa1J8KS53Ztl" class="cta">
+  <div data-page-node-id="kq3vRmRjSxk7K6s6o4bpsk"><h3 data-page-node-id="XHP3C5YgizD3qZM2PkHfnE"><!--pnid:tsIbgUbcnnUq3aLskgAt2q-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="jGza6EiegfDtXk4XRV6EvC"><!--pnid:jhDl4DKtsanPvLMOmTBBep-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="v8bw2jwvpZe96cXOEUa29T" class="btns"><a data-page-node-id="wNGPEwlkckZHj1636FA0aG" class="btn" href="#" id="ctaContact"><!--pnid:3CoNzyWsN12Q6DvV5Hpph1-->联系我们</a></div>
+</div>
+<footer data-page-node-id="WZJfzkeGA2hi5BmIIIrYs0"><!--pnid:ekyvUt40lBjWZFRFa55qEy-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="JDTDgEwFB6GwOv9T3Gp2yy" data-pnid-children="hqiE3hil7xYR2P3eVeqldq">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="Urf2lXV5vhoaxRIBQypuY4" data-pnid-children="H59DKbIeCgTPyO7J38m8XY">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="0sR43HP0412RoQSj1vE2Dc" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="EiQunAQ6up9KJ8ACDcNA09" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="5h4W3zDFl9eBUsyB0Ikkno" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="rCf2XzRCfbB2wN9Cf3L2lJ" data-pnid-children="nziaRqi8rimzyKUCDwgDYH">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="lGgZGhptaA1YNkGl3hwXFM" data-pnid-children="j55epqxxU1i7D1yqAbBMr9" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

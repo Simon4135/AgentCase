@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html data-page-node-id="zMpCkiFxOwCClugr01ELWG" lang="zh-CN">
+<head data-page-node-id="HcqZRqlxHqBBlJh2iHU8el">
+<script data-page-node-id="G9rsaqMDdsQOeMZrOgxbaI" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="k4nmFUOJGAn6jjLFpHyVdc" charset="UTF-8">
+<meta data-page-node-id="Ww3GUu4JK9CstR42qRYMoh" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="L87eLvvtSNyhXHWkR8B7g6" data-pnid-children="HRMP00iduUVi2NQPIK7dvD">清舍家清 · 经营驾驶舱</title>
+<link data-page-node-id="eIjXJ1Rwc2PICSe5riLzm9" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="3kf9iwhzgPyYUvmNRHfH5E" href="_assets/shared/retail-extra.css" rel="stylesheet">
+<script data-page-node-id="MUtNF3x6h4CpyNZODtIfcp" src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<script data-page-node-id="8S5ErsBwCujleOSsaRqwyC" src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@2.1.0/dist/echarts-wordcloud.min.js"></script>
+
+<style data-page-node-id="BfIlVRIjcTjbm39ewOlj6J" data-pnid-children="NgAoZHE2J1LhikfZW1QaIn" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="Qo42HZhRacxQ0ol3pzRGsF">
+
+<div data-page-node-id="iyVLS2XgjbJiaEHBWyW7SQ" class="wrap">
+<section data-page-node-id="xHitgxDSNtAavK5Prp04ae" class="page-hero">
+<h1 data-page-node-id="04v9y9wAKPnKkXxDqE2xdF"><!--pnid:ScoEYZHPA8Ywy1Y91U5u6q-->数据看板 / 三视图可视化</h1>
+<p data-page-node-id="9fQ1lWpwNcrOMKzP3S9zqJ" class="lead"><!--pnid:wpI9mKkRZcqk7zsm5XI5fN-->一份看板给所有人看、老板嫌多运营嫌少甲方嫌泄露 · 每周手动截图发群</p>
+</section><nav data-page-node-id="1qrtnxYRhVHKYJRfqRZeSn" class="subnav"><a data-page-node-id="7n6FwjuRYfj4r2gH3ud0dx" class href="场景引入.html"><!--pnid:02uQ2sZVRMOgT6f8oukHJz-->场景引入</a><a data-page-node-id="4XsO8Y37K51FQysMhobr72" class="on" href="#"><!--pnid:xZlCCuYv30KRYYbUyhcVnr-->Live Demo</a></nav>
+<section data-page-node-id="rRrMpleiotX5wIRPh3Tnc6" class="notice warn"><div data-page-node-id="jUtQ7QWbS401QfrOMoocvh" class="icon"><!--pnid:qn3H9CpVzWNSBqnCGpirEB-->!</div><div data-page-node-id="5T4DJnx4GRBKgvPzHjafl7">
+<b data-page-node-id="LVxSqx9sb4Q3D2lYe6iMJj"><!--pnid:z2cWJTLxFtwPH3R98fcKu6-->演示模式 · 可视化预演</b>
+<p data-page-node-id="3HF2U6uzKOnrIfIWoxYKl7"><!--pnid:cBjcAZRDlWG3jwCgd9T4aw-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="IQeXKgS3PwYU3QydJkzC3S" class="app">
+
+  <!--pnid:IdQ3sz2oPelxbdGf133UZx--><!-- 左侧导航 -->
+  <aside data-page-node-id="5Uc6cjnadzDGGPZi0Zhz6o" class="sidebar">
+    <div data-page-node-id="UlJHaw5Pv0hF7v1l4QwxAV" class="side-brand">
+      <div data-page-node-id="gVnnvxu7oFL8HYK2d6u5KS" class="name"><span data-page-node-id="tdRLQ2TnYeH180QxbAoF07" class="dot"></span><!--pnid:TTHZtwIhcRVI6D3IKYni6F-->清舍家清</div>
+      <div data-page-node-id="gAv8b5N16OPjqdBoMjSaFC" class="desc"><!--pnid:VYywZpFwEKplXObyIV2HTC-->经营驾驶舱 · 天然家居清洁品牌</div>
+    </div>
+    <div data-page-node-id="W0N4G2HAb8U3xTFcPKnZY1" class="nav-item active" data-page="p1"><span data-page-node-id="bdeRknjIePDlBtNFzSZXAH" class="n"><!--pnid:T66pFR8vDC41cPbeuGWclJ-->1</span><!--pnid:ZqKeyhxJXPmZt7y7YJqebL-->经营驾驶舱</div>
+    <div data-page-node-id="cVLwFfmyoLMghhjbfmIkkZ" class="nav-item" data-page="p2"><span data-page-node-id="NdBwkUsAGdK7ZNdXoJervt" class="n"><!--pnid:YhOm0GW0rwoOoW3xcwQvG8-->2</span><!--pnid:ni22Z6WbNDVVqCmyGLPpcO-->商品与品类</div>
+    <div data-page-node-id="td6GnCaPYF7bcIwhrznMFb" class="nav-item" data-page="p3"><span data-page-node-id="F6bhbDkHER4SKUA1FBOWqS" class="n"><!--pnid:25leoxqIFkg2DfLbkVESBF-->3</span><!--pnid:mqqXVpvr8eT0QzlFME1SKW-->会员分层</div>
+    <div data-page-node-id="A9dDfC3baglJ8T6d1VmAba" class="nav-item" data-page="p4"><span data-page-node-id="WVq4jaEwqOSfQjLaFyTdWn" class="n"><!--pnid:pINNgcIeAqLhitENIHjfeM-->4</span><!--pnid:CkPmw9bKo0eu7lpH2a4OXF-->投放与拉新</div>
+    <div data-page-node-id="KyWPb3qOnjxCsokgykl3hw" class="nav-item" data-page="p5"><span data-page-node-id="jmQHbjtUIvEiJ4xHeXe7Fk" class="n"><!--pnid:bIvSB4mW1He5DCJs9ZiLdX-->5</span><!--pnid:UNXLu11DTX9a7kkMH945Zd-->客户反馈</div>
+    <div data-page-node-id="zVRp4Phbggv6aOOcgIIPiu" style="margin-top:16px; padding-top:16px; border-top:1px dashed var(--line)">
+      <div data-page-node-id="GNf8PeeShoASk3TVoL2S4i" class="nav-item" data-page="pboss" style="color:#7c3aed"><span data-page-node-id="ME4PQXJ2pbrBj9hd4pRWOR" class="n" style="background:#ede9fe; color:#7c3aed"><!--pnid:v9ozxklhnEgbFkUJe5BzLn-->👑</span><!--pnid:llIgFNuS9fzHQMs3GGWwre-->老板大屏</div>
+      <div data-page-node-id="rYUJccvhPPzH6C5Ftx2s0w" class="nav-item" data-page="pclient" style="color:#059669"><span data-page-node-id="K1BDBi9C5WW3DiP1rCCpwR" class="n" style="background:#d1fae5; color:#059669"><!--pnid:GQhhZ9aGsCGCHbVRdbXUEh-->🤝</span><!--pnid:AEYbRob1chLvflnxAfJBZM-->客户方视图</div>
+    </div>
+  </aside>
+
+  <!--pnid:ZLucZOcKaT2XbAgsPJRxaS--><!-- 右侧内容 -->
+  <main data-page-node-id="dxBgJ7rJqixOYf8YfjtOux" class="main">
+
+    <!--pnid:HST6Hkv2jWQNUGbypWRuHV--><!-- ============ 页 1 · 经营驾驶舱 ============ -->
+    <section data-page-node-id="MO84IT2QBddCoP2yaMcX6b" class="page active" id="p1">
+      <div data-page-node-id="IBzB5LBIVmZdlmsG9ZjpGC" class="page-h">
+        <div data-page-node-id="mR1uQE3icteQC5oHEmoUhi" class="title">
+          <h2 data-page-node-id="ReGXrrRn6ZmauZC0mCA8tI"><!--pnid:tpmdugHCw9Ifwa0BJEWPSh-->经营驾驶舱</h2>
+          <p data-page-node-id="y2msUMsejkFG1HbSzPJ1fQ"><!--pnid:htCBMg4EnqtHqTSp550Owj-->月度 GMV · 订单趋势 · 品类结构 · 关键预警 · 一屏掌握全局</p>
+        </div>
+        <div data-page-node-id="1D5I9ik33O2A8ZQX4AZKKJ" class="actions">
+          <button data-page-node-id="z4kIKbFYiEXS4zUBUpRmNA" class="btn-mini"><!--pnid:dViePfYqvepQwMZ96yI1XF-->📅 最近 30 天</button>
+          <button data-page-node-id="vTSD1uMfKujBhlsHMljY5T" class="btn-mini"><!--pnid:ZG9g6xDp2wfpOCbgA3ccUZ-->⬇ 导出</button>
+        </div>
+      </div>
+
+      <div data-page-node-id="nkBDTAhJT2Bfwj9r8XelvI" class="kpi-row" id="kpi1"></div>
+
+      <div data-page-node-id="yZfBz9cgUcnswionmgxC4g" class="alert-row" id="alerts"></div>
+
+      <div data-page-node-id="NaWXLjPLSXOq7Pa82mw5Fj" class="grid g-2a1" style="margin-bottom:14px">
+        <div data-page-node-id="tRaON8zWYlVcs6VfNbKGvl" class="panel">
+          <div data-page-node-id="iHXqZH6725iIa8zbWfLC2T" class="panel-h"><h3 data-page-node-id="ZoLSYbK6n09X1epc9cXVui"><!--pnid:5Vb5ghSBRWBFos5FCnNCXE-->📈 GMV 日趋势 · 最近 30 天</h3><span data-page-node-id="DvcGzQwDNDrSHq7pW7Gxeb" class="p-tag"><!--pnid:hyXWMvHMRQUFJKMBHPtz0b-->面积图</span></div>
+          <div data-page-node-id="wHGHV7lqSR5AHjYJq5yS7z" class="chart tall" id="chart-gmv"></div>
+        </div>
+        <div data-page-node-id="OYInbEGMktkZhCNMIUgiXy" class="panel">
+          <div data-page-node-id="PnHXQaVjPlp4y4KeSKetwW" class="panel-h"><h3 data-page-node-id="rJHRXgWJaLtVkKVVVDfhBt"><!--pnid:HwFxkl0T8Jh8ZhZY431hCv-->🎯 月度 GMV 完成度</h3><span data-page-node-id="Hvm8XoABJwbtHBeE0jnIWu" class="p-tag"><!--pnid:PYWsGw9GeJMILFunqXmOMO-->环形进度</span></div>
+          <div data-page-node-id="56NCNDzv9KmZAgP2ufzeU3" class="chart tall" id="chart-target"></div>
+        </div>
+      </div>
+
+      <div data-page-node-id="t6bzgSVQ7wM2NdNsf4LJNR" class="grid g-3">
+        <div data-page-node-id="23j56TRMjOA4NWzIpKPrOh" class="panel">
+          <div data-page-node-id="2ZyadYrM9zex2yMCCdK7WZ" class="panel-h"><h3 data-page-node-id="OuJEvvQvSeFYVRgvzvIKHK"><!--pnid:kP8oEGW6TGbnOKCGomMXnk-->📦 品类 GMV 占比</h3><span data-page-node-id="sV2wxKdIYKD3ir189I6NID" class="p-tag"><!--pnid:ie7msrDCBYDoS29kNQTU9z-->环形图</span></div>
+          <div data-page-node-id="UCp1sOZFCPmkE6dXVYvdet" class="chart" id="chart-cat"></div>
+        </div>
+        <div data-page-node-id="HP8TXnoj8J9g8le1xV4uFZ" class="panel">
+          <div data-page-node-id="ymqyuLRMEHkoqfa0uiBBrK" class="panel-h"><h3 data-page-node-id="PzZDhdsrJvTTXHElH47NHQ"><!--pnid:E7VrQBxB4k7oCs6PmCqplM-->💰 日 AOV 波动</h3><span data-page-node-id="mSwi5TlPnuic67T8JtpAjh" class="p-tag"><!--pnid:XKuGdcL5xjVQ595wVQ313x-->折线</span></div>
+          <div data-page-node-id="hvFf0VGQiZ4Gbvq9a4JxrY" class="chart" id="chart-aov"></div>
+        </div>
+        <div data-page-node-id="f8TQicGWovSyV2Ld7CAi6X" class="panel">
+          <div data-page-node-id="712643TEThG51KlI2ZgJB9" class="panel-h"><h3 data-page-node-id="1avKYIrz4H1CS0Rvi1nmhV"><!--pnid:MZCuodGmF938tNYPLY5oPV-->📊 日订单 vs 日 UV</h3><span data-page-node-id="EMkiTDfPeZzfKGCPar6Ek5" class="p-tag"><!--pnid:G8i3UT5Za71YifvI0OkOR0-->双柱</span></div>
+          <div data-page-node-id="IVWcgQQXl4pCjCVZ8XLTol" class="chart" id="chart-orders"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--pnid:Ph4nlk2p7jcvYCq279aNqq--><!-- ============ 页 2 · 商品与品类 ============ -->
+    <section data-page-node-id="MOKfiM6webrQDJN6rSOmwN" class="page" id="p2">
+      <div data-page-node-id="aV0Zk8Sm2frGM8eovDSIy5" class="page-h">
+        <div data-page-node-id="Lj2pmauC6R6VMoVLck9aO5" class="title">
+          <h2 data-page-node-id="sd1E2u1xPZBKUvQF5sZ69o"><!--pnid:hIKmK3SZN4b0Uf9Fxh4wzl-->商品与品类</h2>
+          <p data-page-node-id="qWVJCR0kmSFsTegL8q4l8f"><!--pnid:QdrAF3t7Nr5F4vKmwzEkuS-->SKU TOP 榜 · 品类环比 · SKU 数量分布</p>
+        </div>
+        <div data-page-node-id="TKZTuNr6LHzn52AgIg7CRd" class="actions"><button data-page-node-id="S5LQUXDGvoMbQBdR8ZWkTJ" class="btn-mini"><!--pnid:IKXEvhmqnW0vLQsMgVuQYv-->⬇ 导出</button></div>
+      </div>
+
+      <div data-page-node-id="YcG8HjzbafoMkDPSNP2Nem" class="grid g-1a2" style="margin-top:16px">
+        <div data-page-node-id="LiAKKt39bwaoSZu8QEAzkE" class="panel">
+          <div data-page-node-id="n42fAjfpGq9ZEQelRXTMIP" class="panel-h"><h3 data-page-node-id="gfQtTk3sJhDbftXVrjXral"><!--pnid:iPH61INsXPZ0Z5NFKEZmrL-->🏆 品类环比增长</h3><span data-page-node-id="mDH3vUeScI6tQBSytd8ZQc" class="p-tag"><!--pnid:cQ43eQ4h94YHOlm4LtfpIA-->横向条形</span></div>
+          <div data-page-node-id="jWrHNyf185bSb0yspDBAoq" class="chart tall" id="chart-cat-growth"></div>
+        </div>
+        <div data-page-node-id="HsN4djGQPe80oC6Sh5WTEg" class="panel">
+          <div data-page-node-id="F5VGgc4VL9hxop9qMW8etb" class="panel-h"><h3 data-page-node-id="jsbhnYJL3jo7TUPmi2yNqg"><!--pnid:BLtVXDpyHnI318Fb8KFI47-->💎 TOP 8 SKU 榜</h3><span data-page-node-id="YzARqzUybjMYSjpMt0ftjX" class="p-tag"><!--pnid:Uy2Y7XgQIIDmaTodnBhkgU-->销售明细</span></div>
+          <table data-page-node-id="jLBpCUB4J3S47MLnpOu4KW" class="p-table" id="table-sku"></table>
+        </div>
+      </div>
+
+      <div data-page-node-id="9AoILAl83APjybMUW3koLB" class="grid g-2" style="margin-top:14px">
+        <div data-page-node-id="SvJmQMA6MhkEXEQQ4lq23g" class="panel">
+          <div data-page-node-id="1r6duvj2l6bPaa5ZqTvRSD" class="panel-h"><h3 data-page-node-id="4UDzUKCVQXGrlp49JQHnk5"><!--pnid:7sRLd0C5e4CXuHJmPqChfc-->📚 品类 SKU 数量分布</h3><span data-page-node-id="2afHMBIoY5C9pT2yfwBvEW" class="p-tag"><!--pnid:yw4QoxxrBLsGXPLd3WbFur-->条形图</span></div>
+          <div data-page-node-id="RaxYkD7TWjhfWFIstogcBR" class="chart" id="chart-sku-count"></div>
+        </div>
+        <div data-page-node-id="h4nRgv8G2u5iqxiRcDaV7e" class="panel">
+          <div data-page-node-id="l6Z8Gb9E0SD4VD04beD06M" class="panel-h"><h3 data-page-node-id="neoPGMFhpnR45zcHPAAhu2"><!--pnid:YYTLtlfI4k0ZlHVh7aEoUd-->💵 品类 GMV 结构</h3><span data-page-node-id="mzKw2UdIGeJjZuxexl2as2" class="p-tag"><!--pnid:DeFXUmU7p41TfJFnpIFh3c-->玫瑰图</span></div>
+          <div data-page-node-id="O04WPW1CYZEBBGu8qN3RlU" class="chart" id="chart-cat-rose"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--pnid:nQXF7unOdbs9imyHFZ1bVG--><!-- ============ 页 3 · 会员分层 ============ -->
+    <section data-page-node-id="QtKAB6mrslmRKanuoWKTsj" class="page" id="p3">
+      <div data-page-node-id="XfUDlJ19I9pLfeKB3Ihxg0" class="page-h">
+        <div data-page-node-id="iZepZGv0iU3bSdxWJ9N05w" class="title">
+          <h2 data-page-node-id="Ha0TesePv3eLES0btnyuIy"><!--pnid:kBDqRqJdM91wDDVjvbYl0q-->会员分层</h2>
+          <p data-page-node-id="3yjmHaT8j5K2zDqcXGkIsC"><!--pnid:f4oCejwKIpryhfnFoCcjfC-->RFM 分层 · GMV 贡献 · 分层健康度</p>
+        </div>
+      </div>
+
+      <div data-page-node-id="djK31zUMcpRtK1bPN20oMQ" class="grid g-2" style="margin-top:16px">
+        <div data-page-node-id="6WN8jdfq5SdBl4z3lGikB0" class="panel">
+          <div data-page-node-id="qVU7YmcDxykraJCFDQUEdX" class="panel-h"><h3 data-page-node-id="QOqkRIWeHkuQCZgKwdsyJS"><!--pnid:N9UROssN6vMFnkewYxbeR7-->👥 会员分层 · 人数</h3><span data-page-node-id="xycSVk554dHFDrEbSaYssM" class="p-tag"><!--pnid:EqsFiIz33tOQ7smgokFcO1-->条形</span></div>
+          <div data-page-node-id="0FGs6nP6hXbLCOWiXbTCBY" class="chart tall" id="chart-tier-count"></div>
+        </div>
+        <div data-page-node-id="GxZR4Y1FI5y0o9MUnVv87h" class="panel">
+          <div data-page-node-id="FUGvGJ1kVSZO3tY9CrpBGF" class="panel-h"><h3 data-page-node-id="jhpQNEvlWbUsCYA0yCkeJk"><!--pnid:c909kuf2BO6PRUXPOcfGWm-->💰 会员分层 · GMV 贡献</h3><span data-page-node-id="gdCuBU6iQT1O79TZHVgCYs" class="p-tag"><!--pnid:kijSeeqtg3CMo6NhldHqL7-->饼图</span></div>
+          <div data-page-node-id="Ti3AfQEfEkxAM4rStn0NKs" class="chart tall" id="chart-tier-gmv"></div>
+        </div>
+      </div>
+
+      <div data-page-node-id="68TNgGRkv1AKBjDMrMicD1" class="panel" style="margin-top:14px">
+        <div data-page-node-id="YbM0tgk18Xq66n20K33x3E" class="panel-h"><h3 data-page-node-id="EO3HjnJxLds40XYhk0yiBv"><!--pnid:1jggrKsIy8HqTiUF052WoX-->🔀 会员来源 → 分层 流转</h3><span data-page-node-id="OvD8vyHoH0mnJw8eDDDCLx" class="p-tag"><!--pnid:6sdSZ4rZREG4WuplEChgBx-->桑基图</span></div>
+        <div data-page-node-id="psOwVcImTi3ZgRIIu1yV2i" class="chart tall" id="chart-sankey"></div>
+      </div>
+    </section>
+
+    <!--pnid:PHikZVqF5zrnIrTF2dr5v7--><!-- ============ 页 4 · 投放与拉新 ============ -->
+    <section data-page-node-id="7VvwXk4JO3umXNPd3lXQuo" class="page" id="p4">
+      <div data-page-node-id="XBTRMw4mtwsQPEx4mTIXHu" class="page-h">
+        <div data-page-node-id="Iu7SMwdAKpzsM4064AHmhI" class="title">
+          <h2 data-page-node-id="9Ww8UkQU9QLb8mvhCCgBL9"><!--pnid:eNlwsfFWA0HC6kP9FtpFER-->投放与拉新</h2>
+          <p data-page-node-id="o0VkirgcmGlh6eMAGOrdcu"><!--pnid:E2kYrX50rvFsI5SivBOm05-->各渠道 ROI 对比 · 拉新成本 · 转化率</p>
+        </div>
+      </div>
+
+      <div data-page-node-id="mm2uzTcwxKts5eoS428wR5" class="grid g-2" style="margin-top:16px">
+        <div data-page-node-id="IxBCAx1CPikFkYbG0DSjns" class="panel">
+          <div data-page-node-id="dTgvlPoPZHdxRiwDNneJA8" class="panel-h"><h3 data-page-node-id="E8TBDl4I5RPGYnkW2VlLh1"><!--pnid:wvQkTYETccNFsy5VQrr9UB-->💸 各渠道 ROI 对比</h3><span data-page-node-id="5V9BVvq4aECbCnclsFJwtF" class="p-tag"><!--pnid:JR5W3FhIkIKQEJjCGttrI6-->条形图</span></div>
+          <div data-page-node-id="rF4lqhJ5O8Pjo5NubyDvhW" class="chart tall" id="chart-channel-roi"></div>
+        </div>
+        <div data-page-node-id="2zwoaR4NzzCAC2p4SJ9ihF" class="panel">
+          <div data-page-node-id="lWiGgYV1O7BgcdBzgC84Vv" class="panel-h"><h3 data-page-node-id="fnAkSymtno1ToSTnvkrzft"><!--pnid:8IzhhmCCmI5t28w7y1lIu1-->🎯 各渠道转化率雷达</h3><span data-page-node-id="Wqe61FKzPMpqItSRickC3j" class="p-tag"><!--pnid:KIUTMdkotaftQBU6pkjLHc-->雷达图</span></div>
+          <div data-page-node-id="4qPppvAWGvbUqOO2N4BLbz" class="chart tall" id="chart-channel-radar"></div>
+        </div>
+      </div>
+
+      <div data-page-node-id="YuKbKuhXNAGwp3EwYA2Iko" class="panel" style="margin-top:14px">
+        <div data-page-node-id="gen2Z4dEn5dbqLzdPYmHNe" class="panel-h"><h3 data-page-node-id="1P8Me16Pdu8XM1QnxXbPTj"><!--pnid:CKsYwWqGnbW6cr5YtjVBiM-->📢 渠道明细表</h3><span data-page-node-id="hyeETplPG49sCmk6V9F0Ia" class="p-tag"><!--pnid:E4lKs6ZyDyIJ3Iwz92NnpY-->GMV 排序</span></div>
+        <table data-page-node-id="L5uIwTT2bNtWGGcj5h23SE" class="p-table" id="table-channel"></table>
+      </div>
+    </section>
+
+    <!--pnid:KXIB9FAO2WPhHHnwpyFKhV--><!-- ============ 页 5 · 客户反馈 ============ -->
+    <section data-page-node-id="s76jiMYvbKa3gFfNudbcVZ" class="page" id="p5">
+      <div data-page-node-id="jmET9Rxz9FiaJAPGwaptUq" class="page-h">
+        <div data-page-node-id="Q4RcGBYGCtlS1n7ebcGehr" class="title">
+          <h2 data-page-node-id="q7qCnmpjANq71XGUO8pR8X"><!--pnid:cIXHIaNJsNhFM6OsQ5jSl1-->客户反馈</h2>
+          <p data-page-node-id="d9HGBD7a9J6eLPuoHLJNwx"><!--pnid:LYwYXv34iZn5bKnrQADdho-->区域分布 · 好评差评占比 · 高频反馈词 · 每日趋势</p>
+        </div>
+      </div>
+
+      <div data-page-node-id="NaqWWz0ybpOjO7ra4UKcQZ" class="grid g-2" style="margin-top:16px">
+        <div data-page-node-id="MQnHHyWnQDvSu2N29IZHHE" class="panel">
+          <div data-page-node-id="dILBijZ92o5LSZ93UPUWRF" class="panel-h"><h3 data-page-node-id="QRbCvZ8oxBDU5dzM306aoT"><!--pnid:Vkr6er2cxL5dko5y4oapAP-->🗺️ 区域反馈</h3><span data-page-node-id="13SSTwi8JJzQdtrIcd2GI6" class="p-tag"><!--pnid:3183j3Ey0EFvh0V0EOVcw9-->好评/差评堆叠</span></div>
+          <div data-page-node-id="R5vZtqx6JxcfVfl2ZYi7BQ" class="chart tall" id="chart-region"></div>
+        </div>
+        <div data-page-node-id="521Xx38Z00qn42EzI6NtIE" class="panel">
+          <div data-page-node-id="Qs58Zoao0eOKVoGKUOjtVl" class="panel-h"><h3 data-page-node-id="lgArjAkL9ogtnZMSSjcnLu"><!--pnid:tp5s5RaKvEYm1r8nskwlAP-->🎯 评价分布</h3><span data-page-node-id="iDPqRK86T6HAyatx1OzgOp" class="p-tag"><!--pnid:J0E94ax1aMnm4TLs5w9IjU-->环形</span></div>
+          <div data-page-node-id="vfODBrQE7GecQroFm9H1Ce" class="chart tall" id="chart-review"></div>
+        </div>
+      </div>
+
+      <div data-page-node-id="jbPLbceOytQt2vtdRNoefy" class="grid g-2" style="margin-top:14px">
+        <div data-page-node-id="f2RxYb3D2pnazse2rBEvPn" class="panel">
+          <div data-page-node-id="VHgJ5RtbpC8XgEs3i7QfFI" class="panel-h"><h3 data-page-node-id="mrfH6d6wMXQWfi8bR3WMwB"><!--pnid:u54TiDlmfzSo7sl9p1L7mi-->☁️ 高频反馈词云</h3><span data-page-node-id="KdWl3NRwzRBfjy8T35fArs" class="p-tag"><!--pnid:hGU7dtK7S8jAwQPxcFWCHT-->好评/差评分色</span></div>
+          <div data-page-node-id="Oj8WUZq9aPEnONcLDQ5AeE" class="chart tall" id="chart-wordcloud"></div>
+        </div>
+        <div data-page-node-id="o3DYI2pmm6v6tg3ckbzfAB" class="panel">
+          <div data-page-node-id="pat2O8IPuJQaiUgXsSiBTt" class="panel-h"><h3 data-page-node-id="GEwYkZdFpP3ZIRjcGESkUM"><!--pnid:QUC2nuVpkPLJDv8Hp8tPFO-->📈 每日反馈</h3><span data-page-node-id="6xflYJpFyPhdq8rrj9kwNw" class="p-tag"><!--pnid:UqMssgjDwOb9II4VYTLJA6-->堆叠面积</span></div>
+          <div data-page-node-id="eBTiC3tVS2STjEeA8AYCOe" class="chart tall" id="chart-daily-fb"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--pnid:fn9guDmVGcvbsyK7U3zKEi--><!-- ============ 老板大屏视图 ============ -->
+    <section data-page-node-id="4IPJMwrrL8mbhiZqYt7xtq" class="page" id="pboss">
+      <div data-page-node-id="zUKTDFkkB27b7sqW7m21B0" class="page-h">
+        <div data-page-node-id="DRwW5MJhaRpoyaK7eguOMW" class="title">
+          <h2 data-page-node-id="j3waDVvEvqg2psRtcSaNtq"><!--pnid:wq78PKwfn6YjcA4EyMQn2k-->老板大屏视图</h2>
+          <p data-page-node-id="Z6itdVQfaIk4erRLjAdSyU"><!--pnid:xs1IMOGCZLhMPufknDWbKs-->4 大核心数字 · 会议室大屏专用 · 深色高对比</p>
+        </div>
+        <div data-page-node-id="NXlj2udG1gzjYx0HEydrDP" class="actions"><button data-page-node-id="OCQWFoPJ0bltGYrNgRAAIT" class="btn-mini"><!--pnid:xBQRAqGWKC6nd1R7i8FTCt-->🖥️ 全屏演示</button></div>
+      </div>
+
+      <div data-page-node-id="F3dcb1rGpYUl56DRVxjv3r" class="boss-hero">
+        <h3 data-page-node-id="k7CqfZEGR8deUIKdzcrr7u"><!--pnid:trpfn1D6HIwDFkwrXLUxBx-->清舍家清 · 2026 年 7 月经营快照</h3>
+        <p data-page-node-id="ufOgXa1WCtHNkvK5eKX3Ey"><!--pnid:hz8OR5pIkj4Sgq51LJEBi7-->数据窗口：2026-06-30 → 2026-07-30 · 最近 30 天</p>
+        <div data-page-node-id="k5nyJUhqMEBPVZNkuLJs2b" class="boss-big-grid" id="boss-grid"></div>
+      </div>
+
+      <div data-page-node-id="E3iXsIWemwh3KppA36oU8M" class="grid g-2">
+        <div data-page-node-id="zr6Y7IrMNbHl9DJ9STkYna" class="panel">
+          <div data-page-node-id="ef81Pk9obyPPtn34MFTZEa" class="panel-h"><h3 data-page-node-id="X694yVcE082xcI6ZZW1mKS"><!--pnid:P383eLAmvnN5WHmDW7FfyS-->📈 GMV 30 天走势</h3><span data-page-node-id="fucgB1buap7m3ARDcPnb8n" class="p-tag"><!--pnid:K3P4ZeKEmUa5uU9zJqIsuQ-->面积图</span></div>
+          <div data-page-node-id="gZPD0aJRUFvpMkmueS00HA" class="chart tall" id="chart-boss-gmv"></div>
+        </div>
+        <div data-page-node-id="teiMzuOLPVH0zoGFJ9UWYu" class="panel">
+          <div data-page-node-id="WYSTIK7gHOK1KC1HZdDR6V" class="panel-h"><h3 data-page-node-id="JIs5vUauOn3FCFZ2y3GMyJ"><!--pnid:PN7zNiGLiSlk0LTU7IIlEe-->💰 品类贡献结构</h3><span data-page-node-id="4trCOKHsrhsYA8o5avS9rg" class="p-tag"><!--pnid:SMny6zA4V2gqqkFSToiV4W-->环形</span></div>
+          <div data-page-node-id="wlOLPSjZi9oxhqYx7jX6Yj" class="chart tall" id="chart-boss-cat"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--pnid:22qR2cf8Q3YC7ViOcDSFk4--><!-- ============ 客户方视图 ============ -->
+    <section data-page-node-id="580TvqEOFLlsJxe3Urs2Za" class="page" id="pclient">
+      <div data-page-node-id="Nkpfosax2FYfwc67acbGYw" class="page-h">
+        <div data-page-node-id="vRDonbiyBAnC26RTYMjRpC" class="title">
+          <h2 data-page-node-id="9rIJlrKz7u2t9yo5j2ZecX"><!--pnid:97Ew5F6lgJnN2xZLzUI2Pv-->客户方自助视图</h2>
+          <p data-page-node-id="Nilv5n2WpFlL8tyW7sAbcJ"><!--pnid:CbVVudM3HQ7guMeOPVbKUZ-->品牌方甲方看板 · 只展示业务成果 · 不含 Agency 内部数据</p>
+        </div>
+        <div data-page-node-id="dMnRsblcRwvLr1hOxvAwKT" class="actions"><button data-page-node-id="viRVH6ASaKAIWngykEufAh" class="btn-mini"><!--pnid:nwA0Y8aTea9wHNaHhw5B8G-->🔗 分享自助链接</button></div>
+      </div>
+
+      <div data-page-node-id="car3h3RMLTrQk7W4niaHAp" class="client-hero">
+        <h3 data-page-node-id="uEkIjJzmSKUf7NiG56zPqv"><!--pnid:lL4uaAUnjLegfNBlCf4RpR-->🤝 尊敬的清舍家清品牌方，欢迎查看您的私域运营周报</h3>
+        <p data-page-node-id="ns4ylrnIbYg4Kd2xHuahuU"><!--pnid:hMuqhcOPjusn7hRcCgj1WG-->数据窗口：2026-06-30 → 2026-07-30 · 每日自动更新 · 无需 Agency 手动导出</p>
+        <div data-page-node-id="bLYvpIocw8UPCwC3Azzcjn" class="client-kpi-grid" id="client-grid"></div>
+      </div>
+
+      <div data-page-node-id="di8tgswwVLAm0bDVjTwAT0" class="grid g-2" style="margin-top:14px">
+        <div data-page-node-id="okRRfZNf2NvL9I1RlcYko4" class="panel">
+          <div data-page-node-id="9cOaC8u8uCkZ6Wn4DvhCsm" class="panel-h"><h3 data-page-node-id="TYLEaKgJkkpIPUjaNqNAPK"><!--pnid:QIJGGrdj3fbFzmpB68pbLQ-->👥 会员池增长</h3><span data-page-node-id="cslXycZouynyjdDvsPxJXs" class="p-tag"><!--pnid:GNUBnddZedPWTmMrWv8q40-->面积</span></div>
+          <div data-page-node-id="RhIawQAGfSNGx1UMX9fxWS" class="chart tall" id="chart-client-members"></div>
+        </div>
+        <div data-page-node-id="RCRVRMUL1vJJtKPcX7g7sN" class="panel">
+          <div data-page-node-id="Y0ZFciVYlVvl69AQumvoNJ" class="panel-h"><h3 data-page-node-id="twF1LFnIed1h5AXlcczmrI"><!--pnid:m8NH8PFFkBoY0Tg8qRKLGi-->📦 品类销售结构</h3><span data-page-node-id="iJR2emeBNVGtwzHW0XSxug" class="p-tag"><!--pnid:fRNbffus5PKlJBVNyq2VUV-->水平条形</span></div>
+          <div data-page-node-id="XFAYRQujso5cLR4VXjnu2d" class="chart tall" id="chart-client-cat"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+<div data-page-node-id="tWKMK6VDdTmh5C1zWsIIUr" class="cta"><div data-page-node-id="dCdL0kqquks4YvR31qi3tF"><h3 data-page-node-id="O16wREfL24fJA84rCxUPaB"><!--pnid:NiMv9Viwmso8i4iwuo8EkU-->想了解来龙去脉？</h3><p data-page-node-id="rGSkqsCwSKPo71dskk5NKY"><!--pnid:OOXPCX3nlJkoTtYgjg1REr-->回到场景引入，看这个场景的痛点、做法与边界</p></div><div data-page-node-id="G8AkLLuDgV0djiSiF3zgNA" class="btns"><a data-page-node-id="9CJ6moacUVKDGXHJn5P283" class="btn ghost" href="场景引入.html"><!--pnid:P5lY2i2RlYN2hv5h1bj4SH-->返回场景引入</a></div></div>
+<footer data-page-node-id="zw4yJTIXAQNh59eUacK42g"><!--pnid:QJsIl8oViBtJvom4qUq2HZ-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="OEZxIDPGQrvMyWztpklct6" data-pnid-children="FWPddaPXYS56IMt79l9T9V">
+// ===== 数据（内嵌以避免 file:// CORS）=====
+const DATA = {"period": "2026-06-30 to 2026-07-30 · 最近 30 天", "brand": "清舍家清（脱敏）", "summary": {"gmv_month": 958002, "gmv_target": 1000000, "orders_month": 3321, "new_members_month": 1950, "active_members_avg": 450, "avg_roi": 4.56, "avg_aov": 260, "complaint_rate_latest": 0.57}, "daily_gmv": [{"date": "2026-06-30", "value": 31836}, {"date": "2026-07-01", "value": 30531}, {"date": "2026-07-02", "value": 29322}, {"date": "2026-07-03", "value": 33743}, {"date": "2026-07-04", "value": 31217}, {"date": "2026-07-05", "value": 32227}, {"date": "2026-07-06", "value": 31814}, {"date": "2026-07-07", "value": 29026}, {"date": "2026-07-08", "value": 33057}, {"date": "2026-07-09", "value": 33258}, {"date": "2026-07-10", "value": 31368}, {"date": "2026-07-11", "value": 28545}, {"date": "2026-07-12", "value": 33976}, {"date": "2026-07-13", "value": 29600}, {"date": "2026-07-14", "value": 31003}, {"date": "2026-07-15", "value": 32575}, {"date": "2026-07-16", "value": 33272}, {"date": "2026-07-17", "value": 28415}, {"date": "2026-07-18", "value": 30538}, {"date": "2026-07-19", "value": 30628}, {"date": "2026-07-20", "value": 28425}, {"date": "2026-07-21", "value": 29285}, {"date": "2026-07-22", "value": 28581}, {"date": "2026-07-23", "value": 30415}, {"date": "2026-07-24", "value": 29498}, {"date": "2026-07-25", "value": 33813}, {"date": "2026-07-26", "value": 30273}, {"date": "2026-07-27", "value": 31334}, {"date": "2026-07-28", "value": 28342}, {"date": "2026-07-29", "value": 31570}, {"date": "2026-07-30", "value": 30515}], "daily_orders": [{"date": "2026-06-30", "value": 95}, {"date": "2026-07-01", "value": 95}, {"date": "2026-07-02", "value": 109}, {"date": "2026-07-03", "value": 103}, {"date": "2026-07-04", "value": 119}, {"date": "2026-07-05", "value": 96}, {"date": "2026-07-06", "value": 104}, {"date": "2026-07-07", "value": 113}, {"date": "2026-07-08", "value": 114}, {"date": "2026-07-09", "value": 102}, {"date": "2026-07-10", "value": 101}, {"date": "2026-07-11", "value": 96}, {"date": "2026-07-12", "value": 108}, {"date": "2026-07-13", "value": 111}, {"date": "2026-07-14", "value": 99}, {"date": "2026-07-15", "value": 108}, {"date": "2026-07-16", "value": 115}, {"date": "2026-07-17", "value": 114}, {"date": "2026-07-18", "value": 100}, {"date": "2026-07-19", "value": 107}, {"date": "2026-07-20", "value": 110}, {"date": "2026-07-21", "value": 98}, {"date": "2026-07-22", "value": 105}, {"date": "2026-07-23", "value": 103}, {"date": "2026-07-24", "value": 118}, {"date": "2026-07-25", "value": 118}, {"date": "2026-07-26", "value": 119}, {"date": "2026-07-27", "value": 112}, {"date": "2026-07-28", "value": 109}, {"date": "2026-07-29", "value": 111}, {"date": "2026-07-30", "value": 109}], "daily_aov": [{"date": "2026-06-30", "value": 244}, {"date": "2026-07-01", "value": 239}, {"date": "2026-07-02", "value": 292}, {"date": "2026-07-03", "value": 228}, {"date": "2026-07-04", "value": 254}, {"date": "2026-07-05", "value": 240}, {"date": "2026-07-06", "value": 253}, {"date": "2026-07-07", "value": 234}, {"date": "2026-07-08", "value": 240}, {"date": "2026-07-09", "value": 278}, {"date": "2026-07-10", "value": 272}, {"date": "2026-07-11", "value": 229}, {"date": "2026-07-12", "value": 307}, {"date": "2026-07-13", "value": 230}, {"date": "2026-07-14", "value": 302}, {"date": "2026-07-15", "value": 290}, {"date": "2026-07-16", "value": 247}, {"date": "2026-07-17", "value": 288}, {"date": "2026-07-18", "value": 268}, {"date": "2026-07-19", "value": 230}, {"date": "2026-07-20", "value": 240}, {"date": "2026-07-21", "value": 304}, {"date": "2026-07-22", "value": 258}, {"date": "2026-07-23", "value": 297}, {"date": "2026-07-24", "value": 259}, {"date": "2026-07-25", "value": 296}, {"date": "2026-07-26", "value": 243}, {"date": "2026-07-27", "value": 233}, {"date": "2026-07-28", "value": 265}, {"date": "2026-07-29", "value": 241}, {"date": "2026-07-30", "value": 267}], "daily_roi": [{"date": "2026-06-30", "value": 4.96}, {"date": "2026-07-01", "value": 3.72}, {"date": "2026-07-02", "value": 5.02}, {"date": "2026-07-03", "value": 4.77}, {"date": "2026-07-04", "value": 4.81}, {"date": "2026-07-05", "value": 3.81}, {"date": "2026-07-06", "value": 5.64}, {"date": "2026-07-07", "value": 4.86}, {"date": "2026-07-08", "value": 3.9}, {"date": "2026-07-09", "value": 4.39}, {"date": "2026-07-10", "value": 3.77}, {"date": "2026-07-11", "value": 4.3}, {"date": "2026-07-12", "value": 5.07}, {"date": "2026-07-13", "value": 5.68}, {"date": "2026-07-14", "value": 4.86}, {"date": "2026-07-15", "value": 4.04}, {"date": "2026-07-16", "value": 5.66}, {"date": "2026-07-17", "value": 4.63}, {"date": "2026-07-18", "value": 4.01}, {"date": "2026-07-19", "value": 4.73}, {"date": "2026-07-20", "value": 3.38}, {"date": "2026-07-21", "value": 5.24}, {"date": "2026-07-22", "value": 4.95}, {"date": "2026-07-23", "value": 4.37}, {"date": "2026-07-24", "value": 3.33}, {"date": "2026-07-25", "value": 3.76}, {"date": "2026-07-26", "value": 4.3}, {"date": "2026-07-27", "value": 4.71}, {"date": "2026-07-28", "value": 5.7}, {"date": "2026-07-29", "value": 3.84}, {"date": "2026-07-30", "value": 5.06}], "categories": [{"name": "厨房清洁", "gmv": 312000, "sku_count": 24, "growth": 12.4}, {"name": "衣物洗护", "gmv": 268000, "sku_count": 18, "growth": 8.2}, {"name": "地板护理", "gmv": 148000, "sku_count": 12, "growth": -3.1}, {"name": "除菌消毒", "gmv": 102000, "sku_count": 8, "growth": 22.5}, {"name": "空气清新", "gmv": 68000, "sku_count": 6, "growth": 4.8}, {"name": "卫浴清洁", "gmv": 42000, "sku_count": 5, "growth": -1.2}], "top_skus": [{"sku": "清舍·天然厨房去油污喷雾 500ml", "gmv": 84000, "sold": 420}, {"sku": "清舍·多效衣物洗涤液 2L", "gmv": 68000, "sold": 340}, {"sku": "清舍·地板养护清洁剂 1L", "gmv": 52000, "sold": 260}, {"sku": "清舍·抗菌免洗手液 300ml", "gmv": 48000, "sold": 480}, {"sku": "清舍·除螨喷雾（除菌款）", "gmv": 42000, "sold": 280}, {"sku": "清舍·柑橘除菌喷雾 500ml", "gmv": 38000, "sold": 190}, {"sku": "清舍·浴室去霉净瓷剂", "gmv": 32000, "sold": 160}, {"sku": "清舍·全效清洁湿巾 80 抽", "gmv": 28000, "sold": 350}], "member_tiers": [{"name": "冠军会员", "count": 148, "color": "#059669", "gmv_pct": 41}, {"name": "忠诚会员", "count": 312, "color": "#00866f", "gmv_pct": 22}, {"name": "潜力发展", "count": 285, "color": "#7c3aed", "gmv_pct": 13}, {"name": "新客", "count": 420, "color": "#0891b2", "gmv_pct": 11}, {"name": "需要关注", "count": 180, "color": "#f59e0b", "gmv_pct": 8}, {"name": "高价值流失中", "count": 92, "color": "#dc2626", "gmv_pct": 5}], "channels": [{"name": "抖音信息流", "spend": 82000, "gmv": 320000, "roi": 3.9, "conv": 2.4}, {"name": "小红书种草", "spend": 46000, "gmv": 215000, "roi": 4.7, "conv": 3.8}, {"name": "微信广告", "spend": 58000, "gmv": 240000, "roi": 4.1, "conv": 2.9}, {"name": "私域社群", "spend": 8000, "gmv": 180000, "roi": 22.5, "conv": 8.6}, {"name": "百度 SEM", "spend": 32000, "gmv": 68000, "roi": 2.1, "conv": 1.5}], "sankey": {"sources": [{"name": "抖音信息流", "total": 420, "to": {"新客": 280, "需要关注": 60, "潜力发展": 50, "冠军会员": 30}}, {"name": "小红书种草", "total": 280, "to": {"新客": 160, "潜力发展": 70, "忠诚会员": 30, "冠军会员": 20}}, {"name": "微信广告", "total": 340, "to": {"新客": 180, "需要关注": 80, "忠诚会员": 50, "高价值流失中": 30}}, {"name": "私域社群", "total": 230, "to": {"忠诚会员": 110, "冠军会员": 80, "潜力发展": 40}}, {"name": "其他", "total": 90, "to": {"新客": 40, "需要关注": 30, "高价值流失中": 20}}]}, "regions": [{"name": "广东", "positive": 11, "negative": 4}, {"name": "江苏", "positive": 9, "negative": 2}, {"name": "浙江", "positive": 8, "negative": 1}, {"name": "上海", "positive": 7, "negative": 3}, {"name": "北京", "positive": 5, "negative": 5}, {"name": "四川", "positive": 4, "negative": 2}, {"name": "湖北", "positive": 4, "negative": 2}, {"name": "山东", "positive": 3, "negative": 3}, {"name": "福建", "positive": 3, "negative": 1}, {"name": "河南", "positive": 2, "negative": 4}, {"name": "其他", "positive": 6, "negative": 2}], "wordcloud": [{"text": "清洁效果", "count": 82, "sentiment": "positive"}, {"text": "味道好闻", "count": 64, "sentiment": "positive"}, {"text": "去污强", "count": 58, "sentiment": "positive"}, {"text": "包装漏液", "count": 42, "sentiment": "negative"}, {"text": "性价比高", "count": 38, "sentiment": "positive"}, {"text": "天然安全", "count": 36, "sentiment": "positive"}, {"text": "物流慢", "count": 32, "sentiment": "negative"}, {"text": "客服响应慢", "count": 22, "sentiment": "negative"}, {"text": "快递破损", "count": 20, "sentiment": "negative"}, {"text": "香味太浓", "count": 18, "sentiment": "negative"}, {"text": "环保", "count": 30, "sentiment": "positive"}, {"text": "除菌快", "count": 26, "sentiment": "positive"}, {"text": "包装漂亮", "count": 22, "sentiment": "positive"}, {"text": "成分放心", "count": 28, "sentiment": "positive"}, {"text": "家人喜欢", "count": 16, "sentiment": "positive"}, {"text": "瓶身设计", "count": 14, "sentiment": "positive"}, {"text": "瓶盖易松", "count": 12, "sentiment": "negative"}, {"text": "重复购买", "count": 24, "sentiment": "positive"}], "daily_feedback": [{"date": "2026-07-01", "positive": 5, "negative": 0}, {"date": "2026-07-02", "positive": 4, "negative": 4}, {"date": "2026-07-03", "positive": 8, "negative": 2}, {"date": "2026-07-04", "positive": 14, "negative": 1}, {"date": "2026-07-05", "positive": 7, "negative": 2}, {"date": "2026-07-06", "positive": 5, "negative": 5}, {"date": "2026-07-07", "positive": 9, "negative": 0}, {"date": "2026-07-08", "positive": 5, "negative": 2}, {"date": "2026-07-09", "positive": 7, "negative": 0}, {"date": "2026-07-10", "positive": 1, "negative": 0}, {"date": "2026-07-11", "positive": 5, "negative": 1}, {"date": "2026-07-12", "positive": 6, "negative": 0}, {"date": "2026-07-13", "positive": 2, "negative": 0}, {"date": "2026-07-14", "positive": 6, "negative": 2}, {"date": "2026-07-15", "positive": 8, "negative": 3}, {"date": "2026-07-16", "positive": 5, "negative": 3}, {"date": "2026-07-17", "positive": 5, "negative": 1}, {"date": "2026-07-18", "positive": 4, "negative": 1}, {"date": "2026-07-19", "positive": 1, "negative": 2}, {"date": "2026-07-20", "positive": 6, "negative": 1}, {"date": "2026-07-21", "positive": 4, "negative": 2}, {"date": "2026-07-22", "positive": 10, "negative": 2}, {"date": "2026-07-23", "positive": 4, "negative": 1}, {"date": "2026-07-24", "positive": 5, "negative": 0}, {"date": "2026-07-25", "positive": 5, "negative": 2}, {"date": "2026-07-26", "positive": 10, "negative": 3}, {"date": "2026-07-27", "positive": 8, "negative": 1}, {"date": "2026-07-28", "positive": 7, "negative": 0}, {"date": "2026-07-29", "positive": 6, "negative": 2}, {"date": "2026-07-30", "positive": 4, "negative": 4}], "alerts": [{"level": "warning", "title": "客单价近 7 天下滑", "msg": "AOV -10.1% · 主因试用装订单占比上升 · 建议对老客关闭试用装入口", "when": "今日"}, {"level": "urgent", "title": "包装漏液投诉集中", "msg": "近 3 天出现 5 条包装漏液反馈，主要集中在厨房去油污喷雾 500ml", "when": "2 天前"}, {"level": "info", "title": "私域社群 ROI 22.5 领跑", "msg": "私域社群渠道 ROI 是抖音信息流的 5.8 倍，建议扩大预算投入", "when": "本周"}]};
+
+// 初始化时机
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAll);
+} else {
+  initAll();
+}
+
+// 简单页切换
+document.querySelectorAll('.nav-item').forEach(el=>{
+  el.addEventListener('click', ()=>{
+    const pageId = el.dataset.page;
+    document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById(pageId).classList.add('active');
+    // 让 ECharts 在切换后 resize
+    setTimeout(()=>{
+      window.dispatchEvent(new Event('resize'));
+    }, 50);
+  });
+});
+
+// ===== 初始化所有图表 =====
+function initAll(){
+  renderKPIRow();
+  renderAlerts();
+  renderChartGMV();
+  renderChartTarget();
+  renderChartCat();
+  renderChartAOV();
+  renderChartOrders();
+  renderChartCatGrowth();
+  renderTableSKU();
+  renderChartSKUCount();
+  renderChartCatRose();
+  renderChartTierCount();
+  renderChartTierGMV();
+  renderChartSankey();
+  renderChartChannelROI();
+  renderChartChannelRadar();
+  renderTableChannel();
+  renderChartRegion();
+  renderChartReview();
+  renderChartWordcloud();
+  renderChartDailyFB();
+  renderBossView();
+  renderClientView();
+}
+
+function renderKPIRow(){
+  const s = DATA.summary;
+  const html = `
+    <div class="kpi-card c-blue"><div class="kpi-lbl"><span class="dot"></span>月度 GMV</div><div class="kpi-v">¥${(s.gmv_month/10000).toFixed(1)}<small>万</small></div><div class="kpi-sub">目标 ¥${(s.gmv_target/10000).toFixed(0)}万 · 完成 ${(s.gmv_month/s.gmv_target*100).toFixed(1)}%</div></div>
+    <div class="kpi-card c-green"><div class="kpi-lbl"><span class="dot"></span>月度订单</div><div class="kpi-v">${s.orders_month.toLocaleString()}<small>单</small></div><div class="kpi-sub">日均 ${Math.round(s.orders_month/30)} 单</div></div>
+    <div class="kpi-card c-amber"><div class="kpi-lbl"><span class="dot"></span>平均客单</div><div class="kpi-v">¥${s.avg_aov}</div><div class="kpi-sub">近 7 天下滑 -10.1% ⚠</div></div>
+    <div class="kpi-card c-purple"><div class="kpi-lbl"><span class="dot"></span>新增会员</div><div class="kpi-v">${s.new_members_month.toLocaleString()}<small>人</small></div><div class="kpi-sub">日均 ${Math.round(s.new_members_month/30)} 人</div></div>
+    <div class="kpi-card c-teal"><div class="kpi-lbl"><span class="dot"></span>月均 ROI</div><div class="kpi-v">${s.avg_roi}</div><div class="kpi-sub">健康区间 3.0-5.0</div></div>
+  `;
+  document.getElementById('kpi1').innerHTML = html;
+}
+
+function renderAlerts(){
+  const style = {'urgent':['#dc2626','🚨'],'warning':['#f59e0b','⚡'],'info':['#00866f','ℹ️']};
+  const html = DATA.alerts.map(a=>{
+    const [c,icon] = style[a.level];
+    return `<div class="alert" style="--ac:${c}"><div class="ah">${icon} ${a.title}</div><div class="am">${a.msg}</div><div class="aw">${a.when}</div></div>`;
+  }).join('');
+  document.getElementById('alerts').innerHTML = html;
+}
+
+function chart(id){
+  const el = document.getElementById(id);
+  if(!el) return null;
+  return echarts.init(el, null, {renderer:'canvas'});
+}
+
+// ==== 页 1 图表 ====
+function renderChartGMV(){
+  const c = chart('chart-gmv'); if(!c) return;
+  c.setOption({
+    tooltip:{trigger:'axis',axisPointer:{type:'cross'}},
+    grid:{left:50,right:20,top:20,bottom:40},
+    xAxis:{type:'category',data:DATA.daily_gmv.map(x=>x.date.slice(5)),axisLine:{lineStyle:{color:'#e2e8f0'}},axisLabel:{color:'#64748b',fontSize:10}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#f1f5f9'}},axisLabel:{color:'#64748b',formatter:v=>'¥'+(v/1000).toFixed(0)+'k'}},
+    series:[{
+      type:'line',smooth:true,data:DATA.daily_gmv.map(x=>x.value),
+      itemStyle:{color:'#00866f'},lineStyle:{width:2.5},
+      areaStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'rgba(0,194,154,0.4)'},{offset:1,color:'rgba(0,194,154,0.02)'}])},
+      showSymbol:false
+    }]
+  });
+}
+
+function renderChartTarget(){
+  const c = chart('chart-target'); if(!c) return;
+  const pct = DATA.summary.gmv_month/DATA.summary.gmv_target*100;
+  c.setOption({
+    series:[{
+      type:'pie',radius:['65%','80%'],center:['50%','48%'],
+      avoidLabelOverlap:false,
+      itemStyle:{borderRadius:6,borderColor:'#fff',borderWidth:2},
+      label:{show:false},labelLine:{show:false},
+      data:[
+        {value:pct,name:'已完成',itemStyle:{color:'#f59e0b'}},
+        {value:100-pct,name:'待完成',itemStyle:{color:'#f1f5f9'}}
+      ]
+    }],
+    graphic:[
+      {type:'text',left:'center',top:'40%',style:{text:pct.toFixed(1)+'%',fill:'#f59e0b',fontSize:34,fontWeight:800,textAlign:'center'}},
+      {type:'text',left:'center',top:'58%',style:{text:'月度 GMV 完成率',fill:'#64748b',fontSize:12,textAlign:'center'}},
+    ]
+  });
+}
+
+function renderChartCat(){
+  const c = chart('chart-cat'); if(!c) return;
+  const colors = ['#00866f','#059669','#f59e0b','#dc2626','#7c3aed','#0891b2'];
+  c.setOption({
+    tooltip:{trigger:'item',formatter:'{b}: ¥{c} ({d}%)'},
+    legend:{bottom:0,left:'center',textStyle:{fontSize:10.5,color:'#64748b'},itemWidth:10,itemHeight:10},
+    series:[{
+      type:'pie',radius:['48%','72%'],center:['50%','44%'],
+      itemStyle:{borderRadius:4,borderColor:'#fff',borderWidth:2},
+      label:{show:true,fontSize:10,formatter:'{d}%',color:'#334155'},
+      data:DATA.categories.map((x,i)=>({value:x.gmv,name:x.name,itemStyle:{color:colors[i%6]}}))
+    }]
+  });
+}
+
+function renderChartAOV(){
+  const c = chart('chart-aov'); if(!c) return;
+  c.setOption({
+    tooltip:{trigger:'axis'},
+    grid:{left:45,right:15,top:20,bottom:30},
+    xAxis:{type:'category',data:DATA.daily_aov.map(x=>x.date.slice(5)),axisLabel:{color:'#64748b',fontSize:10,interval:4}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#f1f5f9'}},axisLabel:{color:'#64748b',formatter:'¥{value}'}},
+    series:[{
+      type:'line',smooth:true,data:DATA.daily_aov.map(x=>x.value),
+      itemStyle:{color:'#f59e0b'},lineStyle:{width:2},showSymbol:false,
+      markLine:{silent:true,symbol:'none',data:[{yAxis:265,label:{formatter:'均线',color:'#94a3b8',fontSize:10}}],lineStyle:{color:'#cbd5e1',type:'dashed'}}
+    }]
+  });
+}
+
+function renderChartOrders(){
+  const c = chart('chart-orders'); if(!c) return;
+  c.setOption({
+    tooltip:{trigger:'axis'},
+    grid:{left:45,right:15,top:24,bottom:30},
+    legend:{show:false},
+    xAxis:{type:'category',data:DATA.daily_orders.slice(-14).map(x=>x.date.slice(5)),axisLabel:{color:'#64748b',fontSize:10}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#f1f5f9'}},axisLabel:{color:'#64748b'}},
+    series:[{
+      type:'bar',data:DATA.daily_orders.slice(-14).map(x=>x.value),
+      itemStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'#3dd1ac'},{offset:1,color:'#00866f'}]),borderRadius:[4,4,0,0]},
+      barWidth:'52%'
+    }]
+  });
+}
+
+// ==== 页 2 商品与品类 ====
+function renderChartCatGrowth(){
+  const c = chart('chart-cat-growth'); if(!c) return;
+  const sorted = [...DATA.categories].sort((a,b)=>a.growth-b.growth);
+  c.setOption({
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+    grid:{left:80,right:40,top:20,bottom:30},
+    xAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#f1f5f9'}},axisLabel:{formatter:'{value}%',color:'#64748b'}},
+    yAxis:{type:'category',data:sorted.map(x=>x.name),axisLine:{show:false},axisTick:{show:false},axisLabel:{color:'#334155',fontWeight:600}},
+    series:[{
+      type:'bar',data:sorted.map(x=>({value:x.growth,itemStyle:{color:x.growth>=0?'#059669':'#dc2626'}})),
+      barWidth:'52%',
+      label:{show:true,position:'right',formatter:x=>(x.value>=0?'+':'')+x.value+'%',fontWeight:700,fontSize:11}
+    }]
+  });
+}
+
+function renderTableSKU(){
+  const t = document.getElementById('table-sku');
+  const maxGMV = Math.max(...DATA.top_skus.map(x=>x.gmv));
+  const rows = DATA.top_skus.map((s,i)=>{
+    const cls = i===0?'g':i===1?'s':i===2?'b':'';
+    return `<tr>
+      <td><span class="rank ${cls}">${i+1}</span></td>
+      <td style="font-size:11.5px;line-height:1.5">${s.sku}</td>
+      <td class="num">¥${s.gmv.toLocaleString()}</td>
+      <td class="num">${s.sold}</td>
+      <td style="width:80px"><div class="pct-bar"><div class="pct-fill" style="width:${s.gmv/maxGMV*100}%"></div></div></td>
+    </tr>`;
+  }).join('');
+  t.innerHTML = `<thead><tr><th></th><th>SKU</th><th class="num">GMV</th><th class="num">销量</th><th></th></tr></thead><tbody>${rows}</tbody>`;
+}
+
+function renderChartSKUCount(){
+  const c = chart('chart-sku-count'); if(!c) return;
+  c.setOption({
+    tooltip:{trigger:'axis'},
+    grid:{left:20,right:20,top:20,bottom:40,containLabel:true},
+    xAxis:{type:'category',data:DATA.categories.map(x=>x.name),axisLabel:{color:'#64748b',fontSize:10}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#f1f5f9'}},axisLabel:{color:'#64748b'}},
+    series:[{
+      type:'bar',data:DATA.categories.map(x=>x.sku_count),
+      itemStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'#a78bfa'},{offset:1,color:'#7c3aed'}]),borderRadius:[6,6,0,0]},
+      barWidth:'48%',
+      label:{show:true,position:'top',color:'#7c3aed',fontWeight:700,fontSize:11}
+    }]
+  });
+}
+
+function renderChartCatRose(){
+  const c = chart('chart-cat-rose'); if(!c) return;
+  const colors = ['#00866f','#059669','#f59e0b','#dc2626','#7c3aed','#0891b2'];
+  c.setOption({
+    tooltip:{trigger:'item'},
+    legend:{bottom:0,textStyle:{fontSize:10.5,color:'#64748b'},itemWidth:10,itemHeight:10},
+    series:[{
+      type:'pie',radius:[30,110],center:['50%','44%'],roseType:'area',
+      itemStyle:{borderRadius:4},
+      label:{fontSize:10,color:'#334155'},
+      data:DATA.categories.map((x,i)=>({value:x.gmv,name:x.name,itemStyle:{color:colors[i%6]}}))
+    }]
+  });
+}
+
+// ==== 页 3 会员分层 ====
+function renderChartTierCount(){
+  const c = chart('chart-tier-count'); if(!c) return;
+  const sorted = [...DATA.member_tiers].sort((a,b)=>a.count-b.count);
+  c.setOption({
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+    grid:{left:100,right:30,top:20,bottom:20},
+    xAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#f1f5f9'}},axisLabel:{color:'#64748b'}},
+    yAxis:{type:'category',data:sorted.map(x=>x.name),axisLine:{show:false},axisTick:{show:false},axisLabel:{color:'#334155',fontWeight:600}},
+    series:[{
+      type:'bar',data:sorted.map(x=>({value:x.count,itemStyle:{color:x.color}})),
+      barWidth:'52%',
+      label:{show:true,position:'right',fontSize:11,fontWeight:700,color:'#0f172a'}
+    }]
+  });
+}
+
+function renderChartTierGMV(){
+  const c = chart('chart-tier-gmv'); if(!c) return;
+  c.setOption({
+    tooltip:{trigger:'item',formatter:'{b}: {c}%'},
+    legend:{orient:'vertical',right:10,top:'middle',textStyle:{fontSize:11,color:'#64748b'}},
+    series:[{
+      type:'pie',radius:['40%','70%'],center:['38%','50%'],
+      itemStyle:{borderColor:'#fff',borderWidth:3},
+      label:{fontSize:11},
+      data:DATA.member_tiers.map(x=>({value:x.gmv_pct,name:x.name,itemStyle:{color:x.color}}))
+    }]
+  });
+}
+
+function renderChartSankey(){
+  const c = chart('chart-sankey'); if(!c) return;
+  const nodes = [];
+  const links = [];
+  const sourceColors = {'抖音信息流':'#000000','小红书种草':'#dc2626','微信广告':'#059669','私域社群':'#7c3aed','其他':'#94a3b8'};
+  DATA.sankey.sources.forEach(src=>{
+    nodes.push({name:src.name,itemStyle:{color:sourceColors[src.name]||'#94a3b8'}});
+  });
+  DATA.member_tiers.forEach(t=>{
+    if(!nodes.find(n=>n.name===t.name)) nodes.push({name:t.name,itemStyle:{color:t.color}});
+  });
+  DATA.sankey.sources.forEach(src=>{
+    Object.entries(src.to).forEach(([target,val])=>{
+      links.push({source:src.name,target:target,value:val});
+    });
+  });
+  c.setOption({
+    tooltip:{trigger:'item',triggerOn:'mousemove'},
+    series:[{
+      type:'sankey',
+      layout:'none',
+      emphasis:{focus:'adjacency'},
+      data:nodes,
+      links:links,
+      lineStyle:{color:'gradient',curveness:0.5},
+      label:{fontSize:11,color:'#334155'}
+    }]
+  });
+}
+
+// ==== 页 4 投放与拉新 ====
+function renderChartChannelROI(){
+  const c = chart('chart-channel-roi'); if(!c) return;
+  const sorted = [...DATA.channels].sort((a,b)=>a.roi-b.roi);
+  c.setOption({
+    tooltip:{trigger:'axis'},
+    grid:{left:100,right:40,top:20,bottom:20},
+    xAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#f1f5f9'}},axisLabel:{color:'#64748b'}},
+    yAxis:{type:'category',data:sorted.map(x=>x.name),axisLine:{show:false},axisTick:{show:false},axisLabel:{color:'#334155',fontWeight:600}},
+    series:[{
+      type:'bar',data:sorted.map(x=>x.roi),
+      itemStyle:{color:new echarts.graphic.LinearGradient(0,0,1,0,[{offset:0,color:'#059669'},{offset:1,color:'#10b981'}]),borderRadius:[0,4,4,0]},
+      barWidth:'48%',
+      label:{show:true,position:'right',formatter:x=>x.value.toFixed(1),fontWeight:700,fontSize:11,color:'#059669'}
+    }]
+  });
+}
+
+function renderChartChannelRadar(){
+  const c = chart('chart-channel-radar'); if(!c) return;
+  const indicators = ['ROI','GMV','转化率','支出效率','规模'];
+  const maxs = {ROI:25,GMV:400000,'转化率':10,'支出效率':10,'规模':100000};
+  c.setOption({
+    tooltip:{trigger:'item'},
+    legend:{bottom:0,textStyle:{fontSize:10.5,color:'#64748b'},itemWidth:10,itemHeight:10},
+    radar:{
+      indicator:[
+        {name:'ROI',max:25},
+        {name:'GMV',max:400000},
+        {name:'转化率',max:10},
+        {name:'规模',max:100000},
+      ],
+      splitLine:{lineStyle:{color:'#e2e8f0'}},
+      axisName:{color:'#334155',fontSize:11}
+    },
+    series:[{
+      type:'radar',
+      data:DATA.channels.map((ch,i)=>({
+        value:[ch.roi, ch.gmv, ch.conv, ch.spend],
+        name:ch.name,
+        lineStyle:{width:2},
+        areaStyle:{opacity:0.15}
+      }))
+    }]
+  });
+}
+
+function renderTableChannel(){
+  const t = document.getElementById('table-channel');
+  const maxGMV = Math.max(...DATA.channels.map(x=>x.gmv));
+  const rows = [...DATA.channels].sort((a,b)=>b.gmv-a.gmv).map((ch,i)=>{
+    return `<tr>
+      <td><span class="rank ${i===0?'g':i===1?'s':i===2?'b':''}">${i+1}</span></td>
+      <td><b>${ch.name}</b></td>
+      <td class="num">¥${ch.spend.toLocaleString()}</td>
+      <td class="num">¥${ch.gmv.toLocaleString()}</td>
+      <td class="num" style="color:${ch.roi>4?'#059669':ch.roi>2.5?'#f59e0b':'#dc2626'}"><b>${ch.roi.toFixed(1)}</b></td>
+      <td class="num">${ch.conv}%</td>
+      <td style="width:100px"><div class="pct-bar"><div class="pct-fill" style="width:${ch.gmv/maxGMV*100}%"></div></div></td>
+    </tr>`;
+  }).join('');
+  t.innerHTML = `<thead><tr><th></th><th>渠道</th><th class="num">投放支出</th><th class="num">GMV</th><th class="num">ROI</th><th class="num">转化率</th><th></th></tr></thead><tbody>${rows}</tbody>`;
+}
+
+// ==== 页 5 客户反馈 ====
+function renderChartRegion(){
+  const c = chart('chart-region'); if(!c) return;
+  c.setOption({
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+    legend:{top:5,textStyle:{fontSize:11}},
+    grid:{left:20,right:20,top:35,bottom:40,containLabel:true},
+    xAxis:{type:'category',data:DATA.regions.map(x=>x.name),axisLabel:{color:'#64748b',fontSize:10,rotate:30}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#f1f5f9'}},axisLabel:{color:'#64748b'}},
+    series:[
+      {name:'好评',type:'bar',stack:'x',data:DATA.regions.map(x=>x.positive),itemStyle:{color:'#059669',borderRadius:[0,0,0,0]},barWidth:'46%'},
+      {name:'差评',type:'bar',stack:'x',data:DATA.regions.map(x=>x.negative),itemStyle:{color:'#dc2626',borderRadius:[4,4,0,0]},barWidth:'46%'}
+    ]
+  });
+}
+
+function renderChartReview(){
+  const c = chart('chart-review'); if(!c) return;
+  const totalPos = DATA.regions.reduce((s,x)=>s+x.positive,0);
+  const totalNeg = DATA.regions.reduce((s,x)=>s+x.negative,0);
+  c.setOption({
+    tooltip:{trigger:'item'},
+    legend:{bottom:0,textStyle:{fontSize:11,color:'#64748b'}},
+    series:[{
+      type:'pie',radius:['55%','78%'],center:['50%','44%'],
+      itemStyle:{borderColor:'#fff',borderWidth:3},
+      label:{fontSize:12,formatter:'{b}\n{c} 条'},
+      data:[
+        {value:totalPos,name:'好评',itemStyle:{color:'#059669'}},
+        {value:totalNeg,name:'差评',itemStyle:{color:'#dc2626'}}
+      ]
+    }],
+    graphic:[
+      {type:'text',left:'center',top:'38%',style:{text:(totalPos+totalNeg).toString(),fill:'#0f172a',fontSize:28,fontWeight:800,textAlign:'center'}},
+      {type:'text',left:'center',top:'54%',style:{text:'反馈总数',fill:'#64748b',fontSize:11,textAlign:'center'}},
+    ]
+  });
+}
+
+function renderChartWordcloud(){
+  const c = chart('chart-wordcloud'); if(!c) return;
+  c.setOption({
+    tooltip:{show:true,formatter:x=>x.name+' · '+x.value+' 次'},
+    series:[{
+      type:'wordCloud',
+      shape:'circle',
+      left:'center',top:'center',
+      width:'92%',height:'92%',
+      sizeRange:[13,42],
+      rotationRange:[-20,20],
+      rotationStep:20,
+      gridSize:8,
+      drawOutOfBound:false,
+      textStyle:{
+        fontFamily:'PingFang SC, sans-serif',
+        fontWeight:'bold',
+        color:function(){
+          const c1 = ['#059669','#10b981','#34d399'];
+          const c2 = ['#dc2626','#ef4444','#f87171'];
+          // 用 tooltip 的 sentiment 确定颜色（在数据里传）
+          return this.data.sentiment === 'positive' ? c1[Math.floor(Math.random()*3)] : c2[Math.floor(Math.random()*3)];
+        }
+      },
+      data:DATA.wordcloud.map(x=>({name:x.text, value:x.count, sentiment:x.sentiment}))
+    }]
+  });
+}
+
+function renderChartDailyFB(){
+  const c = chart('chart-daily-fb'); if(!c) return;
+  c.setOption({
+    tooltip:{trigger:'axis'},
+    legend:{top:5,textStyle:{fontSize:11}},
+    grid:{left:40,right:20,top:35,bottom:30},
+    xAxis:{type:'category',data:DATA.daily_feedback.map(x=>x.date.slice(5)),axisLabel:{color:'#64748b',fontSize:10,interval:4}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#f1f5f9'}},axisLabel:{color:'#64748b'}},
+    series:[
+      {name:'好评',type:'line',smooth:true,stack:'x',data:DATA.daily_feedback.map(x=>x.positive),itemStyle:{color:'#059669'},areaStyle:{color:'rgba(5,150,105,0.25)'},showSymbol:false},
+      {name:'差评',type:'line',smooth:true,stack:'x',data:DATA.daily_feedback.map(x=>x.negative),itemStyle:{color:'#dc2626'},areaStyle:{color:'rgba(220,38,38,0.25)'},showSymbol:false}
+    ]
+  });
+}
+
+// ==== 老板大屏 ====
+function renderBossView(){
+  const s = DATA.summary;
+  const html = `
+    <div class="boss-big"><div class="l">月度 GMV</div><div class="v">¥${(s.gmv_month/10000).toFixed(1)}<small>万</small></div><div class="s">目标 ¥${(s.gmv_target/10000).toFixed(0)}万 · <span class="up">完成 ${(s.gmv_month/s.gmv_target*100).toFixed(1)}%</span></div></div>
+    <div class="boss-big"><div class="l">月度订单</div><div class="v">${s.orders_month.toLocaleString()}</div><div class="s">日均 ${Math.round(s.orders_month/30)} 单 · <span class="up">健康增长</span></div></div>
+    <div class="boss-big"><div class="l">月度新客</div><div class="v">${s.new_members_month.toLocaleString()}</div><div class="s">日均 ${Math.round(s.new_members_month/30)} 人 · <span class="up">高于去年同期</span></div></div>
+    <div class="boss-big"><div class="l">月均 ROI</div><div class="v">${s.avg_roi.toFixed(1)}</div><div class="s">健康区间 3.0-5.0 · <span class="up">达标</span></div></div>
+  `;
+  document.getElementById('boss-grid').innerHTML = html;
+
+  // 老板大屏用的 GMV 图（深色背景）
+  const c = chart('chart-boss-gmv'); if(!c) return;
+  c.setOption({
+    tooltip:{trigger:'axis'},
+    grid:{left:50,right:20,top:20,bottom:40},
+    xAxis:{type:'category',data:DATA.daily_gmv.map(x=>x.date.slice(5)),axisLabel:{color:'#64748b',fontSize:10}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#f1f5f9'}},axisLabel:{color:'#64748b',formatter:v=>'¥'+(v/1000).toFixed(0)+'k'}},
+    series:[{
+      type:'line',smooth:true,data:DATA.daily_gmv.map(x=>x.value),
+      itemStyle:{color:'#3dd1ac'},lineStyle:{width:3},
+      areaStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'rgba(61,209,172,0.5)'},{offset:1,color:'rgba(61,209,172,0.02)'}])},
+      showSymbol:false
+    }]
+  });
+
+  const c2 = chart('chart-boss-cat'); if(!c2) return;
+  const colors = ['#3dd1ac','#4ade80','#fbbf24','#f87171','#a78bfa','#22d3ee'];
+  c2.setOption({
+    tooltip:{trigger:'item'},
+    legend:{bottom:0,textStyle:{fontSize:10.5,color:'#64748b'}},
+    series:[{
+      type:'pie',radius:['50%','75%'],center:['50%','44%'],
+      itemStyle:{borderColor:'#fff',borderWidth:3},
+      label:{fontSize:11,color:'#334155',formatter:'{b}\n{d}%'},
+      data:DATA.categories.map((x,i)=>({value:x.gmv,name:x.name,itemStyle:{color:colors[i%6]}}))
+    }]
+  });
+}
+
+// ==== 客户方视图 ====
+function renderClientView(){
+  const s = DATA.summary;
+  const html = `
+    <div class="client-kpi"><div class="l">💰 私域月度 GMV</div><div class="v">¥${(s.gmv_month/10000).toFixed(1)}<span style="font-size:14px">万</span></div><div class="s">对应完成月度目标 ${(s.gmv_month/s.gmv_target*100).toFixed(1)}%</div></div>
+    <div class="client-kpi"><div class="l">📦 私域月度订单</div><div class="v">${s.orders_month.toLocaleString()}</div><div class="s">日均 ${Math.round(s.orders_month/30)} 单</div></div>
+    <div class="client-kpi"><div class="l">👥 私域新增会员</div><div class="v">${s.new_members_month.toLocaleString()}</div><div class="s">健康增长中</div></div>
+    <div class="client-kpi"><div class="l">🔄 平均活跃会员</div><div class="v">${s.active_members_avg.toLocaleString()}</div><div class="s">私域池活跃稳定</div></div>
+  `;
+  document.getElementById('client-grid').innerHTML = html;
+
+  const c = chart('chart-client-members'); if(!c) return;
+  c.setOption({
+    tooltip:{trigger:'axis'},
+    grid:{left:50,right:20,top:20,bottom:30},
+    xAxis:{type:'category',data:DATA.daily_gmv.map(x=>x.date.slice(5)),axisLabel:{color:'#64748b',fontSize:10}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#f1f5f9'}}},
+    series:[{
+      type:'line',smooth:true,data:DATA.daily_gmv.map((_,i)=>Math.round(400+i*22+Math.random()*20)),
+      itemStyle:{color:'#059669'},lineStyle:{width:3},
+      areaStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'rgba(5,150,105,0.4)'},{offset:1,color:'rgba(5,150,105,0.02)'}])},
+      showSymbol:false
+    }]
+  });
+
+  const c2 = chart('chart-client-cat'); if(!c2) return;
+  const sorted = [...DATA.categories].sort((a,b)=>a.gmv-b.gmv);
+  c2.setOption({
+    tooltip:{trigger:'axis'},
+    grid:{left:100,right:30,top:20,bottom:20},
+    xAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#f1f5f9'}},axisLabel:{color:'#64748b',formatter:v=>'¥'+(v/1000).toFixed(0)+'k'}},
+    yAxis:{type:'category',data:sorted.map(x=>x.name),axisLine:{show:false},axisTick:{show:false},axisLabel:{color:'#334155',fontWeight:600}},
+    series:[{
+      type:'bar',data:sorted.map(x=>x.gmv),
+      itemStyle:{color:new echarts.graphic.LinearGradient(0,0,1,0,[{offset:0,color:'#34d399'},{offset:1,color:'#059669'}]),borderRadius:[0,4,4,0]},
+      barWidth:'52%',
+      label:{show:true,position:'right',formatter:x=>'¥'+(x.value/10000).toFixed(1)+'万',fontWeight:700,fontSize:11,color:'#059669'}
+    }]
+  });
+}
+
+// resize 时刷新所有图表
+window.addEventListener('resize', ()=>{
+  document.querySelectorAll('.chart').forEach(el=>{
+    const inst = echarts.getInstanceByDom(el);
+    if(inst) inst.resize();
+  });
+});
+</script>
+<script data-page-node-id="5UfTwX728qylOCH7stsxzs" data-pnid-children="4SHpHBFyTYMcqcb4bD5ztA">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="1FMu9I2R16pbeYD1uPaEJF" data-pnid-children="hvS0HeYxHEX2Mbgp0S13qb">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="YigaIU6MWiinLoMoSvbIZn" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="3JNqYbUgyKnWO1ENDDnwD4" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="rBS2dyjnIje4p88ipmDuGB" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="WOhB8zzqpKvzhYbLMUhMbo" data-pnid-children="bjSosVhoqqkQ9reqff5G9C">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

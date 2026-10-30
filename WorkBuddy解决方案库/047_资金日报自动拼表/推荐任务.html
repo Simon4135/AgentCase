@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="9H8ku4kdJeFe8vvBbcurjm" lang="zh-CN">
+<head data-page-node-id="ZYYDZDmDG9jjVvJJEzPgyz">
+<script data-page-node-id="GRnK1tnADVEFSb1WB7FWzz" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="OC33mDRWItm7ysoZjzNUWk" charset="UTF-8">
+<meta data-page-node-id="d9Ap2ZjvWUPohygZjmUqBL" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="9d2H9w19zqW2JJyH9eiMgM" data-pnid-children="mIJFbh2GNtBDkzXn5ln8Pq">资金日报自动拼表</title>
+<link data-page-node-id="1LbczeEgBdSibUiQ6zpR1k" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="yMdmWGf61wGIP9CC0JvykX" data-pnid-children="0IIi5C9P9n5tTjwyBLAuUt">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="IaLVZjcP3p4e10yajvE66R" data-pnid-children="kgJxBs1Rr7nZq8O9wKeekB" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="GqNWQlWWISaSmzdG71QQZy" data-pnid-children="lxya4zSNWpghEY8CZCb8fQ" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="kgpwvD6SRxCUfcnkuPem7V">
+
+<div data-page-node-id="qZq9FY4LG6X6UApwhFvfWy" class="wrap">
+<section data-page-node-id="yHL6BcOl59IYkeUYBosXn0" class="page-hero">
+<h1 data-page-node-id="tQMFK0XaGAB65GW1tCKHka"><!--pnid:kPPEQggmNBqzIUq704T9ck-->资金日报自动拼表</h1>
+<p data-page-node-id="0FCO340MPKXnGPXLmEIK8o" class="lead"><!--pnid:u3hu1aO2o7woOHoVuwfrE3-->老板每天早上问「账上还有多少钱」 · 出纳要从三家网银+微信截图里现凑</p>
+</section><nav data-page-node-id="ZEIaOnx2hDhaY07aGtLsAE" class="subnav"><a data-page-node-id="KSOYpIJkdm0vjuDPdfDZSJ" href="场景引入.html"><!--pnid:xciEUp8ak2metOZO7XjGzY-->场景引入</a><a data-page-node-id="B3FuaJp0tKepuCV8eC0nLE" href="LiveDemo.html"><!--pnid:epg3yF7li1atCXllyz9tAQ-->Live Demo</a><a data-page-node-id="ShwJSaWo6ZsPR7KYSCAifu" class="on" href="#"><!--pnid:WjRGV95zh5Dbvb9HpxBrHD-->推荐任务</a></nav>
+
+<section data-page-node-id="Y6AUAyOV1Ajuykba9KUJgA" class="blk">
+  <h2 data-page-node-id="rOUV2qKuAllO7XWpOcvXPQ" class="h"><span data-page-node-id="FEunpIklmEGLMOpldNtdJS" class="num"><!--pnid:iSTnf7X6JoJv0PVSeEoVSr-->一</span><!--pnid:ZqVexcx4Z57prDaL9SZ4qp-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="DOJTfUCbiyD6LRVzhHN29I" class="subline"><!--pnid:TXlEcrsnaVXciRKl95pCCo-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="AJguLmXDCmOyFNa7vIjB8P" class="card"><p data-page-node-id="aI0x0gChDK4njdRESF0nvq"><!--pnid:ZplBnFvwTidhgro7EgGVEx-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="gKVknoBYOtk4O2bE2xejd8" style="margin-top:10px"><!--pnid:bSWSxkWxBiaSz0HjLLs5vm-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:G1kLStJ9FljUF40s18dzEz--><!--wb-skill-start-->
+<div data-page-node-id="hBES4EAhy99UzAr15884ej" class="wb-skill">
+<p data-page-node-id="JxjWKUGmKRwPmMlJOlZ5t9" class="wb-skill-lead"><!--pnid:uXIgJKc2m3SLNzq3AQhIu2-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="NgzmiKPn4zR7zd3wHkpHh8" class="prompt" id="wbSkillPrompt"><!--pnid:nF1Mvh4d74yiBfAbK6Q5Yj-->【准备】这个场景的规则都在「资金日报自动拼表」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/2fShA2a9x8HhJ9JFOWLVjl/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="1bn8pSQijnABpxlGq4Bbkk" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:kJoHMwEqSBqvBA2cVrMPd4-->复制</button></div>
+</div>
+<!--pnid:CdJxC3LKVACdj3vsRkW2xb--><!--wb-skill-end-->
+<section data-page-node-id="mgivM93wgXlM9HBRgDwCYS" class="blk">
+  <h2 data-page-node-id="Eu22SeogueosfeOOhKkRve" class="h"><span data-page-node-id="knzsU8Y0xz7dWqdBFOdvXc" class="num"><!--pnid:NXscmvcwUEpL6t7zR000DN-->二</span><!--pnid:uXVnasATlg3Eb1PhuZWM3K-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="FKhDV4LeChWI1VeUOw8Z2I" class="subline"><!--pnid:e08v31U7hrUNYHbX7EKSlz-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="TC7Kq1AlIHMKM2S8Ekt6fq" class="tlist">
+    <article data-page-node-id="y8faL3LUGdXDNGkqH2OMJA" class="task">
+      <div data-page-node-id="7vu0MuGT4A5rId6cMAcgRS" class="th"><span data-page-node-id="snkmKETW6ZcPm0e1mSNcKy" class="no"><!--pnid:sUZQ48rTtuBgPHK44YEHsz-->01</span><h3 data-page-node-id="u4zfQQmJKpal4qpxb5BEmR" class="ttl"><!--pnid:EVUiAHO9lperkGZAHlTlPH-->首推默认</h3><span data-page-node-id="joWLn0MdX1TJQyS4Fnm31T" class="star"><!--pnid:acXxWRwh1XUVTwEqHXzKqK-->与一键体验入口一致</span><button data-page-node-id="30KdhvAe3Q36IjK8qO5isK" class="cp" type="button"><!--pnid:dvNdZuZTyY5uigHMPntYDU-->复制</button></div>
+      <p data-page-node-id="ycp5gPxOOKS4n8Qypl0FZw" class="tp"><!--pnid:7ztnNJg7Gbk8XXfenmtXE6-->今天要拼一张资金日报。技能内置三份材料：三家银行的对账单/余额截图（工行、招行、建行）、微信收款截图与收据照片、本周的待付款审批单。走完整流程：三家余额汇总、微信在途收款逐条归集、待付款按付款日排好，最后算出「现在真正能用的钱是多少」。
+产出两份：「资金日报.xlsx」，写清三家余额、收款 Top、待付清单，最后一行是可用资金并附算式；「在途收款明细.xlsx」，微信收款一条一行，金额看不清的标「待确认」、不计入可用资金。
+只汇总当日事实，不要做资金预测、不要替我付款；微信里看不清的别硬填一个数，标出来我去问。</p>
+    </article>
+    <article data-page-node-id="iQnrLJ0B6SB6K5YNl8gAL6" class="task">
+      <div data-page-node-id="7NxbTFQ5WRsMFr2sceT9CI" class="th"><span data-page-node-id="vpifWOzEKWCEOrbUXXFTzJ" class="no"><!--pnid:8pDOlsMiSXxTeKhOPjpzX0-->02</span><h3 data-page-node-id="ABs1GIRezQ6eytFv7JRBxC" class="ttl"><!--pnid:2soBRzZi31mboRvRx8ppww-->只算可用资金一个数</h3><button data-page-node-id="SUNBRr8fS7uoPme2kTkcds" class="cp" type="button"><!--pnid:jIpIblRy5qzP5hYPlrQr6Z-->复制</button></div>
+      <p data-page-node-id="tySeuTfw9PovZTvMZhM8sb" class="tp"><!--pnid:qIs52gZXXKA6kANZl9KK2v-->先只算「可用资金」这一个数。读三家银行余额截图、微信收款截图、待付款审批单。产出 Markdown 一段：三家余额合计多少、已确认的在途收款多少、本周待付多少，可用资金＝余额＋在途收款−待付款，每个数后面注明出处（点回哪张截图、哪张审批单）。不做资金预测，也不给付款顺序建议。</p>
+    </article>
+    <article data-page-node-id="hUVXz21Cn5XHjx9q8NvQQm" class="task">
+      <div data-page-node-id="ZWzFivOV4zSkWdwxpuUqGv" class="th"><span data-page-node-id="Ed9wkJ6niaYZEoIQbYNoyV" class="no"><!--pnid:75oonXZDFSg5BwiCgT5vWY-->03</span><h3 data-page-node-id="aprIZwMXPenqlHYG4nasH0" class="ttl"><!--pnid:cPaNhBiuMeU4qbuk7qmu12-->换成已确认口径</h3><button data-page-node-id="g7oABMZaWVUIukdrtedggS" class="cp" type="button"><!--pnid:pgkZpyVhSOUsEILRBmpyPN-->复制</button></div>
+      <p data-page-node-id="ZH6tx7TUKfsbC8pSM03M7z" class="tp"><!--pnid:F67lVVQZAc2vXaxpwXqqKX-->这次按「已确认」口径重出一版：微信里那两张截图模糊的收款先排除不算。产出 Excel 一栏对照：上一版和这一版的可用资金各是多少、差多少，差额会不会改变某个判断（比如这周够不够付那笔货款）。两版都要标明各自把哪几笔算进了在途，模糊那两笔分别是谁。</p>
+    </article>
+    <article data-page-node-id="7TcD4958FWv06CRChqynR7" class="task">
+      <div data-page-node-id="8rFMUsUVdv6GtRbLQa0sgu" class="th"><span data-page-node-id="8DQIVO6H9s49RQotPVzRHH" class="no"><!--pnid:EUpXMTDQyUlVZMC0uiM7Mb-->04</span><h3 data-page-node-id="RkQESozlJNt8dls5a31o35" class="ttl"><!--pnid:WnW1V80iW2pLHqL3sB8hTQ-->一次拼五天日报</h3><button data-page-node-id="W8LnFU9jKsorcs9yUiLQD2" class="cp" type="button"><!--pnid:wBPQO238CChypbGm3qQg5S-->复制</button></div>
+      <p data-page-node-id="7vmfwK2RNxVGSVrsUs5jTm" class="tp"><!--pnid:RtTguEikiSZdhMOJEX9bwQ-->演示数据里再放上周一到周五五天的余额与收款记录，五天一起拼，口径不变（余额＋在途收款−待付款）。产出「资金日报.xlsx」，五天各一个 sheet；另加一张横向对照表，一天一行，列写三家余额合计、在途收款、待付款、可用资金、当天最大一笔在途。哪天缺数据（比如某天没导银行余额）就标「缺」并说明哪些数算不了，别用相邻两天的数顶上。</p>
+    </article>
+    <article data-page-node-id="ELaxneAr1WVmmBw6VLHOEo" class="task">
+      <div data-page-node-id="8eV7W2ARCJgI3ZYQ7hozCS" class="th"><span data-page-node-id="uk5v4VsIqQTmpD8UTW5wgO" class="no"><!--pnid:zMyOUYbA3a6TpQQkULNRvh-->05</span><h3 data-page-node-id="DfBXRBN5lZDpa9A1NG7NEI" class="ttl"><!--pnid:PhXNkivS0HSDNwCxD7IlcI-->给老板看的版本</h3><button data-page-node-id="RoAHp6ovMA8XOramdNMElI" class="cp" type="button"><!--pnid:kgFQlVZUREhVFnoJ3rj3i3-->复制</button></div>
+      <p data-page-node-id="gN48XZqSnHPUJMkU1DIVJr" class="tp"><!--pnid:8TGgqXzQk2uylu3hYk70YR-->压成给老板看的一页，Markdown 半页以内：现在真正能用的钱是多少、昨天收的大额是哪几笔、这周最急着付的是哪几笔（按付款日排、附金额）。不附明细表，也不写未来预测。数字从「资金日报.xlsx」和「在途收款明细.xlsx」里取，别另算一套。</p>
+    </article>
+    <article data-page-node-id="yDuZzvrHS1Vdv9lp981Bwp" class="task">
+      <div data-page-node-id="sCw7ORdOtM3P4zkR7g6KxX" class="th"><span data-page-node-id="b7E027b0RZ4jNtm12MaZC6" class="no"><!--pnid:uGg2UQN7fLubQBBJpbS0w2-->06</span><h3 data-page-node-id="2sTIEQ25g0LzZDYs7F8wBp" class="ttl"><!--pnid:MXIiw8URCWZ5vsFiQ3mWx2-->让它反驳自己</h3><button data-page-node-id="vOUWXScR8UZB4mwzE7Nt2u" class="cp" type="button"><!--pnid:9mLYjBV288ttMx0Z5hMaOk-->复制</button></div>
+      <p data-page-node-id="gl8nVS2PTz2KPxY9n5RiSB" class="tp"><!--pnid:WsXzjzMXvN2ABNJmdCixZz-->读微信收款截图与收据照片。你判断苏州耀华精工那两笔 30000 元不是重复记账、是分两笔转的尾款，依据是备注和截图时间——这个依据够吗？逐条回查截图里能看到什么、看不到什么。产出 Markdown 一份《依据复核》：把站不住的判断挑出来，说明该改回「待确认」还是保留原判，别替我下「重复记账」的定性。</p>
+    </article>
+    <article data-page-node-id="hqddn59z7VxEIGlmB7Hmdd" class="task">
+      <div data-page-node-id="PpqiIMZvpb4JtEIhP45N4t" class="th"><span data-page-node-id="OrwW0Rut3nodYzWVVE5rWt" class="no"><!--pnid:wXJveamL4kewLFE9jQOJ7B-->07</span><h3 data-page-node-id="2IyYOf2Y0h2ZA0FfxSbdeW" class="ttl"><!--pnid:eqLeP62rl43t6NFUQVFChw-->比对上次调头寸那件事</h3><button data-page-node-id="jAgXZyj4v7u4EBGQry9Fq9" class="cp" type="button"><!--pnid:sqT7nPZV6oi6wLbnDnl2md-->复制</button></div>
+      <p data-page-node-id="AApdi6IloZfcUnStLSLrp0" class="tp"><!--pnid:EpGG9fiUXmr8nhVQ9Vgb1n-->上个月只报了银行余额 79 万、没算在途收款和待付款，差点不够付供应商那笔 18 万货款——跟今天这张表比一比。材料用这次的银行对账单/余额截图、微信收款截图、待付款审批单。产出 Markdown 一份对照：上次错在哪一步；这次的口径有没有把同样的坑填上（可用资金是不是算出来的、待付有没有按付款日排）；还有哪个环节仍然只能靠人工确认。</p>
+    </article>
+    <article data-page-node-id="DvCFzL7S0cwruU10F4PX5O" class="task">
+      <div data-page-node-id="fz6zw5N1R9FD72Eg4eUxlN" class="th"><span data-page-node-id="u5SZmwo8AmRJEkWyhtOJSg" class="no"><!--pnid:XHo19DpgMUynLC0ncU3T04-->08</span><h3 data-page-node-id="Fx7aSik65qrVdkVPedNvp4" class="ttl"><!--pnid:Bihk4cZ2jVT6qf7Qj2QoqJ-->按口径自查每一项</h3><button data-page-node-id="SDmioYHcZA2rm4nlxZ6u1p" class="cp" type="button"><!--pnid:X9RxYkG4yJTa97Y1RMFFpx-->复制</button></div>
+      <p data-page-node-id="iCwUOi8fHCIEnfKRZ5MujD" class="tp"><!--pnid:aYb96pRzCEMLsnyQD1wOZb-->对照「可用资金＝余额＋在途收款−待付款」自查这份日报。产出 Markdown 一份自查表，逐项过：每一个数是不是都能点回一张截图或一张审批单；有没有估的数；模糊那两笔在表里是怎么写的；有没有对未来的预测混进来。另外核重复收款有没有被并成一笔、同一客户分笔转的有没有被合并。列出来别动手改数。</p>
+    </article>
+    <article data-page-node-id="Nse62zKS2WX32x1inWWyAR" class="task">
+      <div data-page-node-id="lxComvEoPqvaKM0iyLPF5V" class="th"><span data-page-node-id="VnePgGOvNnKsGJBW3JBAqc" class="no"><!--pnid:oe3Nn9CSOhAsRp9MwqtCh5-->09</span><h3 data-page-node-id="cW5QOjX3slp5UwWq6MIDQ2" class="ttl"><!--pnid:ksEJdSeHhAwi7oF76aueij-->折算成到账时间影响</h3><button data-page-node-id="kZP8mfsrsLkFTVNKBZ1oJs" class="cp" type="button"><!--pnid:RgHRunxLsRQyGuyQuL2q1e-->复制</button></div>
+      <p data-page-node-id="uFWIBdYpQTbe6oKzku5eWf" class="tp"><!--pnid:x1SfhngsPzRDGlGVGdDkNS-->读「在途收款明细.xlsx」和三家余额截图。三家余额合计 864000、可用资金 912000，中间差的 48000 是净在途。产出 Excel 一张表：在途收款一条一行（对方、金额、状态），推算各自大概什么时候到账；再按到账时间排一下，这周哪几天资金最紧、紧在哪一天。只说事实和推算区间，不做现金流预测，也不给付款建议。</p>
+    </article>
+    <article data-page-node-id="i6gKm6E0MVc4ejXcKyazxF" class="task">
+      <div data-page-node-id="Q9DZEc5qhLIEGQrrqAuzOx" class="th"><span data-page-node-id="nYaVTHMQkus2tawbXg2cOq" class="no"><!--pnid:BBanyS7xCcBKxEkzq597dP-->10</span><h3 data-page-node-id="tQAAcGFKOwbItUieqH5sTR" class="ttl"><!--pnid:FankuocpBW18gWl3ozhLA9-->沉淀成日报模板</h3><button data-page-node-id="NtlvS6lKQQyJZtoDgL4zsa" class="cp" type="button"><!--pnid:3uZOKXu0nrrKiNRdXxzwRL-->复制</button></div>
+      <p data-page-node-id="5Bn4FnzRGN9c9WdeH51NML" class="tp"><!--pnid:doHPKpP1tMlrYjwJl4KqHn-->把这次的在途收款识别口径和可用资金算法整理成一份「资金日报模板.xlsx」：写清三块——三家余额怎么汇总、微信收款逐条入表的判定规则（哪些算已确认、哪些标待确认）、可用资金算式与待付款的排序方式。明早直接照这个格式填。只写这次真用过的规则。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="ggTu1t5BD7VgVhVsYUWzEz" class="cta">
+  <div data-page-node-id="xQuCRWDHdL6n7B0bcMDnFO"><h3 data-page-node-id="hLJPIhacSrdrAOBrHpzwW6"><!--pnid:zX7rlX2nIxa9HsgZbutBYv-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="gqM4a6FK7pSuJf57dQnGg0"><!--pnid:DpozAhm1z8CdsmbUCV7VJz-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="cROuOa9IsCDW6sSohAZwwa" class="btns"><a data-page-node-id="X318gfVzdvpFc7I844hAIj" class="btn" href="#" id="ctaContact"><!--pnid:mKpsrhsnJlnCqKAaEaykFl-->联系我们</a></div>
+</div>
+<footer data-page-node-id="EbIXPUVTYviffsJriMvRHr"><!--pnid:WdYWikR4AIk3fAcFbji0kq-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="TFaije9szVJydplBLDXpfk" data-pnid-children="4X7jIx1P7lKzmj2XuwxbLb">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="sOKEwURjOZm9XPw3zsO8qr" data-pnid-children="PvCCnP238gYKLyrURFVLy3">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="w7qP6xpbsrDKyORLyZq9ue" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="VXlbxVfpZW1qndWKE5cO8E" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="sb7GpoV2uHkvsd7gAKgIxI" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="yDpCP8YkDiw2GkUg8722uA" data-pnid-children="4DeQr4jZJyqcajFxufAVxp">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="ek0JiswMTbxLEE5JH5ha2d" data-pnid-children="kBWWUUHjYHmSo2KG4ieNHd" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

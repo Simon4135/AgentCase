@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html data-page-node-id="WdLlgx8tSV7wiRPytNKLVZ" lang="zh-CN">
+<head data-page-node-id="mgSGvYqwlIaLrGZIzDAzaY">
+<script data-page-node-id="qloiUnMfXmvtQ1xXzrW3kh" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="h7336i3kMElAFe9DUt2mPz" charset="UTF-8">
+<meta data-page-node-id="dL6tTaMg5sGSdLWKb2eP8f" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="7GRRyTJPU3yDdARMVBvkcd" data-pnid-children="w6p1amDnrxug42eLqBstcT">ECN 全流程管控</title>
+<link data-page-node-id="cOZAwoqqYCTiAGataIFG49" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="Ur1FG95oreLVAUd6FS1VRS" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+
+<style data-page-node-id="xvD1JNRUXBRVJHzvoWoGz7" data-pnid-children="lF1aJ66eF6PzP0yORJcBsG" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="i4T6HKTOFIAtgP1L1BkLjS">
+
+
+
+<div data-page-node-id="oaAZciChBUcEszCmoW9ma1" class="wrap">
+
+  <section data-page-node-id="pDP6MrXKKUsi7FvUY15uuG" class="page-hero">
+    
+    <h1 data-page-node-id="dqJJvhizaekjnvx5MdtadI"><!--pnid:OyxwHh1z6gWoZ6usUHj7L4-->工程变更管理ECN</h1>
+    <p data-page-node-id="AyylqdRM28ebZg2x8fc9Na" class="lead"><!--pnid:13CgngqVhNinIHiE41zS0B-->案例：<b data-page-node-id="noVu4mhGO7CQ7KwiOyKCa3"><!--pnid:m6KoRSfkZpKJnGx5ptUbk7-->发动机冷却系统密封圈 NBR → EPDM</b><!--pnid:PSJP58uwh1Dz1111gNb2vE--> · IATF 16949 规范级 · 6 步全流程 · 118 天闭环 · 数据脱敏</p>
+
+    
+  </section><nav data-page-node-id="4i6rThhLPSXQulABVjNmYQ" class="subnav"><a data-page-node-id="1lqCXRFSRjPlJkNzWKNa8u" class href="场景引入.html"><!--pnid:uD4W96BXNSfJSMfLNcCflS-->场景引入</a><a data-page-node-id="AugGLjCvofpI5SlcMudAMZ" class="on" href="#"><!--pnid:NRXBT9JB3Ev11vJ7ji5BzK-->Live Demo</a><a data-page-node-id="hUHV2pS6WLOdwsutvMShMj" href="推荐任务.html"><!--pnid:l14m6R79O1xsmMtdKxGhgO-->推荐任务</a></nav>
+<section data-page-node-id="e1ajezcTe9SrMsu7OzCA89" class="notice warn"><div data-page-node-id="oGJhVMN6bPoiDjeV18SW0q" class="icon"><!--pnid:0gd9INSCGzofydB2XUmfiL-->!</div><div data-page-node-id="cPtlHzkoKmGnbuTW6l3Sb1">
+<b data-page-node-id="mRF4YNkHKweyt7rS3ZF5b2"><!--pnid:BKmDctJe9joHuqYvSuF0FS-->演示模式 · 可视化预演</b>
+<p data-page-node-id="1Y6CjwbHZHN1ltDfeKcujc"><!--pnid:BnDHm5WDqWWlHIqmTNxuZD-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="87A7BqHPVhO6t04DGcbI0y" class="kpi-row" style="grid-template-columns:repeat(6,1fr)">
+      <div data-page-node-id="0bm4fRBGZxPvOxepT0DHzW" class="kpi"><div data-page-node-id="aMJUmfVryd31fLQN94AQu4" class="k"><!--pnid:r4GnbEOelNhCZwcs0SMEq5-->流程</div><div data-page-node-id="d8Dkrx8BQ8YLLA80yWAZ1F" class="v"><!--pnid:eJMAjHFeMKzrDfgcvSxXMh-->6 步法</div></div>
+      <div data-page-node-id="AeSS7PyELvwwmhJ1GccbmZ" class="kpi"><div data-page-node-id="Spy5B3GY8HxPPS5XfgiB6b" class="k"><!--pnid:90TywKyM9knexd9fUZlilu-->变更等级</div><div data-page-node-id="ENxabAGIWcrlMHnTkzENa3" class="v" style="color:var(--red)"><!--pnid:GsnKHhkiaBfaCZhLIx3Oa3-->Red · 重大</div></div>
+      <div data-page-node-id="hg6PwdnLxz9jjLSPOcCp7M" class="kpi"><div data-page-node-id="AMivIeXCu0cAzKqmX4d1C6" class="k"><!--pnid:XLbO668Pc8faMCGYFjjqAD-->影响评估</div><div data-page-node-id="ospdVNdauaC5y3jw9oC4Bh" class="v"><!--pnid:AolQMw5RXKzqRbYGWsev36-->6 维度</div></div>
+      <div data-page-node-id="3KtO6mfuXENQXhDFr14M99" class="kpi"><div data-page-node-id="y3KUdoA0GKP4py3szE3ldd" class="k"><!--pnid:DNXwihpxctGQoUjycu0l7j-->验证清单</div><div data-page-node-id="5TnnhziJYux6dMQNWHRPHm" class="v"><!--pnid:wFUEA6JcL8cihzgkWKJj6t-->16 项</div></div>
+      <div data-page-node-id="7QP31bevnxD8RKfow6DoJM" class="kpi"><div data-page-node-id="S5iwvnvI5GBrRCBDWWpf1I" class="k"><!--pnid:77KRByyVzmZqSqghDrqbdE-->审批链</div><div data-page-node-id="oYfPBodn7rPbeWXRU8LZQ6" class="v"><!--pnid:BF8rbrJwBsfwfdrC0qEMq7-->L1-L6</div></div>
+      <div data-page-node-id="UjukEi1rBEjh5XYxyLi5nk" class="kpi"><div data-page-node-id="mNFc6ySaIy4MF0sepr6T0g" class="k"><!--pnid:W7uezJUr0T3kesz47nAsnn-->闭环状态</div><div data-page-node-id="LmeVBUkL9ZRijmaAa2EN3J" class="v g"><!--pnid:bPNUIj0OIQL6SBrAlQk1u5-->✓ 已闭环</div></div>
+    </div>
+
+
+  <!--pnid:crqQN0upNMNEU33CaaahRy--><!-- 案例背景 -->
+  <div data-page-node-id="05GtzqYLJ97EatPp7ntqyG" class="dstep">
+    <div data-page-node-id="BuxwI9F33nRaEogKhfD2sp" class="dstep-h">
+      <div data-page-node-id="LHxY2GzGYjWldLUQPXBT0D" class="dstep-n io"><!--pnid:cKmZ5eIajESdZ9QtPjzH9J-->▶</div>
+      <div data-page-node-id="SZHq4I0aOgELhcUX6FhqZN">
+        <h2 data-page-node-id="iJ8astf42x8RiTyJrYf9sv"><!--pnid:SwYd72bQi1aS9YptSZjeH7-->案例背景 · 汽车零部件 OEM 厂商</h2>
+        <div data-page-node-id="3FphRMKqDgbhsrjdrFrUOL" class="sd"><!--pnid:Szmo5ohrzIozvXLJ0qTEyP-->发动机冷却系统密封件 · 客户为某主机厂 · 质量体系 IATF 16949</div>
+      </div>
+    </div>
+    <div data-page-node-id="271e57CnS2fROOuYKw8Kys" class="dstep-b">
+      <p data-page-node-id="oSYDnWTljleQKwjiIyARvT"><!--pnid:7crzgo9oO08WyU1g5NQxUO-->现有 NBR（丁腈橡胶）密封圈在使用中出现两个问题：<b data-page-node-id="Usma6BLzAx3EF1zA8TZUkT"><!--pnid:DRtHMIo2PCWr1Q9HR4ow3v-->①</b><!--pnid:J61fHKeNBWfwZChOtPzVEW--> 耐低温性能不足，-30℃ 环境下出现硬化泄漏；<b data-page-node-id="nbeJ2pDsRdGClgK1uLr4aU"><!--pnid:BpFmx9xUvpZvcmQrBEEygq-->②</b><!--pnid:TKq2VHdEsg56InhNVF7R27--> 客户要求提升耐候性，适应热带地区使用。经评估决定将密封圈材料从 <b data-page-node-id="5UVrWBDkrjbJFDIAT2HNqr"><!--pnid:T4FX1C0y12HfGcz8GnHZjW-->NBR</b><!--pnid:dzQMMEizCfrlg20krqgZsV--> 改为 <b data-page-node-id="RGRXYoBQEDyselSPLt2EOA"><!--pnid:wUICkZ9Tqi7izbeQUQrxxT-->EPDM</b><!--pnid:D1uYxs77l7p7oBnSgDjWPt-->（三元乙丙橡胶）。</p>
+
+      <h3 data-page-node-id="lCd5wY9NB8ZmsFaK9gaIBG"><!--pnid:NvLXvJ0oTrPZd9dB0T46tQ-->PE 一句话下达变更</h3>
+      <div data-page-node-id="6M19MOoFPgurQTSNLS3OsM" class="prompt">
+<span data-page-node-id="dUw2EADHqMAGnid0cTc25x" class="cmt"><!--pnid:n6Jg2DGHV4rs3PjbLTJhU8--># 用户输入</span>
+<span data-page-node-id="b7UFngHstcle1GQYviV2ae" class="k"><!--pnid:fmC9y0lzZ132JDq5sBGPpZ-->变更类型</span><!--pnid:9B21YSaLHt5SBj48XhX2a4-->: <span data-page-node-id="bMYUAPhJM3p6qpVs9cooRA" class="v"><!--pnid:zO3GacKOPn7GqOxQ7M7ODk-->材料变更</span>
+<span data-page-node-id="anrika9eUqAOwi2VNTRW4Z" class="k"><!--pnid:aAWoJ5ZEWyUHd63L8l9rJM-->变更描述</span><!--pnid:4ZX8F5pAKGwUMOobAa6Zbu-->: <span data-page-node-id="78yMiTHfxrRbhLEgxc7vMD" class="v"><!--pnid:otMFHa8XlkQ6QWOkj056Gq-->发动机密封圈材料从 NBR 改为 EPDM</span>
+<span data-page-node-id="x6F36bayMad9bFP7Rpwanq" class="k"><!--pnid:kW0gXILcrps9IADjypFXXE-->变更原因</span><!--pnid:q7Pqq1oynoSwprSwbcFft7-->: <span data-page-node-id="3CPv7e3UhOyI4WCLUcgmOu" class="v"><!--pnid:4HJY8lYBQZNyUGFtzgux37-->NBR 耐低温仅 -25℃ 无法满足 -30℃ 要求；客户新车型需适应热带地区使用</span>
+<span data-page-node-id="rymVTTdpZAMyoHWAnqeB6U" class="k"><!--pnid:V95U2toaByS8PuBxKAgik2-->变更前</span><!--pnid:5SnqjpmRiWmsxkM4D8PU3R-->: <span data-page-node-id="JIiS5wmdaNMXGPIaVWqZnx" class="v"><!--pnid:Iy4840Z7LW5ESvFjZxH2dw-->NBR（硬度 70 Shore A，耐温 -25℃~+100℃）</span>
+<span data-page-node-id="UGyODT9oVlgmTG0lcDXd1J" class="k"><!--pnid:YohMoOkRbXBkqzbAbNj78E-->变更后</span><!--pnid:hVo0e2zTn2dobTb3jPYUZm-->: <span data-page-node-id="eMf3j850nwXUiTTovjTWu3" class="v"><!--pnid:S0jysNx3zKSjjXJKcPex2W-->EPDM（硬度 70 Shore A，耐温 -40℃~+120℃）</span>
+<span data-page-node-id="rlqBaPsw80kOfeVa9C2yhQ" class="k"><!--pnid:aa161KThJuyMrQoeh9w6iK-->计划实施</span><!--pnid:3Nv6LkafisJk3xjqn1fnN6-->: <span data-page-node-id="jH3LlLR0LIXDeZTqmdfjd4" class="v"><!--pnid:74pJYyAfHhXmWEDvXfOm4a-->2024-07-01</span>
+<span data-page-node-id="mAXEBTtM8C207lB0PIKibc" class="k"><!--pnid:CyYX7zJQCxPj75RqeDlxuY-->发起部门</span><!--pnid:OYpvVef1mgYLTLWLhmp8rY-->: <span data-page-node-id="KpndQsB5SO4wU7qcR1UogY" class="v"><!--pnid:eE9XX2yUHpnJfC7UF6xcHH-->研发部</span><!--pnid:dsSeiqNAUrOkXZi7QGmiNc--> · <span data-page-node-id="tyxW2hdx4Nwr4Hk4InCpf0" class="k"><!--pnid:p2GgNiURzKtHx3ptL6fp3E-->发起人</span><!--pnid:BCZgvCSL3CJybLHzmXY4ht-->: <span data-page-node-id="ep9sOp5g3ju8P59CjyGP7h" class="v"><!--pnid:CydHK47V8Y74CbCCSQ5nHL-->赵工</span>
+<span data-page-node-id="vXKkM72bSI7cz5CexIfPKT" class="k"><!--pnid:nkXATWMqxMPetTS1RGYnkl-->关联产品</span><!--pnid:nzIGtVvFt3dQ0KMaUdDyYs-->: <span data-page-node-id="qD1dR1y8zNyPHxL7Xl4XKy" class="v"><!--pnid:pq7IPABj8ZPZtFDNYvdz5d-->发动机密封圈 PN: SEAL-ENG-XXX（共 8 个规格）</span>
+<span data-page-node-id="xdA4z4cq0ZKWnkbGuRSuOO" class="k"><!--pnid:RJ1izv3CfjWyG0SRrgSBti-->涉及供应商</span><!--pnid:Lx9kgVUS0snDx771YNb3be-->: <span data-page-node-id="rXaYp2ubkpYC1oe7AqOBau" class="v"><!--pnid:7VL8klTZNUjZtP0oPIlIdy-->A 供应商（材料切换）</span></div>
+    </div>
+  </div>
+
+
+  <!--pnid:4reeX2EbFASH79LenFKU4J--><!-- Step 1 -->
+  <div data-page-node-id="AlLGkjdSLHcQXYz5xxLOra" class="dstep">
+    <div data-page-node-id="79zePMxIcXdz8McL28WTeF" class="dstep-h">
+      <div data-page-node-id="F93sGlBCND8Xr8VsLG35KP" class="dstep-n"><!--pnid:NuzKcEoct3MthR78pSkdcW-->1</div>
+      <div data-page-node-id="7l4EOJkEyiwHdImSVAsvPO">
+        <h2 data-page-node-id="QU4rj4nTqebIbVzl0objl2"><!--pnid:ceIhwlHYpKzrHTOYbX2A2U-->Step 1 · 变更发起 &amp; 分级判定</h2>
+        <div data-page-node-id="jMjZFeH0996NrzwIeOnyiq" class="sd"><!--pnid:8Ue3Kki4b2VvK2TLvV4r9O-->生成 ECN 编号 · 按 4 维度自动判定 Red/Yellow/Blue</div>
+      </div>
+      <span data-page-node-id="bHPFZEUz6AEJHygdpi3xCb" class="status"><!--pnid:Cyt4U3NGpoB0KL7IzcWwTj-->✓ 已完成</span>
+    </div>
+    <div data-page-node-id="N6fF35B9dcUks1R5V0CDPY" class="dstep-b">
+      <div data-page-node-id="XnEzLakZAoLZKZXRCNrrXn" class="ecn-id">
+        <div data-page-node-id="pJbXnQqUPlW8fbA9TyCC5L" class="item"><div data-page-node-id="9itpkFl0wFwRQ5uK4wn5aA" class="k"><!--pnid:lEbYCIMXpjMWnDXkR4tP2j-->ECN 编号</div><div data-page-node-id="mN0tcZmTKEoJ8Db1MunikY" class="v"><!--pnid:Xtevw6R2OSwdGKQJNMbvGb-->ECN-20240420-003</div></div>
+        <div data-page-node-id="77EXILrPA8zj6xNtZ6iL1A" class="item"><div data-page-node-id="Emi2MybnaPAJVOoqvvA18A" class="k"><!--pnid:IwRx5PHpczzMX8rncSUb79-->申请日期</div><div data-page-node-id="N1OXavGbJJPdt59L9gyJ7F" class="v"><!--pnid:OzYNymVPyEuxjsYN1V5DIr-->2024-04-20</div></div>
+        <div data-page-node-id="tehwGPrhPKrPjQv9sUn0mA" class="item"><div data-page-node-id="sTMbaj0Ivp6jBaIbALfFMV" class="k"><!--pnid:ey0Lhj4394pa46UvaqOfoS-->申请人</div><div data-page-node-id="ME8m76PnpAPblSvnYVsRC2" class="v"><!--pnid:Faty26czOeMxa7L1SRKWVu-->赵工 · 研发部</div></div>
+        <div data-page-node-id="SBoEZQGUCDmANRt3hI8rbA" class="item"><div data-page-node-id="iPwBKGS3kS1H0ZwK54BVMZ" class="k"><!--pnid:ZAhHvIT7fHVkt1BvSaUNRL-->变更类型</div><div data-page-node-id="HQiVniJOQHsLGfKHk4ygpa" class="v"><!--pnid:76A48scrNL2w2DEXQq9afp-->材料变更</div></div>
+      </div>
+
+      <div data-page-node-id="MRmc00dU4CxBWlvQf2jTyv" class="verdict">
+        <div data-page-node-id="AfJ1Dq770aV4TdrTHNDuWa" class="v-l">
+          <div data-page-node-id="OKFfb1IJY2Nunmzqd2JkPV">
+            <div data-page-node-id="hDTa3u8guXtVsZ6mL1aSrJ" class="v-t"><!--pnid:xcsejPwrbAtsjdWcRRyuE2-->分级判定结果</div>
+            <div data-page-node-id="2Em6d7e2PA3LeCe7aIbhsD" class="v-h"><!--pnid:CQqLSPmByaVW7zurPJVVSG-->Red · 重大变更</div>
+          </div>
+        </div>
+        <div data-page-node-id="hi6c2yJXwn5BKmJEQimFos" class="v-tip"><!--pnid:zZzn9llt1OEgmGJ0lvGnLV-->取最高等级 · 3 项触发 Red 条件 → 走 6 级审批 · 需客户批准 · PPAP 等级 3</div>
+      </div>
+
+      <div data-page-node-id="VG2SHG91CyMK5O4dKkoc25" class="tbl">
+        <table data-page-node-id="ugxBOy6B6BMfjN7NRuu7en">
+          <thead data-page-node-id="BMONHCAuRekvbKQ3MvxPQh"><tr data-page-node-id="OyPHZ22CaZQ0WDGYtWOSIp"><th data-page-node-id="9oQ4bGSIeqhyHFfNuzQZNc" style="width:22%"><!--pnid:yxVkHiBOOIyJRDJOzFexMY-->判定维度</th><th data-page-node-id="6MIwMgURxQd1UvfISSGJ9I" style="width:28%"><!--pnid:n1vZFkX88w27OXWuZNNIbQ-->评估结果</th><th data-page-node-id="2hOgeuP7nqn5f7i78soKpX"><!--pnid:fsl7mqGVHPPwOsf8xQdsOf-->判定依据</th></tr></thead>
+          <tbody data-page-node-id="ojP3tV0TOxfrM1N3nrnsKk">
+            <tr data-page-node-id="17h5HNeV4CXdtCs4HzWkBE"><td data-page-node-id="VUJjUgYPQUNeg0Usm11biR"><b data-page-node-id="ELPYMebSG1Dc4Bfucqs6QF"><!--pnid:NrBVscHEeJLYCq9mdgrNcA-->影响范围</b></td><td data-page-node-id="IYE1HFCxePiYxv8ouFUcl9"><!--pnid:2HjbLP4xdof9LZnuBnqpxK-->影响客户产品</td><td data-page-node-id="jBoVfoCtjHmoC3a5wLoDRG"><!--pnid:UgPFa3GdyeqlJOKXwrfn2U-->发动机密封件关系发动机安全 → <b data-page-node-id="tS2NSCnNlY3I9E1osU9k9v"><!--pnid:g1JqNuTT9ofB5Tabth3SAL-->触发 Red</b></td></tr>
+            <tr data-page-node-id="GOMiLys8Ftu6xhOACft55C"><td data-page-node-id="i3c4NDYqpHy34pawMLqAiD"><b data-page-node-id="wADAmGquSRj8Wkj3yo3ETU"><!--pnid:b221ySIaoB8NTZkiL3blT5-->可逆性</b></td><td data-page-node-id="3NDdW0S8wAnngP0B9A034Z"><!--pnid:dhNJHAhh82vNHBA8vusc5b-->可逆但需重验证</td><td data-page-node-id="7uDnAJhQTOn5jtjw7BKFMH"><!--pnid:zQIqiTEEviHHhRaSqfQ1gQ-->可切换回 NBR，但需重新走完整验证</td></tr>
+            <tr data-page-node-id="YKUF9cKTLVW08KVCfbSfKp"><td data-page-node-id="9MDytdIe2rmmY7e99ReX5f"><b data-page-node-id="SzWWc3CsCxHphJD6fIfcIr"><!--pnid:Q0f0wLlLiYJoA2cv9D0lFs-->验证周期</b></td><td data-page-node-id="jhICuLKc5cgfTjcbaLUotZ"><!--pnid:hiE3mN7kjXGYU2Jbzda2vM-->预计 5 周</td><td data-page-node-id="3EmlqfdaJPxtzovrN5AOPS"><!--pnid:GoKbShoY75SFQsjIHxbr6W-->≥ 4 周 → <b data-page-node-id="745u2NQJgXMLizehHEaVgj"><!--pnid:IMd16nByZkES7J7wXR2w2y-->触发 Red</b></td></tr>
+            <tr data-page-node-id="Bbtigf07M7EcM7zuRjdn6q"><td data-page-node-id="YjZZ88uyZG9HYIxjiYDrdN"><b data-page-node-id="CdGPxgHBQPD4USeW7BjN5L"><!--pnid:waoUFy8YMvQYqxBIDO98QE-->成本影响</b></td><td data-page-node-id="eQCOAf4LWl6derNdMseMde"><!--pnid:qMQ2tRXbqTCvoldCsVR7rW-->约 +12% 成本上涨</td><td data-page-node-id="2daEEusfc1shjKxZe1UFsk"><!--pnid:pIs2gzRHzBF5yeQsApw1qu-->EPDM 价格高于 NBR，含验证费用 ≥ 10 万</td></tr>
+            <tr data-page-node-id="P6XrQNsUNjlwhw3Wa1Oygj"><td data-page-node-id="7OHZ0QqAKvTCAtQqHBb5p1"><b data-page-node-id="4xfr8MeO3ffwsAny0biq2V"><!--pnid:SP2IMX6rPrkA18F7IkJraj-->客户要求</b></td><td data-page-node-id="OVUlleJ7X4VMfMdN8q1dWS"><!--pnid:5w7MmfGxijMMuyQwntG7wT-->必须客户批准</td><td data-page-node-id="EIyZ0lLOR6bkf3UcyrZuhN"><!--pnid:h4v94xCmOpSvLCYLE06fxj-->发动机安全件材料变更 → <b data-page-node-id="wpsxvp0oH5djuUyYdQG4RP"><!--pnid:YuRQOSjvTFGS0FTsDikzu2-->触发 Red</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 data-page-node-id="c7URa7JSqf5Vs1YDyXLUAj"><!--pnid:BDuNz6HyfxzRF011kjUbrP-->初步影响范围识别</h3>
+      <div data-page-node-id="PaFG89Mgn5gsrtCTaLPnln" class="tbl">
+        <table data-page-node-id="M7myybpX0mbLavyFWMJNOo">
+          <thead data-page-node-id="QZZhPu38bkXG1296C1BZrN"><tr data-page-node-id="BmqK13HmWkkwEvOyHnTxmq"><th data-page-node-id="BsOCDNJ40bu9muHvbCh83p" style="width:15%"><!--pnid:TlVmPmFyaoPjD7lIPyQ6n0-->维度</th><th data-page-node-id="nhL3hdaj3t3IW3qGKvTJUn" style="width:15%"><!--pnid:wdyJWuD8OAGLOuWmqbqHYs-->是否影响</th><th data-page-node-id="GwF7FWpqQLkhDg30kTjGxF"><!--pnid:tEAx803QjBhqQAVdrEtXdh-->初步说明</th></tr></thead>
+          <tbody data-page-node-id="vgbEg4cxrdfZg8ph2tAoX5">
+            <tr data-page-node-id="KZYROCKiQc3nHLJvP8CC8z"><td data-page-node-id="nlYPLnY7h7ns4ClvKTh6fQ"><!--pnid:FhPCj0MhfNDZUQ87FFbiYA-->设计</td><td data-page-node-id="IoDIaw4SX5un0VI5irMnpq"><!--pnid:YRyPxpZMBDYAtngRM88BrE-->影响</td><td data-page-node-id="GEHCZPBhcvgdUgaKdI1oBr"><!--pnid:coGIFRh7qzEdSEe0LyvZC9-->材料性能参数变化</td></tr>
+            <tr data-page-node-id="2I9dqPpEuQ7t8dfdOcajWm"><td data-page-node-id="MqTr5RTI57bvpNQ8uLlhuH"><!--pnid:Pi3A9dle94Iw1QeTuRrs42-->工艺</td><td data-page-node-id="EbqiR14mGy5NBZdL6PQd5G"><!--pnid:5P5KjoyubDhZskY7uYmthg-->影响</td><td data-page-node-id="IvXKHhqL8c2g4J9mQZa027"><!--pnid:A06F6wyo84iQDR55GLQJVy-->硫化工序参数可能调整</td></tr>
+            <tr data-page-node-id="UOjfcv12mE1U0hgCDad5aa"><td data-page-node-id="fAFP0Hy3rzyONZluwj7IGz"><!--pnid:4nLLw2IjD5MiXpgnks5ZtR-->质量</td><td data-page-node-id="jqFMV0XX6w8DjlrAQ0zELa"><!--pnid:uQCEnwmWlRqRNg5kf5RUDF-->影响</td><td data-page-node-id="JTcqY9hxzAFKyghdMw8VXZ"><!--pnid:iwx3vH1IOYkdlrkbIHOWrj-->检验标准、材料验证要求变化</td></tr>
+            <tr data-page-node-id="a54128Ee8lQkEg5A4PFmZL"><td data-page-node-id="ApqmVLZWC6bje0VQj6Cn17"><!--pnid:BqCdhAt7EtmRShzpcCtelW-->生产</td><td data-page-node-id="E65G5s1njjAWAYKIpHV7Sr"><!--pnid:9jiMsyoUOZHAWV1OCzHhm0-->影响</td><td data-page-node-id="0fzLTOaZb6PnrL0cBgKTj5"><!--pnid:8zOMWqgM1iwytXEdXGQWda-->材料切换可能影响加工工艺</td></tr>
+            <tr data-page-node-id="Ja7Vait9OtpOolEM7zpdau"><td data-page-node-id="tftWdZGPV1tGeDmeSq1jmW"><!--pnid:dVesBWTyYDEVg1bgNjGdD2-->采购</td><td data-page-node-id="eERV04AuWKfA67ne9LzYpZ"><!--pnid:s2HKOVr9wNpPipkDu66J4N-->影响</td><td data-page-node-id="k0ueXXxeIse4Z8mgOKHbyv"><!--pnid:n5sM4M44Si1oldvu1hXwfa-->供应商切换（同供应商，材料牌号变更）</td></tr>
+            <tr data-page-node-id="DUQiBICX6TdGiGrUmaMkEp"><td data-page-node-id="aCjcmql0toyuapfOQbYgqh"><!--pnid:LgaUuAtCcAqW707C5FGq6o-->客户</td><td data-page-node-id="vP6cPBbGtI3f7n1DSL3OaK"><!--pnid:Y8U3WODfRML5WqgXBYNcOi-->影响</td><td data-page-node-id="cBN73UvXXJddXpkRkN06uW"><!--pnid:DdQ38iPlMcmO1MXK6uUMiD-->需客户批准、PPAP 提交</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:4bgtCYimTZZnFHGNLbgQ2M--><!-- Step 2 -->
+  <div data-page-node-id="EPnPo3yg7s4v2IeeAHGqmL" class="dstep">
+    <div data-page-node-id="jYq7Go8ipwSuosNcgxCiB5" class="dstep-h">
+      <div data-page-node-id="bJif6HwThZlhEzMyEiwP1V" class="dstep-n"><!--pnid:uxDAoPHUXazOEfyzR6lGYB-->2</div>
+      <div data-page-node-id="Qs8RoYWBKSqDO6u8ip46Rb">
+        <h2 data-page-node-id="a2maWLb4sDPgbPOOtfyzpu"><!--pnid:shHIbt7PQV84UrIiyTPDU1-->Step 2 · 6 维影响评估 + FMEA 联动</h2>
+        <div data-page-node-id="lmI1EPDPRqaSfJAvRZoSUJ" class="sd"><!--pnid:gF2mvaBVw970haARZpkmDF-->设计 / 工艺 / 质量 / 生产 / 采购 / 客户 · 每维度打分 + 风险识别</div>
+      </div>
+      <span data-page-node-id="TLLSvkkAA5E6OEt8xXXHVc" class="status"><!--pnid:RQKcooaNc0zWJautDJX4FD-->✓ 已完成</span>
+    </div>
+    <div data-page-node-id="o41W7IFU9ScJePA83xBUom" class="dstep-b">
+      <div data-page-node-id="PlbJZAt4lnGopP32jlDAM8" class="dim-grid">
+        <div data-page-node-id="NBPEF2EHrLQz6PLg7xSMfx" class="dim">
+          <div data-page-node-id="1lthDJLjKZXYfqKA9CyGnV" class="dim-h"><!--pnid:xrBIjPGdkEg73H8Iz37bFd-->① 设计 <span data-page-node-id="hhU37ZrrDa5Nmu7o249WEN" class="lvl high"><!--pnid:4SRZNlFOUXsgLa9hY08oxL-->高</span></div>
+          <div data-page-node-id="YgJz1b4d1Vhd3VQn9mgn7q" class="dim-list">
+            <div data-page-node-id="NCK2X72ENGcVqcPXVToc5U" class="r"><!--pnid:3dP0Rn8RecBSfZb8E5YG91-->结构强度<span data-page-node-id="isePzsIWeGvpPlVj6N9tqg" class="mk n"><!--pnid:O2cw1hO5e7LZiOfMUplmSo-->无</span></div>
+            <div data-page-node-id="epkIfq82pCZyFBvDNVR2B3" class="r"><!--pnid:BtF8tVAyLr0kOVl15my8Uq-->配合尺寸<span data-page-node-id="34Sgy4IVqQ3PvvOUToqMJ1" class="mk l"><!--pnid:zoEOKMKR5qPAXoJR830RVt-->低</span></div>
+            <div data-page-node-id="33ILLBMsnsnpqJqlt57ejY" class="r"><!--pnid:3ZMaczH703LKxftGL74Ijp-->功能性能<span data-page-node-id="P0LZxludUgB71faFp15aVw" class="mk h"><!--pnid:mQAz7uzrlx2joNfpii5RHJ-->高</span></div>
+            <div data-page-node-id="Ien6bUk4AViFOSUr2zvxAD" class="r"><!--pnid:3UVc3YxV9bCOncbICGFQM7-->安全法规<span data-page-node-id="bY4bbdeJ2LCqpjTuDapeVG" class="mk h"><!--pnid:tln3bZYPKWHV82oLLjt0Q1-->高</span></div>
+            <div data-page-node-id="u9GeoRAeFfiLoYpEQdU9XB" class="r"><!--pnid:2ysmKgISrsgtoRLygcqAa9-->可靠性<span data-page-node-id="GYFuwwxYUYWeCMrYRFmWF6" class="mk h"><!--pnid:ZXI0EF78jphJ5Afp6uJaeV-->高</span></div>
+          </div>
+          <div data-page-node-id="JhIIW3cpojaEh77aSf6d3g" class="dim-risk"><!--pnid:8hVf4uWOwzt34KRRVMMmGv-->主要风险：耐介质失效泄漏 → 严重</div>
+        </div>
+        <div data-page-node-id="hzkfTuqw0JVCet9yF99uZD" class="dim">
+          <div data-page-node-id="uCUDwWMOItUvnRiawEwrPf" class="dim-h"><!--pnid:oEueJi8A69a5Fh9dfJjUtz-->② 工艺 <span data-page-node-id="s9lmNysnxddvue7oj4H6AO" class="lvl mid"><!--pnid:07IGkiVAFue1ppwjkeB7qs-->中</span></div>
+          <div data-page-node-id="i74qSLjyqPCQF3dc3qyHu0" class="dim-list">
+            <div data-page-node-id="Urpl5j4nrtD2WkjS4H2X72" class="r"><!--pnid:eZMUI0GF41EDUeXxt4hYTo-->工艺参数<span data-page-node-id="Hg4fbhGJWsq6OUVefiUW4W" class="mk m"><!--pnid:3WLDAaKdJPrMX5KOadYjZh-->中</span></div>
+            <div data-page-node-id="IU8Z3jYtmCKFfAKGrwZYG0" class="r"><!--pnid:aM3yOZErqoY2TuncH3oNEq-->作业方法<span data-page-node-id="n8iZJeTpHKUYmsO7mxXfK6" class="mk n"><!--pnid:QrfNmYtGkYO2t85KVBX0gH-->无</span></div>
+            <div data-page-node-id="qu489QTWME5O6gWvHVVEBL" class="r"><!--pnid:l2kSpUWL6dojtW76ahKS84-->夹具工装<span data-page-node-id="bStPG7Onxvy1mJhRdWxauh" class="mk n"><!--pnid:GrpHsGTYwDc2OsWEryjKrC-->无</span></div>
+            <div data-page-node-id="nxCrWi24lEATO3tjANcHop" class="r"><!--pnid:L69i47pz9oKCWqGg0SKNxg-->操作人员<span data-page-node-id="6TCDoE6ffNG6ooQjGEBDbo" class="mk n"><!--pnid:TUzv5sSx5JLdcQdiuzYrkB-->无</span></div>
+            <div data-page-node-id="nRYs51iZBjMdzA5nL1FYjF" class="r"><!--pnid:sw7I09IyFTWBhp6nd748Vt-->设备要求<span data-page-node-id="DMhPpR4NYTCdNKn1FYvEYo" class="mk n"><!--pnid:5wcLs0pVx6Y09Ipf0OBjN1-->无</span></div>
+          </div>
+          <div data-page-node-id="zp5loZuHe52nN7TVk1X8cG" class="dim-risk amb"><!--pnid:1WV1I9TTLcA7yNzD2L0h9U-->主要风险：硫化剂配比需 DOE 验证</div>
+        </div>
+        <div data-page-node-id="TRWfg6ElsY7fFrgl5AzpkX" class="dim">
+          <div data-page-node-id="Y5LtpTYtfU3rMLpUqZz2I2" class="dim-h"><!--pnid:F8TkAHKnXGJr25tHyynOHC-->③ 质量 <span data-page-node-id="LzYZwXyljQY9gU17MSM3KZ" class="lvl high"><!--pnid:eG29xYSHp14spgV48nJh5M-->高</span></div>
+          <div data-page-node-id="suoZDmTQg4Tze5NB5K6Xiy" class="dim-list">
+            <div data-page-node-id="GGsVEiW1NkbOICmCqBQ3VK" class="r"><!--pnid:IR2WioPYhmajLSXTaZ2vNQ-->检验标准<span data-page-node-id="rDkb6sCMf9Qcs4smKd8d1l" class="mk h"><!--pnid:aAefY7N4kKaKLqnP72hpei-->高</span></div>
+            <div data-page-node-id="2ujJSy3Uu4vY2WZ7QNIyUc" class="r"><!--pnid:l7IOYOcgLGXuyGnXNXSORo-->控制计划 CP<span data-page-node-id="PT4erKcldOl0VLA8BJx0YN" class="mk h"><!--pnid:3VQ5oXkIf1jpZrYejawn5O-->高</span></div>
+            <div data-page-node-id="5mDNqEqbYwaLFrb8Mwzlv4" class="r"><!--pnid:YljY5mGcVD4SvEAXdc8uBh-->SPC 控制<span data-page-node-id="KTsSrcPNbLQRlSYO9DtEuy" class="mk m"><!--pnid:ygXdkRke8uLYSaN0QcxS6L-->中</span></div>
+            <div data-page-node-id="eXhuLjK1FCjMTsnuOwicmG" class="r"><!--pnid:xtj8AG039xHIV76zxbo9Qf-->测量系统<span data-page-node-id="PtHXkgwSAOftO2LSgOUkie" class="mk n"><!--pnid:F4XVh9OMu0xN4dx4JfE8JJ-->无</span></div>
+            <div data-page-node-id="orla2HaMZbQEESqlR6fwTx" class="r"><!--pnid:tgnKOyIpQPdJs5mDxoZhLT-->不良风险<span data-page-node-id="lIgQhI9v1y4RS6DWH67coJ" class="mk m"><!--pnid:RcLmX9tArN5cWgS6ZNnvY9-->中</span></div>
+          </div>
+          <div data-page-node-id="TA9VuL6gJMr8SijTTGUGqT" class="dim-risk"><!--pnid:hM87Tnm0AyjqeFBeeKt2r7-->主要风险：新不良模式识别</div>
+        </div>
+        <div data-page-node-id="aLMcP87iV9DsoiqxF2Cdjg" class="dim">
+          <div data-page-node-id="TvYprUIO6x7SsCXRzQzedj" class="dim-h"><!--pnid:2FeLBEUBlVwkliCiee82Dz-->④ 生产 <span data-page-node-id="I9lQbUXtTkXmdddvHu8w57" class="lvl high"><!--pnid:VZPfpE2n4JXA1pFnP10h6K-->高</span></div>
+          <div data-page-node-id="6dGY4s1Q3Hrb9vdqRAUCD9" class="dim-list">
+            <div data-page-node-id="bnecVyAebKsLw33KhAxiv6" class="r"><!--pnid:nNTID3pMrDHNez35Vz0mYG-->节拍产能<span data-page-node-id="WAwTZDG345zldCcbbxRBLA" class="mk n"><!--pnid:917Lfixvo1LP2shmZP9jwa-->无</span></div>
+            <div data-page-node-id="qRoLMQz2DHsiIvqaBRHted" class="r"><!--pnid:CxqqaZX996Y2OdUgyhPjxU-->人员资质<span data-page-node-id="KvZ4GM4iKUYVylFnZZTXqi" class="mk n"><!--pnid:ktRvQT30DYWEZzd98U8pFz-->无</span></div>
+            <div data-page-node-id="rGmJAHspwhe1w4iz5WauX2" class="r"><!--pnid:QrrMMRjFaMIQAwHF8fqJrp-->设备状态<span data-page-node-id="XcVR46qX8f2E6DOwYldOrn" class="mk n"><!--pnid:pv2Hdltgo2qWFcGvMbdakE-->无</span></div>
+            <div data-page-node-id="9uWcsefediIxTLN7F8HHH3" class="r"><!--pnid:6mJxp2D0zpDOU3n2328Pkq-->物料供应<span data-page-node-id="IBL8d8PqZxJsH70ddmlG5i" class="mk h"><!--pnid:bfsPa9twv7Q0KBvROrj5iU-->高</span></div>
+            <div data-page-node-id="MSagFhZj2ymmVnv4FTQVrE" class="r"><!--pnid:LoDCNZu2lb55LIrUoq62bs-->库存消化<span data-page-node-id="bwucY58nTVMR5K95KRtsKi" class="mk h"><!--pnid:CScBBs4bqCqfmsPMBcMT0G-->高</span></div>
+          </div>
+          <div data-page-node-id="KgDWlTcS4nnZ7jUvTsCtvL" class="dim-risk"><!--pnid:pReRD3Pzhf312FuxSPbh9d-->主要风险：NBR 库存 5000 件消化损失</div>
+        </div>
+        <div data-page-node-id="jHEN8MUWfuyBuXxS1VOewS" class="dim">
+          <div data-page-node-id="Q6D4QbGuZj4ac0bNam160C" class="dim-h"><!--pnid:ULO6ZgwI82kpyweUTwVemx-->⑤ 采购 <span data-page-node-id="TKaWudqjGSc6Z35GhW9kme" class="lvl high"><!--pnid:vw22XXBi7KQLeeBNB3YcqC-->高</span></div>
+          <div data-page-node-id="yuDpP89A2wRh37NGVD536j" class="dim-list">
+            <div data-page-node-id="UsKBaZLh7xI0KW1wPeTX3g" class="r"><!--pnid:ABhLOF1ZSl93GtXllKH1i7-->供应商<span data-page-node-id="y2ZHxTkK1B2sXc158Rw7u3" class="mk h"><!--pnid:iW4hlTJ875wLQFJt48HVUQ-->高</span></div>
+            <div data-page-node-id="ddm860iVi8fN8bXxfeFb2Y" class="r"><!--pnid:Z9ImrW6tmznQWVRxzjvekX-->价格成本<span data-page-node-id="ka99XpKgXynyP4i0iy4IPD" class="mk m"><!--pnid:fpBxy9jS4vK6q8wkHUiWy8-->中</span></div>
+            <div data-page-node-id="pJjOeU7LnIoXSLwChRe46x" class="r"><!--pnid:TdOeQISveghDeFXsJIZtTr-->交期<span data-page-node-id="KJDN9GFlw49mjDU5kF1o2g" class="mk l"><!--pnid:XKquw9UMrqGf9paZbtJSiZ-->低</span></div>
+            <div data-page-node-id="HZDrWTqu0LEnVRCcTRuIcA" class="r"><!--pnid:PJUq1EZzvk9DBIy22uGJxI-->库存<span data-page-node-id="SMby50P7JHp4WTCfLz6uqa" class="mk h"><!--pnid:Q8ffAbaFmqezIASvrRzdHa-->高</span></div>
+            <div data-page-node-id="61kzWVlgzaMgaLXa0oSFsM" class="r"><!--pnid:REunvwP2qQFCJAPq8oDZVP-->MOQ<span data-page-node-id="7Q6EVmAI550iOIXverqiz2" class="mk l"><!--pnid:oEhdVN3lv4zCCwLCVW4Lqh-->低</span></div>
+          </div>
+          <div data-page-node-id="iC6Z1BP2lWkLcmD6lv8f07" class="dim-risk"><!--pnid:k2TnILVhwD6taBPufYFniV-->主要风险：供应商确认函</div>
+        </div>
+        <div data-page-node-id="7z7wPIEF9GtDqjXgsrBc0I" class="dim">
+          <div data-page-node-id="ZdCMiBdQ6f8SPRnJSOwkYi" class="dim-h"><!--pnid:c677dKL2k8dXEOn7IMS2bC-->⑥ 客户 <span data-page-node-id="QlWJmoJki6R8bNHD0GjjhE" class="lvl high"><!--pnid:tSpUkFk2SzCeKO9Jl4Od3f-->高</span></div>
+          <div data-page-node-id="DzBJHITrgcbv4Gsg5myzMX" class="dim-list">
+            <div data-page-node-id="hOMTqBrfcQ4UDcDqndJKqq" class="r"><!--pnid:2V1CfudQbJpFrOYVtm0BM8-->PPAP 要求<span data-page-node-id="o2755hc4Qdd2z5Omddsd9Q" class="mk h"><!--pnid:RrnsxtgMRu87HpizHXeqbw-->等级 3</span></div>
+            <div data-page-node-id="P6J3xnZzesczlxJvATeP65" class="r"><!--pnid:6QdEk5HuJ6qxq4oOp6N3s2-->客户通知<span data-page-node-id="yKC3KGKjOZikzMctL5c5cF" class="mk h"><!--pnid:vGku44DXKoXvhIkf021lWF-->高</span></div>
+            <div data-page-node-id="QFQyIHN280iI0n1F8VW1TT" class="r"><!--pnid:7gcTVnClBUMKDNWrtRR5hN-->规格认可<span data-page-node-id="OiHN7NV9AMRYUxOpGKVyy6" class="mk h"><!--pnid:Q6efpJZu4Wf8C6hTTozmnO-->高</span></div>
+            <div data-page-node-id="siI4pzKIoQ9pBct9RbqywJ" class="r"><!--pnid:vpwyy6dPAyQp326gWOiA0s-->追溯要求<span data-page-node-id="GlJb52T0An23qLhXKhbiNG" class="mk m"><!--pnid:zBTQBQHQ0slIjEdhIsIebU-->中</span></div>
+            <div data-page-node-id="rCj6cXqX63g4vVxs0WHChr" class="r"><!--pnid:gMk8LvRx31u5uen6q8DKa7-->法规符合<span data-page-node-id="VVWB0nDOk4xTkNpPquzySF" class="mk h"><!--pnid:c2VQY1T6qdLkayFGHwoPoT-->高</span></div>
+          </div>
+          <div data-page-node-id="Qv9SVr5FrxkvuuWZKAKJPJ" class="dim-risk"><!--pnid:Z4jMtVswaKoed8vNXGCWmC-->主要风险：PPAP 未通过 → 停线</div>
+        </div>
+      </div>
+
+      <h3 data-page-node-id="QTEJPT9j8kNn7yp1jwT2Jo"><!--pnid:weXjmwZkcRnmy9qwOwDZzw-->FMEA / CP / PPAP 联动清单</h3>
+      <div data-page-node-id="FJH3tRGKU2sRAsmgNnUBzn" class="link-grid">
+        <div data-page-node-id="6PWhglTaMWKMd32oov3Mpz" class="link-item"><div data-page-node-id="O6GqJROuCfudFZxRjK7HJ9" class="ln"><!--pnid:DjCJdrDsndYAFVgrmw2nKg-->DFMEA</div><div data-page-node-id="jwrAJXI9oVsH6etEyoendl" class="ld"><!--pnid:JOmZ1b3weKmdCRXN39MZtU-->密封件 DFMEA 需评估材料影响</div><div data-page-node-id="lTaBk0cBAsKHb1fgzpxu0a" class="lf"><!--pnid:mVALDsp7vhv68N8dgrNkhg-->责任人：周 QE · 6/5 前完成</div></div>
+        <div data-page-node-id="pBS6EaRWcMBVYIwAFWwuo0" class="link-item"><div data-page-node-id="FmkkjwGig02PuqJ0jNHZIU" class="ln"><!--pnid:yWeScLPLDvjLU49iGDCWP0-->PFMEA</div><div data-page-node-id="72Crv6d6RJH090o4Weg7id" class="ld"><!--pnid:W0sfMVOOsyB20i70wZxIkj-->硫化工序 PFMEA 需评估</div><div data-page-node-id="cuVtlFsR0evppKatb8LTbn" class="lf"><!--pnid:Bsbrhr6XbtQ0KC1p7Z6hKD-->责任人：王工 · 6/10 前完成</div></div>
+        <div data-page-node-id="yx88jwenNJ7bExApilWlYK" class="link-item"><div data-page-node-id="l4KxQIT4p9vUcktIhg47bb" class="ln"><!--pnid:QrRrXAvzdFskB0qR9VhzQE-->CP 控制计划</div><div data-page-node-id="88plgLjJOfcxXRoTHGbhTA" class="ld"><!--pnid:EvlX402RBDTr90snf68YcC-->新材料检验规范 + 控制方法更新</div><div data-page-node-id="GucWwm5TopCtOLgo6uSO2f" class="lf amber"><!--pnid:H0WhKooHJ3HRD9Qgk1Nf3t-->责任人：周 QE · 6/12 前完成</div></div>
+        <div data-page-node-id="OW7JZDcuaafayUjzF24KTq" class="link-item"><div data-page-node-id="LlqqIQ7cqpF9S3YYaHB58P" class="ln"><!--pnid:A92Y0W9U5tvTG4bkTfUSM8-->供应商 PPAP</div><div data-page-node-id="qtmATCwmnGyadB2IUczQiO" class="ld"><!--pnid:aXaotxl3zW3Zl1CpqBKGLU-->A 供应商提交 EPDM 材料 PPAP</div><div data-page-node-id="HERDMidGbbEyiz8zCK3vCk" class="lf"><!--pnid:Ce1h9MBO2OVlB2bx93F9JR-->6/20 前完成</div></div>
+        <div data-page-node-id="uKAeH2QQVVQszeEWFkaYMr" class="link-item"><div data-page-node-id="5mU2tGmlcaYOxG7qxiIP5h" class="ln"><!--pnid:g0qa7QcjlNsrZM0V2r0uJy-->客户 PPAP</div><div data-page-node-id="hOXYHxcJ7uGR3SrYB6YBP6" class="ld"><!--pnid:oyGBZzRogt5D9mY7l85anv-->向主机厂提交 <b data-page-node-id="7u36Y4qoZbB7VcehrCIwwl"><!--pnid:vv8QSmEm8vhdSaiNAUMoKU-->等级 3</b><!--pnid:ZrNKBrxxenmlblNHUQTawd-->（含样品+外观批准）</div><div data-page-node-id="qVY7TGfZK0vwLnJojcIz7O" class="lf"><!--pnid:t5RuhCMOTW2p3posUjdKpS-->7/5 前完成</div></div>
+        <div data-page-node-id="QlZeZPBE13CFHXDciVdvo6" class="link-item"><div data-page-node-id="FD8mSx643C8qRp4Th6vyTp" class="ln"><!--pnid:8VoaJdthPrOiVOMHXXMK6F-->整体风险</div><div data-page-node-id="WjYsBsXq0uTuS3sUMDJ9g4" class="ld"><!--pnid:BHZVo055wEP6CbldnrFxGt-->≥1 维度"严重" · <b data-page-node-id="82Vz2I1huOywiIIY8kwOWG"><!--pnid:QeCOphcwrIfrxMAPddzyVN-->Red 级</b></div><div data-page-node-id="R7ygQcgNQPRtID0E297Xjv" class="lf"><!--pnid:7rRXqNEkr8ZnC0Qzu26yuc-->必须验证 6 项以上 + 客户批准</div></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:cSkuB8Jjtag7jj13R6J9gV--><!-- Step 3 -->
+  <div data-page-node-id="3MfeHrb6ZK8pFgzgw1pXU7" class="dstep">
+    <div data-page-node-id="iNtOkd2agezREPIRJL3IbD" class="dstep-h">
+      <div data-page-node-id="BnKE2ZEgcnTJEweoBRNGjX" class="dstep-n"><!--pnid:QV0rnmpZv1E2VYHYJAfKA5-->3</div>
+      <div data-page-node-id="8WrCf4hQZka2QrHSKlYKBm">
+        <h2 data-page-node-id="VNbLunG8lmFQZp3IMVsKPo"><!--pnid:K1DQGbJwz9gnRMrjkr3raj-->Step 3 · 验证计划（16 项完整验证）</h2>
+        <div data-page-node-id="h7OyqeP0KYMIP6p5TXFerI" class="sd"><!--pnid:dN0pdkQxh3b0H6EKXB7BCd-->按 Red 级要求匹配验证项 · 责任到人 · 里程碑节点</div>
+      </div>
+      <span data-page-node-id="tlbsmOGFCxNkixl2ksNvlQ" class="status"><!--pnid:VnryLflw8psr3XVsoLe9Y4-->✓ 已完成</span>
+    </div>
+    <div data-page-node-id="ghoKVHrJrGBCaKk3i9zxWd" class="dstep-b">
+      <div data-page-node-id="yjDtznVWfT67Xsw9jBl4DL" class="tbl">
+        <table data-page-node-id="2YKTQAPVncpNhMb9Es3IAE">
+          <thead data-page-node-id="F7SoIZmHyB7LxbCokzPz5L"><tr data-page-node-id="hyKRsPoRuhPU4ALeZuu5Sh"><th data-page-node-id="QMnSjV7VSnKAhH59zv9uIN" style="width:3%"><!--pnid:uwtPper8ZuHiFmyLE0Vpil-->#</th><th data-page-node-id="XTFoxYvJiDWab3cOt2b5Xr" style="width:15%"><!--pnid:Nej1uLLkm4gEx3puGcNz9V-->验证项目</th><th data-page-node-id="kiRCUrGMOubS5WxpYVWRT6"><!--pnid:XOh0BxskoV0YuidfcP923Y-->验证内容</th><th data-page-node-id="FlDMsfK8JEAf5EejihxoV6" style="width:15%"><!--pnid:T3K1x4pGeuFcSc4DRQ2jIv-->验收标准</th><th data-page-node-id="GyLFMZr0HGY9dTXSfAlgPa" style="width:10%"><!--pnid:kvmPrOuM8snrCKQoUwuGLH-->责任人</th><th data-page-node-id="FypPBakAf4Y9RwAFymLcpx" style="width:9%"><!--pnid:FmxRrzH6rICeLv5k8x4fwH-->完成日</th></tr></thead>
+          <tbody data-page-node-id="EEekqI2RXPT4oOwNurV7kN">
+            <tr data-page-node-id="URixaLki3BdeQLozT0mL9i"><td data-page-node-id="9ETk5SvNTryYNXCKYbQOhs"><!--pnid:KGTSkdNYoP8vO07ATPvAdq-->1</td><td data-page-node-id="BND5mIfkPAbP4nmKLhb4Ei"><!--pnid:k9NVRp8RcIPfO80OlKw2xL-->材料物性测试</td><td data-page-node-id="oWIcim2i3rk4a0nFrMThKr"><!--pnid:jilFsjWAHKbbX1Y595eMeY-->硬度、拉伸强度、延伸率</td><td data-page-node-id="9SfiD4fiDyRxsfeAJQhII4"><!--pnid:lVkQyHMi0yaPJBOrCSPKlL-->符合规格书</td><td data-page-node-id="58MpxHGfmE5jCykc3jgg1X"><!--pnid:07H4YbqCjtsxbFTovQiL3V-->A 供应商</td><td data-page-node-id="sLW5BK7EHwrXG6F6QZZn3R"><!--pnid:rpBaOnyPn8JjKLYlTnfbf8-->5/15</td></tr>
+            <tr data-page-node-id="LxY07zp2Odu73m67LFXMI1"><td data-page-node-id="xw8vlAS9ldFOgHwqAuYi8Q"><!--pnid:VfWMxNF4iZuvN11y2tPUYF-->2</td><td data-page-node-id="8QuKSkO5pUrtIsPsyOTGGT"><!--pnid:O24cK3gM78WC3PQhNZoeC3-->耐低温性能</td><td data-page-node-id="GQBRw83iLeRO5U9Yu5i8po"><!--pnid:DUXzWugc8b5aH0tcxUGspB-->-40℃×24h 低温弯曲</td><td data-page-node-id="QH7FgwcnhfQNEs0q5NiErd"><!--pnid:WP4F7ft6SAwljaDtWwSgLc-->无裂纹</td><td data-page-node-id="j5WfWlMBgRgsWC48nOMK0c"><!--pnid:pPhYugSgpSxtFymz6MeZA0-->实验室</td><td data-page-node-id="7kX7qKbYUGNepDcZIgdbWc"><!--pnid:zQCd2rZpfs5QcSXvFNJfDv-->5/20</td></tr>
+            <tr data-page-node-id="UKNqjQiAKVnLW3QLyJBiwv"><td data-page-node-id="3qyfeop6IwOctrNnjTdjoy"><!--pnid:FCTBn20By46pGRTKmMdPfO-->3</td><td data-page-node-id="C6n6LqyQR9O5Z97P9LItb7"><!--pnid:W0zmOGYZNVChrkowlIdirf-->耐高温性能</td><td data-page-node-id="U05Jra7bnnUZhicwa6P7H2"><!--pnid:zwZgkVqcbfo2MsGS5N3AT5-->120℃×168h 老化</td><td data-page-node-id="YDkayiH8r89SrqTczZr5nD"><!--pnid:OIBGW593Pj0OWWsJxsSLDQ-->硬度变化 ≤ ±5°</td><td data-page-node-id="9mmULo8K7xdDLpfvy6PAao"><!--pnid:MWcufyKATL5LhIyp4zvZJo-->实验室</td><td data-page-node-id="aYFU0SeWnKsyjKeYCugul6"><!--pnid:M5NQCjwkxwvl2RRKfIgMDZ-->5/20</td></tr>
+            <tr data-page-node-id="JQXcj1Y20jmpRRsS5KboUB"><td data-page-node-id="UXtY8l6gpTFFS5quD3BGa9"><!--pnid:H04X95j6GJY5gMGQBYb4Wq-->4</td><td data-page-node-id="VG1amlvAm9MXTMVWO6uCDJ"><!--pnid:PV9cmUDCvVtUPzIRXQXYSy-->耐臭氧性能</td><td data-page-node-id="LeuhactmQEIQQ7ylPH9Czl"><!--pnid:yjrqVg72h4atNcuUI19PBv-->50pphm×40℃×72h</td><td data-page-node-id="kMsDkwql1PP5fceSRLk0nr"><!--pnid:VhaVnLSmpRgvIpxtL5W7NG-->无龟裂</td><td data-page-node-id="makDZLKspIwbt56V7mD1ds"><!--pnid:z9yi4fwh7iu2llui8KCd0D-->实验室</td><td data-page-node-id="dtqbtbfXHnrXFbHSMif8Vv"><!--pnid:lO0pQPZkJtuagxxLQyRXBS-->5/20</td></tr>
+            <tr data-page-node-id="JKNIrwrRBDzXtJ5RkYGtcL"><td data-page-node-id="EJS3hr8hxlXjAu8ToWEhHI"><!--pnid:zaJw8NkD3Fqi3Eo12cFYdH-->5</td><td data-page-node-id="GBcIrFS6h2MqjOQSnTWd1m"><!--pnid:LGhP5u9YRciflUPkpvNlgn-->压缩永久变形</td><td data-page-node-id="hSJWyemmqwIzdyXnIPKeaI"><!--pnid:k64wbXGw6j152C6aGRS8Qn-->100℃×70h · 压缩 25%</td><td data-page-node-id="MNCIaG8IOyOkc3p14In48U"><!--pnid:TXIoIWdvQj6Ul2OAUZhrra-->≤ 25%</td><td data-page-node-id="OiAaj0wjRgUQe4FDechOOk"><!--pnid:FWi0MuypDHVqhRJlgzTcbZ-->实验室</td><td data-page-node-id="MVoUl5f0Skd7Jlqa4KLzDo"><!--pnid:2p3jT2m6VySQOzAJXP6dXQ-->5/25</td></tr>
+            <tr data-page-node-id="xQc3YQk91hGImWA6AAgOYL"><td data-page-node-id="QoQ8LNXoJaY1fFpr1GPB34"><!--pnid:3dKGQk4OXWDdwjrwkBbvTe-->6</td><td data-page-node-id="3tBH4v8Dm56twN9XVXtuaO"><!--pnid:ztAmNWefmxe1YenF70tWyN-->耐冷却液</td><td data-page-node-id="NenJPmVUYFt6WCmdxyILIS"><!--pnid:wv8anXigt2Ht6d8MZKjZcO-->105℃×168h 浸泡</td><td data-page-node-id="bueEwqE3kBiOhfPBwd5lMP"><!--pnid:j6elZbVDWGsWZ1UugbTI2p-->体积变化 ≤ 5%</td><td data-page-node-id="ya91oHHjMXnMSyQGNZLJ8l"><!--pnid:j9sXyDt2Pj3AvaJvca4pz7-->实验室</td><td data-page-node-id="FQYQwS86UUWuNjJ7Xenu0k"><!--pnid:pbrt3ZQpf89pOHgzgJf3ZB-->5/25</td></tr>
+            <tr data-page-node-id="3a1xQWEmddZLaWHMqbFVRi"><td data-page-node-id="OdyUlHO3TU4sq8Mpk4d3Zi"><!--pnid:wgCjPQpZZ4a3FDCNXuZEUh-->7</td><td data-page-node-id="fE8J82xdjnQpw1yRlz78wg"><!--pnid:9zUzLsRhnMJ7US2Ko7Zvr7-->密封性能</td><td data-page-node-id="raQJQ8UCWAzIMzz0q3zBst"><!--pnid:QiuGpixvfOzobaQ1eQ0Yrc-->模拟发动机工况压接</td><td data-page-node-id="A7WJYZNIKMcWV21qjIpjOr"><!--pnid:FJpI0WoqDjqUTKBWEYZCHt-->无泄漏</td><td data-page-node-id="Y4shQnpoXGyaZc0feh1YmP"><!--pnid:qI7rG76lPWwcJBWwV7EAh7-->实验室</td><td data-page-node-id="oqgo4qRuhIhMc0gCFKmPPI"><!--pnid:6JjTvc0e42x1mP3uMZwkSv-->6/5</td></tr>
+            <tr data-page-node-id="0BHTUyBf1KE2x380jxtQlu"><td data-page-node-id="6JSmu3p5IO2woaQxveRmhY"><!--pnid:q3bsfYm0SM809IjbthDHDj-->8</td><td data-page-node-id="fVMPENs6lHHnUR3LtM3mE5"><!--pnid:JXbDb8dIEJqprZvOQKozKr-->寿命试验</td><td data-page-node-id="xZ1V0TRy7dto0oDtMazVGG"><!--pnid:twXQ8RMR06J93XSH9OR6UD-->温度循环 500 次</td><td data-page-node-id="GzM6yhDUEWWJmbZVUrNQ93"><!--pnid:vJ9Cv24xnZnLddy99K3qUh-->功能正常</td><td data-page-node-id="wiu4dVTY9n4d4ojZR7MWBN"><!--pnid:tjs75zj1KkUUjxWNwgLiCN-->实验室</td><td data-page-node-id="0b7WKfaghHXIO4egYXHTDD"><!--pnid:tmHfI4Xi2sSWZHJELlRa6G-->6/15</td></tr>
+            <tr data-page-node-id="dyR0E31ulxgK193c66psNv"><td data-page-node-id="dABs4KOJl2snVRbweJmtse"><!--pnid:OssbhZijhr15CFI9fO94ZQ-->9</td><td data-page-node-id="AQH8yqONysMavCYt6IB7X5"><!--pnid:XQIxrrabJieyA8aq6ru6Bp-->工艺验证</td><td data-page-node-id="XpoqnKvB5famiTVZgdM8y5"><!--pnid:DlmpcReSc14sVOoMf0DDC1-->批量试生产 50 件</td><td data-page-node-id="lD74gwSU1R1RjuCBtkHnQM"><!--pnid:N4vbeWKEaCQssOO1hLPcd4-->良率 ≥ 99%</td><td data-page-node-id="bxHqRK2UFKimD6sjOlZVIg"><!--pnid:Jso3RTAIz97ALYL7KYGfkt-->生产部</td><td data-page-node-id="8H7fZxUmuvQVot38SVwIWn"><!--pnid:4eHH246oSMBe2oQCKqQRqM-->6/10</td></tr>
+            <tr data-page-node-id="w4wpcCmHiWrPLn1cQK3HbI"><td data-page-node-id="tAN9x5HQm0qjvv8PhUnEqb"><!--pnid:4s0UVyYmrwThB6l1SufaFN-->10</td><td data-page-node-id="w5IcMYNJ02BH0nqHeLsAOO"><!--pnid:6RDz5SC5hdw23n0s37P0Qh-->压缩力验证</td><td data-page-node-id="MOXyrgDseyw9nK1Qm5Z2NT"><!--pnid:9jfwDlrW5t40rhzi1ClU6w-->沟槽配合验证</td><td data-page-node-id="wc9gjSKhHwEt20zt0UtDvO"><!--pnid:UulJ5xmKmF2fyUQXaLNoAN-->压缩率 15-25%</td><td data-page-node-id="oG00bMHL3Kxq5P7JaIEYo8"><!--pnid:aQgeBDxe9p0HloGL0Hy5A9-->工艺部</td><td data-page-node-id="q50bltrPqjd1CwCZoxoXBv"><!--pnid:zfhPTUnKwlhyjEu49nmCXe-->6/5</td></tr>
+            <tr data-page-node-id="AFsvC76iundZA8ptP9Sxl8"><td data-page-node-id="r7GHiF6KuXDT4KhzccsYSs"><!--pnid:HwDjBVz9RjntH9s4MF9NQI-->11</td><td data-page-node-id="T91Az113JoyBpqdPB1U1gp"><!--pnid:4YM4gnNh46FtqFOdybu3KO-->DFMEA 评估</td><td data-page-node-id="OnwH7Sy7M5x6VEpIBDSsdO"><!--pnid:eZDQR0ZMyNpzq6Mr8Ctbm0-->材料变更影响评估</td><td data-page-node-id="dTvd13O7JnLzwpknCmZr03"><!--pnid:6R2208ntPcLAUKbNT0547E-->风险可接受</td><td data-page-node-id="OdVR2JR9jZY7z05VLbXPHo"><!--pnid:HFfQpD15AwxOtFdd4VxSmZ-->周 QE</td><td data-page-node-id="4g00unQ1dQPOkWXqTVlzMb"><!--pnid:Ruabnaw4PpDDemKzcTrpCW-->6/5</td></tr>
+            <tr data-page-node-id="VS7rnBW7YXXBguRFAJQ8fX"><td data-page-node-id="35RBhjBbnaJ0MAKNLuZsIQ"><!--pnid:1Mbqk05OBPMKj9fVLVO8or-->12</td><td data-page-node-id="cd1Khvjs7SoJPBzx25fYD9"><!--pnid:krugMlnlm7iK6wDkqxN9iJ-->PFMEA 更新</td><td data-page-node-id="QwalgJ7wmL1JLivC5D3VGx"><!--pnid:u5ug5Bk0OBZemqqB8PYXIa-->工艺 FMEA 更新</td><td data-page-node-id="9Fkq5KW3gJTnx8a97WCnoC"><!--pnid:HsuTnuBcrneEmS6KDEjlGn-->无 RPN ≥ 60 项</td><td data-page-node-id="RNkjsfyLH5cB6phaqmezDq"><!--pnid:fAWJXeCVE50xhyb2peDwhI-->周 QE</td><td data-page-node-id="VkQjR5FyR0eIshNkCkvOD1"><!--pnid:B9AFJdQpGcpwD9HVRultMJ-->6/10</td></tr>
+            <tr data-page-node-id="qSWyc2xoKiwK34VIokDIUI"><td data-page-node-id="kYg13ZCKAI13pxfrd2kkgh"><!--pnid:EzT2h9DfVTXUVZI9UCwTiX-->13</td><td data-page-node-id="60UkFJrwUib2yxs0pmgYXt"><!--pnid:JGCYBlWINdHFhYuctRAFpj-->CP 更新</td><td data-page-node-id="hh4yMQnArA9UptfQUSuy7n"><!--pnid:h6aXug2SiguQvcw9ktHg2f-->控制计划</td><td data-page-node-id="DSAf5agp8Wu5tB6oAJSNKy"><!--pnid:xcY5hmtVLhpxzYAQicptpQ-->更新完成</td><td data-page-node-id="A7NGUKTrLAw8Yk0w7nxOqs"><!--pnid:xG5RwJ2hvWaIimbTmOLfZi-->周 QE</td><td data-page-node-id="035bCqpqDORBrni83mKztn"><!--pnid:EVVof2hXUlv0s5OoKq53m1-->6/12</td></tr>
+            <tr data-page-node-id="3CQovBMjRi5QwoYI9uCcCr"><td data-page-node-id="isp3c9ZqKPLMzQTdKskDcc"><!--pnid:IqB6nYPquTY5ERp3cxVBvC-->14</td><td data-page-node-id="vRa5tJeA0Ha9mAChTLt50u"><!--pnid:4cqfdYGnCmUXVIoolaQR4O-->SIP 确认</td><td data-page-node-id="5B9HaUNbxftIH1ymUvAriV"><!--pnid:v5TifRc56QFcKkAn8Ms9F4-->作业指导书确认</td><td data-page-node-id="rYtiITboXq2Iw6EYmY55ay"><!--pnid:1RPktlDIOa03siA446K4wG-->无需更新</td><td data-page-node-id="8ANudGtzSHswYm8C8GzhdJ"><!--pnid:T48pz6BQRud6rZHOkqT7vh-->工艺部</td><td data-page-node-id="AuDZ9VAnlBoO79pmIdE0AF"><!--pnid:Tsz9i8PBZ84kKU8L0coR4b-->6/5</td></tr>
+            <tr data-page-node-id="DwQLX0fElLJwU4Ftds8u3Y"><td data-page-node-id="tasqRTFVJnNzOhykCvxKXd"><!--pnid:dW8uUxe0AQTIQQIlNX4EDJ-->15</td><td data-page-node-id="YtW3eFIL2XmzqouQNdFe0o"><!--pnid:ejyYMu2Kl9yUKxN0S72EvD-->供应商 PPAP</td><td data-page-node-id="XpG7GtzmZybHEydnh4Z0mn"><!--pnid:icbtIhbNenwEtHAwxrjJvL-->A 供应商材料 PPAP</td><td data-page-node-id="waZPQl3TphYYlB2GmoVFpY"><!--pnid:IdT16nieosQAdIpqO14Vmc-->客户批准</td><td data-page-node-id="t55fHx1zA4ItItZom86raJ"><!--pnid:fz55rWPwNLi0ELSfDAD8Cz-->采购</td><td data-page-node-id="sr1Yll5CWM5lkvmHHKMEhu"><!--pnid:PmcXKWPtW4jRFkvtZgp0FS-->6/20</td></tr>
+            <tr data-page-node-id="RwVHyUcMIP9AkWlk31d0Vk"><td data-page-node-id="5tMTFospo9UxiNSJR7vgkZ"><!--pnid:rr1uTIOYP8sRIcVuGARMaE-->16</td><td data-page-node-id="WxGPJfb4IF1jxENuqyh7Vk"><b data-page-node-id="7k2wfe1CgzZxH3YJbv3uQ1"><!--pnid:xDGiKRw2uA1yfNA2CpIi6W-->客户 PPAP 等级 3</b></td><td data-page-node-id="sYRcAljRZ7qCSBrLPS1PA8"><!--pnid:uVWe9hhEAtUucO2ctC79VN-->提交主机厂 PPAP</td><td data-page-node-id="oQaRNyx77a73O5MrAhnNbK"><!--pnid:D9yab1WE1gOiq7KXOzxrkH-->客户批准</td><td data-page-node-id="Jf8lbLI0YgXZDegsPShvZh"><!--pnid:vdXL9PT7qWbSBHHMCVEHxq-->周 QE</td><td data-page-node-id="6BfrfpBCJFAX9RcY2TPNNm"><!--pnid:Qe036jTKh56yPtwsVVrpe8-->7/5</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 data-page-node-id="O1wtRnXxRAUIlwgHteHSeO"><!--pnid:KGmGYqoBe5e72q4TGIg8BZ-->里程碑节点（含库存消化计划）</h3>
+      <div data-page-node-id="6qOoMP8nJlLckgI7pBaAT4" class="ms">
+        <div data-page-node-id="QIcdiFiVRTs7xks90FJEPc" class="ms-i"><b data-page-node-id="Fd9FSu9yUogbCULou1lqI7"><!--pnid:I239seBPtn9PTQvPY2TN1Q-->ECN 批准</b><div data-page-node-id="3uOdS6Jh0Yv9OSqg3rdVtx" class="d"><!--pnid:SuNDPYqbhj822dZBtODLwO-->2024-05-03（提前 2 天）</div></div>
+        <div data-page-node-id="EY0xEx6BWcW1YQsZa5sSvv" class="ms-i"><b data-page-node-id="KKdGbxV6xzoxJYqwSBoI0D"><!--pnid:a1CTeLRBVbat8ebaT6IX1c-->材料样品到货</b><div data-page-node-id="e16sVm7PLr41SeYspgXmex" class="d"><!--pnid:DdBJnjTumFIZdWUfgc9T9E-->2024-05-14</div></div>
+        <div data-page-node-id="9aWstrdh9MZh8L3ZXlbhYw" class="ms-i"><b data-page-node-id="RAhIKTESGpVjdcaUTqZEtJ"><!--pnid:9Bbeph41rdUd3XXHUvOaTa-->材料验证完成</b><div data-page-node-id="jTYjiXk3lxqbdiaZZV3Bjb" class="d"><!--pnid:pZg0JTMg4d27zYme5AKIBK-->2024-05-25</div></div>
+        <div data-page-node-id="6qu7JR2AjJI8dfAGb2RT6t" class="ms-i"><b data-page-node-id="G4RkGSfFg0fHAl9P65AXKP"><!--pnid:HTGT2XsNHPYafmaC540nDK-->性能验证完成</b><div data-page-node-id="5kUCgRQ8ifVEKBl7zkTVwI" class="d"><!--pnid:sPy744mmzTzbvY6owTyZYl-->2024-06-16</div></div>
+        <div data-page-node-id="8gXzcDnd71OiBOPi85TwjM" class="ms-i"><b data-page-node-id="VKFAhGEox5RMr7j6XtcWrO"><!--pnid:OvEEmxmq0NA1wluY5uuqrD-->工艺验证完成</b><div data-page-node-id="Gyri2M9GF6ZPApdEdouZaR" class="d"><!--pnid:Ad5LylJAowe7PKFnrnGqxX-->2024-06-12（良率 99.2%）</div></div>
+        <div data-page-node-id="8IIavvYSLmnb6TTM6jH7NR" class="ms-i"><b data-page-node-id="N5O8UXIjxHd3i8CbELpEZn"><!--pnid:WJF3YZ5FEF2QpFOX9om7JG-->供应商 PPAP 通过</b><div data-page-node-id="KLRCqlHrzGjBCOQOG6aVqF" class="d"><!--pnid:qDTZoYzLWPmFgnbl4B8r8s-->2024-06-18</div></div>
+        <div data-page-node-id="Lo2e8hvnliwMQ4sq3ZfuYF" class="ms-i"><b data-page-node-id="247xADMx4FDEcawRdJuTL6"><!--pnid:eWuftsr5lI19KIlG5tOVE1-->客户 PPAP 批准</b><div data-page-node-id="L8haep70kPyCPiiClNSu1Y" class="d"><!--pnid:76FsWzXFWMqh69tHLlNAqu-->2024-07-03（等级 3）</div></div>
+        <div data-page-node-id="Ju3rOyY5f3U3Z7DsxpmmzR" class="ms-i"><b data-page-node-id="A8bPYXf9uO1nzNY3SfX1oB"><!--pnid:Bfd6zfXjN4GSSylGKyjQ5s-->量产切换</b><div data-page-node-id="RgomSaIG5AEEXYyPfnobB3" class="d"><!--pnid:n6DGRAD2bO2hN1f5JNWROB-->2024-07-15 · NBR 5000 件消化完毕</div></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:AZ8c0wYQeLV40V27tzmmAy--><!-- Step 4 -->
+  <div data-page-node-id="BJWYTS2zC26wEvDKuyGpId" class="dstep">
+    <div data-page-node-id="zHSg1BSPAuwUsrzfVjiYAX" class="dstep-h">
+      <div data-page-node-id="U3MITHapFbR9Svx3IBBuUw" class="dstep-n"><!--pnid:xwF8z9WJ7T5y5WDbo7grgO-->4</div>
+      <div data-page-node-id="3YoH1HijMQaJFODi2MQbBB">
+        <h2 data-page-node-id="hU2On6wFqLT4viUZHNUzC9"><!--pnid:uFlKUpvDMRDiGaKKIb3MCb-->Step 4 · 6 级审批流转</h2>
+        <div data-page-node-id="qtbWiq7o7uzxf9VQUV8pq1" class="sd"><!--pnid:zCQj7U49Xq5Mk54o3jLL4c-->Red 级重大变更审批路径 · L1-L6 · 含客户批准</div>
+      </div>
+      <span data-page-node-id="2vdjl2SyDk9rAen4GhOFCX" class="status"><!--pnid:07t6QzEylmUyYggf6ey93K-->✓ 已完成</span>
+    </div>
+    <div data-page-node-id="LyFdauM26lVgGfz6SarMhg" class="dstep-b">
+      <div data-page-node-id="kUJQGALIDFHwJfxNPLVYkd" class="apr">
+        <div data-page-node-id="OixhJhPLmcIwfuCB6Jbdjv" class="apr-r head"><div data-page-node-id="UxjBd4jzOFaqhkS4hmKLkZ"><!--pnid:Y1M7lNA5GlrpleXHOD6dWU-->节点</div><div data-page-node-id="Dd8bFQZ5n0Yxc3ItU54aJX"><!--pnid:W5C3sAlJ0ov3jKrDY3W0GE-->审批角色</div><div data-page-node-id="ok0rDbRmlREjashUD6qHTV"><!--pnid:MpXZkYsYC8jArfP9R6nuBZ-->审批人</div><div data-page-node-id="fzo3D1fTR5tmOsTccQZjTp"><!--pnid:S3NAcbRjatyuTaG2RAoXKD-->审批意见</div><div data-page-node-id="GUYMQHrivbtqyOZREdRTt2"><!--pnid:DC5pQhXHE4rPJeafzRvw5O-->时限</div><div data-page-node-id="zkZwVR3nZVpxkpVYQ7pSjk"><!--pnid:nTygubl3m4uzutNGJeLNxB-->状态</div></div>
+        <div data-page-node-id="gYryqVD4wIeNuuEBPotxUS" class="apr-r"><div data-page-node-id="Iuf1jhqRgSsOpwD5gdwv4c"><span data-page-node-id="aIwfM3daBsjzFNRE3KHsTy" class="lv-tag"><!--pnid:5JPTopsnNVl7lHZvkoBpxy-->L1</span></div><div data-page-node-id="Q5KaGqFsQIcAt2uxzi0Cqp"><!--pnid:lpizpRkJZbWp9Xb0M0LWMo-->研发部经理</div><div data-page-node-id="zkvayZcFMTmLsLVHNLX1Ae"><!--pnid:ICDu02S53TkS8GNRxlbXIU-->刘经理</div><div data-page-node-id="scBuXGwjy6cr4b1ZuApjzT"><!--pnid:tZHUOtTk1Qvln71fgmYFOB-->同意变更，解决低温问题</div><div data-page-node-id="HSGBlvZXeyokn8gR9BbHlV"><!--pnid:4bR7lxCuvU7kJX95fDrj0Q-->2 工作日</div><div data-page-node-id="thNER8OByKn57P6gTLbTEk" class="ok"><!--pnid:lvFwqH3cqEkC5qqf19cEFM-->✓ 4/22</div></div>
+        <div data-page-node-id="CxHksIHk2Hk5OA242V6TM5" class="apr-r"><div data-page-node-id="bvDaR9pc0Rx0vTrcVdUzE8"><span data-page-node-id="ZtqrhxVm9rQk00E1qVsatU" class="lv-tag"><!--pnid:NQZ9FFeT9sRKkbvGBGmgBb-->L2</span></div><div data-page-node-id="3Fv6DOtFHHo7i6CucEqAfp"><!--pnid:DiQNd1fvMDWGrtYKZhcxyU-->QE 主管</div><div data-page-node-id="TsaL4RbiUXeZGewA0JhGsC"><!--pnid:xMn6QYBQGblwlBTSN7C9t3-->周 QE</div><div data-page-node-id="xNIziggZKRyh2qQwMduJOT"><!--pnid:iY2BlV7X2t0WLeOIysVNkl-->同意验证计划完整</div><div data-page-node-id="kJPk5raJdXBAP0AS4ayY6m"><!--pnid:iXby9PHAyBIFUQGBa5bBeA-->2 工作日</div><div data-page-node-id="8s9zk7jhzjcHAnKrj3LD9f" class="ok"><!--pnid:AdwTKhn7grwM28AYmqHw9d-->✓ 4/23</div></div>
+        <div data-page-node-id="iC0SQhSBGtZxSWrsek0ENY" class="apr-r"><div data-page-node-id="NB6T1OQX4vA9BDQjiAMoHr"><span data-page-node-id="v35Cz5QuCHB21qBBnEBYfH" class="lv-tag"><!--pnid:O4qUqquAqqDA2WR9UmcvMG-->L3</span></div><div data-page-node-id="OVzb1jbEumDNvJlyaY2Wmt"><!--pnid:UaSzU882H05BuIF06Sp8tJ-->质量经理</div><div data-page-node-id="fQpU0IxPbscJjwUU01DMwE"><!--pnid:ZEslwGCKNCj3jaGKXDbKKm-->吴 QM</div><div data-page-node-id="ksipnwr1TPY6Td1BbVTzjs"><!--pnid:MbK0C2SBM9OprYsEJwmAgF-->同意，材料验证重点关注</div><div data-page-node-id="NgBUarqEPjqBllDNwI0d7a"><!--pnid:QirlHciU7MsTHJXKELGnZ2-->2 工作日</div><div data-page-node-id="hCvKeqBE78k9TO3uOJsiwa" class="ok"><!--pnid:N3dTAuJ3cnpTStP8MXYqQF-->✓ 4/25</div></div>
+        <div data-page-node-id="6dXr2LaA7fRDvuwq79Isc4" class="apr-r"><div data-page-node-id="ijXvs38Svt0mvIvxU6Yhju"><span data-page-node-id="A3QjKR9teTUjczfH3UcJ2J" class="lv-tag"><!--pnid:FRVmrzCgXPzWWWqEwjh8SY-->L4</span></div><div data-page-node-id="Jf22e54GaJ9qT9JlhH71rK"><!--pnid:Yrjg1uo5OS0yNWftCo3vEO-->技术总监</div><div data-page-node-id="jhszWvAm9ZULNe34WoNV1E"><!--pnid:l24Nyzqsd2uzGBtl5FBjmu-->郑总</div><div data-page-node-id="tWOQfszmuSBXmcXnOqvN5v"><!--pnid:4tNvwDu7MfLDCSJRYQjOhU-->同意，建议同步更新 FMEA</div><div data-page-node-id="XM1ngGcQc68JJE7DtynTmy"><!--pnid:7HamDHKnOehk5OIQibtDAk-->3 工作日</div><div data-page-node-id="40MNnp0XryVgEgDW9EkdfS" class="ok"><!--pnid:HJjCDyjWc0aODnb6EUellw-->✓ 4/28</div></div>
+        <div data-page-node-id="TZGPMjUDfqSGczqz1lJtlF" class="apr-r"><div data-page-node-id="NXbTmDO2OF2Tw7ROSjsNyw"><span data-page-node-id="JLN7R8BD59GRgkPug3HxcR" class="lv-tag red"><!--pnid:M6SqeWBcuhi8gSrDE5jxPF-->L5</span></div><div data-page-node-id="eS5cvRPrbrtAsIVXF1sePF"><!--pnid:P5mqpUh6LE1Z0prlWWmlgK-->客户批准</div><div data-page-node-id="KLCBlRE60jjWWuBWmNTboi"><!--pnid:OftZddPaQLQgMSpIfibfUw-->客户质量</div><div data-page-node-id="jmtZNfm7Q4jNhwI2NWbJUr"><!--pnid:GFJAJ6GCL9PsD7DK9ow9UE-->同意材料变更，按 PPAP 执行</div><div data-page-node-id="Jy9BpNC4sOzcDA4xKSIFse"><!--pnid:rTSPowKaXouLMq38GroZwc-->5 工作日</div><div data-page-node-id="i5q1udxOqAgB5SZaJbiZ6T" class="ok"><!--pnid:u2wqFR2AX4OFvKLf8PXUcy-->✓ 6/10</div></div>
+        <div data-page-node-id="uWwGIjnzraq7Ejn9pgvAx8" class="apr-r"><div data-page-node-id="yikXT9RSOz3iEuDP5Ics8t"><span data-page-node-id="Fr5n8133dbD6KevOCsFkOZ" class="lv-tag"><!--pnid:wCNm9WeSUg4G6wJRMU01Az-->L6</span></div><div data-page-node-id="B8k8JKeMvq7EYOPLCG2k9Y"><!--pnid:24OB85fJZQYjJcsJzszZ4M-->总经理</div><div data-page-node-id="W9czVHxhuLy99w1KkodvnZ"><!--pnid:zSUpRm2wCfmZIHxOG7eTjM-->马总</div><div data-page-node-id="2GtZKcJ5C2xtsEugORRZKu"><!--pnid:raAxBcsINSbZkyUn5KzMhy-->批准</div><div data-page-node-id="wSchHyf43G3XeFnSx0mz4U"><!--pnid:qMZt39Qbz3iF0aCTvykank-->2 工作日</div><div data-page-node-id="Tn1lYtsdm9jg1vVcoL5P62" class="ok"><!--pnid:V849dLxWiXcCo5VVXdyfWB-->✓ 6/12</div></div>
+      </div>
+      <p data-page-node-id="I29ZfcSNLizm6S87o9C2kD" class="think"><b data-page-node-id="1JDIyy6OFrg2el1m2GGGae"><!--pnid:11yFQFfqMWLvK2oe5t35D5-->总审批时长</b><!--pnid:qoNkdmM7qwGdrsgTIp14de-->：38 个工作日（含客户批准周期 5 周）· <b data-page-node-id="IIaxxz6k8w0KsQJkUdCiYB"><!--pnid:E5GbiCMDd5iQJyobNO8rYO-->关键路径</b><!--pnid:XssC0Jz3cixEPZpgcS5NuZ-->：L5 客户批准是瓶颈，Red 级变更必须预留客户 PPAP 审批时间。</p>
+    </div>
+  </div>
+
+
+  <!--pnid:EFc2DRxigHfCvf3dXWQQNL--><!-- Step 5 -->
+  <div data-page-node-id="6ljz2KnK2eME2Z0VEeiFp4" class="dstep">
+    <div data-page-node-id="twiaBupazxode50WI1KIJB" class="dstep-h">
+      <div data-page-node-id="vcJW2pLGdernDDfFDCQIqZ" class="dstep-n"><!--pnid:cgsfoJMe28jV4SK8OGKH7d-->5</div>
+      <div data-page-node-id="z6Tnflyn63bib7qLt0y3tA">
+        <h2 data-page-node-id="jxg0wif4xGkXtHg2bxZbNS"><!--pnid:ZHKrsufQsg4Q3TlDdW6GRR-->Step 5 · 实施跟踪 · 文件更新 · 问题闭环</h2>
+        <div data-page-node-id="ZE170kAqCjncdNCC9KJCy1" class="sd"><!--pnid:4SvWkeVum8Xjd83kgd1YHt-->进度看板 + 问题记录 + 文件更新追踪表</div>
+      </div>
+      <span data-page-node-id="IAgFBdT0VkhGmpiJBboUzp" class="status"><!--pnid:KkeXEQM3IF9g8LUAEq6iTI-->✓ 已完成</span>
+    </div>
+    <div data-page-node-id="SBwPpeOWOUEL6kpZMvN8nz" class="dstep-b">
+      <h3 data-page-node-id="Oo46wmD2UsMZNAoqOWcHOS"><!--pnid:2YjSb8EvamYZQ7B4ZRxiC2-->实施问题记录</h3>
+      <div data-page-node-id="td6REmcIdZxynNZDDhM1Gm" class="tbl">
+        <table data-page-node-id="sfn89vRR7k4vOmiSFcwSKV">
+          <thead data-page-node-id="9Vautv4i36DekLYGdM5O3m"><tr data-page-node-id="gF2vySGGGIEm0nZDh9ISTe"><th data-page-node-id="s74dlrEiGGAduJFI8mbYSZ"><!--pnid:ZFwURqHKvJF4eG36P51q9z-->日期</th><th data-page-node-id="cpiLPwrWCgfCyU0ekv7P1X"><!--pnid:YIqX8D5vANWreVcoKO87FB-->问题描述</th><th data-page-node-id="jqwKTfCj2D0VoXffnswhjq"><!--pnid:U65yq6tNxVnOFSVBCkvAYw-->根本原因</th><th data-page-node-id="f8DCmMWmQlDVYo39QD94WD"><!--pnid:c3UoEx8wFhgTF8YkMwS81Z-->纠正措施</th><th data-page-node-id="Bco4rbUFxm668sy8Rli8gB"><!--pnid:ofSBr23PtJrYMnQZHw6hpj-->验证结果</th><th data-page-node-id="KLuS6jmiLKVcyematlEk5Y"><!--pnid:g51CBP22bwr7phgrWbkQ5G-->关闭日期</th></tr></thead>
+          <tbody data-page-node-id="njsF3yZURZAi1M16Hev35S">
+            <tr data-page-node-id="tKTpeIy6N4Jg8Jqi6ywNMl"><td data-page-node-id="Lxj97EBjTi4oKMX1jMASYd"><!--pnid:XgichD3pg1vmQ7GBbQHMPH-->5/21</td><td data-page-node-id="lHIRYZuY31UrZF8uUhJyaA"><!--pnid:6opHfBgGs8rKlTsmQgt8GQ-->首批样品硬度偏高（75°）</td><td data-page-node-id="sxSxlo5ZreBYQcg3LX3Ery"><!--pnid:sZy2VxeKLXt4gy34XN1Fze-->硫化剂配比偏差</td><td data-page-node-id="QtykejgAT2YDC7gsTogTIe"><!--pnid:vGFY5CLsV9yTzxTmhJBltj-->调整硫化剂 -0.5%</td><td data-page-node-id="IqVf0VfuX36TpFvwEKpXQX"><!--pnid:cpLDAOBWdrcXAgsq7KlIPT-->复检 72°（合格）</td><td data-page-node-id="a4gBA1NF5Hgk2wHjJXX5Ur"><!--pnid:Fbre87axUsmsOs5fihIdS2-->5/21（当日闭环）</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 data-page-node-id="UUKYJvW5Z1KIBSCC3iLfWX"><!--pnid:n1lDRH3pUVDHrHKr33pOfk-->文件更新追踪（7 份文件）</h3>
+      <div data-page-node-id="zHeVA7hotb1IEXgfTqU2oe" class="tbl">
+        <table data-page-node-id="rF2PfI7863pIAXgIspWIMm">
+          <thead data-page-node-id="qTk3Mcy5Viq7S9a0rGEaTm"><tr data-page-node-id="83921Ep9SWT8mnTeF2w0PD"><th data-page-node-id="0rzm1vW3uBg9pfB2Msfz7t"><!--pnid:M9ivXdICCZ8jUgD9RWIRVr-->文件名称</th><th data-page-node-id="bUx6WToOn5wSwpJghgwE8j"><!--pnid:BDkQdgLZc9PehE0Ly07UtV-->版本更新</th><th data-page-node-id="pI4Rv59u1JzIeNrWTo7av6"><!--pnid:QDVfiwOt3IraeVH0kyLlDF-->更新人</th><th data-page-node-id="nv9d1G4ExVSRpw6X2HtQuV"><!--pnid:nL7qhmVD3KrGiDSQFMquaC-->更新日期</th><th data-page-node-id="tx9G2iSMdIBtYVbeP8mYIj"><!--pnid:vfIdcv5KtQwkWv7AqwbfP8-->归档位置</th></tr></thead>
+          <tbody data-page-node-id="3e2dsuu6pnTLqMwuQXRt8E">
+            <tr data-page-node-id="vjh18k5wz5dZ0JCScMwBs6"><td data-page-node-id="D8RZknXgTvA2CI5I5cPOoE"><!--pnid:VIEJpcw7hovXCDxN4YOGuq-->产品规格书</td><td data-page-node-id="xDYmPp3oMze4azEVzVuaiS"><!--pnid:1uqRKrwaOT75F6opnIREVO-->V1.0 → V2.0</td><td data-page-node-id="PlMZWlB4VqkRGRJSEhQphq"><!--pnid:SZ0Qwq9Oe3jSE8Qzu1CdqJ-->赵工</td><td data-page-node-id="Ur0nIZLssqe7ppTX4ozSHm"><!--pnid:b7KTXuCq1LdoQzXCitBTw1-->5/15</td><td data-page-node-id="YSYIDaelSwMn3wp6J0C0Sf"><!--pnid:0Ou101WoTyQ3R0lbCEhyK2-->PDM</td></tr>
+            <tr data-page-node-id="4AhmAUGKQlGbClthyGpZ9M"><td data-page-node-id="i7Ys10NYnm5HyevGM4YhRa"><!--pnid:JZWcBDmiZCsCaMW21moNPf-->材料规格书</td><td data-page-node-id="9AkXbMdw8FO3XsBjHO83B2"><!--pnid:aahUDY3sZ2kiCpvLInViim-->V1.0 → V2.0</td><td data-page-node-id="ANdVBc9uPzEqOORBKKnhbU"><!--pnid:OL0AgUOSKKCvHCsNhtzAbD-->赵工</td><td data-page-node-id="JuRhO2qc2vsvP1SyEePB7S"><!--pnid:eErkqnFcGN9lcsXGc0PnXx-->5/15</td><td data-page-node-id="sBghh4JsxbDn8raszZDzHe"><!--pnid:zoryAb5wv59g8E503jplew-->PDM</td></tr>
+            <tr data-page-node-id="aoglTAqJRq9PMLRtKgZl2U"><td data-page-node-id="xAL3il7pSYmhifHhq9fykQ"><!--pnid:tiUKeXk9Sg9VcSFVkHtSJC-->DFMEA</td><td data-page-node-id="ywtt8feS26vYcqD5UAxgRt"><!--pnid:qKYomUDIkGfNtNNqFc8n2a-->V1.0 → V2.0</td><td data-page-node-id="kivUJqxC2mLoh4OmaKdXuH"><!--pnid:fAx6EgkZnCa0Pjd40gIQOs-->周 QE</td><td data-page-node-id="iQY4HR5AEOYqdadYfz9TbF"><!--pnid:M3ehAkE3QgwVOCAlSsL8ht-->6/5</td><td data-page-node-id="qdOb1prHButk0ky48BOkt8"><!--pnid:Kqyku1x1Bwz7LxeFC9B5yi-->PDM</td></tr>
+            <tr data-page-node-id="tVdgwbLQPqBlmnoLxecWFL"><td data-page-node-id="hMJH0DHOZlwSjxVpY0QrRT"><!--pnid:p4fnTlApoO2j2sX17ltTNj-->PFMEA</td><td data-page-node-id="oGpFmlvKfI4UOL9MHjIXrn"><!--pnid:pij4bQIHs7AI5XGB33MXOu-->V1.0 → V2.0</td><td data-page-node-id="eq3k4KJbYzvgMowdaZHZjA"><!--pnid:L1Gv06BV9maH8pDQLW7s7T-->周 QE</td><td data-page-node-id="68LPbAb1D2hOmScngLcW3f"><!--pnid:qWtxGuBA3SKm1QX1RMpsXl-->6/10</td><td data-page-node-id="AAcd1jFtZGQbGRObThijXA"><!--pnid:pOHNE6fxQZiUFqyNw5XRDk-->PDM</td></tr>
+            <tr data-page-node-id="z9KdWXngLDN6CQPtlz7e6F"><td data-page-node-id="nw3q7JVwTfPg9lqXrujfOU"><!--pnid:oltsictjpVeJeNL74PhDZo-->控制计划 CP</td><td data-page-node-id="jhy5N7XB7qKgo6FmyfAltJ"><!--pnid:mgwGlTdIo2bsbaLsSCWwKo-->V1.0 → V2.0</td><td data-page-node-id="OxMZ3s3flVn54SBGcX7YDO"><!--pnid:IeM7Z0RoaZBsKoV2EQTxNj-->周 QE</td><td data-page-node-id="9YOpimYBGoiJEu8ez3rQQU"><!--pnid:EJ6oEFv9q7s59auzIwJgMC-->6/12</td><td data-page-node-id="AF7f6ojVKjFWn8vePbRImY"><!--pnid:SfZnPzVOXKzClMsbsqLq7O-->PDM</td></tr>
+            <tr data-page-node-id="eZFGFOClCWIBQ4fDP739m1"><td data-page-node-id="Xv4kekLEkoWaXtJu5U836G"><!--pnid:InZmnV2JAhFuT33FdyfgsA-->检验规范</td><td data-page-node-id="jCBgKwfhGBfJPnvz0vj1Pu"><!--pnid:FM0xnBfSUUqmOGImUW6e2f-->V1.0 → V2.0</td><td data-page-node-id="4sMbsZHbSQ8SzhNGX9TUIf"><!--pnid:iGHm2L8fi3XUdRBBfsSecg-->周 QE</td><td data-page-node-id="mD0lSUoK3fVlBUX3yZ7ReC"><!--pnid:CfxCzXD7erBUFk7HcLiRyx-->6/10</td><td data-page-node-id="vk67XQrKP8rUNoOrv28dYF"><!--pnid:JFViA1ChSrYSGpcXfp2LJ6-->PDM</td></tr>
+            <tr data-page-node-id="O0NquKlN16msJyX5Q8xJTT"><td data-page-node-id="8HdEhBlUdFMyn4naj9o8p4"><!--pnid:AMoHs9oVj6r8ww6LnqsR77-->作业指导书</td><td data-page-node-id="94z1jUBrtWmR16peaMVq3K"><!--pnid:IMQ8leY6EKbJm76T9cEyHQ-->V1.0 → V1.1</td><td data-page-node-id="SLAdOH32MmcUQ6mLg2xRf4"><!--pnid:4ZvjfMyIxIdPphyqOePUm3-->王工</td><td data-page-node-id="c3ykcl6coexb23yC8jOkgL"><!--pnid:R3aJU0mo0UcJeI7EmRs04D-->6/5</td><td data-page-node-id="oZY1BQyPxvfM7DFxQFs12s"><!--pnid:lH5LtSQ3khtUydWBPHPkjF-->车间</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:ykWXr6dhgmFTNIe5P1zFFI--><!-- Step 6 -->
+  <div data-page-node-id="gEj3h3GS1HH0L6OEJI1RFW" class="dstep">
+    <div data-page-node-id="QQ04Jo8gHlRTX5ouERIoX1" class="dstep-h">
+      <div data-page-node-id="QoqEZ14PWsrZACjoou49rD" class="dstep-n"><!--pnid:RW06gmh2SQHdB0s5dqgeuO-->6</div>
+      <div data-page-node-id="44Aj6D4UumJHvUO0HN2XrM">
+        <h2 data-page-node-id="8uRHxHw46UFArfj7PecfuT"><!--pnid:6i59wHHNwAXJcp3QVgZVvY-->Step 6 · 效果确认 &amp; 闭环判定</h2>
+        <div data-page-node-id="wg18VpdVNltPyYJssHqZSD" class="sd"><!--pnid:DknYDvLzBifLMikUYMpHJJ-->质量指标 · Cpk · 客诉 · 连续 30 天稳定运行</div>
+      </div>
+      <span data-page-node-id="LJrSQEaxAraGFEl6nSSvPb" class="status"><!--pnid:L7bhIawSldW7KYfItTcFKf-->✓ 已完成</span>
+    </div>
+    <div data-page-node-id="SBzKcv0zuUEDZQ0QQqp2z5" class="dstep-b">
+      <h3 data-page-node-id="EMcilxqtiV8IoE9lmr3x9U"><!--pnid:rECn2VEre6vzhSfq1Wu8uu-->效果确认（截至 2024-08-15）</h3>
+      <div data-page-node-id="b8lDQCTg76QeX2xxi5QxcM" class="eff-grid">
+        <div data-page-node-id="MXppZBLJhuhF5sh2NR2PdM" class="eff"><div data-page-node-id="7WSmBsXwutYYDj4Ru4knV6" class="l"><!--pnid:9uAD4Ub5YU6uGMECqq47Cq-->量产良率</div><div data-page-node-id="6r9iLU3EIVPohvkZDvb3Ni" class="v g"><!--pnid:PjT8AjfDK5sM2vNjce0G03-->99.4%</div><div data-page-node-id="IhKkR8rCYEnJ2loVOYmSr8" class="imp"><!--pnid:Nug9a6ttDU1ATv1tKJm1HX-->目标 ≥ 99% · 达标</div></div>
+        <div data-page-node-id="oAOlSgm1Tb0NfyU76E27Vy" class="eff"><div data-page-node-id="YtgkFkTqIsrq7ElJBCz6ev" class="l"><!--pnid:JlFFZBPYb299JlJRxsWBTs-->耐低温性能</div><div data-page-node-id="VLMsgd9bospkPrCnoFRxz0" class="v"><!--pnid:Rhj9SZHcGwTcoTIMdVJiwr-->-40℃</div><div data-page-node-id="aFPqTQGQM1thuV8534icGE" class="imp"><!--pnid:mamyq9ofOiwcTrbQTnDSFC-->从 -25℃ 提升 · +60%</div></div>
+        <div data-page-node-id="SvMGJ7ePkz4b1ijs27AM16" class="eff"><div data-page-node-id="vgrAOIBOXEUY3R3Jmphyvw" class="l"><!--pnid:gbDxYRBJvytrfYnMfmYN9A-->耐高温性能</div><div data-page-node-id="C608VwEQ1eMgVuOdKEipNu" class="v"><!--pnid:btMw2lbRZj7KVK9mbjHqUC-->+120℃</div><div data-page-node-id="3Qja87aQ806pMvo33QT7gk" class="imp"><!--pnid:HxkgR2BtkSZUUjoJAogXO9-->从 +100℃ 提升 · +20%</div></div>
+        <div data-page-node-id="jKJAlYgFKaymXwqp1g3MbP" class="eff"><div data-page-node-id="ohKEBdeDqegrFqrJNrJCRr" class="l"><!--pnid:uYAFOGaOvx2rv0xl9Hg8ij-->耐介质</div><div data-page-node-id="n2D7Khb1YxvUe8VpSbSeH8" class="v g"><!--pnid:mCCzN3BcZnLGmGpVYC261G-->合格</div><div data-page-node-id="MOjukVtI72j7GqITcekyo2" class="imp"><!--pnid:xEibTQk1XkybF5LCK8hJra-->冷却液浸泡无溶胀</div></div>
+        <div data-page-node-id="PR6TUg4uGp4aPHKzOs8HUd" class="eff"><div data-page-node-id="IvnXjlgXHIvhRntbyd7W29" class="l"><!--pnid:krIBqjGKljMoCyyXwcEy45-->客户投诉</div><div data-page-node-id="2ASQQUfxitbhFDvU0fMHFg" class="v g"><!--pnid:1DBhauyoVArsqMmCkf9BDH-->0</div><div data-page-node-id="toDNk30eP2S2avOD40DJju" class="imp"><!--pnid:0Jdd6hzJJ3ytY58CyN5k9L-->从 3 次/年 → 0</div></div>
+        <div data-page-node-id="wHBhkBQkfQI3ckOvtbYQJ8" class="eff"><div data-page-node-id="eBBaNtfbJSRq4zYKQSj76X" class="l"><!--pnid:tkCri1bEdd4O2P070mleZF-->预计寿命</div><div data-page-node-id="zjPLJjBtMxJHeDUuwNNopZ" class="v"><!--pnid:8iVAobBFT9LqmuSPBV2Uq4-->8 年+</div><div data-page-node-id="bjXf7lSHq8mOJRugVuNSmk" class="imp"><!--pnid:ujgF55rQMyWMHyyrazcsZv-->从 5 年提升 · +60%</div></div>
+      </div>
+
+      <div data-page-node-id="wBCkEX0P2jJTIATTFDZAvZ" class="close">
+        <div data-page-node-id="UeJaxzjMvfOruhx8NrGNS5" class="t"><!--pnid:fhCR02g55Z5Mop3U8K5tiP-->可闭环 · 5/5 项全达标</div>
+        <div data-page-node-id="pFyyBkBQetWHJivtHjuRGY" class="d"><!--pnid:YP84wbBu6DAkDoAaOntVH2-->验证 100% 合格 · 文件 100% 更新 · 稳定运行 30 天 · 客户零投诉 · FMEA / CP 已更新</div>
+        <div data-page-node-id="YeyVaIuRh61cCJ1xFvPfTD" class="date"><!--pnid:HSCjvIj90I3kNm70XIhsRB-->闭环日期：2024-08-15 · 归档编号 ECN-20240420-003 · PDM 保存 10 年</div>
+      </div>
+
+      <h3 data-page-node-id="WJwDfEKRPB5kPz07wlUauh"><!--pnid:WGIqLtO0TNfWdZQIAr2pmP-->成本收益分析</h3>
+      <div data-page-node-id="RmjlqPuUf8JU9T6CxVzyON" class="tbl">
+        <table data-page-node-id="3iEUxsT824k37P0COv97U0">
+          <thead data-page-node-id="GzHxLhABrRbvIzTW3TDUlv"><tr data-page-node-id="aq9wT98ZjKTRsD30LaMNRl"><th data-page-node-id="QsPUguuRwKZpambeo6XWL3"><!--pnid:0ia3WPyILLBdsNeno85xx1-->项目</th><th data-page-node-id="kGSSTI7kEUTiyTzEg0m1BN" class="r"><!--pnid:e1SYdABfsSY4hQXRSpIEPf-->数值</th></tr></thead>
+          <tbody data-page-node-id="WRP10iqK9y6c9OkrxdYWJ7">
+            <tr data-page-node-id="pttoZVToUdLt0naLRbI2jS"><td data-page-node-id="zyW7YMx80bZiGfmTCKu8xn"><!--pnid:IhPSAYashhsrQbauapLTLb-->模具修改</td><td data-page-node-id="Onh6rbRf72ml9WQ4j8MtO4" class="r"><!--pnid:gLAZVPpOkR1NtmyKEl67lX-->0 元（同规格）</td></tr>
+            <tr data-page-node-id="4aXdjAFvROzsRoLqoPSawD"><td data-page-node-id="3GGysJovKJRonG9nN9lNvI"><!--pnid:DDR2r6hMDKPp7w4qrL3veG-->工艺调整</td><td data-page-node-id="4YVllmC4jCJrzM0v6Fvo3o" class="r"><!--pnid:qmY7xKUPibz0hEw0tvNa20-->0 元（参数微调）</td></tr>
+            <tr data-page-node-id="Ej9APVdb995Hj7N5wnSYDS"><td data-page-node-id="KqRwYfmOlxVcFvuG7aolWN"><!--pnid:QxtwkwLY38z40xk5LsJ0OI-->验证费用</td><td data-page-node-id="WCKVjg8U68i1JS55ztjgO3" class="r"><!--pnid:GrwZKckM5hAMRqpvXVEhEW-->8 万元</td></tr>
+            <tr data-page-node-id="Xx4dTSY8CAYMnVW0WmxqPu"><td data-page-node-id="p6J7R3X47H5Zgb7tOqhUxE"><!--pnid:5gNjIsqZwX8yybHPSK1z17-->NBR 库存损失</td><td data-page-node-id="bKpEBblaslwunOZdsz8vcA" class="r"><!--pnid:JgY2GlpI95ijNzGgPw0RVd-->1.5 万元</td></tr>
+            <tr data-page-node-id="sEUkYozP33Zu3oR7ATEGoZ"><td data-page-node-id="4QQS2Kg0y8HYbnZVPBjD1F"><b data-page-node-id="aZbEDlIQX4CwRSYmziy0MZ"><!--pnid:JcxyvQxX6mb84uXG4qsz4D-->总成本</b></td><td data-page-node-id="tt1YVDPKfrjtEP5SsRt0gg" class="r"><b data-page-node-id="8dB2EY42swuW8eQzDF6CXd"><!--pnid:8sFOSuJ7RVYP424Wbiclwt-->9.5 万元</b></td></tr>
+            <tr data-page-node-id="hWOGTLA8bcJmo6R9IoSOAo"><td data-page-node-id="veLLbvUImN4U6MJsKYptU9"><!--pnid:rLjtWnqkm0nyYQsU5o4A5e-->年减少质量损失</td><td data-page-node-id="XQCvUyf01jh5O1X8c76In0" class="r save"><!--pnid:uSzCmZ3EMC2FUjeCxb2H5I-->+12 万元</td></tr>
+            <tr data-page-node-id="lxgeeZLOKArnXvrXhZ1fos"><td data-page-node-id="hSP0rIN6kNl4JgG8P5GnVr"><b data-page-node-id="HZjxG8K10FZsR2THcOQeGm"><!--pnid:QFL9Rawg26jUXPqnqoNDuy-->投资回收期</b></td><td data-page-node-id="RUOeqdCvB9foi1RT3d6IU1" class="r save"><b data-page-node-id="YQhysERHZlyTygXTKNL2Jb"><!--pnid:NbgQZOrhJe1pN3sYtddMcB-->约 10 个月</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:ZbpgFX0pM0L9vyTCxhPwZl--><!-- Yellow 对照 -->
+  <div data-page-node-id="0NFhJFxwYs3SDVpzPgiZMQ" class="dstep">
+    <div data-page-node-id="CQfYFIXBjzqZHaG3dbN2Kb" class="dstep-h">
+      <div data-page-node-id="9B4woHVp8EsUY78bmMwWft" class="dstep-n io"><!--pnid:JbBFxoBYbLNOAZuCG0uRB0-->▶</div>
+      <div data-page-node-id="xiCnBRivgm3piVCZbKboFD">
+        <h2 data-page-node-id="rVr96T8tTxOAeCNoucP16t"><!--pnid:ptZSJWk5Nc3ZpGYCaYNhxV-->同类对照 · Case A · Yellow 级供应商切换</h2>
+        <div data-page-node-id="PybpPbwfrNepQZjcuoozTq" class="sd"><!--pnid:X1oo79s1T7hlfbAtKUZFFg-->工控智能控制柜主控板换供应商 · 3 级审批 · 5 工作日</div>
+      </div>
+    </div>
+    <div data-page-node-id="tOu4eNmLQ2NNmCGefCHyNU" class="dstep-b">
+      <div data-page-node-id="ZEQwEX5t97HNgzdsCzhmnb" class="yellow-box">
+        <h4 data-page-node-id="RYwTslbbRQTJLcbPDl0u7j"><!--pnid:4ZAAGsvul7BZvE5iJnfAqg-->Case A · Yellow 级 · 主控板供应商切换（华芯微 → 汇川）</h4>
+        <p data-page-node-id="HAbQB1YhjMw86g7JDcrBCe"><!--pnid:oZkklXCfIz9Zooedzgn0VF-->同样是"改一颗料"，为什么这个只判 Yellow 级？—— <b data-page-node-id="1luT4k3K3C609kWAYFRAxh"><!--pnid:q9gqXTBRzKvzmxUVqTG0HV-->供应商切换（同型号 M-PCB-001）</b><!--pnid:stwWuDc5v5yIHjKdPXQwve-->，影响范围限于内部工艺 / 质量，可逆，验证周期 1-2 周，成本 &lt; 5 万，不影响客户产品结构。<b data-page-node-id="6gqWcV8RZROKfvhtz9SmOR"><!--pnid:bfIkioPRKMrQVqtVZzAwHl-->不触发任何 Red 条件 → 判 Yellow → 3 级审批（部门经理 → QE 主管 → 质量经理）5 工作日完成</b><!--pnid:OnINTj6ak2leZC0iGi3lN8-->。</p>
+        <p data-page-node-id="CnSCJHy9VYzAUGSD7fYyZd"><!--pnid:2fHRCzchyzDtr0pQm4rIna-->Yellow 级也要走完整 6 步法，但每一步都简化了：<b data-page-node-id="FwpfUgy6tpIm9LPsXbm4bS"><!--pnid:ELeUVsJdz8qaBkLRaawCgL-->Step 1</b><!--pnid:YE2tTqfpLSVYGqZrPv1GI8--> 生成 ECN；<b data-page-node-id="AwSUYmFuW6x8v1DOKvpiTa"><!--pnid:acAeJALyn3vFsgQdPkZ7Ju-->Step 2</b><!--pnid:aXo6noUzNj07RMJ9AIdFU4--> 6 维评估中"客户"维度为"低"，无需 PPAP；<b data-page-node-id="Tdv5kvvd4txzhv1YWXCt8X"><!--pnid:DPirgRdRbvTw9AwtW18Dgo-->Step 3</b><!--pnid:MPiQGiADEpDj2ThTlWtFzr--> 验证清单从 16 项减到 4 项（首件确认 + 试生产 200 件 + PFMEA 影响评估 + CP 更新）；<b data-page-node-id="VDaxOpZgzvMZ63Gn1nYcrO"><!--pnid:WBdENWvePecUoPLMgDG7ML-->Step 4</b><!--pnid:mZCHMKIUmlsYBGAYFZH2UZ--> 3 级审批；<b data-page-node-id="SGrmCSehFalPVIrtdIjDDu"><!--pnid:Ys6UMBh4MGU2b7qBz1kQ2w-->Step 5</b><!--pnid:JOmvvZxGzu4MDvAwHVCJLf--> 主要跟踪已装老料 85 颗的加严抽检 + 冻结批次 PCB-260708-A 140 件处置；<b data-page-node-id="Dr6l20PTqMu3Ha7z1yp3U8"><!--pnid:9oBJrxPEETPeJCJiosbrEW-->Step 6</b><!--pnid:FReiLOsSvYT7rxkqi0L2fB--> 连续 7 天稳定即可闭环。</p>
+        <p data-page-node-id="yWQ34cAfSjWiRSa6rrjl24"><b data-page-node-id="tJQcXIIpdXN2QfYHXiE8bv"><!--pnid:3eeAT8DvdKHOd5hZcgONV7-->关键差异</b><!--pnid:o8rlBLmoiSAhNGQBIDd9kT-->：若 PE 把 Case A 误判为 Blue（临时变更），跳过 PFMEA 影响评估 → 老料库存 140 件冻结批次未走处置流程 → 呆滞积压 + 审计不合规。Skill 的 4 维自动判定 + 取最高等级原则，就是为了杜绝这种错判。</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!--pnid:LcOuxYQh7DEXjbfD1x3Ng6--><!-- 关键价值 -->
+  <div data-page-node-id="HHEXh7jXFbKLzEfJXdgo9h" class="dstep">
+    <div data-page-node-id="33UX2Oz7FKyD8GmEWRUjX3" class="dstep-h">
+      <div data-page-node-id="wzZpBrpnuszGxaTXwKkzaF" class="dstep-n io"><!--pnid:JcBXOwZkt6D4Kg3ZghzUd8-->▶</div>
+      <div data-page-node-id="2SpvgbNkOE3aFzDbGoD84v">
+        <h2 data-page-node-id="4Jl5AlJgQvvhVyyegeB5vx"><!--pnid:MKi3KiRrfavVJbgNNVXIeW-->比"提效"更值钱的两件事</h2>
+        <div data-page-node-id="oKtofgDmx7QOV61I2NmcS9" class="sd"><!--pnid:xKgHYGzj0f9iF5v4xzPVA7-->这是 3.3 场景真正的差异化价值</div>
+      </div>
+    </div>
+    <div data-page-node-id="sO3Ce0cbrurqGBwqkaohVB" class="dstep-b">
+      <p data-page-node-id="t6z28aamurCKOzndJJIpNX"><b data-page-node-id="uhnglXa0beKHPCvhufE4m1"><!--pnid:0ZkLzx85Jom0aA7IsxnhJS-->① 判级不再错</b><!--pnid:WyOx9pmk9FbKn8zNbhjIrI--> — 4 维度规则化判定 + 取最高等级原则，杜绝"拆分变更规避审批"的操作，直接避免召回损失（Red 误判 Yellow 的典型后果是索赔 100 万+）。</p>
+      <p data-page-node-id="JSw38h64NiElCvHJURTSm4" style="margin-top:10px"><b data-page-node-id="kUtxiAzi2Fd2BfL3qXPnE9"><!--pnid:CxXgtxY1SMzmijvuPab2qK-->② IATF 审核零压力</b><!--pnid:DMEXuPQ9MnfEtTAaBcfdDp--> — 每次变更全流程留痕、6 步法产出自动归档 PDM，审核员问什么答什么，10 年可追溯。</p>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="W9J62HYKV1bXxQepWvDDeB" class="dstep">
+    <div data-page-node-id="OB9mpjguVNM3AWeF78FjvX" class="dstep-h"><div data-page-node-id="sNauSZcezD1ioyy4MLrL4v" class="dstep-n io"><!--pnid:tew4dXdWNBCNmalgauyYgR-->ROI</div><div data-page-node-id="nOb0XMvsO4d3akQg9ZmcUx"><h2 data-page-node-id="KnpY3VAJroTjXCvEI8limu"><!--pnid:fkASAUrcyHfTiFsPGd85oO-->用 Agent 前后，这次变更的账</h2><div data-page-node-id="QbDSXusOZKhwf8lmF1BvPR" class="sd"><!--pnid:X7x6vf3sCuwaxnQOFKIa1N-->传统耗时来自公开行业调研 · Agent 耗时按本页流程推算 · 均为估算口径，见页底说明</div></div></div>
+    <div data-page-node-id="FAVpzQJbWc0WKlsCh2kuT0" class="dstep-b">
+      <div data-page-node-id="kGFYvrD5D4i0S5MCfKU73V" class="kpi-row" style="grid-template-columns:repeat(4,1fr); margin-top:0">
+        <div data-page-node-id="9JqNK8XZphmfVPXNZqu67a" class="kpi"><div data-page-node-id="ZBIbcahsFLKFBpKMAfEa2W" class="k"><!--pnid:aNshLKcX3AiUkMVs7qC5zf-->人工投入（评估·排查·联动）</div><div data-page-node-id="Nz6ej2LnS310QIWjpFM1t6" class="v"><span data-page-node-id="yDOmCbmsYClttU4UxjjeLM" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:G2t0swzVeazly5WV7ADOQ1-->72 h+</span><!--pnid:RZOdRloXteDdtAFdYMx7Ap--> → <span data-page-node-id="CDbDW3iXxRlRGtUBWxNoJE" style="color:var(--green)"><!--pnid:Nup1YvEqkfsMwsBxBPD0oA-->≈ 1 h</span></div></div>
+        <div data-page-node-id="XhAEbFUlCrw2LnJwVShLVR" class="kpi"><div data-page-node-id="kuMHwwqMVdELFA5FrbXqrQ" class="k"><!--pnid:HfepbOG2AYWqjon7sV2uGf-->发起到批准的案头周期</div><div data-page-node-id="eNTN2QxwRYvI7Fc5s3T59k" class="v"><span data-page-node-id="qn4Eehlo4iMN3z6sexBdx1" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:os2kk2I7YTrzxx33jwjJom-->14-21 天</span><!--pnid:fELNRYbX65r1ck8ppS6ECX--> → <span data-page-node-id="Vn3BOc47fAdc9GzoxM11fb" style="color:var(--green)"><!--pnid:CA0urM7vcpaPaC7mt3ENca-->当天出评估</span></div></div>
+        <div data-page-node-id="h9CKYfXQlsSk49T0Jvruwd" class="kpi"><div data-page-node-id="f1PJtDIvtlu8V96GibJBac" class="k"><!--pnid:NmcrL3THJgQjYTg1zeFdUb-->参与方式</div><div data-page-node-id="ngb0xSdFI8DgkpZVutTUJP" class="v" style="font-size:13px; line-height:1.5"><!--pnid:wxbbjuWfzwnjHkdoNMnNgS-->5 部门接力会签 → PE 1 人主理<br data-page-node-id="lejv9NteJYw6EESJPeH1Ms"><!--pnid:xOd4NmpR3TZ3lD3VJsLkQZ-->QE/工艺只复核高风险项</div></div>
+        <div data-page-node-id="ct6UFGua219BJn8bhkOVdm" class="kpi"><div data-page-node-id="x7yl0uitF7EVJYXZMr7djD" class="k"><!--pnid:htdNqDswznDNrcLpQoY37D-->牵连项排查</div><div data-page-node-id="d2h1dcMX11VOCnTtJwIZpP" class="v"><span data-page-node-id="nnTkDeFtwvCk5NqkNbkzzA" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:gzTR1IEdUMGTiKnFyCyngg-->靠经验·易漏项</span><!--pnid:PbSKrvDqKkQp6NaKeQNttV--> → <span data-page-node-id="zQIBnpLZMMhxg7fuTVDHP2" style="color:var(--green)"><!--pnid:TQr5FZyw2Va6tZIcXCuwJh-->6 维 30 子项全覆盖</span></div></div>
+      </div>
+
+      <div data-page-node-id="3RmU1UxfexQblF5CBTFVpy" class="think" style="margin-top:14px; margin-bottom:0"><span data-page-node-id="NjBwHxPLaMHPQUaur2dAzB" class="lbl"><!--pnid:Hqgb98Y1fWYQGtYGxn9zva-->数字口径与来源 · 都是估算，建议落地前用自家数据校准</span>
+        <b data-page-node-id="fMFALcpdhZt7gvcpyY5iib"><!--pnid:lsGNv10s7RPGMa3Q9ACRcN-->传统耗时</b><!--pnid:xSKDHFkGvJWgLt8aCEZMu9-->：来自公开行业调研 —— 中博科智行业调研：一次工程变更（ECN）平均需人工协调 <b data-page-node-id="Z9UlERXROevlcjgQgIXspj"><!--pnid:IBSSZZu8W5XvdjIUFn1pkY-->5 个部门、耗时 72 小时以上</b><!--pnid:uIqpsSECGdO6nIBqMLhY4n-->才能闭环，BOM 错漏引发的停线、批次返工、售后索赔年均损失超百万元；Oxmaint 行业基准：纸质流程 ECN 从发起到批准平均 <b data-page-node-id="M6WyEM5wIwQoLAz9D4yXcf"><!--pnid:jNwnMtUh2O2EUC1ceetDf7-->14-21 天</b><!--pnid:d4TXGzLlwNzCu52tqzSgom-->；Element Consulting 调研：每次 ECN 平均伴随 <b data-page-node-id="YhFNlFpYLdEijlot7n0hov"><!--pnid:jf8dI11OdeF4TAya0GRxtp-->40+ 小时</b><!--pnid:oS7rdTOEhPQbJxRNcpDgaP-->工程返工。
+        <br data-page-node-id="6mRrydV10oOlLElArAMnKW"><b data-page-node-id="Lovs91j2mctu1iYPuB5NWF"><!--pnid:8Q4jLhsWdU3WshM1ZmN08F-->Agent 耗时</b><!--pnid:pOIvs261Txhbzw8Vp8pYgO-->：按本页 Demo 的 6 步流程推算 —— PE 一句话发起 2-3 分钟；Agent 完成分级判定、6 维 30 子项评估、16 项验证计划匹配、审批路径与文件联动清单约 15-20 分钟；人工只兜底被标出的 3 项 Red 触发条件与各维度"高"风险项，估 20-30 分钟；合计约 40-50 分钟。实验室验证、客户 PPAP 批准等物理周期不因 Agent 缩短，不计入本测算。
+        <br data-page-node-id="IhRBx9EUIOZwUSYfJTkMIr"><b data-page-node-id="q6nHjm9yDJgSPNvhRFyf3q"><!--pnid:wgnP7ieHW0wU8ukCKPvSV5-->测算为演示用途</b><!--pnid:jIEVVI3MocVgUVQRXnvDNi-->，未含系统部署与 Skill 维护成本；落地时建议取 10-20 次自家真实变更跑一遍，用实测值替换本页口径。
+      </div>
+    </div>
+  </div>
+
+
+  <div data-page-node-id="yD0sRLE4HoEVQlnh1jUFNj" class="cta">
+    <div data-page-node-id="YaZNFEH4ocvGFEgWx1otCH">
+      <h3 data-page-node-id="EIRyzaJZLDIkMjY6DUjGpS"><!--pnid:aB3vMklb6T6077NY63Y7ww-->想了解来龙去脉？</h3>
+      <p data-page-node-id="Mjw1r8VEP9KqZf5VNz2uGT"><!--pnid:u8275GodX99ZZZIqTcHeTC-->回到场景引入，看这个场景的痛点、做法与边界</p>
+    </div>
+    <div data-page-node-id="nFqmDriM8uJzYD72XbXRdz" style="display:flex; gap:10px; flex-wrap:wrap">
+      <a data-page-node-id="L9B7TGS4rnDlJuBVmiqR5g" class="btn ghost" href="场景引入.html"><!--pnid:3PNCI6cB2RdUBVDnYj5Bhu-->返回场景引入</a>
+    </div>
+  </div>
+
+  
+</div>
+
+
+<footer data-page-node-id="gHlCzmz7yGj5AP1MCAoFFA"><!--pnid:NjRQ2V427exEacxr8jAlz7-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="B0BmAsTcm2jGfNZGKmPSeM" data-pnid-children="2Yj3haiNhuRO4q0HoYe7CK">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="IZ045oro1NIcTYEQRlI2FD" data-pnid-children="45QXrd4dXfPZNPEWmF4YKW">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="h6gcGbQ5TOTpImptg8jE4V" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="cxEpP8TbJxb5vDkC6Q3qjL" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="58P0fvp1lDdnxsm3XAQTyQ" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="jE3LoI8YuOTPSh1YN9QQBl" data-pnid-children="gIC9sTg4vcyaU1ekJObTjE">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="xuvZS5ZiDWdqp7ge41xqlw" lang="zh-CN">
+<head data-page-node-id="cQf3Vq9xk8OWH4fKp2dT6X">
+<script data-page-node-id="GbDky49eOwtvyEdZUTwPb2" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="ihgX43jEOpqjbbBAscUnMw" charset="UTF-8">
+<meta data-page-node-id="xBlPJ0Lb4l0TMF7BzAhD3J" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="4GkT9YT2SjY0RyeQNO8x2s" data-pnid-children="GPguOP9PQMuf9n95T0EHMV">巡查日志 → 工单转化 —— 走过的路生成日报</title>
+<link data-page-node-id="dAYh8bMbx58Hq7EDIFiFph" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="M3f5zqnh5WKJt2u7owysUU" data-pnid-children="m69wtgB4Q1uYFQwobWGVtk" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="DeFgYWyf0JHob1dtp7aHm6">
+
+<div data-page-node-id="FDJAn69xy80QmouRDaspBo" class="wrap">
+<section data-page-node-id="vzXw88cyuuTdgBrdQnfKOa" class="page-hero">
+
+
+<h1 data-page-node-id="PmjmtUY7y25zrsbvjuIr5M"><!--pnid:IUYL4s7M1sacDh9ivW9ynZ-->巡查日志 → 工单转化 —— 走过的路生成日报</h1>
+<p data-page-node-id="EjFswikoiITHvibEVTAa09" class="lead"><!--pnid:XmsnjqOkqGfin9gXwFaeJg-->网格员每天走 2 万步 · 大半走了等于白走</p>
+</section><nav data-page-node-id="uWkWF64boAUzN722Cn3i59" class="subnav"><a data-page-node-id="TloTjYEwPsYiS5XhVKHKOw" class="on" href="#"><!--pnid:nrtFKuLkNG1V23VJCXGm4J-->场景引入</a><a data-page-node-id="cyvKtsb1P8X8yFoZSUqV4R" class href="LiveDemo.html"><!--pnid:CZMyBYP4zvSHdHymSB9VT6-->Live Demo</a></nav>
+<section data-page-node-id="HNaYYMAULwyyXKK8iWyQBK" class="blk">
+  <h2 data-page-node-id="1KHLtKFpjsi01Gndg5sBW8" class="h"><span data-page-node-id="YAC3WyMOhrooOiC3GSJmpD" class="num"><!--pnid:q8kVjp2ppvFt2dwi0tXvud-->一</span><!--pnid:uSMqrJpEAT1rUrgzTK7vFo-->这件事现在是什么样</h2>
+  <p data-page-node-id="qA261pBC7Iyk3nDvGoWDCl" class="subline"><!--pnid:cxLGtRQtita4ODgM1WiVxD-->网格员 · 事件采集与巡查 · 真实业务触发</p>
+  <div data-page-node-id="q5enPoYzGlKivW8ICoba1n" class="card"><p data-page-node-id="8IVPAWbhTvdSetdv1jnzxV"><!--pnid:S148wp8m6Ry64sy4zQfQs7-->每日下班前需交巡查日志，传统做法是回忆或手写今日所见，黄冈 12345 办法明文要求承办单位「推动接诉即办向未诉先办转变」，但日志形式化严重，没有线索进入处置流程</p></div>
+  <h2 data-page-node-id="19SNGAf3TnOrehrkTa7faG" class="h" style="margin-top:22px"><span data-page-node-id="JDejRUiof9JR1763OB0Z3P" class="num"><!--pnid:MTp9rJclMiWLNzxiPolgiA-->二</span><!--pnid:ZihR5iklbdFoTNKkaGzJaD-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="qdCArHcMmfwLM3OXu4s7pR" class="subline"><!--pnid:YIwZIzkOQywHnvIMyBqIiG-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="68KEycOqwMqGS9yAwkBSsv" class="pains"><div data-page-node-id="U5gowpxcWvid1WIoqVOJab" class="pain"><span data-page-node-id="MysDkQk9wRs6gJKDtgzP8D" class="i"><!--pnid:6yRiW370uoabGYpuv9M0Ij-->1</span><div data-page-node-id="wrwrjA85k4nYdpVBjq1agk" class="t"><!--pnid:VqsyLWMPhp4kgJqVjiPHr2-->痛点一：巡查日志形式上是台账，实际只有日期+几句话，无法与事件库交叉——日志里的「井盖松动」三个月后才有人报修，白白错过最佳处置期<span data-page-node-id="TwcpCl6OR5fkFEFrsD0Jup" class="src"><!--pnid:o0AMxpGzICMVOjKB5HsoDO-->依据 · <a data-page-node-id="jeyluo7yPEoD1MT73SBst5" href="https://www.gov.cn/zhengce/zhengceku/2022-03/29/content_5682177.htm" rel="noopener" target="_blank"><!--pnid:EzVZhnX4AdsNTepoCYHwxS-->住建部建办督〔2021〕54号《关于全面加快建设城市运行管理服务平台的通知》及配套 CJJ/T312-2021、CJ/T545-2021 技术与数据标准，要求 2025 年底前一网统管体制机制基本完善，体征监测与指挥监督为地级以上城市法定动作</a></span></div></div><div data-page-node-id="5hQ0FtmS19h2QQoqaBEidX" class="pain"><span data-page-node-id="rp3Q95iDCWIU6ulwMvqAKt" class="i"><!--pnid:5Vvoa2GdTo41Zc1bHhqzWP-->2</span><div data-page-node-id="rzIweeV8uzGeQjxZ9X996c" class="t"><!--pnid:4k0tsjpOE9G9ZRRfTotTGA-->痛点二：网格员每天走 2 万步，但真正进系统的不到 10%，因为录入成本远大于「装没看见」的代价<span data-page-node-id="wheDvCz6AdoT5IfuzTXap1" class="src"><!--pnid:69cFBF1S1DsMa03L5fLEJW-->依据 · <a data-page-node-id="Y56oCUgBJ7e8Ik1zg19d5d" href="https://www.zhihu.com/question/xxx" rel="noopener" target="_blank"><!--pnid:ODCTvDHzniMLALPmQCYRee-->成都某区 30 名网格员入职半年离职 20+；网格员月薪 2000 上下，每天 2-3 小时耗在系统操作上，高流失率</a></span></div></div><div data-page-node-id="PburrEEoqGnVZrCAtVFhmU" class="pain"><span data-page-node-id="tygjakEZr08uGcgVMlYSq2" class="i"><!--pnid:RNtfuYkd7D9dQKPEXFnmPP-->3</span><div data-page-node-id="MDfHWbMb9qcklP8T2bmbfJ" class="t"><!--pnid:7wYK8S69XBuyEodxxX1Sng-->痛点三：「未诉先办」是黄冈 12345 办法明文要求，但前提是分析过去数年的工单找出「类高发点」，区里没人做得了这个分析<span data-page-node-id="q4GvPCZaY1MnBjeYlfRLc6" class="src"><!--pnid:IfpcGqUiM6XyRbExsxfyTE-->依据 · <a data-page-node-id="PWuxX1Pw4jxykdXJOaBjy0" href="https://www.hubei.gov.cn/pdbstatics/file/converter/2025/12/19/hg1664610.pdf" rel="noopener" target="_blank"><!--pnid:9xBfrXBj2slKcxsrzNCmp5-->《黄冈市 12345 政务服务便民热线管理办法》：按时办结率低于 97%、回访满意率低于 90% 且连续三个月排名靠后由政府督查机构约谈</a></span></div></div><div data-page-node-id="QMdjh2T5FZ5RD6WGDCWDld" class="pain"><span data-page-node-id="rlqwhzLUf3mKrduxSU3DnK" class="i"><!--pnid:PmhKXdVUTXWsPfyc2Z5N7m-->4</span><div data-page-node-id="RLTDQgUcblVHhZhzUcSdzv" class="t"><!--pnid:9a4myDWLJfj0FFvfs0n1FF-->痛点四：日志归档即束之高阁，领导调阅时翻 Excel + 纸质材料是常态——蓬莱区官方自认<span data-page-node-id="ifJCZZytUi87HGtUb584u0" class="src"><!--pnid:zAYzGoecfQSRCT7XCG6aPx-->依据 · <a data-page-node-id="wASVxmIPf4qgFIdUfAg9pI" href="https://www.penglai.gov.cn/xxx" rel="noopener" target="_blank"><!--pnid:3yDN9NoTl0FAig5t08O6Gk-->蓬莱区官方自认闲置资产数据「分散在各镇街 Excel 和纸质材料中，领导问起来需临时电话调度」——真实主数据不在平台里</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="GZNNhvSJ2oVIHJEUD6n6rk" class="blk">
+  <h2 data-page-node-id="TJqma6r75UbkSMUX6dCTiF" class="h"><span data-page-node-id="SWeYSk4ZBjHttoNr05BYUL" class="num"><!--pnid:p4otk4GajnRbdDQUn707Vk-->三</span><!--pnid:mCMWlemgwwViLqtP9Tx0D8-->换个做法之后</h2>
+  <p data-page-node-id="StF5BQouQqtNw7llOjhxJB" class="subline"><!--pnid:A9PAYiXZA6XlveNRbTk6c7-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="LMTVdjnWNwDL1i4hOSbz5d" class="cmp">
+    <div data-page-node-id="ihZKwxL4DPpG0XDA7Mk1Dm" class="old"><h4 data-page-node-id="UhBhDj7YWb9XtWpcublSJT"><!--pnid:VMONPRIB9zJyMkChD71rLk-->✕ 现在的做法</h4><ul data-page-node-id="ePIJdLsft4RPJGbL7oJaiC" class="list"><li data-page-node-id="bIzImoutas4G5ycenYfKa5"><!--pnid:aBDVPRT92fgLsDkVqAFnB3-->痛点一：巡查日志形式上是台账，实际只有日期+几句话，无法与事件库交叉——日志里的「井盖松动」三个月后才有人报修，白白错过最佳处置期</li><li data-page-node-id="h91MS7oCh9zlsvUAwydgrc"><!--pnid:EqPahqcVPuHUIpX8xNOOV8-->痛点二：网格员每天走 2 万步，但真正进系统的不到 10%，因为录入成本远大于「装没看见」的代价</li><li data-page-node-id="gzxKlsm1fV4d51bmxSC021"><!--pnid:iLOk6ntnSbRAJs57sOkFbg-->痛点三：「未诉先办」是黄冈 12345 办法明文要求，但前提是分析过去数年的工单找出「类高发点」，区里没人做得了这个分析</li><li data-page-node-id="Kv1TnztqoUrxulKYX9LvWo"><!--pnid:MZ0GwN0Xa5SSPYGD9xUp5A-->痛点四：日志归档即束之高阁，领导调阅时翻 Excel + 纸质材料是常态——蓬莱区官方自认</li></ul></div>
+    <div data-page-node-id="t2MsTtMM0Aie5nM6R7qyqE" class="new"><h4 data-page-node-id="ztkxpdzvTXmxFxzaIN0YUJ"><!--pnid:ntTJ8601yWgdwoYy23Hi4h-->✓ 交给 Agent 之后</h4><ul data-page-node-id="rIa4GORxlvN1liar817FpV" class="list"><li data-page-node-id="PAFTEeXGcYFQJEXyNAe08g"><!--pnid:oRy9LwD0Mq3Qp3Ilj2bCDu-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="tIRozkjqRcDFHzyfKezMPa"><!--pnid:TdaBEuwqJ4lvckf7AWzu1m-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="0CSciofd3rDlD8FeRe5KsB"><!--pnid:FZLKs4sRpjDKDOjSy31prc-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="X6pK10WlX981cN1jSC8SBw"><!--pnid:2J6WFhgEp7viP6MSUwpIiK-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="9osAkRkVAmxazphZTGs4aU" class="blk">
+  <h2 data-page-node-id="y8LUwYyNK5evQXLvWVysUN" class="h"><span data-page-node-id="SgrQrWYeYU0H4cH1VZlNtE" class="num"><!--pnid:Fv0S6VM0ZarZoGrOdkGqZZ-->四</span><!--pnid:rqM6n2mz1CxBHPscEsIjst-->场景闭环</h2>
+  <p data-page-node-id="ySHOU416hF3D9oUKCOzBXS" class="subline"><!--pnid:iL0o0JIQpk7UZsIKvVlU0n-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="VUK8P3xQVj7VA9ufqcdF9w" class="flow"><div data-page-node-id="98WCPWwihWL3e6BtNctwmy" class="step"><div data-page-node-id="1niY5iYGV1hebTZ5km1Qlz" class="n"><!--pnid:Oxhk8lA8phNddZZb1PdolZ-->第 1 步</div><b data-page-node-id="7MIWp315ly2haSRfFzutBq"><!--pnid:Mp3dUlgTKS11q8ZuWal7AJ-->要素校验 · 轨迹与点位</b><span data-page-node-id="CfO4bm9wEh07iyKU9DAtOO"><!--pnid:lcnmLJmOoX4UR2HDM8GV4M-->GPS 点位缺失 &gt;30% 标黄，建议补打</span></div><div data-page-node-id="p5fxibVAg9b4GQEQoC2sfw" class="step"><div data-page-node-id="4jdL1sQL5L72lzvGgmza28" class="n"><!--pnid:m1nJ8vKeRYIziW4RuXdqvI-->第 2 步</div><b data-page-node-id="thBHmsyZ6MlAAHLQCHnsEq"><!--pnid:mvaiMZXWnLVtahY7BavVZa-->口径归一 · 语音转结构化备注</b><span data-page-node-id="crWOqzbYYjaoFRAtz2fcq1"><!--pnid:l4BVzEjxI7h2FG3rG0Ba1y-->「这家门口堆了好多杂物」→ 疑似事件=群租/杂物堆放</span></div><div data-page-node-id="20ecoIcg49MKlIIo55Svhf" class="step"><div data-page-node-id="UCD3MvyKlgOeVAhWKsGTB2" class="n"><!--pnid:rjnkH2mYJA5bmAExXjWQUG-->第 3 步</div><b data-page-node-id="tlaf0b9l7TWlsqa6pJ9rmj"><!--pnid:fKLvxezvA1GcEzV54191ZB-->交叉核对 · 与近三月事件库对齐</b><span data-page-node-id="5jnEBpskcgBcqD9PylPtTI"><!--pnid:kuLgNEqwQCmCz0xxk23CmM-->同类高发点位自动标红，列入「待人工核实」</span></div><div data-page-node-id="owwFSfxUivZ6uO8cR96JU8" class="step"><div data-page-node-id="jGexqlv7tXN8Enw5rplNtH" class="n"><!--pnid:0aRO3OXUlJrwgPvjZ2Dnxt-->第 4 步</div><b data-page-node-id="IB6M01RUkgXrxt2St7STU9"><!--pnid:d1JLpD6hElmqySm3dVDZ89-->异常识别 · 异常点位与静止轨迹</b><span data-page-node-id="QiGxeYAP1qrd5HeULBUwGV"><!--pnid:QeP5ljaFTMCPMF12bftozx-->在非巡查点位长时间静止 = 疑似市民反映问题</span></div><div data-page-node-id="2QcV6b1yuemQxrRMSXj6as" class="step"><div data-page-node-id="ovs2jWrrbmtvX6zKYiInIz" class="n"><!--pnid:mZ2bkzh8CKWSxbPp4Z60Wd-->第 5 步</div><b data-page-node-id="gLLMpQuk6GioO10VyLVzUY"><!--pnid:RSlZQldfRoQLahfngSWiRn-->留证与签批 · 生成巡查日报</b><span data-page-node-id="yRCYBEgXTd5LNatdibBZM3"><!--pnid:rTFztzZ9dmkamEzJNFydue-->含今日行程、已上报事件、待核实线索、巡查覆盖率</span></div></div>
+</section>
+
+<section data-page-node-id="hZhWUVfuQlUuqKN18yEgTj" class="blk">
+  <div data-page-node-id="MZSfFHeEOCbl6i87063hm8" class="g2">
+    <div data-page-node-id="cXuxukiXppnpQv1RZ4LQV5" class="card"><h3 data-page-node-id="P7RzIu1tuW2WXgqIvATe99"><!--pnid:5LLr82eFD5KAdMOkNlqCjL-->要准备什么</h3><div data-page-node-id="2ScfPw7r5hDrKIqkjKdEX0" class="src"><div data-page-node-id="qUk7Ftj7TSchGNSeC5Mp0a" class="fn"><!--pnid:3vC6QM1Q7mXkEF6N5yhGg6-->当日巡查轨迹（GPS 点位）</div><div data-page-node-id="6tLjCEgaKW8OQ1hfNeyAMn" class="fd"><!--pnid:a2Cyc8qTbOpa07nGqS8rEg-->网格员手持终端的当日 GPS 轨迹，2 万步约 1500 个点</div></div><div data-page-node-id="LTF3VgSODdX9DAbi8IQ74e" class="src"><div data-page-node-id="Xz4SY4lzOTv43Riwp27Kbt" class="fn"><!--pnid:UFLJPS0cYHrdbE2LKGkwFd-->现场语音 / 照片（沿途随手拍）</div><div data-page-node-id="EHyVsBcAcxjyg8o93J4MGN" class="fd"><!--pnid:1OUOJ4lJB6lK31WlvFeYU6-->网格员一路的随手拍照与语音备注</div></div><div data-page-node-id="3Z0lKXIlrAqrStMt4ttURp" class="src"><div data-page-node-id="bEp6VyL49ImfLfhGlMdKCd" class="fn"><!--pnid:hYNbScsdItu7e569foKJ89-->本街道近三月事件登记单</div><div data-page-node-id="DU0XVyS0mPd0hUqAVd7vLh" class="fd"><!--pnid:c1fkORVMaJizwxIf9XBv6Y-->用于交叉匹配判断是否同类高发</div></div></div>
+    <div data-page-node-id="iOHTEuI0p6hMr9OqsjF0Z5" class="card ev"><h3 data-page-node-id="lB023rx6TT6aoBSfYz3avS"><!--pnid:U30yLaqnbyabEOaWbEFDOo-->为什么这个场景值得做</h3>
+      <p data-page-node-id="ZxabeDd8QUkohcaFXicCFF"><!--pnid:tbUyHViME6rUl8s4Dr6aEV-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="6QBJRTONwYxO8ydE1wyCFa"><!--pnid:oF1P7XUCaWax6EI1tWaWz0-->9.6</b></p>
+      <p data-page-node-id="958WjuhfSsos4C7GuvXyci"><b data-page-node-id="zHt5gehb1n6SvZAq2P4UOh"><!--pnid:3ySvkWucyORYdQYpteWP3I-->最大差异点 ·</b><!--pnid:L0CpMOoE9PAaH2ploJ64Uv--> 不要求网格员额外写日志。语音+轨迹+拍照自然记录，Agent 自动汇总并标注「疑似事件线索」，与本街道事件库交叉匹配后写入「待人工核实」队列。</p>
+      <p data-page-node-id="grARpjODa30jfQ2yQxKx2U" style="color:var(--ink3); font-size:12.5px"><!--pnid:zdtE0PMcFM0CVzpsfr4wOo-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="SOGNDs3ftpwJNqikwrKZCe" class="blk">
+  <h2 data-page-node-id="siySzzGlHWN30t5FPOZoDt" class="h"><span data-page-node-id="MX0WwZnFCrZXyjdxxApcY7" class="num"><!--pnid:S1lBa79dQmQHkZCQppEaaK-->五</span><!--pnid:OMaRlmtD9huHs7AX5yH6Oy-->会产出什么</h2>
+  <p data-page-node-id="nqZh4EokUIhgQUPjU7BCVe" class="subline"><!--pnid:PJ93MNaFc63TtsctdNtKL8-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="6ZzOCKpImFrQgxnrulQPoz" class="outs"><div data-page-node-id="FS9gMaHAWbfzgIxIajQSfx" class="out"><div data-page-node-id="DIFMNV49G49fbvv6twHiVo" class="on"><!--pnid:1pPEyNrTPh7Tn6Brr442rO-->正式件本体</div><div data-page-node-id="zthbk1fHpB2VWmjYHCaZ7i" class="ot"><!--pnid:BNZJZLVDvEwlvHlkkmIupp-->巡查日报.xlsx</div><div data-page-node-id="IY3NVs7cf2AaXkWXgTDWO6" class="od"><!--pnid:rriV7hOtHLaqudvmkMcCfn-->正式件本体 · 含行程、事件、线索、覆盖率</div></div><div data-page-node-id="RZ2fVaZ3Yu4he0YBrbxqNr" class="out"><div data-page-node-id="iRbsHbekh9GHFDF22SqfBS" class="on"><!--pnid:fjDMQj8F1ebPyynL2qFfwf-->可派发清单</div><div data-page-node-id="38975j5rSRZZ2KIRTrDlxt" class="ot"><!--pnid:kBl2N40IhwpUJHttQXZLBQ-->未诉先办线索清单.xlsx</div><div data-page-node-id="e54dUMidqu3R696AqufYXv" class="od"><!--pnid:4B4fa1hqnULfdmpxD1jTAl-->疑似事件点位 · 需人工核实</div></div><div data-page-node-id="EdeIWjwXmqilh36RDa8t0O" class="out"><div data-page-node-id="4LFO4HFD7H5kzcLHr8Pgwl" class="on"><!--pnid:TfojP3cCRJ1nqHefcNH9UU-->可派发清单</div><div data-page-node-id="00Xi9QFfI20SzuFc7is1w6" class="ot"><!--pnid:QpDrhBbPyLph5mTM3JO9Iu-->巡查覆盖率报告.xlsx</div><div data-page-node-id="wcfomFxzhglULWRv8siTuZ" class="od"><!--pnid:tEqo0BiA7GSz2EB4ZTNQWU-->本月巡查覆盖率与高发点位热力图</div></div></div>
+</section>
+
+<section data-page-node-id="0zHs8rjqBpJG6H6EUAnTqe" class="blk">
+  <div data-page-node-id="DkSUSPNaTBP7q7DkG8iW6R" class="card warn"><h3 data-page-node-id="KqFVANpd8VKGz8NNaoI2sf"><!--pnid:hb2jW8lDRyv6yD1Xz8fvbd-->这套东西不承诺什么</h3><p data-page-node-id="KmCkNgpS1JVvOLed9xewps"><!--pnid:tiR2BQtSGgIr8mm2168YEP-->不替网格员回忆今天走过哪里；不自动生成事件工单（线索进入「待人工核实」队列）；不跨区共享巡查日志（数据归属本街道）。</p></div>
+</section>
+
+<div data-page-node-id="hVdp8qrw60AbTMQ6PpHW04" class="cta">
+  <div data-page-node-id="lQZZJk0vSmSbKJFwtAG5Tn"><h3 data-page-node-id="UDprkELOiyvtBTfRilsuds"><!--pnid:Fljpv9dVzKDOmNumeQteaJ-->想看具体怎么跑？</h3><p data-page-node-id="XjuGvH4MhbiujKkHBJkGqB"><!--pnid:xg0SaZcwqqRadueVUDAjmB-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="YqpVpDbTubUN5I0RFNMcBD" class="btns">
+    <a data-page-node-id="tRcnMrZkoRZE0oh2kWVZxZ" class="btn" href="LiveDemo.html"><!--pnid:KxqMjqpsAt4JVynouqssAt-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="F3Dt68NQxGSNF6tlPVynYb"><!--pnid:UZgVTEboSp9jzGFTEPqsQn-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="bsmw8u4NiYINyjox8oWVDi" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="jomC2abr8jhHN7VYt7JySd" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="P6x6TMwblDaL5x1q75DFtn" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="cRaWZzbEzSOS0HBufouQHz" data-pnid-children="IO4r9CGEMZtjygCWyPkm6L">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="ZHc7fPFAEg3QhCDTroFade" data-pnid-children="o5IiC4edBN4ojiCvC6AKcK">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

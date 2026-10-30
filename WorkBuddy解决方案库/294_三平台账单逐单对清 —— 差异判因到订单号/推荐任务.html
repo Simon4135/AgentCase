@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="2jKwn1uQuwoN1sXTEQndDI" lang="zh-CN">
+<head data-page-node-id="9iR52raoJUVQ7mBEqqA4jQ">
+<script data-page-node-id="73odC1yhRS7Bs2u0IfeF6E" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="mZY7ohX5EOYrFwegY381mU" charset="UTF-8">
+<meta data-page-node-id="LTgDgPTSiyOsRmdUryQG6S" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="M2ariHP9YtypOfNscnotQl" data-pnid-children="KK7HJCZBzKIwECzUSIEPr5">三平台账单逐单对清</title>
+<link data-page-node-id="PsWWJzurvGW6vpXRmhTxTs" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="mBbtg4WeSagzafuo42LXS3" data-pnid-children="9xOTBqscJc8t3P4nTD421i">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="cLT0gbyCB8ipqapwqHEiX0" data-pnid-children="RiFdYufSNbXeDXCTbmbLpm" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="es512zdQZO1lbCy1uUkrFh" data-pnid-children="QPXJNeQW4Mf3VXHJI0hRxo" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="yp8wjXgRnxkidRVwGcD8gE">
+
+<div data-page-node-id="lmM6IRgZpqxsz0cgX2UHhn" class="wrap">
+<section data-page-node-id="MlfHMTv6yv03DD2a2jazHq" class="page-hero">
+<h1 data-page-node-id="BD1kYUMnKS32GWbvZy0xZW"><!--pnid:skNaXNN8elvnoC6SpiezNF-->三平台账单逐单对清</h1>
+<p data-page-node-id="azM9knB7J9t65Nu0dIyWqm" class="lead"><!--pnid:EtJyhtGUFaXMJWgXF3wcSb-->对账工具只告诉你差了多少 · 没人解释差的每一笔是为什么</p>
+</section><nav data-page-node-id="ZqwDHm4b1jsUXvzkQj3GRW" class="subnav"><a data-page-node-id="UtPSFRvUbZjq1oVvT0SKfb" href="场景引入.html"><!--pnid:VWD7VL0mflisNYbxP8dhvQ-->场景引入</a><a data-page-node-id="1aUUtAqHqh2AZSqM0fABhC" href="LiveDemo.html"><!--pnid:y1KAMUUYdtu1gRxQKrd33p-->Live Demo</a><a data-page-node-id="sRuP7gEDV3JAts7uWd11Qz" class="on" href="#"><!--pnid:tkrMxSSWwcFCOI0qv35s6z-->推荐任务</a></nav>
+
+<section data-page-node-id="LN0WZB6dlgQ6qpLS1itfxs" class="blk">
+  <h2 data-page-node-id="W8u7AERuebnLw3oD69nSmr" class="h"><span data-page-node-id="gia1GDywDjxm16EvOfzPuv" class="num"><!--pnid:v1g3cQ8hQWO6DBwwvcf8mt-->一</span><!--pnid:2EaKLVphd7LQccmQD4frXo-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="lUoK2UXdwl2BSRAJvb5SP8" class="subline"><!--pnid:SiNt2DpYlDpHhI2ulPe7nz-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="AHvYDHDU8AsQi4CBOPXleY" class="card"><p data-page-node-id="k1oDwv8mOQjQ8BfhHvMYLr"><!--pnid:DpUlg9ccRRU3Czhp56aIcQ-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="jaNsyjyBeeokwKtoqeISov" style="margin-top:10px"><!--pnid:48xWIQfgutlkIFNj99pZDa-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:DroOlL6qWS1IMro11DNRSH--><!--wb-skill-start-->
+<div data-page-node-id="JPx1eGsrQOSR8orWBhmuU8" class="wb-skill">
+<p data-page-node-id="IxFTgZ4ynvZ0ytw4OwAFun" class="wb-skill-lead"><!--pnid:1bn50GP8Q4gARlnR5FuFpU-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="L67SU9ZWMWi94mCsjnm7GA" class="prompt" id="wbSkillPrompt"><!--pnid:zhaHHBJIAAcvBtSz8FZxbq-->【准备】这个场景的规则都在「三平台账单逐单对清」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/J2dWHSHAyu2JGi7Y6BV5ff/m0iQM7_lufFz/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="KF6vZ7jwXsvIHHM9EhU2yO" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:a5JwZ2Auh8pEhuYqy7uxo2-->复制</button></div>
+</div>
+<!--pnid:HwUJtY7TkQfuBHJ2kprb52--><!--wb-skill-end-->
+<section data-page-node-id="UThPR1IRPt4ZH7YThpPQ9I" class="blk">
+  <h2 data-page-node-id="n5Qgrz1gFusVt00FD8K1ss" class="h"><span data-page-node-id="ZK1A1actqQG8TJAm39DmZm" class="num"><!--pnid:xcCm48LwEkpLMrABMStknC-->二</span><!--pnid:mm15zSRqrmlj2mq1azLu7L-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="IYpBPGD0h9uEn8Sft7J8cC" class="subline"><!--pnid:IwwoBgg1A9YEpLdR9HVMOS-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="9HvqlpFjaqFOIyOhy7Mpim" class="tlist">
+    <article data-page-node-id="eRAWaR90dONe4xuqrHTrdJ" class="task">
+      <div data-page-node-id="QJ2auiidffTLevNuVBmY1x" class="th"><span data-page-node-id="GEb6jOw03w2Q1B1AS6RBb4" class="no"><!--pnid:CZ8wstkg14Hu3P4lw2itDk-->01</span><h3 data-page-node-id="KtpjCaaFbJz7mLctnv91at" class="ttl"><!--pnid:98JR12M8z36KM1lL30rB03-->首推默认</h3><button data-page-node-id="9rGHssmg2o3SXQkDGYmXam" class="cp" type="button"><!--pnid:ZlRQRqgZkNRmpqMPxzSkDv-->复制</button></div>
+      <p data-page-node-id="klpQvRQKh0LbqapWZZxMpl" class="tp"><!--pnid:RRNfNnWi77XZiAmXGUe4E1-->上月三个平台的账单、我们 ERP 的导出、银行回单都给你，对到订单号这一级。
+每笔差异写清楚是什么原因、找谁、补什么。
+差异的责任我不让你认定，把证据链留好就行。</p>
+    </article>
+    <article data-page-node-id="xBGW5LiqZPtvbr97xkMYIG" class="task">
+      <div data-page-node-id="kBao72Dp4qrMRrxf40FoCS" class="th"><span data-page-node-id="17QZ0LtLg6qIUPTwAHcprn" class="no"><!--pnid:7ThN4cmjZZftMm3kMm5UQS-->02</span><h3 data-page-node-id="RmLDYtwubZe1Wu5GB8npFO" class="ttl"><!--pnid:V2IljwDfXTn50rY9JcKSep-->只跑差异判因</h3><button data-page-node-id="eETWI6IWdgiV0xegyt7u2F" class="cp" type="button"><!--pnid:lfOsQuMkrinFfe8iou40Vm-->复制</button></div>
+      <p data-page-node-id="7HcWq6rRa3TrlJxIq1k8NA" class="tp"><!--pnid:agaiJFZs3R04IRN4i4eMxH-->先只跑差异判因这一步：差异池里每笔按漏单、退款未录、佣金口径、跨月结算、运费险五类归因，写清找谁、补什么，三方比对的过程不用给我。</p>
+    </article>
+    <article data-page-node-id="MHWmiOqlqIyBVnoU6n2Ubp" class="task">
+      <div data-page-node-id="T0KsRtAoxTzYKyUEXGOWJx" class="th"><span data-page-node-id="Qu4ZiTR0Txr5hNE5tG6McD" class="no"><!--pnid:a77EPDLwcqjL4zIQFHRfyD-->03</span><h3 data-page-node-id="cjEvJDtVhfkcuzgvYcXeej" class="ttl"><!--pnid:s6BcWlOl2uWbYJM38x3O1Z-->换成新佣金口径再对</h3><button data-page-node-id="M3u0hyyT2ePusWeY0eegpN" class="cp" type="button"><!--pnid:y7jfq6VTao2ACgTRuP60do-->复制</button></div>
+      <p data-page-node-id="ggCgS7DDDZYRZQpkpzIGZr" class="tp"><!--pnid:rVunfqVbROEu7dBG1GibS1-->这次换个口径再对一遍：佣金这块按月初平台调整后的新折算规则重跑，看差额是不是全部等于新旧口径差，能不能整块排除出人工核查。</p>
+    </article>
+    <article data-page-node-id="3TqK00iq7MHNTjPGtf3ly1" class="task">
+      <div data-page-node-id="HjmSZMzlhHx7j3HJT9TG0R" class="th"><span data-page-node-id="keELDiPdjwya4SXWqY9CaM" class="no"><!--pnid:kHlIcGHAnxNfGgruXOI7zS-->04</span><h3 data-page-node-id="8Ol1mfxujJgJDB9lDbtGE1" class="ttl"><!--pnid:nRDOTrAIR0c3nzr5Y5Pe7w-->两个月一起对</h3><button data-page-node-id="J49a3W7VyiexTRRdjdjU9A" class="cp" type="button"><!--pnid:EJHiFUcNZU1EQtaXi3BMFC-->复制</button></div>
+      <p data-page-node-id="BDmFQC2c9uc3d9tLvytlRp" class="tp"><!--pnid:ya5ooJMv2mUiwRe9bP2Oi9-->把上月和前一个月一起对，两个月的差异合并成一张横向对照表：差异笔数、合计金额、五类判因各占多少、有没有同特征重演。</p>
+    </article>
+    <article data-page-node-id="WTwa4J5spsMapG77mrgfhL" class="task">
+      <div data-page-node-id="FwNqyQUW03eWzhti6N5Qqg" class="th"><span data-page-node-id="kFizUhW6VY1iP5Z3CIfG7E" class="no"><!--pnid:VPcTFK6zRjK0M2JEOHuh7A-->05</span><h3 data-page-node-id="71eYiuui8prgQiZ1GfdpCR" class="ttl"><!--pnid:5qXDzW6eoVwnlTJq0uROVy-->给运营派单的版本</h3><button data-page-node-id="BPt5oUTD9Mkl1PAw5FJNEf" class="cp" type="button"><!--pnid:7Ri7hAqCnlQ3EGNKyR6RHS-->复制</button></div>
+      <p data-page-node-id="jT0ZKapujow1i3PrTVihWv" class="tp"><!--pnid:b6DjTY1u9pleNxngTlIP5M-->把差异清单压成给运营派单的版本：哪个平台、哪笔单、差多少、找谁、补什么单据，一条一行，核销底稿和证据链索引不用给。</p>
+    </article>
+    <article data-page-node-id="8xdNfzlgntAjDnStzvJOrj" class="task">
+      <div data-page-node-id="RZIazSYByhLQcYWBLKuosp" class="th"><span data-page-node-id="OrwhNU8JHKSZcUENpw7g0H" class="no"><!--pnid:IbpXlXnKKQqTBAjl7H62xF-->06</span><h3 data-page-node-id="MmCDNgGBXqRTAExaxTOWLB" class="ttl"><!--pnid:kVDlsKtO2lN1Pw7xM6XSgs-->让它反驳自己</h3><button data-page-node-id="95wX3M4Ci3MKeQdcrwY8wx" class="cp" type="button"><!--pnid:LUd61yTXmHxrURn7urtnNG-->复制</button></div>
+      <p data-page-node-id="7jIwSRWtJMBZd6v5Oa0PLR" class="tp"><!--pnid:9ma6X904dfJCzhsxNryPVe-->你判「佣金口径差异可以直接排除、不进人工核查」，依据够不够？把新旧口径的折算过程列出来，算不通的改回差异池。</p>
+    </article>
+    <article data-page-node-id="1GijMjxTYFyQ2EXURH3z5a" class="task">
+      <div data-page-node-id="E93dkwSUmjOlNWbL2ImCIS" class="th"><span data-page-node-id="xjalzL3ZpahKOf1M6kbsbL" class="no"><!--pnid:PDTTrpde9eqo91bg7ujkBi-->07</span><h3 data-page-node-id="VEu2GDccenH5EpHuMXl1fx" class="ttl"><!--pnid:2k0oyDEEeOkV8jVkqhfPjz-->比对去年那笔挂账</h3><button data-page-node-id="U9Du2OAhC0ka1RqdNtNYfV" class="cp" type="button"><!--pnid:ingYjquY7wvE4mvjVPivr3-->复制</button></div>
+      <p data-page-node-id="KZxBOgQhdcqPLsxPoWNmDW" class="tp"><!--pnid:BW9XTtjt7H1LUaEC7ToXUf-->专门跟去年 11 月那笔 2.7 万元跨月结算挂账对一遍：同一平台、同一口径、跨月两笔拆分，这次差异池里同特征的挑出来，一起给平台对接人处理。</p>
+    </article>
+    <article data-page-node-id="poAjD5WbtGwT1snwtCO8Fw" class="task">
+      <div data-page-node-id="ep73w7IBVv8noMamxFWyD6" class="th"><span data-page-node-id="zMKDntcMLoL9iYCvgFwGZE" class="no"><!--pnid:mZONdJF4gAIEP2XVEmPtLq-->08</span><h3 data-page-node-id="vAITFdCqwBqWpkeprJP0QB" class="ttl"><!--pnid:5UWj36Rfv2Akj8fzKOQIB7-->对照费用台账自检</h3><button data-page-node-id="18TMX1fWYVrfxrxlRjPQA6" class="cp" type="button"><!--pnid:Z5nLiO15a5hErHbFAcYAoL-->复制</button></div>
+      <p data-page-node-id="LU9Wt96BloMdXGszEnPkun" class="tp"><!--pnid:BiOHsCKJDIiAdEL0nTbmuY-->对照费用台账把这份核销底稿自查一遍：平台账单里扣掉的推广费和佣金有没有逐笔勾稽上、有没有该标「台账缺登记」却漏标的，列出来。</p>
+    </article>
+    <article data-page-node-id="jbLTtUWJuAeOscs5aVqII1" class="task">
+      <div data-page-node-id="qiyywRjD0bTnqkCNtCCfgv" class="th"><span data-page-node-id="mO4ouzWXv8BRmAs1bncUi5" class="no"><!--pnid:6SMoAnbIzQg2APpIEkSZ9T-->09</span><h3 data-page-node-id="4ilhccazdOR879QvcaJvf9" class="ttl"><!--pnid:mu5PDKbIphbBlnbSahjwVF-->折算成差错漏损</h3><button data-page-node-id="C3RSGoZL9hxUL8TogSR9EL" class="cp" type="button"><!--pnid:gQeohPXS8Vy9kQE1mPcYla-->复制</button></div>
+      <p data-page-node-id="j5mdJjSzaeAEW6ZrtIJuMh" class="tp"><!--pnid:1cdSxG99Nlf4oeCR4LxjgF-->把本月差异池折算出来：合计 4.3 万元里有多少是去年同类问题的重演，按人工差错率 8% 的行业口径算，不查的话一个月平均漏掉多少，把算法写出来。</p>
+    </article>
+    <article data-page-node-id="VUTChdHbU2w2saCVdyKkWs" class="task">
+      <div data-page-node-id="5sBJhzpAq5Ykdon1iS6DfB" class="th"><span data-page-node-id="AHNPobsgQEhPOK10RdjwTy" class="no"><!--pnid:efOdngge5xTF6tPJpkiEbf-->10</span><h3 data-page-node-id="YxJHaloyQ7vOFOXyyv41Pi" class="ttl"><!--pnid:BM5LqKpxMh8QK9lVK8JGZq-->沉淀成判因模板</h3><button data-page-node-id="VaqC2PYJXyQ7AZaq5Ih5aV" class="cp" type="button"><!--pnid:MiJ3cTdyFSSdtbbyaZS3hs-->复制</button></div>
+      <p data-page-node-id="nTJ0a97TBIVzkrQtiq6ayJ" class="tp"><!--pnid:qTl9lESZvDrS3s6htkyb7q-->把这次的平台口径映射与五类判因整理成一份可复用的对账判因模板，下月账单下来直接往上套，附带每类判因的补单指引。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="4Gmg0d4fLGAkPAf3C7OPnw" class="cta">
+  <div data-page-node-id="CyPyLZOoEg7bs7KDzWFl0s"><h3 data-page-node-id="sM1BjnRVfh9lxzgdYPOo9T"><!--pnid:jKyiioXEHxq3oW1u9T4IRm-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="OzeC3tukvVIov06rHF8kvO"><!--pnid:NMceZpBfLSJyHjtRlorH2C-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="0Hz9jmGbLPbXdKMZRjFxIO" class="btns"><a data-page-node-id="kVLPdTX8NscDP3WglhE8LW" class="btn" href="#" id="ctaContact"><!--pnid:Rk74ol5lTo1HcQB1d2dPTD-->联系我们</a></div>
+</div>
+<footer data-page-node-id="l2NHO2mH1TCjBUlSvX3jhg"><!--pnid:VmxPeqqkG4BWxFcqihr3fv-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="TQaK8JQvcLUWjU6eL80tGh" data-pnid-children="SHoLBTAEvNW1N4E8dEWgHi">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="hPqAckcym3Qy5RaEU8i500" data-pnid-children="5KD6AhNBvslRqCDCvR7iAB">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="DTZMOLtj1zYXdo4tzqC9Lo" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="c1qYQ9h7DwHCFCTMu1ZblX" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="jjQ26oqnqFel04CFactL0H" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="TpLYFYyThoqROZyJNRfrwC" data-pnid-children="mS7AyCxz4uu25tcrUVCVeC">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="vD7yUZPKIET77VSQGhB5tX" data-pnid-children="9VrpWgArHZ22JWip6nuATH" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html data-page-node-id="uHpy6Sq7tERYmwzTu3WrHh" lang="zh-CN">
+<head data-page-node-id="mxPds7511W65WCd72kMT7i">
+<script data-page-node-id="IKODMc9gFd7LPYpUrCY8py" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="FnXcFeKkSudq82jlumt1FK" charset="UTF-8">
+<meta data-page-node-id="tDyLBGquKuR8TvOwc2SaC5" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="PGBK9tMIk5xgSEJi2dagtd" data-pnid-children="n5oeAY8ikI8knsuQs2qiDz">库存结构与呆滞料复盘</title>
+<link data-page-node-id="gbwobuZ76xK6Ix0Mzk2R5k" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="x7ZLhCc7G2LcYyGgKR58KB" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+
+<style data-page-node-id="6Psu11tVNfKodO8SgdrLM4" data-pnid-children="hMNCeAPadUyPnXI5hIvZUj" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="jro0zvuCmPJWvJaoLIMn92">
+
+
+
+<div data-page-node-id="GuB63t7YQM1lcY9HAQ5qRp" class="wrap">
+
+  <section data-page-node-id="h8mHsFinJztqLVmGjWDlSs" class="page-hero">
+    
+    <h1 data-page-node-id="Tun6Uq9CYGDZ5bLi19qzlV"><!--pnid:bGOXEbPSWYAM19tCPpkWZR-->库存结构与呆滞料复盘</h1>
+    <p data-page-node-id="HrC1KtttDc5doP2KSUNZFp" class="lead"><b data-page-node-id="3Pz2NhtqAAIuGXCT39hSbt"><!--pnid:nvxHK3Nc8g5TdbdF22DEoY-->存量驱动</b><!--pnid:dzArgUPdobk6DpmTfB3McA-->（与 6.1 缺料预警方向相反：那个是缺什么去找什么顶，这个是盘库里躺着什么）· 先<b data-page-node-id="MppHoLy4RCtMh8KTghqCbQ"><!--pnid:40c95maIpqpTqnICQI1VAb-->剔掉"账面呆滞但实际已配套"的伪呆滞</b><!--pnid:qZQnTYJEWcAi2ORbi7zF9j--> → 按<b data-page-node-id="hQbUIx1LQ511sicqynC6b8"><!--pnid:J3KWRsg8iIsEQEwXUxulWT-->在产产品图纸公差</b><!--pnid:ByeqZciibCkOEUx6gkBonW-->判能否转用 → 转用/代用/报废/暂缓四档 → 附安全库存修正建议。<b data-page-node-id="O9mHjV4DA9xcEpB4UdNhUo"><!--pnid:xeEfHTgAbh0hjLE7PTjjF3-->判据在技术部的图纸里，不在 ERP 物料主数据里。</b></p>
+    
+  </section><nav data-page-node-id="Ulvs3X21U5AW1mdkGNjEKz" class="subnav"><a data-page-node-id="cDrzobUeh9Ir6cuj2A9Wpn" class="on" href="#"><!--pnid:vhqrlfL2Xo33W83z3d5fql-->场景引入</a><a data-page-node-id="Az5g1mTFUUp4C4fapC9Epk" class href="LiveDemo.html"><!--pnid:GoHoGIolxOxZ6ASDplhdKo-->Live Demo</a><a data-page-node-id="SHMOOp9tqqB6Hinq2fi0tR" href="推荐任务.html"><!--pnid:hXS9QLj2xuvzRlLnjxJjkB-->推荐任务</a></nav>
+
+
+  <section data-page-node-id="NT3sqOSOtWby2uYfbJ06Hc" class="blk">
+    <h2 data-page-node-id="g8VgpIOcT2miQoU5ACSczJ" class="h"><span data-page-node-id="TyAfRnPTHxJxUPTleeRiTg" class="num"><!--pnid:6MYOuyPMmiGcraRmRF9nJ2-->一</span><!--pnid:198mQUi1q1NspaPN8YKJwW-->这件事现在是什么样</h2>
+  <p data-page-node-id="nVEsZdkaRH2nCqvevclgBQ" class="subline"><!--pnid:WMC04kVKk91x2jvoBL7yrH-->呆滞料年年清、年年清不掉。真正的原因不是没人管，是<b data-page-node-id="GkNtBIykkkrtrUArO9ufpv"><!--pnid:ZSW8BEK1gEijtnwQp60z79-->"能不能用"这个判断没人做得了</b><!--pnid:G2avJP1nGQ7EhpfWB3VHLf-->。</p>
+  <div data-page-node-id="RE7cscvtDFNzqANkw0mgnC" class="card"><p data-page-node-id="cLpyvEHaxqv9g5H5WrpiD8"><!--pnid:lNPoK3NIs4Y6WTuZnetLN5-->呆滞料年年清、年年清不掉。真正的原因不是没人管，是"能不能用"这个判断没人做得了。</p></div>
+<h2 data-page-node-id="v9d2xLaUr5zXSaKnRA58RH" class="h" style="margin-top:22px"><span data-page-node-id="6xSC3T3f6RXwcdsUujtwt5" class="num"><!--pnid:mSK5kCg21aMQfOGPoOb8iy-->二</span><!--pnid:SkRkVHieuO3QVRnSVcgkYD-->痛点</h2>
+<div data-page-node-id="tPRe9yslCyvwb3mksb2yFm" class="pains">
+      <div data-page-node-id="GPAJNP8ro4oaikkLcrvHSg" class="pain"><span data-page-node-id="x6DSzizTlmTJjmz48Bi8AM" class="i"><!--pnid:zAVTwqHdDrIQ2RhU60P3pa-->1</span><div data-page-node-id="2pU6LNdqnxiuvgiPF9QBqE" class="t"><b data-page-node-id="M1N0eYYylZJkqwwJo002HE"><!--pnid:e08SxVzq9P4nC9CPMJwkJe-->判呆滞的方式只有"库龄长"，于是误伤一片</b><!--pnid:1JejDDE2r7xadMtSvH3KUM--> — 拉一张库龄表，超过 180 天的全标成呆滞发出去。但里面混着<b data-page-node-id="YENPTNBzPtqTUOIGb9oG48"><!--pnid:VOU0WjMX5EK6GKUsGLKEJ1-->已经被采购单锁定的在途余量、已经挂给某张待开工工单的预留料、已经被销售合同预留的客户指定件</b><!--pnid:A5ciEPecuwXqX5rzBevTe5-->。这些是"账面呆滞但实际已配套"，本次案例里有两项、合计 18,007 元——<b data-page-node-id="x5nDd0iiNPXd0NikgIAu4A"><!--pnid:L0wc6XboLeqQmoUqrqpTet-->如果按库龄一刀切，这笔钱会被当成问题资产报上去。</b></div></div>
+      <div data-page-node-id="6viii6qkrTdexhyeN1DwV7" class="pain"><span data-page-node-id="qwlETdDcWxVPN1kWTskPQG" class="i"><!--pnid:q7XjoymPF96BnY2XMKnKq7-->2</span><div data-page-node-id="pgToywogW6Gzbeb17ZHRG0" class="t"><b data-page-node-id="hMax4QnM3dpe4amQfsypyT"><!--pnid:vwtiXJUQbVV2mwExlctPlc-->"能不能转用"的判据，不在任何系统里</b><!--pnid:OXovKFc3kHlf2xb2BfykKA--> — 判断呆滞料能不能用到在产产品上，<b data-page-node-id="kzBrk7G2Q1nuEYzyKxzPb6"><!--pnid:qgQz8bpqmis46fl7zt2QTn-->依据不是"规格是否相同"，而是"实测值是否落在某个在产产品的图纸公差区间内"</b><!--pnid:3IsTd7aT8l2ROImAOChFck-->。1.8mm 的冷轧板和 2.0mm 的规格不同，但某个在产件的图纸公差写着 1.8~2.2mm ——<b data-page-node-id="03JgUpBbLDEEIy0bhDC25x"><!--pnid:WgPjHJ85hj5mxIa8hiYIIG-->这层信息只在技术部的图纸里，ERP 的物料主数据里没有</b><!--pnid:hIA0MJZImRKcpi49PjJUEU-->。所以从来没人往这个方向想过。</div></div>
+      <div data-page-node-id="9k6L2rlPl8wQgE5Mej36Ji" class="pain"><span data-page-node-id="xbhln4OKBWUp6ST07KhMvL" class="i"><!--pnid:BUGiD8VgXhHLWhLlYSsFAc-->3</span><div data-page-node-id="C8ALYcWUFqAb12vjO3OOpV" class="t"><b data-page-node-id="jkQd3xSzqzz4fcCc1vqwXT"><!--pnid:eRXVgqE6aGWn5wGgStvRPm-->处置方式实际上只有"报废"和"打折退供应商"两条</b><!--pnid:GkbCGEvfjCEA0pRZbvwGtn--> — 因为转用要技术判、代用要客户认，这两件事都跨部门、都要有人拍板。<b data-page-node-id="H6eEABG2dbYNE0fzBVIAnH"><!--pnid:HXCMRZSRjQAOyz9U78eOzS-->而报废只需要财务走个流程</b><!--pnid:HhC4z1NIInTPsAr2dzaU93-->。于是能用的料被当成不能用的处理掉了——本次案例里 <b data-page-node-id="H6Fvqt9gzU4EQwNf5GBJfk"><!--pnid:zKIEL1nq6snPhLkwRnUBvA-->54.5% 的疑似呆滞其实可以转用或代用</b><!--pnid:akxMTpbT3k3UQdFzBM8ygO-->，如果一刀切报废，这部分钱就白扔了。</div></div>
+    </div>
+  </section>
+
+
+  <section data-page-node-id="QVzFSGy8mrIbqA5Eg0x2WI" class="blk">
+    <h2 data-page-node-id="GYZuGW3Q5096Elrb4lmcEK" class="h"><span data-page-node-id="d5pMyMouXsM1z8YTf417R9" class="num"><!--pnid:8Uwb9FiRyt59dbzxdguOtj-->三</span><!--pnid:5DUb3ABLFRHhMBt4TugQ6I-->换个做法之后</h2>
+    <p data-page-node-id="AdK35BzYXEZtlaffkNsXw9" class="subline"><!--pnid:zk1u9N7YyENAsLtHuW8cnc-->五份数据一次读齐 → 剔除伪呆滞 → 按图纸公差判转用 → 四档处置 → 安全库存修正建议 + BOM 溯源。</p>
+
+    <div data-page-node-id="oVVgG0ds2drUqI4uGJn7pz" class="cmp">
+      <div data-page-node-id="UMGfGsloby0cHQjqhi7ENy" class="old"><h4 data-page-node-id="DZrxfFk8JNJONyW2O14MHH"><!--pnid:zOZhI0sDe3HUsWKGuFlD5z-->传统做法</h4><ul data-page-node-id="6Qc6UBBguzvweaeozBaliT" class="list"><li data-page-node-id="DJxSySLCj7ljzXblsP7RVs"><!--pnid:YXPjMBKrvaU0jsucHDkhXF-->拉库龄表→ 超 180 天全标呆滞 → 清单发各部门 → 没人回 → 会开不起来 → 最后走财务报废。</li><li data-page-node-id="ucplJXkFfC6mZ7C2uqU5BK"><b data-page-node-id="LBVBdZSToZ5ve0lUT1L8j4"><!--pnid:PA03YXAYGy5ZWjkVKDeIPn-->伪呆滞被误伤、能转用的没人判（判据在图纸里）、上次的判断因经手人离职失传、安全库存不敢动。</b></li></ul>
+      </div>
+      <div data-page-node-id="zJsyygjLJN4t2qcKu26e5V" class="new"><h4 data-page-node-id="ToLf1pVzgncDB7nGuweKiI"><!--pnid:1WiVTVbvRw1LSgitE771x0-->WorkBuddy</h4><ul data-page-node-id="wcBccn3zbOU1nVSvyb6Ium" class="list"><li data-page-node-id="uyKMo2S7X1A0wb5xxRbihg"><!--pnid:PWfynJRrplx9IU9iCkgv6r-->五份数据一次读齐 → <b data-page-node-id="rJ3j6EzZgf5PwPdBzGCUOH"><!--pnid:ymGVwVOc3tMi8MPjTzDWQC-->先用采购单/工单/销售合同三方交叉剔掉伪呆滞</b><!--pnid:zdksg7Uo6el7MbqasV1ZgY-->（本次剔掉 18,007 元）→ 拿在产产品<b data-page-node-id="qKeC1uu1r7QCI8ftPRmYsS"><!--pnid:f4MlnaG8buKLHIAjDT6wPI-->图纸公差</b><!--pnid:9NDrYnw2OhgbCCghF2iFIv-->逐条反查能否转用 → <b data-page-node-id="CbrNw9ZfAHttZy6WJ7Zgb1"><!--pnid:Jo4LpAvKXMUmyR5bwaTo5O-->转用 / 代用 / 报废 / 暂缓四档</b><!--pnid:RtjzBElo5JKvNHfhb9xXU1-->，每条带技术判据的图号版本 → 附<b data-page-node-id="pS5OcJnlBTFy5SAjU3PPxu"><!--pnid:T1HZxOSCZOkQtoThXJIaLN-->安全库存修正建议表</b><!--pnid:jsBLxTcwx6Rvl3JA8ISezx-->（只建议不写回）+<b data-page-node-id="IjfswYQHydYIXisktlZ1gz"><!--pnid:GHCWn09470SAcqsbDGvrFl-->BOM 版本溯源</b><!--pnid:7MHEslk95Lk8WJEIvWLsO2-->找到呆滞的源头。</li></ul>
+      </div>
+    </div>
+
+    <h3 data-page-node-id="3gP6OB5ZvJqoqSYu1KnSun"><!--pnid:0VYyz1rP6gyrk7yY4LiZS2-->核心价值</h3>
+    <div data-page-node-id="mRkHLdNkdahl29fdwpqOEm" class="g3">
+      <div data-page-node-id="zAZlYkmsVyg0ludxOQd3uX" class="card">
+        <h3 data-page-node-id="CXvC1jRjalen3mvEHUUzYg"><!--pnid:KJXuKb50VgPXUbronyF8tJ-->先剔伪呆滞，再谈处置</h3>
+        <p data-page-node-id="6t5ZvwtI3z4ZhcCN1upAaQ"><!--pnid:2eBopgKUyFuw0Fx8tQuQT1-->库龄长不等于真呆滞。<b data-page-node-id="SC5eg9UTSeQY42ktu13lWC"><!--pnid:sa8ND1L3ux3FuxqbeZQHfc-->采购单未关闭、工单已预留、销售合同预留</b><!--pnid:XnphuavSbLwpeGo4S2KyPf-->三方交叉一过，本次剔掉两项 18,007 元。<b data-page-node-id="tIDrVMs47eKIMIjNVWSWb3"><!--pnid:nFz1IJuGaqzGYLq6YXIgFl-->误伤比漏判更伤信任。</b></p>
+      </div>
+      <div data-page-node-id="SBdcYLpZeYsIhBL0FQNEFw" class="card">
+        <h3 data-page-node-id="OAxETx4DGByD5bmR7vLuSa"><!--pnid:v02dXGFiMIizhvVFrfrHNa-->判据从图纸里挖出来</h3>
+        <p data-page-node-id="O7IxQSMO5CHcOovSlZRTkD"><!--pnid:mW4vt91jqpR3rTmcbHLBTo-->1.8mm 板材能不能用？看在产件图纸公差是不是 1.8~2.2mm。<b data-page-node-id="OfYB8pYviJO06Ed6gMQ0RF"><!--pnid:A9yny9wukKC8JVjY5eVOPy-->这层信息只在技术部图纸里</b><!--pnid:jMqSoPhWCRY86OK0YfJMyq-->，所以从来没人往这方向想。<b data-page-node-id="jalGZo5keupb7ZZgh6zuRl"><!--pnid:0ViHXkLPsgYFE0tHOEFjtz-->本次挖出 54.5% 可消化。</b></p>
+      </div>
+    </div>
+
+    <h3 data-page-node-id="KHeS7iQNLDvBqaANvpOwSL"><!--pnid:1Yby9PPrEbwRzpZQP121jY-->四档处置 · 报废是最后一档，不是第一档</h3>
+    <div data-page-node-id="WVWBEoYVPInTCflW31aDzF" class="disp4">
+      <div data-page-node-id="mXXsv67NmvT0vOLTk7LGRk" class="dp reuse"><div data-page-node-id="HIhUdM3Rx3WAaz8j7XnWK5" class="dp-h"><!--pnid:VOauL043J4jGJZBxYTYVhj-->① 转用 · 不花钱</div><div data-page-node-id="Q2eJjUI09ZWO5xfNqvag9E" class="dp-b"><!--pnid:QzmGnahPSfhi5RU4N7aO0I-->实测值落在某在产产品图纸公差内，同材质、不需客户确认<span data-page-node-id="4tnGcuz4aOsTZtqrJRc0sY" class="amt"><!--pnid:lJ0RchOztgWdu346IP3h9T-->2 项 · 14,505 元</span></div></div>
+      <div data-page-node-id="TleFnhMJ6w9aQlP4qpY5qF" class="dp sub"><div data-page-node-id="z90ALZzCfGP4xpFe4eeThV" class="dp-h"><!--pnid:J6DGA59mJFVlvbsuVSc6DN-->② 代用 · 需客户认</div><div data-page-node-id="m4VmWJX8NkzN1T9Lp9qKD7" class="dp-b"><!--pnid:wetXsCgI3xrqHZItLgIzov-->技术上等效，但客户指定过品牌/料号，<b data-page-node-id="v196hsSrfsZVGHl3178vE2"><!--pnid:9vyxnxkdbglcRyQQET8xZI-->需客户书面确认</b><span data-page-node-id="etSTzyJ7ZguKoCrQ6x49r2" class="amt"><!--pnid:6PJ8u3TxLwq4sFGKcCxOyd-->1 项 · 9,870 元</span></div></div>
+      <div data-page-node-id="G365osk4va4edogkBgI8pa" class="dp hold"><div data-page-node-id="K2bhZenkQWRhaiVgh9Elsr" class="dp-h"><!--pnid:DZpK39pGEfraqC1xxLvJs5-->③ 暂缓 · 保留但调参数</div><div data-page-node-id="2oIEuocENmThfkp32sJPIc" class="dp-b"><!--pnid:vFjCfPUNo93j0FryupGHuf-->标准件不会失效，无须报废，但<b data-page-node-id="wJwwUsU3pl5AzDWcXRyJoo"><!--pnid:7HfuHgzD8C5nWaweSUjNT7-->安全库存明显偏高需下调</b><span data-page-node-id="ruIzQJZWuaPn6Gi9wOqr1w" class="amt"><!--pnid:t1TRMt5W5k0Aw4V9z7uFuX-->1 项 · 5,920 元</span></div></div>
+      <div data-page-node-id="eiYZ0atL16im1rzNwuyyg6" class="dp scrap"><div data-page-node-id="gYTRWUSw1kdU4bgtcZhfEJ" class="dp-h"><!--pnid:Sli274K65SNFPwux1DgnjW-->④ 报废 · 最后一档</div><div data-page-node-id="nxmYNA7KL4VlqxLub9C59h" class="dp-b"><!--pnid:gYzBHXs9N85L8TcZnyG2oV-->技术上无法转用（如固件版本淘汰），<b data-page-node-id="RpSp2uUUK91LhOIsmiSuD0"><!--pnid:6b55PjBgV6Z4ozf2tb1N9R-->需财务按可变现净值重估</b><span data-page-node-id="gRGbX0D2OEazJu0XvRqe86" class="amt"><!--pnid:D5tRHFCL4xTnilgGrniB5j-->1 项 · 14,448 元</span></div></div>
+    </div>
+    <div data-page-node-id="lvjJ9NxkJytFrhkf11BOe3" class="callout warn"><b data-page-node-id="iLqxTevdtHJMx9sPwbM2u9"><!--pnid:Vsmua1uLetGAro6iUOFhP1-->为什么"转用"必须排在第一档：</b><!--pnid:2PZpQcYgUsjRUuXR5romzh-->实际执行中处置方式往往只剩"报废"和"打折退供应商"两条——因为<b data-page-node-id="NPaRUeFzMynHtzhkQ27vxE"><!--pnid:eoxIrXnQdtyJY4eSZwRzA8-->转用要技术判、代用要客户认，这两件事都跨部门都要有人拍板，而报废只需要财务走个流程</b><!--pnid:GU0xy1oNeU0xjtfiEcuHLm-->。<br data-page-node-id="8OPEgvW048yVmtKHk85YXU"><br data-page-node-id="7JX1Kg30WW3dTkjBfudSM4"><!--pnid:8GF6rYsF0tl5JObUYruI3K-->于是能用的料被当成不能用的处理掉了。本次案例里 <b data-page-node-id="O350wFb93Y1giL0Pu6sHHl"><!--pnid:xdDC4DKKQnJLuGm4yqtoyy-->54.5% 的疑似呆滞其实可以转用或代用</b><!--pnid:j9b5xZNFukbDP1OkuDwT8y-->（24,375 元 / 44,743 元），真正只能报废的是 32.3%。<b data-page-node-id="CCNXm0WwIavken1KAJ9Bnn"><!--pnid:TFf3B26arYinn6w7U5378G-->如果一刀切报废，这两万多块就白扔了。</b><br data-page-node-id="E3QTlPuemMuM0ihoRfdmad"><br data-page-node-id="MZU3b4szzLrGBLTfUlIZxk"><!--pnid:8kknTQA2cUozjphgxLsamQ-->而"暂缓"这一档同样重要：轴承这类标准件不会失效，报废它是浪费，<b data-page-node-id="CVlNjrVNPID0zm1t59EYZH"><!--pnid:ibJ8JAWBVIxlUff28tAigP-->但 320 只对应40 个月用量确实不正常</b><!--pnid:lxzDxSyhfsYaGE35Lq3hOR--> —— 正确动作不是处理掉它，是<b data-page-node-id="lFK87CJfXfYzLXXlgsM15G"><!--pnid:I4rausUuNakOCsqJcXXLL8-->把安全库存从 150 下调到 30</b><!--pnid:to9aK6N6kXlKgZ5STPTFzE-->，让它自然消化。</div>
+  </section>
+
+
+  <section data-page-node-id="5RL3EkVEhDKE5P5PCLLf7J" class="blk">
+    <h2 data-page-node-id="AaTLg7BbtVTC52BJQhzUwc" class="h"><span data-page-node-id="0UWcLH0U2xY2pIJTRHxsHA" class="num"><!--pnid:kj0HQMYQBCNptA25J3qiUQ-->四</span><!--pnid:V3cfaj3gh1h1CqkLpCPAkx-->场景闭环</h2>
+    <p data-page-node-id="aIUx2Yu9M7dnotKSkMxYWk" class="subline"><!--pnid:CuHU3E5MrD49jFEuzVLhNi-->从五份数据到一份可会签的处置意见书 · 5 步走完 · 建议每季度跑一次。</p>
+
+    <div data-page-node-id="S2XL0uGoFJHO53mAoc3RI4" class="flow">
+      
+        <div data-page-node-id="zEFL6N0nVQTIpndZ8KdAhX" class="step"><div data-page-node-id="q5pUYnreFtOSIiwqjmYvD5" class="n"><!--pnid:VgpbMnz3l7I4jEd2PoD4YP-->STEP 1</div><b data-page-node-id="ZrNaGM8lxaEJGZQxmGBzHa"><!--pnid:QAx3yMbh8pYdfSRyPHnA91-->读库龄 + 三方校验</b><span data-page-node-id="A7nz7L6sEYm97dHWsVxMNv"><!--pnid:wGtq3By1nmuR8aKD7LZmu2-->采购单 / 工单预留 / 销售合同交叉</span></div>
+        <div data-page-node-id="q9eSzlfiqJqQpHEJGo2wxO" class="step"><div data-page-node-id="c9fdIZ3H6HTYdXRjk4AakA" class="n"><!--pnid:seyBJrq6Jmgby1RvActzr6-->STEP 2</div><b data-page-node-id="teI2y3W20PPuESiDwKqngI"><!--pnid:rHi5aBY9MrRvJgc3b994Fc-->剔除伪呆滞</b><span data-page-node-id="ll74l2dgTMe1SGOViQrKQ6"><!--pnid:1AVHKW1qfwRJeciIwQhwRl-->账面呆滞但实际已配套的摘出去</span></div>
+        <div data-page-node-id="UlULrAbM8J5p9XXS1446Ku" class="step"><div data-page-node-id="J8zSvEdd4AG5XusmXBesEo" class="n"><!--pnid:PNS3C51Klu8O3NQaPjjFGg-->STEP 3</div><b data-page-node-id="QMKXKvPSXgUqVvpZXQxF9x"><!--pnid:20re2GopmQt9aF7Fk58qfm-->图纸公差反查</b><span data-page-node-id="mPigOrUAOnAtgcEfIrPRN7"><!--pnid:4nThUUqJUPWmxPwsZs3LWS-->实测值是否落在在产件公差区间内</span></div>
+        <div data-page-node-id="feKonVqRDt8ysB1rOs10Vr" class="step"><div data-page-node-id="zFHRCdsl0UohRKvfDAPRyl" class="n"><!--pnid:smNyMDnbpP9zcAKyxpS6Y8-->STEP 4</div><b data-page-node-id="fVtSxAcy6RoXkaKC40O02P"><!--pnid:iXr67JcB997ycf9nRIJP12-->四档处置 + 判据</b><span data-page-node-id="XwKM3MpjSwge34qL3NDtRd"><!--pnid:FW0O5vo4Sklo46LZMZq5NF-->每条带图号版本 · 报废排最后</span></div>
+        <div data-page-node-id="ACBr83LIc7vpJ2q0yxFDM9" class="step"><div data-page-node-id="lNtXmGwTC5FsAyfIFrCCsy" class="n"><!--pnid:ec259V0zuoznVdWqVMFxXy-->STEP 5</div><b data-page-node-id="cKPBMxnDCIYuDwmjIQOlMX"><!--pnid:i4MivdjXMx6W1RPY9wEo7j-->参数修正 + 溯源</b><span data-page-node-id="UwFPGhWGNs2rnWgavOjdMw"><!--pnid:euqxKgz5uVEntZY0YLJbrF-->安全库存建议 + BOM 版本找源头</span></div>
+    </div>
+  </section>
+
+
+  
+
+
+  <section data-page-node-id="79e7gbLdSWzbLplvkUyXic" class="blk">
+  <h2 data-page-node-id="rLDuVufJ7UsqeKzSUtNvih" class="h"><span data-page-node-id="SyQnvjZ7bcKUlMptqMvB2M" class="num"><!--pnid:rF8tsn1Ppe8y5MeiOzXZeQ-->五</span><!--pnid:V8ngfMUJT40KM1Ky086MxM-->会产出什么</h2>
+  <p data-page-node-id="ZPF9F2qfpyI84YAKebzpNG" class="subline"><!--pnid:WoYn3KJNOPDV6RdyXmv9z2-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="KILGQbsyZpgWmiUoghXFFK" class="outs"><div data-page-node-id="PSDpij6A0peoITKIpTlSZB" class="out"><div data-page-node-id="GPeeAJEhUfSQuURmZGBXiY" class="on"><!--pnid:XTcHPk6eixEkGKDAhMQZLR-->正式件</div><div data-page-node-id="HCiS0m34QbyUgIQC5mQpOY" class="ot"><!--pnid:kcY0VU08x03ATKe2GLTT1L-->工作产物.xlsx</div><div data-page-node-id="pKmmESm4AMasbb5qYResqG" class="od"><!--pnid:NvQaAPnDZ9P2n6YZczhLZJ-->可直接进企业流程的正式文件 · 带出处与判定依据</div></div><div data-page-node-id="NuZzhxHqYSb2NteJfb8aa2" class="out"><div data-page-node-id="bh9AMCrsn2PB1JvtoYELSj" class="on"><!--pnid:SLKA619LVUtX8fzY9i4yU4-->问题清单</div><div data-page-node-id="lWrLWUtub3X8uYx6azyZYG" class="ot"><!--pnid:U0kZUTMBQc45jWOifwx17p-->待确认与差异清单.xlsx</div><div data-page-node-id="nSycGJYkuZE77DfRO60jNV" class="od"><!--pnid:ROM5YxvqKl7PGX1BdNTYEO-->每条带原因、影响、责任岗位与时限</div></div><div data-page-node-id="E37S02nBpIFr3j594dQOSj" class="out"><div data-page-node-id="wj2U5fP35ARpKwaD3jXPYE" class="on"><!--pnid:JxpTKRkls6r0sdG9bJMOsB-->归档记录</div><div data-page-node-id="gHbXLW6ggMwon8vrAPknaO" class="ot"><!--pnid:GL0xfPnJIqsNkwDhySpamQ-->处理台账.xlsx</div><div data-page-node-id="VlVXw0w5F77tk6tr586zT8" class="od"><!--pnid:5WqyDyD1ozP0bsZwtyLe9U-->本次结果入库 · 下次同类任务多一个真基准</div></div></div>
+</section>
+
+<section data-page-node-id="OEueRWJ0gRm7D2m5Qis06A" class="blk">
+  <div data-page-node-id="jLhR5qWGdfhIoD91sH6Jm2" class="card warn"><h3 data-page-node-id="tagF5tzd3T9rLLzG0b4v3c"><!--pnid:IFNDJsay3tPF2y7hl04rsG-->这套东西不承诺什么</h3><p data-page-node-id="mf55121W0mL3s8Ge6pAgku"><!--pnid:v1BILHUjSCy9JoDBVIq4xa-->不做「AI 替你定最终结论」—— 关键判断必须由人确认。本场景产出的是初稿和建议，影响大的项一定会被拦下来要求人工确认，而不是自动放行。</p></div>
+</section>
+
+<div data-page-node-id="UCRTzObw8XkMI6WM1UIKCu" class="cta">
+    <div data-page-node-id="ipcDQynrguZ0REfHZC4XE8">
+      <h3 data-page-node-id="LbC3QYWBDbibp7X0leH5vF"><!--pnid:rBvAdJb8zdSS2RwDDWVsXX-->打开 Live Demo · 看 1.8mm 板材怎么被"救"回来</h3>
+      <p data-page-node-id="gZ1QNm8OvyTCOAkkL570I9"><!--pnid:pHFGVxR0maU9ezpdlXPODi-->三方交叉剔伪呆滞 · 图纸公差反查 · 四档处置 · 安全库存修正 · 数据脱敏</p>
+    </div>
+    <div data-page-node-id="RhEj5zNyQlTPLIFeWl6gbO" class="btns">
+      <a data-page-node-id="gGBGIn9V4YKFC8IObBmZc5" class="btn" href="LiveDemo.html"><!--pnid:dpubqO32a4Nr4H9ZlRA5mA-->查看 Live Demo →</a>
+    </div>
+  </div>
+
+  
+</div>
+
+
+<footer data-page-node-id="KuOTnGr437qzjCFcPJqfQC"><!--pnid:sbsxFUm6xWTdQQIQ5ntrsE-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="UhaEoCEDThJJh1k21OcMco" data-pnid-children="kD9k74b43w9xnrNWfjfoax">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="SzAU1odHCjCRKZ6Di8YDLN" data-pnid-children="kymka7sfgL15i6xvHEuk1E">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="ZeKYMoQPhoySgzF5C53eGF" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="xCl89Cj3WSlt2o97SuCsqR" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="ARAVvWQHso6V4uKv5nPSQg" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="IIT9CnYtvMqT2GKq5B6OCV" data-pnid-children="RBfLJLdyXICYe4QMA8EyLP">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

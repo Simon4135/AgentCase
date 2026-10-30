@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="sYLJD9lihwdMOiqXI3Y3Xb" lang="zh-CN">
+<head data-page-node-id="DBwrqSnkFvvFgzLuDtnhXO">
+<script data-page-node-id="A76F6gbSg6TzXaRyNQUWbT" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="3rjrmEAAUMw96FvxROl44A" charset="UTF-8">
+<meta data-page-node-id="lE88zxtIMrJFx2eYsIUeOO" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="p0Z4tZOigO4TYGFHopxT1a" data-pnid-children="pzL3WZERWSgKDg9beLnUFN">竞品价格与促销监控</title>
+<link data-page-node-id="YLr5CXuPGkLqYzkolHUjC2" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="fLWGlSRRCTlgmBUri0aDxS" data-pnid-children="v1MvvMnk3zdGCQE62mjblF">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="0hgWucBo9w6aCctXpSjP79" data-pnid-children="4lE22JJwN3i5ZVcg9phW4b" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="fEteONmaz5dYbWAVcQOmbv" data-pnid-children="ttWE8kDLovhBuGoPyyVTo7" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="c1ECudJ7L49zX0SlN6waXj">
+
+<div data-page-node-id="jqWgKhQJrJXmBHXrpnOhci" class="wrap">
+<section data-page-node-id="QwZN24EOKIgemLjNYMREH3" class="page-hero">
+<h1 data-page-node-id="rJcGe16MpC12EB07p0hm6I"><!--pnid:LA8Z4MHnnAH5x7RkebgjH5-->竞品价格与促销监控</h1>
+<p data-page-node-id="gByArNi6eHn1vYadpzsVKD" class="lead"><!--pnid:mBGct9l67j1TqcteXI4U0m-->竞品降价两周后才发现 · 流量已经掉了一半，比价这件事「真没时间」</p>
+</section><nav data-page-node-id="Q0IalvchpTIvrG6oXC0lxx" class="subnav"><a data-page-node-id="cejqr1eoSn7z8VbnNXpGwM" href="场景引入.html"><!--pnid:rhNNkqyFmEoFt5gYuy70Mn-->场景引入</a><a data-page-node-id="Yd7vqQZp3dXOME5P7yurvH" href="LiveDemo.html"><!--pnid:qy7WdfW1kyCpekCuQ2a3mG-->Live Demo</a><a data-page-node-id="6Zox5Lw9mLafmqtcOsg2hk" class="on" href="#"><!--pnid:zGMx5ais2lI0xVz4hEpC4A-->推荐任务</a></nav>
+
+<section data-page-node-id="Pkyb4Wqx1fSV6S9KIE9TQh" class="blk">
+  <h2 data-page-node-id="acKSl6OUdXBniDZz7Nuqbj" class="h"><span data-page-node-id="Ygyfm2ijIjEY5UbLDFnK6E" class="num"><!--pnid:nndD7FmX8svWdlbKXh8GCg-->一</span><!--pnid:Ba7Em9jBmbIjYE5yLGjdC1-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="fJSxBuYaNDCYLmW2a2uv7C" class="subline"><!--pnid:ln1Rgss5Txe2iWb7ftDjVh-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="8ldz8LjkSkzxKCXP32nakQ" class="card"><p data-page-node-id="mwIy0NWZ56ad5zn4wrMBi9"><!--pnid:SPxOTE4kqnYmFQhI0YNEaa-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="E7fQ9U8QeFm0CPQh6Xm1ob" style="margin-top:10px"><!--pnid:eKqwkoGO2iFrD975R2ySKu-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:Olj2ho8iKQS8JjV4mNxkhv--><!--wb-skill-start-->
+<div data-page-node-id="mSSXajIe8Yc6axIDMwTM8g" class="wb-skill">
+<p data-page-node-id="BlJNuV6Wh7VdvGOmivXNA4" class="wb-skill-lead"><!--pnid:Yc0xLOQ6cTB2EYuQxJoZk8-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="2tEgKMOhgj16HrJ2V1aCcV" class="prompt" id="wbSkillPrompt"><!--pnid:OuAkV5huOmVubMcgBrkgpI-->【准备】这个场景的规则都在「竞品价格与促销监控」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/u9WySEKLMjg4ufvlQ9oSge/uAamdQLnn7VR/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="1Pg0eFeGNFt9VoQajLplQT" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:DhSp7fKeiZLQs0e5Z0SqHg-->复制</button></div>
+</div>
+<!--pnid:GG7r7Ucm0gBAfbJCxLT9EO--><!--wb-skill-end-->
+<section data-page-node-id="Yix3B0ovOGXqnEdpzbFRZ5" class="blk">
+  <h2 data-page-node-id="66KVB858ISW5b8vlXUyl7q" class="h"><span data-page-node-id="sTJCTrJNLrwxiPxrRDoraM" class="num"><!--pnid:U09XGNJjxrowPA5pn3dHLA-->二</span><!--pnid:3s60IZDUlowYtvh0RGcvAQ-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="XeQliMZ5glI6J323QA4G2J" class="subline"><!--pnid:gT5Y55JjCN21Ny1pfNOp5s-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="eE7leqxtMWDoUD78poejwc" class="tlist">
+    <article data-page-node-id="dxY1lGCmBOetnrLi2UvA4x" class="task">
+      <div data-page-node-id="RYWAf8W2rQNiij9hsmfe7M" class="th"><span data-page-node-id="DvE1dBamCfqgbMA9c173Vl" class="no"><!--pnid:SaBQYeQrnQ3vdd10cWS44i-->01</span><h3 data-page-node-id="25QOOkwUlnotm0HJ6MDBcD" class="ttl"><!--pnid:scPQK1b4qmxTSBFndsntrH-->首推默认</h3><span data-page-node-id="XzuvYMHqwG4NasQQ8W8JMF" class="star"><!--pnid:to0ZvH64XNrTiIYqI4cCZR-->与一键体验入口一致</span><button data-page-node-id="eHZalcleNm0bS9QgpvjLmL" class="cp" type="button"><!--pnid:9CweUXZx4I5YnHXO5KyYGm-->复制</button></div>
+      <p data-page-node-id="0GneyQPyIzhwGDGkrnLOto" class="tp"><!--pnid:v6XLXPLjcZiOnSpMj41qXj-->我来试一次这个技能。三份材料都读：「01_对标店铺价格快照_本期.xlsx」「02_上期快照_两周前.xlsx」「03_自家流量与转化_近两周.xlsx」。店铺流量连着两周下滑 18%，有客户问隔壁家油污净便宜了 6 块，一查对标店 12 天前就调了价还叠了券。产出三份：「竞品价格与促销监控周报.xlsx」——对标店一行，比的都必须是券后到手价（页面价加可见券折算后的数），折算过程可复核；异动清单一条一行，列谁动了、动了什么、幅度多少、对自家影响级别；「竞品异动与自家流量关联分析.xlsx」——竞品调价时间点和自家流量、转化曲线对齐，算出滞后期天数，逐 SKU 给趋势吻合度；「应对决策框架.xlsx」——跟价、不跟、差异化三个选项各一行，列毛利影响、代价、需要谁参与。竞品降价的 SKU 要跟自家流量转化下滑的 SKU 交叉，区分真威胁和不同价格段的无关动作。跟不跟我自己定，框架只摆选项和账；推荐意见、完成质量评定、责任认定三栏留空。</p>
+    </article>
+    <article data-page-node-id="SOMZGqoC58OO9oE7VZ34do" class="task">
+      <div data-page-node-id="6ghdtHxfkaR0FOSAsfXgne" class="th"><span data-page-node-id="iucenI84oRBScZBTTqROJK" class="no"><!--pnid:1MXB2c3HzswbGM8FVBZPpJ-->02</span><h3 data-page-node-id="BEp34z6FefMzmNGXHfas8A" class="ttl"><!--pnid:gXJTUwcgatD8wOEwUcK0KW-->只比油污净这一个品</h3><button data-page-node-id="ulon8DN5DIxVI7lz1dxU0r" class="cp" type="button"><!--pnid:XEYMrF8LEYiKhxG8ry3YvR-->复制</button></div>
+      <p data-page-node-id="cuCqKRyDSP1fFUJqYCiBZ8" class="tp"><!--pnid:PqzAlhGWUmkEmClFp5uqWM-->先别比全店，只比油污净这一个品。读「01_对标店铺价格快照_本期.xlsx」，把五家对标店的券后到手价逐家列出来。产出 Excel 一张：店铺一行，列页面价、可见券、券后到手价、跟自家的差、是否在打价格战、券的叠加规则。折算过程一行行写出来，页面价直接比的不算。</p>
+    </article>
+    <article data-page-node-id="wXMPxWp1QYcpRYp4W2RtLS" class="task">
+      <div data-page-node-id="AzsanHA2dxZGbSh9Xkbp3u" class="th"><span data-page-node-id="2BL5bnEmV67hwvKKPDAMDh" class="no"><!--pnid:Tr0mOejqa4IkAA2lzDXub3-->03</span><h3 data-page-node-id="PXOaButP1BnFRwKROkbgt6" class="ttl"><!--pnid:5OXpQrdOJpBv48dRHxWbDe-->换成只看上新和改券</h3><button data-page-node-id="jfFFeUTlSVyFxKrJmGrlva" class="cp" type="button"><!--pnid:JeqCJdUnZ3XWbccg1YKQPq-->复制</button></div>
+      <p data-page-node-id="hNLyauLyy9mnUUaFYV08uQ" class="tp"><!--pnid:6l6n6QE15s5RJhnO0sZR2m-->这次不看价格，只看对方上新了什么、券怎么改了。读「01_对标店铺价格快照_本期.xlsx」和「02_上期快照_两周前.xlsx」，产出 Excel 一张：异动一行，列店铺、异动类型（上新/改券门槛/改券力度/下架）、上期是什么、本期是什么、时间窗口、可能意图。拿不到的信息写「快照里没有」，不要推测。</p>
+    </article>
+    <article data-page-node-id="VFfm1uJnjjfh7ydzrjQXsz" class="task">
+      <div data-page-node-id="iB06snycJh7OTaL8R9x0OG" class="th"><span data-page-node-id="kmid2NePG8nJRRapZeENK3" class="no"><!--pnid:GUeApIbpha2VaYQmncEzIq-->04</span><h3 data-page-node-id="UEMLvUzxMaiJAGNpDO1jhW" class="ttl"><!--pnid:FgN6e9uVLjhY4KM0lvOqpo-->一次比十家店</h3><button data-page-node-id="F662h3hz4NWt88vyOvxEbD" class="cp" type="button"><!--pnid:GL7r6AoCiFh6BfmJ4mZ0uw-->复制</button></div>
+      <p data-page-node-id="EdhXZC8TSgeRXeOxuEiGiX" class="tp"><!--pnid:XiaXJvALsH3pvwng3uXvxe-->把对标店扩到十家一次比完。读「01_对标店铺价格快照_本期.xlsx」「02_上期快照_两周前.xlsx」「03_自家流量与转化_近两周.xlsx」，产出「竞品价格与促销监控周报.xlsx」里加一张横向对照表：店铺一行，列券后到手价（按可比 SKU）、本周异动数、对自家影响级别（红/黄/灰）、是不是同一价格段。同一价格段那几家单独排前面。</p>
+    </article>
+    <article data-page-node-id="21OXVCz6mXCpZVe6TD2fq7" class="task">
+      <div data-page-node-id="SOLCbiBMNh0sUGnh5zDhTy" class="th"><span data-page-node-id="dgHvBQRJoToM1jNW5cKu6W" class="no"><!--pnid:nyPVubJTWkGlOtuJy7Igqo-->05</span><h3 data-page-node-id="xe0vxDBK4u1oAqI9c4Uo1S" class="ttl"><!--pnid:fPcVqtvTBq2wBhhkV6R3B7-->给老板娘决策用的一页</h3><button data-page-node-id="4QXeiGXfY4dkrD6VQbQDvd" class="cp" type="button"><!--pnid:cqwd0mxcmhgnWjg1XPk9aN-->复制</button></div>
+      <p data-page-node-id="ZjNCKHkuSYVUjkZvPKOsCA" class="tp"><!--pnid:BVEvbDWyLKolTHGi5n8mvY-->读「01_对标店铺价格快照_本期.xlsx」「02_上期快照_两周前.xlsx」「03_自家流量与转化_近两周.xlsx」，把监控压成老板娘拍板用的一页，输出 Markdown：谁动了、动了多少、对自家影响多大、跟价会掉多少毛利、不跟的风险是什么，逐条摆清楚；跟价、不跟、差异化三个选项各一段，各带一个数字。跟不跟留给她，不要写建议。</p>
+    </article>
+    <article data-page-node-id="9WEUwgDrltGTd09b5rv92n" class="task">
+      <div data-page-node-id="899FKvZNgwsunG4bxaT9x6" class="th"><span data-page-node-id="rBnxUAZ8G4xje4kHZWVXJM" class="no"><!--pnid:ZL6XFxJjDFDezpPpCfm6XJ-->06</span><h3 data-page-node-id="GFR56uboP1EMU4OdvCohtw" class="ttl"><!--pnid:3Y6LEBOzx3vIBzmhqRElh7-->让它反驳自己</h3><button data-page-node-id="EfY9WRPsS633LmM8Vv2Gp0" class="cp" type="button"><!--pnid:tT41QUCd9jnOVl52IcHHY8-->复制</button></div>
+      <p data-page-node-id="OAJqiInFA7NSh9JzFxHkFo" class="tp"><!--pnid:q65CxgDEHMiw1XJvdwquso-->「另一家的新品可以排除出威胁清单」这个判断依据够吗？读「01_对标店铺价格快照_本期.xlsx」和「03_自家流量与转化_近两周.xlsx」，把定价带、目标人群、SKU 重合度摆出来。站不住就加进监控范围。产出 Excel 一个对照段：店铺一行，列定价带、与自家重合的 SKU 数、人群是否重叠、判定（威胁/无关/待观察）、依据。</p>
+    </article>
+    <article data-page-node-id="8dWCIavxI4e0atWMAQz170" class="task">
+      <div data-page-node-id="ple5Y1YZgNX4fd5y1ShOto" class="th"><span data-page-node-id="vTm8rAxLjD0Y46I5uFCfPE" class="no"><!--pnid:HbhxVD0fEbGh4qBkB7ToKA-->07</span><h3 data-page-node-id="feuc9LwqUStR8vMGJItvf4" class="ttl"><!--pnid:78YSGp71fA8pz7IbkiTOoj-->专门比对上次快照</h3><button data-page-node-id="IDIeHkrPNjVxdpltVNisO6" class="cp" type="button"><!--pnid:Xv2ydBlDHjnMGPOYmK8pj8-->复制</button></div>
+      <p data-page-node-id="jhlvemNncJnVtLSct2FnCo" class="tp"><!--pnid:8UKgeO8L1U2thocyzJv1su-->读「01_对标店铺价格快照_本期.xlsx」和「02_上期快照_两周前.xlsx」，逐 SKU 对一遍：谁是在最近两周内动的价、动静多大、具体哪天动的最早能推到哪；再把外部动作时间跟「03_自家流量与转化_近两周.xlsx」里流量下滑的时间点对齐。产出「竞品异动与自家流量关联分析.xlsx」：SKU 一行，列竞品动作、动作时间、自家流量下滑起始日、滞后期天数、吻合程度。</p>
+    </article>
+    <article data-page-node-id="TpgWQwbVWtKjcqkm6LUOEi" class="task">
+      <div data-page-node-id="zX0UMjzkQW7iTKBXBIpbba" class="th"><span data-page-node-id="H8I9oGd32Ik7swwNyuB79V" class="no"><!--pnid:CKxak4IsldJdfPW4TCj5L0-->08</span><h3 data-page-node-id="HG9jP9dB4A9f4jyBx2kF36" class="ttl"><!--pnid:j5lLbgsTAW6GqSD2mk0hjY-->对照决策框架自查</h3><button data-page-node-id="BykhABydJLAwiC7pgMSAlQ" class="cp" type="button"><!--pnid:U54HsXYQlaYEBzQBayoVlY-->复制</button></div>
+      <p data-page-node-id="k4nnSYSEuk8BmQ2NakFO5n" class="tp"><!--pnid:A9SSlUmWiOSiUpIl3mKt5g-->对照决策框架自查一遍：跟价、不跟、差异化三个选项各自的毛利影响都算了吗、用的是哪个成本口径、哪一项只有结论没有账。产出「应对决策框架.xlsx」里加一张自查表：选项一行，列毛利影响有没有算、用了什么口径、缺哪项数据、补上后结论会不会变。只有结论没有账的补上公式和取值。</p>
+    </article>
+    <article data-page-node-id="hDxxBje8m9HtLJjvV7RP0M" class="task">
+      <div data-page-node-id="nCAL8W3jNxX0KUE4cQpUxL" class="th"><span data-page-node-id="4OUEs76RM0oKGCKOrYKaFT" class="no"><!--pnid:foBp15tZHVr5EDeCU0uPRN-->09</span><h3 data-page-node-id="eIqjVa4xhGLJxpVRCT8EJD" class="ttl"><!--pnid:1Eo9spPLgricaqPYIlAlwV-->折算成决策滞后的代价</h3><button data-page-node-id="6l6DdoRXWO4JDC1m1B1lfH" class="cp" type="button"><!--pnid:coa0n8wcs7uTWaGqaukaT1-->复制</button></div>
+      <p data-page-node-id="Nc3lUMw1OnR1VmpJ2qEoeF" class="tp"><!--pnid:5nzVi1Qv8oaAV55pip3ZaX-->读「03_自家流量与转化_近两周.xlsx」和「01_对标店铺价格快照_本期.xlsx」。这 12 天没发现调价，油污净少卖了多少单、折成钱是多少？再换算成每周比一次快照要花的人工时间，值不值。产出 Excel 一个测算段：一项一行，列少卖单量、客单价、损失金额、每周比价人工分钟数、折算人力成本、算式。单量是实测还是按趋势估的要标清楚，估不出来的写「本项无法量化」。</p>
+    </article>
+    <article data-page-node-id="yRFpxEGrRF7EZlW2rBK22i" class="task">
+      <div data-page-node-id="W0CJe2S2O5zL2ux22C8vfA" class="th"><span data-page-node-id="V1os5hnUzLND5gvI9YMzlp" class="no"><!--pnid:IezuBCzZegtzCYnvXiPh3i-->10</span><h3 data-page-node-id="3vz4jtCMh8eDeVsT0ST8zo" class="ttl"><!--pnid:3P3Uwx65rLqDohIybDfJQO-->沉淀成比价周报模板</h3><button data-page-node-id="2Q1yLnxIrmxqWfbg3Ys8QG" class="cp" type="button"><!--pnid:kTYgPgYRoYIlHKUHBTN38r-->复制</button></div>
+      <p data-page-node-id="SL29wG3a3Rt7m72Z5gZdFP" class="tp"><!--pnid:XG2UldBCprskv9IAVNsVGf-->读「01_对标店铺价格快照_本期.xlsx」「02_上期快照_两周前.xlsx」，把这次的对标店清单、到手价折算口径（页面价怎么加可见券折算）、异动分级规则整理成一份比价周报模板，Excel 一张：上半部分是快照登记表（店铺 + SKU + 页面价 + 券 + 到手价 + 记录时间），下半部分是异动与影响表（动作 + 幅度 + 对自家影响级别 + 判定依据）。每周填一次。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="mhr08tiVoSEpeeU7z7a6oD" class="cta">
+  <div data-page-node-id="UmcdM3Ik2ZimyBpvp3yJtF"><h3 data-page-node-id="cRRpI9zYzqkOUPpbn2zILe"><!--pnid:3hWI5dc72wrkEOjsxbmj1v-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="P8XJL4OBkO131PZrR2GBFE"><!--pnid:shmA5mUW8lfJZK2aZzz8uN-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="GdWVptw14khWpp5pFZQI4Q" class="btns"><a data-page-node-id="JkPgiTOrCSnWZmBmKudMcM" class="btn" href="#" id="ctaContact"><!--pnid:HwSFnvabv1o3w4Z8876gJj-->联系我们</a></div>
+</div>
+<footer data-page-node-id="91pLaUbP4rMjgO9RjedDYR"><!--pnid:eFqOMvwRRBSP98qTHHN6mC-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 不碰钱不对外发声 · 执行按钮永远在人手上</footer>
+</div>
+
+<script data-page-node-id="W2Uh16LWada55oq0u3dZQL" data-pnid-children="OBNdFnLYWmnJjUsuIC2r5D">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="jo212ZpyJoLGZ821BQuh1y" data-pnid-children="hEgPA1XJUzeZGDlTwBrGEe">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="HP2w08BBONOtJLFTNGJDWZ" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="1zDGu2dwtv4I3ilGdRbyF5" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="RR2G0V7efdGvj7jjhCYjnJ" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="cfgwPmI3ejW6R4h19AylfF" data-pnid-children="lEX7TltCmA8zHr2ZO82sbw">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="S9UAAP5TFNwn68IxqvxKGj" data-pnid-children="NUSoGv7U9uIIp4ID3LNpJL" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="lUWVmo3ZXJis9gQoLYHvmy" lang="zh-CN">
+<head data-page-node-id="cedhL3ScO9D29CzxUbQeen">
+<script data-page-node-id="vGA0Vpx2BQn73lbQtnvNGE" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="iGUwykZrTrwMJpdQcgPv3m" charset="UTF-8">
+<meta data-page-node-id="Ih69wyRxVDk4f4lS5Hr96z" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="oeQNdrwzHa50HK8UuJXCQc" data-pnid-children="WscIUafxM1z66JV9YRth70">库存车毛利与库龄预警</title>
+<link data-page-node-id="8VelkgZmaxZukA5E0bgEvN" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="OhXDenoQlodnyio1l29rM5" data-pnid-children="m1CC2DvylAvYfrKSMcVKka" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="tLRrY0qGdQsxEhPYk2Rxf5">
+
+<div data-page-node-id="XAP8ydlWPUtJEuR0dEi91J" class="wrap">
+<section data-page-node-id="WlkoiuQNHSD8LmDd8ahmnm" class="page-hero">
+
+
+<h1 data-page-node-id="X4CWvLvhOhuJ0dqRxNb1Vc"><!--pnid:iAkRdmYZHpFBNZtpTOuaJs-->库存车毛利与库龄预警</h1>
+<p data-page-node-id="NgibYJ88u0MMydReOhkSEU" class="lead"><!--pnid:BUbqQw4Xe3VAYytVP7as0r-->库存车停一天就烧一天利息 · 老板却算不出哪台车在亏、该先清哪台</p>
+</section><nav data-page-node-id="lLK76FNLEfi9Jdd1SQENEd" class="subnav"><a data-page-node-id="0yZW8cLBKD0pN9UXdXzjCO" class="on" href="#"><!--pnid:OqXEnBz5xvUEWEFPTyvNe6-->场景引入</a><a data-page-node-id="vyTde8TcIh5JOOhL6wIRSF" class href="LiveDemo.html"><!--pnid:hhVTMGEwQ5xTtZvolINVoI-->Live Demo</a></nav>
+<section data-page-node-id="Ej5im7n2oYzuhMbXZ4WH3K" class="blk">
+  <h2 data-page-node-id="L69J7Yi58ozsihRPeQvu4d" class="h"><span data-page-node-id="od1xK9CCUawLN8oVjQgFw3" class="num"><!--pnid:wMY9Qdru6wmbSC88khS6fB-->一</span><!--pnid:qpMmUdCEZPeYSgv4f6n2UT-->这件事现在是什么样</h2>
+  <p data-page-node-id="AeLGDctGONdDQUAlrH82l7" class="subline"><!--pnid:Sa34PHCglQg9qYlPU0QIpW-->经营与库存 · 真实业务触发</p>
+  <div data-page-node-id="z6Sxx1wLvYG7hHoDYOsJdp" class="card"><p data-page-node-id="ID0CIa1guGjf7Cb1W4TS07"><!--pnid:V50nPJfViwhbeQhz6PbsSb-->每周盘点库存车，逐台算真实毛利、拉库龄预警。主机厂压库，被动接的库存占 40%；库存超半年的车，单台累计额外亏损能到车价的 12% 以上。老板要问「哪台车该先清、降到多少是底」，答不上来就是眼睁睁看钱烧掉。</p></div>
+  <h2 data-page-node-id="46FedtTY0XWuSuhNYpN5r3" class="h" style="margin-top:22px"><span data-page-node-id="gXY9ANKdCQHMnUyMIy7Mtr" class="num"><!--pnid:tpE0vItm6tOwpQGy4ySyX7-->二</span><!--pnid:ZflzOGM7iuqucNSOHQMtyN-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="SQsvys00LKnITv9Q8hodqy" class="subline"><!--pnid:mNfsztUXi2FfgYokjNq27D-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="A07g48Xtkd4BhZkKN4KFUY" class="pains"><div data-page-node-id="T06VL3KOWQhjX4vSJWbnJz" class="pain"><span data-page-node-id="3Ti4DOaS7JqKG92zjLrWZG" class="i"><!--pnid:MeGWZs0HTi9J6VrSbyLKmd-->1</span><div data-page-node-id="mZFdQ0diHFVQk94QL72X2T" class="t"><!--pnid:aU2g2GMTAkNBT5DfGWzclL-->库存超半年车型单台累计额外亏损车价 12%+，月库融利息 4.8%+，库存车每停一天都在烧钱<span data-page-node-id="SQe3geIdGG3NKH7ypHCYbV" class="src"><!--pnid:yK93XBJUwx2U0oL0NiHS3H-->依据 · <a data-page-node-id="geK0DIgjySt2mdDPgc1lQ4" href="https://m.toutiao.com/article/7659579673919111706" rel="noopener" target="_blank"><!--pnid:o6nW8WOU6HTkeYKqxzx1uM-->库存超半年车型单台累计额外亏损车价 12%+、月库融利息 4.8%+、裸车毛利 -10%、百强仅 11 家裸车毛利为正</a></span></div></div><div data-page-node-id="A0GIwLIKisJu7pTQMjJsKJ" class="pain"><span data-page-node-id="AJC97gjP9r3DnaIiNIhkoC" class="i"><!--pnid:Vb2t1k0UujT5TnjaqeINJG-->2</span><div data-page-node-id="6OUAhRhqgQ58dUIhfhxLI0" class="t"><!--pnid:aAPs4CuPK7SG9V6PocYZOc-->主机厂季度考核是库存积压关键推手，经销商为拿返利被动接库、占库存 40%，压库车自己说了不算<span data-page-node-id="mtdIyWYoHAaKJatH1Hv2c5" class="src"><!--pnid:psdzbSCDwhWnRHlUGCWzg1-->依据 · <a data-page-node-id="TNdlfz0ro9McdCgOkN61Gm" href="https://so.html5.qq.com/page/real/search_news" rel="noopener" target="_blank"><!--pnid:738bHJumevg1o5EWDHQMx2-->主机厂季度考核是库存积压关键推手、经销商为拿返利被动接库占总库存 40%</a></span></div></div><div data-page-node-id="P36elxOlwemWcZbydV8NyL" class="pain"><span data-page-node-id="Crs01aYMqZHC2AZSvjo66A" class="i"><!--pnid:P2DZ5OPSxUkQG09uyPya55-->3</span><div data-page-node-id="eyfTAagDDR2TwigWwafFiW" class="t"><!--pnid:xfrP9M3JLBxC3RMSjmTQ3A-->库存台账字段复杂（VIN、移动加权成本、库龄 >45 天标红），人工难维护、账实不符<span data-page-node-id="DUWZVTchFByxncvT2OctHz" class="src"><!--pnid:G8oNkYyCkseM2vvUeYsp2J-->依据 · <a data-page-node-id="Jfjd6ADHrZMkazyoUN5RuW" href="https://www.jiandaoyun.com/nblog/47333/" rel="noopener" target="_blank"><!--pnid:rLR9Wh0G6LV8ACc3n1XXaP-->整车进销存台账字段：VIN、车型、仓库、状态、移动加权成本、在库天数、库龄 &gt;45 天标红、负毛利标橙</a></span></div></div><div data-page-node-id="kwp7tKClLTTH6fTBpNsLkO" class="pain"><span data-page-node-id="dKXXgjrUYnchEtucK3tmpg" class="i"><!--pnid:m26RVZLEqgX4UwKHA2wpKn-->4</span><div data-page-node-id="y24lx2SNXmvtFOjjP0eQOA" class="t"><!--pnid:8aelRQONEMFJxG9OXVAMJN-->一台车真实毛利要叠加到岸成本 + 库融利息 + 贬值 + 返利分摊，跨销售、金融、保险、售后四张表，人工凑不齐<span data-page-node-id="hfQjoKxI8YlHtFLNI2BBo3" class="src"><!--pnid:GLoJL5UIrrpOOCYMlew4wZ-->依据 · <a data-page-node-id="P4pG0NLYHwRWtiFy0RuIYj" href="http://www.succa.cn/?sjfx/1225.html" rel="noopener" target="_blank"><!--pnid:NnxwbcEDh7zc7jfjFSIPNi-->经销商毛利构成：新车 -22.3%、售后 63.8%、金融保险 36.2%，一台车真实毛利要跨四部门四张表拼起来</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="TtwSRZYEPJZzsLzRodOoOw" class="blk">
+  <h2 data-page-node-id="jGkdmmAt4qGWfbGfuO50lS" class="h"><span data-page-node-id="a9phfNm2v9liPNkXZ2l0JA" class="num"><!--pnid:tPXVkFIBjYZq8Fbhj17M5F-->三</span><!--pnid:zjUpytUo06ASC2RrrdwXHP-->换个做法之后</h2>
+  <p data-page-node-id="XpEFi1fzFCuj9XLXtONyO1" class="subline"><!--pnid:rVoTwTJmcGyW2HiegL5e4b-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="XV9wvLkJSLiXI3ZfCN6FuK" class="cmp">
+    <div data-page-node-id="WjmiwPjuNRRELmmFphVCkG" class="old"><h4 data-page-node-id="CrCvlYxQ8uIVXh60PAfq7I"><!--pnid:IF130hTfL76orjhGTiroHa-->✕ 现在的做法</h4><ul data-page-node-id="olc4obFfzhRfB3bw5zypXa" class="list"><li data-page-node-id="lLd6R5UoiCk6wnkDTk8CQN"><!--pnid:OfDCi2bzdlEGsLogI45Rxa-->库存超半年车型单台累计额外亏损车价 12%+，月库融利息 4.8%+，库存车每停一天都在烧钱</li><li data-page-node-id="RuhGFvNR3zde5VLsUEtGea"><!--pnid:un8tISOQxTN6Dg0q42mPjS-->主机厂季度考核是库存积压关键推手，经销商为拿返利被动接库、占库存 40%，压库车自己说了不算</li><li data-page-node-id="lvapvIZZTeOC39tVFC2PbH"><!--pnid:VLbPvKItpTHyOVnKtfcx1j-->库存台账字段复杂（VIN、移动加权成本、库龄 &gt;45 天标红），人工难维护、账实不符</li><li data-page-node-id="vZwvnr1fafUKeoo70OGtqQ"><!--pnid:8bTVsLZjv4WUSVv0mu7CZO-->一台车真实毛利要叠加到岸成本 + 库融利息 + 贬值 + 返利分摊，跨销售、金融、保险、售后四张表，人工凑不齐</li></ul></div>
+    <div data-page-node-id="NeB5ExSfOlNA2tajJIPGF3" class="new"><h4 data-page-node-id="TBkEAOBkCGGX2xEcRXXwZK"><!--pnid:qUwbZryN3yddguLuxDpkAW-->✓ 交给 Agent 之后</h4><ul data-page-node-id="kqvk0KbdLI6RO3xqRJY2Xb" class="list"><li data-page-node-id="ieboFKE0j2POnbajLRwAsx"><!--pnid:baMP92Q2gjNq3aKt30MZun-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="RNDqhMe8Octflxb5M5Os6Z"><!--pnid:bFmLZXoVBzmbp2nmQNqLrD-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="bQ5SPQWDkYTZmrTqBTXxCe"><!--pnid:7vITaHobF9pAdixEHvMrP9-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="DPNvWIYxgJy7qd72pQKhoo"><!--pnid:aAorPuNRWb13WKeFhLRCVs-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="9b7JW53pJY5B1j9Iwzbmlg" class="blk">
+  <h2 data-page-node-id="CYabAcz5o0cPrtgI19Vnve" class="h"><span data-page-node-id="qYW4wuSHhTL05xis7zKqns" class="num"><!--pnid:FkPPawvv2eZoghXmrpavOT-->四</span><!--pnid:UIpd0ownrZ6HKwrn4owTjU-->场景闭环</h2>
+  <p data-page-node-id="df00w2CC4gaNvO2sBlPWyY" class="subline"><!--pnid:fVpnafyF9r8RcbdEhSJJtB-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="AS4Wxkff2J8lky2Hxzb2kq" class="flow"><div data-page-node-id="7pstk9LHN6HBgxP9CZ3y40" class="step"><div data-page-node-id="wBVtViiZ0zfuylncHjg2yH" class="n"><!--pnid:S5O1G3bon3LGnblvnKX7K4-->第 1 步</div><b data-page-node-id="NU3BWVhTVtRzvuxO7ttooM"><!--pnid:0iev1Rlw59oh01AZAJva24-->库存归集 · 把在库/在途/待交车逐台列清</b><span data-page-node-id="ySH8h8d5FafysUF8gRbqWx"><!--pnid:SUXgzBLPzkMuGW4aqnccH8-->VIN、车型、库龄、状态逐台归集，账实不符的标出来</span></div><div data-page-node-id="JDmULY40lN4EGFKEeU4W1R" class="step"><div data-page-node-id="86l15tusL8O6o9qP9eaHrI" class="n"><!--pnid:foUdPs1KVmATN1qdTkZZFs-->第 2 步</div><b data-page-node-id="kqAgk1G00Q3YO7sCLMTbmX"><!--pnid:UsA6pcfnIk3Wh4WPZFVkSK-->逐台成本 · 算每台车的真实持有成本</b><span data-page-node-id="d46u7g33JQBucfNE3z8Dfn"><!--pnid:m385RX7L3HUDyoAK6ee4cu-->到岸成本 + 库融利息按天 + 贬值 + 返利分摊，逐台算</span></div><div data-page-node-id="lszzu2IR7Sex5ORMeJeICd" class="step"><div data-page-node-id="GamAlPHFUZE4HZLe6n50HU" class="n"><!--pnid:zVwmMTcoqTdRTPwJTser5q-->第 3 步</div><b data-page-node-id="6RDYT54AWRt4f1TOMh9S8u"><!--pnid:HAWatjoyWeGe6ePo8Irkr8-->毛利核算 · 真实毛利 = 预估成交价 − 持有成本</b><span data-page-node-id="SoEV7xZhW3dRVR9LpOKXrl"><!--pnid:H1pnEIpoMOjs1G2yrXsNwj-->逐台算真实毛利，负毛利标橙、库龄 &gt;45 天标红</span></div><div data-page-node-id="9ZBDh9YIvQaNyG7Ex1PC9O" class="step"><div data-page-node-id="166j7QqEZgXZYQbKxb7P9r" class="n"><!--pnid:cZw7iTkb7sv7lrB6LuB6Iu-->第 4 步</div><b data-page-node-id="7eeyLAtKzuHU7683jgaBMC"><!--pnid:wCZnOnFOTFalq0mFLzHzIH-->库龄预警 · 长库龄车拉红线</b><span data-page-node-id="Rv4tTqkus8ZpV84QNM4DC8"><!--pnid:vhjh0zHBCrjAo4UYWuX6Gu-->库龄分段预警，超半年车型单台累计亏损量化到金额</span></div><div data-page-node-id="zPnQLSzaE1EbgWvdfbfHR5" class="step"><div data-page-node-id="GvxosizO0OBWFnQxWtGMEq" class="n"><!--pnid:1RD0r9opDI5TXJtS6p9i4P-->第 5 步</div><b data-page-node-id="Tm83Q2etMWw3R80RUTFKAq"><!--pnid:zEOWBepckowkLlIAQSXZUq-->处置建议 · 逐台给「先清哪台、降到多少是底」</b><span data-page-node-id="ZhdOnCqwSLlK1kQ6w5i2M7"><!--pnid:YiIbEMQdEtw7zly1vDCGzW-->降价/调拨/返厂/续销四类建议，每台给底线价</span></div><div data-page-node-id="jtDyqcB6uZcnT76Vcf2U7W" class="step"><div data-page-node-id="TaWo1AwVJa5ER6lIk3zxJn" class="n"><!--pnid:miSxicVUXvGVIc2is3NXKR-->第 6 步</div><b data-page-node-id="9XnonVJlRSRMonxWsgv7Sa"><!--pnid:Fz8PmTGVrqXwapNRgfSlJ1-->留证与签批 · 生成可复核的库存车毛利表</b><span data-page-node-id="D9G7Zrpkv6LAhFcp4qxhvI"><!--pnid:2eKdaw3Bfhu8NvnmGAKWya-->逐台毛利、库龄预警、处置建议一次生成，降价由人拍板</span></div></div>
+</section>
+
+<section data-page-node-id="PH3z2xpjPSP6iayAvqkNLa" class="blk">
+  <div data-page-node-id="viwIbyua9ayRDcWyV3tKS7" class="g2">
+    <div data-page-node-id="3TgSQKkjkEZpCmgWagRVtB" class="card"><h3 data-page-node-id="CwcFUi3UtkC5Ams43wWFU3"><!--pnid:aoDKpk8iMvMkq2TTwI4LdU-->要准备什么</h3><div data-page-node-id="FBBXrRC3va3LjemcwfVaLU" class="src"><div data-page-node-id="r5sT3YmCnrIZuaQdxsKZ8q" class="fn"><!--pnid:iXfFquIjxWxnlYBJsxHP2h-->库存明细表.xlsx</div><div data-page-node-id="CBgNjnxgwTtPRoVL4hQNQW" class="fd"><!--pnid:U6del1cbWBMyfNd3JzvRid-->VIN、车型、库龄、移动加权成本、在库天数、滞销标记</div></div><div data-page-node-id="7rR8r1CuQXllRzu4hqwsML" class="src"><div data-page-node-id="EZxHIhMfY8jimGczOwfAQG" class="fn"><!--pnid:gVh05JmrPcuF9p0W0gQ06s-->资金成本约定.xlsx</div><div data-page-node-id="4KEPxQ0Snujo4nOVIE4wdD" class="fd"><!--pnid:HTr83MR0YWfGpyUDJbSOct-->库融利率、场地仓储费、贬值预估口径</div></div><div data-page-node-id="XcMR2sFwARRXHLMWDbj18N" class="src"><div data-page-node-id="zKmigl496kukXWnEE8NPWI" class="fn"><!--pnid:YQgM989Kv2YlxvBCccTp5v-->金融返佣政策.xlsx</div><div data-page-node-id="2WEWcXXy4STRtsgPa3nI0c" class="fd"><!--pnid:NWOmKf8VifM3nwYwrU4cvf-->返利分摊、厂家补贴口径</div></div></div>
+    <div data-page-node-id="hWSMtPh3YVvuPzQUAu2DRY" class="card ev"><h3 data-page-node-id="V1AL3h6j2rpacHAKvQj97d"><!--pnid:HsMT0I3mOhvRQGyMoQW0aF-->为什么这个场景值得做</h3>
+      <p data-page-node-id="Mo1hwDmTnrzmnVydi4jG6n"><!--pnid:Sq4FVA5SKP6tdFwKyDE4HW-->痛感 5 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="w8qfBra0tqh1UbSqOmYwf0"><!--pnid:HsPjKRibp3W0ECaDY8zap8-->11.0</b></p>
+      <p data-page-node-id="NT1r01jB7p7EU9HauUi7UG"><b data-page-node-id="vu9ux4X2IcD29ZQyXj3Dsh"><!--pnid:lWdLijKNq8UWyPrsvBfzE6-->最大差异点 ·</b><!--pnid:M2VdfC3PUU12XFSFAFCaQL--> 不要求库存台账先整理干净。库存明细表、资金成本、返利政策三份材料扔进来，Agent 逐台按天算库融利息、按政策摊返利，账实不符的标出来而不是硬算。</p>
+      <p data-page-node-id="CbIwOS243UxHDihCXan1lZ" style="color:var(--ink3); font-size:12.5px"><!--pnid:wvDNm7YnIT9sQXhwLtkkLs-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="8mqOGiPbNq7keqHHxR6ACU" class="blk">
+  <h2 data-page-node-id="w6br6gt338Dow7lQ7GKVoz" class="h"><span data-page-node-id="B53jvckbwJQMOvZgVMAagd" class="num"><!--pnid:77jTYs4zjUC56clbQZlDXg-->五</span><!--pnid:nHaP9Jhj4KQdx0gb1wBBmS-->会产出什么</h2>
+  <p data-page-node-id="hiTTp1Yv7KsaO4sRsdgB6x" class="subline"><!--pnid:OpfgRshoDaI0IHXDELJUs6-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="TgeQHVce1E5bV221m7NxRi" class="outs"><div data-page-node-id="s6TcjHVq43YRtyS9Cx86Dl" class="out"><div data-page-node-id="7BhYNprbVSyk0NJsqMZBqX" class="on"><!--pnid:v9JiFI8pekhh6PwzHD98YT-->可派发清单</div><div data-page-node-id="0Gb0odhyEu5fiBOl4F3MeI" class="ot"><!--pnid:kY4nHB2FdEMtGBl7KAvxdo-->库存车毛利表.xlsx</div><div data-page-node-id="fwhqIgHq1rQebUNrTIIQPC" class="od"><!--pnid:zywcSJJPVBCSFRxmENYJc1-->可派发 · 逐台持有成本/预估成交价/真实毛利 · 库龄标色</div></div><div data-page-node-id="YlthACY3kS0uvKP0cTgJfv" class="out"><div data-page-node-id="0XVRTwtl0x6PR78J8IDPLU" class="on"><!--pnid:oeTjkNPu61lqNECGyg6HOv-->可派发清单</div><div data-page-node-id="LeoyKcrEX7V4rSnbwS4yeD" class="ot"><!--pnid:PcyhBkQL5igbBL3McpdaTW-->处置建议清单.xlsx</div><div data-page-node-id="fV6dvUvaMHBA1LJc87YFV3" class="od"><!--pnid:6nI6VMdoI3KUM4DWMS9XYe-->可派发 · 逐台处置建议 + 底线价 · 降价由人拍板</div></div></div>
+</section>
+
+<section data-page-node-id="BFJMF2RgPBvoKUq0uGl5XT" class="blk">
+  <div data-page-node-id="qz1phynTFRRURhUZ1UP4tU" class="card warn"><h3 data-page-node-id="wvwYM8GU27AveCdtP3V6CG"><!--pnid:4M8D5coE3eOD9GvNdIKVM4-->这套东西不承诺什么</h3><p data-page-node-id="Q1V0O5s79TxkvtnvllwWGO"><!--pnid:JboMqBHIyA2xuMIjX0CAsz-->不做「AI 直接定降价处置价」——处置价关联真金白银，最终由店总拍板。Agent 只做逐台毛利核算、库龄预警和处置建议（降价/调拨/返厂/续销），降价动作由人执行。</p></div>
+</section>
+
+<div data-page-node-id="lJKtQAJHYVCgescvHugzYp" class="cta">
+  <div data-page-node-id="M0kwJCi1PZdAxpBh40Ie4Z"><h3 data-page-node-id="2EraUzBd5FLmcrKetvqEOR"><!--pnid:T6EG72NPkSGXTNeSOEG3y0-->想看具体怎么跑？</h3><p data-page-node-id="G9WijZf3XITfpBRqVpKZry"><!--pnid:mL2ddspwGgMxmVVf6V50UQ-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="sAJDMmO5ar54lp8ssiPNkw" class="btns">
+    <a data-page-node-id="zC3kqmUBrLnmuLdIUtEqfW" class="btn" href="LiveDemo.html"><!--pnid:1kku7uxjYxnKQqSfDnJ1Vh-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="vggu6b6ckcYLEylhMeY4mu"><!--pnid:hjUoCoQnB5dzRxVHQJmA5d-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="G7lvZIbxHn1XagK0lDQ6vY" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="yY7p4ttSW9Q8l5Bgz16fN7" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="2I95zpsX7vtkqHDNNmtRDx" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="MHUUwU2ZQnv0vedlvEGAvI" data-pnid-children="13CEqchhSKtSR9r8LfriLS">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="zRRJ1KK3LjNOmoYLPCfw5U" data-pnid-children="eM0OOj3SiNUJHe6WUUyncT">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

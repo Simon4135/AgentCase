@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html data-page-node-id="ySkNC2hIzhrbcVFKObypyO" lang="zh-CN">
+<head data-page-node-id="IpRKnhJz0R4Vy0lCxCI4Ib">
+<script data-page-node-id="bnzbjrJYoEIhiZyseevfGf" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="cJXBnb8KoG2wiGkVKFem8O" charset="UTF-8">
+<meta data-page-node-id="vTNLYZkWZJYu70LN9H5rH3" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="QSRFb59Y6cml8RD7mf1Q0v" data-pnid-children="3VIWcpdS9byi6CFOETAJHS">算薪跨部门数据拼图</title>
+<link data-page-node-id="h5OMIItqpFvEuzldQL2K17" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="hNUKbYKBQp38OJrVt1eKn1" data-pnid-children="cnUEU4oIerRKH9vS5yzf2Z">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="jtPaKP2g96pFFTWvjCkRUu" data-pnid-children="viMBnvIblglIhn1N3c0Pxw" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="UvGki4WLsS8BFlqqOSALAL" data-pnid-children="fQUkYrITyABOk0MvU2Mnke" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="GrJsLETnSqfwrtmJbcO6Ql">
+
+<div data-page-node-id="pepKnYw2f6q0YARNLXHMws" class="wrap">
+<section data-page-node-id="YTQkhNsHUagp8TBPi8f2Rn" class="page-hero">
+<h1 data-page-node-id="IDWBFk3zJePn0wKXfPYuYF"><!--pnid:SNhiqj3VMp2wswrGCG9Cx7-->算薪跨部门数据拼图</h1>
+<p data-page-node-id="YjVvw4U8JT0LiBMNJEplnY" class="lead"><!--pnid:nzFnDTTUqnSEHPnRVUBGdF-->工资表 12 个 Sheet 月月手工拼 · 数字算对了，规则用错了，错得天衣无缝</p>
+</section><nav data-page-node-id="QkCKtG7NYaL7ZHiipHWWbl" class="subnav"><a data-page-node-id="LXTkK6fPsmG0VPhXmIElVN" href="场景引入.html"><!--pnid:3Ux1lSBHdP04bFcN1G2vts-->场景引入</a><a data-page-node-id="7KasR6EWmqram1QhKBWjG8" href="LiveDemo.html"><!--pnid:Z93lFu6VPBQK6dAifFxT8R-->Live Demo</a><a data-page-node-id="TJudPk2Yjce481wW4QauAl" class="on" href="#"><!--pnid:25eyjSoAvNyR8tJpidIcj9-->推荐任务</a></nav>
+
+<section data-page-node-id="IVdyC50BvFN3LZu5Az9d9s" class="blk">
+  <h2 data-page-node-id="DF681z8y5PfhvmmkYJBUJK" class="h"><span data-page-node-id="SSezFibCRNDMXd0c9uLQGF" class="num"><!--pnid:sLZp2SLwqiW2IroNUHVIOM-->一</span><!--pnid:CpegOuay6oFQjLSt7OPEqh-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="lqnf8swh7GLlUEBLSM98LN" class="subline"><!--pnid:bQ7JHT9DVYc7gUTUzrXVSo-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="wBhcODccKsQ6pq4KPNmIjp" class="card"><p data-page-node-id="qqr3g0yr2QidlfWisWOGHp"><!--pnid:0sGDlkZnqPPdL1g6yPOzUk-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="iMxq9E0AtPAzPl3iqiTKQa" style="margin-top:10px"><!--pnid:JrZi0unlyDwFlDXYE1Heqv-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:I0XwhXnMWpIatS69FCRDzA--><!--wb-skill-start-->
+<div data-page-node-id="CH00LDzRdFM4ndPFqEWLDA" class="wb-skill">
+<p data-page-node-id="dANHcxHWmxbS9gPZ15La8N" class="wb-skill-lead"><!--pnid:RiymyN6Qu6gq6gBu13S7Tg-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="5TQ2cfIDlahbGuN4xbfUCM" class="prompt" id="wbSkillPrompt"><!--pnid:v4wnMsM0KdfFiiU28SUOdV-->【准备】这个场景的规则都在「算薪跨部门数据拼图」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/sEBwqlqlpjUkfZdBgcIYaO/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="5xZFAkjBOEcqeNzDdsGm2d" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:r3n3XQrmoFJIKsFOPGOAQ7-->复制</button></div>
+</div>
+<!--pnid:TogE8R6KrgxUVmAazYjCl1--><!--wb-skill-end-->
+<section data-page-node-id="8yTk1dDEqvb9yei4zIyUC1" class="blk">
+  <h2 data-page-node-id="I6PYLaYneg6wFjNjk8PBWj" class="h"><span data-page-node-id="i4ls1Y6qhQmZgqxDZjoHVH" class="num"><!--pnid:jHMIoL1gbRwCjnf7bRo04L-->二</span><!--pnid:T46i5tQYWETMTdFHsLnkW1-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="x34rITHskNIdre1zJUVwqU" class="subline"><!--pnid:TAvwrXreLbpN4egjjdP7pA-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="hcKc5PWi4sQjJ3McmDXKPB" class="tlist">
+    <article data-page-node-id="Iz1LtA340cm8kUaHxVaUQP" class="task">
+      <div data-page-node-id="77h3eq7py9sczAO0CGbt0L" class="th"><span data-page-node-id="rsWT9clIn9kZaqwlZmCNcw" class="no"><!--pnid:8VC5NdZwXLD7LV5y01eSDB-->01</span><h3 data-page-node-id="M9dKnA1gLc7QCdGczJrAVx" class="ttl"><!--pnid:k16DKyyDosSVIwKr57lmxq-->首推默认</h3><span data-page-node-id="iW64vPVIFhBojFMEGBERKk" class="star"><!--pnid:PBFOG3cAa9m4EiVWNyMDEV-->与一键体验入口一致</span><button data-page-node-id="5APmuvtRGcDbSIOYJr6k0T" class="cp" type="button"><!--pnid:ilgDWCfCl6TaBLFVyBOes6-->复制</button></div>
+      <p data-page-node-id="CoSGbJvHmczjvgHSPypR3S" class="tp"><!--pnid:UTXguCYr99Avvc1aFkCDQE-->月底算薪，五份数据都在这：考勤机导出、销售提成、车间计件、社保基数、上月的工资表。帮我拼这个月的工资核算表。
+
+格式不一样，人名顺序也不一样，你先对齐再说。
+对不上的、金额看着不对的，标出来我去问，别自己猜。
+
+最后要一份能直接给财务复核的。</p>
+    </article>
+    <article data-page-node-id="LlqXvJj7IIqgEcp8l1JBtq" class="task">
+      <div data-page-node-id="Fvw1aKUaVIISTlUWt8afbz" class="th"><span data-page-node-id="Ncl1Bux6RJ0gQEbS1bmrlI" class="no"><!--pnid:bv8Ynd7PJ3pWtGoUovVBCS-->02</span><h3 data-page-node-id="sMPrCWD74z3QWtjIuia99J" class="ttl"><!--pnid:G6wp9nDFnZR3tAOvfrnDV4-->只做五源人名对齐</h3><button data-page-node-id="hf9GyV3PTLVqIT6F2uXL5p" class="cp" type="button"><!--pnid:F39xRVlDTtgVIqPcPedTXt-->复制</button></div>
+      <p data-page-node-id="WHS7WvNzCJMec19NZ63Hm2" class="tp"><!--pnid:9HfJIlQ1HMdps3UNjgNUCG-->先只做第一步：把考勤机导出、销售提成表、车间计件统计、社保基数表、上月工资表五份数据按工号、姓名、部门三键对齐，对不上的单独列出来。</p>
+    </article>
+    <article data-page-node-id="UhaEBfi0zMd4HOGTlvyhxS" class="task">
+      <div data-page-node-id="MJNI8S2l4QqFhyuHZBVK40" class="th"><span data-page-node-id="USuaZokwHLbNYmaSnizVEO" class="no"><!--pnid:zpLRHUDSIlocKMWgVrMUOF-->03</span><h3 data-page-node-id="VbcXYjRToF1gd6uyefnSk9" class="ttl"><!--pnid:DJDr3150qLH4xcuiGZ7HE4-->换单一基数口径</h3><button data-page-node-id="3FkBXxDVdlqaDHXxCKenjG" class="cp" type="button"><!--pnid:BPLYs739SuxKt7jbLmK7X4-->复制</button></div>
+      <p data-page-node-id="cveMRGFLhoF8yTA1wijFxe" class="tp"><!--pnid:xxfTvXTmEmHgKJqGC2PuxS-->这次换成「只按合同约定基数算加班费」这一种口径重出一版，把与全额口径的差额单独列一栏，方便财务直接选定。</p>
+    </article>
+    <article data-page-node-id="6woPRLmoG0tDSkek3LW99J" class="task">
+      <div data-page-node-id="Ym0GxfJJP8bH7alwbeBHdV" class="th"><span data-page-node-id="ka4sePSSVsBuPcoTp12JRz" class="no"><!--pnid:SVpnOnmvp46uUa8ijuGS6K-->04</span><h3 data-page-node-id="RpvhJlyJVqzxMm23yHKrXc" class="ttl"><!--pnid:t6upNa2uRGQLmbvYEgglvK-->一次处理两个月</h3><button data-page-node-id="1KEYHrYY9RK7hUP5y3ZuMa" class="cp" type="button"><!--pnid:Djzs06D6xdZKec4Lb6g5HB-->复制</button></div>
+      <p data-page-node-id="nyObzdRON5qpuJomAQ1MBJ" class="tp"><!--pnid:9zDtFDL6FTNBuZ8Z3399xc-->演示数据里再把上上个月的工资表也加上，两个月一起跑，最后给我一张环比横向对照表：异常条数、金额影响、哪些是上月埋下来的。</p>
+    </article>
+    <article data-page-node-id="53sHP0egR1r9U3Y1BuuQaV" class="task">
+      <div data-page-node-id="mWGqwxmv9xfsCLv71KZ2gb" class="th"><span data-page-node-id="0bE0a3wSINl4HXPLzo1SuD" class="no"><!--pnid:0MbDyA0ibbZHDxh8qaPwAg-->05</span><h3 data-page-node-id="KoNpM8RbZ7M98YQ6WUTnKO" class="ttl"><!--pnid:eu1CRlwpKprVxwS316PFKz-->给财务复核的一页</h3><button data-page-node-id="N3ItxXJW5D24FqwD6Y8pMi" class="cp" type="button"><!--pnid:VvYBPgj5skYMhVpA7C3kxx-->复制</button></div>
+      <p data-page-node-id="mUJFvY7bn44dVvFzidAj3p" class="tp"><!--pnid:KP2tFToF6pwv5gXeYWrzeX-->把结果压成给财务复核的一页：被标出的异常逐条一句话、金额影响多少、需要财务确认什么口径，其余明细不用给。</p>
+    </article>
+    <article data-page-node-id="7sGM2lNDJ9AD0wzGxAwJua" class="task">
+      <div data-page-node-id="hB48x3megohJDwRRP32tB4" class="th"><span data-page-node-id="x1l6zX3JCi65zAmhUfe7Ep" class="no"><!--pnid:nWSkaWM7RgbETzq7AiWIvZ-->06</span><h3 data-page-node-id="iiJIAHbhYjNbXPoYlAxZCC" class="ttl"><!--pnid:gyO8RWPqFdw4hCLeD5QotQ-->让它反驳自己</h3><button data-page-node-id="TI3RtIFBJ9tjhw8LUO77nh" class="cp" type="button"><!--pnid:4ksqB5Q8jNMzflSwuImOD1-->复制</button></div>
+      <p data-page-node-id="0UxBZn1Ur3lZ9kdKqK1tnU" class="tp"><!--pnid:m2PPHTrmrilp0xTjD66Pru-->你把那 3 个人的加班费基数标成存疑，依据是哪条口径？把全额和合同约定两种算法各自的出处列出来，站不住的就撤回标注。</p>
+    </article>
+    <article data-page-node-id="PFOtnn4HZnFo5rf5iusPby" class="task">
+      <div data-page-node-id="UCvjeBeLJSofmexqLM5MLL" class="th"><span data-page-node-id="gt2Wmuh6FcxbxLu9xB7QJ1" class="no"><!--pnid:0NeDiKxOkZbuZwqu7oXdWa-->07</span><h3 data-page-node-id="rkat5GxpHhRGgkTaVDDCEa" class="ttl"><!--pnid:mil6nA0TE3lnosuruysOSS-->比对上月遗留的雷</h3><button data-page-node-id="SqDMOAeVVLsg1LUqgeBksd" class="cp" type="button"><!--pnid:zkg4NlvZmz9UqcWJLhMF2r-->复制</button></div>
+      <p data-page-node-id="npc4fnMNFzf204CMEe7x8f" class="tp"><!--pnid:aLeVAGTquzQCODIyv6qgo7-->把上月工资表里那笔已离职人员的提成翻出来，跟这个月的对齐结果比一比：有没有预发未冲回的情况，差多少。</p>
+    </article>
+    <article data-page-node-id="5T5f0CnM0mu6hgFKnNL5CG" class="task">
+      <div data-page-node-id="IsPRqAiSQR7Kno6ZonPPGh" class="th"><span data-page-node-id="cH1dFRh2qxo3W7VkKDppFM" class="no"><!--pnid:u1J3nqbE5jz2Rl5K1yWGZO-->08</span><h3 data-page-node-id="AbtVnHZp7P3cy0xcnPgoZW" class="ttl"><!--pnid:kImO9HFw8RXwPIRyFaYpTx-->对照法定栏位自检</h3><button data-page-node-id="xVnJdcGRbuHKtCPfYWFVPk" class="cp" type="button"><!--pnid:IndugjsR6u7cZrO2CEfQkt-->复制</button></div>
+      <p data-page-node-id="PuEKqX1DzAWhtXvAOe5zwU" class="tp"><!--pnid:3pYUHFimfAHHD0JHCwTLKt-->对照法定工资表栏位自查：姓名、工作天数、加班加点时间、应发减发项目、实发这些栏位齐不齐、能不能直接存档两年。</p>
+    </article>
+    <article data-page-node-id="NMF8ERzURoDRdc8eSv9bKS" class="task">
+      <div data-page-node-id="MX7iGvcV0uNPzDPEoZu6Dd" class="th"><span data-page-node-id="DRaxddUE5mv7D1VReSQm5B" class="no"><!--pnid:flcd0FPKzidekr12k5MwQ3-->09</span><h3 data-page-node-id="Meq71tpgMwADLEWBfez2kn" class="ttl"><!--pnid:u1Uuj3sRUKBQ23nZHcRuyn-->折算成错发金额</h3><button data-page-node-id="LLjyRLYaIjZi8oiYig0gEM" class="cp" type="button"><!--pnid:cy3yJCfySTv1B9kjMDcrt4-->复制</button></div>
+      <p data-page-node-id="T5Br6QfJwR5iQvMY0WUWz6" class="tp"><!--pnid:0FlrfwjtAjlaT40UZ3F7Jp-->把这次的异常逐条折成钱加总：待确认多少、已拦截多少，如果没有这道对账会错发多少出去，把算法和金额都写清楚。</p>
+    </article>
+    <article data-page-node-id="01fpHxZjJkUpzvuctQzE5D" class="task">
+      <div data-page-node-id="pRRvPDEswDo2IUSZPKQaac" class="th"><span data-page-node-id="PUWDA8iwjRRjRykF3Xzd3q" class="no"><!--pnid:G5j6nS2WiJiewYStVVzFaW-->10</span><h3 data-page-node-id="3eW86mOrDCKTpF25i2ETFb" class="ttl"><!--pnid:ccqoeSdQzfSs4tvjLVN7Dj-->沉淀成算薪模板</h3><button data-page-node-id="YIzTUHFpQOW5ajEwkMLy3J" class="cp" type="button"><!--pnid:54UtBOLuI6C9wPPx36Vy1m-->复制</button></div>
+      <p data-page-node-id="E7mKvmd10eTAOX6ncWDNUV" class="tp"><!--pnid:ngrNSpNBfrIfsKibHyHBET-->把这次用到的口径注释和三道对账线整理成一份算薪模板：每列算法写明，考勤对审批、提成对合同台账这两条固定下来，下个月直接套。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="f7lHesPZKI2qLj1wYwAD0d" class="cta">
+  <div data-page-node-id="lNnCWF6Yaxzy2wZhVdQhNR"><h3 data-page-node-id="jcUj1DjJ410grUiKKnozmD"><!--pnid:UunQr8sygSQdE2riawMAz5-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="cHjDfQ9VD18T8qgn5sQGi5"><!--pnid:T4YqErlTU6av6cR7qXYVV2-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="TNyEmX50BK0I9M7G6SCj3b" class="btns"><a data-page-node-id="bAxGKev9A9MBBmPtkoe9ka" class="btn" href="#" id="ctaContact"><!--pnid:RVJfjlL7Wp1HyTiqxG2s6B-->联系我们</a></div>
+</div>
+<footer data-page-node-id="rOwHCY08ZuBIoOehXWe1Uq"><!--pnid:9J1NCmHqBU9K7iDrlMqbcO-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 涉对人的决定一律人工终审留痕</footer>
+</div>
+
+<script data-page-node-id="Z0wcwzMmx5EI7c7eKD7lUs" data-pnid-children="O8fSpJjr9lKcIl5VKw57Cc">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="wxksQb7Pq1dloaM8Mkyar4" data-pnid-children="6f43hM18jtbvDiV24mjbRv">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="vRLLRAhl2bjttkeLYBs5S2" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="3hImvd0ga66RCFFRGWyY9B" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="AfdyBMFRPPhsyDP5Te80yG" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="FIzm4RGDjVF57ZjVloCVH1" data-pnid-children="uDRuAExJBFnePagV9QmKDv">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="nVBP1HYWEVQwu8m5Dx6Zms" data-pnid-children="jqcFMt6ASd9SrgH9J5U3Fx" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html data-page-node-id="Gl1TPaYqaOewWhxkJtDyiI" lang="zh-CN">
+<head data-page-node-id="DaJXLzACjx7NYLZWXoIzTK">
+<script data-page-node-id="WSLzvKcumapcOS4i8cckAT" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="aAAJ1ledJUI8R51v0ZwLnZ" charset="UTF-8">
+<meta data-page-node-id="0as72FqOZqkZlPjGHoXkha" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="rl08e9Swn0tuWAQ0hpQ1YN" data-pnid-children="incj4m0lY6gwCLiNQt2Olh">历史报价一致性与越权折扣核查</title>
+<link data-page-node-id="zRpt1sGq8uOtP8C6uM7a2X" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="wVtSeDrF2CI2YVWYKvSOAO" data-pnid-children="PHdYdD5r6AMOn3T3UG6pel">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="94FhrVwCr5qGi12TFR2aC8" data-pnid-children="zzoQdLuwrgJnGXLUmNIMkt" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="vJXbOyi6kWBVzSVYpXIlCz" data-pnid-children="qeFy9WQREgcRd3P4iSU1f5" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="fNGjfRe62zCMugloDgd3Tn">
+
+<div data-page-node-id="TUCj5zHI0tAX1hLpuYTXAg" class="wrap">
+<section data-page-node-id="sg84jhqAe3FvLFYQqAIna3" class="page-hero">
+<h1 data-page-node-id="zTPquUTc4ibkbwPHyVPfBg"><!--pnid:qrub6EDhF15IbO5cxL14KZ-->历史报价一致性与越权折扣核查</h1>
+<p data-page-node-id="w3CFpiqayHjijk5WajBkXy" class="lead"><!--pnid:JCmMU9MNffgTQXcm3U8oTP-->折扣申请单上写的是「客户要求」· 而这个客户上一单的折扣是多少没人翻过</p>
+</section><nav data-page-node-id="clbCz9IcerhaRCXpXr5FVn" class="subnav"><a data-page-node-id="HcofOorMTS382MyQ98xkkR" href="场景引入.html"><!--pnid:fbKJnlqLIObkUGqD1HpEXQ-->场景引入</a><a data-page-node-id="3KqOS2heE9wZIf7eZVNfGg" href="LiveDemo.html"><!--pnid:zYMJCm5dvBNXAZhhGN4oNZ-->Live Demo</a><a data-page-node-id="eGuBI7Fam7xa73qUUoktWW" class="on" href="#"><!--pnid:VAHc9dmPohsWBqBNsrb4dt-->推荐任务</a></nav>
+
+<section data-page-node-id="kSx1YM8NdCJMlwYyrikWOE" class="blk">
+  <h2 data-page-node-id="7aSrE8jfYkSrxJroECEp8G" class="h"><span data-page-node-id="iWrEHxiTh958joSxh6hSgZ" class="num"><!--pnid:iZZt1xLXTAw6wLoESAyMLd-->一</span><!--pnid:Pm7p3sWlFQISnldiCnpbCC-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="6R6restY36Xt0mpNgbzyJ0" class="subline"><!--pnid:Fr9gBouUsY30y4TCdOGYya-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="K3AAW5Wd52r7Sg9MCv6peE" class="card"><p data-page-node-id="7LSXKwrDhALRUGEidy0umk"><!--pnid:xZ9Vlp1JUI3wApQxrd0rnf-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="Z7AhGjQ9nP90LodIOvPzSm" style="margin-top:10px"><!--pnid:sCB7QoxukDj9BdgOYCnzlJ-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:U0PZku0rkvUMbMBalqgpFS--><!--wb-skill-start-->
+<div data-page-node-id="3XNt6QT02mD7W5sV7MeA0A" class="wb-skill">
+<p data-page-node-id="Oh2fou5KYVJXzOGRI32Sik" class="wb-skill-lead"><!--pnid:NgSaMc9juvZqFgeIL3OQsJ-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="JdUs7fYZAj5s0VyLkNJCLT" class="prompt" id="wbSkillPrompt"><!--pnid:RHGtxY2Nzx2v4mo7f0uhRV-->【准备】这个场景的规则都在「历史报价一致性与越权折扣核查」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/ZTHFcoAluc0gbsjVIrwK6Y/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="BYytKoQEYNZ8UmTQi8KfTU" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:ajIgoapIjvCM4bWMzl9tqJ-->复制</button></div>
+</div>
+<!--pnid:O27dUF1SRhlk7kToIVFwbx--><!--wb-skill-end-->
+<section data-page-node-id="NXKWzFNqkTi9Ezdg6zBV86" class="blk">
+  <h2 data-page-node-id="FYn1wOzQoh2iCaf7enbXji" class="h"><span data-page-node-id="EvX2auBdC2yZgaC07JWmou" class="num"><!--pnid:sPeA2jF6A6EDYeGabw0g1Z-->二</span><!--pnid:umMbUcM1tksjVes7DmKe4D-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="lhUJiWP3SiJV4b8W6RCjWs" class="subline"><!--pnid:urozEL83HPaTH53gxUxcqn-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="JsfwhCJdws3i7IcjhqlZF2" class="tlist">
+    <article data-page-node-id="qAS4dw8YX5xD4GXbOf1gQD" class="task">
+      <div data-page-node-id="s8PCdUQzsJpl2VWrAZzVcY" class="th"><span data-page-node-id="oYYOhrEA5myRdwQuHHQA0q" class="no"><!--pnid:RGw489OCK06Oq7HxSPHjbL-->01</span><h3 data-page-node-id="byt9p9OD3gvdpTgh3bMfS8" class="ttl"><!--pnid:pzAzKQEwTDbG7sTEFWm0ct-->首推默认</h3><span data-page-node-id="b3tZSy2dePigwRTTS0z36f" class="star"><!--pnid:VaCcPMafg3mZ7EneLsyBoT-->与一键体验入口一致</span><button data-page-node-id="pW3NjW8MzHu5n3lW6G3AJJ" class="cp" type="button"><!--pnid:EuXRn80o2FlYoz2uJSdqHh-->复制</button></div>
+      <p data-page-node-id="58gmO4hND6IjXxMXCEqFBj" class="tp"><!--pnid:3lWTslQWrDaSxx70YIYuNM-->明天例会要签恒晟精工这张折扣单，销售报的折扣是 22.4%，理由栏写「老客户维护」。材料都在这儿：2026 版标准价目表、本次折扣申请单与报价明细、恒晟过去两年的历史报价原件台账（格式很乱，有微信图片）、同产品档同类客户的成交记录、他们的应收账款台账，还有折扣分档授权规则。
+
+帮我把历史报价都折算到能比的基准上——含税不含税、含不含运费与安装、赠品怎么算，口径统一到标准价的折扣率，折算依据逐项写清。然后看这次的 22.4% 跟他们自己以前的价、跟别的客户差多少。按价目表的授权区间判断这个折扣该谁签，超了多少个点就说多少。理由栏跟应收台账对一下，看「老客户维护」这个说法站不站得住。
+
+交三份：折扣核查与签批单.xlsx（正式件本体，带五级签批栏）、历史报价折算对照表.xlsx（逐单带原件出处与折算依据）、授权层级判定表.xlsx（分档规则与本次判定结果）。批不批我自己定，推荐意见那栏留空。</p>
+    </article>
+    <article data-page-node-id="RYT9nRmV14v4izm8qMq0UR" class="task">
+      <div data-page-node-id="lmHYKkKwrAKlxTIR9ivpCA" class="th"><span data-page-node-id="mOn8gdVnByMilSGW8KnOFY" class="no"><!--pnid:wk0WAGZKeQGeeR6qn8Xuwr-->02</span><h3 data-page-node-id="R5IPLo38GmlHUOVCFbnHWn" class="ttl"><!--pnid:KPmO0B90DuoDRKLDyKokAD-->只做口径归一</h3><button data-page-node-id="bpQwxkiD94gE7x9XaMMtZs" class="cp" type="button"><!--pnid:j31KO2Epzpdxpt7IRmjBYz-->复制</button></div>
+      <p data-page-node-id="TPqq8moHJCWg1GtgxfABhR" class="tp"><!--pnid:bXG8AahBgiv17KvBk0iPux-->先只做折算这一步：把恒晟这两年那 5 份历史报价统一折算成标准价的折扣率，别的都先不动。产出用 Excel 一张表：报价日期、原件出处与格式、价格口径、当期标准价、成交价、折算后折扣率，折算依据单独一列写清，图片识别来的数字标「请核对原件」。</p>
+    </article>
+    <article data-page-node-id="bziw7nGm458PuYV1vjQ80T" class="task">
+      <div data-page-node-id="iMLL718UKtq8ucxW6bmXBx" class="th"><span data-page-node-id="XiAgm0fqDAvi2oXzp1eruF" class="no"><!--pnid:nAfSKAjS1efaIhFkG2MClL-->03</span><h3 data-page-node-id="iyZMEqcYYyJo5sPi8O0Frd" class="ttl"><!--pnid:6ywfLyAZw0SHgn9lQ00SxM-->换成按授权点数分档</h3><button data-page-node-id="TFShujVkLYjWDg7ZNO5gdH" class="cp" type="button"><!--pnid:SNXMlT4FzYMujzEs0eNOON-->复制</button></div>
+      <p data-page-node-id="uVWlb7R4FlAEwjsW4HLfiG" class="tp"><!--pnid:cdBWT21aPxTQ95hysS3NNd-->换个口径再跑一遍：这次不按客户比，改按超授权点数分档——0 到 3 个点、3 到 7 个点、7 个点以上分别对应什么签批层级。产出用 Excel 一张表：档位、点数区间、签批层级、适用条件、本次是否适用、依据条文，把 22.4% 放进对应档位。</p>
+    </article>
+    <article data-page-node-id="2t8NlXzinQo8POptTR72O5" class="task">
+      <div data-page-node-id="XH8enSaI1a9V4oPyWeBoey" class="th"><span data-page-node-id="5tdg6r2KAau5sJJEY9g8PN" class="no"><!--pnid:3i7Q2u2MZ795vQi7INAJeO-->04</span><h3 data-page-node-id="850WjV3UagKYupnwEwtu5d" class="ttl"><!--pnid:aKCIzORd2mdP9FbAbBHam3-->一次核三张折扣单</h3><button data-page-node-id="gs1buU5LfgumcXSaPJrLQw" class="cp" type="button"><!--pnid:iY5SQru42m3c8icvOQcl16-->复制</button></div>
+      <p data-page-node-id="JAPZF5mtiSiVe7xQgR3pII" class="tp"><!--pnid:Qyq4zsmyEVRJ8mSUFCL9MY-->演示数据里再加另外两张待签的折扣申请单与报价明细，三张一起核、各自出结论，最后给我一张横向对照表：客户、产品档、申请折扣、授权上限、超授权点数、该谁签、历史价偏差。产出用 Excel，对照表单独一张 sheet。</p>
+    </article>
+    <article data-page-node-id="bAbIp1g4e6wKA07gRxEOt0" class="task">
+      <div data-page-node-id="wXsN1UJOd7Y4fvu3NqI8w6" class="th"><span data-page-node-id="ggXs6YRJZsiTDpRJSea3KR" class="no"><!--pnid:XmK7iD3xNVSrYOGFG616GF-->05</span><h3 data-page-node-id="vXavdbjwAu2UEErxcDxbc1" class="ttl"><!--pnid:aJGENe1vhEycNEkgWR70OW-->给总经理看的一页</h3><button data-page-node-id="kiDSHfyc1PhPwoxp6RSBj9" class="cp" type="button"><!--pnid:BJMtEfIzD6pwoQb3Ygfw9N-->复制</button></div>
+      <p data-page-node-id="u2W0XevJwi2Vd96i9dtGVj" class="tp"><!--pnid:4j1JZinW6ZOPjOJFCGp9GA-->把签批单压成给总经理签批时看的一页纸：只留超授权点数、本次折扣在历史价分布里的位置、理由栏与应收事实的冲突点，以及按授权上限批的影响金额。产出用一份 Markdown 一页纸，明细折算表不要。</p>
+    </article>
+    <article data-page-node-id="PkmfU1jf2L52LsFyarWZBi" class="task">
+      <div data-page-node-id="utR5eaQ2gqbbKBWQGut0oM" class="th"><span data-page-node-id="gkT8GokJBBqAA48mnRx3ql" class="no"><!--pnid:UKiE2S8o2Vhj4EhVWqS1gi-->06</span><h3 data-page-node-id="mEQUPM9aBo0exxQOXUXVuS" class="ttl"><!--pnid:CLpXsvpozvfXksDJTQB8CD-->让它反驳自己</h3><button data-page-node-id="pav0Op0q5EUc0bbVKlymZP" class="cp" type="button"><!--pnid:JZngiXp88716U3sXKZMxiR-->复制</button></div>
+      <p data-page-node-id="OIICRaI4j0LBzCILpHgdac" class="tp"><!--pnid:oYPl9fnDh3qL7wJqhjQrEL-->你判的「理由栏与应收事实冲突」，依据够不够？自己挑一下这个判断可能站不住的地方——应收逾期是不是同一主体、是不是已在走对账。产出用 Excel 一张表：判断项、支撑事实与出处、你的疑问、要补的证据、建议保留还是撤回。</p>
+    </article>
+    <article data-page-node-id="Igy7tWHuUgYedbSDdzItH3" class="task">
+      <div data-page-node-id="ENopP5Ai2ywD1vRePNWjx9" class="th"><span data-page-node-id="9V5jHp6UVQdddI5Au9vnDT" class="no"><!--pnid:xb9KXRj4aPL22ANnf1zfav-->07</span><h3 data-page-node-id="iMa3Wy58Q5GqLk3eeW5JG4" class="ttl"><!--pnid:HqxGYjhRNhwLsAvEamlSg2-->比对 2024 年 11 月那单</h3><button data-page-node-id="kd0biiAsXqz7N4bLsn1Icf" class="cp" type="button"><!--pnid:OtYmIcGwLruP8gK91bfHvl-->复制</button></div>
+      <p data-page-node-id="pflFM0D78W8c9kLJger4sa" class="tp"><!--pnid:gqQ9sPaJvRUilIu40f4fRn-->专门比恒晟历史报价原件台账里 2024 年 11 月那单 18.5%：当时的理由栏原文、签批人、之后 90 天的付款情况，跟这次的 22.4% 和理由栏摆在一起。产出用 Excel 一张表：两次申请的时间、理由栏原文、折扣率、签批层级、之后回款表现，像的和不像的分开列。</p>
+    </article>
+    <article data-page-node-id="DfZajpM5aZNbUUhpGueSKo" class="task">
+      <div data-page-node-id="0qy5bA4LeQffg3gEotTVTN" class="th"><span data-page-node-id="j4M8xyhsdeEN7iu70JZNmM" class="no"><!--pnid:CtDRZPJX9xUdwDq1f9TxCz-->08</span><h3 data-page-node-id="AODgM112YL8djaZv4LmVlm" class="ttl"><!--pnid:WVw8JxGuo2HGeIAobdjLsM-->对照授权规则自查</h3><button data-page-node-id="bxAUcKcwtQha1Ml6v5DLZQ" class="cp" type="button"><!--pnid:b63DbQaa2MV8fJcUfypLH9-->复制</button></div>
+      <p data-page-node-id="eeiPwIFuoYqZexS3gd0OoV" class="tp"><!--pnid:7HBs4nPPELUfHtO3qjpexi-->对照折扣分档授权规则，把这张申请单和我的核查过程自查一遍：签批层级判得对不对、超授权点数有没有算错、该附的材料齐不齐、有没有越权给结论。产出用 Excel 一张清单：规则条目、要求、本次现状、结论，对不上的标出来。</p>
+    </article>
+    <article data-page-node-id="Ulgq1aCSEjAuHQkwcI4tbc" class="task">
+      <div data-page-node-id="yz7y2M1Z5XMF3BxdpAlyww" class="th"><span data-page-node-id="ujRtDUjy9PUlXsbmFXO6zb" class="no"><!--pnid:HB0IFFGbOSUX7qISseAMmI-->09</span><h3 data-page-node-id="lkjyFefDw6H0BPdHFZGHUY" class="ttl"><!--pnid:ldes0Tf9GTK3zYPUmL2Wkp-->折算成毛利影响</h3><button data-page-node-id="yggAeZVd0u5jrVykSGk1IG" class="cp" type="button"><!--pnid:LCgiEQV3qMrplj0a6nHE15-->复制</button></div>
+      <p data-page-node-id="PlIGUTsA1TRTAwqwga2COG" class="tp"><!--pnid:Ugi5rM7tsceORbb2Zv5AzV-->把超授权的 7.4 个点折算成钱：本单 186 万元、恒晟去年全年采购 620 万元两个口径分别算，再按短期融资年化 6% 算账期多占 60 天的资金成本。产出用 Excel 一张表：口径、算式、金额，以及这个折扣若成为下一年价格基准的全年影响。</p>
+    </article>
+    <article data-page-node-id="4NxyTbMwwhD12OYwA0WYYu" class="task">
+      <div data-page-node-id="thrpW0uP9KSLxAxjWAYn2E" class="th"><span data-page-node-id="TeG6zX7Eg7h5YEWU50r7rO" class="no"><!--pnid:hgLuyRFITFi2YD4SP3yUrd-->10</span><h3 data-page-node-id="SpIzYfibKjuimAXblxza1Y" class="ttl"><!--pnid:ffrhb0PSeTCjA1Q0REZebQ-->沉淀成折算口径表</h3><button data-page-node-id="Q1FMSO1nMQDOKRUVJmVbo0" class="cp" type="button"><!--pnid:316DyigjpQsnPD1LLlHIZo-->复制</button></div>
+      <p data-page-node-id="pK4dXq0mqJHsEEsdq1G8QO" class="tp"><!--pnid:Oeeq6Jl6F8YqMYDCU78Dz8-->把这次的折算口径整理成下次直接能用的对照表：哪个数从哪份原件取、含税与否怎么判、运费与安装怎么折、赠品怎么算、授权层级怎么定。产出用 Markdown 一份《历史报价折算与授权判定口径表》。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="OjaYXGK0ribqNVHSXhh3GC" class="cta">
+  <div data-page-node-id="3MXJjcKJ8Zq2zIv7wXyzcI"><h3 data-page-node-id="ESbtQK0emP0E7QvDzJWfMX"><!--pnid:Sl6fySOPzuH2PHJOPly7rC-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="nQywhsMHNLs0FGXxJU60Ff"><!--pnid:oQks1NQ2IZLhOY4l6qH6Xs-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="e0g822aPcMc7zJaUOU2mVR" class="btns"><a data-page-node-id="xlF5oRKBOcP2E7VfSruG1H" class="btn" href="#" id="ctaContact"><!--pnid:JJziyxpvZy43LFFuK9bQgk-->联系我们</a></div>
+</div>
+<footer data-page-node-id="q3SGPLMzUfb49dOHCvBfVA"><!--pnid:d92FmBKcDpkYqW7SnzdoVF-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="zcf9BytjC5FH0jyJjJisK7" data-pnid-children="xfpYXL5Jmq764TM8Esktjo">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="1Lq4jMtXL1nA5TAMeG7PRR" data-pnid-children="RxFWoXkTRhbiENQhxOSLWI">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="K9Yw8QEYd3Zjig6bvWZZ9e" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="vegD8UXzZmn5xtahZHZSD5" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="os8Uzggabn860EjWdjUgfZ" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="9iAaqfQDSyuZOEF4t4bPDf" data-pnid-children="x5KVCNGCuQEWsylEaZBTPO">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="W5nBvNw2UK5j9rEsFdNEC2" data-pnid-children="CE9TU0kJeWJtY1U93a6cAR" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

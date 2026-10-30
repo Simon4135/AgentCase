@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="Dhe30EFL6SgmYAljIQ3SvI" lang="zh-CN">
+<head data-page-node-id="FseSIyw1oPwYCcs2hWzAeB">
+<script data-page-node-id="HonkAQd4vk4VFRuTf2z72A" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="a2cuVLY8DntLB9VYMpDJHP" charset="UTF-8">
+<meta data-page-node-id="A2aLOp5WIMfMkfhrkBRJsC" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="MBxgr6i9GJhTJdHJAvr6v8" data-pnid-children="VobxCbPzajSrLJmdjaE1to">掉单与重复支付排查底稿 —— 跨三个系统的排查一次组装完</title>
+<link data-page-node-id="7sdA0bxZ8sloCVmMGOyCmd" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="zcF8pUPWX9nRf76PQC98gR" data-pnid-children="xFRMXovHk6iJdouRUoZgmR" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="WquHsW0U46nLBH2pjKjSQf">
+
+<div data-page-node-id="AH1d3RjN9Pkp6pi2VAsrPI" class="wrap">
+<section data-page-node-id="9TFVYHYdjOiB7R2Dg1MKnd" class="page-hero">
+
+
+<h1 data-page-node-id="tiabVBnz8UXTwzkzVja476"><!--pnid:65QwNcKs3xNBgvSiTGQWYr-->掉单与重复支付排查底稿 —— 跨三个系统的排查一次组装完</h1>
+<p data-page-node-id="2t2UyRkdovi61eds2sSzGw" class="lead"><!--pnid:bK5bdPK9A5Arxei2qkFge5-->商户喊「钱扣了没到账」 · 你要在三个系统里各查一遍才知道他说的真的假的</p>
+</section><nav data-page-node-id="wDZrkY1vDNzraRmDvg0vJu" class="subnav"><a data-page-node-id="kvpfadp5Cg0sOmPWcz7AOF" class="on" href="#"><!--pnid:yVTOxy0lgD3SfMRXC4ecWo-->场景引入</a><a data-page-node-id="BNk3mnyp9N0oIAyZS2LcL1" class href="LiveDemo.html"><!--pnid:xrfUSSWhfkYbxj21mjEyUS-->Live Demo</a></nav>
+<section data-page-node-id="FqDd41gLj3iex7EYa3mu8I" class="blk">
+  <h2 data-page-node-id="3FF4iaJ0FXYXHVzvHSayUP" class="h"><span data-page-node-id="OVp8Kwc8uVksdlpXEnxeUu" class="num"><!--pnid:s35pCNicnzz34HaBFThlfi-->一</span><!--pnid:OYm306z725U2ZwlJEV6xoM-->这件事现在是什么样</h2>
+  <p data-page-node-id="4L6ruVmGCj78jCI6qe7CKp" class="subline"><!--pnid:9ERbqqc8X9XnMt3hmybqNY-->清结算与对账 · 真实业务触发</p>
+  <div data-page-node-id="TkBPZEklvtTL9h2zIzx94G" class="card"><p data-page-node-id="iEdE9z4vHe6Eg3bAaZFqI3"><!--pnid:UpWbAQOknravcMVjkVaDfd-->商户在群里@你：顾客扣款成功但机器没出小票，钱扣了两次。客服转来工单要求今天给结论；排查要联机日志、渠道对账、银行流水三方比对，会被追问「顾客的钱现在到底在哪」。</p></div>
+  <h2 data-page-node-id="NUuMAlPEemudJHdrNRDRay" class="h" style="margin-top:22px"><span data-page-node-id="21peZTT5G0ymc8JLjSQHcs" class="num"><!--pnid:imDIM8YkJtF4BUkQGPVWI8-->二</span><!--pnid:CJNRtCPXQ00SDik8NmiZKD-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="nwhfJM12t7al5JYzsrjl2h" class="subline"><!--pnid:iiZ32h9wsDEWNAtwWDWZbv-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="9Wh9R8TdUWlgqbx8FLUVnY" class="pains"><div data-page-node-id="e72nVG612fiQVVCQb5vkfn" class="pain"><span data-page-node-id="z0PRUKdQsWbI6EAGD6MmYA" class="i"><!--pnid:ahK0faPNS2PKdax8Oh3nfP-->1</span><div data-page-node-id="Lh67vchyhAevV3OLOmbxyo" class="t"><!--pnid:dCvFq0F8Iq2OMv12D7rSku-->掉单排查要联机交易日志、渠道对账文件、银行流水三方比对——从业者自述这套流程9年写了20多份SOP还在写<span data-page-node-id="rE0TH4incN6qLYolW7tWQj" class="src"><!--pnid:yxDATEl4ZnDPF8xVTJwVx1-->依据 · <a data-page-node-id="zTQhR9R7d9FnPyerMMoLJm" href="https://www.toutiao.com/a7658984192373522985" rel="noopener" target="_blank"><!--pnid:LUeniNjKORnqtuR4dOghJw-->14年支付从业者第一人称自述：手工对账每天3小时、9年写20多份SOP、多层分润体系人工极易错</a></span></div></div><div data-page-node-id="4NfEdV9PajhPeu3dUOOCIR" class="pain"><span data-page-node-id="Yn1deWwxbIrWLxGE3XDC9d" class="i"><!--pnid:BmCEr8PvCQ1rbJ4U6LvylQ-->2</span><div data-page-node-id="9f83XXXhL8Sc5EJ4OF0Lqz" class="t"><!--pnid:XrKB4r92201wgV8BrNYDJj-->中通支付被罚事由里包含「未能监测特约商户网络支付接口被转接」——跨系统数据没串起来，问题发现靠客诉倒逼<span data-page-node-id="jyOA4y9H4oUALbzJ12639E" class="src"><!--pnid:rTFEcNyhDXvHfYSSTuO0uR-->依据 · <a data-page-node-id="PlK3Zf49Md4bHQbBHFeWrn" href="https://www.toutiao.com/article/7512027991384818213" rel="noopener" target="_blank"><!--pnid:vyADnqFofpFDOf57sijk7Q-->中通支付罚没1894万元：10项违规含未履行可疑交易监测处置义务、未完善交易监测标准、未能监测网络支付接口被转接</a></span></div></div><div data-page-node-id="zwM6PPLoO68u9PJ1FXpzPA" class="pain"><span data-page-node-id="cRGO7v0awxpTuKRxTG2HGb" class="i"><!--pnid:WVCitjPJkoGB3gusm4XCnK-->3</span><div data-page-node-id="BoVK4U5IHQsyls2yR3RHR2" class="t"><!--pnid:4eORuF6TJhs1OZ45lBduFw-->掉单与重复扣款类是客诉高发区，处理时限压力直接来自12363的15日答复要求<span data-page-node-id="oyi8DTIMheDBNLWRORuNBX" class="src"><!--pnid:0U2KleFS9qhNzxQSJ3gdf3-->依据 · <a data-page-node-id="jQgaKAPEAuo9ZSZwDFzVJv" href="https://dingan.hainan.gov.cn/dingan/rdzt/jrfwzl/zjzx/202209/t20220909_3264751.html" rel="noopener" target="_blank"><!--pnid:qGdS6CsdDyZeoiSrqXVZAB-->12363金融消费权益保护热线：非银行支付机构投诉的主要接收渠道，转办件15日内答复、最长60日办结，逾期影响评级</a></span></div></div><div data-page-node-id="ccFgc1Nnh7ztuBxq821NpX" class="pain"><span data-page-node-id="DgZLPkrqY3FI727cual1jh" class="i"><!--pnid:izN0kTmHNSzzOwuwmY9DPD-->4</span><div data-page-node-id="VLT1OgZt5KlBVKkxBIwTUC" class="t"><!--pnid:nKgainrU7y78Dv7jxAaaLX-->排查结论要给商户和客服一个明确答复——钱在哪、卡在哪一环、什么时候能退回，说不清就升级成投诉<span data-page-node-id="MUwVhWBovhh6d89vWhw6if" class="src"><!--pnid:LFJZfgvwao2vAfFsYJFwlg-->依据 · <a data-page-node-id="1yNBADK8qMc9FggWW0DaN2" href="https://www.toutiao.com/article/7512027991384818213" rel="noopener" target="_blank"><!--pnid:r83QdRHkRKz6CQDYJyTIcx-->中通支付罚没1894万元：10项违规含未履行可疑交易监测处置义务、未完善交易监测标准、未能监测网络支付接口被转接</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="vCuzThZcfqfbED2bed3WUB" class="blk">
+  <h2 data-page-node-id="NB3eDUS3K1tbeYcHpr7pId" class="h"><span data-page-node-id="Z6rNzr93Rp4HwoSa1e0bl4" class="num"><!--pnid:SxSRS4QIFNJvkp2uhW2Pwp-->三</span><!--pnid:iZ3NkmLZVIAKu1kApcICgk-->换个做法之后</h2>
+  <p data-page-node-id="LkmO6Kxu0R5dl6ywmAsJT2" class="subline"><!--pnid:e8oktjDDy6VYzR8xfgobqA-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="2LlpBAFHecnoMt8JyJRrF5" class="cmp">
+    <div data-page-node-id="gPbxmBPtzcugfzoW4YBpbN" class="old"><h4 data-page-node-id="PnbeMe2XivRqFRN8imCXOf"><!--pnid:RRX9tdb87bO7sMsuSnoyTO-->✕ 现在的做法</h4><ul data-page-node-id="vXqzPjF5I9a0nwJ3FhxYH4" class="list"><li data-page-node-id="mJTAey3kvN3WTmILYapSt0"><!--pnid:3uwDzgT7rc4Ic8D3vRVuNS-->掉单排查要联机交易日志、渠道对账文件、银行流水三方比对——从业者自述这套流程9年写了20多份SOP还在写</li><li data-page-node-id="8RisRkhk0q57Bs6VDkGLSh"><!--pnid:yxfmskPYDgkwrifOXgQx9T-->中通支付被罚事由里包含「未能监测特约商户网络支付接口被转接」——跨系统数据没串起来，问题发现靠客诉倒逼</li><li data-page-node-id="MN5e78wjxZY0wqTybbcWln"><!--pnid:PE9uYvN3cyjWusPCvHMaos-->掉单与重复扣款类是客诉高发区，处理时限压力直接来自12363的15日答复要求</li><li data-page-node-id="W7Aez3lH3bjtF5dN9RsW8q"><!--pnid:0MavnCWUZ4r1CeC5dC6woG-->排查结论要给商户和客服一个明确答复——钱在哪、卡在哪一环、什么时候能退回，说不清就升级成投诉</li></ul></div>
+    <div data-page-node-id="lXJeqxLYKKoJPqC4yLxPPA" class="new"><h4 data-page-node-id="hSCvpvzqrMQgsqgfp283NN"><!--pnid:j3cd0eshLLCOJwTL8wMjHp-->✓ 交给 Agent 之后</h4><ul data-page-node-id="oZkqGxHUzFN01hFLoSa6TA" class="list"><li data-page-node-id="l6BgVTO4hu2jO5k5FWMpZQ"><!--pnid:aTkJymriju5PA3i0yalGo5-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="BtUjLDVCi4yD5ssYAWfez6"><!--pnid:SY6M4NnF4fCh1jwNnq60mQ-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="bGwwy0CHqliwG7R8xELYn0"><!--pnid:XNUcShuPW2eU567mxqXjXp-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="NnyLlADkMcISHhRkr1dtwb"><!--pnid:bcsDqLcS0EjkYMDBzWvqEz-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="aPxAKTyQEUzJrV1MdwLwUC" class="blk">
+  <h2 data-page-node-id="hlohwxekM0qo4KXwEUq3rg" class="h"><span data-page-node-id="uOZEITXcdo6aRNdbxdpffT" class="num"><!--pnid:pbPrcLK36b3CdAS0mNGhgW-->四</span><!--pnid:ma8bXAdxDKHsyd6W5wHJYA-->场景闭环</h2>
+  <p data-page-node-id="49OSSLRhlkZDsTjWEiIGLi" class="subline"><!--pnid:RGO6QRlN7RZeTMdTZYUWbK-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="rpAdXuoJfJD3YkVsIqby46" class="flow"><div data-page-node-id="zlUXIBlzKUYB54CrzzboUi" class="step"><div data-page-node-id="JpmVFrMKSEWB3EPXmVwa79" class="n"><!--pnid:sWNQqJN8RYHzzFUoIF5o5d-->第 1 步</div><b data-page-node-id="S2oNKtVLSJnqH8okLCRq0p"><!--pnid:vR5iiRzEXBHit3e2xBELc5-->交易要素定位 · 先把这笔单在三个系统里各找一遍</b><span data-page-node-id="T61H4vz7OcH4QdVKT13OnF"><!--pnid:tCSgoEt62bK370D5Fjp1aJ-->商户订单号/终端参考号/渠道流水号三方映射，找不到的环节就是卡点</span></div><div data-page-node-id="vOdoSvzmNJFF7JGZS9vXD1" class="step"><div data-page-node-id="xhzLltmU1ofcEqcPHj6m7Z" class="n"><!--pnid:rR6KvXasoiXJ0pUGa1eOXE-->第 2 步</div><b data-page-node-id="Ww9nF9QZrA70FdbtsBGG6N"><!--pnid:UZGOOdlkjicm6wKoEjBujP-->资金流向核对 · 钱走到哪一环了</b><span data-page-node-id="lqFS9hGfjoWgpRa04XRBuB"><!--pnid:hW0kk7TeO52IA836ZAbqmh-->扣款成功记录与银行入账逐笔对应，重复扣款单独标出</span></div><div data-page-node-id="d5Na9d42ynZf9jYQhBooq0" class="step"><div data-page-node-id="hRCmrZDLKxZLhzHlYO9ccu" class="n"><!--pnid:38oBYroGxlcitSsrJ7Ybi8-->第 3 步</div><b data-page-node-id="vla8crJuAFGbioSVteiJFy"><!--pnid:2Mqa2qLgAItbv2gUDiHU4X-->卡点归因 · 断在哪、为什么断</b><span data-page-node-id="0IzwyZbfjDrzVsHGZS6aih"><!--pnid:owuzvFbgRju5pCF4P5tHBa-->应答码超时、渠道未收到、回调丢失三类卡点逐项对证据</span></div><div data-page-node-id="OvQ9mBNorkCIqr6rkhx6MS" class="step"><div data-page-node-id="cBpXgX2zizlnhhy23YGs06" class="n"><!--pnid:22YQ1GVshXNkVQLvzBc6KR-->第 4 步</div><b data-page-node-id="S32dmQQtmbZovWyeKi3qHS"><!--pnid:q9x7fwjqXuYsTI449cxc6r-->历史同类引用 · 这类掉单以前怎么处理的</b><span data-page-node-id="bM2MVfCq69dv8TEIj28hCi"><!--pnid:C4wnosYLnN6OSNsUsuk08N-->历史工单同类案例的处置口径与闭环路径带出</span></div><div data-page-node-id="qcQPyqAV35iFNdDs1mQLg8" class="step"><div data-page-node-id="ikQ00c4QrPAG5gegO9tJi5" class="n"><!--pnid:zzLdtx7L5qAqBBaNEs0jG1-->第 5 步</div><b data-page-node-id="VjT6PtDcrINq4DFpDQXrR9"><!--pnid:zgsnaQYZgQeZk09kGP0n6y-->排查底稿组装 · 给客服一份能直接答复的材料</b><span data-page-node-id="eS7Ty8yJsrzzyiZdO7CXCI"><!--pnid:YeSjvvl1L15ZJV5r9Dc4K1-->顾客的钱在哪、卡在哪环、预计路径、建议答复口径——需客服负责人确认</span></div></div>
+</section>
+
+<section data-page-node-id="jnYQcIMfDM2t9nfVl4hl4u" class="blk">
+  <div data-page-node-id="S3xn6ZEfG85cOwLqbYhBhf" class="g2">
+    <div data-page-node-id="Rn0Dp5rk8LzjBgPQ68sEfX" class="card"><h3 data-page-node-id="d9CWvbdBplakTrWb0huO3P"><!--pnid:ZIqNKrsy0dNVddzYITFZ2S-->要准备什么</h3><div data-page-node-id="12HoROKZTbfco8AmW4GMSr" class="src"><div data-page-node-id="2zoprzWQay5r6kAOiRo2Ax" class="fn"><!--pnid:3YWx2h5N6aK5Vg3wGWdKVh-->联机交易日志（导出CSV）</div><div data-page-node-id="iKKGm8emQIldK8enqEhKig" class="fd"><!--pnid:2QkCHUo0UukiP1OCG52pWQ-->终端号、参考号、应答码——按商户要求的时间段导出</div></div><div data-page-node-id="OkMTgK2N9mM7YNy8rMKcAk" class="src"><div data-page-node-id="hKgQaeBt0KBwtuk6kFchmG" class="fn"><!--pnid:gtiVk11xQA7sHymKibHZ1v-->渠道对账文件（TXT）</div><div data-page-node-id="zlIl4Pf5jpRhwlQ9W0t2bk" class="fd"><!--pnid:tn3cj29vp6HNPd3CdnTQTQ-->当日该商户的全部交易记录——验证渠道侧是否收到</div></div><div data-page-node-id="PZE3uryWP1cqVQMCzuKe0W" class="src"><div data-page-node-id="Igx874s8mdsmf3VBzRUNGs" class="fn"><!--pnid:xtOaTiZoIMUQ5wpkTkz7wt-->银行备付金流水（Excel/截图）</div><div data-page-node-id="0qeQST76K7V7HhsrL871xL" class="fd"><!--pnid:jCQoic1GWWEuD0mKydl9hy-->资金实际变动——验证钱是否落账</div></div><div data-page-node-id="PkkBH5PilqM1x6mXnBJ9Gc" class="src"><div data-page-node-id="k51iCBX6uS4GuJrHvfORLy" class="fn"><!--pnid:De4E0E9Yokmv1EBOdd8Ttu-->排查SOP与历史工单（Word/邮件）</div><div data-page-node-id="dGrPMYaEbyJ3Wii9tRJxLQ" class="fd"><!--pnid:xecSjz0TBOHqDMm0jAeXSJ-->本机构积累的排查路径与口径——私有资产</div></div></div>
+    <div data-page-node-id="5RSbWF8qmukADpyCv6OUb0" class="card ev"><h3 data-page-node-id="wLZK4Um2sxykzfhGXxuViK"><!--pnid:wxIS97HNJ5Mg48N7Uj6c3n-->为什么这个场景值得做</h3>
+      <p data-page-node-id="opPPYrAJevsMGPnfXERanu"><!--pnid:RmHo5MafS8elzcuMpck66j-->痛感 4 × AI 适配 4 ÷ 落地难度 3 = <b data-page-node-id="AAFsKJxO5BdsvNrzlI9NNF"><!--pnid:J677BZt21cQERd6F9Zil5H-->6.4</b></p>
+      <p data-page-node-id="tsN7wiTSwUwAtzZsJK80sG"><b data-page-node-id="A5Icy9aQHMIuGtrAsKuePK"><!--pnid:MkI9ERLRbaK3sGGh30mrDD-->最大差异点 ·</b><!--pnid:qU54k6gV62IgkI5oH8WT5x--> 不要求打通系统。日志导出、对账文件、流水截图三样东西扔进对话框就能开始，排查路径与常见卡点由历史SOP口径兜底。</p>
+      <p data-page-node-id="fGK0ExYu0pKK5ko25uCBtj" style="color:var(--ink3); font-size:12.5px"><!--pnid:HWJ4Tx606D2nT86qDhsoj5-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="tbAN3JH7oW55MDDCdxM4Ev" class="blk">
+  <h2 data-page-node-id="nplEEUzEug6NzXz2jEu7wb" class="h"><span data-page-node-id="oV0B4LAnUTjjXK4eDRb55C" class="num"><!--pnid:2iyhzv5mcFxfXvsSdQawCz-->五</span><!--pnid:RvHFHFerBZadvcIrcP3wJP-->会产出什么</h2>
+  <p data-page-node-id="QCbaifJ7tx9NKgwk06aHDC" class="subline"><!--pnid:0rFaaWTknFqaS3Ptbq3ASP-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="9S9ivoTfHa09DTvnkPkDjq" class="outs"><div data-page-node-id="9kKqHQF61PtLbJSn9kmEmV" class="out"><div data-page-node-id="UGGNrbtWl4rHJjW1D7QPr1" class="on"><!--pnid:pNcVAM1jRIgEL4CgQqY1SH-->正式件本体</div><div data-page-node-id="oUFdRlsnGhWZstnTgmb6Aq" class="ot"><!--pnid:XvAFxfc1i26fzS6sqVJIne-->掉单排查底稿.xlsx</div><div data-page-node-id="0CvFWR30ehDCEBAEH0SuLa" class="od"><!--pnid:suoayuNMxneWkGf8hU5HuV-->正式件本体 · 三方证据与卡点归因 · 含签批栏</div></div><div data-page-node-id="jS8medkYhhk9q07SXaL1z8" class="out"><div data-page-node-id="648BAKBlHuZwgIVhHZ0EUa" class="on"><!--pnid:7faL0jYCAmsg1Kx68fHAeR-->正式件本体</div><div data-page-node-id="sXDbgZ2N2JjEbWn1ZFr4ZZ" class="ot"><!--pnid:8Lv0GxeDPGA2tPdv3l8ZI5-->建议答复口径.docx</div><div data-page-node-id="UrX7URfyLvwFZ1hz03dG9w" class="od"><!--pnid:QUFhkMRVv8wOsiyzm6U2ho-->给客服确认后使用 · 含顾客侧与商户侧两版</div></div><div data-page-node-id="40svbaXrKQwHxyuRBsEqBT" class="out"><div data-page-node-id="KxW9IMAgAXxWzkL1hBwDOG" class="on"><!--pnid:9BxJPk6gpdlJ6uxhLDeWEK-->可派发清单</div><div data-page-node-id="1JpUawEuetYUGbnBeUh53N" class="ot"><!--pnid:6MfaZZzP8FyBS6B6hRDZ1r-->同类历史案例引用表.xlsx</div><div data-page-node-id="Kjt8xeWYAcrVqIbnJ4zNcm" class="od"><!--pnid:QSkMDYERPiw8CPUM3fsjxg-->可派发 · 历史同类掉单的处置口径与结果</div></div></div>
+</section>
+
+<section data-page-node-id="Ca4N3wWesan2Xq8AeQcwTD" class="blk">
+  <div data-page-node-id="cpNBYc31kmxfyTpMfkregJ" class="card warn"><h3 data-page-node-id="v4Vveq0waNivy6MXs6ihln"><!--pnid:DMvUq4iOIMrQoHP6OW3nVv-->这套东西不承诺什么</h3><p data-page-node-id="ZHCrjsGC0bKEV6DECQVA8H"><!--pnid:kUOFV3v9oqFOpWBdNnDN3e-->不代发起退款与请款——资金动作只出建议与依据；「接口被转接」等安全事件定性留给人；给顾客的答复口径需客服负责人确认后使用。</p></div>
+</section>
+
+<div data-page-node-id="3SmUO50LlCtCC4SdqW3U27" class="cta">
+  <div data-page-node-id="K9qPPzxHDjnJ9kodGj3Bo5"><h3 data-page-node-id="oRGT89U7jHpCwuyDncc1eW"><!--pnid:bGMWY4B4x0okxRfAy5y5lC-->想看具体怎么跑？</h3><p data-page-node-id="KPV9yboeysUIub7sry25NP"><!--pnid:Hs4XVJQFt8wKiHaPrAUATJ-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="nBu5muisa3kmMMWagJ3xpw" class="btns">
+    <a data-page-node-id="ziEFqptBi3uytB8GWNUPXr" class="btn" href="LiveDemo.html"><!--pnid:1jY2oeRroMjYzNbXke768b-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="fj55gyXqsDejSZfU327BLC"><!--pnid:sWwSpgirqiLuyeBtZ7KuuZ-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="iHYu7NQEfOJEuslwdAn7W5" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="GcbFqpdKk6zZMmTUNAltHE" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="FtaMYws3VjXpnLUIQUwIhS" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="W24fFqhgvMLA5OcZFIIw4c" data-pnid-children="I5427rB2I9MbCgcy78Dp6q">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="d2ZnRiE5pLPdEcctTMVMTE" data-pnid-children="ID66OX28lF0UtZZr9vJORp">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

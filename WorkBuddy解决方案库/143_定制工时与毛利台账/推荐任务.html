@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="youiO7zlHqmhcHD9voscP3" lang="zh-CN">
+<head data-page-node-id="ta4JVOWuAnQW2LZBmrtiuw">
+<script data-page-node-id="a3VDPLP09YenwXdZ2J6GcD" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="DCn1SahPl3q9v0QPGx7dBL" charset="UTF-8">
+<meta data-page-node-id="Ca7DaDntbzsQNnnMXKv95B" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="T0EyKpKrCBXkI6f3oO1Rd1" data-pnid-children="3QUZMlj3y2MUQwj56tJ1zF">定制工时与毛利台账</title>
+<link data-page-node-id="Jib9RxFJqiExTfAZgsFfiQ" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="e8r96TmEDFSUuO7iPFx4FG" data-pnid-children="FnhN1lboujvdOA6LIKE65N">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="yt3JeXvrPcG3UgcmFaLkqM" data-pnid-children="7fdGk9ouGt86t3lgPauDvJ" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="WbNFijQax7UIwxBU2KKFrs" data-pnid-children="EADNLfESy8YjqT26yvc5Rm" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="wmwGpVQQDxEBcA7p6npQ5V">
+
+<div data-page-node-id="9pifmYZ20M2hi2GjI9B0c0" class="wrap">
+<section data-page-node-id="WqhAroZZixKEIzA5pMQIe1" class="page-hero">
+<h1 data-page-node-id="GJCmI7ieTeKfBalLT2vjJS"><!--pnid:bnigFX39jnyKbTCwnaHqMs-->定制工时与毛利台账</h1>
+<p data-page-node-id="ox5SPGToRGLKYIVFLkjtbz" class="lead"><!--pnid:9j3W9ZJI5CmqnK9rpsLnrw-->定制工时占研发 39%、毛利掉到 58% —— 投资人的警戒线是 65% · 这笔账绝大多数中小 SaaS 从来没算过</p>
+</section><nav data-page-node-id="HnAAEhTyzKHs6W02UhCo9X" class="subnav"><a data-page-node-id="QIPgWJBzj9TDqTsldAkCpT" href="场景引入.html"><!--pnid:z0mWIPyrVc055xz2tPp5bh-->场景引入</a><a data-page-node-id="isAD8HlZJDXYtWU1SItEaX" href="LiveDemo.html"><!--pnid:lftiQUTgKuYdFwlIgCcOO0-->Live Demo</a><a data-page-node-id="Tf2BTArtvMpNvOHPQwwq82" class="on" href="#"><!--pnid:ugFJNvFwhbuSMQBL9bvqLl-->推荐任务</a></nav>
+
+<section data-page-node-id="fxDI1x0U7qFgL77ywEY3oL" class="blk">
+  <h2 data-page-node-id="RByLtReRZ6BOJuOSkNsSYG" class="h"><span data-page-node-id="WKo1kNiFHqAt0PxQ7cnBRq" class="num"><!--pnid:wX8OgEtLyBtPi7vYvtMcy3-->一</span><!--pnid:n8m49blDjMonzM24aqFclH-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="iWptLI5M7Fhgzp3AYqnCBU" class="subline"><!--pnid:tvc9OEGwzeWR1tDETBw0ss-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="bK47d0e6vs7YUkok7dz5Dt" class="card"><p data-page-node-id="XI62FlnW9dwEUARdOT2SFs"><!--pnid:tZesFN1ABgDCl7G6tyIUDc-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="CFZwzWekMMDSnzgWAdaxP1" style="margin-top:10px"><!--pnid:DWkp2tdXRQ6IODDMGQSq7M-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:aRcAdIXHQjFhqqqeO7rONn--><!--wb-skill-start-->
+<div data-page-node-id="KjGNnhhggrcpRuQTtQf8Z0" class="wb-skill">
+<p data-page-node-id="46e1lKxBkum7CjQwzUfFIj" class="wb-skill-lead"><!--pnid:TRv4CO0RiBuBfemENEiDrf-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="bMejiAJJtcfvBcAfiKQIs1" class="prompt" id="wbSkillPrompt"><!--pnid:5JBle5ZNia8eBT2OhZQkcJ-->【准备】这个场景的规则都在「定制工时与毛利台账」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/N4Lb2DCgsFQHeywDCbJ0l4/MCWL0IT9Bycg/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="t21Mga1101FCkRiNXaD4ki" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:neof696MOBjSPqIZ3GlCPP-->复制</button></div>
+</div>
+<!--pnid:NcH6N0IcCBR5HHPwBiLsli--><!--wb-skill-end-->
+<section data-page-node-id="xEAx7RP2hr0RDw9hHoFsMN" class="blk">
+  <h2 data-page-node-id="UOttSPFHAJzNft9VnMGaje" class="h"><span data-page-node-id="RYo23ZaRlxUqv32VTPNBuA" class="num"><!--pnid:HNtjecnZnq2CmHe5biWD4G-->二</span><!--pnid:2JJ0pDLT4kWhgU4PCN5Nqs-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="HxOe6ORdLKnP5uT1Jhd9nX" class="subline"><!--pnid:cn8UfkAsj4lXUpnCkB49Mi-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="6xENot2m96E5umlj60lh5p" class="tlist">
+    <article data-page-node-id="qkPAdTcqhG7vFZTXx6H2En" class="task">
+      <div data-page-node-id="hFKEsHiBVGGavm78fHN9d6" class="th"><span data-page-node-id="hgzDrlVOe7n4rj1eSpyGio" class="no"><!--pnid:O9FyrAWMYJrIR3XNANBiPL-->01</span><h3 data-page-node-id="E94kyZqPXRJHHFZNu7duKx" class="ttl"><!--pnid:rsku4Uxonwggpcc2qHFoVX-->首推默认</h3><span data-page-node-id="U51gN418mIqi8GpmcjIkKp" class="star"><!--pnid:N3NBZHaAEUWvopDDQQ2q4R-->与一键体验入口一致</span><button data-page-node-id="AkN4PXxBeqP66kw2OhkF80" class="cp" type="button"><!--pnid:DoQI23oxcy3VSaSDQGXHdg-->复制</button></div>
+      <p data-page-node-id="ZqDZGQeFXGoLcEbx9Uqxsr" class="tp"><!--pnid:LXLQwIE0ITzmBA3Fv5B8Ih-->经营会前陈总要一本定制的账，帮我算。技能内置的是 01_需求池定制需求导出.xlsx、02_CH-01变更台账（Q2）.xlsx、03_研发工时总账.xlsx、04_大客户收入与成本对照.xlsx、05_产品化沉淀记录.xlsx。
+先分清三类定制：客户专属需求、客户引发的变更、私有化环境适配，别搅在一起算；定制工时占比算出来，趋势也拉一下；毛利按投资人口径测，大客户逐家算，65% 的警戒线画上；华正那家的口径帮我标注一下——他们有些定制后来进了标准版，产品化沉淀记录里能对上，两种算法的结果都列上别替我选；算不出来的地方写明。
+产出三份：定制工时与毛利台账.xlsx（正式件本体，含三类定制识别、工时打标聚合、毛利测算、双口径分歧点、经营会一页纸五张分表）、定制侵蚀趋势表.xlsx、经营会一页纸.xlsx。接不接定制我来定。</p>
+    </article>
+    <article data-page-node-id="AelEwqt94PPCweUnPtXhmB" class="task">
+      <div data-page-node-id="fbJGaSxd6oToW3mdv0RbGu" class="th"><span data-page-node-id="j3G8h5i45JtChTNwjvqxwU" class="no"><!--pnid:xu9VmYxUlkX2tLWKSBQIaN-->02</span><h3 data-page-node-id="gd5kBXMEren7qfPxCHo0jX" class="ttl"><!--pnid:QtSJDXX0YCm1sA6Mb0WMcD-->只做三类定制识别</h3><button data-page-node-id="GNT2WVpfPfA8joNTA2K4w7" class="cp" type="button"><!--pnid:jg2VQ4hOFrhP5MOaS1N57e-->复制</button></div>
+      <p data-page-node-id="EBhO6gfGjCUWXJPN8qT73X" class="tp"><!--pnid:Y7FgdpbyT75w83PtoFMxdA-->先别算毛利，只跑定制识别这一步。把三类定制分开数：客户专属需求、客户引发的变更、私有化环境适配。产出 Excel 一张识别表，列定制内容、客户、类型、工时（人时）、判定依据，末行给三类各多少人时。</p>
+    </article>
+    <article data-page-node-id="GByMmit8TcTWQqYT83p9vO" class="task">
+      <div data-page-node-id="5aiklph7oaMXtIg3KjXcp2" class="th"><span data-page-node-id="lwDNpD5QuG2n7H0W4BnyCo" class="no"><!--pnid:kL5C4MghdO62eIZFGMsZ9A-->03</span><h3 data-page-node-id="27iyo5Glo26BnypyzLO8bP" class="ttl"><!--pnid:F5zlKga8T4IElTbrRXpwcR-->换成成本分摊口径</h3><button data-page-node-id="AAu97i9wHOw6sZrcSAtzbd" class="cp" type="button"><!--pnid:nLIRGx2Vccf8ZC7Zpzufkm-->复制</button></div>
+      <p data-page-node-id="GuvHamKc0Ivtunwf0yo04t" class="tp"><!--pnid:RWfvOdsRNJkDmKlDa3wpdC-->这次换成「分摊口径」重算毛利：把后来产品化进标准版的定制成本从客户身上摊出去。产出 Excel 一张双口径对照表，逐家列全成本毛利和分摊后毛利，并标出哪个客户两边差得最多。</p>
+    </article>
+    <article data-page-node-id="LOQgFdJlxFfCPGujpVAd8Y" class="task">
+      <div data-page-node-id="uHtjwkhTkh6r7rJsFFOkmA" class="th"><span data-page-node-id="hnN6NsYoZMqZoFfa8gjCba" class="no"><!--pnid:w2ZN5v0504zTOF21NhiAa7-->04</span><h3 data-page-node-id="wjNH4E1TfrWF3HCvEKHjMp" class="ttl"><!--pnid:9KJ7rB4fKFGSoPzMtKXRjR-->一次算两个季度</h3><button data-page-node-id="tAsx1VWYqusDF8gufQV5gr" class="cp" type="button"><!--pnid:NdeIPgqov8rWV0758uFoID-->复制</button></div>
+      <p data-page-node-id="prdmR4gGyzEdWn5SSIR549" class="tp"><!--pnid:awADsUAJjLCh3JARHazoD7-->演示数据里再加一个季度的数据，两个季度一起算。产出一张横向对照表：季度、定制人时、占研发比例、大客户平均毛利、超警戒线户数、TOP3 大户占比，按季度排列看走势。</p>
+    </article>
+    <article data-page-node-id="N7Q3jrikAENsaD8FZZ6IJY" class="task">
+      <div data-page-node-id="By1zqcwrfTKhI05ELhygAa" class="th"><span data-page-node-id="jTnxNQExlloDGc0sBGYemg" class="no"><!--pnid:d9vQDUrvBD7iBtEZ7Dk30T-->05</span><h3 data-page-node-id="QYVb2Ef3sgUKMNVLaGQ0jg" class="ttl"><!--pnid:1AKlKOsXnGEYsc8aT2ZH1I-->给经营会的一页纸</h3><button data-page-node-id="urZfeIjQMYOM1GrvNSZiCz" class="cp" type="button"><!--pnid:cFl7XiQLy7453PuBMSjPPr-->复制</button></div>
+      <p data-page-node-id="Uf5GJ00VJWwft2SkeUqYlE" class="tp"><!--pnid:e0hTj1IGmErkj0z8vwr0vI-->把台账压成给沈知行经营会用的一页纸：定制占比、毛利、趋势箭头、TOP3 大户，十分钟能讲完。产出一页纸 Excel，每行一个指标加一句话，双口径那一行把两个数都写上。</p>
+    </article>
+    <article data-page-node-id="rfTOzSoVIWYlgZ2baBbCVg" class="task">
+      <div data-page-node-id="bRtndebFweHoyCKCNuTWHu" class="th"><span data-page-node-id="7vdnLN3TgeAUUJThSYhkwx" class="no"><!--pnid:hTvsU4Jp1QXCevB7TFhHwb-->06</span><h3 data-page-node-id="tDV6Ppdq20lzPQRD543jjp" class="ttl"><!--pnid:LIxhRxhJs2NInJlg5POZeC-->让它反驳自己</h3><button data-page-node-id="TQgHjrEAWhR1KspCGFTz9K" class="cp" type="button"><!--pnid:7IdlQ0wMpVAEUZwxGlkOfj-->复制</button></div>
+      <p data-page-node-id="t2BHAw5Ni3jKLXprX4tn7d" class="tp"><!--pnid:rXjODaxQHMhaj8a9zv2nCm-->你自己核一下：算进去的定制工时里哪几笔其实该算标准版投入？比如后来产品化进标准版的那部分。产出 Excel 一张复核表，逐笔列原定制、产品化版本、涉及客户数、成本归属判断，改判的说明影响几个百分点。</p>
+    </article>
+    <article data-page-node-id="qhapuekyeBkskXYEUMsGAy" class="task">
+      <div data-page-node-id="nObPJFxpTCfslcP11pFIif" class="th"><span data-page-node-id="QfVJudkbSbrUqRt7tIJ7r1" class="no"><!--pnid:fxmhEWvmOlGhQJASSWzuC8-->07</span><h3 data-page-node-id="ihvCGl6TYt6qCeFDaCsLil" class="ttl"><!--pnid:UutpEaIjOtwXeXlR2t2rAT-->专门拉产品化沉淀线</h3><button data-page-node-id="irBwHzRSZdHSPm9aTZAgkG" class="cp" type="button"><!--pnid:Ivw3cBlkYvNpMlJSmjstOP-->复制</button></div>
+      <p data-page-node-id="JRLPfScYOQZdJozT5bX629" class="tp"><!--pnid:TEw8Hl8eDSQXzFWILZR6RS-->把「定制转产品化」这条线拉出来：哪些定制后来进了标准版、给多少私有化客户通用。产出 Excel 一张沉淀对照表，列原定制、客户、产品化版本、沉淀价值、当前算在谁头上，每条注明出处。</p>
+    </article>
+    <article data-page-node-id="HCONH2Pe674azZGBwuwJwZ" class="task">
+      <div data-page-node-id="ZLk5g7821Uto6OL4NeU4eF" class="th"><span data-page-node-id="ufEBBv05KLDNm3AYyf9wr8" class="no"><!--pnid:Xkjd1K696NnQ0RnYPhO9o1-->08</span><h3 data-page-node-id="jPN2xe6Imuzfj3iVKoCpzW" class="ttl"><!--pnid:leqkhsUgWQSNQVodNnCEpL-->不估数自检</h3><button data-page-node-id="5HIFG2DsLJfftfv5kI5Nte" class="cp" type="button"><!--pnid:ECro0wqZ2aN197ewv0LEDB-->复制</button></div>
+      <p data-page-node-id="oimiUvZ3Vp7SN7HfPv2uRl" class="tp"><!--pnid:XlgWsFMxYqDgaum7K1ccym-->对照「不估数」这条规则把台账自查一遍：哪些数字是推算的、依据是什么。产出 Excel 一张口径自查表，逐项列指标、数据来源、实测或推算、推算依据，无法分析的写「本项无法分析」并给补记录建议。</p>
+    </article>
+    <article data-page-node-id="6nKpm0O0FZqZov27A6gjoI" class="task">
+      <div data-page-node-id="cki51DORDGEy1TuxVQwXq9" class="th"><span data-page-node-id="0568qVxp12bUi0dL2QVQYR" class="no"><!--pnid:li8PXr2X4D8RxhmpPj4562-->09</span><h3 data-page-node-id="FAWxEmKOB6MEwTV5gDC8Aa" class="ttl"><!--pnid:MlaxQjZJFDAKPn1rSo7ytT-->折算成定制吃掉多少收入</h3><button data-page-node-id="CTiXaPs5XWqseHsSaHFK7H" class="cp" type="button"><!--pnid:evmFpPY0KiepCWcSFO2OZP-->复制</button></div>
+      <p data-page-node-id="6p7HJDHO2FZwP2fcDGT3sY" class="tp"><!--pnid:gx1VSOfcMMxa5MjCRmAW54-->Q2 定制工时按平均人力成本口径折成钱，对照三家大户的年费收入，定制吃掉了多少？定价调整或产品化两个方案各能省多少？产出 Excel 一页纸，算法和区间写出来。</p>
+    </article>
+    <article data-page-node-id="rYZQeS65cxhQHziDsG90hO" class="task">
+      <div data-page-node-id="N4CvoIE6XpgF1WhVOdSzHU" class="th"><span data-page-node-id="ReLMT9HKeN2sMyViE1xkJu" class="no"><!--pnid:mqAPuQOPzX4IT0lrXoSTfn-->10</span><h3 data-page-node-id="VfmjAFGT1VWYlqguIMYUCO" class="ttl"><!--pnid:EzzWfTFkDpCyxyP4rS9Ome-->沉淀成季度台账模板</h3><button data-page-node-id="GPCawJIqUaF0oWFHHFBd3W" class="cp" type="button"><!--pnid:0ESn6YR35rKVe1EnF8uo3d-->复制</button></div>
+      <p data-page-node-id="qTseSfVv62yZmAQzJ6EULB" class="tp"><!--pnid:WwOmSoUlNfQAnNdiPdM9ui-->把三类定制识别口径、工时打标规则、双口径毛利算法整理成季度台账模板。产出 Excel 一份，含识别规则、打标对照、毛利计算表、一页纸模板四张分表，季度末直接填。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="QnfU2Z9xGaH6bwaslRRPvH" class="cta">
+  <div data-page-node-id="p7O7DFrtfh9DZYvOC3pEat"><h3 data-page-node-id="Zx3maDa2whLYdLVZPzKUle"><!--pnid:Ue4FysJCErBWqUbVRwL16H-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="XYSdDmcsSZL5kCQIH6AY4a"><!--pnid:0QG8jWC8zxx2mSW96eZlna-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="6oGHmoCOArBhGbEcV4odKR" class="btns"><a data-page-node-id="OOv5yVJIJbZ35OwWUQf5TF" class="btn" href="#" id="ctaContact"><!--pnid:0Sgt7uIdLhCbSKFrk2bNqS-->联系我们</a></div>
+</div>
+<footer data-page-node-id="naYseF75L4RdgCeTZ1p8ff"><!--pnid:QmWsGaZtJYA1TeFGdJQKuO-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<script data-page-node-id="eNodbg0hlYDN2rcLXR12ji" data-pnid-children="YBBkDH6I0UHHPUpwI8nAim">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="i6FpXIdbNif0HaLzXbO41R" data-pnid-children="8so1VJIfzYxRqmPmkeZnjU">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="1IXDXACyq1xAY46lcEcvOR" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="ry1RN6HgjbHDqIksfXOYwZ" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="HJi5Ojr3DlVtVxaTL5JcLt" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="BPrfuNcbQnsvrzcV10yoVD" data-pnid-children="EZvENSPb4cAS2Dt9OJC0RX">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="DRKS2RssqfMR7EBMpM5jr7" data-pnid-children="CXwm8imt6fZ7cFkmQ045me" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

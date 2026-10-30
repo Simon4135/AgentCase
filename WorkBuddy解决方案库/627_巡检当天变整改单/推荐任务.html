@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="dIu9E6SzhAlyeVN4qPAreX" lang="zh-CN">
+<head data-page-node-id="veLgyBGKn0SzLRRzFm5Evx">
+<script data-page-node-id="Vf2y5bq5bhIM1VNLjuVmOv" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="mtZzSSIZKKGQOnMJ8gz1VX" charset="UTF-8">
+<meta data-page-node-id="HYz090edmDZXQF2kgJXRu1" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="jyEJ3yshlCNvChWcZ5rJo6" data-pnid-children="grcC8t7vFlo0Z9wqDe2bFz">巡检当天变整改单</title>
+<link data-page-node-id="aAYvQ29nrcQ9l8LgEga98L" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="R9QCOd87TtqveYSsTzz1Me" data-pnid-children="6PW79Lel8ilt94zRGodpiT">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="08vCnDtZw2wSRmvCiL7piP" data-pnid-children="2IhPY55CrDJ0uhkWJxjcfG" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="ib3cRpXWhg7Rhke1EDUDyd" data-pnid-children="7Cah5S9rm9SuCIhB5Np7VB" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="QuHZXUxArnrCfe7avzMm7S">
+
+<div data-page-node-id="qWcrBr0OokudmzqRFS3cYL" class="wrap">
+<section data-page-node-id="jL5rCwsGT1Va9rRnSfjVDf" class="page-hero">
+<h1 data-page-node-id="EByfhEAEOIclFbGyrobaDp"><!--pnid:h189QCJxqv5LnGLCFctdRI-->巡检当天变整改单</h1>
+<p data-page-node-id="nz7tOKIKu57e4d7WlJOFTa" class="lead"><!--pnid:5dMHZNF2Hp6UXhwdLlaXOr-->督导巡完店拍了照片发群里 · 问题没人跟进，下个月同一家店同样的问题又出现</p>
+</section><nav data-page-node-id="Do8I1uL0ZRCKOaBGDeay2R" class="subnav"><a data-page-node-id="0fhuhhi7BF2rG9ggenhsSc" href="场景引入.html"><!--pnid:JEZPIuV4Cdhg9zUHFEGJv6-->场景引入</a><a data-page-node-id="5KQQyBlnexr9dOMvCh652z" href="LiveDemo.html"><!--pnid:O8NIksHWtLTfGNs1lG1C3A-->Live Demo</a><a data-page-node-id="HcX76vQd7IpTfMuN6VP7Om" class="on" href="#"><!--pnid:eDqQlLKqAyVWrRkYaAwg5F-->推荐任务</a></nav>
+
+<section data-page-node-id="bBTahHOIikda1sVJlvECnJ" class="blk">
+  <h2 data-page-node-id="ZDLD3f78cnABSXwXR6RW5W" class="h"><span data-page-node-id="Q0kyCskrvizSNfEL9bSGtG" class="num"><!--pnid:AKAImhrEFMunUHcyUeGY7k-->一</span><!--pnid:FJq4G1TeVFjixxwT4aXBCw-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="9nsLqMHndfitGJ2xTTPvxz" class="subline"><!--pnid:ahoh4JpGsTMcMdy3vOnZ9z-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="26auOWld3OeKIkTOPpuXEu" class="card"><p data-page-node-id="7C8PznjVOlvbieu2vq0PZe"><!--pnid:EpEFx51CHaup9zcMmXyeR3-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="sSeRz2dbBBdG4qxcSQoBCn" style="margin-top:10px"><!--pnid:EcWI4blSqTVlGSK2DpjJza-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:7aEAUsAESgVBGsoV410QHu--><!--wb-skill-start-->
+<div data-page-node-id="VW1IRcZEsTXW77xtegOIOm" class="wb-skill">
+<p data-page-node-id="zKX51tkWmIrPfwO716MXtQ" class="wb-skill-lead"><!--pnid:zR3u0cURwGFAE9ooxGuMCI-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="d8cOZMeQr1SiD307E8OEZo" class="prompt" id="wbSkillPrompt"><!--pnid:vSwLADCgnYLeIPSMVqPQsT-->【准备】这个场景的规则都在「巡检当天变整改单」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/AJpLuM0mlRlnP7yhMYkeox/y6Gp__oMxcMh/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="bWelbmAPegjky809QWmt3B" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:nUsmQA6a4GcJMpxcUx29DZ-->复制</button></div>
+</div>
+<!--pnid:yvfkDfqfAy1IWw7uLoeVvs--><!--wb-skill-end-->
+<section data-page-node-id="tBNU1XyMULIueksXHF91p8" class="blk">
+  <h2 data-page-node-id="s77RVOXNGFv3QZPlJqOkND" class="h"><span data-page-node-id="8WFlHRoBnXAMZ2kSbU0Xdy" class="num"><!--pnid:5iAafXLZLsl9aSTUHWWniV-->二</span><!--pnid:EPSfhYUgFciUQKWj5fX2lI-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="OSMhroNfO6uqWIDuN4kHUj" class="subline"><!--pnid:nUfT7VXyYyrDIbvIPilGiG-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="DdeRdSgaOZOmLy6S9uAqj8" class="tlist">
+    <article data-page-node-id="5YU4iLhdmgsQogQ2xjI7zT" class="task">
+      <div data-page-node-id="IumL9wW3saFs2qHWr8fM0S" class="th"><span data-page-node-id="ZFsGrrA1ZhN1MNnz6sBCiL" class="no"><!--pnid:r82pxGiPkKwGYd7EjDGPd2-->01</span><h3 data-page-node-id="1SQ6UaVhJVeWLRVvk9rrSp" class="ttl"><!--pnid:0d8bqVHaY388jRrZhajrYQ-->首推默认</h3><button data-page-node-id="jKJlQ1xtYl39cQKuO9XW8d" class="cp" type="button"><!--pnid:nL5KvjDYAWyxdRyy41uKcd-->复制</button></div>
+      <p data-page-node-id="PWH0LtC7q7OZ4aj5ReSVcQ" class="tp"><!--pnid:p0OX5SXKUpPOBNwf6d39e0-->这是本周巡店的五家店材料：「01_本周巡检评分表.xlsx」「02_督导巡检照片索引.xlsx」「03_上周巡检评分表.xlsx」「04_店长整改反馈.txt」「05_门店基础信息.xlsx」。帮我出这周的整改单、五家店的评分排行，还有一张共性问题清单。产出三份：巡检整改单.xlsx 是正式件，每家门店的整改项、责任人、期限一行一条，带签批栏；门店评分排行.xlsx 把四类评分统一口径后横向对比，一店一行；共性问题清单.xlsx 把所有店同一类扣分项聚合起来，标出下月督导重点。国贸店的效期标签、新天地店的冷藏柜温度记录这两项上周就扣了分，算不算复发要拿上周表比出来。照片看不清或评分对不上的标出来，别硬猜。责任人签字栏和考核评级留空我自己定。</p>
+    </article>
+    <article data-page-node-id="didWxjdrw8vil9K3brYxLC" class="task">
+      <div data-page-node-id="NFwSlMX9tA0gGtuzy7VsWX" class="th"><span data-page-node-id="s6SNmnW7YIq2V2XbzBSJLX" class="no"><!--pnid:6kotyPMYe0dk5iEr7Txwbr-->02</span><h3 data-page-node-id="UkBOPNDgwUcIIiarJ97FvI" class="ttl"><!--pnid:NZ7SRfzmZw0rkymw3NYeOD-->只跑复发识别</h3><button data-page-node-id="vzHfQBwJ36I2L0DRgi9FJM" class="cp" type="button"><!--pnid:kQZOqJ5DgKVnTchrq1cRA0-->复制</button></div>
+      <p data-page-node-id="YikuDqUrIgMjOVMczZWRnt" class="tp"><!--pnid:3RdldZKti8e8JM9QddvhqS-->先别做整改单，只跑复发识别这一步。读「01_本周巡检评分表.xlsx」「03_上周巡检评分表.xlsx」「04_店长整改反馈.txt」，把同一家店、同一类问题连续两轮出现的挑出来。产出用 Excel 一张表：门店、扣分项、上周分、本周分、变化、判定六栏，一行一项，复发项标红。</p>
+    </article>
+    <article data-page-node-id="gXDVsCIh0dDGor5t0DTeBb" class="task">
+      <div data-page-node-id="LxDtGN6h72Q0Hv9dE5bSzF" class="th"><span data-page-node-id="Cnyc42sP4bB6D2qCn8sTXb" class="no"><!--pnid:6y0Txrf82dwt1443H8ZlCx-->03</span><h3 data-page-node-id="R05bSXZA0vFnEqQviAJvd2" class="ttl"><!--pnid:zF8wHG33iNXS6uyafsfTDN-->换一套类目权重再排</h3><button data-page-node-id="tVSh2o1HkvRVsVt62Iu82A" class="cp" type="button"><!--pnid:epzqyG29XqdcISMhWams0n-->复制</button></div>
+      <p data-page-node-id="IeJGNalg4yphY10hX43INZ" class="tp"><!--pnid:bdgREMsmlLer30xUbrnZDv-->这次换一套口径：四个类目不再等权，改成食安 40 分、出餐 25 分、服务 20 分、卫生 15 分，重新排一次。读「01_本周巡检评分表.xlsx」「03_上周巡检评分表.xlsx」。产出用 Excel 一张表，把新旧两套权重下的总分和名次并列对照，一店一行，说明名次动了的是哪几家、动在哪一类。</p>
+    </article>
+    <article data-page-node-id="YEHWBCHMWvEZTEHJnt8uxo" class="task">
+      <div data-page-node-id="69J322a9hYWuIE4LKn3VtK" class="th"><span data-page-node-id="dOCOPQGrcdKnq5ak8kNHPe" class="no"><!--pnid:PBMmfxlaK9WyneYGJkpdY4-->04</span><h3 data-page-node-id="3sSRI1NvitL3Zke5ifciZG" class="ttl"><!--pnid:eNC3QDUPmx8lQ2vQCzuvC6-->一次跑三个区</h3><button data-page-node-id="gvLSbxCzEiVANrpKwAzy6K" class="cp" type="button"><!--pnid:M7ARfSirC7nUItuOFffMyd-->复制</button></div>
+      <p data-page-node-id="NxlgGVYO9nPQDuJ97quZ9u" class="tp"><!--pnid:sAS72bZl2jFCOAjJcPTxQ1-->演示数据里再加两个区的巡检评分表和照片索引，一共三个区、十几家店一起跑。产出每区一份巡检整改单.xlsx，另加一张跨区横向对照表（Excel 一张表）：区域、门店数、四类均分、复发项数、共性问题条数，一行一区。哪个区缺照片归档就在那行标出来。</p>
+    </article>
+    <article data-page-node-id="vjnCZX6pPwHnbg1JZUOiCr" class="task">
+      <div data-page-node-id="8fMH3VKPuV1wieGlUqKQA8" class="th"><span data-page-node-id="jc42Tgah6mzhnVShd9oUXl" class="no"><!--pnid:GfVVSNivhJgfUlQz6STUv4-->05</span><h3 data-page-node-id="WxwBkzjXPO6KI6HEsLpc3O" class="ttl"><!--pnid:E38Z32X3ve5o5MalquNUtZ-->给区域经理看的版本</h3><button data-page-node-id="H5OCRseQg8TqzJsdKPcSwy" class="cp" type="button"><!--pnid:S6jS6tIoYUhssc7d43TrLZ-->复制</button></div>
+      <p data-page-node-id="0QGDDMZz5aiBlNng6tUSAv" class="tp"><!--pnid:qzS3M8dNQhA70lG1f0DR0j-->把这次五家店的结果压成给区域经理看的一页纸（Word）：只留最要紧的三件事——哪几家店要限期整改、共性问题是哪一类、下月督导重点是什么，每件事写清涉及门店、期限和验收标准。逐店明细和照片索引都不用给。</p>
+    </article>
+    <article data-page-node-id="0Jm72Ou4wEjXdEY49xn6Bl" class="task">
+      <div data-page-node-id="Ko4cPHgbTr6AhP17MVJQ9O" class="th"><span data-page-node-id="qzcFe03iEKx9ccfaY2AqEE" class="no"><!--pnid:EH0U9mppFhq9zzVGAkBamz-->06</span><h3 data-page-node-id="6GenBv0drdE0XGTXi7SFCo" class="ttl"><!--pnid:kEZoxOfhzGa0zAV3kK9HK0-->让它反驳自己</h3><button data-page-node-id="Pz5WYsrSrpL5JWFUR8cQ08" class="cp" type="button"><!--pnid:tc4p1ENIYm265AixLZqIYw-->复制</button></div>
+      <p data-page-node-id="LiWLCzXVlzcSlcskUEVlTM" class="tp"><!--pnid:VtK3jcOb1LX8loIy2yhUK6-->你说「中环店的问题是设备老化不是执行力」，依据够不够？读「02_督导巡检照片索引.xlsx」「01_本周巡检评分表.xlsx」，把中环店扣分项集中在哪台设备、哪几项是同类原因摆出来验证。产出用 Excel 一张表：结论、支撑证据、照片编号、是否站得住；站不住就改回「待核」并写明缺什么证据。</p>
+    </article>
+    <article data-page-node-id="1vXnfyC6gyW3Nm5dhf2iBG" class="task">
+      <div data-page-node-id="YjsrKgZ8UKnvkHy9hlXo9D" class="th"><span data-page-node-id="DScSZMK5p4CsT3u5axoyct" class="no"><!--pnid:JQrnt5Uu3r5nzvL2WP7wEl-->07</span><h3 data-page-node-id="Fp0b9aB4raZkJn9HDvDoqm" class="ttl"><!--pnid:T4xBCzXvWseEy5XZETxPpY-->比对店长承诺过的整改</h3><button data-page-node-id="NOhsGkATveRfCrzPR4lB4j" class="cp" type="button"><!--pnid:NLsjfn8JH0IY4H6znKuKEs-->复制</button></div>
+      <p data-page-node-id="rHcO21yWF6T5hUDs5ehFzm" class="tp"><!--pnid:aXfNCFjAtBH7m3HalfDydn-->专门把这一轮的复发项和店长反馈里承诺过的整改逐条对账。读「04_店长整改反馈.txt」「03_上周巡检评分表.xlsx」「01_本周巡检评分表.xlsx」，看上次承诺补的哪几项这次还是老样子。产出用 Excel 一张表：承诺事项、承诺门店、上周分、本周分、是否兑现，一行一项，没兑现的标出来。</p>
+    </article>
+    <article data-page-node-id="Fknctl7VJk70wZt81ZVUl1" class="task">
+      <div data-page-node-id="C48ZfTj0rTzEokUzcEk7Y2" class="th"><span data-page-node-id="pwojpcfjdybvr5SZ1LnXZ5" class="no"><!--pnid:OFWTonHueZG0sW5XQL83i8-->08</span><h3 data-page-node-id="Aa2FRIva8p1VuALhVKHh3q" class="ttl"><!--pnid:Ja1MhbivjXz4ZTjQgPUy97-->对照硬规则做自检</h3><button data-page-node-id="CgxMM2s6rR72CGYz7ej6mx" class="cp" type="button"><!--pnid:HjkpRn2RSaEx51PWDQDLCw-->复制</button></div>
+      <p data-page-node-id="lgpxZxi2u8hwuuKinAvWHw" class="tp"><!--pnid:Sm2ezvnQtRYunVBGOYbB8b-->对照硬规则自查这一版整改单：责任人签字栏和考核评级栏有没有留空，每条整改措施有没有写明改哪份文件、谁负责、什么时候完成、拿什么验收，有没有出现「加强管理」这类结尾，有没有编造效率数据。产出用 Excel 一张表：违规项、出处、该怎么改，一行一条。只列出来，不要自己改完就算。</p>
+    </article>
+    <article data-page-node-id="AYjt8w3Arz7wmImFqmMxLP" class="task">
+      <div data-page-node-id="IeG3Syke1QRffRwAFZVNjq" class="th"><span data-page-node-id="oPHK75plFTJPjmwF3W3Tvo" class="no"><!--pnid:O1OvfH4KyNRY05ARxzXvOu-->09</span><h3 data-page-node-id="OabfyTtUtLsI3AtSFjqWe9" class="ttl"><!--pnid:Cnl3b2YCTRKgzydqJr7snd-->把食安扣分折成罚款档</h3><button data-page-node-id="O3Wu39k3jiGhULTtD1ISAN" class="cp" type="button"><!--pnid:jUeRNVyH75JGI06iZnp5h4-->复制</button></div>
+      <p data-page-node-id="GES5O1wOfuGtSXBvf1aPA3" class="tp"><!--pnid:6zXl2MyxXXhxlFxKGnDgWR-->把食安类扣分折成钱和代价：读「01_本周巡检评分表.xlsx」「03_上周巡检评分表.xlsx」，算清五家店食安扣分合计多少项、其中复发几项，再按「被抽检坐实是警告还是 5 万起步罚款」两档各标一次影响。产出用 Excel 一张表，一行一家店，写清算式与依据；哪家算不出就写「本项无法分析」。</p>
+    </article>
+    <article data-page-node-id="o52taRyGM8RV4SFsaQjBBZ" class="task">
+      <div data-page-node-id="9yOulyJa8dbBYSqQnlPZgl" class="th"><span data-page-node-id="prXt6gv9enBbUkDK6cQJS8" class="no"><!--pnid:2UvhiFLExgP6Zx49fWrLX5-->10</span><h3 data-page-node-id="yhyBErvikrerDqbvPNOj9O" class="ttl"><!--pnid:MPVNdaPWZodfSn8EgPcw07-->沉淀成巡检整改口径表</h3><button data-page-node-id="HW4w1XTWyilEmmGhJZjbD4" class="cp" type="button"><!--pnid:huART8qqv77CKEjO2u2xjb-->复制</button></div>
+      <p data-page-node-id="EUg36xkUftmUxAQDAJb5hq" class="tp"><!--pnid:dXfn4t8clrZiffxhTC7cfO-->把这次的评分归一规则和复发判定口径整理成一份可复用的《巡检整改口径表》（Excel 一张表）：四类评分怎么映射、复发项怎么判（同店同类两轮）、共性问题的聚合阈值是多少、责任人和期限怎么填。写成下周巡回直接照抄的样子。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="YAChU2p1YRZ4t2H7fss3Ml" class="cta">
+  <div data-page-node-id="D1VNESMTEsMiMLDDwJ5g4W"><h3 data-page-node-id="dmbqAxZCm5mLkQX5uYlKwu"><!--pnid:AOA7z3RjMnmsWXsutplyUR-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="Aln9xMPFLPABmqVRj3p30p"><!--pnid:g8rHh5EC6VXnKOXayZAfdg-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="c1YCwAixSsJMtu7CnYHp5A" class="btns"><a data-page-node-id="NmSzct4m7ofAvVbaFNDYz7" class="btn" href="#" id="ctaContact"><!--pnid:VhkM052jXNCMOjWsuc4nVw-->联系我们</a></div>
+</div>
+<footer data-page-node-id="WlXIDhTH17Tawn3M2JEWgq"><!--pnid:gR2BOzy0MgZvNaF3rbUvcO-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="iSBpsH4Qk92ca8oYxijp1i" data-pnid-children="P82Y95SYKVvmF9wQPIRobf">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="o0HE2zkmd5mTQra91XF8Hs" data-pnid-children="kddJwmnTVkFOMJ75hE7tcB">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="vNVMcX0gEKx416J9BSpiTl" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="xbenlWgLWt2MfxkBOEg6yE" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="pU4BnNw5BY3CnRB4nCT74a" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="LrLOix1S7JFTtr4jqXVBkk" data-pnid-children="8DVLshQyRFOPKrG46yxieB">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="Fdk5OcSqzkZCIbIWzLyDsm" data-pnid-children="xtQkbF2i81hp2RrC1bKj5H" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

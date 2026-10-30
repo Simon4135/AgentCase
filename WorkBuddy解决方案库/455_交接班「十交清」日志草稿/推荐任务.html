@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html data-page-node-id="jHcPTkBuTYUs4yOvyok4FO" lang="zh-CN">
+<head data-page-node-id="HGqnUVwmQmIdaOndxczl2D">
+<script data-page-node-id="INM15sOQKmyJCMNJvrGDuj" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="D3DV6uZslDiKAt0yH2ewEl" charset="UTF-8">
+<meta data-page-node-id="G2bD8SnClGQM65jnII7sst" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="DYJ0V0AV1h2oHYATWUVMx2" data-pnid-children="w8U1WCp0hUrutDwWm9UGkR">交接班「十交清」日志草稿</title>
+<link data-page-node-id="M3VJGg77tt2jQlNZZBUvSz" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="dIq6Mx4RIPnWlGmgd9IgO8" data-pnid-children="Fu9vq65QoMRklbLyAeJsGN">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="dUGyYS5jOKVKXmFS7OhOZe" data-pnid-children="1m1QH5sh04YdRh6aSPPB4F" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="g44gJQxJY2O8fhumdkq3b8" data-pnid-children="Akt02T1BPt9x6TOubJBBZh" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="BfAr26l2YJnB5woe0MGhhW">
+
+<div data-page-node-id="Md5YXh7ygL7MVceMwGEZfM" class="wrap">
+<section data-page-node-id="RzuLBrjqM8bgL6HangjTaK" class="page-hero">
+<h1 data-page-node-id="5iKtgNBckjFLS3BRL5JYOq"><!--pnid:TkmSrDlyEN18Hqk0BgW4JD-->交接班「十交清」日志草稿</h1>
+<p data-page-node-id="sUJrRvo9ED6g1SYFutKtOZ" class="lead"><!--pnid:63QDSikvaSaAK5jB38y4Nq-->记录本上每一栏都填了 · 唯独最该写的第三项「异常指标详细工况」是空的</p>
+</section><nav data-page-node-id="cJfokt8TOv24sh00ycoUtC" class="subnav"><a data-page-node-id="LDDJkKPKkuiNIWa2WisNVA" href="场景引入.html"><!--pnid:ee2y2dmqPGCM8DFgZqhRQO-->场景引入</a><a data-page-node-id="see2QxLBFeLs0UMmOkHCnu" href="LiveDemo.html"><!--pnid:gbgRgPRKfKRdzGGP1KgFtk-->Live Demo</a><a data-page-node-id="Uref0SUjU7DzQdxyBjQMmz" class="on" href="#"><!--pnid:iMvZmU6Lvt8KMO4Getbeeg-->推荐任务</a></nav>
+
+<section data-page-node-id="KbmXNqDbcizUOixTY1nksG" class="blk">
+  <h2 data-page-node-id="IqCOZLywH99TgFhDbWZjNL" class="h"><span data-page-node-id="5zffFTGTDstWePpWGti9dg" class="num"><!--pnid:2b0380GpZ5PzsrubW7EtoN-->一</span><!--pnid:u9k7CDAjLr8Up2WeUDTdLk-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="qrNaEUhC9NS3mxOzbvERsO" class="subline"><!--pnid:Fuxn9g4AjR2kuERMwL0Ve3-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="BjBrGj8jCkFBBz2u6QiNRB" class="card"><p data-page-node-id="3fF8bbroiKsSKIFLiwZKul"><!--pnid:eYsVcu0KE56mNRzJ1V9ZUm-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="yc9erOuc6HnR63f0B6Jlqq" style="margin-top:10px"><!--pnid:s65jrNElkFPghkxxdP79Dy-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:KNBIc1WrQkHAfrFIcQyiWs--><!--wb-skill-start-->
+<div data-page-node-id="vGqgJdUS19UG33W69hytE1" class="wb-skill">
+<p data-page-node-id="mFOOam0oL3uqrSfwtQpLw7" class="wb-skill-lead"><!--pnid:PXDiiX7hAKcyNEmsGUqF5c-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="DZ8P7UvuslTm03wAypbTK3" class="prompt" id="wbSkillPrompt"><!--pnid:u7KkSa96JPe5bi5p2zKKKu-->【准备】这个场景的规则都在「交接班「十交清」日志草稿」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/6Hb9vG95MAYD28JEnoDv0l/3iTBcYvZOy4C/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="WtsU3cs4LKCkaRMky6HkwD" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:Pm1SyTipd8CLwl6wfvaa58-->复制</button></div>
+</div>
+<!--pnid:DQM3HVK3xW267pjXy3KCXo--><!--wb-skill-end-->
+<section data-page-node-id="aRw6BO0QsS1RLoF6vpeNNw" class="blk">
+  <h2 data-page-node-id="RF6sLEeQaHjsBBOJZujTqa" class="h"><span data-page-node-id="ebvUqjCWR4xPoGZbZOV3CG" class="num"><!--pnid:u3cfMJwlO7ztsXNaNbv5T9-->二</span><!--pnid:KgTe9luEzn6Nv47M032i0v-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="WzBli5MG2ATweXS0YBruZM" class="subline"><!--pnid:YuH7ZsBEzljsrqKRjFfYq8-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="gsAOdJ36ZnA8VLKhCN2gcr" class="tlist">
+    <article data-page-node-id="xkbUG1bONpGNHCKfbnyFcF" class="task">
+      <div data-page-node-id="2SWv7QXVChZd7JgpzH342s" class="th"><span data-page-node-id="0R2O5pp0ieupQsKOWlw6bP" class="no"><!--pnid:u7SOFZXMTHa9XVCBkdxwpn-->01</span><h3 data-page-node-id="LQ7SFYat5NBY2C49QNhKD4" class="ttl"><!--pnid:RLhRiIHLp7MMlFBbkhG985-->首推默认</h3><button data-page-node-id="uCbUwVdjqBuLHScLepyfF7" class="cp" type="button"><!--pnid:aLfQtIRxe8ZUc6AQIxHFcJ-->复制</button></div>
+      <p data-page-node-id="zbdK5mMfcdzYSvHEypWOT6" class="tp"><!--pnid:cvwjvCaACSXjlJ9TJj5O8T-->帮我起草 8 月 17 日丙班（20:00 到次日 08:00）的交接班记录。材料都已随技能内置：01_DCS报警记录_20260817丙班.xlsx、02_DCS操作记录_20260817丙班.xlsx、03_工艺卡片_R-202缩合段.xlsx、04_上一班交接班记录_乙班.xlsx、05_化验记录本_B26-0817当班页.xlsx。
+按我们厂现在用的那张表的栏位写，十交清十项都要有，必录事件五类逐条落位。凌晨那次温度超限的起止时刻、持续多久、峰值多少要算清楚，写进第三项。报警响过又被消掉、但没留下原因分析或处置记录的单独列一张清单。上一班遗留的那两个问题（E-202 温差、B26-0817 中控样结果）要在记录里交代进展。
+产出三份 Excel：交接班记录草稿.xlsx 是正式件本体，交班人／接班人／班长三处签名栏留空，只有当班人知道的地方逐处标出来等我填；报警未闭环清单.xlsx 一条一行，带响的时间、消音人和缺哪一步；超限时段明细.xlsx 一个时段一行，带起止时刻、时长、峰值和卡片限值出处。
+拿不准的地方你别替我编，标出来我去问。</p>
+    </article>
+    <article data-page-node-id="G7SV9JtIbdGEs68Tu6Z3Y1" class="task">
+      <div data-page-node-id="jYd23KoOCwAciMg6TPpVon" class="th"><span data-page-node-id="cTDXOS13Va2koKgXZmbnRe" class="no"><!--pnid:2FCAq8ulTenUAqWpN0ykD0-->02</span><h3 data-page-node-id="r3LTLU2zGmEntSDFG8MWqA" class="ttl"><!--pnid:WXSGQwvT3AhV8WONNig7X5-->只算超限时段</h3><button data-page-node-id="UFCKoH0aiDpogieCFEyw3P" class="cp" type="button"><!--pnid:8ae7AzhxHP1t3KyxGzD1ac-->复制</button></div>
+      <p data-page-node-id="uGj6sySQJlvvpsqbO2kyZI" class="tp"><!--pnid:uf6nA92tPwouPA2KH0qbIt-->先只算超限这一件事，不用出记录。读 01_DCS报警记录_20260817丙班.xlsx 和 03_工艺卡片_R-202缩合段.xlsx，把当班每个关键位号的实际值跟卡片上下限逐点比一遍。产出 Excel 一张超限时段明细：起止时刻、持续时长、峰值、对应卡片限值与出处，一个时段一行。</p>
+    </article>
+    <article data-page-node-id="0CfwnP1UTXiGwzp7KHdAqp" class="task">
+      <div data-page-node-id="Rbt7urLZeyumWOnxelsF2V" class="th"><span data-page-node-id="sLsRjVSzhbzZRKxGXcKcfd" class="no"><!--pnid:mK7EPTx98D35Dnko7lXBJv-->03</span><h3 data-page-node-id="1IuaU39vdxLkrQMDLKiifs" class="ttl"><!--pnid:6lsHRr5kRE7TfsU7Z0J5RN-->换成用报警值当尺子</h3><button data-page-node-id="OMWy4FlWzRrbHerQv3NV7r" class="cp" type="button"><!--pnid:GQvy5DNTjgyKl0eG1wLTGa-->复制</button></div>
+      <p data-page-node-id="jKcBUwQvOQTGadrNEPtNhl" class="tp"><!--pnid:pnVeE4sk2G7bdwHcbAnlw7-->这次把超限判定基准换成 DCS 报警值（不用现场那张工艺卡片），01 和 03 两份材料再跑一遍。产出 Excel 一张对照表：两种口径下各判出几个超限时段、哪些只在卡片口径下越限、相差多少度，口径差异要标出处。</p>
+    </article>
+    <article data-page-node-id="mqjAv3Wq4NDZtNxBsLyRuk" class="task">
+      <div data-page-node-id="hMvSm2IZHUlDlKbt9101E0" class="th"><span data-page-node-id="qKRziIjUsDJRnjGfhL4E6O" class="no"><!--pnid:uvrio91YUbpeRF00joSfuq-->04</span><h3 data-page-node-id="gM92Qfrz23cmPfBR9Vjlqv" class="ttl"><!--pnid:mw17aKRBxrLRh2iutvziIs-->三个位号一起过</h3><button data-page-node-id="S1xnQzctZUNAV3aQlM1LAf" class="cp" type="button"><!--pnid:Ty49Z6wGE3vuXDyLO6UGCL-->复制</button></div>
+      <p data-page-node-id="kBE6nMzjwEnhtS4p9JiLw3" class="tp"><!--pnid:eLX1WFQ07t6EIusys3ntMK-->把 TI-2021、TDI-2028、PI-2015 这三个位号分别过一遍，材料用 01_DCS报警记录与 03_工艺卡片，各自算出超限时段和未闭环报警。产出 Excel 一张三行横向对照表：报警条数、超限时段数、峰值区间、缺哪一步闭环、是否涉及 B26-0817，按超限总时长排序。</p>
+    </article>
+    <article data-page-node-id="tGUlCijTN5bNtdntWv5rLt" class="task">
+      <div data-page-node-id="icfEFwc8sMptjMp4zgZ7H7" class="th"><span data-page-node-id="5uc1cYQ4XxrD18LNkmb0mn" class="no"><!--pnid:3Huyms2ymgd4AsVTI8MuYi-->05</span><h3 data-page-node-id="Rnz1cznu0URT9NqsJbngk6" class="ttl"><!--pnid:Gdt27MsjZXkhXPYaEVYNw5-->给接班人看的一页</h3><button data-page-node-id="CHvaNz2tFstewOFCJljzSa" class="cp" type="button"><!--pnid:lN7fMRn3gPoqlE5HBldP3Q-->复制</button></div>
+      <p data-page-node-id="TRVaVHakJdd6sZB9IsLUYP" class="tp"><!--pnid:vAg7FqJCZhr6bn92FEfhq8-->把这份草稿压成接班人交班时看的一页：哪几项有数据支撑可以直接接、哪几项要追着当班人问、哪几条报警没闭环。产出 Markdown 一页纸，只留要点和材料出处，逐条明细和底稿不用给。</p>
+    </article>
+    <article data-page-node-id="sklJIRxgpOBEKRuUho9JPW" class="task">
+      <div data-page-node-id="lVceOvp3vU5jq9lkcbWfDF" class="th"><span data-page-node-id="AHYT1QGUN6LW0J1Qx2DJSR" class="no"><!--pnid:EIsrsXGg1aJ2H5sBu82ssb-->06</span><h3 data-page-node-id="EU9Me0ViutRXItn0EptPfX" class="ttl"><!--pnid:mIuUT5jYX07q7EyUNdoUCx-->让它反驳自己</h3><button data-page-node-id="dLBXq1pqnRhwSmKYq9E5c7" class="cp" type="button"><!--pnid:eUPYar0kWu4Pr5o9IlS4Lj-->复制</button></div>
+      <p data-page-node-id="n1oRRSkvkcOfRsnMD4ZvyA" class="tp"><!--pnid:z3fkhCqQPM6qZ8kf0on0Cf-->对照 01_DCS报警记录与 03_工艺卡片：你判进第三项的 TI-2021 高报警和 E-202 出口温差这两条，自己挑毛病——哪条其实属于开车升温段的预期报警、哪条证据不够。产出 Excel 一张复核表：候选事件、支撑证据、留或撤、理由与出处，站不住的就撤掉。</p>
+    </article>
+    <article data-page-node-id="TjqdthSAR03l9JyVaS5q52" class="task">
+      <div data-page-node-id="kthUYWy41I3uQU6UqJirUk" class="th"><span data-page-node-id="MPJsWuFFv2Jpdif8mWW42M" class="no"><!--pnid:572EoHz6R0J6qOHphRFHLp-->07</span><h3 data-page-node-id="yjmSo34MtET1JgeFzJvdWE" class="ttl"><!--pnid:1NdfXQN5yEHSehR9FObB5m-->比对巨化那条路径</h3><button data-page-node-id="pL75oECuSdkwARjM6d2ndK" class="cp" type="button"><!--pnid:SyTPg072tB5pDecBd3WHFY-->复制</button></div>
+      <p data-page-node-id="mDZge0wESBer4joBZw6VCJ" class="tp"><!--pnid:yTWoqfKIleiZFbiXVEiPal-->把本班 TI-2021 这次处置，跟巨化那起二十一天超压的路径逐步对一遍：消音、原因分析、现场处置、写进记录、交接班这五步各做到没有。产出 Excel 一张五步比对表，两个案子并列，哪一步在这里断了要标出来，出处标到 DCS 时间戳。</p>
+    </article>
+    <article data-page-node-id="FkLYMrFX5DbWuqCFKbzOD2" class="task">
+      <div data-page-node-id="DEFghNmcCv26dQucyMxgPY" class="th"><span data-page-node-id="8pxCYj86dPrLDDyuxkgWZ8" class="no"><!--pnid:ttqsFAq606YQxPpvR5jRfD-->08</span><h3 data-page-node-id="KEYFSUtwKq4CxMRj6YUuDS" class="ttl"><!--pnid:VpXGDyVAu7P1vY8H4CpAIm-->对照十交清自查</h3><button data-page-node-id="q0bwc73Eqmf5E2CaTZLUys" class="cp" type="button"><!--pnid:B64pUJFxcAHXhjsTQ3vZjr-->复制</button></div>
+      <p data-page-node-id="3dUQgbCSWhOeAAsacXEtA7" class="tp"><!--pnid:Tu6cPaD3YJtEvQhcXfUShA-->对照我们那张表的十交清十项，把这份草稿自查一遍：哪一项没有数据支撑、哪一项只有一句话没有实质内容、哪一项该附化验结果却没附。产出 Excel 一张自查表：十项逐项列出、当前状态、判断依据、该补什么材料。</p>
+    </article>
+    <article data-page-node-id="ekFNhWrLFCuBkGaYwNAXNO" class="task">
+      <div data-page-node-id="jXR1x6HrsAayoQSRtHns0W" class="th"><span data-page-node-id="0ZWktY65dB27Mb2OSb1Ckm" class="no"><!--pnid:7Z3MbTMBy46nbMkSIFgyuI-->09</span><h3 data-page-node-id="iJ6M2PuCKLoDyrTJ098Xjp" class="ttl"><!--pnid:KNJ28HAeq3YHIMNJDGabBp-->折成记录不全的后果</h3><button data-page-node-id="6IqHLnLulCejW0v0Igpbq8" class="cp" type="button"><!--pnid:sdBE0oHmrwui9Ep8luMhXP-->复制</button></div>
+      <p data-page-node-id="AvisZqhZVsmMwsm7juP4lJ" class="tp"><!--pnid:jrTJSvs3LvvoAHgn4Nw3Zg-->读 01_DCS操作记录与 05_化验记录本：如果这两处缺口（03:22 改设定值的原因、B26-0817 色度没结果）最后没补上，按巨化与宁波科元两个案例的处置结果，把后果性质列出来。产出 Excel 一张影响表：缺口项、历史上同类缺口的结果、依据出处、影响面涉及哪些批次。</p>
+    </article>
+    <article data-page-node-id="VWx5Ef6Tb5CiskHr50fabS" class="task">
+      <div data-page-node-id="s1HBiDExmFICwDn4M7yTbS" class="th"><span data-page-node-id="olaOO2joCBClTDck9QBAGp" class="no"><!--pnid:0GIxkb2eUDp9xt5IqsaySz-->10</span><h3 data-page-node-id="kDtUlANO9HkQhPiUnWLJFm" class="ttl"><!--pnid:DHlj32yXL1AS3bvxeuPczQ-->沉淀成班末核对清单</h3><button data-page-node-id="IvZA6mhpQ7Yg9ZjzJBXyT6" class="cp" type="button"><!--pnid:B3xE7juZEKDYVwWgHKZK8k-->复制</button></div>
+      <p data-page-node-id="2noNwIWmnAXz8tFXLZIq69" class="tp"><!--pnid:lU3DwwJpoOdyWhqjWf2275-->把这次用到的核对动作整理成一张班末清单：交班前要核哪几项、每项看哪份材料或哪个位号、缺了怎么标、谁签。产出 Markdown 一份，换任何班次直接照着跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="YPGhCXlrBjgUwWQvRuxwvI" class="cta">
+  <div data-page-node-id="Jl1Gar2o6jccudzQrIZexb"><h3 data-page-node-id="41WBssCFnwY61CuyMI39Gf"><!--pnid:Pyog2x7BwVaaoWtazRLoqM-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="zgUBGk562KssOPs8sV0V5c"><!--pnid:OIS5Ju9Yeyu9guImuucpBB-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="GrR1niKW3KOMHEp7ds0WNV" class="btns"><a data-page-node-id="nKYNki2O2l4KKPAOnTwVNN" class="btn" href="#" id="ctaContact"><!--pnid:ypuRhZGeCuMvlUHjWr0mNk-->联系我们</a></div>
+</div>
+<footer data-page-node-id="xx9eWpvqQ87EHhqakqQmgD"><!--pnid:EmmzqC3AwQ9WYNvVXSikJP-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="yb3VXes8OZtcqrh4Qkin0D" data-pnid-children="tI4s3EsN9l8WdtFbC16jdV">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="clddraNF91Vm1YD399ueza" data-pnid-children="KE3Kljcn4wh6QC1DSlmcW3">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="zl3pNpIOQFaT2LaDT4OHQt" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="rbjLU0VQvpGefxuSfZJH7Z" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="JsoW8hCvQZbStnuSi0MDZk" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="bZRWekA4grCvVhZoQ1Pt8v" data-pnid-children="bCpYVBBDhakwhhdi26uzXO">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="qA74WM7wOH8VNbgcmmn9LQ" data-pnid-children="HikMb6hQ4WjRbPwNIAGfbI" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

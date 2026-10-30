@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="Lcg5ZDjDTwC3NgHBTpWDQX" lang="zh-CN">
+<head data-page-node-id="KyKlYJeAPpRlLUJKiUAgrm">
+<script data-page-node-id="GbWS5JL26CYdEOq5ZzPLDr" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="MSp01JyjY2GsLI2mh11XOd" charset="UTF-8">
+<meta data-page-node-id="GbRvhLiimHBecHPn2Y8xUA" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="gaOInvFXqIrgHlW6JkQDtf" data-pnid-children="Tzm0W0Ht2fO29j9mVjy4CA">开播前内容合规预审与违规话术拦截</title>
+<link data-page-node-id="DskjcFXWNtf9pO2f8RXgmT" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Vibekd2dq9cjVe9MAhCv5e" data-pnid-children="omVn8Pkdftr6WrllPle8NW">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="LPvdo6FqfgdpyLOrwKruj6" data-pnid-children="EiU4yrEFJCLUPsmn2DNWdI" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="sEzdcvlFrfa8CLH2qQgX8O" data-pnid-children="LmVNkGwtlvZi0sRtZ1Ctkk" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="2clS4iRfm1sN3rPxLyHccv">
+
+<div data-page-node-id="qGFcMOoV7YaH56z6Z3t8Xq" class="wrap">
+<section data-page-node-id="yM9ujXtNzjVbDr1IZyA4NN" class="page-hero">
+<h1 data-page-node-id="2ObY2gAq5A20YrvwkFFMSI"><!--pnid:Vv3BZ8kGM4vtsY9rohilE2-->开播前内容合规预审与违规话术拦截</h1>
+<p data-page-node-id="UjhhjqyCGOOwvqcgJJFZjp" class="lead"><!--pnid:MDotDRCwSOq7hWaVSmvpI2-->主播说错一句「全网最低」罚单上限 100 万 · 运营就坐在旁边，手里没有任何工具</p>
+</section><nav data-page-node-id="UbcoHIhgO4JFPHRHkIp0Zl" class="subnav"><a data-page-node-id="WC9B3eGCNpsmO3wqf7CvwK" href="场景引入.html"><!--pnid:0if98bSxIGXfC5I7XjMK94-->场景引入</a><a data-page-node-id="EaZflpTffh7hFBZIgY3aSf" href="LiveDemo.html"><!--pnid:7Dj2m76wnSWgkHoeVh2vBG-->Live Demo</a><a data-page-node-id="z7RZ2JgvRBPLThs3vXYy3G" class="on" href="#"><!--pnid:w7tS26jhVL6mXl3YqFMFo4-->推荐任务</a></nav>
+
+<section data-page-node-id="X3GdRNWtc6OILwKzNMODuQ" class="blk">
+  <h2 data-page-node-id="AuIYa4ggvjgeomCEwmYYye" class="h"><span data-page-node-id="8yzTVIf70kWsBvJN4sh2Hx" class="num"><!--pnid:MqA8orwCND4V9D0ExEAOej-->一</span><!--pnid:D8h7KW7BIzqwwiuP4hG2Dh-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="YMEIcC9kzw6yjF1N0TIUfD" class="subline"><!--pnid:cYNB21RzLMds8I5MttIvnZ-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="aaqdsw9juB98LRpLBolVeU" class="card"><p data-page-node-id="aRiN95ofrohOBZjYPckdkz"><!--pnid:891WZfHb059PvNRavpCQfq-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="TdTWe9Y18JqjyKF7XAHlS5" style="margin-top:10px"><!--pnid:kG1OhccHNIcY7JrM9lXb5J-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:EHSUG4EOy9IGgd4Cd4Za2o--><!--wb-skill-start-->
+<div data-page-node-id="EJw7h3jFzUnxlGVFcCGTNt" class="wb-skill">
+<p data-page-node-id="uinjSB8UR3wZioxzc4jHYG" class="wb-skill-lead"><!--pnid:5AU7diu7yCM0pxflWJjGZG-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="ESnNgZlM8olTjToHpXtJMn" class="prompt" id="wbSkillPrompt"><!--pnid:nJG9OEswaFSeTOlyFpckS7-->【准备】这个场景的规则都在「开播前内容合规预审与违规话术拦截」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/zYYp2Hzy9BUPGui7WnRS9M/-7tFwKpm0nbE/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="pk1DD8FJjc9HB6em7jFAwk" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:EV0XCSM5YeU9xUjC1p5E50-->复制</button></div>
+</div>
+<!--pnid:8VhUuIOYSnF4Pw3WDxUoa4--><!--wb-skill-end-->
+<section data-page-node-id="AdmGD8N0eeGjZYOoHHC8us" class="blk">
+  <h2 data-page-node-id="WoEXWVcw2cobjYy3xxKUrb" class="h"><span data-page-node-id="gK9saeVJsEyI4ACYTiVQsY" class="num"><!--pnid:63SldSuTYGsVlQGUuNPFvh-->二</span><!--pnid:isXtgCKnM3v0yBVpnVAiHr-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="B0nKlpPN4W1NtZa2yfdHgU" class="subline"><!--pnid:Dc6s62Qx3MTwKlWE6FeUTr-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="vwZ0XkTsgMdFZCPRfw5Tfv" class="tlist">
+    <article data-page-node-id="1YKpRXheHWfxifM3JURBeg" class="task">
+      <div data-page-node-id="195DQqIp3B2AO41JoZlSHT" class="th"><span data-page-node-id="C8xZy6ljRjMsUqV7zTfAzs" class="no"><!--pnid:8t7k7shOeccwMLjR1Jv9a2-->01</span><h3 data-page-node-id="iLYkxhTuG6z3hQz7n93rYC" class="ttl"><!--pnid:WMT4GLzkuUOtW70bF2OqGS-->首推默认</h3><button data-page-node-id="B7kv1bFox6LivnB43BYadY" class="cp" type="button"><!--pnid:jzvORq81z3cLO55Z2jD8y5-->复制</button></div>
+      <p data-page-node-id="TzdCgE1XiwE96lIYce3KZb" class="tp"><!--pnid:5noPJ4gaAIFc6E3qzRTWE9-->11-14 雪绒首发场，开播前帮我把这一场过一遍。材料：01_直播脚本_雪绒首发场终稿v3.docx 是编导林晓蔓定稿的逐分钟脚本，02_贴片文案与商品标题.xlsx 是 14 张贴片加 12 款商品标题，03_违禁词库_五类298条_11-09版.xlsx 是现行词库与自家三次踩坑记录，04_商品资质与功效边界档案.xlsx 是各款货的备案功效边界，05_处罚案例参照库.xlsx 是带金额的罚单与平台处罚梯度。哪些话有风险、怎么改、依据是什么，一条条说清楚，我要拿去跟品牌方对。产出三份：开播前合规核查记录.xlsx，四类逐条判定加依据，随脚本归档留痕；主播避雷卡.docx，一页纸，本场最高危的三句话与替换说法，苏梨开播前过一遍；改写建议清单.xlsx，每条带语境判定理由与参照案例。别删词，给我能保住说服力的改法。</p>
+    </article>
+    <article data-page-node-id="FavBcTmiN0jFEh2CbEACf4" class="task">
+      <div data-page-node-id="9xTGtDzDuIJ358dGcwSkvG" class="th"><span data-page-node-id="W61mFdasVAnEf95OA7ArLn" class="no"><!--pnid:HlqehQ4bnd9G7smZ8bH3du-->02</span><h3 data-page-node-id="ChA23pGIhUT5w3n0U0NJwV" class="ttl"><!--pnid:MKdndXIKBp0zlcP5IusjbP-->只审贴片与标题</h3><button data-page-node-id="7my4VKscPGJR4AxGZUJ6Mf" class="cp" type="button"><!--pnid:TTW6fikfKj6Dyf90rcMkG1-->复制</button></div>
+      <p data-page-node-id="w0wIw1LMSof20GBVRqOc4f" class="tp"><!--pnid:aTqvUlCaXEBVtuPlLxNnMB-->脚本先放着，只审 02_贴片文案与商品标题：14 张贴片加 12 款商品标题逐条过一遍，命中项标类别与风险等级。产出核查表.xlsx，一条一行，附语境判定理由，注意品牌方 11-12 新发的那五张。</p>
+    </article>
+    <article data-page-node-id="6HH4O3Ujn5hVDtDah0CggB" class="task">
+      <div data-page-node-id="S27wCOZGTUNEc7XJ5dBCER" class="th"><span data-page-node-id="YDlkS7KF9RQs18bl1nGND5" class="no"><!--pnid:QNu5VQR6lRWN2BG5nhxuTl-->03</span><h3 data-page-node-id="iu2IrGA1Bv9uE0UzD9NTd2" class="ttl"><!--pnid:BbmbIV086aLMBh4aP5skFL-->换成按处罚梯度定级</h3><button data-page-node-id="dUJcVLhlkGVt1raBNGD6Ln" class="cp" type="button"><!--pnid:69sb6n9rJg0Cb69lK9CdMB-->复制</button></div>
+      <p data-page-node-id="KCXTEbirIipf2FF5loQOS1" class="tp"><!--pnid:nS40Mba4s0bIt5gdWfYr2F-->换个定级口径再跑一遍：不按低中高分，改按平台处罚梯度分档——首次弹窗、二次中断 30 分钟、三次限流扣保证金，逐条标出这句话再犯会进哪一档。产出定级表.xlsx，附本场已落在首次档的那条。</p>
+    </article>
+    <article data-page-node-id="lNrXvEhHw9M6WCZvAUzG5J" class="task">
+      <div data-page-node-id="q5jOy1dLrlQE9l9VqRbOiB" class="th"><span data-page-node-id="JIa78ObfbyVg5CW2AwsnKs" class="no"><!--pnid:7VraAyYQH1vpItNgo1RqZc-->04</span><h3 data-page-node-id="yWhveAHjwt7E1KRCii3lNn" class="ttl"><!--pnid:0RIPOCZnThQC8G8MMMrmlY-->脚本贴片标题一起过</h3><button data-page-node-id="HFWlpjhSzsTRJby0S7X1wa" class="cp" type="button"><!--pnid:77YBaz9taxzrhcZmtdhEkU-->复制</button></div>
+      <p data-page-node-id="gnuMz3iJ7Q67LyxhVeSR8j" class="tp"><!--pnid:DeHT6Qmn0Z7f1F3CYhyiKq-->脚本、14 张贴片、12 款商品标题三类一起过，最后给我一张汇总表：素材类型、总数、命中数、类别分布、需改写数、低风险保留数。产出总汇表.xlsx，一类一行，合计行要与分项对得上。</p>
+    </article>
+    <article data-page-node-id="UlBAfZL8Hf92zOkXqqHFxv" class="task">
+      <div data-page-node-id="7hORpCNNfd5WGmUeCgHrgb" class="th"><span data-page-node-id="n0gVJAZLOE6CXU2oQUI1Xt" class="no"><!--pnid:w4UYgs3EP0bGYhb3E0Y2Um-->05</span><h3 data-page-node-id="5EH9ru5BFN2Pf1kMbjfUy8" class="ttl"><!--pnid:cSY9pLuiSHoilZICfKBmp3-->做成给品牌方的沟通件</h3><button data-page-node-id="AkzAfW8xgUxuf2bYas1mVA" class="cp" type="button"><!--pnid:RAwmzZbkiKVaCSbjEsJZYb-->复制</button></div>
+      <p data-page-node-id="7eb7AE1bB7hyrvrHB77KfL" class="tp"><!--pnid:CxBrRflTPwC6J8psK7q0Yb-->把命中项里来自品牌方 11-12 新发的那几条，整理成给悦研宋雨桐的沟通件：原表述、风险点、依据的罚单、我们的替换建议。产出沟通件.docx，逐条列清，语气对品牌方。</p>
+    </article>
+    <article data-page-node-id="8pnZmvJ0xYdo6nG6HrFJss" class="task">
+      <div data-page-node-id="ieHr0UzPQ2khP9LsOH2gI9" class="th"><span data-page-node-id="QjAVcyQ5v48307Rgn8gNai" class="no"><!--pnid:8uHHiSP8rTCIpGu9AKRL2R-->06</span><h3 data-page-node-id="BppKu7KX0VDx8wv5pMMnxZ" class="ttl"><!--pnid:v3W6K8Q8wAi575G24S5aYn-->让它反驳自己</h3><button data-page-node-id="VFjCpp29CCfsZZze9384tF" class="cp" type="button"><!--pnid:RArnu2xU40ZP2ViuVtiEbm-->复制</button></div>
+      <p data-page-node-id="zZ59rd4gBHx5F3QIsTMXNv" class="tp"><!--pnid:wdVrYcsd4JbT3G7B2uluSn-->你自己复核这份核查记录：命中的那些里哪些其实可以保留、哪些是判严了，比如 04_商品资质与功效边界档案.xlsx 里备案写的「修护」与脚本里的「修复」一字之差，凭什么一个留一个改。逐条说依据，判严的改回可保留。产出复核表.xlsx，一条一行。</p>
+    </article>
+    <article data-page-node-id="7yS6WHTqU0sCHCQJXNCpJ6" class="task">
+      <div data-page-node-id="oFjZN0QzTv939TBFgCu4qK" class="th"><span data-page-node-id="TK8A82fXjYekkpBC3T7ygN" class="no"><!--pnid:6kVZlDa7Mz1TfU0nXBHypE-->07</span><h3 data-page-node-id="U6fpVF2Xzrxt2APwRkCmpi" class="ttl"><!--pnid:a17DNEvjiu1TuJqoVCcmtJ-->专门比三次弹窗先例</h3><button data-page-node-id="mhTivKoY3eLuhUFhvxOEvn" class="cp" type="button"><!--pnid:72CvPsVoU6ASaKcJPVRbUn-->复制</button></div>
+      <p data-page-node-id="APfDMPDiJO1WU2ZXot61PP" class="tp"><!--pnid:fO47taiMRZfVHo1aemx1nd-->专门翻 03_违禁词库的自家踩坑记录：2025-12-30 温言「消炎祛痘」、2026-06-14 沐橙「比专柜便宜一半」、2026-10-28 苏梨「全网最低」三次，跟本场脚本逐段对，撞上的段落明确标出。产出先例对照表.xlsx，附各次损失金额。</p>
+    </article>
+    <article data-page-node-id="xPUpwYDh3yOD0vUW66hSLz" class="task">
+      <div data-page-node-id="HrjwMUyvBIz2FuGOt4UE8j" class="th"><span data-page-node-id="jDry2hpdTh4p7SgKQARAoK" class="no"><!--pnid:s8NUsbfGqvp3JccXLjKbnJ-->08</span><h3 data-page-node-id="UTtpQOrGvdvKUtMSw7kJK8" class="ttl"><!--pnid:LgyylVK3UB80QpwiV897qm-->对照备案功效复查</h3><button data-page-node-id="VJbpnjupDh8Ub8yRkEUsb6" class="cp" type="button"><!--pnid:zHB4nMgIc2q997k5sWv7Hg-->复制</button></div>
+      <p data-page-node-id="s2rLkhfqCBwdxVrR9xOaIw" class="tp"><!--pnid:UP4orH9pJXOm6HHPpXTcvq-->对照 04_商品资质与功效边界档案的备案功效逐款比对一遍：讲解卡里每款货的宣称有没有超出备案范围，尤其安瓶精华的「修复」与胶原软糖的功效类说法。产出复查清单.xlsx，一款一行标超出与合规。</p>
+    </article>
+    <article data-page-node-id="RnLLPAIJ1tmPLFNtJhuf2x" class="task">
+      <div data-page-node-id="GVq1VPDrHjOa2k8ZLyMSMi" class="th"><span data-page-node-id="uF7UzrK8FdbrVQ2NWhn3VX" class="no"><!--pnid:FxIjckNNOyz5Z3bsydIy5d-->09</span><h3 data-page-node-id="mbHOVbBeXRwWMdyCn2CoEa" class="ttl"><!--pnid:A3FWNYIVRMWzRZK8BDgx2t-->折算成罚单与时段损失</h3><button data-page-node-id="1VJimbRllwoJAHrMXpPghD" class="cp" type="button"><!--pnid:MKMOPJ9NQJ9CAsDXgSWLaf-->复制</button></div>
+      <p data-page-node-id="LGbQozH6NrX0yRbXVK5kYr" class="tp"><!--pnid:1mpNoKCzDY6fNYzx0hac3P-->把每个高风险项折成钱：挂上参照罚单金额与处罚梯度档位——广告法第九条 20 万至 100 万、薇诺娜 17.55 万、徐州案 62.91 万，再按本场逼单段分钟产出算一次弹窗中断 5 分钟的时段损失。产出代价对照表.xlsx，一条一行。</p>
+    </article>
+    <article data-page-node-id="Y3Tg7AkKTyqfzW7gU8sSlJ" class="task">
+      <div data-page-node-id="V6YATQKhWSWPvVWLHTgsio" class="th"><span data-page-node-id="y2ihDVnzSp7kq5g2VRAJWI" class="no"><!--pnid:GpvfEnrmx8nFzZmyTRgrea-->10</span><h3 data-page-node-id="fK9TqAMn91Qnl9LgXgY8XQ" class="ttl"><!--pnid:6GzyUkd1vhl4kar6KQZc2S-->沉淀成预审清单模板</h3><button data-page-node-id="aoBSIhjCsyeGjsySJeF61A" class="cp" type="button"><!--pnid:TfBmLp75fyRl1ZXGbfeJqX-->复制</button></div>
+      <p data-page-node-id="31kzkosFPUUfHgJluI13hF" class="tp"><!--pnid:t3iaaReJXnEhsFOvOozW2d-->把这次四类逐条判定的口径整理成开播前预审清单模板：03 的词库五类与 04 的备案边界怎么装载、脚本贴片标题各要过哪几栏、风险等级怎么定、留痕怎么归档。产出模板.xlsx 加一页使用说明，每场开播前直接套。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="kDm71LcVqJYPcvZB9XxBjH" class="cta">
+  <div data-page-node-id="Bt4QqRth0tf40ZTzyafzct"><h3 data-page-node-id="yAKeMZaW0GqQQpWKXYYbqi"><!--pnid:LAeq8H68Jv0zoi6PpZBCJb-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="uNAv0cibK2rrOm8YDfwWOS"><!--pnid:HwQFE5GvXSwJKhKxynjyK6-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="tAOJ13aUKIdVgBniW8mmpD" class="btns"><a data-page-node-id="vcRsn7uOVx2uYkIsqJG2to" class="btn" href="#" id="ctaContact"><!--pnid:a4UpVRKnhzjAyUaZJmY7G4-->联系我们</a></div>
+</div>
+<footer data-page-node-id="j505k0rcGht7W4x4oH795M"><!--pnid:dZukKSuM4EvVJgpyuCo3MV-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="l3DMfA7r8dvfl6ops7w70H" data-pnid-children="dPsc9HMfE1l2kyH8yatXwt">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="EEpVcgIycYm0lLhGTgxWtB" data-pnid-children="0Lvndngm9v9DjwBfcJdS6r">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="EqBzhJQdNMiVS5c7tAqvzr" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="idpUymlInxh3wwCSux74Hl" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="S10EsFJ6pVqsGX0MRctLHH" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="02A6uLbCfWQFXxrjwoHYPW" data-pnid-children="2AlqQLwn5ImvDYxtxH1cL3">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="Pr3Aypr7pc0jx18qmINcFa" data-pnid-children="q0uLhMm0uNcf2YKJCaV3tR" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

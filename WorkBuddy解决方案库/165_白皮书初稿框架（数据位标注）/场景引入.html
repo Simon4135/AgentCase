@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="bIuGDkP1v2XWozY8kiRaDp" lang="zh-CN">
+<head data-page-node-id="VG4XFgDrvOQG9W98FQDXrF">
+<script data-page-node-id="gitvYLzfB5P8ML1OCyZOPX" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="VonmyZ1pOvs8bxFXlJwjSM" charset="UTF-8">
+<meta data-page-node-id="LiDwI9VxIEYWmFJx5IYWj8" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="ka0GPjRUYKXMi9QjA1p2Sn" data-pnid-children="m5uQeKZUZRMavxYvutsyrr">白皮书初稿框架（数据位标注）</title>
+<link data-page-node-id="avziCozXnXitKUa2KNcTn0" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="r8zwVAmjlQH5h1gEE229Sj" data-pnid-children="QdUvUacntQ2r4DvV48aGAs" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="Gq5qztE3SrcPA6QmZjBS1h">
+
+<div data-page-node-id="2CFfLlNQ8XPPh1rU9u7Wa4" class="wrap">
+<section data-page-node-id="vLNiWGAyMXb1XejouPSvrF" class="page-hero">
+
+
+<h1 data-page-node-id="X22Io8nzdhFmiE2tG6KuVh"><!--pnid:pYmYFIEYEKPck342vGo34D-->白皮书初稿框架（数据位标注）</h1>
+<p data-page-node-id="mK8jchNhPvT0Rg0xCxWwNa" class="lead"><!--pnid:FaPiCIUPqYcAMKfYY9XPy9-->AI 写的白皮书数据漂亮极了 · 被同行在展会现场指出「这个增长率是编的」，展位前站满了人</p>
+</section><nav data-page-node-id="Vpw8DscX3apYJWNo1mDvzv" class="subnav"><a data-page-node-id="vaRPUzfOk3eg5hqmwlwyE3" class="on" href="#"><!--pnid:ddNpIprZfxr1en47BEBrMt-->场景引入</a><a data-page-node-id="okFp3fObjbHCDPitC0Zqpq" class href="LiveDemo.html"><!--pnid:K71XbrqPY5rjdubEZ1ocXV-->Live Demo</a><a data-page-node-id="5GTw3J10wjoxSs2ycZiQXp" href="推荐任务.html"><!--pnid:wB2FkY2kOqbHqJ1mX1EvGu-->推荐任务</a></nav>
+<section data-page-node-id="Bda3U76efJZ3fEFsFGJjsl" class="blk">
+  <h2 data-page-node-id="Gvut6J7R9asPT9TjPtwquj" class="h"><span data-page-node-id="4jn1Lb7nv8YnqbPfuKSvtp" class="num"><!--pnid:HxfzsnM3hIzDpktDyal1OE-->一</span><!--pnid:RiLipDhZyN07p4lBuhZZxD-->这件事现在是什么样</h2>
+  <p data-page-node-id="Kq8kE5mEZP3dEPPO27NSlf" class="subline"><!--pnid:jgUlaYEZ5CJpOKNES578UX-->内容与合规 · 真实业务触发</p>
+  <div data-page-node-id="G7XqpLcGR8WwLrET9etb7h" class="card"><p data-page-node-id="AxSot7zAK3hbYkEBLVkaAI"><!--pnid:GGZHWzXPq3zg0fwD05HIt2-->沈总拍板要做一本《中小模具厂数控改造白皮书》—— 理由是「竞品都有一本」。方蕾试过让 AI 直接写：出来的东西看着专业，但里面的「行业增长率 23.6%」她完全不知道哪来的。上次行业展会上，某同行的白皮书就被人当场指出数据造假，她就在旁边站着。</p></div>
+  <h2 data-page-node-id="euidQV7c7tmPonselnq3Ka" class="h" style="margin-top:22px"><span data-page-node-id="OE62a7Ms0D0vwKVLL1CtZD" class="num"><!--pnid:pPWIjFxixXbCwxajSBcWrD-->二</span><!--pnid:GRuCSEDys68ZuV7HbI0S8L-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="O0kY1ONfD8z0Nh3GhHUSpB" class="subline"><!--pnid:MVNVMnmT5uoSkkCbB2NSFF-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="1Ua9875scWRd9NmamRcbTl" class="pains"><div data-page-node-id="rHsgMxLn5e93urvT0xF0dj" class="pain"><span data-page-node-id="zbMRoGM7Bxgi265LeFJXv4" class="i"><!--pnid:6vvihmO7RoGV7cD8uHvaUP-->1</span><div data-page-node-id="bGOhgTxRL07zm8vyOJyLzh" class="t"><!--pnid:2ayl7RHELfcIrVJech4rLL-->白皮书数据引用翻车有密集判例：安永加拿大一份报告 27 个引用中 16 个是虚假的（引用了不存在的麦肯锡报告），全文撤回；德勤两起虚构引用；国内《大数据交易白皮书》被专家公开指出「完全是编造数据」，被业内当笑话看<span data-page-node-id="IqvFaYbvJvajBEScBZIIJf" class="src"><!--pnid:gXrCE9xE3V18aGGdJD7xBR-->依据 · <a data-page-node-id="27GPzZLuSy8VL5tDUzzvwO" href="https://finance.sina.com.cn/wm/2026-06-26/doc-inieveqy4800159.shtml" rel="noopener" target="_blank"><!--pnid:ep3bBnYyePqq2MJ4AjcraD-->白皮书数据引用翻车判例：安永加拿大一份报告 27 个引用中 16 个是虚假的（引用了不存在的麦肯锡报告），全文撤回；德勤多起虚构引用；国内《大数据交易白皮书》被专家公开指出「完全是编造数据」—— 大厂尚且如此，中小企业的内容引用基本处于裸奔状态</a></span></div></div><div data-page-node-id="DbqsTGj4dOWDwAwyytNM0m" class="pain"><span data-page-node-id="Klw3lr8lt58fhE9yG4XzCO" class="i"><!--pnid:gwApbGihlL2j2tbC9stXyB-->2</span><div data-page-node-id="Yn5wQZwdQu6dlMxZJZIhAB" class="t"><!--pnid:oH2RbS52zoL4DFqMRTFIwn-->AI 生成数据恰是幻觉高发区（德勤/安永案例全部归因于此）——「AI 生成数据」与「AI 核对数据」是两个方向相反的场景：前者是雷，后者是扫雷器<span data-page-node-id="H9nHHtNhgs2UDrDa0DKaWL" class="src"><!--pnid:vzBRPzXu5oLDjaTnbLH7nD-->依据 · <a data-page-node-id="3DWbUrpM3Quiy4XU6gJot4" href="https://finance.sina.com.cn/wm/2026-06-26/doc-inieveqy4800159.shtml" rel="noopener" target="_blank"><!--pnid:CyaEdBp9stExE5vi0iZxQj-->白皮书数据引用翻车判例：安永加拿大一份报告 27 个引用中 16 个是虚假的（引用了不存在的麦肯锡报告），全文撤回；德勤多起虚构引用；国内《大数据交易白皮书》被专家公开指出「完全是编造数据」—— 大厂尚且如此，中小企业的内容引用基本处于裸奔状态</a></span></div></div><div data-page-node-id="Vmg8APA6dCmyXAHCkTgMH9" class="pain"><span data-page-node-id="AESaMRMEzreXfNhCNeIR8c" class="i"><!--pnid:Isg1uDG77euASvDnlDxFVa-->3</span><div data-page-node-id="DRrQnyhPgscvHwXUZocJpA" class="t"><!--pnid:NP5NRodGIvpM28ZgwYMPzV-->白皮书制作周期 2-4 周、需数据支撑 —— 对全年预算 3 万的企业边际成本极高；但把结构搭好、数据位留给人工填充，制作周期的大头（框架与整合）能省下来<span data-page-node-id="ZnwqCy9KgpPxy1qLEuh7nP" class="src"><!--pnid:9hkfR5lb1EIvTUGY94haYG-->依据 · <a data-page-node-id="26eSEb8W0EjAPqc90RAfgj" href="https://finance.sina.com.cn/wm/2026-06-26/doc-inieveqy4800159.shtml" rel="noopener" target="_blank"><!--pnid:31Nv2OSVhZIh7sTXqpaOfU-->白皮书数据引用翻车判例：安永加拿大一份报告 27 个引用中 16 个是虚假的（引用了不存在的麦肯锡报告），全文撤回；德勤多起虚构引用；国内《大数据交易白皮书》被专家公开指出「完全是编造数据」—— 大厂尚且如此，中小企业的内容引用基本处于裸奔状态</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="bq3FVgJQFLmbXWAlTzKYTG" class="blk">
+  <h2 data-page-node-id="1jexDckQH6mpqosMoEj0bU" class="h"><span data-page-node-id="GfkgFDoDoMfRbSb1W9ZeCl" class="num"><!--pnid:zyep3OmrIs8WrK8wpRyG3w-->三</span><!--pnid:HpLO9ebjTRneWTGapXR0Wx-->换个做法之后</h2>
+  <p data-page-node-id="d3Yrz841OrFHDaX3nWGiBH" class="subline"><!--pnid:iycQAtCQMui60fPjUSArqq-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="T9jpuoG8YbH7Qu2ei0lve7" class="cmp">
+    <div data-page-node-id="ybfDr3z3Ju19XXqIUSaZf9" class="old"><h4 data-page-node-id="dJLXldQO5wWPt3OWrPpWzM"><!--pnid:2Yw5mksT2ickcn0v0Qf3Rg-->✕ 现在的做法</h4><ul data-page-node-id="7pU4tBwXbq16dVprnKpzA6" class="list"><li data-page-node-id="ynSM3dBP8SE0od18W3MUJY"><!--pnid:ZSza2eyZ4RjQ179Q89aHEX-->白皮书数据引用翻车有密集判例：安永加拿大一份报告 27 个引用中 16 个是虚假的（引用了不存在的麦肯锡报告），全文撤回；德勤两起虚构引用；国内《大数据交易白皮书》被专家公开指出「完全是编造数据」，被业内当笑话看</li><li data-page-node-id="ZkpgXB379ENLVLqnEo9sT8"><!--pnid:WGj9tOW8HxHHipfssPDcEd-->AI 生成数据恰是幻觉高发区（德勤/安永案例全部归因于此）——「AI 生成数据」与「AI 核对数据」是两个方向相反的场景：前者是雷，后者是扫雷器</li><li data-page-node-id="XUIUnIlLdX9ORzJEl7M7st"><!--pnid:5o6gBeQSuC39fvJ6Egernl-->白皮书制作周期 2-4 周、需数据支撑 —— 对全年预算 3 万的企业边际成本极高；但把结构搭好、数据位留给人工填充，制作周期的大头（框架与整合）能省下来</li></ul></div>
+    <div data-page-node-id="oBiBRoWKRwArXo5h6Acety" class="new"><h4 data-page-node-id="UPF9ImqxLBckgwNhqzPzQO"><!--pnid:8uqDEQMqNnTO4IAiLIvgnK-->✓ 交给 Agent 之后</h4><ul data-page-node-id="HBBSNiRMJtQvAJr2EjNlmq" class="list"><li data-page-node-id="5tA6VD0nQzRJASRX2g2rg8"><!--pnid:3ixlxRjc4qFgN4cQtoaxYj-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="aySRQHY0dDqYLLQjnXpmBN"><!--pnid:fjtAvMrmqR14mHAF3JkN2w-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="YaszTH0gt5qLvNlshc7YRb"><!--pnid:HcQJVdrcEudnorkpd7P2RR-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="IlIXaoVCGRrwT0NF7GtdaV"><!--pnid:kUJGsy1fYoJhdkJWUjBtOq-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="OOw7KDMoa4jSzhk3m5IOhr" class="blk">
+  <h2 data-page-node-id="Nes40TaSELNrXk2JqZrL7z" class="h"><span data-page-node-id="wMVLWOQpWLUMNNdCumOQ8Q" class="num"><!--pnid:WBOKgsQofvx1rq1p0ZeTzg-->四</span><!--pnid:7rJHR1SITOHmE1GM3gBdkz-->场景闭环</h2>
+  <p data-page-node-id="zmRNQlvBUwvgoTdfNKrWDC" class="subline"><!--pnid:vOrC7zzV6ArmzKjCKV0BGT-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="5Qcp5lxgifhn6jLqnQsbqh" class="flow"><div data-page-node-id="vwLJCIq9Hftx9LN5O0UCz2" class="step"><div data-page-node-id="C3nnbK6wa5qWswW5VTDklN" class="n"><!--pnid:bBzsARrzgUxJhITwKdlsIX-->第 1 步</div><b data-page-node-id="RlewE1VeT42t7K3P96imJN"><!--pnid:0DmWJtkAAoPNFwVAeBmQFh-->结构生成 · 挑战-方案-成果骨架</b><span data-page-node-id="5r3TPW5WHH4HaJcwHtzRt1"><!--pnid:3zh5gkpiZeDvQWsHaCjZIE-->8 章结构：行业困境 → 改造路径 → 技术方案 → 案例实证 → 投入产出 → 实施步骤 → 常见问题 → 结语 —— 章节按客户旅程排</span></div><div data-page-node-id="4IlRVBxOY966eQZSoleOIB" class="step"><div data-page-node-id="R8KbmqyOpGqqXvmodnlcU9" class="n"><!--pnid:7Ed5AJSQsJACcTqUJvEK0q-->第 2 步</div><b data-page-node-id="GCoik9r9VnYZgIwGl2B5Nn"><!--pnid:U8GBs1kNL8oiKTKQJV1qr0-->自家素材优先填充</b><span data-page-node-id="bRvhydMk78VZsfRfMDLtuI"><!--pnid:D5lRDcxWex26EeOfpxKHKW-->案例章用自家客户（脱敏）不用「某行业领先企业」；技术章用自家参数不用泛泛而谈 —— 能用自家的绝不引外部的</span></div><div data-page-node-id="vMwreAkfSTCsEaYoa3Dm8A" class="step"><div data-page-node-id="yY01UiZTIlzISI2oA60MCJ" class="n"><!--pnid:CokQeOeqbVl8VeLOMZJc5e-->第 3 步</div><b data-page-node-id="KD3feTIKBZKvpxcFV2f419"><!--pnid:dwGaxUMklyDQRe5jqcNCKB-->数据位三色标注</b><span data-page-node-id="It87Ly8SUxPZPvdpEF3M9D"><!--pnid:NO0Orm1SBxDbUft3WUZIQk-->已核实（有出处，绿）/ 需人工核实（找到了来源但要人确认口径，黄）/ 无来源待补（AI 没找到，红）—— 红色数据位一个都不许进正文</span></div><div data-page-node-id="AfkFx2wZstDg9SII9iLWuq" class="step"><div data-page-node-id="lNc9Pb47pTv0ZFr9sFLp1h" class="n"><!--pnid:lyeDK3RaMrxsGFQu5Dk9gM-->第 4 步</div><b data-page-node-id="rmjofqjrKcr1Irs5CA00wi"><!--pnid:sI9UViR4iSdfEtOJdejY29-->防幻觉纪律 · 引用与推断分离</b><span data-page-node-id="dWQiB2U17B3LCasOjTSSYN"><!--pnid:cFPS0JZ8oL7rTt56l7GGRX-->「行业增长 X%」这类外部数据全部进入引用区（带来源链接），与自家的实测数据在版式上分开 —— 读者一眼分清「他说的」和「我们测的」</span></div><div data-page-node-id="FcRp3yGFI2a40VFtaCXCkt" class="step"><div data-page-node-id="zY00vB4XhGQ0Oo3lm9Hs7h" class="n"><!--pnid:j5zfVR7YvBO18v0HtjLXxe-->第 5 步</div><b data-page-node-id="X5Mbu2nOUgh5ls0Y8vYBEi"><!--pnid:4xCj1GpwVgHfngiUo5YMXD-->初稿交付 · 半成品 + 数据位地图</b><span data-page-node-id="6r9eaiOLtO9rrXHXQQskeC"><!--pnid:TsmNmD4CYQuWpN4jE9P7ag-->42 页初稿 + 58 个数据位的红黄绿地图 —— 方蕾和小蒋的剩余工作量 = 补 27 个数据位，不是从零写</span></div></div>
+</section>
+
+<section data-page-node-id="9YZF5oXlbFr3t73AwL9ZWG" class="blk">
+  <div data-page-node-id="dbd1uqAj1bLFf5juDN0J04" class="g2">
+    <div data-page-node-id="bAaBOoiz5Zk5Go4BGbTBOo" class="card"><h3 data-page-node-id="CCe8SRGUFOSVUJeiXI5CGY"><!--pnid:POKYQ56RWIXvJ7vzP60Nhf-->要准备什么</h3><div data-page-node-id="0ghHjNEmd7IlhufM2TaAhU" class="src"><div data-page-node-id="2MhYi4TowuBdTH0LBGALFS" class="fn"><!--pnid:Lqhc1eljuZHb58XmeEFqCn-->自家案例与客户成果（可脱敏）</div><div data-page-node-id="X3cSjELDIgiDtZUNrahCbl" class="fd"><!--pnid:Hmr5M2V8MbhbmNgbIBV0nx-->白皮书的血肉 —— 自家数据永远优先于行业引用</div></div><div data-page-node-id="IDZVnqSNblxwt15G2jokRZ" class="src"><div data-page-node-id="abSnRBjyyGPCfbfFnp5CXB" class="fn"><!--pnid:OhD1QrFDFSCgKxAOiYFaI7-->产品技术资料</div><div data-page-node-id="dxeGOzsTE1rxD7qWOsjOv8" class="fd"><!--pnid:B6qK86mafOQhcDsOpN1DKM-->方案章节的骨架</div></div><div data-page-node-id="ulCFBZ0SL2CjnbzN3xePBF" class="src"><div data-page-node-id="P3Z5N40MWv9GLeN5vLnASL" class="fn"><!--pnid:04vvAoiiQS1JObn3SQFF21-->客户高频问题（内容选题库周更 同源）</div><div data-page-node-id="X8WZFNPtm3Ykl9FoJyJk0B" class="fd"><!--pnid:jsVIJYMBQ7GcmP5yljPFRb-->「挑战」章节的选题 —— 客户的困惑就是章节结构</div></div><div data-page-node-id="05v3fYRmQJZvyqlarsA1hr" class="src"><div data-page-node-id="GSTNvAWlBvJHa6mibEL5V7" class="fn"><!--pnid:6UgiEtWQ3NB1pa53i4i3rk-->拟引用的行业数据（已有的）</div><div data-page-node-id="CIDMIfsngyjmEIyEkqUpmD" class="fd"><!--pnid:csrB5WqWs0VMWVe9uEgvND-->每条带来源 —— 核对场景（已发布内容数据引用溯源核对）的输入</div></div></div>
+    <div data-page-node-id="RqnzfYdIldQP4ahaBzIBbT" class="card ev"><h3 data-page-node-id="HQHOfFlvBxEKBNiz6STjmT"><!--pnid:hovc1WQoKaxtZmLCGQ3BHM-->为什么这个场景值得做</h3>
+      <p data-page-node-id="m1e1KIXtEqeiMFWdpcVfrT"><!--pnid:mFZaB42xeaiqRv6RnIOEjY-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="Z9a7DO9PpMZGyBOFrl5mzo"><!--pnid:mFAvxOOz9uRo4r6OKMzDYz-->8.0</b></p>
+      <p data-page-node-id="3uL8Oa5Pn97kvLP4MiH1FQ"><b data-page-node-id="3JPmaAOIOio71LrphmkWYb"><!--pnid:cAy7lPRh5cBUC2mvgkwdZr-->最大差异点 ·</b><!--pnid:EJLw5a73npzVehaWhIEciz--> 不要求客户有白皮书方法论。自家案例（客户名可脱敏）、技术资料、销售 FAQ 扔进来 —— 初稿框架 + 三色数据位（已核实/需人工/无来源待补）一次出。</p>
+      <p data-page-node-id="IoJQSjNmw1JJHtl4QZT2j8" style="color:var(--ink3); font-size:12.5px"><!--pnid:KXesJ7wOZUWNDM0Fa4Rhjn-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="uLLhoxXFeLPU3pqwwz4XJe" class="blk">
+  <h2 data-page-node-id="6mcUvPOt8bVeJ2IXVkHYMr" class="h"><span data-page-node-id="ww6XgZTzz3ANb3Uk7Oy9z9" class="num"><!--pnid:YKxuMwPq14dNfXiIqBKJW2-->五</span><!--pnid:dvqDAr46wakNpKoKNUKFZl-->会产出什么</h2>
+  <p data-page-node-id="osVrfgXFkxswyGGfs26O86" class="subline"><!--pnid:9dHOhjRF8EE4K07NUPaZUR-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="Gm8DuljtAJisqRKVJUYDvF" class="outs"><div data-page-node-id="qf01EXdZ0CSEXsiAO6d5Qt" class="out"><div data-page-node-id="4UwPX1xsvRiLOIZbyRJUHZ" class="on"><!--pnid:e6LVgMqC8uwEZtl4dyXFxA-->正式件本体</div><div data-page-node-id="HZ26ekFqhebQsS3xUnmPL4" class="ot"><!--pnid:9PEcCWWsftlaCMqzAKYWZi-->白皮书初稿框架.xlsx</div><div data-page-node-id="bE1fV3YS9dfEezxaXQ0CO0" class="od"><!--pnid:OKnRP1kqDSAF8g68gpr2A4-->正式件本体 · 8 章结构 · 自家素材填充 · 数据位三色标注</div></div><div data-page-node-id="G6WA0j7GLtE9uqPPZvURRr" class="out"><div data-page-node-id="jWXk9qgpF9HCqplvnzWJ50" class="on"><!--pnid:mpSEZxFPkZ5N0ZHNnyUXDx-->可派发清单</div><div data-page-node-id="nk0UHj8OoWLrfmd21dMS77" class="ot"><!--pnid:b1X0gMbynIhaN5eIngbF4K-->数据位清单与补数指引.xlsx</div><div data-page-node-id="mMpEx4JdCokZfDrRZAyAm0" class="od"><!--pnid:6BuiGnP4p7gyl0kdByYsVD-->58 个数据位逐条 · 红黄绿状态 · 找谁要什么</div></div><div data-page-node-id="cu7UbCN1bF5U8W0l5Hyp2f" class="out"><div data-page-node-id="91o6SoXt2xsR3dSFRR45DC" class="on"><!--pnid:ewmzGut1YOWorj7Q3IAU6U-->可派发清单</div><div data-page-node-id="YRRMUXQfPelJy6amesG1HF" class="ot"><!--pnid:um3lzw20Z0KHQ5y39K9N7Z-->引用区来源登记表.xlsx</div><div data-page-node-id="XgvbXafo8Iizhs836ChtLQ" class="od"><!--pnid:JhMLWO6GFMJbaYeGdG1PoB-->外部引用逐条带链接 · 与自家数据分列</div></div></div>
+</section>
+
+<section data-page-node-id="FTHHhFhwkXNJ3wbb5hOavL" class="blk">
+  <div data-page-node-id="WYBRaCURTMlVZ8B92Gu7bA" class="card warn"><h3 data-page-node-id="OCictBJ42nfnl6Rq3GgoHt"><!--pnid:X1HR3z1aXgqLzsCXx7xwCQ-->这套东西不承诺什么</h3><p data-page-node-id="TlKokGKyyc84AwccQsQsKb"><!--pnid:klUKlr10HdNSrzKYqE1uJ9-->不做「数据代填」—— 所有数据位必须由人提供或核实后才进正文。AI 只搭结构、整理自家素材、标注哪些数据位空着 —— 一个空着的数据位胜过一个编造的漂亮数字。</p></div>
+</section>
+
+<div data-page-node-id="UslcysLgfbIc5YBSEwjZrR" class="cta">
+  <div data-page-node-id="Qrij2B8Xh782nZBr9Ew5QJ"><h3 data-page-node-id="TTTwoUxgPxCLWSA0JivMFc"><!--pnid:qxmB9refpz7qftAJrsGrkV-->想看具体怎么跑？</h3><p data-page-node-id="FJXFAWILKHT3RkalDoaVbt"><!--pnid:lojadBcUVzpNynlksCz78g-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="3Vluza23TElmKTW78dy4sz" class="btns">
+    <a data-page-node-id="WhFj5D1utDioeIkHBRUpNs" class="btn" href="LiveDemo.html"><!--pnid:YwBI0UvvNlzlmJIx0ht8c5-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="gOEmbxcrwlwTap5hBYU6IW"><!--pnid:qMTeAgE5jyfkyz3ZyDDkx9-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="UDYUdL7YUMYZZAPBkCIvLp" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="wbqgjfqOr50OT7KyytqNy8" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="Xx47ZteE8swaTaL0aPM8V5" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="P4A9YTijXiSRckEfA86ozG" data-pnid-children="Fvy3XX4ZO7FzfxDKAxu6NA">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="7ZoOw79luHCeYjR4RfxOai" data-pnid-children="m1pFE1neg8Srlu7GbjIFwy">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

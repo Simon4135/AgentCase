@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html data-page-node-id="HskTLfcTQGVbefkrlc6Kv9" lang="zh-CN">
+<head data-page-node-id="ViJJhhFa5BE3iXFmEZ1ee1">
+<script data-page-node-id="5YFlaXIPDPRkQBUEV7xkYq" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="UDlqBC8wD5zk5dEfkDzTW9" charset="UTF-8">
+<meta data-page-node-id="Qs8BlwMD2IpXXGQXoY5Fgw" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="kfSctj73YOkP46JFfr7GO4" data-pnid-children="A5hMxpJMfTLKbKwIGKmfzJ">素研 · RFM 分层</title>
+<link data-page-node-id="3LCKMktofnisUQUmh2BzIA" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="Beinb1FtvPbKXUaVC1HfQ3" href="_assets/shared/retail-extra.css" rel="stylesheet">
+<style data-page-node-id="Ur2rEEsYaxIGuPiUViNZX9" data-pnid-children="J4QDiIiIYKWKcnbnZk7PRm" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="Lr5NPFYhhziKGkTFzNDydE">
+<div data-page-node-id="RNUNoiEz9cEg7VZtrLFDUM" class="wrap">
+  <section data-page-node-id="gH2xFusQqswd772iDVm2k8" class="page-hero">
+    
+    <h1 data-page-node-id="XAHygbxX4USgsLXIA0Ff2d"><!--pnid:x1u7d8veSJxi8lWKWkcQqz-->RFM 分层与差异化触达</h1>
+    <p data-page-node-id="DR7ZRcf9aLLEu7sPB9jpwi" class="lead"><!--pnid:uV7tb46rcEt92zriwKW0JX-->品牌：素研（脱敏 · 中高端功能性护肤）· 基于 WorkBuddy 的 RFM 分层能力 · 数据全部脱敏</p>
+    
+  </section><nav data-page-node-id="nJO3G8Kj3AHWXs41EVujHZ" class="subnav"><a data-page-node-id="CFkMM8UGKEmZIaya65BH8O" class href="场景引入.html"><!--pnid:MAXnTLrjnS0GLLWPw2qVEs-->场景引入</a><a data-page-node-id="U1I85E2U6eTWMH7alWU6Zo" class="on" href="#"><!--pnid:xux6CvnfBXTqSxBPg6bQTM-->Live Demo</a></nav>
+<section data-page-node-id="dXXxnge3FZI3DQ8Gtv1VMq" class="notice warn"><div data-page-node-id="29T9spwHRc7rQsjuy0nCDH" class="icon"><!--pnid:l953aLE0MrxHaRsXEZFmT2-->!</div><div data-page-node-id="mVmz394a44jsGIprpPoIB0">
+<b data-page-node-id="1uT2da358zHIC8RMRGVpcV"><!--pnid:jtCVdshhssyRKW8NhDhApl-->演示模式 · 可视化预演</b>
+<p data-page-node-id="XGh5Ai50TuCHUm7kITAIII"><!--pnid:bsjDFboVr6qkKNU4WeVnDD-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="qnpqJ6JHRy3fl8BNcBnpGx" class="kpi-row" style="grid-template-columns:repeat(5,1fr)">
+      <div data-page-node-id="Oo7IKeBf1NC5JZjPlPJira" class="kpi"><div data-page-node-id="zkexrNzEqrpfYU6hJ0WxQ3" class="k"><!--pnid:tGhZx2yxjkj8l10KUwNY6i-->CSV 字段（订单ID+日期+客户ID+金额）</div><div data-page-node-id="OUK0rR6csfGe5P8lOmPHBV" class="v"><!--pnid:HZoJEAVOetju3af7S27d6Y-->4</div></div>
+      <div data-page-node-id="sgvhHP3Z5q92wRcuDz2BAj" class="kpi"><div data-page-node-id="HzAWix3zG4i5m0R2Pbb0jY" class="k"><!--pnid:Qb3P8NoRd9MC2cQvmSOYVH-->原始订单</div><div data-page-node-id="T71upUHLuwi7217xGEztCH" class="v"><!--pnid:5VNsZrS6QGXCs4ggwRmJLS-->200</div></div>
+      <div data-page-node-id="55QaoN4D9ElBL1eiqJll6E" class="kpi"><div data-page-node-id="P0VliFXlokb00x2blTm2ot" class="k"><!--pnid:9Ye6eQfAEDJKddG8wYyYZB-->去重会员</div><div data-page-node-id="sLFwDqNqtFWsZsSFMEG8SU" class="v"><!--pnid:BjVXgTHtKGvAPajSnJq94O-->64</div></div>
+      <div data-page-node-id="J2Psx8nnJA71zd8iai6FZt" class="kpi"><div data-page-node-id="meewwvVuWXC10hKjSt8usg" class="k"><!--pnid:pI6GiIEZWSTFaY8BQjr17e-->分段</div><div data-page-node-id="OKJZ7jwaegkQBWckOo86pt" class="v"><!--pnid:cQ2rm4skYejEQaYnNjwdiF-->8</div></div>
+      <div data-page-node-id="KcnZzEDhM5bBZyalDZPm5W" class="kpi"><div data-page-node-id="9BdoSuizEbnUzcfaPTB7ku" class="k"><!--pnid:phMdeTeKodu5HsqF6hxc9l-->12 月 GMV</div><div data-page-node-id="FbHsPUneXa9JEAgn2hbnlh" class="v"><!--pnid:OhphEjKU5OfiZ3dY8vK6ge-->¥18.7<span data-page-node-id="t1yoxHlYjlU79XZz64nawB" style="font-size:14px"><!--pnid:vWuuFQKYxiIcMZPXFoxszf-->万</span></div></div>
+    </div>
+
+  <!--pnid:zpIenaboyDbmsvUsdncZ5F--><!-- STEP 1 · 原始数据 -->
+  <div data-page-node-id="iYVWsDO8xm4XtIdx0dDVki" class="dstep">
+    <div data-page-node-id="r427XwvxVUcXpntNSi16RH" class="dstep-h"><div data-page-node-id="Bha5SOQGPwl667QEvqVjZD" class="dstep-n"><!--pnid:hTbrxcaU35OvFkk9aKH2cf-->1</div><div data-page-node-id="1xFQyhQIq8QgYG0IlGAqbV"><h3 data-page-node-id="uxwytngGuU5JxGmsBSJAsT"><!--pnid:lgUAu1nCIupgTM5guxSMwD-->原始数据 · 只需 4 列</h3></div></div><div data-page-node-id="eWxifJIcM0g7QkkBiTHez1" class="dstep-b">
+    <p data-page-node-id="URpEFcgjkVzcljLcPIY8Tn" style="font-size:13.5px"><!--pnid:zU7mRESYEN5RGCT4CRhjIs-->RFM 分层需要的最小数据集：<b data-page-node-id="gJo3Yovsi0ezlU705nDp3T"><!--pnid:FeCDH1eA6INQ21PIkmAHvR-->客户ID、订单日期、订单金额（净额）</b><!--pnid:06wP0f9zz1CwluK378040X-->。所有品牌无论行业都能导出这三个字段——不需要城市/渠道/SKU/画像等复杂数据。</p>
+
+    <div data-page-node-id="ETZvGnFICv9l3ko2IHIMqw" class="schema">
+      <div data-page-node-id="5h2dU5l17T1OFvyFWMDhtE" class="col"><div data-page-node-id="S98Ea5HL1jElmKS61ZMX6n" class="n"><!--pnid:jNxkwltqnLqye0H4I9OXHh-->order_id</div><div data-page-node-id="GeqXFpOmIxrEddCrkXILoN" class="d"><!--pnid:tbsJrHdOiCCsesX9HcZBoe-->订单编号 · 用于去重</div></div>
+      <div data-page-node-id="aJ0Ot1Zsc6ErflSeAyiPHJ" class="col"><div data-page-node-id="zYKUzzsbLKjYSMc6BXwoUh" class="n"><!--pnid:TrPetfWH6RPkGGfp6DepEH-->order_date</div><div data-page-node-id="fS7iaI1UxpCl9SPo9kPk9A" class="d"><!--pnid:eKbYHlwWLYWQCWQohndnCV-->下单日期 · 用于计算 R</div></div>
+      <div data-page-node-id="OY5UVCJ19fpRgS0J9KGEmw" class="col"><div data-page-node-id="KGtWD4of8zUwV9TULtHT6P" class="n"><!--pnid:hTk6auXDP5hgXhW9SyuIsh-->customer_id</div><div data-page-node-id="FKG9ZhaprYo3qzGnSyt9SF" class="d"><!--pnid:NGq8vFgaS1IgoQuDUWAHXW-->客户唯一标识 · 用于聚合 F / M</div></div>
+      <div data-page-node-id="l4B836PeHyBj5rYO1D46cz" class="col"><div data-page-node-id="3N17eqX8dxXQViFDLXTleJ" class="n"><!--pnid:LzPY9ZQuLDuilPGhJxT6s7-->order_amount</div><div data-page-node-id="wnJcc3XCR2ToqMW05dGRzt" class="d"><!--pnid:5oI2pcABlpFrzHkYS6JNkA-->订单净金额（扣除退款）· 用于计算 M</div></div>
+    </div>
+
+    <div data-page-node-id="SJPuCoT3ul1PeUiM6GnSYR" style="overflow-x:auto; margin-top:14px">
+      <table data-page-node-id="TKa1tIGa6eFDxtglgf79aW">
+        <thead data-page-node-id="0MDlPhXSo6nY9TgBI4W9VX"><tr data-page-node-id="za2zLosAKd0sAElBwx5riL"><th data-page-node-id="OptlQR6UCQyci32DTpY7FN"><!--pnid:1G6OPc8tob4u8Wif0FMS9J-->order_id</th><th data-page-node-id="uCBNzhuj6qmvXoFAMtoBqZ"><!--pnid:M7KzDNYsDCBHLzf4bWRzTc-->order_date</th><th data-page-node-id="7taikwpr8HsZjdtnEh42dS"><!--pnid:MEcdj5LCFQ12MIi4qlbKaq-->customer_id</th><th data-page-node-id="yiVoSg8UUDC5e2B5suLGNs"><!--pnid:wvGl6vZk2Yl3pXko3K3Zaa-->order_amount</th></tr></thead>
+        <tbody data-page-node-id="Lqsw1ZjuwOzNKa8dKrnBDN"><tr data-page-node-id="4xJgbaKhMaBkoYYNGQJyNQ"><td data-page-node-id="1hBNh4EpIdwbXfbHAKQtHR"><code data-page-node-id="fPe5uxhUL6ICl3XZWE6Tda" data-pnid-children="GPRmePpoD16dZEQbESy1Qa">O100040</code></td><td data-page-node-id="rY7tJmcjfMOlaFAfVECdlK"><!--pnid:HCbKAvrgTuNpITx6sRwQvb-->2025-10-11</td><td data-page-node-id="nPRDvEQizC6u8kFJtBIlGj"><code data-page-node-id="0KeQLeIBDMmvFhVYpjf3HS" data-pnid-children="tzzISz4seSp78Q0kumAxiN">C10007</code></td><td data-page-node-id="rmyDBhrqDA1mok9cAUA2bQ" class="num"><!--pnid:AKwMq1RlKJVy0eoHJWb1cN-->¥307</td></tr><tr data-page-node-id="YeilEOO4GKGhFgDPxbn21A"><td data-page-node-id="rISIJb09B6xyHyc8MSourw"><code data-page-node-id="Cd4K6hqAYO4plwlcWIyL74" data-pnid-children="KTqNgrdBHhx6lfqmCH3cPV">O100024</code></td><td data-page-node-id="0QXVtsIiQchySkpz9rn36U"><!--pnid:n9lx8CpCEC6zj2sjrSkV0F-->2025-12-30</td><td data-page-node-id="4yRRLRLnP1Q7c8AyhWhrlr"><code data-page-node-id="MkBl690ozjH6Oikts1eMK8" data-pnid-children="1UxoL3IC2GEnVHHlyMujHl">C10004</code></td><td data-page-node-id="vi3dQ19mYaYHJ93Wo3qgqx" class="num"><!--pnid:xllYo15sbE0vbFVwo3CP9N-->¥1,165</td></tr><tr data-page-node-id="GdNk2rBCyCn1PgB1UPSfHk"><td data-page-node-id="uMwZuz1kJNe48sSJ68NdHA"><code data-page-node-id="lvxaC3kzKKDACqt9QkNhlW" data-pnid-children="bLIn2eT0tz8OTTknTQfeSw">O100121</code></td><td data-page-node-id="4e6hSI9ln09pGFuDD7LNxB"><!--pnid:VenDw7JQvUJeMj9ETNfMPl-->2026-01-13</td><td data-page-node-id="TqRF9rlJLXnrz8tiZ6MJqN"><code data-page-node-id="ozuxUtrQNzaXTZ0frdIJs4" data-pnid-children="XwwyihbvACDX7qLfgPjtwB">C10028</code></td><td data-page-node-id="X0GBa95aKdi1moYdcn42of" class="num"><!--pnid:eYJ5twLUXsMUPF1lugaKCd-->¥693</td></tr><tr data-page-node-id="tHS7ZkVWZgwQoNUEPYtU6h"><td data-page-node-id="CH2LWyHcmGwqL6rCicyubJ"><code data-page-node-id="6ydhqHu3eXB0j31D3gVUdM" data-pnid-children="vPeGSi291CQ6OcMWw6n9HP">O100184</code></td><td data-page-node-id="GsF0Y6Olz1Yw31iml8rZa1"><!--pnid:9h2D705YyYJns7CHrgkAYy-->2025-12-31</td><td data-page-node-id="NcAqs5lcGKYi9DZgFsC83z"><code data-page-node-id="vQlGwTqhFHBQx3KoiT0qLz" data-pnid-children="5781kJTQD5xqQ1MS84T1Kw">C10058</code></td><td data-page-node-id="01QHo0LeWWfVaWPRP0j4OJ" class="num"><!--pnid:g0v6QLyGQePOO2s8OdrEem-->¥1,392</td></tr><tr data-page-node-id="BkdVhC4fHj6Mj7ZDN33Ap5"><td data-page-node-id="qHFU0Rpq67Pew4TryndyUL"><code data-page-node-id="I91WPGDagWzxAOCBPXvEhV" data-pnid-children="DnyAfgYGhe3NsqP5m4hipd">O100009</code></td><td data-page-node-id="oM6WfsMrjkWZLaeTvvNZd1"><!--pnid:E6FDEf4sSPF2UZP3MFw5Ai-->2026-03-30</td><td data-page-node-id="UyhTps3CxmQW2xfntzMs9G"><code data-page-node-id="lIgoRJlKdoWTqg5x4aFdAy" data-pnid-children="YGkjVKTNep09mGdjV8gytx">C10002</code></td><td data-page-node-id="urLUtoIljNZDLGVRO1H0Dy" class="num"><!--pnid:lHp9LtkiFXuhlnaiLJJh3c-->¥169</td></tr><tr data-page-node-id="DhtCwn51gg3qjjIT5wgsHQ"><td data-page-node-id="jQ00p7KGCE8YgwkTWT5mgC"><code data-page-node-id="RbXefRPN7hFi8QhIgnySbO" data-pnid-children="6BjoHKNfw2LHSZgQ6DVhjN">O100189</code></td><td data-page-node-id="oYnsvpHw07sMAxN82NIyn6"><!--pnid:WbdMZGvd25TSKclG2jDruN-->2026-02-01</td><td data-page-node-id="BqerZMSjnyme1BygtQfOC9"><code data-page-node-id="DTlJQsKCm4PPD9qPLIg8fb" data-pnid-children="ErxHnk5z7oxr1roPfUbup8">C10061</code></td><td data-page-node-id="lAum6tA905eW2kETAb0CU1" class="num"><!--pnid:66l5lOOb4F0njxBC4RdsH6-->¥172</td></tr><tr data-page-node-id="Jsn5VFvmM6AEn5AWdhOPSV"><td data-page-node-id="0w8HjAUcm61LS6yDV20OOj"><code data-page-node-id="kTkZXlmT8OGaVwGmEfu6sZ" data-pnid-children="GdTjzdU40wUrVaqc65KKOy">O100139</code></td><td data-page-node-id="hUdTjOrDNWbAuIm3ZEbxYR"><!--pnid:ckqe2ckAodtgYIBYqaMpQm-->2026-07-29</td><td data-page-node-id="F5ruN9kpkEsD9AyLMnoxU3"><code data-page-node-id="rhyzMy3woRiTCdvuzHEgZL" data-pnid-children="HMsjPgFgtSi24Kt4J4yJUF">C10042</code></td><td data-page-node-id="tONLgqO7ySngxXpUF0YArr" class="num"><!--pnid:vauzCTs8tEnlGfhjJmyo4o-->¥662</td></tr><tr data-page-node-id="8SLZp0q3b4s53r4T1yUwOc"><td data-page-node-id="SfGU0oXdMjhv0lB009rSP4"><code data-page-node-id="B9nLYgwWcRoZ1Des3MlWev" data-pnid-children="SYBLq8bCkeNPOfHkULAIZ8">O100096</code></td><td data-page-node-id="2lW68wP3SyCF8UORmLPbwX"><!--pnid:kFIS5TrXIiE5pgGDbT9Mnz-->2026-06-09</td><td data-page-node-id="vt4g2xwXuGkTtRmQTGeMXr"><code data-page-node-id="ZmxFRRJBhzPvM0vdDEuUZt" data-pnid-children="jtxtlBTRKshjkXjQYhj1z8">C10019</code></td><td data-page-node-id="DiAqck0BuIb0i3fiKrdNtN" class="num"><!--pnid:92dS4MTB3MLvci9pofVN1R-->¥513</td></tr><tr data-page-node-id="PbOVrc0Ss1R0AM0CZBy3OB"><td data-page-node-id="fNikPYH0AqqI9VILd8UcYc"><code data-page-node-id="GHostKE4Aip1o0yzNXuAep" data-pnid-children="PqdPundlW6crxJoMjBwwfR">O100059</code></td><td data-page-node-id="rsCkB5T8aU0Zl7cMZ5Lrdh"><!--pnid:H3sYWLQPcqHPE27uqo2lD0-->2026-01-16</td><td data-page-node-id="pogpY0fd8tTps1fOfOpaaq"><code data-page-node-id="Hhwa03lhk9WgSN04JppYyp" data-pnid-children="O6FnWIbfNMhfdJoq4Oxl9m">C10010</code></td><td data-page-node-id="T4moCYCsYlckPXRGbdFxWE" class="num"><!--pnid:GPYMyMzpAl6soAbSKAOJ0w-->¥1,009</td></tr><tr data-page-node-id="YRFchKZzg2dc0hdK2gw5Y3"><td data-page-node-id="q8RPvhgDnoIpJaKNcnKXHb"><code data-page-node-id="0varKLxKA4rMxDgqeFZrVz" data-pnid-children="ZOB4p6Wmnryesm3MQcR0yl">O100095</code></td><td data-page-node-id="SSpK9jiRCDGYkHb9sX8PbH"><!--pnid:1QCqHxEaheMgrbYTqU4vlW-->2026-05-19</td><td data-page-node-id="MTeensMnZvJQZIERzUt7XM"><code data-page-node-id="QdoxKjwzYzo3ole8NVXMvk" data-pnid-children="2RSmnQkE5C92Dt2fqchKeN">C10019</code></td><td data-page-node-id="xkpXRmSfaxbIPVtHaWbqGm" class="num"><!--pnid:8dromzPCSKHSuowaDFzXDe-->¥493</td></tr><tr data-page-node-id="rUoZaV5STTvkg9wXp76BkC"><td data-page-node-id="TTY97FKHi1xTzLpm0mWK9v"><code data-page-node-id="JVD8P5dfCPkleU83R1xYPY" data-pnid-children="8imOkrgXiegymaAlcyAQxq">O100026</code></td><td data-page-node-id="tGnO5fmTWGM6V6T04A9QXx"><!--pnid:AIod2qrBxVYlv39mlLNUkT-->2026-05-09</td><td data-page-node-id="XB8hCEokjK9YYz9oG5kBHV"><code data-page-node-id="bFcQLngRNlrkpZ6GbGO6RV" data-pnid-children="IglL7ZvrLLOXK9hn4dFzxk">C10004</code></td><td data-page-node-id="cp8UgGzq0wHxzK35mVjvui" class="num"><!--pnid:zgWPAAOhDSkRyvHan3IJG5-->¥1,034</td></tr><tr data-page-node-id="YFYSbIqPoUFuJlPv3OFaed"><td data-page-node-id="yY2QmPsmaBTZdhjoBztMWg"><code data-page-node-id="2A1trwvxyLj001rzkmn3tm" data-pnid-children="Hz41TGquDayR1SoA91plTc">O100122</code></td><td data-page-node-id="64ZWQxG9seQ64Tzi1RsTmw"><!--pnid:kEouYLlyLHlr0N7j6mmJUt-->2026-06-17</td><td data-page-node-id="FoLdrKw85yYarUkoe7ZElm"><code data-page-node-id="6HFxyoo9SgWJToNllDYz0K" data-pnid-children="EvxRejn4HLR9p3s4SWU1sF">C10028</code></td><td data-page-node-id="9cUZAPx6mUY4E5tvDn7lPM" class="num"><!--pnid:inl9dyviebRZ1EeqVuCMAI-->¥2,890</td></tr><tr data-page-node-id="KCad2ixmnMMXKWhdkEDRdU"><td data-page-node-id="z7LRTXG2lydr0SZomGowJ1"><code data-page-node-id="ujlb19XlQopOuneyT5gsqn" data-pnid-children="rvtBUQu39MMiNF994mFF3j">O100004</code></td><td data-page-node-id="TcS6xkhSdfh9Od004pTfvF"><!--pnid:ThcwVvqmpxcRB4CdUNE5Uw-->2026-05-20</td><td data-page-node-id="XTnsA0E7MH7VPkO8S80t7x"><code data-page-node-id="zFjblTLRco7kNp7vvuNHj5" data-pnid-children="Ru1KZgiGQP75zrLqehpDNt">C10001</code></td><td data-page-node-id="HDOXob3mKrIYinTSsj0KJF" class="num"><!--pnid:v08LLIvid3QX8LUfcGlhRd-->¥1,203</td></tr><tr data-page-node-id="ct7EY7mPzazQyp3957h29L"><td data-page-node-id="RJg3NynXEJNw3LS8b40NYh"><code data-page-node-id="w5N3Gc5ngz8yOCr5d9CmxL" data-pnid-children="0RGq0HfnAUNYbecM3d5t6r">O100141</code></td><td data-page-node-id="9IiYMFAW2r9uFRf520ysKQ"><!--pnid:gIpgLgb2n66M10W62hcl1B-->2026-03-11</td><td data-page-node-id="cGTtvKpFZYKtOHbMrcAES0"><code data-page-node-id="IK6Vl5YyIFVUUitRpfjAMG" data-pnid-children="MtAdQgjJK5fu3C4kz3mCvj">C10043</code></td><td data-page-node-id="YMlUG2AGLU8cwDKohpOZTE" class="num"><!--pnid:ys7UzgLtdchsWSLnNydCii-->¥296</td></tr><tr data-page-node-id="XXpMg1tJRVsi1IkENYU2aG"><td data-page-node-id="sGzWG2aepSTEImGaGMJjaE"><code data-page-node-id="QL96BrmWvXwLAgE1AJd6fi" data-pnid-children="55tRXvdVNNYEqPKdfcQaKi">O100012</code></td><td data-page-node-id="bfajQdgtv0QDEVVP7TiYH0"><!--pnid:OyO0cSmkirPqgJSDC4TynR-->2026-06-19</td><td data-page-node-id="VW37Pg83c9c7nniLYFxc78"><code data-page-node-id="B4OOkCK1rwvfwyN8Yc59RX" data-pnid-children="s9j3VF7n6jb1o8PM5fqDM6">C10002</code></td><td data-page-node-id="xDbRvObWndFQkgz4GgZM3o" class="num"><!--pnid:phS0qrPek9Zq5cv9ZU14sY-->¥147</td></tr></tbody>
+      </table>
+      <p data-page-node-id="fFQSQlU1vGR844WMwmnlJv" style="font-size:11.5px; color:var(--muted); margin-top:6px"><!--pnid:ukTqzQUDRAPdmgYcZuEp48-->（仅显示前 15 条 · 完整 200 条可联系我们获取）</p>
+    </div>
+
+    <div data-page-node-id="dF8DXOu47jq8Fe5FIvnis3" class="callout warn">
+      <b data-page-node-id="eXRCVjZEY5PyxC4ldZ5IDo"><!--pnid:pDGdMeL478Ub81eWg4LWOv-->⚠ 数据清洗第一步：</b><!--pnid:6sfx3mpvlNzYUfbNAMmLTM-->200 条中有 <b data-page-node-id="Xb44SX1wRFFqwlgSmzCpA7"><!--pnid:RTm6aZYMIZdGuT2vecIq4o-->5 条噪声</b><!--pnid:s7hbVoMxMjeAzBMZ1QqRd3--> —— 3 条 <code data-page-node-id="fFNYkHTNBh7loP2VkT4ghw" data-pnid-children="2BXotaa28YpfVhQCdllWaZ">INTERNAL_TEST</code><!--pnid:vkJOSXpJnXvd0dceqseBA1--> 测试单 + 2 条 <code data-page-node-id="YuJQKDZe4Z8IJdS8cyhbKP" data-pnid-children="kly7Mw4DrrrbudB9A79IpL">WHOLESALE</code><!--pnid:GUpGN2x0JDP8rqtrKXCrfN--> 批发大单。WorkBuddy 会先自动过滤掉这类"非真实客户"的订单——<b data-page-node-id="Sa8EveZHUG3gCnfnVxNV9u"><!--pnid:O1FP5zG4qblnXXulkDgIZg-->批发号 ¥63,000 会把 M 分位数拉爆</b><!--pnid:F9mTmFcrgtHCYTanEMAp4D-->，让所有正常会员挤进低分位。
+    </div>
+  </div></div>
+
+  <!--pnid:2iCUOBVr2Gml1Vzgt60U4D--><!-- STEP 2 · 聚合 -->
+  <div data-page-node-id="1CtkqLdsSGQ97AnwLFJP7H" class="dstep">
+    <div data-page-node-id="2hqiTZUKF9pRbxCRkX7e60" class="dstep-h"><div data-page-node-id="sW3PysurZ26Ht40fe6N7z9" class="dstep-n"><!--pnid:oaM7S6ORQroN7qzT2kacn9-->2</div><div data-page-node-id="GUWb2bMjy1SQWd1NYKOP0p"><h3 data-page-node-id="w8fqWDDUzTzwVP8rnQ4at0"><!--pnid:bxt3LjcZ2M5FRqqXSRxQMr-->聚合 R / F / M</h3></div></div><div data-page-node-id="fV3Be14RHEO3vRVrwrqry2" class="dstep-b">
+    <p data-page-node-id="aKvSpPPMDbrPGAjYBrI9F5" style="font-size:13.5px"><!--pnid:mruDFYFneH2i5WM6H2Wogn-->清洗后 <b data-page-node-id="H00wGQo8EPFODLVDnTg1Pg"><!--pnid:Dwx2AOGdsSvckN4Tpcv07E-->195 条订单</b><!--pnid:l5gek8apEFcLMeFk0RM1E5-->聚合到 <b data-page-node-id="agJcDDRFr7sJpeWwVIYw0s"><!--pnid:mmQwix9fJ8oUUJh1t34Uif-->64 个客户</b><!--pnid:OSGmdsHTHjhDMbBCUtWI9i-->。分析窗口 12 个月（护肤属稳定品类，也可扩到 24 个月）。快照日 2026-07-31。</p>
+    <pre data-page-node-id="okxnCriLT9t5ROYCURE9pz"><span data-page-node-id="VKZm1cDq5H5mEmphPJfFTU" class="cmt"><!--pnid:eK5t0P2HAm3Okbf0KlB4Fw--># 只需 3 行核心逻辑</span>
+<span data-page-node-id="CF5h2YU87eyVxWOKkcWtFe" class="k"><!--pnid:Rxg1AR6hsdCudkgOgZ5qnx-->for</span><!--pnid:BvuUfH6LSJzW1JLU6Ant09--> order <span data-page-node-id="nFD5fkUqWUC2BYbJeaIhJy" class="k"><!--pnid:6BXGK5ZU6LPrxQ8m77Uhp0-->in</span><!--pnid:rEnHsQ8E3vHPFCdgwh3LPt--> clean_orders:
+    c = customers[order.customer_id]
+    c.last_purchase = <span data-page-node-id="zzsm3eDCRlzHxGVLtjIpj9" class="k"><!--pnid:pDCj0L1qRIDuo67DEbzBXA-->max</span><!--pnid:fhUQnDAQaU7JQj1n0NWsxH-->(c.last_purchase, order.order_date)  <span data-page-node-id="4uk2Ugo179N1J7LlD6PEhh" class="cmt"><!--pnid:sLvsda2C1L8taqmJmMXsT6--># R</span><!--pnid:7H3Vq70EZPgnqssMiufE1P-->
+    c.freq += <span data-page-node-id="Lr6sUjdKSlpTeqU2YkHwDT" class="n"><!--pnid:TyS02l1yYvscmXUamTJlvx-->1</span>                                              <span data-page-node-id="SbY0MzK8KZvp35ahRtVszG" class="cmt"><!--pnid:eu35sYioh5vAdwAgIX7ceA--># F</span><!--pnid:Wa6UftgkaOt84Pqk8Hln5w-->
+    c.monetary += order.order_amount                          <span data-page-node-id="FRQqgZBdvacLGhpt3fULpG" class="cmt"><!--pnid:0odeza25qTmjvsm1z810YX--># M（已含净额）</span></pre>
+  </div></div>
+
+  <!--pnid:KU94hX84Z83YwHE6zdOuer--><!-- STEP 3 · 四分位 -->
+  <div data-page-node-id="PsTEfaQueh6WRTHmk1v3e7" class="dstep">
+    <div data-page-node-id="KxUhqetqx8fhJOQQTDBO11" class="dstep-h"><div data-page-node-id="tjLL9UqiwOR3BFXuL8wrDU" class="dstep-n"><!--pnid:jELK65pyevd75tNzvPIW1Q-->3</div><div data-page-node-id="xLuuDYE7BzC63ElqMdvLYn"><h3 data-page-node-id="a5RCvRseAXwo5EZUm2j8fL"><!--pnid:yO9oM3qVae5g1OZEzlaQBK-->四分位打分</h3></div></div><div data-page-node-id="STJKFbSlIhEQ5vjEsDI6Zu" class="dstep-b">
+    <p data-page-node-id="thoimhuOycWE9VkdXuF2vR" style="font-size:13.5px"><!--pnid:iRI8X8SfFwXzZgzH0Yjjjr-->WorkBuddy 会根据客户量自动选评分粒度：<b data-page-node-id="14eMG70srCToN1m0rN4Frp"><!--pnid:k6PYXEY68icIEJVzAP8yjW-->&lt; 500 客户用四分位（1-4）</b><!--pnid:gm7nIdHmHiZ8TL0wL81Oju-->，避免五分位造成的空桶问题。素研 64 客户，四分位每档约 16 人，合理。</p>
+
+    <div data-page-node-id="C820Ap3aNevTdNzKN5nYkZ" class="quartile-grid">
+      <div data-page-node-id="gR5X9XEqTA2RQP70EP4uhS" class="q-card">
+        <h4 data-page-node-id="lk6DzK4WOMGipZXcxVFlgY"><!--pnid:51V5T3tFvOLHMyldf9Ybhy-->R · 最近购买距今天数</h4>
+        <div data-page-node-id="3MzOQL5cyqHKFAJfrXGX48" class="q-bar"><span data-page-node-id="JtpT0Ka6ecK0aR9ThIkIRv" class="lb"><!--pnid:byhhV6ZTtNnBXMEpOEFD7K-->R=4 最近</span><div data-page-node-id="NpjqclRpYKr4kfuib4Y3cK" class="bar"><div data-page-node-id="7wpPYJyZQQQp6z9555PXvP" class="fill" style="width:100%"></div></div><span data-page-node-id="moAQbPg8XpuCQkcnTNMrke" class="vv"><!--pnid:CTs4vxyVdpIhjTQ2XKvh7r-->≤ 15 天</span></div>
+        <div data-page-node-id="FIOv6ZgSZAbvcaR95nyxKS" class="q-bar"><span data-page-node-id="CVYLDrvud9yDMKztQbcBOi" class="lb"><!--pnid:Hod9BAZCY3O6pvD9wDSwTW-->R=3</span><div data-page-node-id="8nWKf6InHLZvglBtod9c95" class="bar"><div data-page-node-id="KqLHELttcVONI6rUQPqrCS" class="fill" style="width:75%"></div></div><span data-page-node-id="AFEd89HgyE0dbvTZbF7h9X" class="vv"><!--pnid:aq0zrmo7IaKQ49fVZRS6ex-->≤ 36 天</span></div>
+        <div data-page-node-id="pYTunTrwXulNU94kSghicx" class="q-bar"><span data-page-node-id="EnnAfvv2SYYp11ENRgG7qv" class="lb"><!--pnid:oOnqeB9atd1RfgNAIr3GNv-->R=2</span><div data-page-node-id="88CPvnMOHTqxizXWJWfhly" class="bar"><div data-page-node-id="r4ZfUZ4pWuFwkWyahhqyNd" class="fill" style="width:50%"></div></div><span data-page-node-id="OSmWk17dFBuvIpW9R0Wx97" class="vv"><!--pnid:ZgstR4iPrS1uyeaQc3BWM8-->≤ 95 天</span></div>
+        <div data-page-node-id="VIAR8ViFCErjITecyUVXrE" class="q-bar"><span data-page-node-id="zYn71ykuT0Vjwc3yELGK1G" class="lb"><!--pnid:JwJWHeibzXGm4eWC90TPIV-->R=1 最远</span><div data-page-node-id="XTfbXUFRCYVxP0LjvqZSlW" class="bar"><div data-page-node-id="Nswfybw5iy5Q5OuOEQuPkk" class="fill" style="width:25%"></div></div><span data-page-node-id="p6FLV9x7HmmHz0ANnJib11" class="vv"><!--pnid:LizMiGaljoIGcj5nJGdeBL-->&gt; 95 天</span></div>
+      </div>
+      <div data-page-node-id="ghb0gW5fb0i5kwKyVZEaLv" class="q-card">
+        <h4 data-page-node-id="N9QzmLVgbvYAm2UgyQ6spv"><!--pnid:EvF675BZjtduev757rNWQG-->F · 12 月购买次数</h4>
+        <div data-page-node-id="ikUuE2Hd7YfU8fEqDsHbrI" class="q-bar"><span data-page-node-id="ZKmtChAa6iHesWwIJaNRhC" class="lb"><!--pnid:BrNfXT1mb0UKy2CgUe5tjz-->F=4 最多</span><div data-page-node-id="VjrmloOBh39S60u22MvJYR" class="bar"><div data-page-node-id="hAdTVVTDaQPwQgh3QWkDyW" class="fill" style="width:100%"></div></div><span data-page-node-id="zwgAHB6QaMlHTNg18imJhE" class="vv"><!--pnid:eDDb8Z5V3JhChuelvuWP1L-->≥ 5 次</span></div>
+        <div data-page-node-id="FWK9Piqh5DW5A88kB35b3L" class="q-bar"><span data-page-node-id="twwQT8jSqbytvMINK6Iomn" class="lb"><!--pnid:DjnICMp79vdNQGe3XOpJ5n-->F=3</span><div data-page-node-id="6yPwr0gVixeN3Vcdui4eRL" class="bar"><div data-page-node-id="jzowzp2JTC16vPq6ubrnVI" class="fill" style="width:75%"></div></div><span data-page-node-id="Np4qRCMfyLtnj1ruB1ksC0" class="vv"><!--pnid:JojhOyw05YCXdhCwFbBnZ2-->4-4 次</span></div>
+        <div data-page-node-id="JWYJveyMBlUEGxy4W7Sm7w" class="q-bar"><span data-page-node-id="vCbST04JTY0dXCisJjqtb0" class="lb"><!--pnid:T5AUMudwbVTwxwBzAp8wRQ-->F=2</span><div data-page-node-id="TNfBJ2rwlM2FjWMm5IEnG5" class="bar"><div data-page-node-id="ecJAfFSeYEaB7ffD7j8ExF" class="fill" style="width:50%"></div></div><span data-page-node-id="r197MdHcuaQHcTIyqSbooS" class="vv"><!--pnid:heASlsXqO5BPs3G09Bc9on-->3-3 次</span></div>
+        <div data-page-node-id="NZkeetTuDFe3QYu7IzQkeu" class="q-bar"><span data-page-node-id="XBodY5AreIwrBJ4hhQwYj6" class="lb"><!--pnid:YZ7ZlJsbVy3zpOLrbDEyXv-->F=1 最少</span><div data-page-node-id="fLXVTMAubUv9kjAwkaQob1" class="bar"><div data-page-node-id="sp2Yaacx1k8qPZals7RRRE" class="fill" style="width:25%"></div></div><span data-page-node-id="8439ctAKvvBPt6JQTHStMr" class="vv"><!--pnid:D1PWj2WEnGEmq8RKiRRjW3-->≤ 2 次</span></div>
+      </div>
+      <div data-page-node-id="rneninQYqGtvLVEjj2PI7Q" class="q-card">
+        <h4 data-page-node-id="wJXckME1e2XUAdAlpfSgg0"><!--pnid:mBayJEzDcn1DusM5fmUwPi-->M · 12 月消费金额</h4>
+        <div data-page-node-id="6xQkDmajhgJjpZvzWfSZOy" class="q-bar"><span data-page-node-id="qDiJuFBmKgwfaw6ToXiay1" class="lb"><!--pnid:kyeB8OBvCM3EpAI07Sqor2-->M=4 最高</span><div data-page-node-id="nLobClCwUiKy6ExRoBHTEl" class="bar"><div data-page-node-id="kG71hnuO5xuhoQtRHFoG5X" class="fill" style="width:100%"></div></div><span data-page-node-id="Qu6UQwerM8uFOR3dJ5sRkA" class="vv"><!--pnid:L0or8l535rR3hxBi6p9BW4-->≥¥4071</span></div>
+        <div data-page-node-id="nXjMyK34rRFHxmvNOdgYUm" class="q-bar"><span data-page-node-id="wZjQHlA8sPI0dILuY1DqK7" class="lb"><!--pnid:jPGHJgUvobXiwn8pd7TwAp-->M=3</span><div data-page-node-id="DDUMMJAzQl3SuCDn1vDuFd" class="bar"><div data-page-node-id="2g171DCr280DTn6CRAOCRN" class="fill" style="width:75%"></div></div><span data-page-node-id="YSe5x4hcSzqK2vO0N6U9Gj" class="vv"><!--pnid:XzYBztFTT5NoDpnFuIphwG-->¥2399-4070</span></div>
+        <div data-page-node-id="DCeH0akrZGuH5zjrQDv2KM" class="q-bar"><span data-page-node-id="IiKVHpGzN09VmbgIqwT4gt" class="lb"><!--pnid:FqIGRCiUv7uY5VMah9EJA2-->M=2</span><div data-page-node-id="je74kFouwmVL58oEJyvvSM" class="bar"><div data-page-node-id="YMMqc2oqC0Y6yOAvQNAmeb" class="fill" style="width:50%"></div></div><span data-page-node-id="asS3zkuu5IujbrTHWUwwxm" class="vv"><!--pnid:YxT6MoyjfGuSwYqZGLwIsj-->¥1091-2398</span></div>
+        <div data-page-node-id="KRBRHGr6uQD6tjpTx2fgFA" class="q-bar"><span data-page-node-id="5SwApTJ8sjRG7mXSaZXBmr" class="lb"><!--pnid:5L3trMgfAQ2bwSnQHynsD5-->M=1 最低</span><div data-page-node-id="HG6L6emTY6jzPENqOshMWG" class="bar"><div data-page-node-id="A7k4tSH76OAOQijF7Wawk1" class="fill" style="width:25%"></div></div><span data-page-node-id="vY3ndaQgxDKgw1FMbJ5rao" class="vv"><!--pnid:iieVnwS7W9ygV7CouEbEEY-->&lt;¥1091</span></div>
+      </div>
+    </div>
+
+    <div data-page-node-id="7qe9zZoS7qhxqW7BV1EzKy" class="callout info">
+      <b data-page-node-id="62HL5qkhmq2WF3VuesMKBf"><!--pnid:t4wEhx6b6JzhoFCqhoVYfK-->💡 按品类周期动态调整：</b><!--pnid:XhtgHw7sDZNH842ltQGAlu-->护肤品复购中位数约 45 天，所以 R=4（"活跃"）阈值取 <b data-page-node-id="bGflXsE7LSArnwMJGVrRC9"><!--pnid:Hl8hTedZYW2YymXmXUIODi-->15 天</b><!--pnid:HEMzhtdEyP0ZXZx2b0EGBy-->（约半个周期），R=1（"流失预警"）阈值 <b data-page-node-id="asShJORHpHTEfNJ0TyiRS3"><!--pnid:Jf6yzynv68on8BGNPg6gg6-->&gt; 95 天</b><!--pnid:ls6AVtlKOYo4OJ6WXTPhvE-->（约 2 个周期）。<b data-page-node-id="2K6iuac2IDi32ZsVZWOwLW"><!--pnid:jEbDKx11zzn6596MsAaFCx-->不能对所有品类都用固定 30/90 天。</b>
+    </div>
+  </div></div>
+
+  <!--pnid:lR59NSZbeIoyjekGxNnqB2--><!-- STEP 4 · 分段结果 -->
+  <div data-page-node-id="YbLFA9C8jQESjnXNVCFv9V" class="dstep">
+    <div data-page-node-id="6oNk5JPQuQLD5L6WkKozz5" class="dstep-h"><div data-page-node-id="jWrRq6cyHUM00J6ZvH7iol" class="dstep-n"><!--pnid:X3Jj1FqfzX6Wb2OR774eWH-->4</div><div data-page-node-id="yeslPVXFab1VM9JbwzHAZ1"><h3 data-page-node-id="4mCZfVKUZTNq4jOlgy4yOX"><!--pnid:KQ8cKZhSGDT92giH8Omhwi-->RFM 分段结果</h3></div></div><div data-page-node-id="UMh6ZTgDxR0fKqCHPvEu2g" class="dstep-b">
+    <p data-page-node-id="wglAFAKW3OFoZllAp54gpP" style="font-size:13.5px"><!--pnid:SlRAzNxtiGi24btvjNVSba-->按业内通用的分段命名法，最终产出 <b data-page-node-id="hFc7ayYZgFwDs8TybGQLpg"><!--pnid:gBrMoY260sMcHvEtHO0xGZ-->8 个可行动人群</b><!--pnid:U8XYcmIQtVspJfwFm2ZRM5-->。每段附样本客户 R/F/M 分数，便于验证分段逻辑。</p>
+
+    <div data-page-node-id="oo3WHARsor3YL7gBzAZYqF" class="seg-grid">
+      
+    <div data-page-node-id="7JrPg6sdW6GVkGjOgmPfrF" class="seg-card" style="--seg-color:#6b7280; --seg-bg:#f3f4f6">
+      <div data-page-node-id="AIdbFgA1b1qSLUHp8XSC7R" class="seg-h">
+        <div data-page-node-id="Yv8x6R50enMIxv8qTsHrJp" class="seg-name"><!--pnid:RFzgSvb58e4570LCEewt2i-->冬眠中</div>
+        <div data-page-node-id="SlzlJAiY3CyxRfJ5HH1zqb" class="seg-badges">
+          <span data-page-node-id="M2K1OZZdQ31BuSrypy614Y" class="badge"><!--pnid:uPvsax0GZ0R8R2wU2yNHMy-->13 人</span>
+          <span data-page-node-id="il8tofmlZG5F1tZeM1QieQ" class="badge"><!--pnid:0ZZtOOH7m9kyWemaqlQUCk-->20.3%</span>
+          <span data-page-node-id="l7g0btAuhfrba9TmGJtltT" class="badge"><!--pnid:0t8lOW0j20zcI22Bvxq1Pf-->¥14,578</span>
+        </div>
+      </div>
+      <div data-page-node-id="czpr9MGk7jJAH0Wo7HjRq2" class="seg-stats">
+        <div data-page-node-id="ezQiVctr2a7ltrdhnYUdIu"><span data-page-node-id="RweDpGD34pEE8LbD5L75DY" class="lbl"><!--pnid:Ufepq5x7zmYD9eXkrqQMAl-->平均 R</span><b data-page-node-id="VYHY3EoFzsDsalP0d5sD1d"><!--pnid:e234RBVSVoaEvouVnElQ74-->108 天</b></div>
+        <div data-page-node-id="7bVtWWUKXHmaDjMBrGexpS"><span data-page-node-id="KlJQk3Dew7cTpxGkMAAkBq" class="lbl"><!--pnid:93otPe1ldrCrzA5e2cparQ-->平均 F</span><b data-page-node-id="2X2p7e3qZhGR7YfAjGQN33"><!--pnid:6PpviWJshNVaZvKjFfLbvr-->1.9 次</b></div>
+        <div data-page-node-id="UmBvz81JgYwhNuj7S22g4I"><span data-page-node-id="fdY9CLjbzzk96zhhgObzhd" class="lbl"><!--pnid:ygrpi9t3cUXdUj2A31IN2i-->平均 M</span><b data-page-node-id="mRq4hLccqSRFwymEwuxsam"><!--pnid:lqlT6QwehyNcXJJYlNSF36-->¥1,121</b></div>
+        <div data-page-node-id="R8kjE3HX0oW2IujDMFPSdT"><span data-page-node-id="oYCCimwil4TF8k69E2kSa3" class="lbl"><!--pnid:sWSzMF4MWgB8qH0ZNFxYMR-->GMV 占比</span><b data-page-node-id="PRFYwEeQEA3HP6P7sjNDkG"><!--pnid:2I7to7fRYTqV9ubPYJKhGn-->7.8%</b></div>
+      </div>
+      <div data-page-node-id="msVv9kj6AOOck78PP7D9kb" class="seg-samples">
+        <div data-page-node-id="4Bx6aFZ2QguwYRgbxbcNvK" class="samples-h"><!--pnid:irjyVgtkp20FHdnk6UknEn-->🔍 样本会员</div>
+        <table data-page-node-id="fAwNRWUiIaCY11vSjAZlz1">
+          <thead data-page-node-id="K5DLuzS4Ptidlq9oEphUpT"><tr data-page-node-id="IT0oZcUj9wZdb5XxYKm9O0"><th data-page-node-id="YuHz7hbAGNjtoJb3gYZof2"><!--pnid:JfdmVJMvix0THHSd7P4ez0-->客户ID</th><th data-page-node-id="RITpqnKJNeWHTYmFw3kbCb"><!--pnid:KGIKrFIUECTxz0fHBQQp9T-->R</th><th data-page-node-id="1ow1wLGeR5EiTiLhlOXqmP"><!--pnid:C2MvuMAkmRDXnEgRY8uHzi-->F</th><th data-page-node-id="Ar7du9X57Oc4gJby73p9cW"><!--pnid:Fth2Fg3d0An1SsLADgpb3c-->M</th><th data-page-node-id="AEZcHPQNHevnxQwmcrVPjj"><!--pnid:0t9BmKFrsyBDHrThNpdTCO-->RFM</th></tr></thead>
+          <tbody data-page-node-id="87t23NPtqIWXl2mI38uXAy"><tr data-page-node-id="zhD9zq9MdrV7Mtn708ULer"><td data-page-node-id="TcAmZcqr9Fxz75iP6hO3bw"><code data-page-node-id="cf4Z7BCqGVkCdGbb4MEleq" data-pnid-children="eOLufG3yy2Dhz5JrP24dvh">C10058</code></td><td data-page-node-id="hbZa0Tjf4zVvmQl43Fd6ah"><!--pnid:lbcCX19XOlKKHKoX4BNqQa-->113 天</td><td data-page-node-id="y6ejaspX5JJlE4a48OJLlb"><!--pnid:rF54FdomHx7DDOyA3KG9HR-->2</td><td data-page-node-id="CQueZunaPQpgcHuwXpSmjO"><!--pnid:5iBhZtyrBsriAfXIAuxfYb-->¥2,316</td><td data-page-node-id="XyIVsuqCfhoJLUVdwrVGdA"><span data-page-node-id="k3dFocEChjRiUjTiIHpLGc" class="rfm-code"><!--pnid:ahsK1Nfc2rB1diFW8t50dH-->R1F1M2</span></td></tr><tr data-page-node-id="5ZkN0fGM2FXZiyjrsQU301"><td data-page-node-id="gOPwo4ELypTpOr5ashNy3f"><code data-page-node-id="aq1KveDxiGYOih7kp681HC" data-pnid-children="AYV3r7d5OJQrvqFR5rPAYn">C10061</code></td><td data-page-node-id="VRCXQnwvmhJycBR0VrvGl4"><!--pnid:gzIgJlBxTtbcg0Rv83Epot-->122 天</td><td data-page-node-id="Fa9CixupEGUgIDW8Usrq3v"><!--pnid:Tb9kReCOzKzTFIJXU2mh4k-->2</td><td data-page-node-id="7q71JmZRbxm75GyeKH50Gg"><!--pnid:Ot14KOC8ljdT63BKI8Up4j-->¥833</td><td data-page-node-id="bsJzWGwF1LHnT3nDyxb9ci"><span data-page-node-id="9SYADUmxM5RMjHWqS273Vi" class="rfm-code"><!--pnid:iUKdC3Qlb2mBLHttBPZDSu-->R1F1M1</span></td></tr><tr data-page-node-id="MvCXH9MXkYtsUMeQuH8ex7"><td data-page-node-id="weDbzUDp7V5jdYioJi0myx"><code data-page-node-id="MqjOIpH6iSsCbQpnkPGt39" data-pnid-children="h1ypih6AiS5dqLS9adT7j9">C10051</code></td><td data-page-node-id="u0IGgvJhhiXJ9vCaubSsYw"><!--pnid:Em2oUtvKVOdaiqJKracWmK-->112 天</td><td data-page-node-id="7ThnaBvJ34nDd3ezChk7tb"><!--pnid:WanMHoqxwirStnTKY0CePM-->2</td><td data-page-node-id="KLdYZKCrCpohjjHgF2iZJP"><!--pnid:kWEruvNrZxOtHUgOrLLvUr-->¥713</td><td data-page-node-id="YofaAKnNHCzmZ6UNybW9x6"><span data-page-node-id="KXKUiRgdYPplHCSN7VGkPt" class="rfm-code"><!--pnid:Ms0PB6CCTHUzyOwYNDo2RL-->R1F1M1</span></td></tr></tbody>
+        </table>
+      </div>
+      <div data-page-node-id="I3YV1Qjred7e12aiY5RX7R" class="seg-action">
+        <div data-page-node-id="yTpIZIzHp33Q8A9Ein9L7G" class="ac-row"><span data-page-node-id="pEMlccD7XDFvnSLr7SiIpl" class="ac-l"><!--pnid:iuZuiqzA1EMw4NcSI71rzM-->💡 策略</span><span data-page-node-id="EvPKanYtCTjFRLk53C7q3u" class="ac-v"><!--pnid:PpRDXJGcVts2OBvOrY0i3L-->低成本 EDM 触达 · 大促试探 · 不投人力</span></div>
+        <div data-page-node-id="ZiuL3mgISS4uqRxFJQ84mP" class="ac-row"><span data-page-node-id="ZP6HuOCMVnEWU0JbyFNZwD" class="ac-l"><!--pnid:XVn1LHSw0sdK3aXF40GVkR-->📅 频次</span><span data-page-node-id="UmZt6e1wUuGlVEwKD5kYck" class="ac-v"><!--pnid:MenjwqahWDuSXYzM6yKhrQ-->月 1 次</span></div>
+        <div data-page-node-id="2C4kkovXd1k3TEm3JYDeDD" class="ac-row"><span data-page-node-id="wpQy6D1MFdWfTsZS9AZOSQ" class="ac-l"><!--pnid:Ix69gh2ava4E5MoC4ubQnF-->📢 渠道</span><span data-page-node-id="QSYtkIKNlMyCtmLPnJuB2b" class="ac-v"><!--pnid:3xq4uHnUUfGcADzFFS9ii9-->EDM · 短信</span></div>
+      </div>
+    </div>
+    
+    <div data-page-node-id="GamhwzWT0w7XC6Hb8ZRfDM" class="seg-card" style="--seg-color:#059669; --seg-bg:#d1fae5">
+      <div data-page-node-id="Hv17IWgnnCxXxU1XufWQaZ" class="seg-h">
+        <div data-page-node-id="9wqEqNPqEbRANgOTxSlQ9V" class="seg-name"><!--pnid:1dvEwvVPsoXojldlLS2fn1-->冠军会员</div>
+        <div data-page-node-id="LkelyElSvPOd6HjcMsUSou" class="seg-badges">
+          <span data-page-node-id="C1mU79o0ZR1MinTXFDmouT" class="badge"><!--pnid:QuHffvaQ1gOg329QqxSJ2E-->12 人</span>
+          <span data-page-node-id="1MjXimBdOIeLSJkIuCAUfk" class="badge"><!--pnid:SAspPYuChgBBBk7LEATV0a-->18.8%</span>
+          <span data-page-node-id="XVJhbpo1J5tR1rsEKDkHIl" class="badge"><!--pnid:4Ci4zkGesIwVYzxNwsdf41-->¥76,482</span>
+        </div>
+      </div>
+      <div data-page-node-id="B1YnmMzdOSSzjWSK2wRZ2Q" class="seg-stats">
+        <div data-page-node-id="76MW0TWmbWohWyT1xR4Bvx"><span data-page-node-id="rDqWyYjYT7AibMZjOSuGJc" class="lbl"><!--pnid:hO0eyogvqWg0iEHMSZ5q80-->平均 R</span><b data-page-node-id="dkwaTHmDAQObvboiqWeSkj"><!--pnid:9wR0LYlwTbmO9qcCQfJy7B-->14 天</b></div>
+        <div data-page-node-id="70s7r0DE8DgaY6CtVHuxn0"><span data-page-node-id="C9VQdeTBV04vCKBjT2jrsA" class="lbl"><!--pnid:F2jvTDayqQWZV8scTlEpDW-->平均 F</span><b data-page-node-id="shNUKI9RBnHcDt7zg2jFNW"><!--pnid:TvUVK7vg62KBl3PCaePvT9-->5.9 次</b></div>
+        <div data-page-node-id="T1cVp5V0nlmBy7QkWrZJF4"><span data-page-node-id="KkbR3IxN21HNVagBVnQ3rf" class="lbl"><!--pnid:bHL7rQAlpSdzwzWoV9D05N-->平均 M</span><b data-page-node-id="mu5eNjYgRVptiiIBsGiFUw"><!--pnid:HZI7dClcnxkL4s0TR4MRgH-->¥6,374</b></div>
+        <div data-page-node-id="kaYs4Z3hHwDS9GyP1IULZR"><span data-page-node-id="OwOQLJ5aibKWZt3iF586LF" class="lbl"><!--pnid:qGYuH9Svz8cGJfjOlVU6Fx-->GMV 占比</span><b data-page-node-id="jYDvDDXwIf2tHIgC6yRgT0"><!--pnid:apyYD1RlgeDD5Ps2QiADc1-->40.9%</b></div>
+      </div>
+      <div data-page-node-id="sKD3w74GosjGMFWbL2briS" class="seg-samples">
+        <div data-page-node-id="JtZa3qb9ik9kxMYZkYRGZf" class="samples-h"><!--pnid:YbqWlQpEy6oY3ylgVH7uxC-->🔍 样本会员</div>
+        <table data-page-node-id="nQR41FYbz2UronbBabAeQT">
+          <thead data-page-node-id="gBC3Va0a7eQJFi4m7ylxf3"><tr data-page-node-id="r2eCJ8AJAwnmgrrrrtODzu"><th data-page-node-id="PfHEZ9uTeRxZTJZOVqnhUX"><!--pnid:iwe0xYgdzPVMGTdM0WeQRj-->客户ID</th><th data-page-node-id="xYEzn63f0u5ZO47oCxcywx"><!--pnid:TdBbU7KU2Qj9RXhj1SjkSW-->R</th><th data-page-node-id="eNUgxsjtw6KrZrTUD4pyZD"><!--pnid:yMrMT9HPYT4MJ3tb70wyox-->F</th><th data-page-node-id="gnUCtU7bGf4psWysH9DFiZ"><!--pnid:XimzZPH5XZAbe7UX0PvYRu-->M</th><th data-page-node-id="z3vSRwt3Q5RZUEvGPNQCum"><!--pnid:ZFwKMHbwV7NcKqy2l07PKB-->RFM</th></tr></thead>
+          <tbody data-page-node-id="kCehkSJmFo2zphSH0vo2uR"><tr data-page-node-id="D1ldU9w6ACN6chlHd0TJqf"><td data-page-node-id="qNMejlPHCCB3LU4NZxCH2W"><code data-page-node-id="XhaYP8gIkMt85pdB2FS17W" data-pnid-children="0MSRb1CQo0JuFDHMTKO2SB">C10007</code></td><td data-page-node-id="eMsg7VWpl53DdgGE95aD1G"><!--pnid:MHYdQ2Jjz02Cm469j2rOBY-->6 天</td><td data-page-node-id="ekBot2fGSYLWk8TiKgNDIC"><!--pnid:GiKOn9fOgPTo6bV30Wv8fn-->7</td><td data-page-node-id="kWzIrUh0VeUf2tfv6yCjeO"><!--pnid:uTQWpGC14mt4oXfkYP1lZB-->¥5,328</td><td data-page-node-id="QgydjPupqPGwED1N9f13BM"><span data-page-node-id="rVWTSi6agG8mx8ccOHF8Qd" class="rfm-code"><!--pnid:v5j9lLoAxatKBcyZ9bMylq-->R4F4M4</span></td></tr><tr data-page-node-id="B5lExzphXmRQmrQn5XJUHS"><td data-page-node-id="xud61Q4SjeD8A9YGvI29aV"><code data-page-node-id="WIHgwOwrSXB6euGXjf8VhS" data-pnid-children="DvAf5j4lhFTuvW2MxQP50L">C10004</code></td><td data-page-node-id="43Mqbk2HgnmpmXHua0M5Dg"><!--pnid:Pq3RwpVILrbP6tko8VeKlN-->21 天</td><td data-page-node-id="0rPYlWNkJRndbkuNhjEA94"><!--pnid:L1pgsGc7DhTW9LvmxNgVh0-->8</td><td data-page-node-id="YJjgrxjgTYz8o8gTKQ7pgG"><!--pnid:dofZK6K5CRr6Q4IJ76McZG-->¥10,309</td><td data-page-node-id="zYHUZQnaXb7MOx1skJDMV3"><span data-page-node-id="ppBGdKsayTR2wDt4gcY1aO" class="rfm-code"><!--pnid:YUVn1dXwh2sVJBwDRlly5F-->R3F4M4</span></td></tr><tr data-page-node-id="3mAvgM95DSXKSJDFnmnLWZ"><td data-page-node-id="idaceBys0dZ2DZMBJDnEOX"><code data-page-node-id="DrJTLnhyQGYqyj5QL7WZuc" data-pnid-children="bkHOsJcXtLNKfxghzRP4Vh">C10002</code></td><td data-page-node-id="3y7TsSnKeleltlR2jg4q73"><!--pnid:eWP1SnHhD3f5qL7O2Wtb5V-->6 天</td><td data-page-node-id="cKMI9yNwgGF7qlAlTsMDG4"><!--pnid:65WKva2SsBkUTeBhoeqIAM-->9</td><td data-page-node-id="lQ4L2yEaCa3QdjaDDdF8ry"><!--pnid:4cEh2pdriZxhD0AloOBGFO-->¥9,807</td><td data-page-node-id="SB5fNZPguZ8BKwGdxPVgvf"><span data-page-node-id="Jii0LAYLex9SeXbRrG7t0G" class="rfm-code"><!--pnid:Rk6yZecTFaEFKfyW2X9AUV-->R4F4M4</span></td></tr></tbody>
+        </table>
+      </div>
+      <div data-page-node-id="SmNEPr3E8Lx6KkX7HubzxU" class="seg-action">
+        <div data-page-node-id="cWkOiRej9zmtc5neSiVuBV" class="ac-row"><span data-page-node-id="Lz5aMCnHSjNJ8PGGqp2zks" class="ac-l"><!--pnid:Hb1f3Hm364jwS3l7l2HiM2-->💡 策略</span><span data-page-node-id="PVWl6lrOphTGzJifmaZqHW" class="ac-v"><!--pnid:fjlWS10cqIJDclJKb52933-->新品首发优先购 · 生日大礼 · 无折扣 · VIP 沙龙</span></div>
+        <div data-page-node-id="rQQQBc3TIUk41fuI2JWurz" class="ac-row"><span data-page-node-id="OM6nqBnxmSkWlj6rGlG0i1" class="ac-l"><!--pnid:xbqMpfzMk7nH9GLmNmlXe3-->📅 频次</span><span data-page-node-id="gE9sW8lNsh7IHIEHIhfJyj" class="ac-v"><!--pnid:BQvvtgo45CVk8ciWqVjaiU-->每月 1-2 次 · 精准</span></div>
+        <div data-page-node-id="Mooguz7KUp5H2TwZ2E2DvW" class="ac-row"><span data-page-node-id="b1hyYhrIi89eInnr3HL5BI" class="ac-l"><!--pnid:yDRbDsQzQx4Ll2rfxNVHi6-->📢 渠道</span><span data-page-node-id="xSus9kZRCRaXGlY9L5NWpr" class="ac-v"><!--pnid:GbpgjvPjhFRKb2PZbT7V3X-->1v1 顾问 · 企微 · SMS</span></div>
+      </div>
+    </div>
+    
+    <div data-page-node-id="dxgUGPlOc7Gek9EW75T5Xr" class="seg-card" style="--seg-color:#f59e0b; --seg-bg:#fef3c7">
+      <div data-page-node-id="aP5tyNWvOfe4YeGC7NPSEu" class="seg-h">
+        <div data-page-node-id="gJYjn3cxseCePFpNIgBEBh" class="seg-name"><!--pnid:0EHim0RvvBRLtwmlV2ujY9-->需要关注</div>
+        <div data-page-node-id="GMxSFgTT8kBC3i96aYwBkr" class="seg-badges">
+          <span data-page-node-id="JsaFCE75eIJYlSrqTQlqZS" class="badge"><!--pnid:5nD7TchJ0kOQums7bLpCdB-->10 人</span>
+          <span data-page-node-id="CLqop27ZQxBGfxsEQHv4Ee" class="badge"><!--pnid:AtHeJ0Om04BKPyqkvjTxxJ-->15.6%</span>
+          <span data-page-node-id="P7YW5E9PpjG6zpLbk0w7vm" class="badge"><!--pnid:85ygGw1KeQN496igpqCCUw-->¥31,895</span>
+        </div>
+      </div>
+      <div data-page-node-id="dIv98ClUz7i8PQZN4jRdnu" class="seg-stats">
+        <div data-page-node-id="61i73VGPN2L22qCmgexD1p"><span data-page-node-id="DQoO4p2OP4OCdwU18H41kg" class="lbl"><!--pnid:Pxh3lpPRHjfWpx4sDWmpB1-->平均 R</span><b data-page-node-id="rK2oaz0gdO761EFiMEQEy0"><!--pnid:O6FzOpIxbUdTH2xR1WBCEI-->63 天</b></div>
+        <div data-page-node-id="vGSTUP0HVXmIwAH6zgAQh8"><span data-page-node-id="gNcUHATWpoKDFjncYxouFs" class="lbl"><!--pnid:k4K0sjwIai4h4NTFfw5VDU-->平均 F</span><b data-page-node-id="TtAamoanrxrSoKZ8fsgNmn"><!--pnid:P0L4ybIQdy2tZlnyEA7su7-->3.1 次</b></div>
+        <div data-page-node-id="qVypKKfWuwFhFmcm2D93mM"><span data-page-node-id="ecI7NiqdvxscAZ2JuCoyMO" class="lbl"><!--pnid:HmbGitAbHgx3kJ0DgqY2jN-->平均 M</span><b data-page-node-id="gNzFmB7fqbntuSVwwLcO9g"><!--pnid:sUCh9FV37qbO5ri7U9tWet-->¥3,190</b></div>
+        <div data-page-node-id="xSRrL92HTX5danaJYvqyYp"><span data-page-node-id="8ePj1d0WjKKNfakWsOg9OJ" class="lbl"><!--pnid:v07IjL7ylmFdxO6Y4La5Ef-->GMV 占比</span><b data-page-node-id="E7Cs4j1Tdk6KObGaO7KsJm"><!--pnid:CcIbfUYNZ5tQZViHFLS1tF-->17.0%</b></div>
+      </div>
+      <div data-page-node-id="sI8dsNTb8CadS9w4Z8uuwL" class="seg-samples">
+        <div data-page-node-id="fdovKZs8dIMEflgVZCOBRd" class="samples-h"><!--pnid:bLHNpi4q1Ok3q6pgQGphXP-->🔍 样本会员</div>
+        <table data-page-node-id="pVhk9O8d8UPqsuTpAMvqk9">
+          <thead data-page-node-id="iHnUcSeGQlktpeInuXpOXn"><tr data-page-node-id="E5ExLL4DBzQLLyFGfqWND4"><th data-page-node-id="bLpQMkYeX8BfX9CLere1Gu"><!--pnid:We2Cdao8F3kqPLX4CgcBWb-->客户ID</th><th data-page-node-id="zkMq3icreFyXXNXXSHNXC7"><!--pnid:vzGHzPc8Gp78rCYjEFNVmz-->R</th><th data-page-node-id="1PiaC5KNVeO3iNpdXafsGO"><!--pnid:nnqjX152SAHMleDrhWn7MA-->F</th><th data-page-node-id="XZseIeEkB2PRBvAl7VY0j4"><!--pnid:wnlSSQqaVIbsfuw2m9hmbp-->M</th><th data-page-node-id="164ezPXnZBJkEgaEn3VEdf"><!--pnid:G35uY2H9N3LxUGCCVE14bm-->RFM</th></tr></thead>
+          <tbody data-page-node-id="V23oSwLSgKANz5MOjNMSw2"><tr data-page-node-id="TvO2XXxAWGEp9czKR8akXj"><td data-page-node-id="mrcC2VlExiT5284sjXZIao"><code data-page-node-id="G0h4Gn2ttzUsiREqSrTWsH" data-pnid-children="Kg1lwmR0hWx7X1cv9qDyZE">C10028</code></td><td data-page-node-id="8DidgfzK2YSZlJIelWVvMN"><!--pnid:AyVKqluWDpMev7D7LY8M46-->44 天</td><td data-page-node-id="n25UDgdgaNWSbQq39cDVki"><!--pnid:4J5vXXcEgznoOepHGJckYt-->3</td><td data-page-node-id="wol8haXvqITaLSeKW3LYIQ"><!--pnid:XfeSuhkLthnOghfwQ2Cwee-->¥3,703</td><td data-page-node-id="OQxr2K21IdkSBqDQm1qEXG"><span data-page-node-id="6L2YSqR9givC978LZG5I6S" class="rfm-code"><!--pnid:ZgOTNGal17zaNSYz3VyMmM-->R2F2M3</span></td></tr><tr data-page-node-id="eDHJlJZWK2TbIyKQmbuI4B"><td data-page-node-id="1oaCSXCc0WgFG2zRVoECTE"><code data-page-node-id="hygG15SPTUnqRoqWJomqyl" data-pnid-children="7O2gvNSzpKMXeT9VwMqpgv">C10048</code></td><td data-page-node-id="5mripg0kNhxaPgXrk20AJX"><!--pnid:cz2FcFtll2Wz7o2mdKZgB6-->92 天</td><td data-page-node-id="fdYXB6QmAQ6UMyR5elwK8x"><!--pnid:L1RR2NMBXJoeAuIWJD7mzw-->3</td><td data-page-node-id="MKRWZ1QpiVUSx2YDKr8pd6"><!--pnid:Aq7QLWWZfBUZ67G5owTaI3-->¥2,647</td><td data-page-node-id="8NEvwluEp9B14vEWZf8cyQ"><span data-page-node-id="U7wJFV4uFcb4usXHBD155Y" class="rfm-code"><!--pnid:1lMHUAt5ZBIj9PaS7U0hEv-->R2F2M3</span></td></tr><tr data-page-node-id="ZQxpULqNczE7Zd0lthAK2D"><td data-page-node-id="HyFmmpfSeHwXBMEXaFNX50"><code data-page-node-id="gIJkWwC2t0dBFhNCWsSuut" data-pnid-children="cGZZHwNmnYqEp0hJ5edtaz">C10049</code></td><td data-page-node-id="6k5WnUMRyzw5aHv2FuV2By"><!--pnid:v402EkxYRkqK9jx6aU4tc5-->62 天</td><td data-page-node-id="uPUbaKAiNQjgGvGPLAPLz4"><!--pnid:w9smze4l51CLOyIc8BG1XI-->3</td><td data-page-node-id="GU925AWroR6Df4ciOd2jzB"><!--pnid:wQuoY3IZlDxmekPRZkgxRM-->¥2,189</td><td data-page-node-id="ZzE3iTeazvOLNXtbY5pZY2"><span data-page-node-id="enh8azVfce1SpuQBDMu0U4" class="rfm-code"><!--pnid:8WNSlLmBSc49xZhlyvmaua-->R2F2M2</span></td></tr></tbody>
+        </table>
+      </div>
+      <div data-page-node-id="W6e52jfN6tAFYqzMx4e3sT" class="seg-action">
+        <div data-page-node-id="jxukc9ZSMdzyOxnlCy8sim" class="ac-row"><span data-page-node-id="WibOMZsFE3RbiOaPnZyWZt" class="ac-l"><!--pnid:357ReDoYJ2g2ceD5DGs2pK-->💡 策略</span><span data-page-node-id="8rEY82Rke5G7fhRdDNf96q" class="ac-v"><!--pnid:caxKgg5ZIBVICspRskiodq-->唤回专属券 · 品牌温情内容 · 试用装</span></div>
+        <div data-page-node-id="3HaLQDKK1dAlMsWM3QH7O2" class="ac-row"><span data-page-node-id="VdoqbxAmHjOCBqTF588gsY" class="ac-l"><!--pnid:mT2TRULNmJ3RN92n27ewQl-->📅 频次</span><span data-page-node-id="8zDjFVatmvYfAx85UFixfb" class="ac-v"><!--pnid:bZwxImkHwb1nPjGpu0gH3h-->每 2 周 1 次</span></div>
+        <div data-page-node-id="bLo193C61e7WecUMqaocCn" class="ac-row"><span data-page-node-id="MYG58kOw0lg2KbEcYfO1wT" class="ac-l"><!--pnid:7czXvP9IpHbdD6HxMghCxa-->📢 渠道</span><span data-page-node-id="2qkGmsWt91HioHF5xNdUEj" class="ac-v"><!--pnid:hsQOuaZm4V2SofepJjAkBI-->企微 · 朋友圈</span></div>
+      </div>
+    </div>
+    
+    <div data-page-node-id="zvw9hzwSpHmJu8g1IyzfZ3" class="seg-card" style="--seg-color:#0891b2; --seg-bg:#cffafe">
+      <div data-page-node-id="WvvBezitzO4qAF2ZZfHiR5" class="seg-h">
+        <div data-page-node-id="ftfso06a2OqQCMD2ABKoyv" class="seg-name"><!--pnid:eXRThEeLX688HmncL1jDhx-->新客</div>
+        <div data-page-node-id="qAqSpmEXocVYSDonL2DQme" class="seg-badges">
+          <span data-page-node-id="iNjAtzCwiQiUCWYrxqfgAN" class="badge"><!--pnid:QAL4jNicnRpXEQFSSX9QLb-->8 人</span>
+          <span data-page-node-id="KjPjAeOvGJyxpLZdWVqBOF" class="badge"><!--pnid:c68mvz9S5eqYgVdkM9e6JO-->12.5%</span>
+          <span data-page-node-id="XnCuVTnz3rzc8Q8E2b37s3" class="badge"><!--pnid:aKZHMxOmngSmYOJnucW8oE-->¥6,657</span>
+        </div>
+      </div>
+      <div data-page-node-id="cp5wEVco1NZjdbd3HSMasG" class="seg-stats">
+        <div data-page-node-id="NGzEcFYOHXWK9D1i7hD7J3"><span data-page-node-id="t9qXkYE0L7fax7q9HgGeX5" class="lbl"><!--pnid:JQvxb1sYMRtieOgyiZyeA6-->平均 R</span><b data-page-node-id="FqjmihOhkKaO28UyxWCEoI"><!--pnid:jRIaZXII4nE3MvYgr48Nyn-->10 天</b></div>
+        <div data-page-node-id="H4upak9YEvl9ZFF21lfGIv"><span data-page-node-id="gxPzZrcEksZ8V8lRxCM8lx" class="lbl"><!--pnid:Uxi6OjnqmieCkLRN9NPNDC-->平均 F</span><b data-page-node-id="6RRkq3yMmEJ5VjVOZum1rm"><!--pnid:k2xqxVFQcIAnGFMulv1JI8-->1.1 次</b></div>
+        <div data-page-node-id="iJkm63wcdvaG4EVEXMmrRZ"><span data-page-node-id="QZcoRs35QvmMkXVXpLs42e" class="lbl"><!--pnid:bdkJDMjfKXRjekByN0dbOV-->平均 M</span><b data-page-node-id="JnW77cl0IeGZdoBLfBGwXR"><!--pnid:AQ00tNjMEPj9UWJWi6jFQg-->¥832</b></div>
+        <div data-page-node-id="4bqGOq2TvzXan0OPlwZb7x"><span data-page-node-id="ZNltiJzTdHwfs91DrR5T51" class="lbl"><!--pnid:8YTrWkfrB1G4AXF0vwvzsi-->GMV 占比</span><b data-page-node-id="6nBTBcQiPbgSTye3uFI4kj"><!--pnid:GlkgWwJEl4hn6B22Paf5f1-->3.6%</b></div>
+      </div>
+      <div data-page-node-id="N6iI0NEl9qPVCxtQOkQ77s" class="seg-samples">
+        <div data-page-node-id="V6SYSdJfTdpp7S4yz4J1od" class="samples-h"><!--pnid:tOfzqEHWPN6fLHQKByWGpt-->🔍 样本会员</div>
+        <table data-page-node-id="j013FRiTnDC1IDamdrkBy5">
+          <thead data-page-node-id="kVvgdKWUjGGIYFn2RDI6EF"><tr data-page-node-id="fRTyOLGZ7OebuFIuZ9eCVs"><th data-page-node-id="Ajh3gQrkgIyVqc5btTSxqb"><!--pnid:5vwPirhZRjUwRkvILOD3Ef-->客户ID</th><th data-page-node-id="NvhcVTubYXkKY2zISO5vJ5"><!--pnid:0SbLSQawWLeU5Kaugww4Vx-->R</th><th data-page-node-id="NeJ9h2HxTVMbcDxSmePx9y"><!--pnid:v8Y4MFwPynIWGSi6mJrWEa-->F</th><th data-page-node-id="uGbClK4SjYjO4vdaob7muv"><!--pnid:8SP4svDGNB92l75xhwQpgJ-->M</th><th data-page-node-id="udBrH0XIDIrJZgCOFLlscS"><!--pnid:zrY1yhdBJQ6mSYQNxMr6Pe-->RFM</th></tr></thead>
+          <tbody data-page-node-id="srG8cwH60b5IpvZU3ncxHx"><tr data-page-node-id="ilGcjDc8FjXLaYe14a9n4Q"><td data-page-node-id="9Qvk0B8HDSZ0yrouMvvHuz"><code data-page-node-id="uF67BEqeK9KzudAEwWCR9Z" data-pnid-children="WD9jcazlr2NWViauCZVz41">C10042</code></td><td data-page-node-id="oJ8HILqrsqprmyFqt1GZDt"><!--pnid:DumS295LjVpDQmTYRRHos5-->2 天</td><td data-page-node-id="YmKsL07Rc59VKPQIAOP5ZE"><!--pnid:KCRx2IAYCTxkWU7YFkxWnx-->1</td><td data-page-node-id="1dcta4JZlogLRdNm5PODwT"><!--pnid:bE4bNCts0eA4Ao0TwXN32O-->¥662</td><td data-page-node-id="48KUFRcKNhmycRffKtTox4"><span data-page-node-id="WgGVQBnR8d7LPkvSgTwLPh" class="rfm-code"><!--pnid:6sBaZfPt8t6086mMAmWBdF-->R4F1M1</span></td></tr><tr data-page-node-id="3VLgBtlbeUG7fKzj9dAPr3"><td data-page-node-id="3gtx2VQ1EqtEFOnr69QX0d"><code data-page-node-id="24ZE90U5wLQpaKF6lQdg22" data-pnid-children="coIbIfLmh10RSXMfupaG6D">C10036</code></td><td data-page-node-id="rjLbbGqS4jnjriZt1lWiia"><!--pnid:jrYQWbKxOiZL3IQ5pXHm4d-->13 天</td><td data-page-node-id="eqQVZmS1WP23Yc22OSB5FU"><!--pnid:UM5NgTmj5EgcF18yV3AdUl-->1</td><td data-page-node-id="3hKQTXdQEcm0JQIH1uhoJE"><!--pnid:4mq6sm4Yd2cUzAWWWphbDz-->¥312</td><td data-page-node-id="HvsH0sf9VIDoRT44rgQHsL"><span data-page-node-id="ozudcnMEsiaJNWQ8Tsdxen" class="rfm-code"><!--pnid:RemX5yrFb34xgRAut0sgGZ-->R4F1M1</span></td></tr><tr data-page-node-id="Tp1fief6p94nS6DxW52MP1"><td data-page-node-id="Hu3owYaf5OerwYe9mlm5PI"><code data-page-node-id="IpRn8yIhLqEGjjuP47mWBY" data-pnid-children="GSHcM662WLlCcduwt18P01">C10040</code></td><td data-page-node-id="UwjtOqj9HAQdXzeoSOKPJk"><!--pnid:7skm9CBrUmpSKc6wDSsaYB-->11 天</td><td data-page-node-id="kLplAM1VD64yDwK95ksxqB"><!--pnid:bHjSnre7ONgyS5aTcxZ3xJ-->1</td><td data-page-node-id="C3cCJzLPgWjqTvt8Rt4X53"><!--pnid:BoFisNAWVflMTbrzTW7GHE-->¥2,812</td><td data-page-node-id="Nax1aDXjDtBtnyyZwKQkce"><span data-page-node-id="jcYihgJYutrvEy3ui9DVij" class="rfm-code"><!--pnid:lLCghw83rKMC8dYFsEqOge-->R4F1M3</span></td></tr></tbody>
+        </table>
+      </div>
+      <div data-page-node-id="j8XKx9wWhq9XTfuQE4Kvrv" class="seg-action">
+        <div data-page-node-id="Dqq5PlQnbKVnhX63hrr0YI" class="ac-row"><span data-page-node-id="MlqkttH98M9qmdUfHfoMpN" class="ac-l"><!--pnid:2lAy8uBpdfiEUMqxkqXPt3-->💡 策略</span><span data-page-node-id="i2AO3OQ5mKbg9JLK7DyNgR" class="ac-v"><!--pnid:Ix0anRjNpt5vwtLj5eMej7-->60 天转化路径 SOP · 第二单钩子 · 使用教育内容</span></div>
+        <div data-page-node-id="G7SWmJZ1SGYDPoKL9Miiqz" class="ac-row"><span data-page-node-id="A4ZmJzhtVf74WZg0JInsK7" class="ac-l"><!--pnid:rC10z9AEXqJyiXRYE1P2Yx-->📅 频次</span><span data-page-node-id="Gc9EqJz4aKEtwtyLrgw8Io" class="ac-v"><!--pnid:vyxziEhmc1b2diSAOVAmtq-->D1/D3/D7/D14/D30</span></div>
+        <div data-page-node-id="Xtl4TCeYIoswMq2RnEhTBu" class="ac-row"><span data-page-node-id="KkWaqadjVbNEq5UzMIW63D" class="ac-l"><!--pnid:b1X2DEAfedBkraFIecvfea-->📢 渠道</span><span data-page-node-id="Cz1Np3OwUWrhbWgdWS9NCg" class="ac-v"><!--pnid:UygXdcx9X3gATPvSdDhKBN-->企微 + 短信</span></div>
+      </div>
+    </div>
+    
+    <div data-page-node-id="bVSw8y1tdx8t1RT2MgvwNX" class="seg-card" style="--seg-color:#94a3b8; --seg-bg:#f1f5f9">
+      <div data-page-node-id="TeT4HY2FqKCArh7rhrjzpZ" class="seg-h">
+        <div data-page-node-id="B0olVALZlUF7CCv7oQA6B3" class="seg-name"><!--pnid:g2UDyqjhkAzZ4jDgniWX6n-->流失</div>
+        <div data-page-node-id="BS6nUJOj1C6Xy10ZJuac8F" class="seg-badges">
+          <span data-page-node-id="oMYeqLFzVXmjCbm6qXhhsx" class="badge"><!--pnid:93dUNpDOetQ3xN8yIBwLNl-->8 人</span>
+          <span data-page-node-id="wUwpB3ozCG3S2NUseJlVxK" class="badge"><!--pnid:iu4hcKduiA2BoLOyvajiD3-->12.5%</span>
+          <span data-page-node-id="Bx8V4D82AypjzOpHDLbN9k" class="badge"><!--pnid:wiRwPWe0UNlhYRV9Ilx3ol-->¥14,305</span>
+        </div>
+      </div>
+      <div data-page-node-id="Kpcu7nbP8f9xITMmZi0pSZ" class="seg-stats">
+        <div data-page-node-id="goQwrdpVC8n6LENje0UmVD"><span data-page-node-id="ldiSNLWsAqLums3iDv5U4i" class="lbl"><!--pnid:ekgaTrQxi8HbKFyj7cTmZ4-->平均 R</span><b data-page-node-id="x5PhhpsYOIdiq6kNkUNx3b"><!--pnid:Y7XLBb41JBwO3y66VhBr1p-->47 天</b></div>
+        <div data-page-node-id="hHIfRwIYG2uhcfzM2wT51x"><span data-page-node-id="sXGKJTtieYVeg52Ha96y4e" class="lbl"><!--pnid:p7vZMJRSBhnXkINB4jv9fw-->平均 F</span><b data-page-node-id="O56a3OMSElVMu1RVFvlZgz"><!--pnid:vE3JEaIRvstdMa8sNXXgbI-->1.6 次</b></div>
+        <div data-page-node-id="1FOexNkdiyLxHC146fvrnr"><span data-page-node-id="yAPHSTMNQVfOP35qf4U1If" class="lbl"><!--pnid:FVkCu2tAWQR9GGkDhPHXP6-->平均 M</span><b data-page-node-id="Ex1GI7xgLEV3GMJynfFbDF"><!--pnid:MDEoukxI1Svsjckrngn5yi-->¥1,788</b></div>
+        <div data-page-node-id="1Cyjg8yTlGx3ka21yP6U2G"><span data-page-node-id="IWuN9hBmkLK2eKJna9Ti8C" class="lbl"><!--pnid:iN3kGafkwH8Mqp2vQKjZns-->GMV 占比</span><b data-page-node-id="8bpBusCkfLvRrh4x7I1Gy0"><!--pnid:CZpCRvrHalMIYt2X7T0WzI-->7.6%</b></div>
+      </div>
+      <div data-page-node-id="XsxeSbLb6CwnLypzmSQHGq" class="seg-samples">
+        <div data-page-node-id="zAwIy1Qo2gljSoz9uRq0wV" class="samples-h"><!--pnid:upJ2mBknO9kVdJ0WCQagkD-->🔍 样本会员</div>
+        <table data-page-node-id="iOnhk2FFmUvoDpo5umsTtL">
+          <thead data-page-node-id="ZoiuRwiA3FzFZxQrWD7Plh"><tr data-page-node-id="gEodWLCKDlGvwcAfJCGaDE"><th data-page-node-id="CkuVeN3NK7xdo2jtPaPtIK"><!--pnid:sFHs64uOpsJjBWVof0A81a-->客户ID</th><th data-page-node-id="SLlrsRbSryabK8BvmiyhwQ"><!--pnid:fYj5QjIga7NuXOSzNR8dQb-->R</th><th data-page-node-id="5SOUxKntRODNxmisB9bnW9"><!--pnid:kh3MWyT7drQzTVJlALrXbQ-->F</th><th data-page-node-id="Z8CWf6Pmo8AEhpSCSYHo46"><!--pnid:8AFEHn3JhSKLwIXdp8UsPV-->M</th><th data-page-node-id="x6ITFF8d3m8TtaUVbdrNLy"><!--pnid:PnBwrWcQEEYNmyE3ynFKCm-->RFM</th></tr></thead>
+          <tbody data-page-node-id="MYc9QSYMX5O2s6VTMekHr9"><tr data-page-node-id="eLFdFamoYsmMxNxOglX7pK"><td data-page-node-id="8500PE5hPFGnuD1W7N8ZhA"><code data-page-node-id="lVCTTQe3sl2zfEpYc2dJZu" data-pnid-children="EOUEhT5PvFIpesdqMLu4QZ">C10043</code></td><td data-page-node-id="2GLHLwpsD11RJpS4QK0Bw3"><!--pnid:DtuU5k02shoEjQqaY9ru6r-->98 天</td><td data-page-node-id="h0qxgLhIYfcdeAyktErV5q"><!--pnid:Ej45rX2Yv8Hnv1YKWJzUlm-->4</td><td data-page-node-id="fKKZnaLRsnqpPqwzDiW5ZK"><!--pnid:pPqRgDYMX2LAMpZwc8Bk0w-->¥2,085</td><td data-page-node-id="bWBEkFGedVLBzrFaWzD4gL"><span data-page-node-id="onMIdNyAxsTq28SM2vRACc" class="rfm-code"><!--pnid:MdjmzwGXsmxXkgefyIFlKR-->R1F3M2</span></td></tr><tr data-page-node-id="KGUC8fKNFKqvF3reifNWvb"><td data-page-node-id="5UuA8YCGiA821JzcePWQRB"><code data-page-node-id="KMFjcCkgthClyRmDzgvAY7" data-pnid-children="PtVvQL6m4kthOp0BPRvxGB">C10026</code></td><td data-page-node-id="A7UW2WJ64AkyiS3BTitpgI"><!--pnid:2QaijGA680TP4ACbKthMTR-->40 天</td><td data-page-node-id="a9bY1rMXcJ6NSSUUOtsOIa"><!--pnid:WLlboiJQ2lZIxvZr942T8J-->2</td><td data-page-node-id="JsmNun8hepMVBfN8Orq4gN"><!--pnid:K6XCSZYBAPbxSyM7uMzKEB-->¥3,732</td><td data-page-node-id="PIltXcuX4wFLUwNQnovrRl"><span data-page-node-id="foCebFIpa8Lkm2ipoM6fw0" class="rfm-code"><!--pnid:PAG8DYbN3TUEa6OuntUiQT-->R2F1M3</span></td></tr><tr data-page-node-id="FAdYHiVxAChY6k6FNynik0"><td data-page-node-id="GxSzKHbaiUR1wtKwivoHvg"><code data-page-node-id="AaG5Jpj2aLpvqI4l9aWZ5c" data-pnid-children="xYqFQVg6fPTTrszfnHEzdp">C10033</code></td><td data-page-node-id="28Qbv70tKt1ExplJkPvd51"><!--pnid:flNygMRKhxPYerrDswy2zw-->21 天</td><td data-page-node-id="u5WlLhFSmOOVhGkiaQD8c9"><!--pnid:3GVsdAg7fhQDakjJknHT7e-->1</td><td data-page-node-id="tashfKrdQBAYtKOVv6oOY4"><!--pnid:05DuQeGE6oxh5WcSUvGCGs-->¥382</td><td data-page-node-id="raMNLtu4aZKdP4Yh6VjzNX"><span data-page-node-id="SPK8BTHAXU0aSyaMuy6Nye" class="rfm-code"><!--pnid:vyGF5zZAMp0nIl7eMdjqhW-->R3F1M1</span></td></tr></tbody>
+        </table>
+      </div>
+      <div data-page-node-id="mPJ58EFubboKKTq5rnPenA" class="seg-action">
+        <div data-page-node-id="B5XvSg9pXT06A6nXX5NKGa" class="ac-row"><span data-page-node-id="F8eVLU5Qwd5PpyZA8A5v54" class="ac-l"><!--pnid:4wQGYK0IhLCnuJeb65xI7C-->💡 策略</span><span data-page-node-id="646IUQbn15ukS8nhifa7hf" class="ac-v"><!--pnid:m0FVPUK1nSBfOrhQ1S33n3-->标记流失 · 归入 CDP 长期人群池 · 停止主动触达</span></div>
+        <div data-page-node-id="zeIPOx6Vjr660KeS5JVot5" class="ac-row"><span data-page-node-id="egFlDggOAhNHPcsesiDoT1" class="ac-l"><!--pnid:dVXvj9yx16MpkyOYtVoxNp-->📅 频次</span><span data-page-node-id="ugo3OuWhqrz9rKMnITLsan" class="ac-v"><!--pnid:3fmBAvV3hOyL7ohz4Q4Sn6-->季度性大促试探</span></div>
+        <div data-page-node-id="u7rNWwYbtzaqlxf8S6h4GW" class="ac-row"><span data-page-node-id="ReyWyGosYTF0qNpX8XbZbZ" class="ac-l"><!--pnid:h9CS6gCfDO8oBs5dV1uWm5-->📢 渠道</span><span data-page-node-id="4IX6twWg8CAsFlDEGsE1G2" class="ac-v"><!--pnid:TwPUqECBHR0cvrdancWbjH-->EDM only</span></div>
+      </div>
+    </div>
+    
+    <div data-page-node-id="Le5QnQCLC77YoXdLrp4BJZ" class="seg-card" style="--seg-color:#7c3aed; --seg-bg:#ede9fe">
+      <div data-page-node-id="o6Md24HogfFS7VTx9gbJ7c" class="seg-h">
+        <div data-page-node-id="omwituI5e3Q7miPSXyg1Ep" class="seg-name"><!--pnid:KnfRDwidjH2d0uwXygwCeO-->潜力忠诚</div>
+        <div data-page-node-id="aUxnJw8DavGs6iKOjZztfJ" class="seg-badges">
+          <span data-page-node-id="D46PIz4leAhnyED7ONpezN" class="badge"><!--pnid:FbsMEhIa6RBgURimeYTphw-->7 人</span>
+          <span data-page-node-id="44CFPt1V7NJvqLxgymeBOC" class="badge"><!--pnid:63q18bvcKdxL0q0mGyckZP-->10.9%</span>
+          <span data-page-node-id="qwpXL8aKBRmT06rJik1FrR" class="badge"><!--pnid:UU8s8MGJ1oPtOfBT4gDIZk-->¥23,568</span>
+        </div>
+      </div>
+      <div data-page-node-id="5n64Ptpzqj2TQ9qr2mCL0O" class="seg-stats">
+        <div data-page-node-id="PAE6neoHa215fCK4eY6Dyo"><span data-page-node-id="Ia78hbm3ot0ttc8QshQTEI" class="lbl"><!--pnid:a3Wf0nAhNTHerT6ntnj8nC-->平均 R</span><b data-page-node-id="PWbgAj5b2vvANOBgbO1EIB"><!--pnid:j73apIaUXNPImPA9BPdHFK-->20 天</b></div>
+        <div data-page-node-id="B937j2pxnG5Q6t6M1jUOTz"><span data-page-node-id="8XRscbyW5x0CHLSswpqMEx" class="lbl"><!--pnid:IwQ8lzNcVYVMd6hlp8EyDo-->平均 F</span><b data-page-node-id="BZVWyvCf7kJEPHlad0ruzd"><!--pnid:B9noTviV3KvuVrWEdLPDay-->3.0 次</b></div>
+        <div data-page-node-id="PK146A0VlNN90zjOEGMib7"><span data-page-node-id="YgrdEP2E9ho4vrnGLuCC7d" class="lbl"><!--pnid:YQ7F0Ot6iOtCwaWMsKwXQO-->平均 M</span><b data-page-node-id="36wGHeBzihaGIpEAVbFy5c"><!--pnid:BJDkGeIk855LuvNTOK0JzL-->¥3,367</b></div>
+        <div data-page-node-id="Le0diIN1CuxJKHS4obecMb"><span data-page-node-id="8n2pIqnxUroxhPdfM9xPl8" class="lbl"><!--pnid:CMNh4GrnpzqICfvSRGqvvi-->GMV 占比</span><b data-page-node-id="0KluINC84bPi7RhkyfaUvr"><!--pnid:1lBRXvvEImkBkkJYZ7MCfE-->12.6%</b></div>
+      </div>
+      <div data-page-node-id="BpBfN1umWrGCL7k5rQe2Fl" class="seg-samples">
+        <div data-page-node-id="bowEUDNUYbrMatdiOrvoHJ" class="samples-h"><!--pnid:MOOT2gEcqU49eJu23X1Viq-->🔍 样本会员</div>
+        <table data-page-node-id="NNu5pTPBanWS4OFzG6HetG">
+          <thead data-page-node-id="vFQBiw9G2w1mPXBwzhHCuf"><tr data-page-node-id="TzdXZdqJFBH9xez4uG8AWJ"><th data-page-node-id="reRjdUGKZbBkTF1N3HNqi8"><!--pnid:gEgz7nyRn9jrN6t3u2UVEX-->客户ID</th><th data-page-node-id="sYE0G8ni42BKmMifqAP4h1"><!--pnid:FZKHiNmZeat12ubEnlYqIx-->R</th><th data-page-node-id="GjerAVmwxqaY3i8iSJTMVV"><!--pnid:tRT1WMBhEIR2bU6VtS0MMK-->F</th><th data-page-node-id="kThwSWrNkqtk3nyGagtZYH"><!--pnid:JbzXzYrkd7qFSkJGMcyRsd-->M</th><th data-page-node-id="98Pf5vxdFSDC5rcPL6MwpB"><!--pnid:wBPcAiktoYS1EWI8DS4iAk-->RFM</th></tr></thead>
+          <tbody data-page-node-id="9m6SqBGWIbo54JW8pCysTZ"><tr data-page-node-id="W6FgkNrmTv47kxNyXZLkHm"><td data-page-node-id="MnfibXCtUiXDHRISQtrLwr"><code data-page-node-id="UEfcDuMac7gVXZJMc8Eeqy" data-pnid-children="sP1aY0H0pMYjGq4xpScpDT">C10010</code></td><td data-page-node-id="9gNC1q8gZUxwY4yCYydwLk"><!--pnid:iZLna81GEH70lJDrciHqd0-->26 天</td><td data-page-node-id="HDyBlaEZSTArvZhDgwol9K"><!--pnid:fJOsBgcBcoymh1W4v2CEwc-->3</td><td data-page-node-id="Rvp6JNSQirKMpcnEowhtsr"><!--pnid:z2x0sT8LIW6xQYDBjafbK1-->¥3,512</td><td data-page-node-id="LipIrBus2KwWOAO1SspBFg"><span data-page-node-id="P61HcIIs6oNz4QOFMLEQBI" class="rfm-code"><!--pnid:w1iSCucVASV0PZ4vWFTVJK-->R3F2M3</span></td></tr><tr data-page-node-id="f2wKzdH6uXTqtCNonVofTt"><td data-page-node-id="woEZm3HtFnMMs3Fy4mLriB"><code data-page-node-id="J2As8Q3wWojRU0VO8srXYY" data-pnid-children="Nn61C1p8fhdo4e7V1seDq0">C10024</code></td><td data-page-node-id="Hb6AnnUSXGfg72kiZjyxBs"><!--pnid:pdA9pwphZKHRNcKoyTVdnE-->27 天</td><td data-page-node-id="V5q2xU2rczmUG9FSNp3pr7"><!--pnid:ElkZDw0nqKRzuBrdIdGMg5-->3</td><td data-page-node-id="gANGstowFWq16PzUKMu0Ra"><!--pnid:24K5f6jPgLg8Zo9fJavMUp-->¥4,329</td><td data-page-node-id="V5hKrL8Pj1TheeeDGSnvag"><span data-page-node-id="0M9Zba5c6eBQ63XrNm2ljH" class="rfm-code"><!--pnid:1OC8qGPFL5ZsKmaOa79ZoV-->R3F2M4</span></td></tr><tr data-page-node-id="VPCQh1szqcxOCtfRVfhV3C"><td data-page-node-id="iHrdxGL3FPWEx0gNazU3K5"><code data-page-node-id="2duVxyRGMwvorpvcFIg8Hv" data-pnid-children="mmTEHZZD3uX9CO7dNJEHlS">C10022</code></td><td data-page-node-id="huArKlHrJuNT2lpqXm6R6J"><!--pnid:OzdQoJaFff4X9yYel28UGp-->6 天</td><td data-page-node-id="lF8kovQSJqiCx5B8i4Rm0n"><!--pnid:oOv1AvekRBTmy1gSVSZaBt-->3</td><td data-page-node-id="G9vWe12nG1eHAPTu0STorT"><!--pnid:RTSo9eim3mytbbLd79Q6Hq-->¥2,028</td><td data-page-node-id="qVxsmH0BwlWJZBoZLquALb"><span data-page-node-id="UzUzWBf085v5aDvTuhWJiz" class="rfm-code"><!--pnid:jqWgcNDY28Q5VnFvhDdZ91-->R4F2M2</span></td></tr></tbody>
+        </table>
+      </div>
+      <div data-page-node-id="X8TQTATXJjryQxZJdKhN43" class="seg-action">
+        <div data-page-node-id="cdfveULg3g5UPWJHwsuYxn" class="ac-row"><span data-page-node-id="y1jwOaJI0d0BHvUGiuvRjQ" class="ac-l"><!--pnid:XoThJU2fdNkCTppgE4MfZu-->💡 策略</span><span data-page-node-id="xdx8IUyC7hC5zSlnmpkV4t" class="ac-v"><!--pnid:fnkapA0zKTSfX4xIjNtw7N-->品类拓展推荐 · 会员成长任务 · 首次跨品类立减</span></div>
+        <div data-page-node-id="FOqoXZoYTxQiRSa282ld2J" class="ac-row"><span data-page-node-id="joNNg0vltY5KWFvlMyasOh" class="ac-l"><!--pnid:KWlNOnQRVie5Lisgjxcqxp-->📅 频次</span><span data-page-node-id="9EL6aqrpuSIMxjfeaH4Wfj" class="ac-v"><!--pnid:1cR1EbgDiE7M2UkHSolHmn-->每周 1-2 次</span></div>
+        <div data-page-node-id="XrfNCd9Dhc5l2hurrIMgx0" class="ac-row"><span data-page-node-id="1wmI1oOfGhxrLIu9O7HxM8" class="ac-l"><!--pnid:S4WnKJ5xg2O3o2aQGPuPVY-->📢 渠道</span><span data-page-node-id="23jJdp2o7APgmO3dxDg8aW" class="ac-v"><!--pnid:j2czzt0m3dOC8vK4kvL8yJ-->企微 · 私聊</span></div>
+      </div>
+    </div>
+    
+    <div data-page-node-id="k6xjUEvLG7tQh3vDE1aVOl" class="seg-card" style="--seg-color:#dc2626; --seg-bg:#fee2e2">
+      <div data-page-node-id="plTCtYWXqHm49XUADMxhDE" class="seg-h">
+        <div data-page-node-id="TVIMvHqPnZAYJJCorbj8He" class="seg-name"><!--pnid:BUFKm8Q7kzlQayHFsy4qA4-->高价值流失中</div>
+        <div data-page-node-id="zjJkc4QppinwLKaPcnDlBv" class="seg-badges">
+          <span data-page-node-id="1qFGuqTawse7J4uTu7AwF7" class="badge"><!--pnid:XGZiq7YYNEukEqSg9lOjCC-->5 人</span>
+          <span data-page-node-id="OeJfJS8SFL1TIApcAvC6e0" class="badge"><!--pnid:SMYcw153wi97qfZ5tL5Rwf-->7.8%</span>
+          <span data-page-node-id="Kr0GDITW4oS8I53u5t9S61" class="badge"><!--pnid:UyAeqkWMaeOoPuiR8QpibO-->¥17,337</span>
+        </div>
+      </div>
+      <div data-page-node-id="KvE5CIpJmv0bTluZdKveAw" class="seg-stats">
+        <div data-page-node-id="4SHAdjFttBATAj1gNJ7RjH"><span data-page-node-id="HYUrnH72BKjBIcgPXELukT" class="lbl"><!--pnid:Q0sQSc2IdBMF0CCawcEbxt-->平均 R</span><b data-page-node-id="5rn89F5vHRoksGuXr7XO6m"><!--pnid:owlclaXwKav2SCsNAO5AnA-->83 天</b></div>
+        <div data-page-node-id="Tb2dNgPsEnMVkblmNXB6MD"><span data-page-node-id="nWv7lZuztdZtiwSfOtcrzJ" class="lbl"><!--pnid:yvobFKoKozg3STNHCjNIMH-->平均 F</span><b data-page-node-id="HXjil5pMr7Ug3FBskcVtfl"><!--pnid:IZwEYrxwp2V0FfJw80zdax-->4.2 次</b></div>
+        <div data-page-node-id="lsliPXtPQTq3zU5kvZI2g6"><span data-page-node-id="8O8otidwWbC2DuoQl5VmQF" class="lbl"><!--pnid:I62QHCeTXlGnRe9fK6IlU0-->平均 M</span><b data-page-node-id="WvUz7nO9U3Anl6jSMp9n13"><!--pnid:IbvEPvra3jQ1PkN3foDl5x-->¥3,467</b></div>
+        <div data-page-node-id="kyZPy0TJHeGHBTXmo2qUfE"><span data-page-node-id="LVNWdYUZL3zbQf1ucQCLCb" class="lbl"><!--pnid:2cvbMHb2fHohGhKVk9EmBj-->GMV 占比</span><b data-page-node-id="kPVgfHjvOgIrcdGCcBOu13"><!--pnid:Kn0PgYJfgR3H6XUySqalEx-->9.3%</b></div>
+      </div>
+      <div data-page-node-id="VHA8A1jGkmTu0WnbBFBXBH" class="seg-samples">
+        <div data-page-node-id="pJqLk2FV0ITyRja0PiSHPC" class="samples-h"><!--pnid:H2tIgnOcfzZCUohkechLcW-->🔍 样本会员</div>
+        <table data-page-node-id="QCaNOTzMMEcqFmUKxiASdu">
+          <thead data-page-node-id="wIvv9xweIDMG952WsYwmBA"><tr data-page-node-id="qLnTlxY2jGgLFfnNmicM2f"><th data-page-node-id="edK6w5xnovZclhtIuZv09M"><!--pnid:Yb50N5xYSskPl2bnucSVLS-->客户ID</th><th data-page-node-id="VWehfScEIOcld1mn0JRQLz"><!--pnid:36cHMH5uH9qiA7dPalFo7d-->R</th><th data-page-node-id="ddSJkV7UY1X1k7yap1bSfR"><!--pnid:uRt2rFSs56RVOIgxgTe0v5-->F</th><th data-page-node-id="0jk97yIWc8AN4DCZ6Sf46X"><!--pnid:bpVm0XuGK7AlypKb0LPIYZ-->M</th><th data-page-node-id="fvbuzSATTPbIP691mahGDD"><!--pnid:UBe5ejEwoGYGzHLFrkU0Dp-->RFM</th></tr></thead>
+          <tbody data-page-node-id="OveGuN3xJ8CRgPt5ACsqgL"><tr data-page-node-id="wZjeEyEfhmLmvPzh0fjfvg"><td data-page-node-id="MjSQBgSExhDLdTeqmcHz7d"><code data-page-node-id="zV3Ypjx10hUg5LHHWWmbnY" data-pnid-children="tH7JtAkhcRldebLNSfjMNf">C10019</code></td><td data-page-node-id="2Xb1TsokJhh3Wi8hPg2bBe"><!--pnid:0SuSIoIcn8raSfDotpRy8d-->52 天</td><td data-page-node-id="CY0dmFh8Vjs0rF4dXHlV44"><!--pnid:Dbsgq5t0gFaRSDUp8K8Von-->5</td><td data-page-node-id="XvipqiADpdc0bTWWlaaXeT"><!--pnid:SA1UbMp2q77UTMC1Nr2u4J-->¥4,279</td><td data-page-node-id="vdqdDthJ4DhwuKQ9eLv2NF"><span data-page-node-id="N8anQ9n2rBGggxEhXEli1T" class="rfm-code"><!--pnid:D27WH4e01UZeGgskIh11AC-->R2F4M4</span></td></tr><tr data-page-node-id="gfkTV0hc3ab5ebMiJmDssz"><td data-page-node-id="oSDxU4P2Vjlf3ArB7dH7uN"><code data-page-node-id="ypFny78cTh1xQUxGQY0exC" data-pnid-children="GIZzDd8xSrpgfLk7Dqg7QV">C10046</code></td><td data-page-node-id="Ljzw0AhQ9oY4E9wMQFJMib"><!--pnid:YZOOKv3jeLyFGY65FoirbK-->115 天</td><td data-page-node-id="uT9h5Eu8ntT8Ksklll94Z0"><!--pnid:fBtmG7sfWAzEbyS49g4MGj-->4</td><td data-page-node-id="6NQEfxuKygiI7hrG33CISh"><!--pnid:o2Qt8Z25qIt1foQ1C6lekB-->¥2,729</td><td data-page-node-id="eICIjZVSdlsGbZbsXeZhtI"><span data-page-node-id="IavcV40Ts4k75mmk8EQfaU" class="rfm-code"><!--pnid:MauHoSmpXWQZmApdkajkUp-->R1F3M3</span></td></tr><tr data-page-node-id="booDT4zlKfbrtiQogxHvg1"><td data-page-node-id="l62PxcAvMfbRYTHcjq9J7t"><code data-page-node-id="c1LqoBZwstbUDZHEFf9Vkc" data-pnid-children="r2QQYR3ifxgrF90rUGRpAg">C10009</code></td><td data-page-node-id="EV6eT90x2PVeayGttLvD9o"><!--pnid:1MV3Tncx9so7xJOCHzi9rU-->42 天</td><td data-page-node-id="KFc2eV4fuJJNBtzLcGyzSg"><!--pnid:SxsArrJPlVc9ryQybMTJNM-->4</td><td data-page-node-id="Bm0Gj1zjDQoccRrJDCMFfX"><!--pnid:IeKApSxas3KSS7pc5T1yhr-->¥2,439</td><td data-page-node-id="ZSpeVGy7ZFx3P8tXezlfMh"><span data-page-node-id="cvDtZxcOq2siY65pjJixX6" class="rfm-code"><!--pnid:ikvru6Ll1eMR7xOEGJ9DQr-->R2F3M3</span></td></tr></tbody>
+        </table>
+      </div>
+      <div data-page-node-id="vArAPhMuOJp7koKNah1c6l" class="seg-action">
+        <div data-page-node-id="awT4Y4stJnxe6vCUR9y4m6" class="ac-row"><span data-page-node-id="05QIGlugxm90yAI44guMn2" class="ac-l"><!--pnid:SZAY38RaFtetHYTWy7inzl-->💡 策略</span><span data-page-node-id="2289TgmwVihNCp7nG6Ca2Z" class="ac-v"><!--pnid:xwtNI5JroDh5onEAPLKgXt-->大额挽回券 · 主管电话回访 · VIP 回归礼包</span></div>
+        <div data-page-node-id="ZClWb58MI9sOXCHh6kIb56" class="ac-row"><span data-page-node-id="ryYCEVe4oQx98i6wrNop2c" class="ac-l"><!--pnid:72rY9uB1J5arH87FUtT7eu-->📅 频次</span><span data-page-node-id="6IiXaSl6QCE3LM9MPJQrSQ" class="ac-v"><!--pnid:vwhWS3JtYYDYGRC3NB3Gn6-->48h 内首触</span></div>
+        <div data-page-node-id="5gFaQWReH39Ip0JMosolZ1" class="ac-row"><span data-page-node-id="mp8nDMm0hRl0qjltOTgqvA" class="ac-l"><!--pnid:pYTqEwdo2BvLhrzSRBD4Sc-->📢 渠道</span><span data-page-node-id="TKrz7Cp5xGSZdjxjrgRWJC" class="ac-v"><!--pnid:Fz4Qx0DU5v7v4umMhvqwGQ-->电话 + 挂号信 + 企微</span></div>
+      </div>
+    </div>
+    
+    <div data-page-node-id="fYfkQcy0cG7YleaLUxKGaS" class="seg-card" style="--seg-color:#00866f; --seg-bg:#ddf0ec">
+      <div data-page-node-id="NnNyHm7yHf51D8SDzZnYKJ" class="seg-h">
+        <div data-page-node-id="ksC4FeWRCriuqmgeeW4CSr" class="seg-name"><!--pnid:ftfw3gZomUs3cxva5gfI7x-->忠诚会员</div>
+        <div data-page-node-id="hRcHMMShze8zUuqF9YH2uK" class="seg-badges">
+          <span data-page-node-id="BiRSnjT9vAoOM41wWOiIQV" class="badge"><!--pnid:sXVOZPorxTO0fybQZDkyMm-->1 人</span>
+          <span data-page-node-id="oqtjkHueYhh5Ii19FSUkoO" class="badge"><!--pnid:bcMdAsOmOmrN9WgF0WRGMZ-->1.6%</span>
+          <span data-page-node-id="0P5lfhbLpAeJ3lbboCS5UY" class="badge"><!--pnid:FPu3GiHhlXRjBTYZp4CSDA-->¥2,347</span>
+        </div>
+      </div>
+      <div data-page-node-id="ARtbheQpYAjyU6Pk2CBV3r" class="seg-stats">
+        <div data-page-node-id="3XcvYTc1qhr1SmV0IYkIk5"><span data-page-node-id="C1q1pxojsTsiMsusYhtDXb" class="lbl"><!--pnid:4y0db9tbHkguSqxC1Ot5Co-->平均 R</span><b data-page-node-id="Td8MYFXuLGE84NMWg2xR0M"><!--pnid:esMIqXgJk4eHg1Anlx1Woz-->35 天</b></div>
+        <div data-page-node-id="NyqJaSueRNZUctRcZ7galk"><span data-page-node-id="Qt4uVmoB5TYvTyQYIxPhjx" class="lbl"><!--pnid:LWVxyPSfMcfxnxp5YIIYJz-->平均 F</span><b data-page-node-id="XEfaQuaDxiXIY0NUwt8Jbr"><!--pnid:ESsQFocSJZaawn9BcoZ6yO-->4.0 次</b></div>
+        <div data-page-node-id="yGipvLico4R2ZfZyCJtf8j"><span data-page-node-id="wL6Dc6vQUDqn3dejCmOyaH" class="lbl"><!--pnid:XO5GM1xORTl8nTM5gIyaoR-->平均 M</span><b data-page-node-id="gyV27632hllHhWjIVGPD5b"><!--pnid:tf3qo6vhkbQMxhRsCwilBy-->¥2,347</b></div>
+        <div data-page-node-id="DqV5ZcJvjcCuSEa5jNsKIA"><span data-page-node-id="19CniVLdOjMCBgmb3hwAH4" class="lbl"><!--pnid:Pxz3nuNorG4duHNlW74TQg-->GMV 占比</span><b data-page-node-id="7AlP4Mx58MBXtCWRAyF6kG"><!--pnid:tbRrpgade4WzNkno3XpwDb-->1.3%</b></div>
+      </div>
+      <div data-page-node-id="hR9FTidV21gwoN1WGfq9aK" class="seg-samples">
+        <div data-page-node-id="wX9XFmf0EyeesETEBpA52O" class="samples-h"><!--pnid:iAuygplPEf2eCbdC0cGyiL-->🔍 样本会员</div>
+        <table data-page-node-id="A0RJQQudDeY6H78KozE8Uv">
+          <thead data-page-node-id="S7JZSFgjqdqFiXQfBnp0BC"><tr data-page-node-id="92E154ZeLk89K5D13hg59P"><th data-page-node-id="d4nJis15oYN8X6J9POzJqx"><!--pnid:XNI3A2wejHTqbkL7CPAjbo-->客户ID</th><th data-page-node-id="e9eJStDDZNlhTqPWC6F0h6"><!--pnid:ZItuNfrAKT16Y8GY2R0e16-->R</th><th data-page-node-id="FMXE5r0snffHpavVCPVjoq"><!--pnid:pFBHA3G86pHzDxt14LFKJX-->F</th><th data-page-node-id="nioy1uOk1dSFBtnern02DE"><!--pnid:iUvcrjJrqtKrY98RVU59Hj-->M</th><th data-page-node-id="il4IgjFCCvyYaxTUjxnezr"><!--pnid:v6nJQixebo89x9z1X4W1va-->RFM</th></tr></thead>
+          <tbody data-page-node-id="Dw81DyZP8xZUfAWIUHXPuh"><tr data-page-node-id="scVZNAXUWgi3fT9L1pc5qQ"><td data-page-node-id="8f5kzFBxZrJZl7iZlBA1Sy"><code data-page-node-id="9tANjqDvC2Qvt6WhgBWKW8" data-pnid-children="Vdli69RgJKUInV7tD8eF4R">C10020</code></td><td data-page-node-id="YLf3cPmOW72jerlDh4P8rF"><!--pnid:B2wd9QJLssWtVPc3ESW013-->35 天</td><td data-page-node-id="uvlssw95aLEUfcq2qmurcQ"><!--pnid:ms7ST2dvADSI2SnpwRClHw-->4</td><td data-page-node-id="q5hKLOvhtfgOsvxbHeoJBM"><!--pnid:RFOkXcMcnhLeJZhTvvrxRy-->¥2,347</td><td data-page-node-id="mzaJ4YwiiRI6bjNWZzuxEt"><span data-page-node-id="J74xunFEnku2uehAgInFFO" class="rfm-code"><!--pnid:OiqQPKepjz1n03XxvlXhOz-->R3F3M2</span></td></tr></tbody>
+        </table>
+      </div>
+      <div data-page-node-id="4Pimf2aWTZMT0ZhgJl5U08" class="seg-action">
+        <div data-page-node-id="8XI6kHosUMtB3XMH2QNaLt" class="ac-row"><span data-page-node-id="1LzsqiFeJgsQ1nprwyNne8" class="ac-l"><!--pnid:c5uZx15NFu8HDLN9u7kIbM-->💡 策略</span><span data-page-node-id="VNyqg8PvOFjhQ27EqRE5zu" class="ac-v"><!--pnid:IyydlA5DhoCq3YjfQxOA10-->年度会员权益续期 · 组合套装推荐 · 积分翻倍</span></div>
+        <div data-page-node-id="pbK0gGcvffeDswZOLAOoTo" class="ac-row"><span data-page-node-id="f5abRVKJsVZ5V8FWlmd1ol" class="ac-l"><!--pnid:wzE8H81hvOufVQJ001XC7f-->📅 频次</span><span data-page-node-id="FxU4ygbFxvkT450a8bZ3mp" class="ac-v"><!--pnid:0H4y0HZnFgZ4wwtxWt7sKz-->每周 1 次</span></div>
+        <div data-page-node-id="umBukZe9TwaHTjuWBzAmFl" class="ac-row"><span data-page-node-id="IqMT4BGeDEkEpQkW1wMpQn" class="ac-l"><!--pnid:0JOaUzShroGddS1wbktfsa-->📢 渠道</span><span data-page-node-id="AmzG7MRq9rI9HO3Rm1FKNj" class="ac-v"><!--pnid:DrXBKCqWIvlGJ1eLa2ok6y-->企微 · 小程序 push</span></div>
+      </div>
+    </div>
+    
+    </div>
+
+    <div data-page-node-id="WUJTOu3bTlrb1V7I8nlSVP" class="callout" style="margin-top:14px">
+      <b data-page-node-id="crBNMihXkADFldWqDpZSUt"><!--pnid:zPsjFTpJPV2WT8tmp2PXRW-->📊 分段健康度自查：</b><br data-page-node-id="NaZj9xhF4yJhYyR2wiYRPR"><!--pnid:kANIbVgK7PqcEOMTG0grtR-->
+      冠军+忠诚 = <b data-page-node-id="dG3etROk0LIijhqJMqhsht"><!--pnid:gR8t1WFJblvH7wbJB88Naw-->20.4%</b><!--pnid:lgea0KfEDho9442KXeN7i1-->（撑起 <b data-page-node-id="BRxL76Nnaqsix0n4qxs0pr"><!--pnid:jBYTqPbuBUvn09AfWyq9GX-->42.1%</b><!--pnid:3QJ7ZnrYtNfIaxwiAXc6uY--> GMV）· 健康区间 15-35%，本次达标 · 头部 20/80 效应明显<br data-page-node-id="DVnc1LdddTrw1Dd5PZ5p2R"><!--pnid:3gcwtC4v5ruhFmJuoHkLOH-->
+      高价值流失中+需要关注 = <b data-page-node-id="J80AyHnJ5mCX1Rpe1bwATF"><!--pnid:9meX2oLgNGw1MG0aeidHfJ-->23.4%</b><!--pnid:ZXuzIaJbobbNoavEb77EGd--> · 健康区间 10-20% · 达标 · 是本轮运营重点<br data-page-node-id="Qv1PSleOw2WeN0RCtdK7Jq"><!--pnid:oglOvim0zSjm5q9No2T3hv-->
+      新客+潜力 = <b data-page-node-id="qmKwMnlqh5QD4vI4Dy9kFf"><!--pnid:xQQg2JQJTTm0Ch0v1tL1Yp-->23.4%</b><!--pnid:x8eeXJECOAmvn08DdRkJHD-->（增长管道健康）· 冬眠+流失 = <b data-page-node-id="Ey3Hl8RkPrca7pyBdyJPcE"><!--pnid:kWqYwehfXQv8HPbmZ57Jx7-->32.8%</b><!--pnid:xMIWjsXArsSnBpLksKG4Du-->（正常范围）
+    </div>
+  </div></div>
+
+  <!--pnid:FBerS9reLmF63sway1iRmY--><!-- STEP 5 · 资源分配 -->
+  <div data-page-node-id="dvn5obWkt0eMwGNt1pI4Jj" class="dstep">
+    <div data-page-node-id="sXfcS9TZytuaRBxvDIwB99" class="dstep-h"><div data-page-node-id="eYwvKIAJbEhsVJS4iKh28g" class="dstep-n"><!--pnid:Va0tZ13qVIhjBzlFCyo384-->5</div><div data-page-node-id="mGpf6TSDUVedyNfqwUrE5a"><h3 data-page-node-id="Mvm0TB8xB37ZgNFkFFdqud"><!--pnid:xTgfFfzyVAyNcYv5D0VHmf-->资源分配建议：60% 资源投在这 3 段</h3></div></div><div data-page-node-id="5AhiSyCMDS6bLdHcQqUf4I" class="dstep-b">
+    <table data-page-node-id="IpwRAUd5tCT3qr22Fw7tyN">
+      <thead data-page-node-id="jgyn5XsNbNdpvwIlSlPrBd"><tr data-page-node-id="72eihQmVSt08r2umDscee4"><th data-page-node-id="AcKmDzKsNVyg5ooy7iC8Nj"><!--pnid:tPK2Z22GMq0PBpzSKV4oFX-->分段</th><th data-page-node-id="u7YseSULRX0l8k2kFPyH3F"><!--pnid:2x5NWoZyW9D4lj88XmI3lR-->人数</th><th data-page-node-id="WZbZ1c1p6HVYMZ4AGYar2R"><!--pnid:FSKvjyRwOazer4mjIsQePH-->GMV 占比</th><th data-page-node-id="Xo7tPBnT72cFzq1rByj0Jb"><!--pnid:BAb5o1WoVuwtGUn6sz3vCX-->建议资源</th><th data-page-node-id="5yfu7itfOClShsRNqp3xFH"><!--pnid:nzhWYOUQLmvqDmnOZQiRzK-->核心逻辑</th></tr></thead>
+      <tbody data-page-node-id="KrauxTyh1MXbeXRwFCLJ3V">
+        <tr data-page-node-id="cr4dn4E9ZCKKWVD5jagm70">
+          <td data-page-node-id="p2L8GukqihmFVXy6OPqeJh"><b data-page-node-id="ZZaBGJ4llsW1RhRFYfEwuO" style="color:#059669"><!--pnid:tDhSaDP8e5ZamW40IQzpal-->冠军会员</b></td>
+          <td data-page-node-id="0HqLu58NedcJ52QRnrjP7o"><!--pnid:rdVEidoakpS4jHtTUkIlc2-->12 人（18.8%）</td>
+          <td data-page-node-id="DZVBJRQZpDmMV2hyV1fI6n"><!--pnid:PkBl9TZUZX1L84ucl1F45T-->40.9%</td>
+          <td data-page-node-id="yS19IFQO5lhylpU8nvixhO"><!--pnid:fGqg4QomZ2PqYkJkbPTMlc-->25% 触达 + 15% 顾问</td>
+          <td data-page-node-id="1qsEtqruWLukYjlovur7aF"><!--pnid:AvufRuVjZrXBuo7A0ZMBax-->撑起过半 GMV · 但绝对不发折扣券（会毁掉毛利）</td>
+        </tr>
+        <tr data-page-node-id="A8X8cl8WmBkuPIYkTioq0K">
+          <td data-page-node-id="YTYdAloQAhntAQ3REoBT9t"><b data-page-node-id="mWMjAIq78amdZQPgPawzqx" style="color:#dc2626"><!--pnid:CyQMBWF98ELW8EYHZGf1y9-->高价值流失中</b></td>
+          <td data-page-node-id="0paG4Fe9I3YwQnsnEDOdLx"><!--pnid:mvDgaGbSRU9Kr0veIDsHB4-->5 人（7.8%）</td>
+          <td data-page-node-id="owN6KYxrcPBxVvEocW7OJj"><!--pnid:79yhU3KalxPng51CXkAhkM-->9.3%</td>
+          <td data-page-node-id="0iZ3dV4EpUv223R3GON1xd"><!--pnid:yPsoGYLigHxA3I9XvS8OLZ-->30% 触达 + 大额挽回券</td>
+          <td data-page-node-id="it2WMgjx002U6OVDpdryDM"><!--pnid:hMbSPC2dKB0LOZgNqDvnOC-->60+ 天未回 · 若不干预将转"不能失去" · 挽回 ROI 最高</td>
+        </tr>
+        <tr data-page-node-id="9WwoQj5Uwre9qkbrs4j2iR">
+          <td data-page-node-id="w2bJDFqkdgjY1xzZTJlN3Z"><b data-page-node-id="mjUJ0Ol0wj9sO0WtsrvPDq" style="color:#0891b2"><!--pnid:95Fgy4k9fe8KNi6gHqOkJ2-->新客</b></td>
+          <td data-page-node-id="Mp8yTdvfrnvYpS7mnUu8Ze"><!--pnid:ZZ9CJVwDp3zTJT1hNDSSGO-->8 人（12.5%）</td>
+          <td data-page-node-id="xKWY63zMxwBFr9wPaLg0MA"><!--pnid:MZLVQLjSEAuWMwmFeTopLG-->3.6%</td>
+          <td data-page-node-id="FT8tEJb1kp0YeqTCR69hzi"><!--pnid:NYhDNBNQljXTlXObRAwfKe-->25% 触达 · 60 天转化 SOP</td>
+          <td data-page-node-id="iDOhMO9jCodwS5w2952xh7"><!--pnid:X1trFmQTHDSc2wI6rFkKBu-->第二单是护肤 LTV 关键节点 · 需 D1/D3/D7/D14/D30</td>
+        </tr>
+        <tr data-page-node-id="aCjn0m2ZGmY8zFo4DJxBMm" style="background:#f9fafb">
+          <td data-page-node-id="fAgn3INNxgOxoCqYPgo3Hx" colspan="3"><b data-page-node-id="UcgIQSFSUjTweJz6Us9g8n"><!--pnid:HnV9orS5GfbQIqe5SPI68l-->其他 5 段</b><!--pnid:gTeIZDFfhhdVKNHLLJaPgf-->（冬眠 / 流失 / 需要关注 / 潜力 / 忠诚）</td>
+          <td data-page-node-id="w9VOi32Ax1M5hHDflqFYfS"><!--pnid:h8Nxl0NnqXNq52F0IkjYU5-->20% 自动化触达</td>
+          <td data-page-node-id="U55oF9tmsfGY5zKrJjIQ3x"><!--pnid:TkB1DOf9IopjcGLJkaIi4E-->低成本 EDM/短信 · 不投人工</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div data-page-node-id="343hVTN2qVDIxHt4Vyj5Pc" class="callout warn" style="margin-top:14px">
+      <b data-page-node-id="sHOiBmDXmbBoBxR5ET2sqB"><!--pnid:z5zCjiRn8h2G2Oq5pN3YYc-->⚠ RFM 最常见的踩雷点：</b><!--pnid:O8J2NHaBpjL3WfamAihRNR-->不能对所有非冠军段用同一个折扣券。冠军段送权益不打折 · 高价值流失段送大额挽回券 · 新客段送教育内容 · 冬眠段自动化触达即可。<b data-page-node-id="V37b5dbtop2XvBCDA0YWpE"><!--pnid:hAGIKrNe27SIfItOkJ4n5i-->"一张券打天下"是 RFM 最典型的反面教材。</b>
+    </div>
+  </div></div>
+
+  <!--pnid:Sk9Y1lkDKyJ2lAE5krRook--><!-- STEP 6 · ROI 与迁移追踪 -->
+  <div data-page-node-id="c7ySw0s4uTIWTHdVhy0oWk" class="dstep">
+    <div data-page-node-id="LzSFRkuDtNk1vTcC45HgER" class="dstep-h"><div data-page-node-id="kp05ljwiLF3uDVYNAkd2S2" class="dstep-n"><!--pnid:I1hC4Eb2cB2av88Ln5osQq-->6</div><div data-page-node-id="g2LvufrBIWjfxGCPBdxeRC"><h3 data-page-node-id="CRmNp8djFumrwAfs38B8Cb"><!--pnid:n5tWhbwr8NwDpfoNH88GyG-->预期 ROI 与迁移追踪</h3></div></div><div data-page-node-id="txXsbpc4NSYHweTyvp46C4" class="dstep-b">
+    <div data-page-node-id="MtJ4X98go363xuFoj1eXMX" class="roi">
+      <div data-page-node-id="9xav6R7McahezojblSoknc" class="roi-c"><div data-page-node-id="T5gtOyR7hLrQvgAcohZ3VX" class="n"><!--pnid:1F6os9NAf0iEGEyq3gewsV-->¥6K</div><div data-page-node-id="x6nx5D8IbqSnfGnacOJuxD" class="l"><!--pnid:rFVXBiIxYXtwxVv5QebN2R-->高价值流失挽回目标（40% × ¥17,337）</div></div>
+      <div data-page-node-id="jJ6IZr1xnBZBsxcT3b3mxf" class="roi-c"><div data-page-node-id="sgTHWFiSsSsQRpF1bxiPkc" class="n"><!--pnid:3DBnbsuAJRMKdOLvYKsbah-->+24%</div><div data-page-node-id="Jijekp8Y6pKJcgFXS8zRJE" class="l"><!--pnid:6k6YYcshSf1DkiVxi2JJfG-->冠军 AOV 提升目标</div></div>
+      <div data-page-node-id="KFkfXyWikoRIBLM9PFCGDw" class="roi-c"><div data-page-node-id="4kjwwhKjjeZ1s34sv3Zwhl" class="n"><!--pnid:Q6x3Tbs4jvFeJThuhM0LHH-->18%</div><div data-page-node-id="CgpYfd3ZBJTsA9GpDCxAQ4" class="l"><!--pnid:pidyYtm1BNOWnM4iztxxBw-->新客二单转化目标（行业均值 8%）</div></div>
+      <div data-page-node-id="ilPs6ds2TV8Ch20SADfyWy" class="roi-c"><div data-page-node-id="uWmn9reiAZE2RWaV139E1n" class="n"><!--pnid:Ujb5TCgYv6QB6CU5XWobGt-->30 天</div><div data-page-node-id="RnrH5D9DqSY9iAMrBIV589" class="l"><!--pnid:mDO7gSCERvl73XVOZfbrTn-->下次分层复算 · 追踪迁移</div></div>
+    </div>
+    <div data-page-node-id="d7el41FlmYrDCyz0hGRccK" class="callout" style="margin-top:14px">
+      <b data-page-node-id="TPBh9tYfH1N5lnqVld5bwd"><!--pnid:em0pSttOhWx4RHaPbm5e7G-->迁移信号观察点：</b><br data-page-node-id="U19zVw09xe3xDMc0QxskIA"><!--pnid:1XsoBRuFfMjuroCbFrUYwn-->
+      🚨 <b data-page-node-id="1vbKvcThOM8dMcWwhIS1Ww"><!--pnid:c4ORljhqnw4zrVyJGJKrBp-->预警</b><!--pnid:nH6slmgwU88YXEfdDLGooJ-->：忠诚 → 需要关注 → 高价值流失中（留存漏斗有问题）<br data-page-node-id="NrfLTu2Frj0iFbqxDFspbn"><!--pnid:16uNsPvDgSsaw41D8OT1tF-->
+      ✅ <b data-page-node-id="0cTuBdYNz6BdklqgBqEBjJ"><!--pnid:0LyBolLP0at5ddqOShGhOy-->成功</b><!--pnid:P9l8McxjFj211raGlpDf5t-->：潜力 → 忠诚 → 冠军（第二单 SOP 有效）
+    </div>
+  </div></div>
+
+  <!--pnid:5pXzItQOAMlsfnal2x8myS--><!-- 交付物 -->
+  
+<div data-page-node-id="q5FW7ODyzRjxfoUXEz5ThI" class="cta"><div data-page-node-id="schU2A7SLbAihmFoKP5rS5"><h3 data-page-node-id="sNV2Bw4gZ3txNpD6xlXccK"><!--pnid:kPnWJ1xwoEtaANybh8uH4u-->想了解来龙去脉？</h3><p data-page-node-id="CZAOVye7fLAlKzPA8MPmch"><!--pnid:zWEfLxHs7xZTWU5ll2xt2V-->回到场景引入，看这个场景的痛点、做法与边界</p></div><div data-page-node-id="IBmR270S8hiVkNNX8lmJ89" class="btns"><a data-page-node-id="BLcVp7qAGQf455QFMuSIUi" class="btn ghost" href="场景引入.html"><!--pnid:xxFGc2wawziiwe8SoKqTIM-->返回场景引入</a></div></div>
+<footer data-page-node-id="n2ptGeA22hvHEO0eBLZBnC"><!--pnid:5tFfvF2bUV6BJxY0LRXWdT-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+<script data-page-node-id="fQ97EKoCfCsv3gaPettVGz" data-pnid-children="f1S9WROFvEmdbLOKMOiTqj">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="1WFVzVl3Rl7KymXyWxf3yZ" data-pnid-children="mrcmgguZpnDo5KkPlqOqEM">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="dNu7wL0TIvy3k0BPBGs82a" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="v6VKm3m4jAqb4k2tPIkCGj" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="wkwiLfNBpCv7Ptw2SEJLaH" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="2R5htPOwZYbqE8xkwzMDtF" data-pnid-children="ws9YWQEd0XCXoTVojsBKX6">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html data-page-node-id="3YxfH3znXqhofR307L7mNr" lang="zh-CN">
+<head data-page-node-id="21MkI49sz8cKI7KyRoXcz4">
+<script data-page-node-id="QxJqkjwW1FQDStAJyv99Yt" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="EqMcYIOUF12yVN3unkNonM" charset="UTF-8">
+<meta data-page-node-id="TZT1S91BxDPpRe0Jm9MWAq" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="xZjJFmxYSOk0UQIdzRmApc" data-pnid-children="LoHKHnRyZDKlsgObczQ2pQ">人员汰换评估</title>
+<link data-page-node-id="5LHmkI0sjILa3t3sVQ6f3C" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="BgZ9hfuy2ZHG9Qw0uoPX2L" href="_assets/shared/hr-extra.css" rel="stylesheet">
+
+<style data-page-node-id="u05b2nM0s96JyrROSPb2ns" data-pnid-children="MSZVtQ0SVajpTUxuWMrvpQ" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="rTFSoGrFqRRFCTRZH8VNN2">
+<div data-page-node-id="yvEtcOPIJ7fVOuJxm3Lg0S" class="wrap">
+
+  <section data-page-node-id="mQ5KWFQ4c4fo0oEFfU7wMR" class="page-hero">
+    
+    <h1 data-page-node-id="niKIm5AYFvStkWcw0cK2hF"><!--pnid:wDqGkM2CaqFovFoB0UyGhS-->人员汰换评估</h1>
+    <p data-page-node-id="cxZfYMPyF2c8mn7MkKFeXe" class="lead"><!--pnid:5jvB2n5hsKYd6gWCeZk90Y-->绩效 + 薪酬成本 + 出勤 + 违纪 四源交叉 → 加权打分 → 三色汰换名单 + 合规动作清单</p>
+
+  </section><nav data-page-node-id="D815C0JkNHadkxOoUaWP8k" class="subnav"><a data-page-node-id="CE8Hja23ZkKE9lRCXUINX3" class href="场景引入.html"><!--pnid:dYvXITpAF74tp1ww4fEal4-->场景引入</a><a data-page-node-id="KY9S4J1u0Vu78anmMVMhTF" class="on" href="#"><!--pnid:wzXtTUXHbgSRWCw33xCXaA-->Live Demo</a></nav>
+<section data-page-node-id="OVmqytSustIhZpZq39RvAj" class="notice warn"><div data-page-node-id="vzTc3qi1D60zq6ieFF1Rxp" class="icon"><!--pnid:oIo3W5W5CIrGIApnR4QIgt-->!</div><div data-page-node-id="Ct4fdty59CmorBJPdlMYuU">
+<b data-page-node-id="DbbXgp9uHbXuBj6vw6HzxP"><!--pnid:oAWfwQH9h3D3isVWKPUeXI-->演示模式 · 可视化预演</b>
+<p data-page-node-id="uhQ0QB7skexQTOtXppnao5"><!--pnid:OTMqY2MyJv5oFF92XC6J10-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="prfz21R1GOrswGmImin3ty" class="kpi-row" style="grid-template-columns:repeat(5,1fr)">
+      <div data-page-node-id="kNfC1vtCIQ2n55dC5Fuhsx" class="kpi"><div data-page-node-id="gzPztN77TAOzH0fUDQcF61" class="k"><!--pnid:hsTRufobfBvVoBYXdL7AyT-->评估对象</div><div data-page-node-id="4VuOhl9Df5FgndcWZUHiy0" class="v"><!--pnid:wVK4Y3VOvWukfPWYBGQrWg-->12</div></div>
+      <div data-page-node-id="ur13kl0RalDQIvEm62EGvW" class="kpi"><div data-page-node-id="pxq19xKpAVUVQKvU6dcDYf" class="k"><!--pnid:dymynPKaPJzKo8QHCNExc3-->四源数据</div><div data-page-node-id="e6NcvoXIl8zjDZ91fLsKmE" class="v"><!--pnid:3G151PK4MFwBEIWLtfKAPK-->4</div></div>
+      <div data-page-node-id="66wcs7EiB2ST5igHp45hOe" class="kpi"><div data-page-node-id="21rHtH9kkRo0oEBcdERySg" class="k"><!--pnid:Oad1jxR6H72NBxP7SpBMQ0-->风险名单</div><div data-page-node-id="JHVoKTEwj7jYt0F1625yhR" class="v"><!--pnid:7ngbKuuTLxfBTJuR0OxDME-->🔴2 🟡3</div></div>
+      <div data-page-node-id="RhmhqYNlFUYak6YjsK0886" class="kpi"><div data-page-node-id="fYo0heOwfZ0A6Vq9bjKcKO" class="k"><!--pnid:1tGriD95TqnQApHQihydnJ-->出名单耗时</div><div data-page-node-id="qgSpd5pv5WPwERoKAcLjhF" class="v"><!--pnid:s47fNVfpXtmR32qSxhVEdS-->10min</div></div>
+      <div data-page-node-id="MQ0xPhWeyIKqTTXqkRmKGo" class="kpi"><div data-page-node-id="4Fd3GHU5qNJtvPoRMXsF1z" class="k"><!--pnid:hPdCuyQrcnD3aRxNAYpbjY-->节省人工</div><div data-page-node-id="Jvp2Bfqque46AWLDvx0fqF" class="v"><!--pnid:jfUl0Wu4lngbTQtvPe1Ypm-->1天<small data-page-node-id="iwlwnaDWoN25gBvrvdaAVG" style="font-size:14px"><!--pnid:9uRH6eizR6VOKAW7K0kkKk-->→10min</small></div></div>
+    </div>
+
+  <div data-page-node-id="CXd671rAOFfxoHUloGLN1t" class="dstep">
+    <div data-page-node-id="nrp2UVb9Hj1ebREEHOO2yB" class="dstep-h">
+      <div data-page-node-id="gXtAcnYFxqJHIepRUSg8nN" class="dstep-n"><!--pnid:aKYTnJcCLSApnMDR4dzUjL-->1</div>
+      <div data-page-node-id="dIteFO1qQPmUl6Fj688tbq"><h3 data-page-node-id="XH31No9rw5bGmdzwMStoiZ">
+        <span data-page-node-id="6LvJxoBMHK1ftVTUAf5g0y" class="st"><!--pnid:K2DWCfxLAwcigMieKmROEi-->Step 1 · 四源数据导入（碎片化输入）</span></h3></div>
+        <div data-page-node-id="td3GrRZCLjaUlpVvs5qJuc" class="sd"><!--pnid:Ak2FzR8ApgMlTQdUGRnoQN-->绩效评分 / 薪酬成本 / 考勤 / 违纪 4 张表 · 12 人 · 覆盖研发/销售/制造/职能</div>
+      </div><div data-page-node-id="scQHlzFUnHYMANc1Zvz4hn" class="dstep-b">
+    <table data-page-node-id="0gDK6IVbEFEHtNX1k5z334">
+      <thead data-page-node-id="jxguSnuydgILJaJW6dsomW"><tr data-page-node-id="YDHOGgAfKmpsH9Rorxsb00"><th data-page-node-id="OuYZg8ZaEwmMljbXtM1mPg"><!--pnid:CHIzDqkISubII2siXv9u8f-->数据源</th><th data-page-node-id="XnKs05EiwPhKUcb4SMaftt"><!--pnid:Z9DznAiHZdo3nGMTCShmk6-->来源系统</th><th data-page-node-id="6x2Z7mz7vdge7nEBZjcpBG"><!--pnid:SaGYIO505ctbjeWYrlqXp0-->关键字段</th><th data-page-node-id="G4XvpNX4rdJp3KDNcEUqgC"><!--pnid:zjfSwSPSzlf0AOHiaxwwbf-->覆盖范围</th></tr></thead>
+      <tbody data-page-node-id="dm04gMIfW0DmKlZu6uvh53">
+        <tr data-page-node-id="Nc5CDX2kCpQaBuIjIYL3Qj"><td data-page-node-id="80l6zh14WIYGMlb06GwMln"><b data-page-node-id="erthNDP7niPn3dwpsUZ4n2"><!--pnid:Eiq0idK2QSb9GaXEO1iDay-->① 绩效评分表</b></td><td data-page-node-id="E5vgSSvw19rEZNEKTOovwJ"><!--pnid:3Eoznbjq36KkCRYWGmpKbo-->绩效系统 Q3 考评</td><td data-page-node-id="WUy7OCu5mf7Do6JVUMX6XU"><!--pnid:BuCYnv0T5GTCvAXoxqBgf1-->绩效等级 / 绩效分 / 季度排名</td><td data-page-node-id="tPKV1fYHxIu9imQrooofJw"><!--pnid:y1Dn7wXcC7r5RLYGfU7Ez1-->12 人全部覆盖</td></tr>
+        <tr data-page-node-id="hM7rUoIZweTDuF89Qu5nDV"><td data-page-node-id="RFAkADbP2TTBvRVbz6ItRH"><b data-page-node-id="fsMYVNQQm0ATsNkMa7NhaN"><!--pnid:pbkx3OGZRTaMgPrnyyCKV0-->② 薪酬成本表</b></td><td data-page-node-id="TWNDCBsOfgm8uaDykjanMZ"><!--pnid:TsPzBYVY9LFwFKTPy4jtJG-->薪酬系统</td><td data-page-node-id="6LzRayPo5FtPqlNqbZu7CO"><!--pnid:W6r9zHQ4MkZPhexZCSrAC3-->月薪 / 年总成本 / 成本效率分</td><td data-page-node-id="NPlZdsptXZUywdIMsaHmoC"><!--pnid:Fsq0IZSQUOxrY0aHVhdPFX-->12 人全部覆盖</td></tr>
+        <tr data-page-node-id="zb7C9b2mRd8Fy35KGPzNb8"><td data-page-node-id="UxuyWchFBGE60TZEBVCXPd"><b data-page-node-id="OeowDek9Vf4oOgzUxLbbGE"><!--pnid:EcbijSWsjrbhcERLw4fcfU-->③ 考勤记录</b></td><td data-page-node-id="uJyXXj30KFq5ek5kcD0uB9"><!--pnid:XucwVaohiA2yWA8JHQjpX1-->考勤系统</td><td data-page-node-id="MhCzhnaiMXGaYIT09WWmAH"><!--pnid:Nits32BDVBHwrOw4gwxzLq-->迟到次数 / 缺勤天数 / 出勤分</td><td data-page-node-id="UcGis0Zax8t1zHUZO1OGnX"><!--pnid:jXZESzPODA3yjc61ZAJiDe-->12 人全部覆盖</td></tr>
+        <tr data-page-node-id="nTeWIi9XyZGKSqjnGW8TTH" class="hi-row"><td data-page-node-id="3fSflFQI4dGJQbyoqx91El"><b data-page-node-id="omPX7Cx4sIeJb6UX000rME"><!--pnid:4PWK6lfppmQe1gJpXGF3fq-->④ 违纪记录</b></td><td data-page-node-id="oFIBjWJju72FD18pM0zYuz"><!--pnid:qu5jot5xaNIfEQ7Dn0c0RK-->违纪台账</td><td data-page-node-id="3HcKMNdwsyR0NmTP8K7XIw"><!--pnid:ls3Di9kpIKDOCpvgvO63Pr-->违纪类型 / 严重程度 / 违纪分</td><td data-page-node-id="uxx0oWI9NWLE4J3rkUc2tj"><!--pnid:eMQGlO6436COVEPckNe4yb-->1 人触红线（王大力）</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+
+  <div data-page-node-id="BNkU75yaUm0cxhcU4Epe61" class="dstep">
+    <div data-page-node-id="NOu3gHjWkZUmcVT5imgALh" class="dstep-h">
+      <div data-page-node-id="WBerlIUr3qcWDLqzbY9Olf" class="dstep-n"><!--pnid:i6fpizVWLR8yiAfgCqy0XO-->2</div>
+      <div data-page-node-id="RdsAzRbcU9UovgI21PxysP"><h3 data-page-node-id="lE5RChjEy6XPCeVNBCskmV">
+        <span data-page-node-id="T4lye1QjsqY450BzcAHrDs" class="st"><!--pnid:gfIQOYYWnbR8CZBvMKPGyI-->Step 2 · 一句话调用人员汰换 Skill</span></h3></div>
+        <div data-page-node-id="U7QUdcwPXAwM4b6z534oDP" class="sd"><!--pnid:au0po1CTAMUhU8mH0FS2zb-->不需要自己翻 4 个表拼名单</div>
+      </div><div data-page-node-id="ssda0tbR9O9fdrGa5JuT4O" class="dstep-b">
+    <div data-page-node-id="bRzHl0xlkGpJsVZK4Hevv2" class="prompt-box">
+      <p data-page-node-id="cjzyk7bcYhQNBDuOA0KP50"><!--pnid:VWBLBqdJia4q3Pd1ONJjvN-->帮我做季度人员汰换评估，<span data-page-node-id="FhGzEsg0gP4zr6yAlTiMGb" class="hl"><!--pnid:SLRGURfpzZdvFiOBOuMhBr-->四源数据已上传</span><!--pnid:9oI0od9kJTLZe3Z2rx3yYf-->（绩效 / 薪酬成本 / 出勤 / 违纪）。<br data-page-node-id="OfSJZTcMs6Zm5WKVPrupnJ"><!--pnid:gtHR14RydqgNrMK1YTnQTZ-->帮我：<span data-page-node-id="QKKPYdrTnvBAtTRcgZBTPV" class="hl"><!--pnid:Fzyr9VZ3yho3tTuG06n4t1-->① 按人员对齐四表加权打分 ② 三色分级（🔴汰换/🟡观察/🟢留任）③ 标出高成本低绩效隐形冗余 ④ 输出合规动作清单（证据链/流程/话术）</span></p>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="JEkeqTv1jmYAWB4KqCz68o" class="dstep">
+    <div data-page-node-id="7Y7YP2GmAD7ShFFCTAxEmT" class="dstep-h">
+      <div data-page-node-id="jWAJoHDCuJBKKukrk0ypsm" class="dstep-n"><!--pnid:6zeWjP5R8r4cJpqZMMCYih-->3</div>
+      <div data-page-node-id="xP2oNhHrDFa4o8J2625Pws"><h3 data-page-node-id="vROgs4mSDCdmhiYrwPFYSX">
+        <span data-page-node-id="dGZ1tC5dybHydbxMRwCaGq" class="st"><!--pnid:49BhiRTMIz63LzH4OdTnl4-->Step 3 · Skill 四源 join + 加权打分</span></h3></div>
+        <div data-page-node-id="kJ2uk2ew8nZaODHlu6hToi" class="sd"><!--pnid:zk5CqhRVLenE9lSGUzcXYx-->综合分 = 绩效×40% + 成本效率×20% + 出勤×20% + 违纪×20%</div>
+      </div><div data-page-node-id="zg6VEYYC5Ow5MgDwKhfVT2" class="dstep-b">
+    <table data-page-node-id="wcFXIx6CLoV9qxMIREBz1m">
+      <thead data-page-node-id="hmWgX9BqugBops8XtOmqbx"><tr data-page-node-id="q4bZYsMxrXAiGjzkmtcC9j"><th data-page-node-id="hKJHcRsLwNQJp1gmxqbRJr"><!--pnid:f9pfXJUbyaRoVPn8Bi1Ru2-->人员</th><th data-page-node-id="GgKUgZgSThKa2JctPWRKVe"><!--pnid:VbtVg8o59ZhakKximzZ4ZR-->部门</th><th data-page-node-id="luISyeLaXfBA7nEc9YfS8Y"><!--pnid:Sd7BVPkRYdZRmKVMNYbYfA-->绩效分<br data-page-node-id="qbO1WPpob4ALzR6O5YvclZ"><small data-page-node-id="f2wbs7oG3uxeWtM1SWSzUC" style="font-weight:400; color:var(--muted)"><!--pnid:e1noyILwoLFPz45f1Q6vld-->40%</small></th><th data-page-node-id="Mi247EbPW6UO7GieAwq7ZM"><!--pnid:chzLPjzanOHiR7mE9IeSTe-->成本效率<br data-page-node-id="bsQODfxrtkp0ClLRfSrPZa"><small data-page-node-id="mPN75Rtyz6PhQsnk6rROko" style="font-weight:400; color:var(--muted)"><!--pnid:QhwLVZ2qv9qoQ5HXmcYamp-->20%</small></th><th data-page-node-id="uKWLn0DmNXOgz7EXqYkbm5"><!--pnid:hAZH5hN40vgbG7e8XyjUBI-->出勤分<br data-page-node-id="rpNaexnY1YZnjVfuMQC5Kr"><small data-page-node-id="MRX705TZI5euH1QWWRgwhB" style="font-weight:400; color:var(--muted)"><!--pnid:Vc0Q6pmFZwlU1mneH1bH8A-->20%</small></th><th data-page-node-id="wIePyn1YskzlyYaTJBTdl5"><!--pnid:8py3K1wASysuGot0rVg2nh-->违纪分<br data-page-node-id="4H3HuYG2R8P6JawCCCCCqH"><small data-page-node-id="u0AXacxtdtT7agQNyBBpL7" style="font-weight:400; color:var(--muted)"><!--pnid:2oQB3Fft5Lt1gHtHx1n2se-->20%</small></th><th data-page-node-id="koKDaTWus7xk2CQRoGnqFS"><!--pnid:HyKu5QBjuHHFUseIwrNXhA-->综合分</th><th data-page-node-id="tNHfKM4jnQgMsq51cqjTKT"><!--pnid:aoGzsXWd1BLQfXdQ5JwqPb-->三色结论</th></tr></thead>
+      <tbody data-page-node-id="Zn7qyrKZX27LrCRAhXMsvy">
+        <tr data-page-node-id="eKwApfQhfVAD8iPDQx5doT" style="background:#fef2f2"><td data-page-node-id="nzQ9RFywESdDVeUSyMdut0"><b data-page-node-id="33FhxDNA2aY1qkgU5ikhFn"><!--pnid:uCyCuakR4oPwgeps4WXzL7-->王大力</b></td><td data-page-node-id="5xEarcpHFrbWybGZvwtBtF"><!--pnid:MkYy3QyXw5IS5hNnzZva1K-->制造部</td><td data-page-node-id="8nuQjdFLk755o3KlAuRFUs" class="num"><!--pnid:XszfdrCnx9mhSgy4xh6RXs-->55</td><td data-page-node-id="KmFHWwbEkssLoO5jIeJ324" class="num"><!--pnid:klwl4OGA0SOG71KFDIezZ5-->60</td><td data-page-node-id="c0IsnrCT6GbKG0509Wbe0g" class="num"><!--pnid:ydBDkNuoJi1dUaYQOymn2w-->50</td><td data-page-node-id="ySUf4FjSdLD39MO7gkvKg4" class="num" style="color:var(--red); font-weight:800"><!--pnid:LViIx9vGmVWMSfRZ71HeEX-->0 🔴红线</td><td data-page-node-id="mEeBmmaamS96F3wpW0a3aV" class="num" style="color:var(--red); font-weight:800; font-size:15px"><b data-page-node-id="NkmTVjC0CH3Z6UUtoupMFC"><!--pnid:dd1V3GuR1NhsRwgfvUYcAf-->44</b></td><td data-page-node-id="CXxWRp1bSWOmJrT7gK2a3N"><span data-page-node-id="QZcI42TQlsCrEo7dztf7Im" class="tier r"><!--pnid:03b8YI3mdw3PcZwsbV0ohm-->🔴 建议汰换</span><br data-page-node-id="VEFjkcTAvFawrXhHdn9HbO"><span data-page-node-id="jLCP86iXSLcW1JU3GDQJoW" style="font-size:11px; color:var(--muted)"><!--pnid:wytzgbEUN41Qb48J3OqTDJ-->红线一票否决</span></td></tr>
+        <tr data-page-node-id="JqpU4yhCxdXRqTcCeplhDQ" style="background:#fef2f2"><td data-page-node-id="0IXUp8BTmLXNDmJTa6A1vW"><b data-page-node-id="amsxLOpXVZS9CaLhpNNMkZ"><!--pnid:ddKRIiOAqHpUWJ8sxRM4Bz-->陈芳</b></td><td data-page-node-id="Qy6TNTWC9Of7ao86QRJ5vH"><!--pnid:aSejzifvaXYVW20UzFXOqB-->销售部</td><td data-page-node-id="gHNBmDRjerOkoxh3sp8FGY" class="num"><!--pnid:opXi38HExNvLtQRvMvINNH-->45</td><td data-page-node-id="hUaYbJx60NPpUXbnYtsYh0" class="num"><!--pnid:CMJGN5dI9CW0ckRlFQQAf0-->55</td><td data-page-node-id="0zyNPd9Yb2LIoO7eLI1YX5" class="num"><!--pnid:wTnyFKvpq9DpeLlcoG1DT1-->50</td><td data-page-node-id="7fkd2bVFBJy6rsbTlYkwxx" class="num"><!--pnid:hUbEMJ9HO3xOgCMLSc6fx7-->90</td><td data-page-node-id="0AYrmok8t3BOSV8r5R560K" class="num" style="color:var(--red); font-weight:800"><b data-page-node-id="xVnYiwY1E1SsXBSJxf0FoS"><!--pnid:algkpW1T8iePWmCUHyvSMW-->57</b></td><td data-page-node-id="RvLZxL3zWBAyApi272DeBx"><span data-page-node-id="D3eVmbu9raszBeTfguh7hX" class="tier r"><!--pnid:fZBd6mVBYqhEeI0RbAnaqY-->🔴 建议汰换</span><br data-page-node-id="Cg98NSq6ubmpdNa8WdkbSR"><span data-page-node-id="oRGMScUCH92abzRN1XaYHa" style="font-size:11px; color:var(--muted)"><!--pnid:ff3WXozVzM600bEGagdq8F-->业绩垫底+出勤差</span></td></tr>
+        <tr data-page-node-id="IS4x02yd5de1fUZENHEPFV" style="background:#fffbeb"><td data-page-node-id="UHnDzc8b9CjhMJlBWc6Q5T"><b data-page-node-id="CWvjA8rm2HF67hnVNxLOGY"><!--pnid:NjVg6cJiA7CT78CU0YUKx4-->刘思远</b></td><td data-page-node-id="e19wYJrTgrNyd3uOXbb9Lb"><!--pnid:wS3ivKotVtfFAOgPVBHQuB-->研发部</td><td data-page-node-id="L0xRwT5RuKC57r2ZYeqwZl" class="num"><!--pnid:2z9zYu0ejYpqKSi1ns78hz-->65</td><td data-page-node-id="xaoqv6LLRQ6KEtrLbqNTYw" class="num" style="color:var(--red)"><!--pnid:9rvFGsd0Ip5XUm325SIK89-->45</td><td data-page-node-id="vPH29mH0lVJspJsXAngaPI" class="num"><!--pnid:vvQrXugYApQi65K9N5BLjo-->90</td><td data-page-node-id="58RJdn9dkmVQPztr3cqxdx" class="num"><!--pnid:pYzfpKudlKbZhNa40IRD2R-->90</td><td data-page-node-id="9mYHAbhhr0YXtdfxaRaCmU" class="num" style="color:#b45309; font-weight:800"><b data-page-node-id="Q7gtls01txFYF3ApO6B89u"><!--pnid:7YKImXV1tpGW3J6LkLqlWr-->71</b></td><td data-page-node-id="mddAJ5cpRk6l3QKErB7B0j"><span data-page-node-id="W8qlOZ4EpXRA5lNH3dArn4" class="tier y"><!--pnid:M1B8h5WJ36g6zui7KoHjVB-->🟡 观察留用</span><br data-page-node-id="VA3My7HnwImPfnPZULcQY5"><span data-page-node-id="AXsXCCJ5QxshGAoNNLPyUh" style="font-size:11px; color:var(--red)"><!--pnid:xigFQMMTqeKf6N4hDQObha-->高成本低绩效(28K)</span></td></tr>
+        <tr data-page-node-id="WYVc1MsN1ViuOY3CXzmZsy" style="background:#fffbeb"><td data-page-node-id="gX0yPKHw6JfDsLmbIBmYdT"><b data-page-node-id="vRrQPwaPFGAtfdxLZIecKR"><!--pnid:inFS4HrTADnMiTj2qTxXVd-->张伟</b></td><td data-page-node-id="sF8aOP6rN6PKB35gkfdqON"><!--pnid:jkWzQTAIuCvVy9u6TD2x4O-->制造部</td><td data-page-node-id="9HytFkvJAiSdCO7bPg5nqm" class="num"><!--pnid:01MDib9oAsw3b6IPqRlu94-->65</td><td data-page-node-id="fEHxdJ0IxbOHhmVdc5z8Mk" class="num"><!--pnid:PsfqdKuZnCXs2ytqitk0JR-->75</td><td data-page-node-id="9aGcB5zlEJracOdVJN3a0t" class="num"><!--pnid:io8k049xXc0VWKWCHVbPBw-->70</td><td data-page-node-id="i7libVztUjdWEZ0zGFAsnl" class="num"><!--pnid:KW1AyPoMlY4Lg9adEDhpmo-->90</td><td data-page-node-id="hbelmvmmwUaeKXdrm1O9au" class="num"><b data-page-node-id="7lviDYbsdZO4NyQAwWV6Vo"><!--pnid:bDGuP2knNIMy78TnZDn2tz-->73</b></td><td data-page-node-id="XSFD0RqiuAA1Wa7VhA8k2m"><span data-page-node-id="ihA6AHQPxG7NHFiv4OIOcd" class="tier y"><!--pnid:tStIGZ2mhM0UN75AvSWRhv-->🟡 观察留用</span><br data-page-node-id="woGJV3PoX4c7wEXvqOimN7"><span data-page-node-id="veIzXjo98KkOzbQxXIJvu1" style="font-size:11px; color:var(--muted)"><!--pnid:sEWPisx7zvtFtALVOGjvf2-->PIP 补齐管理能力</span></td></tr>
+        <tr data-page-node-id="FBS6m8uPOVViMHPUPitVp8" style="background:#fffbeb"><td data-page-node-id="TAoVBt5yVy27B0GwWTCyS6"><b data-page-node-id="ywg8dHpM64YxO5QOlwH011"><!--pnid:gWeL090PenB41zGanYjHT5-->赵强</b></td><td data-page-node-id="sWcN2y0wWOEOVJosQ15Tw6"><!--pnid:FlLDCijMSBvpiMSmrgJ2H8-->销售部</td><td data-page-node-id="dUuFU36e8CfhXiWV7x4JQh" class="num"><!--pnid:RrYTDcwCJCXkXGYWGFJ3Io-->70</td><td data-page-node-id="3IxEDqX5iSrhn7Qv6FJH1p" class="num"><!--pnid:oyockcDLdp5BTnsqhlWEDx-->70</td><td data-page-node-id="YtLIWXyDqUICMPEssdfvWR" class="num"><!--pnid:jZhVhiI5OxsGtNHuSoWQJp-->70</td><td data-page-node-id="WsRpRGiQCwNIcL6L1eIZc5" class="num"><!--pnid:TeCu4TuZ7X1grF1YnbmIJE-->90</td><td data-page-node-id="1T6AnVzNRylkSIRyoL8GrP" class="num"><b data-page-node-id="ekJM8JJvINBZpTvIOJupKU"><!--pnid:37LlqFF7B4zr5eZ1xjKA6u-->74</b></td><td data-page-node-id="uMgLetlhfzL47nExlkZHL6"><span data-page-node-id="OuZV2RAsPWR5NnlTr9IKmn" class="tier y"><!--pnid:Yi5LOfU4oX6HIVNA2DFfmv-->🟡 观察留用</span><br data-page-node-id="8QZndQUhQDOnKGToKgBUmU"><span data-page-node-id="Fx3jAJ7aZFG9Da008tdxO1" style="font-size:11px; color:var(--muted)"><!--pnid:ML9kdzKpTI6UPh1AvdUu3v-->业绩辅导观察一季</span></td></tr>
+        <tr data-page-node-id="LzgPQJ8HY1SSHpwpIq6BhX" style="background:#f0fdf4"><td data-page-node-id="XNhWd01pxdFamNaqYHWivC"><b data-page-node-id="6a4yBBVnQmMni6Yr6AehGp"><!--pnid:aeN1iFp3ct86HwASziakLW-->李娜</b></td><td data-page-node-id="wyIaoXA9gsYDR5YJPHkJsO"><!--pnid:2XAKJvXEfinzqAh1gKVGJT-->职能部</td><td data-page-node-id="KRpifhnwqy34uFkrNsPX3q" class="num"><!--pnid:17xVb7K3onSeytboe4vRkl-->75</td><td data-page-node-id="nWuvfnw2azxy0xmHybzNX1" class="num"><!--pnid:egRjvchdZcBKs0dx1u55Da-->70</td><td data-page-node-id="vE7tSpsogAAZnw4yn8DM2l" class="num"><!--pnid:QSfLly2TNA2XFDKMefxN3A-->90</td><td data-page-node-id="RafD19jMxxVF8LBR4LbvmN" class="num"><!--pnid:6ikF1kuQtKtccqCxe8urVw-->90</td><td data-page-node-id="oZwG4NiDJ41XEaAhuglGKI" class="num"><!--pnid:08HDGNhJ0MyAJJlTQWj8mz-->80</td><td data-page-node-id="jydRDog76cx0gj5tuJcy7A"><span data-page-node-id="161ZXhKAPg3QKpSjWr9kR0" class="tier g"><!--pnid:GvXDdgC1lxUrO0ISun7QHM-->🟢 稳定留任</span></td></tr>
+        <tr data-page-node-id="7ayVPDqLTTSukZeOGEgXFP" style="background:#f0fdf4"><td data-page-node-id="o091eBxyGnLaIFRdokWTb2"><b data-page-node-id="KTsk5oOXeH98lBtjGQCYY1"><!--pnid:WuZwix2mqpGN4spj7n6izu-->孙丽</b></td><td data-page-node-id="ykMxPlsd5Bt7VcOm1Vt2Bz"><!--pnid:acEQ13vebL1AVCGOcIfz3E-->研发部</td><td data-page-node-id="AURTFmol4I2iGthU6AmRRD" class="num"><!--pnid:28mG5WQr393WB6gMGeTTOH-->80</td><td data-page-node-id="VaIxsp3gBTlmo9kmGLPlJs" class="num"><!--pnid:yR6AEeVUdvMhWeo1lGd8Xr-->65</td><td data-page-node-id="yLKcdMLsZ4GKaw8vQKpEwr" class="num"><!--pnid:OSTzTRG51aSnT1J3e0DuKd-->90</td><td data-page-node-id="nKrY6MYLi68wlVQ4qSuGt9" class="num"><!--pnid:CGHKqWjzvrE5fi42hwJZ12-->90</td><td data-page-node-id="9P0lBUksj31XfcVQh8v21X" class="num"><!--pnid:ftRQSO0IECS23d6CJdHvvd-->81</td><td data-page-node-id="trJfAFBA3H42XbO6tvLTDC"><span data-page-node-id="FG5Dz4T6kQIiom8qeSegjQ" class="tier g"><!--pnid:EtCTadSqGTb0SMHmy6brmy-->🟢 稳定留任</span></td></tr>
+        <tr data-page-node-id="S47moPThRzwk0budF9CBrg" style="background:#f0fdf4"><td data-page-node-id="CO7I8H8KFWml7zmie02ylv"><b data-page-node-id="44oKQKn0iCvux59qypmYh3"><!--pnid:VoieHUKpvwpXuLL8QPOnpi-->周杰</b></td><td data-page-node-id="lj9e9MRPKoIHizWYWpgBoL"><!--pnid:GLBJXmzzvaRTPPjxQPFWgN-->制造部</td><td data-page-node-id="Nu6bzepEEBVoaQUjpkc1U1" class="num"><!--pnid:jhxyhMpGoLKccGkVZSXWnl-->90</td><td data-page-node-id="AHlS6OR605qlG5NCA72mas" class="num"><!--pnid:zFCXj12jrnACk3aig2rlw0-->80</td><td data-page-node-id="BkPLg6KhYSN5WVdj23ltLC" class="num"><!--pnid:9Hrm5z1jDGMXZXMMZVu6Qu-->90</td><td data-page-node-id="FphbhPmewbL9lk39FUHQv0" class="num"><!--pnid:dczFOlrwrQM9hVYxN4fCN6-->90</td><td data-page-node-id="zKnywI13gwE4gYi2OqiZt6" class="num"><!--pnid:7hJUCxcPRbiYCqFr4lFiLe-->88</td><td data-page-node-id="HzdxRA3SspM8R8MRFLkv0B"><span data-page-node-id="pBGU8ChsAZLZVKrgbfZ7RJ" class="tier g"><!--pnid:aTT5v3St9275GxufACY1QS-->🟢 稳定留任</span><br data-page-node-id="N1UhtmPhXbp5eGROysa2A7"><span data-page-node-id="M60NbrWkvaJvOSu0qypXj8" style="font-size:11px; color:var(--muted)"><!--pnid:mUlFkCPbWiqV4GHLOs6Cpi-->关键技能岗</span></td></tr>
+        <tr data-page-node-id="L72nnuL1DTzR8WhGrWFRmK" style="background:#f0fdf4"><td data-page-node-id="WUuCbzOAZJYxdXgsr7bPFj"><b data-page-node-id="J7Kcu4on48SfN0NLdXYcgo"><!--pnid:3CfzN7dMszwo9ejXlK7gMX-->吴敏</b></td><td data-page-node-id="h7QG78LTyshaGpBP9yX9me"><!--pnid:LYCkFqYEMxXTcwK5Ph776c-->职能部</td><td data-page-node-id="HxR1bZKxrt5Ds3l8L4QasS" class="num"><!--pnid:DWUkAqEWoyd0mPzPKeONFo-->85</td><td data-page-node-id="X3RqrUVoXJdub4vUzZDzpg" class="num"><!--pnid:5ADvrTvgoDrrXc0T0P463x-->70</td><td data-page-node-id="IvsDe5TXGYi2zSOgQScEnu" class="num"><!--pnid:HoHYX3GIJdRxc3InRcxTU3-->90</td><td data-page-node-id="2c14KX3S6C4KkAY0Ubu5CJ" class="num"><!--pnid:4DTZPIuBEYa6S5Tu6Tzc6k-->90</td><td data-page-node-id="BKDkum9t0TYaK8VdETZ9R3" class="num"><!--pnid:yXzmcQu8wI0nS7zVPWatfZ-->84</td><td data-page-node-id="zKCcXg7XOJghiKLnOiiN7N"><span data-page-node-id="vIShl6XKoAZRZIupqyshfy" class="tier g"><!--pnid:IJGIRtzd88BZ3xrwpEHYP3-->🟢 稳定留任</span></td></tr>
+        <tr data-page-node-id="bpcEUsWylCQUlJoddM7jmB" style="background:#f0fdf4"><td data-page-node-id="5nxVO2zy3tzC5eOezYJTlz"><b data-page-node-id="WvZhs62QQvIoUccpTqrFUT"><!--pnid:M65Hyu2GSaV0Gdp2UOZXH5-->郑浩</b></td><td data-page-node-id="n1VK4T8TAN2RBXryvIVhCC"><!--pnid:fChGvoAxSbITZZGw84n3zP-->销售部</td><td data-page-node-id="6edipIdQcUdGFrLa6YVLaa" class="num"><!--pnid:Y948chpeNaNaDD8Xssm6af-->95</td><td data-page-node-id="DVNJrcbcdz7FyDuUQKeEMz" class="num"><!--pnid:jlaXk6bHPZH8iZxjno44rI-->70</td><td data-page-node-id="Ajrq4L4Ixmv8KUdKH4WdpC" class="num"><!--pnid:sFFPfNwlOaxwnBGaCrqDLC-->90</td><td data-page-node-id="LhtvtKsB4I8MoD7fLsgShc" class="num"><!--pnid:ksJpfhBFHtv1Fgby2S7HrA-->90</td><td data-page-node-id="0iHUQeVBq6DfNoRBA9mjxO" class="num"><!--pnid:UK6T4jtfFw6oGTXAcbGWzh-->88</td><td data-page-node-id="EdBfjdCumpsUftusCSaiYL"><span data-page-node-id="Q4KQD1gG0EM653QZpo568d" class="tier g"><!--pnid:kgX5z1SOVdA1QdzRXHSfxg-->🟢 稳定留任</span><br data-page-node-id="gH7oXjSesi9nxCVb12QQKb"><span data-page-node-id="RS3ae5SMwGLwaweavQNhIi" style="font-size:11px; color:var(--muted)"><!--pnid:xvvvTiyfkOG2p39flBMwFM-->晋升候选</span></td></tr>
+        <tr data-page-node-id="UMiPDSw6QupSw0WU8UvGBo" style="background:#f0fdf4"><td data-page-node-id="YiVYwJqCLPq2tG6qXGYHWG"><b data-page-node-id="Sdp9YGVsixsYM7NPu7xACt"><!--pnid:wDEF7bnIVglsn9dx0avnVk-->钱芳</b></td><td data-page-node-id="MRB4yyFFfjdwGcoyAbfw4r"><!--pnid:RcQH9kgANeFcv3IKhxYnPk-->研发部</td><td data-page-node-id="4Yuutem5SXMKj1SJDn250C" class="num"><!--pnid:W4lrc4Lf8Acbgfj3VjbhCo-->85</td><td data-page-node-id="UAu8yJAZN3yrV6P4SujXpf" class="num"><!--pnid:Pr5kUX3XISp3PVjKq0kfWv-->60</td><td data-page-node-id="gnB8WmAFpxp6UGcQhuIQlR" class="num"><!--pnid:KMosaEEzSvZYXnMGBWE4Pl-->90</td><td data-page-node-id="YPXmhmuAeNheCRJgg86hrN" class="num"><!--pnid:I5hdnAAygcdMtEaIHCwtdo-->90</td><td data-page-node-id="u3YrED8eGXvAADIVG79r07" class="num"><!--pnid:Qqz2xNCO6phZeBf5XVMqaY-->82</td><td data-page-node-id="SBMWxhky174xLJeDZWbblA"><span data-page-node-id="DcIXIFEZscYGdkTCWjpy1J" class="tier g"><!--pnid:gIaL9ddrZkWI1QQAEYpTDn-->🟢 稳定留任</span></td></tr>
+        <tr data-page-node-id="HgxE71w4DAqLluIAJ1MpiG" style="background:#f0fdf4"><td data-page-node-id="qAOyig7dYHL4uENXa3sfwm"><b data-page-node-id="pNboT1zRbrWhEOUnjn7rSA"><!--pnid:SSPuf45KWPQ8KFH3apgmH7-->孙涛</b></td><td data-page-node-id="ubqYWmXwie6LOCM5LMRHMn"><!--pnid:jkpA5FYyyc83NFO8zkF6xg-->制造部</td><td data-page-node-id="RZQuWaWdtwzobXI1ZyUWZV" class="num"><!--pnid:pDcmjNfx0sSxZGWw9Ru5T3-->80</td><td data-page-node-id="TfIp8pqA8je3mCDBfVCtMX" class="num"><!--pnid:qWyw1ybTw0oxdqoegERHnz-->80</td><td data-page-node-id="mMhwJO3MNrJTcCM3fhUlOs" class="num"><!--pnid:vOttDYw8mOTy2CNcKoOmwJ-->90</td><td data-page-node-id="oS62YaMJ2Fk9YRNT6ywynD" class="num"><!--pnid:ZBP0olj9DP8brazMSE5wbn-->90</td><td data-page-node-id="1BMmUJRfWhEFN32IyfpO1n" class="num"><!--pnid:4g6sJUFvmyhSJbhWk1WLmx-->84</td><td data-page-node-id="dsAUNemh3bBGmVEUTWeowM"><span data-page-node-id="PSnyWgt0hmiDfxEttJN0Qh" class="tier g"><!--pnid:6VDNBRvxsvIDPisi7Ma62Q-->🟢 稳定留任</span></td></tr>
+      </tbody>
+    </table>
+  </div></div>
+
+  <div data-page-node-id="rzvN9K9iriUgMrYX9L0yIW" class="dstep">
+    <div data-page-node-id="QofTmCOoo8nj67mz6OIDgw" class="dstep-h">
+      <div data-page-node-id="CJ6JeYoC90sbIJnXu31AAh" class="dstep-n"><!--pnid:msN0x1bfSiq8eytI2P35Op-->4</div>
+      <div data-page-node-id="KqtlcKWrgs6MVYd50ujSzX"><h3 data-page-node-id="rUkO1gPQe9wh8idqQILEjr">
+        <span data-page-node-id="YGcWtaIXNjJ9wIBQtU7gmm" class="st"><!--pnid:UwTkHD5oFqxen4pDfTzIyp-->Step 4 · 三色汰换名单</span></h3></div>
+        <div data-page-node-id="bFkKnMGohhzhtozRcBakjd" class="sd"><!--pnid:NsVSKWdXDBRqynbNGDrpvI-->🔴 建议汰换 2 · 🟡 观察留用 3 · 🟢 稳定留任 7</div>
+      </div><div data-page-node-id="RWwavoXPbrRIk58W1iqJIO" class="dstep-b">
+    <div data-page-node-id="3ynpn0xFyc0A30DHP2sMA4" class="stat-row">
+      <div data-page-node-id="8fqtlbDfS1Br7977rXoJ3d" class="stat red"><div data-page-node-id="7jrvirGmhKgip5BCNsrnAH" class="n"><!--pnid:MTYEE4b48fIxtEeLQ17UrS-->2</div><div data-page-node-id="nNEHussaOPfyj6YFfQaThl" class="l"><!--pnid:zkqJRRRF9IDYdO6Cvp0Ukv-->🔴 建议汰换</div></div>
+      <div data-page-node-id="OiiqepK89QsBaHDoM7jLl9" class="stat yellow"><div data-page-node-id="BC1irNu1RHwX1H0w7MgJ4U" class="n"><!--pnid:qQxreaQAw58lvmBCajHtxT-->3</div><div data-page-node-id="TtOD67o2ymb7tBlJLfIjzk" class="l"><!--pnid:7rh3xVCUXW87oZb2T3rAex-->🟡 观察留用</div></div>
+      <div data-page-node-id="1R2bmic7ABYwTYw0PzbPld" class="stat green"><div data-page-node-id="X259CAUNVjyAAhg1iJH5hT" class="n"><!--pnid:qEGN0MZo0DaX4uf1vAOWNA-->7</div><div data-page-node-id="hU8yygTSM9n0gUIyNViHTp" class="l"><!--pnid:KDEOvtPch5KmozNQs1Talx-->🟢 稳定留任</div></div>
+      <div data-page-node-id="8o2pMVtSlACtuFC0zmwy2k" class="stat total"><div data-page-node-id="JcjpniDs1o6YarkkiBr4Ar" class="n"><!--pnid:TBVWg5GGLM7ZbTGdUCMUaw-->1</div><div data-page-node-id="KSkcMktn8O6d69HchuW4uN" class="l"><!--pnid:C2kJJMpy9ThnQgStUNc2GH-->红线一票否决</div></div>
+    </div>
+    <table data-page-node-id="ZlobQHciKR6herhRuO4seL">
+      <thead data-page-node-id="Al3buPyfOi8bRaPrArlwNE"><tr data-page-node-id="GIFntm2vwheI74Nl1Ykyn1"><th data-page-node-id="LM1ehRJAWHefBiEg4gcF2X"><!--pnid:ZEmmaKANvGSDKEbbsMLwpI-->人员</th><th data-page-node-id="pGEE6gu59odhcZHoyr1BPs"><!--pnid:plVATxMHZwr7NfrjTWL6nk-->部门</th><th data-page-node-id="gn14jS8QiffsfBRwU0nvNH"><!--pnid:YXpDnfgSD03OxefyXtbtg2-->综合分</th><th data-page-node-id="PiVElTC0rWxAAqfWNdmHUN"><!--pnid:iiGBjeadJZZnLmkQ8kifSi-->结论</th><th data-page-node-id="9Y1eY3c4mInsfx5JpbvPB4"><!--pnid:IxrWmkpLZ2tF9uLeoQI9jK-->理由</th><th data-page-node-id="OBHDMjXrlPfZ1PrEa0e3cB"><!--pnid:9AFqOXCWalkTi7nxdTAhCi-->建议动作</th></tr></thead>
+      <tbody data-page-node-id="TBCxMSw9SqLQCZoavlBEbW">
+        <tr data-page-node-id="ssDDmfvXQksVgYhvdA9fIR" style="background:#fef2f2"><td data-page-node-id="wcP3vwIqMYskwxSLo01pyF"><b data-page-node-id="XdU59nDS6ZXvrM4ZeJjyMf"><!--pnid:B9D3DqmxJoYMrE1ZT3afc1-->王大力</b></td><td data-page-node-id="k9JT11N3IJXhgpcWGzyDY7"><!--pnid:9AcsXOajRW6TgSw1aV7auF-->制造部</td><td data-page-node-id="L3onNphgzDmOUA0rlpeUjQ" class="num"><b data-page-node-id="R1IJi3R0zRkJmMS6hpnNAW"><!--pnid:0NzjLbOlWb3zVufFRSiXG7-->44</b></td><td data-page-node-id="OjrjFx8U7ckxjlXwNuRt0A"><span data-page-node-id="hJT6C1G8Us4Rz7VP2dWkla" class="tier r"><!--pnid:km7rYpeB4FYU13lhltC4ln-->🔴 建议汰换</span></td><td data-page-node-id="oIZg18FGSMGgfJbrVANqzJ"><!--pnid:To1rBVfDi7UoKwXf4Om5t1-->红线一票否决（打架斗殴）+ 综合分 44 垫底</td><td data-page-node-id="IOLODZUw34uLP2Jr0OHBII"><!--pnid:rPxFstnqDY83e2cpyr9v0U-->按违纪解除流程：书面通知 → 工会报备 → 赔偿协商</td></tr>
+        <tr data-page-node-id="qCN8CvXRjaRM1Fb0te5okv" style="background:#fef2f2"><td data-page-node-id="O2oncaTNn9tAFDV16EvSz0"><b data-page-node-id="gnCQTCigG9tp0RYOIFYRqg"><!--pnid:2HoNcABT5yIZkfrZJlhxDp-->陈芳</b></td><td data-page-node-id="QGp837gWTbUYLNloAy33rB"><!--pnid:VGQKE6WKEnh7cMCgPH3x4c-->销售部</td><td data-page-node-id="EYgU95MleoVsur4V9LNRiJ" class="num"><b data-page-node-id="kSnZAQdHGbWXe6mvzZvalU"><!--pnid:AbOESYZ3cmzcUJh2O7T7QL-->57</b></td><td data-page-node-id="ZC2J4NoxP7Em74fRK0KmGJ"><span data-page-node-id="Ucowwm0w9R6QaVBLwUACGh" class="tier r"><!--pnid:PxK8PHrBp5QwqBw5OXp6ve-->🔴 建议汰换</span></td><td data-page-node-id="wkoa5XPrUAw2mKsyRnenw9"><!--pnid:tQ50A95rtyZDTBVDlh4C4L-->综合分 57 < 60（业绩垫底 + 出勤差）</td><td data-page-node-id="3ZPYnIJLPeGIztjNrbRC97"><!--pnid:OEUBispVtqtRDnsI8ldihH-->按绩效改进流程：PIP 面谈 → 30 天改进期 → 二次评估</td></tr>
+        <tr data-page-node-id="RIBjxA6rs6fdLJTx0BRpli" style="background:#fffbeb"><td data-page-node-id="bqHEm759sTO6JRHlaXqE0X"><b data-page-node-id="7gWbEv1WcYnfZ3Mxzt5fef"><!--pnid:FSyCY5naLXBkhI0sUQkQ4I-->刘思远</b></td><td data-page-node-id="4ymAB2zL39NtGoLqnt0gQo"><!--pnid:mLdWf21STrzAcxYI66GJ9a-->研发部</td><td data-page-node-id="7XOMB6YmtU4g2pKxhBEvMU" class="num"><!--pnid:o7LHlL8TKlLimhUVcyyUAC-->71</td><td data-page-node-id="kdOnQiSJyiiJHWBtS7GvcA"><span data-page-node-id="PMKYG5cHVmG35l534Qrgqh" class="tier y"><!--pnid:AHyf7YGHom0efUTqvBy8CG-->🟡 观察留用</span></td><td data-page-node-id="5OCW8MnOjImit0zxrT8ZLt"><!--pnid:V8wgSsdwRiGhuUPsEtqmrn-->高成本低绩效（28K 绩效 C），先 PIP 观察一季</td><td data-page-node-id="sfIZ7V9fpz0oGUFUwEESaz"><!--pnid:5aQGwdDVs9USqvXF1ldbCO-->PIP：设定绩效改进目标，评估薪资结构调整</td></tr>
+        <tr data-page-node-id="sxJOqjRHSVmEch73b0NjOp" style="background:#fffbeb"><td data-page-node-id="xePcHzFE6ta0jtT1xSeniI"><b data-page-node-id="Gvdbr3hPo6RCZvhM2mocjO"><!--pnid:SVwg7951valLfYlwuyAS2e-->张伟</b></td><td data-page-node-id="gQg02UCFWcSOrh1CR0DSq3"><!--pnid:RcmYhNxjyQOmKIedyQfE48-->制造部</td><td data-page-node-id="DphpvmfsxeRVi3rm9RwzFu" class="num"><!--pnid:X7htBFs3gUCrs4lLxMRiCK-->73</td><td data-page-node-id="nex3KnRuKw4DE48e9GSfq1"><span data-page-node-id="GSDh1mQtym0AC8e4PcpRMi" class="tier y"><!--pnid:3raXzhxq1vlDhMNHlvvgy2-->🟡 观察留用</span></td><td data-page-node-id="uQS0v3wnpNurQfISMCv2Sx"><!--pnid:flpX5Kc9wlG9NoS4JMbbfL-->综合分 73（60-79）</td><td data-page-node-id="p7zKYCB6HkhJU4rrCs7a0w"><!--pnid:D49VI293EIfR68IZ54oi1s-->PIP：补齐班组长管理能力，季度末复评</td></tr>
+        <tr data-page-node-id="2nqg8WbRIqqWfp15cmPvQx" style="background:#fffbeb"><td data-page-node-id="80FOYTl9zLbQceqVlIrhts"><b data-page-node-id="ishMzZ2zwL76x6wHKijF8O"><!--pnid:gGGzLfpdBtMsTIgHullyPF-->赵强</b></td><td data-page-node-id="RLsIrQv1ShgG3N9anMrgC3"><!--pnid:vluPdn0jBX5gTNnTs9pzSd-->销售部</td><td data-page-node-id="9Zq4IlNfHgDzqfT8GgoqjC" class="num"><!--pnid:pRhMsLuwAffgwgXW422qoj-->74</td><td data-page-node-id="CJUw66eqQVevPyDPiDBido"><span data-page-node-id="mrwtwBexIpjSLwwbrNOJEW" class="tier y"><!--pnid:m7vzBoUZqCDhB25pSkZzIz-->🟡 观察留用</span></td><td data-page-node-id="uZAtrjqaxx58UKZO4shtGv"><!--pnid:HUGgJoFb8CyATml4lqCpxf-->综合分 74（60-79）</td><td data-page-node-id="jSGuzAeZ68I6N7tnqSLxgq"><!--pnid:rh9lyMqnbe0O5UzoU3IH4y-->业绩辅导 + 目标重设，观察一季</td></tr>
+        <tr data-page-node-id="2fvzEfPoncwIjS4K2DY6Bl"><td data-page-node-id="SmpGpitrgBYrSIb9pSpcgY" colspan="6" style="background:#f0fdf4; color:var(--green); font-weight:700; font-size:12.5px"><!--pnid:y0uVoOMwxI8fH7pWTq4kgn-->🟢 稳定留任 7 人：李娜 80 / 孙丽 81 / 周杰 88（关键技能岗）/ 吴敏 84 / 郑浩 88（晋升候选）/ 钱芳 82 / 孙涛 84</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+
+  <div data-page-node-id="w6Km4maF0Pqf370KiW2QH5" class="dstep">
+    <div data-page-node-id="wlq3ZshwusbCEr84hH8x5Q" class="dstep-h">
+      <div data-page-node-id="VblwifJjeFlPmjVg1uC4bz" class="dstep-n"><!--pnid:LaNx4NzwRr62ndKZ3UE06S-->5</div>
+      <div data-page-node-id="0PdYY9GJjkWHVaS5AyaWWs"><h3 data-page-node-id="w41i29tsX4pF4nZwDV8C9u">
+        <span data-page-node-id="DGtyzVVGo6oppeL3b5k2G8" class="st"><!--pnid:D4hUR3vUiDdjQQeq7BNYfV-->Step 5 · 合规动作清单（🔴 重点人员）</span></h3></div>
+        <div data-page-node-id="bAANlDeF06CernFeUXLmkX" class="sd"><!--pnid:enpz6R4eZZ4rirdOdoIa4C-->证据链 + 法定流程 + 面谈话术 + 风险提示 · 红线人员单独处理</div>
+      </div><div data-page-node-id="9vamXaOyqcAaHbeSPCTzum" class="dstep-b">
+    <div data-page-node-id="LAVguLmsKm1fVfpXxWxstp" class="compliance">
+      <div data-page-node-id="32QuWoLaqDjoQPJmkBS6i9" class="h"><!--pnid:WbtcSPQJiIKy555e3nckR9-->🔴 王大力 · 违纪解除（红线）</div>
+      <div data-page-node-id="QiPfzTnDpXo1DwvhFgcG0s" class="row"><b data-page-node-id="pribF6n7rm3WI2ahmFozME"><!--pnid:p3pxsNbgP8ZRfKiynppHai-->证据链：</b><!--pnid:LWxFQXvgKM9aJa9NgS6By6-->两次书面警告记录 + 车间监控录像 + 目击证人笔录</div>
+      <div data-page-node-id="D2uyaGTUape3doYmBo0IRD" class="row"><b data-page-node-id="ISE7yCPtLJhobdM4uzLtvJ"><!--pnid:OmldOs2SNUnu4KL0Uu0tYx-->法定流程：</b><!--pnid:JtdTWAoPd4RReMRqnjvSOs-->书面通知 → 工会报备 → 协商解除 → 出具离职证明</div>
+      <div data-page-node-id="fOtHv4ZePzCekFEnpB130e" class="row"><b data-page-node-id="t4XzpPQgtcaZ0sU03QW6j6"><!--pnid:hMabJ1hn3nszCXlLfUVelR-->面谈话术：</b><code data-page-node-id="qAu4v60vVoOGwbOnEPpVNq" data-pnid-children="TBCjpwz70glH3J59OsTMG8">「依据《员工手册》第 X 条，打架斗殴属严重违纪…公司决定解除劳动合同，补偿按 N 计算」</code></div>
+      <div data-page-node-id="9DbE5iHia6NdrNcyxjQOWF" class="row"><b data-page-node-id="LQuALDAAB6GpNnVdF49GpA"><!--pnid:MnbC1XThSaCFXBg8PFiUjb-->风险提示：</b><!--pnid:1PSS8rnddO2qCNLtCb8VG5-->证据链必须完整（警告+监控），避免仲裁败诉；确认无仲裁/诉讼在途</div>
+    </div>
+    <div data-page-node-id="6T2bTiqs4qFvzZk67s4Sqe" class="compliance">
+      <div data-page-node-id="MzepNPQ7NtqMFZv9GRWyW3" class="h"><!--pnid:ExdtVUSYb7Jh2Uv37Q1M1s-->🔴 陈芳 · 绩效改进解除</div>
+      <div data-page-node-id="DvmYoaX1hp9DfpbZn13c1r" class="row"><b data-page-node-id="XZbVobmrK9alGdPzaKcafi"><!--pnid:2cyesKI2xcUGnVh61NFBu7-->证据链：</b><!--pnid:vE5tXAFbvNKaTszPIc2piQ-->连续两季度绩效 D 记录 + 出勤扣款记录</div>
+      <div data-page-node-id="Rh0EZeNDbraHfN3Mqv2JFk" class="row"><b data-page-node-id="pVAyKdgBDUjKQGPdpPhiQE"><!--pnid:5bNMjD3VFm3faOtSm5kcXR-->法定流程：</b><!--pnid:hZUjm15fNcWTJuopgx5V6e-->PIP 面谈 → 30 天改进期 → 二次评估 → 解除</div>
+      <div data-page-node-id="YGdMowCp9CFbTQmaX0FqRI" class="row"><b data-page-node-id="A9aawbr3VbIqoBwJMAlfqU"><!--pnid:8tPnPAyNuBdNvAyybR47j9-->面谈话术：</b><code data-page-node-id="CTApAiaoxyNKFK0YDFnhQU" data-pnid-children="GkhJATgjPpWWLeHwvrYRBV">「按绩效改进计划约定，本季度目标未达成，公司将启动…」</code></div>
+      <div data-page-node-id="2TnPNk5ApL4ZzAiDGMScN5" class="row"><b data-page-node-id="jNwB3vhHBmoWcBcOKubfOj"><!--pnid:BSDUajcVezYASYsVkCDAtF-->风险提示：</b><!--pnid:vb4E9UIS9oZJdikkzNwLsY-->PIP 目标必须书面化、可量化；全程留痕；关注是否处于医疗期/孕产期</div>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="rCQwcnmvjliWJRpkVNns4c" class="dstep">
+    <div data-page-node-id="XNo4j4jKgQ3KtrFRYX618a" class="dstep-h">
+      <div data-page-node-id="cpoAjUZvDeyq1rPahd6SzN" class="dstep-n"><!--pnid:1qKKLAY4ZRbHIlADOUqEfI-->6</div>
+      <div data-page-node-id="kWbkEXzJXb5E8yR0HbqqdY"><h3 data-page-node-id="KBpUIMoB1yIXsL0tPSo9kx">
+        <span data-page-node-id="Q8QZmNSMEGbrhL1Asbnchz" class="st"><!--pnid:SDqpVWUay2ozdP89me8qKl-->Step 6 · Skill 给结论</span></h3></div>
+      </div><div data-page-node-id="c8pP2CxDOcWFPK5DtCEhp0" class="dstep-b">
+    <div data-page-node-id="wypiAlCLEdreGSvV97JcfO" class="verdict">
+      <div data-page-node-id="ZDAro9cOQi5KQpznT7X6bw" class="t"><!--pnid:g2p6nwKsWI67mI0JPiDFwI-->🔴 王大力 / 陈芳 建议汰换 · 🟡 3 人 PIP 观察 · 🟢 7 人稳定留任</div>
+      <div data-page-node-id="9NuW9txl5kRUnLdbYvc5VO" class="d"><b data-page-node-id="fFemG5KMTSZSpOQTNKEhHS"><!--pnid:KxNq02XvnnIQtKOotwf9T2-->可信度：高</b><!--pnid:7ASxvlYFyRTCRwCeEnD7up--> · 基于绩效 / 薪酬成本 / 出勤 / 违纪四源数据加权汇总<br data-page-node-id="C3IeqbCfgRcQNY3wvivryW"><!--pnid:6aObIEYflJg3lYzDuKsSa1-->王大力触红线（打架斗殴）一票否决，其余按综合分 <60 / 60-79 / ≥80 三色分级</div>
+    </div>
+    <div data-page-node-id="RDpLZDQ4BsgtRT1Ewn9Trx" style="background:#f0f9ff; border:1px solid #b9e8db; border-radius:10px; padding:16px 20px; margin-top:14px">
+      <div data-page-node-id="7CuSoVBRMOsv5TUxlM2KXK" style="font-size:12px; font-weight:800; color:#00755f; letter-spacing:.05em; margin-bottom:8px"><!--pnid:yKzrzA2K6PzumdigG95MDq-->🎯 Skill 的一句话解读</div>
+      <p data-page-node-id="LAwO8Z7HMEEO2FNOiLtK3R" style="font-size:13.5px; color:var(--ink); line-height:1.8; margin:0"><!--pnid:fnFsnzQldqBRABjTdvK7DM-->"12 个人里真正要动的是 2 个——<b data-page-node-id="jvaxEUk2JJzsMgR2mlPL2O"><!--pnid:G2vQvKYvR2GvpkfAMjI137-->王大力是纪律问题一票否决</b><!--pnid:Oh3btZdjydIMBxNfBtS4yr-->，陈芳是业绩连续垫底。真正值得关注的是 <b data-page-node-id="9Tz4ONtmIl7ozFffc5v4Qk"><!--pnid:z1JiAWbDXEvANFKVOewCB7-->刘思远（28K 绩效 C）</b><!--pnid:lw4imaPoryb502QZDnGJ7B-->：他没到汰换线，但属于典型的高成本低绩效，建议先 PIP 观察而不是直接动，避免误伤核心研发。其余 7 人全部稳定，不用折腾。"</p>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="4D1TESucDNHAWwvQLwiJ5f" class="dstep">
+    <div data-page-node-id="YD8hpAsDVU69b0jiU7DAtZ" class="dstep-h">
+      <div data-page-node-id="Z3BduCDTAxOK8AEubV1Fx0" class="dstep-n"><!--pnid:R9NjseowyMI21kLgocmOM6-->7</div>
+      <div data-page-node-id="SyqnoodEG5fY27NiqJYtkq"><h3 data-page-node-id="MXwgFgfiGyeIotmwDJixI8">
+        <span data-page-node-id="dZ8egQ7G1PLTAzpp4awRga" class="st"><!--pnid:Osi79IKE046pErAMPlX1cA-->Step 7 · 典型追问 · Skill 怎么应对</span></h3></div>
+      </div><div data-page-node-id="R2CQW3idhCG4NjhoJ2snxf" class="dstep-b">
+    <div data-page-node-id="2IiYdBZ4qGd49ozRL9wyDw" class="followup">
+      <div data-page-node-id="GqRd3TNhKHpgcT2728mrkY" class="h"><!--pnid:ct30slpRPsceSB4dJ71d67-->追问 A · 为什么王大力直接淘汰，不给他改进机会？</div>
+      <div data-page-node-id="WGYFkPLUnf4Lsrn7QifAFA" class="q"><!--pnid:fMKSPnGj1QV9W7jFkHeDPc-->王大力才 44 分，但他之前也干过活，能不能先警告观察？</div>
+      <div data-page-node-id="QQrTrIsxM3YbDEUFAR43Nx" class="a"><b data-page-node-id="JmhcqCwJ2olueXbRTCLr7t"><!--pnid:xFfg62jOGCSaY3BoFytoSY-->Skill 应答：</b><!--pnid:TwY7opm1heBmVcswk9JTA6-->打架斗殴在《员工手册》里属于<b data-page-node-id="zmn0RsOLlb4JIwWE41eerF"><!--pnid:XJPCPdXH3ZBZJcvRrLsr8U-->严重违纪（红线）</b><!--pnid:kssp2WNJbqbNR3rOX1KDEr-->，制度层面就是直接解除的情形，不是绩效改进能覆盖的。Skill 已经把他标成红线一票否决，同时给出<b data-page-node-id="BevHqfIxHttdJVrsyNBVJl"><!--pnid:k09JAxXyctbK1BysyU95kj-->合规动作清单</b><!--pnid:7S2RE0iIwPwNA5tE8j1Zqy-->——证据链（两次警告+监控）齐全，流程走违纪解除而不是绩效解除，这样即使仲裁也有完整依据。给改进机会的前提是"绩效问题"，纪律问题不适用。</div>
+    </div>
+    <div data-page-node-id="mx06J3mff1AlqBStj5H16B" class="followup">
+      <div data-page-node-id="hpyjJ18PHCaRqPDtEu4BSK" class="h"><!--pnid:ua6SyqhIX8Wv3OllGiiHL4-->追问 B · 刘思远才 71 分，为什么还留他？</div>
+      <div data-page-node-id="EIZH8mvWGd26Giz9G3Rlcr" class="q"><!--pnid:eyd1Rg2pXc5gd0r5D96FkP-->他绩效 C 又拿 28K，成本这么高为什么不直接优化掉？</div>
+      <div data-page-node-id="KJTWfSBXHRZBb4yFwC7vMV" class="a"><b data-page-node-id="nWSqnXAaX6yUrKUfdzBfHN"><!--pnid:gq0IorYEaB47sY8mDFpQhc-->Skill 应答：</b><!--pnid:lgoblVx9QoPQuJy2PhO81P-->71 分确实落在 🟡 观察区，但直接动他的风险在于：<b data-page-node-id="CIjaaUWXQJ7trmPLXFzTtV"><!--pnid:MbWcMO9GnNwKEo0TH7NTH6-->他是高级开发工程师，核心研发岗，手上可能有项目在关键期</b><!--pnid:Fsv5bcaX0zTPVypBDcPOJg-->——裁一个核心研发的成本（项目中断+再招聘+上手期）可能远高于他 28K 的月薪。所以 Skill 的建议是<b data-page-node-id="2oYHrn0usk2dPgPeYYqgN4"><!--pnid:HGyP92LqX996tSArDYGkPz-->先 PIP 观察一个季度</b><!--pnid:JUa3XfAEtk0RuTaJ18490X-->，同时评估薪资结构调整空间，如果改进期后仍不达标再走流程。这也是"高成本低绩效"识别背后的逻辑：不是见高成本就砍，而是给改进窗口、留证据、再决策。</div>
+    </div>
+    <div data-page-node-id="25UPSLDYbjixcTqZUqsnqR" class="followup">
+      <div data-page-node-id="JSkuPhhkgxc9FraO5qADLy" class="h"><!--pnid:gSpYcCxMGHrIIlKGsqbLlL-->追问 C · 名单给业务部门，他们不认怎么办？</div>
+      <div data-page-node-id="YT3uSIwhDEPKbzZ46PMh8Z" class="q"><!--pnid:Ueq6I2roBmRIYXCrK1gNsP-->业务经理说陈芳"其实挺努力的"，拒绝认可汰换名单。</div>
+      <div data-page-node-id="Bbe39w1RAPyiDqHl60Ebz2" class="a"><b data-page-node-id="awkp2OsYBchnJJpW9AUsCD"><!--pnid:8UQo3Z0qYwMPCvow19KxaO-->Skill 应答：</b><!--pnid:lA3tvKWTeg3hnm7n1H3qJf-->这正是口径固定的价值。可以跟业务经理说："<b data-page-node-id="pWGjsciqQbL7tbqlj5ryZ1"><!--pnid:cMtknACfcbAdWXcnoZyyey-->陈芳连续两个季度绩效 D，综合分 57，四源数据都在表里</b><!--pnid:3qCsV8veXKBLLLeFALHo9f-->——不是 HR 拍脑袋，是绩效系统、考勤系统、薪酬系统的客观数据。如果您觉得有特殊贡献可以补充，我们把它加进 PIP 改进期的评估依据，但数据口径不能变，否则下个季度名单又没法对齐。"<b data-page-node-id="jckJwHauzlnRKr2PKCQjWW"><!--pnid:0zRApNO16rANZzz722FYbw-->用同一把尺子，名单就是共识。</b></div>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="Ey7dXqCkT29ymej519P6ni" class="cta"><div data-page-node-id="qu6PSqhUpqbCpgZQXZLWrz"><h3 data-page-node-id="gxWPnjMLujvsXqOsLiCYOM"><!--pnid:DOsJo8mp5xjHe1LcVGW6fq-->想了解来龙去脉？</h3><p data-page-node-id="5LSPhn43x7NIMaeCLkmW4w"><!--pnid:aGOqG1Oj4Q2hmaFEljjzQn-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+    <div data-page-node-id="4hs9rGB7l1lG1RVaz5LIOx" class="btn-row">
+      <a data-page-node-id="mVjNUnyeTvBIIzPwQoz0qo" class="btn ghost" href="场景引入.html"><!--pnid:FGbNaqFiXKZpj55wOIw0ZX-->返回场景引入</a>
+    </div>
+  </div>
+
+<footer data-page-node-id="xSzt8AA67w4igAtWOgexuy"><!--pnid:Berba385yQcCvQBVzvJ9zL-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+<script data-page-node-id="yB7j8h24CLyA0Lm5Y2VWxW" data-pnid-children="ICtaqOgQsPcFGMuhW1Lis2">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="82P3HsLJ0arZLGFa0uHLNQ" data-pnid-children="luTG6TUEh9WTljDesWJNxu">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="VBaeehYZbtfZ2ovKh2gzI8" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="7y266Ni1fA64cEJO7NL5jc" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="RSFwOWwkLPvdUpAmJBCrmc" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="zMu6ki7WYMYJwMa7UWfj0i" data-pnid-children="0KzmS7dernt4RlMpFpReEQ">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

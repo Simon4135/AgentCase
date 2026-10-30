@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="BJhXAAXgHnov872rHos34K" lang="zh-CN">
+<head data-page-node-id="9YGlfNUZjppZicG4uhARjt">
+<script data-page-node-id="9IhV7oTlGNxitc59ZZ3Zcn" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="ixt3hrCHi3mXZqM8AcAcwL" charset="UTF-8">
+<meta data-page-node-id="wZYd1Wsu2mJ2KiHUEokKdH" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="l1KLZQDWjnxBhDvGVwjdVw" data-pnid-children="wBUvZ8Xh4QO3tEiRCFnwwx">AI选品机会发现与多维验证</title>
+<link data-page-node-id="sAYdUAG27ntuWwCDvfGPTB" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="bnDk39ZCjDV6BOXwBikkiO" data-pnid-children="ukTDpy1PvPF1D2ZOytjZPM">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="Db3ePTwzGqsSDsQAbwKb0e" data-pnid-children="eWNZIOGK57ICW21IfS5pPS" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="cXN0N6C5ZjSgVANY2uxIse" data-pnid-children="ueQnmZaEfCRaUNoH9PdM5w" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="XW0yDSSCkQzjj3DPzOqc8J">
+
+<div data-page-node-id="03s2JGlCeER18HbJLXQswF" class="wrap">
+<section data-page-node-id="wBYwnBpQcncloymZAJxCav" class="page-hero">
+<h1 data-page-node-id="sUfYAF3QghqvTDh6ju3APx"><!--pnid:3SYSPfi3CjJHczgYhN4g4r-->AI选品机会发现与多维验证</h1>
+<p data-page-node-id="h7rNBQYwdWR0q93dZKmd8f" class="lead"></p>
+</section><nav data-page-node-id="hVbdZ09lcaxd8k7JucpwXa" class="subnav"><a data-page-node-id="hJSqQ0TKjKyejNUYKcJWfw" href="场景引入.html"><!--pnid:C9MVc6mmFQHaOLelJfaznO-->场景引入</a><a data-page-node-id="aqQ5z3RWXog8djGVGm2Tes" href="LiveDemo.html"><!--pnid:vH4SqXGLxdlMpLntCsUUbK-->Live Demo</a><a data-page-node-id="r0EQyEh0zEX3oBgehkTX6l" class="on" href="#"><!--pnid:U5tm2g5qchKrmNnKrSfaYH-->推荐任务</a></nav>
+
+<section data-page-node-id="eW6gKg884rewiTkVcorIpG" class="blk">
+  <h2 data-page-node-id="zprwPtMRTDEuUd2ESwBBni" class="h"><span data-page-node-id="CnzYpITnPUSykmkPuHcu6Y" class="num"><!--pnid:aE2hCyI8ac708S7kfZWZIG-->一</span><!--pnid:ke4fmCtZm9I9U1K4fNxqtq-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="CLbOXFX2LRUviNrmcxq6hn" class="subline"><!--pnid:gL2Lzjf5djyERWRrtZlN3r-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="sPASYClrQjTJkdgLFyJIZy" class="card"><p data-page-node-id="EKla9SZmPMCEXuT1ZaIYl8"><!--pnid:aH6zp8qlrgQFCfw2qtXooY-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="y8KXVbaYLlVtEgKWYx4zvX" style="margin-top:10px"><!--pnid:pUWzaOwudWNomsV3TGCuwh-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:TPVsSLvTNaxjIkqvFAFnyB--><!--wb-skill-start-->
+<div data-page-node-id="rrR2Ab7QoiN6iKhYqRQXQe" class="wb-skill">
+<p data-page-node-id="kMN1dvi99mrSQRWe1aWubx" class="wb-skill-lead"><!--pnid:q6dHH3qHTe6alqLQSDNBkB-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="qdD30Q14Sr6ajUMRQi9J1a" class="prompt" id="wbSkillPrompt"><!--pnid:3AVhq8qDEOye7tPQrCwsi6-->【准备】这个场景的规则都在「AI选品机会发现与多维验证」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/EP31dYG89Txg0l4U6o1Cyu/Edu6b-bk3a-8/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="Me84qqeLJ2I8vLdvukx63k" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:9j3zsZkjF6ROEkqalTpejJ-->复制</button></div>
+</div>
+<!--pnid:KqcyIweqjlcjZdYjBFtl4y--><!--wb-skill-end-->
+<section data-page-node-id="eBX0jEsdJAhfDR5FsKBYUN" class="blk">
+  <h2 data-page-node-id="0T5bDlHW39YHGmemXLsrrY" class="h"><span data-page-node-id="57yyb2byn4cUiRoqXxHOph" class="num"><!--pnid:X9JfvcA3e2zDmBtrQ3pt69-->二</span><!--pnid:1yrhkkIpYzUv2YhwdFEDLG-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="vo6hnGD6bM6m8oBsk6oIaE" class="subline"><!--pnid:l0Nj50foQ08yQWErC0pUaz-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="OZ1VuKDi9RsCqdMgDNd6zR" class="tlist">
+    <article data-page-node-id="Bzg4lMhTZmsG8VIeIV34kt" class="task">
+      <div data-page-node-id="TmGRhi1JpYgxFBYQbaLiM7" class="th"><span data-page-node-id="gljio6kTNjjf6d2Yg110dc" class="no"><!--pnid:erOAWNMdriycFhj6wIljf2-->01</span><h3 data-page-node-id="SftSbhDYSooG6kzSqjqLMj" class="ttl"><!--pnid:Hhv8qxPCmX7FwCJ9Gn7IIN-->首推默认</h3><button data-page-node-id="J6A1d1Oa1qCtuXZ9hqhKS3" class="cp" type="button"><!--pnid:EyJiwjL3faP9SUXyReqrvh-->复制</button></div>
+      <p data-page-node-id="0W7N5rL1nkPBfp8kBP8JNg" class="tp"><!--pnid:4JncYztGOXeJHD73CmcPfU-->这是秋冬新品的选品材料，我一起拖进来了：候选商品池 180 个、关键词与趋势快照（近 30 天）、竞品属性对比、供应商初筛信息，还有折叠水杯类目 300 条竞品差评原文。我们的约束是客单价 15 到 35 美元、毛利至少 30%、头程不超过 4.2 美元、Q4 现金流有限。你走完整流程：先按这套约束定义筛子，再从需求、竞争、利润、供应链、合规、退货六个维度把 180 个筛到入围名单，每维打分并附证据来源；然后逐款过评论、竞品、成本、认证做深度验证；最后分成继续调研、可以打样、明确放弃三档，放弃的写清原因。产出两份：一是《选品机会池与多维评分》Excel，含结论摘要与评分明细两张 sheet，明细一行一个候选写清六维得分、证据来源、所处档位；二是《差评洞察证据卡》Excel，一条痛点一行写清原文、出现条数、占比、指向的机会、对应我们的哪个卖点。打样立项的决议栏留空，我自己定。</p>
+    </article>
+    <article data-page-node-id="USVU0bc4PJMBDxG4LjU6dL" class="task">
+      <div data-page-node-id="8f3HcWXHbPN7N7NxRNYiYu" class="th"><span data-page-node-id="4Ej2BYHIkgWxXZZUzMpLv4" class="no"><!--pnid:Kzatjnbn9gdVSKC4bJcveH-->02</span><h3 data-page-node-id="utL8tQ0JNXUlkCKII24sJJ" class="ttl"><!--pnid:tn3wBS7anphT9CEvWgujON-->只做六维初筛</h3><button data-page-node-id="jSBh72b2IH3the9MD9SQm2" class="cp" type="button"><!--pnid:gB4xTgA0OPNNeDn6EUfQ8x-->复制</button></div>
+      <p data-page-node-id="aiWytX6urfa2orqBWvvc7M" class="tp"><!--pnid:kpgqKyYWf1RkKNyeQFYtUq-->先不做深度验证也不出证据卡。只把 180 个候选按需求、竞争、利润、供应链、合规、退货六维打分，筛出入围名单，每维分数标出证据来源。产出 Excel 一张评分表。</p>
+    </article>
+    <article data-page-node-id="WRgEobIDdCYMxAjFQACbS2" class="task">
+      <div data-page-node-id="5voqn12QP7MOpPp0VmBCAi" class="th"><span data-page-node-id="6CrYDZVqwEhVkgBJlxCaYg" class="no"><!--pnid:ynlKcCXMmuARJMKTMLZuFW-->03</span><h3 data-page-node-id="liTh2txBEz0z9Y1LxNxN3j" class="ttl"><!--pnid:iNySmEIryWqLMfso8DLMeW-->换成只看差评口径</h3><button data-page-node-id="1pCQ8E8uhdZg93slYrn0Xx" class="cp" type="button"><!--pnid:F0LYjnweoR26tUshvVqopc-->复制</button></div>
+      <p data-page-node-id="pt2LOnxSFWBNQDAoEFTFcQ" class="tp"><!--pnid:8M1IRqahpZOvfUcWs3uFjF-->这次不按维度打分，改成从 300 条竞品差评里反推：客户到底在骂什么、哪几条是产品定义机会、哪几条是伪需求，按出现条数和占比排序。产出 Excel 一张差评归类表。</p>
+    </article>
+    <article data-page-node-id="uzl3zU8JLQGLYqzeNEByCq" class="task">
+      <div data-page-node-id="m8IExIDbgzGiFTsPw0FU0C" class="th"><span data-page-node-id="2vuqgcW1S0g5btJRA9hyZP" class="no"><!--pnid:6iu1Pm2UBrQJdCTJNMhsGq-->04</span><h3 data-page-node-id="zEwmfvVGlZIfKHAORtPxjQ" class="ttl"><!--pnid:7Ji7IMZt0Jcqt3OjHIXcIC-->一次比三个类目</h3><button data-page-node-id="if3IgQBEjYP4iOsqJ8DKIo" class="cp" type="button"><!--pnid:4TOWiOb9Ir9KAZuGKJxv3J-->复制</button></div>
+      <p data-page-node-id="SA5yL6TjywIcLWx7I63uSN" class="tp"><!--pnid:uPz7aCrZRsW6VTNrL3YFXP-->把候选按类目分组，三个主要类目各跑一遍六维初筛，最后给我一张横向对照表：各类目的平均毛利、竞争集中度、退货率、认证成本、入围数。</p>
+    </article>
+    <article data-page-node-id="RrIz31N4zbqqCdsDFqEmkV" class="task">
+      <div data-page-node-id="jDyT2KX2d5RxYIDaTzIUjw" class="th"><span data-page-node-id="PDd7Me6guWUwJq2jNrbVyK" class="no"><!--pnid:IparJTprrcLP8iIhpXjDsf-->05</span><h3 data-page-node-id="sVwC7P4hIGIQmkomgbkqcv" class="ttl"><!--pnid:9RF0jjULZtlo8GUbz8FYJW-->给老板立项会看的版本</h3><button data-page-node-id="03gOTD3KO2XCeIa4mEcmhQ" class="cp" type="button"><!--pnid:G0reNRwLQT0jaEVq7virH4-->复制</button></div>
+      <p data-page-node-id="lXva4bftCkHDMA1RKALlHo" class="tp"><!--pnid:whtHJiVPk33u8Qx3VWDnV3-->压成一页：入围几个、最值得打样的三个是什么及理由、被砍掉的热门候选为什么砍、还差什么信息才能定。不带全量评分。产出 Markdown 一页。</p>
+    </article>
+    <article data-page-node-id="37VozFjW35K5F42QgR18z1" class="task">
+      <div data-page-node-id="P8huYR76wrZMQ4CNtcPUxL" class="th"><span data-page-node-id="cF0BDSYu9a7znnRnp01tnc" class="no"><!--pnid:anoSDNbSy5tHuAynjRcgSN-->06</span><h3 data-page-node-id="p4QIniCs825oyMkrhq7JIv" class="ttl"><!--pnid:Y7C5iDAH76rcD1VeEPlINR-->让它反驳自己的排除结论</h3><button data-page-node-id="SzzVWIpUS6xlqljqSjOBC3" class="cp" type="button"><!--pnid:rMUJz2GgOpvAOYgzJ8EIMp-->复制</button></div>
+      <p data-page-node-id="6adP73kbNxoQiRynPtqGMM" class="tp"><!--pnid:KXZM0yA7uQuHkyah7eRTt6-->对照候选商品池、竞品属性对比和 300 条差评原文，你排除了热度第一的智能保温杯和另一个品类，逐条写清依据来自哪份文件的哪个字段；同时说明如果约束放宽（客单价上限提到 45），哪些被排除的会重新入围。产出 Markdown 一页。</p>
+    </article>
+    <article data-page-node-id="WMVVj3RW9VUEXMQwra7wfC" class="task">
+      <div data-page-node-id="kHdgtLlq3vkEFZ1f0vCYbs" class="th"><span data-page-node-id="tD13zIo6jDZlYE4qNsb0OI" class="no"><!--pnid:g6T8xEK2lVqQmmo243QVBg-->07</span><h3 data-page-node-id="Ef6hmVW2UxCz8XRt8vGE1u" class="ttl"><!--pnid:DukVEZZn49gXB9kd1HGpye-->专门比对历史选品的踩坑</h3><button data-page-node-id="zkuW5v2s1zFr8RIj9x1fTf" class="cp" type="button"><!--pnid:9qcClf0vjfeJ5IL2t4kVUi-->复制</button></div>
+      <p data-page-node-id="YPSwgFTgSHwaNUXqK9t9Lr" class="tp"><!--pnid:INk4kod9R7OU0eRxNspWji-->把这次的候选特征跟历史上失败或滞销的品类比：上次是死在竞争、退货还是现金流，这次有几个候选有同样的特征。像的标出来。产出 Excel 一张对照表。</p>
+    </article>
+    <article data-page-node-id="ufNDWdEHarV6JnB4iUlgD9" class="task">
+      <div data-page-node-id="QASklPNg1rFMQ0uYaLgZla" class="th"><span data-page-node-id="Q3cFM37VZ8g4xeqW8vvC9w" class="no"><!--pnid:obrqk8qmGJe9N0kYWKjRVq-->08</span><h3 data-page-node-id="WM2sWaOUggICuqUBcmAbZ1" class="ttl"><!--pnid:XpPjI76oADrEG7yZctJf8z-->对照约束做合规自检</h3><button data-page-node-id="w5YM0RFL1tfiv714PLUA3s" class="cp" type="button"><!--pnid:zmPbjdhCZJaYh6LDN6cCra-->复制</button></div>
+      <p data-page-node-id="mbN1PvN7bKRFpY35ju1x8u" class="tp"><!--pnid:YhfTYHYTQY7GQCUzMo8683-->对照我们定的四条约束（客单价、毛利、头程、现金流），把入围名单自查一遍：有没有超线的、超线的为什么还留着、每一维的分数能不能用行级数据复算。缺的列出来。产出 Excel 一张自查表。</p>
+    </article>
+    <article data-page-node-id="09GTC8rjajWxCpOV0VgOuK" class="task">
+      <div data-page-node-id="qUT5pvNKkxY7ILwjUKLjvd" class="th"><span data-page-node-id="OXhStJaA4ffMYovYcMQAqh" class="no"><!--pnid:jPMTo0WMtiJsWtu3VczWzd-->09</span><h3 data-page-node-id="Dzn9bWydaJHWVPT3JhykeC" class="ttl"><!--pnid:5t3u0p3TXxzWNnRA8S4ht6-->折算成现金流占用</h3><button data-page-node-id="tDzNtLPs2huL4fJ9zRr9h7" class="cp" type="button"><!--pnid:khYlwWkCE62k7dbrWa0Iim-->复制</button></div>
+      <p data-page-node-id="qHowl1oGHYwOWCPi6TFBVZ" class="tp"><!--pnid:SX3aEjwZZEXH2YsYqHGo0o-->把「可以打样」的几个候选，按起订量和头程算清各自的现金占用、回本周期，再跟 Q4 可动用额度对一下看能吃下几个。给出算法和口径。产出 Excel 一张测算表。</p>
+    </article>
+    <article data-page-node-id="soCgfsMN8IAutomriCXXha" class="task">
+      <div data-page-node-id="BgMIjhnabpVXoVSVag1RRL" class="th"><span data-page-node-id="o9gYmzGRFiQWRQSolzXpDB" class="no"><!--pnid:kOuk4e7VB7h6n5zKFLboJm-->10</span><h3 data-page-node-id="23HAEy3DLKa0doCiFnosJ0" class="ttl"><!--pnid:cF29SY0ik2mXAiH5s7H6Qi-->沉淀成选品评分口径表</h3><button data-page-node-id="O1wjAot86NBmIXfYF8RkjN" class="cp" type="button"><!--pnid:1DwqeFEeIs1x5tQQXeVi1s-->复制</button></div>
+      <p data-page-node-id="3dVOJ0ZHeNwPUHxdqcg4zR" class="tp"><!--pnid:B7gS3nUhvJ3ErqhTw1UMvL-->把这次的六维打分口径整理成一张表：每一维看哪些字段、多少分算过、什么情况一票否决、拿不到数据怎么处理。下次换类目直接套。产出 Excel 一张口径表。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="s4jkdkQFrV8r5GGQjD8tRV" class="cta">
+  <div data-page-node-id="fKHc8doKk5YEiENpbpFtD1"><h3 data-page-node-id="gAPKBataQJBlQA6YNGc2iL"><!--pnid:iqrb5sbXJogs0AoB1ECjza-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="jEKO849DJMSNjdJOdWqJ9H"><!--pnid:BcP0Zc1U6L9EbeTXE0UfGX-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="630YIpxIwq1x61u9MVpBBI" class="btns"><a data-page-node-id="5JyJSo03yRhjp0JGHfR9aG" class="btn" href="#" id="ctaContact"><!--pnid:KB5ARRu2vrCDibhr8dY93i-->联系我们</a></div>
+</div>
+<footer data-page-node-id="e0h41mBlmbfymNaseiR4Bo"><!--pnid:unjGjQPJeE7uwnjfjL9JrQ-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="ku3xPIiXLhZj76AWOO7T22" data-pnid-children="VYbl1Pnsn8iYpMZl1JfyUo">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="mkihBEyHoklRBqU0V2MrbH" data-pnid-children="tfM49G48hU48KAOyigJisA">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="r6FG6AjiIzn9RYK0LRzmHb" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="UuAY9XkbGVXuWofOP14EHL" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="FwODyTvBVC9XglQq5o2AG1" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="q6FP4JHxPcjSzShGM9NzSA" data-pnid-children="5Ji0bDfFlA8NhBqWtmmZnb">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="DmfGnzNeZmY5qXXflBIaIR" data-pnid-children="g1i07tJzWcF5rRWwI5jXzX" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="fvUUjtNDdhgllKW9kJdctd" lang="zh-CN">
+<head data-page-node-id="nqoCG31c9aH7kkCbHhSjPo">
+<script data-page-node-id="whlVPKo5jk8zaLpMkCqk9z" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="qfCyCIPHyzqiDZYHCG3XFw" charset="UTF-8">
+<meta data-page-node-id="YiawF7r1ibantVG2CMSBFk" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="bt5RWTGa3loiURdA5qI9kI" data-pnid-children="QBNkFzgXUKHxiwEYu0F2t9">运维月报与故障工单成稿</title>
+<link data-page-node-id="N98dkofUWnEn2eKcRPLu3s" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="ml8laBWtwp0bFfP5Z0ldcf" data-pnid-children="vEj9BMj8i7FPJHFuEMSKFB" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="RbAuXstuOgrEq7DaNZLnTK">
+
+<div data-page-node-id="qsLVUYdB7vQHh3hw84YT1Y" class="wrap">
+<section data-page-node-id="SymusEKl38Pf1ZfnIaZFfS" class="page-hero">
+
+
+<h1 data-page-node-id="5g0FuJO0s7J4UUOcUnGJVM"><!--pnid:Dc1pB2tqWkhg1XtmneiNA5-->运维月报与故障工单成稿</h1>
+<p data-page-node-id="VibyTYY21ig5LFY73KTmBA" class="lead"><!--pnid:dGMjnSb4b7n0FG2PB9HBRL-->月报里那个 99.2% 没人会去核对 · 直到业主按合同口径算了一遍，才发现两个数差了 1.8 个百分点</p>
+</section><nav data-page-node-id="UsMfdU7r9cAYPt1E6wDN3t" class="subnav"><a data-page-node-id="gmOQViG6tqWNy1s3fZgBdP" class="on" href="#"><!--pnid:YmewBKNFsmlQKFQXK5d5oM-->场景引入</a><a data-page-node-id="Pq4himE9q0Zwocy9zHyugd" class href="LiveDemo.html"><!--pnid:krQtQXZW0ylCML2vShN842-->Live Demo</a></nav>
+<section data-page-node-id="0H5QrW9XNWLvwNfhyYJLAK" class="blk">
+  <h2 data-page-node-id="OrZ39UA8fe5dbIBwjFUgXh" class="h"><span data-page-node-id="xM5JWKFgFzwW3rkftRQxB5" class="num"><!--pnid:RhfHwrOAUAjyrco4UK54Dc-->一</span><!--pnid:QlgDLwy8NYfnRqqQTvrwUt-->这件事现在是什么样</h2>
+  <p data-page-node-id="pa7HLuDQdkrsUMQ6C0f4Pv" class="subline"><!--pnid:HprlvGO4CSg68lYlO7fInH-->运维与质保工程师 · 真实业务触发</p>
+  <div data-page-node-id="N2IjW6dDxOVpelFoOohMht" class="card"><p data-page-node-id="enKzQjSwnAUBkQWTzV2MLf"><!--pnid:0tNhoK5L3dmVMlmmAamaOK-->蒙鑫项目 2026-08 运维月报，业主要求每月 3 日前提交，内容含报告周期、装机容量与系统构成、累计充放电量、综合效率 RTE、系统可用率、SOC/SOH 与单体电压温度波动、PCS 输出与谐波、告警与故障分级统计、舱内温湿度、经济性、风险与合规、下月计划，外加编写、审阅、批准三级签栏。数据是齐的 —— 在 EMS 里、在四个微信群里、在巡检本上、在工单系统里。</p></div>
+  <h2 data-page-node-id="WMAf0skfd519uBsW8PSqwJ" class="h" style="margin-top:22px"><span data-page-node-id="mNUY32JbgZ3XyhixV21lyR" class="num"><!--pnid:QlYQNmX04Run2ZPDXe6RJI-->二</span><!--pnid:krHmPmjTsxhgqRvCKAuBGR-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="bb37Ku23EXwA1ywBBForas" class="subline"><!--pnid:ALKS220Z9Rk7saNJNbutbm-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="ykidFgMe4cFHkIaymmZbYB" class="pains"><div data-page-node-id="6BskwegsKP3gPHd6g4F0FS" class="pain"><span data-page-node-id="6BquyeIsPqE1zZcHZ78HZr" class="i"><!--pnid:8BBlbptqIFr87DCDAFAwxp-->1</span><div data-page-node-id="fVPg2We9nSDiV7OwtwfRUg" class="t"><!--pnid:FNCyWNSEg4IbgPt4e3R01l-->运维月报必备内容有十二项，从累计充放电量到编写、审阅、批准三级签栏，每一项都要从不同的地方抓数；而项目经理的原话是：每次做汇报之前先花半小时统计数据<span data-page-node-id="E2hZMLmyopEREd1EaU0H0R" class="src"><!--pnid:qrzMPJfwPTdElr137Hlmto-->依据 · <a data-page-node-id="VMfFA0aiacarwiNJV4MQYk" href="https://m.renrendoc.com/paper/524258294.html" rel="noopener" target="_blank"><!--pnid:xd8fPX7GzXEGQN9B2yrpPw-->储能电站运维月报必备内容：报告周期、装机容量与系统构成、累计充电电量与放电电量、综合效率 RTE、系统可用率、SOC/SOH 与单体电压温度波动、PCS 输出与谐波、告警与故障分级统计、舱内温湿度、经济性、风险与合规、下月计划、编写/审阅/批准三级签栏</a></span></div></div><div data-page-node-id="LJdbWf7ZW1hbg0Qh8hqgq5" class="pain"><span data-page-node-id="sXE1BnC0UJc3o86q4BDf7c" class="i"><!--pnid:7qnd2FZ7NUOh6qbpdj4kEB-->2</span><div data-page-node-id="61xbYGLDe2SnjIPn8fOYn8" class="t"><!--pnid:wSfKA6EbySZWsSz0SrZl4x-->周五晚上 11 点接到「明早九点客户要所有项目整体进展」，接下来三个小时在十几个微信群里翻聊天记录、挨个问负责人要最新进度、把零散 Excel 复制粘贴到主表；第二天客户问「这个数据是昨天的还是前天的」，答不上来<span data-page-node-id="rFeW7ZY7HqpjIP4eUNC7h3" class="src"><!--pnid:XWh3aVJcSkODrohZ8Rnu5Q-->依据 · <a data-page-node-id="70NvumjOwZyafH9LHm7UPp" href="https://www.landian.cc/content.aspx?p=18067" rel="noopener" target="_blank"><!--pnid:1NtusUTh1D9irwGJagi7i9-->项目经理的周五晚：11 点接到「明早九点客户要所有项目整体进展」，接下来三个小时在十几个微信群里翻聊天记录、挨个问负责人要最新进度、把零散 Excel 复制粘贴到主表；第二天客户问「这个数据是昨天的还是前天的」，答不上来</a></span></div></div><div data-page-node-id="V6P7DYb9QqQEJVr5FqIukx" class="pain"><span data-page-node-id="FPWfwpq6DWBFSy7g4tr3pY" class="i"><!--pnid:LDccuvFV8xatK5R7SgHEoY-->3</span><div data-page-node-id="foygkJ1GhhYM5HmRjt0bIp" class="t"><!--pnid:CXHP19KaXOwB8xK9XiUqWX-->故障等级判定要遵循时间、影响、后果三要素，涉核心安全设备无论时长一律按严重或重大处理；工单字段里持续时长、影响时长、故障重复率都要填 —— 而等级一旦判错，可用率就跟着错，且没人会发现<span data-page-node-id="5HsJxoH8ElhF6fxFPfGeOi" class="src"><!--pnid:veVmEW2D5KrFWZ7K4xKOXl-->依据 · <a data-page-node-id="NJ7eiRMLHtnzXUObLRUIeN" href="https://m.renrendoc.com/paper/524485126.html" rel="noopener" target="_blank"><!--pnid:IxvBXMhIXecMKmzEM48hsr-->储能故障工单字段与等级判定：故障日期与起止时间、故障单元编号、故障类型、故障等级（一般不影响并网预计恢复 ≤1h / 严重影响并网恢复 &gt;1h / 重大完全无法并网需紧急停机或换核心部件恢复 &gt;2h）、故障状态、持续时长、影响时长、故障重复率、处理结果；等级判定遵循时间—影响—后果三要素，涉核心安全设备无论时长一律按严重或重大处理</a></span></div></div><div data-page-node-id="3DABQOkyEV0M1PE50WESpY" class="pain"><span data-page-node-id="Le985MGvDL4g50zDAKf8yH" class="i"><!--pnid:rcT5xGMUEiImno5naISjAi-->4</span><div data-page-node-id="GxqF6pZrgsFAf8Xl7sgyzA" class="t"><!--pnid:5GPlCdllpdxOn5O8N4fva6-->真实月报的故障画像是：储能侧以电池簇隔离开关误跳闸、BMS 通信异常、液冷泵浦故障为主，液冷因需停机排气、检修、更换冷却剂导致停机时长异常拉长；电网侧设备故障次数少但单次停机长（继保误动、SVG 功率模块过热保护，须待电网侧确认后方可复归）<span data-page-node-id="016Qw082fFEUq26tS13ga0" class="src"><!--pnid:kM8u9kJXLcCCZyzh0Etx16-->依据 · <a data-page-node-id="ytru1cAlpNGpwW67b9iQdp" href="https://www.renrendoc.com:10443/paper/534167765.html" rel="noopener" target="_blank"><!--pnid:8zdAs8RslKJjXo7XB8LEs7-->一份真实运维月报的故障画像：储能侧以电池簇隔离开关误跳闸、BMS 通信异常、液冷泵浦故障为主（液冷因需停机排气、检修、更换冷却剂导致停机时长异常拉长）；电网侧设备故障次数少但单次停机长（继保误动、SVG 功率模块过热保护，须待电网侧确认后方可复归）</a></span></div></div><div data-page-node-id="Q16DbKTNxHx3bVZEakUd6t" class="pain"><span data-page-node-id="3cQ81i0EzFEDKEC7DTDWIx" class="i"><!--pnid:If6hZAUgRGapzbB8NxNQF0-->5</span><div data-page-node-id="rZXoTTxpQQiBRzCRR1jI5m" class="t"><!--pnid:3JYKBWWjmzyABjGbk37P7s-->西门子能源对 BESS 停机的归因是：停机主因是 HVAC、逆变器与 BOP 小件，备件可得性直接决定停机时长 —— 而停机时长才是月报里唯一会被业主追问的数字<span data-page-node-id="5MUkXi1VEtjI08WwjZGY58" class="src"><!--pnid:1Dlje6GFFwBsyOYxK3yXBH-->依据 · <a data-page-node-id="bibCuBMFBNChuTV0vh7F48" href="https://www.mffb.com.cn/news/show-671093.html" rel="noopener" target="_blank"><!--pnid:4wO9wLJIwaotAAm4lOI3f2-->西门子能源对 BESS 停机的归因：停机主因是 HVAC、逆变器与 BOP 小件，备件可得性直接决定停机时长</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="6E91ab57PhqPrVN5Wlux2Q" class="blk">
+  <h2 data-page-node-id="NX26UDZwN57qhdPHjtRvHp" class="h"><span data-page-node-id="ksCwrQplkM2Hlcnc5oWMA0" class="num"><!--pnid:YRr3x0ixWxQpGM4JQ3T35T-->三</span><!--pnid:nt5IXCqVkRcNsd3qUM7ShX-->换个做法之后</h2>
+  <p data-page-node-id="v4wU6PYgzrBUb35VvjvuLU" class="subline"><!--pnid:mVsXmQxfx1QFe6FEOxAplW-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="T8piHe9ejML9ch83VxzkX8" class="cmp">
+    <div data-page-node-id="vl6BVxJTJqDQ2WwF36c8XB" class="old"><h4 data-page-node-id="oN9PHWrVnKQqRNeCkx2M7q"><!--pnid:HPxxxori8D3KXE2tNfAwHd-->✕ 现在的做法</h4><ul data-page-node-id="4DWdVhOWGvGZdxeI0yt6zA" class="list"><li data-page-node-id="DJ2gfYPhOj5MOMnyzPcuGr"><!--pnid:VYFzKURSABjrM8oYaM0jQO-->运维月报必备内容有十二项，从累计充放电量到编写、审阅、批准三级签栏，每一项都要从不同的地方抓数；而项目经理的原话是：每次做汇报之前先花半小时统计数据</li><li data-page-node-id="txsOyfNqoN47ctAaWBw2lu"><!--pnid:3B9MvvOktNNr1P28iVetXt-->周五晚上 11 点接到「明早九点客户要所有项目整体进展」，接下来三个小时在十几个微信群里翻聊天记录、挨个问负责人要最新进度、把零散 Excel 复制粘贴到主表；第二天客户问「这个数据是昨天的还是前天的」，答不上来</li><li data-page-node-id="8qPNem1dnQZtNZF38xMhAb"><!--pnid:VLmGhOr7EYhpGkFvgDMkCi-->故障等级判定要遵循时间、影响、后果三要素，涉核心安全设备无论时长一律按严重或重大处理；工单字段里持续时长、影响时长、故障重复率都要填 —— 而等级一旦判错，可用率就跟着错，且没人会发现</li><li data-page-node-id="baTUBLeYWjSmpu3ydfyhmz"><!--pnid:pUCSFS6JpjpSJRe7J5SzTO-->真实月报的故障画像是：储能侧以电池簇隔离开关误跳闸、BMS 通信异常、液冷泵浦故障为主，液冷因需停机排气、检修、更换冷却剂导致停机时长异常拉长；电网侧设备故障次数少但单次停机长（继保误动、SVG 功率模块过热保护，须待电网侧确认后方可复归）</li></ul></div>
+    <div data-page-node-id="MdezX9jm8OFQNH68poiYyX" class="new"><h4 data-page-node-id="b7ZQdAS1U4MZiSrST0Orbr"><!--pnid:FldevSuZztT9ZV8wMthWh5-->✓ 交给 Agent 之后</h4><ul data-page-node-id="741T7v2BA76lu9eTuMjY2E" class="list"><li data-page-node-id="LqX45j2ri44LCiDkJFB36I"><!--pnid:e9EMHdQsiN2Zoo2O3ALowk-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="ImjWasDoLLB6tXweL49Bn6"><!--pnid:wgcmARO5rClQwxLRwczs0F-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="DpTyYwLG8lFDsY7dhS4XpC"><!--pnid:j9D58y5tUYHYmM0aB0kE3t-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="mYgPgvG7JZX2aiouLDHRmg"><!--pnid:b9wv0Cva413HfhBt9iO4IU-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="A2geCIZzOnwI5ZrgxQ6qpM" class="blk">
+  <h2 data-page-node-id="fm5PngF5ZGLlg6SIYUrCcf" class="h"><span data-page-node-id="oVHPV9yVxeZbAA9p8Yd7L5" class="num"><!--pnid:dwKlRAXz8YsCY7YUL8VnZB-->四</span><!--pnid:To93JOVxq1BViyMXN2W5J0-->场景闭环</h2>
+  <p data-page-node-id="IcZJA9OxHpWaAqSx60chVy" class="subline"><!--pnid:6WIPScbIBFwGycoG614zxC-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="wxj4FYKWYDJDJookunmQaL" class="flow"><div data-page-node-id="KNe6uu1mYSCDGMaFdRnXCq" class="step"><div data-page-node-id="aH4NP5UkgqWJ9KdgAS7MvX" class="n"><!--pnid:7GeiXgn5r5cFoAyqUShUNr-->第 1 步</div><b data-page-node-id="5FZnI0Xlyjl9ZntT0wABWz"><!--pnid:4h1Equv5EcdkXJ7FkUrj9J-->多源对齐 · 四条流水按时间戳归并</b><span data-page-node-id="LWTvyzj31wHD5DqevQ5CjM"><!--pnid:sQDI5dklJdbjfaCUgIxYDO-->微信群与巡检本里的动作挂到工单系统，挂不上的单列「无单动作」</span></div><div data-page-node-id="cLvYDFhXW87uKAJFt30M4m" class="step"><div data-page-node-id="KJcqJOxfXxANlaQAALtTdj" class="n"><!--pnid:1sdAYNzik2IfzaEY6ZnS42-->第 2 步</div><b data-page-node-id="sKUwrsgFNOS31zDxuoamKa"><!--pnid:rulWIFkXBp0OfTbDxOT4Ig-->口径并列 · EMS 在线率与合同并网可用率各算各的</b><span data-page-node-id="YKYGCCc3oCUvB5Sc9DU9wI"><!--pnid:jnYWfME6LtupMSO5SVTqSk-->两个口径各自标注扣除项，差额来源逐条列出，不合并、不取舍</span></div><div data-page-node-id="xzzRBTMfMJKgxx8OcPoYa2" class="step"><div data-page-node-id="58ajnnhiGJt2L55DtDSfN5" class="n"><!--pnid:4oGNt7OuEIauvsaH1UcRU4-->第 3 步</div><b data-page-node-id="FHZvv3J4k4pWU9AlXJZACW"><!--pnid:NGdndlFisvWTrIKkyNCK83-->等级复核 · 按三要素逐条回判当月 64 张工单</b><span data-page-node-id="bFlnE8VRc2u8mDR4P77S3W"><!--pnid:ePvUHaFwYbhD2GAgXnLlKA-->时间、影响、后果三要素逐项核对，涉核心安全设备的按严重或重大回判</span></div><div data-page-node-id="oLl6I2zNwFiErUVsim5hBP" class="step"><div data-page-node-id="yEDJUfVoFF6fvbS8iQURG2" class="n"><!--pnid:3Q02BMcGuJjnBM15KX8Ggx-->第 4 步</div><b data-page-node-id="mn5ZugZXVZdgufS50EHfQZ"><!--pnid:92G5pFETaMRHl63tp5EnNN-->停机归因 · 分储能侧与电网侧，归因到部件</b><span data-page-node-id="4o8GI25zsVIr5tQj03KOhe"><!--pnid:nfDHwYPDXRy106m101PgvM-->每次停机的主因落到具体部件，标出是否因备件不可得而延长</span></div><div data-page-node-id="BhFTzVBKzeF7FEOyajM8p2" class="step"><div data-page-node-id="vb9YNlqAtITWXOJ2Ufz8Ua" class="n"><!--pnid:vdAyQgeDrVDV4i9vIyYggY-->第 5 步</div><b data-page-node-id="DVVrQbpZIZ27v1O08X283V"><!--pnid:51X18uCzRi5g2uIp8hMR1y-->成稿与签批 · 生成月报与工单台账</b><span data-page-node-id="FxpCc6eGtdUZYc6N3IJUV5"><!--pnid:rVlvt7Km5hqAAxJJpLmgIK-->十二项必备内容逐项对齐，编写、审阅、批准三级签栏留空</span></div></div>
+</section>
+
+<section data-page-node-id="7Nn6GCnwinfXMXqtVZ5Usf" class="blk">
+  <div data-page-node-id="PwdkcfKObJranG7TvQNg9b" class="g2">
+    <div data-page-node-id="kz28GlWD0SG8H5mUyZqUVW" class="card"><h3 data-page-node-id="RIxtgSpQ1QAfQCP4OabBdv"><!--pnid:yE3Y51InSF7JWGaEEjpBk8-->要准备什么</h3><div data-page-node-id="GzITVtXUySFSYL5yp7Zkfr" class="src"><div data-page-node-id="hLh743SVXhhK9IRJqD6Nbu" class="fn"><!--pnid:o7E2TKbvtGf4SI5NpyMhi9-->EMS 导出 CSV（15 分钟粒度，400 测点 × 2,880 点/月）</div><div data-page-node-id="e17VhjYtO9xGIsyn3bsjyw" class="fd"><!--pnid:uBDft4IppORuUsOl1dZeQI-->充放电量、SOC、SOH、单体电压温度、PCS 输出、谐波、舱内温湿度全在里面</div></div><div data-page-node-id="GPiqL5ZWBCsKZicYs6ZWLp" class="src"><div data-page-node-id="vYtuOan3duaUnufWoqkFCh" class="fn"><!--pnid:7T733rHhJ9kPPBSKvBYlpd-->运维微信群导出（4 个群，当月 3,100 余条）</div><div data-page-node-id="TTUTWBXULQ5KDeZyD4rWRc" class="fd"><!--pnid:L1MCJP6zuhZFvWE0iU3JLd-->大量处置动作只在这里留痕，工单系统里没有</div></div><div data-page-node-id="xBzZGaBormHSPt6DudDPow" class="src"><div data-page-node-id="DhpbZy7u7Zetw3Z7vxXooO" class="fn"><!--pnid:4m6SZMQFA50GjJXtHWlhV9-->巡检记录本扫描件（31 天，PDF）</div><div data-page-node-id="fHUKq3x4UgBUKoxEGoFK5q" class="fd"><!--pnid:NqJejpO8qOnpN0QUzCTHyK-->手写，含现场处置描述与签名，是唯一有签字的原始记录</div></div><div data-page-node-id="BsRxD9Nun0WHT8BZEwo67Y" class="src"><div data-page-node-id="vBKApOT35MkgMLWfvsdO0k" class="fn"><!--pnid:7TDq2ITKRJoE63fdt6aWBM-->工单系统导出（当月 64 张工单）</div><div data-page-node-id="amGtNPIdUBp5jVQ3FxKOfu" class="fd"><!--pnid:XnJWBn6sHIOSQ18QjVaCOX-->含故障等级、持续时长、影响时长，但等级由值班人员自评</div></div><div data-page-node-id="6yJZZVsrXAy7EWULlmcnHT" class="src"><div data-page-node-id="anTFrFo6EGVL8XSnQ2Mhf6" class="fn"><!--pnid:c2yaUnAMxOb1ny0nI3kC8H-->本司故障等级判定规则与运维合同可用率条款（星标）</div><div data-page-node-id="EysBhkRyxonUjIvzMc3ceu" class="fd"><!--pnid:0saf2MKuDo5nqS6uxVIn8f-->★那份平时不在核对范围内的东西 —— 等级怎么判、可用率按哪个口径算，这两件事写在两份文件里，而写月报的人通常只看得到 EMS</div></div></div>
+    <div data-page-node-id="pvvrBkig5j8LXWKzIJ9KD0" class="card ev"><h3 data-page-node-id="9Cy5WDATEb2aY7MQ0Y62Xa"><!--pnid:loKTeHgGPOCMtjMc74UaM0-->为什么这个场景值得做</h3>
+      <p data-page-node-id="6u12u5XJIGyii6UlyTPsWi"><!--pnid:059VSd104YxoprD5qA9zwB-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="nybm9Z3RwRJ5uulwzvpIzE"><!--pnid:xhuhgZOZVmbL468LSf6Qpi-->11.0</b></p>
+      <p data-page-node-id="hfrYLyJPkaLZGZED7TO8p0"><b data-page-node-id="sZuEHKXJTkvtRzgMcO84uI"><!--pnid:ZB0XvIgsajEOM51Aq8SBtR-->最大差异点 ·</b><!--pnid:e5m3AwJr9HVg6ae3cWHWah--> 不做 EMS 报表的二次美化（业主自己就能导出），只做三件 EMS 做不到的事：①把微信群与巡检本里的动作对齐到工单系统的时间戳上；②按本司故障等级判定规则（时间、影响、后果三要素）复核每一条工单的等级是否被判低；③把 EMS 在线率与合同口径的并网可用率并列，标出差额来源。</p>
+      <p data-page-node-id="f5UM39XnIGpEZaHCLnntIU" style="color:var(--ink3); font-size:12.5px"><!--pnid:H9z2e3Sbck8yuDGfYrjuB6-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="1hLzKInbE1LNA0y2oYDTbU" class="blk">
+  <h2 data-page-node-id="jXe7Isg3F4pxE2QBvmM4Kf" class="h"><span data-page-node-id="lqMmAEUmjwNZ0sWgkKF65x" class="num"><!--pnid:U5vyftxVQkiThpESKDOn9I-->五</span><!--pnid:yewYxMMC39FYMId22WBv7q-->会产出什么</h2>
+  <p data-page-node-id="uXshxxlNbEISPEy8ACdf1L" class="subline"><!--pnid:Xwwmsi1E4vcF71oT6jfWiT-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="XkdUVKnKuYflT00fEwhLO6" class="outs"><div data-page-node-id="Nm8ho2zIdTuoYt9Rd9gpUG" class="out"><div data-page-node-id="yFbg4VwxLnNNvDnfhr4KCL" class="on"><!--pnid:k5RPExkjLcghv71wKti8jS-->正式件本体</div><div data-page-node-id="G4Ubr5ZzdVgSbMKN77XEhA" class="ot"><!--pnid:jbE6LMrv2DXcJUUqJ7KU7f-->运维月报_成稿.xlsx</div><div data-page-node-id="wwAh3QwYMLZz9aCnUPXcIn" class="od"><!--pnid:kxyBb6OhJBgNloa74rG6t2-->正式件 · 12 项必备内容 · 含编写/审阅/批准三级签栏</div></div><div data-page-node-id="O6Xb1cZhP8bGu0uFdG8q3g" class="out"><div data-page-node-id="eVFnuloyt5vJ37intjfHpN" class="on"><!--pnid:LBXbqSRbzPC0YxArMTXwbk-->可派发清单</div><div data-page-node-id="JJrfIVXacnDAmhheqSl9IX" class="ot"><!--pnid:IspvmY9SGKisZdTtQoBegf-->故障工单复核表.xlsx</div><div data-page-node-id="Us61xigQ6YNykd72eH7g1S" class="od"><!--pnid:joUUrBAqIcnAG0XNFjhAja-->可派发 · 逐条三要素回判 · 原等级与回判等级并列</div></div><div data-page-node-id="65t5RWAatjWQsLrU0HMUTq" class="out"><div data-page-node-id="X6byLjbiGmuVs9W12OkTlR" class="on"><!--pnid:PJImR3SkolVgnGqHoT5pfw-->可派发清单</div><div data-page-node-id="kL4qnbBfjxD4bAzlYsa1VF" class="ot"><!--pnid:bjkj6khtCWNZ1g6nPbP3VN-->停机归因与备件缺口表.xlsx</div><div data-page-node-id="4NlZQDMcFLbBjHZNDfjSvC" class="od"><!--pnid:X66d7dYyRotHcu6mgPg2sM-->逐次停机 · 归因部件 · 备件在库状态 · 建议常备清单</div></div></div>
+</section>
+
+<section data-page-node-id="TWqJJT4lrJDMySM1Ph9xOG" class="blk">
+  <div data-page-node-id="MQcP85iNpoAiW20TLQtmun" class="card warn"><h3 data-page-node-id="JHAZCvUa9ukRFLsVdXOucn"><!--pnid:35Qm9S1z7pUvkdWxg7l0Ti-->这套东西不承诺什么</h3><p data-page-node-id="joPNGHrRixMPermg3qaZEU"><!--pnid:mJIcUmUE33ihrceoIg1lFU-->不输出设备健康度评分、不预测故障；不替业主认定可用率是否达标 —— 可用率的口径以合同为准，本司 EMS 口径与合同口径不一致时两个都列出来并标注差异来源，不替业主选一个；不下「设备状态良好」这类结论性表述；审阅与批准栏留空。</p></div>
+</section>
+
+<div data-page-node-id="OxPGBMJOrVvQEvDBKfUHMZ" class="cta">
+  <div data-page-node-id="fYx4FsGuRTFXKnsr86rDpd"><h3 data-page-node-id="pMmTWmgxjqvChh1Gy9bIyG"><!--pnid:qdE0ZTEPjrLfKoYucqYuDo-->想看具体怎么跑？</h3><p data-page-node-id="24R64L9yHBrI7dMaBmGywi"><!--pnid:z2OFLnUbQBKcBcZ3VhREbS-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="U1WvS1JdeNvqGumf2Rq1ZW" class="btns">
+    <a data-page-node-id="X3PsIaVZjlpiCSJYc4N2H1" class="btn" href="LiveDemo.html"><!--pnid:gpJlbqHeLVgSv9oZapxOLo-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="9Qi0XYwHF16cuLrhXtKFDU"><!--pnid:t5twuUM69OLi8ujLX31YQ2-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="XyhS5i4rxzg6BKKXxDRI9n" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="TnNORVNRZSnABI7SnvrTIz" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="1wMxVGV9l27Vb3bRfZALL4" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="Z1sPGW3A04m9qv3EAdpIxc" data-pnid-children="cktUCm69wMVeU191A3F4Vq">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="iqcUTBfIykdgMAT0g6WB5H" data-pnid-children="0iPjX6msvau7z1PC0wmz9C">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

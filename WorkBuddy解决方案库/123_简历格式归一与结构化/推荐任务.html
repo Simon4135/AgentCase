@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html data-page-node-id="0mq3sfEfwnvXW1YV8JuBsd" lang="zh-CN">
+<head data-page-node-id="XFsPpoyQZWRHQCZNy9e60s">
+<script data-page-node-id="FyJCneX1XYbEBhtrJ6DhdS" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="BkOMu0tcmnnxTlU9dg21qB" charset="UTF-8">
+<meta data-page-node-id="pCDgP6eNDvxfY0yqY4pn7l" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="iuALJkFLRpA6VaD9WIrLgy" data-pnid-children="ww5WP1N2athr0yyLidFAnj">简历格式归一与结构化</title>
+<link data-page-node-id="1zU95Pq8Pm0PzecmfQXKnd" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="S7YWtJQJvvxSSRSVRlfe1O" data-pnid-children="odwq6gtTdcLlvHUmHEN3Wd">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="J7cuAIpa52i6myzf0vwo0Q" data-pnid-children="45qU3uwI3JWavDncE890a2" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="h7EI7ZtDekGNEtOAG9wIzj" data-pnid-children="ftw33DnVZ7w3HXeRdp4Nho" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="Z1bNxdPnMxaJr3DsRDK1Um">
+
+<div data-page-node-id="y10CF162Sxe28U77qm5ORA" class="wrap">
+<section data-page-node-id="Sk7yB12Izh4fnxx3hxDjfQ" class="page-hero">
+<h1 data-page-node-id="qMImbOqpWvZxmbd8tvwjT4"><!--pnid:JIgk2wGO2xX4kRCN38tdMR-->简历格式归一与结构化</h1>
+<p data-page-node-id="Gru3zD0fBpGzhxFuxPuQjl" class="lead"><!--pnid:lGjlR5QtuRosbRep2y1Pvx-->300 份简历一半文件名叫「简历.pdf」· 筛没筛过、重复筛过几次，没人记得</p>
+</section><nav data-page-node-id="Lqwap4QTOoId5eP92LbgXB" class="subnav"><a data-page-node-id="B5jWSmXzGaLFTwTPLVKQPh" href="场景引入.html"><!--pnid:t4O39cT9BkdYd1svMcTxLM-->场景引入</a><a data-page-node-id="AIAi6n6GJSRa0jf6YTNBWh" href="LiveDemo.html"><!--pnid:nIW07cj6YMzjpZwZuyw6gt-->Live Demo</a><a data-page-node-id="9k1TIwlxpKwsKIQdhqdSE3" class="on" href="#"><!--pnid:bWh0zkhJ7wsTyCQ7Ud2c4q-->推荐任务</a></nav>
+
+<section data-page-node-id="eHqzLjBOmgwVrEA3qIllSe" class="blk">
+  <h2 data-page-node-id="sQVC0bl9UpQ9hN6CiuFBVz" class="h"><span data-page-node-id="RDaikqtjAlBEVfOV4oJoOU" class="num"><!--pnid:lX6rKUocKsFLhjS97Gkjn8-->一</span><!--pnid:3t30pUQkRdtTy4Ur5U4g3t-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="pWaj9cqs91dkErRdzgfyEg" class="subline"><!--pnid:Rt5jeZBrSWteVtRCJVsfLn-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="xIrmzi5NaZZcYjEsXBlxHH" class="card"><p data-page-node-id="OQbOA98wfiPJ81l76X3MeM"><!--pnid:GIlIEYqpoEkXK3CeStrpIP-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="alP8nD9cXPFkhxQl6zxzd4" style="margin-top:10px"><!--pnid:ozwjAqjR13W2qScaSNIeKX-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:CYGssM2DVFR0LzaouyHAIf--><!--wb-skill-start-->
+<div data-page-node-id="GG79oBosvRcsEFjgAPwNJE" class="wb-skill">
+<p data-page-node-id="gQjnSoRsw0rKj7IxdljM5N" class="wb-skill-lead"><!--pnid:42a9crB6adVc66jgkNOvrj-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="BrE9ixyYm9c5JT83zdh37g" class="prompt" id="wbSkillPrompt"><!--pnid:UkSJeqHRJjAIe7xqmMf2tY-->【准备】这个场景的规则都在「简历格式归一与结构化」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/06XwE1VAhgB63YUUuxghlS/1/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="EjCh4THd0n7CJeXpd0lV1n" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:7g9ikh4iI78FfCZfGG3099-->复制</button></div>
+</div>
+<!--pnid:IqF6HGGSCEHHTldTm3i2Xp--><!--wb-skill-end-->
+<section data-page-node-id="0GMZXvrjQC9Krrji0sQbeS" class="blk">
+  <h2 data-page-node-id="GqQ9ilCWgfwQ9uQ27jkwD2" class="h"><span data-page-node-id="NM8bYD10zikXrHFh8uEf5X" class="num"><!--pnid:r0LaOgtY9kcN2karljhrff-->二</span><!--pnid:7jADH1HnVoMUFOhjBmwXSW-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="uglydNK7hDBjrzemUz4jZS" class="subline"><!--pnid:STWnY3cgnmOaBSDong9gDz-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="gJoCKzr6v68ZnVoYjlwm0l" class="tlist">
+    <article data-page-node-id="1HFz1EKjcqjZoNuc12xoCv" class="task">
+      <div data-page-node-id="3HLzKTchPMLAuZqpkr9O1v" class="th"><span data-page-node-id="v4IhgH5fp6nwFeTGWknSPa" class="no"><!--pnid:aqnm1FMZOnIqweHr7z5PUv-->01</span><h3 data-page-node-id="sRziWf01krmT1fuYqTsbtz" class="ttl"><!--pnid:M268SXAsGub3gQ7hsYxL1w-->首推默认</h3><span data-page-node-id="qstofBQfomvCD0pd5QMRsd" class="star"><!--pnid:PqJrlPCe5YLmyJRs56zSHB-->与一键体验入口一致</span><button data-page-node-id="dpbrNUhcNNhhwPSVnqPOre" class="cp" type="button"><!--pnid:XBmylJcR0NpmLbeWnjEERK-->复制</button></div>
+      <p data-page-node-id="CakSx88dwStP6e7NtylGpl" class="tp"><!--pnid:q7w3fjw0j1C0rCIvuUS1GG-->装配技师岗收到了 312 份简历，平台导出、邮箱、猎头的都有，格式乱七八糟。帮我做成一张能筛选的表。
+
+去年投过的人帮我标出来。简历里时间对不上、证书奇怪的，列个疑点清单给我。
+联系方式没有的单独说一声。
+
+我不需要你帮我打分排名，进谁的面我们自己圈。</p>
+    </article>
+    <article data-page-node-id="Eqg7uN27amtsApAEPTGE6I" class="task">
+      <div data-page-node-id="JyJtCA1ol3huH4EJhfaTg6" class="th"><span data-page-node-id="gxYLtc86NbPxrsIX509Lm6" class="no"><!--pnid:KrHlEEkPVBuPLWnWSQwm4c-->02</span><h3 data-page-node-id="fo6mZVel6c3PVwaYzbLOf2" class="ttl"><!--pnid:FSFv4uRLYuBu1Lsw6DllK9-->只做去重与历史交叉</h3><button data-page-node-id="WNa0s4TQuj2yqVlw2CMftB" class="cp" type="button"><!--pnid:NtyeNLcWfJJZVZylIO8fzo-->复制</button></div>
+      <p data-page-node-id="4lqFMA8xmUtHHLk9EakUOJ" class="tp"><!--pnid:jnsU5EnXSJ9Gnxqn2TzQXJ-->先只做去重：把这批简历里的重复投递找出来，再跟去年同岗位简历库对一遍，看有多少人去年投过、当时走到哪一步。</p>
+    </article>
+    <article data-page-node-id="SYd2ffOIVwDjHJlzjAGJoB" class="task">
+      <div data-page-node-id="FljiPjmq4nRbsLjJeeAfcY" class="th"><span data-page-node-id="aIQT1p6LnId5so5XblaM1U" class="no"><!--pnid:oaXT2AjuIrUFMMFCpGKu8N-->03</span><h3 data-page-node-id="xmehByv30SBygLhLb1IRh1" class="ttl"><!--pnid:9zjc4Jn7R3cgG6X6JF8t7k-->只处理猎头那 50 份</h3><button data-page-node-id="iCeWW1hm7Pk0wi94vqSuJr" class="cp" type="button"><!--pnid:AuKAYZShQVSoGFE3dQMjmR-->复制</button></div>
+      <p data-page-node-id="aUg99NHJFF3UxZ0gHjfn74" class="tp"><!--pnid:IK6CMfHXpndyGO16WZxXRt-->这次只处理猎头推荐的 50 份：把猎头批注剥掉后按同一套字段抽一遍，同时标出跟自投渠道重复、会牵出双倍佣金风险的人。</p>
+    </article>
+    <article data-page-node-id="h4m6X6KGbo92V5mllrQYRK" class="task">
+      <div data-page-node-id="W5e5Ygi3zDSmlTjTNxkHqB" class="th"><span data-page-node-id="vos22dx41r9kO4LqelVHZW" class="no"><!--pnid:1aYzaXBYkw4a8ybaMc3t0j-->04</span><h3 data-page-node-id="8AoPQs05WTcyTRFTEsZKRZ" class="ttl"><!--pnid:wDQRDYi648ft59PfYe9Xef-->一次处理三个渠道</h3><button data-page-node-id="r6Yt2Nlc9pAGslQmFLThab" class="cp" type="button"><!--pnid:INMwQwrprTyRmX1exFee7l-->复制</button></div>
+      <p data-page-node-id="8zCFc7VqNHvDO5niDPefin" class="tp"><!--pnid:qYBYSJwDpdJ5LOKb6LuXQm-->演示数据里再把邮箱投递的 82 份加上，三个渠道一起跑，最后给我一张渠道横向对照表：份数、抽不到关键字段的人数、疑点数。</p>
+    </article>
+    <article data-page-node-id="iyThIznabZ5S1Stlm8QV1r" class="task">
+      <div data-page-node-id="SmadY7DmfT6tII1uR0UKsO" class="th"><span data-page-node-id="Kr58gCrRKeT6MJ9pBgJWxd" class="no"><!--pnid:fvHmrsa8RCfDxgfNwAHdm3-->05</span><h3 data-page-node-id="UShUQ77sEVwBCQfIbokMid" class="ttl"><!--pnid:6bT87Dq1QqD2uSJQpgU4pn-->给业务经理筛的一页</h3><button data-page-node-id="wYgsLa6Y4m0FBWz2eviUg0" class="cp" type="button"><!--pnid:U6zjxLOQSktodZS7LbIGUW-->复制</button></div>
+      <p data-page-node-id="q93RYaiTRkoosdOaHCRUQs" class="tp"><!--pnid:JzBZPNHPy9o3CFJSvGonQk-->把底表压成给业务经理筛的一页：能直接筛的有多少人、需要平台内沟通的有多少人、硬条件明显不符的有多少。</p>
+    </article>
+    <article data-page-node-id="ePzZEQKgJRaDKwhLj02T1o" class="task">
+      <div data-page-node-id="bBVeSg2mdmhAbuCwOtXmr9" class="th"><span data-page-node-id="SlH5CroEJu9JJjZsPDSd4N" class="no"><!--pnid:3FhButI9TmCe4AAeUU3Txv-->06</span><h3 data-page-node-id="Tt1eH3IP3DlWhkkwLO1rFw" class="ttl"><!--pnid:Jgu7uIMdUINMwhc7mHeQNi-->让它反驳自己</h3><button data-page-node-id="4CXSIVQSIBqhoRqEbMnYI1" class="cp" type="button"><!--pnid:dIZ8Ct2PG49QWv1CRvoxRl-->复制</button></div>
+      <p data-page-node-id="k3dK9v44ApGSdkK99R28Vm" class="tp"><!--pnid:gPVPiZ7g8tcEYml7JZHb4s-->你标出的这些疑点里，哪些其实解释得通、是我多虑了？把站不住的挑出来，并说明要补什么材料才能重新立起来。</p>
+    </article>
+    <article data-page-node-id="7sUtSHwQGKisTFEnkVu8Cx" class="task">
+      <div data-page-node-id="YErPkAKIUc4rIZUkEwRpPI" class="th"><span data-page-node-id="BysX556RWchbmV0KxLMajJ" class="no"><!--pnid:IpBoYVbPZqaJMAhcgHyVEh-->07</span><h3 data-page-node-id="0uW1LfnaPswQxZbPz5z2Gi" class="ttl"><!--pnid:pwzW63j6ayMyWwbeX9WUrU-->比对去年那批终面人选</h3><button data-page-node-id="Q2K5d1OVj5NGYSIwKOMvjW" class="cp" type="button"><!--pnid:zUzzBEsnt58zu2jxEcbLAi-->复制</button></div>
+      <p data-page-node-id="NOCZcVtKnYa2gWXknHJr5h" class="tp"><!--pnid:RIcgTlhkfmhqlX9UQmvOEt-->去年那批终面被薪资原因拒掉的人今年又投了，把他们的两份简历逐项对上：这一年履历有什么变化、期望薪资差多少。</p>
+    </article>
+    <article data-page-node-id="HGFev9CjYliYIIEWNcEFq6" class="task">
+      <div data-page-node-id="bpEok00K8k5S0qeWFQAq6d" class="th"><span data-page-node-id="mDoFe6wThPaNRMsB8N21ht" class="no"><!--pnid:PprgwvxaBOYGJUIzcIativ-->08</span><h3 data-page-node-id="yiCJv2be2Fc7w0E0UhZnox" class="ttl"><!--pnid:9r8Sda9QqPvZ60V10Sh1yN-->对照红线自检</h3><button data-page-node-id="CzWhD5AHt5wE4jpEm2rpWW" class="cp" type="button"><!--pnid:oatgGPEkSCI1sTEi6wCfv3-->复制</button></div>
+      <p data-page-node-id="ExVqAtnJaeQwSdnGlYDiih" class="tp"><!--pnid:ypcN2nUqLD0yQ7LwWxtEIE-->对照个保法第 24 条和欧盟 AI Act 口径自查一遍这张表：有没有任何打分、排序、淘汰倾向的栏位，有就删掉。</p>
+    </article>
+    <article data-page-node-id="MXirWvhT3cFYn3C6ubS0aw" class="task">
+      <div data-page-node-id="hxRLSsxSpDHrGvYgPtzOyC" class="th"><span data-page-node-id="OQAIdL3rqMFzL3EVtci0SM" class="no"><!--pnid:xN0FOxPGcIKgaQVnKpmkmD-->09</span><h3 data-page-node-id="TRf5m7ddedCmOZ4U9Zcsjr" class="ttl"><!--pnid:fIXpZmg9bRPBX6XuMozhvE-->折算成渠道成本对比</h3><button data-page-node-id="A4YkbQNovQ2JQXV5iakWQf" class="cp" type="button"><!--pnid:WtlPug38FTS3N0TKePqjfs-->复制</button></div>
+      <p data-page-node-id="ClN7nSXhZrbU93TPgTVwAw" class="tp"><!--pnid:tovPitCY0gP7uCPNJj1xBI-->按渠道单人成本口径算给我：激活那 5 个去年走到终面的人，比从外部渠道招一个人省多少，把算式写出来。</p>
+    </article>
+    <article data-page-node-id="njnUWkSTuFgn9L3GJbIOmT" class="task">
+      <div data-page-node-id="Tfv46VzH2tRFAgoQ4LAy35" class="th"><span data-page-node-id="GGkDRoWKN3kJxtPltPlZGE" class="no"><!--pnid:cTSwZmGBGaEyFVmcZak3Pe-->10</span><h3 data-page-node-id="HM2ayv2S7GrWf0Gfo4HZEj" class="ttl"><!--pnid:3gHRzuF1do0PmhtO7po65b-->沉淀成简历底表模板</h3><button data-page-node-id="Qi5AmBpo7B5S1S16KkxoJU" class="cp" type="button"><!--pnid:QOFysjfFoXsPwZVrvDng2M-->复制</button></div>
+      <p data-page-node-id="VCiujANHafYcbx1TM0QgsZ" class="tp"><!--pnid:nQzh0kHQVdZqJXabchuW9h-->把这套字段口径和疑点类型沉淀成一份底表模板：一人一行、哪些栏位必填、疑点按几类标、筛选状态列怎么留痕，下次直接套。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="TBAMFc3fk0n5nkkeWTVbxE" class="cta">
+  <div data-page-node-id="BVsmWY6c4doRLJkj8pIDEn"><h3 data-page-node-id="9iwHYAyYnOmUJvHlZoLXVU"><!--pnid:CsJG07c0eugktyacrLWVKp-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="7fTDdVDXtov1eAeIxpjcg9"><!--pnid:YuyEsq9DHpUTUeYyoWUq6l-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="fMIwtWr8oTF1JVASp2mMTz" class="btns"><a data-page-node-id="1bymVlQx9VNNs4mJNirpCY" class="btn" href="#" id="ctaContact"><!--pnid:DbamzSnVC734rZzgbe7DYj-->联系我们</a></div>
+</div>
+<footer data-page-node-id="auAoscDlPCQbogEpectZib"><!--pnid:1QnYMq1sJwuR4tEQmylulD-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 涉对人的决定一律人工终审留痕</footer>
+</div>
+
+<script data-page-node-id="wbpaGoMq7u7RK3d7etLFa9" data-pnid-children="UMzwtiYfl8PblLs7NO2Dvr">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="87kLIXx3vVXnVBha0lGTwL" data-pnid-children="1FZY9GOGojGRQBIS3ZBdMk">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="h9qA6F3MyGWpK7iTTCEqnx" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="06cBanXq7FuMOLvByno5we" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="GcTD0DIAzia555zMkHRiW1" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="KujqAxsaMKVnkzOAFYXcym" data-pnid-children="0JXzJXNfV1lwwZVXNluCvf">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="SRJ0r8ByvpyEB181xprwBK" data-pnid-children="sd1i1rsm2feQwMRiPiXjR5" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="0bcPS2FGTJlQ41wAh4Cflp" lang="zh-CN">
+<head data-page-node-id="XAvpwBmBCmvmzfYvV26IZ8">
+<script data-page-node-id="a0kuKF0EemsnCwG27OndsC" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="8iwm31zkeH2cvFYKlHFxCT" charset="UTF-8">
+<meta data-page-node-id="LNiE726RS8FAOt2cHCbkOt" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="vA0zhg09T8ENqFbWdCw0yZ" data-pnid-children="vlUVQdkVieDYxBGQ2ASC63">开发信个性化与报价 PI 校验</title>
+<link data-page-node-id="SzuOCADaGI0surRwWcGwHB" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="hwuR2aFDQ2aRhOIUGrgX9m" data-pnid-children="qlhC7N5wRDv40FieonHaiG">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="T6I8DqrYvfpCU0qXeslYYk" data-pnid-children="mhnIELKXqAZ2TAiTFrUEYP" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="gfb32G9Sb9PBv7sUFf83v7" data-pnid-children="UtIx6Z4AAr9dvi7cMGVIDM" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="jP6NW2kePrIuFKtmpmHE5x">
+
+<div data-page-node-id="zJiQ3toGf9l0loibLfcKiW" class="wrap">
+<section data-page-node-id="U3H9bfFj3pEyF7YtDt3jcP" class="page-hero">
+<h1 data-page-node-id="XV9vIMxUY9bAgMKwYAzB4o"><!--pnid:2FztafWBXSNtsB1OreBa2u-->开发信个性化与报价 PI 校验</h1>
+<p data-page-node-id="gSbyqSEyG0HHml2uZuR5NX" class="lead"><!--pnid:oEav328iMbnaiTjVgqzMIn-->开发信群发一百封没人回 · 报价只算了出厂价，订单做下来是亏的</p>
+</section><nav data-page-node-id="9aFwZidpBSMVRj1t7mwzbZ" class="subnav"><a data-page-node-id="y50bhhUxaAq4ZUbvGBwNvD" href="场景引入.html"><!--pnid:th51lBZex5uVH0AHW3UmeJ-->场景引入</a><a data-page-node-id="NiEj9GRkwDBlIGKu8fSL5m" href="LiveDemo.html"><!--pnid:60D5gpbv71IHfXlcfIdxbi-->Live Demo</a><a data-page-node-id="NFrKUOwfVqfOpUW74PTp6k" class="on" href="#"><!--pnid:hVAfRIbedaGXtXKDMBpOZU-->推荐任务</a></nav>
+
+<section data-page-node-id="NSfrLmSdbQ6I8mfUw9cdua" class="blk">
+  <h2 data-page-node-id="WVfNcQWlkXDffrwkKbn0AJ" class="h"><span data-page-node-id="WT9279ZaUwWJjzbvdOREPm" class="num"><!--pnid:6WAWjMvUhKMgNyxAzSfpZr-->一</span><!--pnid:Mo2SGwbxwTemG0u14qM6ua-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="1p9y2ZRJKAO0tzkkuUlffA" class="subline"><!--pnid:MJbIDclKA7c0kMEQ3eaaJo-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="09cto9prSFvj7nTMZxn0h6" class="card"><p data-page-node-id="9pcOO8QhDkFm0TkVZ7v6hP"><!--pnid:hNF4obvOJn8yDzNjLliC8H-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="SKtJd5mDTNOeGJAT4Y8wgQ" style="margin-top:10px"><!--pnid:8Dh0y7uRMiK1AbkDhj9fvu-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:QIk4OLKVykoKGWWEBlo9gT--><!--wb-skill-start-->
+<div data-page-node-id="Q9140nffXGe0MpXAXgHfD3" class="wb-skill">
+<p data-page-node-id="mqJlBSe3PodLomRkDMFAGf" class="wb-skill-lead"><!--pnid:EL1NqCNAWlO1kilz4XJaTX-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="Qo5saM2TQorZR5REKPyvwP" class="prompt" id="wbSkillPrompt"><!--pnid:MRgV27DCEyglR1kNePXakC-->【准备】这个场景的规则都在「开发信个性化与报价 PI 校验」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/3OfQtPyNlg0rKGhq9VOVH0/zhHaybfwKLKb/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="fRvb2gdUU5qc8y81evO87U" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:irTI1qj6qbcVmFAfzIlZpn-->复制</button></div>
+</div>
+<!--pnid:4XHG20GBlyJWrMNz7YatYS--><!--wb-skill-end-->
+<section data-page-node-id="gkzaZxoJ0YX1fI6lFGCU3P" class="blk">
+  <h2 data-page-node-id="gNOmYyw3bqdy3ys8RWmcSP" class="h"><span data-page-node-id="LaiAK5NuISrVg5sf6XLYoT" class="num"><!--pnid:y2aRK4d8eVwzII9r7OldqK-->二</span><!--pnid:kbI7VZrmubZz5NaKQZPCp6-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="tJsPoAmWmMsOPWOs0z9eUN" class="subline"><!--pnid:ioFIO3bd5TLcCFTuRPGFRQ-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="Zd9miyqNGXdEyBMvLgfeAD" class="tlist">
+    <article data-page-node-id="nwN7BUxDe9WyhFOIYHmRBe" class="task">
+      <div data-page-node-id="hGVdBx6oSVIjFPwFCCldVp" class="th"><span data-page-node-id="oFvH1EmHUm7LXFxFB0Z9gi" class="no"><!--pnid:GZYX8djB1zCMq9QxL1fbhO-->01</span><h3 data-page-node-id="YukaYwUex5xYusArosnWTd" class="ttl"><!--pnid:VIZJ02FVzxi62RWptHM5GS-->首推默认</h3><button data-page-node-id="uQ43HW2bVanvKVdYzg7OpN" class="cp" type="button"><!--pnid:iNGcdyx3L0Lm1MvDOUyXEn-->复制</button></div>
+      <p data-page-node-id="zrJvxlvkt7UApgePcKFILg" class="tp"><!--pnid:GnCIuiOChWEtzsuIxF321K-->FW-01 分级出的那家德国采购商要 5000 只 BX-500 的正式报价和 PI。材料四份：「01_BX-500出厂价与产品资料.xlsx」、「02_出口退税率与实时汇率海运费表.xlsx」、「03_PI模板与付款条件清单.docx」、「04_FW-01传来的背调线索.xlsx」。帮我出开发信个性化初稿、报价单 PI 成本校验表和报价成本假设清单。产出三份：开发信个性化初稿.docx，结合背调线索写，末尾给出按德国时区的建议发送窗口；报价单PI成本校验表.xlsx，FOB 和 CIF 两版到岸单价都给我、退税与运费单列，PI 各项必备栏逐条核过，含编制审核栏；报价成本假设清单.xlsx，退税率、汇率、运费等假设写清数值、来源、待补项。报价别只算出厂价，把退税、海运费、汇率都算进去。PI 的付款方式和交易术语帮我核一遍，100% 见提单副本付款这种高风险的标出来给我替代方案。报多少钱、用什么付款方式我自己定，报价栏和签署栏留空。</p>
+    </article>
+    <article data-page-node-id="3ym2boVDMRzVsvmC9F3br8" class="task">
+      <div data-page-node-id="HgJpGGGHNN0Mz3V6MeGIJ9" class="th"><span data-page-node-id="FK5qUMj2q4kmt2Xwc48cyg" class="no"><!--pnid:khu1IfX3chHZYaGjXXYdYP-->02</span><h3 data-page-node-id="bNND95xi6aJpsRkKqQhUXc" class="ttl"><!--pnid:p5S8Gr1lk2UsqBPdCeqvPf-->只做 PI 条款校验</h3><button data-page-node-id="jvGSN7IgOHOzmF7xq8Am7N" class="cp" type="button"><!--pnid:pBsyBWs12QNoRCPUk9ggcH-->复制</button></div>
+      <p data-page-node-id="Kj1IKFQTgOhEAuZHfEPfPD" class="tp"><!--pnid:113Nz53UJZ2isx6xadbiwy-->只做 PI 条款校验，先不写开发信、也不算报价。读「03_PI模板与付款条件清单.docx」「01_BX-500出厂价与产品资料.xlsx」，把 PI 的必备栏逐项对一遍。产出用 Excel 一张表，一行一栏，写清是必备还是选填、现稿有没有、缺的该怎么补；属于高风险付款方式的单独标出来并给替代方案，别替我定用哪个。</p>
+    </article>
+    <article data-page-node-id="EwOfB4QmDWmGyfznl1boUT" class="task">
+      <div data-page-node-id="QSNrAFx2dP4cfFyl4bRf9y" class="th"><span data-page-node-id="A4pZCPw5djmRRlDjzg9BWO" class="no"><!--pnid:Po9RcOb8PKApIQlaMhl12w-->03</span><h3 data-page-node-id="Rd9NUo1qCZSKbeqSIAiMJu" class="ttl"><!--pnid:VF7pCzvIEGVIZiEPuV2yb0-->换成只报 CIF 一口价</h3><button data-page-node-id="k3hBxqeEGpWKIfZcPR3YHg" class="cp" type="button"><!--pnid:Vl8AR83XnSBEAckhmW3lpt-->复制</button></div>
+      <p data-page-node-id="VTbrCw0su7lSWrDL2XvXJt" class="tp"><!--pnid:eZGOvepq6XKpq9hFNy7de7-->拿出厂价与产品资料、退税率与汇率海运费表、PI 模板与付款条件清单换一个口径再跑：这轮只出 CIF 到岸一口价，不做 FOB。产出用 Excel 一张表，一行一个成本项，写清单件金额、占比、来源出处，最后给 CIF 到岸单价与按 5000 只算的总价；汇率敏感项单列一行。</p>
+    </article>
+    <article data-page-node-id="YDfgO0atuwclvJIfACCsWy" class="task">
+      <div data-page-node-id="qWBSxdwITY8Ll8iyIXgGCe" class="th"><span data-page-node-id="fFOBYipiCc837ybjzGrEKN" class="no"><!--pnid:EXuHjDdxaIGDeAFL8wjs6d-->04</span><h3 data-page-node-id="YOdXSS8LGYUHkNpuxM8Axq" class="ttl"><!--pnid:YGoqN5oCgVc8TYhVlgdY0x-->一次跑三家客户</h3><button data-page-node-id="wa7QNObup60tv2yYsGnph8" class="cp" type="button"><!--pnid:blsXtoc6myl16ayfupYzg2-->复制</button></div>
+      <p data-page-node-id="kMywS8Ok5tTyfPXF6kinnn" class="tp"><!--pnid:ISlMBPWYro71iiR6gOIkFA-->演示数据里再加一家美国、一家日本客户的「04_FW-01传来的背调线索.xlsx」同类背调线索与采购数量，三家一起跑。每家出一份 Excel 报价校验表，另加一张横向对照表（Excel 一张表）：三家到岸单价、PI 缺项数、高风险付款方式、建议发送窗口。缺背调线索的那家在表里标出来，别套别家的。</p>
+    </article>
+    <article data-page-node-id="4RDkIaLUiuPJYoZLQBB6sc" class="task">
+      <div data-page-node-id="hthX5GbFCEwfscN6EhksFQ" class="th"><span data-page-node-id="4BHWeJxtFjk6CGz1ejaowp" class="no"><!--pnid:RTGrTLdDLkQs7AT4kj4fIA-->05</span><h3 data-page-node-id="1G98BhB4XzXjiot9qRwbo6" class="ttl"><!--pnid:of2e08nDqe5DeDeMuVDFKG-->给客户看的报价函</h3><button data-page-node-id="D96P0LTUM3aN5AOy8pyxdg" class="cp" type="button"><!--pnid:hbkcyHBqNYqJqtf5oAqJD3-->复制</button></div>
+      <p data-page-node-id="9F5U9o0IMLKdfde7QOZXpF" class="tp"><!--pnid:zMpNhYhKMKZwHZdkJARCkR-->基于这次的报价单PI成本校验表.xlsx，做成可以直接发给德国采购商的报价函（Word）：只写 FOB 与 CIF 两版价格、包含项、报价有效期、付款条件、交期，别的都不写。成本构成、假设来源、内部校验过程一个字都不要出现，报价数字那几处留空我自己填。</p>
+    </article>
+    <article data-page-node-id="W4RYSe63oBgEGownCKXDW8" class="task">
+      <div data-page-node-id="oJ4XlamTJnbk0xeEEy6clh" class="th"><span data-page-node-id="WplJXkC46ZRnQt0g63QCCj" class="no"><!--pnid:DDcD66r3lUBZnx9pBc3qPf-->06</span><h3 data-page-node-id="LxmPVRATjnDJZY4yvu9TL4" class="ttl"><!--pnid:IwIukBE9yXnKOV7Llmla8r-->挑最可能报亏的成本项</h3><button data-page-node-id="ehTiqL1UHUTIpIKfDkp3cp" class="cp" type="button"><!--pnid:2b461WcFC6i90y8m4dOfpK-->复制</button></div>
+      <p data-page-node-id="uSMTsGeqBZkpMXcCZI49mO" class="tp"><!--pnid:ctEVyjzrrmYKScHmU35oY2-->你这份报价里哪几项成本最容易漏、最可能把单子报亏？把退税计算、海运费口径、汇率取值拿「01_BX-500出厂价与产品资料.xlsx」「02_出口退税率与实时汇率海运费表.xlsx」逐项验证。产出用 Excel 一张表，一行一项，写清用值、原始出处、是否正确、差多少钱；算错的改回来并写明改了哪一条。</p>
+    </article>
+    <article data-page-node-id="6ZbjPYHfmWFqtgxC178AdN" class="task">
+      <div data-page-node-id="e7frp4ppTKeNOLlEmgGsx6" class="th"><span data-page-node-id="oPOiIYiI8Pc7Xhcw3PFs8z" class="no"><!--pnid:dLSBnHpd8uNy4DhKeCfapD-->07</span><h3 data-page-node-id="1mU7wlT3RUMn7NMsoyme8o" class="ttl"><!--pnid:41cvTElwwAspNv0FJJC0iH-->比对 2024 年那单亏的 CIF</h3><button data-page-node-id="KZH1GxOR8vn0n0wfWCTC6v" class="cp" type="button"><!--pnid:hPP9uunbTTnKVx6iJrjEYH-->复制</button></div>
+      <p data-page-node-id="b9fhuWLOb3HtfbFn91Oi79" class="tp"><!--pnid:UoE7EmVKl2fHD88buv8SZn-->读「01_BX-500出厂价与产品资料.xlsx」「02_出口退税率与实时汇率海运费表.xlsx」，把 2024 年那单只按出厂价报的 CIF 单（运费中途涨、退税没算、最后亏了）对一遍。产出 Markdown 一页：写清那单漏了哪几项、什么量级，再逐条列这次哪些已单列、哪些没覆盖。记录缺的写「无记录」，别补。</p>
+    </article>
+    <article data-page-node-id="QCv5rZEsapV69y23pm49Xm" class="task">
+      <div data-page-node-id="qVmlvDu6OdaF29F5PfSUNA" class="th"><span data-page-node-id="1bKUqSyR8ekSGDrPMP4omn" class="no"><!--pnid:AMocZw8hCY5SYGCSOowcBf-->08</span><h3 data-page-node-id="ljqNXwCJEvKcw5K5ud1aSz" class="ttl"><!--pnid:zrxet6kSZlTMCAcj41va36-->对照报价口径自检</h3><button data-page-node-id="MfUnIhWsSXHtnKdfF0WOBS" class="cp" type="button"><!--pnid:N8rsscWlJ9xGcPyOYArjXj-->复制</button></div>
+      <p data-page-node-id="C2v0J0MX2qmXb5F8XyVbp6" class="tp"><!--pnid:K1PEp4BhiNghAkPoplw8WP-->自查这一版：FOB 与 CIF 两版是不是都给了、退税与运费有没有单列、汇率口径有没有标明、PI 必备栏有没有核全、高风险付款方式有没有标出、报价栏与签署栏是不是空的、有没有代发开发信的动作。产出用 Excel 一张表，一行一条，写清检查项、现状、该怎么改。</p>
+    </article>
+    <article data-page-node-id="JiwLAHeaq9YLIHnkGnYk2Z" class="task">
+      <div data-page-node-id="V0wyhqszJJ6MjOPglDEkBx" class="th"><span data-page-node-id="2hUOPlNbh2BKnVIbENSo47" class="no"><!--pnid:T9mYG6Gvs9pwHdGqOInO0R-->09</span><h3 data-page-node-id="nRsega25wtVKrn44iaRNkV" class="ttl"><!--pnid:UTY1oPWjyUT7v1KxSLeXbU-->按出厂价报和按到岸报差多少</h3><button data-page-node-id="rrEjJJxRhU6vM5lfM7uj3b" class="cp" type="button"><!--pnid:4Ekng1B27OZGELuS3yJvfy-->复制</button></div>
+      <p data-page-node-id="XGfM2PG8emXnGX9ZMxy3IJ" class="tp"><!--pnid:JzifI4olGPhjBke0tmzS72-->读「01_BX-500出厂价与产品资料.xlsx」「02_出口退税率与实时汇率海运费表.xlsx」，按 5000 只这一单，算出厂价口径与 FOB、CIF 两个到岸口径的单件差、总差，以及退税和运费各占多少。产出 Excel 一张表，一行一个口径，写清单件价、总价、与出厂价的差额；缺项的写「无法测算」，别拿参考值凑。</p>
+    </article>
+    <article data-page-node-id="TjdjvFAZ1M8lk98xAdVP3O" class="task">
+      <div data-page-node-id="yI2PI7B3qM5wJVZhO803Sf" class="th"><span data-page-node-id="jdukntj45bEgEwNqf6hlAT" class="no"><!--pnid:xlxxtK9ctPNlbYou8YhQ0e-->10</span><h3 data-page-node-id="6INrmuUYDifpCHPXfT3tug" class="ttl"><!--pnid:5eme6qj3ip3Dr1iWudB4ZN-->沉淀成报价成本口径表</h3><button data-page-node-id="7BQpKfqeNcwhLtDCrp9q7H" class="cp" type="button"><!--pnid:mpirc7ymaTy4uKgC8zD79r-->复制</button></div>
+      <p data-page-node-id="haPMvLzTReKtr2UqlUnn5u" class="tp"><!--pnid:SYGheNM7g1BNdcTHmv9z4E-->把这次的口径整理成一张可复用的表（Excel 一张表）：到岸报价要含哪几项成本、退税率与汇率怎么取值和标注、FOB 与 CIF 怎么分、PI 必备栏清单、哪些付款方式算高风险。写成下一个客户要报价时直接套的样子。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="KIeFhlgUW72KerNhjB4ifD" class="cta">
+  <div data-page-node-id="XqrZGyM9z5vVlWKHURdl6q"><h3 data-page-node-id="IhpMy8bVTduh3JPuK28ogN"><!--pnid:bGE3X5LwhyBvF9qy54mRq4-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="Y3kmYMqJLC4hpj6anQAzym"><!--pnid:U6Vxfxe5PxcXbe4K2uzfa7-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="V28sP0ePwvw8WMxaGVBXWp" class="btns"><a data-page-node-id="pHLNKfW0WRAaKT9DP0hkTa" class="btn" href="#" id="ctaContact"><!--pnid:DSAQpvdZm5gwqIWzADnTpl-->联系我们</a></div>
+</div>
+<footer data-page-node-id="XoiI8dJg63Gd7YmFpOIfIh"><!--pnid:jkNksn3PMIZUqE0A4zjTFs-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="mvelzrmkJsdkOOS91sLGL3" data-pnid-children="4btLd3JdAfKqioGfyl7w3u">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="cio4FBi7w4rkVTcLW5sGhj" data-pnid-children="d3UBYllPImQ9iIvkPoYxLr">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="nrA8FVrwUNsse0eyYfgvTD" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="A0HM678pXWqNme5ZmPKmHE" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="p2RYATymLcvI9BNuY4F8xU" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="A7ElFDM3E5qqfJFNncCoQg" data-pnid-children="5EyYsdwlZkGUvXeHE8Prxo">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="bF0yYPpHoHHohjIZGu318t" data-pnid-children="Te0YVrpEddaCaDAUZELc7d" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

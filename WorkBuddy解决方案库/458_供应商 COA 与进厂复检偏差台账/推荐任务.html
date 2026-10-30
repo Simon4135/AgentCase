@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html data-page-node-id="IgTVGYbjvm5XVlJhNDOVzI" lang="zh-CN">
+<head data-page-node-id="t4E3xOJUCs7INKffps6qr2">
+<script data-page-node-id="HicyPJ3KyYxrRnsg31gVcL" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="Bw8ayFXXyRn79AEGFG0sJk" charset="UTF-8">
+<meta data-page-node-id="2AfsvJ8FoN4ExzFrZoYXc1" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="EA4y8GmjvTARoCvxfSis77" data-pnid-children="JDOzKZyUlDMLCdi8pRvmzR">供应商 COA 与进厂复检偏差台账</title>
+<link data-page-node-id="Umju1NvGL3gUT4yi59pPOy" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="59lLoc3xnvQLcMEDg5ImAt" data-pnid-children="t7UuTAPOknfB8AnlHtgzby">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="BRMmKOVseQkidPnsrRN8zp" data-pnid-children="6GzpRlQTt5fDPaAbJNIgXf" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="G3SIRRoVQTpfMQYBBweV3F" data-pnid-children="TtAlCv0oC89PRx6B2WaHil" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="hlKIrI41uM81ilVJONKcIp">
+
+<div data-page-node-id="ctCm07DAHB2N7oPqfcjhMN" class="wrap">
+<section data-page-node-id="DRUGxcaxWjoHwTvtMzo4Or" class="page-hero">
+<h1 data-page-node-id="qyi9QZ2ebT6VXURl2bpxji"><!--pnid:j4z5J9nvhHCxkUIkoBUCFB-->供应商 COA 与进厂复检偏差台账</h1>
+<p data-page-node-id="MwOSwRIeFy8qfkUMvGsyAb" class="lead"><!--pnid:I9Ru3xiEwCl67jHKLiLy1v-->供应商送样合格 · 到货批次的杂质是送样的八百倍</p>
+</section><nav data-page-node-id="jztSgLSYchnkUEeTRmzpH7" class="subnav"><a data-page-node-id="JRpo0pql7T8YIv2kMsiFql" href="场景引入.html"><!--pnid:8bkuxxsCI6K7OFJO6WkrTi-->场景引入</a><a data-page-node-id="ZeG1wPKKIc8PFqO0B66JLm" href="LiveDemo.html"><!--pnid:ppRLg7Qe6MCYtzuN4ywBb4-->Live Demo</a><a data-page-node-id="PwyIfmMgVHoiKGymrjmoAm" class="on" href="#"><!--pnid:p7nAKUVB9XDcGmGnLXrQHY-->推荐任务</a></nav>
+
+<section data-page-node-id="eznfxseS6csdV0grqhA1cX" class="blk">
+  <h2 data-page-node-id="ulZqtu2ORFz9R2kUp2Y5o5" class="h"><span data-page-node-id="wGTbpEtTFCROqM2iQzbKIU" class="num"><!--pnid:JS3Izxd4suaJu8UCWqtI4G-->一</span><!--pnid:R57VckglZ20d8el294sSQg-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="6PYF7CFtZEZJtDD22WWLU9" class="subline"><!--pnid:Npup150F7RJSkmTf2nSqz4-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="NYsOisXhVGJC5p855O12du" class="card"><p data-page-node-id="NO7y3E0KFx0BArhOrOocUc"><!--pnid:ZUuadc5j6abPGbdsEvS6xp-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="smHqv1WOYjDPknCrS1A80Q" style="margin-top:10px"><!--pnid:pKt1IKuV4wg2AWyVt73E8r-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:2IVkxk1IZm6Id31Oa8P732--><!--wb-skill-start-->
+<div data-page-node-id="gXW6d4dLP6o3O4pxNzR1uB" class="wb-skill">
+<p data-page-node-id="Phzb3ZOB4Un3KCgKcX46pt" class="wb-skill-lead"><!--pnid:AfXg36oRQqsy64bsSoonDn-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="zCbpMDvl2zNPNeW1V97FPO" class="prompt" id="wbSkillPrompt"><!--pnid:mjt88qB9sD7dpLOX49ipmP-->【准备】这个场景的规则都在「供应商 COA 与进厂复检偏差台账」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/r6eSoRLoJI7ns19z3ciLhF/eFPc-pKf54dp/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="dQVHtvgFQ3ysQq11JdzlAx" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:qZpPLXkyN9jFgjGrldWHBC-->复制</button></div>
+</div>
+<!--pnid:HH8FnIP6T0QhKMli80AfRa--><!--wb-skill-end-->
+<section data-page-node-id="zEKyiBivjFgcGfYOPRVBto" class="blk">
+  <h2 data-page-node-id="x6umdWteCv50xtecj9pKDZ" class="h"><span data-page-node-id="06Ad0sFz601GqY5WvXhzvC" class="num"><!--pnid:1UXkP0AXESZ4l07xYFfmQ5-->二</span><!--pnid:XDsPWXbIJ9NrN6mIC6DUmp-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="LVKjFg4hx5GRZ04ZxBcBKG" class="subline"><!--pnid:hbxnXvBhNJ2hN7szTj2c0I-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="loKTSH86KqvRcWfT3f1Z12" class="tlist">
+    <article data-page-node-id="FxAFW42c1pyaGAyuKsc4xT" class="task">
+      <div data-page-node-id="AnYzu9w1ETdKks9Wggzjti" class="th"><span data-page-node-id="ur58VJlMgYnZU1y49Xx3L0" class="no"><!--pnid:Tp7CdJNpMxhqsBCdwOvULe-->01</span><h3 data-page-node-id="zIRLikKRYmceebg8gJHy72" class="ttl"><!--pnid:KhnrBcX4oMV09hbodwUVTl-->首推默认</h3><button data-page-node-id="6UAoGcPkqlUVIM65fU4SwP" class="cp" type="button"><!--pnid:LHEhv7ryI3YzaXmCEbDUlk-->复制</button></div>
+      <p data-page-node-id="50OSg6wZHTUXaA4TdT8O9Q" class="tp"><!--pnid:9jzXxa3Y6OWM2rspHLjBHa-->把近半年供应商给的质检报告和我们进厂复检的结果对一下。技能内置的是：01_供应商COA_元丰化工_近六个月.xlsx、02_化验记录本_进厂复检页_近六个月转录.xlsx、03_原料采购技术协议_双酚A_元丰化工.xlsx、04_元丰化工送样报告_2024年签约前.xlsx、05_ZY-2608留样补测结果_加急.xlsx。
+我想知道：协议要求的项目，他报了几项、我们实际检了几项，有没有两边都没检的、有没有漏检的批次。两边的数差多少、按供应商和项目累计起来看有没有反复偏差的。检验方法或标准版本号不一样的项目单独标出来，那种不能直接比。批号配不上的批次也列出来。
+产出三份 Excel：供应商COA偏差台账.xlsx 是正式件本体，按供应商与项目累计，带审核签批栏，供应商评级与索赔建议两栏留空；检验项覆盖缺口表.xlsx 按协议 9 项逐项给三态，标出双方都没检的项和漏检批次；方法不一致项清单.xlsx 标出不可直接比对的项目和建议补充的信息。
+供应商评级和索赔怎么提我们自己定，那两栏留空。</p>
+    </article>
+    <article data-page-node-id="Slk0xbTnni1P3saP4aqI6p" class="task">
+      <div data-page-node-id="h4i1V8dSmgIp9FS8w5jIk2" class="th"><span data-page-node-id="EMSIaib908ht2ckNcfWnJw" class="no"><!--pnid:Oi0NEjaWc7PNYQrvocu2tO-->02</span><h3 data-page-node-id="IlKUIS3v8ydCQpsVRS0Q5Q" class="ttl"><!--pnid:J8uN5LCSdt7VHXyoJHewDj-->只核覆盖三态</h3><button data-page-node-id="iBnL7XqW9QWpc2zMmp5Gze" class="cp" type="button"><!--pnid:VhpRbcmg9HozAvG9zXzfPV-->复制</button></div>
+      <p data-page-node-id="wZltdjKUp5SzbFSXxs8E5Y" class="tp"><!--pnid:tzVJ3ekNABWnK829nZ2GWF-->先只核覆盖这一件事，不用算偏差。以 03_原料采购技术协议_双酚A_元丰化工.xlsx 的 9 项为基准，对照 01 的 COA 和 02 的复检页逐项打「协议要求／供应商报了／我们检了」三态。产出 Excel 一张缺口表：项目、三态勾选、缺口类型，并列清漏检的批次。</p>
+    </article>
+    <article data-page-node-id="opNkwC3AvhChgZt6U8eS5n" class="task">
+      <div data-page-node-id="wuhxUvxyAGfX7S7jFTJr2Y" class="th"><span data-page-node-id="p3G5crWnNKoVKPOybLzxnP" class="no"><!--pnid:e36z0IF0hgGFs3kwFT2QMd-->03</span><h3 data-page-node-id="61UI14r428uJqBmV0m2ZA0" class="ttl"><!--pnid:e370KXnuv8qnLH8V1gIxbO-->换成拿送样报告当基准</h3><button data-page-node-id="573Oc28h30R1ydSHnXZxsx" class="cp" type="button"><!--pnid:Jd94pJXQ4NtrHV5f3WNV3u-->复制</button></div>
+      <p data-page-node-id="FNys85tvzZFiuNmJ9icR7g" class="tp"><!--pnid:1bdMEg8P8091rgmh4poWC8-->这次的基准换成 2024 年签约前那份送样报告（它检了 9 项），拿它跟六个月来的 COA 与复检对着看：签约时检过、之后哪几项再没检过。产出 Excel 一张对照表：项目、签约时实测值、之后 COA 是否报、复检是否做、缺口类型与出处。</p>
+    </article>
+    <article data-page-node-id="rx2puqnctSwsULFrIUpJHU" class="task">
+      <div data-page-node-id="3B7FbAwWRSWoQNVKJMqxvi" class="th"><span data-page-node-id="HhNl6LH1drYkAjPqrmGhyl" class="no"><!--pnid:oWkLIlVZgSTjuA1KBEeb0V-->04</span><h3 data-page-node-id="UBONcY7QkldQghz6tsP7Zi" class="ttl"><!--pnid:X8o2voFw2tJUNxxW7d5AtZ-->十个批号一起过</h3><button data-page-node-id="Sm0in7QBPAVPJ2aDhHNAXW" class="cp" type="button"><!--pnid:33oE8eM84u5kwBpdQDAHhv-->复制</button></div>
+      <p data-page-node-id="mwK6hs9cUArbPbEN8dXRBa" class="tp"><!--pnid:kCSMie0jKJgPV53dvWXhSO-->把六个月里 ZY-2601 到 ZY-2610 十个批号逐批过一遍，COA 没收到的批次单独标。产出 Excel 一张逐批对照表：批号、到货日、COA 各项值、复检各项值、差额、是否漏检、是否在协议要求项里，最后一行给累计与漏检批次数。</p>
+    </article>
+    <article data-page-node-id="f2kDd0qPbiS8sxywTT2rOD" class="task">
+      <div data-page-node-id="wE5NxxeN62rFWStq4uA2EE" class="th"><span data-page-node-id="pq5PKZoKD17Q0e9dZTblq4" class="no"><!--pnid:deG1ZnBW73VLnB9uwuOGan-->05</span><h3 data-page-node-id="7etGjC0uiGYqypbXs9cUED" class="ttl"><!--pnid:99wVyKx4O6hnBPSW9nHKDG-->给采购部看的一页</h3><button data-page-node-id="DXopTv5C8fVSzACBV6fu9D" class="cp" type="button"><!--pnid:vjwyHr1Oxa2BOeCAQSemKM-->复制</button></div>
+      <p data-page-node-id="MhouTTYfi1hpwt7Vin4RJi" class="tp"><!--pnid:h0tl6tJF2vu9fHEr3lgAnA-->读 01_供应商COA_元丰化工_近六个月.xlsx 和 03_原料采购技术协议_双酚A_元丰化工.xlsx，把结果压成给采购部的一页：哪几项该检没检、哪一项两边都没检、哪几批缺 COA 原件，以及对外目前只能提什么要求。产出 Markdown 一页纸，逐批明细和偏差底稿不用给。</p>
+    </article>
+    <article data-page-node-id="Z7bJA6WDJwCmRIUBJCGgbW" class="task">
+      <div data-page-node-id="U4gpGXInFdt3rkcUHGgf2A" class="th"><span data-page-node-id="iThnet1i3HCoJwoI1ZnZyX" class="no"><!--pnid:sDZQZdWHXAYAGTDSGbeWZa-->06</span><h3 data-page-node-id="A17Tye6Z2MyuTyqsWFpI3q" class="ttl"><!--pnid:ARvQC4PxGnzaGkhquePPOG-->让它反驳自己</h3><button data-page-node-id="TjsOrGueHpwqpz6RYJ8c4A" class="cp" type="button"><!--pnid:mm88lZF0u3tnV7Zy4WenG7-->复制</button></div>
+      <p data-page-node-id="italAB9xIrPHh2EVLpCtTQ" class="tp"><!--pnid:ylwckHqIFhVupocFvoRXq1-->「供应商换料或掺假」这个结论你排除了，依据够不够？把 01_供应商COA_元丰化工_近六个月.xlsx 的 10 批纯度、水分、灰分极差重新算出来复核，看波动是否真的小到能支持这个结论。产出 Excel 一张复核表：项目、最小值、最大值、极差、判据、结论与出处，站不住就改回「待核」。</p>
+    </article>
+    <article data-page-node-id="V6eVufSz6XLs593HNi9RkW" class="task">
+      <div data-page-node-id="FJ2VLNRhvEzpZjldiLDGXz" class="th"><span data-page-node-id="bIcclB8JZURgjgGjAXbvUB" class="no"><!--pnid:tdhqoLutkIoucC1TbofKm9-->07</span><h3 data-page-node-id="G9KMqCUPwciY825rb9w29F" class="ttl"><!--pnid:SuAO3TO48Zut8WL7M6bNFE-->比对签约前后两项</h3><button data-page-node-id="U4h4nVZPWtdpmQ92Vhw9Ds" class="cp" type="button"><!--pnid:0MWkzFa7TERgKbmPT9YchO-->复制</button></div>
+      <p data-page-node-id="3CakInWO6Kz7UGBpH5pYEO" class="tp"><!--pnid:U9QzwUMzG7F5J5T9NGTcD4-->专门比签约前送样报告跟 ZY-2608 留样补测：硫酸铜、色度前体这两项签约时检过、之后 COA 再没检过，现在实测值是多少、超限多少倍。产出 Excel 一张比对表：项目、协议限值、送样值、留样实测值、倍数、判定，超限项标出来。</p>
+    </article>
+    <article data-page-node-id="oIBq50Y78KVn8j2DQj8C7t" class="task">
+      <div data-page-node-id="QEPRQ2rGYrsoG58A1sCObT" class="th"><span data-page-node-id="mEkIhMiMJcWm8gz8b4xx6J" class="no"><!--pnid:iGxB8O180RiFUtDo4MF7D0-->08</span><h3 data-page-node-id="cFzLRoAia6s7NZTfTTsQHR" class="ttl"><!--pnid:eJQ4lw5pZu3QyoMZlw12Vq-->对照协议九项自查</h3><button data-page-node-id="NfO5C0EOchAVoD7zQucFUg" class="cp" type="button"><!--pnid:VFlC9K9ktNML9Yq6cOPFVj-->复制</button></div>
+      <p data-page-node-id="M0VaB6eBuyxchTsJFCtjLQ" class="tp"><!--pnid:D3Lh1vvDaySNZ15EdxGAsQ-->对照采购技术协议附件那 9 项，把这份台账自查一遍：哪项协议要求但 COA 不报、哪项报了但我们不检、哪项两边都没检、哪项方法不明不能比。产出 Excel 一张自查表：项目、标准要求、检验方法、缺口类型、依据条款与出处。</p>
+    </article>
+    <article data-page-node-id="ZTLdSOV2oMrIZseXgFWdyi" class="task">
+      <div data-page-node-id="YrFvUUErMjZuMXx6fn4EoO" class="th"><span data-page-node-id="rpg8M5VGhxcJxP9B8vLth0" class="no"><!--pnid:UtN14bCJr2ofF3ZY5GeZMX-->09</span><h3 data-page-node-id="T0b124E8BpoIQYedlsFvCB" class="ttl"><!--pnid:ZPiDw97DwdFGxyStWeyqwM-->折成漏检的代价</h3><button data-page-node-id="FiuU1ukDY5xST40E5tKMsW" class="cp" type="button"><!--pnid:To1CIpW3WFz3LiDZhADooK-->复制</button></div>
+      <p data-page-node-id="yfrqdIemgDQiWDWmQdaOW7" class="tp"><!--pnid:Mgin7NoRofB4nnafRayfHg-->把 05_ZY-2608留样补测结果_加急.xlsx 里那两项没检的代价折算出来：B26-0817 那 24.6 吨按退货 12 吨、库存降级 8.4 吨、已售待回复 4.2 吨的分布，以及 4.2 吨还在客户手上意味着什么风险口径。产出 Excel 一张影响表，写清算法与依据。</p>
+    </article>
+    <article data-page-node-id="wny67sXcUuioVQIAsKjk4E" class="task">
+      <div data-page-node-id="MKB7Rr5dhnyMDtLUMKGowY" class="th"><span data-page-node-id="RO8CD0hUFFadufpExF1PVk" class="no"><!--pnid:2H2dZoWp1uAn6ksINZxHMF-->10</span><h3 data-page-node-id="hUa229SmiviMj3h7JTPOTG" class="ttl"><!--pnid:uZLUx95CQWAUwfmUi0DZNk-->沉淀成三态核对清单</h3><button data-page-node-id="7mFAXE0WTWSbUVoYzwyCBC" class="cp" type="button"><!--pnid:Fakv7bzKSMvseXh7NXZFCl-->复制</button></div>
+      <p data-page-node-id="atzqkAkFpwZzZPysgPHTI3" class="tp"><!--pnid:46KvZnZWivt7PJmQvllDQM-->把这次的核对动作沉淀成一份原料进厂三态核对清单：以协议 9 项为基准，每项写清该谁检、用什么方法、标准版本号填在哪、方法不明怎么办、单据缺了怎么标。产出 Markdown 一份，新供应商进来直接套。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="EMXDVVBtWrhTOzpx3MDfml" class="cta">
+  <div data-page-node-id="pffOiDPSZ3DhKnAPQQV7kU"><h3 data-page-node-id="TsAfaY9WHC488Jcm0zeRnD"><!--pnid:sSKXZAxXobxIVWk5IgKLXv-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="SVLEpFDatVBvnum51el60D"><!--pnid:keM9ZOMEXnoYAICUDQS2WU-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="7b3HwOtVRB4q0Kzl4BmifX" class="btns"><a data-page-node-id="uywHVzth8eLJ8lagE5kdhk" class="btn" href="#" id="ctaContact"><!--pnid:lXjgEb8aIjM2x9YNgrM4CC-->联系我们</a></div>
+</div>
+<footer data-page-node-id="Yp5yTTnpoTnRvMLBMCbCFh"><!--pnid:5RRXWWIRUA0sKSRY3nXIuv-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="8AncKrQuqh3FjfUGjSwv82" data-pnid-children="beJVroNTL3RvWHkt71sHvk">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="gfkO4GJjp07lr7h5e6pTvy" data-pnid-children="uitxRmOWqHodhgM0cscI1p">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="YmNBbTqsMm0M1Sbum9htyV" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="7WtjnZkZWcjpxJfGINTkKK" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="KxcNSVQ8eyk4sOMQw7BIEh" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="sIvLsihdfqlILuAacWILQx" data-pnid-children="N2t4HqkXBaIaRktVsiiw7f">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="lyurXSPijkmiGhHXqPxy60" data-pnid-children="yTb3wedFqDQyOzhHQvfJIO" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

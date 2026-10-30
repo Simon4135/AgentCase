@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="l12nmrZAyGEsPEAny09XbL" lang="zh-CN">
+<head data-page-node-id="91xLtIxx5R5Hbb3CkYare7">
+<script data-page-node-id="2jjJuk4VQl5lj9xGH2ZFew" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="VwqhNwmt0q8kGsJFrxlJsY" charset="UTF-8">
+<meta data-page-node-id="SiyMF4Q1CZ2anZLgxEott4" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="EzmFfqijYFscXobWlSngDJ" data-pnid-children="B1JdBCwl6TXFr0mlfIaQiy">发布检查清单执行留痕</title>
+<link data-page-node-id="nbtnN8zSEmaYBuhhfN4I0h" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="hhBg2sWe0CiSg4ieHvOP0D" data-pnid-children="eM0V7GIeKAFrfsPH688Unj">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="HuKSmOg7vop37zREMtfP92" data-pnid-children="vUbMOQxKfaorSNVrNSQ3EI" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="KkyN2iwItVDrQHJSMnsjnJ" data-pnid-children="9usi7zIv1bMpsVNBJ55Ybg" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="3wlly890CCHyllSi2HFNrp">
+
+<div data-page-node-id="M5SrG1zHELw2CGCPt5L2PJ" class="wrap">
+<section data-page-node-id="slriPQ9og2FRw7tGfsBTpu" class="page-hero">
+<h1 data-page-node-id="fChKWw2TP4ecfhdiUbBX4F"><!--pnid:bTErWw4HL85p1BKmEe6Wrc-->发布检查清单执行留痕</h1>
+<p data-page-node-id="h7FTK8ySzw1DSVclwWO7xr" class="lead"><!--pnid:F2tNSuehTbZvDHLYMFYE2V-->「连锁反应式灾难」的复盘第一条：回滚预案没有 · 检查清单的价值不在列出来，在逐项核过并留下痕迹</p>
+</section><nav data-page-node-id="F02a9mbzP1nZcdOngLltHy" class="subnav"><a data-page-node-id="JtWO4KzF3FDSkRYSRVAI29" href="场景引入.html"><!--pnid:AZn4qxiN5sWhU0k0nOK5xG-->场景引入</a><a data-page-node-id="Ez65POr24Ykb4VE90rm1Qu" href="LiveDemo.html"><!--pnid:mBLunRwZjMNZAsVUAKU0VX-->Live Demo</a><a data-page-node-id="Xa1WPBeefhSA3muVQX9LmW" class="on" href="#"><!--pnid:HEm4CCC7fr0E9KRBwIJB3C-->推荐任务</a></nav>
+
+<section data-page-node-id="vMqngzHr2Gu6psLqirQKvD" class="blk">
+  <h2 data-page-node-id="9otoHx0LaS1smbqVgqLkJf" class="h"><span data-page-node-id="8Wd2owvGNadtIyAnKKrJVQ" class="num"><!--pnid:LMMTMr9zXCkhoibZuzu79T-->一</span><!--pnid:qYH6nIDiljfLWd9pRY8sCW-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="Onz5JTuKPDoW2tymNT3Cwb" class="subline"><!--pnid:VUYlXWvofB1xHntw9WU9PP-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="9O0tClqcmsmLOZZnXwj3jP" class="card"><p data-page-node-id="52W7eI0gQ82ZSFyodV8stN"><!--pnid:0e1WDWxm2x2YDC5MDHsoC0-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="P9GiRH27nlpHItSLZZTfUT" style="margin-top:10px"><!--pnid:CWGbSgxvzFBFjIxPDIDTOQ-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:xGKyhmKbBmjTgZSyX6GPRE--><!--wb-skill-start-->
+<div data-page-node-id="MP8hGvf84B1ryDaSzeqNIe" class="wb-skill">
+<p data-page-node-id="rJ6SeMUocHaySrrl11Qd9D" class="wb-skill-lead"><!--pnid:cvxejECGBuI6AyW4DEmxXx-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="wtj3muxPlmJ66sZIMvC8oF" class="prompt" id="wbSkillPrompt"><!--pnid:LmkO28bMYFEADRBySYr751-->【准备】这个场景的规则都在「发布检查清单执行留痕」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/6OOisfjtrtK10cw3zJXrUQ/JKHonbRD4a2D/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="7dG6mUZyPPdTcCsXZ49LWQ" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:zUaLBsZEgM3jjng8ceLG4Q-->复制</button></div>
+</div>
+<!--pnid:6D8fY9X7wlgVQJlKgFwGrW--><!--wb-skill-end-->
+<section data-page-node-id="bu8F0egVAaS50zHTXyRavW" class="blk">
+  <h2 data-page-node-id="ZUF2bric10RFVBwsqsBuCB" class="h"><span data-page-node-id="2n0P7TWiyahoz9wg6VMVle" class="num"><!--pnid:notdlSR8ezqn8y2uU7N5ay-->二</span><!--pnid:risaJmAPGRXq2rYzjxUe73-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="2GsPUpXXoTiEs0KcSoREFX" class="subline"><!--pnid:dGMo7pcRs0n3jQSgSIJXLm-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="WF66pkEAwZ4ZXSmSeraLqj" class="tlist">
+    <article data-page-node-id="097BvzNEu33007M6Ph2CiG" class="task">
+      <div data-page-node-id="vHE4j5jv7cdaEOQDbwFmhT" class="th"><span data-page-node-id="URm98pZ8Gdvck73ViiejXY" class="no"><!--pnid:6KdpDrZYF1Kt5EbAXtHBUj-->01</span><h3 data-page-node-id="w4i3F7zGTEjKLvZ3pi4QfE" class="ttl"><!--pnid:ldOGQB4yvkbQLunHJSGIjG-->首推默认</h3><span data-page-node-id="u59i8MeTV1W7E3oG1hUUdn" class="star"><!--pnid:57qEazW57LynFeCSr9YMHp-->与一键体验入口一致</span><button data-page-node-id="CoS5CrCQFk09NdC6zwYtIF" class="cp" type="button"><!--pnid:xmboury8UNqsoRu2F3GnBy-->复制</button></div>
+      <p data-page-node-id="Y2gyTUIGRYgMX4F0ca39YW" class="tp"><!--pnid:2ykBMOfRhZEv0jWqEp0SOn-->周五要发 v3.4，帮我做发布检查。技能内置的是 01_旧版发布检查清单.txt、02_v3.4发布计划.xlsx、03_研发回滚方案.txt、04_v3.3事故复盘节选.txt、05_客服与实施值班表.xlsx。
+老模板先翻新：五个维度缺什么补什么，别拿两年前的口径糊弄这次；逐项核验，每一项都要有验证动作，不是打个勾就完；回滚方案重点看——代码能回退，那数据呢，研发那份里数据库写的是「无需回滚」，帮我核到能不能演练这一层；v3.3 那次事故的教训对照着看一遍；缺项的给我亮灯，红黄绿分开，红灯的处置给我三个选项各带代价；值班表拿来做发布当天的作战板。
+产出三份：发布检查执行报告.xlsx（正式件本体，含五维升级、逐项核验、红灯处置、影响范围图、作战板五张分表）、影响范围图.xlsx、回滚预案核验单.xlsx（代码/数据/配置三层 + 演练状态）。发不发我来定。</p>
+    </article>
+    <article data-page-node-id="i2LBD5bdyDgfFSO7f4M7hK" class="task">
+      <div data-page-node-id="OklA6RCI2EVKj8jvDx2gnB" class="th"><span data-page-node-id="1zuzwQQpLgUaIZPSK5cDPu" class="no"><!--pnid:sv79tTdIZHhDXT8uIIAi7H-->02</span><h3 data-page-node-id="1DQ9mJgzfw5ZQZr9AqVkK1" class="ttl"><!--pnid:xMR0akKGDwCRyvA7okGvfy-->只核回滚这一项</h3><button data-page-node-id="j7z2phhASfaBHzIHzuHT2u" class="cp" type="button"><!--pnid:cs3ZkHzfKLOxkkl8nAJSZm-->复制</button></div>
+      <p data-page-node-id="gbPk6OFFACYWnraUq0Pnv9" class="tp"><!--pnid:yeG03U2Iq34NePY76A60A0-->先只跑回滚，别的维度不用动。把研发那份三层回退方案逐层核：代码回哪个标签、新增数据表能不能回退、配置改回什么值。产出 Excel 一张回滚核验单，逐层写明核验结果、缺口、演练状态。</p>
+    </article>
+    <article data-page-node-id="7ohwzbFbLYF7vJxlNORo7N" class="task">
+      <div data-page-node-id="qSBDyPDwZgvLZgILIcf3q8" class="th"><span data-page-node-id="DRVadlOWyrSGcQqC325X1p" class="no"><!--pnid:p0q6urnBjQm4nCbMUcRnfw-->03</span><h3 data-page-node-id="2pF5zXIAMhJPNrQdCK6u7D" class="ttl"><!--pnid:K45IvJUsEgsiyXp8Nl5Dcj-->换成小版本快检</h3><button data-page-node-id="FUq4gmizHrY5u5Vf2UgZkf" class="cp" type="button"><!--pnid:34ecxI1U8ZABVxOB5PrbZa-->复制</button></div>
+      <p data-page-node-id="kggmpyvDYkCx1rDeo1NjU7" class="tp"><!--pnid:xreBwDkzdGUam4kDnOQWog-->这次按「小版本快检」的口径重跑：只查回滚与依赖两项，其余三个维度留一句说明为什么跳过。产出 Excel 一页，两项逐条核验加红绿灯，跳过的维度写明依据。</p>
+    </article>
+    <article data-page-node-id="Riq9zr1WxM7sJ4i2G3yGdO" class="task">
+      <div data-page-node-id="Ahx1qC8hGb9EJndTwRzqrm" class="th"><span data-page-node-id="OqTstsAVVwhpMSo27EpO9m" class="no"><!--pnid:plahG4LPKsMo1XdpkVbfKh-->04</span><h3 data-page-node-id="dMOG4SV6SygUj6idX8kPsM" class="ttl"><!--pnid:84nVKT6WB07rplbg3vqDzp-->一次检三个版本</h3><button data-page-node-id="cGksobZ58wtxwXBAHvvBuP" class="cp" type="button"><!--pnid:v4dtYxNpzvm6Pby9IL5Oag-->复制</button></div>
+      <p data-page-node-id="j1krP1nDVDSezl9bdvYx4g" class="tp"><!--pnid:2osBST2EDMoH37xKp0kaVF-->演示数据里再加两个版本的发布计划，三个一起检查。产出一张横向对照表：版本、涉及模块数、红灯项数、红灯类型、回滚演练状态、最晚可延期时点，按红灯数排序。</p>
+    </article>
+    <article data-page-node-id="ROStvPUduqqJEdGbddHBEu" class="task">
+      <div data-page-node-id="BT3Dhbk47DqYFCb6ZcxzWB" class="th"><span data-page-node-id="VeWHpLt9uk42t8Ru1O1CxO" class="no"><!--pnid:sGc1La1QLl5uuAefFG3poy-->05</span><h3 data-page-node-id="ZLeg8pXlHtcI51q3633TOV" class="ttl"><!--pnid:I3ROhd7Vo1wGf3OMWO2d1M-->做成发布夜作战板</h3><button data-page-node-id="Mn3JkRzdw9ED75rAcpDY0J" class="cp" type="button"><!--pnid:uMsei8uesi3CKffzcsGbAw-->复制</button></div>
+      <p data-page-node-id="WbVUCqWOKZiG70xeHjnmU1" class="tp"><!--pnid:IgmlnuyvOuyaphLsH6ARWg-->把报告压成发布当天的作战板：每项谁核验、什么证据、几点前完成。产出 Excel 一页，按时间排列，核验人和证据栏留空待填，其余分表不用给。</p>
+    </article>
+    <article data-page-node-id="RTUBZpakjlYvPrQMBmsfIB" class="task">
+      <div data-page-node-id="rasRzbKHSOHHFhr5dgTsy1" class="th"><span data-page-node-id="ygH88ceRS89OEx0MXVOMLA" class="no"><!--pnid:OHui8TSDwknX7caGUnJkjt-->06</span><h3 data-page-node-id="Pkq1E09dbAPcq8S4vE09e9" class="ttl"><!--pnid:qJz1kfj4c0KVCKiHwfqiPa-->让它反驳自己</h3><button data-page-node-id="bbggsvXd2E33BqLdIozV0N" class="cp" type="button"><!--pnid:62wHsHLyyAKYuDqkOmNxLd-->复制</button></div>
+      <p data-page-node-id="fZd8pLhyo4Ng7QnOY8Hb0J" class="tp"><!--pnid:5nsZhGrCU1DkTJLunzkyJ3-->你自己核一下：标红灯的几项里哪几项其实证据已经够了、是我把老模板的旧要求当成必须项了？产出 Excel 一张复核表，逐条写明判据和原文出处，站不住的就降成黄灯。</p>
+    </article>
+    <article data-page-node-id="6qufqbydXueUpxLkboCpMU" class="task">
+      <div data-page-node-id="X4lSeWtzVDopxBczdi4L8I" class="th"><span data-page-node-id="DD604mBjOgA84DzuUTStxC" class="no"><!--pnid:7t56bmD8ROVKhdjgr7UYYx-->07</span><h3 data-page-node-id="r06rocETbkP3JB0McShJug" class="ttl"><!--pnid:0BQkjrcOTQe0CH7pjHxGOK-->专门对 v3.3 教训</h3><button data-page-node-id="FvNT2sF6Equs2J3G1ZQBS6" class="cp" type="button"><!--pnid:32GUUZOxZYA3CMpgGGdadA-->复制</button></div>
+      <p data-page-node-id="Bq5f8YKKEAwvvmLMxq6h6n" class="tp"><!--pnid:UkQjPiWAwtxghF7pFROQh2-->对照 v3.3 事故复盘节选逐条对：当时缺的那几项，这次模板和计划里补上了没有。产出 Excel 一张教训对照表，列复盘结论、本次对应项、是否已覆盖、证据在哪。</p>
+    </article>
+    <article data-page-node-id="HIxs408Emh9B5q4pLgPtJu" class="task">
+      <div data-page-node-id="LsuBHkkuK7UkGq2MpOaRNl" class="th"><span data-page-node-id="nE4UDXj5zSznlg6PVrDXsD" class="no"><!--pnid:T5xmqEoDWdmsq2BxaPfCLX-->08</span><h3 data-page-node-id="IjiSUD100y74fOree0l0jj" class="ttl"><!--pnid:31SLVo4WXo74nuBIQMw3iq-->验证动作自检</h3><button data-page-node-id="ZPShTkNk7r6pT0uoC34bO7" class="cp" type="button"><!--pnid:40nQn2FIa5x0ZvJRQuFOHt-->复制</button></div>
+      <p data-page-node-id="csJjCZBSbWZHDNjeyCim4O" class="tp"><!--pnid:XZV1VNU2hQa7bgiN9G5ov8-->对照五维检查框架把清单自查一遍：哪个维度里的项其实没有验证动作、只列了个名字。产出 Excel 一张自查表，逐条列维度、项、验证动作（有/无）、补充建议，无的单独成组。</p>
+    </article>
+    <article data-page-node-id="ETvAiCovIQhTU5T1jYx49D" class="task">
+      <div data-page-node-id="VfuD3y53FQc6zRdZ93KLfe" class="th"><span data-page-node-id="IFI9Ts1L4jrjMNSA5yMC4a" class="no"><!--pnid:R7w4sOV3Fkl9kNXuDuIDIF-->09</span><h3 data-page-node-id="C3oK4kxIGqm7DMmU9I84eb" class="ttl"><!--pnid:pepdMQcPoys0TuyoPaD0qw-->折算成发布风险代价</h3><button data-page-node-id="oNEmT6SHIyAZJyeHqt2YrN" class="cp" type="button"><!--pnid:H1k3R7DGWKB3kSrMUAqV8w-->复制</button></div>
+      <p data-page-node-id="58satdy3lOiNHWmLUgFcHk" class="tp"><!--pnid:m6tqB8JMNp32vzZ6Aw3y6x-->用 03_研发回滚方案、04_v3.3事故复盘节选两份材料算：数据层回退缺口不带处置就发，按 v3.3 那次 47 分钟停服、12 家客户算，可能的代价是多少？三个处置选项各值多少时间和钱？产出 Excel 一页纸，逐项列代价。</p>
+    </article>
+    <article data-page-node-id="9856Fx2VtgVPOKkzpIS0Kb" class="task">
+      <div data-page-node-id="QqjH7Pgd8pwIc5FdJ0LRcn" class="th"><span data-page-node-id="Tu21FllqydZCUpN4oy9h0j" class="no"><!--pnid:uWI3rnRwnRv9ZaROnbGfDO-->10</span><h3 data-page-node-id="QcGAKTtFRztNWBv3iMXwPT" class="ttl"><!--pnid:3wuIe8oXXOOm31u7vjc0w0-->沉淀成发布检查模板</h3><button data-page-node-id="LFR14a5a7tQe9Z9fjTFP7R" class="cp" type="button"><!--pnid:hrcFrVOSRI2ENQiJn2lGMQ-->复制</button></div>
+      <p data-page-node-id="pSejNmjoCnhKgxRElmEvVr" class="tp"><!--pnid:KsC75EcaqHnY1wpAn2uxc0-->把升级后的五维清单和亮灯规则固化成发布检查新模板。产出 Excel 一份，含五维条目、验证动作要求、红黄绿判定标准、作战板空表四张分表，下次发布直接套。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="uu28qvsMk3MdlcBmhmZClj" class="cta">
+  <div data-page-node-id="I3atVbF6DmcQi46KteIRuZ"><h3 data-page-node-id="KJPsV0IgsBZrTw9OaJGjXB"><!--pnid:hLY6UGjLbmSRhXx5CgZ3pH-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="XWZfWRry0b1KjXxW1N6QWp"><!--pnid:7TsqJF3UM4kzJ1i23H9ZsZ-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="Rk8Om6FEUT9CwTZmzkIGdk" class="btns"><a data-page-node-id="Idygni9fKwHBkIYcp1Onzd" class="btn" href="#" id="ctaContact"><!--pnid:mTE3X15fmGneAxbjcjL8Fl-->联系我们</a></div>
+</div>
+<footer data-page-node-id="9YBY2WQh0mXLUKj9OkGERd"><!--pnid:qk5WmnQwxxt4F2w7QkicEq-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<script data-page-node-id="sYwBRGcskXFgEObimYVhto" data-pnid-children="97uG5hzmrSyZpv8gihf7ex">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="TvPeibUEwQlYgMe2GvFhw6" data-pnid-children="JS88ag0rZe3ZaT9gHOnfM5">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="UlTq581tGKzy4ZbZ0Deomw" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="Cmz72J0iUMlBT8CpPugCSS" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="sRpHLLOnMlNWllCoXglVVu" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="20mR9tR99WVDwpdJTVHk4y" data-pnid-children="herc7jzVCwpRL6DcthKwFL">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="8muYfd4BpIMCpSDxd3q4Qw" data-pnid-children="hjnXVnw5zDMvzjRCKqVxEg" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html data-page-node-id="8xq8Cgy1il2UCt8o2O8IHZ" lang="zh-CN">
+<head data-page-node-id="4fezwby1h2sLKeNJoi42AR">
+<script data-page-node-id="Z0S9sUWxcMjW56Gejcx4gE" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="lFHiwV5CgL9cGDK90H2jbc" charset="UTF-8">
+<meta data-page-node-id="eiCRCQu34qAnKE8ZhCkKAO" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="n1w3vrH92sw9bLGRBSFqwh" data-pnid-children="z8TxOWABJBIzMqJxOCUE0t">从需求到产品原型</title>
+<link data-page-node-id="hvEb8HTo1yi1w2YmiQioZa" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Wr7RuZlGGAjP3nzqihEsfp" data-pnid-children="ktfO51Eah4WuFJFe2i3Mg3" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="dEVCB90hm6gnZa2vzgVCgm">
+<div data-page-node-id="Me7UZrFYcOvqLY1xKadaX9" class="wrap">
+<section data-page-node-id="WsHD9eZqwatZYw3VgzRbp0" class="page-hero">
+<h1 data-page-node-id="D8QcVptikrMBa3QyKk2yPR"><!--pnid:9jAbWnL3tJFpp8ISSnNnyd-->从需求到产品原型</h1>
+<p data-page-node-id="NaV0NpaScOL1GvI9BMCg0u" class="lead"><!--pnid:OJNt0ogTPwyApTBPtkTU4a-->写 PRD 太慢，原型制作与沟通耗时，需求评审返工率高</p>
+</section><nav data-page-node-id="5hqe8c2EevldrYqkpHS17K" class="subnav"><a data-page-node-id="QKcH1AB7QZDmxl6D0NrvXu" class="on" href="#"><!--pnid:mtRCD9yUeVMLuyvrOrDYSu-->场景引入</a><a data-page-node-id="TPHZBnC3nBRB1kF3HcuPHU" class href="LiveDemo.html"><!--pnid:bLXRtRRSjdN09oBPTnqq14-->Live Demo</a></nav>
+<section data-page-node-id="K5K2TUAF5CWdSNRo6TKxyA" class="blk">
+  <h2 data-page-node-id="qQrh9nGeevvT5A0ZRk7E02" class="h"><span data-page-node-id="BdgZthTMjpHMVDmZqvFtgB" class="num"><!--pnid:a1iUzkcDxsGM1Sh8k2AlVi-->一</span><!--pnid:jh6c6cPSFXjdEtmQaBPPr6-->这件事现在是什么样</h2>
+  <p data-page-node-id="2AB5ptk1gr1oHE2fkM9bEC" class="subline"><!--pnid:ix12DGQZ89LO3xGI05YrpZ-->餐饮品牌产品经理 · 评审会前永远在赶稿</p>
+  <div data-page-node-id="pNNZ2WOKtOIoiGn94W1fhX" class="card"><p data-page-node-id="IdTIBbEJLaFiRgtVG0hMRb"><!--pnid:yuKwYKWFn4lGjsybJGfAAl-->某连锁餐饮品牌，周二下午。运营总监在周会上口头提了个排队叫号的需求 —— 「客人扫码取号、手机上看进度、快叫到微信提醒、过号别直接作废」，前后不到两百字。产品经理要在周五评审会前把这两百字变成一份 PRD：功能点拆出来、优先级排出来、流程画出来、验收标准写出来，光写文档就得两三天。再做出能给区域经理现场点的原型，又是两三天 —— 和设计师来回对齐页面结构，改一版等一版。等评审会真开起来，边界条件没写全，当场被问住，回去返工，下周再审一次。</p></div>
+  <h2 data-page-node-id="zRGnl8X2aeZTJYATv3z3Z9" class="h" style="margin-top:22px"><span data-page-node-id="xIxBPFprandtHMPkTLWuyZ" class="num"><!--pnid:lKHXlXcZ1CQOw88X8QD5vg-->二</span><!--pnid:uqlwgesJpyRSvp6xoct9MO-->痛点 · 每条都发生在昨天</h2>
+  <p data-page-node-id="VMZMBtJ6zPXFziygCNl9AI" class="subline"><!--pnid:vjNUGzDMnyGGqGAwSCpV50-->不是流程描述，是产品团队每周真实上演的日常 —— 以下案例均取自场景调研与演示素材</p>
+  <div data-page-node-id="kg5GcK2h5h0wawoLItAdmD" class="pains"><div data-page-node-id="9zKya3wt3KYQ9qLriks4Wa" class="pain"><span data-page-node-id="kkvWl9XdEULBA7Sd54GJXS" class="i"><!--pnid:jxeGHDvoZzyh9cNMnHUiHk-->1</span><div data-page-node-id="hIXzbMW8CZMHJsYEVs8MFo" class="t"><!--pnid:JCTVgaSW6PTksfnGot8oRP-->需求是口头的、模糊的：「想要个取号的东西」—— 从一句话到结构化 PRD，光梳理就要两三天</div></div><div data-page-node-id="78W8ejyyjp4wz0zGG0FZCe" class="pain"><span data-page-node-id="8p5teWX3rvakBog7FV7W5p" class="i"><!--pnid:J6rvPF78yU6np3FgU1zkGY-->2</span><div data-page-node-id="lG4Idt8z7HfwwEhQT2Kjik" class="t"><!--pnid:AidIw6PrPm57E2LNW3DjO2-->原型制作与沟通耗时：和设计师来回对齐页面结构，改一版等一版，评审前排期永远不够</div></div><div data-page-node-id="n6Bf3bms1xfTZD0XtJkzZz" class="pain"><span data-page-node-id="Rsxx8HUNuHYX1bNRdA7WDw" class="i"><!--pnid:vkbTVwskiJ9PQ4kv7mzp9x-->3</span><div data-page-node-id="geewUTW96uC6Qe4CDLpb9h" class="t"><!--pnid:cdXLV9A7u2SskpDa7Ak39s-->评审返工率高：边界条件没写全、优先级没依据，会上被问住，回去改完下周再审一次</div></div><div data-page-node-id="7kRYuKPh0WexCh9BYz8b4o" class="pain"><span data-page-node-id="QAfpMqAA34UiDtQEzmORey" class="i"><!--pnid:piX3mrXrctPCHrGrAtNd4l-->4</span><div data-page-node-id="rTSg5W1jLXcVGVKSQKsU29" class="t"><!--pnid:6zcMrWkFdnapS2Kpi8jv6v-->PRD 和原型是两张皮：文档改了一版，原型忘了同步，开发照着旧原型做，返工从评审拖到了编码</div></div></div>
+  <p data-page-node-id="W5kuHHQmHS0pQlr8vZ7SoY" style="margin-top:14px; color:var(--ink3); font-size:12.5px"><!--pnid:neraUvlJJFKAu6r4ClMXYt-->说明：本场景与现有方案「PRD 一致性终审」的差异 —— 同为 PRD 但方向相反：本场景是从模糊需求生成 PRD 与高保真原型，对方是对已有 PRD 做一致性终审。</p>
+</section>
+
+<section data-page-node-id="eg9CXBjWFObiL39CM8u7Ue" class="blk">
+  <h2 data-page-node-id="he6UN1ev1NhD6MtrpUznyh" class="h"><span data-page-node-id="wckh1PYFZSud2haNxV2Av7" class="num"><!--pnid:WFVlTNVmdfqH3jaCR2jFKU-->三</span><!--pnid:ryG0gjW0dU4XmelYUr0ECB-->换个做法之后</h2>
+  <p data-page-node-id="HlyNU0RiXbnhuXcUEDah3U" class="subline"><!--pnid:URT5fHhsnElUrPLAEX2O5X-->变化不在「快」，在「评审前就把返工消化掉」</p>
+  <div data-page-node-id="ZUhoGgl6IeGM4ouH72GKFA" class="cmp">
+    <div data-page-node-id="apUqFP9cUtf1eWXeAV7Q4A" class="old"><h4 data-page-node-id="5G56pUHwzL264pCO6jB8Ws"><!--pnid:fB9028hmSJARARMWYROOBF-->✕ 现在的做法</h4><ul data-page-node-id="d8WOyH2PPc7LyeMPnHANNB" class="list"><li data-page-node-id="XFn4py7u3Co1XGWHJyoxzU"><!--pnid:Ba1F9x9lIivtA5OPY54TUm-->两百字口头需求，产品经理凭经验拆功能点，漏不漏全看状态</li><li data-page-node-id="tCYA8BFSCeQhk9V10gz2QO"><!--pnid:cE0dHYI9qYVpFbIOvB6C9S-->PRD 手写两三天，结构一家一个样，验收标准常常缺位</li><li data-page-node-id="2n2cNsnrculAflr7nzpnvt"><!--pnid:yyBdzujGsmALk6adxSTDyl-->原型等设计师排期，评审前只能拿静态截图讲</li><li data-page-node-id="cRDgzLCERdzfHuitvVjROe"><!--pnid:XiQ3aBkz8QuBxh7FH3Sm9M-->会上发现漏了边界条件，回去改文档改原型，下周再审</li></ul></div>
+    <div data-page-node-id="FHJnHGXxtgN9mHhp3VJFFd" class="new"><h4 data-page-node-id="10uG3RBD2pcfrow9jJXdDh"><!--pnid:0OC6jJS5xPV9W5gDu4uIFw-->✓ 交给 Agent 之后</h4><ul data-page-node-id="BNF9OND4xsNHfqhACBjB1b" class="list"><li data-page-node-id="CvgSWpHk9b7n4vpWc5lsKh"><!--pnid:2X4UiksgcJWSVmmek8nHep-->上传需求材料，自动识别用户角色、核心功能和边界条件，输出结构化功能清单</li><li data-page-node-id="S4JpBIkmaZ9fJkxruvjZdg"><!--pnid:vewkXKrDN3ajRfpYpDL5gg-->基于最佳实践模板生成 PRD：背景/故事/功能/流程/数据/验收六段齐备</li><li data-page-node-id="jgPesp93V4obJex9EMlDHV"><!--pnid:ZJSHZFbXtc8biaJcineGo8-->同步生成高保真 HTML 可交互原型：响应式布局、评审标注，现场就能点</li><li data-page-node-id="5QbyxfimNHs92B6Gt1E9Wq"><!--pnid:bJhECYsCdC0WZUzYAsEpt2-->评审反馈直接迭代 PRD 与原型，输出最终交付版本</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="pSo8P6gcoa0Lur8xjGloMM" class="blk">
+  <h2 data-page-node-id="FQuEdBNgSBCzrO6T04koXX" class="h"><span data-page-node-id="NUhbIdKMBgvGXhERqlty6T" class="num"><!--pnid:tr2NpRWmabCMBz2oArWCJs-->四</span><!--pnid:h0KPHByJ2JYwPOs4xH21ti-->场景闭环</h2>
+  <p data-page-node-id="j0X4DXzPGUHPFrgKYGcIn3" class="subline"><!--pnid:YWwxIRSJTkpX0e1amWcjTk-->6 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="6c1dqv3TBHRAKIbJE2htZw" class="flow"><div data-page-node-id="dnkmvnXgV6Hbv2HG8C7pYy" class="step"><div data-page-node-id="XlylBzGCQEMVyKK6dOY4Qe" class="n"><!--pnid:aIfkpNft20SCXiMX2GkVWN-->第 1 步</div><b data-page-node-id="gGamnI0yMidtdLSSBF32Li"><!--pnid:GIuxc6gD3faSXsSnhbxuoZ-->解析需求材料 · 自动脱敏</b><span data-page-node-id="B29M9CJxkJ8O5ZeTXfOP9L"><!--pnid:yH6zi3pbcb6HhkIZ56PsiT-->解析上传的 .md / .docx / .txt 文件，去除真实客户名称与敏感数据，自动提取功能点清单和优先级</span></div><div data-page-node-id="n20RdwwbMZLwdwVD4c3KVC" class="step"><div data-page-node-id="ooBjkSHjgSQj3DebmmRdKb" class="n"><!--pnid:nTp2EnZIFpI2c76HYPAf8b-->第 2 步</div><b data-page-node-id="B5lK48pFcFF3RdOPLI0eYl"><!--pnid:7xem9yhGnW6cDM1wS2J7jy-->识别功能点 · 角色与边界</b><span data-page-node-id="FVqngLZL4Kd3jc7dcFXGcn"><!--pnid:8kLhuX0ehSHTf9IWCG951H-->基于自然语言理解，自动识别用户角色、核心功能和边界条件，生成结构化功能清单</span></div><div data-page-node-id="f6lgpyyTQbqw4GhZnIDnZ4" class="step"><div data-page-node-id="e9Rgap6iF4zPMKhR0ecAfI" class="n"><!--pnid:h0G0PZeUiOMD7am0mVsw1L-->第 3 步</div><b data-page-node-id="ukpaTveXyZdq8SYorwdcUn"><!--pnid:DVQPdx5r8k1GryjEIYZTxj-->生成 PRD · 六段结构</b><span data-page-node-id="HD8RJ2VKZ023a0UJXoSbOr"><!--pnid:fwgFV13v6Y7zQSPDFZlVtS-->基于最佳实践模板输出结构化 PRD：背景 / 故事 / 功能 / 流程 / 数据 / 验收</span></div><div data-page-node-id="8coetAANIk2wSYrQiKLwLN" class="step"><div data-page-node-id="AOMDbCEqcsSaRSVNL0sfhk" class="n"><!--pnid:SWDwGhgCMSIN2nmg7f5uIw-->第 4 步</div><b data-page-node-id="8L1FcAclAL1NDVqYCZVG8H"><!--pnid:NP8EhS5wxJJT0vswkQyf7v-->生成原型 · 高保真可交互</b><span data-page-node-id="ZMBI0bp5YF5UweB4rCi6ze"><!--pnid:n6P3VIGgVljyQtGF7BI4M0-->输出高保真 HTML 原型，支持响应式布局和评审标注，单文件可离线演示</span></div><div data-page-node-id="m1rTvQ2k18JiHBCwJXvvk6" class="step"><div data-page-node-id="8ulEILZFvBHxJfW0r0TBDA" class="n"><!--pnid:5SC00g19TayjZ6EUxa5Yft-->第 5 步</div><b data-page-node-id="aXRxb4wPNSKA2lJkXdYT2l"><!--pnid:fBmeIEoUwb21zP18E5OTmA-->评审验证 · 完整性确认</b><span data-page-node-id="thYnGc459EHym7gj6cFiJk"><!--pnid:9XnbZwyKRteS1RMz3ub6hP-->基于 PRD 和原型进行需求评审，确认功能完整性和业务逻辑正确性</span></div><div data-page-node-id="gzq61ZiicNyATTtoXTYGYu" class="step"><div data-page-node-id="UlrLT6IACrH3vtY9eo8zH1" class="n"><!--pnid:0RQ813Rup1nC0fs41apCfw-->第 6 步</div><b data-page-node-id="J9wTkI7CBzf9Vh5VhDbroz"><!--pnid:XimH2SHfuHCXXGYemzLVS5-->迭代优化 · 输出交付版</b><span data-page-node-id="5la7lvmQI8NzKgQamNnMKo"><!--pnid:oV4HbssZzKpERVCZBATXvt-->根据评审反馈优化 PRD 和原型，输出最终交付版本</span></div></div>
+</section>
+
+<section data-page-node-id="6GAQOgtNC7URvQozjw8raC" class="blk">
+  <div data-page-node-id="iTdOY9O4S0zP7xgZfrLSHA" class="g2">
+    <div data-page-node-id="gaNvznuTiVToJrWyc6PK5a" class="card"><h3 data-page-node-id="JpNAdc6r4IJAmYMJ5f0Uww"><!--pnid:wYp7miEXmSVsQTeWgdf9Om-->要准备什么</h3><div data-page-node-id="VNtujT3AxsbZ2iDBm1pkbG" class="src"><div data-page-node-id="J9slDY4JQbvboBUnTc6cLu" class="fn"><!--pnid:uaElORmEcR5CmCdczrAXKY-->需求材料（.md / .docx / .txt 非结构化需求描述）</div><div data-page-node-id="BiKYyGhXhApkOTHYD1Fwx4" class="fd"><!--pnid:sbhYSacixAGwIo24poC6Xy-->口头记录、聊天记录整理均可 —— 越结构化输出越精准</div></div><div data-page-node-id="kEWUtbUM8rB3s1zeGPRNtu" class="src"><div data-page-node-id="o1JdQtAdpz7T6LvBPIRqxG" class="fn"><!--pnid:B2tf92l1FFp78upMTuUwG6-->一句话意图（「帮我做 PRD」）</div><div data-page-node-id="oxmfqinTwT05Hx7fLicoR6" class="fd"><!--pnid:empcmwxWAb2ASJrMq5VlF4-->直接说或拖拽文件到对话框</div></div><div data-page-node-id="3WY09qEtX8iEInTaKaDpT6" class="src"><div data-page-node-id="HTF2hhsUa52jVQLg0vojwt" class="fn"><!--pnid:6qOVcMiqCgNsNYUaYMEJBJ-->评审约束（评审时间 / 演示设备 / 优先级口径，可选）</div><div data-page-node-id="FT4R87m6w2jXG9ep6fwS7p" class="fd"><!--pnid:23EY7DpEt5qfwZEhS2oxQc-->有什么给什么 —— 缺项自动按默认口径处理</div></div></div>
+    <div data-page-node-id="nj9zqwFmGuUbo8g5ysbSCC" class="card ev"><h3 data-page-node-id="ZBqBNBT6niewljn3R6esfW"><!--pnid:QRfyIzCxu1D4Y9fFefVjwy-->为什么这个场景值得做</h3>
+      <p data-page-node-id="n8x5lhVBu7rzTptFRBFcuG"><!--pnid:8uy8V25AylfeQTtjHL8e3R-->痛感 4 × AI 适配 5 ÷ 落地难度 2 = <b data-page-node-id="lngCHGDcFLs9jAGu0wnXuf"><!--pnid:g75EkaDsXgqZfqClYpQ4eX-->10.0</b></p>
+      <p data-page-node-id="3ZCOMAEwUbpLrMPhuwzvI2"><b data-page-node-id="4NwsjVFUa9FNQXBkRdoWi0"><!--pnid:rYDd4CieUDjXOwBf2dbcOd-->最大差异点 ·</b><!--pnid:9C0dra5YKB2bbqMCjYPY27--> 一份非结构化需求扔进来，PRD 与可交互原型同时出 —— 评审会上点着原型过需求，返工在写代码之前就消化掉。</p>
+      <p data-page-node-id="zsWuAHdnEIO7uaG9Q8VInf" style="color:var(--ink3); font-size:12.5px"><!--pnid:Rpz5NHc5t0ZZXxuRUR54X5-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨渠道取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要先对接 POS/ERP 才能用的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="SMhYlAjVWoV7MI3R1CRjVr" class="blk">
+  <h2 data-page-node-id="wJVc1t4cLE98rQYcdfUtjy" class="h"><span data-page-node-id="SUZWMygEQju3ty1I0R8cVy" class="num"><!--pnid:biy4Bd0kjL87Sym7sz1OuK-->五</span><!--pnid:dCUMXA6pkkzzqtMJMGC3Jb-->会产出什么</h2>
+  <p data-page-node-id="AwNTAcBMB9KYLpx20fZeLp" class="subline"><!--pnid:y7QALQRnrAEHKjCJ4deftt-->判断标准只有一个：这份东西周五评审会能不能直接用</p>
+  <div data-page-node-id="U897PASAcR446W08IWba0f" class="outs"><div data-page-node-id="PQ1q803VGkyKMXbmINIHxQ" class="out"><div data-page-node-id="jP6Ofilgcaw8dihXOtZ2rB" class="on"><!--pnid:WVD5qB9MIVcbxuQ07bWID6-->正式件本体</div><div data-page-node-id="L8s3xBVIKryRzdtFmTPW80" class="ot"><!--pnid:qHCw2SlEqIsvmfsoeih1Jp-->PRD.md</div><div data-page-node-id="C8KjWkKsTasmgbDB5WmSiR" class="od"><!--pnid:abYgvLAM1At5ilLLoOjJm4-->功能描述 / 交互逻辑 / 边界条件 · 结构化、可评审、可直接使用</div></div><div data-page-node-id="fzamRT2BRRPjFVvqWL1t9m" class="out"><div data-page-node-id="99569Xnj2NJslUiRtUXtZP" class="on"><!--pnid:WmdS25NV9RINudkZZYsMNg-->演示件</div><div data-page-node-id="B2CZ2rBPoBceY5K6LWMrrl" class="ot"><!--pnid:gn1lRzVJ7bUND1CchyFMtH-->prototype.html</div><div data-page-node-id="ZqqCjTTOfMjRuX1Jj9W4Ae" class="od"><!--pnid:nM9leVBJ4LjAWmvGQb9qgk-->高保真可交互原型 · 响应式布局 + 评审标注 · 浏览器直接演示</div></div></div>
+</section>
+
+<section data-page-node-id="K0MJRtzJOjjhUM3MPhr6cT" class="blk">
+  <div data-page-node-id="Td9Irz6jhu5JwdkxTYljyQ" class="card warn"><h3 data-page-node-id="3veKTNBDMlZZfuGFfSsaAy"><!--pnid:8l2lewey4MCfIUvIi7KmPs-->这套东西不承诺什么</h3><p data-page-node-id="UbkpZrVvuzGGsfxm82q974"><!--pnid:n2vEZReMncokPct6zNgHAu-->产物不含真实后端逻辑，不对接业务 API，不做 VI 设计，不做 ROI 测算；HTML 原型仅作评审演示，不可直接用于开发交付；AI 生成的 PRD 可能遗漏业务边界条件，功能完整性与优先级须产品经理逐项复核定稿；需求描述越结构化输出越精准，模糊需求可能需要多轮调整才能达标。</p></div>
+</section>
+
+<div data-page-node-id="tNh2RKhiOp0qXjdeJe8pmC" class="cta">
+  <div data-page-node-id="ZeEIrxVddCA9CvmUT85L7c"><h3 data-page-node-id="CoO0YS3iqNCzTLAbJBb76u"><!--pnid:FJvwSZoXspQEqKR9PXuPRF-->想看具体怎么跑？</h3><p data-page-node-id="bsTVF8wT2RLEpOfBC0t1kZ"><!--pnid:sGL51iQYdXgf9RVFCWIMjZ-->Live Demo 里有一个完整案例的每一步，包括哪些内容必须先经产品经理复核定稿</p></div>
+  <div data-page-node-id="LjG459VEnSav21JNCbl1ut" class="btns">
+    <a data-page-node-id="RwYjpKJfqWbKQjT9a9WgWC" class="btn" href="LiveDemo.html"><!--pnid:JspTiVs8Jro2rwnOWxUwYi-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="H9znozqOnSyhc6HI3TRX8d"><!--pnid:6D3bQgbiYW1SHv0AGbgj7D-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<button data-page-node-id="2WYdxXo6nfDIidu9jd2smq" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="nD2JkHFBKlIKoXEEjwqdR5" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="DylzJ1VbWivbWn1V13SSFn" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="DpUghtVtPcHQvwM28gyEGu" data-pnid-children="uWx1JNzLootUpAXBTNgHHn">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

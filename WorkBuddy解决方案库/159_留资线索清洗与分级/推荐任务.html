@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="gbJ55fqlJ2MoN6jNEn3RYs" lang="zh-CN">
+<head data-page-node-id="kY6PBsoobJm83oX4OZMldy">
+<script data-page-node-id="Gr0lBUxKRTZmz0tptbzVPO" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="H3oAjh6WJ0JJPgbMZ6GYsD" charset="UTF-8">
+<meta data-page-node-id="Z4sIdI10ymvQV1jUIBTgFB" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="GT5gKkiI8zg4Jpn32v8DwX" data-pnid-children="eu9EsAdkAy1383lsPt742J">留资线索清洗与分级</title>
+<link data-page-node-id="8rwYYnpIEvXaam6o5AkoJ2" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="M9izDkGhPEKVH9tXruIfxK" data-pnid-children="R5DDTq5YUVHA0368zl3Qip">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="KNO3ZE4dJXXRMVIKy3bzc7" data-pnid-children="MuXXCnPt8aoOXg3GOSUZAm" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="PrHXk6onyfkhqhhcS57Efv" data-pnid-children="yYqNNy5nZmUtr47hAjbdh3" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="mkFeYG5M6YPjKQO1HAQP4n">
+
+<div data-page-node-id="auaaPIINgpxsvR1M9jOm4c" class="wrap">
+<section data-page-node-id="PsPcD3AeE2zCNbwZp714I7" class="page-hero">
+<h1 data-page-node-id="OYOfmToD8hBvHmr918Nh8E"><!--pnid:9K2QdjxaJc5WzPE0x30i0s-->留资线索清洗与分级</h1>
+<p data-page-node-id="gtnZK37X2qMMFyWNiVcw5x" class="lead"><!--pnid:6UFSU5cPR5ZgTXrfvmhIT9-->表单里躺着同行询价、学生调研、乱填的 139 手机号 · 原样甩给销售群，就是三面背锅的开场</p>
+</section><nav data-page-node-id="RChiUoK6Zny7moOEYaJdYh" class="subnav"><a data-page-node-id="tyLoWgpaBt824nYnUBHEjA" href="场景引入.html"><!--pnid:AyLsPXjOwzDBLKgYD1bwZl-->场景引入</a><a data-page-node-id="iCn5mq2cLrJGkQFiZBc9eM" href="LiveDemo.html"><!--pnid:Ple6II2DinujFDeEo4iwCJ-->Live Demo</a><a data-page-node-id="UTOKbJv1QghWxoxJnSF5Ez" class="on" href="#"><!--pnid:lUtfmyVKNHdD2IIaEz7GKW-->推荐任务</a></nav>
+
+<section data-page-node-id="JHobvS5D7O0dLawbSEUH5z" class="blk">
+  <h2 data-page-node-id="A2H1o7UbxkBh9fUtMn4Adu" class="h"><span data-page-node-id="kzulkp2bcXWtQ5L3WDOX9L" class="num"><!--pnid:e53msReJwWQ3znG9o65D7A-->一</span><!--pnid:6W4AJE0IsGyfEv9la6jPaI-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="l6DG9stvOIreF7FWIH7wut" class="subline"><!--pnid:PVcHB4cm7PZOXKS4ruCrfU-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="F9se6MtCHBx4kQ5ErnZJUS" class="card"><p data-page-node-id="Po7jOmS1R5IOWZtr2z35Bn"><!--pnid:8mYeH9BBs2muZ8bOFtFt2r-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="vouGbsPHL1PtD4hjaq6YfE" style="margin-top:10px"><!--pnid:ZUFbH61aFwF9RAFYKMS2Or-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:bQgSxT4nN00XNfiDWOAhbf--><!--wb-skill-start-->
+<div data-page-node-id="n9MkEQz7ky8oC5UF6MhHIE" class="wb-skill">
+<p data-page-node-id="Q85ByGUbq5nlnt9wgxqAdj" class="wb-skill-lead"><!--pnid:mHAfDjTqZYZHTC4q6PSxtJ-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="czsQLZOYRuMlPNJSN8JvYd" class="prompt" id="wbSkillPrompt"><!--pnid:h7KwIFF3rcc3EYrOLT8b9k-->【准备】这个场景的规则都在「留资线索清洗与分级」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/7WQABA8RPLcrVqA9UXqwM7/1xBFNZEMuIAH/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="s6exZDU65SV4S6eBPHQ5LI" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:2E1ZJsZDUYxUIshM0XMzcf-->复制</button></div>
+</div>
+<!--pnid:VjYqM1bJXe0XvMZJ4rctRf--><!--wb-skill-end-->
+<section data-page-node-id="aArYNbvvAmNBmFvgvcR045" class="blk">
+  <h2 data-page-node-id="8t2bCOcfHbCaQggvuULz3l" class="h"><span data-page-node-id="EAiX3C4ABlJO6nSTOLjYpO" class="num"><!--pnid:3orxplJAE6UwEkkYASfX9f-->二</span><!--pnid:LYBfEf7m8xdCF4N4v5dS5E-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="BdrD1DtcqqBoPCafYZD6CN" class="subline"><!--pnid:m7LSASY05ex4aEQdBKx7wH-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="uHUDcJWlbvtTrWGlb1xqnZ" class="tlist">
+    <article data-page-node-id="ArcoaKhbvohk7zZlHd84G3" class="task">
+      <div data-page-node-id="V989Nby2PbwnywSdAFZDmY" class="th"><span data-page-node-id="khpxZJqSPvEOlGgR0IK5eY" class="no"><!--pnid:9lKz8Fgy4ebJ1pgksliOpV-->01</span><h3 data-page-node-id="PnxsszMa1O0qfhgAM8N29Q" class="ttl"><!--pnid:6ZupB69BQbkzlBmCefX0tp-->首推默认</h3><span data-page-node-id="pMN8j45LKVm4RHHF4rlno5" class="star"><!--pnid:ygRTUCzxawjGBkcfm89sZ2-->与一键体验入口一致</span><button data-page-node-id="VLHxyp4BEeaIoafbwKVVnu" class="cp" type="button"><!--pnid:YsmSQplr01LJbkJYDz78rI-->复制</button></div>
+      <p data-page-node-id="xTwM2vhA1kGwHS3wdLxmuI" class="tp"><!--pnid:ujP5Klq3FQshBvt8WYCtlp-->这两个月官网和展会的留资表都在这，214 条，帮我洗一遍。
+同行、学生、乱填的剔出去，剔的理由每条写清楚；拿不准的单独放一列我自己看，别直接扔。 剩下的分个级，谁该马上跟、谁先放放，每条带上他留言里说了什么。 有三个老客户混在里面，帮我挑出来转给客户成功那边。
+最后给我一张能直接发销售群、销售挑不出毛病的表。</p>
+    </article>
+    <article data-page-node-id="lLbWkSm4MWkjGWqjIhE4IH" class="task">
+      <div data-page-node-id="wWGo3NgmZkeiAuQ4c0ta1y" class="th"><span data-page-node-id="9g5xLE77Isz2ezdwtG35Pt" class="no"><!--pnid:7XHZf7N9TXTdPnvJ5DshQd-->02</span><h3 data-page-node-id="GL810z3w5OsUxMTCRPUAaH" class="ttl"><!--pnid:siubLlF6mgD1Yx2STYXnEH-->只做垃圾识别</h3><button data-page-node-id="tSy9WwimKQeb9sCb4RIWZ5" class="cp" type="button"><!--pnid:Cx5J4pXP8dIerMTIsHR52J-->复制</button></div>
+      <p data-page-node-id="7B2QvbpUYS6lM8OmKcyBwf" class="tp"><!--pnid:e4bcxBMjNogZJqgj3bFzrV-->先只跑垃圾识别这一步：214 条里把同行询价、学生调研、乱填的挑出来，每条写清剔除理由，拿不准的单独放一列，先不做分级。</p>
+    </article>
+    <article data-page-node-id="PwCeml9Pp9wQcUAowXXQJY" class="task">
+      <div data-page-node-id="K5ecdXrgY8BRw1hFzKsHZt" class="th"><span data-page-node-id="pk97Edvtqu5kQceM9UmFih" class="no"><!--pnid:RJTSmUv5V8Kw0STOZgN8qB-->03</span><h3 data-page-node-id="SvJFmuH4ZwQT6mU5bEnWOa" class="ttl"><!--pnid:z0qIF7veRLUQHOkFjJvKc8-->换画像口径再分级</h3><button data-page-node-id="l25FmO3tBRiaqy5ziSf2HR" class="cp" type="button"><!--pnid:WaeXcH1926GGhAatrYeXde-->复制</button></div>
+      <p data-page-node-id="ioS5qba5BaZlnHAGrXVZJJ" class="tp"><!--pnid:uE8fBEAqIQsCF5Btnn1zbd-->把目标客户画像换成「只做模具与 3C 结构件、50 人以上、有采购决策权」这一版重新分级，看看 A 级名单跟上一版差在哪几条、为什么差。</p>
+    </article>
+    <article data-page-node-id="1I8E6AMtnG6uPSfkQOlJ1e" class="task">
+      <div data-page-node-id="m6AMbude9BX3mcJPAvqOeC" class="th"><span data-page-node-id="uRCmSErgPjBQrSzmLH8dOJ" class="no"><!--pnid:6LttUg6mkKOgRIDzcpOXvF-->04</span><h3 data-page-node-id="BK7zKTPlprUFM3uzeIQWpK" class="ttl"><!--pnid:XgHqJDoG2e7E4gx7RGUoBE-->一次洗三批留资</h3><button data-page-node-id="X0KP6PHZ7DzeSyXp9jyMF1" class="cp" type="button"><!--pnid:tqEiyl103syjsDdWAH3BGJ-->复制</button></div>
+      <p data-page-node-id="Ajtu5u5j2BNqnthSCYRKSt" class="tp"><!--pnid:3WCjCykoybweKdZdG2iNjs-->演示数据里再加两个月的官网表单和另一场展会的扫码记录，三批一起洗，最后给我一张按来源分列的横向对照表：留资量、无效率、A 级占比。</p>
+    </article>
+    <article data-page-node-id="70KQLD5RzK57ceOezCqgpt" class="task">
+      <div data-page-node-id="ZAS264L14RvJBJgxmuPGwG" class="th"><span data-page-node-id="NhzIrLUeStUTLckvNRMGWH" class="no"><!--pnid:u1d2GdDi6jTVa66TVfiPRQ-->05</span><h3 data-page-node-id="Xi6gwJ6iaE47INGVgEBymx" class="ttl"><!--pnid:OyG8UXuOo5rZDrzKgq0F28-->给销售群直接用的版本</h3><button data-page-node-id="uqijwMt8TYjEbU4qeQB2qQ" class="cp" type="button"><!--pnid:VC2NiiK0q8twJSaUG71bbg-->复制</button></div>
+      <p data-page-node-id="x1qZNMIfx5pGbGlpGtdWfQ" class="tp"><!--pnid:3ly3dU0qK6NOHYpHzzvpZt-->把结果压成能直接发销售群的一版：只剩姓名、公司、留言摘录、分级和建议话术，剔除与复核的过程不用给他们看。</p>
+    </article>
+    <article data-page-node-id="QG3T21cfGJ1f3PBLU13O0Z" class="task">
+      <div data-page-node-id="SLD45iauzIUtx7Nsk07anH" class="th"><span data-page-node-id="Ub7P2ZaVgZ2Lh2rNX1FD9c" class="no"><!--pnid:NmYF9ny9ztJLwGoQ8GLeT1-->06</span><h3 data-page-node-id="SEfQBgSktvsAZprO3FhMdb" class="ttl"><!--pnid:islCRSxGmByI4UrWVyPXYP-->让它反驳自己</h3><button data-page-node-id="NSQv5X22EMc3Bx0ovN61MS" class="cp" type="button"><!--pnid:6dZhWKsyU1aV8oWBAcvyrB-->复制</button></div>
+      <p data-page-node-id="Hwg0Rw3PZ8cvOSeUAvJmrg" class="tp"><!--pnid:hfZMMWKqicGXRZCmNxA2Fa-->这 68 条剔除里哪几条可能误杀？按 27% 误杀的口径逐条说明依据够不够，站不住的挪回人工复核队列。</p>
+    </article>
+    <article data-page-node-id="eC9LVLMWAKFR9o0UW9od0S" class="task">
+      <div data-page-node-id="sneld3BllDspWP8v4GkGIY" class="th"><span data-page-node-id="ruWWDeuu3ps3l673BthX42" class="no"><!--pnid:dfVOXFTYQhV6rZpZVw2yJc-->07</span><h3 data-page-node-id="RbnMmBPZaT9fTTSyEWwRGb" class="ttl"><!--pnid:I8FTGnCCgAFCnE0hw07eVg-->比对历史成交名单</h3><button data-page-node-id="w1tr9vhSSwNSPjdCdpaLKm" class="cp" type="button"><!--pnid:jUn491dKdyqthRDzTf1hUt-->复制</button></div>
+      <p data-page-node-id="BHzuy83VB1FGO7PpAYlQX5" class="tp"><!--pnid:hywJPVwTa0ekocPGeon77W-->把这次的分级结果跟历史成交客户名单逐条对一遍，看有没有正在谈的老客户被当新线索分下去，有的话单独列出来。</p>
+    </article>
+    <article data-page-node-id="7ArA6eZbg2KTXQq64l1VTn" class="task">
+      <div data-page-node-id="YIEYhfmnjwu75UA8gCjkpd" class="th"><span data-page-node-id="NkymeoMhxA8vcDwgu38z2v" class="no"><!--pnid:tc0d6EwYFjd425sxIOA5kS-->08</span><h3 data-page-node-id="MQQgp3G2xPcfFUKX3EK26o" class="ttl"><!--pnid:vCv3YLpw0lFM7F7pPYq0zZ-->对照无效判定口径自检</h3><button data-page-node-id="VmE7IUmU9jEZeSaFPWKPv5" class="cp" type="button"><!--pnid:suhiojX40WS8Q5F1cSL6JV-->复制</button></div>
+      <p data-page-node-id="VUhYtCdu0jAFojw2dXHzGM" class="tp"><!--pnid:LsSLaKFuEQ4z7dpxIW4TB4-->对照四类无效线索的判定口径把剔除的 68 条自查一遍：每条能不能点回是哪一类、依据是留言里哪句话，说不清的重标。</p>
+    </article>
+    <article data-page-node-id="UijFOE6unW9wtDMnweV9T1" class="task">
+      <div data-page-node-id="IqwDsdPgRvXr5v1BMv5A62" class="th"><span data-page-node-id="FmK5pbN5TIAoJM39sdWgtJ" class="no"><!--pnid:fAsnGz1Gn8QgWFWfpW6RgS-->09</span><h3 data-page-node-id="dP5TqRgM6RKXqCv6gCGXBJ" class="ttl"><!--pnid:HxwWc5CgDycknSr2SBgmCW-->折算成销售产能</h3><button data-page-node-id="dPuTPpGkfEYfFnF5MnbRG5" class="cp" type="button"><!--pnid:ZfbU31KllsGtwOb7GPxWS8-->复制</button></div>
+      <p data-page-node-id="K9013R8Rjtwd29JX9DkGmr" class="tp"><!--pnid:nz0hCUwpZLf70ZT6itA31w-->按我们 6 个销售、每人每天 2 小时筛线索折算，这次清洗每天能捞回多少销售小时？再按首通转化口径算，146 条有效线索多出几个商机。</p>
+    </article>
+    <article data-page-node-id="1mN4oiczBEhayJqROV2Qdj" class="task">
+      <div data-page-node-id="hWIVYyFGwHZvU2TyX81IC5" class="th"><span data-page-node-id="4i6KjIBjc5dCqaOoFIEmpk" class="no"><!--pnid:4Vx4oepnddHL5StvtirO3e-->10</span><h3 data-page-node-id="UJEdHFclIjvrK40TaWDdnC" class="ttl"><!--pnid:DfIE6vyYN3E2YK2jd3H4Wu-->沉淀成清洗规则清单</h3><button data-page-node-id="ouIBtILTL6W6QFSYutpbAj" class="cp" type="button"><!--pnid:OuQaZSBGN67rIlMsZfvkxK-->复制</button></div>
+      <p data-page-node-id="3vpa4NUzFo21Xoa6fOErGc" class="tp"><!--pnid:W1KEufu8KDUIS5zwy15eyY-->把这次的清洗口径、四类无效判定标准、ABCD 分级标准整理成一份可复用的清洗规则清单，下个月新线索直接照着跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="J9go6yoHV6e4dPmOL52DtS" class="cta">
+  <div data-page-node-id="iUxfwfqS4XvzcO6liXPPvG"><h3 data-page-node-id="VsE9FZ9pRKTzaFJlvQGCSI"><!--pnid:RyjJVRIAiixF5mNOzUYqHr-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="2lwE6Z8MrcrAhU29BqwJtP"><!--pnid:tgTOcOMSd3OmtzaPuZp2Y3-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="eUHouigOWWovCmXTjpV1Ur" class="btns"><a data-page-node-id="VpSKBj0F2QcRhRMYitD3bT" class="btn" href="#" id="ctaContact"><!--pnid:oiUjHbJ3RA4wViSKitGqm1-->联系我们</a></div>
+</div>
+<footer data-page-node-id="nyrjbktwz7EU1piBtbIF4o"><!--pnid:2McMidDwx8tXWc4yHbp3jv-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="mqOkzgYijRSvmXrJWelS6x" data-pnid-children="M5fR0Os8ricd7opCqE3STZ">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="FMIIFUkHUE2VDuUwhHzAro" data-pnid-children="zAUwzHPk6KKXvjgErX5UQz">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="Lr8ASMY8E3okP30OyLv82S" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="zDnfe7vR515xIILyQR13Xt" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="RCKYRTvCRE0M897GIe7D0F" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="OethgdZDUHZvs1U1607wcL" data-pnid-children="5WBmwhvk7SZWEwXdaVj1ot">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="zxgEAGjSbA8JtUqVR5RwvO" data-pnid-children="3tBUSaodMUwMweKs2F3pZq" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

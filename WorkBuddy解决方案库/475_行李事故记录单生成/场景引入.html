@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="1otjcrX27oGQ0Hthm8RMTn" lang="zh-CN">
+<head data-page-node-id="SAkko7CUh0tLPL7LJsrq6i">
+<script data-page-node-id="orGsoOagCCaa85fk1k0qOJ" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="UAPUy88C5TkUCLbnX5gFUW" charset="UTF-8">
+<meta data-page-node-id="zLhipEBfoLWoypcvdkg3uf" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="GwWv5GSWJgZYNiqghTDQ3e" data-pnid-children="Wu9lXnHyMhxQsleZSmyPGZ">行李事故记录单生成</title>
+<link data-page-node-id="SOZxOjMMKn8e6YX99MtjCr" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="yow4HVAT8IPxgkKvozSQ1F" data-pnid-children="lhVuthXHYiBjwa8qq44tHH" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="66GSkxjlMAPdWqCbUPYz8L">
+
+<div data-page-node-id="kCyJ1DmXEVEW2uyDlCvf5t" class="wrap">
+<section data-page-node-id="PW62PFsDFiN7sAKW05bzF9" class="page-hero">
+
+
+<h1 data-page-node-id="dgUixESuxNg2lA9Zmrc00z"><!--pnid:98WUNGyvtkwWJffphzc0qv-->行李事故记录单生成</h1>
+<p data-page-node-id="cXPQzYDdU5JPEtM42Ilyty" class="lead"><!--pnid:SnMDpTjqe2IjT0dWF294No-->一次航班减载 100 多件行李，现场手填 78 份事故记录单 · 填错一份，理赔就扯皮</p>
+</section><nav data-page-node-id="0RKHHjIlnRQMNgzxReemKW" class="subnav"><a data-page-node-id="wFTEM6ZMNC69DsUAGIx7Nv" class="on" href="#"><!--pnid:B7UgZTCaD1Qc3cVBfk9G9M-->场景引入</a><a data-page-node-id="ssVa0TiajkJlDWwJ8yP5Sh" class href="LiveDemo.html"><!--pnid:UjQdLnE7PJ2f0pO1sDLq9S-->Live Demo</a></nav>
+<section data-page-node-id="32unfpj95tETA75uFtI4PX" class="blk">
+  <h2 data-page-node-id="AAklUCd7Eu06Un7taNrtZh" class="h"><span data-page-node-id="W4KXELyrYfhXuIQrubpziG" class="num"><!--pnid:RYht31VO7Iuf4YVS9a6K3Z-->一</span><!--pnid:QBIkDlINF2bw2BxQSq5ocK-->这件事现在是什么样</h2>
+  <p data-page-node-id="qgyk0IQy6rgWYxyxNhevYb" class="subline"><!--pnid:NSKzYgwbqqOHpbAfDB7Kvb-->跟踪调度 · 真实业务触发</p>
+  <div data-page-node-id="M3qEYsIYt8t5PXZ3dUcs0E" class="card"><p data-page-node-id="0D6Wi1g2vynyPfhvvPVX8t"><!--pnid:eKd5BWlAgIwRTVDpgYNd5a-->航班减载或行李少收，现场要逐件填《行李运输事故记录单》，一次减载 100 余件就要填 78 份。填单内容重复、易错，漏填一项理赔就卡住。</p></div>
+  <h2 data-page-node-id="co8Te3sIvsB2lmV0IfcFNk" class="h" style="margin-top:22px"><span data-page-node-id="Dltk4O4aJ4EaOzCioiWPFv" class="num"><!--pnid:08ypLDWAO3FvooI9ASkewP-->二</span><!--pnid:6O8Gl6s7pJJeEJjqa47QTD-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="ZmxUT0zcqUDqkDjEpTVa33" class="subline"><!--pnid:vNvJIyE5cgXmKkWpKiiue3-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="B9xZqjrZev08N4ZKK3y6Oh" class="pains"><div data-page-node-id="R2vcSgEiTVjOnqG59vFwLG" class="pain"><span data-page-node-id="XYZZ98m6zZT6k1gQhnOrnU" class="i"><!--pnid:grHU0s0ZJ9dJr98qdWJVtK-->1</span><div data-page-node-id="57qKK51vXDDIKWiJ34fxBf" class="t"><!--pnid:HLlLsM8eCchLmtKSkUOtZ8-->行李中心一次航班减载 100 余件行李，现场要手填 78 份《行李运输事故记录单》<span data-page-node-id="59NKqDylLOMm1hOatDS0cI" class="src"><!--pnid:EHzit1zkK0XSxjeLK2VDhl-->依据 · <a data-page-node-id="D0awkzYNMsfimJtxg8xKdX" href="https://www.ccaonline.cn/hqtx/236772.html" rel="noopener" target="_blank"><!--pnid:VQUMsRjAtLk5wJ9PzmFAI6-->行李事故记录单：一次航班减载 100 余件行李，现场填 78 份《行李运输事故记录单》</a></span></div></div><div data-page-node-id="fdFHUVV8UyCtrK0snab7Pl" class="pain"><span data-page-node-id="b6QnW60tqBzEJZCJM2MasL" class="i"><!--pnid:1Lj1Lx5yEbOzzgFxVd2KBi-->2</span><div data-page-node-id="IX0ARYNm3j20WGdIaoggmZ" class="t"><!--pnid:kpRWERWns8demGpx0EvKV3-->事故记录单栏目多、内容重复，逐件手填易错，漏填关键项理赔就扯皮<span data-page-node-id="ZQUGd0Rwa590SmgQTztqJu" class="src"><!--pnid:UuOuva54H9LXdKCxD4sOOb-->依据 · <a data-page-node-id="bAtGDm5VbsvkXSXEft1Lcp" href="https://www.ccaonline.cn/hqtx/236772.html" rel="noopener" target="_blank"><!--pnid:4wEWf0H3AAFgm7CDEfIadu-->行李事故记录单：一次航班减载 100 余件行李，现场填 78 份《行李运输事故记录单》</a></span></div></div><div data-page-node-id="6jQIxpR1OkW3gfgTy6tzLe" class="pain"><span data-page-node-id="ZZo0xPykcCZGMMW9i1bpOW" class="i"><!--pnid:PEVkPT9mHQgDSWc83S5FFr-->3</span><div data-page-node-id="uh3Dea67KOXwMBP4r7ZgA9" class="t"><!--pnid:xP9zsai5xZWzIFwj2liyP7-->行查岗既是操作又是客服，还要对接保险，多线程打断下漏记是常态<span data-page-node-id="moQH2mfzdvRDlkgZI40wti" class="src"><!--pnid:aqtdkx41aYCFMcNL4SFWIm-->依据 · <a data-page-node-id="GFEEYs7RR73gxHEP34aBRY" href="https://baike.baidu.com/view/2672819.htm" rel="noopener" target="_blank"><!--pnid:zvwNU45i92SCKfv1lBIZrb-->航班配载：值机柜台截柜提交客货数据，A330 只要 6 人座位变动就需重制舱单</a></span></div></div><div data-page-node-id="dKfLM9y9bicFZLcV31ttf2" class="pain"><span data-page-node-id="aDt60tzF8QudbbSjfvLGQW" class="i"><!--pnid:vJS7DHPD5y3eKdnYY16PBV-->4</span><div data-page-node-id="11RfZcl3acwOBBg9Wusm26" class="t"><!--pnid:CKYxO9GjoLYJM1PmRgSq7D-->事故记录单是理赔和内部结算的凭证，不是内部通报，填错就是钱<span data-page-node-id="drMJVifqPAkoV8pvd63eAb" class="src"><!--pnid:uKl4gXJjkyQ6aOUGGrmbm4-->依据 · <a data-page-node-id="a5ZotjszhTyrhN0DVr65dS" href="https://www.ccaonline.cn/hqtx/236772.html" rel="noopener" target="_blank"><!--pnid:sWOvrJY7O7Yn8smBhy5tNp-->行李事故记录单：一次航班减载 100 余件行李，现场填 78 份《行李运输事故记录单》</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="Go1OQ9Rlq2sTulvNTpRXwG" class="blk">
+  <h2 data-page-node-id="tfR0MLAz1TKHv7KEivy5th" class="h"><span data-page-node-id="Tid8KQFxvZHz7kEnNkY6sT" class="num"><!--pnid:mgi4gmdGE23cBO2JIFzZvz-->三</span><!--pnid:j9Dq2C5QraYHYCTIWCmdZM-->换个做法之后</h2>
+  <p data-page-node-id="z3owMTgmFG9o23eLz5SmXu" class="subline"><!--pnid:fNy7oaCGv9Np5rH8JccyF0-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="xLc4uaPd8gHXIdxSWeY3Eg" class="cmp">
+    <div data-page-node-id="o1KujiyzTjGfRNhnYroGUf" class="old"><h4 data-page-node-id="1WT4tkzmFvw3YDtSoXV587"><!--pnid:Q2dy4GUnRLqkEGFPHzRapT-->✕ 现在的做法</h4><ul data-page-node-id="VREODoVWotr3pO6eDWDkmg" class="list"><li data-page-node-id="CfshXo8ntl8u6nfPmGZL1i"><!--pnid:TIAvhfPsAfEUgYrqfHiOaH-->行李中心一次航班减载 100 余件行李，现场要手填 78 份《行李运输事故记录单》</li><li data-page-node-id="wdzhfoipBgvcCytdwhMdUd"><!--pnid:M9GLWaUxJsBaK27kxDaLdP-->事故记录单栏目多、内容重复，逐件手填易错，漏填关键项理赔就扯皮</li><li data-page-node-id="0hrjVPuHvbjwH4Gu1uNcdC"><!--pnid:Rjl7uWNzdmvHjt63Ribz2n-->行查岗既是操作又是客服，还要对接保险，多线程打断下漏记是常态</li><li data-page-node-id="g6lmxRmZMo736aaxS9uLIH"><!--pnid:1oIgsuSjQE46vQrbFkWIYN-->事故记录单是理赔和内部结算的凭证，不是内部通报，填错就是钱</li></ul></div>
+    <div data-page-node-id="R5GB1hQF5IT9CC3iAAg8WA" class="new"><h4 data-page-node-id="vFd7JhwKw1PFk3YAYmeRvM"><!--pnid:5o5vTKsAB2eXgImVx23phs-->✓ 交给 Agent 之后</h4><ul data-page-node-id="OmL7X23dS7eH2QlK35kyFb" class="list"><li data-page-node-id="IrDh8rQAlhqwO6BdC14LmL"><!--pnid:hyirBmObqN8ZyG6A6dlCkC-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="BS3hiC2DtucMXb8RbFCDEo"><!--pnid:sGLgLSGNpUuRG3ZNArEzqM-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="TATssguYZ3FYpl4UsVXBEy"><!--pnid:EQX2CkFWmoJF5VbfnXFY5z-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="IE9uwjdYBIfSnJebYkclCR"><!--pnid:viL3m4SevTnvjvOM9m13V4-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="83iOhrIy539yv7imSSQMSm" class="blk">
+  <h2 data-page-node-id="dHNMeaRlkLb8bJW4b9Ta4t" class="h"><span data-page-node-id="Oc6vzie6XkOkh1QHRujyw2" class="num"><!--pnid:QxlBecvHSzO2zaAmqyDucB-->四</span><!--pnid:9jaooBXUYiqSlbL60tg3PB-->场景闭环</h2>
+  <p data-page-node-id="C9TVl1fMvbKWi4tOc9ePhP" class="subline"><!--pnid:oVexxksJyDodOaI2V43mgE-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="WJsZiaFHgk5VVud6LrEKo5" class="flow"><div data-page-node-id="3DdwTU6SZBSZRj85wz2jU8" class="step"><div data-page-node-id="iyy8ieeVkmcgvXWSEHO7GS" class="n"><!--pnid:7hvKHmwlELTHQTZzl2NYIy-->第 1 步</div><b data-page-node-id="h10oRxUmCXq4Q0NwLjYVUc"><!--pnid:AFqyQveXrkdLQ6j40cFZJO-->要素校验 · 判断这批行李能不能填单</b><span data-page-node-id="pPlNYN0bVBZk5jfhpPhAt6"><!--pnid:DyUPQEjeM0PceA86o1eCea-->航班号、件数、行李牌号逐项打勾</span></div><div data-page-node-id="nIUWA6RMa5mFOy1OBWBc4s" class="step"><div data-page-node-id="kVZI0mrJ7XSoz5eL7EuQm3" class="n"><!--pnid:pjMDkwsWdYv2x6PSKcdNW2-->第 2 步</div><b data-page-node-id="TXdFJegFRWbUjMp9yyb2kh"><!--pnid:47N8D6eLEc7HWhY7uMUhxi-->批量生成 · 按模板逐件生成记录单</b><span data-page-node-id="aqzvTFO3w0kRs7olPjNmqt"><!--pnid:hSNx6LATQXWsopZ1murkDv-->每件一份记录单，公共字段自动填、个性字段抽取</span></div><div data-page-node-id="iRKuZJqr9911Yo9nhMZRMm" class="step"><div data-page-node-id="QLkoqMY7LtwXVqV1eYhcIO" class="n"><!--pnid:pAezKdyGryW3Peve50mw4o-->第 3 步</div><b data-page-node-id="tR9w97PZ0gV74GNZeNQmEt"><!--pnid:326Thikgaxh2HWhAZoVHOA-->件数对齐 · 减载清单 vs 记录单份数</b><span data-page-node-id="rd41DdD3JpUylokGKKB7AP"><!--pnid:JXFBpWY0kJiMFnT3P9w3vo-->减载 100 件就要出 78 份对应的记录单，份数对不上标出</span></div><div data-page-node-id="xNVjdjogTmSAdo2e5HhBNr" class="step"><div data-page-node-id="NpUjC75bhFEivnuwqvCwzy" class="n"><!--pnid:6NWAYH7a7WMPh1kwNRM4FY-->第 4 步</div><b data-page-node-id="7v1EQW7PcWbhazLrJ7mXnK"><!--pnid:bYxa1hg0DLHkaW66P5eegF-->漏填检查 · 把理赔必填项标出来</b><span data-page-node-id="svIFbRxTpNVeTsFEVN1jVr"><!--pnid:BOU5pBImZ2gfdcFAUzP4cH-->行李牌号、目的地、旅客联系方式逐项查漏</span></div><div data-page-node-id="dtIIAtAdD26TyEz3yGQr4L" class="step"><div data-page-node-id="a1nqlAhf81vkbosJcwRof9" class="n"><!--pnid:3dwDMy1XkXNvPLrmUSRF7Y-->第 5 步</div><b data-page-node-id="DCpMHxGlV7XPmBuo1jzvp1"><!--pnid:6yDrj4DnetJpjJwG0DDSmG-->留证与签批 · 生成待签的记录单</b><span data-page-node-id="rhTujRH0gr9QppwOj41Jn7"><!--pnid:x3KlgMvAAAofA5LH3nl4iv-->签批栏留空，由行查岗确认</span></div></div>
+</section>
+
+<section data-page-node-id="XizSBIxfnjftGp2al6Cm0y" class="blk">
+  <div data-page-node-id="dqp2mHC7WmNTsKPUA5SlpV" class="g2">
+    <div data-page-node-id="OPShEqegChxHTqlm4SEYCu" class="card"><h3 data-page-node-id="Q8Z6v7RBpnNMdyH6T34kOb"><!--pnid:WgFzZ13p3isIGy5AUVC5sQ-->要准备什么</h3><div data-page-node-id="SOKnafzS4Kgh1GTJeMLPmo" class="src"><div data-page-node-id="mEy6jax3XrUXQhJkqXVerp" class="fn"><!--pnid:TVvFQi9F6AVoZi5mj5iMqZ-->减载/少收清单.xlsx</div><div data-page-node-id="JhuMhLOHGkhv4Y1k3aIDVB" class="fd"><!--pnid:8wO7DEJuhcX1qxHaH0rrGy-->航班号、件数、旅客信息</div></div><div data-page-node-id="YZGi9PJHBPLsRSpbkzhwDU" class="src"><div data-page-node-id="Ggf7tLU4ISEYMVCpgC67Gz" class="fn"><!--pnid:SuAeBb8kbDmeZ5dGL4YawZ-->旅客行李信息.xlsx</div><div data-page-node-id="PxRM2K6chPPooJabsKm4OX" class="fd"><!--pnid:aFXIvk26gimUMCYB8vA2y6-->行李牌号、目的地、联系方式</div></div><div data-page-node-id="XrEglt6PozdJ8WMEcxTNw8" class="src"><div data-page-node-id="ed7bCbmfOi8a0HwvDBnI4I" class="fn"><!--pnid:ylPQc1xdR4t26Yn9gDUZwt-->事故记录单模板.xlsx</div><div data-page-node-id="gu7DDkzSoBCF8vpFx1ND6t" class="fd"><!--pnid:XiFFHEn44hGtbkoH4KZnb6-->必填栏位与填写规范</div></div></div>
+    <div data-page-node-id="xPlLWXq9GaehXdkm2Qpwfl" class="card ev"><h3 data-page-node-id="wZ9iwsHpDBahu876FcpOy2"><!--pnid:Zhc8Xm4sHAmtV9Ccq1nSKJ-->为什么这个场景值得做</h3>
+      <p data-page-node-id="PEuDFuFek7oi6cbhTvunY9"><!--pnid:g5T0phMo6oflZtkzX4feIR-->痛感 4 × AI 适配 4 ÷ 落地难度 2 = <b data-page-node-id="LcCUhiC68L3XGmkdMJYyCS"><!--pnid:ESB0HqzrGxU2apX6ttjcDK-->9.6</b></p>
+      <p data-page-node-id="noh35vTerdQmEnXnknG4QU"><b data-page-node-id="a6QWdAhCyptWDTZQhqkb6h"><!--pnid:ASBgoCO8ECv3hKgju6enb5-->最大差异点 ·</b><!--pnid:AH8zIycCwf328a0YYw8vs8--> 不要求行李数据先在线。减载清单、旅客信息哪怕是 Excel 和微信里的记录，Agent 也能读进去批量生成记录单，逐件对齐。</p>
+      <p data-page-node-id="BZsFxt3r41RAa8QlwLvi2X" style="color:var(--ink3); font-size:12.5px"><!--pnid:Li2L6rjBemJHs7ge4fuZL5-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="tkNhESsUrEc32xf7LddWEL" class="blk">
+  <h2 data-page-node-id="ichTBLTJEcEj5oUZGwrSrl" class="h"><span data-page-node-id="DmkmJ4qvz3dGEEZOovIpT7" class="num"><!--pnid:pbRE1ODo0VblxZIA1fa7X3-->五</span><!--pnid:psX9sNEByrN8E9uxkOj7xl-->会产出什么</h2>
+  <p data-page-node-id="Ksl5SUP1Q9jz7AfjJz1DtB" class="subline"><!--pnid:0y99TIj6pleuTcLTX5QVwh-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="ADvHMz2ewC0ZWjGrDrqK4K" class="outs"><div data-page-node-id="UMejEd8UkN6BXnZwF6TlBc" class="out"><div data-page-node-id="O2q5Z5t0Z94e7ksTKGnFIG" class="on"><!--pnid:UsyQ9hlnGZ0cvc7yYOEzU4-->正式件本体</div><div data-page-node-id="7UBSG0G36jv8WzzFRMckm3" class="ot"><!--pnid:sc0ROoqVenz7xjUpv2GmoS-->行李事故记录单.xlsx</div><div data-page-node-id="dZ4uu2Wnv1oCGgRz1lXTg2" class="od"><!--pnid:BVnRfbUMKyLSPVS6suaXfk-->正式件本体 · 逐件记录单 · 含签批栏</div></div><div data-page-node-id="zO6SJDcJoKiCqIPZfussuZ" class="out"><div data-page-node-id="ZQ0lMPyqmp3KXkeZ5KVqvg" class="on"><!--pnid:9maFF7qFYEhCD2uUkBJZcM-->可派发清单</div><div data-page-node-id="tBSocPXVrJH4s2Xx8Cqcrj" class="ot"><!--pnid:gJSZxgs0NEqG5J1oQa7ADC-->漏填必填项清单.xlsx</div><div data-page-node-id="PFVPYzAEzYMJAGKRXcndks" class="od"><!--pnid:8kTciWqFbd0mzGia8tFt87-->可派发 · 漏填行李牌号/目的地逐条可补</div></div></div>
+</section>
+
+<section data-page-node-id="GCJ7ojtPNOz4apFIns1m1w" class="blk">
+  <div data-page-node-id="lcgsLOimE3GyXfApPRH7Qr" class="card warn"><h3 data-page-node-id="JAmxfhopYGkDjRIZ9C3xLF"><!--pnid:uUqYe3SDtmphUtFd049ggv-->这套东西不承诺什么</h3><p data-page-node-id="scYZJLlnY24xhchUaVlFI7"><!--pnid:YOCzqz3pxNpRMyPGmQPmwz-->不替客户判定责任归属、不承诺赔付金额。Agent 只批量生成记录单草稿并对齐件数，责任认定和赔付由行查岗和保险公司定。</p></div>
+</section>
+
+<div data-page-node-id="U1In0ZFtibftPsA7aHumD7" class="cta">
+  <div data-page-node-id="tIb8gtmbAghfK1VuDNZF7j"><h3 data-page-node-id="1GGt3h0XmLpQ4UEs4guGPU"><!--pnid:GgQfRKKe1nMsXrfkZirtzU-->想看具体怎么跑？</h3><p data-page-node-id="aTwh0HTHrrNguNivtHKAvN"><!--pnid:IyI723YDiikNd5XxBGA2lC-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="xqsbso9CBNTs2VPufViBok" class="btns">
+    <a data-page-node-id="zDlKQ4bVPAcBarEDUDcVus" class="btn" href="LiveDemo.html"><!--pnid:v6YaVBaJVQ19V03Ahf4Kud-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="6rM8dHgIFIX8hwFdXYJXFa"><!--pnid:m5GWoMxiKML5mObZ8fXG6z-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<button data-page-node-id="vXd6t8uNkWF7tdY5xyRtIw" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="qZ2E65Ihe2Hxp96jhrBkR3" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="V7dk52kD9n66p9TvoRxhvf" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="270n7ApufPqvxA4gpjOyAL" data-pnid-children="bEmkiIbY1c4OoqrmYJbIe6">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="X8TmoHC0gNQTMbjsOR2r0m" data-pnid-children="844WH4mZiYiM8PIpPg5VWq">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-page-node-id="89XeR8oipqLehMPy2B87XR" lang="zh-CN">
+<head data-page-node-id="cI8AMWMjniFmsOVsXQFhHQ">
+<script data-page-node-id="H6pKAl4H8wJnngVRIMTwbk" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="iQ3bEdwbcfpLJwL3NsRQPC" charset="UTF-8">
+<meta data-page-node-id="18FDhwOmPNytNzjv7tSzDr" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="Fqjeub2HgughGw2odAIf2k" data-pnid-children="8PeO3i9EHMMZMTAK3fJ5Vl">故障 RCA 复盘报告初稿 —— 合同给你的 24 小时，不该用来翻聊天记录</title>
+<link data-page-node-id="mCyGV30uqEuYmL5IskbsW3" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="sJAeuAuwLrz4ZGB4DFf6PO" data-pnid-children="R2aEaXS7NNeeLb1gFmIVTb" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="IHzsA8egfIImYP4qJf1dw2">
+
+<div data-page-node-id="cuPdt1EhRzTu49mb89OBkX" class="wrap">
+<section data-page-node-id="ZhTsen271ilJLoD4s3nbT0" class="page-hero">
+
+
+<h1 data-page-node-id="RKwVYKjs8ASbP0e2d7YIPp"><!--pnid:xihBwZ4eBnZq0TZIjgUuva-->故障 RCA 复盘报告初稿 —— 合同给你的 24 小时，不该用来翻聊天记录</h1>
+<p data-page-node-id="yiEondXCWxMKXewQKPB3Hy" class="lead"><!--pnid:mJ5Ourw3fIOM7QlJvt5CC6-->规范要求 24 小时内出 RCA · 现实是故障一处理完就冲进下一个火场</p>
+</section><nav data-page-node-id="1SSYg0Mrho1iEsNJMtSZCf" class="subnav"><a data-page-node-id="yhX5EKRF0OHngJ5IbIBCsF" class="on" href="#"><!--pnid:WimyfIth29uVq2Ayzbtb72-->场景引入</a><a data-page-node-id="0rJpM4icJJPtXPmJln2XTw" class href="LiveDemo.html"><!--pnid:HFCd6z6niJ1DGlrkKO8tpT-->Live Demo</a></nav>
+<section data-page-node-id="THj2mBJalNToUs8CqAvdaB" class="blk">
+  <h2 data-page-node-id="ftf9hSXA3cjwto6fvAkG9E" class="h"><span data-page-node-id="gL8KO0MWYWMqpsP75e2Dun" class="num"><!--pnid:RrRknSlQaGlWyM59ZKrwTH-->一</span><!--pnid:BPlVTwYbirY8UoQoSMOD8F-->这件事现在是什么样</h2>
+  <p data-page-node-id="GGyHNDOiGwNFsNxjgWR1wL" class="subline"><!--pnid:pNO0ixIs8KCINPrK40n1cP-->智算集群运维（GPU 与高速网络） · 真实业务触发</p>
+  <div data-page-node-id="RSns0MOks6dNBTpZ25qFqV" class="card"><p data-page-node-id="l50M7cXLA06WFXZ3x2nj8E"><!--pnid:3w9e6ML8HAkE0e2yygMBI0-->8 月 21 日凌晨 A12 区 GPU 降频、客户星澜科技训练任务变慢并在群里要书面说明。SLA 合同约定投诉受理后 24 小时内须提交第一份书面处理报告 —— 现在是第二天上午十点，时间线散落在监控截图、微信聊天、值班记录和厂商电话里。</p></div>
+  <h2 data-page-node-id="dCfC7WmuE2Pz3N5XGj0oTM" class="h" style="margin-top:22px"><span data-page-node-id="aTnXeT0bkNSxySiXcitTMr" class="num"><!--pnid:VEWHypfunOb79juQMx2tcy-->二</span><!--pnid:4lg16g3AacNL093CP3D8GC-->痛点 · 每条都有来源</h2>
+  <p data-page-node-id="qCT39ZdFilaO1EGYttJoYp" class="subline"><!--pnid:URRy5bghBP06Mw94T781Pl-->不是流程描述，是调研出来的真痛点 —— 每条可点开核对出处</p>
+  <div data-page-node-id="rFd5axNVsstSUqWdkZ11SK" class="pains"><div data-page-node-id="GjJouSbZ1Q8e3dd2feUQLB" class="pain"><span data-page-node-id="Di8DDS9qNuCyFYqIr2ngAy" class="i"><!--pnid:0Y5ZqLCqbPOTFArIZulmDp-->1</span><div data-page-node-id="4lho0lyO2qAO8iV7lmTt37" class="t"><!--pnid:jkrRefCD6WiZHi6FOsaa1o-->IDC 托管 SLA 协议明确约定投诉受理后 24 小时内提供第一份书面处理情况报告 —— 这是合同刚性，不是「有空再写」<span data-page-node-id="FE9XlByWZuPSpgEv07MIW4" class="src"><!--pnid:3g09P9FmUIEPTqezNRBUTb-->依据 · <a data-page-node-id="EuaoqrkpDktoi3erCqpZVc" href="https://wenku.baidu.com/view/d8a2be1b6bd97f192279e9a9.html" rel="noopener" target="_blank"><!--pnid:0FQV5LdRN1BIedQ0rAWrC9-->IDC 托管 SLA 协议明确约定：受理投诉后 24 小时内向甲方提供第一份书面形式的投诉处理情况报告 —— 故障后的文书压力是合同刚性的</a></span></div></div><div data-page-node-id="eZBrveMBplSutUPXqzC7oH" class="pain"><span data-page-node-id="AZ7bSZUQN49Vqznh0AQhZe" class="i"><!--pnid:RhF4gDVUHRUqftGwFBFpnm-->2</span><div data-page-node-id="4MvVAEtH82XdnFymfPsL5w" class="t"><!--pnid:UDO42V3y87zQ5Prccgh9L6-->运维规范要求一级批量停机、重复频发故障 24 小时内完成 RCA 复盘，但「复盘流于形式、报告完成后不跟进」是行业公开的秘密<span data-page-node-id="OmNvxzPUzpOA7Jjhli8luc" class="src"><!--pnid:zfLLXF9FMiRqAHgkt2iV3u-->依据 · <a data-page-node-id="jYHKLJK2v5C2YH90IXOgQ2" href="https://blog.csdn.net/weixin_45421321/article/details/162088444" rel="noopener" target="_blank"><!--pnid:W3K092J5FeIUswJLbF5Nls-->运维规范要求一级批量停机、重复频发故障必须 24 小时内完成 RCA 复盘报告，但「复盘流于形式、报告完成后不跟进」是行业公开的秘密</a></span></div></div><div data-page-node-id="ks4fghq0JrPR3HcYz6EorG" class="pain"><span data-page-node-id="ofKwekHxgCkY32HSVRkekq" class="i"><!--pnid:sZdJxFjkOMc59vIW0aQjwU-->3</span><div data-page-node-id="rqBJ9rSrlr1ldv1DmLidk0" class="t"><!--pnid:HNfhK31sBszaJNW32jKdht-->时间线靠翻聊天记录、监控截图、个人笔记拼 —— 每个环节的精确时间只有当事人在场才知道，「隐性降速不中断任务最难查」<span data-page-node-id="XY06fcEBsYXqI9i26lopSG" class="src"><!--pnid:eTGGornFWQdmhZ5aq17ZQS-->依据 · <a data-page-node-id="YwZOs8cxohCpKFbnNqWYGm" href="https://zhuanlan.zhihu.com/p/1917807480097997704" rel="noopener" target="_blank"><!--pnid:NQn1Q82X8U4oZkTChwTBq8-->大规模 GPU 集群运维实践：Xid 79 掉卡（需换卡）、Xid 48/63/94 不可纠正 ECC、Xid 31 多为客户代码问题；隐性降速（PCIe 降速、GPU 降频）不中断任务最难查 —— 实测 PSU 问题导致 SM Clock 从 2GHz 掉到 500MHz、性能降至 1/4 而监控无感</a></span></div></div><div data-page-node-id="hTuv9zMEn3Gu2IimJ4IqlF" class="pain"><span data-page-node-id="Vs3wi5VlqQlw3KmwlSfFRs" class="i"><!--pnid:WwqjSSYr2YxOshcMvaaitu-->4</span><div data-page-node-id="S5pL5XOG00CzzOvQrSLTjg" class="t"><!--pnid:NQbAOttIC6JmocvgE6bQhe-->责任界定敏感：外包、设备厂商、自己人各说各话 —— 误拔电源查三天的教训就是「没有记录就没有追责」<span data-page-node-id="rRFXeEJ6ysp09vowjoMmkR" class="src"><!--pnid:Mt25oJbUubdNmeSjZpK8IX-->依据 · <a data-page-node-id="lxGwvSpRKkdHYqjHc8qUyN" href="https://zhuanlan.zhihu.com/p/2035039056187357142" rel="noopener" target="_blank"><!--pnid:K1LfahhYBOKIZqLoD3GLAo-->U 位资产管理从业者自述：季度盘点账实不符比例接近 8%；误拔电源「查了三天才知道是外包运维人员干的，但人家说我也没记录啊」；审计突击「留给你的时间往往只有几十分钟」</a></span></div></div></div>
+</section>
+
+<section data-page-node-id="6dawRZCSYCCQdEF03wY509" class="blk">
+  <h2 data-page-node-id="lMyLvKTZ6My8VgPMP23Gjd" class="h"><span data-page-node-id="KEqYf6ZG2gbOzqMlanD6WK" class="num"><!--pnid:O5uySQRwzJJNK0NIQeIkj1-->三</span><!--pnid:z0XvqrqV7SQTeF014bS5w3-->换个做法之后</h2>
+  <p data-page-node-id="j3OSZdsH8BOI4hYO1ANZ3c" class="subline"><!--pnid:kvVZpcP8niTQ7piAkSpNW2-->变化不在「快」，在「参与的角色」和「覆盖的范围」</p>
+  <div data-page-node-id="LTVD9NlXKOYV3OK5CZi8SU" class="cmp">
+    <div data-page-node-id="7OaoUlifZVA3nYJH5NhD24" class="old"><h4 data-page-node-id="4Y9wayV2JwkDCmAMG2Yd2h"><!--pnid:q8yGFgaUr5usVE8xdRnKLC-->✕ 现在的做法</h4><ul data-page-node-id="XRqfChqv1bFzsg7PNWd2M7" class="list"><li data-page-node-id="Ah3Edq4xWAeJ6lszCQk2PJ"><!--pnid:kaBkBBfzrnGzMyi0UBR7Da-->IDC 托管 SLA 协议明确约定投诉受理后 24 小时内提供第一份书面处理情况报告 —— 这是合同刚性，不是「有空再写」</li><li data-page-node-id="QZCpsXMgj9ZsUn5aPaBzLQ"><!--pnid:evLVX2hTg9mPWJELZVegex-->运维规范要求一级批量停机、重复频发故障 24 小时内完成 RCA 复盘，但「复盘流于形式、报告完成后不跟进」是行业公开的秘密</li><li data-page-node-id="AIvRxaXBxTQzyqBKEvmVT6"><!--pnid:EteH7puuOyf4hzqJoxqNhA-->时间线靠翻聊天记录、监控截图、个人笔记拼 —— 每个环节的精确时间只有当事人在场才知道，「隐性降速不中断任务最难查」</li><li data-page-node-id="qcxaVnL8rPlhSww17WiG8i"><!--pnid:n6QQx7cCxdwnqhhyzVc0L5-->责任界定敏感：外包、设备厂商、自己人各说各话 —— 误拔电源查三天的教训就是「没有记录就没有追责」</li></ul></div>
+    <div data-page-node-id="7Se4p0TCp783LyaYFgwk9n" class="new"><h4 data-page-node-id="PDPDuoBbkya799D7RVRxfp"><!--pnid:bygt09rfcReL7LO7umGXTA-->✓ 交给 Agent 之后</h4><ul data-page-node-id="H8nJOfTgOygpRKer0biRFC" class="list"><li data-page-node-id="JPfqsZrrlXAsaSD04CP7nD"><!--pnid:EFFkoOnxx4BE2yc4AbDROu-->多来源文件一次读入，先做口径与完整性校验，再开始算</li><li data-page-node-id="INU1aM1FsyQjQOH1HQx4H0"><!--pnid:4ZKn5JOcvrWmhbjmiiB1L8-->每条结论绑定来源文件、字段或条号，可以被审</li><li data-page-node-id="Br01T2tJAVqELTnETuaNR6"><!--pnid:VBqCLe8FDcpw51VIomTCHg-->产出是企业真会流转的正式件（带签批栏），不是一张展示用的表</li><li data-page-node-id="p0MccLpuSyMHoaVOuvwa1F"><!--pnid:CcLSXsLG6DxAVZCF8SKCqE-->该拦的地方给出「现在还不能提交」，并给不用干等的替代方案</li></ul></div>
+  </div>
+</section>
+
+<section data-page-node-id="OpLS40UPfldvqtDYFKQNfA" class="blk">
+  <h2 data-page-node-id="bMXYLRMKFbNFmfqUQ5RWbT" class="h"><span data-page-node-id="irplsN6499TTtimVjNS1nU" class="num"><!--pnid:LbPpIIS8mZCMO2iFwwX3bt-->四</span><!--pnid:jp60Dvd3KDI66xLVRUfJ4s-->场景闭环</h2>
+  <p data-page-node-id="jMiKHTOLWrg8egjzqLxBjZ" class="subline"><!--pnid:fzYvRKnHareui0wpzLy0kh-->5 步 · 每一步的产出都是下一步的输入</p>
+  <div data-page-node-id="XzOqBFMiPbXi8dcGnnalP4" class="flow"><div data-page-node-id="hHjBxmTFDU5tWnmkGwe84k" class="step"><div data-page-node-id="GIMnFJR7wpaxbbD2WA0VIs" class="n"><!--pnid:3LW80le0tLw3IAg3EhxKJf-->第 1 步</div><b data-page-node-id="GZx5SP9996TsGOst1XI0LZ"><!--pnid:xNbJFlLbgctlua9XU40y9k-->时间线重建 · 五源拼出完整事件链</b><span data-page-node-id="8tuFxEUSp5MYvqsElthMwK"><!--pnid:WMDiBxwQlria2DaynvUKOK-->从 8 月 19 日巡检发现空调异常，到 8 月 21 日凌晨降频、客户投诉、临时处置，每个节点标来源与置信度 —— 含糊的标「待核实」</span></div><div data-page-node-id="JjgFQNy76EjaqptJL4ErsH" class="step"><div data-page-node-id="adu50LxrsV9LIGyObQifml" class="n"><!--pnid:8P3rJDpDmff56yB8wMc5n2-->第 2 步</div><b data-page-node-id="sdrB5K8orxrPVDuCdkNzef"><!--pnid:d0cVFGcdj56Ed6C8S2XOpg-->根因分析 · 5Why 沿因果链下钻</b><span data-page-node-id="tngNlsk1CJynjScfHGJdyx"><!--pnid:MZgGntCQKscv1wZVVqpSGD-->为什么降频（进风超温）→ 为什么超温（空调故障未修复）→ 为什么未修复（排期 8 月 22 日）→ 为什么排了 3 天（厂商人力）→ 为什么没有应急预案（高密区无备用制冷）—— 每层给证据</span></div><div data-page-node-id="t6CO9DNONcL2QtQKGZSLSe" class="step"><div data-page-node-id="Yaz5nNNZUkydrbmhIJw7vG" class="n"><!--pnid:yDt5VPGkd6rmNUGWygMBpe-->第 3 步</div><b data-page-node-id="nSIl7yD2DHHQqfRNMmUWZy"><!--pnid:NfEmLL1shZ0cp4nMrdunka-->影响范围 · 哪些客户哪些任务受累</b><span data-page-node-id="iPQRcKyHVwcF38WnVRDFzd"><!--pnid:5DJD56K17MfWi9tqfoeh15-->受影响节点、时长、任务类型逐项成表；与客户感知（iter time 变化）互证</span></div><div data-page-node-id="1Sw4qQfWe1XPgjwUV5N8wi" class="step"><div data-page-node-id="f5qVXrciDxH3KXVrcydaNf" class="n"><!--pnid:Buj1KZ9v0wnQKfgwUGiigb-->第 4 步</div><b data-page-node-id="cdJTagWEkWltSdLASJzjCe"><!--pnid:cilwYYpiAQ3fToa0N31tO9-->SLA 影响测算 · 这件事按合同怎么算</b><span data-page-node-id="Nuah0YeQz1LQSa8ufbJJaF"><!--pnid:ZgnBjoMSpX1fRDuIaQxCh8-->对照 SLA 条款逐项判定：计划内维护免责条款适用与否、降频是否构成「服务中断」、赔付金额的计算口径 —— 争议点单独列出</span></div><div data-page-node-id="C4kcxs43tuVjLm5hA72b2q" class="step"><div data-page-node-id="L1s74frFGkLptDNcJfARpb" class="n"><!--pnid:loWGc1q73jtNc1ArK5PAg4-->第 5 步</div><b data-page-node-id="sg0z8Ba1MAdeiEBSuHo1f8"><!--pnid:ZjdaOVgic4BGryjejuvmhQ-->成稿 · RCA 报告与整改跟踪清单</b><span data-page-node-id="Ep6oHTW2R06KKKVxXP0PFQ"><!--pnid:K4425T9S6np3tjDqnPnJOh-->标准 RCA 栏位（概述/时间线/根因/影响/整改项）+ 整改项跟踪清单，责任认定栏留空，签批栏齐备</span></div></div>
+</section>
+
+<section data-page-node-id="jKdkGq6lUzAScLG0cPojcC" class="blk">
+  <div data-page-node-id="gHTEQHTTjcEazPxJQVPRth" class="g2">
+    <div data-page-node-id="Yh6kY6qYOxGcvEcNrQtTD9" class="card"><h3 data-page-node-id="53dMqXnsfa6WAdP7ZkSGs1"><!--pnid:LE0wwzQcc6tWgvrfvxpVyR-->要准备什么</h3><div data-page-node-id="1xkwZnlPdar8S3A5ywCAEZ" class="src"><div data-page-node-id="PvoR5X2PG5QaDv38x8jP1R" class="fn"><!--pnid:LTw3ADK43ELS4yMRElvpPt-->DCGM 告警与 clock throttle 导出（故障时段）</div><div data-page-node-id="mum5sqyhtEPKt5t0ugHxaI" class="fd"><!--pnid:ugRbZPnddh00b5X2bqdGuG-->GPU 侧的权威时间线</div></div><div data-page-node-id="rF8JxgCS294b7DscbwgHE0" class="src"><div data-page-node-id="6zdJilydIShz3xI4agQMSx" class="fn"><!--pnid:v34UmVivy0qYi52t5jFZe3-->动环告警与巡检记录（8 月 19-21 日）</div><div data-page-node-id="p3v8JfpvY9gFJhTPKG9ZaD" class="fd"><!--pnid:iFn9eIZGiK8alCqhxL9q5l-->环境侧的因果链起点</div></div><div data-page-node-id="PMYqrAaB0CorS9t1aKHH7m" class="src"><div data-page-node-id="nE4R4rcsa7Pu8WZosfdLAc" class="fn"><!--pnid:rNB2h7WJty8l4RhYrsWIS3-->客户与值班微信群聊天记录导出（txt）</div><div data-page-node-id="NGJ2ts0A8CiYMfvpRwbapj" class="fd"><!--pnid:1CwIOHT6pyLIqPCFjYfnNv-->客户感知时间与承诺记录</div></div><div data-page-node-id="M0qyt1eZe9p4pdUv5uZAnI" class="src"><div data-page-node-id="IwRwTBfdM6zbH2bQna4Nzs" class="fn"><!--pnid:b4ugWeeprdovsIFFn1kCgS-->值班交接班记录（8 月 19-21 日）</div><div data-page-node-id="FXf7hKexcwSxwuX0sxaVDc" class="fd"><!--pnid:LaWpi5QIHzVOvlhs62uXEx-->巡检发现与报修进度的中间证据</div></div><div data-page-node-id="uh4TKAXCVl8OAAcH2EdFxa" class="src"><div data-page-node-id="CcBGyW5IUh1XyYtOHYNQzY" class="fn"><!--pnid:VewGmCWNKlBHS6JEMJzj7z-->空调厂商维修工单与通话记录</div><div data-page-node-id="W6pMgmXcFLA1CsfoKqyQqx" class="fd"><!--pnid:dCfDbDHetgbLG3q52IoaLU-->报修时间与「8 月 22 日进场」约定的出处</div></div></div>
+    <div data-page-node-id="TDADBoFqjEKQPHmweiL4ng" class="card ev"><h3 data-page-node-id="IygkkQzwY9dxjaxd2oHvll"><!--pnid:U1vEdkCZmPs5u7j6hXSGcY-->为什么这个场景值得做</h3>
+      <p data-page-node-id="XhVqYhDLkMmqePR4ZLpYPu"><!--pnid:w30LLzhFwTttFFj4oPEpR4-->痛感 5 × AI 适配 5 ÷ 落地难度 3 = <b data-page-node-id="CKia8xOw2Ey55fp7Aq5i1X"><!--pnid:8a0n6azvbJ12MXU6sXMNe0-->8.3</b></p>
+      <p data-page-node-id="05O1BM0cmCC7u5bNLZUjsJ"><b data-page-node-id="zhqJ9mOghQSYTNliwmzmEc"><!--pnid:u7f4ZMmut1aniq3kWfDZov-->最大差异点 ·</b><!--pnid:vQEwXhiooAo28gkHU2Exjf--> 与「工单系统自动生成故障报告」的区别：那些系统的数据止步于自己平台内。本场景的时间线从五处拼起来 —— DCGM 告警、动环告警、微信沟通、值班记录、厂商工单 —— 每个时间点标注来源与置信度。</p>
+      <p data-page-node-id="txWunSCTqeN0tm1Fy16Xe7" style="color:var(--ink3); font-size:12.5px"><!--pnid:xNjNABIvX7mXyVMQZ5bduJ-->评分口径：痛感看「这事没做好谁会生气、生气到什么程度」；
+      AI 适配看「输入是否非结构化、是否要跨部门取数、错了能不能当场看出来」；
+      落地难度是分母 —— 需要客户先做数据治理的场景，分数会被压得很低。</p>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="q9GNPAdeWIBJm0onkW9PEk" class="blk">
+  <h2 data-page-node-id="TdozxL1X3THYlEyppMrAOv" class="h"><span data-page-node-id="Cnt4lGTADtzOgvGhMED1Bg" class="num"><!--pnid:1XF1zIOcf7dSy0TZ8RSLOE-->五</span><!--pnid:3FuAjCoKs8ZZxjvAyjTycg-->会产出什么</h2>
+  <p data-page-node-id="FVm9otEVYUdacGcr8ee8gW" class="subline"><!--pnid:tT1GFIOD254zENO1uRLRUE-->判断标准只有一个：这份东西能不能直接进企业的流程</p>
+  <div data-page-node-id="MyCR0ExQIC37DJMIj4kj0p" class="outs"><div data-page-node-id="gvdizYpoDzMAm2bi2x49d2" class="out"><div data-page-node-id="n22i4EtJW8rQRoB3dV5xBt" class="on"><!--pnid:yv1iLb7IlsFCIh5smddiHJ-->正式件本体</div><div data-page-node-id="TkvMbpb4Z47jD35kQrLbJZ" class="ot"><!--pnid:REks7RzujqrMbrzFUNRs5e-->故障RCA复盘报告.xlsx</div><div data-page-node-id="Hg2fC1vS1gTOth0B5NdZRp" class="od"><!--pnid:lz5YVbyLltiTZlyp7Arsjd-->正式件 · 客户版与内部版 · 签批栏</div></div><div data-page-node-id="gXWS7xGBPuddx7qkSg7KLF" class="out"><div data-page-node-id="SSYI9HfmxtmwofKP7INKQE" class="on"><!--pnid:GWHskANej4WUHvEyGRTiZc-->可派发清单</div><div data-page-node-id="C3Mv4CKE6P1fFWj0BoFedp" class="ot"><!--pnid:GUXO4nb8Km91vhcWb9taDb-->整改项跟踪清单.xlsx</div><div data-page-node-id="S4xb0CZnfAK3eBM2ZW2UO7" class="od"><!--pnid:ygtjcjpk3m8gQNR7e1GB21-->每条带责任部门/期限/验收标准</div></div><div data-page-node-id="l6eKyXxLiIkVdf5K1mB2hP" class="out"><div data-page-node-id="zitwFVF5KV1jgwdotap5iM" class="on"><!--pnid:Afw9X8LqN2wUR3OTV3i5XG-->可派发清单</div><div data-page-node-id="0V90SQwNopGd0TYzFQrvQY" class="ot"><!--pnid:7AyHBkUMs3E45LPCIuL1sn-->事件时间线.xlsx</div><div data-page-node-id="mLtiTXIr7Tc8QdCMlYuT0j" class="od"><!--pnid:p2eKdE6nklXrssj9pDWG1d-->五源拼合 · 每个节点标注出处</div></div></div>
+</section>
+
+<section data-page-node-id="BiaI2T9JLnSXq4LKyvwQIb" class="blk">
+  <div data-page-node-id="4Efv5VJMpQMos2ZYDXcYEh" class="card warn"><h3 data-page-node-id="eos9Ry0V29bkESZ4C29e1T"><!--pnid:1a34wtEZKpHK214KCBAG9n-->这套东西不承诺什么</h3><p data-page-node-id="RCOG0zz8WDgDunOVxlWpjw"><!--pnid:XRa0lfdU6MRNBkfJll3C7E-->不下最终责任认定（责任认定栏留空 —— RCA 是给责任认定会提供证据的，不是替它做结论）。不替客户决定赔偿方案。整改项只跟踪状态与期限，「已完成」的确认要责任部门签字。对外发送版需人工审定后发出。</p></div>
+</section>
+
+<div data-page-node-id="TN8OShhRW3yDznUZ2LveSy" class="cta">
+  <div data-page-node-id="D6i4S7f6iWFqH9CuiOQTSq"><h3 data-page-node-id="BvROA2aPgUOtrASXBfQDA4"><!--pnid:nweECxrEk83pE1fZRqwlVH-->想看具体怎么跑？</h3><p data-page-node-id="m4P3EEk1kCNnN4nwWPr5EV"><!--pnid:hbKlp4EYG2AUPmj5Y6At5j-->Live Demo 里有一个完整案例的每一步，包括 Agent 在哪一步拦住了</p></div>
+  <div data-page-node-id="KCDJ8F7eqOKSbfcLspnEdT" class="btns">
+    <a data-page-node-id="utv1hIeNnve0dK8WpIym2L" class="btn" href="LiveDemo.html"><!--pnid:S4DqA9jLhXwCxnGB2jODVI-->查看 Live Demo →</a>
+  </div>
+</div>
+<footer data-page-node-id="kUMAvNVRvwQ0v5evl5dQ6m"><!--pnid:hgowt5iJTO1XnzO7s7UTEW-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 判定与承诺一律人工签核</footer>
+</div>
+
+<button data-page-node-id="YogayUzorF04bCRcZ9NdM2" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="x2O7u9Cq1CkT7H9k2pvGmH" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="IyVp55XGjuzaq990v8bPt6" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="dXjYxr3ZATE8TYubmxIRR0" data-pnid-children="C05MrpkD5BMYHfe4W8whoC">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="jgWcu3Wc7SKZFHyYPh8lyG" data-pnid-children="vfLeEqhzg2mEYKVrTiAwal">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script></body>
+</html>

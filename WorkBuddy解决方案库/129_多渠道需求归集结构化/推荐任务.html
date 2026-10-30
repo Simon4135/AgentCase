@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="6kKXTeUs2zxsIZTnBwQ92z" lang="zh-CN">
+<head data-page-node-id="QVEnBgCMCf6xHOSzws9L6d">
+<script data-page-node-id="yUpB0V2vjYu5e2AHL8Tqba" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="gJrHyKLfzgbkHZkxYgr8bl" charset="UTF-8">
+<meta data-page-node-id="Ww1sgyv7QE3PG4tPaIyr8q" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="hxotSbUq3vEJMTB0cCJtXo" data-pnid-children="vTbaNdu5KNoU8WIJ9DrSC2">多渠道需求归集结构化</title>
+<link data-page-node-id="j82LX0cEmnzDEA51OzleHf" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="53lD7kJqPYfVBqxSidgwRy" data-pnid-children="UoZiUm4p0U2TIR577MsfFy">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="BeLhQt013v4aSae57aFXkk" data-pnid-children="ElmysDWmyLSNqH7EpwwUR6" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="JrQQWEqbzbG5TEuwPcYh6Z" data-pnid-children="KvqilEjhRgMvQ8iXtjALFs" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="fLuGdtYR65PWncR3y5pAwh">
+
+<div data-page-node-id="NbyZRr8SopAT6fMEcdUALR" class="wrap">
+<section data-page-node-id="GTV3xBXBfoVl1E7FCPAqQx" class="page-hero">
+<h1 data-page-node-id="zU5dA7j1tK3xICcb2ROSPs"><!--pnid:hQo5203FxN3age5lncEajI-->多渠道需求归集结构化</h1>
+<p data-page-node-id="e6N3Jm1lx1pJk0vozMXCUP" class="lead"><!--pnid:74dKsiKnceqC0L90l8oVpH-->同一个「导出」需求，销售微信两条、客服工单两张、客户邮件一封、老板语音一段 —— 六次转世，需求池里还是没有它</p>
+</section><nav data-page-node-id="guJv0kkNZG9AtsPeZOiX73" class="subnav"><a data-page-node-id="swQLeWXh4jEPJJrlGLLPjE" href="场景引入.html"><!--pnid:xFRhlpKbzUEZmr9EwJDEO3-->场景引入</a><a data-page-node-id="5b52jkWBjolawXyP1YNM9c" href="LiveDemo.html"><!--pnid:c3Eyv9FCCpCY0m5gQbSSBD-->Live Demo</a><a data-page-node-id="k2FusenX5Do0bEXVf3sF5c" class="on" href="#"><!--pnid:SEJMlRrDObZxihSUm7FD4B-->推荐任务</a></nav>
+
+<section data-page-node-id="ouioDw36CjIKyZKDmmBEFy" class="blk">
+  <h2 data-page-node-id="xG57aQDUWJwDuqJakPRh5R" class="h"><span data-page-node-id="T9A7QSEMkBGFQhFXN2F39o" class="num"><!--pnid:0uDXRcnlso2RPIhgL4wWRe-->一</span><!--pnid:HdOJP9aGk9BtyV4V9eFZOs-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="1lu9aSksTcpmV5PzXVmrk6" class="subline"><!--pnid:MBgCWwk658qms4ZcQVBoaQ-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="6OgbJgRlQsXAITnPmgVOUv" class="card"><p data-page-node-id="FOpUL6Vdwg5iRnJ973ziXC"><!--pnid:tS8XNUk9JEhIqPJBkQ8qE7-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="dXQzgoebsfZRKdLxsvL07M" style="margin-top:10px"><!--pnid:YZajgOjzeNzSd24htllIrF-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:xiVk38aSbVX6hGgDZRWdrx--><!--wb-skill-start-->
+<div data-page-node-id="buwjdGErgVtBIYcX3DUfrw" class="wb-skill">
+<p data-page-node-id="Si0SlN1qOqAQcKaKACjTfS" class="wb-skill-lead"><!--pnid:XSUwhvIoVOQ6BwyyhvIU3q-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="BMjhEU2Oo6KOY5T0HZiGrM" class="prompt" id="wbSkillPrompt"><!--pnid:7B2j14vzn9yNF4d5nVzsPR-->【准备】这个场景的规则都在「多渠道需求归集结构化」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/D0VKPKZILupuvefSrilZEW/hx15ZOUiddxf/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="f135rZ8jZVZmuWRbPqltpA" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:JFP4MdBgnLOvUoIvIxY7sG-->复制</button></div>
+</div>
+<!--pnid:Ncob7AC5JcA7wjNQc53iKV--><!--wb-skill-end-->
+<section data-page-node-id="BmP7nutehO7YA25UeM7BAx" class="blk">
+  <h2 data-page-node-id="RrAQUz8FuxAMzSltS7z1Za" class="h"><span data-page-node-id="xQvjlw8xpDI8TC8rFZGko5" class="num"><!--pnid:i89uBfn7anOXYfnHWetZxk-->二</span><!--pnid:EHJR56IFCG6UStFYs3Tgkv-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="400i2w0IgY1Irm7L3zoUO7" class="subline"><!--pnid:VFZhxY5H4ER96wXw8KAR6h-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="2W0cx0noAoGBIINSr5jmCB" class="tlist">
+    <article data-page-node-id="16wlnE7Tv8Kw0HKrLcuM1i" class="task">
+      <div data-page-node-id="kFv21P2yv8kwHxBLrzOyQ7" class="th"><span data-page-node-id="aM0pSioARxTtH6M3SEKsNR" class="no"><!--pnid:haXTcMwxvYZWs48rqvTZ68-->01</span><h3 data-page-node-id="uJ1s3IfjFD26DQ6hbFc6T5" class="ttl"><!--pnid:50JBXzg8nAYUMJRWQTxP5b-->首推默认</h3><span data-page-node-id="eTexAF9ncmjw4raVeuZate" class="star"><!--pnid:PYm6QYGASNBOsY9XroGZ8g-->与一键体验入口一致</span><button data-page-node-id="XnpMceX8wQWJ0Nkb8yOufF" class="cp" type="button"><!--pnid:TZThjFq61vstEisowRDut8-->复制</button></div>
+      <p data-page-node-id="ehv7wuWjQaOE6ewocMqrkA" class="tp"><!--pnid:RAq0T4ckfSmhYpMBma8M83-->我这边一个「导出」需求散在好几个地方，麻烦帮我归集一遍。技能内置的是 01_销售微信记录（华正相关）.txt、02_客服工单导出（导出相关）.xlsx、03_实施邮件（华正信息化科长）.txt、04_老板语音转写.txt、05_需求池现状导出（导出相关）.xlsx 五份。
+每个渠道的需求都抽成结构化条目，字段要能对回原文，编的不行；「导出」在多处出现过，帮我判断是不是同一个需求，该合并的给合并建议、拿不准的单独标出来；跟需求池里的旧记录查个重，看看有没有以前被拒过的。
+最后给我三份：多渠道需求归集结果.xlsx（正式件本体，含来源盘点、语义查重、字段抽取、旧案对照、证据包成册五张分表）、待确认清单.xlsx（语义存疑的每条给判断依据）、需求来源全景图.xlsx（这条需求各渠道的来源、时间、原话对照）。归集结果先别动需求池，等我确认。</p>
+    </article>
+    <article data-page-node-id="yqCxH4CACihmmJ3xm8BBuz" class="task">
+      <div data-page-node-id="fDO1nBX44z6rjbpayOLRES" class="th"><span data-page-node-id="dEzwMuZtQoeU7rTU0Kapp9" class="no"><!--pnid:JsS09jt5xiyddwv5r1k5F9-->02</span><h3 data-page-node-id="3rFuFx7QeM7G1riMZEBRsn" class="ttl"><!--pnid:ATkElNmdfP0nHd9Tx8PDFm-->只做来源盘点</h3><button data-page-node-id="XYmOCDI7qAyl8mNecOxMmA" class="cp" type="button"><!--pnid:Sb3VMv6Umb3uygWDzIqWPu-->复制</button></div>
+      <p data-page-node-id="AbkDn7yYBDwfNHmS7FBAoL" class="tp"><!--pnid:vyREHt8x5Yn2WIhyOoapKl-->先别归集，只跑来源盘点这一步。把五份材料里的记录逐条列出来：哪条来自哪个渠道、什么时间、涉及哪个客户、谁说的。产出 Excel 一张来源盘点表，按渠道分组，每条带原文引用，末行给各渠道条数合计。</p>
+    </article>
+    <article data-page-node-id="baSrDihElAN0xtf7nl1Wvx" class="task">
+      <div data-page-node-id="ZaWX42Kne3FqfEboGuQyN2" class="th"><span data-page-node-id="ZucH56KxEiqIHyLeGs8fg1" class="no"><!--pnid:ldskoqJZdF2eB3kXpz4RGE-->03</span><h3 data-page-node-id="o5ZYJCm5Lusxp2tYSQ7NHQ" class="ttl"><!--pnid:9xtq74vwSe0kAaFIv2WoZ8-->换成华正单客户口径</h3><button data-page-node-id="l8ScPgitJBlxdgNqNj8egW" class="cp" type="button"><!--pnid:lHbmqBQwDHmm1FfTVsCZdH-->复制</button></div>
+      <p data-page-node-id="WswXUJjWPuJ1fRHFPdwOqh" class="tp"><!--pnid:hTEriedxQKKtm3uOCvsuuT-->这次只按「华正重工」一家客户的口径归集：把各来源里跟华正有关的记录挑出来单独成一簇，其他客户的先不动。产出 Excel 一份华正专项归集表，写清查重结论与旧案对照，另附一句这个簇能不能代表共性需求。</p>
+    </article>
+    <article data-page-node-id="r1ph8UN1g8n58nQ5wkDiUs" class="task">
+      <div data-page-node-id="PajsARSpFH8c8SbmkNOmCY" class="th"><span data-page-node-id="zrPHUeEiIAa2Y8ao5c7KAO" class="no"><!--pnid:grxRsWwG09VIpRR0Be2Ope-->04</span><h3 data-page-node-id="LxhHUikQAMUyIW0R7l0TN8" class="ttl"><!--pnid:zEykGMZbPXLQibfqQRvJUi-->一次归集四条需求</h3><button data-page-node-id="7XZI4uKeVGnLDItq3lPmcn" class="cp" type="button"><!--pnid:nmBi3ImQtOncelQuFkE7x9-->复制</button></div>
+      <p data-page-node-id="kbsz2eoZmLY3cGlsUfJMHa" class="tp"><!--pnid:0vCQEKZmis3fkoz9flHO3c-->演示数据里再给几条其他需求的多来源记录，一次跑四条需求。产出 Excel 一张四需求横向对照表：需求名、来源渠道数、涉及客户数、最早提出时间、重复簇数、是否与池内旧记录冲突，按客户数排序。</p>
+    </article>
+    <article data-page-node-id="nunZMQTER913XS0VqrVmR0" class="task">
+      <div data-page-node-id="nt0S9BtZxrIoOVSKXxjBNi" class="th"><span data-page-node-id="HjcmXoheks6WDhHGrKMnjK" class="no"><!--pnid:R8HFrnDNWkiSCXosOdoY7S-->05</span><h3 data-page-node-id="l8jGQmxyX34oX0JfJm4ysM" class="ttl"><!--pnid:cQSoy6ZrhzRki5O4ADfaEq-->给研发组长看的一页</h3><button data-page-node-id="G03wXxBwWxkRqNU3w7hhaL" class="cp" type="button"><!--pnid:3jeVSjU6MNBeXVtuWMBnwe-->复制</button></div>
+      <p data-page-node-id="eG62YXhg5BXKV9NbFwnp5Q" class="tp"><!--pnid:8WRnvaJ3iiFQRjubuAOqwI-->把归集结果压成给研发组长谭锐看的一页：这条导出需求谁提的、几个客户在要、各说了哪句原话、跟 2025-11 那条旧决策的区别在哪。产出一页纸 Excel，只留他会追问的四列，其余分表不用给。</p>
+    </article>
+    <article data-page-node-id="1kf0y3QjFLGvdSyLNcMAOf" class="task">
+      <div data-page-node-id="juaMQU8RaWVNzFPsG22Dfv" class="th"><span data-page-node-id="03lxsJsrL6XU9BbdJZFGyh" class="no"><!--pnid:Lc7h7K3Xup4Kpw0cHZZy0g-->06</span><h3 data-page-node-id="YA92sR09hupj9mb3HOEXx8" class="ttl"><!--pnid:rZvXI4pxmFA8yoj05yVax8-->让它反驳自己</h3><button data-page-node-id="rUyMc0eQrAXeEOIX88tVv6" class="cp" type="button"><!--pnid:NQNDGnltQDm32pmMPxoiOH-->复制</button></div>
+      <p data-page-node-id="DUrgYkyUl0LGT8wSdNraoO" class="tp"><!--pnid:oC33XfhCbrs9tAI1OuFiHC-->你自己挑一下：这条需求被判定成「多方共提」的证据里，哪几条其实站不住？比如只有销售转述、没有客户原话的。产出 Excel 一张证据强度复核表，逐条写明原话出处和降级理由，站不住的标回待确认。</p>
+    </article>
+    <article data-page-node-id="xBSnt9LnqAh24PbSo871vI" class="task">
+      <div data-page-node-id="DKEoIei31MUN85awzQ0sjo" class="th"><span data-page-node-id="4x4rfo9fafz8HoHKy3x9i6" class="no"><!--pnid:T0N6LJyLsGmAHV54810Q78-->07</span><h3 data-page-node-id="OHRIx0xOa926FJzcnnoP0S" class="ttl"><!--pnid:M1NPO1AsasVgO5YaxBY6Xm-->专门比对旧决策</h3><button data-page-node-id="36H10cphiQFCeyU5eWEVDd" class="cp" type="button"><!--pnid:kTnCXl46NLUvbgGyswaQi0-->复制</button></div>
+      <p data-page-node-id="C1a6PEK0KjGK2dxyN6XiaM" class="tp"><!--pnid:llyh4jNGQAI69s0mH7iwWG-->专门翻 2025-11 那条被拒的旧记录，跟这次的新信号放在一起对。产出 Excel 一张旧决策对照表：旧决策要点、当时依据、现在的变化、依据是否还成立，每条注明出处文件。</p>
+    </article>
+    <article data-page-node-id="C0KgI2IRNLy0NT72t7CUoK" class="task">
+      <div data-page-node-id="G2AJTfQXi2dndoyWtSraRG" class="th"><span data-page-node-id="k1231OkcVzqON1ptkkLHC9" class="no"><!--pnid:0ENvtIZ0VTmnzP7Gy8rXIF-->08</span><h3 data-page-node-id="7xKJUuP2NvnMg21mobKPCP" class="ttl"><!--pnid:a6ZsyXCCk74FZUasURynv5-->字段来源合规自检</h3><button data-page-node-id="Y23ZXwBMBxZUqcgC3FuwZN" class="cp" type="button"><!--pnid:f8XPf571Q2c5ab7hmEhrZ0-->复制</button></div>
+      <p data-page-node-id="DyHABYh615MFdmQDTPbl3r" class="tp"><!--pnid:kRcsXkIlbej5LWIXsyJyeY-->对照「字段必须能对回原文」这条硬规则把归集结果自查一遍：哪些字段原文里没有、哪些是推断填的。产出 Excel 一张自查表，有问题的逐条标出并给补齐动作，要谁补写清楚。</p>
+    </article>
+    <article data-page-node-id="4nMD92A7ZjyFGDVl65KJIH" class="task">
+      <div data-page-node-id="45fiS2VO7zmGE0ENJOvPFQ" class="th"><span data-page-node-id="2l0YhtOqxvkagm7uV7ivA6" class="no"><!--pnid:3eFsoA1lBQDwGXZEVyhHdl-->09</span><h3 data-page-node-id="sQjv9zhMos5GKVafr2Xgyz" class="ttl"><!--pnid:jBXN08PcGcdSzlTzcRpdjG-->折算成续约风险敞口</h3><button data-page-node-id="3TPN8l3KXrjZcklwLcNOkf" class="cp" type="button"><!--pnid:tjSuWdCuAOk2jc4Y97iScE-->复制</button></div>
+      <p data-page-node-id="rzK2GUQSeXixEbzkfy1iT5" class="tp"><!--pnid:wUsQwQo4YOSeWKlOWrCjSe-->按前一轮归集结果里华正重工的原话出处（01_销售微信记录、03_实施邮件）算：这条需求继续不排期，按年费 28 万、续约到期 2026-Q4，可能的续约风险敞口是多少？产出 Excel 一页纸，口径、假设、结果分开列，末行给一句话结论。</p>
+    </article>
+    <article data-page-node-id="g7G6R3DTnERSzMoiQMURTl" class="task">
+      <div data-page-node-id="1Is7jG06h1FzMFD8oJawEl" class="th"><span data-page-node-id="aJ8RZVXYIPIcbEE49TwILV" class="no"><!--pnid:Rn96kXlLtGrsFCswxRinho-->10</span><h3 data-page-node-id="OIFwzaOUPbpo9C5FLM3472" class="ttl"><!--pnid:r57poICTyrd1a6KrypvT93-->沉淀成归集模板</h3><button data-page-node-id="JJGOz0Dy2xjS0DlLW4FPJ9" class="cp" type="button"><!--pnid:WkFu2M1WemDOdMLk0cuaKd-->复制</button></div>
+      <p data-page-node-id="Hul7d1yl9XccZwzy2vKa3R" class="tp"><!--pnid:4ZgLdibtipxc94kbcicEBp-->把这次的渠道清单、字段口径、查重规则整理成一份可复用的归集模板。产出 Excel 一份，含渠道对照、字段定义、查重规则、证据包结构四张分表，下次别的需求直接照跑。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="I6qGzAI1iCdVeBiVDoekm5" class="cta">
+  <div data-page-node-id="6474SdlaZHHpsHfdKSXTLP"><h3 data-page-node-id="dWdz3KasQOIfA2SHNC3Lsw"><!--pnid:S4qA2vpLPKSejfN79bDEPO-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="dv6w00Mrrde2PqaRaqrLuM"><!--pnid:nb0lpMJAciU5TizO00Aij6-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="JYSZwn9VFoEE8Li6VIyCiF" class="btns"><a data-page-node-id="uJh3RzxD1aM9lX1T4bVpfB" class="btn" href="#" id="ctaContact"><!--pnid:OA3RbsdfZ8WdnwrcXYonLG-->联系我们</a></div>
+</div>
+<footer data-page-node-id="jtmdr5hUdiQ2IFAprSoitF"><!--pnid:VO8c7TNMirR0O30O6LT3bS-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 优先级与对外承诺一律人工拍板</footer>
+</div>
+
+<script data-page-node-id="2qqACYqHFahpS0XvZqV1qd" data-pnid-children="pzrfQensGw9N6DrF7oWQQE">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="o5cT3pXSfQlGrikHhn5BN6" data-pnid-children="HmLcgX773HQPiXZK1tKx9A">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="tQmjvqHy8uH3mOqNqphjdF" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="7lWX72y1X0ipau5lyMKGg7" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="N4fF6OljlDHOnQkB2nmz3c" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="DeXNmUM5OnwsVnO5Tc1t6g" data-pnid-children="nmpUfoCFby3KkTp5mBQVrA">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="g2h4USSvAslgx3iDFP6ss5" data-pnid-children="tQXo88cuC22KRETFU9HhBv" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

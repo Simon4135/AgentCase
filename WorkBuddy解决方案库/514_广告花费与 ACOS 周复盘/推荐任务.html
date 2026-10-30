@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-page-node-id="GhK94cx0jFt9izImdiL1QT" lang="zh-CN">
+<head data-page-node-id="EOpX3LJwPI10BU7viqzKt2">
+<script data-page-node-id="NoJc1ytyWHItT1LwjHZVDN" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="6vzKB3VopUjppAU9BzUNxy" charset="UTF-8">
+<meta data-page-node-id="i8TlWFNn3vjXtQqe7hDKH6" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="QT32eUu5qYGsr1HKIDp09C" data-pnid-children="YS5xBpX9t8dz8LjMMaE0rH">广告花费与 ACOS 周复盘</title>
+<link data-page-node-id="1Wf48mCtnI5bITCLmYCkxy" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="ABTkDAgP6JrznMvAljf3de" data-pnid-children="WUEYeOxQ4Ag0lXz0ZOT9Xu">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="1gj4KWoydQi5lnqIAKM8Qe" data-pnid-children="9SAOVsAEWhfCd2A9Y5tj5f" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="5WkAFmYhC96N9QQRIiKKGv" data-pnid-children="DNy9WFCEHmHVtl8gcPbxzD" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="xVZmbjMjYjjh5er8OoXOEm">
+
+<div data-page-node-id="XMlwNgfjsAJTZCu0nQgne6" class="wrap">
+<section data-page-node-id="PdwJ6u8WyjIXJzMTTNCjsB" class="page-hero">
+<h1 data-page-node-id="ioajJ4VU7MZqzPdhedMoPC"><!--pnid:tBqfF7A4Dc9RQVHVY2Sx8h-->广告花费与 ACOS 周复盘</h1>
+<p data-page-node-id="AYozo7SAVVXuxe3hjFBhA8" class="lead"><!--pnid:mSTN3sGhobopPKAkB7Stu0-->广告后台每天都是绿的（有点击、有曝光）· 月底一算广告费吃穿了毛利</p>
+</section><nav data-page-node-id="VuZRf6lJfRXvPX5XNhaV96" class="subnav"><a data-page-node-id="cXhZig3JLSBBEBYuP3H2gC" href="场景引入.html"><!--pnid:tlMPaVIWzB44Hym6bA5zw3-->场景引入</a><a data-page-node-id="cNPzC1tbWTAOvbRcFpVq6C" href="LiveDemo.html"><!--pnid:CXnhWp4gJvdnb0g7QP2Ctq-->Live Demo</a><a data-page-node-id="N80JktLB64Fjw0h5gNYqCw" class="on" href="#"><!--pnid:C9h725i8Ua6V573necMMHf-->推荐任务</a></nav>
+
+<section data-page-node-id="yfI1PD0V26gfhdS9w0x1Yf" class="blk">
+  <h2 data-page-node-id="KNHYo9nGymhiyl5ZBdtRj5" class="h"><span data-page-node-id="JAzV7jthXAw69gZFECaIz7" class="num"><!--pnid:20V5HObRO5P4upfEWyEDjj-->一</span><!--pnid:FlNKmY9gWpplVKwyKrlObW-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="2eQtmXuBxhCOwt8z2rsYLk" class="subline"><!--pnid:MKxUItIBU8whg40yhk9EcO-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="1OeCYWLKVAScxaHsPt3MQy" class="card"><p data-page-node-id="uvRcgszvugNv51QREvoTvG"><!--pnid:eKQrvAz3QHZpdEAoIc1Vnm-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="vhgibRXy5dfGnm244cx3gR" style="margin-top:10px"><!--pnid:9f6b6nbLV4lM68YcEPdHQf-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:yq0XwJflVqfmug4Ot2EFox--><!--wb-skill-start-->
+<div data-page-node-id="UmAjdEIDBmT5kPP3TQbIuK" class="wb-skill">
+<p data-page-node-id="ejzYdd1AvQUvcLcThv8ciu" class="wb-skill-lead"><!--pnid:95H8rmPSvlvCOli04Yomm9-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="g5GL1Xxc1oQgziUKomhk16" class="prompt" id="wbSkillPrompt"><!--pnid:PlDpznc6RcxZdNqed1lLrF-->【准备】这个场景的规则都在「广告花费与 ACOS 周复盘」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/vVLkHSfIACX3tfB4dxB6M1/Wb978XIhbrLG/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="gh2Fb0BiDN4DXleITGDygx" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:ylkWnpHTTXlmfTsc8NmME0-->复制</button></div>
+</div>
+<!--pnid:Clzvvoko0rO0alvjmruIDS--><!--wb-skill-end-->
+<section data-page-node-id="PVu8juqGh40eqK4w6Dwfde" class="blk">
+  <h2 data-page-node-id="jzF5bxi6nrFzZZhBkFLVI7" class="h"><span data-page-node-id="crWT1UUbpW6VG4dpBAEFOq" class="num"><!--pnid:dsPlWPWBZrVFw7vkJDBlwX-->二</span><!--pnid:QqJa5Wk1fIIJumG2kneokW-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="Wr6OPKSWkKBk1QfBsZ9wsg" class="subline"><!--pnid:tLvwUtkQFxlaFGW2Ubvdft-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="es3oOjMdpU8sp8tuJ5ZT31" class="tlist">
+    <article data-page-node-id="z8Nlg2MjxiuRjH6R4ra3cp" class="task">
+      <div data-page-node-id="qCL4Q0b3SSZw2iTO9vRNYv" class="th"><span data-page-node-id="u6f6oSWVt0jjMN8FjXnA5Z" class="no"><!--pnid:p02npZjwSP7oSLY9G3RZTY-->01</span><h3 data-page-node-id="NEjCaKWUqJNlGNvQO1igEz" class="ttl"><!--pnid:LgewuUZvKMMJNrMC907bvK-->首推默认</h3><button data-page-node-id="utYmn4GVt4ElipCW1pMT5L" class="cp" type="button"><!--pnid:TgvIZrYAb5wJSME1DH24Mg-->复制</button></div>
+      <p data-page-node-id="YyneLpI9bO2jmxqUk5y3mC" class="tp"><!--pnid:cgjvqsYgjjteJxYSqHFbjW-->BX-500 这周广告费又超了，ACOS 冲到三十几，周一晨会我要讲。材料四份：「01_BX-500广告搜索词报告.csv」，近 7 天 Amazon 的；「02_TikTok广告投放导出.csv」，近 7 天；「03_BX-500毛利率与到手成本.xlsx」；「04_上周否词建议记录.xlsx」。帮我出广告周复盘底稿、建议否定关键词清单和亏卖活动处置清单。产出三份：广告周复盘底稿.xlsx，花费结构、无效花费合计、盈亏平衡对照一次生成，含编制审核栏；建议否定关键词清单.xlsx，一行一个词，写清匹配方式、上周花费、是不是上周已建议未执行；亏卖活动处置清单.xlsx，一行一个活动，写清当前 ACOS、盈亏平衡 ACOS、处置建议、日均花费敞口。Amazon 和 TikTok 的花费要并到一张表上，两个平台归因窗口不同就在表里注明；有花费零订单的词、还有 ACOS 高过盈亏平衡的活动，都要算成钱给我。盈亏平衡 ACOS 按「03」里的毛利率算，我拿不准的地方标出来。否哪些词你给清单，我到后台自己操作，别直接改。</p>
+    </article>
+    <article data-page-node-id="FHEos3htfhaGpnyto9cKUR" class="task">
+      <div data-page-node-id="mzPOQZmbNeV0AmCBbB6UPG" class="th"><span data-page-node-id="PL255F1LR359DaCVuzTiVc" class="no"><!--pnid:s5dGuWrL8l8s2FVIPdvkrT-->02</span><h3 data-page-node-id="0880Thm0tdEA8xRgsy3juD" class="ttl"><!--pnid:pN9ocjR2rXshll6yuqBDIF-->只做无效花费识别</h3><button data-page-node-id="XdsWdADCac39s6etxSy8wo" class="cp" type="button"><!--pnid:Y38bwSxMyTvsBHZvqqqVd1-->复制</button></div>
+      <p data-page-node-id="s3Ju8CyqafX4LWqckz4fp0" class="tp"><!--pnid:FxRS4lsxlFp3qjhTOJnmce-->只跑无效花费识别。读「01_BX-500广告搜索词报告.csv」「02_TikTok广告投放导出.csv」「03_BX-500毛利率与到手成本.xlsx」，筛出有花费零订单的词和亏卖活动。产出用 Excel 一张表，一行一条，写清平台、词或活动、花费、订单、ACOS、命中哪条规则；只列出来，别给处置建议。</p>
+    </article>
+    <article data-page-node-id="dSm8ousDjzqUOdXpsrfPVR" class="task">
+      <div data-page-node-id="dgRU9tMIslPo8JHGF3w4O0" class="th"><span data-page-node-id="fdFaXIdA8chWombdt2PCrb" class="no"><!--pnid:Jp8iHS71Ugl9LjHVQIxOuq-->03</span><h3 data-page-node-id="qIoKNjuiT46Xkj5604AM9p" class="ttl"><!--pnid:fLWOM0QTxSxPESqjOGQdCd-->换成按活动一级汇总</h3><button data-page-node-id="TQ4EMwmw0SvcBtey1v8OYG" class="cp" type="button"><!--pnid:Sz9Lrclgvkxx6uBDDMU6gf-->复制</button></div>
+      <p data-page-node-id="4IQPcVPY2DpSCcyx5pLL7c" class="tp"><!--pnid:yycmoOavHehKVnA6qf017J-->拿广告搜索词报告、TikTok 广告投放导出和毛利率与到手成本，换一个口径：不按搜索词逐条看，改按广告活动一级汇总。产出用 Excel 一张表，一行一个活动，写清花费、订单、ACOS、盈亏平衡 ACOS、是否亏卖、占本周总花费的比重。搜索词明细不用给，口径写在表头。</p>
+    </article>
+    <article data-page-node-id="nVuqp1SLE1twXFgb2MDEgw" class="task">
+      <div data-page-node-id="AEplfRcyH7dw2anwbHL3QY" class="th"><span data-page-node-id="8iQw6HIeQMs5olMzbJaee5" class="no"><!--pnid:MdHffLHlaJY5WcR3cVp354-->04</span><h3 data-page-node-id="Tj2KIUluVWf2MOi4tgbb8D" class="ttl"><!--pnid:mXBBdDmBiMRxmcVYOrnM0O-->一次跑三周</h3><button data-page-node-id="3tGSWVv7jd0ivaPM56DZnn" class="cp" type="button"><!--pnid:PcsxeQKYg4rCDZrqpAT3C8-->复制</button></div>
+      <p data-page-node-id="Aoz9jsU6TOF7SD3iH5lVkb" class="tp"><!--pnid:olTMLbNAX0MgcHeIaW6Tz6-->演示数据里还有前两周的广告搜索词报告、TikTok 投放导出和否词建议记录，格式同「01_BX-500广告搜索词报告.csv」「04_上周否词建议记录.xlsx」，三周一起跑。产出用 Excel 一张表做周对周横向对照：各周总花费、无效花费金额、ACOS、否词执行率，一周一行。哪周数据缺就在那格写「缺」，别拿别的周去补。</p>
+    </article>
+    <article data-page-node-id="MxudHHag0RiiG4iVGV4i9H" class="task">
+      <div data-page-node-id="ZjJTcbQd2kXBIXIUs0lWhe" class="th"><span data-page-node-id="5UCRNwsd8H4r23nun4IWHR" class="no"><!--pnid:1nJQxEpdP07evLceF5rYx7-->05</span><h3 data-page-node-id="K2NOZl9xyiPpoxVpFkwqLZ" class="ttl"><!--pnid:kmMVbe6i1UVcrvakKlSCxV-->给晨会讲的一页纸</h3><button data-page-node-id="R6FfDjucDR2DHP0dQfAac2" class="cp" type="button"><!--pnid:qsp1iBrtFACAVhzZKIeGq1-->复制</button></div>
+      <p data-page-node-id="s2d9drv35PONIcWQuwk9Xn" class="tp"><!--pnid:ILm4mAQBqgN1xgJYV2v3Z7-->基于这次的广告周复盘底稿.xlsx 和两张清单，压成晨会讲的一页纸（Word）：这周白烧了多少钱、白烧在哪三个词或活动上、否掉后每周大概能省多少，各一句带一个数。明细行和逐词清单都不用放。</p>
+    </article>
+    <article data-page-node-id="BfxYGuDFd5Tivo6Ax8OP8I" class="task">
+      <div data-page-node-id="wfDbLosIm3fWpFNgn7OflA" class="th"><span data-page-node-id="0OSw3UOp2TK6aqQxTg644E" class="no"><!--pnid:6vhEbFl415LybQLNj54wcm-->06</span><h3 data-page-node-id="nKLB8HPC65ntHzvM8fUSxw" class="ttl"><!--pnid:9mhJ7ysIuLbfGJdWeedWay-->挑可能误判的无效花费</h3><button data-page-node-id="uRK24xFBxvv1QBCsGtyogB" class="cp" type="button"><!--pnid:M95IY9vByjHBLVHBJjAn5R-->复制</button></div>
+      <p data-page-node-id="itqeedPKwmXdcOkJh1UZrY" class="tp"><!--pnid:5HSYuYJXTsEmFcnmJUHxK2-->你判为无效花费的词里，哪几个可能只是这周偶然没出单、不该直接否掉？把「01_BX-500广告搜索词报告.csv」里的曝光、点击、转化率摆出来验证。产出用 Excel 一张表，一行一个词，写清三项原始数、判定、是建议否还是再观察一周；误判的从否词清单里撤下来，写明撤了哪几条。</p>
+    </article>
+    <article data-page-node-id="zw60uhWYpbLwJnzT49X2oE" class="task">
+      <div data-page-node-id="uYigD6lXNVzGf7d3v2vjPp" class="th"><span data-page-node-id="xYN3KKGcoLs5FEp16ewoGu" class="no"><!--pnid:5ngmiohv0FDKj790k31mAE-->07</span><h3 data-page-node-id="CT243ybrYYtoVZ6XmTnsDS" class="ttl"><!--pnid:GvmIgU1sGVM7xh3daqPZaa-->比对上周否词执行情况</h3><button data-page-node-id="cX9M3n9bznvbVTTBmAUVil" class="cp" type="button"><!--pnid:072W2NroI078qTu1KfivxE-->复制</button></div>
+      <p data-page-node-id="C9OJLrr4lpB5nKcaEPPK9i" class="tp"><!--pnid:5yRva9yT74DGJlMwyhnQDG-->读「04_上周否词建议记录.xlsx」和这周的搜索词报告，把上周建议否掉却仍在花钱的词逐条找出来。产出用 Markdown 一页：一行一个词，写清上周建议日期、建议的匹配方式、这周又花了多少、后台有没有执行。记录里没写执行状态的写「记录缺失」，别替我判断是谁的责任。</p>
+    </article>
+    <article data-page-node-id="7tSiDcaFZnUZMSJuKQXpAO" class="task">
+      <div data-page-node-id="gNf1uPXrZdCfoVhivuRE0C" class="th"><span data-page-node-id="9Fxa0c3YwLDHpA5LZwaied" class="no"><!--pnid:YXYFYafQmYHZMwXj0TaCuL-->08</span><h3 data-page-node-id="qc6SSDJjYuc9lKMbM15GZV" class="ttl"><!--pnid:9R03TVVa6tL92aZWboPmtP-->对照复盘口径自检</h3><button data-page-node-id="WkgShQhtV5WlhaFAjRmvIq" class="cp" type="button"><!--pnid:LxlSlP26xL9SDnmCRToICg-->复制</button></div>
+      <p data-page-node-id="2pgynj4RhY0UffRciyyvgf" class="tp"><!--pnid:PnRgApm2A3A4rnPh8RI6lI-->对照「03_BX-500毛利率与到手成本.xlsx」「04_上周否词建议记录.xlsx」自查这一版：多平台花费有没有归一、归因窗口差异有没有注明、无效花费有没有算成金额、盈亏平衡 ACOS 的毛利率出处有没有标、有没有降 ACOS 的承诺、有没有自动改竞价或否词。产出 Excel 一张表，写清检查项、现状、越界的改法。</p>
+    </article>
+    <article data-page-node-id="sE5bw2jOqPxvlZTrSPQgxH" class="task">
+      <div data-page-node-id="K5c6KGeix8SMhNcz2OakWh" class="th"><span data-page-node-id="MKNEAtjubGV5GX7SnOqN9E" class="no"><!--pnid:4GtwIlPUtf3C6PWbPrj1fa-->09</span><h3 data-page-node-id="QX6zZzzgq551aHr7WHadKG" class="ttl"><!--pnid:xYLNd8JbBaWrC5I2eRAIpQ-->赔钱活动还能烧几天</h3><button data-page-node-id="4SXyAp4W1dGA7f6Dyh0zDl" class="cp" type="button"><!--pnid:pKb42oUeRY3D2CXM1SQYOF-->复制</button></div>
+      <p data-page-node-id="YDIhfi5JneTn3y8f26Qdrd" class="tp"><!--pnid:mvi7tlMxU6YIShNJXKDSsR-->读「02_TikTok广告投放导出.csv」「03_BX-500毛利率与到手成本.xlsx」，把亏卖活动按当前日均花费算三个数：本周已经亏了多少、再投三天会多亏多少、本周所有无效花费合计多少。产出用 Excel 一张表，一行一个词或活动，写清算式与日均敞口，最后一行给合计。</p>
+    </article>
+    <article data-page-node-id="v67Fdf5kMJO05UFiIUyEvI" class="task">
+      <div data-page-node-id="MMIZBft7gESfyJ0DvX2w8A" class="th"><span data-page-node-id="2kAbHH8rCDPtEbqMgWoJpv" class="no"><!--pnid:jk9pnoerWgRVC5gwiyuenU-->10</span><h3 data-page-node-id="NYJyJ6nuZiPgHV7St9P3O7" class="ttl"><!--pnid:JNa2xmqvKiVLRwUfsHVfTK-->沉淀成周复盘口径表</h3><button data-page-node-id="r6auk0y59kVHDYU0On7flo" class="cp" type="button"><!--pnid:5hw8rSL7pKKMaAJ3iWGbrp-->复制</button></div>
+      <p data-page-node-id="aDom5JGoCYItL0sLEF398w" class="tp"><!--pnid:zhduzoevWfK3A0U4TTTv1y-->把这次的口径整理成一张可复用的周复盘口径表（Excel 一张表）：多平台花费折算规则、无效花费两条识别规则的阈值、盈亏平衡 ACOS 算法、否词与执行状态怎么标。写成下周换一批报表直接套的样子。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="owyf68QA0PuldeXzC3ZaR0" class="cta">
+  <div data-page-node-id="2Vfszf3kbBQFSDJNq0bYwT"><h3 data-page-node-id="kQB3OKaojvSDNB2s874ufv"><!--pnid:1tOq4yQWjfsmKQ2hEmy2Ko-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="8OT2DGl0WpvixeLqOdGIjg"><!--pnid:4dl8kHWbZMZiO6RVTVMUWZ-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="xKgc0T9KXvGzwwEQdruFhb" class="btns"><a data-page-node-id="o8QNTgkaTIyBTlBF2Hrela" class="btn" href="#" id="ctaContact"><!--pnid:LJrurcyXnq0XWV0bZjjMHF-->联系我们</a></div>
+</div>
+<footer data-page-node-id="pUrUpPtryqjS2xlNybnxRa"><!--pnid:sS8x3FQyiE4TxNZ4TYqdog-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="mVKtK1tDtTDyT1Ejsv3t2B" data-pnid-children="KCMkRZO4pCiQ6jCyDMM8ko">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="k7rpdexn9Ry04bcRNvQ7nJ" data-pnid-children="vBcLT0skAm24XUPp6OTNCS">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="Chb5UtreDhly8eOn5t4pPO" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="0oELpqGXEO44nq1YwOYgSO" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="jir3Y6Ljvxg8MJ7vqdDiOD" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="cfAZ1Npbz6J04ddYPpPOrb" data-pnid-children="mdYZFuyFbeAsvcy3BUxs0Z">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="qik1jp022eEFh5S5OyRFBG" data-pnid-children="IIUylhL0D6pOndrqDyAjrx" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

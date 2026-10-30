@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html data-page-node-id="MnwZyS4BoBXRZuSdIeRyhe" lang="zh-CN"><head data-page-node-id="wxIQLTta9BHIqqxax9zWEL">
+<script data-page-node-id="63D73GL5jNlVQIw5nVUjdD" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="OZz7AEwNg0JKQ0Ivxrx0ph" charset="UTF-8"><meta data-page-node-id="VUpwCxCD4SVr7mauS8RdOK" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="9gbdoG3O15tpIXH4KYic5k" data-pnid-children="MORqcPAS2GbdpTfklCHhV9">对账差异核对</title>
+<link data-page-node-id="PkC88v7DAhWp2xrnUaKIKQ" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="sXAjrgysaDMk4T86ng0UUW" href="_assets/shared/discrete-extra.css" rel="stylesheet">
+
+<style data-page-node-id="QOgJk5SAJTF9nKJ4SeRk4b" data-pnid-children="cRm2JqiRlnnJcnA6DCBmvT" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head><body data-page-node-id="v3h29HOt1ZeO9LOLleBn6h">
+
+
+<div data-page-node-id="WyovbSWr2634LB8fmsbBZ9" class="wrap">
+  <section data-page-node-id="YqM7NgK6PzvDxh039812Cg" class="page-hero">
+    
+    <h1 data-page-node-id="krL03YZ3wiVHTBnsKwIIih"><!--pnid:f9LySxgUZUz9zGERZF3LEs-->对账差异核对</h1>
+    <p data-page-node-id="iK2u4gQ7pdKx78F1gj3S4j" class="lead"><!--pnid:WYAHTXtyb2r8EAEBlNxt2C-->案例：<b data-page-node-id="wxOdnhURkV7cYIa3iUeaoY"><!--pnid:S8zYtLLYbVRhjks0gQPAZt-->某主机厂 7 月对账 · 客户 39 行 vs 我方 42 行 · 差额 48,880 元</b><!--pnid:wRjyzb3xyxmz1AYA7dDXES--> · 数据脱敏</p>
+    
+  </section><nav data-page-node-id="oBfTXWmUH3Kpytf2vPdHfl" class="subnav"><a data-page-node-id="YrQgvUQIAEfEtAC5or3jkO" class href="场景引入.html"><!--pnid:vA95Jk7oXoA0gNEfNxzmrm-->场景引入</a><a data-page-node-id="PiqrcmFXrwQPukA2bF7lTi" class="on" href="#"><!--pnid:Zv8r7eOeWtYtVxfIxsb4n1-->Live Demo</a><a data-page-node-id="VCUqaFwdcg7chSRKsBIQjP" href="推荐任务.html"><!--pnid:7EIP8Z8ucgshTpxjpCZpvj-->推荐任务</a></nav>
+<section data-page-node-id="1ls8kssf8XQqIC7qeB4LG6" class="notice warn"><div data-page-node-id="6BMtTh7LcttlQfzCPV3rvv" class="icon"><!--pnid:Qc2dMdQ76uGzrVcusRvZMp-->!</div><div data-page-node-id="7t0wqEGvho8o8FEUiziILQ">
+<b data-page-node-id="4GYnFjR0wSWKedqRvAo108"><!--pnid:qktbEdGkeMjRjfTaK8JS22-->演示模式 · 可视化预演</b>
+<p data-page-node-id="3RgDBqgNjbSv8nCdhqOe3a"><!--pnid:luKZ0Sc2qn7XiIuXIO58ZU-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="hq4JT28Afcoqas4RFyNFFF" class="kpi-row">
+      <div data-page-node-id="GszzTkWAGZOtlkbRAYP4xJ" class="kpi"><div data-page-node-id="rSlEnhdmKDV4qXUyBXHSHI" class="k"><!--pnid:jwSLY8utxBcIjp3SvcsIv4-->客户方合计</div><div data-page-node-id="fjGKP2JdBy8zBSGSUxq5Ie" class="v"><!--pnid:UBQIS4UmPC3hHLzd3JjRLh-->1,502,552</div></div>
+      <div data-page-node-id="yorOkZJQhv2AUAPoFNhTJk" class="kpi"><div data-page-node-id="VoURACVC7rTH4AJHzOhTpt" class="k"><!--pnid:JFVvMipXanH7Bd9HmCRuES-->我方合计</div><div data-page-node-id="NwoScZM1Onccf6dITdXS5R" class="v"><!--pnid:RfKRUxZ1BElvMTEeexJgnC-->1,551,432</div></div>
+      <div data-page-node-id="fFs7pAFbzav4cCgYO5u9Ol" class="kpi"><div data-page-node-id="LBvxiw2kx71OHaxB2dFIP4" class="k"><!--pnid:0B338dCaauhXLNiqLZwxuQ-->差额</div><div data-page-node-id="nW3dtA0dx5BTqpQHfqjNe0" class="v" style="color:var(--orange)"><!--pnid:BXf1qWzop1CfizdEdLtVEn-->48,880</div></div>
+      <div data-page-node-id="c8Qgjf5060eN0jdygc0WvF" class="kpi"><div data-page-node-id="YSVYHn3jRsYkXgq24lV4Oj" class="k"><!--pnid:lEKImZbPbPkpCdI94OZeWK-->差异笔数</div><div data-page-node-id="1EdesZSvkLOyNx4SrWNEaZ" class="v"><!--pnid:iSKSrmYJ1scCxueVo6gvvs-->7 笔</div></div>
+    </div>
+
+  <div data-page-node-id="JMFf1w4TmtQALroLS2XPOL" class="dstep">
+    <div data-page-node-id="zxLc2qpZdT4dbzG3EoOIfB" class="dstep-h"><div data-page-node-id="O3SWmWfHUUOZSzLJjjLjKF" class="dstep-n"><!--pnid:qtRAprnRvmbTjoLpQkEuSl-->1</div><div data-page-node-id="9s8ckEoi7ogdiLI7A4ekH8"><h2 data-page-node-id="JKykqhAuBwtAj8zb231Xe4"><!--pnid:FiQtQ6mG4EfIguhZFOQGa0-->Step 1 · 原始数据 · 4 份文件</h2><div data-page-node-id="UyySjQlhF1uWZ6p9S2YhZS" class="sd"><!--pnid:K5Q4p1ESBT0nzm6DnAYmue-->客户格式 + 我方 ERP + 价格表 + 回执</div></div></div>
+    <div data-page-node-id="TtyhuEx3MTy7L1gMvmQ74O" class="dstep-b"><div data-page-node-id="ZGNHpLCnLW58vWOVy4pr4d" class="source-grid" style="grid-template-columns:repeat(4,1fr)">
+      <div data-page-node-id="xSSPWIV6sMZ4QB3UozaQGk" class="src"><div data-page-node-id="EAy10JLjfBXiaWOv1jr1Y6" class="fn"><!--pnid:IzTq3idY4N6R62sOcNhjPP-->客户对账单.xlsx</div><div data-page-node-id="41nVpCtKE5449n2TmuIwq5" class="fd"><!--pnid:O2USluoGztLw1uING23kEh-->39 行 · 繁体列名 · 含税单价</div></div>
+      <div data-page-node-id="CBg3mE0luPEl4pmcWfQdTD" class="src"><div data-page-node-id="nuQ0jsya33cuSXFaE5RmGa" class="fn"><!--pnid:WZzu0IJBvjk0Z5NyYrA13p-->销售出货明细.xlsx</div><div data-page-node-id="Ic66lR8JqX34Sp8vmgXQym" class="fd"><!--pnid:GmFT1JeqiieuUQ98HFOzh6-->42 行 · 我方 ERP · 未税单价</div></div>
+      <div data-page-node-id="S2lkb4aJz9uFFx6Bgx2Uwd" class="src"><div data-page-node-id="y3NKUzGJGDFBPzsqXviiB0" class="fn"><!--pnid:cL2AieoxurjCkxwtVuwQyn-->销售价格表.xlsx</div><div data-page-node-id="RQa4z5zdg06A8r8oJjU2Wp" class="fd"><!--pnid:cdzX3SeDdNKK2d5CY5Usgj-->A 级· 含批量档特批价</div></div>
+      <div data-page-node-id="uupSX1rYwpDnphdyKpGcK4" class="src"><div data-page-node-id="gO3LH2fReNkK49qcl9cxdj" class="fn"><!--pnid:iLJFgvfTl2HFRRVpqk3uqN-->送货单回执台账.xlsx</div><div data-page-node-id="3GB8r2nT5BQgHAitg9fyO7" class="fd"><!--pnid:qjKaWzM1TZCjkdtDui2qJq-->39/42 已签· 3 张待处置</div></div>
+    </div></div>
+  </div>
+
+  <div data-page-node-id="oTZADE9RZbiJfdj0ycRFdG" class="dstep">
+    <div data-page-node-id="oJ8OQpKp1vxJIZQseh3MtP" class="dstep-h"><div data-page-node-id="Q9TFKKwX3gL9KwxmyGsawQ" class="dstep-n"><!--pnid:LQcd0LiWH0mvq47YJu6t4T-->2</div><div data-page-node-id="0AAKBWWD2WSaEu0ASE8YNk"><h2 data-page-node-id="PVh5qvwM2loCZUFUMuUAa0"><!--pnid:vi20wQNGHiocPuenuNs17k-->Step 2 · 财务一句话触发</h2><div data-page-node-id="6cm99dERFMQkmWi5nXtT7c" class="sd"><!--pnid:AlYpTCNqZlYmLR5B33LFe2-->不用手工建映射表</div></div></div>
+    <div data-page-node-id="5fGOGK6ikKZaGVSGYkCOIR" class="dstep-b"><div data-page-node-id="siABhPLzX9QRcNf5cWd5aT" class="prompt">
+<span data-page-node-id="mDL1A9Q4U93snSjooI1PT8" class="cmt"><!--pnid:Z9LrUcAehozZaQyUuKKZO9--># 财务输入</span><!--pnid:iLHkXV0fgXVbuIpID9r9A6-->
+某主机厂发来 7 月对账单 · 39 行 · 合计 <span data-page-node-id="wdlmXTZCKkSNovDN29q2Cv" class="v"><!--pnid:IZiFvxKuvBLvO5bvdjykMJ-->1,502,552</span><!--pnid:fkUhPdUuxnC0DqZHCtNCJO--> 元(含税)。
+我方出货 42 行 · 合计 <span data-page-node-id="Pwc4SqEIBFt5wJsrdp9fmt" class="v"><!--pnid:QTtboG9GzznEAkK3f0H5rO-->1,551,432</span><!--pnid:XSbo2UtKyvpMHDZjIrNrus--> 元(未税)。
+两边差额 <span data-page-node-id="CAR1iNu1Ho2APYYogN7QyI" class="v"><!--pnid:bDn5lZMyoNDdRGhl1Kucwl-->48,880</span><!--pnid:aoFOGHZppVEX7TMpENSn1W--> 元 · 请核对并生成对客回函。</div></div>
+  </div>
+
+  <div data-page-node-id="f6FW9YmzC693n3lyJySxqV" class="dstep">
+    <div data-page-node-id="1nyQk81WBaVw2hcNCBQAUA" class="dstep-h"><div data-page-node-id="HHd4n1EjxsBzET8fY0zLqa" class="dstep-n"><!--pnid:oQO4DnfXZkaeBmOY8UqYol-->3</div><div data-page-node-id="AQfRbBqwnbNpJWIyJWeE5i"><h2 data-page-node-id="vifCquiKSc9HKQyNzjggnx"><!--pnid:TXaaBZsoaujj7TI1QZmXHM-->Step 3 · 7 笔差异清单</h2><div data-page-node-id="XWWVek3R360WiwDzRL4aal" class="sd"><!--pnid:SZpT1lD4LQJVECysGdcB0P-->五类差异 · 每笔归口+ 处置建议</div></div></div>
+    <div data-page-node-id="4HYDFJMEswWUIhS19ODOWq" class="dstep-b"><div data-page-node-id="dJQTjAQ7c5JZRMVfVvmUT6" class="tbl"><table data-page-node-id="z2BBtKy9MtU4HJfYjkTHuU">
+      <thead data-page-node-id="FDGNF2SaIWIvmishl2fr6h"><tr data-page-node-id="HzOwGPHtbr5gkD64s27F85"><th data-page-node-id="pwnfPwbBujSZWaUIOEvab1"><!--pnid:nFLtgy85xxLQiL3lCDc0e1-->序</th><th data-page-node-id="uveBgHL2BPgl23ikkf9tmt"><!--pnid:XQUps5urWlV0Pw0J177li3-->送货单号</th><th data-page-node-id="45yHyILwEE0GEipMOOOi2T"><!--pnid:NPOVXRq1glsCIcciEuyfdr-->差异类型</th><th data-page-node-id="fwqh9SRJbZF0jJGe4phI21"><!--pnid:Z8VyVOSFqTdkLC2gFnzIao-->客户方</th><th data-page-node-id="2toG1rGf74OYuNNHQYwJEI"><!--pnid:R98mA4eE4L5YKyTS6jGcVL-->我方</th><th data-page-node-id="om3kiCPQzZdfzY6Qk3XVfk"><!--pnid:lUsij0kl59knTPJpwc2Tkf-->建议处置</th></tr></thead>
+      <tbody data-page-node-id="wdFcEVELa7erfLtHk66IAE">
+        <tr data-page-node-id="gvabg8ipWwVCW3H4mc7Igb"><td data-page-node-id="b7UfumiD565Zj48EcVe6bK"><!--pnid:tynMZVONh1Z35WXsCwJksa-->1</td><td data-page-node-id="5iDexSy57ibYkaYYE0O1M5"><!--pnid:NSKNG1kTTDKa4nKxlNBr8V-->DN-20260712-009</td><td data-page-node-id="D1ckMNjvzQWCFw8yM2wP0t"><span data-page-node-id="p9d7XMftYXUPJR5lrmq6XC" class="tag r"><!--pnid:4Bl2CeX5vQF3oKn9PQ9HKa-->🔴 数量差</span></td><td data-page-node-id="xmGdwazijAreEvAFgzeLL8"><!--pnid:4QjYqp8RrA7pMX1RIH9NXP-->签收 98 件</td><td data-page-node-id="Vk5Wnx39eV8ZincFBcubcO"><!--pnid:w1aZFE00CO9yAcxOPrwqUp-->送货 100 件</td><td data-page-node-id="q1K0UyBfWpbJhyQ5zAz6rY"><!--pnid:yuGmbgl7UdZG1MQaeWwXbK-->短收 2 件走质量索赔流程</td></tr>
+        <tr data-page-node-id="yDfkt7Baaodkxf8fV0QgFI"><td data-page-node-id="UvatCUJZmXR5lOVXzZZgNI"><!--pnid:VrSDaj1ZGfP2n7BWWVBgk0-->2</td><td data-page-node-id="A2hdh6aUn9nLpatfextv0X"><!--pnid:WJohWUyB0G4DMldeopoUIY-->DN-20260708-004</td><td data-page-node-id="Rn0FBlEEMk2HJYolypZdLV"><span data-page-node-id="crgfFozZLlCKCyc6GwskxP" class="tag a"><!--pnid:3jTjf8cCucYpK7xEVbLKJG-->🟡 单价差</span></td><td data-page-node-id="gtsLekDf4Zqp1JI9NSTQl3"><!--pnid:XzyKcwVcbq7vBo574Dzc7s-->含税 5,424 → 未税 4,800</td><td data-page-node-id="tWb7KVLRpo74zOX7pMi7Xp"><!--pnid:Lsi9jrlvAV1mBFZbmAAy4z-->未税 5,000</td><td data-page-node-id="jjhNaeIP4GNPwZGDPdBvoU"><!--pnid:dd7fuKLwvtDTSBNX7yGAlw-->客户按 24 台批量档 · 需核对</td></tr>
+        <tr data-page-node-id="TdWQZAogv9V4oRC6JT2zif"><td data-page-node-id="qER72QxS3L2HfJMzg51nsP"><!--pnid:N1vczSAFN5kS12zQx3Qduv-->3</td><td data-page-node-id="CBTj9IA8iEl4RTgnUPbOwE"><!--pnid:ve2ODAx1x7SIpEA2VSVy8g-->DN-20260716-021</td><td data-page-node-id="yVCmQQSbtQi7n0zT763B4x"><span data-page-node-id="2NCpJTIpAsukOGrgLRwbs6" class="tag a"><!--pnid:577qFJe5hV4EqyLHdQMPjK-->🟡 单价差</span></td><td data-page-node-id="Fk1K97BH5PYghldnCiFNaW"><!--pnid:a7Xm3SyUjDxv6C9zABXpDg-->含税 4,294 → 未税 3,800</td><td data-page-node-id="YU1QphqIugBboodmNgyqvX"><!--pnid:vZwWcrMlNsnUnroKsilawb-->未税 4,000</td><td data-page-node-id="IiW05JI7qM2Sk9tYjWmalw"><!--pnid:UGDT9pAsNafSJtc20S5isF-->客户按15 台批量档 · 需核对</td></tr>
+        <tr data-page-node-id="ebZm2d9eQD8yHa0nbpeHAM"><td data-page-node-id="iDHbWyApSVi9RkhzDMMOPI"><!--pnid:KotDlOU47VRdYpmzKrz1Js-->4</td><td data-page-node-id="Oyo9D223CQ9gu3OSbHee4P"><!--pnid:1D34MZAI3C0rKjkKHBZgoN-->DN-20260703-002</td><td data-page-node-id="79Ofcp2MRwabDnmhv8LWv2"><span data-page-node-id="aAAW2qujY0591SdtnR6fak" class="tag r"><!--pnid:nfuFHbA6Q2eNgEQMRBU4si-->🔴 税率差</span></td><td data-page-node-id="d9yGBlKH12UYvm0HfsnEla"><!--pnid:tsfS4XP7Iyx5oGMxDNtjGq-->按 9% 建筑安装</td><td data-page-node-id="dt3yFmzHJeyLcBnoL014Nh"><!--pnid:91oZccM11oXsyzqgpbUFjH-->按 13% 销售</td><td data-page-node-id="NuXeAbqQH8ADp62MNYNlkS"><!--pnid:nWEjlC66MhZKJuXvOEYror-->建议按 13% · 客户可开专票抵扣</td></tr>
+        <tr data-page-node-id="B0oemD6sB40ucjCTiVfq7E"><td data-page-node-id="N8NhseH6ZcrK6LePXx3m1E"><!--pnid:tWJp5TEIgjaQDlShpWM4x0-->5</td><td data-page-node-id="j8lb6UDKZBVhvU19FKFvr8"><!--pnid:TZTfO6n6PwBtsfJncYSGVI-->DN-20260720-028</td><td data-page-node-id="5VksDVsfgoGjRqg0KyR7Dd"><span data-page-node-id="2nEC7ETantZ8arO2B2MDSg" class="tag r"><!--pnid:zsHc9VHrdXN2tjKGPViQXJ-->🔴 回执缺失</span></td><td data-page-node-id="kPZM0ySx6gZGm0hKugBFg8"><!--pnid:crcfvtwT6qWPbuDpJZ49bY-->无该行</td><td data-page-node-id="PHJUaQFs0SycGkHTs9q7Pn"><!--pnid:fILGgKigd0m1PKBynjPYuJ-->控制柜 6 台 33,900</td><td data-page-node-id="R3SF62IMKD8U9mfGDetLdQ"><!--pnid:a1VcUhyfvSj0kvBlZ2Nrkh-->PDF 回执已收 · 客户需补录</td></tr>
+        <tr data-page-node-id="2AIFnZ6tM3WvHGeKZSj3YZ"><td data-page-node-id="nULD7V7GePMwlefcJnKIPs"><!--pnid:EOZyIPo9TWTXHBErrC6g9x-->6</td><td data-page-node-id="faNUVo3hvEceX0t7aVPi2Q"><!--pnid:rOd3ygxS8BlTp6u9fNKgyX-->DN-20260731-041</td><td data-page-node-id="stdqeLfeVHEAtiCCCfpLyT"><span data-page-node-id="1LYgsA8iZV8smcBnjJEbIL" class="tag a"><!--pnid:9hZeiLuq7ecrY442NHt7w0-->🟡 期间归属</span></td><td data-page-node-id="fEhRN0ff1EW6nKlFsYHp2i"><!--pnid:Jy8K5qQBsLyxNgTX0bY6rc-->无该行</td><td data-page-node-id="IQxon26Vp2QtxrJpDp1J6P"><!--pnid:iWRLuHc1a7JSkdvHYjExcl-->7/31 出货 · 5 台</td><td data-page-node-id="GAZM0IPbiQDrHIM5R5jFtI"><!--pnid:Uvw0V7FQHP2EZJhcb6Eulo-->客户按签收 8/2 归入 8 月</td></tr>
+        <tr data-page-node-id="c41TVRjkuwjbOqCTyrh2uZ"><td data-page-node-id="G82lUG6eTmouESY8UZNio0"><!--pnid:Ijn4IVrg7LIeE3WbJAoTDq-->7</td><td data-page-node-id="t1AoVrxuOy29wz658sIyQC"><!--pnid:1uQ7ABk51n6o8Jcd06R2rQ-->DN-20260730-039</td><td data-page-node-id="TOCG4evXrulq0HoejOYqRj"><span data-page-node-id="FYNHrSdwwyfvrPzNvjxIsu" class="tag a"><!--pnid:GPhWDyVEgSrIRKKUtsb4ZI-->🟡 期间归属+ 单号A</span></td><td data-page-node-id="WGjMfKzKKSgsL45wD0GSOi"><!--pnid:XNhBwNzTqCoORAtjKZBe8H-->无该行 or 039A</td><td data-page-node-id="9gghoIx2cWPsZyg6bdlJsl"><!--pnid:wsuPOZ7Le91iNrHHDeNl6n-->7/30 出货 · 7 台</td><td data-page-node-id="Um5m1CMtMNSZv36iVzkIKY"><!--pnid:aEpgEqTwRNhK2q0jtkjp6f-->回执 039A → 归一到 039</td></tr>
+      </tbody>
+    </table></div></div>
+  </div>
+
+  <div data-page-node-id="naT8yLMsbPWiQEk5mhnIeT" class="dstep">
+    <div data-page-node-id="dMo8mVnR9cpL8rLNnDWvVV" class="dstep-h"><div data-page-node-id="g644NWMYAbNxR0Zy8i45lC" class="dstep-n"><!--pnid:MHVXMe3Q9afCfVpVQ87FoR-->4</div><div data-page-node-id="4cEVd0XwA0FPeTrgOBhqY6"><h2 data-page-node-id="VeeSOdVYdr3veTMiQOaWIY"><!--pnid:DzvH4Zn5HAS4UkJOo2ixcH-->Step 4 · 差额分解</h2><div data-page-node-id="fL1AhyJgkYMQZn0G63XRx2" class="sd"><!--pnid:UNWa84vCu2Dplm6iAhqwJ4-->48,880 元的构成透明可复核</div></div></div>
+    <div data-page-node-id="5VgFqIzBiWETta0GblN2iY" class="dstep-b"><div data-page-node-id="Tojor1DceTbhY2rG4nsd6I" class="tbl"><table data-page-node-id="3RSVDPCKbZV1ax0Z7397di">
+      <thead data-page-node-id="AFrAQQ6u0A8oW0imWepWgM"><tr data-page-node-id="fPVlKF6NQl7UEU3Bj8qvHB"><th data-page-node-id="mMu5QfwBBuyLmZICArZox1"><!--pnid:ZveYpyAcKSlQSqcxgJvGHd-->科目</th><th data-page-node-id="SGwkBPcSsn8MBpmQFFaa8T"><!--pnid:xhd2un3IPIEjWeFdohOPzj-->金额</th><th data-page-node-id="fH4WumnB8sV2giXT2ZD1Ke"><!--pnid:aJm09WwzvVEkQbib7s64UW-->归口</th><th data-page-node-id="JZ6G1MJgMkgebAgCiih0Mc"><!--pnid:5qhgDcXmXX8dmlmRFS74FL-->备注</th></tr></thead>
+      <tbody data-page-node-id="9MX7bNKCxeCmSa0AGkDBbg">
+        <tr data-page-node-id="8ZAr3IJNZIPBU7g8PpBEi8"><td data-page-node-id="r29XQLuYZ7jY13IJvh7SeB"><b data-page-node-id="3RoynwM7GOCbno77apHUDh"><!--pnid:ouzfvRNX24T9ctkWytGInK-->总差额</b></td><td data-page-node-id="ZQCRIiKnh8pVtmnOprnIdi"><b data-page-node-id="iE6exLQ8VjHLTGhotJvP6K"><!--pnid:5kvjR2jkdVPgKCH5H29MXh-->+48,880</b></td><td data-page-node-id="2N2cgMgK037X38dA6HdC6H"><!--pnid:k4NCUDGid0vp5t8hQJcJxO-->—</td><td data-page-node-id="zj9ERVzPUoIQZfMSgLQkSZ"><!--pnid:3K2JdZoPbPv5W8yeJow3Z7-->1,551,432 - 1,502,552</td></tr>
+        <tr data-page-node-id="tU8anKX2R5NdU7R23mhc1m"><td data-page-node-id="k0Y8TqSyAiYYuaRoaT8Qb1"><!--pnid:etgNVXNycpUwKHLfRF31oK-->回执缺失 DN-028</td><td data-page-node-id="i6mf4AQdar5icx6Ao3KXuE"><!--pnid:rNzdShPwucQYmxxOm7JEkX-->+33,900</td><td data-page-node-id="jYvquWQiHkNnP9lqnS2ecI"><span data-page-node-id="WtnDrI822U8shD2zXM02jF" class="tag r"><!--pnid:5R7epyjZnnIpXJjK7kCOtg-->客户少记</span></td><td data-page-node-id="KRUFxgPPpHtatGGDaqfjAD"><!--pnid:pLz9za74OAhaG5ovTrriOt-->确认后客户补录</td></tr>
+        <tr data-page-node-id="Sr2OE43ac553MPr9FyLuWC"><td data-page-node-id="ggo0Nl2pb2W0aT9wjYzZgj"><!--pnid:6u00EBcQlJmUCAYUcfhif9-->期间归属 DN-041/039</td><td data-page-node-id="8BLjcznTEy5I1JW37s7chw"><!--pnid:okuqInzmdkk8OkBUcLgfGM-->+62,890</td><td data-page-node-id="NV8pqyU4wlko9PUCgzfVLS"><span data-page-node-id="FP1GwL2VosV9PEbWdfala3" class="tag a"><!--pnid:uIYj6SGLT9w0HuHLVQfs1s-->口径差</span></td><td data-page-node-id="cmbSnOTzXsylk66kepxP5k"><!--pnid:LEY6PZHyMDxwtvnv1KvDsY-->我方 7 月 · 客户 8 月</td></tr>
+        <tr data-page-node-id="bFwLODkKkX44x7vVL4iUoz"><td data-page-node-id="gHwB0iJmkuQBBRmrbeFyE4"><!--pnid:IaxOv0phr3CvriJui38bH7-->单价差 DN-004/021</td><td data-page-node-id="Twzze7L783D55VI3hUDj3o"><!--pnid:yr7nBrGYwI1QnVdhA4Axqf-->-10,830</td><td data-page-node-id="QhELLGWlq3gotqo9kFRJYF"><span data-page-node-id="DqxaiX53BU89uGHEJ66Fa6" class="tag a"><!--pnid:xqVRlrncPstcynLM78AxIS-->口径差</span></td><td data-page-node-id="OyrYzXqWZXGQzxpX67pMgZ"><!--pnid:1mUemV8o6I91tbcFloQHqI-->我方标准 · 客户批量档</td></tr>
+        <tr data-page-node-id="lnsW63VZ54PoZSnEtWfzpL"><td data-page-node-id="LEL1LYEpRhxviCQYld2uvT"><!--pnid:PMr2ZMtj4mLZaAL2xCTnkg-->数量差 DN-009</td><td data-page-node-id="PAybTtehA6qQvrO18tmzku"><!--pnid:egyIjg4OcsskKdZMnyM6zj-->-800</td><td data-page-node-id="JJb6lQuQIZkfCMY0eZAttV"><span data-page-node-id="sB6zhkujI7Z1dUiCmJOf4j" class="tag r"><!--pnid:a0lfCYjE5r8vazlIbCnQMg-->客户少记</span></td><td data-page-node-id="V28aAo7H4f1NXsHZepAiPt"><!--pnid:GCUWtJR8gHEgcQkL8KCi3N-->短收 · 我方调整</td></tr>
+        <tr data-page-node-id="fVfiEzjP51GSWvziVJbEzg"><td data-page-node-id="xr0ZkZM0MAROgN0TsoO9Jb"><!--pnid:iRaZzVSgMlXajM5T0guyDP-->税率差 DN-002</td><td data-page-node-id="UYqGqhrB6V6XsViBy1aaB5"><!--pnid:rtxm2C2Znq1xhXJgmOfv4d-->+800</td><td data-page-node-id="0jij0mrpICEphNNySQpzzv"><span data-page-node-id="2GCqUIckw7j2xYYmlOnCzP" class="tag a"><!--pnid:HXl4OTbDfL0nJnqnsxKNuR-->口径差</span></td><td data-page-node-id="sRUF8Vf3e2cy7CySJMngNb"><!--pnid:6rYsAv6NDXezr1G8HpE2e1-->9% vs 13% 差额</td></tr>
+      </tbody>
+    </table></div></div>
+  </div>
+
+  <div data-page-node-id="w59nm8RPKAT26Zvy2OtqNB" class="dstep">
+    <div data-page-node-id="PwJbAWVbg4VAYrqOp5xc5S" class="dstep-h"><div data-page-node-id="Q7KRztZZjP30IBODbPpup9" class="dstep-n"><!--pnid:S6yQtyPxsoQZTK8AgPQ1hx-->5</div><div data-page-node-id="dTDRuY0C3dlAfSJGrPm0Sn"><h2 data-page-node-id="DgTq9t76Ie7gKAwXSFDiK7"><!--pnid:z0toRN7UJixxayipMAnHCz-->Step 5 · 对客回函稿</h2><div data-page-node-id="C3A0L7uZVQukezdNsQqVye" class="sd"><!--pnid:SVAslzuxlacy1uPoASFTPu-->财务复核后一键发出</div></div></div>
+    <div data-page-node-id="5T3XoOqE6hwZepKe3uuPoy" class="dstep-b">
+      <div data-page-node-id="6mC7yiSaAibE7IZctRBaOJ" class="prompt" style="background:#f6f8fb; color:#1a2332"><!--pnid:wG7iTT2OjiUN2jLJX9V5rf-->
+陈某(客户财务):
+
+7 月对账已核对完成。我方合计 1,551,432元·贵司合计 1,502,552元 · 差额 48,880 元。
+
+差额构成:
+1. DN-20260720-028 · 控制柜 6 台 · 33,900 元 · 贵司对账单遗漏 ·附回执扫描件请补录
+2. DN-20260731-041 / DN-20260730-039 · 62,890 元 · 出货在 7 月 · 签收在 8 月初 · 建议保留我方 7 月归属
+3. DN-20260708-004 / DN-20260716-021 · 10,830 元 · 请确认是否按批量档特批
+4. DN-20260712-009 · 数量差 2 件 · 我方将确认短收原因后按签收数结算
+5. DN-20260703-002 · 技术服务 · 建议按 13% 销售税率 · 可开专票便于贵司抵扣
+
+请回复上述 5 项处置意见 · 完成对账后开票。
+
+恒信精密财务部 · 2026-08-04</div>
+      <div data-page-node-id="h5UKotvVx0IBHaJtkN1vYq" class="verdict"><div data-page-node-id="WaPnnhRQmZZPqoWV4hqn78" class="t"><!--pnid:rG2426PzGYH6GCTeojWf0B-->✅ 5 分钟完成 · 财务可直接发出</div><div data-page-node-id="YgOZfO9tbIrnrcH543awVV" class="d"><!--pnid:sue9n6HQP5L0zoRpgzoZrF-->从"财务和销售一起熬 3 天"变成"财务复核 5 分钟发出"· <b data-page-node-id="Py0qLUgOerZqeRiAUpItgr"><!--pnid:aPsny8eIKFA6sX8yfejwhO-->规则透明可复核 · 客户看到清单能立即认账· 大幅减少后续扯皮</b><!--pnid:5C3L4gdmsK9aixHqx4ZNBx-->。</div></div>
+    </div>
+  </div>
+
+  <div data-page-node-id="LNwaIPP0IZTwxaFJ1QOdd8" class="dstep">
+    <div data-page-node-id="oIbpiXJwCzVJUOZWhtpLrb" class="dstep-h"><div data-page-node-id="tpXriRXGjvivro42YLNQzy" class="dstep-n io"><!--pnid:2faLGOA040e3ndogArfTKl-->ROI</div><div data-page-node-id="wzwO5mCT9zD8JvwBABeeM0"><h2 data-page-node-id="BYYcfMyYbyGdzCItIHGNLU"><!--pnid:pww6dKvcRJB5TSeTznQ6gY-->用 Agent 前后，这次对账的账</h2><div data-page-node-id="tOLG2ztZxBj5PWVDCVytjP" class="sd"><!--pnid:8iTYR1RuEPcxurS5Ho0w8F-->传统耗时来自公开行业调研 · Agent 耗时按本页流程推算 · 均为估算口径，见页底说明</div></div></div>
+    <div data-page-node-id="KD1sNU17UyoiGqCU8aWTTM" class="dstep-b">
+      <div data-page-node-id="LlYzj5HcdMX38JtuncMEH0" class="kpi-row" style="grid-template-columns:repeat(4,1fr); margin-top:0">
+        <div data-page-node-id="zIDN9LRCkdnzWgn3V6fBqL" class="kpi"><div data-page-node-id="6P5yPJ1Zs3a2MyqOozqY9M" class="k"><!--pnid:sL48lQCKma8e6mFzxS1JNf-->人工投入（这一单）</div><div data-page-node-id="EJfpkA7hwBh0cBl1PShOwi" class="v"><span data-page-node-id="vputzRrCssZ62r12HtfFF7" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:eYnnqvhuS7tVMS6w3vl1di-->2-3 天</span><!--pnid:YafBOxxzHjjewAACYURZXO--> → <span data-page-node-id="JXRAdeluYJhNlLzagHT5w2" class="green" style="color:var(--green)"><!--pnid:IVPTHiYn2xg0aEzLiRn8wS-->≈ 0.5-1 h</span></div></div>
+        <div data-page-node-id="h3TJ7pMo9XBYzt4LYVjJjG" class="kpi"><div data-page-node-id="CtUvUkOUoRehkEioufyZPh" class="k"><!--pnid:MvKNDy4FyPe19lgwixiCNd-->端到端周期</div><div data-page-node-id="WShZZKZ4Q4kuODbc1IXqCg" class="v"><span data-page-node-id="0VaKkjgo77r8jjSNdyoO5y" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:XbMGGwFIdnidQgX8x0hVnh-->跨周来回</span><!--pnid:hT43jphkprrxTCJJoDqP1d--> → <span data-page-node-id="jWTTVmlsNQDLppmypXFiMM" class="green" style="color:var(--green)"><!--pnid:4meaUlmZ54JmOtJBvIRK6k-->当天发回函</span></div></div>
+        <div data-page-node-id="ftdqq02ivfwmAHx3TkcP6W" class="kpi"><div data-page-node-id="zmAEwmbeukbkPcO0Xey0oM" class="k"><!--pnid:ksgHbkko3LwRY8JvGpxAhy-->参与方式</div><div data-page-node-id="LkyYaQJYMDuZcq2lj0y3uU" class="v" style="font-size:13px; line-height:1.5"><!--pnid:lbKzeap1y9GE2NvzAk83zu-->财务+销售接力翻单 → 财务 1 人主理<br data-page-node-id="oVStxrSCmckKP59QgALHLq"><!--pnid:WJziG2uJZfGFVzDbVXDZgu-->只处理被标出的 7 笔差异</div></div>
+        <div data-page-node-id="Z1B0hj5OsEEjCUHKfA3Rnv" class="kpi"><div data-page-node-id="RcQY51gw9yzVmqmEZG3zaE" class="k"><!--pnid:R2lfsUlIdgIF6NbU8f0c7l-->48,880 元差额</div><div data-page-node-id="240x3Bb57YsgIAg587kr2V" class="v"><span data-page-node-id="0C3bu4rmNt4pNCByO3RvQL" style="color:var(--ink3); text-decoration:line-through; font-weight:500"><!--pnid:n3SnHdEIMHIV3elSN8y1LZ-->说不清易扯皮</span><!--pnid:8G6fT9PI1985aH39ktmPEt--> → <span data-page-node-id="ZuSYhC7n4wVeDAKcgUAw5t" class="green" style="color:var(--green)"><!--pnid:Rc0lG84qP2Brt0dvpvkAHz-->五类归口 · 逐笔带凭证索引</span></div></div>
+      </div>
+
+      <div data-page-node-id="WEpNYds6TTteThRt4S3IQ9" class="think" style="margin-top:14px; margin-bottom:0"><span data-page-node-id="jiLkKc0MORyfj8rgtZwxWP" class="lbl"><!--pnid:pmzEBsPMx21z5ep90TPRAS-->数字口径与来源 · 都是估算，建议落地前用自家数据校准</span>
+        <b data-page-node-id="n5f8689sAR5JDFqVXjoizE"><!--pnid:nCTFciaiH21SWCXwYqxeAb-->传统耗时</b><!--pnid:mpdtD5aa0W5w0lStCvloOl-->：来自公开行业调研与案例 —— 《中国企业财务数字化转型调研报告 2023》显示 <b data-page-node-id="ESCUCeT1f2y76Ge9ddsxZN"><!--pnid:r7ycXJ8wgFLFXDcIxRISd4-->73% 的企业财务人员每月花超过一周</b><!--pnid:tZmGJb6smXUgvC6r173tAB-->在应收应付账务核对上；智邦国际行业抽样调研：300 笔的月度对账人工平均耗时 <b data-page-node-id="ZnshPa7OsicIeGEuausOOh"><!--pnid:SE3F5hXKxFOByr3CfIT8QP-->12 小时以上、出错率超 18%</b><!--pnid:5YAwrjVicyu2xNINC1FLnJ-->，63% 的财务负责人每月至少花 2 天做应收应付专项对账；帆软公开案例：制造企业每月约 300 笔对账，平均每笔差异修复耗时约 <b data-page-node-id="Dz2y7DlgjQdaaHlKCe0qyz"><!--pnid:89whv7q0dDSucMtnmlf5Mg-->2 小时</b><!--pnid:bBsXnLK5run8M4AvNfLxs2-->、整体周期长达一周。
+        <br data-page-node-id="eqFLjSVX7zSa1KFMHgOyup"><b data-page-node-id="rKPPcHNILouKLmlnKC3N8b"><!--pnid:DeO34PpKcyx1tfPVA7sp3d-->Agent 耗时</b><!--pnid:P7GaWXs2ihO3AkKr70UJtK-->：按本页 Demo 的工作流程推算 —— 财务发起约 2-3 分钟，Agent 解析 4 份文件、逐笔比对 81 行、差异分类并生成回函约 10-15 分钟（实际受模型速度与文件量影响），人工只处理被标出的 7 笔差异、复核回函约 20-30 分钟。
+        <br data-page-node-id="8ANephD0kolySHS55MAgQr"><b data-page-node-id="2ggLf0LmYaEx4RhbRlWRSC"><!--pnid:3AP5AX7hfIMfBe46vGLP1I-->测算为演示用途</b><!--pnid:u5mazFNSlYZ8awwFC7IioD-->，未含系统部署与 Skill 维护成本；落地时建议取 10-20 单自家真实对账跑一遍，用实测值替换本页口径。
+      </div>
+    </div>
+  </div>
+
+  <div data-page-node-id="RN98k49WrPNZozJQwtDNwk" class="cta">
+    <div data-page-node-id="rgLIPFS4TuWOp6oBMMiKQz"><h3 data-page-node-id="XYBCjElr3HVmmCd3u1YneO"><!--pnid:tdhIopABHjilsevBKE1E20-->想了解来龙去脉？</h3><p data-page-node-id="YGI43zUTYwJuv2dgrIVfix"><!--pnid:K8qzlpiLDRd9yptIpTwhjM-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+    <div data-page-node-id="8KJZVX0MpJ6JGLWheosR3Z" style="display:flex; gap:10px; flex-wrap:wrap">
+      <a data-page-node-id="ei7uOYbFQT1t31dpbBLwrQ" class="btn ghost" href="场景引入.html"><!--pnid:r57cUBMDo9mXbvZWaUdTsR-->返回场景引入</a>
+    </div>
+  </div>
+  
+</div>
+
+<footer data-page-node-id="oBFCt98LQ4bU8Bd8QBVyWU"><!--pnid:lNZSCOyOeyUcD3cZQPHWI1-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer><script data-page-node-id="keeFJ4EyOSZaXOt1Rri6EV" data-pnid-children="9c2cMrvWYvGtpvTJBzcBst">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="xVUJ2kNfpuuPCXyq57ZtUn" data-pnid-children="EV2aDvefFS9QA151mnTiBO">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="ltu00cqIJ6UJml1rv1EVms" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="pQKLrsZUULaFt6c3mvbUgF" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="AfRApCxa1B1FynTel0gGw4" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="VY49DosRrcKUDUDOP5hoWA" data-pnid-children="T4po8nJ3iOzWZOjVKef69l">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body></html>

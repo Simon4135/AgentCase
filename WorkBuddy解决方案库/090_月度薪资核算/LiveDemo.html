@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html data-page-node-id="pUXTgtWdgffbTOpOvBEQSE" lang="zh-CN">
+<head data-page-node-id="isvyyzpjXYuSVUcni8HjJ4">
+<script data-page-node-id="Utksn7UlBfBDX8ljr13ZbN" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="Q91R3NgdUp9GqiNM1T8xdd" charset="UTF-8">
+<meta data-page-node-id="U1H1ThQL24qOThmBCPqDmD" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="8hPXKuAdTsNgkSXXKWaxqt" data-pnid-children="Ye072Q8EL65h5U9iUjmDO6">月度薪资核算</title>
+<link data-page-node-id="S0lNL8NvEGpUMpL9o4vrPu" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="vObbzpm6FjTwQuXH7MsW34" href="_assets/shared/hr-extra.css" rel="stylesheet">
+
+<style data-page-node-id="fgFQFlpeHPRIwglqmUtTI8" data-pnid-children="fw7sIef1W96jOoKUXrQkDL" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="NQABaZaOAhnrP7JKLcLKYM">
+<div data-page-node-id="gWdZOdRdm7Pc4xV7Z5tDgJ" class="wrap">
+
+  <section data-page-node-id="sPbNXqaik3JrqAydhnvCiu" class="page-hero">
+    
+    <h1 data-page-node-id="CRDl7eDpGLzBPvLorI0CFs"><!--pnid:pIwrCWiaKTTPfvb17qxiLT-->月度薪资核算</h1>
+    <p data-page-node-id="ovdgzft21Videe62lAH81C" class="lead"><!--pnid:M5NZdtO3yGrkmUU1o2r3lL-->薪资档案 + 考勤 + 绩效 → 应发构成 + 社保公积金 + 个税试算 + 异常标注</p>
+
+  </section><nav data-page-node-id="F9XYBZGElVHbYloDmfXvQR" class="subnav"><a data-page-node-id="x0CXzZXkWNjZQN9NiEyaQb" class href="场景引入.html"><!--pnid:TRbmtC83ZAq4iO59GYkgwz-->场景引入</a><a data-page-node-id="HRwy4B8zfBAETCB0QJnMoB" class="on" href="#"><!--pnid:2joId4yYMxgT2KIZVhZHg1-->Live Demo</a></nav>
+<section data-page-node-id="TkdgZAesoKmSMqTNpmLI11" class="notice warn"><div data-page-node-id="Ryre7vnn0avth1IMG97Bh9" class="icon"><!--pnid:NyOLqYewUctswd3LjvRlrI-->!</div><div data-page-node-id="TS5Wlrn0NlfiX8OmNhlUQG">
+<b data-page-node-id="zLGaLpoYtayPbdElIWeiWW"><!--pnid:2hAd163nx8Prhft4o6sKBO-->演示模式 · 可视化预演</b>
+<p data-page-node-id="pE7NvMdIXwBnR8uI5iVzrO"><!--pnid:51ezY8oFHfsF1HkGKIYrR0-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="x5tooyOSD0uvGPJqSVQqHX" class="kpi-row" style="grid-template-columns:repeat(5,1fr)">
+      <div data-page-node-id="c32R0b9wpMoqvScoXllcbc" class="kpi"><div data-page-node-id="KMsWymB9ElpCBLjsH129EI" class="k"><!--pnid:91rsu2iJT1Dib6FW2wkJ6V-->核算对象</div><div data-page-node-id="dAtOfaPLIrKbYAQVHtW6JG" class="v"><!--pnid:8XzNt6l59O5ZmkozBfX6Oq-->12</div></div>
+      <div data-page-node-id="MP7xAFwIXh5W2fBexG8ZWO" class="kpi"><div data-page-node-id="5lxfYNrVgt16PONUxTY7WM" class="k"><!--pnid:6Tp16HJlA39YrreIYUEL4f-->数据表</div><div data-page-node-id="LqUgsHipig0z0baMMaLqv3" class="v"><!--pnid:lkr5TmOb3JjpiuYiHx01bX-->3</div></div>
+      <div data-page-node-id="1xVtRatNZiBK0YN8PoNYog" class="kpi"><div data-page-node-id="kuNL9u2HUS2UnpLGAIuRz9" class="k"><!--pnid:OuqNC24gNsLtpTFvyzVW7w-->异常标注</div><div data-page-node-id="VhXjIcDQKE3lzdLiSDl0z7" class="v"><!--pnid:smjZxTPOgEit8QfN3XwsDa-->🔴1 🟡5</div></div>
+      <div data-page-node-id="kheqeiNLpsyPrVLijEOoeD" class="kpi"><div data-page-node-id="PDm0X0dLmNyKEMSEkE01gi" class="k"><!--pnid:egYZ7f5J7PzHjfe6nmehy9-->实发合计</div><div data-page-node-id="vNiA9yRlA1HE0ibWTcY9ug" class="v"><!--pnid:T1EMRmi3iG0ZWx8Bntu4JE-->¥34.5万</div></div>
+      <div data-page-node-id="8Jx8W5mCTS2qWxrKxyp9EW" class="kpi"><div data-page-node-id="G7iD6p5S4nHdMCdJuiK2O2" class="k"><!--pnid:W8nqMExVDL8cphNq0eeS7i-->节省人工</div><div data-page-node-id="4QJVQGDpP2M9mXtlinb8ZW" class="v"><!--pnid:q16mse20AwbL30ADbdFyoo-->1天<small data-page-node-id="gVdn49PwaskiTDSE1l1ANV" style="font-size:14px"><!--pnid:GwCABsoPbMfkaoRCRhMKu6-->→5min</small></div></div>
+    </div>
+
+  <div data-page-node-id="ODODfRsMT0AKb36IRQA5g9" class="dstep">
+    <div data-page-node-id="ICrhB3XU8T7GR9RyCtw8GZ" class="dstep-h">
+      <div data-page-node-id="ezK04nr7VsZTeaG0ozOeqz" class="dstep-n"><!--pnid:fjQl0moNsRdCQ6hbUdEuAx-->1</div>
+      <div data-page-node-id="2J47ZkiIExJZjt2gwigPLN"><h3 data-page-node-id="FR2ehASFkN44rYmXYwp9Uk">
+        <span data-page-node-id="sR1sHU4qhY3OB1FETc0xtJ" class="st"><!--pnid:32jl6O6n2HOoeIDyIUwDOI-->Step 1 · 三表导入（碎片化输入）</span></h3></div>
+        <div data-page-node-id="PGrezixyvXmLlOve9K4yMm" class="sd"><!--pnid:tRSCXOboh9ZzaB1XdGuizo-->薪资档案 / 考勤汇总 / 绩效结果 · 12 人 · 覆盖研发/销售/职能</div>
+      </div><div data-page-node-id="cvu1zppHTNNGDx4QnRH6IS" class="dstep-b">
+    <table data-page-node-id="8a1Hgj1Z6AsOLN2pln6YTH">
+      <thead data-page-node-id="IPFO70OkFjXMRVohFcMGXp"><tr data-page-node-id="iwZiS6lIbgK6xHCrH6C4ko"><th data-page-node-id="sm8tu7tn71cYxDDVkmddwm"><!--pnid:3VA747RqCYU8PcCdmxnTpG-->数据表</th><th data-page-node-id="zQ1MxfiIWgIcbNvo63somQ"><!--pnid:qpZVl9BVcw260Jec4J89u7-->来源系统</th><th data-page-node-id="EvOutkqiEUJigciAkNUqUB"><!--pnid:emBOPIpcRXB7zjufEvF3l6-->关键字段</th><th data-page-node-id="PXqi78ZoEGeVJaDqnVyV2l"><!--pnid:QDqzZwIp8SpqiDNStYSpWa-->重点信号</th></tr></thead>
+      <tbody data-page-node-id="r5TzhYrSYzl6lccgtd98Gg">
+        <tr data-page-node-id="xeP4ANZyFRENNvjQiBX7aX"><td data-page-node-id="VCwGTKEETLUjnn2m9MXDkf"><b data-page-node-id="eEAhtjOMOzE3kVFSJ1TKZA"><!--pnid:522k7QFNjU7AglcgnYIsG8-->① 薪资档案</b></td><td data-page-node-id="SpD8vOGRbnQZns8vxpmwZX"><!--pnid:KHm7OZeIyhe98D9XXVnyvx-->HRIS 系统导出</td><td data-page-node-id="nt4JEr8u7eOliSaxTcJqzt"><!--pnid:cTqzy8MW8Y1WG0nSS6XYxw-->基本/岗位工资 / 绩效基数 / 补贴</td><td data-page-node-id="PUDy5BKoyGJSXcPmB9T4nY"><!--pnid:3zwVCAclFx2mgbnML4cMG0-->12 人全部覆盖</td></tr>
+        <tr data-page-node-id="sXvceDrmGt0STURyK0K58R"><td data-page-node-id="NyWRBnFbCNfEMdVBLT9WFw"><b data-page-node-id="bikbIcZbFSnocpGFeRbWFQ"><!--pnid:YxthGF69Bb8cCERPdka3M0-->② 考勤汇总</b></td><td data-page-node-id="PPOGmhVslOoU2108CubIBr"><!--pnid:eHQaXfvsfVyIQp7ScUEnJ0-->考勤系统</td><td data-page-node-id="hrHR9wXbjts8rWvRrfikdD"><!--pnid:7zAjtBINrK6UKxkegpP7Y9-->出勤/缺勤天数 / 加班时长 / 核算状态</td><td data-page-node-id="AVShnCMfywLDoIcHniCq8k" class="hi-row"><b data-page-node-id="qnvcPojavkSiakTvXkAap5"><!--pnid:wSHeppwk1CIafvF3YonJt7-->1 人加班 42h 超红线</b></td></tr>
+        <tr data-page-node-id="bHV22fv9YGZNfIszrNgecE" class="hi-row"><td data-page-node-id="dynalnjo1Sly0rNpz3l8vQ"><b data-page-node-id="q9SN8q40UgvnByBg9hw17v"><!--pnid:vy27iFBnQlmahWPsolVuzH-->③ 绩效结果</b></td><td data-page-node-id="BrRUPg18VTbIbubgPChZev"><!--pnid:xsmaGtEzUPFX9ItHX7Vao5-->绩效系统</td><td data-page-node-id="E40fcmvcuL1rhY1a2eXNGw"><!--pnid:CVlmJUxxEgBlhi1wAg7qO1-->绩效等级 / 系数 / 绩效工资</td><td data-page-node-id="3e2Fmd4DFsYrbHVepT4viq"><b data-page-node-id="cOA9KB2n1lVLIPgkzxItdk"><!--pnid:GHBJemlchcdiJ0RhJWl5RJ-->1 人绩效 D（周雅琴）</b></td></tr>
+      </tbody>
+    </table>
+  </div></div>
+
+  <div data-page-node-id="4JdG9uixqzvtxtipIy2W3Y" class="dstep">
+    <div data-page-node-id="Esp52Lmdz90QXoBRkUlfUf" class="dstep-h">
+      <div data-page-node-id="tFpmAuyUE3FPYGAZmfAVJt" class="dstep-n"><!--pnid:QeV1LgP069AeB8d3nRaOWU-->2</div>
+      <div data-page-node-id="YeN3NM7sbf9wBgnRkb5YjZ"><h3 data-page-node-id="ckpwoyEpNzi6jTiLRCoV7X">
+        <span data-page-node-id="etEQZ4aiazBZHMAagDFgoR" class="st"><!--pnid:BPD1yCM2tGknQXIAgosDWd-->Step 2 · 一句话调用薪资核算 Skill</span></h3></div>
+        <div data-page-node-id="5zdgtnsAh9bTNcZa8ufdAo" class="sd"><!--pnid:F2DnPOCVU8zCmKX8aCmYgV-->不需要每月打开 Excel 手工套公式</div>
+      </div><div data-page-node-id="KdYjABDIDj5RXwqbrfUnWn" class="dstep-b">
+    <div data-page-node-id="1I4Ed00thvsz88Yb4Ltfnt" class="prompt-box">
+      <p data-page-node-id="cWC6RSptR93eRH70dFFlxA"><!--pnid:fyrXEBBGew1ObEXoQKMKnE-->帮我做本月薪资核算，<span data-page-node-id="UMqWlwXVkkx6H0Vrb3DJCw" class="hl"><!--pnid:yMj3sKWNGNIrBiG3anxDGx-->三表已上传</span><!--pnid:tEOkNPDa1sVnDOMx3fb8x9-->（薪资档案 / 考勤汇总 / 绩效结果）。<br data-page-node-id="dK3UBrorzSwTeYp6nJIli1"><!--pnid:KnZxaqT8Y1UjSKocXTVkbf-->帮我：<span data-page-node-id="gqOdVQI1GbcnwotST6mEjn" class="hl"><!--pnid:FcAF6xQzCGk2jHJZucGAGj-->① 按人对齐逐人算应发（基本+岗位+绩效系数+补贴-缺勤扣款）② 社保公积金 ③ 个税 7 级累进试算 ④ 异常标注（缺勤&gt;3天/绩效D/加班&gt;36h/加班费未核算）⑤ 输出工资表</span></p>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="HW5hL5OmXzqJzgz6P9cCL8" class="dstep">
+    <div data-page-node-id="9zmrfvtxPdqvSjAK7y9YFp" class="dstep-h">
+      <div data-page-node-id="uTMcOSUh7xJYrNlux57xI5" class="dstep-n"><!--pnid:tmKMyF9tDjBYROdIb7gaSZ-->3</div>
+      <div data-page-node-id="gh02vdvJfRFk4qNCEH0TVk"><h3 data-page-node-id="ycHXInh4HWMWP78RPtnE4g">
+        <span data-page-node-id="wLGwJQY3bC6VSScTF7Bw5B" class="st"><!--pnid:zwNPDmyzrDarOJk9iE31Qg-->Step 3 · Skill 逐人计算（应发构成）</span></h3></div>
+        <div data-page-node-id="uZuJTqLdeycLdhrIq5lKJE" class="sd"><!--pnid:mUD87slTguITD9aTBcsWN8-->应发 = 基本 + 岗位 + 绩效基数×系数 + 补贴 − 缺勤扣款 · 系数 A=1.3/B=1.1/C=0.9/D=0.7</div>
+      </div><div data-page-node-id="4Chf0RXwM6znw4numYZRrl" class="dstep-b">
+    <table data-page-node-id="oXPyjAQLJDPlBiNT1jvBdj">
+      <thead data-page-node-id="bF4JILldWUzTPKVYoaQpTX"><tr data-page-node-id="gIGj1qNNfNYTyhyxIzOoqv"><th data-page-node-id="PE5ZslxfbOpzEHjxFsHlxU"><!--pnid:cPDuJCdbA1RP2V2ehKSR1S-->人员</th><th data-page-node-id="HUd2qO8Sds1uyKuFg32yZM"><!--pnid:gFaH30faWPzPIlCELU4tFL-->部门</th><th data-page-node-id="Z5u9GTBKKYjgC3z4IxOnoR"><!--pnid:Ll3jAySrzkBhV8yYQYzjbV-->绩效</th><th data-page-node-id="LjcRGxNsCnGoMa8j1rmWGo"><!--pnid:dk4NFTP04CdDz2s3FYtAoB-->基本+岗位</th><th data-page-node-id="86uUqh8yicKxoUCm3JQtZE"><!--pnid:e8OsvKLk2pCfjyFAuNb45K-->绩效工资</th><th data-page-node-id="d4HhzdzmSP9cKd2WgLfH5D"><!--pnid:U2CFeLpDqtln3U4AwMN9VK-->补贴</th><th data-page-node-id="shQ4ARB1gOdXkyPTLzqzol"><!--pnid:C2Db3ub3cyXhFgPyxyTCFU-->缺勤扣款</th><th data-page-node-id="OolqBt6v6OlQ33Mdkgkf1m"><!--pnid:FMs0SzJEKIOvarxgznPC9g-->应发</th></tr></thead>
+      <tbody data-page-node-id="dWIPt7HSuY0fNO0XGFzGcQ">
+        <tr data-page-node-id="w6KFTo4j1vu5Du6b3ljCIX" style="background:#fef2f2"><td data-page-node-id="MAYQ8xuRimeocYbNJuwsQQ"><b data-page-node-id="8pHRNMttesSp677l86twGB"><!--pnid:HgEbIQSLdGPjAbXD0xcN4d-->赵一鸣</b></td><td data-page-node-id="dQYhnfO9XqyU6M9PGlRv7e"><!--pnid:FfjSPd0m8ov672PBg04h9g-->研发部</td><td data-page-node-id="VwIvBHv7tLReDU2Fh8nwV8"><span data-page-node-id="dcWdxSVPwO6znYN6aWnLna" class="tier y"><!--pnid:CDbOG5trAt6iFycdTcaYdC-->🟡 C</span></td><td data-page-node-id="btc5X0WSrld1eiOtCx8wfA" class="num"><!--pnid:NyiKhWe7puWE36N4kFAvWa-->30,000</td><td data-page-node-id="UGjxaXidlMKpjIiYrrc1rg" class="num"><!--pnid:jMH0wQWvWxqcHATDn1YGNu-->13,500</td><td data-page-node-id="uxJ4Tw62mKbsTxsiZ1TU1t" class="num"><!--pnid:XlgXQfxaoXYEStaeToDd2C-->800</td><td data-page-node-id="oURqFi2CvNQUq5jk1jGxvv" class="num"><!--pnid:ivuoeh0MteBkPTmqqm10Zx-->0</td><td data-page-node-id="h9tI6JYxHrv9KymQszHDzH" class="num"><b data-page-node-id="XNUc37X1LovAD4G7QHdDY8"><!--pnid:zLp7FRds7cvDAqrmp1wCb9-->44,300</b></td></tr>
+        <tr data-page-node-id="7TDDvvYd2iLkIQJ3ac5VRb" style="background:#fffbeb"><td data-page-node-id="rvjvnazsDUNRlS7JJEbjMi"><b data-page-node-id="86w0BI9vIBYlpFwkbyK456"><!--pnid:M83nZepe83q4AR7YLpKmRt-->周雅琴</b></td><td data-page-node-id="H3Tn9gflJepJZl8Cdhq93b"><!--pnid:olVWs7dyPR2s8aYH4ZGApo-->销售部</td><td data-page-node-id="jWK6aY7DC0jGJm8vLaffom"><span data-page-node-id="ehI3mtJIHuZVhbMms0gcSI" class="tier y"><!--pnid:wXj308WnaVbyzpldYFlAVL-->🟡 D</span></td><td data-page-node-id="bTl0bIP32kfczEg0eGIYYo" class="num"><!--pnid:E0ZSmYeWkcIBegRfljEfbN-->13,000</td><td data-page-node-id="kJHlOzQnfKPNAnM7zLQEo3" class="num"><!--pnid:xxMgbfugWvqx5PzF2Gd9Y8-->5,600</td><td data-page-node-id="L0h53pIPxco7VQ5ihzjEIe" class="num"><!--pnid:1WJt3aE3Ox0mf9HXzlpnMJ-->1,200</td><td data-page-node-id="DWELmdhCeT7R3qvsT05vwi" class="num"><!--pnid:zyMpHHMR6gzUPLZxLhgBJe-->1,195.4</td><td data-page-node-id="llwpTq0VqWZGCodmByH8xh" class="num"><b data-page-node-id="30M1HYVitCYlfJWjwKJT7r"><!--pnid:2m4zdBZLIDaSxtq8BC9iK4-->18,604.6</b></td></tr>
+        <tr data-page-node-id="aV1txuRPSRk341UaoHM5hy" style="background:#fffbeb"><td data-page-node-id="WmVQfR28ZcADF1IbgiSChR"><b data-page-node-id="Me3BHfPO1rhrTjQQVEbKtn"><!--pnid:jEu5L0iS8o94miMYT3WdSY-->高婷婷</b></td><td data-page-node-id="R7yqg3ZuVnMg6cqvoyRxqS"><!--pnid:gC2nMnuYygHZ4aLcXXNeam-->研发部</td><td data-page-node-id="i5TIpcB064OKASRAeUvu2Z"><span data-page-node-id="tPfgUlBeZlf0MTAeuoEzbb" class="tier y"><!--pnid:MZsZGxwC7FZntsVQcaetM6-->🟡 C</span></td><td data-page-node-id="zHvx1i2Jy3B2W9xf3l95sz" class="num"><!--pnid:0vYbUxqrZQOGulE27lgoxL-->24,000</td><td data-page-node-id="oUuU3gPNJsGidWF4DQN6Oa" class="num"><!--pnid:wqrt06eQVjXFeZrehxtwl2-->9,900</td><td data-page-node-id="8VIbvVD6h1ra8ar3ru7DZ3" class="num"><!--pnid:avXmaBwCOTfYY4SuSlP9k1-->800</td><td data-page-node-id="I1Pfnb6rLXipu5obK1qztM" class="num"><!--pnid:CkAQcXy3pIgos7pIGSWTZL-->4,413.79</td><td data-page-node-id="ZWdFhM42liT01ZMQxIXYFk" class="num"><b data-page-node-id="3HZNAjokZkB0rgTka3LBQ8"><!--pnid:BT7YHsKSFzoUt818cHbB0I-->30,286.21</b></td></tr>
+        <tr data-page-node-id="GVnN8xV4TJZvp5QPA5LDTT" style="background:#f0fdf4"><td data-page-node-id="g32F8stXZiUOwZgWRiDuxX"><b data-page-node-id="n2yWYBLSiZotF4OBPCyGIT"><!--pnid:GUr3LI3JCo9Gs4IjR6CtZE-->孙志强</b></td><td data-page-node-id="c6BIfByfIZeJvsNmdXj6E3"><!--pnid:DsNlPdtnURgv6tCFOA4Tlx-->研发部</td><td data-page-node-id="XNClOnuytlqpGDh4Q2auZ1"><span data-page-node-id="UZ66ZKjHWMmgkvQoq489Dj" class="tier g"><!--pnid:lhNK8LyANBZiSfkJno2t78-->🟢 A</span></td><td data-page-node-id="vqKYsKalyHqw4U9R7qJCLh" class="num"><!--pnid:8lVGQ3FPJY9WjXHxa11TqO-->35,000</td><td data-page-node-id="t9R3T15M3auIORot2LhQFB" class="num"><!--pnid:rhbEydJMb8xXqLZPnNpC0B-->23,400</td><td data-page-node-id="BrN1BMfvCWI2JSHaJfEh2g" class="num"><!--pnid:BCZbL8U8CSQSI130yOhYWp-->800</td><td data-page-node-id="fbE32shDMHIPdumEPoKlgB" class="num"><!--pnid:mwj974Of3IgOfGD8bSiFFA-->0</td><td data-page-node-id="wXfVQ7wZspedoZBZxqxpdZ" class="num"><b data-page-node-id="6TZ6HJEqbNef2evkVEZklG"><!--pnid:osrnIWfZ1VziFjd3uZzkVr-->59,200</b></td></tr>
+        <tr data-page-node-id="Jwn4hxrZaOtRmn6JlLBBPW" style="background:#f0fdf4"><td data-page-node-id="Tq4GiSdYozTgMwxkfzHgMV"><b data-page-node-id="yqRMhy5uKFPL5iYonUOraF"><!--pnid:GgoIjwvEKVH0KMlgOiO3Q2-->罗文博</b></td><td data-page-node-id="LQ3ivIfFwsinZf3brZZyPj"><!--pnid:MjeY0YAh6PdwVhkkky8T8h-->销售部</td><td data-page-node-id="c1bVTjHB34UH9worlmr4ww"><span data-page-node-id="GHZ4M58CsUK6gJBwwhn839" class="tier g"><!--pnid:Q5NHAb3MSTaecY59iE3h0j-->🟢 A</span></td><td data-page-node-id="H3STbOtfJD5w1Geb255oSF" class="num"><!--pnid:NsrwxfbTBhzPYUGHlUIpDP-->35,000</td><td data-page-node-id="eNAvdLgGNlfALSkEuH8yrb" class="num"><!--pnid:npEydc8EaAiBgmFmyNf7HY-->23,400</td><td data-page-node-id="JT7Xok92MPhWkCktN2hsLk" class="num"><!--pnid:ANan5YtIXxm15Kqu6Dr9qI-->1,200</td><td data-page-node-id="uWQury1jhg6b3Ki1xLW6A0" class="num"><!--pnid:FrYVxNeyhnV6htXjjkpjnb-->0</td><td data-page-node-id="z8IhEXhkJ4B49Y58Jms9YT" class="num"><b data-page-node-id="kaMKPR23EfIzv4C3WLz6Qq"><!--pnid:KewpZhUfQxDnRjvXgENaxU-->59,600</b></td></tr>
+      </tbody>
+    </table>
+  </div></div>
+
+  <div data-page-node-id="HdHHQStUD3YZGgZhkTBbmN" class="dstep">
+    <div data-page-node-id="U9EmteE4y6VSRdAX9AR5h4" class="dstep-h">
+      <div data-page-node-id="aPeYmQRjKw0MK83AyU0UI4" class="dstep-n"><!--pnid:MzoQTZ1C9JI1gUhWgd3uLk-->4</div>
+      <div data-page-node-id="wWBcmOZySxGpD18fPSTTcX"><h3 data-page-node-id="as7XiZye0bHXv4X7WKVKTf">
+        <span data-page-node-id="gDKvfIzXYyYjuY34Tkr7Un" class="st"><!--pnid:xSed8r68LnR50ZY0c41jCQ-->Step 4 · 个税试算（7 级累进 + 速算扣除）</span></h3></div>
+        <div data-page-node-id="PGNor1vBYKmnaFISPEpuHw" class="sd"><!--pnid:1rktGy3Rt6jvZeTWHkJnJi-->应纳税所得额 = 应发 − 社保 − 公积金 − 5000 · 3%-45% 七档</div>
+      </div><div data-page-node-id="354j6Sijh2HWwBc8MkNl1u" class="dstep-b">
+    <table data-page-node-id="yo482JDyUB29nU1I1zteRC">
+      <thead data-page-node-id="cO7ylZYNl6zzqL2p7fQprN"><tr data-page-node-id="GMhb1xJYvK1JKAcK3n2vHn"><th data-page-node-id="ShGCYSIgRkBpxftS89jhzr"><!--pnid:EOh9BOOOtZGgElBnoglwSz-->人员</th><th data-page-node-id="UwNOWT3rKuPyVvhlxn1loy"><!--pnid:77ZUDyILhIEZXEoSyhN0xW-->部门</th><th data-page-node-id="7FZKsPhi1GVSRwKEru47R0"><!--pnid:Z2hecTcukt7ymjRRU2myic-->应发</th><th data-page-node-id="RoxQ6ONS9HLvrz4BFwWBdQ"><!--pnid:8YDNMlukxCrWcvNTfEMuvK-->社保</th><th data-page-node-id="VRPjZXOsuxaH9ehxv5p4Kr"><!--pnid:7IAk4NWuc0vgidAzQN7K1B-->公积金</th><th data-page-node-id="IS4cFaGADexd3jn6ROuX9M"><!--pnid:cJYXiaTNxQb67goZv7vjd7-->应纳税所得额</th><th data-page-node-id="BhTJvsy7LVxIGJpIkYPkgc"><!--pnid:iSs4uLZCudxHP1AksAGfqc-->税率</th><th data-page-node-id="FqbH6ODTinSeJc8qWeITuK"><!--pnid:gtLm3Cm3IPWbuvp9eZppnd-->个税</th></tr></thead>
+      <tbody data-page-node-id="dsjsOPbE8ijQxQ6IjszPaf">
+        <tr data-page-node-id="P5FPJuUSIVqpjngAwKAeYh"><td data-page-node-id="Oxf56q06xE2HonpzHrvVe4"><b data-page-node-id="VEs0YC8VAzTtj9tknjqjYF"><!--pnid:eVffjg8THSMNKi5tjwriCK-->罗文博</b></td><td data-page-node-id="42lXPjqzzPvbb1rdSZui40"><!--pnid:KYTUhA4veR3XY2gY1HIpGB-->销售部</td><td data-page-node-id="owoagLJrdo01UimL3ONvTd" class="num"><!--pnid:UC0RMdRnLOLftnW0YbsacD-->59,600</td><td data-page-node-id="dzFCeYvEjLCJclkLbaZjCZ" class="num"><!--pnid:WL6QHQ0fF9dyx7Gt333HcI-->3,675</td><td data-page-node-id="4GiowUZunNIjxkH8svYlaG" class="num"><!--pnid:7QOEfWKjXX34BkeSOvkaTd-->2,450</td><td data-page-node-id="YIsRsUQgvHNKClpkk8Y7hr" class="num"><!--pnid:jGHY7ZjsUjlAb33Vg5ROa7-->48,475</td><td data-page-node-id="WYqfLIUQuqWFSQZs19bgIH"><!--pnid:IRbjXh6YGq9rSvdlGpOq89-->30%</td><td data-page-node-id="dUG996Mc9cAZiRhWnpXqUJ" class="num"><b data-page-node-id="6nwJgNS9P3rchPe0jBdu04"><!--pnid:WvLvjOmXPvXVOFSFiq1ZG6-->10,132.5</b></td></tr>
+        <tr data-page-node-id="AaaE7Ko6u8FoDvqOqGCOSi"><td data-page-node-id="OPe3yX6I4Nj7AnDVJjmZT7"><b data-page-node-id="PritggR8YNFenzWG8XYnKl"><!--pnid:D54tZwzRaiRgNc3QgiJ1r8-->孙志强</b></td><td data-page-node-id="QnL3z8Mfvxma7jKA0esO0V"><!--pnid:wOCkTUigurB7zZcXR1TDUD-->研发部</td><td data-page-node-id="Cd2UnPpjrZx56c10Laoad2" class="num"><!--pnid:sslyPc7BshLsGfbk17tClx-->59,200</td><td data-page-node-id="WUt8vRcUnGJmxtfMG1yli4" class="num"><!--pnid:zMLglRwyvVUUYBdR6HnbBD-->3,675</td><td data-page-node-id="Di1x97R16mNY0RMNpHRWUE" class="num"><!--pnid:IX5obi0K2wxYZ16e7ZfXcX-->2,450</td><td data-page-node-id="TRjdYJHakP1ZzT2g1mqY7J" class="num"><!--pnid:aENGQVSe62YQ9jCmsIBijv-->48,075</td><td data-page-node-id="ycIhLtraYU3fYOl22cUNE2"><!--pnid:j5MYJ3HJbqptkPvfMNakHB-->30%</td><td data-page-node-id="g1CFG1nWabRr6S4cTjRLes" class="num"><b data-page-node-id="umVGM1e0R74JMkjf3zw73Z"><!--pnid:dTCyDSKs3AMRFP3hi77zuG-->10,012.5</b></td></tr>
+        <tr data-page-node-id="QcGLAXG90LeBHN8KpseIE7"><td data-page-node-id="DMmmyelJw2zkiVbeb4Pdnp"><b data-page-node-id="3G45VbwYxeqWLJ6FfS1V5o"><!--pnid:yVZZ91W8KGiJFFCYaANL0I-->赵一鸣</b></td><td data-page-node-id="WTpDKcIL28QOV9lyCA7zmq"><!--pnid:3REqGKsvAf2uOkViBPx5SR-->研发部</td><td data-page-node-id="5eU0zCiW1u1K8To8Ze4ewB" class="num"><!--pnid:Jhxj1n9LoqfaBsXjSkyMLs-->44,300</td><td data-page-node-id="Oxs0HSFGuWdoXXaArT6Dxr" class="num"><!--pnid:9ltS1mSFN8qEkbihxWkBlG-->3,150</td><td data-page-node-id="GVdfCQNFoQ1SApAgeBfyEY" class="num"><!--pnid:lNN7OIOK8mmAHSxoRNfatQ-->2,100</td><td data-page-node-id="TIw38mjSNtoLb7MsfUmnxl" class="num"><!--pnid:vEpleMy4hxJS3S5NbiQVNB-->34,050</td><td data-page-node-id="JaQhwM0AprCdE8eYExJqGF"><!--pnid:sqn3FsBV1X5CeoDbSr3Wxg-->25%</td><td data-page-node-id="LYDedbXJ4Ky0lnU4ibav62" class="num"><b data-page-node-id="xC5HiaNKO1VChqNvQJkt9m"><!--pnid:8p9cpMsv4yWq9tJcdCqFOq-->5,852.5</b></td></tr>
+        <tr data-page-node-id="eHIfeC8fEwDBdB9Jolt4nd"><td data-page-node-id="giyK5ATfSFm7pAPxa5HP7Q"><b data-page-node-id="ETboAFneW74NvzuY531bDj"><!--pnid:asNojUQKDh8jWtSp2aUKj4-->周雅琴</b></td><td data-page-node-id="hVUm028Xl3BJ00ibZ1cY1O"><!--pnid:kumSnq5Fz3Mv97nOdT7giR-->销售部</td><td data-page-node-id="okBOqUGyHj8yLmIUNUqF1c" class="num"><!--pnid:Jovylwpay0q0EUN4UX8OYL-->18,604.6</td><td data-page-node-id="cldcfhCMFiCTtJ3RqRHZ5N" class="num"><!--pnid:z9fcdcnSCb1vWknZENAX6T-->1,365</td><td data-page-node-id="8CfYDrxtm4xWRanHqwWnq2" class="num"><!--pnid:LXSvlx5s4uoOY8C5aoPRZY-->910</td><td data-page-node-id="zPfJdWHGgGt6dhkX24ZPFL" class="num"><!--pnid:e7lQuzeHp5pLik8NI2ENSt-->11,329.6</td><td data-page-node-id="Q9ohCFkiHvTz3JYhu7sPsR"><!--pnid:QOD6A0LvSfIZ5RIGH1q4fK-->10%</td><td data-page-node-id="N3Yo716Llon5gYwMAMPJpl" class="num"><b data-page-node-id="W25rVjdrCrfHZj0TFJPpbX"><!--pnid:88duklZr58xgQOQaHuVydL-->922.96</b></td></tr>
+        <tr data-page-node-id="norAcvpBFQdQJ2NXFYWc5P"><td data-page-node-id="zI1X8tJPof2TmAyM4n5orM"><b data-page-node-id="RXXiwAq3TcrybX6v8hVIqG"><!--pnid:i6IqAEnd7LXaA2RxDKPQI7-->冯小玲</b></td><td data-page-node-id="bxzGEIunBzvsoBbftRFG1m"><!--pnid:LhEXJql7xCZePRXXIcdmgD-->职能部</td><td data-page-node-id="NLToGubxcG2OIPidf2jO7Y" class="num"><!--pnid:qfaDy3BM3z4Q7UM28WjpSe-->17,200</td><td data-page-node-id="ZUfHri5cQG35ebIizTsa6J" class="num"><!--pnid:KbdCoEWJ5zzvUtJYoTMJcO-->1,155</td><td data-page-node-id="gJ4tG8FiY74E5iGzClBM6K" class="num"><!--pnid:fQZv49SLLwpbv4JJmSmbLL-->770</td><td data-page-node-id="GHCca8dM4F5ssTwF8pNL1Z" class="num"><!--pnid:9O2SSp8cnLerYJXxMwgU7G-->10,275</td><td data-page-node-id="QFOWCZQwvgEDRiwJ1Yk2Vw"><!--pnid:hBnsguUDswWXwAvh2Ixrjc-->10%</td><td data-page-node-id="LpTI5KrKcpMYeF7Ch28Dq5" class="num"><b data-page-node-id="nmZmNERA5pITYCGZyqv5bf"><!--pnid:mzyrvOLKA73QpXLqlLsjw8-->817.5</b></td></tr>
+      </tbody>
+    </table>
+    <p data-page-node-id="a3spC2LDRQQHesI4bXBF3g" style="font-size:12px; color:var(--muted); margin-top:4px"><!--pnid:k2NdJzpSHBvn7X7FFGI0Jh-->合计：12 人个税 ¥56,873.99 · 实发合计 ¥344,835.79</p>
+  </div></div>
+
+  <div data-page-node-id="HW85vU5Fbj3ak0qob6pI9n" class="dstep">
+    <div data-page-node-id="K2DFFaNIMLhucIPlBIyDAk" class="dstep-h">
+      <div data-page-node-id="M1uGRmGN8HRXbzZSclQRNq" class="dstep-n"><!--pnid:1oyLdipxDRPLH8tZL89EbB-->5</div>
+      <div data-page-node-id="3F3slSpPvlM4rO3v59FEfU"><h3 data-page-node-id="SfPts4dOLkLvvPDbDbBtgI">
+        <span data-page-node-id="J9fZEshtJdA7sTvvrxeX4s" class="st"><!--pnid:cMCyETjT3x3kkp9624ysY3-->Step 5 · 完整工资表 + 异常标注</span></h3></div>
+        <div data-page-node-id="r678Qo4gsF1DLCVDBEa5kR" class="sd"><!--pnid:VFiNjE0fudU3Z9QxfUPcDZ-->12 人全量明细 · 异常自动着色 · 发薪直接对表</div>
+      </div><div data-page-node-id="OmP9rbX6lqvQM1M3p0WJnD" class="dstep-b">
+    <div data-page-node-id="p0P9F3LhYKVgjuapBJSMp8" class="stat-row">
+      <div data-page-node-id="l2vcaGafoKWBwpFFceoYeq" class="stat red"><div data-page-node-id="BusHYMtfoFdh8lUzv1zNVJ" class="n"><!--pnid:fF7MQgKLpxqAyfGJrm47kX-->1</div><div data-page-node-id="ZkzE3gAoGoq0ssDK114nwE" class="l"><!--pnid:yrZJcnrLahnLaouJRQGluj-->🔴 加班超红线</div></div>
+      <div data-page-node-id="nNuuOTT1q7f7zkkknHptJ3" class="stat yellow"><div data-page-node-id="zcidb5UzammHKuMoRxM3Im" class="n"><!--pnid:4xMSXIVsWQhIbXMiwiMP3c-->5</div><div data-page-node-id="OvGHmhGX8TKQh7mbwWycS5" class="l"><!--pnid:EM7YZzW5dzLfQY082NWYf9-->🟡 异常标注</div></div>
+      <div data-page-node-id="qlMsfEdZg1bXf6xZHZsWXz" class="stat green"><div data-page-node-id="KCkyekoKcSxzY4pxONwHo6" class="n"><!--pnid:mE6BDMNwn4MThkdhu9HUbH-->6</div><div data-page-node-id="zI6FCmVRz8zLxMwcpfZM3B" class="l"><!--pnid:fQzBnWtORrPidc6Zythivi-->🟢 无异常</div></div>
+      <div data-page-node-id="6alwk9KmjMOG42MMnzeN1D" class="stat blue"><div data-page-node-id="xm2O8Bc6Y1Pc2DBkUqbNmk" class="n"><!--pnid:iYSEMq9T0a4WHH9osHQcUL-->¥344,835.79</div><div data-page-node-id="I81yq6mZQm2r7H65Ku6ct3" class="l"><!--pnid:fP3XPqQB2rt5TYDnU1R8CK-->实发合计</div></div>
+    </div>
+    <table data-page-node-id="dbYvCKro7VfxWPzFKUAxHB">
+      <thead data-page-node-id="h5S1XZiwLHu2UjgEBohI6J"><tr data-page-node-id="QPsHVgX1myfcVHy0xoWw1z"><th data-page-node-id="gnQLdTS7G3rYTwxmdzcyPU"><!--pnid:TEoLMWID9wXTiEXn0Czj5x-->人员</th><th data-page-node-id="1oWLfrwHlk4qSFgrzDSRb7"><!--pnid:LFtAMgV5BEUqUK34lDpzBh-->部门</th><th data-page-node-id="NlDWOFvN2GKqE9hcOTOyoc"><!--pnid:38LOS9saLXouJcYGrFU0Hw-->绩效</th><th data-page-node-id="eWd2OueflBOjkthSwtQKy6"><!--pnid:jRKOnwZKRZhRx6LB0pRXaE-->应发</th><th data-page-node-id="GJOMLAXUaI8fAnbykc2WQj"><!--pnid:tzDHsNwYLMtc2hBgDN5weg-->社保</th><th data-page-node-id="grnZH73nNGxnNQdcaA1d8v"><!--pnid:H9uTCLcoWSEMVfPvK4B66S-->公积金</th><th data-page-node-id="TrCMJ9BdMLiLGeNWaeQQIE"><!--pnid:85XxnsCNs1mSKQTrcSZpIV-->个税</th><th data-page-node-id="dg1Ai7u3dAqd3L5tooESFh"><!--pnid:RaPgxqMfdnJeJGY8iwpuAL-->实发</th><th data-page-node-id="TsuuANv3kyiXhoVQ1R7Cz4"><!--pnid:InDng1CHQkAFU2sT5yvRjG-->异常标注</th></tr></thead>
+      <tbody data-page-node-id="5bpk2WAnZt2eeNh9ejNFMD">
+        <tr data-page-node-id="ZC7aQiKK8KjmSiJLYw1rxO"><td data-page-node-id="ROltGn9Hkb9lD38wSlMgPB"><b data-page-node-id="wlQ3Vi5kKtcSCCO4abCNOb"><!--pnid:DSZ5GQeFJ3WvqqOQjlk37b-->罗文博</b></td><td data-page-node-id="VDW2utdtVF08ositNQ3amQ"><!--pnid:474cGh3IhkX66JlfzfsyFk-->销售部</td><td data-page-node-id="ppM9OgvstNf68kWt3fOde1"><!--pnid:MJ7pkVoSB8iqnP0MhKPJhQ-->A</td><td data-page-node-id="0QQSFZ4GSEf0JyDc3RIU9P" class="num"><!--pnid:p9k6GlIvnY6EpkGFXgQ3Jf-->59,600</td><td data-page-node-id="sgaKhZIQY9vObHyN6HJrR2" class="num"><!--pnid:vXD2qRHvRXS46RcP7R2ofw-->3,675</td><td data-page-node-id="fFoSERatSNsBmKifJkbdEH" class="num"><!--pnid:JjuJ4G5lFoPmvVoLkIs1RB-->2,450</td><td data-page-node-id="MMjyy3vJJnOfuS24eBPJd7" class="num"><!--pnid:TqIPdCyIHs2JX8U1JTIHPn-->10,132.5</td><td data-page-node-id="tdtQqIuD7Xd8c55vuxCtFm" class="num"><b data-page-node-id="9h8GuI4yeszK4xcpmLmAUw"><!--pnid:X6Gvns7BWwX5B3ezHLtc79-->43,342.5</b></td><td data-page-node-id="7dSMJa84SsYlFATvTTAVjZ"><span data-page-node-id="8JqQU4p2Fcfbd9Sb6dGOhC" class="tier y"><!--pnid:68waGfil9SGltZzZqgtd9P-->🟡 高薪档位</span></td></tr>
+        <tr data-page-node-id="qAFzLJIGahA6VcFRvvojEY"><td data-page-node-id="MKZeB7ZvpWFJM5u6JbhlwE"><b data-page-node-id="n5NLHojPK6vf1cUcRTsD5Y"><!--pnid:jZoI7PUzCphjaj8fiT8gV2-->孙志强</b></td><td data-page-node-id="Dkiz3JKGK2YRUNaMMnEu2P"><!--pnid:boDuIzpYH8Dug0QkG7TBZ4-->研发部</td><td data-page-node-id="pWhhw3QDkQ9RmhvMbcf0Ng"><!--pnid:jdsz418ZjpevRi2d2ThsSn-->A</td><td data-page-node-id="NkOVgX8Gwe4zWXmDszklrC" class="num"><!--pnid:uXXN5x2KzcU640t27kzR6X-->59,200</td><td data-page-node-id="5XMY2owSjEjKOcCtVpBJjc" class="num"><!--pnid:ESx073HqiFoyNTwvpuj7Ti-->3,675</td><td data-page-node-id="RrpPj1Qp5lVzPgx0mYNjTK" class="num"><!--pnid:0vZ6F4rHbZRY7b1vTMu2fo-->2,450</td><td data-page-node-id="bX82XnqLuy4Gl20zrDep20" class="num"><!--pnid:l62HeCeNZyMNo2BS8g1TE5-->10,012.5</td><td data-page-node-id="wsKt3ob1ZZ9UEMDCap13hs" class="num"><b data-page-node-id="FuX8AHMaBVnNYjN1EtqbYH"><!--pnid:MGnImSwtNOQPlbi3fg4CeW-->43,062.5</b></td><td data-page-node-id="9tUpCE2Q6ZNkIuvpAI42OI"><span data-page-node-id="TR4KZ9SWnCpNUvUhMVmgE9" class="tier y"><!--pnid:OAiPftFIPUswyDOotBykRs-->🟡 高薪档位</span></td></tr>
+        <tr data-page-node-id="mqKETvrK16UrWAe6jawRVb" style="background:#fef2f2"><td data-page-node-id="Hm9eYeuUKUZQupsfRQff8l"><b data-page-node-id="Q41OANb2ONWLKMsSOWS7Tr"><!--pnid:zABtz2VmDQRi93RUGd0O0z-->赵一鸣</b></td><td data-page-node-id="lCn126XGaGwBhVscPLkCdx"><!--pnid:UviBwByZRXXnjbJFVzc7eq-->研发部</td><td data-page-node-id="Bp0hk086f65gBajjNQNRjx"><!--pnid:j2XFIZO3bTpClYqzfJi1oG-->C</td><td data-page-node-id="IzFPZonsGQhJ3U6DvRDQhe" class="num"><!--pnid:ClVXrzzvmkeEJNQL90oiWf-->44,300</td><td data-page-node-id="eKSPE7rNNqVC7gRVV9UCCW" class="num"><!--pnid:ncIHlBctSUTk1Z5iNq9Grd-->3,150</td><td data-page-node-id="eCxPIUa9IzwkQ7oQU2ubbF" class="num"><!--pnid:dokmz9jPG6RRIQtyj9f2wI-->2,100</td><td data-page-node-id="dZrrqtxHHJ07X7BUuRTiCi" class="num"><!--pnid:UW8CpjmplildSWYWuI3Wb1-->5,852.5</td><td data-page-node-id="sTxuOjpXlBAefuskyBq5Kj" class="num"><b data-page-node-id="XRyHRbXbTKEYeYLOYMzyiQ"><!--pnid:pHADBkTuiqkjARg9H2INrq-->33,197.5</b></td><td data-page-node-id="ozmEbkqauJVY8BAmXjaxc2"><span data-page-node-id="R60jI45hjFgZiOmISXoWx7" class="tier r"><!--pnid:86yv68LOe1th3XnEaI4l0E-->🔴 加班 42h 超红线</span></td></tr>
+        <tr data-page-node-id="69FRvg3OKvaZqtPaR8Q2sy" style="background:#fffbeb"><td data-page-node-id="VhknRYJ2OTOexDUaRFPz3M"><b data-page-node-id="aYXahAjJZlAIem4wU71Upl"><!--pnid:0Tq028V2gQP4lKviRJt4le-->周雅琴</b></td><td data-page-node-id="Bv26Bub4cxr8sNfO8pl5YE"><!--pnid:aKoJ7CR8k3DzVycdY1wcSb-->销售部</td><td data-page-node-id="gP00QgdQ3TfQbT6qvg0XKC"><!--pnid:0vrAnBXvTOpksGwWTIdTci-->D</td><td data-page-node-id="NH6Yeh5CQP7cOmxOb95cH4" class="num"><!--pnid:IrrZrvQg4VlvGtGJIDQYCA-->18,604.6</td><td data-page-node-id="Fw4D7EJyI88JLSHswxgqPy" class="num"><!--pnid:Vqnps3ilLbHrA3zFGJ6FGu-->1,365</td><td data-page-node-id="nuNOn6kVVRjNy6NKCx680b" class="num"><!--pnid:KlQMF0RmYihBo9hXwgtRja-->910</td><td data-page-node-id="9eRdm67N7q58szzs19y9By" class="num"><!--pnid:4qsA6gd31ipvcM23DD8YiX-->922.96</td><td data-page-node-id="WuScMNJ5pNWcZUhSHIJVoS" class="num"><b data-page-node-id="m0eMXQNbYOk3dxyifEFN2F"><!--pnid:jvUJjJ1WpqsCwa9wsdRzji-->15,406.64</b></td><td data-page-node-id="cO2xaxCjWKqYlMcgEJhMXk"><span data-page-node-id="3hldVYqwqQOEIW1zQiEeYR" class="tier y"><!--pnid:RCmRHGpMSEZRwexY5HYOZI-->🟡 绩效 D</span></td></tr>
+        <tr data-page-node-id="6cadU5dJ47zsbsZjtx0GZt" style="background:#fffbeb"><td data-page-node-id="G9li0MW4JLVEakWrP7kDlv"><b data-page-node-id="nVdOJFhbY2mIvxQ5EY9khx"><!--pnid:r6oi6gX2XzW8kAOCtWw78Z-->高婷婷</b></td><td data-page-node-id="lB4HrFldBTotIA5AfxuZlh"><!--pnid:05vXmH036W190Qex0HhADS-->研发部</td><td data-page-node-id="xCuSML3opfoGjHazDYuTMT"><!--pnid:eLHNCAa0GzD0mGubOzaAap-->C</td><td data-page-node-id="Cy7e2otI9o8zLx2OeM1C1h" class="num"><!--pnid:6VoHHGBMSAptR4XqfxxFVm-->30,286.21</td><td data-page-node-id="Bm04vRF3nWgagtzzhFTASk" class="num"><!--pnid:gKoaucVpcigC57br8RRwc3-->2,520</td><td data-page-node-id="LNNh5dzFNmZurbn1c2rOQc" class="num"><!--pnid:TF1OEDXzBM5sqRYgWO9Cco-->1,680</td><td data-page-node-id="UklgRq481E9cub7hkhTJUP" class="num"><!--pnid:5bCmWSd1rkU6JwF76GDAF6-->2,807.24</td><td data-page-node-id="GfDO6VSbHVt5IbGFDgQvjW" class="num"><b data-page-node-id="EGuav6C9xxrQPoeWptBCBn"><!--pnid:R3OOmsMZUEDOhWEMvrhzqc-->23,278.97</b></td><td data-page-node-id="Lv86iSeup0tnvSBFfWVciK"><span data-page-node-id="EbxSpVtwDkIhyCLDzJBtNP" class="tier y"><!--pnid:9DDfoijHhTaDfSsVUXMmBk-->🟡 缺勤 4 天</span></td></tr>
+        <tr data-page-node-id="j9vD5yf1LfpUqbBp2o4LVQ" style="background:#fffbeb"><td data-page-node-id="lUuZVJfxkylfvRPDsARi4f"><b data-page-node-id="I5cBPkC6MrCj0V0IqZlP2E"><!--pnid:njKwdzzB2VAkl8qjYLrZo7-->曹丽娟</b></td><td data-page-node-id="fQeXz3ziY19TKGHcRb295d"><!--pnid:GuQoq8cHBz0Xr0W1bNAPNe-->职能部</td><td data-page-node-id="JqBivGRqrfro0eOWERr7Wg"><!--pnid:T37haKTt0a6TX7xvp9llgw-->B</td><td data-page-node-id="NXIh88cvpcan9UnAVA7Cb1" class="num"><!--pnid:mQ0wf7gO1RzQsk67drAvhJ-->34,900</td><td data-page-node-id="Vp0gvZNvpt4HKic2fP6J07" class="num"><!--pnid:tUqmdtlK0bTDGgAD72Ndxg-->2,310</td><td data-page-node-id="1KZQ6Zi58MTTvP6l8Kmbbt" class="num"><!--pnid:YTAd8e0kflQsDXcR5JZMuM-->1,540</td><td data-page-node-id="A6xXTkCpn0DlOodTtbSTLa" class="num"><!--pnid:t6TdXYENNvg5bXXVx5piDi-->3,852.5</td><td data-page-node-id="c4Ftdilt3KAQFjXIwXjdz4" class="num"><b data-page-node-id="1YqApait2PudXMTiN1RjNP"><!--pnid:jPZR31AcQVzo9tKQFqGMYv-->27,197.5</b></td><td data-page-node-id="BQvRDw9YvSubss83mH429C"><span data-page-node-id="kqSWlcVOq0OT74B1VQ5cq4" class="tier y"><!--pnid:CYMQqmqzEyWw4mcgiJnmtV-->🟡 加班费未核算</span></td></tr>
+        <tr data-page-node-id="o0TKzXjxm4mv6dlQZSWM4v"><td data-page-node-id="ePTS9dmLEHskrWKMgHVOzD" colspan="9" style="background:#f0fdf4; color:var(--green); font-weight:700; font-size:12.5px"><!--pnid:mwt5CHVlIHCubV6fIU2Gud-->🟢 无异常 6 人：钱雨晴 25,560.81 / 李思源 32,072.5 / 吴国栋 30,178.75 / 郑晓东 32,766.25 / 冯小玲 14,457.5 / 何志远 24,314.37</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+
+  <div data-page-node-id="oaWlzFgugERrQo05ynFTQv" class="dstep">
+    <div data-page-node-id="gSQqViw3CdFqxVob7P4kuK" class="dstep-h">
+      <div data-page-node-id="dlGYC96CJtpNTgL0NEw6qq" class="dstep-n"><!--pnid:LGutLSRsw4fIefWONqV7UO-->6</div>
+      <div data-page-node-id="sBvfnswKE3bXRrk8SSHFao"><h3 data-page-node-id="JbQM1HomPimvNjgqKjwVby">
+        <span data-page-node-id="UQz0TtTzqmgz0HvVtoRCoR" class="st"><!--pnid:Zl9ZY19UU78RSsMQtXP3Am-->Step 6 · Skill 给结论</span></h3></div>
+      </div><div data-page-node-id="t1rQgYOl1NnJsSWjE8FRKc" class="dstep-b">
+    <div data-page-node-id="E2P3Vm3CVwN94XglwJNMNl" class="verdict">
+      <div data-page-node-id="gyaiLR7OzbT4Hdz0oGs2DT" class="t"><!--pnid:Wuh0OuKWnGcESrauI9QTzg-->12 人核算完成 · 应发 ¥451,759.78 · 实发 ¥344,835.79 · 异常 6 条</div>
+      <div data-page-node-id="o9Hs0ZtGBH6iLYgZ1qbWAJ" class="d"><b data-page-node-id="nljZBIr32hrJgCh8Yuq48D"><!--pnid:urswIIlymNzqu7NaW0bvH3-->可信度：高</b><!--pnid:WCD7d8ETDFbVAOnWI6v09M--> · 应发/社保/公积金/个税全部按固定规则计算，无人工干预<br data-page-node-id="i4Gfya7PRAUFHd14psZxTC"><!--pnid:2ekFTn5NBRfymcyXqaLQin-->重点异常：赵一鸣加班 42h 超红线需补调休 · 周雅琴绩效 D 收入断崖需关注</div>
+    </div>
+    <div data-page-node-id="7TOfX6k3SkMV6xKJmaC8Cx" style="background:#f0f9ff; border:1px solid #b9e8db; border-radius:10px; padding:16px 20px; margin-top:14px">
+      <div data-page-node-id="NUSZK2vuPu8KIFSiaRIFIO" style="font-size:12px; font-weight:800; color:#00755f; letter-spacing:.05em; margin-bottom:8px"><!--pnid:xC35LJbBuhIpraJ4e2x2kj-->🎯 Skill 的一句话解读</div>
+      <p data-page-node-id="50kFokQJitWsn6Enxj6jdT" style="font-size:13.5px; color:var(--ink); line-height:1.8; margin:0"><!--pnid:10lEPzCn2oZk8bTL012HoY-->"这个月最该盯的不是工资数字本身，是 <b data-page-node-id="Hc5NVxvmleMpPWtHUAgcpD"><!--pnid:VQcxF6eXIcVpwditjZxKOP-->赵一鸣的 42 小时加班</b><!--pnid:HagnTC6BtVvQmCfQWSNtMx-->——超出劳动法红线 6 小时，属于必须补调休/核算加班费的处理项，不是'研发默认加班'就能盖过去的。另外 <b data-page-node-id="KZUumMdA7t3fRGeN9GbWbQ"><!--pnid:jEXft6Lo5bhBXk2vsaSo67-->周雅琴绩效 D 只拿 0.7 系数，实发 1.54 万</b><!--pnid:CsqneuB4nbriLosgWCySue-->，和同部门 A 绩效差了近 2.8 倍——异常标注把它捞出来，提醒 HR 别等员工自己发现收入断崖来投诉。高婷婷缺勤 4 天扣了 4,413 元，扣款逻辑也留了痕，员工问起来一张表说清楚。"</p>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="4TihvkMOvtW1eBtnxWfWMN" class="dstep">
+    <div data-page-node-id="MnUHjHAAI5srslLLrPYAk0" class="dstep-h">
+      <div data-page-node-id="UHhM4pbbXV3R226MyrAXnc" class="dstep-n"><!--pnid:Rbn258k03dCNGlInxtPKZE-->7</div>
+      <div data-page-node-id="nzZw6fUBdrGy80Hph2TjGn"><h3 data-page-node-id="sK4pvm5gQyCr256Lqrnd4r">
+        <span data-page-node-id="YtgWZOFSLhZIyHNl7BVYVP" class="st"><!--pnid:ji8dOIaxKBJkuQx4d3AWN1-->Step 7 · 典型追问 · Skill 怎么应对</span></h3></div>
+      </div><div data-page-node-id="YZME6HbeBDvxIbSxNj3Sx1" class="dstep-b">
+    <div data-page-node-id="WHbw4dqnrJuFbAZQI3soqa" class="followup">
+      <div data-page-node-id="vqmbfTy2i1uOpEEn72uuhK" class="h"><!--pnid:SDJ608RgYzsN2JOBUD1tL4-->追问 A · 个税是怎么算的？能信吗？</div>
+      <div data-page-node-id="2PagK3iee8nRA1sZwoWI7c" class="q"><!--pnid:8jBCWgEKmOmjISxK5U6O7P-->孙志强一个月个税 1 万多，会不会算错了？</div>
+      <div data-page-node-id="ZrXtY2f20XbIYCV6AwFwuN" class="a"><b data-page-node-id="15e4BVKH93YWRcFdbaJCH3"><!--pnid:esJQ7lZZ9wrYKX4qqS8OZs-->Skill 应答：</b><!--pnid:gceZaMEfm9DW74iuIAx9Pu-->个税用的是<b data-page-node-id="waWoa8wFporOxEFJBfHAvw"><!--pnid:33HhHHeytDx5wg6098NCqJ-->累计预扣 7 级超额累进</b><!--pnid:S36USlJH9YYY8ejxnlRHvR-->：应纳税所得额 = 应发 − 社保 − 公积金 − 5000 起征点，落在哪个档用哪档税率再减速算扣除数。孙志强应发 59,200，扣完社保公积金后应纳税所得额 48,075，落在 30% 档（35,000-55,000），个税 = 48,075×30% − 4,410 = <b data-page-node-id="HsYcWTiXETuYlrKRiLAURX"><!--pnid:IxQ91LTV51Fni7QbicCcxp-->10,012.5</b><!--pnid:4SDcVPGlVDGHjHMHStnEaK-->，一分不差。税率表和速算扣除数内置在 Skill 里，不是估算，每月同一套规则，算完还能和财务系统对账。</div>
+    </div>
+    <div data-page-node-id="J0e4AzwnEX99Eztiia0Emt" class="followup">
+      <div data-page-node-id="8fk4zF0jZV6EH6SQeXBo8a" class="h"><!--pnid:ODMbfMUuVSUBmBgesdSg5f-->追问 B · 高婷婷缺勤扣款怎么算的？</div>
+      <div data-page-node-id="TtBRpB1BtgWsYDUqoB2Dmr" class="q"><!--pnid:FVz8yVLSrCYqRgQgbao36p-->她缺勤 4 天扣了 4,413 元，扣多少有依据吗？</div>
+      <div data-page-node-id="HYdsCG6XiWsEcxI3bPsIYG" class="a"><b data-page-node-id="JRHcqs19UaUXgSoIyR5PSP"><!--pnid:PUWDvyrRW7MEUxji2YW7uh-->Skill 应答：</b><!--pnid:yzEGfY5qJZa7XvEYI1j0KH-->按 <b data-page-node-id="oMmNXl6E05h5on1eTn99Ht"><!--pnid:4up3E0kcUyQLpDfNOGragU-->日薪 =（基本+岗位）÷ 21.75</b><!--pnid:E2mday1RLOel8zNbAp029D--> 计算，高婷婷月薪基数 24,000，日薪 1,103.45 元，缺勤 4 天扣 <b data-page-node-id="62HpANhnooLvWXTqtxxWpl"><!--pnid:YClz1EdLSjuh0XJnlqTrLp-->4,413.79</b><!--pnid:NsH0IbhQXoVkuqIkJqKLae-->。21.75 是法定月计薪天数，不是 22 也不是 30，这是统一的扣款口径。缺勤 4 天还触发了 🟡 异常标注——不是扣完钱就完事，是提醒 HR 同步看考勤异常原因，避免"月底才发现人经常不来"。</div>
+    </div>
+    <div data-page-node-id="6dbvMf569LEWdgnee72bPo" class="followup">
+      <div data-page-node-id="BgBrRVT1l77pcf9AjtOeAu" class="h"><!--pnid:8I845xz7CmcsmGJvCJrbml-->追问 C · 下个月还要重新算一遍吗？</div>
+      <div data-page-node-id="M0rHW3FUkYXO1yZz03d7hW" class="q"><!--pnid:jCzaSnj3cSNkYfgqg83jIG-->这套流程每月都要跑？能不能沉淀下来？</div>
+      <div data-page-node-id="1GbQUJoe0cG8shkEbBkE4m" class="a"><b data-page-node-id="QqmZbfoLKKMTHfjYLMCgGy"><!--pnid:iKDRM9LAbDMmE3DkIgaoeN-->Skill 应答：</b><!--pnid:IXhfEyYkJs74vXGGjfUhM0-->这就是 Skill 的价值——<b data-page-node-id="1zZDvR52PjshlAiHLIQIjY"><!--pnid:Wf9OvkEE4Q731fVdbOoZFe-->规则全部写死，每月三张新表丢进来，同一把尺子直接跑</b><!--pnid:iUxcqc7iAzHokYm3QqmxqB-->，5 分钟出工资表，不需要重新解释规则。异常标注的阈值（缺勤 3 天/加班 36h/绩效 D）也固定，这个月和上个月口径一致，员工不会这个月扣那个月不扣。薪酬专员从"每月熬夜对表"变成"每月 5 分钟复核"，省下来的时间做真正的薪酬分析。</div>
+    </div>
+  </div></div>
+
+  <div data-page-node-id="kRI16a11tQpzXxc6O5D9zv" class="cta"><div data-page-node-id="fvzDtmNNzXBwYp3M0iR85m"><h3 data-page-node-id="NDyontSqG5YBv1zwWD7NNZ"><!--pnid:p7OGZLaBxXHGihrNoPFO8i-->想了解来龙去脉？</h3><p data-page-node-id="jckQYfFNqKVaxh3as5QAaX"><!--pnid:CUVTcEW5YxrcqwquPMlYid-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+    <div data-page-node-id="CMyI2XItmhIE1WbltO3Gs6" class="btn-row">
+      <a data-page-node-id="qzqNEr9K88SPl2qAUS6Avk" class="btn ghost" href="场景引入.html"><!--pnid:6pjSle1RfIbiOr0Rw5vdnB-->返回场景引入</a>
+    </div>
+  </div>
+
+<footer data-page-node-id="yQnxvZ7cz5hnjd2cJ42lO7"><!--pnid:XqR4MpP7wtfEWC7tygDD6A-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+<script data-page-node-id="mhphalT0OHktlNT95aOD5d" data-pnid-children="u1f6VrkfJEyHiQBMGiYNt6">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="xMjUFQ2QhKD7BXsfIdLBAC" data-pnid-children="ZoMV6rKfe9oufxaWzJyVV6">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="UNla8Tj05yPuxUT31sb1Wu" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="vjy6YMLuRg02QXXqha1B6p" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="Z8qAT3frXTkRorx7n0piVa" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="Tli2P6Wt8BtaCElU3LZh0w" data-pnid-children="Eqg5O3oUf337HmVXGSqVCn">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

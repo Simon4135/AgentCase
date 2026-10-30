@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html data-page-node-id="0yAq3IyYaNLGOMZ6KBuezm" lang="zh-CN">
+<head data-page-node-id="BGmC1toMconMqb1eP7Tgg1">
+<script data-page-node-id="cMS4Yjr8YaAJfruQupDAAf" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="Z7CnIKrDKyaiZa4dh88Sef" charset="UTF-8">
+<meta data-page-node-id="0THvKZqg0oPUzosTlWYqEp" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="wezs29QCkVtpsFyuBH28XV" data-pnid-children="ZnChDPMknJwXREmCScJaLM">JD 需求拆解</title>
+<link data-page-node-id="KfRwWHzKX4LlwJk9Xbb77d" href="_assets/shared/style.css" rel="stylesheet">
+<link data-page-node-id="uGF1z5QNpamTDDOWWWa9FJ" href="_assets/shared/hr-extra.css" rel="stylesheet">
+
+<style data-page-node-id="X10FQmhysITTjHH5Scarp5" data-pnid-children="GqsjlbfzIIAMsYEEDzVGD2" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+</head>
+<body data-page-node-id="1e8gREL9zfjVH0BPfdt5uL">
+<div data-page-node-id="nray7tg1DMcUs3vZ8SfVoQ" class="wrap">
+
+<section data-page-node-id="6qqeiRkvPWCzy6aPgEz2NS" class="page-hero">
+<h1 data-page-node-id="iir6cnUtR7Dcbs9OJLRrnx"><!--pnid:4yICQ4c7Hlc26eypIF5bqL-->JD 需求拆解</h1>
+<p data-page-node-id="YfQzIFKaOtSbwuY3e1R7Xw" class="lead"><!--pnid:8I3iQxwNCYGyjDXQQuti3N-->JD解构 Skill · 口语化需求 → 结构化画像 + 完整JD + 渠道建议</p>
+
+</section><nav data-page-node-id="PLsYYSQ1eip3hSO7AnmaSZ" class="subnav"><a data-page-node-id="6gkllIFyMHrPxCvDtKFQo0" class href="场景引入.html"><!--pnid:bACLYPh0riUtNDSzFHH0bC-->场景引入</a><a data-page-node-id="YuwBmFUxE7yHNfXo3gt5ya" class="on" href="#"><!--pnid:6wuhTMF6l6nzZssCzxeDUK-->Live Demo</a></nav>
+<section data-page-node-id="owT6dTZchfSHCFAa9AEyFY" class="notice warn"><div data-page-node-id="pM9S9utCKi9gcC6nPa506p" class="icon"><!--pnid:i9ccRc6g3jpwfRPHN9mbv3-->!</div><div data-page-node-id="RkngW7GmPBiwXjos4LKB1e">
+<b data-page-node-id="JKCAv9fZ5fbLyCEQgaHtXe"><!--pnid:xPYQkY9LjdszFiiFjhb3hc-->演示模式 · 可视化预演</b>
+<p data-page-node-id="kBLA9KYqCRis1OIVN4vNeB"><!--pnid:VD61x3vBrN5pnXLJmmW3ko-->本页展示的是「应该怎么跑、每一步看什么、交付什么」，用的是真实业务格式的脱敏构造数据，不宣称已接入客户生产系统，也不承诺任何效率提升百分比。</p></div></section>
+<div data-page-node-id="ePJjK566MM3lNeiiEDzIMt" class="kpi-row">
+<div data-page-node-id="n0J5dS0wRZIHjqkeHPG9ix" class="kpi"><div data-page-node-id="MqWEFTQdCmQEyxUjMe5tPN" class="k"><!--pnid:jVXW82pypWfuxM0sUfdHWh-->需求样本</div><div data-page-node-id="b7gXrYVIa9OoYuOBq5mN88" class="v"><!--pnid:qnKQzcvhNFoFPWmSPZFn3U-->3</div></div>
+<div data-page-node-id="jNJraFUxZzEZhCuV4M03Ya" class="kpi"><div data-page-node-id="Jxu4CUr5ugcm75i6XUPAbg" class="k"><!--pnid:5YKDM6CDMc5YaKHEla3ygF-->结构化输出</div><div data-page-node-id="3ASvbKsUKYb41KSCyoWaSF" class="v"><!--pnid:p4DMe1IVRi2oHFOJVUP0XX-->6项</div></div>
+<div data-page-node-id="L6KVDQWBPvtjQXR9WVMKp7" class="kpi"><div data-page-node-id="t4fj8Coib1r2fd591bcwBP" class="k"><!--pnid:OAgloNIyax3XhU5s3cIQsR-->AI处理耗时</div><div data-page-node-id="pPInt4hKteaUGDNrWWkved" class="v"><!--pnid:fEFhE7L0EmNA8W42oixUpO-->2min</div></div>
+<div data-page-node-id="ZRLYKgUpinfcbTaDQR4lv7" class="kpi"><div data-page-node-id="ZDUUarT1nrcmrLp6TphpEM" class="k"><!--pnid:rljPjp5oh4x9QzXL6Kat1l-->效率提升</div><div data-page-node-id="Y1sn0kf2sZ1isVFOdDHqV6" class="v"><!--pnid:fMtcTafbWX69iLnRdgBBMW-->-97%</div></div>
+</div>
+
+<section data-page-node-id="Z8a834y0PHIYH30Z1wZRSJ" class="phase phase-in">
+<div data-page-node-id="DyoixFy9wlfWvCmR9YMi4t" class="phase-h"><span data-page-node-id="SczCja0lqFsno3DQruSkJ2" class="phase-tag"><!--pnid:FRQbN5Y0hSPP1Y1Hp9WNnC-->INPUT 输入</span><span data-page-node-id="SlwccO3RWaIOitkcrCOAMs" class="phase-title"><!--pnid:IlSGf5DPKLI0mAzD236JHC-->3段不同行业的模糊招聘需求</span></div>
+<table data-page-node-id="ylZYaKc47SLgxW7qAtgIeD">
+<thead data-page-node-id="xnDXjrjooBG0iMEfetOcOv"><tr data-page-node-id="UKyP9Cx4klJ2L7NEEyIcuX"><th data-page-node-id="vN6bcLlmxPe08kW0JsxFIu" style="width:60px"><!--pnid:edGZpwH6YlftmcefpQO6EO-->#</th><th data-page-node-id="AokCdHKpy8wQyY1Iqp6bYT"><!--pnid:2Ymo6hPIG9uFX3SwTDEcPG-->原始需求（口语化）</th></tr></thead>
+<tbody data-page-node-id="y33jetgFl0njAW5wZ37hlM">
+<tr data-page-node-id="PccQ0LgDztndkoMahhmw1I"><td data-page-node-id="7LLECkutWZXPcwkYjNonbC"><!--pnid:r2BLBfe3OCshddj0mtOUJn-->①</td><td data-page-node-id="y8tgY5c6a0WCxgBpkYaCtx"><!--pnid:5108iCmEByTUJpMtrYg5tq-->我们需要一个做硬件的，主要是工控这块的，要能独立画板子，最好做过PLC或者伺服相关的，薪资大概25-35K吧，岗位级别P4，急招因为现有的要离职了。</td></tr>
+<tr data-page-node-id="WmbanIaM0V5vn5muNfTV6d"><td data-page-node-id="NfgPZbGNBm6QjftJn29fTm"><!--pnid:8X5ueueAiFBzHE1FmtfT60-->②</td><td data-page-node-id="vV1KEik7Zu1DjGQdbOgL25"><!--pnid:DsJGgk0pHbdUieTpFKlB4p-->招一个前端开发，熟悉React和Vue，有中大型项目经验，能带人的优先，团队现在3个人想扩到5个。</td></tr>
+<tr data-page-node-id="8nePQL33Th2plYJa3zg21t"><td data-page-node-id="BRbBox6LEKAYpE78eiS54m"><!--pnid:37OJOFg6NYCwbmiBlfTL78-->③</td><td data-page-node-id="eyf1EX4SHPhBorpnRslNZj"><!--pnid:V1RlBSOMXitIOpJOG5y93g-->销售岗，主要负责华东区快消品渠道拓展，要有KA客户资源，底薪15K+提成，最好有快消品行业背景。</td></tr>
+</tbody>
+</table>
+</section>
+
+<section data-page-node-id="31RvuPHxLmEfuOiBX8y0df" class="phase phase-run">
+<div data-page-node-id="mTbjM1Lhpbqn7CKBrmE0BB" class="phase-h"><span data-page-node-id="f1zSTIij7wekajVX8li49o" class="phase-tag"><!--pnid:II7q8aCUb5VcygWMO4fXQg-->RUN 调用</span><span data-page-node-id="VLRmv0U5qn0ib8nSEizJyN" class="phase-title"><!--pnid:A7vYzv5nuykP6UBZvOcCPQ-->一句话调用 + 引擎执行</span></div>
+<div data-page-node-id="Oh3Y5XhX2JqQuWUG292ynC" class="console" style="padding-top:24px">
+<p data-page-node-id="K8I3ZNkCrRWdcQVnT9FtOQ"><!--pnid:giFmvfgCK6U2dGYHPQN07y-->帮我拆一下这几个JD需求，输出<span data-page-node-id="i7z7PcKdkt2hun7zq8StFM" class="hl"><!--pnid:prLAwEeEIdRFvj7ivUlwEg-->结构化岗位画像</span><!--pnid:lQKqJSCuU2S6HL9f1a03q0-->。<br data-page-node-id="vVdWNaQo5ISO9RAO5eIL4s"><!--pnid:mbrBjjnRtkCANfCpOIa7Yx-->每个需求列清楚：<span data-page-node-id="h0JvFUIMh3VPxiCBftPdFi" class="hl"><!--pnid:Iv8lO3MN96rMrbiUFgQGlF-->① 岗位名称级别 ② 硬性条件 ③ 加分项 ④ 红线 ⑤ 渠道建议 ⑥ 风险提示</span><!--pnid:MfrFCLwAKp7dW1oou3s9Ru-->。</p>
+</div>
+<div data-page-node-id="iqCGsNkjdxwQshCJVfCDOK" class="engine-toggle" onclick="document.getElementById('eng').classList.toggle('show')"><!--pnid:AQzaJGc76Q4dTVPCQruZ0S-->🔧 展开/折叠 引擎调用代码</div>
+<div data-page-node-id="MgXFac5sL5sMoH6CRWdSlz" class="engine-box" data-label="🔧 Skill 调用 JDParser 引擎" id="eng">
+<span data-page-node-id="mBqU5CilyrxYCMAKPkwNUh" class="cm"><!--pnid:Kzm4zf4kh1hTNstRk30Uuz--># JD解构引擎</span>
+<span data-page-node-id="wdVDSSOk7osEbj2ypyIV2g" class="kw"><!--pnid:FEMrlrQ2uRRsLEzSXdlOS2-->from</span><!--pnid:ijkioTNX1PmWdCcNnOQSTa--> jd_parser <span data-page-node-id="SM25HyUN9p7cTrGPqGLrrx" class="kw"><!--pnid:W4xWQGg80OWYE27Av820Q1-->import</span><!--pnid:XyvctP9yAxZrEGsMDOkloW--> JDParser
+parser = <span data-page-node-id="qF56ua2bBTBzggkXpJjotK" class="fn"><!--pnid:BonhmF6p4ixKF4laO23x39-->JDParser</span><!--pnid:rESvXsd40qYsP5wuvj8jpR-->()
+parser.<span data-page-node-id="3ob7WIL6eMISemCWOztg4g" class="fn"><!--pnid:IREZ1hMAjI4qlLsdTvALmc-->load_config</span><!--pnid:OmXqfzBFEKz7ob4h5U9N0m-->(<span data-page-node-id="YOaJAUAeL4Zl6j0kLzJWG6" class="str"><!--pnid:JY3oYS0ltXlDzmOU4vGF8p-->"manufacturing_hr"</span><!--pnid:QJLYHGInvawoVDQnApJVYD-->)
+results = []
+<span data-page-node-id="yjtkvOW83e5q5d0vUan5oE" class="kw"><!--pnid:F3v6iRhllEFI78N8Dgji6f-->for</span><!--pnid:JD9HvVSnEaXPXT73DzvrEs--> req <span data-page-node-id="vzQEV8umTLOMXitAfA3z3g" class="kw"><!--pnid:OGOveM00mUMCNmPOgzhTDD-->in</span><!--pnid:fSxC4J3WIGoBeNPMxgy7os--> raw_requirements:
+    profile = parser.<span data-page-node-id="5I6Jt9XftzhBAxNjlnAGUw" class="fn"><!--pnid:vMDzCT1bxxMmn5kRZYcKyF-->extract_profile</span><!--pnid:9G4i42URMseuxdK9gWQKzQ-->(req)       <span data-page-node-id="Ppcb2tXRgDN1CtaCxT4dtB" class="cm"><!--pnid:19nrvInsoIJh1PDDA7XVcr--># NLP实体提取+职级推断</span><!--pnid:ECXZCJ2YoCOOA6OzmcXa2e-->
+    jd = parser.<span data-page-node-id="ZXVLniRK4hO3zH4o2OcwuH" class="fn"><!--pnid:sBOIueaInpB2qSsTVCO0c5-->generate_jd</span><!--pnid:OMdfkELaZMecvuKoZGzNNZ-->(profile)            <span data-page-node-id="lWTSTrcWdIKx6nFaKEmuEh" class="cm"><!--pnid:LluL2T1ZOjK1WglyifaxeH--># 结构化JD生成</span><!--pnid:uQ67y6AlUtVYFnkWa75pO7-->
+    channels = parser.<span data-page-node-id="3saGOz7h3UgJeYDzOu3dPh" class="fn"><!--pnid:PLMQSibMHH4b0k2GDSywcf-->recommend_channels</span><!--pnid:3QBGUOHYNNNVw7p7al1HQc-->(profile) <span data-page-node-id="YofB95hHuCEXHFlSUlfdr1" class="cm"><!--pnid:kWw3M4DFijDr2QbPk8K5tK--># 渠道匹配</span><!--pnid:Z5mqOm7OOoOGeIOjSiHhuu-->
+    risks = parser.<span data-page-node-id="d6zeu6Y898QfvgDUwfYvUh" class="fn"><!--pnid:0lrsL1FqBc3I2CVFatwMZR-->scan_risks</span><!--pnid:kCn1ySVOLRAQtEVkjV9P1e-->(profile)           <span data-page-node-id="Xy45XDS03aZhL8ByuiOtsI" class="cm"><!--pnid:Zsl5jRr544RThWRSWYsTrg--># 风险扫描</span><!--pnid:ZWOtrf9ONxFQnvFCmgHA5V-->
+    results.<span data-page-node-id="FJ6cNW4qX03V39Cq2xoKd7" class="fn"><!--pnid:WsceLIgs1UUJUpNiZ0Ab7v-->append</span><!--pnid:AQ5fGCaYptUFt9X3i0Kn4s-->({profile, jd, channels, risks})
+</div>
+</section>
+
+<section data-page-node-id="aSISWwseMLYvfZL1e69QUb" class="phase phase-out">
+<div data-page-node-id="skNzbJctDcuaewrX0VXoq3" class="phase-h"><span data-page-node-id="4iGYDP5a9516eeozsbtjPb" class="phase-tag"><!--pnid:zowgm8x6Z1unk3jyLKZPmD-->OUTPUT 输出</span><span data-page-node-id="CqVuqgCpUGuyDQlbgmpNu4" class="phase-title"><!--pnid:hnO3fHEtm1vuHzCrCrCDyD-->3段需求的结构化拆解结果</span></div>
+
+<div data-page-node-id="r4IIPmFvYvvnXg8UuVmNxu" class="result-card">
+<div data-page-node-id="lbSahOTbqb1cX7bFWdF9tG" class="rc-title"><!--pnid:cKHKY916V4Cj3AB9ZPcYFg-->✅ 需求① · 岗位画像（高级硬件工程师·工控方向）</div>
+<table data-page-node-id="3r7LDd7M0GIglFuEAsvHFQ">
+<tr data-page-node-id="YLn5nADkl3MZJkA3ixRBcy"><td data-page-node-id="bEGqppxH2Wte7qBPo06JGP" style="width:90px; font-weight:700"><!--pnid:KNtnzPnCQ9E1NpChjYlvYE-->岗位级别</td><td data-page-node-id="QgRhsHx6Re3BzEsbK3YYOX"><!--pnid:alnMtssuIAbDKrMkLiBscL-->P4 · 研发中心硬件部 · 急招（现有人员即将离职）</td></tr>
+<tr data-page-node-id="EhuflmEOQSZJyJAwtLlzjZ"><td data-page-node-id="p4xJkDXQ6ccj3UTozjpLWD" style="font-weight:700"><!--pnid:WbJzM2q2XQ9Ga0IYcizcZR-->硬性条件</td><td data-page-node-id="KApNpc5BUD6jzJTQf07GTc"><!--pnid:tOFMhBbxEO5hOk4gcZQNGa-->本科电子/自动化/通信 · 5年+硬件经验含2年工控 · 精通AD/Cadence · 量产≥2款</td></tr>
+<tr data-page-node-id="TBVd2dZYtVz9JjsriE3LEh"><td data-page-node-id="2gqT8beIXpHzHJepLTOF6z" style="font-weight:700"><!--pnid:IVG2p5WaaD06q6zWgFZydK-->加分项</td><td data-page-node-id="4KHEaZN15JXo89Jmj7DV7L"><!--pnid:xBT8kScMpD2kC184XL095f-->EMC/EMI认证 · IATF 16949体系 · PLC/伺服产品经验 · 带人经验</td></tr>
+<tr data-page-node-id="2YqSZr5jChVsOUAuUn6pUz"><td data-page-node-id="5tNBnN6SITEeaKibNA9Dg3" style="font-weight:700"><!--pnid:AQD0NaXMrIDr2OFUdbyuIF-->红线</td><td data-page-node-id="zPcihXOy6OaTpCoJ6IV5ws"><!--pnid:dGI8LwbzqWBcN6a9r4g1Pg-->近3年跳槽>2次 · 薪资超预算20% · 行业完全不匹配</td></tr>
+<tr data-page-node-id="OFkuc8EhcJBZ51VIk8jTyn"><td data-page-node-id="rOOYSgRKm7E7Wl5DWV3pR3" style="font-weight:700"><!--pnid:HJ3RdQs9nOFFqEEMQ4Kz6e-->渠道建议</td><td data-page-node-id="oUwNsM7AePAfOVcBpVgKnw"><!--pnid:3OkDfmyaqeJIKTSKM70E56-->猎聘(中高端工控) · BOSS直聘(覆盖广) · 行业社群/论坛</td></tr>
+</table>
+</div>
+
+<div data-page-node-id="iFuyMVy8q61PEtnB5CknkI" class="result-card warn">
+<div data-page-node-id="GmaB0Hfh0c2uXkuMXJnBrB" class="rc-title"><!--pnid:F1C8y1xiwIHDk7cTb3TCcq-->⚠️ 风险提示</div>
+<ul data-page-node-id="v4r2r9DuKitCpwdh5CdWuv" style="font-size:12px; padding-left:18px; color:var(--ink); line-height:1.8">
+<li data-page-node-id="wUyBMhWuSIFesSXSlEytR9"><!--pnid:tF3be6DUj9QoofyWBuzS7R-->"急招"但未说明离职原因 — 建议先了解前任离职原因避免同坑</li>
+<li data-page-node-id="F1bl9JsAblpMkQXdNtP9Qv"><!--pnid:IjCkH3qliPKfgw6wOBONJn-->"独立画板子"可能被理解为主力或唯一硬件工程师 — 需确认团队配置</li>
+<li data-page-node-id="7g3qRGixMs0ZSDSSGlfn4z"><!--pnid:QyqLrs550WwKfwr1qNHs6R-->薪资25-35K偏宽 — 建议分两档(25-28K标准 / 30-35K资深)区别定级</li>
+</ul>
+</div>
+
+<p data-page-node-id="pxZc38H1uQBspQNgm6rObF" style="font-size:12px; color:var(--muted); margin-top:10px"><!--pnid:E7whOwb9o2PYEb6gL5lBnE-->📋 需求②前端工程师 和 需求③区域销售经理 的结构化画像同理输出（篇幅省略），完整结果见 Excel 参考文件</p>
+
+<div data-page-node-id="je2SLNw8PuYMHxWZq4gdxq" class="eff-bar">
+<span data-page-node-id="xPCHXsm2VbKc4dIT0xgDkd" class="label"><!--pnid:9N2luIeOFn4MzWbqV89BSx-->人工 30-60分钟</span><div data-page-node-id="u1CBP5u2wYf6TroecZ3qOT" class="bar-wrap"><div data-page-node-id="60Vky8KI21XbXqaQzM3MN7" class="bar-fill old" style="width:85%"><!--pnid:BytHb5RbacmyG5yX26Rfd0-->30-60min</div></div>
+<span data-page-node-id="izhDwU9xyWHu1spt4gQ7vN" class="label"><!--pnid:6K23CtPrXANBV2unJfRs54-->→ Skill 2分钟</span><div data-page-node-id="blnzrUSuVMGMOTNweIBbD3" class="bar-wrap"><div data-page-node-id="lARAkjm4Ps4CWzeEWjQPlF" class="bar-fill" style="width:3%"><!--pnid:OmSumk8lopbEeOMtBsanZZ-->2m</div></div>
+<span data-page-node-id="J6XjZHsAOE82u0javHWM0A" class="label" style="font-weight:800; color:var(--blue)"><!--pnid:64201rNyngGhBt5YwMO71G-->节省 -97%</span>
+</div>
+</section>
+
+<section data-page-node-id="x9qK6PHss6jdG9NEyWUEQq" class="faq"><div data-page-node-id="slzyvNoJFZLt97Xmfg7rkK" class="q"><!--pnid:ugdxaboQYo7XBP1oW5Cs7x-->❓ 如果需求只有一句话怎么办？</div><div data-page-node-id="uuPkEVFvc0weTzr9xZj1VG" class="a"><!--pnid:v13XXah1IQpPQyWO1GtAbj-->Skill 会主动追问：行业方向、团队规模、预算范围等关键信息，确保不遗漏。</div></section>
+<section data-page-node-id="cR8GquKHlD5X0ZuVkj3g1S" class="faq"><div data-page-node-id="WtsjNZc2HGj2Ek1mN0Uvvf" class="q"><!--pnid:lADg5ErXUXSdKNtN3NabRL-->❓ 不同行业的JD都能拆吗？</div><div data-page-node-id="HkBDVeXCLwMgHis1rRlcec" class="a"><!--pnid:ZgQXyyefIpFf5JDd7BVQnt-->可以。JD解构规则是通用的，会根据需求中的行业关键词调整知识库（工控/互联网/快消等）。</div></section>
+
+<!--pnid:4oqOBh7bCkifFhiwPbx77w--><!-- 三件套已移至顶部统一导航 -->
+<!--pnid:EPAteALhRWkPN0zCK5naqT--><!-- Footer CTA -->
+<div data-page-node-id="bZRLC954EMN5zF4ZvQdu0M" class="cta">
+<div data-page-node-id="AIsly5ppsXvEjLWMjdAtcS"><h3 data-page-node-id="YwuWNf7ln9efQTMf5b1fUw"><!--pnid:nkJC2RO7M8659Ada6zXZbN-->想了解来龙去脉？</h3><p data-page-node-id="acxY5rxXGKaHzIPPnVrL5B"><!--pnid:CKs9krCMrs9tnzdOaQCqm6-->回到场景引入，看这个场景的痛点、做法与边界</p></div>
+<div data-page-node-id="nEKwRqRVRVDmEjl6VQJgQu" class="btns">
+<a data-page-node-id="My4xvsJkmHtZqh0VxihVOi" class="btn ghost" href="场景引入.html"><!--pnid:iIPbIunXJvuT7ixByNXYaR-->返回场景引入</a>
+</div>
+</div>
+
+<footer data-page-node-id="O0i8jX6TYlvtjjAvctXHXp"><!--pnid:OfvL37jQUhqXVTCm8Qfr1Z-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+<script data-page-node-id="u2QTXImglaDcA94bw9RmFO" data-pnid-children="95xBw0lyOfylKhn4Pn92Ve">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+</script>
+<script data-page-node-id="1Nto5UhZGos4YBeYwpjZnz" data-pnid-children="l75VvzGjvzqWkMQdeQqSif">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="YMaUQANnbZqzWPyAGsZnN8" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="92XUne9ZlNyDkDUiH3nDow" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="RN71LLHj6jIh3WiV1WbTdX" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="OSISl9khvoTAHNlcdmownh" data-pnid-children="HhLLtZRSQfbLvi0IU2RcUT">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>

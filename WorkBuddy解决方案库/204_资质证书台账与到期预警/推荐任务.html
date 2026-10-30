@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="n3rcstrNgoonN5X7cuC1h9" lang="zh-CN">
+<head data-page-node-id="s6QJCyvaZaGEV0fHrK3spY">
+<script data-page-node-id="QzAh51OjeXBavAsKoljJDx" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="Jukcvf1HD2nyZNJkPoiwsk" charset="UTF-8">
+<meta data-page-node-id="sCFK9nH241qPZ4g57pslXq" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="IQIIuYyNMIIYb2SXw2XuWq" data-pnid-children="BzGOgTM7JQ8D1buXnL4U83">资质证书台账与到期预警</title>
+<link data-page-node-id="M2GaS7aBZuxD9oaxQZPmka" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="Tg2tm280R4Lxj2jU1Mwh2V" data-pnid-children="Jz3BhAf3q7MyIatMwfxthe">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="krtG8OZRhJP6rHOfcbGekg" data-pnid-children="8Z629wCHRHoN0S02vMtoZH" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="J4SkbpBi5QIsMH8a3CwICw" data-pnid-children="rxHXPVGXx2KD0n5zljaXxp" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="RxVW23FLOPoPvdXVHrUmPD">
+
+<div data-page-node-id="lBR4ziScv3aOV0esPSnt8x" class="wrap">
+<section data-page-node-id="FKRLw9uNroW3tFEODh9R50" class="page-hero">
+<h1 data-page-node-id="EE4N00bgTAfceYD6qH2pru"><!--pnid:ow4tjQIYWMeoYApUZ6ToY1-->资质证书台账与到期预警</h1>
+<p data-page-node-id="Rm7c4eGk6IERTijt6iyAmQ" class="lead"><!--pnid:YaVHAZykkMY9s3roKh0Iom-->公司的资质证书散落在三个抽屉和四个人电脑里 · 直到招标公告要求它，才发现已经过期 22 天</p>
+</section><nav data-page-node-id="qlSxVLowujWwZJD1ZUvfrm" class="subnav"><a data-page-node-id="PhBfrFW25y5IPdYwSMWC0e" href="场景引入.html"><!--pnid:ur3fRBD0LpN5Y6hOAnlSvs-->场景引入</a><a data-page-node-id="j1PiKkDXgTehuljBYocZOX" href="LiveDemo.html"><!--pnid:gKwHnKYdcaYZU7KPEaE9xR-->Live Demo</a><a data-page-node-id="kin6WDqT8rybXKOmgR20Fc" class="on" href="#"><!--pnid:C9P7FxcZbjGwcn3zkOQQwx-->推荐任务</a></nav>
+
+<section data-page-node-id="HOdao3HBlhDAFPIqvDTJJv" class="blk">
+  <h2 data-page-node-id="gyYB38WTV2SGSbcfozsufh" class="h"><span data-page-node-id="MprYD8bb0cpRWyBkLvUieV" class="num"><!--pnid:YR3YoULWnXPD4C73s69VRS-->一</span><!--pnid:xB32vhROSa4K6J4OUE7SsL-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="t9B7UbNc7ifBfhtSRSyj9F" class="subline"><!--pnid:XiLaDQ9DeVtINAqpDKimK7-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="w4Sbi1tb1P7HgkFHMUnXSM" class="card"><p data-page-node-id="YzdYXc39Ce1ZPl94nO9A0B"><!--pnid:BqbwNEtlTfmxpzcOZZeyKd-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="WtUHrZjDi5Dbveb2e7xxAa" style="margin-top:10px"><!--pnid:ys2kDvmIBJJ975FA40CjXg-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:fk1tLxHJ0jfJS1P51NxHbj--><!--wb-skill-start-->
+<div data-page-node-id="zQfNbs7JQfLlyFa1STlxGv" class="wb-skill">
+<p data-page-node-id="XNrIUvPV8kydxczmul6s17" class="wb-skill-lead"><!--pnid:9J4baLnV8SsWMC27FXwrPi-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="MYDjSnpBQS57rXWVCZjC2r" class="prompt" id="wbSkillPrompt"><!--pnid:ysvpuX5QKG2xPRN7AEtTXe-->【准备】这个场景的规则都在「资质证书台账与到期预警」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/sBLunjjDpAJD1KKc232py4/Jx1ISv3Q3WKt/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="ALTogtdwTatjjzwvB0pM4U" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:9HRr5KORuzPjfCjOcAAh5N-->复制</button></div>
+</div>
+<!--pnid:sQCv7C8aQpjR3010bSmZ7k--><!--wb-skill-end-->
+<section data-page-node-id="LYwaDcCvRiRXmXPp3ZgDuX" class="blk">
+  <h2 data-page-node-id="KZTwcS7c8pO489LOJaoOsU" class="h"><span data-page-node-id="FZWhoL37wSB0n0QQtjAXFZ" class="num"><!--pnid:2hHFH6aoF4WMaQUOvTOlUS-->二</span><!--pnid:b4D5l2Bw90sLV5awCgEYDE-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="H0JY9ogqcV48pXTxTHtS92" class="subline"><!--pnid:Gpzltegh0Wy1RSzN4ecuxk-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="F5LyyyrwuAgpxwPRRGmSJO" class="tlist">
+    <article data-page-node-id="6tQXGPdKQP2ZD00MLu0F1r" class="task">
+      <div data-page-node-id="dH8bcabSU6JaSfVDVVNXAr" class="th"><span data-page-node-id="Yty1WhPUmEGZ0nbSDExN81" class="no"><!--pnid:aybdGzSKOztikTwiWuFO7u-->01</span><h3 data-page-node-id="U51rYeadyx6gw5HukSxJLY" class="ttl"><!--pnid:7Ov3thxzAEFKSXrBn7qkcC-->首推默认</h3><span data-page-node-id="0noYiGimE9fMyK6MFvtV8C" class="star"><!--pnid:03WDqESTJPLoUxNO4n6spw-->与一键体验入口一致</span><button data-page-node-id="gvyZzAM8PEfmuTRyvzggLV" class="cp" type="button"><!--pnid:QcEPAjQnYb51esQKArpIqj-->复制</button></div>
+      <p data-page-node-id="sT3PBGQ2zG6fPQIyrYTlTY" class="tp"><!--pnid:H873hUV2KI5GVKMtQzaFP3-->公司要投精工的技改项目，我把手上能找的证书材料都发你了：苏婷手拼的证书登记表、去年 11 月投标时装订进标书的资质页汇总、精工项目的招标公告要求，还有今天新翻拍的三本证书信息。
+帮我把台账建起来：到底有哪些证、哪几本快到期、哪本已经过期，按紧急程度排出来；识别不清楚的单独列一列，我去翻原件，别自己填日期。 再对着精工要求的那几项逐条比一下够不够用，缺的怎么办给我指条路。
+交三份：资质证书台账与到期预警表.xlsx（六栏台账加预警分级）、招标资质对照清单.xlsx（逐项比对与补救路径）、换证倒排计划.xlsx（每本临期证书的换证流程、责任人、死线）。换证申请我自己去跑。</p>
+    </article>
+    <article data-page-node-id="zivJ2iTOXNCtnn8ouzmggy" class="task">
+      <div data-page-node-id="kzgVz1nzW4UWRhv4jqS6Hn" class="th"><span data-page-node-id="awA2e1qINrJDRauC4oIqk8" class="no"><!--pnid:IbL49sxh0Fw4QrGN9d08Gk-->02</span><h3 data-page-node-id="SfpRVQRkPqBmDCSkwoyOFU" class="ttl"><!--pnid:y5KWDUVuMrqYc6bfCuc6eX-->只做到期分级</h3><button data-page-node-id="nPTdeIiJPwvlhaHNiYSMCb" class="cp" type="button"><!--pnid:TT98tsajyo21VwaJSuouEL-->复制</button></div>
+      <p data-page-node-id="ZoYbe0izO4y9WxrwhjkJc6" class="tp"><!--pnid:bSpDnbBS3SkMLRgqd7U0oK-->先只跑到期分级这一步，其他都不用做：拿苏婷手拼的证书登记表和新翻拍的证书信息，把 15 本证的到期日排一遍，90 天内的标黄、30 天内和已过期的标红，过期的算出过了多少天。产出用 Excel 一张表：证书名、有效期、剩余天数、预警档位四列。识别不了日期的单独一行标「待人工核」。</p>
+    </article>
+    <article data-page-node-id="l1g0MggHt683iI4eL3AreZ" class="task">
+      <div data-page-node-id="UJHXmhgdd0EIiV7UMxWYjD" class="th"><span data-page-node-id="qIg8FumxRu2ghmXxc7M0X5" class="no"><!--pnid:6Iqmv3iriKj12capz4cxiT-->03</span><h3 data-page-node-id="kAm3chOIIXPYuWqO2PCjd2" class="ttl"><!--pnid:4BuV7b7t5855R9KLXybnB8-->换成按换证周期倒推</h3><button data-page-node-id="PS1CIQg7BbAdTYunLkuw7J" class="cp" type="button"><!--pnid:E8Qv2oUVoGfWvvhSzhHxFC-->复制</button></div>
+      <p data-page-node-id="DHQP93eontgxK6TxKAMcVl" class="tp"><!--pnid:xyVu2WOcyYxwNR9QA0S6tL-->换个口径再跑一遍：这次按换证周期倒推，ISO 类按 1-2 个月复审期算、其余按认证机构实际周期，别只看日历天数。产出用 Excel 一张表：证书名、有效期、换证所需周期、最晚启动换证日，这次该今天启动的标出来，其余栏不填。</p>
+    </article>
+    <article data-page-node-id="Xs2kbxvv5Odvwt8CaYCfaU" class="task">
+      <div data-page-node-id="yu0VB2GO0HKooUF0qLAT7M" class="th"><span data-page-node-id="lbEktOW2DKdccmiki4af1h" class="no"><!--pnid:1aNuoIBqLi2709QCdsU1cJ-->04</span><h3 data-page-node-id="QYG04ZvYUI3NijuAgggI5R" class="ttl"><!--pnid:ziukd1a1FzUHmNmCkbcLbO-->三份来源交叉建账</h3><button data-page-node-id="juXPzxx11HAAt4LddhKWvk" class="cp" type="button"><!--pnid:xynvDfZerSfz5qb5LFFq1w-->复制</button></div>
+      <p data-page-node-id="FSdBHOY31DOCXGWbJPtrjV" class="tp"><!--pnid:UWvATV5PHu4GwiskjTOvwi-->手上三份来源口径不一样：苏婷的登记表、去年 11 月标书的资质页、今天新翻拍的三本。三份交叉着建一次账，同一本证两处说法不一致的单独列出来。产出用 Excel 一张对照表：证书名 × 三个来源 × 各自说法，最后一行给「以哪份为准」的待核标记。</p>
+    </article>
+    <article data-page-node-id="ejTKh8E35UShp59tV1Z2b8" class="task">
+      <div data-page-node-id="aCg8feQ5zyYvKYyQ5HxLWJ" class="th"><span data-page-node-id="ygJ2T4cSoQ9VgEuMUG3zAv" class="no"><!--pnid:2nXsuZ6Wce1uCfNOYh34G5-->05</span><h3 data-page-node-id="Pnptk7lakrxY8qDHVFwaPb" class="ttl"><!--pnid:LoRK9o7rG3zzlQNjuVVUvW-->给老板娘看的办理清单</h3><button data-page-node-id="BT7QLIIbIoYe9WFBiZRV1O" class="cp" type="button"><!--pnid:58jx7iarGgpl0BQp2bn0B6-->复制</button></div>
+      <p data-page-node-id="wuOsmXvHmhWEyPGydq5Yab" class="tp"><!--pnid:7KXfdEhZQJMdDlOx5psbhw-->把台账压成一页给老板娘看的：马上要办的证有几本、各要跑哪个机构、大概几天、谁去办、原件在谁那。产出用 Excel 一页纸，只留临期和已过期的那几行，健康的不列。</p>
+    </article>
+    <article data-page-node-id="4SQ6iSc4Se4xOtqSG9DRNp" class="task">
+      <div data-page-node-id="KX3mbp2cZi1LVWP1AC00Sc" class="th"><span data-page-node-id="Sutp7X3aqarsb8lwfZYDYS" class="no"><!--pnid:sRqGmwRwHOg3Ak6Q3p3Est-->06</span><h3 data-page-node-id="tRZ6waeRLcPuJSusrHF29L" class="ttl"><!--pnid:pvZfN2yVvKYkv79ZdHMxNE-->让它反驳自己</h3><button data-page-node-id="lvBmnjOoMFcAcRDoakMGPa" class="cp" type="button"><!--pnid:3cZJoS5Yldu7J0949zFej3-->复制</button></div>
+      <p data-page-node-id="WcfswsFzgjYUioByaFmdCH" class="tp"><!--pnid:LV3CzbBFZ6TBJydK4Q1f2s-->台账里「ISO14001 已过期 22 天」这条结论，你自己反过来挑毛病：翻拍的受理回执写着「流程中」，凭什么判它过期、凭的是哪份材料的哪个字段。产出用 Excel 复核表：结论、支撑材料与字段、反方理由、是否维持，站不住的改回「口径待确认」。</p>
+    </article>
+    <article data-page-node-id="ildzbOXz3LbErCHizXtGIm" class="task">
+      <div data-page-node-id="hWdh7g2h5pjnhfiT3L4gfc" class="th"><span data-page-node-id="xslr3s6fRjtphu6DCsGo5S" class="no"><!--pnid:Tp4mH9DQM9V18zR43PndRe-->07</span><h3 data-page-node-id="mYJgdIlqY0x8rgLQVhk2ZC" class="ttl"><!--pnid:baUuUj5HSyCeXryRhVQ1Fv-->专门比对历史标书资质页</h3><button data-page-node-id="D26qrgKv8qCyDV5M23F6DU" class="cp" type="button"><!--pnid:A9fKnWiP6V09KlWN1vXQ3U-->复制</button></div>
+      <p data-page-node-id="7sObQbjVG6jkFYLJ56sJsQ" class="tp"><!--pnid:cdVfTRR3Nej9zQAHNoSrRt-->专门比一遍历史：把历史标书资质页汇总和苏婷手拼的登记表逐本对——2025 年 11 月那次装订进标书的有 15 本，登记表上也是 15 本但内容对不上。差异——哪些是这次新增的、哪些是登记表漏掉的、哪些是同一本两个有效期。产出用 Excel 差异表，一本一行，含两边说法与出处。</p>
+    </article>
+    <article data-page-node-id="41IgY4F5abbSBIE2drEU04" class="task">
+      <div data-page-node-id="jDTgCjALwuF8WUoq2NwcDv" class="th"><span data-page-node-id="zO6ZVQFdpLTq1jTHWSM0Z4" class="no"><!--pnid:KJCy8CPxEKCz6EbvEE60wI-->08</span><h3 data-page-node-id="vnejGVzwfoKZxzizGn707U" class="ttl"><!--pnid:ehxRAM6jyGkuR3L6jKAYjq-->对照招标公告做合规自检</h3><button data-page-node-id="YwA6DJx5pRsCDhce5MVxms" class="cp" type="button"><!--pnid:YRfAaRMFEMFpApEPtlTO7G-->复制</button></div>
+      <p data-page-node-id="8aqvGjiuP67vwLjuhRQ71z" class="tp"><!--pnid:cxyOxz1YRiDgSxToyuh7xD-->对照精工招标公告的 9 项要求把台账自查一遍：每项要求能不能在台账里找到对应的证、找到的那本在不在有效期内、要的是原件还是盖章复印件。产出用 Excel 自查表：要求项、性质（资格/资信/形式）、对应证书、有效期状态、件型是否对得上、缺口。</p>
+    </article>
+    <article data-page-node-id="aM7t4YJmnARsDTdJDKioFW" class="task">
+      <div data-page-node-id="EbAPzsOGoqoFWZP22XixqY" class="th"><span data-page-node-id="5YMVf2frv4ZOeUss2AsLxc" class="no"><!--pnid:55gArsNDo2GYBd0f9VGuVZ-->09</span><h3 data-page-node-id="p1lDyfHdF0kxZ2FXng8wMc" class="ttl"><!--pnid:zUdVYo1UnK6etFt15RKmQe-->折算成时限与金额影响</h3><button data-page-node-id="uV4C2oKx1akEqTLLG8qoyK" class="cp" type="button"><!--pnid:aQVZZSTfWoogZoo5VlQisa-->复制</button></div>
+      <p data-page-node-id="1GFZZN80rs1187h1q2TTYT" class="tp"><!--pnid:Jh5vnEHZtd6wvNEvW5D8ou-->折算一下：ISO14001 若走加急复审，按认证机构周期算最晚哪天要启动、离递交日还剩几天缓冲；缓冲不够的话这次项目废标一次，按项目预算和 18 万保证金怎么算损失。产出用 Excel 测算表：时间线与金额两栏都写出来，算法写在表头注释。</p>
+    </article>
+    <article data-page-node-id="1LTrlQCi2AiM3KsK5XvICi" class="task">
+      <div data-page-node-id="0g3hmwLxITcYZjSn2Q1dw0" class="th"><span data-page-node-id="eUvSW1AFULr7kjavJwoeLp" class="no"><!--pnid:SzGbUwCnwa0wSxZ3guX8qk-->10</span><h3 data-page-node-id="X4kmsTU4Q5x6U3uLdpEOYa" class="ttl"><!--pnid:EQAmceWSGy3WbNQFIpxKop-->沉淀成台账模板</h3><button data-page-node-id="lxXM8NdoruHXv6hq4MbRBD" class="cp" type="button"><!--pnid:njRLvLtCbX1EQpTmUMJ5Nw-->复制</button></div>
+      <p data-page-node-id="ZlBKRBm9j9rIIFaOEdKZDm" class="tp"><!--pnid:XpVCDbhd62RGiYk5Hjmpgh-->把这次的口径整理成下次能直接用的模板：六栏台账的列定义、90/30 双提醒线怎么定、各类证按什么周期倒推、识别不清的怎么标、原件位置栏怎么填。产出用 Excel 一份模板加列说明与预警口径，下次招标公告出来直接往里填。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="2Aa1d18w7YG3oaXGzDOR3c" class="cta">
+  <div data-page-node-id="VnjohJGBWKDwohwQX4A5jx"><h3 data-page-node-id="xp5bcyaXN4nhHPudcm2MXX"><!--pnid:4PZg8Blqn93NPxaCGyHZca-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="p4v7QTBONsmBAIoIiUcSbI"><!--pnid:hceIidgySoypfMRtu6OCse-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="9Yj5llhmRhucFcte1b2g9G" class="btns"><a data-page-node-id="qUKmsd1y3EeEq5T4iTzNCT" class="btn" href="#" id="ctaContact"><!--pnid:mTl0Da5PCIvIAdEdBSbtxF-->联系我们</a></div>
+</div>
+<footer data-page-node-id="wJjmKAJK2Hv3tVhgdoZHBL"><!--pnid:DcEfA7Ba4DSDHjAtjbCInn-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 对外动作一律人工确认后发送</footer>
+</div>
+
+<script data-page-node-id="U4sgjUZ9vhKzHqVjzj4b7u" data-pnid-children="y7xLYAzBUJY3SIC7eCRwm6">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="7S2KE80rR1bW04R3Coqr0m" data-pnid-children="lZrJlULHVwTgBvl4iMXuHY">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="x5nfUCVph4w0YXgaP8yD1l" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="T0N85k4iDTR01zSnEfqnvK" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="BVVASKQuoji4KAVgbbWS43" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="UIesrD8SZBzCW9lv4CXJq2" data-pnid-children="U9KpuGZllx8YbBKIpzAG0p">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="VZ0bi0geBhsTrChgHQq1Mi" data-pnid-children="xKD9U5ckHWEdsZoMifxjYv" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>

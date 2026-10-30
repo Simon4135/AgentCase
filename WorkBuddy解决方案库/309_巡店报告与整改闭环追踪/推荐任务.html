@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-page-node-id="tBOJ9Bh0YkWGNlHBHoGvRV" lang="zh-CN">
+<head data-page-node-id="ygDC56lOCTeJ7tOgMfhB7z">
+<script data-page-node-id="5tfK7LvZ0kdWmg4fVJjFoV" src="data:," data-removed-inject="1"></script>
+<meta data-page-node-id="eoRH7KlMPv4BUbRTeba5WU" charset="UTF-8">
+<meta data-page-node-id="NSM4mzKgG30v1X1OsjHmPc" content="width=device-width,initial-scale=1" name="viewport">
+<title data-page-node-id="9HpbXrSVR9zjlsSfeCApVe" data-pnid-children="QBM1GwoUuzONGYuAszHEjY">巡店报告与整改闭环追踪</title>
+<link data-page-node-id="64TTrKDePC4nuKlSqvKMCb" href="_assets/shared/style.css" rel="stylesheet">
+<style data-page-node-id="gGi6m8c1TD4kcHU8VighZH" data-pnid-children="SQ7WADdRzNlms6SwcbHVw9">
+.tlist{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.task .th{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.task .no{font-size:12px;font-weight:600;color:var(--blue-d);background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.task .ttl{font-size:13.5px;font-weight:600;color:var(--ink);margin:0;flex:1;min-width:120px}
+.task .star{font-size:11.5px;font-weight:600;color:var(--orange-d);background:var(--orange-bg);border:1px solid #f3d4b4;border-radius:6px;padding:2px 7px}
+.task .cp{font-size:12px;padding:5px 12px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:7px;cursor:pointer;font-family:inherit}
+.task .cp:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg)}
+.task .tp{font-size:13px;line-height:1.74;color:var(--ink2);margin:0}
+@media(max-width:640px){.task{padding:14px 15px}.task .ttl{flex-basis:100%}}
+</style>
+<style data-page-node-id="QC5pYIJnfjOKWJMJ0mc2Si" data-pnid-children="H0EXcRVuRrtmrT2UmLnDBw" id="wbBackTopStyle">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定）；规格对齐主站 .back-top */
+.wb-back-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;border:1px solid var(--line,#e3e8ef);border-radius:50%;background:var(--surface,#fff);box-shadow:0 4px 16px rgba(26,35,50,.12);display:flex;align-items:center;justify-content:center;color:var(--blue-d,#00755f);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:90}
+.wb-back-top.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.wb-back-top:hover{border-color:var(--blue,#00c29a);box-shadow:0 6px 20px rgba(26,35,50,.17);transform:translateY(-2px)}
+.wb-back-top:focus-visible{outline:2px solid var(--blue-d,#00755f);outline-offset:3px}
+@media(max-width:640px){.wb-back-top{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.wb-back-top{transition:none}}
+</style>
+<style data-page-node-id="Gcc5hoCwxlgXdvcAPqaUN3" data-pnid-children="Su4R6eFKvKCypqT0HgN3U1" id="wbSkillStyle">
+/* 推荐任务页「技能安装说明」块（2026-10-09）—— 复用库内 .prompt 深色块与 .copy 按钮规格 */
+.wb-skill{margin-top:14px}
+.wb-skill-lead{margin:0 0 10px;font-size:12.5px;line-height:1.75;color:var(--ink3,#8a94a3)}
+.wb-skill .prompt{margin-bottom:0}
+.wb-skill .prompt .u{word-break:break-all;overflow-wrap:anywhere}
+</style>
+</head>
+<body data-page-node-id="SAUtiTvoDEEwDyd8r4vkyC">
+
+<div data-page-node-id="PTFasFA8Ly5ZHNJCy7d9Mf" class="wrap">
+<section data-page-node-id="mCsEBmRs5d955T6HtPseTW" class="page-hero">
+<h1 data-page-node-id="BRP2OH0O78jaN1oK0aeflf"><!--pnid:YRgEkDpCRJb5cSPrO0GopO-->巡店报告与整改闭环追踪</h1>
+<p data-page-node-id="d09f8o9n5NmVuB2cTJXBlU" class="lead"><!--pnid:4cDxLV0UbevlmdnJWm3ckQ-->发现问题从来不是瓶颈 · 超六成连锁「巡而未改、改而未验、验而未固」</p>
+</section><nav data-page-node-id="k1ExPBpX0Z0b6J3rgmudQn" class="subnav"><a data-page-node-id="pHdIbUi7Ldi0djZxU5UQyN" href="场景引入.html"><!--pnid:vzCZgM75zXzkoZ7Z2IC3F0-->场景引入</a><a data-page-node-id="j8BPsi93TvI782p55VS9bT" href="LiveDemo.html"><!--pnid:XV7oHxgVshVgaZvLXOBNGY-->Live Demo</a><a data-page-node-id="XCEqMS8egnws3T5fLnoFFP" class="on" href="#"><!--pnid:O4gtOygt27PwoKeD6PYiej-->推荐任务</a></nav>
+
+<section data-page-node-id="PTSWMJPMq7faDHsGLXBmCj" class="blk">
+  <h2 data-page-node-id="D9mweAC8H3xjpt2WWdFu3n" class="h"><span data-page-node-id="Tnump079mgT5MMolwMJvFm" class="num"><!--pnid:6CQnnmKdsYAatjQJEfMPZH-->一</span><!--pnid:ylMA3WHj23rnXfZm0JqK3E-->这 10 条任务怎么用</h2>
+  <p data-page-node-id="uNsGcfuCu8cVFf6TyLqbUx" class="subline"><!--pnid:FY3P7latWrwXwWPiFa5Gft-->技能装好后，复制任意一条发给 WorkBuddy 就能跑；演示数据已随技能内置，不需要先上传文件</p>
+  <div data-page-node-id="T0AG8FD0wnztPbm4MPdw1v" class="card"><p data-page-node-id="sv8hGBH9EUpep03TjqVIjP"><!--pnid:m95HlZRS44P7z6MHY4wtQy-->第 1 条是默认体验任务，与方案详情页「一键体验」入口带过去的提示词一致；其余 9 条换角度、换口径、换输出对象，用来把这套技能的能力边界摸清楚。</p><p data-page-node-id="G2I1yD2oU1SRrDY7FJVfzB" style="margin-top:10px"><!--pnid:YGnc5620dxtnqSEe7foNs5-->换成你自己的数据时：把对话框里【取数据】这部分的内容换成你自己的文件，再微调提示词 —— 技能会整套改用你的数据。</p></div>
+</section>
+
+<!--pnid:pLeLIi9A7Gncy1lB2I5azk--><!--wb-skill-start-->
+<div data-page-node-id="5Dv6YsHyBjjzitxJozZetG" class="wb-skill">
+<p data-page-node-id="Vsf1wByRM2WWm2KWXxCY2Z" class="wb-skill-lead"><!--pnid:VKeRfZTYgrEdtR6ZN5K6kL-->本次演示的技能与输入参考文件在同一个技能包里。下面这段与方案详情页「一键体验」入口给出的安装说明一致 —— 手动复制提示词到 WorkBuddy 前，先按它装一次即可：</p>
+<div data-page-node-id="5kx6fyydnsLYYq4XhvNWym" class="prompt" id="wbSkillPrompt"><!--pnid:g2B5gu3s8FpsehYS1XrSFX-->【准备】这个场景的规则都在「巡店报告与整改闭环追踪」技能里。如果还没装，依次执行下面两条命令把它装好（两个链接都是公开地址，不需要登录；装过会自动跳过，可放心重复执行）：
+
+curl -L -o install_skill.py "https://workbuddy-space-static.codebuddy.work/page/C4IMIxqXQDzznN6KEtzqft/1/install_skill.py"
+python3 install_skill.py "https://workbuddy-space-static.codebuddy.work/page/ZNt4OE4BdBSVZowZ25nlNZ/wex0hc7dwqLJ/pkg.zip"
+
+脚本会把技能装到本机技能目录，并把本次的演示数据取到当前目录的「输入参考文件」里。如果没有 curl，用任何方式把脚本文件下载下来再执行即可。<button data-page-node-id="pXUruh7Y81vx0PPMDH1SdX" class="copy" data-wb-skill-copy="1" type="button"><!--pnid:NsijEitO3PwWLF60xFYOg9-->复制</button></div>
+</div>
+<!--pnid:c2GlPuMY7U72sFVYoORLR9--><!--wb-skill-end-->
+<section data-page-node-id="aHMnqmxlxsmEyfqGJEuyUh" class="blk">
+  <h2 data-page-node-id="IOhSOk8oIUrUafPWrkZjMX" class="h"><span data-page-node-id="V5wgQH0xLovLFwBa1L8HsF" class="num"><!--pnid:ICUvDU6Jt8CMXhaUtIlcvE-->二</span><!--pnid:dX7HpqaBpXrRIM4aZks4eK-->10 条可直接照做的任务</h2>
+  <p data-page-node-id="wkhgs4ffzgxXwy9kS69FOC" class="subline"><!--pnid:dEMFoIGy6YPtKQ7oG8W91T-->点「复制」拿走整段描述，粘进 WorkBuddy 即可</p>
+  <div data-page-node-id="BHUmJemVHGNf8rBram9Ykm" class="tlist">
+    <article data-page-node-id="h3n0RMf9s9FnYB5IJ3UIhY" class="task">
+      <div data-page-node-id="qGU6sDeAraaLtrnLs3kz43" class="th"><span data-page-node-id="h9eMjiQ1L1UCrdyrWvMkQk" class="no"><!--pnid:mAQfnGp2CzfSy4wDIpanwn-->01</span><h3 data-page-node-id="kyQwA22rLXNVULIlYyccds" class="ttl"><!--pnid:T91Tv8dSXshKetDbIVxzLy-->首推默认</h3><button data-page-node-id="IMFdLsBYki8CE2TzcAw3Uh" class="cp" type="button"><!--pnid:tR9LNmG2EtzZDz3as0rrSG-->复制</button></div>
+      <p data-page-node-id="R2fOk981SV8U6z6J2HpSkx" class="tp"><!--pnid:7LYoGnNtnDyXH4wU2zw6VJ-->这是我这次巡店的检查记录和照片，未闭环问题台账，还有几家店的整改回复截图 和最近的经营数据。
+帮我出这次的巡店报告和更新后的问题台账。
+「已处理」但没有复查证据的不能关单，你给我单独列出来。 价签那个问题你看看是门店的事还是我们档期通知发晚了的事，说错了我可不签。 评分两套口径都放上去，考核用哪个我自己定。</p>
+    </article>
+    <article data-page-node-id="hVO4A3g4cZFIHax18F26GQ" class="task">
+      <div data-page-node-id="Tb9irdDLWaRvY5uiCfdsC4" class="th"><span data-page-node-id="6BfdyXqaE5DGuUPn0XGawj" class="no"><!--pnid:kQiD7jAJllMyyX5vMnu0MX-->02</span><h3 data-page-node-id="ZwJKnG7EoY2LTl1tPK6Oas" class="ttl"><!--pnid:6FQ9re2HSm7gXpnSDkwYdJ-->只判能不能关单</h3><button data-page-node-id="SrMFssMHTyDeKVLlPvCvB0" class="cp" type="button"><!--pnid:CBKWmbXAfyLTlep6Jn8h83-->复制</button></div>
+      <p data-page-node-id="6cP81d3yjNJmNFBNQH0da5" class="tp"><!--pnid:90udOWVcM62MmMa6ebL2i4-->先别出报告，只干一件事：把门店回复的「已处理」逐条对着照片和经营数据看，有复查证据的标可关单、没有的单独列出来，给我一张两栏清单。</p>
+    </article>
+    <article data-page-node-id="VbYlVYnkJ266tWOt6ufESL" class="task">
+      <div data-page-node-id="jnq4kVSH40pMds9060D0tw" class="th"><span data-page-node-id="hcm7cjRadqlOB8UqyXWqrD" class="no"><!--pnid:uz96aTZdBQmezYIhLRSPn5-->03</span><h3 data-page-node-id="N9ULmD3n6ybPKaOuecWKen" class="ttl"><!--pnid:vrYimKZwe3WMxdYndcIVQc-->换成旧的完成率口径再算</h3><button data-page-node-id="45wxzmo8vNuGYUXeOPnHfn" class="cp" type="button"><!--pnid:msCyTkgt3P2jAT0SbOcaJF-->复制</button></div>
+      <p data-page-node-id="vDpZIdMpfExgOf5qEYbnU4" class="tp"><!--pnid:T42BNnt6dAMP0hwyYN2WSk-->同一批数据按旧口径再算一次：只算查了多少项、完成了多少项，跟解决率口径的分数并排放，两版的差距出在哪几条问题上，一并标出来。</p>
+    </article>
+    <article data-page-node-id="d9HgsHCwMBbAGL1vN378JQ" class="task">
+      <div data-page-node-id="KqSfLjbSd6pBAn4azdtGON" class="th"><span data-page-node-id="UlGBv8FpLnRxYMTfkA4z4f" class="no"><!--pnid:TV8VULN46MjcfmaZxAVkQf-->04</span><h3 data-page-node-id="HC6morJKrYLYV4pR1oPzg8" class="ttl"><!--pnid:nHDOEV4zRPEHqcKYPCbgpf-->一次收三周的巡店记录</h3><button data-page-node-id="bqTMC6Z3AbxoUKyeWCfhHG" class="cp" type="button"><!--pnid:3EVz7NhJBgNRQgpirn8XIL-->复制</button></div>
+      <p data-page-node-id="Smh8SY0Kha60opzZ4lP0gs" class="tp"><!--pnid:DZOSY9ZzVVPwQcvTQv586x-->演示数据里还有前两周的巡店记录和整改回复，三周一起跑，最后给我一张横向对照表：各周问题数、双条件关单数、超时未闭环数、两个口径的分数。</p>
+    </article>
+    <article data-page-node-id="HTtyWEyN9t1dvqlNTO95jS" class="task">
+      <div data-page-node-id="WXL9NaNJMD5aiG2GRM9SII" class="th"><span data-page-node-id="5tmZhdbBwaJi5YPb5VKyfp" class="no"><!--pnid:0KF4Z9L6JEojo1BSs7UqOY-->05</span><h3 data-page-node-id="jU2ZOudzEBYBNYxdSxAr0W" class="ttl"><!--pnid:xD5cx4wsr47vFswMYRVHbQ-->给门店店长看的版本</h3><button data-page-node-id="04T5AUdpQfaKC59SLd3pEq" class="cp" type="button"><!--pnid:35QRameY6gTJ5vsdzhvnmL-->复制</button></div>
+      <p data-page-node-id="AyNyR5p3tI3lbknCe6yOnP" class="tp"><!--pnid:1Ua5uvq7lj3KrVXqAOy1jq-->把报告里属于锦绣店的部分抽出来给店长：这次查出哪几条、哪几条还没关单、各要什么证据、什么时候前给，评分那部分不用给。</p>
+    </article>
+    <article data-page-node-id="DNpsxCdivPaAwEwfo0QZdZ" class="task">
+      <div data-page-node-id="xbPHTeYuMEbJSEvi7twpVT" class="th"><span data-page-node-id="0GlesRpmDHM2ONzlA5c2nE" class="no"><!--pnid:cLgs9ZZutopaz6L5Rvawu1-->06</span><h3 data-page-node-id="3JJVavdK3XLzKQozoswzGw" class="ttl"><!--pnid:pbjETLpYkKpux0le7E332w-->让它反驳自己</h3><button data-page-node-id="yVSqlq8deQDqFs0ykPGLMH" class="cp" type="button"><!--pnid:qAg9efwfDROTMGGowxjU7L-->复制</button></div>
+      <p data-page-node-id="YqGbVu60IBMUYZtvKbr87y" class="tp"><!--pnid:u2JnINvfiSTNNJZWM8u6Lv-->你说价签错误高发可以排除门店主观因素、根因在档期通知发晚了，把促销换档日和通知到达时间的记录摆出来；时间上要是根本对不上，这张整改单就该开回门店。</p>
+    </article>
+    <article data-page-node-id="niMD3aNeVWg66K9tHUd0F6" class="task">
+      <div data-page-node-id="lYblogBfooDK7qqRV2LvhG" class="th"><span data-page-node-id="6b7DxAhhF7Bee0mRzSlTr6" class="no"><!--pnid:FIYS1f6VO8QqalelGajcZp-->07</span><h3 data-page-node-id="GEusSMmjLk2kVIzg6C1lX8" class="ttl"><!--pnid:RN0uWxH7BIN0uVzCqQpYrK-->比对上月那条断档整改</h3><button data-page-node-id="Dqri8G77ZVmyfE53YRSYQ2" class="cp" type="button"><!--pnid:9UBs8B4dhIEkI0B4A7iZJp-->复制</button></div>
+      <p data-page-node-id="60sWI609Bv3MNGzc62ozWT" class="tp"><!--pnid:Y9JC2q5NrnamNrOubmq9GP-->把上月锦绣店冷库温度记录断档、回复「已加强设备巡检」无复查证据就关单的记录调出来，跟本周同位置再出的问题摆在一起，说明上次那条整改其实从未被验证。</p>
+    </article>
+    <article data-page-node-id="eEtIuf8Gz2npX7njtbCxwa" class="task">
+      <div data-page-node-id="UAvqATugDxAlZXQclW2qbf" class="th"><span data-page-node-id="cinJx6RBcvHJuJIpON98tP" class="no"><!--pnid:5dDcKNaFGreM1VH8qeDAac-->08</span><h3 data-page-node-id="Dyrv6bhAn96HOPVkC4U7nK" class="ttl"><!--pnid:5QPn0HldRyFSMudgSAKcPY-->对照闭环标准做自检</h3><button data-page-node-id="xHyUfX9aUcoBakubNF4qv0" class="cp" type="button"><!--pnid:jkYtvVWnYl5hPsTlDWz3LJ-->复制</button></div>
+      <p data-page-node-id="Ll2oHhy6akaWUR98MOQaeQ" class="tp"><!--pnid:adNYnGhdCl7dEMlVkxjeO3-->自查一遍：有没有只看回复就关掉的单、超时项的提醒对象和时限对不对、两套评分口径有没有并列、签批栏是不是空的，越界的列出来。</p>
+    </article>
+    <article data-page-node-id="qbWprLFMK6Un0AeRQ4WW2c" class="task">
+      <div data-page-node-id="CpQgA9qrDlxLctxbzSJ5GB" class="th"><span data-page-node-id="glm25opokJv0BVwsopMEhq" class="no"><!--pnid:YMpCnoAdapkNu4QqH1azaY-->09</span><h3 data-page-node-id="srBtP2bUY27XqhQLaPF4KV" class="ttl"><!--pnid:NgWouwoYNgw7N0CsFpQDab-->把超时问题折成金额</h3><button data-page-node-id="HY3srVXWJuwpmCD76MZ7ID" class="cp" type="button"><!--pnid:v59CTX4n4Unh7SdxVEaP0a-->复制</button></div>
+      <p data-page-node-id="cevjOkbqKga0xBbe2BcZMr" class="tp"><!--pnid:tSmdv9lNZ4xrCthFFppwdl-->本月 42 个问题闭环 38 个、4 个超时，把那 4 条超时问题关联的价签错误，按单店月均影响金额估一下大概是多少，算法和口径都写给我。</p>
+    </article>
+    <article data-page-node-id="csSBnXExC2jKMSSMjw5jH3" class="task">
+      <div data-page-node-id="0o5WUO3ldzivpHIxCeUT9n" class="th"><span data-page-node-id="RNVIlDNyVi58zIzGcXaKlf" class="no"><!--pnid:y8dSERNqWKG0HXD27oCSf7-->10</span><h3 data-page-node-id="OVJwM9vCidlSho1krbfDdZ" class="ttl"><!--pnid:02RCwfyrYTVmaeUQoFGVWp-->沉淀成台账结构</h3><button data-page-node-id="4vWQrGuvaUDAt0lcGrYjaQ" class="cp" type="button"><!--pnid:QkvhjlOAFyMLmSnK1EipHM-->复制</button></div>
+      <p data-page-node-id="sTjkJZupJlqS8vAEs3UFNT" class="tp"><!--pnid:UgsWYypRlGRWjOAn58Qoce-->把这次的问题台账结构固定下来：门店、位置、问题描述、证据编号、责任人、时限、复查证据、关单状态各一栏，下周新问题直接往这张滚存台账里加。</p>
+    </article>
+  </div>
+</section>
+
+<div data-page-node-id="FjYa4ZZK1Dgd6tknety1J0" class="cta">
+  <div data-page-node-id="wtUeuokAIuFtiqNxPkpXyf"><h3 data-page-node-id="wV6p0VB2YePeQXHlYaNzct"><!--pnid:fALk68sPjN0zse3dZinXcs-->想让这套流程跑在你自己的数据上？</h3><p data-page-node-id="zQYLCgpgeB71sNdTGN3lg3"><!--pnid:xAhU8sRZXb1RPk6Membd1Q-->把演示数据换成你自己的业务文件，同一套流程就能直接跑。如果口径和审批习惯需要按你们自己的来，可以联系我们。</p></div>
+  <div data-page-node-id="4ghgfI7Zvk5nZCvpUDGu4T" class="btns"><a data-page-node-id="XtGg3INgp1jrq1x2vDO7b8" class="btn" href="#" id="ctaContact"><!--pnid:RgxRPpq8VSV2gd1lZdwyKA-->联系我们</a></div>
+</div>
+<footer data-page-node-id="bTHSc0JSkSCmjiKIj6BrMg"><!--pnid:BcNAJBNupXJ9mWHOsPlQOL-->真实业务格式 + 脱敏构造数据 · 不承诺效率百分比 · 高风险动作一律人工审批</footer>
+</div>
+
+<script data-page-node-id="IxMgbSALn9Lix7nTCaAaF8" data-pnid-children="Nsgc49pgh8wElpXepMEQ0e">
+/* 平台内嵌时：子页面导航改由父页无刷新切换，避免整页重载跳动 */
+(function(){
+  if(window.self === window.top) return;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a || a.target === '_blank') return;
+    if(a.id === 'ctaContact'){
+      e.preventDefault();
+      try{ window.parent.postMessage({type:'wb-contact'}, '*'); }catch(err){}
+      return;
+    }
+    var u;
+    try { u = new URL(a.getAttribute('href'), location.href); } catch(err){ return; }
+    if(u.origin !== location.origin || !/\.html?$/i.test(u.pathname)) return;
+    e.preventDefault();
+    window.parent.postMessage({type:'wb-subnav', url:u.href}, '*');
+  });
+})();
+/* 复制任务描述 */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cp'), function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.task');
+      var t = card ? card.querySelector('.tp').innerText : '';
+      writeText(t, function(){
+        b.textContent = '已复制';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      }, function(){
+        b.textContent = '复制失败';
+        setTimeout(function(){ b.textContent = '复制'; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+<script data-page-node-id="k0bQVQlebo7fdFgSa5JH9l" data-pnid-children="mic1ruC9kOLNKxzI1938eZ">(function(){try{if(window.parent&&window.parent!==window){var h=document.querySelector("h1");var t=h?h.textContent.trim():"";var ps=location.pathname.split("/").filter(Boolean);var slug=ps[ps.length-1]||"";slug=slug.replace(/\.html$/,"");if(slug==="index"||!slug){slug=ps[ps.length-2]||"";}if(t)window.parent.postMessage({type:"wb-detail-title",title:t,slug:slug},"*");}}catch(e){}})();</script><button data-page-node-id="hcRA18BkyyIb4gJsMsU1B4" aria-label="回到顶部" class="wb-back-top" id="wbBackTop" title="回到顶部" type="button">
+  <svg data-page-node-id="knrw2ZjH5vFtWOApkQUQMJ" aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline data-page-node-id="igr56jt0wqPyUKlWggfIo2" points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<script data-page-node-id="onS19xiVKbvvynViEHHqcP" data-pnid-children="1FKX6dmV79fntYddIcA6J3">
+/* 回到顶部：滚动容器是当前场景页自身（详情模式下主站外层滚动已锁定） */
+(function(){
+  var btn = document.getElementById('wbBackTop');
+  if(!btn) return;
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > 400){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  btn.addEventListener('click', function(){
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(err){ window.scrollTo(0,0); }
+  });
+  onScroll();
+})();
+</script>
+<script data-page-node-id="2sn5byWv8YAsZIueNF3iea" data-pnid-children="YkUWGguBcDdFtcH5xDnTjt" id="wbSkillScript">
+/* 技能安装说明块的「复制」：页面原有处理器只认 .task 内的 .cp，本块自带一个（复制时剔除按钮文字） */
+(function(){
+  function fallbackCopy(t, ok, fail){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.setAttribute('readonly','');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var done = false;
+    try { done = document.execCommand('copy'); } catch(err){ done = false; }
+    document.body.removeChild(ta);
+    done ? ok() : fail();
+  }
+  function writeText(t, ok, fail){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(ok, function(){ fallbackCopy(t, ok, fail); });
+    } else { fallbackCopy(t, ok, fail); }
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-wb-skill-copy]') : null;
+    if(!b) return;
+    var box = b.closest('.wb-skill');
+    var pr = box ? box.querySelector('.prompt') : null;
+    if(!pr) return;
+    var c = pr.cloneNode(true);
+    var btn = c.querySelector('button');
+    if(btn) btn.parentNode.removeChild(btn);
+    var t = c.innerText.replace(/^\s+|\s+$/g, '');
+    writeText(t, function(){
+      b.textContent = '已复制';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    }, function(){
+      b.textContent = '复制失败';
+      setTimeout(function(){ b.textContent = '复制'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>
